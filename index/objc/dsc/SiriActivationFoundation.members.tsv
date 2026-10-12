@@ -1,0 +1,28 @@
+owner	kind	declaration
+SAFAssetAvailabilityReporter	-	- (_Bool)isAvailable;
+SAFAssetAvailabilityReporter	-	- (_Bool)isEnabled;
+SAFAssetAvailabilityReporter	-	- (id)init;
+SAFAssetAvailabilityReporter	-	- (void)notificationForUnavailabilityReason:(id /* block */)reason;
+SAFAssetAvailabilityReporter	-	- (void)notificationForUnavailabilityReasonWithContext:(long long)context completion:(id /* block */)completion;
+SAFAssetAvailabilityReporter	property	@property (nonatomic, readonly) NSByteCountFormatter *byteCountFormatter;
+SAFAssetAvailabilityReporter	property	@property (nonatomic, readonly) SAFLocalization *strings;
+SAFCFUserNotificationPresenter	-	- (id)init;
+SAFCFUserNotificationPresenter	-	- (void)presentNotificationWithConfiguration:(id)configuration additionalOptions:(id)options;
+SAFCarPlayUserAlertPresenter	-	- (id)init;
+SAFCarPlayUserAlertPresenter	-	- (void)presentNotificationWithConfiguration:(id)configuration additionalOptions:(id)options;
+SAFLocalization	-	- (id)init;
+SAFLocalization	-	- (id)initWithBundle:(id)bundle tableName:(id)name;
+SAFLocalization	-	- (id)localizedStringForLanguageCode:(id)code key:(id)key;
+SAFLocalization	-	- (id)localizedStringWithSiriLanguageForKey:(id)key;
+SAFLocalization	property	@property (nonatomic, readonly) NSBundle *bundle;
+SAFLocalization	property	@property (nonatomic, readonly) NSString *tableName;
+SAFNotificationConfiguration	-	- (id)init;
+SAFNotificationConfiguration	-	- (id)initWithTitle:(id)title body:(id)body defaultButtonTitle:(id)title defaultButtonHandler:(id /* block */)handler alternateButtonTitle:(id)title alternateButtonHandler:(id /* block */)handler;
+SAFNotificationConfiguration	property	@property (nonatomic, copy) NSString *alternateButtonTitle;
+SAFNotificationConfiguration	property	@property (nonatomic, copy) NSString *body;
+SAFNotificationConfiguration	property	@property (nonatomic, copy) NSString *defaultButtonTitle;
+SAFNotificationConfiguration	property	@property (nonatomic, copy) NSString *title;
+SAFNotificationConfiguration	property	@property (nonatomic, copy) id /* block */ alternateButtonHandler;
+SAFNotificationConfiguration	property	@property (nonatomic, copy) id /* block */ defaultButtonHandler;
+SAFNotificationPresenting	-	- (void)presentNotificationWithConfiguration:(id)configuration additionalOptions:(id)options;
+_TtC24SiriActivationFoundation24SiriAvailabilityObserver	-	- (void)fetchLatestAvailabilityState;

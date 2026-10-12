@@ -1,0 +1,923 @@
+kind	type	conformance	member_kind	member
+class	nwswifttls.STLSRecordHandler	NSObject		
+class	nwswifttls.STLSRecordHandler	NSObject	var	recordHandler
+class	nwswifttls.STLSRecordHandler	NSObject	let	logString
+class	nwswifttls.STLSServerHandshaker	NSObject		
+class	nwswifttls.STLSServerHandshaker	NSObject	var	stateMachine
+class	nwswifttls.STLSServerHandshaker	NSObject	var	partialHandshakeResult
+class	nwswifttls.STLSServerHandshaker	NSObject	var	readEncryptionLevel
+class	nwswifttls.STLSServerHandshaker	NSObject	var	writeEncryptionLevel
+class	nwswifttls.STLSServerHandshaker	NSObject	var	latestError
+class	nwswifttls.STLSServerHandshaker	NSObject	var	clientAppSecret
+class	nwswifttls.STLSClientHandshaker	NSObject		
+class	nwswifttls.STLSClientHandshaker	NSObject	var	stateMachine
+class	nwswifttls.STLSClientHandshaker	NSObject	var	partialHandshakeResult
+class	nwswifttls.STLSClientHandshaker	NSObject	var	readEncryptionLevel
+class	nwswifttls.STLSClientHandshaker	NSObject	var	writeEncryptionLevel
+class	nwswifttls.STLSClientHandshaker	NSObject	var	receivedSessionTickets
+class	nwswifttls.STLSClientHandshaker	NSObject	var	latestError
+struct	SwiftTLSLibrary.PAKECredential			
+struct	SwiftTLSLibrary.PAKECredential		let	context
+struct	SwiftTLSLibrary.PAKECredential		let	clientIdentity
+struct	SwiftTLSLibrary.PAKECredential		let	serverIdentity
+struct	SwiftTLSLibrary.PAKECredential		let	isServer
+class	SwiftTLSLibrary.PAKELimiter			
+class	SwiftTLSLibrary.PAKELimiter		let	PAKECredentials
+struct	SwiftTLSLibrary.PeerCertificateBundle			
+struct	SwiftTLSLibrary.PeerCertificateBundle		var	bundle
+enum	SwiftTLSLibrary.PeerCertificateBundle.Bundle			
+enum	SwiftTLSLibrary.PeerCertificateBundle.Bundle		case	rawPublicKey
+enum	SwiftTLSLibrary.PeerCertificateBundle.Bundle		case	x509
+struct	SwiftTLSLibrary.PAKEScheme			
+struct	SwiftTLSLibrary.PAKEScheme		var	rawValue
+struct	SwiftTLSLibrary.HandshakeMessageParser			
+struct	SwiftTLSLibrary.HandshakeMessageParser		var	bufferedBytes
+struct	SwiftTLSLibrary.HandshakeMessageParser		var	readClientHello
+struct	SwiftTLSLibrary.HandshakeMessageParser.ParseResult			
+struct	SwiftTLSLibrary.HandshakeMessageParser.ParseResult		var	messageBytes
+struct	SwiftTLSLibrary.HandshakeMessageParser.ParseResult		var	message
+struct	SwiftTLSLibrary.SwiftOfferedEPSK			
+struct	SwiftTLSLibrary.SwiftOfferedEPSK		let	external_identity
+struct	SwiftTLSLibrary.SwiftOfferedEPSK		let	context
+struct	SwiftTLSLibrary.SwiftOfferedPAKEIdentity			
+struct	SwiftTLSLibrary.SwiftOfferedPAKEIdentity		let	client_identity
+struct	SwiftTLSLibrary.SwiftOfferedPAKEIdentity		let	server_identity
+struct	SwiftTLSLibrary.SwiftOfferedPAKEIdentity		let	offered_pake_scheme
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine			
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine		var	parser
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine		var	serializer
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine		var	state
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine		let	clock
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine		var	random
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine		var	configuration
+enum	SwiftTLSLibrary.ServerHandshakeStateMachine.StepResult			
+enum	SwiftTLSLibrary.ServerHandshakeStateMachine.StepResult		case	partialResult
+enum	SwiftTLSLibrary.ServerHandshakeStateMachine.StepResult		case	continueOkay
+enum	SwiftTLSLibrary.ServerHandshakeStateMachine.StepResult		case	waitingForBytes
+struct	SwiftTLSLibrary.TLSPlaintext			
+struct	SwiftTLSLibrary.TLSPlaintext		let	contentType
+struct	SwiftTLSLibrary.TLSPlaintext		let	protocolVersion
+struct	SwiftTLSLibrary.TLSPlaintext		let	fragment
+struct	SwiftTLSLibrary.CertificateVerify			
+struct	SwiftTLSLibrary.CertificateVerify		var	algorithm
+struct	SwiftTLSLibrary.CertificateVerify		var	signature
+struct	SwiftTLSLibrary.CertificateRequest			
+struct	SwiftTLSLibrary.CertificateRequest		var	certificateRequestContext
+struct	SwiftTLSLibrary.CertificateRequest		var	extensions
+enum	SwiftTLSLibrary.Extension.SupportedVersions			
+enum	SwiftTLSLibrary.Extension.SupportedVersions		case	offer
+enum	SwiftTLSLibrary.Extension.SupportedVersions		case	selection
+struct	SwiftTLSLibrary.TLSMessageSerializer			
+enum	SwiftTLSLibrary.Extension.PreSharedKey			
+enum	SwiftTLSLibrary.Extension.PreSharedKey		case	clientHello
+enum	SwiftTLSLibrary.Extension.PreSharedKey		case	serverHello
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs			
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs		var	identities
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs		var	binders
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs.PSKIdentity			
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs.PSKIdentity		var	identity
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs.PSKIdentity		var	obfuscatedTicketAge
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs.PSKBinderEntry			
+struct	SwiftTLSLibrary.Extension.PreSharedKey.OfferedPSKs.PSKBinderEntry		var	serializedBinder
+struct	SwiftTLSLibrary.SignatureScheme			
+struct	SwiftTLSLibrary.SignatureScheme		var	rawValue
+struct	SwiftTLSLibrary.EPSK			
+struct	SwiftTLSLibrary.EPSK		let	externalIdentity
+struct	SwiftTLSLibrary.EPSK		let	epsk
+struct	SwiftTLSLibrary.EPSK		let	context
+struct	SwiftTLSLibrary.TLSKDFIdentifier			
+struct	SwiftTLSLibrary.TLSKDFIdentifier		var	rawValue
+struct	SwiftTLSLibrary.TLSKDFIdentifier		var	outputLength
+enum	SwiftTLSLibrary.PSK			
+enum	SwiftTLSLibrary.PSK		case	imported
+enum	SwiftTLSLibrary.PSK		case	rawEPSK
+struct	SwiftTLSLibrary.GeneralEPSK			
+struct	SwiftTLSLibrary.GeneralEPSK		let	innerPSK
+struct	SwiftTLSLibrary.ImportedPSK			
+struct	SwiftTLSLibrary.ImportedPSK		let	importedIdentity
+struct	SwiftTLSLibrary.ImportedPSK		let	ipskx
+struct	SwiftTLSLibrary.RawEPSK			
+struct	SwiftTLSLibrary.RawEPSK		let	identity
+struct	SwiftTLSLibrary.RawEPSK		let	epsk
+struct	SwiftTLSLibrary.ImportedIdentity			
+struct	SwiftTLSLibrary.ImportedIdentity		let	externalIdentity
+struct	SwiftTLSLibrary.ImportedIdentity		let	context
+struct	SwiftTLSLibrary.ImportedIdentity		let	targetProtocol
+struct	SwiftTLSLibrary.ImportedIdentity		let	targetKDF
+enum	SwiftTLSLibrary.Extension.ServerCertificateType			
+enum	SwiftTLSLibrary.Extension.ServerCertificateType		case	offer
+enum	SwiftTLSLibrary.Extension.ServerCertificateType		case	selection
+struct	SwiftTLSLibrary.CertificateType			
+struct	SwiftTLSLibrary.CertificateType		var	rawValue
+struct	SwiftTLSLibrary.Nonce			
+struct	SwiftTLSLibrary.Nonce		let	tuple
+struct	SwiftTLSLibrary.TLSRecordProtector			
+struct	SwiftTLSLibrary.TLSRecordProtector		var	writeKey
+struct	SwiftTLSLibrary.TLSRecordProtector		var	writeIV
+struct	SwiftTLSLibrary.TLSRecordProtector		var	readKey
+struct	SwiftTLSLibrary.TLSRecordProtector		var	readIV
+struct	SwiftTLSLibrary.TLSRecordProtector		var	writeSequenceNumber
+struct	SwiftTLSLibrary.TLSRecordProtector		var	readSequenceNumber
+struct	SwiftTLSLibrary.TLSRecordProtector		var	ciphersuite
+struct	SwiftTLSLibrary.NewSessionTicket			
+struct	SwiftTLSLibrary.NewSessionTicket		var	ticketLifetime
+struct	SwiftTLSLibrary.NewSessionTicket		var	ticketAgeAdd
+struct	SwiftTLSLibrary.NewSessionTicket		var	ticketNonce
+struct	SwiftTLSLibrary.NewSessionTicket		var	ticket
+struct	SwiftTLSLibrary.NewSessionTicket		var	extensions
+struct	SwiftTLSLibrary.ExtensionType			
+struct	SwiftTLSLibrary.ExtensionType		var	rawValue
+enum	SwiftTLSLibrary.TLSError			
+enum	SwiftTLSLibrary.TLSError		case	invalidMessageForExtension
+enum	SwiftTLSLibrary.TLSError		case	internalError
+enum	SwiftTLSLibrary.TLSError		case	truncatedMessage
+enum	SwiftTLSLibrary.TLSError		case	excessBytes
+enum	SwiftTLSLibrary.TLSError		case	handshakeError
+enum	SwiftTLSLibrary.TLSError		case	handshakeUnexpectedRead
+enum	SwiftTLSLibrary.TLSError		case	handshakeUnexpectedMessage
+enum	SwiftTLSLibrary.TLSError		case	handshakeInvalidMessage
+enum	SwiftTLSLibrary.TLSError		case	negotiationFailed
+enum	SwiftTLSLibrary.TLSError		case	invalidSerializedSession
+enum	SwiftTLSLibrary.TLSError		case	invalidSerializedImportedIdentity
+enum	SwiftTLSLibrary.TLSError		case	insufficientBytes
+enum	SwiftTLSLibrary.TLSError		case	exporterInvalidMessage
+enum	SwiftTLSLibrary.TLSError		case	exporterInvalidState
+enum	SwiftTLSLibrary.TLSError		case	certificateError
+enum	SwiftTLSLibrary.TLSError		case	protocolVersion
+enum	SwiftTLSLibrary.TLSError		case	missingExtension
+enum	SwiftTLSLibrary.TLSError		case	unsupportedCertificate
+enum	SwiftTLSLibrary.TLSError		case	helloRetryRequestPlaceholder
+enum	SwiftTLSLibrary.TLSError		case	noApplicationProtocol
+enum	SwiftTLSLibrary.TLSError		case	invalidApplicationProtocol
+enum	SwiftTLSLibrary.TLSError		case	sessionMissingPeerCertificates
+enum	SwiftTLSLibrary.TLSError		case	sessionMissingNegotiatedCipherSuiteOrGroup
+enum	SwiftTLSLibrary.TLSError		case	missingTargetKDFs
+enum	SwiftTLSLibrary.TLSError		case	importedIdentityTooLong
+enum	SwiftTLSLibrary.TLSError		case	insufficientLengthForEPSK
+enum	SwiftTLSLibrary.TLSError		case	serverMissingSigningKey
+enum	SwiftTLSLibrary.TLSError		case	missingPSKKeyExchangeModesExtension
+enum	SwiftTLSLibrary.TLSError		case	unknownCiphersuite
+enum	SwiftTLSLibrary.TLSError		case	decodeError
+enum	SwiftTLSLibrary.TLSError		case	recordOverflow
+enum	SwiftTLSLibrary.TLSError		case	incorrectNonceLength
+enum	SwiftTLSLibrary.TLSError		case	startHandshakeCalledOnServer
+enum	SwiftTLSLibrary.TLSError		case	decryptError
+enum	SwiftTLSLibrary.TLSError		case	wrappedCryptoError
+enum	SwiftTLSLibrary.TLSError		case	illegalParameter
+enum	SwiftTLSLibrary.TLSError		case	ciphertextRecordTooShort
+enum	SwiftTLSLibrary.TLSError		case	pakeExhausted
+enum	SwiftTLSLibrary.TLSError		case	invalidAlertBeforeHandshakeStart
+enum	SwiftTLSLibrary.TLSError		case	processNetworkDataErrorBeforeHandshakeStart
+enum	SwiftTLSLibrary.HandshakeMessage			
+enum	SwiftTLSLibrary.HandshakeMessage		case	clientHello
+enum	SwiftTLSLibrary.HandshakeMessage		case	serverHello
+enum	SwiftTLSLibrary.HandshakeMessage		case	encryptedExtensions
+enum	SwiftTLSLibrary.HandshakeMessage		case	certificateRequest
+enum	SwiftTLSLibrary.HandshakeMessage		case	certificate
+enum	SwiftTLSLibrary.HandshakeMessage		case	certificateVerify
+enum	SwiftTLSLibrary.HandshakeMessage		case	finished
+enum	SwiftTLSLibrary.HandshakeMessage		case	newSessionTicket
+struct	SwiftTLSLibrary.Extension.SupportedGroups			
+struct	SwiftTLSLibrary.Extension.SupportedGroups		var	groups
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration			
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	serverName
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	validPublicKeys
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	quicTransportParameters
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	alpn
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	ticketRequest
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	fixedKeyExchangeGroup
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	enableEarlyData
+struct	SwiftTLSLibrary.HandshakeStateMachine.Configuration		var	useRawEPSKs
+struct	SwiftTLSLibrary.LegacySessionID			
+struct	SwiftTLSLibrary.LegacySessionID		var	bytes
+struct	SwiftTLSLibrary.LegacySessionID		var	length
+struct	SwiftTLSLibrary.TLSRecordParser			
+struct	SwiftTLSLibrary.TLSRecordParser		var	bufferedBytes
+struct	SwiftTLSLibrary.TLSRecordParser		var	numberOfBytesToReadNext
+struct	SwiftTLSLibrary.Extension.SignatureAlgorithms			
+struct	SwiftTLSLibrary.Extension.SignatureAlgorithms		var	schemes
+struct	SwiftTLSLibrary.Random			
+struct	SwiftTLSLibrary.Random		var	bytes
+struct	SwiftTLSLibrary.Extension.PreSharedKeyKexModes			
+struct	SwiftTLSLibrary.Extension.PreSharedKeyKexModes		var	modes
+struct	SwiftTLSLibrary.Extension.PreSharedKeyKexModes.Mode			
+struct	SwiftTLSLibrary.Extension.PreSharedKeyKexModes.Mode		var	rawValue
+enum	SwiftTLSLibrary.Extension.PAKE			
+enum	SwiftTLSLibrary.Extension.PAKE		case	clientHello
+enum	SwiftTLSLibrary.Extension.PAKE		case	serverHello
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEShare			
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEShare		var	pakeScheme
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEShare		var	pakeMessage
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEClientHello			
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEClientHello		var	clientIdentity
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEClientHello		var	serverIdentity
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEClientHello		var	clientShares
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEServerHello			
+struct	SwiftTLSLibrary.Extension.PAKE.PAKEServerHello		var	serverShare
+enum	SwiftTLSLibrary.ServerHandshakeState			
+enum	SwiftTLSLibrary.ServerHandshakeState		case	idle
+enum	SwiftTLSLibrary.ServerHandshakeState		case	clientHello
+enum	SwiftTLSLibrary.ServerHandshakeState		case	serverHello
+enum	SwiftTLSLibrary.ServerHandshakeState		case	serverEncryptedExtensions
+enum	SwiftTLSLibrary.ServerHandshakeState		case	serverCertificate
+enum	SwiftTLSLibrary.ServerHandshakeState		case	serverCertificateVerify
+enum	SwiftTLSLibrary.ServerHandshakeState		case	serverFinished
+enum	SwiftTLSLibrary.ServerHandshakeState		case	readyForData
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState			
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		let	epsks
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		let	externalPSKSelectionCallback
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		let	pakeRecords
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		let	pakeSelectionCallback
+struct	SwiftTLSLibrary.ServerHandshakeState.IdleState		let	transportIsQUIC
+struct	SwiftTLSLibrary.ServerHandshakeState.NegotiatedParams			
+struct	SwiftTLSLibrary.ServerHandshakeState.NegotiatedParams		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.NegotiatedParams		let	negotiatedSignatureAlgorithm
+struct	SwiftTLSLibrary.ServerHandshakeState.NegotiatedParams		let	negotiatedCertificateType
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier			
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	observedExtensionTypes
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientKeyShares
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientOfferedGroups
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientOfferedSupportedVersions
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientOfferedSignatureAlgs
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientRequestedServerCertificateTypes
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientRequestPSKKexModes
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientOfferedPSKs
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientIndicatedEarlyData
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		var	clientOfferedPAKE
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	serverSupportedGroups
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	serverSupportedSignatureAlgs
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	serverSupportedCertificateTypes
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	serverSupportedPSKKexModes
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	serverSupportedPSKs
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	useRawEPSKs
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	externalPSKSelectionCallback
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	pakeRecords
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	pakeSelectionCallback
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier		let	transportIsQuic
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier.negotiatedEPSKResult			
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier.negotiatedEPSKResult		let	negotiatedPSK
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier.negotiatedEPSKResult		let	pskIndex
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier.negotiatedEPSKResult		let	binderValue
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloVerifier.negotiatedEPSKResult		let	bindersArrayLength
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	negotiatedCipherSuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	negotiatedSignatureAlgorithm
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	negotiatedServerCertificateType
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	clientKeyShare
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	ephemeralKey
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	sharedSecret
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	publicKeyShare
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	legacySessionIDEcho
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	selectedPSK
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	selectedPSKIndex
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	pakeServerState
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	transportIsQUIC
+struct	SwiftTLSLibrary.ServerHandshakeState.ClientHelloState		let	pakeNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		var	negotiatedSignatureAlgorithm
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	negotiatedCiphersuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	epskNegotiated
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	negotiatedPAKE
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	negotiatedServerCertificateType
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	pakeServerState
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerHelloState		let	pakeNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	negotiatedSignatureAlgorithm
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	negotiatedCiphersuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	epskNegotiated
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	negotiatedPAKE
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	pakeServerState
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerEncryptedExtensionsState		let	pakeNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	negotiatedSignatureAlgorithm
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	negotiatedCiphersuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateState		let	pakeNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		var	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		let	negotiatedCiphersuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerCertificateVerifyState		let	pakeNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	negotiatedCiphersuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	negotiatedPAKE
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	epskNegotiated
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	pakeServerState
+struct	SwiftTLSLibrary.ServerHandshakeState.ServerFinishedState		let	pakeNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState			
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		var	configuration
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		var	keyScheduler
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	clientQUICTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	selectedALPN
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	negotiatedCiphersuite
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	earlyDataPermitted
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	negotiatedPAKE
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	negotiatedGroup
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	epskNegotiated
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	pskNegotiationAttempted
+struct	SwiftTLSLibrary.ServerHandshakeState.ReadyState		let	pakeNegotiationAttempted
+enum	SwiftTLSLibrary.knownTLSAlert			
+enum	SwiftTLSLibrary.knownTLSAlert		case	closeNotify
+enum	SwiftTLSLibrary.knownTLSAlert		case	unexpectedMessage
+enum	SwiftTLSLibrary.knownTLSAlert		case	badRecordMac
+enum	SwiftTLSLibrary.knownTLSAlert		case	recordOverflow
+enum	SwiftTLSLibrary.knownTLSAlert		case	handshakeFailure
+enum	SwiftTLSLibrary.knownTLSAlert		case	badCertificate
+enum	SwiftTLSLibrary.knownTLSAlert		case	unsupportedCertificate
+enum	SwiftTLSLibrary.knownTLSAlert		case	certificateRevoked
+enum	SwiftTLSLibrary.knownTLSAlert		case	certificateExpired
+enum	SwiftTLSLibrary.knownTLSAlert		case	certificateUnknown
+enum	SwiftTLSLibrary.knownTLSAlert		case	illegalParameter
+enum	SwiftTLSLibrary.knownTLSAlert		case	unknownCA
+enum	SwiftTLSLibrary.knownTLSAlert		case	accessDenied
+enum	SwiftTLSLibrary.knownTLSAlert		case	decodeError
+enum	SwiftTLSLibrary.knownTLSAlert		case	decryptError
+enum	SwiftTLSLibrary.knownTLSAlert		case	protocolVersion
+enum	SwiftTLSLibrary.knownTLSAlert		case	insufficientSecurity
+enum	SwiftTLSLibrary.knownTLSAlert		case	internalError
+enum	SwiftTLSLibrary.knownTLSAlert		case	inappropriateFallback
+enum	SwiftTLSLibrary.knownTLSAlert		case	userCanceled
+enum	SwiftTLSLibrary.knownTLSAlert		case	missingExtension
+enum	SwiftTLSLibrary.knownTLSAlert		case	unsupportedExtension
+enum	SwiftTLSLibrary.knownTLSAlert		case	unrecognizedName
+enum	SwiftTLSLibrary.knownTLSAlert		case	badCertificateStatusResponse
+enum	SwiftTLSLibrary.knownTLSAlert		case	unknownPskIdentity
+enum	SwiftTLSLibrary.knownTLSAlert		case	certificateRequired
+enum	SwiftTLSLibrary.knownTLSAlert		case	noApplicationProtocol
+struct	SwiftTLSLibrary.Alert			
+struct	SwiftTLSLibrary.Alert		let	alertLevel
+struct	SwiftTLSLibrary.Alert		var	alertDescription
+enum	SwiftTLSLibrary.Extension			
+enum	SwiftTLSLibrary.Extension		case	serverName
+enum	SwiftTLSLibrary.Extension		case	supportedGroups
+enum	SwiftTLSLibrary.Extension		case	supportedVersions
+enum	SwiftTLSLibrary.Extension		case	alpn
+enum	SwiftTLSLibrary.Extension		case	keyShare
+enum	SwiftTLSLibrary.Extension		case	earlyData
+enum	SwiftTLSLibrary.Extension		case	signatureAlgorithms
+enum	SwiftTLSLibrary.Extension		case	serverCertificateType
+enum	SwiftTLSLibrary.Extension		case	quicTransportParameters
+enum	SwiftTLSLibrary.Extension		case	preSharedKeyKexModes
+enum	SwiftTLSLibrary.Extension		case	preSharedKey
+enum	SwiftTLSLibrary.Extension		case	ticketRequest
+enum	SwiftTLSLibrary.Extension		case	pake
+enum	SwiftTLSLibrary.Extension		case	unknownExtension
+struct	SwiftTLSLibrary.FinishedMessage			
+struct	SwiftTLSLibrary.FinishedMessage		var	verifyData
+struct	SwiftTLSLibrary.SessionTicket			
+struct	SwiftTLSLibrary.SessionTicket		var	issued
+struct	SwiftTLSLibrary.SessionTicket		var	lifetime
+struct	SwiftTLSLibrary.SessionTicket		var	ticketAgeAdd
+struct	SwiftTLSLibrary.SessionTicket		var	nonce
+struct	SwiftTLSLibrary.SessionTicket		var	ticket
+struct	SwiftTLSLibrary.SessionTicket		var	psk
+struct	SwiftTLSLibrary.SessionTicket		var	maxEarlyDataSize
+struct	SwiftTLSLibrary.SessionTicket		var	cipherSuite
+struct	SwiftTLSLibrary.SessionTicket		var	group
+struct	SwiftTLSLibrary.SessionTicket		var	alpn
+struct	SwiftTLSLibrary.SessionTicket		var	certificateBundle
+struct	SwiftTLSLibrary.ClientSessionKeyManager<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.ClientSessionKeyManager<A	CryptoKit.HashFunction>	var	sessionKeyManager
+struct	SwiftTLSLibrary.ServerSessionKeyManager<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.ServerSessionKeyManager<A	CryptoKit.HashFunction>	var	sessionKeyManager
+struct	SwiftTLSLibrary.SessionKeyManager.State.EarlySecret<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.SessionKeyManager.State.EarlySecret<A	CryptoKit.HashFunction>	var	transcriptHasher
+struct	SwiftTLSLibrary.SessionKeyManager.State.EarlySecret<A	CryptoKit.HashFunction>	var	derivedSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.EarlySecret<A	CryptoKit.HashFunction>	var	binderKey
+struct	SwiftTLSLibrary.SessionKeyManager.State.EarlySecret<A	CryptoKit.HashFunction>	var	clientEarlyTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.EarlySecret<A	CryptoKit.HashFunction>	var	earlyExporterMasterSecret
+enum	SwiftTLSLibrary.SessionKeyManager.State<A	CryptoKit.HashFunction>		
+enum	SwiftTLSLibrary.SessionKeyManager.State<A	CryptoKit.HashFunction>	case	earlySecret
+enum	SwiftTLSLibrary.SessionKeyManager.State<A	CryptoKit.HashFunction>	case	handshakeSecret
+enum	SwiftTLSLibrary.SessionKeyManager.State<A	CryptoKit.HashFunction>	case	masterSecret
+enum	SwiftTLSLibrary.SessionKeyManager.State<A	CryptoKit.HashFunction>	case	allSecrets
+enum	SwiftTLSLibrary.SessionKeyManager.State<A	CryptoKit.HashFunction>	case	idle
+struct	SwiftTLSLibrary.SessionKeyManager.State.AllSecrets<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.SessionKeyManager.State.AllSecrets<A	CryptoKit.HashFunction>	var	clientApplicationTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.AllSecrets<A	CryptoKit.HashFunction>	var	serverApplicationTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.AllSecrets<A	CryptoKit.HashFunction>	var	exporterMasterSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.AllSecrets<A	CryptoKit.HashFunction>	var	resumptionMasterSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	transcriptHasher
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	masterSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	clientHandshakeTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	serverHandshakeTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	clientApplicationTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	serverApplicationTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.MasterSecret<A	CryptoKit.HashFunction>	var	exporterMasterSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.HandshakeSecret<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.SessionKeyManager.State.HandshakeSecret<A	CryptoKit.HashFunction>	var	transcriptHasher
+struct	SwiftTLSLibrary.SessionKeyManager.State.HandshakeSecret<A	CryptoKit.HashFunction>	var	derivedSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.HandshakeSecret<A	CryptoKit.HashFunction>	var	clientHandshakeTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager.State.HandshakeSecret<A	CryptoKit.HashFunction>	var	serverHandshakeTrafficSecret
+struct	SwiftTLSLibrary.SessionKeyManager<A	CryptoKit.HashFunction>		
+struct	SwiftTLSLibrary.SessionKeyManager<A	CryptoKit.HashFunction>	var	state
+struct	SwiftTLSLibrary.Extension.QUICTransportParameters			
+struct	SwiftTLSLibrary.Extension.QUICTransportParameters		var	opaqueOffer
+struct	SwiftTLSLibrary.Extension.EarlyData			
+struct	SwiftTLSLibrary.Extension.EarlyData		var	maxEarlyDataSize
+struct	SwiftTLSLibrary.TLSCiphertext			
+struct	SwiftTLSLibrary.TLSCiphertext		let	encryptedRecord
+struct	SwiftTLSLibrary.DeprotectedRecord			
+struct	SwiftTLSLibrary.DeprotectedRecord		var	fragment
+struct	SwiftTLSLibrary.DeprotectedRecord		let	actualContentType
+struct	SwiftTLSLibrary.TLSInnerPlaintext			
+struct	SwiftTLSLibrary.TLSInnerPlaintext		let	content
+struct	SwiftTLSLibrary.TLSInnerPlaintext		let	contentType
+struct	SwiftTLSLibrary.TLSInnerPlaintext		let	paddingLength
+struct	SwiftTLSLibrary.HandshakeStateMachine			
+struct	SwiftTLSLibrary.HandshakeStateMachine		var	parser
+struct	SwiftTLSLibrary.HandshakeStateMachine		var	serializer
+struct	SwiftTLSLibrary.HandshakeStateMachine		var	state
+struct	SwiftTLSLibrary.HandshakeStateMachine		let	clock
+struct	SwiftTLSLibrary.HandshakeStateMachine		var	random
+struct	SwiftTLSLibrary.HandshakeStateMachine		var	configuration
+enum	SwiftTLSLibrary.TLSHandshakeStateMachine			
+enum	SwiftTLSLibrary.TLSHandshakeStateMachine		case	client
+enum	SwiftTLSLibrary.TLSHandshakeStateMachine		case	server
+enum	SwiftTLSLibrary.HandshakeStateMachine.ProcessStep			
+enum	SwiftTLSLibrary.HandshakeStateMachine.ProcessStep		case	complete
+enum	SwiftTLSLibrary.HandshakeStateMachine.ProcessStep		case	waitingForMoreData
+enum	SwiftTLSLibrary.HandshakeState			
+enum	SwiftTLSLibrary.HandshakeState		case	idle
+enum	SwiftTLSLibrary.HandshakeState		case	clientHello
+enum	SwiftTLSLibrary.HandshakeState		case	serverHello
+enum	SwiftTLSLibrary.HandshakeState		case	serverEncryptedExtensions
+enum	SwiftTLSLibrary.HandshakeState		case	serverCertificate
+enum	SwiftTLSLibrary.HandshakeState		case	serverCertificateVerify
+enum	SwiftTLSLibrary.HandshakeState		case	readyForData
+struct	SwiftTLSLibrary.HandshakeState.IdleState			
+struct	SwiftTLSLibrary.HandshakeState.IdleState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.IdleState		var	sessionToResume
+struct	SwiftTLSLibrary.HandshakeState.IdleState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.IdleState		var	epsks
+struct	SwiftTLSLibrary.HandshakeState.IdleState		var	pakeClientState
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState			
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	expectedLegacySessionID
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	allowedCipherSuites
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	serverCertificateTypes
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	ephemeralKeyShare
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	sessionToResume
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	epsks
+struct	SwiftTLSLibrary.HandshakeState.ClientHelloState		var	pakeClientState
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState			
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	sessionData
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	negotiatedGroup
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	epskNegotiated
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	sessionResumed
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	pskNegotiatedIndex
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		var	pakeClientState
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState		let	epskNegotiationAttempted
+enum	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData			
+enum	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData		case	newSession
+enum	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData		case	pakeSession
+enum	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData		case	resumingSession
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData.NewSession			
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData.NewSession		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData.NewSession		var	negotiatedGroup
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData.NewSession		var	serverCertificateTypes
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData.PAKESession			
+struct	SwiftTLSLibrary.HandshakeState.ServerHelloState.SessionData.PAKESession		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState			
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	sessionData
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	serverALPN
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	serverQUICTransportParameters
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	earlyDataAccepted
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	epskNegotiated
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	sessionResumed
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		var	pakeClientState
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState		let	epskNegotiationAttempted
+enum	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData			
+enum	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData		case	newSession
+enum	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData		case	pakeSession
+enum	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData		case	resumingSession
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.NewSession			
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.NewSession		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.NewSession		var	negotiatedGroup
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.NewSession		var	serverCertificateType
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.NewSession		var	serverName
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.PAKESession			
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.PAKESession		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.EncryptedExtensionsState.SessionData.PAKESession		var	negotiatedPAKE
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState			
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	negotiatedGroup
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	serverALPN
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	serverQUICTransportParameters
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	earlyDataAccepted
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	certificates
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		let	epskNegotiationAttempted
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateState		let	pakeAttempted
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState			
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	negotiatedGroup
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	certificates
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	serverALPN
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	serverQUICTransportParameters
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	earlyDataAccepted
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		let	epskNegotiationAttempted
+struct	SwiftTLSLibrary.HandshakeState.ServerCertificateVerifyState		let	pakeAttempted
+struct	SwiftTLSLibrary.HandshakeState.ReadyState			
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	configuration
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	negotiatedCipherSuite
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	negotiatedGroup
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	certificates
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	serverALPN
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	serverQUICTransportParameters
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	earlyDataAccepted
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	keyScheduler
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	negotiatedPAKE
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		var	epskNegotiated
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		let	epskNegotiationAttempted
+struct	SwiftTLSLibrary.HandshakeState.ReadyState		let	pakeAttempted
+struct	SwiftTLSLibrary.ContentType			
+struct	SwiftTLSLibrary.ContentType		var	rawValue
+struct	SwiftTLSLibrary.CipherSuite			
+struct	SwiftTLSLibrary.CipherSuite		var	rawValue
+struct	SwiftTLSLibrary.ProtocolVersion			
+struct	SwiftTLSLibrary.ProtocolVersion		var	major
+struct	SwiftTLSLibrary.ProtocolVersion		var	minor
+struct	SwiftTLSLibrary.ByteBuffer			
+struct	SwiftTLSLibrary.ByteBuffer		var	backingData
+struct	SwiftTLSLibrary.ByteBuffer		var	readerIndex
+struct	SwiftTLSLibrary.PAKEClientConfiguration			
+struct	SwiftTLSLibrary.PAKEClientConfiguration		var	pakeScheme
+struct	SwiftTLSLibrary.PAKEClientConfiguration		var	context
+struct	SwiftTLSLibrary.PAKEClientConfiguration		var	clientIdentity
+struct	SwiftTLSLibrary.PAKEClientConfiguration		var	serverIdentity
+struct	SwiftTLSLibrary.PAKEClientConfiguration		var	clientPasswordVerifier
+struct	SwiftTLSLibrary.PAKEClientConfiguration		var	pakeCredential
+struct	SwiftTLSLibrary.PAKEServerRecord			
+struct	SwiftTLSLibrary.PAKEServerRecord		var	pakeScheme
+struct	SwiftTLSLibrary.PAKEServerRecord		var	context
+struct	SwiftTLSLibrary.PAKEServerRecord		var	clientIdentity
+struct	SwiftTLSLibrary.PAKEServerRecord		var	serverIdentity
+struct	SwiftTLSLibrary.PAKEServerRecord		var	serverPasswordVerifier
+struct	SwiftTLSLibrary.PAKEServerRecord		var	pakeCredential
+struct	SwiftTLSLibrary.PAKEServerRecord		var	simulated
+struct	SwiftTLSLibrary.PAKEServerRecords			
+struct	SwiftTLSLibrary.PAKEServerRecords		var	records
+struct	SwiftTLSLibrary.PAKEServerRecords		var	serverSupportedPAKEs
+struct	SwiftTLSLibrary.PAKEServerRecords.RecordKey			
+struct	SwiftTLSLibrary.PAKEServerRecords.RecordKey		var	pakeScheme
+struct	SwiftTLSLibrary.PAKEServerRecords.RecordKey		var	serverIdentity
+struct	SwiftTLSLibrary.PAKEServerRecords.RecordKey		var	clientIdentity
+struct	SwiftTLSLibrary.PAKEClientState			
+struct	SwiftTLSLibrary.PAKEClientState		var	configuration
+struct	SwiftTLSLibrary.PAKEClientState		var	derivedSharedKey
+struct	SwiftTLSLibrary.PAKEClientState		var	prover
+struct	SwiftTLSLibrary.PAKEServerState			
+struct	SwiftTLSLibrary.PAKEServerState		var	clientShare
+struct	SwiftTLSLibrary.PAKEServerState		var	derivedSharedKey
+struct	SwiftTLSLibrary.PAKEServerState		var	pakeServerHello
+struct	SwiftTLSLibrary.PAKEServerState		var	useDummyDerivation
+struct	SwiftTLSLibrary.PAKEServerState		var	record
+struct	SwiftTLSLibrary.PAKEServerState		var	verifier
+struct	SwiftTLSLibrary.SwiftTLSDefaultClock			
+enum	SwiftTLSLibrary.Extension.TicketRequest			
+enum	SwiftTLSLibrary.Extension.TicketRequest		case	clientHello
+enum	SwiftTLSLibrary.Extension.TicketRequest		case	encryptedExtensions
+struct	SwiftTLSLibrary.ClientTicketRequest			
+struct	SwiftTLSLibrary.ClientTicketRequest		var	newSessionCount
+struct	SwiftTLSLibrary.ClientTicketRequest		var	resumptionCount
+struct	SwiftTLSLibrary.Extension.TicketRequest.ServerTicketRequestHint			
+struct	SwiftTLSLibrary.Extension.TicketRequest.ServerTicketRequestHint		var	expectedCount
+struct	SwiftTLSLibrary.TLSRecordHandler			
+struct	SwiftTLSLibrary.TLSRecordHandler		var	stateMachine
+struct	SwiftTLSLibrary.TLSRecordHandler		var	recordParser
+struct	SwiftTLSLibrary.TLSRecordHandler		var	recordProtector
+struct	SwiftTLSLibrary.TLSRecordHandler		var	currentWriteEncryptionLevel
+struct	SwiftTLSLibrary.TLSRecordHandler		var	currentReadEncryptionLevel
+struct	SwiftTLSLibrary.TLSRecordHandler		var	receivedPeerEncryptedMessage
+struct	SwiftTLSLibrary.TLSRecordHandler		var	pendingApplicationData
+struct	SwiftTLSLibrary.TLSRecordHandler		var	receivedApplicationData
+struct	SwiftTLSLibrary.TLSRecordHandler		var	outgoingBytes
+struct	SwiftTLSLibrary.TLSRecordHandler		var	alertRead
+struct	SwiftTLSLibrary.TLSRecordHandler		var	alertWrote
+struct	SwiftTLSLibrary.TLSRecordHandler		var	closureAlertRead
+struct	SwiftTLSLibrary.TLSRecordHandler		var	tlsError
+enum	SwiftTLSLibrary.Extension.ApplicationLayerProtocolNegotiation			
+enum	SwiftTLSLibrary.Extension.ApplicationLayerProtocolNegotiation		case	offer
+enum	SwiftTLSLibrary.Extension.ApplicationLayerProtocolNegotiation		case	selection
+enum	SwiftTLSLibrary.Extension.ServerName			
+enum	SwiftTLSLibrary.Extension.ServerName		case	clientHello
+enum	SwiftTLSLibrary.Extension.ServerName		case	encryptedExtensions
+struct	SwiftTLSLibrary.Extension.ServerName.Names			
+struct	SwiftTLSLibrary.Extension.ServerName.Names		var	hostName
+enum	SwiftTLSLibrary.Extension.KeyShare			
+enum	SwiftTLSLibrary.Extension.KeyShare		case	clientHello
+enum	SwiftTLSLibrary.Extension.KeyShare		case	serverHello
+enum	SwiftTLSLibrary.Extension.KeyShare		case	helloRetryRequest
+struct	SwiftTLSLibrary.Extension.KeyShare.KeyShareEntry			
+struct	SwiftTLSLibrary.Extension.KeyShare.KeyShareEntry		var	group
+struct	SwiftTLSLibrary.Extension.KeyShare.KeyShareEntry		var	keyExchange
+struct	SwiftTLSLibrary.ExportedAuthenticator			
+struct	SwiftTLSLibrary.ExportedAuthenticator		var	parser
+struct	SwiftTLSLibrary.ExportedAuthenticator		var	serializer
+struct	SwiftTLSLibrary.ExportedAuthenticator		var	stateMachine
+struct	SwiftTLSLibrary.CertificateMessage			
+struct	SwiftTLSLibrary.CertificateMessage		var	certificateRequestContext
+struct	SwiftTLSLibrary.CertificateMessage		var	certificateList
+struct	SwiftTLSLibrary.CertificateMessage.CertificateEntry			
+struct	SwiftTLSLibrary.CertificateMessage.CertificateEntry		var	opaqueCertificateData
+struct	SwiftTLSLibrary.CertificateMessage.CertificateEntry		var	extensions
+struct	SwiftTLSLibrary.ServerHello			
+struct	SwiftTLSLibrary.ServerHello		var	legacyVersion
+struct	SwiftTLSLibrary.ServerHello		var	random
+struct	SwiftTLSLibrary.ServerHello		var	legacySessionIDEcho
+struct	SwiftTLSLibrary.ServerHello		var	cipherSuite
+struct	SwiftTLSLibrary.ServerHello		var	legacyCompressionMethod
+struct	SwiftTLSLibrary.ServerHello		var	extensions
+struct	SwiftTLSLibrary.EncryptedExtensions			
+struct	SwiftTLSLibrary.EncryptedExtensions		var	extensions
+struct	SwiftTLSLibrary.ClientHello			
+struct	SwiftTLSLibrary.ClientHello		var	legacyVersion
+struct	SwiftTLSLibrary.ClientHello		var	random
+struct	SwiftTLSLibrary.ClientHello		var	legacySessionID
+struct	SwiftTLSLibrary.ClientHello		var	cipherSuites
+struct	SwiftTLSLibrary.ClientHello		var	legacyCompressionMethods
+struct	SwiftTLSLibrary.ClientHello		var	extensions
+enum	SwiftTLSLibrary.GeneratedEphemeralPrivateKey			
+enum	SwiftTLSLibrary.GeneratedEphemeralPrivateKey		case	curve25519
+enum	SwiftTLSLibrary.GeneratedEphemeralPrivateKey		case	p384
+enum	SwiftTLSLibrary.GeneratedEphemeralPrivateKey		case	X25519MLKEM768
+struct	SwiftTLSLibrary.Curve25519EphemeralKey			
+struct	SwiftTLSLibrary.Curve25519EphemeralKey		var	privateKey
+struct	SwiftTLSLibrary.P384EphemeralKey			
+struct	SwiftTLSLibrary.P384EphemeralKey		var	privateKey
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey			
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey		var	privateKeyA
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey		var	privateKeyB
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey		var	publicKeyData
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey		let	curve25519PublicKeySize
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey		let	mlkemPublicKeySize
+struct	SwiftTLSLibrary.X25519MLKEM768EphemeralKey		let	mlkemCiphertextSize
+struct	SwiftTLSLibrary.HandshakeType			
+struct	SwiftTLSLibrary.HandshakeType		var	rawValue
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration			
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	serverName
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	signingKey
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	quicTransportParameters
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	alpn
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	enableEarlyData
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	transportIsQUIC
+struct	SwiftTLSLibrary.ServerHandshakeStateMachine.Configuration		var	useRawEPSKs
+struct	SwiftTLSLibrary.PartialHandshakeResult			
+struct	SwiftTLSLibrary.PartialHandshakeResult		var	handshakeBytesToSend
+struct	SwiftTLSLibrary.PartialHandshakeResult		var	newWriteEncryptionLevel
+struct	SwiftTLSLibrary.PartialHandshakeResult		var	newReadEncryptionLevel
+struct	SwiftTLSLibrary.PartialHandshakeResult		var	sessionTicket
+enum	SwiftTLSLibrary.EncryptionLevel			
+enum	SwiftTLSLibrary.EncryptionLevel		case	earlyData
+enum	SwiftTLSLibrary.EncryptionLevel		case	handshake
+enum	SwiftTLSLibrary.EncryptionLevel		case	application
+struct	SwiftTLSLibrary.NamedGroup			
+struct	SwiftTLSLibrary.NamedGroup		var	rawValue
+protocol	SwiftTLSLibrary.PSKProtocol			
+protocol	SwiftTLSLibrary.HandshakeMessageProtocol			
+protocol	SwiftTLSLibrary.TLSRecordProtocol			
+protocol	SwiftTLSLibrary.SwiftTLSClock			
+protocol	SwiftTLSLibrary.EphemeralPrivateKey			
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance SwiftTLSLibrary.PAKECredential	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.PAKECredential	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.PeerCertificateBundle	Swift.Equatable		
+protocol	conformance Bundle	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.PAKEScheme	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.PAKEScheme	Swift.Comparable		
+protocol	conformance SwiftTLSLibrary.PAKEScheme	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.PAKEScheme	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.PAKEScheme	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.TLSPlaintext	SwiftTLSLibrary.TLSRecordProtocol		
+protocol	conformance SwiftTLSLibrary.TLSPlaintext	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.TLSPlaintext	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CertificateVerify	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.CertificateVerify	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CertificateVerify	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.CertificateRequest	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.CertificateRequest	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CertificateRequest	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance Extension.SupportedVersions	Swift.Hashable		
+protocol	conformance Extension.SupportedVersions	Swift.Equatable		
+protocol	conformance Extension.PreSharedKey	Swift.Hashable		
+protocol	conformance Extension.PreSharedKey	Swift.Equatable		
+protocol	conformance PreSharedKey.OfferedPSKs	Swift.Hashable		
+protocol	conformance PreSharedKey.OfferedPSKs	Swift.Equatable		
+protocol	conformance OfferedPSKs.PSKIdentity	Swift.Hashable		
+protocol	conformance OfferedPSKs.PSKIdentity	Swift.Equatable		
+protocol	conformance OfferedPSKs.PSKBinderEntry	Swift.Hashable		
+protocol	conformance OfferedPSKs.PSKBinderEntry	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.SignatureScheme	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.SignatureScheme	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.SignatureScheme	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.SignatureScheme	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.TLSKDFIdentifier	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.TLSKDFIdentifier	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.PSK	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.GeneralEPSK	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.GeneralEPSK	SwiftTLSLibrary.PSKProtocol		
+protocol	conformance SwiftTLSLibrary.ImportedPSK	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ImportedPSK	SwiftTLSLibrary.PSKProtocol		
+protocol	conformance SwiftTLSLibrary.RawEPSK	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.RawEPSK	SwiftTLSLibrary.PSKProtocol		
+protocol	conformance SwiftTLSLibrary.ImportedIdentity	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ImportedIdentity	Swift.Equatable		
+protocol	conformance Extension.ServerCertificateType	Swift.Hashable		
+protocol	conformance Extension.ServerCertificateType	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CertificateType	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.CertificateType	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.CertificateType	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CertificateType	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.Nonce	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.Nonce	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.NewSessionTicket	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.NewSessionTicket	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.NewSessionTicket	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.ExtensionType	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.ExtensionType	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ExtensionType	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ExtensionType	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.TLSError	Swift.Error		
+protocol	conformance SwiftTLSLibrary.TLSError	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.HandshakeMessage	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.HandshakeMessage	Swift.Equatable		
+protocol	conformance Extension.SupportedGroups	Swift.Hashable		
+protocol	conformance Extension.SupportedGroups	Swift.Equatable		
+protocol	conformance HandshakeStateMachine.Configuration	Swift.Hashable		
+protocol	conformance HandshakeStateMachine.Configuration	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.LegacySessionID	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.LegacySessionID	Swift.Equatable		
+protocol	conformance Extension.SignatureAlgorithms	Swift.Hashable		
+protocol	conformance Extension.SignatureAlgorithms	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.Random	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.Random	Swift.Equatable		
+protocol	conformance PreSharedKeyKexModes.Mode	Swift.RawRepresentable		
+protocol	conformance PreSharedKeyKexModes.Mode	Swift.Hashable		
+protocol	conformance PreSharedKeyKexModes.Mode	Swift.Equatable		
+protocol	conformance Extension.PreSharedKeyKexModes	Swift.Hashable		
+protocol	conformance Extension.PreSharedKeyKexModes	Swift.Equatable		
+protocol	conformance PAKE.PAKEShare	Swift.Hashable		
+protocol	conformance PAKE.PAKEShare	Swift.Equatable		
+protocol	conformance PAKE.PAKEClientHello	Swift.Hashable		
+protocol	conformance PAKE.PAKEClientHello	Swift.Equatable		
+protocol	conformance PAKE.PAKEServerHello	Swift.Hashable		
+protocol	conformance PAKE.PAKEServerHello	Swift.Equatable		
+protocol	conformance Extension.PAKE	Swift.Hashable		
+protocol	conformance Extension.PAKE	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ServerHandshakeState	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.knownTLSAlert	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.knownTLSAlert	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.knownTLSAlert	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.Alert	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.Alert	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.Alert	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.Extension	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.Extension	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.FinishedMessage	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.FinishedMessage	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.FinishedMessage	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.SessionTicket	Swift.Equatable		
+protocol	conformance Extension.QUICTransportParameters	Swift.Hashable		
+protocol	conformance Extension.QUICTransportParameters	Swift.Equatable		
+protocol	conformance Extension.EarlyData	Swift.Hashable		
+protocol	conformance Extension.EarlyData	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.TLSCiphertext	SwiftTLSLibrary.TLSRecordProtocol		
+protocol	conformance SwiftTLSLibrary.TLSCiphertext	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.TLSCiphertext	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.DeprotectedRecord	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.DeprotectedRecord	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.TLSInnerPlaintext	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.TLSInnerPlaintext	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ContentType	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.ContentType	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ContentType	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ContentType	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.CipherSuite	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.CipherSuite	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.CipherSuite	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CipherSuite	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.ProtocolVersion	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ProtocolVersion	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ProtocolVersion	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.ByteBuffer	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ByteBuffer	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.PAKEClientConfiguration	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.PAKEClientConfiguration	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.PAKEClientConfiguration	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.PAKEServerRecord	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.PAKEServerRecord	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.PAKEServerRecord	Swift.Equatable		
+protocol	conformance PAKEServerRecords.RecordKey	Swift.Hashable		
+protocol	conformance PAKEServerRecords.RecordKey	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.SwiftTLSDefaultClock	SwiftTLSLibrary.SwiftTLSClock		
+protocol	conformance Extension.TicketRequest	Swift.Hashable		
+protocol	conformance Extension.TicketRequest	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ClientTicketRequest	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ClientTicketRequest	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.ClientTicketRequest	Swift.Equatable		
+protocol	conformance TicketRequest.ServerTicketRequestHint	Swift.Hashable		
+protocol	conformance TicketRequest.ServerTicketRequestHint	Swift.Equatable		
+protocol	conformance TicketRequest.ServerTicketRequestHint	Swift.CustomStringConvertible		
+protocol	conformance Extension.ApplicationLayerProtocolNegotiation	Swift.Hashable		
+protocol	conformance Extension.ApplicationLayerProtocolNegotiation	Swift.Equatable		
+protocol	conformance Extension.ServerName	Swift.Hashable		
+protocol	conformance Extension.ServerName	Swift.Equatable		
+protocol	conformance ServerName.Names	Swift.Hashable		
+protocol	conformance ServerName.Names	Swift.Equatable		
+protocol	conformance Extension.KeyShare	Swift.Hashable		
+protocol	conformance Extension.KeyShare	Swift.Equatable		
+protocol	conformance KeyShare.KeyShareEntry	Swift.Hashable		
+protocol	conformance KeyShare.KeyShareEntry	Swift.Equatable		
+protocol	conformance KeyShare.KeyShareEntry	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.CertificateMessage	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.CertificateMessage	Swift.Equatable		
+protocol	conformance CertificateMessage.CertificateEntry	Swift.Hashable		
+protocol	conformance CertificateMessage.CertificateEntry	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.CertificateMessage	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.ServerHello	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ServerHello	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ServerHello	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.EncryptedExtensions	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.EncryptedExtensions	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.EncryptedExtensions	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.ClientHello	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.ClientHello	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.ClientHello	SwiftTLSLibrary.HandshakeMessageProtocol		
+protocol	conformance SwiftTLSLibrary.GeneratedEphemeralPrivateKey	SwiftTLSLibrary.EphemeralPrivateKey		
+protocol	conformance SwiftTLSLibrary.Curve25519EphemeralKey	SwiftTLSLibrary.EphemeralPrivateKey		
+protocol	conformance SwiftTLSLibrary.P384EphemeralKey	SwiftTLSLibrary.EphemeralPrivateKey		
+protocol	conformance SwiftTLSLibrary.X25519MLKEM768EphemeralKey	SwiftTLSLibrary.EphemeralPrivateKey		
+protocol	conformance SwiftTLSLibrary.HandshakeType	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.HandshakeType	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.HandshakeType	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.HandshakeType	Swift.CustomStringConvertible		
+protocol	conformance SwiftTLSLibrary.NamedGroup	Swift.RawRepresentable		
+protocol	conformance SwiftTLSLibrary.NamedGroup	Swift.Hashable		
+protocol	conformance SwiftTLSLibrary.NamedGroup	Swift.Equatable		
+protocol	conformance SwiftTLSLibrary.NamedGroup	Swift.CustomStringConvertible		
+extension	SwiftTLSLibrary.PAKEScheme	RawRepresentable		
+extension	SwiftTLSLibrary.SignatureScheme	RawRepresentable		
+extension	SwiftTLSLibrary.CertificateType	RawRepresentable		
+extension	SwiftTLSLibrary.ExtensionType	RawRepresentable		
+extension	SwiftTLSLibrary.Extension.PreSharedKeyKexModes.Mode	RawRepresentable		
+extension	SwiftTLSLibrary.knownTLSAlert	RawRepresentable		
+extension	SwiftTLSLibrary.ContentType	RawRepresentable		
+extension	SwiftTLSLibrary.CipherSuite	RawRepresentable		
+extension	SwiftTLSLibrary.HandshakeType	RawRepresentable		
+extension	SwiftTLSLibrary.NamedGroup	RawRepresentable		

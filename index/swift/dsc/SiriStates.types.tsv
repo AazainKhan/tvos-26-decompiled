@@ -1,0 +1,116 @@
+kind	type	conformance	member_kind	member
+class	SiriStates.SharedClient	NSObject		
+class	SiriStates.SharedClient	NSObject	var	delegate
+class	SiriStates.SharedClient	NSObject	var	_currentState
+class	SiriStates.SharedClient	NSObject	var	_mostRecentEvent
+class	SiriStates.SharedClient	NSObject	var	stopped
+enum	SiriStates.SharedEvent			
+class	SiriStates.CallState	NSObject		
+class	SiriStates.CallState	NSObject	let	name
+class	SiriStates.CallState	NSObject	var	parent
+class	SiriStates.CallState	NSObject	let	eventHandler
+class	SiriStates.CallStateProxy	NSObject		
+class	SiriStates.CallStateProxy	NSObject	let	state
+class	SiriStates.State	NSObject		
+class	SiriStates.State	NSObject	let	name
+class	SiriStates.State	NSObject	var	parent
+class	SiriStates.State	NSObject	let	eventHandler
+class	SiriStates.StateProxy	NSObject		
+class	SiriStates.StateProxy	NSObject	let	state
+class	SiriStates.SharedState	NSObject		
+class	SiriStates.SharedState	NSObject	let	name
+class	SiriStates.SharedState	NSObject	var	parent
+class	SiriStates.SharedState	NSObject	let	eventHandler
+class	SiriStates.SharedStateProxy	NSObject		
+class	SiriStates.SharedStateProxy	NSObject	let	state
+class	SiriStates.CallServer	NSObject		
+class	SiriStates.CallServer	NSObject	let	stateMachine
+class	SiriStates.CallServer	NSObject	var	stateMachineObserver
+class	SiriStates.Server	NSObject		
+class	SiriStates.Server	NSObject	let	stateMachine
+class	SiriStates.Server	NSObject	var	stateMachineObserver
+class	SiriStates.SharedServer	NSObject		
+class	SiriStates.SharedServer	NSObject	let	stateMachine
+class	SiriStates.SharedServer	NSObject	var	stateMachineObserver
+class	SiriStates.Client	NSObject		
+class	SiriStates.Client	NSObject	var	delegate
+class	SiriStates.Client	NSObject	var	_currentState
+class	SiriStates.Client	NSObject	var	_mostRecentEvent
+class	SiriStates.Client	NSObject	var	stopped
+enum	SiriStates.EventHandlerResult<A	SiriStates.StateProtocol>		
+enum	SiriStates.EventHandlerResult<A	SiriStates.StateProtocol>	case	updatedState
+enum	SiriStates.EventHandlerResult<A	SiriStates.StateProtocol>	case	unhandled
+enum	SiriStates.EventHandlerResult<A	SiriStates.StateProtocol>	case	noStateChange
+class	SiriStates.StateMachine<A	SiriStates.StateProtocol>		
+class	SiriStates.StateMachine<A	SiriStates.StateProtocol>	let	states
+class	SiriStates.StateMachine<A	SiriStates.StateProtocol>	let	backingStateMachine
+class	SiriStates.StateMachine<A	SiriStates.StateProtocol>	var	_currentState
+class	SiriStates.StateMachine<A	SiriStates.StateProtocol>	var	stateMapping
+class	SiriStates.StateMachine<A	SiriStates.StateProtocol>	let	instrumentationManager
+class	SiriStates.NotificationCenterHelper			
+enum	SiriStates.CallEvent			
+class	SiriStates.CallClient	NSObject		
+class	SiriStates.CallClient	NSObject	var	delegate
+class	SiriStates.CallClient	NSObject	var	_currentState
+class	SiriStates.CallClient	NSObject	var	_mostRecentEvent
+class	SiriStates.CallClient	NSObject	var	stopped
+class	SiriStates.InstrumentationManager			
+class	SiriStates.InstrumentationManager		var	currentSessionIdentifier
+class	SiriStates.InstrumentationManager		var	queue
+class	SiriStates.InstrumentationManager		let	sruifUserDefaults
+class	SiriStates.InstrumentationManager		let	stream
+enum	SiriStates.Event			
+enum	SiriStates.Clientele			
+protocol	SiriStates.EventProtocol			
+protocol	SiriStates.ClientProtocol	StateType, DelegateType		
+protocol	SiriStates.StateProtocol	EventType, ProxyType		
+protocol	SiriStates.ProxyProtocol	StateType		
+protocol	SiriStates.StateMachineEvent			
+protocol	conformance SiriStates.SharedClient	SiriStates.ClientProtocol		
+protocol	conformance SiriStates.SharedEvent	Swift.Equatable		
+protocol	conformance SiriStates.SharedEvent	Swift.Hashable		
+protocol	conformance SiriStates.SharedEvent	Swift.RawRepresentable		
+protocol	conformance SiriStates.SharedEvent	SiriStates.StateMachineEvent		
+protocol	conformance SiriStates.SharedEvent	Swift.CaseIterable		
+protocol	conformance SiriStates.CallEvent	SiriStates.EventProtocol		
+protocol	conformance SiriStates.Event	SiriStates.EventProtocol		
+protocol	conformance SiriStates.SharedEvent	SiriStates.EventProtocol		
+protocol	conformance SiriStates.CallStateProxy	Swift.Decodable		
+protocol	conformance SiriStates.CallStateProxy	Swift.Encodable		
+protocol	conformance SiriStates.CallStateProxy	SiriStates.ProxyProtocol		
+protocol	conformance SiriStates.CallState	SiriStates.StateProtocol		
+protocol	conformance SiriStates.StateProxy	Swift.Decodable		
+protocol	conformance SiriStates.StateProxy	Swift.Encodable		
+protocol	conformance SiriStates.StateProxy	SiriStates.ProxyProtocol		
+protocol	conformance SiriStates.State	SiriStates.StateProtocol		
+protocol	conformance SiriStates.SharedStateProxy	Swift.Decodable		
+protocol	conformance SiriStates.SharedStateProxy	Swift.Encodable		
+protocol	conformance SiriStates.SharedStateProxy	SiriStates.ProxyProtocol		
+protocol	conformance SiriStates.SharedState	SiriStates.StateProtocol		
+protocol	conformance SiriStates.Client	SiriStates.ClientProtocol		
+protocol	conformance SiriStates.CallEvent	Swift.Equatable		
+protocol	conformance SiriStates.CallEvent	Swift.Hashable		
+protocol	conformance SiriStates.CallEvent	Swift.RawRepresentable		
+protocol	conformance SiriStates.CallEvent	SiriStates.StateMachineEvent		
+protocol	conformance SiriStates.CallEvent	Swift.CaseIterable		
+protocol	conformance SiriStates.CallClient	SiriStates.ClientProtocol		
+protocol	conformance SiriStates.Event	Swift.Equatable		
+protocol	conformance SiriStates.Event	Swift.Hashable		
+protocol	conformance SiriStates.Event	Swift.RawRepresentable		
+protocol	conformance SiriStates.Event	SiriStates.StateMachineEvent		
+protocol	conformance SiriStates.Event	Swift.CaseIterable		
+extension	SiriStates.SharedClient	ClientProtocol		
+extension	SiriStates.SharedEvent	RawRepresentable		
+extension	SiriStates.SharedEvent	CaseIterable		
+extension	SiriStates.CallStateProxy	ProxyProtocol		
+extension	SiriStates.CallState	StateProtocol		
+extension	SiriStates.StateProxy	ProxyProtocol		
+extension	SiriStates.State	StateProtocol		
+extension	SiriStates.SharedStateProxy	ProxyProtocol		
+extension	SiriStates.SharedState	StateProtocol		
+extension	SiriStates.Client	ClientProtocol		
+extension	SiriStates.CallEvent	RawRepresentable		
+extension	SiriStates.CallEvent	CaseIterable		
+extension	SiriStates.CallClient	ClientProtocol		
+extension	SiriStates.Event	RawRepresentable		
+extension	SiriStates.Event	CaseIterable		

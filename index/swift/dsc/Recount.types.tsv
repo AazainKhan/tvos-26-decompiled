@@ -1,0 +1,1232 @@
+kind	type	conformance	member_kind	member
+struct	Recount.CounterUpdate			
+struct	Recount.CounterUpdate		let	process
+struct	Recount.CounterUpdate		let	thread
+struct	Recount.CounterUpdate		let	isIdle
+struct	Recount.CounterUpdate		let	cpu
+struct	Recount.CounterUpdate		var	nanoseconds
+struct	Recount.CounterUpdate		var	values
+struct	Recount.CounterUpdate		var	contextSwitches
+class	Recount.CPUState			
+class	Recount.CPUState		var	state
+class	Recount.CPUState		var	counters
+class	Recount.CPUState		var	currentCounter
+class	Recount.CPUState		var	idleThreadID
+class	Recount.CPUState		var	updates
+enum	Recount.CPUState.State			
+enum	Recount.CPUState.State		case	running
+enum	Recount.CPUState.State		case	switching
+enum	Recount.CPUState.State		case	idle
+struct	Recount.CPUState.State.Snapshot			
+struct	Recount.CPUState.State.Snapshot		let	timestamp
+struct	Recount.CPUState.State.Snapshot		let	threadID
+struct	Recount.CPUState.State.Snapshot		let	processID
+struct	Recount.CPUState.State.Snapshot		let	counters
+struct	Recount.CPUState.State.Target			
+struct	Recount.CPUState.State.Target		let	processID
+struct	Recount.CPUState.CounterDelta			
+struct	Recount.CPUState.CounterDelta		let	timeStart
+struct	Recount.CPUState.CounterDelta		let	timeEnd
+struct	Recount.CPUState.CounterDelta		let	threadID
+struct	Recount.CPUState.CounterDelta		let	processID
+struct	Recount.CPUState.CounterDelta		let	counters
+struct	Recount.CPUTopology			
+struct	Recount.CPUTopology		let	cpuKinds
+struct	Recount.CPUTopology		let	cpuKindCount
+enum	Recount.CPUTopologyError			
+enum	Recount.CPUTopologyError		case	sysctlFailed
+enum	Recount.CPUTopologyError		case	ioKitCall
+enum	Recount.CPUTopologyError		case	missingIOKitProperty
+enum	Recount.CPUTopologyError		case	ioKitPropertyTypeMismatch
+enum	Recount.CPUTopologyError		case	missingCPUKinds
+class	Recount.TraceAnalysis			
+class	Recount.TraceAnalysis		let	cpus
+class	Recount.TraceAnalysis		let	targets
+class	Recount.TraceAnalysis		let	verbose
+class	Recount.TraceAnalysis		let	counterUpdates
+class	Recount.TraceAnalysis		let	continuation
+class	Recount.TraceAnalysis		let	warnings
+class	Recount.TraceAnalysis		let	warningContinuation
+class	Recount.TraceAnalysis		var	cpuTime
+enum	Recount.TraceAnalysis.Target			
+enum	Recount.TraceAnalysis.Target		case	process
+struct	Recount.TraceEvent			
+struct	Recount.TraceEvent		let	timestamp
+struct	Recount.TraceEvent		let	threadID
+struct	Recount.TraceEvent		let	processID
+struct	Recount.TraceEvent		let	cpu
+struct	Recount.TraceEvent		let	kind
+enum	Recount.TraceEvent.Kind			
+enum	Recount.TraceEvent.Kind		case	switchThread
+enum	Recount.TraceEvent.Kind		case	kpcData
+enum	Recount.TraceEvent.Kind		case	dispatch
+enum	Recount.TraceEvent.Kind		case	idle
+struct	Recount.TraceWarning			
+struct	Recount.TraceWarning		let	timestamp
+struct	Recount.TraceWarning		let	processID
+struct	Recount.TraceWarning		let	threadID
+struct	Recount.TraceWarning		let	cpu
+struct	Recount.TraceWarning		let	message
+enum	Recount.CountingModeError			
+enum	Recount.CountingModeError		case	format
+enum	Recount.CountingModeError		case	decode
+enum	Recount.CountingModeError		case	unsupported
+class	Recount.CountingMode			
+class	Recount.CountingMode		let	id
+class	Recount.CountingMode		let	name
+class	Recount.CountingMode		let	displayName
+class	Recount.CountingMode		let	synopsis
+class	Recount.CountingMode		let	documentation
+class	Recount.CountingMode		let	metrics
+class	Recount.CountingMode		let	triggers
+class	Recount.CountingMode		let	settings
+class	Recount.CountingMode		let	displays
+class	Recount.CountingMode		let	expressions
+class	Recount.CountingMode		let	thresholds
+class	Recount.CountingMode		let	constants
+class	Recount.CountingMode		let	evaluator
+class	Recount.CountingMode		let	counterTriggers
+class	Recount.CountingMode		let	spec
+class	Recount.CountingMode		let	platform
+enum	Recount.CountingMode.CodingKeys			
+enum	Recount.CountingMode.CodingKeys		case	spec
+enum	Recount.CountingMode.CodingKeys		case	platform
+enum	Recount.CountingMode.Display			
+enum	Recount.CountingMode.Display		case	normalizedArea
+enum	Recount.CountingMode.Display		case	bar
+struct	Recount.CountingMode.Display.NormalizedArea			
+struct	Recount.CountingMode.Display.NormalizedArea		let	elements
+struct	Recount.CountingMode.Display.NormalizedArea		let	denominator
+struct	Recount.CountingMode.Display.NormalizedArea.Element			
+struct	Recount.CountingMode.Display.NormalizedArea.Element		let	metric
+struct	Recount.CountingMode.Display.NormalizedArea.Element		let	metricIndex
+struct	Recount.CountingMode.Display.NormalizedArea.Element		let	color
+struct	Recount.CountingMode.Display.Bar			
+struct	Recount.CountingMode.Display.Bar		let	metric
+struct	Recount.CountingMode.Display.Bar		let	metricIndex
+struct	Recount.CountingMode.Display.Bar		let	color
+struct	Recount.CountingMode.Display.Bar		let	suggestedMaximum
+struct	Recount.CountingMode.Evaluation			
+struct	Recount.CountingMode.Evaluation		let	metricValues
+struct	Recount.CountingMode.Evaluation		let	violations
+struct	Recount.CountingMode.Evaluation		let	remarks
+struct	Recount.CountingMode.Evaluation		let	isValid
+class	Recount.CountingMode.Metric			
+class	Recount.CountingMode.Metric		let	id
+class	Recount.CountingMode.Metric		let	name
+class	Recount.CountingMode.Metric		let	displayName
+class	Recount.CountingMode.Metric		let	shortDisplayName
+class	Recount.CountingMode.Metric		let	synopsis
+class	Recount.CountingMode.Metric		let	documentation
+class	Recount.CountingMode.Metric		let	commentary
+class	Recount.CountingMode.Metric		let	expression
+class	Recount.CountingMode.Metric		let	aggregation
+class	Recount.CountingMode.Metric		let	isInternal
+enum	Recount.CountingMode.Metric.Aggregation			
+enum	Recount.CountingMode.Metric.Aggregation		case	sum
+enum	Recount.CountingMode.Metric.Aggregation		case	timeWeightedAverage
+enum	Recount.CountingMode.Metric.Aggregation.CodingKeys			
+enum	Recount.CountingMode.Metric.Aggregation.CodingKeys		case	sum
+enum	Recount.CountingMode.Metric.Aggregation.CodingKeys		case	timeWeightedAverage
+enum	Recount.CountingMode.Metric.Aggregation.SumCodingKeys			
+enum	Recount.CountingMode.Metric.Aggregation.TimeWeightedAverageCodingKeys			
+enum	Recount.CountingMode.Metric.CodingKeys			
+enum	Recount.CountingMode.Metric.CodingKeys		case	id
+enum	Recount.CountingMode.Metric.CodingKeys		case	name
+enum	Recount.CountingMode.Metric.CodingKeys		case	displayName
+enum	Recount.CountingMode.Metric.CodingKeys		case	shortDisplayName
+enum	Recount.CountingMode.Metric.CodingKeys		case	synopsis
+enum	Recount.CountingMode.Metric.CodingKeys		case	documentation
+enum	Recount.CountingMode.Metric.CodingKeys		case	commentary
+enum	Recount.CountingMode.Metric.CodingKeys		case	expression
+enum	Recount.CountingMode.Metric.CodingKeys		case	aggregation
+enum	Recount.CountingMode.Metric.CodingKeys		case	isInternal
+struct	Recount.CountingMode.Remark			
+struct	Recount.CountingMode.Remark		let	threshold
+struct	Recount.CountingMode.Remark		let	severity
+enum	Recount.CountingMode.Remark.Severity			
+enum	Recount.CountingMode.Remark.Severity		case	low
+enum	Recount.CountingMode.Remark.Severity		case	medium
+enum	Recount.CountingMode.Remark.Severity		case	high
+struct	Recount.CountingMode.Settings			
+struct	Recount.CountingMode.Settings		let	namesToCounters
+struct	Recount.CountingMode.Settings		let	pmuInfo
+struct	Recount.CountingMode.Settings		let	eventSettings
+struct	Recount.CountingMode.Settings		let	periods
+struct	Recount.EventSetting			
+struct	Recount.EventSetting		let	name
+struct	Recount.EventSetting		let	counter
+struct	Recount.EventSetting		let	selector
+struct	Recount.EventSetting		let	isInternal
+enum	Recount.CountingMode.Settings.CodingKeys			
+enum	Recount.CountingMode.Settings.CodingKeys		case	namesToCounters
+enum	Recount.CountingMode.Settings.CodingKeys		case	pmuInfo
+enum	Recount.CountingMode.Settings.CodingKeys		case	eventSettings
+enum	Recount.CountingMode.Settings.CodingKeys		case	periods
+enum	Recount.CountingMode.Settings.EventError			
+enum	Recount.CountingMode.Settings.EventError		case	unknownEvent
+enum	Recount.EventSetting.CodingKeys			
+enum	Recount.EventSetting.CodingKeys		case	name
+enum	Recount.EventSetting.CodingKeys		case	counter
+enum	Recount.EventSetting.CodingKeys		case	selector
+enum	Recount.EventSetting.CodingKeys		case	isInternal
+class	Recount.CountingMode.Threshold			
+class	Recount.CountingMode.Threshold		let	name
+class	Recount.CountingMode.Threshold		let	synopsis
+class	Recount.CountingMode.Threshold		let	documentation
+class	Recount.CountingMode.Threshold		let	nextCountingModeID
+class	Recount.CountingMode.Threshold		let	nextCountingModeName
+class	Recount.CountingMode.Threshold		let	nextCountingMode
+class	Recount.CountingMode.Threshold		let	expression
+class	Recount.CountingMode.Threshold		let	thresholds
+class	Recount.CountingMode.Trigger			
+class	Recount.CountingMode.Trigger		let	metric
+struct	Recount.CountingMode.Violation			
+struct	Recount.CountingMode.Violation		let	threshold
+struct	Recount.CountingMode.Violation		let	severity
+enum	Recount.CountingMode.Violation.Severity			
+enum	Recount.CountingMode.Violation.Severity		case	low
+enum	Recount.CountingMode.Violation.Severity		case	medium
+enum	Recount.CountingMode.Violation.Severity		case	high
+enum	Recount.CPUKind			
+enum	Recount.CPUKind		case	standard
+enum	Recount.CPUKind		case	efficiency
+enum	Recount.CPUKind		case	performance
+enum	Recount.CPUKind		case	m
+enum	Recount.CPUKind.CodingKeys			
+enum	Recount.CPUKind.CodingKeys		case	standard
+enum	Recount.CPUKind.CodingKeys		case	efficiency
+enum	Recount.CPUKind.CodingKeys		case	performance
+enum	Recount.CPUKind.CodingKeys		case	m
+enum	Recount.CPUKind.StandardCodingKeys			
+enum	Recount.CPUKind.EfficiencyCodingKeys			
+enum	Recount.CPUKind.PerformanceCodingKeys			
+enum	Recount.CPUKind.MCodingKeys			
+class	Recount.ExpressionNode			
+class	Recount.ExpressionNode		let	expression
+class	Recount.ExpressionNode		let	index
+class	Recount.ExpressionNode		var	dependsOn
+class	Recount.ExpressionNode		var	isMarked
+class	Recount.Evaluator			
+class	Recount.Evaluator		let	expressions
+class	Recount.Evaluator		let	constantsByCPUKind
+class	Recount.Evaluator		let	inputCount
+class	Recount.Evaluator		let	resultOrder
+class	Recount.Evaluator		let	resultCount
+class	Recount.Evaluator		let	limits
+class	Recount.Evaluator		let	markedResults
+struct	Recount.Evaluator.Limit			
+struct	Recount.Evaluator.Limit		let	expressionIndex
+struct	Recount.Evaluator.Limit		let	resultIndex
+struct	Recount.Evaluator.Limit		let	value
+struct	Recount.Evaluator.Limit		let	threshold
+struct	Recount.NamedExpression			
+struct	Recount.NamedExpression		let	name
+struct	Recount.NamedExpression		let	expression
+enum	Recount.VisitState			
+enum	Recount.VisitState		case	unvisited
+enum	Recount.VisitState		case	beingVisited
+enum	Recount.VisitState		case	visited
+enum	Recount.EvaluatorError			
+enum	Recount.EvaluatorError		case	cyclicDependency
+enum	Recount.EvaluatorError		case	duplicateExpression
+enum	Recount.EvaluatorError		case	nameOverlap
+enum	Recount.EvaluatorError		case	unknownExpression
+enum	Recount.EvaluatorError		case	thresholdExpression
+enum	Recount.EvaluatorError		case	missingThreshold
+enum	Recount.EvaluatorError		case	nonMetricThreshold
+enum	Recount.NamedExpression.CodingKeys			
+enum	Recount.NamedExpression.CodingKeys		case	name
+enum	Recount.NamedExpression.CodingKeys		case	expression
+class	Recount.EventDictionary			
+class	Recount.EventDictionary		let	namesToEvents
+class	Recount.EventDictionary		let	data
+struct	Recount.Event			
+struct	Recount.Event		var	name
+struct	Recount.Event		let	selector
+struct	Recount.Event		var	counterMask
+struct	Recount.Event		var	samplingCounterMask
+struct	Recount.Event		var	isInternal
+enum	Recount.KPEPError			
+enum	Recount.KPEPError		case	database
+enum	Recount.EventStoreError			
+enum	Recount.EventStoreError		case	noStore
+enum	Recount.Event.CodingKeys			
+enum	Recount.Event.CodingKeys		case	name
+enum	Recount.Event.CodingKeys		case	selector
+enum	Recount.Event.CodingKeys		case	counterMask
+enum	Recount.Event.CodingKeys		case	samplingCounterMask
+enum	Recount.Event.CodingKeys		case	isInternal
+enum	Recount.EventDictionary.CodingKeys			
+enum	Recount.EventDictionary.CodingKeys		case	namesToEvents
+enum	Recount.EventDictionary.CodingKeys		case	data
+enum	Recount.EventSource			
+enum	Recount.EventSource		case	kpep
+struct	Recount.Expression			
+struct	Recount.Expression		var	operations
+struct	Recount.Expression		let	variables
+struct	Recount.Expression		let	source
+enum	Recount.Expression.EvaluationError			
+enum	Recount.Expression.EvaluationError		case	unboundVariable
+enum	Recount.Expression.EvaluationError		case	bindingsLength
+enum	Recount.Operator			
+enum	Recount.Operator		case	function
+enum	Recount.Operator		case	leftParen
+enum	Recount.Operator		case	leftParenNegated
+enum	Recount.Operator		case	add
+enum	Recount.Operator		case	subtract
+enum	Recount.Operator		case	multiply
+enum	Recount.Operator		case	divide
+enum	Recount.Expression.ParseError			
+enum	Recount.Expression.ParseError		case	unbalancedRightParen
+enum	Recount.Expression.ParseError		case	unbalancedLeftParen
+enum	Recount.Expression.ParseError		case	unbalancedOperator
+enum	Recount.Expression.ParseError		case	invalidCharacters
+enum	Recount.Expression.ParseError		case	extraOperand
+enum	Recount.Expression.ParseError		case	unknownFunction
+enum	Recount.Expression.ParseError		case	strayComma
+enum	Recount.Expression.ParseError		case	functionArity
+enum	Recount.Expression.ParseError		case	extraElements
+enum	Recount.Operation			
+enum	Recount.Operation		case	constant
+enum	Recount.Operation		case	unboundVariable
+enum	Recount.Operation		case	variable
+enum	Recount.Operation		case	operate
+enum	Recount.Function			
+enum	Recount.Function		case	min
+enum	Recount.Function		case	max
+enum	Recount.Function		case	floor
+enum	Recount.Function		case	ceil
+enum	Recount.Function		case	round
+enum	Recount.Function		case	trunc
+class	Recount.KPCSet			
+class	Recount.KPCSet		let	classes
+class	Recount.KPCSet		let	configs
+class	Recount.KPCSet		let	samplers
+class	Recount.KPCSet		let	periods
+class	Recount.KPCSet		let	actions
+class	Recount.KPCConfiguration			
+class	Recount.KPCConfiguration		var	activeSet
+class	Recount.KPCConfiguration		let	sets
+class	Recount.KPCConfiguration		let	timer
+class	Recount.KPCConfiguration		let	period
+class	Recount.KPCConfiguration		let	cancelSync
+class	Recount.KPCConfiguration		var	timerError
+struct	Recount.KPCError			
+struct	Recount.KPCError		let	error
+struct	Recount.KPCError		let	operation
+struct	Recount.KPerfTimer			
+struct	Recount.KPerfTimer		let	timerID
+struct	Recount.KPerfTimer		let	actionID
+enum	Recount.KPerfTimer.Err			
+enum	Recount.KPerfTimer.Err		case	invalidPeriod
+struct	Recount.KPerfError			
+struct	Recount.KPerfError		let	error
+struct	Recount.KPerfError		let	operation
+enum	Recount.PlacementError			
+enum	Recount.PlacementError		case	noPlacesLeft
+class	Recount.Platform			
+class	Recount.Platform		let	silicon
+class	Recount.Platform		let	events
+class	Recount.Platform		let	namedExpressions
+class	Recount.Platform		let	expressions
+class	Recount.Platform		let	periods
+class	Recount.Platform		let	constants
+class	Recount.Platform		let	supportedCountingModes
+enum	Recount.Platform.CodingKeys			
+enum	Recount.Platform.CodingKeys		case	silicon
+enum	Recount.Platform.CodingKeys		case	events
+enum	Recount.Platform.CodingKeys		case	namedExpressions
+enum	Recount.Platform.CodingKeys		case	expressions
+enum	Recount.Platform.CodingKeys		case	periods
+enum	Recount.Platform.CodingKeys		case	constants
+enum	Recount.Platform.CodingKeys		case	supportedCountingModes
+struct	Recount.PMUInfo			
+struct	Recount.PMUInfo		let	counterCount
+struct	Recount.PMUInfo		let	configurableCount
+struct	Recount.PMUInfo		let	configurableOffset
+enum	Recount.PMUInfo.CodingKeys			
+enum	Recount.PMUInfo.CodingKeys		case	counterCount
+enum	Recount.PMUInfo.CodingKeys		case	configurableCount
+enum	Recount.PMUInfo.CodingKeys		case	configurableOffset
+struct	Recount.RecountModeChunk			
+struct	Recount.RecountModeChunk		let	analysis
+struct	Recount.RecountModeChunk		let	modeName
+enum	Recount.RecountModeChunk.CodingKeys			
+enum	Recount.RecountModeChunk.CodingKeys		case	analysis
+enum	Recount.RecountModeChunk.CodingKeys		case	modeName
+class	Recount.AwimboPMC			
+class	Recount.AwimboPMC		let	kpcConfiguration
+class	Recount.AwimboPMC		let	configuration
+class	Recount.AwimboPMC		let	logger
+class	Recount.AwimboPMI			
+class	Recount.AwimboPMI		let	kpcConfiguration
+class	Recount.AwimboPMI		let	configuration
+class	Recount.AwimboPMI		var	errorDuring
+struct	Recount.AwimboConfiguration			
+struct	Recount.AwimboConfiguration		let	counterConfiguration
+struct	Recount.AwimboConfiguration		let	timerPeriod
+struct	Recount.AwimboConfiguration		let	sampleOnContextSwitch
+struct	Recount.AwimboConfiguration		let	sampleOnCounterPeriods
+struct	Recount.AwimboConfiguration		let	pmiSamples
+struct	Recount.AwimboConfiguration		let	configurableCounters
+struct	Recount.AwimboConfiguration		let	fixedCounters
+struct	Recount.AwimboConfiguration		let	storeData
+struct	Recount.AwimboConfiguration		let	pmiMultiplexing
+struct	Recount.AwimboEvent			
+struct	Recount.AwimboEvent		let	code
+struct	Recount.AwimboEvent		let	name
+struct	Recount.AwimboEvent		let	period
+struct	Recount.EventSampler			
+struct	Recount.EventSampler		let	event
+struct	Recount.EventSampler		let	period
+struct	Recount.EventSampler		let	action
+enum	Recount.AwimboPMIError			
+enum	Recount.AwimboPMIError		case	invalidFile
+enum	Recount.AwimboPMIError		case	noEvent
+enum	Recount.AwimboPMIError		case	unknownSampler
+enum	Recount.AwimboPMIError		case	noSettings
+enum	Recount.AwimboConfiguration.CodingKeys			
+enum	Recount.AwimboConfiguration.CodingKeys		case	timerSamples
+enum	Recount.AwimboConfiguration.CodingKeys		case	sampleOnContextSwitch
+enum	Recount.AwimboConfiguration.CodingKeys		case	counterConfiguration
+enum	Recount.AwimboConfiguration.CodingKeys		case	configurableCounters
+enum	Recount.AwimboConfiguration.CodingKeys		case	fixedCounters
+enum	Recount.AwimboConfiguration.CodingKeys		case	pmiSamples
+enum	Recount.AwimboConfiguration.CodingKeys		case	pmiMultiplexing
+enum	Recount.AwimboPMCError			
+enum	Recount.AwimboPMCError		case	invalidFile
+enum	Recount.AwimboPMCError		case	noEvent
+enum	Recount.AwimboPMCError		case	noMoreTimers
+enum	Recount.AwimboConfiguration.Err			
+enum	Recount.AwimboConfiguration.Err		case	appendFailed
+struct	Recount.AwimboInfo			
+struct	Recount.AwimboInfo		let	kpcConfig
+struct	Recount.AwimboPMIMultiplexing			
+struct	Recount.AwimboPMIMultiplexing		let	configurablePMIs
+struct	Recount.AwimboPMIMultiplexing		let	fixedPMIs
+struct	Recount.AwimboPMIMultiplexing		let	multiplexAllPeriodSeconds
+struct	Recount.AwimboPMIMultiplexing		let	multiplexPeriodSeconds
+enum	Recount.AwimboEvent.CodingKeys			
+enum	Recount.AwimboEvent.CodingKeys		case	code
+enum	Recount.AwimboEvent.CodingKeys		case	name
+enum	Recount.AwimboEvent.CodingKeys		case	period
+enum	Recount.AwimboPMIMultiplexing.CodingKeys			
+enum	Recount.AwimboPMIMultiplexing.CodingKeys		case	configurablePMIs
+enum	Recount.AwimboPMIMultiplexing.CodingKeys		case	fixedPMIs
+enum	Recount.AwimboPMIMultiplexing.CodingKeys		case	multiplexAllPeriodSeconds
+enum	Recount.AwimboPMIMultiplexing.CodingKeys		case	multiplexPeriodSeconds
+enum	Recount.AwimboInfo.CodingKeys			
+enum	Recount.AwimboInfo.CodingKeys		case	kpcConfig
+enum	Recount.AwimboPMCEvents			
+enum	Recount.AwimboPMCEvents		case	custom
+enum	Recount.AwimboPMCEvents		case	implicit
+enum	Recount.AwimboPMCEvents		case	paTrace
+struct	Recount.ProviderOptions			
+struct	Recount.ProviderOptions		let	mode
+enum	Recount.ProviderOptions.UsageError			
+enum	Recount.ProviderOptions.UsageError		case	invalidOption
+enum	Recount.ProviderOptions.UsageError		case	unknownMode
+enum	Recount.ProviderOptions.UsageError		case	unknownLevel
+enum	Recount.ProviderOptions.UsageError		case	incompatibleModes
+enum	Recount.ProviderOptions.UsageError		case	integerParsing
+enum	Recount.ProviderOptions.UsageError		case	noMode
+enum	Recount.AwimboPMCOptions.UsageError			
+enum	Recount.AwimboPMCOptions.UsageError		case	incompatibleEvents
+enum	Recount.AwimboPMCOptions.UsageError		case	noSampling
+struct	Recount.AwimboPMCOptions			
+struct	Recount.AwimboPMCOptions		var	events
+struct	Recount.AwimboPMCOptions		var	timerPeriod
+struct	Recount.AwimboPMCOptions		var	sampleOnContextSwitch
+struct	Recount.AwimboPMCOptions		var	sampleOnCounterPeriods
+struct	Recount.AwimboPMCOptions		var	level
+enum	Recount.ModeOption			
+enum	Recount.ModeOption		case	recount
+enum	Recount.ModeOption		case	awimboPMI
+enum	Recount.ModeOption		case	awimboPMC
+enum	Recount.ModeName			
+enum	Recount.ModeName		case	mode
+enum	Recount.ModeName		case	awimboPMI
+enum	Recount.ModeName		case	awimboPMC
+enum	Recount.ModeName		case	paTrace
+enum	Recount.ModeSelection			
+enum	Recount.ModeSelection		case	explicit
+enum	Recount.ModeSelection		case	implicit
+enum	Recount.ModeSelection		case	fallback
+struct	Recount.AwimboPMIOptions			
+struct	Recount.AwimboPMIOptions		let	path
+struct	Recount.AwimboPMIOptions		let	samplers
+struct	Recount.AwimboPMIOptions		let	level
+struct	Recount.LevelFilter			
+struct	Recount.LevelFilter		let	kernel
+struct	Recount.LevelFilter		let	user
+class	Recount.RecountMode			
+class	Recount.RecountMode		let	analysis
+class	Recount.RecountMode		let	mode
+class	Recount.RecountMode		let	kpcOptions
+class	Recount.RecountMode		let	analyzer
+enum	Recount.RecountModeError			
+enum	Recount.RecountModeError		case	chunkAppend
+class	Recount.TraceProvider			
+class	Recount.TraceProvider		let	mode
+enum	Recount.AsyncProcessError			
+enum	Recount.AsyncProcessError		case	commandFailed
+enum	Recount.AsyncProcessError		case	spawnPrepareFailed
+enum	Recount.AsyncProcessError		case	spawnFailed
+enum	Recount.AsyncProcessError		case	killFailed
+enum	Recount.AsyncProcessError		case	waitFailed
+enum	Recount.AsyncProcessError		case	pipeRead
+enum	Recount.ExitStatus			
+enum	Recount.ExitStatus		case	failure
+enum	Recount.ExitStatus		case	signalled
+enum	Recount.ExitStatus		case	success
+class	Recount.CStringArray			
+class	Recount.CStringArray		var	cArray
+class	Recount.ProcessOutput			
+class	Recount.ProcessOutput		let	fileActions
+class	Recount.ProcessOutput		let	outputPipe
+class	Recount.ProcessOutput		let	errorPipe
+class	Recount.ProcessOutput		let	outputWriteDescriptor
+class	Recount.ProcessOutput		let	errorWriteDescriptor
+class	Recount.AsyncProcess			
+class	Recount.AsyncProcess		let	command
+class	Recount.AsyncProcess		let	arguments
+class	Recount.AsyncProcess		let	environment
+class	Recount.AsyncProcess		let	startSuspended
+class	Recount.AsyncProcess		let	outputDisposition
+enum	Recount.AsyncProcess.Progress			
+enum	Recount.AsyncProcess.Progress		case	spawned
+enum	Recount.AsyncProcess.Progress		case	output
+enum	Recount.AsyncProcess.Progress		case	errorOutput
+enum	Recount.AsyncProcess.Progress		case	exit
+class	Recount.AsyncProcess.ActiveProcess			
+class	Recount.AsyncProcess.ActiveProcess		let	pid
+class	Recount.AsyncProcess.ActiveProcess		let	exitSource
+class	Recount.AsyncProcess.ActiveProcess		let	output
+class	Recount.AsyncProcess.ActiveProcess		let	errorOutput
+class	Recount.AsyncProcess.ActiveProcess		let	group
+class	Recount.AsyncProcess.ActiveProcess		let	queue
+class	Recount.AsyncProcess.ActiveProcess		let	stream
+class	Recount.AsyncProcess.ActiveProcess		let	continuation
+class	Recount.AsyncProcess.ActiveProcess		var	rusage
+class	Recount.AsyncProcess.ActiveProcess		var	exitStatus
+class	Recount.AsyncProcess.ActiveProcess		var	exitError
+enum	Recount.AsyncProcess.OutputDisposition			
+enum	Recount.AsyncProcess.OutputDisposition		case	file
+enum	Recount.AsyncProcess.OutputDisposition		case	null
+enum	Recount.AsyncProcess.OutputDisposition		case	echo
+struct	Recount.CommandMeasurement			
+struct	Recount.CommandMeasurement		let	wallTimeNanoseconds
+struct	Recount.CommandMeasurement		let	waitTimeNanoseconds
+struct	Recount.CommandMeasurement		let	footprintBytes
+struct	Recount.CommandMeasurement		let	peakFootprintBytes
+struct	Recount.CommandMeasurement		let	logicalWritesBytes
+struct	Recount.CommandMeasurement		let	counters
+struct	Recount.CommandMeasurement		let	countersByKind
+struct	Recount.CPUCounters			
+struct	Recount.CPUCounters		let	systemTimeNanoseconds
+struct	Recount.CPUCounters		let	userTimeNanoseconds
+struct	Recount.CPUCounters		let	instructions
+struct	Recount.CPUCounters		let	cycles
+struct	Recount.MeasurementSummary			
+struct	Recount.MeasurementSummary		let	wallTimeNanoseconds
+struct	Recount.MeasurementSummary		let	userTimeNanoseconds
+struct	Recount.MeasurementSummary		let	systemTimeNanoseconds
+struct	Recount.MeasurementSummary		let	cpuTimeNanoseconds
+struct	Recount.MeasurementSummary		let	waitRunRatio
+struct	Recount.MeasurementSummary		let	instructions
+struct	Recount.MeasurementSummary		let	cycles
+struct	Recount.MeasurementSummary		let	peakFootprintBytes
+struct	Recount.SyscallFailure			
+struct	Recount.SyscallFailure		let	syscall
+struct	Recount.SyscallFailure		let	error
+struct	Recount.Statistics			
+struct	Recount.Statistics		let	arithmeticMean
+struct	Recount.Statistics		let	standardDeviation
+struct	Recount.Statistics		let	min
+struct	Recount.Statistics		let	max
+struct	Recount.Statistics		let	count
+struct	Recount.Statistics		let	outliers
+struct	Recount.Statistics		let	unit
+struct	Recount.Statistics		let	unitScale
+struct	Recount.Statistics		let	centralTendency
+struct	Recount.Statistics		let	scale
+struct	Recount.Statistics		let	dispersion
+struct	Recount.Statistics		let	range
+struct	Recount.Unit			
+struct	Recount.Unit		let	name
+struct	Recount.Unit		let	prefix
+struct	Recount.Unit		let	includeName
+enum	Recount.Unit.Prefix			
+enum	Recount.Unit.Prefix		case	english
+enum	Recount.Unit.Prefix		case	si
+enum	Recount.Unit.Prefix		case	siBinary
+enum	Recount.CounterAnalysisError			
+enum	Recount.CounterAnalysisError		case	notFound
+enum	Recount.CounterAnalysisError		case	expressionFailure
+enum	Recount.CounterAnalysisError		case	unsupported
+class	Recount.CounterAnalysis			
+class	Recount.CounterAnalysis		let	id
+class	Recount.CounterAnalysis		let	name
+class	Recount.CounterAnalysis		let	displayName
+class	Recount.CounterAnalysis		let	initialModeID
+class	Recount.CounterAnalysis		let	initialModeName
+class	Recount.CounterAnalysis		let	modeOutline
+class	Recount.CounterAnalysis		let	specification
+class	Recount.CounterAnalysis		let	platform
+enum	Recount.CounterAnalysis.CodingKeys			
+enum	Recount.CounterAnalysis.CodingKeys		case	specification
+enum	Recount.CounterAnalysis.CodingKeys		case	silicon
+enum	Recount.CounterAnalysis.CodingKeys		case	eventDictionary
+struct	Recount.CounterSample			
+struct	Recount.CounterSample		let	time
+struct	Recount.CounterSample		let	cpuKind
+struct	Recount.CounterSample		let	counterValues
+struct	Recount.KPCSettings			
+struct	Recount.KPCSettings		let	classMask
+struct	Recount.KPCSettings		let	config
+struct	Recount.KPCSettings		let	periods
+struct	Recount.KPCSettings.ApplyOptions			
+struct	Recount.KPCSettings.ApplyOptions		let	rawValue
+struct	Recount.ModeLine			
+struct	Recount.ModeLine		let	name
+struct	Recount.ModeLine		let	displayName
+struct	Recount.ModeLine		let	synopsis
+struct	Recount.ModeLine		let	documentation
+struct	Recount.ModeLine		let	level
+struct	Recount.ModeLine		let	hasTriggers
+struct	Recount.ModeLine		let	isLeaf
+struct	Recount.ModeLine		let	isLast
+struct	Recount.ModeLine		let	fromThresholdDisplayName
+struct	Recount.Silicon			
+struct	Recount.Silicon		let	marketingName
+struct	Recount.Silicon		let	platform
+struct	Recount.Silicon		let	cpuTriplet
+struct	Recount.Silicon		let	cpmu
+struct	Recount.Silicon		let	constants
+struct	Recount.Silicon.CPUTriplet			
+struct	Recount.Silicon.CPUTriplet		let	type
+struct	Recount.Silicon.CPUTriplet		let	subtype
+struct	Recount.Silicon.CPUTriplet		let	family
+enum	Recount.Silicon.CodingKeys			
+enum	Recount.Silicon.CodingKeys		case	marketingName
+enum	Recount.Silicon.CodingKeys		case	platform
+enum	Recount.Silicon.CodingKeys		case	cpuTriplet
+enum	Recount.Silicon.CodingKeys		case	cpmu
+enum	Recount.Silicon.CodingKeys		case	constants
+enum	Recount.Silicon.CPUTriplet.CodingKeys			
+enum	Recount.Silicon.CPUTriplet.CodingKeys		case	type
+enum	Recount.Silicon.CPUTriplet.CodingKeys		case	subtype
+enum	Recount.Silicon.CPUTriplet.CodingKeys		case	family
+enum	Recount.Silicon.CurrentSiliconError			
+enum	Recount.Silicon.CurrentSiliconError		case	noValue
+enum	Recount.Silicon.CurrentSiliconError		case	syscall
+enum	Recount.Color			
+enum	Recount.Color		case	primary
+enum	Recount.Color		case	red
+enum	Recount.Color		case	orange
+enum	Recount.Color		case	green
+enum	Recount.Color		case	blue
+enum	Recount.Color		case	yellow
+enum	Recount.Color		case	purple
+struct	Recount.KPEPPropertyList			
+struct	Recount.KPEPPropertyList		let	name
+struct	Recount.KPEPPropertyList		let	isInternal
+struct	Recount.KPEPPropertyList		let	system
+struct	Recount.KPEPPropertyList		let	version
+struct	Recount.KPEPPropertyList.KPEPEvent			
+struct	Recount.KPEPPropertyList.KPEPEvent		let	number
+struct	Recount.KPEPPropertyList.KPEPEvent		let	description
+struct	Recount.KPEPPropertyList.KPEPEvent		let	countersMask
+struct	Recount.KPEPPropertyList.KPEPEvent		let	pcCaptureCountersMask
+struct	Recount.KPEPPropertyList.KPEPEvent		let	fallback
+struct	Recount.KPEPPropertyList.KPEPEvent		let	fixedCounter
+enum	Recount.KPEPPropertyList.CodingKeys			
+enum	Recount.KPEPPropertyList.CodingKeys		case	name
+enum	Recount.KPEPPropertyList.CodingKeys		case	isInternal
+enum	Recount.KPEPPropertyList.CodingKeys		case	system
+enum	Recount.KPEPPropertyList.CodingKeys		case	version
+struct	Recount.KPEPPropertyList.SystemList			
+struct	Recount.KPEPPropertyList.SystemList		let	cpu
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys			
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys		case	number
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys		case	description
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys		case	countersMask
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys		case	pcCaptureCountersMask
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys		case	fallback
+enum	Recount.KPEPPropertyList.KPEPEvent.CodingKeys		case	fixedCounter
+enum	Recount.KPEPPropertyList.SystemList.CodingKeys			
+enum	Recount.KPEPPropertyList.SystemList.CodingKeys		case	cpu
+struct	Recount.KPEPPropertyList.System			
+struct	Recount.KPEPPropertyList.System		let	fixedCounters
+struct	Recount.KPEPPropertyList.System		let	configCounters
+struct	Recount.KPEPPropertyList.System		let	powerCounters
+struct	Recount.KPEPPropertyList.System		let	marketingName
+struct	Recount.KPEPPropertyList.System		let	architecture
+struct	Recount.KPEPPropertyList.System		let	aliases
+struct	Recount.KPEPPropertyList.System		let	events
+enum	Recount.KPEPPropertyList.System.CodingKeys			
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	fixedCounters
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	configCounters
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	powerCounters
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	marketingName
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	architecture
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	aliases
+enum	Recount.KPEPPropertyList.System.CodingKeys		case	events
+struct	Recount.CounterAnalysisSpec			
+struct	Recount.CounterAnalysisSpec		let	name
+struct	Recount.CounterAnalysisSpec		let	displayName
+struct	Recount.CounterAnalysisSpec		let	initialModeName
+struct	Recount.CounterAnalysisSpec		let	modes
+struct	Recount.CounterAnalysisSpec		let	platforms
+struct	Recount.ModeSpec			
+struct	Recount.ModeSpec		let	name
+struct	Recount.ModeSpec		let	displayName
+struct	Recount.ModeSpec		let	synopsis
+struct	Recount.ModeSpec		let	documentation
+struct	Recount.ModeSpec		let	metrics
+struct	Recount.ModeSpec		let	displays
+struct	Recount.ModeSpec		let	thresholds
+struct	Recount.ModeSpec		let	triggers
+enum	Recount.CounterAnalysisSpec.CodingKeys			
+enum	Recount.CounterAnalysisSpec.CodingKeys		case	name
+enum	Recount.CounterAnalysisSpec.CodingKeys		case	displayName
+enum	Recount.CounterAnalysisSpec.CodingKeys		case	initialModeName
+enum	Recount.CounterAnalysisSpec.CodingKeys		case	modes
+enum	Recount.CounterAnalysisSpec.CodingKeys		case	platforms
+enum	Recount.ModeSpec.CodingKeys			
+enum	Recount.ModeSpec.CodingKeys		case	name
+enum	Recount.ModeSpec.CodingKeys		case	displayName
+enum	Recount.ModeSpec.CodingKeys		case	synopsis
+enum	Recount.ModeSpec.CodingKeys		case	documentation
+enum	Recount.ModeSpec.CodingKeys		case	metrics
+enum	Recount.ModeSpec.CodingKeys		case	displays
+enum	Recount.ModeSpec.CodingKeys		case	thresholds
+enum	Recount.ModeSpec.CodingKeys		case	triggers
+struct	Recount.PlatformSpec			
+struct	Recount.PlatformSpec		let	platforms
+struct	Recount.PlatformSpec		let	expressions
+struct	Recount.PlatformSpec		let	periods
+struct	Recount.PlatformSpec		let	constants
+struct	Recount.PlatformSpec		let	supportedModeNames
+struct	Recount.TriggerSpec			
+struct	Recount.TriggerSpec		let	metric
+struct	Recount.ThresholdSpec			
+struct	Recount.ThresholdSpec		let	expression
+struct	Recount.ThresholdSpec		let	displayName
+struct	Recount.ThresholdSpec		let	thresholds
+struct	Recount.ThresholdSpec		let	synopsis
+struct	Recount.ThresholdSpec		let	documentation
+struct	Recount.ThresholdSpec		let	nextModes
+enum	Recount.DisplaySpec			
+enum	Recount.DisplaySpec		case	normalizedArea
+enum	Recount.DisplaySpec		case	bar
+struct	Recount.MetricSpec			
+struct	Recount.MetricSpec		let	name
+struct	Recount.MetricSpec		let	displayName
+struct	Recount.MetricSpec		let	shortDisplayName
+struct	Recount.MetricSpec		let	synopsis
+struct	Recount.MetricSpec		let	documentation
+struct	Recount.MetricSpec		let	aggregation
+enum	Recount.DisplaySpec.Bar.CodingKeys			
+enum	Recount.DisplaySpec.Bar.CodingKeys		case	metric
+enum	Recount.DisplaySpec.Bar.CodingKeys		case	color
+enum	Recount.DisplaySpec.Bar.CodingKeys		case	suggestedMaximum
+enum	Recount.DisplaySpec.NormalizedArea.CodingKeys			
+enum	Recount.DisplaySpec.NormalizedArea.CodingKeys		case	elements
+enum	Recount.DisplaySpec.NormalizedArea.CodingKeys		case	denominator
+enum	Recount.DisplaySpec.DisplayKeys			
+enum	Recount.DisplaySpec.DisplayKeys		case	kind
+enum	Recount.DisplaySpec.DisplayKeys		case	elements
+enum	Recount.DisplaySpec.DisplayKeys		case	denominator
+enum	Recount.DisplaySpec.DisplayKeys		case	metric
+enum	Recount.DisplaySpec.DisplayKeys		case	suggestedMaximum
+enum	Recount.PlatformSpec.CodingKeys			
+enum	Recount.PlatformSpec.CodingKeys		case	platforms
+enum	Recount.PlatformSpec.CodingKeys		case	expressions
+enum	Recount.PlatformSpec.CodingKeys		case	periods
+enum	Recount.PlatformSpec.CodingKeys		case	constants
+enum	Recount.PlatformSpec.CodingKeys		case	supportedModeNames
+enum	Recount.TriggerSpec.CodingKeys			
+enum	Recount.TriggerSpec.CodingKeys		case	metric
+enum	Recount.ThresholdSpec.CodingKeys			
+enum	Recount.ThresholdSpec.CodingKeys		case	expression
+enum	Recount.ThresholdSpec.CodingKeys		case	displayName
+enum	Recount.ThresholdSpec.CodingKeys		case	thresholds
+enum	Recount.ThresholdSpec.CodingKeys		case	synopsis
+enum	Recount.ThresholdSpec.CodingKeys		case	documentation
+enum	Recount.ThresholdSpec.CodingKeys		case	nextModes
+struct	Recount.DisplaySpec.NormalizedArea.Element			
+struct	Recount.DisplaySpec.NormalizedArea.Element		let	metric
+struct	Recount.DisplaySpec.NormalizedArea.Element		let	color
+enum	Recount.DisplaySpec.NormalizedAreaKeys			
+enum	Recount.DisplaySpec.NormalizedAreaKeys		case	elements
+enum	Recount.DisplaySpec.NormalizedAreaKeys		case	denominator
+enum	Recount.DisplaySpec.NormalizedAreaKeys		case	kind
+enum	Recount.DisplaySpec.BarKeys			
+enum	Recount.DisplaySpec.BarKeys		case	metric
+enum	Recount.DisplaySpec.BarKeys		case	color
+enum	Recount.DisplaySpec.BarKeys		case	suggestedMaximum
+enum	Recount.DisplaySpec.BarKeys		case	kind
+enum	Recount.MetricSpec.CodingKeys			
+enum	Recount.MetricSpec.CodingKeys		case	name
+enum	Recount.MetricSpec.CodingKeys		case	displayName
+enum	Recount.MetricSpec.CodingKeys		case	shortDisplayName
+enum	Recount.MetricSpec.CodingKeys		case	synopsis
+enum	Recount.MetricSpec.CodingKeys		case	documentation
+enum	Recount.MetricSpec.CodingKeys		case	aggregation
+struct	Recount.ConstantSpec			
+struct	Recount.ConstantSpec		let	p
+struct	Recount.ConstantSpec		let	e
+struct	Recount.ConstantSpec		let	m
+struct	Recount.DisplaySpec.Bar			
+struct	Recount.DisplaySpec.Bar		let	metric
+struct	Recount.DisplaySpec.Bar		let	color
+struct	Recount.DisplaySpec.Bar		let	suggestedMaximum
+struct	Recount.DisplaySpec.NormalizedArea			
+struct	Recount.DisplaySpec.NormalizedArea		let	elements
+struct	Recount.DisplaySpec.NormalizedArea		let	denominator
+enum	Recount.MetricSpec.AggregationSpec			
+enum	Recount.MetricSpec.AggregationSpec		case	sum
+enum	Recount.MetricSpec.AggregationSpec		case	timeWeightedAverage
+enum	Recount.ConstantSpec.CodingKeys			
+enum	Recount.ConstantSpec.CodingKeys		case	p
+enum	Recount.ConstantSpec.CodingKeys		case	performance
+enum	Recount.ConstantSpec.CodingKeys		case	e
+enum	Recount.ConstantSpec.CodingKeys		case	efficiency
+enum	Recount.ConstantSpec.CodingKeys		case	m
+enum	Recount.DisplaySpec.NormalizedArea.Element.CodingKeys			
+enum	Recount.DisplaySpec.NormalizedArea.Element.CodingKeys		case	metric
+enum	Recount.DisplaySpec.NormalizedArea.Element.CodingKeys		case	color
+protocol	Recount.Placeable	FallbackComparable		
+protocol	Recount.ProviderMode			
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance Recount.CPUTopologyError	Foundation.LocalizedError		
+protocol	conformance Recount.CPUTopologyError	Swift.Error		
+protocol	conformance TraceAnalysis.Target	Swift.Hashable		
+protocol	conformance TraceAnalysis.Target	Swift.Equatable		
+protocol	conformance TraceEvent.Kind	Swift.CustomStringConvertible		
+protocol	conformance Recount.CountingModeError	Foundation.LocalizedError		
+protocol	conformance Recount.CountingModeError	Swift.Error		
+protocol	conformance Recount.CountingMode	Swift.Hashable		
+protocol	conformance Recount.CountingMode	Swift.Equatable		
+protocol	conformance Recount.CountingMode	Swift.Decodable		
+protocol	conformance Recount.CountingMode	Swift.Encodable		
+protocol	conformance CountingMode.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountingMode.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountingMode.CodingKeys	Swift.RawRepresentable		
+protocol	conformance CountingMode.CodingKeys	Swift.Hashable		
+protocol	conformance CountingMode.CodingKeys	Swift.Equatable		
+protocol	conformance CountingMode.CodingKeys	Swift.CodingKey		
+protocol	conformance NormalizedArea.Element	Swift.Hashable		
+protocol	conformance NormalizedArea.Element	Swift.Equatable		
+protocol	conformance Display.NormalizedArea	Swift.Hashable		
+protocol	conformance Display.NormalizedArea	Swift.Equatable		
+protocol	conformance Display.Bar	Swift.Hashable		
+protocol	conformance Display.Bar	Swift.Equatable		
+protocol	conformance CountingMode.Display	Swift.Hashable		
+protocol	conformance CountingMode.Display	Swift.Equatable		
+protocol	conformance Metric.Aggregation	Swift.Equatable		
+protocol	conformance Metric.Aggregation	Swift.Hashable		
+protocol	conformance CountingMode.Metric	Swift.Decodable		
+protocol	conformance CountingMode.Metric	Swift.Encodable		
+protocol	conformance CountingMode.Metric	Swift.Hashable		
+protocol	conformance CountingMode.Metric	Swift.Equatable		
+protocol	conformance Metric.Aggregation	Swift.Decodable		
+protocol	conformance Metric.Aggregation	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TimeWeightedAverageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TimeWeightedAverageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SumCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SumCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SumCodingKeys	Swift.CodingKey		
+protocol	conformance TimeWeightedAverageCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Remark.Severity	Swift.Equatable		
+protocol	conformance Remark.Severity	Swift.Hashable		
+protocol	conformance CountingMode.Remark	Swift.Hashable		
+protocol	conformance CountingMode.Remark	Swift.CustomStringConvertible		
+protocol	conformance CountingMode.Remark	Swift.Equatable		
+protocol	conformance CountingMode.Settings	Swift.Decodable		
+protocol	conformance CountingMode.Settings	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Recount.EventSetting	Swift.Equatable		
+protocol	conformance Recount.Event	Recount.Placeable		
+protocol	conformance Recount.EventSetting	Swift.Decodable		
+protocol	conformance Recount.EventSetting	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Settings.EventError	Swift.Equatable		
+protocol	conformance Settings.EventError	Foundation.LocalizedError		
+protocol	conformance Settings.EventError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CountingMode.Threshold	Swift.Hashable		
+protocol	conformance CountingMode.Threshold	Swift.Equatable		
+protocol	conformance Violation.Severity	Swift.Equatable		
+protocol	conformance Violation.Severity	Swift.Hashable		
+protocol	conformance CountingMode.Violation	Swift.Hashable		
+protocol	conformance CountingMode.Violation	Swift.CustomStringConvertible		
+protocol	conformance CountingMode.Violation	Swift.Equatable		
+protocol	conformance Recount.CPUKind	Swift.Decodable		
+protocol	conformance Recount.CPUKind	Swift.Encodable		
+protocol	conformance Recount.CPUKind	Swift.Equatable		
+protocol	conformance Recount.CPUKind	Swift.Hashable		
+protocol	conformance MCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PerformanceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PerformanceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EfficiencyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EfficiencyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StandardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StandardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance StandardCodingKeys	Swift.CodingKey		
+protocol	conformance EfficiencyCodingKeys	Swift.CodingKey		
+protocol	conformance PerformanceCodingKeys	Swift.CodingKey		
+protocol	conformance MCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.NamedExpression	Swift.CustomDebugStringConvertible		
+protocol	conformance Recount.NamedExpression	Swift.Encodable		
+protocol	conformance Recount.NamedExpression	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Recount.EvaluatorError	Swift.Equatable		
+protocol	conformance Recount.EvaluatorError	Foundation.LocalizedError		
+protocol	conformance Recount.VisitState	Swift.Hashable		
+protocol	conformance Recount.VisitState	Swift.Equatable		
+protocol	conformance Recount.EvaluatorError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.Event	Swift.CustomStringConvertible		
+protocol	conformance Recount.Event	Swift.Equatable		
+protocol	conformance Recount.Event	Swift.Encodable		
+protocol	conformance Recount.Event	Swift.Decodable		
+protocol	conformance Recount.EventDictionary	Swift.Decodable		
+protocol	conformance Recount.EventDictionary	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Recount.EventStoreError	Foundation.LocalizedError		
+protocol	conformance Recount.KPEPError	Foundation.LocalizedError		
+protocol	conformance Recount.KPEPError	Swift.Error		
+protocol	conformance Recount.EventStoreError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.EventSource	Swift.Hashable		
+protocol	conformance Recount.EventSource	Swift.Equatable		
+protocol	conformance Recount.Expression	Swift.CustomDebugStringConvertible		
+protocol	conformance Recount.Expression	Swift.Encodable		
+protocol	conformance Recount.Expression	Swift.Decodable		
+protocol	conformance Recount.Operation	Swift.CustomStringConvertible		
+protocol	conformance Expression.ParseError	Swift.Equatable		
+protocol	conformance Expression.ParseError	Foundation.LocalizedError		
+protocol	conformance Recount.Operator	Swift.Equatable		
+protocol	conformance Expression.EvaluationError	Foundation.LocalizedError		
+protocol	conformance Expression.EvaluationError	Swift.Error		
+protocol	conformance Expression.ParseError	Swift.Error		
+protocol	conformance Recount.Function	Swift.Equatable		
+protocol	conformance Recount.Function	Swift.RawRepresentable		
+protocol	conformance Recount.Function	Swift.Hashable		
+protocol	conformance Recount.KPCError	Foundation.LocalizedError		
+protocol	conformance Recount.KPCError	Swift.Error		
+protocol	conformance Recount.KPerfError	Foundation.LocalizedError		
+protocol	conformance KPerfTimer.Err	Foundation.LocalizedError		
+protocol	conformance KPerfTimer.Err	Swift.Error		
+protocol	conformance Recount.KPerfError	Swift.Error		
+protocol	conformance Recount.PlacementError	Swift.Equatable		
+protocol	conformance Recount.PlacementError	Foundation.LocalizedError		
+protocol	conformance Recount.PlacementError	Swift.Error		
+protocol	conformance Recount.Platform	Swift.Decodable		
+protocol	conformance Recount.Platform	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.PMUInfo	Swift.Decodable		
+protocol	conformance Recount.PMUInfo	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.RecountModeChunk	Swift.Decodable		
+protocol	conformance Recount.RecountModeChunk	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.AwimboConfiguration	Swift.Encodable		
+protocol	conformance Recount.AwimboPMI	Recount.ProviderMode		
+protocol	conformance Recount.AwimboPMC	Recount.ProviderMode		
+protocol	conformance AwimboConfiguration.Err	Foundation.LocalizedError		
+protocol	conformance Recount.AwimboPMCError	Foundation.LocalizedError		
+protocol	conformance AwimboConfiguration.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AwimboConfiguration.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AwimboConfiguration.CodingKeys	Swift.RawRepresentable		
+protocol	conformance AwimboConfiguration.CodingKeys	Swift.Hashable		
+protocol	conformance AwimboConfiguration.CodingKeys	Swift.Equatable		
+protocol	conformance Recount.AwimboPMIError	Foundation.LocalizedError		
+protocol	conformance Recount.EventSampler	Swift.Equatable		
+protocol	conformance Recount.EventSampler	Swift.CustomStringConvertible		
+protocol	conformance Recount.EventSampler	Recount.Placeable		
+protocol	conformance Recount.AwimboEvent	Swift.Encodable		
+protocol	conformance Recount.AwimboPMIError	Swift.Error		
+protocol	conformance Recount.AwimboPMIMultiplexing	Swift.Encodable		
+protocol	conformance AwimboConfiguration.CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.AwimboPMCError	Swift.Error		
+protocol	conformance AwimboConfiguration.Err	Swift.Error		
+protocol	conformance Recount.AwimboInfo	Swift.Encodable		
+protocol	conformance Recount.AwimboPMCEvents	Swift.CustomStringConvertible		
+protocol	conformance Recount.AwimboPMCEvents	Swift.Equatable		
+protocol	conformance AwimboInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AwimboInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AwimboInfo.CodingKeys	Swift.RawRepresentable		
+protocol	conformance AwimboInfo.CodingKeys	Swift.Hashable		
+protocol	conformance AwimboInfo.CodingKeys	Swift.Equatable		
+protocol	conformance AwimboPMIMultiplexing.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AwimboPMIMultiplexing.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AwimboPMIMultiplexing.CodingKeys	Swift.RawRepresentable		
+protocol	conformance AwimboPMIMultiplexing.CodingKeys	Swift.Hashable		
+protocol	conformance AwimboPMIMultiplexing.CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AwimboPMIMultiplexing.CodingKeys	Swift.CodingKey		
+protocol	conformance AwimboInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.AwimboPMCOptions	Swift.Equatable		
+protocol	conformance AwimboPMCOptions.UsageError	Foundation.LocalizedError		
+protocol	conformance ProviderOptions.UsageError	Swift.Equatable		
+protocol	conformance ProviderOptions.UsageError	Foundation.LocalizedError		
+protocol	conformance ProviderOptions.UsageError	Swift.Error		
+protocol	conformance AwimboPMCOptions.UsageError	Swift.Error		
+protocol	conformance Recount.LevelFilter	Swift.Equatable		
+protocol	conformance Recount.ModeSelection	Swift.CustomStringConvertible		
+protocol	conformance Recount.ModeSelection	Swift.Equatable		
+protocol	conformance Recount.ModeName	Swift.Equatable		
+protocol	conformance Recount.RecountMode	Recount.ProviderMode		
+protocol	conformance Recount.RecountModeError	Foundation.LocalizedError		
+protocol	conformance Recount.RecountModeError	Swift.Error		
+protocol	conformance Recount.AsyncProcessError	Swift.Error		
+protocol	conformance Recount.AsyncProcessError	Foundation.LocalizedError		
+protocol	conformance Recount.SyscallFailure	Foundation.LocalizedError		
+protocol	conformance Recount.SyscallFailure	Swift.Error		
+protocol	conformance Unit.Prefix	Swift.Equatable		
+protocol	conformance Unit.Prefix	Swift.Hashable		
+protocol	conformance Recount.CounterAnalysisError	Foundation.LocalizedError		
+protocol	conformance Recount.CounterAnalysisError	Swift.Error		
+protocol	conformance CounterAnalysis.CodingKeys	Swift.Equatable		
+protocol	conformance CounterAnalysis.CodingKeys	Swift.Hashable		
+protocol	conformance CounterAnalysis.CodingKeys	Swift.RawRepresentable		
+protocol	conformance CounterAnalysis.CodingKeys	Swift.CodingKey		
+protocol	conformance CounterAnalysis.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CounterAnalysis.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Recount.CounterAnalysis	Swift.Decodable		
+protocol	conformance Recount.CounterAnalysis	Swift.Encodable		
+protocol	conformance Recount.CounterAnalysis	Swift.Hashable		
+protocol	conformance Recount.CounterAnalysis	Swift.Equatable		
+protocol	conformance KPCSettings.ApplyOptions	Swift.OptionSet		
+protocol	conformance KPCSettings.ApplyOptions	Swift.SetAlgebra		
+protocol	conformance KPCSettings.ApplyOptions	Swift.RawRepresentable		
+protocol	conformance KPCSettings.ApplyOptions	Swift.Equatable		
+protocol	conformance KPCSettings.ApplyOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Recount.ModeLine	Swift.Equatable		
+protocol	conformance Recount.ModeLine	Swift.Hashable		
+protocol	conformance Recount.ModeLine	Swift.Identifiable		
+protocol	conformance Silicon.CPUTriplet	Swift.Decodable		
+protocol	conformance Silicon.CPUTriplet	Swift.Encodable		
+protocol	conformance Recount.Silicon	Swift.Decodable		
+protocol	conformance Recount.Silicon	Swift.Encodable		
+protocol	conformance Silicon.CurrentSiliconError	Foundation.LocalizedError		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Silicon.CurrentSiliconError	Swift.Error		
+protocol	conformance Recount.Color	Swift.Equatable		
+protocol	conformance Recount.Color	Swift.Hashable		
+protocol	conformance Recount.Color	Swift.Decodable		
+protocol	conformance Recount.Color	Swift.Encodable		
+protocol	conformance Recount.KPEPPropertyList	Swift.Encodable		
+protocol	conformance Recount.KPEPPropertyList	Swift.Decodable		
+protocol	conformance KPEPPropertyList.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance KPEPPropertyList.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance KPEPPropertyList.CodingKeys	Swift.RawRepresentable		
+protocol	conformance KPEPPropertyList.CodingKeys	Swift.Hashable		
+protocol	conformance KPEPPropertyList.CodingKeys	Swift.Equatable		
+protocol	conformance KPEPPropertyList.KPEPEvent	Swift.Encodable		
+protocol	conformance KPEPPropertyList.KPEPEvent	Swift.Decodable		
+protocol	conformance KPEPPropertyList.SystemList	Swift.Encodable		
+protocol	conformance KPEPPropertyList.SystemList	Swift.Decodable		
+protocol	conformance KPEPPropertyList.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance KPEPEvent.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance KPEPEvent.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance KPEPEvent.CodingKeys	Swift.RawRepresentable		
+protocol	conformance KPEPEvent.CodingKeys	Swift.Hashable		
+protocol	conformance KPEPEvent.CodingKeys	Swift.Equatable		
+protocol	conformance KPEPEvent.CodingKeys	Swift.CodingKey		
+protocol	conformance KPEPPropertyList.System	Swift.Encodable		
+protocol	conformance KPEPPropertyList.System	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance System.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance System.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance System.CodingKeys	Swift.RawRepresentable		
+protocol	conformance System.CodingKeys	Swift.Hashable		
+protocol	conformance System.CodingKeys	Swift.Equatable		
+protocol	conformance System.CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.ModeSpec	Swift.Decodable		
+protocol	conformance Recount.CounterAnalysisSpec	Swift.Decodable		
+protocol	conformance Recount.CounterAnalysisSpec	Swift.Encodable		
+protocol	conformance Recount.ModeSpec	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Recount.TriggerSpec	Swift.Decodable		
+protocol	conformance Recount.ThresholdSpec	Swift.Decodable		
+protocol	conformance Recount.DisplaySpec	Swift.Decodable		
+protocol	conformance Recount.MetricSpec	Swift.Decodable		
+protocol	conformance Recount.PlatformSpec	Swift.Decodable		
+protocol	conformance Recount.PlatformSpec	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Recount.TriggerSpec	Swift.Encodable		
+protocol	conformance Recount.ThresholdSpec	Swift.Encodable		
+protocol	conformance Recount.DisplaySpec	Swift.Encodable		
+protocol	conformance Recount.MetricSpec	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MetricSpec.AggregationSpec	Swift.Hashable		
+protocol	conformance MetricSpec.AggregationSpec	Swift.Equatable		
+protocol	conformance DisplaySpec.NormalizedArea	Swift.Encodable		
+protocol	conformance DisplaySpec.NormalizedArea	Swift.Decodable		
+protocol	conformance DisplaySpec.Bar	Swift.Encodable		
+protocol	conformance DisplaySpec.Bar	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DisplaySpec.BarKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DisplaySpec.BarKeys	Swift.CustomStringConvertible		
+protocol	conformance DisplaySpec.BarKeys	Swift.RawRepresentable		
+protocol	conformance DisplaySpec.BarKeys	Swift.Hashable		
+protocol	conformance DisplaySpec.BarKeys	Swift.Equatable		
+protocol	conformance DisplaySpec.NormalizedAreaKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DisplaySpec.NormalizedAreaKeys	Swift.CustomStringConvertible		
+protocol	conformance DisplaySpec.NormalizedAreaKeys	Swift.RawRepresentable		
+protocol	conformance DisplaySpec.NormalizedAreaKeys	Swift.Hashable		
+protocol	conformance DisplaySpec.NormalizedAreaKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DisplaySpec.DisplayKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DisplaySpec.DisplayKeys	Swift.CustomStringConvertible		
+protocol	conformance DisplaySpec.DisplayKeys	Swift.RawRepresentable		
+protocol	conformance DisplaySpec.DisplayKeys	Swift.Hashable		
+protocol	conformance DisplaySpec.DisplayKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NormalizedArea.Element	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DisplaySpec.DisplayKeys	Swift.CodingKey		
+protocol	conformance MetricSpec.AggregationSpec	Swift.Decodable		
+protocol	conformance Recount.ConstantSpec	Swift.Decodable		
+protocol	conformance Recount.ConstantSpec	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NormalizedArea.Element	Swift.Encodable		
+protocol	conformance DisplaySpec.NormalizedAreaKeys	Swift.CodingKey		
+protocol	conformance DisplaySpec.BarKeys	Swift.CodingKey		
+protocol	conformance MetricSpec.AggregationSpec	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ConstantSpec.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ConstantSpec.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ConstantSpec.CodingKeys	Swift.RawRepresentable		
+protocol	conformance ConstantSpec.CodingKeys	Swift.Hashable		
+protocol	conformance ConstantSpec.CodingKeys	Swift.Equatable		
+protocol	conformance ConstantSpec.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	Recount.CountingMode.CodingKeys	RawRepresentable		
+extension	Recount.Event	Placeable		
+extension	Recount.Function	RawRepresentable		
+extension	Recount.AwimboConfiguration.CodingKeys	RawRepresentable		
+extension	Recount.EventSampler	Placeable		
+extension	Recount.AwimboInfo.CodingKeys	RawRepresentable		
+extension	Recount.AwimboPMIMultiplexing.CodingKeys	RawRepresentable		
+extension	Recount.CounterAnalysis.CodingKeys	RawRepresentable		
+extension	Recount.KPCSettings.ApplyOptions	OptionSet		
+extension	Recount.KPCSettings.ApplyOptions	SetAlgebra		
+extension	Recount.KPCSettings.ApplyOptions	RawRepresentable		
+extension	Recount.KPCSettings.ApplyOptions	ExpressibleByArrayLiteral		
+extension	Recount.ModeLine	Identifiable		
+extension	Recount.KPEPPropertyList.CodingKeys	RawRepresentable		
+extension	Recount.KPEPPropertyList.KPEPEvent.CodingKeys	RawRepresentable		
+extension	Recount.KPEPPropertyList.System.CodingKeys	RawRepresentable		
+extension	Recount.DisplaySpec.BarKeys	RawRepresentable		
+extension	Recount.DisplaySpec.NormalizedAreaKeys	RawRepresentable		
+extension	Recount.DisplaySpec.DisplayKeys	RawRepresentable		
+extension	Recount.ConstantSpec.CodingKeys	RawRepresentable		

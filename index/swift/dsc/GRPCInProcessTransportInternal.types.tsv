@@ -1,0 +1,38 @@
+kind	type	conformance	member_kind	member
+struct	GRPCInProcessTransportInternal.InProcessTransport			
+struct	GRPCInProcessTransportInternal.InProcessTransport		let	server
+struct	GRPCInProcessTransportInternal.InProcessTransport		let	client
+enum	GRPCInProcessTransportInternal.System			
+class	GRPCInProcessTransportInternal.InProcessTransport.Client			
+class	GRPCInProcessTransportInternal.InProcessTransport.Client		let	retryThrottle
+class	GRPCInProcessTransportInternal.InProcessTransport.Client		let	methodConfig
+class	GRPCInProcessTransportInternal.InProcessTransport.Client		let	state
+class	GRPCInProcessTransportInternal.InProcessTransport.Client		let	peer
+enum	GRPCInProcessTransportInternal.InProcessTransport.Client.State			
+enum	GRPCInProcessTransportInternal.InProcessTransport.Client.State		case	unconnected
+enum	GRPCInProcessTransportInternal.InProcessTransport.Client.State		case	connected
+enum	GRPCInProcessTransportInternal.InProcessTransport.Client.State		case	closed
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ClosedState			
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ClosedState		var	openStreams
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ClosedState		var	signalEndContinuation
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ConnectedState			
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ConnectedState		var	serverTransport
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ConnectedState		var	nextStreamID
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ConnectedState		var	openStreams
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.ConnectedState		var	signalEndContinuation
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.UnconnectedState			
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.UnconnectedState		var	serverTransport
+struct	GRPCInProcessTransportInternal.InProcessTransport.Client.State.UnconnectedState		var	pendingStreams
+class	GRPCInProcessTransportInternal.InProcessTransport.Server			
+class	GRPCInProcessTransportInternal.InProcessTransport.Server		let	newStreams
+class	GRPCInProcessTransportInternal.InProcessTransport.Server		let	newStreamsContinuation
+class	GRPCInProcessTransportInternal.InProcessTransport.Server		let	peer
+class	GRPCInProcessTransportInternal.InProcessTransport.Server		let	handles
+struct	GRPCInProcessTransportInternal.InProcessTransport.Server.State			
+struct	GRPCInProcessTransportInternal.InProcessTransport.Server.State		var	_nextID
+struct	GRPCInProcessTransportInternal.InProcessTransport.Server.State		var	handles
+struct	GRPCInProcessTransportInternal.InProcessTransport.Server.State		var	isShutdown
+protocol	conformance InProcessTransport.Client	GRPCCoreInternal.ClientTransport		
+protocol	conformance InProcessTransport.Server	GRPCCoreInternal.ServerTransport		
+extension	GRPCInProcessTransportInternal.InProcessTransport.Client	ClientTransport		
+extension	GRPCInProcessTransportInternal.InProcessTransport.Server	ServerTransport		

@@ -1,0 +1,404 @@
+kind	type	conformance	member_kind	member
+class	RCS.RCSReachabilityResultHandler			
+class	RCS.RCSReachabilityResultHandler		var	allSupportEncryption
+class	RCS.RCSMessageSendItem			
+class	RCS.RCSMessageSendItem		var	sourceMessage
+class	RCS.RCSMessageSendItem		var	rcsMessage
+class	RCS.RCSMessageSendItem		var	context
+class	RCS.RCSMessageSendItem		var	chat
+class	RCS.RCSMessageSendItem		var	sendState
+enum	RCS.RCSMessageSendItem.SendState			
+enum	RCS.RCSMessageSendItem.SendState		case	retry
+enum	RCS.RCSMessageSendItem.SendState		case	initial
+enum	RCS.RCSMessageSendItem.SendState		case	finalRetry
+enum	RCS.RCSMessageSendItem.SendState		case	success
+enum	RCS.RCSMessageSendItem.SendState		case	failure
+enum	RCS.TransferCreationError			
+enum	RCS.TransferCreationError		case	failedToCreateTransfer
+enum	RCS.ChatResolutionError			
+enum	RCS.ChatResolutionError		case	failedToCreateGroup
+enum	RCS.ChatResolutionError		case	failedToCreateIM
+enum	RCS.ChatResolutionError		case	invalidRequest
+class	RCS.State			
+class	RCS.State		var	messageReceiver
+class	RCS.State		var	typingTracker
+class	RCS.State		var	reachabilityController
+class	RCS.State		var	reachabilityDelegate
+class	RCS.State		var	reachabilityResultHandler
+class	RCS.State		var	messageProcessingQueue
+struct	RCS.Bug			
+struct	RCS.Bug		let	type
+struct	RCS.Bug		let	redactedContext
+struct	RCS.Bug		let	sensitiveContext
+struct	RCS.Bug		let	error
+struct	RCS.Bug		let	fatal
+enum	RCS.RCSBugType			
+enum	RCS.RCSBugType		case	telephony
+enum	RCS.RCSBugType		case	groups
+enum	RCS.RCSBugType		case	DSDS
+enum	RCS.RCSBugType		case	messaging
+enum	RCS.RCSBugType		case	privacy
+class	RCS.RCSServiceReachabilityDelegate	IMDServiceReachabilityBaseDelegate		
+class	RCS.RCSServiceReachabilityDelegate	IMDServiceReachabilityBaseDelegate	let	rcsServiceSession
+class	RCS.RCSTypingMetricsManager			
+class	RCS.RCSTypingMetricsManager		var	messagesStarted
+class	RCS.RCSTypingMetricsManager		let	queue
+class	RCS.RCSTypingMetricsManager		var	timer
+struct	RCS.RCSTypingMetricsManager.MessageDetails			
+struct	RCS.RCSTypingMetricsManager.MessageDetails		let	typingStartedTime
+struct	RCS.RCSTypingMetricsManager.MessageDetails		let	isGroupMessage
+enum	CoreRCS.RCSParticipantChange.IMDChangeContext<A	CoreRCS.RCSChatProtocol>		
+enum	CoreRCS.RCSParticipantChange.IMDChangeContext<A	CoreRCS.RCSChatProtocol>	case	memberStatusChange
+enum	CoreRCS.RCSParticipantChange.IMDChangeContext<A	CoreRCS.RCSChatProtocol>	case	chatStatusChange
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>		
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	id
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	chat
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	type
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	participants
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	fromHandle
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	toID
+struct	CoreRCS.RCSParticipantChange<A	CoreRCS.RCSChatProtocol>	let	fromMe
+enum	CoreRCS.RCSParticipantChange.ChangeType<A	CoreRCS.RCSChatProtocol>		
+enum	CoreRCS.RCSParticipantChange.ChangeType<A	CoreRCS.RCSChatProtocol>	case	add
+enum	CoreRCS.RCSParticipantChange.ChangeType<A	CoreRCS.RCSChatProtocol>	case	remove
+enum	CoreRCS.RCSDestination			
+enum	CoreRCS.RCSDestination		case	direct
+enum	CoreRCS.RCSDestination		case	group
+class	CoreRCS.RCSFailureToDecryptInfo	NSObject		
+class	CoreRCS.RCSFailureToDecryptInfo	NSObject	var	uuid
+class	CoreRCS.RCSFailureToDecryptInfo	NSObject	var	secureGroupVersion
+class	CoreRCS.RCSFailureToDecryptInfo	NSObject	var	sendDate
+class	CoreRCS.RCSFailureToDecryptInfo.SecureGroupVersion	NSObject		
+class	CoreRCS.RCSFailureToDecryptInfo.SecureGroupVersion	NSObject	var	era
+class	CoreRCS.RCSFailureToDecryptInfo.SecureGroupVersion	NSObject	var	epoch
+class	CoreRCS.RCSChipList			
+class	CoreRCS.RCSChipList		let	chipList
+struct	CoreRCS.RCSConvergenceContext			
+struct	CoreRCS.RCSConvergenceContext		let	sender
+struct	CoreRCS.RCSConvergenceContext		let	subscriptionInfo
+struct	CoreRCS.RCSConvergenceContext		let	chat
+class	CoreRCS.RCSOperationController			
+class	CoreRCS.RCSOperationController		let	operationQueues
+class	CoreRCS.RCSOperationController		let	configuration
+class	CoreRCS.RCSOperationController		var	operations
+class	CoreRCS.RCSOperationController		var	dedupeToOperationID
+class	CoreRCS.RCSOperationController		let	expirationTimer
+enum	CoreRCS.RCSOperationController.OperationError			
+enum	CoreRCS.RCSOperationController.OperationError		case	timedOut
+enum	CoreRCS.RCSOperationController.OperationError		case	mismatchedType
+class	CoreRCS.RCSOperationController.Operation			
+class	CoreRCS.RCSOperationController.Operation		var	result
+class	CoreRCS.RCSOperationController.Operation		var	callbacks
+class	CoreRCS.RCSOperationController.Operation		let	creationDate
+class	CoreRCS.RCSOperationController.Operation		let	id
+struct	CoreRCS.RCSOperationController.Configuration			
+struct	CoreRCS.RCSOperationController.Configuration		var	maxOperationDuration
+struct	CoreRCS.RCSOperationController.Configuration		var	operationExpirationWatchdogInterval
+struct	CoreRCS.RCSOperationController.Configuration		var	untrackedFulfillmentHandler
+struct	CoreRCS.RCSOperationController.Configuration		var	verifiesUniqueOperationIDs
+struct	CoreRCS.RCSGroup			
+struct	CoreRCS.RCSGroup		var	identity
+struct	CoreRCS.RCSGroup		var	participants
+struct	CoreRCS.RCSGroup		var	displayName
+struct	CoreRCS.RCSGroup		var	displayNameStatus
+struct	CoreRCS.RCSGroup		var	icon
+enum	CoreRCS.RCSGroup.DisplayNameStatus			
+enum	CoreRCS.RCSGroup.DisplayNameStatus		case	update
+enum	CoreRCS.RCSGroup.DisplayNameStatus		case	ignore
+struct	CoreRCS.RCSGroup.Icon			
+struct	CoreRCS.RCSGroup.Icon		var	name
+struct	CoreRCS.RCSGroup.Icon		var	data
+struct	CoreRCS.RCSGroup.Icon		var	type
+enum	CoreRCS.RCSGroup.Icon.CodingKeys			
+enum	CoreRCS.RCSGroup.Icon.CodingKeys		case	name
+enum	CoreRCS.RCSGroup.Icon.CodingKeys		case	data
+enum	CoreRCS.RCSGroup.Icon.CodingKeys		case	type
+class	CoreRCS.RCSMessageProcessingQueue<A	CoreRCS.RCSMessageProcessingQueueDelegate>		
+class	CoreRCS.RCSMessageProcessingQueue<A	CoreRCS.RCSMessageProcessingQueueDelegate>	let	delegate
+class	CoreRCS.RCSMessageProcessingQueue<A	CoreRCS.RCSMessageProcessingQueueDelegate>	let	stream
+class	CoreRCS.RCSMessageProcessingQueue<A	CoreRCS.RCSMessageProcessingQueueDelegate>	let	continuation
+class	CoreRCS.RCSMessageProcessingQueue<A	CoreRCS.RCSMessageProcessingQueueDelegate>	let	waitingQueue
+enum	CoreRCS.RCSMessageProcessingQueue.QueuedJob<A	CoreRCS.RCSMessageProcessingQueueDelegate>		
+enum	CoreRCS.RCSMessageProcessingQueue.QueuedJob<A	CoreRCS.RCSMessageProcessingQueueDelegate>	case	relay
+class	CoreRCS.RCSMessageReceiver<A	CoreRCS.RCSMessageReceiverDelegate>		
+class	CoreRCS.RCSMessageReceiver<A	CoreRCS.RCSMessageReceiverDelegate>	let	delegate
+enum	CoreRCS.RCSMessageReceiver.MessageProcessingError<A	CoreRCS.RCSMessageReceiverDelegate>		
+enum	CoreRCS.RCSMessageReceiver.MessageProcessingError<A	CoreRCS.RCSMessageReceiverDelegate>	case	unsupported
+enum	CoreRCS.RCSMessageReceiver.MessageProcessingError<A	CoreRCS.RCSMessageReceiverDelegate>	case	missingGroup
+enum	CoreRCS.RCSMessageReceiver.MessageProcessingError<A	CoreRCS.RCSMessageReceiverDelegate>	case	skipProcessing
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>		
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>	let	message
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>	let	parser
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>	let	rcsMessage
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>	let	delegate
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>	var	flags
+struct	CoreRCS.RCSMessageReceiver.MessageProcessingContext<A	CoreRCS.RCSMessageReceiverDelegate>	var	contentType
+enum	CoreRCS.RCSTransferError			
+enum	CoreRCS.RCSTransferError		case	temporaryFileError
+enum	CoreRCS.RCSTransferError		case	downloadFailed
+enum	CoreRCS.RCSTransferError		case	transferPropertiesInvalid
+struct	CoreRCS.RCSMessage			
+struct	CoreRCS.RCSMessage		var	senderInfo
+struct	CoreRCS.RCSMessage		var	originalID
+struct	CoreRCS.RCSMessage		var	messageID
+struct	CoreRCS.RCSMessage		var	encryption
+struct	CoreRCS.RCSMessage		var	content
+struct	CoreRCS.RCSMessage		var	groupIdentity
+struct	CoreRCS.RCSMessage		var	metadata
+struct	CoreRCS.RCSMessage		var	isChatBot
+struct	CoreRCS.RCSMessage		var	advisedAction
+struct	CoreRCS.RCSMessage		var	alreadyReceivedReplicatedVersion
+struct	CoreRCS.RCSMessage		var	siblingMessageIDs
+struct	CoreRCS.RCSMessage		var	subscriptionInfo
+enum	CoreRCS.RCSMessage.SenderInfo			
+enum	CoreRCS.RCSMessage.SenderInfo		case	to
+enum	CoreRCS.RCSMessage.SenderInfo		case	from
+struct	CoreRCS.RCSMessage.SubscriptionInfo			
+struct	CoreRCS.RCSMessage.SubscriptionInfo		var	handleID
+struct	CoreRCS.RCSMessage.SubscriptionInfo		var	simID
+enum	CoreRCS.RCSMessage.ContentType			
+enum	CoreRCS.RCSMessage.ContentType		case	text
+enum	CoreRCS.RCSMessage.ContentType		case	transfer
+enum	CoreRCS.RCSMessage.ContentType		case	location
+enum	CoreRCS.RCSMessage.ContentType		case	group
+enum	CoreRCS.RCSMessage.ContentType		case	typing
+enum	CoreRCS.RCSMessage.ContentType		case	richCards
+enum	CoreRCS.RCSMessage.ContentType		case	suggestedReply
+enum	CoreRCS.RCSMessage.ContentType		case	suggestedAction
+enum	CoreRCS.RCSMessage.ContentType		case	deviceAction
+enum	CoreRCS.RCSMessage.Content			
+enum	CoreRCS.RCSMessage.Content		case	text
+enum	CoreRCS.RCSMessage.Content		case	transfer
+enum	CoreRCS.RCSMessage.Content		case	location
+enum	CoreRCS.RCSMessage.Content		case	group
+enum	CoreRCS.RCSMessage.Content		case	typing
+enum	CoreRCS.RCSMessage.Content		case	richCards
+enum	CoreRCS.RCSMessage.Content		case	suggestedReply
+enum	CoreRCS.RCSMessage.Content		case	suggestedAction
+enum	CoreRCS.RCSMessage.Content		case	deviceAction
+enum	CoreRCS.RCSMessage.Encryption			
+enum	CoreRCS.RCSMessage.Encryption		case	failedToDecrypt
+enum	CoreRCS.RCSMessage.Encryption		case	unencrypted
+enum	CoreRCS.RCSMessage.Encryption		case	encrypted
+enum	CoreRCS.RCSMessage.Encryption		case	downgraded
+struct	CoreRCS.RCSMessage.Coordinates			
+struct	CoreRCS.RCSMessage.Coordinates		var	latitude
+struct	CoreRCS.RCSMessage.Coordinates		var	longitude
+struct	CoreRCS.RCSMessage.Coordinates		var	description
+struct	CoreRCS.RCSMessage.Typing			
+struct	CoreRCS.RCSMessage.Typing		var	isTyping
+enum	CoreRCS.RCSMessage.Typing.CodingKeys			
+enum	CoreRCS.RCSMessage.Typing.CodingKeys		case	isTyping
+enum	CoreRCS.RCSMessage.Coordinates.CodingKeys			
+enum	CoreRCS.RCSMessage.Coordinates.CodingKeys		case	latitude
+enum	CoreRCS.RCSMessage.Coordinates.CodingKeys		case	longitude
+enum	CoreRCS.RCSMessage.Coordinates.CodingKeys		case	description
+enum	CoreRCS.RCSMessage.SubscriptionInfo.CodingKeys			
+enum	CoreRCS.RCSMessage.SubscriptionInfo.CodingKeys		case	handleID
+enum	CoreRCS.RCSMessage.SubscriptionInfo.CodingKeys		case	simID
+class	CoreRCS.RCSRichCards			
+class	CoreRCS.RCSRichCards		let	cards
+struct	CoreRCS.RCSFile			
+struct	CoreRCS.RCSFile		var	thumbnail
+struct	CoreRCS.RCSFile		var	disposition
+struct	CoreRCS.RCSFile.ThumbnailInformation			
+struct	CoreRCS.RCSFile.ThumbnailInformation		var	fileSizeInBytes
+struct	CoreRCS.RCSFile.ThumbnailInformation		var	contentType
+struct	CoreRCS.RCSFile.ThumbnailInformation		var	dataUrl
+struct	CoreRCS.RCSFile.ThumbnailInformation		var	validUntil
+struct	CoreRCS.RCSFile.ThumbnailInformation		var	cryptoMaterial
+enum	CoreRCS.RCSFile.Disposition			
+enum	CoreRCS.RCSFile.Disposition		case	unknown
+enum	CoreRCS.RCSFile.Disposition		case	attachment
+enum	CoreRCS.RCSFile.Disposition		case	render
+struct	CoreRCS.RCSFile.DispositionInformation			
+struct	CoreRCS.RCSFile.DispositionInformation		var	fileSizeInBytes
+struct	CoreRCS.RCSFile.DispositionInformation		var	originalFileName
+struct	CoreRCS.RCSFile.DispositionInformation		var	mimeType
+struct	CoreRCS.RCSFile.DispositionInformation		var	dataUrl
+struct	CoreRCS.RCSFile.DispositionInformation		var	validUntil
+struct	CoreRCS.RCSFile.DispositionInformation		var	disposition
+struct	CoreRCS.RCSFile.DispositionInformation		var	timeLength
+struct	CoreRCS.RCSFile.DispositionInformation		var	cryptoMaterial
+struct	CoreRCS.RCSMessageMetadata			
+struct	CoreRCS.RCSMessageMetadata		var	entries
+enum	CoreRCS.RCSMessageMetadata.Entry			
+enum	CoreRCS.RCSMessageMetadata.Entry		case	advisedAction
+enum	CoreRCS.RCSMessageMetadata.Entry.HeaderKeys			
+enum	CoreRCS.RCSMessageMetadata.Entry.HeaderKeys		case	advisedAction
+class	CoreRCS.RCSReachabilityController<A	CoreRCS.RCSReachabilityDelegate>		
+class	CoreRCS.RCSReachabilityController<A	CoreRCS.RCSReachabilityDelegate>	let	delegate
+class	CoreRCS.RCSReachabilityController<A	CoreRCS.RCSReachabilityDelegate>	let	operationController
+struct	CoreRCS.RCSHandle			
+struct	CoreRCS.RCSHandle		var	scheme
+struct	CoreRCS.RCSHandle		var	id
+struct	CoreRCS.RCSHandle		var	attributes
+struct	CoreRCS.RCSHandle		var	alternateHandle
+struct	CoreRCS.RCSHandle		var	botStatus
+enum	CoreRCS.RCSHandle.Attribute			
+enum	CoreRCS.RCSHandle.Attribute		case	phoneContext
+enum	CoreRCS.RCSHandle.Attribute		case	user
+enum	CoreRCS.RCSHandle.Attribute		case	conference
+enum	CoreRCS.RCSHandle.Attribute		case	jioOb
+enum	CoreRCS.RCSHandle.Attribute		case	jioTransport
+enum	CoreRCS.RCSHandle.BotStatus			
+enum	CoreRCS.RCSHandle.BotStatus		case	notChatBot
+enum	CoreRCS.RCSHandle.BotStatus		case	couldBeChatBot
+enum	CoreRCS.RCSHandle.BotStatus		case	isChatBot
+enum	CoreRCS.RCSHandle.ParseError			
+enum	CoreRCS.RCSHandle.ParseError		case	invalidURI
+enum	CoreRCS.RCSHandle.ParseError		case	missingPath
+enum	CoreRCS.RCSHandle.ParseError		case	missingScheme
+class	CoreRCS.RCSSuggestedReply			
+class	CoreRCS.RCSSuggestedReply		let	chipReply
+class	CoreRCS.RCSSuggestedAction			
+class	CoreRCS.RCSSuggestedAction		let	chipAction
+enum	CoreRCS.RCSEncryption			
+enum	CoreRCS.RCSEncryption		case	encrypted
+enum	CoreRCS.RCSEncryption		case	unencrypted
+class	CoreRCS.IMDChatRCSGroupSnapshot			
+class	CoreRCS.IMDChatRCSGroupSnapshot		var	originalGroupID
+class	CoreRCS.IMDChatRCSGroupSnapshot		var	properties
+struct	CoreRCS.IMDChatRCSGroupIdentity			
+struct	CoreRCS.IMDChatRCSGroupIdentity		let	chat
+class	CoreRCS.RCSActor			
+class	CoreRCS.RCSTypingTracker			
+class	CoreRCS.RCSTypingTracker		let	delegate
+class	CoreRCS.RCSTypingTracker		var	expirationTimer
+class	CoreRCS.RCSTypingTracker		var	allIndicators
+struct	CoreRCS.TypingIndicator			
+struct	CoreRCS.TypingIndicator		let	chatID
+struct	CoreRCS.TypingIndicator		let	handle
+struct	CoreRCS.TypingIndicator		let	messageGUID
+struct	CoreRCS.TypingIndicator		let	date
+struct	CoreRCS.TypingIndicator		let	encryption
+struct	CoreRCS.TypingIndicator		let	subscription
+protocol	CoreRCS.RCSChatProtocol			
+protocol	RCSOperationController.OperationID			
+protocol	CoreRCS.RCSMessageProcessingQueueDelegate			
+protocol	CoreRCS.RCSMessageReceiverDelegate	Chat		
+protocol	CoreRCS.RCSHandleCapabilities			
+protocol	CoreRCS.RCSFileCryptoMaterial			
+protocol	CoreRCS.RCSReachabilityDelegate			
+protocol	CoreRCS.RCSGroupIdentity			
+protocol	CoreRCS.IMDChatRCSGroupIdentityProviding			
+protocol	CoreRCS.RCSTypingTrackerDelegate			
+protocol	conformance RCSServiceSession	CoreRCS.RCSTypingTrackerDelegate: RCS		
+protocol	conformance __C.IMAccountRegistrationStatus	protocol descriptor for RawRepresentable: IMSharedUtilities		
+protocol	conformance __C.IMAccountRegistrationStatus	protocol descriptor for Equatable: IMSharedUtilities		
+protocol	conformance RCSMessageSendItem.SendState	protocol descriptor for CustomStringConvertible		
+protocol	conformance RCS.RCSMessageSendItem	protocol descriptor for Equatable		
+protocol	conformance RCS.RCSMessageSendItem	protocol descriptor for Hashable		
+protocol	conformance RCS.RCSMessageSendItem	protocol descriptor for Identifiable		
+protocol	conformance RCS.RCSMessageSendItem	protocol descriptor for CustomStringConvertible		
+protocol	conformance IMDChat	CoreRCS.RCSChatProtocol: RCS		
+protocol	conformance TransferCreationError	protocol descriptor for Error		
+protocol	conformance ChatResolutionError	protocol descriptor for LocalizedError		
+protocol	conformance ChatResolutionError	protocol descriptor for Error		
+protocol	conformance RCSServiceSession	CoreRCS.RCSMessageReceiverDelegate: RCS		
+protocol	conformance __C.IMAccountRegistrationStatus	protocol descriptor for Comparable: RCS		
+protocol	conformance RCSBugType	protocol descriptor for RawRepresentable		
+protocol	conformance RCSBugType	protocol descriptor for Hashable		
+protocol	conformance RCSBugType	protocol descriptor for Equatable		
+protocol	conformance RCSServiceSession	CoreRCS.RCSMessageProcessingQueueDelegate: RCS		
+protocol	conformance IMDChat	CoreRCS.IMDChatRCSGroupIdentityProviding: RCS		
+protocol	conformance RCS.RCSServiceReachabilityDelegate	CoreRCS.RCSReachabilityDelegate		
+protocol	conformance __C.Key	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.Key	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.Key	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.Key	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.Key	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.Key	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.FZMessageFlags	protocol descriptor for ExpressibleByArrayLiteral: IMSharedUtilities		
+protocol	conformance __C.FZMessageFlags	protocol descriptor for Equatable: IMSharedUtilities		
+protocol	conformance __C.FZMessageFlags	protocol descriptor for RawRepresentable: IMSharedUtilities		
+protocol	conformance __C.FZMessageFlags	protocol descriptor for SetAlgebra: IMSharedUtilities		
+protocol	conformance __C.FZMessageFlags	protocol descriptor for OptionSet: IMSharedUtilities		
+protocol	conformance RCSParticipantChange.ChangeType	protocol descriptor for Equatable		
+protocol	conformance RCSParticipantChange.ChangeType	protocol descriptor for Hashable		
+protocol	conformance CoreRCS.RCSParticipantChange	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance RCSParticipantChange.ChangeType	protocol descriptor for CustomStringConvertible		
+protocol	conformance RCSOperationController.OperationError	protocol descriptor for LocalizedError		
+protocol	conformance RCSOperationController.OperationError	protocol descriptor for Error		
+protocol	conformance CoreRCS.RCSOperationController	protocol descriptor for Actor		
+protocol	conformance Operation	protocol descriptor for Actor		
+protocol	conformance RCSGroup.DisplayNameStatus	protocol descriptor for Equatable		
+protocol	conformance RCSGroup.DisplayNameStatus	protocol descriptor for Hashable		
+protocol	conformance RCSGroup.DisplayNameStatus	protocol descriptor for RawRepresentable		
+protocol	conformance RCSGroup.Icon	protocol descriptor for Decodable		
+protocol	conformance RCSGroup.Icon	protocol descriptor for Encodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance RCSMessageReceiver.MessageProcessingError	protocol descriptor for LocalizedError		
+protocol	conformance RCSMessageReceiver.MessageProcessingError	protocol descriptor for Error		
+protocol	conformance CoreRCS.RCSTransferError	protocol descriptor for Equatable		
+protocol	conformance CoreRCS.RCSTransferError	protocol descriptor for Hashable		
+protocol	conformance CoreRCS.RCSTransferError	protocol descriptor for Error		
+protocol	conformance RCSMessage.SenderInfo	protocol descriptor for CustomStringConvertible		
+protocol	conformance RCSMessage.SubscriptionInfo	protocol descriptor for Decodable		
+protocol	conformance RCSMessage.SubscriptionInfo	protocol descriptor for Encodable		
+protocol	conformance RCSMessage.ContentType	protocol descriptor for Equatable		
+protocol	conformance RCSMessage.ContentType	protocol descriptor for RawRepresentable		
+protocol	conformance RCSMessage.ContentType	protocol descriptor for Decodable		
+protocol	conformance RCSMessage.ContentType	protocol descriptor for Encodable		
+protocol	conformance RCSMessage.ContentType	protocol descriptor for Hashable		
+protocol	conformance RCSMessage.ContentType	protocol descriptor for CustomStringConvertible		
+protocol	conformance RCSMessage.Encryption	protocol descriptor for Equatable		
+protocol	conformance RCSMessage.Coordinates	protocol descriptor for Decodable		
+protocol	conformance RCSMessage.Coordinates	protocol descriptor for Encodable		
+protocol	conformance RCSMessage.Typing	protocol descriptor for Decodable		
+protocol	conformance RCSMessage.Typing	protocol descriptor for Encodable		
+protocol	conformance CoreRCS.RCSMessage	protocol descriptor for Equatable		
+protocol	conformance CoreRCS.RCSMessage	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance RCSFile.Disposition	protocol descriptor for Equatable		
+protocol	conformance RCSFile.Disposition	protocol descriptor for Hashable		
+protocol	conformance RCSFile.Disposition	protocol descriptor for RawRepresentable		
+protocol	conformance Entry.HeaderKeys	protocol descriptor for Equatable		
+protocol	conformance Entry.HeaderKeys	protocol descriptor for Hashable		
+protocol	conformance Entry.HeaderKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CoreRCS.RCSMessageMetadata	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance RCSHandle.Attribute	protocol descriptor for Equatable		
+protocol	conformance RCSHandle.Attribute	protocol descriptor for RawRepresentable		
+protocol	conformance RCSHandle.Attribute	protocol descriptor for Hashable		
+protocol	conformance RCSHandle.BotStatus	protocol descriptor for Equatable		
+protocol	conformance RCSHandle.BotStatus	protocol descriptor for Hashable		
+protocol	conformance CoreRCS.RCSHandle	protocol descriptor for Hashable		
+protocol	conformance CoreRCS.RCSHandle	protocol descriptor for Equatable		
+protocol	conformance RCSHandle.ParseError	protocol descriptor for LocalizedError		
+protocol	conformance RCSHandle.ParseError	protocol descriptor for Error		
+protocol	conformance CoreRCS.RCSHandle	protocol descriptor for CustomStringConvertible		
+protocol	conformance CoreRCS.RCSEncryption	protocol descriptor for Hashable		
+protocol	conformance CoreRCS.RCSEncryption	protocol descriptor for Equatable		
+protocol	conformance CoreRCS.RCSEncryption	protocol descriptor for CustomStringConvertible		
+protocol	conformance CoreRCS.IMDChatRCSGroupSnapshot	CoreRCS.IMDChatRCSGroupIdentityProviding		
+protocol	conformance CoreRCS.IMDChatRCSGroupIdentity	CoreRCS.RCSGroupIdentity		
+protocol	conformance CoreRCS.RCSActor	protocol descriptor for Actor		
+protocol	conformance CoreRCS.RCSActor	protocol descriptor for GlobalActor		
+protocol	conformance CoreRCS.RCSTypingTracker	protocol descriptor for Actor		
+extension	RCS.RCSMessageSendItem	Identifiable		
+extension	RCSServiceSession	RCSMessageReceiverDelegate		
+extension	RCS.RCSBugType	RawRepresentable		
+extension	CoreRCS.RCSGroup.DisplayNameStatus	RawRepresentable		
+extension	CoreRCS.RCSMessage.ContentType	RawRepresentable		
+extension	CoreRCS.RCSFile.Disposition	RawRepresentable		
+extension	CoreRCS.RCSMessageMetadata.Entry.HeaderKeys	RawRepresentable		
+extension	CoreRCS.RCSHandle.Attribute	RawRepresentable		
+extension	CoreRCS.RCSActor	GlobalActor		

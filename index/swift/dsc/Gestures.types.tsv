@@ -1,0 +1,970 @@
+kind	type	conformance	member_kind	member
+struct	Gestures.SubgraphResetTracker			
+struct	Gestures.SubgraphResetTracker		var	records
+struct	Gestures.SubgraphResetTracker		var	lastQueryTimestamp
+struct	Gestures.SubgraphResetTracker		var	nodeUpdateTimestamps
+struct	Gestures.SubgraphResetTracker.SubgraphRecord			
+struct	Gestures.SubgraphResetTracker.SubgraphRecord		var	nodes
+struct	Gestures.SubgraphResetTracker.SubgraphRecord		var	blockingNode
+struct	Gestures.SubgraphResetTracker.SubgraphRecord		var	deadline
+class	Gestures.AnyEventStore			
+class	Gestures.EventStore	Gestures.AnyEventStore<A: Gestures.Event>		
+class	Gestures.EventStore	Gestures.AnyEventStore<A: Gestures.Event>	var	events
+class	Gestures.EventStore	Gestures.AnyEventStore<A: Gestures.Event>	var	boundEventIds
+class	Gestures.AnyGestureNodeShim	NSObject		
+class	Gestures.AnyGestureNodeShim	NSObject	let	isValueless
+class	Gestures.AnyGestureNodeShim	NSObject	var	delegate
+class	Gestures.AnyGestureNodeShim	NSObject	var	container
+class	Gestures.AnyGestureNodeShim	NSObject	var	coordinator
+class	Gestures.AnyGestureNodeShim	NSObject	let	platformKey
+class	Gestures.GestureNodeShim	Gestures.AnyGestureNodeShim		
+class	Gestures.GestureNodeShim	Gestures.AnyGestureNodeShim	let	node
+class	Gestures.GestureNodeShim	Gestures.AnyGestureNodeShim	var	flags
+struct	Gestures.NodeShimFlags			
+struct	Gestures.NodeShimFlags		let	rawValue
+enum	Gestures.GestureNodeShim.Failure			
+enum	Gestures.GestureNodeShim.Failure		case	clientRequest
+enum	Gestures.GestureNodeShim.Failure		case	deinit
+struct	Gestures.DiscreteGate<A	Gestures.GestureComponent>		
+struct	Gestures.DiscreteGate<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.GestureNodeOptions			
+struct	Gestures.GestureNodeOptions		let	rawValue
+struct	Gestures.GestureComponentContext			
+struct	Gestures.GestureComponentContext		var	startTime
+struct	Gestures.GestureComponentContext		var	currentTime
+struct	Gestures.GestureComponentContext		var	updateSource
+struct	Gestures.GestureComponentContext		var	updateTracer
+struct	Gestures.GestureComponentContext		var	eventStore
+enum	Gestures.GestureUpdateSource			
+enum	Gestures.GestureUpdateSource		case	scheduler
+enum	Gestures.GestureUpdateSource		case	event
+struct	Gestures.ConcreteScrollEvent			
+struct	Gestures.ConcreteScrollEvent		var	id
+struct	Gestures.ConcreteScrollEvent		var	phase
+struct	Gestures.ConcreteScrollEvent		var	timestamp
+struct	Gestures.ConcreteScrollEvent		var	location
+struct	Gestures.ConcreteScrollEvent		var	delta
+struct	Gestures.ConcreteScrollEvent		var	acceleratedDelta
+struct	Gestures.ExpirationComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>		
+struct	Gestures.ExpirationComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>	var	upstream
+struct	Gestures.ExpirationComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>	var	state
+struct	Gestures.ExpirationRecord			
+struct	Gestures.ExpirationRecord		var	payload
+struct	Gestures.ExpirationRecord		var	expiration
+enum	Gestures.ExpirablePayload			
+enum	Gestures.ExpirablePayload		case	empty
+enum	Gestures.ExpirablePayload		case	value
+enum	Gestures.ExpirationComponent.Failure<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>		
+enum	Gestures.ExpirationComponent.Failure<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>	case	timeout
+struct	Gestures.ExpirationComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>		
+struct	Gestures.ExpirationComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.Expirable>	var	request
+struct	Gestures.Expiration			
+struct	Gestures.Expiration		var	deadline
+struct	Gestures.Expiration		var	reason
+struct	Gestures.ExpirationReason			
+struct	Gestures.ExpirationReason		let	rawValue
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>		
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	maximumMovement
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	maximumSeparationDistance
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	tapInterval
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	pointCountTimeout
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	minimumDuration
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	maximumDuration
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	tapCount
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	pointCount
+struct	Gestures.TapComponent<A	Gestures.SpatialEvent>	var	failOnExceedingMaximumPointCount
+struct	Gestures.ReduceComponent<A	Gestures.GestureComponent>		
+struct	Gestures.ReduceComponent<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.ReduceComponent<A	Gestures.GestureComponent>	var	state
+struct	Gestures.ReduceComponent<A	Gestures.GestureComponent>	let	initial
+struct	Gestures.ReduceComponent<A	Gestures.GestureComponent>	let	reduce
+struct	Gestures.ReduceComponent.State<A	Gestures.GestureComponent>		
+struct	Gestures.ReduceComponent.State<A	Gestures.GestureComponent>	var	accumulator
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>		
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	component
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	let	timeScheduler
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	eventStores
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	_traits
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	startTime
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	updateListener
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	lazy
+class	Gestures.GestureComponentController	Gestures.AnyGestureComponentController<A: Gestures.GestureComponent>	var	lazy
+class	Gestures.AnyGestureComponentController			
+class	Gestures.AnyGestureComponentController		var	node
+struct	Gestures.GestureUpdateDriverToken			
+struct	Gestures.GestureUpdateDriverToken		let	value
+class	Gestures.RunLoopUpdateDriver			
+class	Gestures.RunLoopUpdateDriver		var	listeners
+class	Gestures.RunLoopUpdateDriver		var	lazy
+struct	Gestures.EventSource<A	Gestures.Event>		
+struct	Gestures.EventSource<A	Gestures.Event>	var	state
+enum	Gestures.EventSource.Failure<A	Gestures.Event>		
+enum	Gestures.EventSource.Failure<A	Gestures.Event>	case	eventFailed
+struct	Gestures.EventSource.State<A	Gestures.Event>		
+struct	Gestures.EventSource.State<A	Gestures.Event>	var	trackedId
+struct	Gestures.DurationGate<A	Gestures.GestureComponent>		
+struct	Gestures.DurationGate<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.DurationGate<A	Gestures.GestureComponent>	let	minimumDuration
+struct	Gestures.DurationGate<A	Gestures.GestureComponent>	let	maximumDuration
+enum	Gestures.DurationGate.Failure<A	Gestures.GestureComponent>		
+enum	Gestures.DurationGate.Failure<A	Gestures.GestureComponent>	case	minimumDurationNotReached
+enum	Gestures.LoggingEnabledState			
+enum	Gestures.LoggingEnabledState		case	unknown
+enum	Gestures.LoggingEnabledState		case	enabled
+enum	Gestures.LoggingEnabledState		case	disabled
+class	Gestures.FailureDependencyGraph			
+class	Gestures.FailureDependencyGraph		var	graph
+class	Gestures.FailureDependencyGraph		let	shouldTrackTransitiveDependencies
+struct	Gestures.FailureDependencyGraph.Subgraph			
+struct	Gestures.FailureDependencyGraph.Subgraph		let	nodes
+struct	Gestures.FailureDependencyGraph.Subgraph		let	unresolvedDependencyNode
+struct	Gestures.FailureDependencyGraph.Edge			
+struct	Gestures.FailureDependencyGraph.Edge		let	dependentNode
+struct	Gestures.FailureDependencyGraph.Edge		let	dependencyNode
+enum	Gestures.ReplicatingList.Storage<A	Gestures.ReplicatingValue>		
+enum	Gestures.ReplicatingList.Storage<A	Gestures.ReplicatingValue>	case	empty
+enum	Gestures.ReplicatingList.Storage<A	Gestures.ReplicatingValue>	case	single
+enum	Gestures.ReplicatingList.Storage<A	Gestures.ReplicatingValue>	case	multiple
+struct	Gestures.ReplicatingList<A	Gestures.ReplicatingValue>		
+struct	Gestures.ReplicatingList<A	Gestures.ReplicatingValue>	var	storage
+enum	Gestures.EventPhase			
+enum	Gestures.EventPhase		case	began
+enum	Gestures.EventPhase		case	active
+enum	Gestures.EventPhase		case	ended
+enum	Gestures.EventPhase		case	failed
+class	Gestures.AnyGestureNode			
+class	Gestures.AnyGestureNode		let	id
+class	Gestures.AnyGestureNode		var	tag
+class	Gestures.AnyGestureNode		var	traits
+class	Gestures.AnyGestureNode		var	options
+class	Gestures.AnyGestureNode		var	container
+class	Gestures.AnyGestureNode		var	timeSource
+class	Gestures.AnyGestureNode		var	context
+class	Gestures.AnyGestureNode		var	debugLabelProvider
+class	Gestures.AnyGestureNode		var	listener
+class	Gestures.AnyGestureNode		var	relationMap
+class	Gestures.AnyGestureNode		var	trackedEvents
+class	Gestures.GestureNode	Gestures.AnyGestureNode		
+class	Gestures.GestureNode	Gestures.AnyGestureNode	var	delegate
+class	Gestures.GestureNode	Gestures.AnyGestureNode	var	phaseQueue
+struct	Gestures.NestedDescription			
+struct	Gestures.NestedDescription		var	options
+struct	Gestures.NestedDescription		var	customPrefix
+struct	Gestures.NestedDescription		var	customSuffix
+struct	Gestures.NestedDescription		let	depth
+struct	Gestures.NestedDescription		let	target
+struct	Gestures.NestedDescription		var	buffer
+struct	Gestures.NestedDescription.Options			
+struct	Gestures.NestedDescription.Options		let	rawValue
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>		
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	hysteresis
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	maximumSeparationDistance
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	pointCountTimeout
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	minimumPointCount
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	maximumPointCount
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	failOnExceedingMaximumPointCount
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	invertScrollingDirection
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	preferNonAcceleratedScrollingDelta
+struct	Gestures.PanComponent<A	Gestures.SpatialEvent, B: Gestures.ScrollEvent>	var	ignoreStationaryPoints
+struct	Gestures.PanComponentValue			
+struct	Gestures.PanComponentValue		var	location
+struct	Gestures.PanComponentValue		var	translation
+struct	Gestures.PanComponentValue		var	_velocity
+struct	Gestures.PanCentroid<A	Gestures.LocationContaining, A: Swift.Identifiable>		
+struct	Gestures.PanCentroid<A	Gestures.LocationContaining, A: Swift.Identifiable>	var	id
+struct	Gestures.PanCentroid<A	Gestures.LocationContaining, A: Swift.Identifiable>	var	value
+struct	Gestures.PanCentroid<A	Gestures.LocationContaining, A: Swift.Identifiable>	var	translation
+struct	Gestures.GestureNodeID			
+struct	Gestures.GestureNodeID		let	rawValue
+struct	Gestures.EventID			
+struct	Gestures.EventID		let	rawValue
+struct	Gestures.MouseEvent			
+struct	Gestures.MouseEvent		let	id
+struct	Gestures.MouseEvent		let	phase
+struct	Gestures.MouseEvent		let	timestamp
+struct	Gestures.MouseEvent		let	location
+struct	Gestures.MouseEvent		let	button
+struct	Gestures.MouseEvent.Button			
+struct	Gestures.MouseEvent.Button		let	rawValue
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>		
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>	var	upstreams
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>	let	outputCombiner
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>	let	initialCount
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>	let	limit
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>	let	failOnExceedingLimit
+struct	Gestures.DynamicCombinerComponent<A	Gestures.GestureComponent>	let	resetComponentsOnCompletion
+enum	Gestures.DynamicCombinerComponent.Failure<A	Gestures.GestureComponent>		
+enum	Gestures.DynamicCombinerComponent.Failure<A	Gestures.GestureComponent>	case	limitExceeded
+struct	Gestures.StationaryLocationFilter<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>		
+struct	Gestures.StationaryLocationFilter<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>	var	upstream
+struct	Gestures.StationaryLocationFilter<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>	var	state
+struct	Gestures.StationaryLocationFilter<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>	let	requiredPointCount
+struct	Gestures.StationaryLocationFilter<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>	let	capacity
+struct	Gestures.StationaryLocationFilter.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>		
+struct	Gestures.StationaryLocationFilter.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining, Value Gestures.GestureComponent _$s_7ElementSTQZ: Swift.Identifiable>	var	previousLocations
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>		
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	maximumMovement
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	maximumSeparationDistance
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	pointCountTimeout
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	minimumDuration
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	maximumDuration
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	pointCount
+struct	Gestures.LongPressComponent<A	Gestures.SpatialEvent>	var	failOnExceedingMaximumPointCount
+struct	Gestures.CombinerComponent<A	Gestures.GestureComponent>		
+struct	Gestures.CombinerComponent<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.CombinerComponent<A	Gestures.GestureComponent>	let	outputCombiner
+struct	Gestures.CombinerComponent<A	Gestures.GestureComponent>	let	resetComponentsOnCompletion
+struct	Gestures.CombinerElement<A	Gestures.GestureComponent>		
+struct	Gestures.CombinerElement<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.CombinerElement<A	Gestures.GestureComponent>	var	state
+struct	Gestures.CombinerElement.State<A	Gestures.GestureComponent>		
+struct	Gestures.CombinerElement.State<A	Gestures.GestureComponent>	var	cachedOutput
+struct	Gestures.CombinerElement.State<A	Gestures.GestureComponent>	var	isDirty
+struct	Gestures.UptimeTimeSource			
+struct	Gestures.Timestamp			
+struct	Gestures.Timestamp		let	value
+struct	Gestures.TimeSchedulerToken			
+struct	Gestures.TimeSchedulerToken		let	rawValue
+class	Gestures.DispatchTimeScheduler			
+class	Gestures.DispatchTimeScheduler		let	queue
+class	Gestures.DispatchTimeScheduler		let	timeSource
+class	Gestures.DispatchTimeScheduler		var	scheduledJobs
+class	Gestures.DispatchTimeScheduler		var	counter
+struct	Gestures.ScheduledJob			
+struct	Gestures.ScheduledJob		let	workItem
+struct	Gestures.ScheduledJob		let	cancelHandler
+class	Gestures.GestureNodeCoordinator			
+class	Gestures.GestureNodeCoordinator		var	willUpdate
+class	Gestures.GestureNodeCoordinator		var	willProcessUpdateQueue
+class	Gestures.GestureNodeCoordinator		var	didUpdate
+class	Gestures.GestureNodeCoordinator		var	nodes
+class	Gestures.GestureNodeCoordinator		let	timeSource
+class	Gestures.GestureNodeCoordinator		let	failureDependencyGraph
+class	Gestures.GestureNodeCoordinator		var	exclusionPool
+class	Gestures.GestureNodeCoordinator		var	nodesNeedingUpdate
+class	Gestures.GestureNodeCoordinator		var	nodesNeedingReset
+class	Gestures.GestureNodeCoordinator		var	isProcessingUpdates
+class	Gestures.GestureNodeCoordinator		var	synchronousNodeUpdates
+class	Gestures.GestureNodeCoordinator		let	updateDriver
+class	Gestures.GestureNodeCoordinator		var	updateDriverToken
+class	Gestures.GestureNodeCoordinator		var	resetTracker
+struct	Gestures.IdentifiableLocation<A	Swift.Hashable>		
+struct	Gestures.IdentifiableLocation<A	Swift.Hashable>	var	id
+struct	Gestures.IdentifiableLocation<A	Swift.Hashable>	var	location
+struct	Gestures.TrackedValue			
+struct	Gestures.TrackedValue		var	current
+struct	Gestures.TrackedValue		var	previous
+struct	Gestures.TrackedValue		var	initial
+struct	Gestures.ValueTracker<A	Gestures.GestureComponent>		
+struct	Gestures.ValueTracker<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.ValueTracker<A	Gestures.GestureComponent>	var	state
+struct	Gestures.ValueTracker<A	Gestures.GestureComponent>	let	valueReader
+struct	Gestures.ValueTracker.State<A	Gestures.GestureComponent>		
+struct	Gestures.ValueTracker.State<A	Gestures.GestureComponent>	var	initialValue
+struct	Gestures.ValueTracker.State<A	Gestures.GestureComponent>	var	previousValue
+class	Gestures.UpdateTracer			
+class	Gestures.UpdateTracer		var	seed
+class	Gestures.UpdateTracer		var	traceHead
+class	Gestures.UpdateTracer		var	activeTraces
+class	Gestures.UpdateTracer		var	pendingBranches
+class	Gestures.UpdateTracer		var	dataSnapshots
+struct	Gestures.TraceDataSnapshot			
+struct	Gestures.TraceDataSnapshot		var	component
+struct	Gestures.TraceDataSnapshot		var	result
+struct	Gestures.TraceDataSnapshot		var	state
+struct	Gestures.TraceDataSnapshot		var	isSuccess
+struct	Gestures.Trace			
+struct	Gestures.Trace		var	id
+struct	Gestures.Trace		var	upstreamTraces
+struct	Gestures.TouchEvent			
+struct	Gestures.TouchEvent		var	id
+struct	Gestures.TouchEvent		var	phase
+struct	Gestures.TouchEvent		var	timestamp
+struct	Gestures.TouchEvent		var	location
+struct	Gestures.RepeatComponent<A	Gestures.GestureComponent>		
+struct	Gestures.RepeatComponent<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.RepeatComponent<A	Gestures.GestureComponent>	var	state
+struct	Gestures.RepeatComponent<A	Gestures.GestureComponent>	let	count
+struct	Gestures.RepeatComponent<A	Gestures.GestureComponent>	let	delay
+struct	Gestures.RepeatComponent.State<A	Gestures.GestureComponent>		
+struct	Gestures.RepeatComponent.State<A	Gestures.GestureComponent>	var	currentCount
+struct	Gestures.RepeatComponent.State<A	Gestures.GestureComponent>	var	repeatDeadline
+struct	Gestures.RepeatComponent.State<A	Gestures.GestureComponent>	var	repeatStartTime
+struct	Gestures.ScrollPositionListener<A	Gestures.ScrollEvent>		
+struct	Gestures.ScrollPositionListener<A	Gestures.ScrollEvent>	var	upstream
+struct	Gestures.ScrollPositionListener<A	Gestures.ScrollEvent>	var	state
+struct	Gestures.ScrollPositionListener<A	Gestures.ScrollEvent>	let	options
+struct	Gestures.ScrollPositionListenerOptions			
+struct	Gestures.ScrollPositionListenerOptions		let	rawValue
+struct	Gestures.ScrollPositionListener.State<A	Gestures.ScrollEvent>		
+struct	Gestures.ScrollPositionListener.State<A	Gestures.ScrollEvent>	var	location
+enum	Gestures.GesturePhase			
+enum	Gestures.GesturePhase		case	blocked
+enum	Gestures.GesturePhase		case	active
+enum	Gestures.GesturePhase		case	ended
+enum	Gestures.GesturePhase		case	failed
+enum	Gestures.GesturePhase		case	idle
+enum	Gestures.GesturePhase		case	possible
+enum	Gestures.GestureFailureReason			
+enum	Gestures.GestureFailureReason		case	excluded
+enum	Gestures.GestureFailureReason		case	failureDependency
+enum	Gestures.GestureFailureReason		case	custom
+enum	Gestures.GestureFailureReason		case	disabled
+enum	Gestures.GestureFailureReason		case	removedFromContainer
+enum	Gestures.GestureFailureReason		case	activationDenied
+enum	Gestures.GestureFailureReason		case	aborted
+enum	Gestures.GestureFailureReason		case	coordinatorChanged
+enum	Gestures.GestureOutput			
+enum	Gestures.GestureOutput		case	empty
+enum	Gestures.GestureOutput		case	value
+enum	Gestures.GestureOutput		case	finalValue
+enum	Gestures.GestureOutputEmptyReason			
+enum	Gestures.GestureOutputEmptyReason		case	noData
+enum	Gestures.GestureOutputEmptyReason		case	filtered
+enum	Gestures.GestureOutputEmptyReason		case	timeUpdate
+struct	Gestures.GestureOutputMetadata			
+struct	Gestures.GestureOutputMetadata		var	updatesToSchedule
+struct	Gestures.GestureOutputMetadata		var	updatesToCancel
+struct	Gestures.GestureOutputMetadata		var	traceAnnotation
+struct	Gestures.UpdateTraceAnnotation			
+struct	Gestures.UpdateTraceAnnotation		var	value
+struct	Gestures.GestureOutputStatusCombiner			
+struct	Gestures.GestureOutputStatusCombiner		var	combine
+enum	Gestures.GestureOutputStatus			
+enum	Gestures.GestureOutputStatus		case	empty
+enum	Gestures.GestureOutputStatus		case	value
+enum	Gestures.GestureOutputStatus		case	finalValue
+struct	Gestures.GestureOutputArrayCombiner			
+struct	Gestures.GestureOutputArrayCombiner		let	statusCombiner
+struct	Gestures.GestureOutputCombiner			
+struct	Gestures.GestureOutputCombiner		let	combineValues
+struct	Gestures.GestureOutputCombiner		let	combineOptionals
+struct	Gestures.GestureOutputCombiner		let	statusCombiner
+struct	Gestures.VelocityComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>		
+struct	Gestures.VelocityComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>	var	upstream
+struct	Gestures.VelocityComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>	var	state
+struct	Gestures.VelocityComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>	let	interpolationWeight
+struct	Gestures.VelocityComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>		
+struct	Gestures.VelocityComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>	var	previousValue
+struct	Gestures.VelocityComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>	var	previousVelocity
+struct	Gestures.VelocityComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.VectorContaining, Value Gestures.GestureComponent  first-element-marker VectorType Gestures.VectorContaining _$sQZ: Gestures.Interpolatable>	var	previousTime
+struct	Gestures.RingBuffer			
+struct	Gestures.RingBuffer		let	capacity
+struct	Gestures.RingBuffer		var	count
+struct	Gestures.RingBuffer		var	storage
+struct	Gestures.RingBuffer		var	emptyValue
+struct	Gestures.RingBuffer		var	start
+struct	Gestures.RingBuffer		var	end
+struct	Gestures.RingBufferIterator			
+struct	Gestures.RingBufferIterator		let	ringBuffer
+struct	Gestures.RingBufferIterator		var	currentIndex
+struct	Gestures.RingBufferIterator		var	elementsRemaining
+struct	Gestures.GestureTrait			
+struct	Gestures.GestureTrait		var	id
+struct	Gestures.GestureTrait		var	attributes
+struct	Gestures.GestureTrait.AttributeKey			
+struct	Gestures.GestureTrait.AttributeKey		let	rawValue
+enum	Gestures.GestureTrait.AttributeValue			
+enum	Gestures.GestureTrait.AttributeValue		case	bool
+enum	Gestures.GestureTrait.AttributeValue		case	int
+enum	Gestures.GestureTrait.AttributeValue		case	double
+struct	Gestures.GestureTraitID			
+struct	Gestures.GestureTraitID		let	rawValue
+struct	Gestures.GestureTraitCollection			
+struct	Gestures.GestureTraitCollection		var	_traits
+class	Gestures.TraitLabelStore			
+class	Gestures.TraitLabelStore		var	labels
+class	Gestures.TraitLabelStore		let	lock
+struct	Gestures.AdjacencyListGraph<A	Swift.Hashable>		
+struct	Gestures.AdjacencyListGraph<A	Swift.Hashable>	var	outAdjacency
+struct	Gestures.AdjacencyListGraph<A	Swift.Hashable>	var	inAdjacency
+enum	Gestures.MovementGate.Failure<A	Gestures.GestureComponent, B: Gestures.LocationContaining, Gestures.GestureComponent.Value ==: Gestures.TrackedValue B>		
+enum	Gestures.MovementGate.Failure<A	Gestures.GestureComponent, B: Gestures.LocationContaining, Gestures.GestureComponent.Value ==: Gestures.TrackedValue B>	case	tooMuchMovement
+enum	Gestures.MovementGate.Restriction<A	Gestures.GestureComponent, B: Gestures.LocationContaining, Gestures.GestureComponent.Value ==: Gestures.TrackedValue B>		
+enum	Gestures.MovementGate.Restriction<A	Gestures.GestureComponent, B: Gestures.LocationContaining, Gestures.GestureComponent.Value ==: Gestures.TrackedValue B>	case	min
+enum	Gestures.MovementGate.Restriction<A	Gestures.GestureComponent, B: Gestures.LocationContaining, Gestures.GestureComponent.Value ==: Gestures.TrackedValue B>	case	max
+enum	Gestures.GestureNodeMatcher			
+enum	Gestures.GestureNodeMatcher		case	id
+enum	Gestures.GestureNodeMatcher		case	tag
+enum	Gestures.GestureNodeMatcher		case	traits
+enum	Gestures.GestureNodeMatcher		case	any
+enum	Gestures.GestureNodeMatcher.RelativePosition			
+enum	Gestures.GestureNodeMatcher.RelativePosition		case	any
+enum	Gestures.GestureNodeMatcher.RelativePosition		case	above
+enum	Gestures.GestureNodeMatcher.RelativePosition		case	below
+struct	Gestures.MapComponent<A	Gestures.GestureComponent>		
+struct	Gestures.MapComponent<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.MapComponent<A	Gestures.GestureComponent>	let	map
+struct	Gestures.ThresholdComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>		
+struct	Gestures.ThresholdComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>	var	upstream
+struct	Gestures.ThresholdComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>	var	state
+struct	Gestures.ThresholdComponent<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>	let	threshold
+struct	Gestures.ThresholdComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>		
+struct	Gestures.ThresholdComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>	var	initialValue
+struct	Gestures.ThresholdComponent.State<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>	var	adjustmentDelta
+enum	Gestures.ThresholdComponent.Failure<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>		
+enum	Gestures.ThresholdComponent.Failure<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Gestures.ThresholdAdjustable>	case	notEnoughMovement
+class	Gestures.GestureNodeCoordinatorShim	NSObject		
+class	Gestures.GestureNodeCoordinatorShim	NSObject	let	coordinator
+class	Gestures.GestureNodeCoordinatorShim	NSObject	var	willUpdateHandler
+class	Gestures.GestureNodeCoordinatorShim	NSObject	var	willProcessUpdateQueueHandler
+class	Gestures.GestureNodeCoordinatorShim	NSObject	var	didUpdateHandler
+class	Gestures.ExclusionPool			
+class	Gestures.ExclusionPool		let	failureDependencyGraph
+class	Gestures.ExclusionPool		var	nodes
+class	Gestures.ExclusionPool		var	isSorted
+class	Gestures.ExclusionPool		var	needsUpdate
+class	Gestures.ExclusionPool		var	relationCache
+class	Gestures.ExclusionRelationCache			
+class	Gestures.ExclusionRelationCache		var	exclusionValues
+class	Gestures.ExclusionRelationCache		var	activeExclusionValues
+struct	Gestures.SeparationDistanceGate<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining>		
+struct	Gestures.SeparationDistanceGate<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining>	var	upstream
+struct	Gestures.SeparationDistanceGate<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining>	let	distance
+enum	Gestures.SeparationDistanceGate.Failure<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining>		
+enum	Gestures.SeparationDistanceGate.Failure<A	Gestures.GestureComponent, Gestures.GestureComponent.Value ==: Swift.Collection, Value Gestures.GestureComponent _$s_7ElementSTQZ: Gestures.LocationContaining>	case	exceedsAllowedDistance
+struct	Gestures.GesturePhaseQueue			
+struct	Gestures.GesturePhaseQueue		var	timeSource
+struct	Gestures.GesturePhaseQueue		var	currentPhase
+struct	Gestures.GesturePhaseQueue		var	pendingPhases
+struct	Gestures.GesturePhaseQueue.InvalidTransition			
+struct	Gestures.GesturePhaseQueue.InvalidTransition		var	phase
+struct	Gestures.GesturePhaseQueue.InvalidTransition		var	targetPhase
+struct	Gestures.TimeoutComponent<A	Gestures.GestureComponent>		
+struct	Gestures.TimeoutComponent<A	Gestures.GestureComponent>	var	upstream
+struct	Gestures.TimeoutComponent<A	Gestures.GestureComponent>	var	state
+struct	Gestures.TimeoutComponent<A	Gestures.GestureComponent>	let	timeout
+struct	Gestures.TimeoutComponent<A	Gestures.GestureComponent>	let	tag
+struct	Gestures.TimeoutComponent<A	Gestures.GestureComponent>	let	predicate
+struct	Gestures.TimeoutComponent.State<A	Gestures.GestureComponent>		
+struct	Gestures.TimeoutComponent.State<A	Gestures.GestureComponent>	var	fulfilled
+class	Gestures.UpdateScheduler			
+class	Gestures.UpdateScheduler		let	timeScheduler
+class	Gestures.UpdateScheduler		var	scheduledRequests
+struct	Gestures.UpdateRequest			
+struct	Gestures.UpdateRequest		let	id
+struct	Gestures.UpdateRequest		let	creationTime
+struct	Gestures.UpdateRequest		let	targetTime
+struct	Gestures.UpdateRequest		let	tag
+enum	Gestures.GestureRelationType			
+enum	Gestures.GestureRelationType		case	exclusion
+enum	Gestures.GestureRelationType		case	activeExclusion
+enum	Gestures.GestureRelationType		case	failureRequirement
+enum	Gestures.GestureRelationRole			
+enum	Gestures.GestureRelationRole		case	regular
+enum	Gestures.GestureRelationRole		case	blocking
+enum	Gestures.GestureRelationDirection			
+enum	Gestures.GestureRelationDirection		case	outgoing
+enum	Gestures.GestureRelationDirection		case	incoming
+struct	Gestures.GestureRelation			
+struct	Gestures.GestureRelation		var	type
+struct	Gestures.GestureRelation		var	direction
+struct	Gestures.GestureRelation		var	role
+struct	Gestures.GestureRelation		var	target
+struct	Gestures.RelationMap			
+struct	Gestures.RelationMap		var	relations
+struct	Gestures.RelationDefinition			
+struct	Gestures.RelationDefinition		var	type
+struct	Gestures.RelationDefinition		var	direction
+struct	Gestures.RelationDefinition		var	role
+struct	Gestures.GestureTag			
+struct	Gestures.GestureTag		let	rawValue
+protocol	Gestures.StatefulGestureComponent	State		
+protocol	Gestures.GestureComponentState			
+protocol	Gestures.DiscreteComponent			
+protocol	Gestures.GestureComponent	Value		
+protocol	Gestures.ScrollEvent			
+protocol	Gestures.GestureNodeDelegate	Value		
+protocol	Gestures.Expirable	Value		
+protocol	Gestures.GestureUpdateDriver			
+protocol	Gestures.Interpolatable			
+protocol	Gestures.ReplicatingValue			
+protocol	Gestures.Event			
+protocol	Gestures.NestedCustomStringConvertible			
+protocol	OptionalProtocol			
+protocol	Gestures.VectorArithmetic			
+protocol	Gestures.VectorContaining	VectorType		
+protocol	Gestures.SpatialEvent			
+protocol	Gestures.TimeSource			
+protocol	Gestures.TimeSourceImpl			
+protocol	Gestures.TimeScheduler			
+protocol	Gestures.LocationContaining			
+protocol	Gestures.Mergeable			
+protocol	Gestures.Graph	Vertex		
+protocol	Gestures.GestureNodeContainer			
+protocol	Gestures.GestureNodeListener			
+protocol	Gestures.CompositeGestureComponent	Upstream		
+protocol	Gestures.ValueTransformingComponent			
+protocol	Gestures.ThresholdAdjustable	Threshold		
+protocol	Gestures._AdditiveArithmetic			
+protocol	conformance Gestures.EventStore	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.EventStore	Swift.CustomStringConvertible		
+protocol	conformance Gestures.EventStore	Gestures.NestedCustomStringConvertible		
+protocol	conformance NodeShimFlags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance NodeShimFlags	Swift.Equatable		
+protocol	conformance NodeShimFlags	Swift.RawRepresentable		
+protocol	conformance NodeShimFlags	Swift.SetAlgebra		
+protocol	conformance NodeShimFlags	Swift.CustomStringConvertible		
+protocol	conformance NodeShimFlags	Swift.OptionSet		
+protocol	conformance Gestures.GestureNodeShim	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureNodeShim	Gestures.GestureNodeDelegate		
+protocol	conformance Gestures.AnyGestureNodeShim	Gestures.GestureNodeContainer		
+protocol	conformance Failure	Swift.CustomStringConvertible		
+protocol	conformance Failure	Swift.Error		
+protocol	conformance DiscreteGate	Gestures.CompositeGestureComponent		
+protocol	conformance DiscreteGate	Gestures.DiscreteComponent		
+protocol	conformance DiscreteGate	Gestures.ValueTransformingComponent		
+protocol	conformance DiscreteGate	Gestures.GestureComponent		
+protocol	conformance Gestures.GestureNodeOptions	Swift.OptionSet		
+protocol	conformance Gestures.GestureNodeOptions	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureNodeOptions	Swift.SetAlgebra		
+protocol	conformance Gestures.GestureNodeOptions	Swift.RawRepresentable		
+protocol	conformance Gestures.GestureNodeOptions	Swift.Equatable		
+protocol	conformance Gestures.GestureNodeOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Gestures.GestureUpdateSource	Swift.Equatable		
+protocol	conformance Gestures.ConcreteScrollEvent	Gestures.ScrollEvent		
+protocol	conformance Gestures.ConcreteScrollEvent	Gestures.SpatialEvent		
+protocol	conformance Gestures.ConcreteScrollEvent	Gestures.Event		
+protocol	conformance Gestures.ConcreteScrollEvent	Gestures.LocationContaining		
+protocol	conformance Gestures.ConcreteScrollEvent	Swift.Identifiable		
+protocol	conformance Gestures.ConcreteScrollEvent	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.ConcreteScrollEvent	Swift.CustomStringConvertible		
+protocol	conformance Gestures.ConcreteScrollEvent	Swift.CustomDebugStringConvertible		
+protocol	conformance Swift.Never	Gestures.ScrollEvent		
+protocol	conformance Gestures.ExpirationRecord	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.ExpirationRecord	Swift.CustomStringConvertible		
+protocol	conformance Gestures.ExpirationRecord	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.ExpirationComponent	Gestures.CompositeGestureComponent		
+protocol	conformance Gestures.ExpirationComponent	Gestures.StatefulGestureComponent		
+protocol	conformance ExpirationComponent.State	Gestures.GestureComponentState		
+protocol	conformance Gestures.ExpirationComponent	Gestures.ValueTransformingComponent		
+protocol	conformance Gestures.ExpirablePayload	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.ExpirablePayload	Swift.CustomStringConvertible		
+protocol	conformance Gestures.ExpirablePayload	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.ExpirationComponent	Gestures.GestureComponent		
+protocol	conformance Gestures.ExpirationRecord	Gestures.Expirable		
+protocol	conformance ExpirationComponent.State	Swift.CustomDebugStringConvertible		
+protocol	conformance ExpirationComponent.State	Swift.CustomStringConvertible		
+protocol	conformance ExpirationComponent.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance ExpirationComponent.Failure	Swift.Error		
+protocol	conformance Gestures.ExpirationReason	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance Gestures.ExpirationReason	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance Gestures.ExpirationReason	Swift.CustomStringConvertible		
+protocol	conformance Gestures.ExpirationReason	Swift.ExpressibleByStringLiteral		
+protocol	conformance Gestures.TapComponent	Gestures.CompositeGestureComponent		
+protocol	conformance Gestures.TapComponent	Gestures.DiscreteComponent		
+protocol	conformance Gestures.TapComponent	Gestures.GestureComponent		
+protocol	conformance ReduceComponent	Gestures.CompositeGestureComponent		
+protocol	conformance ReduceComponent	Gestures.StatefulGestureComponent		
+protocol	conformance ReduceComponent.State	Gestures.GestureComponentState		
+protocol	conformance ReduceComponent	Gestures.ValueTransformingComponent		
+protocol	conformance ReduceComponent	Gestures.GestureComponent		
+protocol	conformance ReduceComponent.State	Swift.CustomDebugStringConvertible		
+protocol	conformance ReduceComponent.State	Swift.CustomStringConvertible		
+protocol	conformance ReduceComponent.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance __C.GFGestureRelationType	Swift.CustomStringConvertible		
+protocol	conformance __C.GFGestureRelationRole	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureUpdateDriverToken	Swift.Hashable		
+protocol	conformance Gestures.GestureUpdateDriverToken	Swift.Equatable		
+protocol	conformance Gestures.RunLoopUpdateDriver	Gestures.GestureUpdateDriver		
+protocol	conformance Gestures.EventSource	Gestures.StatefulGestureComponent		
+protocol	conformance EventSource.State	Gestures.GestureComponentState		
+protocol	conformance Gestures.EventSource	Gestures.GestureComponent		
+protocol	conformance EventSource.State	Swift.CustomDebugStringConvertible		
+protocol	conformance EventSource.State	Swift.CustomStringConvertible		
+protocol	conformance EventSource.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance EventSource.Failure	Swift.Hashable		
+protocol	conformance EventSource.Failure	Swift.Equatable		
+protocol	conformance EventSource.Failure	Swift.Error		
+protocol	conformance DurationGate	Gestures.CompositeGestureComponent		
+protocol	conformance DurationGate	Gestures.ValueTransformingComponent		
+protocol	conformance DurationGate	Gestures.GestureComponent		
+protocol	conformance DurationGate.Failure	Swift.Hashable		
+protocol	conformance DurationGate.Failure	Swift.Equatable		
+protocol	conformance DurationGate.Failure	Swift.Error		
+protocol	conformance LoggingEnabledState	Synchronization.AtomicRepresentable		
+protocol	conformance LoggingEnabledState	Swift.RawRepresentable		
+protocol	conformance LoggingEnabledState	Swift.Hashable		
+protocol	conformance LoggingEnabledState	Swift.Equatable		
+protocol	conformance __C.CGPoint	Gestures.Interpolatable		
+protocol	conformance __C.CGVector	Gestures.Interpolatable		
+protocol	conformance Gestures.FailureDependencyGraph	Swift.CustomStringConvertible		
+protocol	conformance Gestures.ReplicatingList	Swift.Sequence		
+protocol	conformance Gestures.ReplicatingList	Swift.Collection		
+protocol	conformance __C.CGSize	Gestures._AdditiveArithmetic		
+protocol	conformance Gestures.EventPhase	Swift.Equatable		
+protocol	conformance Gestures.EventPhase	Swift.Hashable		
+protocol	conformance __C.CGPoint	Gestures._AdditiveArithmetic		
+protocol	conformance __C.CGPoint	Gestures.VectorArithmetic		
+protocol	conformance __C.CGPoint	Gestures.VectorContaining		
+protocol	conformance Gestures.AnyGestureNode	Swift.Identifiable		
+protocol	conformance Gestures.AnyGestureNode	Swift.Hashable		
+protocol	conformance Gestures.AnyGestureNode	Swift.Equatable		
+protocol	conformance Swift.Optional	Gestures.OptionalProtocol		
+protocol	conformance Swift.Array	Gestures.NestedCustomStringConvertible		
+protocol	conformance Swift.Set	Gestures.NestedCustomStringConvertible		
+protocol	conformance Swift.Dictionary	Gestures.NestedCustomStringConvertible		
+protocol	conformance NestedDescription.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance NestedDescription.Options	Swift.Equatable		
+protocol	conformance NestedDescription.Options	Swift.RawRepresentable		
+protocol	conformance NestedDescription.Options	Swift.SetAlgebra		
+protocol	conformance NestedDescription.Options	Swift.OptionSet		
+protocol	conformance Gestures.PanComponent	Gestures.CompositeGestureComponent		
+protocol	conformance Gestures.PanComponent	Gestures.GestureComponent		
+protocol	conformance Gestures.PanComponentValue	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.PanComponentValue	Swift.CustomStringConvertible		
+protocol	conformance Gestures.PanComponentValue	Swift.CustomDebugStringConvertible		
+protocol	conformance PanCentroid	Swift.CustomDebugStringConvertible		
+protocol	conformance PanCentroid	Swift.CustomStringConvertible		
+protocol	conformance PanCentroid	Gestures.NestedCustomStringConvertible		
+protocol	conformance PanCentroid	Swift.Identifiable		
+protocol	conformance Gestures.IdentifiableLocation	Gestures.ThresholdAdjustable		
+protocol	conformance PanCentroid	Gestures.VectorContaining		
+protocol	conformance PanCentroid	Gestures.ThresholdAdjustable		
+protocol	conformance Gestures.GestureNodeID	Swift.Hashable		
+protocol	conformance Gestures.GestureNodeID	Swift.Comparable		
+protocol	conformance Gestures.GestureNodeID	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureNodeID	Swift.Equatable		
+protocol	conformance Gestures.EventID	Swift.Hashable		
+protocol	conformance Gestures.EventID	Swift.CustomStringConvertible		
+protocol	conformance Gestures.EventID	Swift.Equatable		
+protocol	conformance MouseEvent.Button	Swift.RawRepresentable		
+protocol	conformance Gestures.MouseEvent	Gestures.SpatialEvent		
+protocol	conformance Gestures.MouseEvent	Gestures.Event		
+protocol	conformance Gestures.MouseEvent	Gestures.LocationContaining		
+protocol	conformance Gestures.MouseEvent	Swift.Identifiable		
+protocol	conformance Gestures.MouseEvent	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.MouseEvent	Swift.CustomStringConvertible		
+protocol	conformance Gestures.MouseEvent	Swift.CustomDebugStringConvertible		
+protocol	conformance Swift.Double	Gestures.VectorArithmetic		
+protocol	conformance Swift.Double	Gestures._AdditiveArithmetic		
+protocol	conformance Swift.Double	Gestures.VectorContaining		
+protocol	conformance Gestures.CombinerElement	Gestures.ReplicatingValue		
+protocol	conformance DynamicCombinerComponent	Gestures.GestureComponent		
+protocol	conformance DynamicCombinerComponent.Failure	Swift.Hashable		
+protocol	conformance DynamicCombinerComponent.Failure	Swift.Equatable		
+protocol	conformance DynamicCombinerComponent.Failure	Swift.Error		
+protocol	conformance StationaryLocationFilter	Gestures.CompositeGestureComponent		
+protocol	conformance StationaryLocationFilter	Gestures.StatefulGestureComponent		
+protocol	conformance StationaryLocationFilter.State	Gestures.GestureComponentState		
+protocol	conformance StationaryLocationFilter	Gestures.ValueTransformingComponent		
+protocol	conformance StationaryLocationFilter	Gestures.GestureComponent		
+protocol	conformance StationaryLocationFilter.State	Swift.CustomDebugStringConvertible		
+protocol	conformance StationaryLocationFilter.State	Swift.CustomStringConvertible		
+protocol	conformance StationaryLocationFilter.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance Swift.Never	Gestures.SpatialEvent		
+protocol	conformance Swift.Never	Gestures.Event		
+protocol	conformance Swift.Never	Gestures.LocationContaining		
+protocol	conformance Gestures.LongPressComponent	Gestures.CompositeGestureComponent		
+protocol	conformance Gestures.LongPressComponent	Gestures.GestureComponent		
+protocol	conformance CombinerElement.State	Swift.CustomDebugStringConvertible		
+protocol	conformance CombinerElement.State	Swift.CustomStringConvertible		
+protocol	conformance CombinerElement.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance CombinerElement.State	Gestures.GestureComponentState		
+protocol	conformance Gestures.CombinerElement	Gestures.GestureComponent		
+protocol	conformance Gestures.CombinerElement	Gestures.StatefulGestureComponent		
+protocol	conformance Gestures.CombinerElement	Gestures.CompositeGestureComponent		
+protocol	conformance CombinerComponent	Gestures.GestureComponent		
+protocol	conformance Gestures.UptimeTimeSource	Gestures.TimeSource		
+protocol	conformance Gestures.UptimeTimeSource	Gestures.TimeSourceImpl		
+protocol	conformance Gestures.Timestamp	Swift.Hashable		
+protocol	conformance Gestures.Timestamp	Swift.CustomStringConvertible		
+protocol	conformance Gestures.Timestamp	Swift.Equatable		
+protocol	conformance Gestures.TimeSchedulerToken	Swift.Hashable		
+protocol	conformance Gestures.TimeSchedulerToken	Swift.Equatable		
+protocol	conformance Gestures.DispatchTimeScheduler	Gestures.TimeScheduler		
+protocol	conformance Gestures.DispatchTimeScheduler	Gestures.TimeSource		
+protocol	conformance Gestures.Timestamp	Swift.Comparable		
+protocol	conformance Gestures.GestureNode	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureNode	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureNode	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.GestureNodeCoordinator	Gestures.GestureNodeListener		
+protocol	conformance __C.CGPoint	Gestures.LocationContaining		
+protocol	conformance Gestures.IdentifiableLocation	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.IdentifiableLocation	Swift.CustomStringConvertible		
+protocol	conformance Gestures.IdentifiableLocation	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.IdentifiableLocation	Swift.Identifiable		
+protocol	conformance Gestures.IdentifiableLocation	Gestures.LocationContaining		
+protocol	conformance Gestures.IdentifiableLocation	Gestures.VectorContaining		
+protocol	conformance ValueTracker.State	Swift.CustomDebugStringConvertible		
+protocol	conformance ValueTracker.State	Swift.CustomStringConvertible		
+protocol	conformance ValueTracker.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance ValueTracker.State	Gestures.GestureComponentState		
+protocol	conformance ValueTracker	Gestures.CompositeGestureComponent		
+protocol	conformance ValueTracker	Gestures.StatefulGestureComponent		
+protocol	conformance ValueTracker	Gestures.ValueTransformingComponent		
+protocol	conformance Gestures.TrackedValue	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.TrackedValue	Swift.CustomStringConvertible		
+protocol	conformance Gestures.TrackedValue	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.TrackedValue	Gestures.LocationContaining		
+protocol	conformance Gestures.TrackedValue	Swift.Equatable		
+protocol	conformance ValueTracker	Gestures.GestureComponent		
+protocol	conformance Trace	Swift.Equatable		
+protocol	conformance Trace	Swift.Hashable		
+protocol	conformance Trace	Swift.Identifiable		
+protocol	conformance Gestures.TouchEvent	Gestures.SpatialEvent		
+protocol	conformance Gestures.TouchEvent	Gestures.Event		
+protocol	conformance Gestures.TouchEvent	Gestures.LocationContaining		
+protocol	conformance Gestures.TouchEvent	Swift.Identifiable		
+protocol	conformance Gestures.TouchEvent	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.TouchEvent	Swift.CustomStringConvertible		
+protocol	conformance Gestures.TouchEvent	Swift.CustomDebugStringConvertible		
+protocol	conformance __C.GFGesturePhase	Swift.CustomStringConvertible		
+protocol	conformance RepeatComponent	Gestures.StatefulGestureComponent		
+protocol	conformance RepeatComponent.State	Gestures.GestureComponentState		
+protocol	conformance RepeatComponent	Gestures.CompositeGestureComponent		
+protocol	conformance RepeatComponent	Gestures.GestureComponent		
+protocol	conformance RepeatComponent.State	Swift.CustomDebugStringConvertible		
+protocol	conformance RepeatComponent.State	Swift.CustomStringConvertible		
+protocol	conformance RepeatComponent.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.ScrollPositionListener	Gestures.CompositeGestureComponent		
+protocol	conformance Gestures.ScrollPositionListener	Gestures.StatefulGestureComponent		
+protocol	conformance ScrollPositionListener.State	Gestures.GestureComponentState		
+protocol	conformance Gestures.ScrollPositionListener	Gestures.ValueTransformingComponent		
+protocol	conformance Gestures.ScrollPositionListener	Gestures.GestureComponent		
+protocol	conformance ScrollPositionListener.State	Swift.CustomDebugStringConvertible		
+protocol	conformance ScrollPositionListener.State	Swift.CustomStringConvertible		
+protocol	conformance ScrollPositionListener.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.ScrollPositionListenerOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Gestures.ScrollPositionListenerOptions	Swift.Equatable		
+protocol	conformance Gestures.ScrollPositionListenerOptions	Swift.RawRepresentable		
+protocol	conformance Gestures.ScrollPositionListenerOptions	Swift.SetAlgebra		
+protocol	conformance Gestures.ScrollPositionListenerOptions	Swift.CustomStringConvertible		
+protocol	conformance Gestures.ScrollPositionListenerOptions	Swift.OptionSet		
+protocol	conformance Gestures.GesturePhase	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureFailureReason	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureOutputEmptyReason	Swift.Hashable		
+protocol	conformance Gestures.GestureOutputEmptyReason	Swift.Equatable		
+protocol	conformance Gestures.GestureOutputMetadata	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureOutputMetadata	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureOutputMetadata	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.GestureOutput	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureOutput	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureOutput	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.GestureOutputStatus	Swift.Hashable		
+protocol	conformance Gestures.GestureOutputStatus	Swift.Equatable		
+protocol	conformance VelocityComponent.State	Swift.CustomDebugStringConvertible		
+protocol	conformance VelocityComponent.State	Swift.CustomStringConvertible		
+protocol	conformance VelocityComponent.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance VelocityComponent.State	Gestures.GestureComponentState		
+protocol	conformance VelocityComponent	Gestures.CompositeGestureComponent		
+protocol	conformance VelocityComponent	Gestures.StatefulGestureComponent		
+protocol	conformance VelocityComponent	Gestures.ValueTransformingComponent		
+protocol	conformance VelocityComponent	Gestures.GestureComponent		
+protocol	conformance Gestures.AnyGestureNode	Swift.Comparable		
+protocol	conformance Gestures.RingBuffer	Swift.CustomStringConvertible		
+protocol	conformance Gestures.RingBuffer	Swift.Sequence		
+protocol	conformance Gestures.RingBufferIterator	Swift.IteratorProtocol		
+protocol	conformance Gestures.RingBuffer	Swift.Collection		
+protocol	conformance Gestures.RingBuffer	Swift.BidirectionalCollection		
+protocol	conformance GestureTrait.AttributeKey	Swift.Hashable		
+protocol	conformance GestureTrait.AttributeKey	Swift.Equatable		
+protocol	conformance GestureTrait.AttributeValue	Swift.Hashable		
+protocol	conformance GestureTrait.AttributeValue	Swift.Equatable		
+protocol	conformance Gestures.GestureTrait	Swift.Identifiable		
+protocol	conformance Gestures.GestureTraitID	Swift.Hashable		
+protocol	conformance Gestures.GestureTraitID	Swift.Equatable		
+protocol	conformance Gestures.GestureTraitCollection	Swift.Sequence		
+protocol	conformance Gestures.GestureTraitCollection	Swift.Hashable		
+protocol	conformance Gestures.GestureTraitCollection	Swift.Equatable		
+protocol	conformance Gestures.GestureTrait	Swift.Hashable		
+protocol	conformance Gestures.GestureTrait	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureTrait	Swift.Equatable		
+protocol	conformance Gestures.GestureTrait	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureTrait	Swift.CustomDebugStringConvertible		
+protocol	conformance GestureTrait.AttributeKey	Swift.CustomStringConvertible		
+protocol	conformance GestureTrait.AttributeValue	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureTraitCollection	Gestures.Mergeable		
+protocol	conformance Gestures.GestureTraitCollection	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureTraitCollection	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureTraitCollection	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.AdjacencyListGraph	Gestures.Graph		
+protocol	conformance __C.CGVector	Gestures._AdditiveArithmetic		
+protocol	conformance __C.CGVector	Gestures.VectorArithmetic		
+protocol	conformance __C.CGVector	Gestures.VectorContaining		
+protocol	conformance MovementGate	Gestures.CompositeGestureComponent		
+protocol	conformance MovementGate	Gestures.ValueTransformingComponent		
+protocol	conformance MovementGate	Gestures.GestureComponent		
+protocol	conformance MovementGate.Restriction	Swift.Hashable		
+protocol	conformance MovementGate.Restriction	Swift.Equatable		
+protocol	conformance MovementGate.Failure	Swift.Hashable		
+protocol	conformance MovementGate.Failure	Swift.Equatable		
+protocol	conformance MovementGate.Failure	Swift.Error		
+protocol	conformance GestureNodeMatcher.RelativePosition	Swift.Equatable		
+protocol	conformance GestureNodeMatcher.RelativePosition	Swift.Hashable		
+protocol	conformance Gestures.GestureNodeMatcher	Swift.Hashable		
+protocol	conformance Gestures.GestureNodeMatcher	Swift.Comparable		
+protocol	conformance Gestures.GestureNodeMatcher	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.GestureNodeMatcher	Swift.Equatable		
+protocol	conformance Gestures.GestureNodeMatcher	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureNodeMatcher	Swift.CustomDebugStringConvertible		
+protocol	conformance MapComponent	Gestures.CompositeGestureComponent		
+protocol	conformance MapComponent	Gestures.GestureComponent		
+protocol	conformance Swift.Double	Gestures.ThresholdAdjustable		
+protocol	conformance __C.CGVector	Gestures.ThresholdAdjustable		
+protocol	conformance __C.CGPoint	Gestures.ThresholdAdjustable		
+protocol	conformance ThresholdComponent.State	Swift.CustomDebugStringConvertible		
+protocol	conformance ThresholdComponent.State	Swift.CustomStringConvertible		
+protocol	conformance ThresholdComponent.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance ThresholdComponent.State	Gestures.GestureComponentState		
+protocol	conformance ThresholdComponent	Gestures.CompositeGestureComponent		
+protocol	conformance ThresholdComponent	Gestures.StatefulGestureComponent		
+protocol	conformance ThresholdComponent	Gestures.ValueTransformingComponent		
+protocol	conformance ThresholdComponent	Gestures.GestureComponent		
+protocol	conformance ThresholdComponent.Failure	Swift.Hashable		
+protocol	conformance ThresholdComponent.Failure	Swift.Equatable		
+protocol	conformance ThresholdComponent.Failure	Swift.Error		
+protocol	conformance SeparationDistanceGate	Gestures.CompositeGestureComponent		
+protocol	conformance SeparationDistanceGate	Gestures.ValueTransformingComponent		
+protocol	conformance SeparationDistanceGate	Gestures.GestureComponent		
+protocol	conformance SeparationDistanceGate.Failure	Swift.Hashable		
+protocol	conformance SeparationDistanceGate.Failure	Swift.Equatable		
+protocol	conformance SeparationDistanceGate.Failure	Swift.Error		
+protocol	conformance InvalidTransition	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidTransition	Swift.CustomStringConvertible		
+protocol	conformance InvalidTransition	Gestures.NestedCustomStringConvertible		
+protocol	conformance InvalidTransition	Swift.Error		
+protocol	conformance TimeoutComponent	Gestures.StatefulGestureComponent		
+protocol	conformance TimeoutComponent.State	Gestures.GestureComponentState		
+protocol	conformance TimeoutComponent	Gestures.CompositeGestureComponent		
+protocol	conformance TimeoutComponent	Gestures.GestureComponent		
+protocol	conformance TimeoutComponent.State	Swift.CustomDebugStringConvertible		
+protocol	conformance TimeoutComponent.State	Swift.CustomStringConvertible		
+protocol	conformance TimeoutComponent.State	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.UpdateRequest	Swift.Equatable		
+protocol	conformance Gestures.UpdateRequest	Swift.CustomStringConvertible		
+protocol	conformance Gestures.UpdateRequest	Swift.Hashable		
+protocol	conformance Gestures.UpdateRequest	Swift.Identifiable		
+protocol	conformance Gestures.UpdateScheduler	Gestures.TimeSource		
+protocol	conformance Gestures.GestureRelationType	Swift.Equatable		
+protocol	conformance Gestures.GestureRelationType	Swift.Hashable		
+protocol	conformance Gestures.GestureRelationRole	Swift.Equatable		
+protocol	conformance Gestures.GestureRelationRole	Swift.Hashable		
+protocol	conformance Gestures.GestureRelationDirection	Swift.Equatable		
+protocol	conformance Gestures.GestureRelationDirection	Swift.Hashable		
+protocol	conformance Gestures.GestureRelation	Swift.Equatable		
+protocol	conformance Gestures.RelationMap	Swift.Sequence		
+protocol	conformance Gestures.RelationDefinition	Swift.CustomStringConvertible		
+protocol	conformance Gestures.RelationMap	Swift.CustomDebugStringConvertible		
+protocol	conformance Gestures.RelationMap	Swift.CustomStringConvertible		
+protocol	conformance Gestures.RelationMap	Gestures.NestedCustomStringConvertible		
+protocol	conformance Gestures.RelationDefinition	Swift.Equatable		
+protocol	conformance Gestures.RelationDefinition	Swift.Hashable		
+protocol	conformance Gestures.GestureTag	Swift.Hashable		
+protocol	conformance Gestures.GestureTag	Swift.CustomStringConvertible		
+protocol	conformance Gestures.GestureTag	Swift.ExpressibleByStringLiteral		
+protocol	conformance Gestures.GestureTag	Swift.Equatable		
+protocol	conformance Gestures.GestureTag	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance Gestures.GestureTag	Swift.ExpressibleByUnicodeScalarLiteral		
+extension	Gestures.NodeShimFlags	ExpressibleByArrayLiteral		
+extension	Gestures.NodeShimFlags	RawRepresentable		
+extension	Gestures.NodeShimFlags	SetAlgebra		
+extension	Gestures.NodeShimFlags	OptionSet		
+extension	Gestures.GestureNodeShim	GestureNodeDelegate		
+extension	Gestures.DiscreteGate	CompositeGestureComponent		
+extension	Gestures.DiscreteGate	ValueTransformingComponent		
+extension	Gestures.DiscreteGate	GestureComponent		
+extension	Gestures.GestureNodeOptions	OptionSet		
+extension	Gestures.GestureNodeOptions	SetAlgebra		
+extension	Gestures.GestureNodeOptions	RawRepresentable		
+extension	Gestures.GestureNodeOptions	ExpressibleByArrayLiteral		
+extension	Gestures.ConcreteScrollEvent	Identifiable		
+extension	Gestures.ExpirationComponent	CompositeGestureComponent		
+extension	Gestures.ExpirationComponent	StatefulGestureComponent		
+extension	Gestures.ExpirationComponent	ValueTransformingComponent		
+extension	Gestures.ExpirationComponent	GestureComponent		
+extension	Gestures.ExpirationRecord	Expirable		
+extension	Gestures.ExpirationReason	ExpressibleByUnicodeScalarLiteral		
+extension	Gestures.ExpirationReason	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	Gestures.ExpirationReason	ExpressibleByStringLiteral		
+extension	Gestures.TapComponent	CompositeGestureComponent		
+extension	Gestures.TapComponent	GestureComponent		
+extension	Gestures.ReduceComponent	CompositeGestureComponent		
+extension	Gestures.ReduceComponent	StatefulGestureComponent		
+extension	Gestures.ReduceComponent	ValueTransformingComponent		
+extension	Gestures.ReduceComponent	GestureComponent		
+extension	Gestures.EventSource	StatefulGestureComponent		
+extension	Gestures.EventSource	GestureComponent		
+extension	Gestures.DurationGate	CompositeGestureComponent		
+extension	Gestures.DurationGate	ValueTransformingComponent		
+extension	Gestures.DurationGate	GestureComponent		
+extension	Gestures.LoggingEnabledState	AtomicRepresentable		
+extension	Gestures.LoggingEnabledState	RawRepresentable		
+extension	Gestures.ReplicatingList	Sequence		
+extension	Gestures.ReplicatingList	Collection		
+extension	Gestures.AnyGestureNode	Identifiable		
+extension	Gestures.NestedDescription.Options	ExpressibleByArrayLiteral		
+extension	Gestures.NestedDescription.Options	RawRepresentable		
+extension	Gestures.NestedDescription.Options	SetAlgebra		
+extension	Gestures.NestedDescription.Options	OptionSet		
+extension	Gestures.PanComponent	CompositeGestureComponent		
+extension	Gestures.PanComponent	GestureComponent		
+extension	Gestures.PanCentroid	Identifiable		
+extension	Gestures.IdentifiableLocation	ThresholdAdjustable		
+extension	Gestures.PanCentroid	VectorContaining		
+extension	Gestures.PanCentroid	ThresholdAdjustable		
+extension	Gestures.MouseEvent.Button	RawRepresentable		
+extension	Gestures.MouseEvent	Identifiable		
+extension	Double	VectorContaining		
+extension	Gestures.DynamicCombinerComponent	GestureComponent		
+extension	Gestures.StationaryLocationFilter	CompositeGestureComponent		
+extension	Gestures.StationaryLocationFilter	StatefulGestureComponent		
+extension	Gestures.StationaryLocationFilter	ValueTransformingComponent		
+extension	Gestures.StationaryLocationFilter	GestureComponent		
+extension	Gestures.LongPressComponent	CompositeGestureComponent		
+extension	Gestures.LongPressComponent	GestureComponent		
+extension	Gestures.CombinerElement	GestureComponent		
+extension	Gestures.CombinerElement	StatefulGestureComponent		
+extension	Gestures.CombinerElement	CompositeGestureComponent		
+extension	Gestures.CombinerComponent	GestureComponent		
+extension	Gestures.IdentifiableLocation	Identifiable		
+extension	Gestures.IdentifiableLocation	VectorContaining		
+extension	Gestures.ValueTracker	CompositeGestureComponent		
+extension	Gestures.ValueTracker	StatefulGestureComponent		
+extension	Gestures.ValueTracker	ValueTransformingComponent		
+extension	Gestures.ValueTracker	GestureComponent		
+extension	Gestures.Trace	Identifiable		
+extension	Gestures.TouchEvent	Identifiable		
+extension	Gestures.RepeatComponent	StatefulGestureComponent		
+extension	Gestures.RepeatComponent	CompositeGestureComponent		
+extension	Gestures.RepeatComponent	GestureComponent		
+extension	Gestures.ScrollPositionListener	CompositeGestureComponent		
+extension	Gestures.ScrollPositionListener	StatefulGestureComponent		
+extension	Gestures.ScrollPositionListener	ValueTransformingComponent		
+extension	Gestures.ScrollPositionListener	GestureComponent		
+extension	Gestures.ScrollPositionListenerOptions	ExpressibleByArrayLiteral		
+extension	Gestures.ScrollPositionListenerOptions	RawRepresentable		
+extension	Gestures.ScrollPositionListenerOptions	SetAlgebra		
+extension	Gestures.ScrollPositionListenerOptions	OptionSet		
+extension	Gestures.VelocityComponent	CompositeGestureComponent		
+extension	Gestures.VelocityComponent	StatefulGestureComponent		
+extension	Gestures.VelocityComponent	ValueTransformingComponent		
+extension	Gestures.VelocityComponent	GestureComponent		
+extension	Gestures.RingBuffer	Sequence		
+extension	Gestures.RingBufferIterator	IteratorProtocol		
+extension	Gestures.RingBuffer	Collection		
+extension	Gestures.RingBuffer	BidirectionalCollection		
+extension	Gestures.GestureTrait	Identifiable		
+extension	Gestures.GestureTraitCollection	Sequence		
+extension	Gestures.AdjacencyListGraph	Graph		
+extension	Gestures.MovementGate	CompositeGestureComponent		
+extension	Gestures.MovementGate	ValueTransformingComponent		
+extension	Gestures.MovementGate	GestureComponent		
+extension	Gestures.MapComponent	CompositeGestureComponent		
+extension	Gestures.MapComponent	GestureComponent		
+extension	Double	ThresholdAdjustable		
+extension	Gestures.ThresholdComponent	CompositeGestureComponent		
+extension	Gestures.ThresholdComponent	StatefulGestureComponent		
+extension	Gestures.ThresholdComponent	ValueTransformingComponent		
+extension	Gestures.ThresholdComponent	GestureComponent		
+extension	Gestures.SeparationDistanceGate	CompositeGestureComponent		
+extension	Gestures.SeparationDistanceGate	ValueTransformingComponent		
+extension	Gestures.SeparationDistanceGate	GestureComponent		
+extension	Gestures.TimeoutComponent	StatefulGestureComponent		
+extension	Gestures.TimeoutComponent	CompositeGestureComponent		
+extension	Gestures.TimeoutComponent	GestureComponent		
+extension	Gestures.UpdateRequest	Identifiable		
+extension	Gestures.RelationMap	Sequence		
+extension	Gestures.GestureTag	ExpressibleByStringLiteral		
+extension	Gestures.GestureTag	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	Gestures.GestureTag	ExpressibleByUnicodeScalarLiteral		

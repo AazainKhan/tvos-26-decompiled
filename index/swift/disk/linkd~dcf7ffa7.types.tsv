@@ -1,0 +1,925 @@
+kind	type	conformance	member_kind	member
+struct	LinkDaemon.LNAssistantSuggestionPhraseRecord			
+struct	LinkDaemon.LNAssistantSuggestionPhraseRecord		var	suggestionPhraseKey
+struct	LinkDaemon.LNAssistantSuggestionPhraseRecord		var	assistantSuggestionPhrase
+class	LinkDaemon.AppShortcutDonator.CascadeSyncManager			
+class	LinkDaemon.AppShortcutDonator.CascadeSyncManager		let	logger
+class	LinkDaemon.AppShortcutDonator.CascadeSyncManager		var	processingTask
+class	LinkDaemon.AppShortcutDonator.CascadeSyncManager		var	workQueue
+struct	LinkDaemon.AppShortcutDonator			
+struct	LinkDaemon.AppShortcutDonator		let	appShortcutInterpolator
+struct	LinkDaemon.AppShortcutDonator		let	vocabulary
+struct	LinkDaemon.AppShortcutDonator		let	denyList
+enum	LinkDaemon.AppShortcutDonator.CascadeSyncManager.WorkTask			
+enum	LinkDaemon.AppShortcutDonator.CascadeSyncManager.WorkTask		case	phrases
+enum	LinkDaemon.AppShortcutDonator.CascadeSyncManager.WorkTask		case	spans
+enum	LinkDaemon.DonationError			
+enum	LinkDaemon.DonationError		case	unsupportedDonationStreamType
+enum	LinkDaemon.DonationError		case	unknownSiriLanguage
+class	LinkDaemon.AsyncWorkQueue<A	LinkDaemon.AsyncWorkQueueCancelable>		
+class	LinkDaemon.AsyncWorkQueue<A	LinkDaemon.AsyncWorkQueueCancelable>	let	lock
+class	LinkDaemon.AsyncWorkQueue<A	LinkDaemon.AsyncWorkQueueCancelable>	var	items
+class	LinkDaemon.AsyncWorkQueue<A	LinkDaemon.AsyncWorkQueueCancelable>	var	demand
+class	LinkDaemon.AsyncWorkQueue<A	LinkDaemon.AsyncWorkQueueCancelable>	var	started
+struct	LinkDaemon.AsyncWorkQueue.AsyncIterator<A	LinkDaemon.AsyncWorkQueueCancelable>		
+struct	LinkDaemon.AsyncWorkQueue.AsyncIterator<A	LinkDaemon.AsyncWorkQueueCancelable>	let	queue
+class	LinkDaemon.ObservationStatusRegistry	NSObject		
+struct	LinkDaemon.PlatformAssistantIntentGenerator			
+class	LinkDaemon.XPCEventEntryPoint<A	LinkDaemon.XPCEventService>		
+class	LinkDaemon.XPCEventEntryPoint<A	LinkDaemon.XPCEventService>	let	service
+class	LinkDaemon.XPCEventDispatcher			
+class	LinkDaemon.XPCEventDispatcher		var	checkedIn
+class	LinkDaemon.XPCEventDispatcher		var	handlersToEventsToStreams
+class	LinkDaemon.XPCEventDispatcher		let	queue
+struct	LinkDaemon.ConcreteXPCEvent			
+struct	LinkDaemon.ConcreteXPCEvent		let	rawValue
+struct	LinkDaemon.ConcreteXPCEvent		let	stream
+struct	LinkDaemon.ConcreteXPCEvent		let	xpcEventName
+struct	LinkDaemon.XPCStreamName			
+struct	LinkDaemon.XPCStreamName		var	rawValue
+struct	LinkDaemon.LNAppShortcutRecord			
+struct	LinkDaemon.LNAppShortcutRecord		var	bundleId
+struct	LinkDaemon.LNAppShortcutRecord		var	metadata
+class	LinkDaemon.AppShortcutInterpolator			
+class	LinkDaemon.AppShortcutInterpolator		var	store
+struct	LinkDaemon.AppShortcutInterpolator.Builder.RecordIdentifier			
+struct	LinkDaemon.AppShortcutInterpolator.Builder.RecordIdentifier		var	propertyIdentifier
+struct	LinkDaemon.AppShortcutInterpolator.Builder.RecordIdentifier		var	basePhraseTemplate
+struct	LinkDaemon.AppShortcutInterpolator.ApplicationPlaceholder			
+struct	LinkDaemon.AppShortcutInterpolator.ApplicationPlaceholder		var	applicationRecord
+struct	LinkDaemon.AppShortcutInterpolator.ApplicationPlaceholder		var	bundleIdentifier
+struct	LinkDaemon.AppShortcutInterpolator.Builder			
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	logging
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	applicationPlaceholder
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	localeIdentifier
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	appShortcutRecords
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	appShortcutParameterRecords
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	metadataProvider
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	shortcutTileColor
+struct	LinkDaemon.AppShortcutInterpolator.Builder		let	appShortcutProviderMangledName
+struct	LinkDaemon.LocalizedAlternativeAppName			
+struct	LinkDaemon.LocalizedAlternativeAppName		let	localizedValue
+struct	LinkDaemon.LocalizedAlternativeAppName		let	preferred
+struct	LinkDaemon.LNAssistantAppEntityRecord			
+struct	LinkDaemon.LNAssistantAppEntityRecord		var	bundleId
+struct	LinkDaemon.LNAssistantAppEntityRecord		var	metadata
+class	LinkDaemon.Transcript	NSObject		
+class	LinkDaemon.Transcript	NSObject	let	streamManager
+class	LinkDaemon.Transcript	NSObject	let	observers
+class	LinkDaemon.Transcript	NSObject	var	nextActionObserverConnections
+class	LinkDaemon.Transcript	NSObject	var	nextActionLock
+class	LinkDaemon.TranscriptActionRecordStreamManager	LinkDaemon.StreamManager LNTranscriptActionRecord		
+class	LinkDaemon.PruneTranscriptService			
+class	LinkDaemon.PruneTranscriptService		let	streamManager
+enum	LinkDaemon.TranscriptError			
+enum	LinkDaemon.TranscriptError		case	unknown
+enum	LinkDaemon.TranscriptError		case	internalServiceError
+enum	LinkDaemon.TranscriptError		case	missingBundleIdentifier
+enum	LinkDaemon.TranscriptError		case	missingApplicationIdentifierEntitlement
+enum	LinkDaemon.TranscriptError		case	tokenFetchFailed
+enum	LinkDaemon.TranscriptError		case	streamNotFound
+enum	LinkDaemon.TranscriptError		case	missingDonationIdentifierOverrideEntitlement
+enum	LinkDaemon.AppShortcutIdentifierExtractionError			
+enum	LinkDaemon.AppShortcutIdentifierExtractionError		case	malformedIdentifier
+enum	LinkDaemon.AppShortcutIdentifierExtractionError		case	identifierValueOutOfRange
+enum	LinkDaemon.AppShortcutIdentifierExtractionError		case	internalError
+class	LinkDaemon.OSStateHandler			
+class	LinkDaemon.OSStateHandler		var	handle
+class	LinkDaemon.OSStateHandler		let	handler
+class	LinkDaemon.OSStateHandler		let	oneShot
+enum	LinkDaemon.OSStateHandler.Hint			
+enum	LinkDaemon.OSStateHandler.Hint		case	error
+enum	LinkDaemon.OSStateHandler.Hint		case	fault
+enum	LinkDaemon.OSStateHandler.Hint		case	request
+enum	LinkDaemon.OSStateHandler.Hint		case	unknown
+struct	LinkDaemon.LNActionRecord			
+struct	LinkDaemon.LNActionRecord		var	bundleIdentifier
+struct	LinkDaemon.LNActionRecord		var	bundleURL
+struct	LinkDaemon.LNActionRecord		var	metadata
+struct	LinkDaemon.AppShortcutsChangedNotification			
+struct	LinkDaemon.AppShortcutsChangedNotification		var	bundles
+struct	LinkDaemon.LNAppShortcutParameterRecord			
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	parameterIdentifier
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	bundleIdentifier
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	basePhraseTemplate
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	propertyTitle
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	propertyTitleKey
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	property
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	optionsCollectionTitle
+struct	LinkDaemon.LNAppShortcutParameterRecord		var	optionsCollectionSystemImageName
+class	LinkDaemon.ConstraintValidationService	NSObject		
+struct	LinkDaemon.ContainerError			
+struct	LinkDaemon.ContainerError		var	code
+class	LinkDaemon.AssistantIntentPhraseInterpolator			
+class	LinkDaemon.AssistantIntentPhraseInterpolator		var	store
+class	LinkDaemon.AssistantIntentPhraseInterpolator		var	platformGenerator
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ApplicationPlaceholder			
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ApplicationPlaceholder		var	applicationRecord
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ApplicationPlaceholder		var	bundleIdentifier
+struct	LinkDaemon.LinkDaemon			
+struct	LinkDaemon.LNAppShortcutSpanSynonymRecord			
+struct	LinkDaemon.LNAppShortcutSpanSynonymRecord		var	parentIdentifier
+struct	LinkDaemon.LNAppShortcutSpanSynonymRecord		var	bundleIndentifier
+struct	LinkDaemon.LNAppShortcutSpanSynonymRecord		var	synonym
+class	LinkDaemon.SuggestedActionsService	NSObject		
+class	LinkDaemon.SuggestedActionsService	NSObject	let	applicationSuggestionsProvider
+class	LinkDaemon.SuggestedActionsService	NSObject	let	registrySource
+struct	LinkDaemon.SiriDiscoverabilityClosedAppSuggestionStrategy			
+struct	LinkDaemon.SiriDiscoverabilityClosedAppSuggestionStrategy		let	siriLanguageCode
+struct	LinkDaemon.SiriDiscoverabilityClosedAppSuggestionStrategy		let	enumMetadata
+struct	LinkDaemon.SiriDiscoverabilityClosedAppSuggestionStrategy		let	entityMetadata
+class	LinkDaemon.XPCActivityEntryPoint<A	LinkDaemon.XPCActivityService>		
+class	LinkDaemon.XPCActivityEntryPoint<A	LinkDaemon.XPCActivityService>	let	scheduler
+class	LinkDaemon.XPCActivityEntryPoint<A	LinkDaemon.XPCActivityService>	var	stream
+class	LinkDaemon.XPCActivityEntryPoint<A	LinkDaemon.XPCActivityService>	var	task
+class	LinkDaemon.XPCActivityEntryPoint<A	LinkDaemon.XPCActivityService>	let	service
+enum	LinkDaemon.XPCActivityResult			
+enum	LinkDaemon.XPCActivityResult		case	finished
+enum	LinkDaemon.XPCActivityResult		case	deferred
+enum	LinkDaemon.IssueSandboxExceptionError			
+enum	LinkDaemon.IssueSandboxExceptionError		case	unknown
+enum	LinkDaemon.IssueSandboxExceptionError		case	noSuchFileOrDirectory
+class	LinkDaemon.MetadataStore	NSObject		
+class	LinkDaemon.MetadataStore	NSObject	let	connection
+class	LinkDaemon.MetadataStore	NSObject	var	URL
+class	LinkDaemon.MetadataStore	NSObject	let	provider
+class	LinkDaemon.MetadataStore	NSObject	let	transactionManager
+class	LinkDaemon.ConnectionTransactionSerializer			
+class	LinkDaemon.ConnectionTransactionSerializer		let	logger
+class	LinkDaemon.ConnectionTransactionSerializer		let	connection
+class	LinkDaemon.ConnectionTransactionSerializer		var	transactionQueue
+class	LinkDaemon.ConnectionTransactionSerializer		var	processingTask
+class	LinkDaemon.ConnectionTransactionSerializer		var	count
+struct	LinkDaemon.ConnectionTransactionSerializer.Transaction			
+struct	LinkDaemon.ConnectionTransactionSerializer.Transaction		var	count
+struct	LinkDaemon.ConnectionTransactionSerializer.Transaction		var	work
+struct	LinkDaemon.ConnectionTransactionSerializer.Transaction		var	continuation
+enum	LinkDaemon.MetadataStore.CreationError			
+enum	LinkDaemon.MetadataStore.CreationError		case	couldNotOpen
+enum	LinkDaemon.MetadataStore.CreationError		case	couldNotCreateSchema
+enum	LinkDaemon.MetadataStore.CreationError		case	versionMismatch
+enum	LinkDaemon.MetadataStore.CreationError		case	corrupted
+struct	LinkDaemon.LNAssistantIntentRecord			
+struct	LinkDaemon.LNAssistantIntentRecord		var	bundleId
+struct	LinkDaemon.LNAssistantIntentRecord		var	metadata
+class	LinkDaemon.ApplicationService	SwiftNativeNSObject<A: LinkDaemon.ApplicationServiceType>		
+class	LinkDaemon.ApplicationService	SwiftNativeNSObject<A: LinkDaemon.ApplicationServiceType>	let	registrySource
+class	LinkDaemon.ApplicationService	SwiftNativeNSObject<A: LinkDaemon.ApplicationServiceType>	let	observationStatusRegistrySource
+class	LinkDaemon.ApplicationServiceInstance	NSObject		
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	identifier
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	logger
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	sourceBundleIdentifier
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	destinationBundleIdentifier
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	registrySource
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	observationStatusRegistrySource
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	processID
+class	LinkDaemon.ApplicationServiceInstance	NSObject	let	auditToken
+struct	LinkDaemon.ModernApplicationService			
+struct	LinkDaemon.LegacyApplicationService			
+enum	LinkDaemon.ApplicationServiceInstance.Errors			
+enum	LinkDaemon.ApplicationServiceInstance.Errors		case	missingEntitlement
+enum	LinkDaemon.ApplicationServiceInstance.Errors		case	notInitialized
+enum	LinkDaemon.ApplicationServiceInstance.Errors		case	notSupported
+enum	LinkDaemon.ApplicationServiceInstance.Errors		case	unregisteredProcessInstanceIdentifier
+enum	LinkDaemon.ApplicationServiceInstance.Errors		case	invalidArguments
+struct	LinkDaemon.LNDefaultActionForSystemProtocolRecord			
+struct	LinkDaemon.LNDefaultActionForSystemProtocolRecord		var	bundleIdentifier
+struct	LinkDaemon.LNDefaultActionForSystemProtocolRecord		var	systemProtocol
+struct	LinkDaemon.LNDefaultActionForSystemProtocolRecord		var	actionIdentifier
+class	LinkDaemon.SuggestedActionsGenerator			
+class	LinkDaemon.SuggestedActionsGenerator		let	strategy
+class	LinkDaemon.SuggestedActionsGenerator		var	entityTypeValues
+class	LinkDaemon.SuggestedActionsGenerator		var	entityTypeDisplayNames
+enum	LinkDaemon.SuggestedActionsGeneratorDialogingError			
+enum	LinkDaemon.SuggestedActionsGeneratorDialogingError		case	changeBinarySetting
+enum	LinkDaemon.SuggestedActionsGeneratorDialogingError		case	navigateSequentially
+struct	LinkDaemon.LNAppShortcutSpanRecord			
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	spanIdentifier
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	bundleIdentifier
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	propertyTitle
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	propertyTitleKey
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	providerClassName
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	parameterTypeIdentifier
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	value
+struct	LinkDaemon.LNAppShortcutSpanRecord		var	synonyms
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ExpectedInvocation			
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ExpectedInvocation		let	intentIdentifier
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ExpectedInvocation		let	parameters
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder			
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	logging
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	applicationPlaceholder
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	localeIdentifier
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	assistantIntentRecords
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	assistantIntentNegativeRecords
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	platformProvidedParameters
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	metadataProvider
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	entitiesByIdentifier
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.Builder		let	assistantAppEntities
+struct	LinkDaemon.RegistryUpdatedNotification			
+struct	LinkDaemon.RegistryUpdatedNotification		var	registeredBundles
+struct	LinkDaemon.RegistryUpdatedNotification		var	unregisteredBundles
+struct	LinkDaemon.NotifyingRegistryObserver			
+struct	LinkDaemon.NotifyingRegistryObserver		let	notifier
+class	LinkDaemon._LNMetadataProviderDirect	NSObject		
+class	LinkDaemon._LNMetadataProviderDirect	NSObject	let	connection
+class	LinkDaemon._LNMetadataProviderDirect	NSObject	let	requiresAssertion
+class	LinkDaemon.UpdateRegistryService			
+class	LinkDaemon.UpdateRegistryService		var	registrySource
+class	LinkDaemon.RegistryAdapter	NSObject		
+class	LinkDaemon.RegistryAdapter	NSObject	let	registry
+class	LinkDaemon.RegistryAdapter.MetadataProviderClient	NSObject		
+class	LinkDaemon.RegistryAdapter.MetadataProviderClient	NSObject	let	registry
+class	LinkDaemon.RegistryAdapter.MetadataProviderClient	NSObject	let	logger
+struct	LinkDaemon.LNRelevantIntentRecord			
+struct	LinkDaemon.LNRelevantIntentRecord		var	bundleIdentifier
+struct	LinkDaemon.LNRelevantIntentRecord		var	actionIdentifier
+struct	LinkDaemon.LNRelevantIntentRecord		var	encodedParameters
+struct	LinkDaemon.LNRelevantIntentRecord		var	widgetKind
+struct	LinkDaemon.LNRelevantIntentRecord		var	encodedContext
+class	LinkDaemon.LazyTask<B	protocol descriptor for Error>		
+class	LinkDaemon.LazyTask<B	protocol descriptor for Error>	let	lock
+class	LinkDaemon.LazyTask<B	protocol descriptor for Error>	let	task
+class	LinkDaemon.LazyTask<B	protocol descriptor for Error>	var	retryable
+class	LinkDaemon.LazyTask<B	protocol descriptor for Error>	var	state
+enum	LinkDaemon.LazyTask.State<B	protocol descriptor for Error>		
+enum	LinkDaemon.LazyTask.State<B	protocol descriptor for Error>	case	active
+enum	LinkDaemon.LazyTask.State<B	protocol descriptor for Error>	case	waiting
+struct	LinkDaemon.NotifyingTranscriptObserver			
+struct	LinkDaemon.NotifyingTranscriptObserver		let	notificationCenter
+struct	LinkDaemon.AppShortcutDenyList			
+struct	LinkDaemon.AppShortcutDenyList		let	deniedActionIdentifiersByBundleIdentifier
+class	LinkDaemon.Registry	NSObject		
+class	LinkDaemon.Registry	NSObject	var	applicationSource
+class	LinkDaemon.Registry	NSObject	let	indexingQueue
+class	LinkDaemon.Registry	NSObject	let	observers
+class	LinkDaemon.Registry	NSObject	var	ready
+class	LinkDaemon.Registry	NSObject	let	registryState
+class	LinkDaemon.Registry	NSObject	let	store
+class	LinkDaemon.Registry	NSObject	let	appShortcutInterpolator
+class	LinkDaemon.Registry	NSObject	let	examplePhraseInterpolator
+class	LinkDaemon.Registry	NSObject	var	osStateHandler
+class	LinkDaemon.Registry	NSObject	var	observationToken
+class	LinkDaemon.Registry.IndexingQueue			
+class	LinkDaemon.Registry.IndexingQueue		let	applicationMetadataProvider
+class	LinkDaemon.Registry.IndexingQueue		let	metadataLibraryProvider
+class	LinkDaemon.Registry.IndexingQueue		var	isStoreDirty
+class	LinkDaemon.Registry.IndexingQueue		let	observers
+class	LinkDaemon.Registry.IndexingQueue		let	workQueue
+class	LinkDaemon.Registry.IndexingQueue		var	processingTask
+class	LinkDaemon.Registry.IndexingQueue		var	store
+class	LinkDaemon.Registry.IndexingQueue		var	appShortcutInterpolator
+class	LinkDaemon.Registry.IndexingQueue		var	examplePhraseInterpolator
+class	LinkDaemon.Registry.IndexingQueue		let	currentChange
+class	LinkDaemon.LSLinkBundleSource			
+struct	LinkDaemon.Registry.IndexingQueue.Change			
+struct	LinkDaemon.Registry.IndexingQueue.Change		var	authoritative
+struct	LinkDaemon.Registry.IndexingQueue.Change		var	installedBundles
+struct	LinkDaemon.Registry.IndexingQueue.Change		var	uninstalledBundleIdentifiers
+struct	LinkDaemon.Registry.IndexingQueue.Change		var	version
+struct	LinkDaemon.Registry.IndexingQueue.Change		var	force
+struct	LinkDaemon.Registry.State			
+struct	LinkDaemon.Registry.State		var	lastAuditDate
+struct	LinkDaemon.Registry.State		var	lastPersistentIdentifier
+struct	LinkDaemon.Registry.State		var	initialIndexCompleted
+enum	LinkDaemon.RegistryError			
+enum	LinkDaemon.RegistryError		case	applicationNotFound
+enum	LinkDaemon.RegistryError		case	connectionError
+enum	LinkDaemon.RegistryError		case	parameterNotFound
+enum	LinkDaemon.RegistryError		case	wrapping
+enum	LinkDaemon.RegistryError		case	applicationNotLinkEnabled
+enum	LinkDaemon.RegistryError		case	missingEntitlements
+enum	LinkDaemon.RegistryError		case	preflightRequiredToLaunchApp
+enum	LinkDaemon.RegistryError		case	indexingNotCompleted
+struct	LinkDaemon.LSLinkBundleRecord			
+struct	LinkDaemon.LSLinkBundleRecord		let	bundleIdentifier
+struct	LinkDaemon.LSLinkBundleRecord		let	bundleURL
+struct	LinkDaemon.LSLinkBundleRecord		let	installIdentifier
+struct	LinkDaemon.LSLinkBundleRecord		let	registrationDate
+struct	LinkDaemon.LSLinkBundleRecord		let	allowOmittingApplicationNameInShortcuts
+struct	LinkDaemon.LSLinkBundleRecord		let	type
+enum	LinkDaemon.LSLinkBundleRecord.RecordType			
+enum	LinkDaemon.LSLinkBundleRecord.RecordType		case	bundle
+enum	LinkDaemon.LSLinkBundleRecord.RecordType		case	daemon
+enum	LinkDaemon.LSLinkBundleRecord.RecordType		case	framework
+struct	LinkDaemon.LNExamplePhraseRecord			
+struct	LinkDaemon.LNExamplePhraseRecord		var	bundleIdentifier
+struct	LinkDaemon.LNExamplePhraseRecord		var	description
+struct	LinkDaemon.Diagnostics.DiagnosticError			
+struct	LinkDaemon.Diagnostics.DiagnosticError		var	message
+struct	LinkDaemon.Diagnostics.DiagnosticError		var	showHelp
+struct	LinkDaemon.LNAssistantIntentNegativePhraseRecord			
+struct	LinkDaemon.LNAssistantIntentNegativePhraseRecord		var	bundleId
+struct	LinkDaemon.LNAssistantIntentNegativePhraseRecord		var	negativePhrases
+class	LinkDaemon.XPCListenerEntryPoint	SwiftNativeNSObject<A: LinkDaemon.XPCListenerService>		
+class	LinkDaemon.XPCListenerEntryPoint	SwiftNativeNSObject<A: LinkDaemon.XPCListenerService>	let	listener
+class	LinkDaemon.XPCListenerEntryPoint	SwiftNativeNSObject<A: LinkDaemon.XPCListenerService>	let	service
+class	LinkDaemon.UncheckedConcurrentValue			
+class	LinkDaemon.UncheckedConcurrentValue		var	value
+class	LinkDaemon.MetadataIndexCoordinator			
+class	LinkDaemon.MetadataIndexCoordinator		let	logger
+class	LinkDaemon.MetadataIndexCoordinator		let	index
+class	LinkDaemon.MetadataIndexCoordinator		let	state
+class	LinkDaemon.MetadataIndexCoordinator		let	metadataNotification
+class	LinkDaemon.MetadataIndexCoordinator		let	appShortcutNotification
+struct	LinkDaemon.MetadataIndexCoordinator.State			
+struct	LinkDaemon.MetadataIndexCoordinator.State		var	initialIndexTask
+struct	LinkDaemon.MetadataIndexCoordinator.State		var	interpolateAppShortcutsTask
+struct	LinkDaemon.MetadataIndexCoordinator.State		var	initialized
+class	LinkDaemon.ExtensionService	NSObject		
+class	LinkDaemon.ExtensionService	NSObject	let	monitoredBundles
+class	LinkDaemon.ExtensionService.MonitorState			
+class	LinkDaemon.ExtensionService.MonitorState		let	bundleIdentifier
+class	LinkDaemon.ExtensionService.MonitorState		let	monitor
+class	LinkDaemon.ExtensionService.MonitorState		var	transaction
+class	LinkDaemon.ExtensionService.MonitorState		var	timeout
+struct	LinkDaemon.LNBundleRecord			
+struct	LinkDaemon.LNBundleRecord		var	bundleIdentifier
+struct	LinkDaemon.LNBundleRecord		var	bundleURL
+struct	LinkDaemon.LNBundleRecord		var	installIdentifier
+struct	LinkDaemon.LNBundleRecord		var	attemptedIndexCount
+struct	LinkDaemon.LNBundleRecord		var	metadataVersion
+struct	LinkDaemon.LNAppShortcutBundleMetadataRecord			
+struct	LinkDaemon.LNAppShortcutBundleMetadataRecord		var	bundleIdentifier
+struct	LinkDaemon.LNAppShortcutBundleMetadataRecord		var	appShortcutProviderMangledName
+struct	LinkDaemon.LNAppShortcutBundleMetadataRecord		var	shortcutTileColor
+struct	LinkDaemon.LNIntentEnablementRecord			
+struct	LinkDaemon.LNIntentEnablementRecord		let	bundleIdentifier
+struct	LinkDaemon.LNIntentEnablementRecord		let	actionIdentifier
+struct	LinkDaemon.LNIntentEnablementRecord		let	value
+struct	LinkDaemon.LNIntentEnablementRecord		let	associatedData
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>		
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	let	debounceDelayMS
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	let	notificationCenter
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	let	logger
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	let	queue
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	var	pendingNotification
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	var	workItem
+class	LinkDaemon.NotificationDebouncer<A	LinkDaemon.DebouncableNotification>	let	transaction
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue			
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue		let	intentIdentifier
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue		let	parameterIdentifier
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue		let	expectedInvocationValue
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue		let	localizedValues
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue		let	expectedInvocationIsString
+struct	LinkDaemon.AssistantIntentPhraseInterpolator.ParameterValue		let	expectedInvocationIsArray
+enum	LinkDaemon.Schema.RuntimeError			
+enum	LinkDaemon.Schema.RuntimeError		case	linkRequirementsViolation
+enum	LinkDaemon.Schema.RuntimeError		case	metadataError
+enum	LinkDaemon.Schema.RuntimeError		case	sqlError
+enum	LinkDaemon.Schema.RuntimeError		case	unknownError
+enum	LinkDaemon.Schema.RuntimeError		case	blockListed
+struct	LinkDaemon.LNEntityRecord			
+struct	LinkDaemon.LNEntityRecord		var	bundleIdentifier
+struct	LinkDaemon.LNEntityRecord		var	metadata
+struct	LinkDaemon.LNEnumRecord			
+struct	LinkDaemon.LNEnumRecord		var	bundleId
+struct	LinkDaemon.LNEnumRecord		var	metadata
+struct	LinkDaemon.LNQueryRecord			
+struct	LinkDaemon.LNQueryRecord		var	bundleIdentifier
+struct	LinkDaemon.LNQueryRecord		var	metadata
+class	LinkDaemon.StreamManager			
+class	LinkDaemon.StreamManager		var	initialized
+class	LinkDaemon.StreamManager		var	directory
+class	LinkDaemon.StreamManager		let	directoryPathComponent
+class	LinkDaemon.StreamManager		let	streamURL
+class	LinkDaemon.StreamManager		var	writers
+class	LinkDaemon.StreamManager		var	lock
+struct	LinkDaemon.StreamReference			
+struct	LinkDaemon.StreamReference		var	identifier
+struct	LinkDaemon.StreamReference		var	config
+enum	LinkDaemon.StreamManagerError			
+enum	LinkDaemon.StreamManagerError		case	streamFileSystemError
+enum	LinkDaemon.StreamManagerError		case	biomeConfigInitError
+enum	LinkDaemon.StreamManagerError		case	malformedTranscriptMatchingPredicate
+struct	LinkDaemon.ApplicationMetadata			
+struct	LinkDaemon.ApplicationMetadata		var	bundleIdentifier
+struct	LinkDaemon.ApplicationMetadata		var	bundleRecord
+struct	LinkDaemon.ApplicationMetadata		var	actions
+struct	LinkDaemon.ApplicationMetadata		var	autoShortcutProviderMangledName
+struct	LinkDaemon.ApplicationMetadata		var	shortcutTileColor
+struct	LinkDaemon.ApplicationMetadata		var	autoShortcuts
+struct	LinkDaemon.ApplicationMetadata		var	defaultActionPerSystemProtocol
+struct	LinkDaemon.ApplicationMetadata		var	entities
+struct	LinkDaemon.ApplicationMetadata		var	enumerations
+struct	LinkDaemon.ApplicationMetadata		var	queries
+struct	LinkDaemon.ApplicationMetadata		var	version
+struct	LinkDaemon.ApplicationMetadata		var	negativePhrases
+struct	LinkDaemon.ApplicationMetadata		var	examplePhrases
+struct	LinkDaemon.ApplicationMetadata		var	assistantIntents
+struct	LinkDaemon.ApplicationMetadata		var	assistantIntentNegativePhrases
+struct	LinkDaemon.ApplicationMetadata		var	assistantEntities
+struct	LinkDaemon.ApplicationMetadata		var	assistantSuggestionPhrases
+struct	LinkDaemon.ApplicationMetadata		let	unknownDomainPlaceholder
+enum	LinkDaemon.ApplicationMetadataExtractor.Errors			
+enum	LinkDaemon.ApplicationMetadataExtractor.Errors		case	unableToParseManifest
+enum	LinkDaemon.ApplicationMetadataExtractor.Errors		case	unableToConnectToApp
+enum	LinkDaemon.ApplicationMetadataExtractor.Errors		case	unableToLoadMetadata
+struct	LinkDaemon.ApplicationMetadataExtractor			
+class	AppIntents_SQLite.TableBuilder			
+class	AppIntents_SQLite.TableBuilder		var	definitions
+enum	AppIntents_SQLite.TableBuilder.Dependency			
+enum	AppIntents_SQLite.TableBuilder.Dependency		case	noAction
+enum	AppIntents_SQLite.TableBuilder.Dependency		case	restrict
+enum	AppIntents_SQLite.TableBuilder.Dependency		case	setNull
+enum	AppIntents_SQLite.TableBuilder.Dependency		case	setDefault
+enum	AppIntents_SQLite.TableBuilder.Dependency		case	cascade
+enum	AppIntents_SQLite.PrimaryKey			
+enum	AppIntents_SQLite.PrimaryKey		case	default
+enum	AppIntents_SQLite.PrimaryKey		case	autoincrement
+struct	AppIntents_SQLite.Module			
+struct	AppIntents_SQLite.Module		let	name
+struct	AppIntents_SQLite.Module		let	arguments
+struct	AppIntents_SQLite.Blob			
+struct	AppIntents_SQLite.Blob		let	bytes
+struct	AppIntents_SQLite.Table			
+struct	AppIntents_SQLite.Table		var	clauses
+struct	AppIntents_SQLite.View			
+struct	AppIntents_SQLite.View		var	clauses
+struct	AppIntents_SQLite.VirtualTable			
+struct	AppIntents_SQLite.VirtualTable		var	clauses
+struct	AppIntents_SQLite.ScalarQuery			
+struct	AppIntents_SQLite.ScalarQuery		var	clauses
+struct	AppIntents_SQLite.Select			
+struct	AppIntents_SQLite.Select		var	template
+struct	AppIntents_SQLite.Select		var	bindings
+struct	AppIntents_SQLite.Insert			
+struct	AppIntents_SQLite.Insert		var	template
+struct	AppIntents_SQLite.Insert		var	bindings
+struct	AppIntents_SQLite.Update			
+struct	AppIntents_SQLite.Update		var	template
+struct	AppIntents_SQLite.Update		var	bindings
+struct	AppIntents_SQLite.Delete			
+struct	AppIntents_SQLite.Delete		var	template
+struct	AppIntents_SQLite.Delete		var	bindings
+struct	AppIntents_SQLite.RowIterator			
+struct	AppIntents_SQLite.RowIterator		let	statement
+struct	AppIntents_SQLite.RowIterator		let	columnNames
+struct	AppIntents_SQLite.Row			
+struct	AppIntents_SQLite.Row		let	columnNames
+struct	AppIntents_SQLite.Row		let	values
+enum	AppIntents_SQLite.JoinType			
+enum	AppIntents_SQLite.JoinType		case	cross
+enum	AppIntents_SQLite.JoinType		case	inner
+enum	AppIntents_SQLite.JoinType		case	leftOuter
+enum	AppIntents_SQLite.JoinType		case	unqualified
+enum	AppIntents_SQLite.OnConflict			
+enum	AppIntents_SQLite.OnConflict		case	replace
+enum	AppIntents_SQLite.OnConflict		case	rollback
+enum	AppIntents_SQLite.OnConflict		case	abort
+enum	AppIntents_SQLite.OnConflict		case	fail
+enum	AppIntents_SQLite.OnConflict		case	ignore
+struct	AppIntents_SQLite.QueryClauses			
+struct	AppIntents_SQLite.QueryClauses		var	select
+struct	AppIntents_SQLite.QueryClauses		var	from
+struct	AppIntents_SQLite.QueryClauses		var	join
+struct	AppIntents_SQLite.QueryClauses		var	filters
+struct	AppIntents_SQLite.QueryClauses		var	group
+struct	AppIntents_SQLite.QueryClauses		var	order
+struct	AppIntents_SQLite.QueryClauses		var	limit
+struct	AppIntents_SQLite.QueryClauses		var	union
+class	AppIntents_SQLite.Connection			
+class	AppIntents_SQLite.Connection		var	_handle
+class	AppIntents_SQLite.Connection		var	onClose
+class	AppIntents_SQLite.Connection		var	busyTimeout
+class	AppIntents_SQLite.Connection		var	busyHandler
+class	AppIntents_SQLite.Connection		var	trace
+class	AppIntents_SQLite.Connection		var	updateHook
+class	AppIntents_SQLite.Connection		var	commitHook
+class	AppIntents_SQLite.Connection		var	rollbackHook
+class	AppIntents_SQLite.Connection		var	functions
+class	AppIntents_SQLite.Connection		var	collations
+class	AppIntents_SQLite.Connection		var	queue
+class	AppIntents_SQLite.Connection		var	lazy
+enum	AppIntents_SQLite.Connection.Location			
+enum	AppIntents_SQLite.Connection.Location		case	uri
+enum	AppIntents_SQLite.Connection.Location		case	inMemory
+enum	AppIntents_SQLite.Connection.Location		case	temporary
+enum	AppIntents_SQLite.Connection.Operation			
+enum	AppIntents_SQLite.Connection.Operation		case	insert
+enum	AppIntents_SQLite.Connection.Operation		case	update
+enum	AppIntents_SQLite.Connection.Operation		case	delete
+enum	AppIntents_SQLite.Connection.TransactionMode			
+enum	AppIntents_SQLite.Connection.TransactionMode		case	deferred
+enum	AppIntents_SQLite.Connection.TransactionMode		case	immediate
+enum	AppIntents_SQLite.Connection.TransactionMode		case	exclusive
+struct	AppIntents_SQLite.Expression			
+struct	AppIntents_SQLite.Expression		var	template
+struct	AppIntents_SQLite.Expression		var	bindings
+class	AppIntents_SQLite.Statement			
+class	AppIntents_SQLite.Statement		var	handle
+class	AppIntents_SQLite.Statement		let	connection
+class	AppIntents_SQLite.Statement		var	lazy
+class	AppIntents_SQLite.Statement		var	lazy
+class	AppIntents_SQLite.Statement		var	lazy
+struct	AppIntents_SQLite.Cursor			
+struct	AppIntents_SQLite.Cursor		let	handle
+struct	AppIntents_SQLite.Cursor		let	columnCount
+struct	AppIntents_SQLite.Setter			
+struct	AppIntents_SQLite.Setter		let	column
+struct	AppIntents_SQLite.Setter		let	value
+class	AppIntents_SQLite.DateFunctions			
+class	AppIntents_SQLite.Backup			
+class	AppIntents_SQLite.Backup		let	targetConnection
+class	AppIntents_SQLite.Backup		let	sourceConnection
+class	AppIntents_SQLite.Backup		var	handle
+enum	AppIntents_SQLite.Backup.DatabaseName			
+enum	AppIntents_SQLite.Backup.DatabaseName		case	attached
+enum	AppIntents_SQLite.Backup.DatabaseName		case	main
+enum	AppIntents_SQLite.Backup.DatabaseName		case	temp
+enum	AppIntents_SQLite.Backup.Pages			
+enum	AppIntents_SQLite.Backup.Pages		case	limited
+enum	AppIntents_SQLite.Backup.Pages		case	all
+enum	AppIntents_SQLite.QueryError			
+enum	AppIntents_SQLite.QueryError		case	noSuchTable
+enum	AppIntents_SQLite.QueryError		case	noSuchColumn
+enum	AppIntents_SQLite.QueryError		case	ambiguousColumn
+enum	AppIntents_SQLite.QueryError		case	unexpectedNullValue
+enum	AppIntents_SQLite.Result			
+enum	AppIntents_SQLite.Result		case	error
+enum	AppIntents_SQLite.Collation			
+enum	AppIntents_SQLite.Collation		case	custom
+enum	AppIntents_SQLite.Collation		case	binary
+enum	AppIntents_SQLite.Collation		case	nocase
+enum	AppIntents_SQLite.Collation		case	rtrim
+class	AppIntents_SQLite.SQLiteEncoder			
+class	AppIntents_SQLite.SQLiteEncoder		var	setters
+class	AppIntents_SQLite.SQLiteEncoder		let	codingPath
+class	AppIntents_SQLite.SQLiteEncoder		let	userInfo
+class	AppIntents_SQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer<A	protocol descriptor for CodingKey>		
+class	AppIntents_SQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer<A	protocol descriptor for CodingKey>	let	encoder
+class	AppIntents_SQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer<A	protocol descriptor for CodingKey>	let	codingPath
+class	AppIntents_SQLite.SQLiteDecoder			
+class	AppIntents_SQLite.SQLiteDecoder		let	row
+class	AppIntents_SQLite.SQLiteDecoder		let	codingPath
+class	AppIntents_SQLite.SQLiteDecoder		let	userInfo
+class	AppIntents_SQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer<A	protocol descriptor for CodingKey>		
+class	AppIntents_SQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer<A	protocol descriptor for CodingKey>	let	codingPath
+class	AppIntents_SQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer<A	protocol descriptor for CodingKey>	let	row
+protocol	LinkDaemon.AppShortcutSpanSynonymRecord			
+protocol	LinkDaemon.AppShortcutSpanRecord	Synonym		
+protocol	LinkDaemon.AsyncWorkQueueCancelable			
+protocol	LinkDaemon.AnyEntryPoint			
+protocol	LinkDaemon.EntryPoint	Service		
+protocol	LinkDaemon.Daemon			
+protocol	LinkDaemon.XPCEvent			
+protocol	LinkDaemon.XPCEventService			
+protocol	XPCEventHandler			
+protocol	LinkDaemon.SiriKitApplicationRecord			
+protocol	LinkDaemon.AppShortcutInterpolatorMetadataProvider			
+protocol	LinkDaemon.AssistantIntentPhraseInterpolationMetadataProvider			
+protocol	LinkDaemon.MangledTypeNameQueryProvider			
+protocol	LinkDaemon.AppShortcutsObserver			
+protocol	LinkDaemon.XPCActivityService			
+protocol	LinkDaemon.ApplicationServiceType			
+protocol	LinkDaemon.SuggestionStrategy			
+protocol	LinkDaemon.RegistryObserver			
+protocol	LinkDaemon.Logging			
+protocol	LinkDaemon.TranscriptObserver			
+protocol	LinkDaemon.LinkBundleRecord			
+protocol	LinkDaemon.LocalLinkBundleRecord			
+protocol	LinkDaemon.LinkBundleSource			
+protocol	LinkDaemon.XPCListenerService			
+protocol	LinkDaemon.XPCListenerStatelessService			
+protocol	LinkDaemon.SignpostInterval			
+protocol	LinkDaemon.DebouncableNotification			
+protocol	LinkDaemon.AppShortcutInterpolatorInterface			
+protocol	LinkDaemon.RegistryInterface	Interpolator		
+protocol	AssistantPrebuilt			
+protocol	LinkDaemon.Locking			
+protocol	AppIntents_SQLite.Binding			
+protocol	AppIntents_SQLite.Number			
+protocol	AppIntents_SQLite.Value	ValueType, Datatype		
+protocol	AppIntents_SQLite._OptionalType	WrappedType		
+protocol	AppIntents_SQLite.QueryType			
+protocol	AppIntents_SQLite.SchemaType			
+protocol	AppIntents_SQLite.ExpressionType	UnderlyingType		
+protocol	AppIntents_SQLite.Expressible			
+protocol	AppIntents_SQLite.FailableIterator			
+protocol	conformance __C.LSPersistentIdentifier	protocol descriptor for _HasCustomAnyHashableRepresentation		
+protocol	conformance __C.LSPersistentIdentifier	protocol descriptor for RawRepresentable		
+protocol	conformance __C.LSPersistentIdentifier	protocol descriptor for _SwiftNewtypeWrapper		
+protocol	conformance __C.LSPersistentIdentifier	protocol descriptor for Equatable		
+protocol	conformance __C.LSPersistentIdentifier	protocol descriptor for Hashable		
+protocol	conformance __C.LSPersistentIdentifier	protocol descriptor for _ObjectiveCBridgeable		
+protocol	conformance __C.LNSystemProtocolIdentifier	protocol descriptor for _HasCustomAnyHashableRepresentation: LinkMetadata		
+protocol	conformance __C.LNSystemProtocolIdentifier	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNSystemProtocolIdentifier	protocol descriptor for _SwiftNewtypeWrapper: LinkMetadata		
+protocol	conformance __C.LNSystemProtocolIdentifier	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNSystemProtocolIdentifier	protocol descriptor for _ObjectiveCBridgeable: LinkMetadata		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.LNValueTypeSpecificMetadataKey	protocol descriptor for _HasCustomAnyHashableRepresentation: LinkMetadata		
+protocol	conformance __C.LNValueTypeSpecificMetadataKey	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNValueTypeSpecificMetadataKey	protocol descriptor for _SwiftNewtypeWrapper: LinkMetadata		
+protocol	conformance __C.LNValueTypeSpecificMetadataKey	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNValueTypeSpecificMetadataKey	protocol descriptor for _ObjectiveCBridgeable: LinkMetadata		
+protocol	conformance __C.LNPlatformName	protocol descriptor for _HasCustomAnyHashableRepresentation: LinkMetadata		
+protocol	conformance __C.LNPlatformName	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNPlatformName	protocol descriptor for _SwiftNewtypeWrapper: LinkMetadata		
+protocol	conformance __C.LNPlatformName	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNPlatformName	protocol descriptor for _ObjectiveCBridgeable: LinkMetadata		
+protocol	conformance __C.LNQueryCapabilities	protocol descriptor for ExpressibleByArrayLiteral: LinkMetadata		
+protocol	conformance __C.LNQueryCapabilities	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNQueryCapabilities	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNQueryCapabilities	protocol descriptor for SetAlgebra: LinkMetadata		
+protocol	conformance __C.LNQueryCapabilities	protocol descriptor for OptionSet: LinkMetadata		
+protocol	conformance __C.LNArrayValueTypeCapabilities	protocol descriptor for ExpressibleByArrayLiteral: LinkMetadata		
+protocol	conformance __C.LNArrayValueTypeCapabilities	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNArrayValueTypeCapabilities	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNArrayValueTypeCapabilities	protocol descriptor for SetAlgebra: LinkMetadata		
+protocol	conformance __C.LNArrayValueTypeCapabilities	protocol descriptor for OptionSet: LinkMetadata		
+protocol	conformance __C.LNActionTypeSpecificMetadataKey	protocol descriptor for _HasCustomAnyHashableRepresentation: LinkMetadata		
+protocol	conformance __C.LNActionTypeSpecificMetadataKey	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNActionTypeSpecificMetadataKey	protocol descriptor for _SwiftNewtypeWrapper: LinkMetadata		
+protocol	conformance __C.LNActionTypeSpecificMetadataKey	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNActionTypeSpecificMetadataKey	protocol descriptor for _ObjectiveCBridgeable: LinkMetadata		
+protocol	conformance __C.LNSuggestedActionDialogParameterKey	protocol descriptor for _HasCustomAnyHashableRepresentation: LinkServices		
+protocol	conformance __C.LNSuggestedActionDialogParameterKey	protocol descriptor for RawRepresentable: LinkServices		
+protocol	conformance __C.LNSuggestedActionDialogParameterKey	protocol descriptor for _SwiftNewtypeWrapper: LinkServices		
+protocol	conformance __C.LNSuggestedActionDialogParameterKey	protocol descriptor for Equatable: LinkServices		
+protocol	conformance __C.LNSuggestedActionDialogParameterKey	protocol descriptor for _ObjectiveCBridgeable: LinkServices		
+protocol	conformance __C.LNSystemEntityProtocolIdentifier	protocol descriptor for _HasCustomAnyHashableRepresentation: LinkMetadata		
+protocol	conformance __C.LNSystemEntityProtocolIdentifier	protocol descriptor for RawRepresentable: LinkMetadata		
+protocol	conformance __C.LNSystemEntityProtocolIdentifier	protocol descriptor for _SwiftNewtypeWrapper: LinkMetadata		
+protocol	conformance __C.LNSystemEntityProtocolIdentifier	protocol descriptor for Equatable: LinkMetadata		
+protocol	conformance __C.LNSystemEntityProtocolIdentifier	protocol descriptor for _ObjectiveCBridgeable: LinkMetadata		
+protocol	conformance __C.LNTranscriptActionSource	protocol descriptor for Equatable: LinkServices		
+protocol	conformance __C.LNTranscriptActionSource	protocol descriptor for RawRepresentable: LinkServices		
+protocol	conformance __C.LNSystemEntityProtocolIdentifier	protocol descriptor for Hashable: LinkMetadata		
+protocol	conformance __C.LNSuggestedActionDialogParameterKey	protocol descriptor for Hashable: LinkServices		
+protocol	conformance __C.LNActionTypeSpecificMetadataKey	protocol descriptor for Hashable: LinkMetadata		
+protocol	conformance __C.LNPlatformName	protocol descriptor for Hashable: LinkMetadata		
+protocol	conformance __C.LNValueTypeSpecificMetadataKey	protocol descriptor for Hashable: LinkMetadata		
+protocol	conformance __C.LNSystemProtocolIdentifier	protocol descriptor for Hashable: LinkMetadata		
+protocol	conformance LinkDaemon.AppShortcutDonator	LinkDaemon.Logging		
+protocol	conformance CascadeSyncManager	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.LNAppShortcutSpanSynonymRecord	LinkDaemon.AppShortcutSpanSynonymRecord		
+protocol	conformance LinkDaemon.LNAppShortcutSpanRecord	LinkDaemon.AppShortcutSpanRecord		
+protocol	conformance LinkDaemon.DonationError	protocol descriptor for LocalizedError		
+protocol	conformance LinkDaemon.DonationError	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.DonationError	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.DonationError	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.DonationError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.AsyncWorkQueue	protocol descriptor for AsyncSequence		
+protocol	conformance AsyncWorkQueue.AsyncIterator	protocol descriptor for AsyncIteratorProtocol		
+protocol	conformance LSBundleRecord	LinkDaemon.SiriKitApplicationRecord		
+protocol	conformance LinkDaemon.PlatformAssistantIntentGenerator	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.XPCEventEntryPoint	LinkDaemon.AnyEntryPoint		
+protocol	conformance LinkDaemon.XPCEventEntryPoint	LinkDaemon.XPCEventHandler		
+protocol	conformance LinkDaemon.XPCEventEntryPoint	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.XPCEventEntryPoint	LinkDaemon.EntryPoint		
+protocol	conformance LinkDaemon.XPCStreamName	protocol descriptor for ExpressibleByUnicodeScalarLiteral		
+protocol	conformance LinkDaemon.XPCStreamName	protocol descriptor for ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance LinkDaemon.XPCStreamName	protocol descriptor for ExpressibleByStringLiteral		
+protocol	conformance LinkDaemon.XPCStreamName	protocol descriptor for RawRepresentable		
+protocol	conformance LinkDaemon.ConcreteXPCEvent	LinkDaemon.XPCEvent		
+protocol	conformance LinkDaemon.MetadataStore	LinkDaemon.AppShortcutInterpolatorMetadataProvider		
+protocol	conformance LinkDaemon.AppShortcutInterpolator	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.AppShortcutInterpolator	protocol descriptor for Actor		
+protocol	conformance AppShortcutInterpolator.Builder	LinkDaemon.Logging		
+protocol	conformance RecordIdentifier	protocol descriptor for Equatable		
+protocol	conformance RecordIdentifier	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.PruneTranscriptService	LinkDaemon.XPCActivityService		
+protocol	conformance LinkDaemon.PruneTranscriptService	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.Transcript	LinkDaemon.XPCListenerService		
+protocol	conformance LinkDaemon.Transcript	LinkDaemon.XPCListenerStatelessService		
+protocol	conformance LinkDaemon.Transcript	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.TranscriptError	protocol descriptor for CustomNSError		
+protocol	conformance LinkDaemon.TranscriptError	protocol descriptor for RawRepresentable		
+protocol	conformance LinkDaemon.TranscriptError	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.TranscriptError	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.TranscriptError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.AppShortcutIdentifierExtractionError	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.AppShortcutIdentifierExtractionError	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.AppShortcutIdentifierExtractionError	protocol descriptor for CustomNSError		
+protocol	conformance LinkDaemon.AppShortcutIdentifierExtractionError	protocol descriptor for LocalizedError		
+protocol	conformance LinkDaemon.AppShortcutIdentifierExtractionError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.MetadataStore	LinkDaemon.AssistantIntentPhraseInterpolationMetadataProvider		
+protocol	conformance OSStateHandler.Hint	protocol descriptor for Hashable		
+protocol	conformance OSStateHandler.Hint	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.AppShortcutsChangedNotification	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.AppShortcutsChangedNotification	LinkDaemon.DebouncableNotification		
+protocol	conformance LinkDaemon.ConstraintValidationService	LinkDaemon.XPCListenerService		
+protocol	conformance LinkDaemon.ConstraintValidationService	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.ConstraintValidationService	LinkDaemon.XPCListenerStatelessService		
+protocol	conformance ContainerError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.AssistantIntentPhraseInterpolator	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.AssistantIntentPhraseInterpolator	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.LinkDaemon	LinkDaemon.Daemon		
+protocol	conformance LinkDaemon.LNAppShortcutSpanSynonymRecord	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.LNAppShortcutSpanSynonymRecord	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.SuggestedActionsService	LinkDaemon.XPCListenerService		
+protocol	conformance LinkDaemon.SuggestedActionsService	LinkDaemon.XPCListenerStatelessService		
+protocol	conformance LinkDaemon.SuggestedActionsService	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.SiriDiscoverabilityClosedAppSuggestionStrategy	LinkDaemon.SuggestionStrategy		
+protocol	conformance LinkDaemon.XPCActivityResult	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.XPCActivityResult	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.XPCActivityEntryPoint	LinkDaemon.AnyEntryPoint		
+protocol	conformance LinkDaemon.XPCActivityEntryPoint	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.XPCActivityEntryPoint	LinkDaemon.EntryPoint		
+protocol	conformance LinkDaemon.IssueSandboxExceptionError	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.IssueSandboxExceptionError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.ConnectionTransactionSerializer	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.MetadataStore	LinkDaemon.Logging		
+protocol	conformance MetadataStore.CreationError	protocol descriptor for LocalizedError		
+protocol	conformance MetadataStore.CreationError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.LegacyApplicationService	LinkDaemon.ApplicationServiceType		
+protocol	conformance LinkDaemon.ModernApplicationService	LinkDaemon.ApplicationServiceType		
+protocol	conformance LinkDaemon.ApplicationService	LinkDaemon.XPCEventService		
+protocol	conformance LinkDaemon.ApplicationService	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.ApplicationService	LinkDaemon.XPCListenerService		
+protocol	conformance LinkDaemon.ApplicationService	protocol descriptor for Actor		
+protocol	conformance ApplicationServiceInstance.Errors	protocol descriptor for LocalizedError		
+protocol	conformance ApplicationServiceInstance.Errors	protocol descriptor for Hashable		
+protocol	conformance ApplicationServiceInstance.Errors	protocol descriptor for Equatable		
+protocol	conformance ApplicationServiceInstance.Errors	protocol descriptor for Error		
+protocol	conformance LinkDaemon.SuggestedActionsGeneratorDialogingError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.LNAppShortcutSpanRecord	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.LNAppShortcutSpanRecord	protocol descriptor for Hashable		
+protocol	conformance AssistantIntentPhraseInterpolator.Builder	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.RegistryUpdatedNotification	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.RegistryUpdatedNotification	LinkDaemon.DebouncableNotification		
+protocol	conformance LinkDaemon.NotifyingRegistryObserver	LinkDaemon.RegistryObserver		
+protocol	conformance LinkDaemon.UpdateRegistryService	LinkDaemon.XPCActivityService		
+protocol	conformance LinkDaemon.UpdateRegistryService	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.RegistryAdapter	LinkDaemon.XPCListenerService		
+protocol	conformance LinkDaemon.RegistryAdapter	LinkDaemon.XPCListenerStatelessService		
+protocol	conformance LinkDaemon.RegistryAdapter	LinkDaemon.XPCEventService		
+protocol	conformance LinkDaemon.LazyTask	LinkDaemon.Locking		
+protocol	conformance LinkDaemon.NotifyingTranscriptObserver	LinkDaemon.TranscriptObserver		
+protocol	conformance IndexingQueue.Change	LinkDaemon.AsyncWorkQueueCancelable		
+protocol	conformance LinkDaemon.AppShortcutInterpolator	LinkDaemon.AppShortcutInterpolatorInterface		
+protocol	conformance LinkDaemon.Registry	LinkDaemon.RegistryInterface		
+protocol	conformance LinkDaemon.LSLinkBundleSource	LinkDaemon.LinkBundleSource		
+protocol	conformance LinkDaemon.LNBundleRecord	LinkDaemon.LinkBundleRecord		
+protocol	conformance IndexingQueue	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.Registry	LinkDaemon.Logging		
+protocol	conformance LSLinkBundleRecord.RecordType	protocol descriptor for Hashable		
+protocol	conformance LSLinkBundleRecord.RecordType	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.RegistryError	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.RegistryError	protocol descriptor for CustomNSError		
+protocol	conformance LinkDaemon.RegistryError	protocol descriptor for LocalizedError		
+protocol	conformance LinkDaemon.LSLinkBundleRecord	LinkDaemon.LinkBundleRecord		
+protocol	conformance LinkDaemon.LSLinkBundleRecord	LinkDaemon.LocalLinkBundleRecord		
+protocol	conformance LinkDaemon.RegistryError	protocol descriptor for Error		
+protocol	conformance Diagnostics.DiagnosticError	protocol descriptor for CustomNSError		
+protocol	conformance Diagnostics.DiagnosticError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.XPCListenerEntryPoint	protocol descriptor for Actor		
+protocol	conformance LinkDaemon.XPCListenerEntryPoint	LinkDaemon.EntryPoint		
+protocol	conformance LinkDaemon.XPCListenerEntryPoint	LinkDaemon.AnyEntryPoint		
+protocol	conformance nominal type descriptor for AppShortcutInterpolator	LinkDaemon.AppShortcutInterpolatorInterface		
+protocol	conformance nominal type descriptor for AppShortcutSpanResult.Synonym	LinkDaemon.AppShortcutSpanSynonymRecord		
+protocol	conformance nominal type descriptor for AppShortcutSpanResult	LinkDaemon.AppShortcutSpanRecord		
+protocol	conformance LinkDaemon.MetadataIndexCoordinator	LinkDaemon.RegistryInterface		
+protocol	conformance LinkDaemon.ExtensionService	LinkDaemon.XPCListenerService		
+protocol	conformance LinkDaemon.ExtensionService	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.ExtensionService	LinkDaemon.XPCListenerStatelessService		
+protocol	conformance AssistantIntentPhraseInterpolator.ParameterValue	protocol descriptor for Equatable		
+protocol	conformance Schema.RuntimeError	protocol descriptor for LocalizedError		
+protocol	conformance Schema.RuntimeError	protocol descriptor for Error		
+protocol	conformance LinkDaemon.StreamManager	LinkDaemon.Logging		
+protocol	conformance LinkDaemon.StreamManagerError	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.StreamManagerError	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.StreamReference	protocol descriptor for Equatable		
+protocol	conformance LinkDaemon.StreamReference	protocol descriptor for Hashable		
+protocol	conformance LinkDaemon.StreamReference	protocol descriptor for CustomStringConvertible		
+protocol	conformance LinkDaemon.StreamManagerError	protocol descriptor for Error		
+protocol	conformance nominal type descriptor for AssistantPrebuiltIntent	LinkDaemon.AssistantPrebuilt		
+protocol	conformance nominal type descriptor for AssistantPrebuiltEnum	LinkDaemon.AssistantPrebuilt		
+protocol	conformance nominal type descriptor for AssistantPrebuiltEntity	LinkDaemon.AssistantPrebuilt		
+protocol	conformance LinkDaemon.ApplicationMetadataExtractor	LinkDaemon.Logging		
+protocol	conformance ApplicationMetadataExtractor.Errors	protocol descriptor for LocalizedError		
+protocol	conformance ApplicationMetadataExtractor.Errors	protocol descriptor for Hashable		
+protocol	conformance ApplicationMetadataExtractor.Errors	protocol descriptor for Equatable		
+protocol	conformance ApplicationMetadataExtractor.Errors	protocol descriptor for Error		
+protocol	conformance nominal type descriptor for Double	AppIntents_SQLite.Number		
+protocol	conformance nominal type descriptor for Double	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for Double	AppIntents_SQLite.Binding		
+protocol	conformance nominal type descriptor for Double	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for Int64	AppIntents_SQLite.Number		
+protocol	conformance nominal type descriptor for Int64	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for Int64	AppIntents_SQLite.Binding		
+protocol	conformance nominal type descriptor for Int64	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for String	AppIntents_SQLite.Binding		
+protocol	conformance nominal type descriptor for String	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for String	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Blob	AppIntents_SQLite.Binding		
+protocol	conformance AppIntents_SQLite.Blob	AppIntents_SQLite.Value		
+protocol	conformance AppIntents_SQLite.Blob	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for Bool	AppIntents_SQLite.Binding		
+protocol	conformance nominal type descriptor for Bool	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for Bool	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for Int	AppIntents_SQLite.Number		
+protocol	conformance nominal type descriptor for Int	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for Int	AppIntents_SQLite.Binding		
+protocol	conformance nominal type descriptor for Int	AppIntents_SQLite.Expressible		
+protocol	conformance TableBuilder.Dependency	protocol descriptor for Equatable		
+protocol	conformance TableBuilder.Dependency	protocol descriptor for Hashable		
+protocol	conformance TableBuilder.Dependency	protocol descriptor for RawRepresentable		
+protocol	conformance AppIntents_SQLite.PrimaryKey	protocol descriptor for Equatable		
+protocol	conformance AppIntents_SQLite.PrimaryKey	protocol descriptor for Hashable		
+protocol	conformance AppIntents_SQLite.Module	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Blob	protocol descriptor for CustomStringConvertible		
+protocol	conformance AppIntents_SQLite.Blob	protocol descriptor for Equatable		
+protocol	conformance nominal type descriptor for Optional	AppIntents_SQLite._OptionalType		
+protocol	conformance AppIntents_SQLite.Table	AppIntents_SQLite.SchemaType		
+protocol	conformance AppIntents_SQLite.Table	AppIntents_SQLite.QueryType		
+protocol	conformance AppIntents_SQLite.Table	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.View	AppIntents_SQLite.SchemaType		
+protocol	conformance AppIntents_SQLite.View	AppIntents_SQLite.QueryType		
+protocol	conformance AppIntents_SQLite.View	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.VirtualTable	AppIntents_SQLite.SchemaType		
+protocol	conformance AppIntents_SQLite.VirtualTable	AppIntents_SQLite.QueryType		
+protocol	conformance AppIntents_SQLite.VirtualTable	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.ScalarQuery	AppIntents_SQLite.QueryType		
+protocol	conformance AppIntents_SQLite.ScalarQuery	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Select	AppIntents_SQLite.ExpressionType		
+protocol	conformance AppIntents_SQLite.Select	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Insert	AppIntents_SQLite.ExpressionType		
+protocol	conformance AppIntents_SQLite.Insert	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Update	AppIntents_SQLite.ExpressionType		
+protocol	conformance AppIntents_SQLite.Update	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Delete	AppIntents_SQLite.ExpressionType		
+protocol	conformance AppIntents_SQLite.Delete	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.RowIterator	AppIntents_SQLite.FailableIterator		
+protocol	conformance AppIntents_SQLite.RowIterator	protocol descriptor for IteratorProtocol		
+protocol	conformance AppIntents_SQLite.JoinType	protocol descriptor for Equatable		
+protocol	conformance AppIntents_SQLite.JoinType	protocol descriptor for Hashable		
+protocol	conformance AppIntents_SQLite.JoinType	protocol descriptor for RawRepresentable		
+protocol	conformance AppIntents_SQLite.OnConflict	protocol descriptor for Equatable		
+protocol	conformance AppIntents_SQLite.OnConflict	protocol descriptor for Hashable		
+protocol	conformance AppIntents_SQLite.OnConflict	protocol descriptor for RawRepresentable		
+protocol	conformance Connection.Operation	protocol descriptor for Equatable		
+protocol	conformance Connection.Operation	protocol descriptor for Hashable		
+protocol	conformance Connection.TransactionMode	protocol descriptor for Equatable		
+protocol	conformance Connection.TransactionMode	protocol descriptor for Hashable		
+protocol	conformance Connection.TransactionMode	protocol descriptor for RawRepresentable		
+protocol	conformance AppIntents_SQLite.Connection	protocol descriptor for CustomStringConvertible		
+protocol	conformance Connection.Location	protocol descriptor for CustomStringConvertible		
+protocol	conformance AppIntents_SQLite.Expression	AppIntents_SQLite.ExpressionType		
+protocol	conformance AppIntents_SQLite.Expression	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Statement	protocol descriptor for Sequence		
+protocol	conformance AppIntents_SQLite.Statement	AppIntents_SQLite.FailableIterator		
+protocol	conformance AppIntents_SQLite.Statement	protocol descriptor for IteratorProtocol		
+protocol	conformance AppIntents_SQLite.Statement	protocol descriptor for CustomStringConvertible		
+protocol	conformance AppIntents_SQLite.Cursor	protocol descriptor for Sequence		
+protocol	conformance AppIntents_SQLite.Setter	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for Data	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for Data	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for Date	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for Date	AppIntents_SQLite.Expressible		
+protocol	conformance nominal type descriptor for UUID	AppIntents_SQLite.Value		
+protocol	conformance nominal type descriptor for UUID	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.QueryError	protocol descriptor for Error		
+protocol	conformance AppIntents_SQLite.QueryError	protocol descriptor for CustomStringConvertible		
+protocol	conformance AppIntents_SQLite.Result	protocol descriptor for Error		
+protocol	conformance AppIntents_SQLite.Result	protocol descriptor for CustomStringConvertible		
+protocol	conformance AppIntents_SQLite.Collation	AppIntents_SQLite.Expressible		
+protocol	conformance AppIntents_SQLite.Collation	protocol descriptor for CustomStringConvertible		
+protocol	conformance SQLiteDecoder.SQLiteKeyedDecodingContainer	protocol descriptor for KeyedDecodingContainerProtocol		
+protocol	conformance SQLiteEncoder.SQLiteKeyedEncodingContainer	protocol descriptor for KeyedEncodingContainerProtocol		
+protocol	conformance SQLiteDecoder	protocol descriptor for Decoder		
+protocol	conformance SQLiteEncoder	protocol descriptor for Encoder		
+extension	LinkDaemon.LNAppShortcutSpanRecord	AppShortcutSpanRecord		
+extension	LinkDaemon.AsyncWorkQueue	AsyncSequence		
+extension	LinkDaemon.AsyncWorkQueue.AsyncIterator	AsyncIteratorProtocol		
+extension	LinkDaemon.XPCEventEntryPoint	EntryPoint		
+extension	LinkDaemon.XPCStreamName	ExpressibleByUnicodeScalarLiteral		
+extension	LinkDaemon.XPCStreamName	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	LinkDaemon.XPCStreamName	ExpressibleByStringLiteral		
+extension	LinkDaemon.XPCStreamName	RawRepresentable		
+extension	LinkDaemon.TranscriptError	RawRepresentable		
+extension	LinkDaemon.XPCActivityEntryPoint	EntryPoint		
+extension	LinkDaemon.Registry	RegistryInterface		
+extension	LinkDaemon.XPCListenerEntryPoint	EntryPoint		
+extension	nominal type descriptor for AppShortcutSpanResult	AppShortcutSpanRecord		
+extension	LinkDaemon.MetadataIndexCoordinator	RegistryInterface		
+extension	Double	Value		
+extension	nominal type descriptor for Int64	Value		
+extension	String	Value		
+extension	AppIntents_SQLite.Blob	Value		
+extension	Swift.Bool	Value		
+extension	Int	Value		
+extension	AppIntents_SQLite.TableBuilder.Dependency	RawRepresentable		
+extension	Optional	_OptionalType		
+extension	AppIntents_SQLite.Select	ExpressionType		
+extension	AppIntents_SQLite.Insert	ExpressionType		
+extension	AppIntents_SQLite.Update	ExpressionType		
+extension	AppIntents_SQLite.Delete	ExpressionType		
+extension	AppIntents_SQLite.RowIterator	IteratorProtocol		
+extension	AppIntents_SQLite.JoinType	RawRepresentable		
+extension	AppIntents_SQLite.OnConflict	RawRepresentable		
+extension	AppIntents_SQLite.Connection.TransactionMode	RawRepresentable		
+extension	AppIntents_SQLite.Expression	ExpressionType		
+extension	AppIntents_SQLite.Statement	Sequence		
+extension	AppIntents_SQLite.Statement	IteratorProtocol		
+extension	AppIntents_SQLite.Cursor	Sequence		
+extension	nominal type descriptor for Data	Value		
+extension	nominal type descriptor for Date	Value		
+extension	nominal type descriptor for UUID	Value		
+extension	AppIntents_SQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer	KeyedDecodingContainerProtocol		
+extension	AppIntents_SQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer	KeyedEncodingContainerProtocol		

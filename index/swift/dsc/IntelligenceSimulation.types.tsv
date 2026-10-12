@@ -1,0 +1,149 @@
+kind	type	conformance	member_kind	member
+struct	IntelligenceSimulation.SimulationError			
+struct	IntelligenceSimulation.SimulationError		let	file
+struct	IntelligenceSimulation.SimulationError		let	function
+struct	IntelligenceSimulation.SimulationError		let	line
+struct	IntelligenceSimulation.SimulationError		let	className
+struct	IntelligenceSimulation.SimulationError		let	data
+struct	IntelligenceSimulation.SimulationError		let	description
+struct	IntelligenceSimulation.SimulationError		let	error
+struct	IntelligenceSimulation.SimulationError		let	grpcStatus
+struct	IntelligenceSimulation.SimulationError		let	stackTrace
+enum	IntelligenceSimulation.SimulationError.GRPCStatus			
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	unknown
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	invalidArgument
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	deadlineExceeded
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	notFound
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	alreadyExists
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	permissionDenied
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	resourceExhausted
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	failedPrecondition
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	aborted
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	outOfRange
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	unimplemented
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	internalError
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	unavailable
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	dataLoss
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	unauthenticated
+enum	IntelligenceSimulation.SimulationError.GRPCStatus		case	failedExecutingCliCommand
+struct	IntelligenceSimulation.DefaultStatefulSiriReplayResult			
+struct	IntelligenceSimulation.DefaultStatefulSiriReplayResult		let	rawTranscript
+struct	IntelligenceSimulation.DefaultStatefulSiriReplayResult		let	evalMessages
+struct	IntelligenceSimulation.InterceptionType			
+struct	IntelligenceSimulation.InterceptionType		let	typeName
+struct	IntelligenceSimulation.InterceptionValue			
+struct	IntelligenceSimulation.InterceptionValue		let	id
+struct	IntelligenceSimulation.InterceptionValue		let	type
+struct	IntelligenceSimulation.InterceptionValue		let	encodedData
+struct	IntelligenceSimulation.InterceptionPoint			
+struct	IntelligenceSimulation.InterceptionPoint		let	taskID
+struct	IntelligenceSimulation.InterceptionPoint		let	sourceLocationId
+struct	IntelligenceSimulation.InterceptionPoint		let	inputs
+struct	IntelligenceSimulation.InterceptionPoint		let	outputs
+struct	IntelligenceSimulation.InterceptionResponse			
+struct	IntelligenceSimulation.InterceptionResponse		let	encodedData
+enum	IntelligenceSimulation.InterceptionDecision			
+enum	IntelligenceSimulation.InterceptionDecision		case	intercept
+enum	IntelligenceSimulation.InterceptionDecision		case	ignore
+enum	IntelligenceSimulation.InterceptionValue.CodingKeys			
+enum	IntelligenceSimulation.InterceptionValue.CodingKeys		case	id
+enum	IntelligenceSimulation.InterceptionValue.CodingKeys		case	type
+enum	IntelligenceSimulation.InterceptionValue.CodingKeys		case	encodedData
+enum	IntelligenceSimulation.InterceptionType.CodingKeys			
+enum	IntelligenceSimulation.InterceptionType.CodingKeys		case	typeName
+struct	IntelligenceSimulation.TaskID			
+struct	IntelligenceSimulation.TaskID		let	tree
+struct	IntelligenceSimulation.TaskID		let	stableTaskID
+struct	IntelligenceSimulation.TreeID			
+struct	IntelligenceSimulation.TreeID		let	value
+struct	IntelligenceSimulation.StableTaskID			
+struct	IntelligenceSimulation.StableTaskID		let	value
+struct	IntelligenceSimulation.SourceLocationID			
+struct	IntelligenceSimulation.SourceLocationID		let	stableValue
+struct	IntelligenceSimulation.SourceLocationID		let	file
+struct	IntelligenceSimulation.SourceLocationID		let	function
+struct	IntelligenceSimulation.SourceLocationID		let	line
+struct	IntelligenceSimulation.SourceLocationID		let	column
+enum	IntelligenceSimulation.Simulation			
+enum	IntelligenceSimulation.SourceLocationID.CodingKeys			
+enum	IntelligenceSimulation.SourceLocationID.CodingKeys		case	stableValue
+enum	IntelligenceSimulation.SourceLocationID.CodingKeys		case	file
+enum	IntelligenceSimulation.SourceLocationID.CodingKeys		case	function
+enum	IntelligenceSimulation.SourceLocationID.CodingKeys		case	line
+enum	IntelligenceSimulation.SourceLocationID.CodingKeys		case	column
+enum	IntelligenceSimulation.StableTaskID.CodingKeys			
+enum	IntelligenceSimulation.StableTaskID.CodingKeys		case	value
+enum	IntelligenceSimulation.TreeID.CodingKeys			
+enum	IntelligenceSimulation.TreeID.CodingKeys		case	value
+enum	IntelligenceSimulation.TaskID.CodingKeys			
+enum	IntelligenceSimulation.TaskID.CodingKeys		case	tree
+enum	IntelligenceSimulation.TaskID.CodingKeys		case	stableTaskID
+class	IntelligenceSimulation.SimulationCoordinator			
+class	IntelligenceSimulation.SimulationCoordinator		var	interceptors
+struct	IntelligenceSimulation.SimulationService			
+struct	IntelligenceSimulation.SimulationService		let	coordinator
+protocol	IntelligenceSimulation.FunctionRegistrar			
+protocol	IntelligenceSimulation.GenericServiceProvider			
+protocol	IntelligenceSimulation.CallbackHandler			
+protocol	IntelligenceSimulation.MappableToGRPCStatus			
+protocol	IntelligenceSimulation.StatefulSiriReplayResult			
+protocol	IntelligenceSimulation.StatefulSiriReplayerProtocol			
+protocol	IntelligenceSimulation.StatefulSiriReplayerProvider			
+protocol	IntelligenceSimulation.SimulationIntercepting			
+protocol	conformance SimulationError.GRPCStatus	Swift.Equatable		
+protocol	conformance SimulationError.GRPCStatus	Swift.Hashable		
+protocol	conformance IntelligenceSimulation.SimulationError	Swift.Error		
+protocol	conformance DefaultStatefulSiriReplayResult	IntelligenceSimulation.StatefulSiriReplayResult		
+protocol	conformance IntelligenceSimulation.InterceptionType	Swift.Decodable		
+protocol	conformance IntelligenceSimulation.InterceptionType	Swift.Encodable		
+protocol	conformance IntelligenceSimulation.InterceptionValue	Swift.Identifiable		
+protocol	conformance IntelligenceSimulation.InterceptionValue	Swift.Decodable		
+protocol	conformance IntelligenceSimulation.InterceptionValue	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IntelligenceSimulation.TaskID	Swift.Hashable		
+protocol	conformance IntelligenceSimulation.TaskID	Swift.Decodable		
+protocol	conformance IntelligenceSimulation.TaskID	Swift.Encodable		
+protocol	conformance IntelligenceSimulation.TaskID	Swift.Equatable		
+protocol	conformance IntelligenceSimulation.TreeID	Swift.Hashable		
+protocol	conformance IntelligenceSimulation.TreeID	Swift.Decodable		
+protocol	conformance IntelligenceSimulation.TreeID	Swift.Encodable		
+protocol	conformance IntelligenceSimulation.TreeID	Swift.Equatable		
+protocol	conformance IntelligenceSimulation.StableTaskID	Swift.Hashable		
+protocol	conformance IntelligenceSimulation.StableTaskID	Swift.Decodable		
+protocol	conformance IntelligenceSimulation.StableTaskID	Swift.Encodable		
+protocol	conformance IntelligenceSimulation.StableTaskID	Swift.Equatable		
+protocol	conformance IntelligenceSimulation.SourceLocationID	Swift.Hashable		
+protocol	conformance IntelligenceSimulation.SourceLocationID	Swift.Decodable		
+protocol	conformance IntelligenceSimulation.SourceLocationID	Swift.Encodable		
+protocol	conformance IntelligenceSimulation.SourceLocationID	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IntelligenceSimulation.SimulationCoordinator	Swift.Actor		
+extension	IntelligenceSimulation.InterceptionValue	Identifiable		

@@ -1,0 +1,27 @@
+owner	kind	declaration
+BluetoothBridge	+	+ (id)sharedBluetoothBridge;
+BluetoothBridge	-	- (_Bool)isConnected:(id)connected;
+BluetoothBridge	-	- (_Bool)isHALPublished:(unsigned char)halpublished device:(id)device;
+BluetoothBridge	-	- (_Bool)shouldRemoveDevice:(id)device;
+BluetoothBridge	-	- (id)addressFromDevice:(id)device;
+BluetoothBridge	-	- (id)deviceFromIdentifier:(id)identifier;
+BluetoothBridge	-	- (id)init;
+BluetoothBridge	-	- (id)nameFromDevice:(id)device;
+BluetoothBridge	-	- (id)uidFromDevice:(id)device;
+BluetoothBridge	-	- (struct __CFDictionary *)createDescriptionWithDevice:(id)device;
+BluetoothBridge	-	- (unsigned char)supportedFormats:(id)formats;
+BluetoothBridge	-	- (void)addListeners;
+BluetoothBridge	-	- (void)connectToAddress:(id)address completionHandler:(id /* block */)handler;
+BluetoothBridge	-	- (void)getHFPSupportStatus;
+BluetoothBridge	-	- (void)startLEScanning:(_Bool)lescanning;
+BluetoothBridge	-	- (void)stopLEScanning;
+BluetoothBridge	property	@property (copy) id /* block */ activation;
+BluetoothBridge	property	@property (copy) id /* block */ activationTimeoutBlock;
+BluetoothBridge	property	@property (copy) id /* block */ lowerScanRate;
+BluetoothBridge	property	@property (nonatomic) _Bool noHFPSupport;
+BluetoothBridge	property	@property (nonatomic) struct OpaqueFigEndpointManager * manager;
+BluetoothBridge	property	@property (retain) CBDiscovery *deviceDiscovery;
+BluetoothBridge	property	@property (retain) CUSystemMonitor *systemMonitor;
+BluetoothBridge	property	@property (retain) NSObject<OS_dispatch_queue> *queue;
+BluetoothBridge	property	@property (retain) NSObject<OS_dispatch_semaphore> *connectedSemaphore;
+BluetoothBridge	property	@property _Bool targetUserSession;

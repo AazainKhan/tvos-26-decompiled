@@ -1,0 +1,701 @@
+kind	type	conformance	member_kind	member
+class	CloudTelemetryService.TransparencyLog			
+class	CloudTelemetryService.TransparencyLog		var	rootLogsURL
+class	CloudTelemetryService.TransparencyLog		var	writeInternalEvents
+class	CloudTelemetryService.TransparencyLog		var	activeFile
+class	CloudTelemetryService.TransparencyLog		var	fileDeletionSource
+enum	CloudTelemetryService.TransparencyLog.WriteError			
+enum	CloudTelemetryService.TransparencyLog.WriteError		case	encodeFailed
+struct	CloudTelemetryService.TransparencyLog.JustEvents			
+struct	CloudTelemetryService.TransparencyLog.JustEvents		let	events
+enum	CloudTelemetryService.TransparencyLog.JustEvents.CodingKeys			
+enum	CloudTelemetryService.TransparencyLog.JustEvents.CodingKeys		case	events
+enum	CloudTelemetryService.SessionUser			
+enum	CloudTelemetryService.SessionUser		case	uid
+enum	CloudTelemetryService.SessionUser		case	unknown
+struct	CloudTelemetryService.CachedSession			
+struct	CloudTelemetryService.CachedSession		var	identity
+struct	CloudTelemetryService.CachedSession		var	id
+struct	CloudTelemetryService.CachedSession		var	samplingFactor
+struct	CloudTelemetryService.CachedSession		var	creation
+struct	CloudTelemetryService.CachedSession		let	user
+struct	CloudTelemetryService.CachedSession		var	eventPayload
+class	CloudTelemetryService.Session			
+struct	CloudTelemetryService.StorebagSigningConfiguration			
+struct	CloudTelemetryService.StorebagSigningConfiguration		let	throttleCacheURL
+struct	CloudTelemetryService.StorebagSigningConfiguration		let	configurationsCacheURL
+enum	CloudTelemetryService.StorebagSigningConfiguration.Error			
+enum	CloudTelemetryService.StorebagSigningConfiguration.Error		case	failedParse
+enum	CloudTelemetryService.StorebagSigningConfiguration.Error		case	internalError
+enum	CloudTelemetryService.StorebagSigningConfiguration.Error		case	downloadFailed
+enum	CloudTelemetryService.StorebagSigningConfiguration.Error		case	throttled
+class	CloudTelemetryService.BackendHTTP			
+class	CloudTelemetryService.BackendHTTP		let	coord
+class	CloudTelemetryService.BackendHTTP		let	transparencyLog
+class	CloudTelemetryService.BackendHTTP		let	url
+class	CloudTelemetryService.BackendHTTP		let	options
+class	CloudTelemetryService.BackendHTTP		let	clientID
+class	CloudTelemetryService.BackendHTTP		let	extraHeaders
+class	CloudTelemetryService.BackendHTTP		let	filters
+class	CloudTelemetryService.BackendHTTP		let	name
+class	CloudTelemetryService.BackendHTTP		let	skipLogging
+enum	CloudTelemetryService.ZLibError			
+enum	CloudTelemetryService.ZLibError		case	initFailed
+struct	CloudTelemetryService.BackendHTTP.POSTData			
+struct	CloudTelemetryService.BackendHTTP.POSTData		let	postTime
+struct	CloudTelemetryService.BackendHTTP.POSTData		let	clientId
+struct	CloudTelemetryService.BackendHTTP.POSTData		let	events
+enum	CloudTelemetryService.BackendHTTP.POSTData.CodingKeys			
+enum	CloudTelemetryService.BackendHTTP.POSTData.CodingKeys		case	postTime
+enum	CloudTelemetryService.BackendHTTP.POSTData.CodingKeys		case	clientId
+enum	CloudTelemetryService.BackendHTTP.POSTData.CodingKeys		case	events
+struct	CloudTelemetryService.SessionHierarchyItem			
+struct	CloudTelemetryService.SessionHierarchyItem		var	level
+struct	CloudTelemetryService.SessionHierarchyItem		var	id
+class	CloudTelemetryService.SessionCoordinator			
+class	CloudTelemetryService.SessionCoordinator		let	storebagCoordinator
+class	CloudTelemetryService.SessionCoordinator		var	diskCache
+class	CloudTelemetryService.SessionCoordinator		var	sessionsPerClientType
+class	CloudTelemetryService.SessionCoordinator		var	evictingClientTypes
+class	CloudTelemetryService.SessionCoordinator		var	sessionHierarchy
+struct	CloudTelemetryService.StorebagSectionBackendHTTP			
+struct	CloudTelemetryService.StorebagSectionBackendHTTP		let	name
+struct	CloudTelemetryService.StorebagSectionBackendHTTP		let	event_types
+enum	CloudTelemetryService.StorebagSectionBackendHTTP.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionBackendHTTP.CodingKeys		case	event_types
+struct	CloudTelemetryService.StorebagSectionBackendScriptGroup			
+struct	CloudTelemetryService.StorebagSectionBackendScriptGroup		let	script_groups
+enum	CloudTelemetryService.StorebagSectionBackendScriptGroup.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionBackendScriptGroup.CodingKeys		case	script_groups
+enum	CloudTelemetryService.StorebagSectionBackend			
+enum	CloudTelemetryService.StorebagSectionBackend		case	http
+enum	CloudTelemetryService.StorebagSectionBackend		case	local
+enum	CloudTelemetryService.StorebagSectionBackend		case	other
+class	CloudTelemetryService.SubmitEventsActivity			
+class	CloudTelemetryService.SubmitEventsActivity		let	diskCache
+class	CloudTelemetryService.SubmitEventsActivity		let	sessionCoord
+class	CloudTelemetryService.SubmitEventsActivity		let	submissionCoord
+enum	CloudTelemetryService.SubmitEventsActivity.Error			
+enum	CloudTelemetryService.SubmitEventsActivity.Error		case	noBackendAvailable
+enum	CloudTelemetryService.DiskCacheError			
+enum	CloudTelemetryService.DiskCacheError		case	invalidEvent
+enum	CloudTelemetryService.DiskCacheError		case	recreateDB
+class	CloudTelemetryService.DiskCache			
+class	CloudTelemetryService.DiskCache		let	database
+class	CloudTelemetryService.PostInstallActivity			
+struct	CloudTelemetryService.RawStorebag			
+struct	CloudTelemetryService.RawStorebag		let	bag
+struct	CloudTelemetryService.RawStorebag		let	signature
+struct	CloudTelemetryService.RawStorebag._EncodedRawStorebag			
+struct	CloudTelemetryService.RawStorebag._EncodedRawStorebag		let	bag
+struct	CloudTelemetryService.RawStorebag._EncodedRawStorebag		let	signature
+enum	CloudTelemetryService.RawStorebag._EncodedRawStorebag.CodingKeys			
+enum	CloudTelemetryService.RawStorebag._EncodedRawStorebag.CodingKeys		case	bag
+enum	CloudTelemetryService.RawStorebag._EncodedRawStorebag.CodingKeys		case	signature
+enum	CloudTelemetryService.StorebagSharedValue			
+enum	CloudTelemetryService.StorebagSharedValue		case	filters
+enum	CloudTelemetryService.StorebagSharedValue		case	scripts
+enum	CloudTelemetryService.StorebagSharedValue		case	stringList
+enum	CloudTelemetryService.StorebagSharedValue.Error			
+enum	CloudTelemetryService.StorebagSharedValue.Error		case	invalid
+class	CloudTelemetryService.Listener			
+class	CloudTelemetryService.Listener		let	connectionQueue
+class	CloudTelemetryService.Listener		var	clients
+class	CloudTelemetryService.Listener		var	daemon
+class	CloudTelemetryService.Listener		var	conn
+class	CloudTelemetryService.BackendLocal			
+class	CloudTelemetryService.BackendLocal		let	sender
+class	CloudTelemetryService.BackendLocal		let	scripts
+class	CloudTelemetryService.BackendLocal		let	filters
+class	CloudTelemetryService.BackendLocal		let	frameworkObj
+struct	CloudTelemetryService.Main			
+struct	CloudTelemetryService.Event			
+struct	CloudTelemetryService.Event		let	sessionID
+struct	CloudTelemetryService.Event		var	payload
+struct	CloudTelemetryService.CachedEvent			
+struct	CloudTelemetryService.CachedEvent		let	rowID
+struct	CloudTelemetryService.CachedEvent		let	event
+enum	CloudTelemetryService.ServiceEventValue			
+enum	CloudTelemetryService.ServiceEventValue		case	string
+enum	CloudTelemetryService.ServiceEventValue		case	int
+enum	CloudTelemetryService.ServiceEventValue		case	uint
+enum	CloudTelemetryService.ServiceEventValue		case	double
+enum	CloudTelemetryService.ServiceEventValue		case	bool
+enum	CloudTelemetryService.ServiceEventValue		case	uuid
+enum	CloudTelemetryService.ServiceEventValue		case	array
+enum	CloudTelemetryService.ServiceEventValue		case	dictionary
+struct	CloudTelemetryService.ServiceEventValue.CodingKeys			
+struct	CloudTelemetryService.ServiceEventValue.CodingKeys		var	stringValue
+struct	CloudTelemetryService.BadCachedEvent			
+struct	CloudTelemetryService.StorebagSectionScript			
+struct	CloudTelemetryService.StorebagSectionScript		let	script
+struct	CloudTelemetryService.StorebagSectionScript		let	version
+struct	CloudTelemetryService.StorebagSectionScript		let	jsCode
+struct	CloudTelemetryService.StorebagSectionScript		let	requiredLibraries
+enum	CloudTelemetryService.StorebagSectionScript.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionScript.CodingKeys		case	script
+enum	CloudTelemetryService.StorebagSectionScript.CodingKeys		case	version
+enum	CloudTelemetryService.StorebagSectionScript.CodingKeys		case	jsCode
+enum	CloudTelemetryService.StorebagSectionScript.CodingKeys		case	requiredLibraries
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries			
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries		let	library
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries		let	varName
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries		let	tapToRadarDecisionServerURL
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries		let	tapToRadarRadarComponentID
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries		let	tapToRadarRadarKeywordIDs
+struct	CloudTelemetryService.StorebagSectionScriptRequiredLibraries		let	tapToRadarRadarTitle
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys		case	library
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys		case	varName
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarDecisionServerURL
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarRadarComponentID
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarRadarKeywordIDs
+enum	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarRadarTitle
+enum	CloudTelemetryService.StorebagSectionMaybeShared<A	protocol descriptor for Decodable>		
+enum	CloudTelemetryService.StorebagSectionMaybeShared<A	protocol descriptor for Decodable>	case	direct
+enum	CloudTelemetryService.StorebagSectionMaybeShared<A	protocol descriptor for Decodable>	case	shared
+struct	CloudTelemetryService.StorebagSectionFilter			
+struct	CloudTelemetryService.StorebagSectionFilter		let	keys
+struct	CloudTelemetryService.StorebagSectionFilter		let	values
+struct	CloudTelemetryService.StorebagSectionFilter		let	action
+struct	CloudTelemetryService.StorebagSectionFilter		let	condition
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys		case	keys
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys		case	key
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys		case	values
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys		case	value
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys		case	action
+enum	CloudTelemetryService.StorebagSectionFilter.CodingKeys		case	condition
+struct	CloudTelemetryService.StorebagSectionCondition			
+struct	CloudTelemetryService.StorebagSectionCondition		let	action
+struct	CloudTelemetryService.StorebagSectionCondition		let	keys
+struct	CloudTelemetryService.StorebagSectionCondition		let	values
+struct	CloudTelemetryService.StorebagSectionCondition		let	conditions
+enum	CloudTelemetryService.StorebagSectionCondition.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionCondition.CodingKeys		case	action
+enum	CloudTelemetryService.StorebagSectionCondition.CodingKeys		case	keys
+enum	CloudTelemetryService.StorebagSectionCondition.CodingKeys		case	values
+enum	CloudTelemetryService.StorebagSectionCondition.CodingKeys		case	conditions
+enum	CloudTelemetryService.ServiceSamplingOutcome			
+enum	CloudTelemetryService.ServiceSamplingOutcome		case	deterministic
+enum	CloudTelemetryService.ServiceSamplingOutcome		case	nondeterministic
+enum	CloudTelemetryService.ServiceSamplingOutcome		case	disallowed
+enum	CloudTelemetryService.ServiceSamplingOutcome		case	storebagUnavailable
+enum	CloudTelemetryService.ServiceSamplingOutcome		case	eventNotFound
+enum	CloudTelemetryService.ServiceSamplingOutcome		case	unknown
+struct	CloudTelemetryService.HTTPHeaderFieldProvider			
+struct	CloudTelemetryService.HTTPHeaderFieldProvider		let	internalType
+struct	CloudTelemetryService.HTTPHeaderFieldProvider		let	id
+struct	CloudTelemetryService.HTTPHeaderFieldProvider		let	includeSessionID
+struct	CloudTelemetryService.HTTPHeaderFieldProvider		let	sessionID
+struct	CloudTelemetryService.AllEventFieldProvider			
+struct	CloudTelemetryService.AllEventFieldProvider		let	internalType
+struct	CloudTelemetryService.AllEventFieldProvider		let	tzOffset
+struct	CloudTelemetryService.AllEventFieldProvider		let	sessionID
+struct	CloudTelemetryService.AllEventFieldProvider		let	clientID
+struct	CloudTelemetryService.AllEventFieldProvider		let	identity
+struct	CloudTelemetryService.AllEventFieldProvider		let	allowedEventFields
+struct	CloudTelemetryService.AllEventFieldProvider		let	automatedDeviceGroupProvider
+struct	CloudTelemetryService.StartEventFieldProvider			
+struct	CloudTelemetryService.StartEventFieldProvider		let	currentLocaleCode
+struct	CloudTelemetryService.EndEventFieldProvider			
+struct	CloudTelemetryService.EndEventFieldProvider		let	graceful
+struct	CloudTelemetryService.EndEventFieldProvider		let	storebagVersion
+struct	CloudTelemetryService.AllEventFieldProvider.OSASystemConfigurationFields			
+struct	CloudTelemetryService.AllEventFieldProvider.OSASystemConfigurationFields		let	automatedDeviceGroup
+struct	CloudTelemetryService.CachedStorebag			
+struct	CloudTelemetryService.CachedStorebag		let	storebag
+struct	CloudTelemetryService.CachedStorebag		let	expiration
+enum	CloudTelemetryService.CacheError			
+enum	CloudTelemetryService.CacheError		case	cacheOutOfDiskSpace
+enum	CloudTelemetryService.CacheError		case	unableToAccessSBCache
+enum	CloudTelemetryService.CacheError		case	unknownSBCacheFileError
+enum	CloudTelemetryService.CacheError		case	unknownSBCacheError
+enum	CloudTelemetryService.CacheError		case	mockError
+class	CloudTelemetryService.StorebagCache			
+class	CloudTelemetryService.StorebagCache		var	cache
+class	CloudTelemetryService.StorebagCache		var	activeLoadingTask
+class	CloudTelemetryService.StorebagCache		var	activeLoadingTransaction
+class	CloudTelemetryService.StorebagCache		let	storebagCacheURL
+class	CloudTelemetryService.StorebagCache		let	storebagSource
+enum	CloudTelemetryService.Mode			
+enum	CloudTelemetryService.Mode		case	inProcess
+enum	CloudTelemetryService.Mode		case	xpcService
+enum	CloudTelemetryService.Mode		case	machService
+struct	CloudTelemetryService.Daemon			
+struct	CloudTelemetryService.Daemon		var	mode
+struct	CloudTelemetryService.Daemon		var	clientBundleID
+struct	CloudTelemetryService.Daemon		var	diskCache
+struct	CloudTelemetryService.Daemon		var	sessionCoord
+struct	CloudTelemetryService.Daemon		var	submissionCoord
+struct	CloudTelemetryService.Daemon		var	transparencyLog
+struct	CloudTelemetryService.Daemon		var	disabled
+enum	CloudTelemetryService.StorebagEnvironment			
+enum	CloudTelemetryService.StorebagEnvironment		case	development
+enum	CloudTelemetryService.StorebagEnvironment		case	internal
+enum	CloudTelemetryService.StorebagEnvironment		case	seed
+enum	CloudTelemetryService.StorebagEnvironment		case	release
+struct	CloudTelemetryService.Storebag			
+struct	CloudTelemetryService.Storebag		let	backends
+struct	CloudTelemetryService.Storebag		let	ttl
+struct	CloudTelemetryService.Storebag		let	version
+struct	CloudTelemetryService.Storebag		let	sharedValues
+enum	CloudTelemetryService.Storebag.Error			
+enum	CloudTelemetryService.Storebag.Error		case	failedParse
+enum	CloudTelemetryService.Storebag.Error		case	failedVerify
+enum	CloudTelemetryService.Storebag.Error		case	storebagMissing
+struct	CloudTelemetryService.Storebag._StorebagRoot			
+struct	CloudTelemetryService.Storebag._StorebagRoot		let	version
+struct	CloudTelemetryService.Storebag._StorebagRoot		let	refreshCycle
+struct	CloudTelemetryService.Storebag._StorebagRoot		let	sharedValues
+struct	CloudTelemetryService.Storebag._StorebagRoot		let	environments
+enum	CloudTelemetryService.Storebag._StorebagRoot.CodingKeys			
+enum	CloudTelemetryService.Storebag._StorebagRoot.CodingKeys		case	environment
+enum	CloudTelemetryService.Storebag._StorebagRoot.CodingKeys		case	version
+enum	CloudTelemetryService.Storebag._StorebagRoot.CodingKeys		case	refreshCycle
+enum	CloudTelemetryService.Storebag._StorebagRoot.CodingKeys		case	sharedValues
+struct	CloudTelemetryService.EventFilterMatcher			
+struct	CloudTelemetryService.EventFilterMatcher		let	keys
+struct	CloudTelemetryService.EventFilterMatcher		let	values
+struct	CloudTelemetryService.EventAllowFilter			
+struct	CloudTelemetryService.EventAllowFilter		let	matcher
+struct	CloudTelemetryService.EventAllowFilter		let	allAllowedKeys
+struct	CloudTelemetryService.EventRemoveFilter			
+struct	CloudTelemetryService.EventRemoveFilter		let	matcher
+struct	CloudTelemetryService.EventSHA256KeyFilter			
+struct	CloudTelemetryService.EventSHA256KeyFilter		let	matcher
+struct	CloudTelemetryService.EventAllowValuesFilter			
+struct	CloudTelemetryService.EventAllowValuesFilter		let	matcher
+struct	CloudTelemetryService.EventDenyValuesFilter			
+struct	CloudTelemetryService.EventDenyValuesFilter		let	matcher
+struct	CloudTelemetryService.EventInsertStringKeyFilter			
+struct	CloudTelemetryService.EventInsertStringKeyFilter		let	matcher
+struct	CloudTelemetryService.EventAppendToKeyFilter			
+struct	CloudTelemetryService.EventAppendToKeyFilter		let	matcher
+struct	CloudTelemetryService.EventPrependToKeyFilter			
+struct	CloudTelemetryService.EventPrependToKeyFilter		let	matcher
+class	CloudTelemetryService.BackendGroup			
+class	CloudTelemetryService.BackendGroup		var	backends
+enum	CloudTelemetryService.BackendGroup.Error			
+enum	CloudTelemetryService.BackendGroup.Error		case	noRemainingBackends
+class	CloudTelemetryService.RequestOptions			
+class	CloudTelemetryService.RequestOptions		var	networkingDelegate
+class	CloudTelemetryService.Throttle			
+class	CloudTelemetryService.Throttle		let	location
+class	CloudTelemetryService.Throttle		var	state
+class	CloudTelemetryService.CacheCleanupActivity			
+class	CloudTelemetryService.CacheCleanupActivity		let	diskCache
+enum	CloudTelemetryService.StorebagBool			
+enum	CloudTelemetryService.StorebagBool		case	true
+enum	CloudTelemetryService.StorebagBool		case	false
+struct	CloudTelemetryService.StorebagSectionClientHTTP			
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	eventType
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	samplingKeys
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	postURL
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	samplingThreshold
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	clientIDMaxAge
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	customClientID
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	deviceDenylist
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	deviceAllowlist
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	enabledSince
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	eventDenylist
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	eventAllowlist
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	eventThreshold
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	extrasOnInternal
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	filters
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	hashedClient
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	hierarchy
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	includeSessionID
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	localeAllowlist
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	overrideDNU
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	isRealtime
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	overrideSampling
+struct	CloudTelemetryService.StorebagSectionClientHTTP		let	perCountrySamplingThresholds
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	eventType
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	postURL
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	samplingKeys
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	samplingThreshold
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	clientIDMaxAge
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	customClientID
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	deviceDenylist
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	deviceAllowlist
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	enabledSince
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	eventDenylist
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	eventAllowlist
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	eventThreshold
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	extrasOnInternal
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	filters
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	hashedClient
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	hierarchy
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	includeSessionID
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	localeAllowlist
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	overrideDNU
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	isRealtime
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	overrideSampling
+enum	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys		case	perCountrySamplingThresholds
+struct	CloudTelemetryService.StorebagSectionPerCountrySampling			
+struct	CloudTelemetryService.StorebagSectionPerCountrySampling		let	country
+struct	CloudTelemetryService.StorebagSectionPerCountrySampling		let	threshold
+struct	CloudTelemetryService.StorebagSectionClientScriptGroup			
+struct	CloudTelemetryService.StorebagSectionClientScriptGroup		let	eventTypes
+struct	CloudTelemetryService.StorebagSectionClientScriptGroup		let	samplingThreshold
+struct	CloudTelemetryService.StorebagSectionClientScriptGroup		let	filters
+struct	CloudTelemetryService.StorebagSectionClientScriptGroup		let	scripts
+enum	CloudTelemetryService.StorebagSectionClientScriptGroup.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionClientScriptGroup.CodingKeys		case	eventTypes
+enum	CloudTelemetryService.StorebagSectionClientScriptGroup.CodingKeys		case	samplingThreshold
+enum	CloudTelemetryService.StorebagSectionClientScriptGroup.CodingKeys		case	filters
+enum	CloudTelemetryService.StorebagSectionClientScriptGroup.CodingKeys		case	scripts
+enum	CloudTelemetryService.StorebagSectionPerCountrySampling.CodingKeys			
+enum	CloudTelemetryService.StorebagSectionPerCountrySampling.CodingKeys		case	country
+enum	CloudTelemetryService.StorebagSectionPerCountrySampling.CodingKeys		case	threshold
+struct	CloudTelemetryService.SQLError			
+struct	CloudTelemetryService.SQLError		var	code
+struct	CloudTelemetryService.SQLError		var	desc
+enum	CloudTelemetryService.DBError			
+enum	CloudTelemetryService.DBError		case	noRows
+enum	CloudTelemetryService.DBError		case	tooManyRows
+enum	CloudTelemetryService.DBError		case	wrongColumns
+enum	CloudTelemetryService.DBError		case	closed
+class	CloudTelemetryService.SQLiteDB			
+class	CloudTelemetryService.SQLiteDB		let	handle
+enum	CloudTelemetryService.SQLiteDB.Location			
+enum	CloudTelemetryService.SQLiteDB.Location		case	url
+enum	CloudTelemetryService.SQLiteDB.Location		case	memory
+class	CloudTelemetryService.SQLiteDB.DBHandle			
+class	CloudTelemetryService.SQLiteDB.DBHandle		let	rawHandle
+class	CloudTelemetryService.SQLiteDB.DBHandle		var	closed
+class	CloudTelemetryService.SQLiteDB.Statement			
+class	CloudTelemetryService.SQLiteDB.Statement		let	handle
+class	CloudTelemetryService.SQLiteDB.Statement		var	finished
+struct	CloudTelemetryService.SQLiteDB.Row			
+struct	CloudTelemetryService.SQLiteDB.Row		let	statement
+class	CloudTelemetryService.SQLiteDB.Transaction			
+class	CloudTelemetryService.SQLiteDB.Transaction		let	db
+class	CloudTelemetryService.SQLiteDB.Transaction		var	finalized
+class	CloudTelemetryService.StorebagCoordinator			
+class	CloudTelemetryService.StorebagCoordinator		let	pathMonitor
+class	CloudTelemetryService.StorebagCoordinator		let	pathMonitorQueue
+class	CloudTelemetryService.StorebagCoordinator		let	storebagCache
+class	CloudTelemetryService.StorebagCoordinator		let	rootCacheURL
+struct	CloudTelemetryService.ServiceTransportConfiguration			
+struct	CloudTelemetryService.ServiceTransportConfiguration		let	allowCellularAccess
+struct	CloudTelemetryService.ServiceTransportConfiguration		let	allowExpensiveAccess
+struct	CloudTelemetryService.ServiceTransportConfiguration		let	bundleID
+struct	CloudTelemetryService.ClientIdentity			
+struct	CloudTelemetryService.ClientIdentity		var	clientType
+struct	CloudTelemetryService.ClientIdentity		var	eventType
+struct	CloudTelemetryService.ClientIdentity		var	transportConfiguration
+class	CloudTelemetryService.Client			
+class	CloudTelemetryService.Client		var	connection
+class	CloudTelemetryService.Client		let	queue
+class	CloudTelemetryService.Client		let	remoteName
+class	CloudTelemetryService.Client		let	diskCache
+class	CloudTelemetryService.Client		let	sessionCoord
+class	CloudTelemetryService.Client		let	submissionCoord
+class	CloudTelemetryService.Client		let	transparencyLog
+class	CloudTelemetryService.Client		let	listener
+struct	CloudTelemetryService.SessionConfiguration			
+struct	CloudTelemetryService.SessionConfiguration		let	backends
+struct	CloudTelemetryService.SessionConfiguration		let	immediateBackends
+struct	CloudTelemetryService.SessionConfiguration		var	deferred
+struct	CloudTelemetryService.SessionConfiguration		var	version
+enum	CloudTelemetryService.SessionConfiguration.Availability			
+enum	CloudTelemetryService.SessionConfiguration.Availability		case	none
+enum	CloudTelemetryService.SessionConfiguration.Availability		case	expensive
+enum	CloudTelemetryService.SessionConfiguration.Availability		case	deferred
+enum	CloudTelemetryService.SessionConfiguration.Availability		case	immediate
+enum	CloudTelemetryService.SessionConfiguration.Backend			
+enum	CloudTelemetryService.SessionConfiguration.Backend		case	http
+enum	CloudTelemetryService.SessionConfiguration.Backend		case	local
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP			
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	name
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	samplingThreshold
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	samplingKeys
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	postURL
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	filters
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	includeSessionID
+struct	CloudTelemetryService.SessionConfiguration.BackendHTTP		let	skipLogging
+struct	CloudTelemetryService.SessionConfiguration.BackendLocal			
+struct	CloudTelemetryService.SessionConfiguration.BackendLocal		let	samplingThreshold
+struct	CloudTelemetryService.SessionConfiguration.BackendLocal		let	filters
+struct	CloudTelemetryService.SessionConfiguration.BackendLocal		let	scripts
+class	CloudTelemetryService.StorebagSource			
+class	CloudTelemetryService.StorebagSource		let	throttleCacheURL
+class	CloudTelemetryService.StorebagSource		let	storebagSigningConfiguration
+class	CloudTelemetryService.StorebagSource		var	throttlesByName
+enum	CloudTelemetryService.StorebagSource.Error			
+enum	CloudTelemetryService.StorebagSource.Error		case	failedParse
+enum	CloudTelemetryService.StorebagSource.Error		case	downloadFailed
+enum	CloudTelemetryService.StorebagSource.Error		case	internalError
+struct	CloudTelemetryService.StorebagSource.StorebagResponse			
+struct	CloudTelemetryService.StorebagSource.StorebagResponse		var	json
+struct	CloudTelemetryService.StorebagSource.StorebagResponse		var	signature
+enum	CloudTelemetryService.StorebagSource.StorebagResponse.CodingKeys			
+enum	CloudTelemetryService.StorebagSource.StorebagResponse.CodingKeys		case	json
+enum	CloudTelemetryService.StorebagSource.StorebagResponse.CodingKeys		case	signature
+class	CloudTelemetryService.SubmissionCoordinator			
+class	CloudTelemetryService.SubmissionCoordinator		let	sessionCoord
+class	CloudTelemetryService.SubmissionCoordinator		let	diskCache
+class	CloudTelemetryService.SubmissionCoordinator		let	transparencyLog
+protocol	CloudTelemetryService.SessionConfigurable			
+protocol	CloudTelemetryService.FieldProviding			
+protocol	CloudTelemetryService.AutomatedDeviceGroupProvider			
+protocol	CloudTelemetryService.EventFilter			
+protocol	CloudTelemetryService.Backend			
+protocol	CloudTelemetryService.SQLType			
+protocol	CloudTelemetryService.SQLNullableType			
+protocol	CloudTelemetryService.SQLBindable			
+protocol	CloudTelemetryService.SessionConfigurationProviding			
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for Equatable		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for Hashable		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for LocalizedError		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for CustomStringConvertible		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.TransparencyLog	protocol descriptor for Actor		
+protocol	conformance JustEvents	protocol descriptor for Encodable		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CloudTelemetryService.CachedSession	CloudTelemetryService.SessionConfigurable		
+protocol	conformance CloudTelemetryService.Session	protocol descriptor for Actor		
+protocol	conformance StorebagSigningConfiguration.Error	protocol descriptor for LocalizedError		
+protocol	conformance StorebagSigningConfiguration.Error	protocol descriptor for Error		
+protocol	conformance __C.SecKey	protocol descriptor for Equatable		
+protocol	conformance __C.SecKey	protocol descriptor for Hashable		
+protocol	conformance __C.SecKey	protocol descriptor for _CFObject		
+protocol	conformance __C.CFString	protocol descriptor for Equatable: CoreFoundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.CFString	protocol descriptor for _CFObject: CoreFoundation		
+protocol	conformance __C.CFString	protocol descriptor for Hashable: CoreFoundation		
+protocol	conformance CloudTelemetryService.BackendHTTP	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.BackendHTTP	CloudTelemetryService.Backend		
+protocol	conformance CloudTelemetryService.BackendHTTP	protocol descriptor for CustomStringConvertible		
+protocol	conformance ZLibError	protocol descriptor for Error		
+protocol	conformance POSTData	protocol descriptor for Encodable		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CloudTelemetryService.SessionCoordinator	protocol descriptor for Actor		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionBackendHTTP	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionBackendScriptGroup	protocol descriptor for Decodable		
+protocol	conformance CloudTelemetryService.StorebagSectionBackend	protocol descriptor for Decodable		
+protocol	conformance SubmitEventsActivity.Error	protocol descriptor for Equatable		
+protocol	conformance SubmitEventsActivity.Error	protocol descriptor for Hashable		
+protocol	conformance SubmitEventsActivity.Error	protocol descriptor for LocalizedError		
+protocol	conformance SubmitEventsActivity.Error	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.SubmitEventsActivity	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.SubmitEventsActivity	protocol descriptor for XPCActivityHandler		
+protocol	conformance CloudTelemetryService.DiskCacheError	protocol descriptor for Equatable		
+protocol	conformance CloudTelemetryService.DiskCacheError	protocol descriptor for Hashable		
+protocol	conformance CloudTelemetryService.DiskCacheError	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.DiskCache	protocol descriptor for Actor		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudTelemetryService.PostInstallActivity	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.PostInstallActivity	protocol descriptor for XPCActivityHandler		
+protocol	conformance _EncodedRawStorebag	protocol descriptor for Decodable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSharedValue.Error	protocol descriptor for Equatable		
+protocol	conformance StorebagSharedValue.Error	protocol descriptor for Hashable		
+protocol	conformance StorebagSharedValue.Error	protocol descriptor for LocalizedError		
+protocol	conformance StorebagSharedValue.Error	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.StorebagSharedValue	protocol descriptor for Decodable		
+protocol	conformance CloudTelemetryService.Listener	protocol descriptor for XPCConnectionDelegate		
+protocol	conformance CloudTelemetryService.BackendLocal	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.BackendLocal	CloudTelemetryService.Backend		
+protocol	conformance CloudTelemetryService.BackendLocal	protocol descriptor for CustomStringConvertible		
+protocol	conformance CloudTelemetryService.ServiceEventValue	protocol descriptor for Equatable		
+protocol	conformance ServiceEventValue.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ServiceEventValue.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance ServiceEventValue.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.ServiceEventValue	protocol descriptor for Encodable		
+protocol	conformance CloudTelemetryService.BadCachedEvent	protocol descriptor for LocalizedError		
+protocol	conformance CloudTelemetryService.BadCachedEvent	protocol descriptor for CustomStringConvertible		
+protocol	conformance CloudTelemetryService.BadCachedEvent	protocol descriptor for Error		
+protocol	conformance StorebagSectionScript.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionScript.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionScript.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionScript.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionScript.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionScript.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionScript	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionScriptRequiredLibraries	protocol descriptor for Decodable		
+protocol	conformance CloudTelemetryService.StorebagSectionMaybeShared	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionFilter	protocol descriptor for Decodable		
+protocol	conformance CloudTelemetryService.StorebagSectionCondition	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CloudTelemetryService.ServiceSamplingOutcome	protocol descriptor for Equatable		
+protocol	conformance CloudTelemetryService.ServiceSamplingOutcome	protocol descriptor for RawRepresentable		
+protocol	conformance CloudTelemetryService.ServiceSamplingOutcome	protocol descriptor for Comparable		
+protocol	conformance CloudTelemetryService.HTTPHeaderFieldProvider	CloudTelemetryService.FieldProviding		
+protocol	conformance CloudTelemetryService.AllEventFieldProvider	CloudTelemetryService.FieldProviding		
+protocol	conformance CloudTelemetryService.StartEventFieldProvider	CloudTelemetryService.FieldProviding		
+protocol	conformance CloudTelemetryService.EndEventFieldProvider	CloudTelemetryService.FieldProviding		
+protocol	conformance OSASystemConfigurationFields	CloudTelemetryService.AutomatedDeviceGroupProvider		
+protocol	conformance CloudTelemetryService.CacheError	protocol descriptor for LocalizedError		
+protocol	conformance CloudTelemetryService.CacheError	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.StorebagCache	protocol descriptor for Actor		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudTelemetryService.Mode	protocol descriptor for Equatable		
+protocol	conformance CloudTelemetryService.Mode	protocol descriptor for Hashable		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudTelemetryService.StorebagEnvironment	protocol descriptor for Equatable		
+protocol	conformance CloudTelemetryService.StorebagEnvironment	protocol descriptor for Hashable		
+protocol	conformance CloudTelemetryService.StorebagEnvironment	protocol descriptor for RawRepresentable		
+protocol	conformance CloudTelemetryService.StorebagEnvironment	protocol descriptor for CaseIterable		
+protocol	conformance Storebag.Error	protocol descriptor for Equatable		
+protocol	conformance Storebag.Error	protocol descriptor for Hashable		
+protocol	conformance Storebag.Error	protocol descriptor for LocalizedError		
+protocol	conformance Storebag.Error	protocol descriptor for Error		
+protocol	conformance _StorebagRoot	protocol descriptor for Decodable		
+protocol	conformance _StorebagRoot.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance _StorebagRoot.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance _StorebagRoot.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CloudTelemetryService.EventAllowFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventRemoveFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventSHA256KeyFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventAllowValuesFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventDenyValuesFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventInsertStringKeyFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventAppendToKeyFilter	CloudTelemetryService.EventFilter		
+protocol	conformance CloudTelemetryService.EventPrependToKeyFilter	CloudTelemetryService.EventFilter		
+protocol	conformance BackendGroup.Error	protocol descriptor for Equatable		
+protocol	conformance BackendGroup.Error	protocol descriptor for Hashable		
+protocol	conformance BackendGroup.Error	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.BackendGroup	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.BackendGroup	CloudTelemetryService.Backend		
+protocol	conformance CloudTelemetryService.Throttle	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.CacheCleanupActivity	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.CacheCleanupActivity	protocol descriptor for XPCActivityHandler		
+protocol	conformance CloudTelemetryService.StorebagBool	protocol descriptor for Equatable		
+protocol	conformance CloudTelemetryService.StorebagBool	protocol descriptor for Hashable		
+protocol	conformance CloudTelemetryService.StorebagBool	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionClientHTTP	protocol descriptor for Decodable		
+protocol	conformance CloudTelemetryService.StorebagSectionPerCountrySampling	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryService.StorebagSectionClientScriptGroup	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CloudTelemetryService.SQLError	protocol descriptor for LocalizedError		
+protocol	conformance CloudTelemetryService.SQLError	protocol descriptor for CustomStringConvertible		
+protocol	conformance CloudTelemetryService.SQLError	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.DBError	protocol descriptor for Equatable		
+protocol	conformance CloudTelemetryService.DBError	protocol descriptor for Hashable		
+protocol	conformance CloudTelemetryService.DBError	protocol descriptor for LocalizedError		
+protocol	conformance CloudTelemetryService.DBError	protocol descriptor for CustomStringConvertible		
+protocol	conformance CloudTelemetryService.DBError	protocol descriptor for Error		
+protocol	conformance CloudTelemetryService.SQLiteDB	protocol descriptor for Actor		
+protocol	conformance nominal type descriptor for Bool	CloudTelemetryService.SQLType		
+protocol	conformance nominal type descriptor for Bool	CloudTelemetryService.SQLBindable		
+protocol	conformance nominal type descriptor for Int	CloudTelemetryService.SQLType		
+protocol	conformance nominal type descriptor for Int	CloudTelemetryService.SQLBindable		
+protocol	conformance nominal type descriptor for Int64	CloudTelemetryService.SQLType		
+protocol	conformance nominal type descriptor for Int64	CloudTelemetryService.SQLBindable		
+protocol	conformance nominal type descriptor for Double	CloudTelemetryService.SQLType		
+protocol	conformance nominal type descriptor for Double	CloudTelemetryService.SQLBindable		
+protocol	conformance nominal type descriptor for String	CloudTelemetryService.SQLNullableType		
+protocol	conformance nominal type descriptor for String	CloudTelemetryService.SQLBindable		
+protocol	conformance CloudTelemetryService.StorebagCoordinator	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.StorebagCoordinator	CloudTelemetryService.SessionConfigurationProviding		
+protocol	conformance CloudTelemetryService.ClientIdentity	protocol descriptor for CustomStringConvertible		
+protocol	conformance CloudTelemetryService.Client	protocol descriptor for Actor		
+protocol	conformance CloudTelemetryService.Client	protocol descriptor for Identifiable		
+protocol	conformance CloudTelemetryService.Client	protocol descriptor for Hashable		
+protocol	conformance CloudTelemetryService.Client	protocol descriptor for XPCConnectionDelegate		
+protocol	conformance CloudTelemetryService.Client	protocol descriptor for Equatable		
+protocol	conformance SessionConfiguration.Availability	protocol descriptor for Equatable		
+protocol	conformance SessionConfiguration.Availability	protocol descriptor for Hashable		
+protocol	conformance StorebagSource.Error	protocol descriptor for LocalizedError		
+protocol	conformance StorebagSource.Error	protocol descriptor for Error		
+protocol	conformance StorebagSource.StorebagResponse	protocol descriptor for Decodable		
+protocol	conformance StorebagSource.StorebagResponse	protocol descriptor for Encodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CloudTelemetryService.SubmissionCoordinator	protocol descriptor for Actor		
+extension	CloudTelemetryService.StorebagSectionScript.CodingKeys	RawRepresentable		
+extension	CloudTelemetryService.StorebagSectionScriptRequiredLibraries.CodingKeys	RawRepresentable		
+extension	CloudTelemetryService.StorebagSectionFilter.CodingKeys	RawRepresentable		
+extension	CloudTelemetryService.ServiceSamplingOutcome	RawRepresentable		
+extension	CloudTelemetryService.StorebagEnvironment	RawRepresentable		
+extension	CloudTelemetryService.StorebagEnvironment	CaseIterable		
+extension	CloudTelemetryService.StorebagSectionClientHTTP.CodingKeys	RawRepresentable		
+extension	CloudTelemetryService.StorebagSectionClientScriptGroup.CodingKeys	RawRepresentable		
+extension	CloudTelemetryService.Client	Identifiable		

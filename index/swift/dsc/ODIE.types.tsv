@@ -1,0 +1,1184 @@
+kind	type	conformance	member_kind	member
+class	ODIE.BufferManager			
+class	ODIE.BufferManager		let	temporaryDirectory
+class	ODIE.BufferManager		let	bufferHandlesMutex
+class	ODIE.DefaultProfiler			
+class	ODIE.DefaultProfiler		let	profiler
+class	ODIE.DefaultProfiler		let	signposter
+class	ODIE.DefaultProfiler		let	sharedEventLog
+class	ODIE.DefaultProfiler.SharedEventLog			
+class	ODIE.DefaultProfiler.SharedEventLog		let	bufferManager
+class	ODIE.DefaultProfiler.SharedEventLog		let	eventListMutex
+class	ODIE.DefaultProfiler.SharedEventLog		let	closureMutex
+class	ODIE.DefaultProfiler.SharedEventLog		let	atomicIntervalId
+class	ODIE.DefaultProfiler.SharedEventLog		let	enabled
+struct	ODIE.SignpostProfiler			
+enum	ODIE.BuiltinCallableError			
+enum	ODIE.BuiltinCallableError		case	invalidType
+enum	ODIE.BuiltinCallableError		case	invalidArity
+enum	ODIE.BuiltinCallableError		case	invalidAttribute
+struct	ODIE.Log			
+struct	ODIE.Log		let	emitter
+class	ODIE.Compiler			
+enum	ODIE.Compiler.Errors			
+enum	ODIE.Compiler.Errors		case	notADirectory
+enum	ODIE.Compiler.Errors		case	segmenterError
+enum	ODIE.Compiler.Errors		case	delegateCompilerError
+enum	ODIE.Compiler.Errors		case	unknownCompilerError
+enum	ODIE.Compiler.DebugOptions			
+enum	ODIE.Compiler.DebugOptions		case	saveODIXIR
+enum	ODIE.Compiler.DebugOptions		case	printIRAfterAll
+struct	ODIE.Compiler.TargetSpecification			
+struct	ODIE.Compiler.TargetSpecification		var	targetTriple
+struct	ODIE.Compiler.TargetSpecification		var	targetSOC
+struct	ODIE.Compiler.TargetSpecification		var	targetDelegateOptions
+enum	ODIE.Compiler.Module			
+enum	ODIE.Compiler.Module		case	text
+enum	ODIE.Compiler.Module		case	bytecode
+struct	ODIE.Compiler.DelegateConfiguration			
+struct	ODIE.Compiler.Options			
+struct	ODIE.Compiler.Options		var	segmenters
+struct	ODIE.Compiler.Options		var	targetSpecification
+struct	ODIE.Compiler.Options		var	delegateCompilers
+struct	ODIE.Compiler.Options		var	debugOptions
+struct	ODIE.Compiler.Options		var	logger
+struct	ODIE.Compiler.Options		var	resourcesDirectory
+struct	ODIE.Compiler.Options		var	requireFullDelegation
+struct	ODIE.Compiler.Options		var	delegatePlugins
+class	ODIE.Compiler.BytecodeBuffer			
+class	ODIE.Compiler.BytecodeBuffer		let	bytes
+class	ODIE.Compiler.BytecodeBuffer		var	deallocator
+struct	ODIE.Compiler.Delegates			
+struct	ODIE.Compiler.Delegates.IRConfiguration			
+struct	ODIE.Compiler.Delegates.IRConfiguration		var	bytecodeVersion
+struct	ODIE.Compiler.Delegates.IRConfiguration		var	dialectVersion
+struct	ODIE.Compiler.Delegates.IRConfiguration		var	dialectEncodingScheme
+class	ODIE.Compiler.Delegates.SharedBytecode			
+class	ODIE.Compiler.Delegates.SharedBytecode		let	bytes
+class	ODIE.Compiler.Delegates.SharedBytecode		let	deallocator
+enum	ODIE.Compiler.Delegates.Plugin			
+enum	ODIE.Compiler.Delegates.Plugin		case	segmenter
+enum	ODIE.Compiler.Delegates.Plugin		case	binaryGenerator
+class	ODIE.AsyncOperandState			
+class	ODIE.AsyncOperandState		let	state
+enum	ODIE.AsyncOperandState.State			
+enum	ODIE.AsyncOperandState.State		case	pending
+enum	ODIE.AsyncOperandState.State		case	created
+enum	ODIE.AsyncOperandState.State		case	ready
+enum	ODIE.AsyncOperandState.State		case	failed
+class	ODIE.BasicEvent			
+class	ODIE.BasicEvent		let	state
+struct	ODIE.BasicEvent.State			
+struct	ODIE.BasicEvent.State		var	continuations
+struct	ODIE.BasicEvent.State		var	result
+struct	ODIE._Profiler			
+struct	ODIE._Profiler		var	isEnabled
+struct	ODIE._Profiler		let	eventKinds
+struct	ODIE._Profiler		let	logEvent
+struct	ODIE._Profiler		let	logEventBegin
+struct	ODIE._Profiler		let	logEventEnd
+class	ODIE.CPUEvent			
+class	ODIE.CPUEvent		let	ready
+class	ODIE.CPUEvent		let	continuations
+enum	ODIE.AsyncTensorReference.Event			
+enum	ODIE.AsyncTensorReference.Event		case	cpu
+enum	ODIE.AsyncTensorReference.Event		case	metal
+enum	ODIE.AsyncTensorReference.Event		case	metalCommandBuffer
+struct	ODIE.MetalCommandBufferEvent			
+struct	ODIE.MetalCommandBufferEvent		let	commandBuffer
+struct	ODIE.MetalEvent			
+struct	ODIE.MetalEvent		let	completionValue
+struct	ODIE.MetalEvent		let	event
+struct	ODIE.AsyncTensorReference			
+struct	ODIE.AsyncTensorReference		let	event
+struct	ODIE.AsyncTensorReference		var	buffer
+struct	ODIE.CompiledGraph			
+struct	ODIE.CompiledGraph		let	model
+class	ODIE.CompiledGraph.ExecutablePool			
+class	ODIE.CompiledGraph.ExecutablePool		let	function
+class	ODIE.CompiledGraph.ExecutablePool		let	mutexBuffer
+class	ODIE.CompiledGraph.ExecutablePool		let	dependencies
+struct	ODIE.CompiledGraph.ManagedExecutable			
+struct	ODIE.CompiledGraph.ManagedExecutable		let	executablePool
+struct	ODIE.CompiledGraph.ManagedExecutable		let	tensorPool
+struct	ODIE.CompiledLibrary			
+struct	ODIE.CompiledLibrary		let	program
+enum	ODIE.ODIEError			
+enum	ODIE.ODIEError		case	functionNotFound
+enum	ODIE.ODIEError		case	fileWriteError
+struct	ODIE.CompoundSymbolResolver			
+struct	ODIE.CompoundSymbolResolver		let	resolvers
+struct	ODIE.GraphDescriptor			
+struct	ODIE.GraphDescriptor		let	base
+struct	ODIE.KernelResolutionContext			
+struct	ODIE.KernelResolutionContext		let	descriptor
+struct	ODIE.KernelResolutionContext		let	dependencies
+struct	ODIE.LogEvent			
+struct	ODIE.LogEvent		let	timestamp
+struct	ODIE.LogEvent		let	eventId
+struct	ODIE.LogEvent		let	phase
+struct	ODIE.LogEvent		let	odixId
+struct	ODIE.LogEvent		let	debugInfoIds
+struct	ODIE.LogEvent		let	data
+struct	ODIE.LogEvent		let	metadata
+enum	ODIE.LogEventData.CodingKeys			
+enum	ODIE.LogEventData.CodingKeys		case	interval
+enum	ODIE.LogEventData.CodingKeys		case	intervalMarker
+enum	ODIE.LogEventData.CodingKeys		case	memory
+enum	ODIE.LogEventData.CodingKeys		case	counters
+enum	ODIE.LogEventData.CodingKeys		case	empty
+enum	ODIE.LogEventData.IntervalCodingKeys			
+enum	ODIE.LogEventData.IntervalCodingKeys		case	duration
+enum	ODIE.LogEventData.IntervalMarkerCodingKeys			
+enum	ODIE.LogEventData.IntervalMarkerCodingKeys		case	intervalId
+enum	ODIE.LogEventData.CountersCodingKeys			
+enum	ODIE.LogEventData.CountersCodingKeys		case	signed
+enum	ODIE.LogEventData.CountersCodingKeys		case	unsigned
+enum	ODIE.LogEventData.MemoryCodingKeys			
+enum	ODIE.LogEventData.MemoryCodingKeys		case	memoryUsage
+enum	ODIE.LogEventData.EmptyCodingKeys			
+enum	ODIE.LogEvent.CodingKeys			
+enum	ODIE.LogEvent.CodingKeys		case	timestamp
+enum	ODIE.LogEvent.CodingKeys		case	eventId
+enum	ODIE.LogEvent.CodingKeys		case	phase
+enum	ODIE.LogEvent.CodingKeys		case	odixId
+enum	ODIE.LogEvent.CodingKeys		case	debugInfoIds
+enum	ODIE.LogEvent.CodingKeys		case	data
+enum	ODIE.LogEvent.CodingKeys		case	metadata
+enum	ODIE.LogEventPhase.CodingKeys			
+enum	ODIE.LogEventPhase.CodingKeys		case	load
+enum	ODIE.LogEventPhase.CodingKeys		case	compile
+enum	ODIE.LogEventPhase.CodingKeys		case	inference
+enum	ODIE.LogEventPhase.LoadCodingKeys			
+enum	ODIE.LogEventPhase.CompileCodingKeys			
+enum	ODIE.LogEventPhase.InferenceCodingKeys			
+enum	ODIE.LogEventKind.CodingKeys			
+enum	ODIE.LogEventKind.CodingKeys		case	runtime
+enum	ODIE.LogEventKind.CodingKeys		case	memory
+enum	ODIE.LogEventKind.CodingKeys		case	intermediates
+enum	ODIE.LogEventKind.CodingKeys		case	eventBuffer
+enum	ODIE.LogEventKind.RuntimeCodingKeys			
+enum	ODIE.LogEventKind.MemoryCodingKeys			
+enum	ODIE.LogEventKind.IntermediatesCodingKeys			
+enum	ODIE.LogEventKind.EventBufferCodingKeys			
+enum	ODIE.LogEventData			
+enum	ODIE.LogEventData		case	interval
+enum	ODIE.LogEventData		case	intervalMarker
+enum	ODIE.LogEventData		case	counters
+enum	ODIE.LogEventData		case	memory
+enum	ODIE.LogEventData		case	intermediates
+enum	ODIE.LogEventData		case	eventBuffer
+enum	ODIE.LogEventData		case	empty
+enum	ODIE.LogEventPhase			
+enum	ODIE.LogEventPhase		case	load
+enum	ODIE.LogEventPhase		case	compile
+enum	ODIE.LogEventPhase		case	inference
+enum	ODIE.LogEventKind			
+enum	ODIE.LogEventKind		case	runtime
+enum	ODIE.LogEventKind		case	memory
+enum	ODIE.LogEventKind		case	intermediates
+enum	ODIE.LogEventKind		case	eventBuffer
+struct	ODIE.Tensor			
+struct	ODIE.Tensor		var	backing
+struct	ODIE.Tensor.Layout			
+struct	ODIE.Tensor.Layout		var	shape
+struct	ODIE.Tensor.Layout		var	scalarType
+struct	ODIE.Tensor.Layout		var	strides
+struct	ODIE.Tensor.Layout		var	interleave
+struct	ODIE.Tensor.Layout		var	ordering
+struct	ODIE.Tensor.RawView			
+struct	ODIE.Tensor.RawView		let	storage
+struct	ODIE.Tensor.RawView		let	layout
+struct	ODIE.Tensor.RawView		let	scalarType
+struct	ODIE.Tensor.Reference			
+struct	ODIE.Tensor.Reference		let	storage
+struct	ODIE.Tensor.Reference		let	layout
+enum	ODIE.Tensor.SharedStorage			
+enum	ODIE.Tensor.SharedStorage		case	bytes
+enum	ODIE.Tensor.SharedStorage		case	iosurface
+enum	ODIE.Tensor.SharedStorage		case	metalBuffer
+enum	ODIE.SharedStorageAliasError			
+enum	ODIE.SharedStorageAliasError		case	surfaceAliasingFailed
+enum	ODIE.SharedStorageAliasError		case	mtlHeapAliasingFailed
+enum	ODIE.SharedStorageAdaptError			
+enum	ODIE.SharedStorageAdaptError		case	metalDeviceUnavailable
+enum	ODIE.SharedStorageAdaptError		case	metalBufferAdaptationFailed
+enum	ODIE.SharedStorageAdaptError		case	surfaceAdaptationFailed
+enum	ODIE.Tensor.Storage			
+enum	ODIE.Tensor.Storage		case	bytes
+enum	ODIE.Tensor.Storage		case	iosurface
+enum	ODIE.Tensor.Storage		case	metalBuffer
+struct	ODIE.Tensor.View			
+struct	ODIE.Tensor.View		let	layout
+struct	ODIE.Tensor.View		let	baseStorage
+struct	ODIE.Tensor.View		let	originOffset
+class	ODIE.TensorBacking			
+class	ODIE.TensorBacking		let	storage
+class	ODIE.TensorBacking		let	layout
+class	ODIE.TensorBacking		let	returnHandle
+struct	ODIE.TensorBacking.ReturnHandle			
+struct	ODIE.TensorBacking.ReturnHandle		var	pool
+class	ODIE.TensorPool			
+class	ODIE.TensorPool		let	storageCache
+struct	ODIE.TensorPool.CacheKey			
+struct	ODIE.TensorPool.CacheKey		let	byteCount
+struct	ODIE.TensorPool.CacheKey		let	storageKind
+struct	ODIE.TensorRequirements			
+struct	ODIE.TensorRequirements		var	scalarType
+struct	ODIE.TensorRequirements		var	shape
+struct	ODIE.TensorRequirements		var	alignments
+struct	ODIE.TensorRequirements		var	interleave
+struct	ODIE.TensorRequirements		var	ordering
+struct	ODIE.TensorRequirements		var	storageKind
+enum	ODIE.TensorRequirements.StorageKind			
+enum	ODIE.TensorRequirements.StorageKind		case	bytes
+enum	ODIE.TensorRequirements.StorageKind		case	ioSurface
+enum	ODIE.TensorRequirements.StorageKind		case	metalBuffer
+struct	ODIE.ViewLayout			
+struct	ODIE.ViewLayout		let	shape
+struct	ODIE.ViewLayout		let	strides
+struct	ODIE.ViewLayout		let	interleave
+struct	ODIE.ArrayDescriptor			
+struct	ODIE.ArrayDescriptor		var	scalarType
+struct	ODIE.ArrayDescriptor		var	allocationType
+struct	ODIE.ArrayDescriptor		var	shape
+struct	ODIE.ArrayDescriptor		var	alignments
+struct	ODIE.ArrayDescriptor		var	interleave
+struct	ODIE.ArrayDescriptor		var	ordering
+enum	ODIE.ArrayDescriptor.AllocationType			
+enum	ODIE.ArrayDescriptor.AllocationType		case	heap
+enum	ODIE.ArrayDescriptor.AllocationType		case	ioSurface
+enum	ODIE.ArrayDescriptor.AllocationType		case	mtlBuffer
+struct	ODIE._Attribute			
+struct	ODIE._Attribute		let	index
+struct	ODIE._Attribute		let	symbolTable
+struct	ODIE.CompositeAttribute			
+struct	ODIE.CompositeAttribute		let	compositeAttr
+struct	ODIE.CompositeAttribute		let	symbolTable
+struct	ODIE.AttributeProvider			
+struct	ODIE.AttributeProvider		let	attributes
+struct	ODIE.AttributeProvider		let	symbolTable
+struct	ODIE.BoundOperands			
+struct	ODIE.BoundOperands		var	registerBank
+struct	ODIE.BoundOperands		var	operandIndices
+class	ODIE.Context			
+class	ODIE.Context		let	slotTypes
+class	ODIE.Context		var	slots
+struct	ODIE.CustomType			
+struct	ODIE.CustomType		var	id
+struct	ODIE.CustomType		var	attributes
+struct	ODIE.DelegateProgramArguments			
+struct	ODIE.DelegateProgramArguments		var	resourceDirectory
+struct	ODIE.DelegateProgramArguments		var	data
+struct	ODIE.DelegateFunctionArguments			
+struct	ODIE.DelegateFunctionArguments		var	groups
+struct	ODIE.DelegateFunctionArguments.IsolatedGroup			
+struct	ODIE.DelegateFunctionArguments.IsolatedGroup		var	dataSegmentID
+struct	ODIE.DelegateFunctionArguments.IsolatedGroup		var	data
+struct	ODIE.DelegateFunctionArguments.IsolatedGroup		var	kernelName
+enum	ODIE.Dimension			
+enum	ODIE.Dimension		case	known
+enum	ODIE.Dimension		case	unknown
+struct	ODIE.ExecutionContext			
+struct	ODIE.ExecutionContext		let	descriptor
+struct	ODIE.ExecutionContext		let	profiler
+struct	ODIE.FlatBufferProgram			
+struct	ODIE.FlatBufferProgram		let	odixBytes
+struct	ODIE.FlatBufferProgram		let	program
+class	ODIE.Function			
+class	ODIE.Function		var	model
+class	ODIE.Function		var	state
+struct	ODIE.FunctionDescriptor			
+struct	ODIE.FunctionDescriptor		let	base
+struct	ODIE.IndexSequence			
+struct	ODIE.IndexSequence		let	shape
+struct	ODIE.IndexSequence		var	index
+struct	ODIE.IndexSequence		var	finished
+struct	ODIE.KernelDescriptor			
+struct	ODIE.KernelDescriptor		let	symbol
+struct	ODIE.KernelDescriptor		let	symbolTable
+struct	ODIE.KernelDescriptor		var	overridenName
+class	ODIE.NDArray			
+class	ODIE.NDArray		let	buffer
+class	ODIE.NDArray		var	scalarType
+class	ODIE.NDArray		var	shape
+class	ODIE.NDArray		var	strides
+class	ODIE.NDArray		var	ordering
+class	ODIE.NDArray		var	interleave
+class	ODIE.NDArray.Bytes			
+class	ODIE.NDArray.Bytes		let	buffer
+class	ODIE.NDArray.Bytes		let	deallocator
+struct	ODIE.NDArray.Buffer			
+struct	ODIE.NDArray.Buffer		let	allocation
+struct	ODIE.NDArray.Buffer		let	sourceBuffer
+enum	ODIE.NDArray.Buffer.Allocation			
+enum	ODIE.NDArray.Buffer.Allocation		case	bytes
+enum	ODIE.NDArray.Buffer.Allocation		case	iosurface
+enum	ODIE.NDArray.Buffer.Allocation		case	metalBuffer
+enum	ODIE.NDArray.Buffer.AllocationError			
+enum	ODIE.NDArray.Buffer.AllocationError		case	surfaceAllocationFailure
+enum	ODIE.NDArray.Buffer.AllocationError		case	metalDeviceUnavailable
+enum	ODIE.NDArray.Buffer.AllocationError		case	metalHeapCreationFailed
+enum	ODIE.NDArray.Buffer.AllocationError		case	metalAllocationFailed
+enum	ODIE.NDArray.Buffer.AllocationError		case	surfaceAliasingFailed
+enum	ODIE.NDArray.Buffer.AllocationError		case	mtlHeapAliasingFailed
+enum	ODIE.NDArray.Buffer.AllocationError		case	metalBufferAliasingFailed
+enum	ODIE.Operand			
+enum	ODIE.Operand		case	ndArray
+enum	ODIE.Operand		case	scalar
+enum	ODIE.Operand		case	type
+enum	ODIE.Operand		case	taskResult
+enum	ODIE._Operand			
+enum	ODIE._Operand		case	scalar
+enum	ODIE._Operand		case	tensor
+enum	ODIE._Operand		case	asyncTensor
+enum	ODIE._Operand		case	type
+enum	ODIE._Operand		case	dataSegment
+enum	ODIE._Operand		case	custom
+enum	ODIE._Operand		case	context
+enum	ODIE._Operand		case	task
+enum	ODIE._Operand		case	taskResult
+enum	ODIE.OperandType			
+enum	ODIE.OperandType		case	ndArray
+enum	ODIE.OperandType		case	scalar
+enum	ODIE.OperandType		case	meta
+enum	ODIE.OperandType		case	future
+enum	ODIE.OperandType		case	taskResult
+enum	ODIE.OperandType		case	asyncTensor
+enum	ODIE._OperandType			
+enum	ODIE._OperandType		case	scalar
+enum	ODIE._OperandType		case	tensor
+enum	ODIE._OperandType		case	asyncTensor
+enum	ODIE._OperandType		case	meta
+enum	ODIE._OperandType		case	custom
+enum	ODIE._OperandType		case	context
+enum	ODIE._OperandType		case	future
+enum	ODIE._OperandType		case	taskResult
+struct	ODIE.OperandTypes			
+struct	ODIE.OperandTypes		let	registerBank
+struct	ODIE.OperandTypes		let	operandIndices
+struct	ODIE.EmptyProfiler			
+struct	ODIE.EmptyProfiler		let	isEnabled
+struct	ODIE.ProgramDescriptor			
+struct	ODIE.ProgramDescriptor		let	base
+struct	ODIE.Scalar			
+struct	ODIE.Scalar		var	scalarType
+struct	ODIE.Scalar		var	rawStorage
+enum	ODIE.ScalarType			
+enum	ODIE.ScalarType		case	bool
+enum	ODIE.ScalarType		case	int2
+enum	ODIE.ScalarType		case	int3
+enum	ODIE.ScalarType		case	int4
+enum	ODIE.ScalarType		case	int5
+enum	ODIE.ScalarType		case	int6
+enum	ODIE.ScalarType		case	int7
+enum	ODIE.ScalarType		case	int8
+enum	ODIE.ScalarType		case	int16
+enum	ODIE.ScalarType		case	int32
+enum	ODIE.ScalarType		case	int64
+enum	ODIE.ScalarType		case	int128
+enum	ODIE.ScalarType		case	uint1
+enum	ODIE.ScalarType		case	uint2
+enum	ODIE.ScalarType		case	uint3
+enum	ODIE.ScalarType		case	uint4
+enum	ODIE.ScalarType		case	uint5
+enum	ODIE.ScalarType		case	uint6
+enum	ODIE.ScalarType		case	uint7
+enum	ODIE.ScalarType		case	uint8
+enum	ODIE.ScalarType		case	uint16
+enum	ODIE.ScalarType		case	uint32
+enum	ODIE.ScalarType		case	uint64
+enum	ODIE.ScalarType		case	uint128
+enum	ODIE.ScalarType		case	float8e5m2
+enum	ODIE.ScalarType		case	float8e4m3fn
+enum	ODIE.ScalarType		case	float16
+enum	ODIE.ScalarType		case	float32
+enum	ODIE.ScalarType		case	float64
+enum	ODIE.ScalarType		case	bfloat16
+enum	ODIE.ScalarType		case	cfloat16
+enum	ODIE.ScalarType		case	cfloat32
+enum	ODIE.ScalarType		case	cfloat64
+class	ODIE.SharedMutableBytes			
+class	ODIE.SharedMutableBytes		let	buffer
+class	ODIE.SharedMutableBytes		let	deallocator
+struct	ODIE.SharedBytes			
+struct	ODIE.SharedBytes		let	startIndex
+struct	ODIE.SharedBytes		let	backing
+struct	ODIE.SharedBytes		let	count
+struct	ODIE.ResolutionContext			
+struct	ODIE.ResolutionContext		let	programs
+class	ODIE.InternalSymbolResolver			
+class	ODIE.InternalSymbolResolver		var	wrapped
+struct	ODIE.TypeInferenceResult			
+struct	ODIE.TypeInferenceResult		var	registerBank
+struct	ODIE.TypeInferenceResult		var	operandIndices
+struct	ODIE.UnsafeArrayPointer			
+struct	ODIE.UnsafeArrayPointer		var	scalarType
+struct	ODIE.UnsafeArrayPointer		var	shape
+struct	ODIE.UnsafeArrayPointer		var	strides
+struct	ODIE.UnsafeArrayPointer		var	interleave
+struct	ODIE.UnsafeArrayPointer		var	ordering
+struct	ODIE.UnsafeArrayPointer		var	contents
+struct	ODIE.UnsafeMutableArrayPointer			
+struct	ODIE.UnsafeMutableArrayPointer		var	scalarType
+struct	ODIE.UnsafeMutableArrayPointer		var	shape
+struct	ODIE.UnsafeMutableArrayPointer		var	strides
+struct	ODIE.UnsafeMutableArrayPointer		var	interleave
+struct	ODIE.UnsafeMutableArrayPointer		var	ordering
+struct	ODIE.UnsafeMutableArrayPointer		var	contents
+struct	ODIE.UnsafeMutableRawArrayPointer			
+struct	ODIE.UnsafeMutableRawArrayPointer		var	scalarType
+struct	ODIE.UnsafeMutableRawArrayPointer		var	shape
+struct	ODIE.UnsafeMutableRawArrayPointer		var	strides
+struct	ODIE.UnsafeMutableRawArrayPointer		var	interleave
+struct	ODIE.UnsafeMutableRawArrayPointer		var	ordering
+struct	ODIE.UnsafeMutableRawArrayPointer		var	contents
+struct	ODIE.UnsafeRawArrayPointer			
+struct	ODIE.UnsafeRawArrayPointer		var	scalarType
+struct	ODIE.UnsafeRawArrayPointer		var	shape
+struct	ODIE.UnsafeRawArrayPointer		var	strides
+struct	ODIE.UnsafeRawArrayPointer		var	interleave
+struct	ODIE.UnsafeRawArrayPointer		var	ordering
+struct	ODIE.UnsafeRawArrayPointer		var	contents
+struct	ODIE.FusedInterleavedGatherDequantReshape			
+struct	ODIE.InterleavedGatherKernel			
+struct	ODIE.Conv2DBNNSKernel			
+struct	ODIE.ConvTranspose2DBNNSKernel			
+struct	ODIE.TransposeBNNSKernel			
+struct	ODIE.BlockwiseShiftScaleKernel			
+struct	ODIE.ViewKernel			
+struct	ODIE.CopyKernel			
+struct	ODIE.CopyKernel		let	variant
+enum	ODIE.CopyKernel.Variant			
+enum	ODIE.CopyKernel.Variant		case	copyWithConstraints
+enum	ODIE.CopyKernel.Variant		case	copyDiscardingConstraints
+enum	ODIE.CopyKernel.Variant		case	cast
+struct	ODIE.DequantizeKernel			
+struct	ODIE.LookupKernel			
+struct	ODIE.QuantizeKernel			
+struct	ODIE.SparseToDenseKernel			
+struct	ODIE.CastKernel			
+struct	ODIE.BatchNormKernel			
+struct	ODIE.BroadcastShapesKernel			
+struct	ODIE.BroadcastToKernel			
+struct	ODIE.BroadcastInDimsKernel			
+struct	ODIE.CallableRegistry			
+struct	ODIE.CallableRegistry		var	callables
+struct	ODIE.CreateComplexKernel			
+struct	ODIE.ImaginaryPartKernel			
+struct	ODIE.ImaginaryPartKernel		var	operation
+struct	ODIE.RealPartKernel			
+struct	ODIE.RealPartKernel		var	operation
+struct	ODIE.ComplexPartOperation			
+struct	ODIE.ComplexPartOperation		var	name
+struct	ODIE.ComplexPartOperation		var	real
+struct	ODIE.ConcatKernel			
+struct	ODIE.Conv3DKernel			
+struct	ODIE.ConvTranspose3DKernel			
+struct	ODIE.CumsumKernel			
+struct	ODIE.ExpandShrinkDimsKernel			
+struct	ODIE.ExpandShrinkDimsKernel		let	kind
+enum	ODIE.ExpandShrinkDimsKernel.Kind			
+enum	ODIE.ExpandShrinkDimsKernel.Kind		case	expand
+enum	ODIE.ExpandShrinkDimsKernel.Kind		case	shrink
+struct	ODIE.FillKernel			
+struct	ODIE.GatherAxisKernel			
+struct	ODIE.GatherScatterNDKernel			
+struct	ODIE.GatherScatterNDKernel		let	kind
+struct	ODIE.GatherScatterNDKernel		let	kMaxNumDims
+enum	ODIE.GatherScatterNDKernel.Kind			
+enum	ODIE.GatherScatterNDKernel.Kind		case	gather
+enum	ODIE.GatherScatterNDKernel.Kind		case	scatter
+struct	ODIE.GeluKernel			
+struct	ODIE.GetShapeKernel			
+struct	ODIE.KernelContext			
+struct	ODIE.KernelContext		var	profiler
+struct	ODIE.KernelError			
+struct	ODIE.KernelError		var	kernelName
+struct	ODIE.KernelError		var	kind
+enum	ODIE.KernelError.Kind			
+enum	ODIE.KernelError.Kind		case	invalidParameters
+enum	ODIE.KernelError.Kind		case	unsupportedType
+struct	ODIE.KernelRegistry			
+struct	ODIE.KernelRegistry		var	kernels
+struct	ODIE.NonZeroKernel			
+struct	ODIE.ElementWiseNotKernel			
+struct	ODIE.PadKernel			
+struct	ODIE.AvgPool2d			
+struct	ODIE.MaxPool3d			
+struct	ODIE.MaxPool2d			
+struct	ODIE.RangeKernel			
+struct	ODIE.ReduceKernel			
+struct	ODIE.ReduceKernel		let	kind
+enum	ODIE.ReduceKernel.Kind			
+enum	ODIE.ReduceKernel.Kind		case	mean
+enum	ODIE.ReduceKernel.Kind		case	max
+enum	ODIE.ReduceKernel.Kind		case	min
+enum	ODIE.ReduceKernel.Kind		case	sum
+enum	ODIE.ReduceKernel.Kind		case	product
+enum	ODIE.ReduceKernel.Kind		case	any
+enum	ODIE.ReduceKernel.Kind		case	all
+struct	ODIE.ReshapeKernel			
+struct	ODIE.ResizeKernel			
+struct	ODIE.ReverseKernel			
+struct	ODIE.ScatterAxisKernel			
+struct	ODIE.SelectKernel			
+struct	ODIE.SliceKernel			
+struct	ODIE.SliceUpdateKernel			
+struct	ODIE.SoftmaxKernel			
+struct	ODIE.SortKernel			
+struct	ODIE.SortKernel		var	kind
+enum	ODIE.SortKernel.Kind			
+enum	ODIE.SortKernel.Kind		case	value
+enum	ODIE.SortKernel.Kind		case	arg
+struct	ODIE.SplitKernel			
+struct	ODIE.StackKernel			
+struct	ODIE.TileKernel			
+struct	ODIE.WhereKernel			
+enum	ODIE.Callable			
+enum	ODIE.Callable		case	inferValue
+enum	ODIE.Callable		case	inferType
+enum	ODIE.Callable		case	suspendingInferValue
+enum	ODIE.Callable		case	oldCallable
+struct	ODIE.CallContext			
+struct	ODIE.CallContext		var	symbol
+struct	ODIE.CallContext		var	profiler
+class	ODIE.CallTable			
+class	ODIE.CallTable		var	entries
+struct	ODIE.ExecutionInfo			
+struct	ODIE.ExecutionInfo		let	programs
+struct	ODIE.ExecutionInfo		let	dataSegments
+struct	ODIE.ExecutionInfo		let	regions
+struct	ODIE.ExecutionInfo		let	profiler
+struct	ODIE.CallableKernel			
+struct	ODIE.CallableKernel		let	target
+struct	ODIE.CallableKernel		let	isTypeInference
+struct	ODIE.LinkTable			
+struct	ODIE.LinkTable		var	entries
+struct	ODIE.LinkTable		var	functions
+struct	ODIE.Loader.SymbolReference			
+struct	ODIE.Loader.SymbolReference		let	programIndex
+struct	ODIE.Loader.SymbolReference		let	symbolIndex
+struct	ODIE.Loader.FunctionReference			
+struct	ODIE.Loader.FunctionReference		let	programIndex
+struct	ODIE.Loader.FunctionReference		let	functionIndex
+struct	ODIE.Loader.ResolutionTable			
+struct	ODIE.Loader.ResolutionTable		var	resolvedSymbols
+struct	ODIE.Loader.ResolutionTable		var	programOffsetTable
+struct	ODIE.MemberFunction			
+struct	ODIE.MemberFunction		let	descriptor
+struct	ODIE.MemberFunction		let	regions
+class	ODIE.Model			
+class	ODIE.Model		let	inferValue
+class	ODIE.Model		let	initializer
+class	ODIE.Model		let	executionInfo
+class	ODIE.Model		let	linkTable
+enum	ODIE.OpCode			
+enum	ODIE.OpCode		case	loadImmediate
+enum	ODIE.OpCode		case	loadDataSegment
+enum	ODIE.OpCode		case	jump
+enum	ODIE.OpCode		case	branch
+enum	ODIE.OpCode		case	invokeRegion
+enum	ODIE.OpCode		case	call
+enum	ODIE.OpCode		case	suspendingCall
+enum	ODIE.OpCode		case	invoke
+enum	ODIE.OpCode		case	dispatch
+enum	ODIE.OpCode		case	getContext
+enum	ODIE.OpCode		case	setContext
+enum	ODIE.OpCode		case	move
+struct	ODIE.RegionList			
+struct	ODIE.RegionList		let	operations
+struct	ODIE.RegionList		let	regions
+struct	ODIE.RegionList		let	functions
+struct	ODIE.TaskResult			
+struct	ODIE.TaskResult		let	task
+struct	ODIE.TaskResult		let	index
+class	ODIE._InternalByteBuffer.Storage			
+class	ODIE._InternalByteBuffer.Storage		let	unowned
+class	ODIE._InternalByteBuffer.Storage		var	memory
+class	ODIE._InternalByteBuffer.Storage		var	capacity
+struct	ODIE._InternalByteBuffer			
+struct	ODIE._InternalByteBuffer		var	_storage
+struct	ODIE._InternalByteBuffer		var	_writerSize
+struct	ODIE._InternalByteBuffer		var	alignment
+struct	ODIE.ByteBuffer			
+struct	ODIE.ByteBuffer		var	_storage
+struct	ODIE.ByteBuffer		var	_readerIndex
+class	ODIE.FlatBufferBuilder.VTableStorage			
+class	ODIE.FlatBufferBuilder.VTableStorage		var	memoryInUse
+class	ODIE.FlatBufferBuilder.VTableStorage		let	size
+class	ODIE.FlatBufferBuilder.VTableStorage		var	memory
+class	ODIE.FlatBufferBuilder.VTableStorage		var	capacity
+class	ODIE.FlatBufferBuilder.VTableStorage		var	maxOffset
+class	ODIE.FlatBufferBuilder.VTableStorage		var	numOfFields
+class	ODIE.FlatBufferBuilder.VTableStorage		var	writtenIndex
+struct	ODIE.FlatBufferBuilder			
+struct	ODIE.FlatBufferBuilder		var	_vtableStorage
+struct	ODIE.FlatBufferBuilder		var	_bb
+struct	ODIE.FlatBufferBuilder		var	_vtables
+struct	ODIE.FlatBufferBuilder		var	isNested
+struct	ODIE.FlatBufferBuilder		var	stringOffsetMap
+struct	ODIE.FlatBufferBuilder		var	finished
+struct	ODIE.FlatBufferBuilder		var	serializeDefaults
+struct	ODIE.FlatBufferBuilder		var	_minAlignment
+enum	ODIE.FlatbuffersErrors			
+enum	ODIE.FlatbuffersErrors		case	missAlignedPointer
+enum	ODIE.FlatbuffersErrors		case	outOfBounds
+enum	ODIE.FlatbuffersErrors		case	signedOffsetOutOfBounds
+enum	ODIE.FlatbuffersErrors		case	requiredFieldDoesntExist
+enum	ODIE.FlatbuffersErrors		case	missingNullTerminator
+enum	ODIE.FlatbuffersErrors		case	valueNotFound
+enum	ODIE.FlatbuffersErrors		case	unionVectorSize
+enum	ODIE.FlatbuffersErrors		case	bufferDoesntContainID
+enum	ODIE.FlatbuffersErrors		case	bufferIdDidntMatchPassedId
+enum	ODIE.FlatbuffersErrors		case	prefixedSizeNotEqualToBufferSize
+enum	ODIE.FlatbuffersErrors		case	exceedsMaxSizeAllowed
+enum	ODIE.FlatbuffersErrors		case	maximumTables
+enum	ODIE.FlatbuffersErrors		case	maximumDepth
+enum	ODIE.FlatbuffersErrors		case	unknownUnionCase
+enum	ODIE.FlatbuffersErrors		case	apparentSizeTooLarge
+struct	ODIE.Offset			
+struct	ODIE.Offset		var	o
+struct	ODIE.Struct			
+struct	ODIE.Struct		var	bb
+struct	ODIE.Struct		var	position
+struct	ODIE.Table			
+struct	ODIE.Table		var	bb
+struct	ODIE.Table		var	position
+struct	ODIE.VerifierOptions			
+struct	ODIE.VerifierOptions		var	_maxApparentSize
+struct	ODIE.VerifierOptions		var	_maxTableCount
+struct	ODIE.VerifierOptions		var	_maxDepth
+struct	ODIE.VerifierOptions		var	_ignoreMissingNullTerminators
+class	ODIE.Verifier.Storage			
+class	ODIE.Verifier.Storage		var	apparentSize
+class	ODIE.Verifier.Storage		var	tableCount
+class	ODIE.Verifier.Storage		let	capacity
+class	ODIE.Verifier.Storage		var	depth
+struct	ODIE.Verifier			
+struct	ODIE.Verifier		let	_checkAlignment
+struct	ODIE.Verifier		let	storage
+struct	ODIE.Verifier		var	_buffer
+struct	ODIE.Verifier		let	_options
+enum	ODIE.Attribute			
+enum	ODIE.Attribute		case	integer
+enum	ODIE.Attribute		case	string
+enum	ODIE.Attribute		case	float
+enum	ODIE.Attribute		case	composite
+enum	ODIE.Attribute		case	boolean
+enum	ODIE.Attribute		case	enumeration
+enum	ODIE.Attribute		case	array
+enum	ODIE.NativeAttribute			
+enum	ODIE.NativeAttribute		case	integer
+enum	ODIE.NativeAttribute		case	string
+enum	ODIE.NativeAttribute		case	float
+enum	ODIE.NativeAttribute		case	composite
+enum	ODIE.NativeAttribute		case	array
+enum	ODIE.NativeAttribute		case	dict
+enum	ODIE.NativeAttribute		case	type
+enum	ODIE.NativeAttribute		case	enumeration
+enum	ODIE.NativeAttribute		case	boolean
+struct	ODIE.Location			
+struct	ODIE.Location		var	fileName
+struct	ODIE.Location		var	line
+struct	ODIE.Location		var	column
+struct	ODIE.InferenceError			
+struct	ODIE.InferenceError		var	locations
+struct	ODIE.InferenceError		var	underlyingError
+enum	ODIE.Odix			
+struct	ODIE.Odix.Function			
+struct	ODIE.Odix.Function		let	program
+struct	ODIE.Odix.Function		let	storage
+struct	ODIE.Odix.Function		let	publicInputNames
+struct	ODIE.Odix.Function		let	allInputNames
+struct	ODIE.Odix.Function		let	outputNames
+struct	ODIE.Odix.Program			
+struct	ODIE.Odix.Program		let	flatbufferProgram
+struct	ODIE.Odix.Program		let	dataSegmentsStartOffset
+struct	ODIE.Odix.Program		let	packageURL
+struct	ODIE.Odix.Program		let	symbols
+struct	ODIE.Operation			
+struct	ODIE.Operation		let	operation
+struct	ODIE.Operation		let	opCode
+struct	ODIE.Operation		let	programIndex
+struct	ODIE.ODIE_FB_Symbol			
+struct	ODIE.ODIE_FB_Symbol		var	_accessor
+struct	ODIE.ODIE_FB_SymbolTable			
+struct	ODIE.ODIE_FB_SymbolTable		var	_accessor
+struct	ODIE.ODIE_FB_Function			
+struct	ODIE.ODIE_FB_Function		var	_accessor
+enum	ODIE.ODIE_FB_Opcode			
+enum	ODIE.ODIE_FB_Opcode		case	none_
+enum	ODIE.ODIE_FB_Opcode		case	jump
+enum	ODIE.ODIE_FB_Opcode		case	branch
+enum	ODIE.ODIE_FB_Opcode		case	invokeregion
+enum	ODIE.ODIE_FB_Opcode		case	move
+enum	ODIE.ODIE_FB_Opcode		case	loadimm
+enum	ODIE.ODIE_FB_Opcode		case	loadds
+enum	ODIE.ODIE_FB_Opcode		case	call
+enum	ODIE.ODIE_FB_Opcode		case	asyncinvokeregion
+enum	ODIE.ODIE_FB_Opcode		case	getcontext
+enum	ODIE.ODIE_FB_Opcode		case	setcontext
+struct	ODIE.ODIE_FB_Operation			
+struct	ODIE.ODIE_FB_Operation		var	_accessor
+struct	ODIE.ODIE_FB_Call			
+struct	ODIE.ODIE_FB_Call		var	_accessor
+struct	ODIE.ODIE_FB_Region			
+struct	ODIE.ODIE_FB_Region		var	_accessor
+struct	ODIE.ODIE_FB_Program			
+struct	ODIE.ODIE_FB_Program		var	_accessor
+enum	ODIE.Intent			
+enum	ODIE.Intent		case	out
+enum	ODIE.Intent		case	inout
+enum	ODIE.Intent		case	return
+enum	ODIE.Intent		case	in
+enum	ODIE.Intent		case	param
+enum	ODIE.SymbolKind			
+enum	ODIE.SymbolKind		case	function
+enum	ODIE.SymbolKind		case	kernel
+enum	ODIE.SymbolKind		case	delegate
+struct	ODIE.SymbolDescriptor			
+struct	ODIE.SymbolDescriptor		var	nativeInputTypes
+struct	ODIE.SymbolDescriptor		var	nativeOutputTypes
+struct	ODIE.SymbolDescriptor		let	namedAttributeStorage
+struct	ODIE.SymbolDescriptor		let	kind
+struct	ODIE.SymbolDescriptor		var	name
+struct	ODIE.SymbolDescriptor		let	outputIntents
+enum	ODIE.SymbolDescriptor.NamedAttributeStorage			
+enum	ODIE.SymbolDescriptor.NamedAttributeStorage		case	flatbuffer
+enum	ODIE.SymbolDescriptor.NamedAttributeStorage		case	dictionary
+struct	ODIE.ODIE_FB_DictionaryAttr			
+struct	ODIE.ODIE_FB_DictionaryAttr		var	_accessor
+struct	ODIE.ODIE_FB_CompositeAttr			
+struct	ODIE.ODIE_FB_CompositeAttr		var	_accessor
+struct	ODIE.ODIE_FB_BooleanAttr			
+struct	ODIE.ODIE_FB_BooleanAttr		var	_accessor
+struct	ODIE.ODIE_FB_EnumAttr			
+struct	ODIE.ODIE_FB_EnumAttr		var	_accessor
+struct	ODIE.ODIE_FB_TypeAttr			
+struct	ODIE.ODIE_FB_TypeAttr		var	_accessor
+struct	ODIE.ODIE_FB_ArrayAttr			
+struct	ODIE.ODIE_FB_ArrayAttr		var	_accessor
+struct	ODIE.ODIE_FB_FloatAttr			
+struct	ODIE.ODIE_FB_FloatAttr		var	_accessor
+struct	ODIE.ODIE_FB_StringAttr			
+struct	ODIE.ODIE_FB_StringAttr		var	_accessor
+struct	ODIE.ODIE_FB_IntegerAttr			
+struct	ODIE.ODIE_FB_IntegerAttr		var	_accessor
+struct	ODIE.CompiledGraph.Executable			
+struct	ODIE.CompiledGraph.Executable		var	model
+struct	ODIE.CompiledGraph.Executable		var	modelState
+struct	ODIE.CompiledGraph.Executable		var	inputOperands
+struct	ODIE.CompiledGraph.Executable		var	outputOperands
+struct	ODIE.CompiledGraph.ExecutablePool.LockedState			
+struct	ODIE.CompiledGraph.ExecutablePool.LockedState		var	executableArray
+struct	ODIE.CompiledGraph.ExecutablePool.LockedState		let	resolver
+struct	ODIE.CompiledGraph.UnboundExecutable			
+struct	ODIE.CompiledGraph.UnboundExecutable		var	model
+struct	ODIE.CompiledGraph.UnboundExecutable		let	modelState
+struct	ODIE.CompiledGraph.UnboundExecutable		var	inputOperands
+struct	ODIE.CompiledGraph.UnboundExecutable		var	outputOperands
+struct	ODIE.KernelBinding			
+struct	ODIE.KernelBinding		let	_callable
+struct	ODIE.Tensor.MutableRawView			
+struct	ODIE.Tensor.MutableRawView		let	storage
+struct	ODIE.Tensor.MutableRawView		let	layout
+struct	ODIE.Tensor.MutableRawView		let	scalarType
+struct	ODIE.Tensor.MutableView			
+struct	ODIE.Tensor.MutableView		let	layout
+struct	ODIE.Tensor.MutableView		let	baseStorage
+struct	ODIE.Tensor.MutableView		let	originOffset
+struct	ODIE.MutableBoundOperands			
+struct	ODIE.MutableBoundOperands		var	registerBank
+struct	ODIE.MutableBoundOperands		var	operandIndices
+struct	ODIE.ActiveInterval			
+struct	ODIE.ActiveInterval		let	eventId
+struct	ODIE.ActiveInterval		let	type
+struct	ODIE.ActiveInterval		let	intervalId
+struct	ODIE.RigidArray			
+struct	ODIE.RigidArray		var	_pointer
+struct	ODIE.RigidArray		var	_count
+struct	ODIE.RigidArray		var	_capacity
+struct	ODIE.Loader			
+struct	ODIE.Loader		var	loadedPrograms
+struct	ODIE.Loader		var	symbolTable
+struct	ODIE.Loader		var	profiler
+struct	ODIE.Loader		var	linkTable
+struct	ODIE.Loader		var	dataSegments
+struct	ODIE.Loader		var	regions
+struct	ODIE.ModelState			
+struct	ODIE.ModelState		let	callTable
+struct	ODIE.ModelState		let	context
+struct	ODIE.ModelState		var	inferValueRegisters
+struct	ODIE.RegionList.Builder			
+struct	ODIE.RegionList.Builder		var	operations
+struct	ODIE.RegionList.Builder		var	regions
+struct	ODIE.RegionList.Builder		var	functions
+struct	ODIE.RegionList.Builder		var	functionTable
+struct	ODIE.RegisterBank			
+struct	ODIE.RegisterBank		var	registers
+protocol	Log.Emitter			
+protocol	Compiler.Segmenter			
+protocol	Compiler.DelegateCompiler			
+protocol	Delegates.Segmenter			
+protocol	Delegates.BinaryGenerator			
+protocol	ODIE.Event			
+protocol	ODIE.TensorRangeExpression			
+protocol	ODIE._SymbolResolver			
+protocol	ODIE.Delegate			
+protocol	ODIE.Profiler			
+protocol	ODIE.SymbolResolver			
+protocol	ODIE.ElementWiseOperation			
+protocol	ODIE.ElementWiseBitwiseOperation			
+protocol	ODIE.ElementWiseBooleanOperation			
+protocol	ODIE.ElementWiseComparison			
+protocol	ODIE.ElementWiseUnaryOperation			
+protocol	ODIE.Kernel			
+protocol	ODIE.OldCallable			
+protocol	ODIE.OldAsyncCallable			
+protocol	ODIE._Scalar	NumericValue		
+protocol	ODIE.Enum	T		
+protocol	ODIE.UnionEnum			
+protocol	ODIE.NativeStruct			
+protocol	ODIE.FlatbuffersInitializable			
+protocol	ODIE.FlatBufferObject			
+protocol	ODIE.ObjectAPIPacker	T		
+protocol	ODIE.FlatBufferGRPCMessage			
+protocol	ODIE.Mutable			
+protocol	ODIE.NativeObject			
+protocol	ODIE.Verifiable			
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance ODIE.SignpostProfiler	ODIE.Profiler		
+protocol	conformance ODIE.BuiltinCallableError	Swift.Error		
+protocol	conformance os.Logger	ODIE.Log.Emitter		
+protocol	conformance Compiler.Errors	Swift.Error		
+protocol	conformance Compiler.DebugOptions	Swift.Equatable		
+protocol	conformance Compiler.DebugOptions	Swift.Hashable		
+protocol	conformance ODIE.BasicEvent	ODIE.Event		
+protocol	conformance ODIE.ODIEError	Swift.Error		
+protocol	conformance ODIE.CompoundSymbolResolver	ODIE._SymbolResolver		
+protocol	conformance ODIE.LogEventData	Swift.Encodable		
+protocol	conformance ODIE.LogEventData	Swift.Decodable		
+protocol	conformance ODIE.LogEvent	Swift.CustomStringConvertible		
+protocol	conformance ODIE.LogEvent	Swift.Encodable		
+protocol	conformance ODIE.LogEvent	Swift.Decodable		
+protocol	conformance ODIE.LogEventPhase	Swift.Encodable		
+protocol	conformance ODIE.LogEventPhase	Swift.Decodable		
+protocol	conformance ODIE.LogEventKind	Swift.Encodable		
+protocol	conformance ODIE.LogEventKind	Swift.Decodable		
+protocol	conformance ODIE.LogEventKind	Swift.CaseIterable		
+protocol	conformance ODIE.LogEventKind	Swift.Equatable		
+protocol	conformance ODIE.LogEventPhase	Swift.Hashable		
+protocol	conformance ODIE.LogEventPhase	Swift.Equatable		
+protocol	conformance EventBufferCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EventBufferCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntermediatesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntermediatesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MemoryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MemoryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RuntimeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RuntimeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InferenceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InferenceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CompileCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CompileCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LoadCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LoadCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance EmptyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EmptyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MemoryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MemoryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MemoryCodingKeys	Swift.Hashable		
+protocol	conformance MemoryCodingKeys	Swift.Equatable		
+protocol	conformance CountersCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountersCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountersCodingKeys	Swift.Hashable		
+protocol	conformance CountersCodingKeys	Swift.Equatable		
+protocol	conformance IntervalMarkerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntervalMarkerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntervalMarkerCodingKeys	Swift.Hashable		
+protocol	conformance IntervalMarkerCodingKeys	Swift.Equatable		
+protocol	conformance IntervalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntervalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntervalCodingKeys	Swift.Hashable		
+protocol	conformance IntervalCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ODIE.LogEventKind	Swift.Hashable		
+protocol	conformance IntervalCodingKeys	Swift.CodingKey		
+protocol	conformance IntervalMarkerCodingKeys	Swift.CodingKey		
+protocol	conformance CountersCodingKeys	Swift.CodingKey		
+protocol	conformance MemoryCodingKeys	Swift.CodingKey		
+protocol	conformance EmptyCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LoadCodingKeys	Swift.CodingKey		
+protocol	conformance CompileCodingKeys	Swift.CodingKey		
+protocol	conformance InferenceCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RuntimeCodingKeys	Swift.CodingKey		
+protocol	conformance MemoryCodingKeys	Swift.CodingKey		
+protocol	conformance IntermediatesCodingKeys	Swift.CodingKey		
+protocol	conformance EventBufferCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ODIE.SharedStorageAdaptError	Swift.Hashable		
+protocol	conformance ODIE.SharedStorageAdaptError	Swift.Equatable		
+protocol	conformance ODIE.SharedStorageAliasError	Swift.Hashable		
+protocol	conformance ODIE.SharedStorageAliasError	Swift.Equatable		
+protocol	conformance ODIE.SharedStorageAliasError	Swift.Error		
+protocol	conformance ODIE.SharedStorageAdaptError	Swift.Error		
+protocol	conformance TensorPool.CacheKey	Swift.Equatable		
+protocol	conformance TensorPool.CacheKey	Swift.Hashable		
+protocol	conformance Swift.Range	ODIE.TensorRangeExpression		
+protocol	conformance Swift.ClosedRange	ODIE.TensorRangeExpression		
+protocol	conformance Swift.PartialRangeUpTo	ODIE.TensorRangeExpression		
+protocol	conformance Swift.PartialRangeThrough	ODIE.TensorRangeExpression		
+protocol	conformance Swift.PartialRangeFrom	ODIE.TensorRangeExpression		
+protocol	conformance Swift.Int	ODIE.TensorRangeExpression		
+protocol	conformance ODIE.TensorRequirements	Swift.Equatable		
+protocol	conformance TensorRequirements.StorageKind	Swift.CaseIterable		
+protocol	conformance TensorRequirements.StorageKind	Swift.Equatable		
+protocol	conformance TensorRequirements.StorageKind	Swift.Hashable		
+protocol	conformance ODIE.ArrayDescriptor	Swift.Hashable		
+protocol	conformance ODIE.ArrayDescriptor	Swift.Equatable		
+protocol	conformance ArrayDescriptor.AllocationType	Swift.CaseIterable		
+protocol	conformance ArrayDescriptor.AllocationType	Swift.Equatable		
+protocol	conformance ArrayDescriptor.AllocationType	Swift.Hashable		
+protocol	conformance ODIE.CustomType	Swift.Equatable		
+protocol	conformance ODIE.Dimension	Swift.Equatable		
+protocol	conformance ODIE.Dimension	Swift.Hashable		
+protocol	conformance ODIE.Dimension	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance ODIE.IndexSequence	Swift.IteratorProtocol		
+protocol	conformance ODIE.IndexSequence	Swift.Sequence		
+protocol	conformance Buffer.AllocationError	Swift.Hashable		
+protocol	conformance Buffer.AllocationError	Swift.Equatable		
+protocol	conformance Buffer.AllocationError	Swift.Error		
+protocol	conformance ODIE.OperandType	Swift.Equatable		
+protocol	conformance ODIE._OperandType	Swift.Equatable		
+protocol	conformance ODIE.EmptyProfiler	ODIE.Profiler		
+protocol	conformance ODIE.Scalar	Swift.Hashable		
+protocol	conformance ODIE.Scalar	Swift.Equatable		
+protocol	conformance ODIE.ScalarType	Swift.Equatable		
+protocol	conformance ODIE.ScalarType	Swift.Hashable		
+protocol	conformance ODIE.InternalSymbolResolver	ODIE._SymbolResolver		
+protocol	conformance ODIE.FusedInterleavedGatherDequantReshape	ODIE.Kernel		
+protocol	conformance ODIE.InterleavedGatherKernel	ODIE.Kernel		
+protocol	conformance ODIE.Conv2DBNNSKernel	ODIE.Kernel		
+protocol	conformance ODIE.ConvTranspose2DBNNSKernel	ODIE.Kernel		
+protocol	conformance ODIE.TransposeBNNSKernel	ODIE.Kernel		
+protocol	conformance ODIE.BlockwiseShiftScaleKernel	ODIE.Kernel		
+protocol	conformance ODIE.ViewKernel	ODIE.Kernel		
+protocol	conformance ODIE.CopyKernel	ODIE.Kernel		
+protocol	conformance CopyKernel.Variant	Swift.CaseIterable		
+protocol	conformance CopyKernel.Variant	Swift.Hashable		
+protocol	conformance CopyKernel.Variant	Swift.Equatable		
+protocol	conformance ODIE.DequantizeKernel	ODIE.Kernel		
+protocol	conformance ODIE.LookupKernel	ODIE.Kernel		
+protocol	conformance ODIE.QuantizeKernel	ODIE.Kernel		
+protocol	conformance ODIE.SparseToDenseKernel	ODIE.Kernel		
+protocol	conformance ODIE.CastKernel	ODIE.Kernel		
+protocol	conformance ODIE.BatchNormKernel	ODIE.Kernel		
+protocol	conformance ODIE.BroadcastShapesKernel	ODIE.Kernel		
+protocol	conformance ODIE.BroadcastToKernel	ODIE.Kernel		
+protocol	conformance ODIE.BroadcastInDimsKernel	ODIE.Kernel		
+protocol	conformance ODIE.CallableRegistry	ODIE._SymbolResolver		
+protocol	conformance ODIE.CreateComplexKernel	ODIE.Kernel		
+protocol	conformance ODIE.ImaginaryPartKernel	ODIE.Kernel		
+protocol	conformance ODIE.RealPartKernel	ODIE.Kernel		
+protocol	conformance ODIE.ConcatKernel	ODIE.Kernel		
+protocol	conformance ODIE.Conv3DKernel	ODIE.Kernel		
+protocol	conformance ODIE.ConvTranspose3DKernel	ODIE.Kernel		
+protocol	conformance ODIE.CumsumKernel	ODIE.Kernel		
+protocol	conformance ExpandShrinkDimsKernel	ODIE.Kernel		
+protocol	conformance ExpandShrinkDimsKernel.Kind	Swift.CaseIterable		
+protocol	conformance ExpandShrinkDimsKernel.Kind	Swift.Hashable		
+protocol	conformance ExpandShrinkDimsKernel.Kind	Swift.Equatable		
+protocol	conformance ODIE.FillKernel	ODIE.Kernel		
+protocol	conformance ODIE.GatherAxisKernel	ODIE.Kernel		
+protocol	conformance ODIE.GatherScatterNDKernel	ODIE.Kernel		
+protocol	conformance GatherScatterNDKernel.Kind	Swift.CaseIterable		
+protocol	conformance GatherScatterNDKernel.Kind	Swift.Hashable		
+protocol	conformance GatherScatterNDKernel.Kind	Swift.Equatable		
+protocol	conformance ODIE.GeluKernel	ODIE.Kernel		
+protocol	conformance ODIE.GetShapeKernel	ODIE.Kernel		
+protocol	conformance ODIE.KernelError	Swift.Error		
+protocol	conformance ODIE.KernelError	Swift.CustomDebugStringConvertible		
+protocol	conformance ODIE.NonZeroKernel	ODIE.Kernel		
+protocol	conformance ODIE.ElementWiseNotKernel	ODIE.Kernel		
+protocol	conformance ODIE.PadKernel	ODIE.Kernel		
+protocol	conformance ODIE.AvgPool2d	ODIE.Kernel		
+protocol	conformance ODIE.MaxPool3d	ODIE.Kernel		
+protocol	conformance ODIE.MaxPool2d	ODIE.Kernel		
+protocol	conformance ODIE.RangeKernel	ODIE.Kernel		
+protocol	conformance ODIE.ReduceKernel	ODIE.Kernel		
+protocol	conformance ReduceKernel.Kind	Swift.CaseIterable		
+protocol	conformance ReduceKernel.Kind	Swift.Hashable		
+protocol	conformance ReduceKernel.Kind	Swift.Equatable		
+protocol	conformance ODIE.ReshapeKernel	ODIE.Kernel		
+protocol	conformance ODIE.ResizeKernel	ODIE.Kernel		
+protocol	conformance ODIE.ReverseKernel	ODIE.Kernel		
+protocol	conformance ODIE.ScatterAxisKernel	ODIE.Kernel		
+protocol	conformance ODIE.SelectKernel	ODIE.Kernel		
+protocol	conformance ODIE.SliceKernel	ODIE.Kernel		
+protocol	conformance ODIE.SliceUpdateKernel	ODIE.Kernel		
+protocol	conformance ODIE.SoftmaxKernel	ODIE.Kernel		
+protocol	conformance ODIE.SortKernel	ODIE.Kernel		
+protocol	conformance SortKernel.Kind	Swift.CaseIterable		
+protocol	conformance SortKernel.Kind	Swift.Hashable		
+protocol	conformance SortKernel.Kind	Swift.Equatable		
+protocol	conformance ODIE.SplitKernel	ODIE.Kernel		
+protocol	conformance ODIE.StackKernel	ODIE.Kernel		
+protocol	conformance ODIE.TileKernel	ODIE.Kernel		
+protocol	conformance ODIE.WhereKernel	ODIE.Kernel		
+protocol	conformance ODIE.CallableKernel	ODIE.OldCallable		
+protocol	conformance Loader.FunctionReference	Swift.Equatable		
+protocol	conformance Loader.FunctionReference	Swift.Hashable		
+protocol	conformance ODIE._InternalByteBuffer	Swift.CustomDebugStringConvertible		
+protocol	conformance Swift.Double	ODIE._Scalar		
+protocol	conformance Swift.Float	ODIE._Scalar		
+protocol	conformance Swift.Bool	ODIE._Scalar		
+protocol	conformance Swift.Int	ODIE._Scalar		
+protocol	conformance Swift.Int8	ODIE._Scalar		
+protocol	conformance Swift.Int16	ODIE._Scalar		
+protocol	conformance Swift.Int32	ODIE._Scalar		
+protocol	conformance Swift.Int64	ODIE._Scalar		
+protocol	conformance Swift.UInt	ODIE._Scalar		
+protocol	conformance Swift.UInt8	ODIE._Scalar		
+protocol	conformance Swift.UInt16	ODIE._Scalar		
+protocol	conformance Swift.UInt32	ODIE._Scalar		
+protocol	conformance Swift.UInt64	ODIE._Scalar		
+protocol	conformance ODIE.ByteBuffer	Swift.CustomDebugStringConvertible		
+protocol	conformance Swift.Double	ODIE.Verifiable		
+protocol	conformance Swift.Float	ODIE.Verifiable		
+protocol	conformance Swift.Bool	ODIE.Verifiable		
+protocol	conformance Swift.Int	ODIE.Verifiable		
+protocol	conformance Swift.Int8	ODIE.Verifiable		
+protocol	conformance Swift.Int16	ODIE.Verifiable		
+protocol	conformance Swift.Int32	ODIE.Verifiable		
+protocol	conformance Swift.Int64	ODIE.Verifiable		
+protocol	conformance Swift.UInt8	ODIE.Verifiable		
+protocol	conformance Swift.UInt16	ODIE.Verifiable		
+protocol	conformance Swift.UInt32	ODIE.Verifiable		
+protocol	conformance Swift.UInt64	ODIE.Verifiable		
+protocol	conformance ODIE.FlatBufferBuilder	Swift.CustomDebugStringConvertible		
+protocol	conformance ODIE.FlatbuffersErrors	Swift.Equatable		
+protocol	conformance ODIE.FlatbuffersErrors	Swift.Error		
+protocol	conformance ODIE.Table	ODIE.Mutable		
+protocol	conformance ODIE.Struct	ODIE.Mutable		
+protocol	conformance Swift.String	ODIE.Verifiable		
+protocol	conformance Swift.String	ODIE.FlatbuffersInitializable		
+protocol	conformance Swift.String	ODIE.ObjectAPIPacker		
+protocol	conformance Swift.String	ODIE.NativeObject		
+protocol	conformance ODIE.Attribute	Swift.Equatable		
+protocol	conformance ODIE.NativeAttribute	Swift.Equatable		
+protocol	conformance ODIE.InferenceError	Foundation.LocalizedError		
+protocol	conformance ODIE.Location	Swift.CustomStringConvertible		
+protocol	conformance ODIE.InferenceError	Swift.Error		
+protocol	conformance ODIE.ODIE_FB_Function	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_Function	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_Function	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_SymbolTable	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_SymbolTable	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_SymbolTable	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_Symbol	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_Symbol	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_Symbol	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_Program	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_Program	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_Program	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_Region	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_Region	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_Region	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_Call	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_Call	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_Call	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_Operation	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_Operation	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_Operation	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_Opcode	ODIE.Enum		
+protocol	conformance ODIE.ODIE_FB_Opcode	ODIE.UnionEnum		
+protocol	conformance ODIE.ODIE_FB_Opcode	Swift.RawRepresentable		
+protocol	conformance ODIE.ODIE_FB_Opcode	Swift.Hashable		
+protocol	conformance ODIE.ODIE_FB_Opcode	Swift.Equatable		
+protocol	conformance ODIE.Intent	Swift.Equatable		
+protocol	conformance ODIE.Intent	Swift.Hashable		
+protocol	conformance ODIE.SymbolKind	Swift.Equatable		
+protocol	conformance ODIE.SymbolKind	Swift.Hashable		
+protocol	conformance ODIE.ODIE_FB_CompositeAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_CompositeAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_CompositeAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_DictionaryAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_DictionaryAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_DictionaryAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_IntegerAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_IntegerAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_IntegerAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_StringAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_StringAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_StringAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_FloatAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_FloatAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_FloatAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_ArrayAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_ArrayAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_ArrayAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_TypeAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_TypeAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_TypeAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_EnumAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_EnumAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_EnumAttr	ODIE.FlatBufferObject		
+protocol	conformance ODIE.ODIE_FB_BooleanAttr	ODIE.FlatbuffersInitializable		
+protocol	conformance ODIE.ODIE_FB_BooleanAttr	ODIE.Verifiable		
+protocol	conformance ODIE.ODIE_FB_BooleanAttr	ODIE.FlatBufferObject		
+extension	ODIE.LogEventKind	CaseIterable		
+extension	ODIE.LogEventData.CodingKeys	RawRepresentable		
+extension	ODIE.TensorRequirements.StorageKind	CaseIterable		
+extension	ODIE.ArrayDescriptor.AllocationType	CaseIterable		
+extension	ODIE.Dimension	ExpressibleByIntegerLiteral		
+extension	ODIE.IndexSequence	IteratorProtocol		
+extension	ODIE.IndexSequence	Sequence		
+extension	ODIE.CopyKernel.Variant	CaseIterable		
+extension	ODIE.ExpandShrinkDimsKernel.Kind	CaseIterable		
+extension	ODIE.GatherScatterNDKernel.Kind	CaseIterable		
+extension	ODIE.ReduceKernel.Kind	CaseIterable		
+extension	ODIE.SortKernel.Kind	CaseIterable		
+extension	Double	_Scalar		
+extension	Float	_Scalar		
+extension	Swift.Bool	_Scalar		
+extension	Int	_Scalar		
+extension	Swift.Int8	_Scalar		
+extension	Swift.Int16	_Scalar		
+extension	Swift.Int32	_Scalar		
+extension	Swift.Int64	_Scalar		
+extension	UInt	_Scalar		
+extension	Swift.UInt8	_Scalar		
+extension	Swift.UInt16	_Scalar		
+extension	Swift.UInt32	_Scalar		
+extension	Swift.UInt64	_Scalar		
+extension	String	ObjectAPIPacker		
+extension	ODIE.ODIE_FB_Opcode	Enum		
+extension	ODIE.ODIE_FB_Opcode	RawRepresentable		

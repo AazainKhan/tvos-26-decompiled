@@ -1,0 +1,23 @@
+owner	kind	declaration
+NSString(OAURLEncode)	-	- (id)oauth_urlEncodedString;
+OACredential	-	- (id)signingKey;
+OACredential	-	- (void)dealloc;
+OACredential	property	@property (copy, nonatomic) NSString *consumerKey;
+OACredential	property	@property (copy, nonatomic) NSString *consumerSecret;
+OACredential	property	@property (copy, nonatomic) NSString *oauthToken;
+OACredential	property	@property (copy, nonatomic) NSString *oauthTokenSecret;
+OAHMAC_SHA1Signer	+	+ (id)signatureForText:(id)text withKey:(id)key;
+OAPlainTextSigner	+	+ (id)signatureForText:(id)text withKey:(id)key;
+OAURLRequestSigner	-	- (Class)signer;
+OAURLRequestSigner	-	- (id)applyApplicationID:(id)id toRequest:(id)request containsMultiPartData:(_Bool)data;
+OAURLRequestSigner	-	- (id)initWithCredential:(id)credential;
+OAURLRequestSigner	-	- (id)oauthAuthorizationHeaderWithSignature:(id)signature nonce:(id)nonce timestamp:(id)timestamp;
+OAURLRequestSigner	-	- (id)oauthNonce;
+OAURLRequestSigner	-	- (id)oauthParametersWithNonce:(id)nonce timeStamp:(id)stamp;
+OAURLRequestSigner	-	- (id)signatureMethodString;
+OAURLRequestSigner	-	- (id)signedURLRequestWithRequest:(id)request applicationID:(id)id timestamp:(id)timestamp;
+OAURLRequestSigner	-	- (id)signedURLRequestWithRequest:(id)request;
+OAURLRequestSigner	-	- (id)timestamp:(id)timestamp;
+OAURLRequestSigner	-	- (void)dealloc;
+OAURLRequestSigner	property	@property (nonatomic) int signatureMethod;
+OAuthSigner	+	+ (id)signatureForText:(id)text withKey:(id)key;

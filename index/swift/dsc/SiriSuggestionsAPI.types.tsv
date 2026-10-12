@@ -1,0 +1,933 @@
+kind	type	conformance	member_kind	member
+class	SiriSuggestionsAPI.SiriSuggestionsAPIClients			
+enum	SiriSuggestionsAPI.DonationPolicy			
+enum	SiriSuggestionsAPI.DonationPolicy		case	async
+enum	SiriSuggestionsAPI.DonationPolicy		case	sync
+enum	SiriSuggestionsAPI.SiriSuggestionsClientConstants			
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes			
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	dialogIdentifier
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	intentProperties
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	intentsToSuggest
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	owner
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	siriKitIntent
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	skIntentResult
+enum	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes		case	templatingResult
+struct	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport			
+struct	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport		let	intentName
+struct	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport		let	owner
+struct	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport		let	intentProps
+struct	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport		let	verb
+enum	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport.CodingKeys			
+enum	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport.CodingKeys		case	intentName
+enum	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport.CodingKeys		case	owner
+enum	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport.CodingKeys		case	intentProps
+enum	SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport.CodingKeys		case	verb
+class	SiriSuggestionsAPI.ACECommandSuggestionDispatcher			
+class	SiriSuggestionsAPI.ACECommandSuggestionDispatcher		let	invocationContext
+class	SiriSuggestionsAPI.DefaultACECommandSuggestionDispatcherFactory			
+class	SiriSuggestionsAPI.DeviceStateTransformers			
+enum	SiriSuggestionsAPI.CustomConversationContinuer			
+enum	SiriSuggestionsAPI.CustomConversationContinuer		case	deviceExpertQuestions
+struct	SiriSuggestionsAPI.SuggestionPhraseWithIcon			
+struct	SiriSuggestionsAPI.SuggestionPhraseWithIcon		let	suggestionPhrase
+struct	SiriSuggestionsAPI.SuggestionPhraseWithIcon		let	icon
+struct	SiriSuggestionsAPI.SuggestionPhraseWithIcon		let	continuerId
+class	SiriSuggestionsAPI.SinkDispatcherProvider<A	SiriSuggestionsAPI.SuggestionsDispatcherFactory>		
+class	SiriSuggestionsAPI.SinkDispatcherProvider<A	SiriSuggestionsAPI.SuggestionsDispatcherFactory>	let	capture
+class	SiriSuggestionsAPI.SinkDispatcherProvider<A	SiriSuggestionsAPI.SuggestionsDispatcherFactory>	let	suggestionDispatcherFactory
+class	SiriSuggestionsAPI.SinkCapture			
+class	SiriSuggestionsAPI.SinkCapture		var	result
+class	SiriSuggestionsAPI.SinkCapture		var	sink
+class	SiriSuggestionsAPI.LocalStateStoreClient			
+class	SiriSuggestionsAPI.LocalStateStoreClient		var	cache
+class	SiriSuggestionsAPI.LocalStateStoreClient		let	delegate
+class	SiriSuggestionsAPI.LocalStateStoreClient		let	cacheClearedListener
+class	SiriSuggestionsAPI.StoreCache			
+class	SiriSuggestionsAPI.StoreCache		var	store
+struct	SiriSuggestionsAPI.EventConfig			
+struct	SiriSuggestionsAPI.EventConfig		let	eventBuffersize
+struct	SiriSuggestionsAPI.EventConfig		let	relevanceTimeWindowSecs
+class	SiriSuggestionsAPI.CoreSpeechPolicyProvider			
+class	SiriSuggestionsAPI.SiriFeatureSupportPolicyProvider			
+class	SiriSuggestionsAPI.SiriFeatureSupportPolicyProvider		let	coreSpeechPolicyProvider
+class	SiriSuggestionsAPI.SiriFeatureSupportPolicyProvider		let	afPreferencesProvider
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory			
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory		let	featureFlagProvider
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory		let	kvStoreManager
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory		let	featureSupportPolicyProvider
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory		let	selfLogger
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory		let	cachedDialogProvider
+class	SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory		let	userDefaultsProvider
+class	SiriSuggestionsAPI.DefaultSiriHintsViewService			
+class	SiriSuggestionsAPI.DefaultSiriHintsViewService		let	aceViewFactory
+class	SiriSuggestionsAPI.DefaultSiriHintsViewService		let	claimDeterminer
+struct	SiriSuggestionsAPI.SuggestionList			
+struct	SiriSuggestionsAPI.SuggestionList		let	allSuggestions
+struct	SiriSuggestionsAPI.SuggestionList		let	sourceOwner
+struct	SiriSuggestionsAPI.SuggestionList		let	generationId
+struct	SiriSuggestionsAPI.SuggestionList		let	generationTs
+struct	SiriSuggestionsAPI.SuggestionList		let	experimentId
+enum	SiriSuggestionsAPI.SuggestionList.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionList.CodingKeys		case	generationId
+enum	SiriSuggestionsAPI.SuggestionList.CodingKeys		case	sourceOwner
+enum	SiriSuggestionsAPI.SuggestionList.CodingKeys		case	suggestions
+enum	SiriSuggestionsAPI.SuggestionList.CodingKeys		case	generationTs
+enum	SiriSuggestionsAPI.SuggestionList.CodingKeys		case	experimentId
+enum	SiriSuggestionsAPI.UIActivity			
+enum	SiriSuggestionsAPI.UIActivity		case	presented
+enum	SiriSuggestionsAPI.UIActivity		case	tapped
+enum	SiriSuggestionsAPI.UIActivity		case	rendered
+class	SiriSuggestionsAPI.SelfEmitter			
+class	SiriSuggestionsAPI.DefaultSELFLogger			
+class	SiriSuggestionsAPI.DefaultSELFLogger		let	selfEmitter
+class	SiriSuggestionsAPI.DefaultSELFLogger		let	uuidMapper
+enum	SiriSuggestionsAPI.SELFPerfBlock			
+enum	SiriSuggestionsAPI.SELFPerfBlock		case	total
+enum	SiriSuggestionsAPI.SELFPerfBlock		case	generation
+enum	SiriSuggestionsAPI.SELFPerfBlock		case	resolution
+enum	SiriSuggestionsAPI.SELFPerfBlock		case	filtering
+enum	SiriSuggestionsAPI.SELFPerfBlock		case	ranking
+struct	SiriSuggestionsAPI.DefaultSELFLogger.InvocationDetails			
+struct	SiriSuggestionsAPI.DefaultSELFLogger.InvocationDetails		let	generationTag
+struct	SiriSuggestionsAPI.DefaultSELFLogger.InvocationDetails		let	invocationType
+struct	SiriSuggestionsAPI.PolicyResult			
+struct	SiriSuggestionsAPI.PolicyResult		let	result
+struct	SiriSuggestionsAPI.PolicyResult		let	policyId
+struct	SiriSuggestionsAPI.PolicyResult		let	score
+struct	SiriSuggestionsAPI.PolicyResult		let	childPolicyResults
+enum	SiriSuggestionsAPI.PolicyResult.CodingKeys			
+enum	SiriSuggestionsAPI.PolicyResult.CodingKeys		case	result
+enum	SiriSuggestionsAPI.PolicyResult.CodingKeys		case	policyId
+enum	SiriSuggestionsAPI.PolicyResult.CodingKeys		case	score
+enum	SiriSuggestionsAPI.PolicyResult.CodingKeys		case	childPolicyResults
+class	SiriSuggestionsAPI.SiriRemembersLogger			
+class	SiriSuggestionsAPI.SiriRemembersLogger		let	donator
+class	SiriSuggestionsAPI.SiriRemembersLogger		let	storeProvider
+class	SiriSuggestionsAPI.SiriRemembersLogger		let	clock
+class	SiriSuggestionsAPI.XPCRemembersDonator			
+class	SiriSuggestionsAPI.InProcessRemembersDonator			
+class	SiriSuggestionsAPI.InProcessRemembersDonator		let	writableStore
+class	SiriSuggestionsAPI.InProcessRemembersDonator		let	inProcessStore
+enum	SiriSuggestionsAPI.SuggestionType			
+enum	SiriSuggestionsAPI.SuggestionType		case	crossDomain
+enum	SiriSuggestionsAPI.SuggestionType		case	announcement
+class	SiriSuggestionsAPI.SuggestionDialogCacheProvider			
+enum	SiriSuggestionsAPI.StaticSuggestionDialogCache			
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties			
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementTitle
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementText
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementSpokenDialogDisplayText
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementSpokenDialogSpokenText
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementButtonLabel
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementPunchOutUri
+struct	SiriSuggestionsAPI.AnnouncementDialogProperties		let	announcementThumbnailName
+struct	SiriSuggestionsAPI.CrossDomainHintDialogProperties			
+struct	SiriSuggestionsAPI.CrossDomainHintDialogProperties		let	hintText
+class	SiriSuggestionsAPI.SuggestionsCloudKVStoreManager			
+class	SiriSuggestionsAPI.SuggestionsCloudKVStoreManager		let	educationExposedKeyEnd
+class	SiriSuggestionsAPI.SuggestionsCloudKVStoreManager		let	storeIdentifierString
+class	SiriSuggestionsAPI.SuggestionsCloudKVStoreManager		var	lazy
+class	SiriSuggestionsAPI.SiriHintsSuggestionsDispatcherFactory			
+class	SiriSuggestionsAPI.SiriHintsSuggestionsDispatcherFactory		let	logger
+class	SiriSuggestionsAPI.InAppSuggestionsDispatcherFactory			
+class	SiriSuggestionsAPI.InAppSuggestionsDispatcherFactory		let	suggestionsLogger
+class	SiriSuggestionsAPI.InAppSuggestionsDispatcherFactory		let	selfLogger
+class	SiriSuggestionsAPI.SELFDispatcherFactory			
+class	SiriSuggestionsAPI.SELFDispatcherFactory		let	logger
+enum	SiriSuggestionsAPI.InteractionIdentifier			
+enum	SiriSuggestionsAPI.InteractionIdentifier		case	requestId
+enum	SiriSuggestionsAPI.InteractionIdentifier		case	sessionId
+enum	SiriSuggestionsAPI.InteractionIdentifierType			
+enum	SiriSuggestionsAPI.InteractionIdentifierType		case	request
+enum	SiriSuggestionsAPI.InteractionIdentifierType		case	session
+enum	SiriSuggestionsAPI.InteractionIdentifier.CodingKeys			
+enum	SiriSuggestionsAPI.InteractionIdentifier.CodingKeys		case	requestId
+enum	SiriSuggestionsAPI.InteractionIdentifier.CodingKeys		case	sessionId
+enum	SiriSuggestionsAPI.InteractionIdentifier.RequestIdCodingKeys			
+enum	SiriSuggestionsAPI.InteractionIdentifier.RequestIdCodingKeys		case	_0
+enum	SiriSuggestionsAPI.InteractionIdentifier.SessionIdCodingKeys			
+enum	SiriSuggestionsAPI.InteractionIdentifier.SessionIdCodingKeys		case	_0
+class	SiriSuggestionsAPI.CrossDomainHintCATsSimple			
+class	SiriSuggestionsAPI.CrossDomainHintCATsSimple		let	internalCATWrapperSimple
+class	SiriSuggestionsAPI.CrossDomainHintCATsSimple		let	catGlobals
+enum	SiriSuggestionsAPI.CrossDomainHintCATsSimple.GoBackDialogIds			
+enum	SiriSuggestionsAPI.CrossDomainHintCATsSimple.GoBackDialogIds		case	hintText
+struct	SiriSuggestionsAPI.NoOpSalientEntitiesService			
+class	SiriSuggestionsAPI.RRSalientEntitiesService			
+class	SiriSuggestionsAPI.RRSalientEntitiesService		let	referenceResolutionClient
+class	SiriSuggestionsAPI.RRSalientEntitiesService		let	extractors
+class	SiriSuggestionsAPI.IFSalientEntitiesService			
+class	SiriSuggestionsAPI.IFSalientEntitiesService		let	contextRetriever
+class	SiriSuggestionsAPI.IFSalientEntitiesService		let	enabled
+enum	SiriSuggestionsAPI.RRErrors			
+enum	SiriSuggestionsAPI.RRErrors		case	UNABLETOCOMPLETEQUERY
+class	SiriSuggestionsAPI.NoOpSiriSuggestionsClient			
+class	SiriSuggestionsAPI.NoOpSiriSuggestionsClient		let	description
+struct	SiriSuggestionsAPI.Suggestion			
+struct	SiriSuggestionsAPI.Suggestion		let	identifier
+struct	SiriSuggestionsAPI.Suggestion		let	suggestionId
+struct	SiriSuggestionsAPI.Suggestion		let	presentation
+struct	SiriSuggestionsAPI.Suggestion		let	deliveryVehicle
+struct	SiriSuggestionsAPI.Suggestion		let	owner
+struct	SiriSuggestionsAPI.Suggestion		let	sourceOwner
+struct	SiriSuggestionsAPI.Suggestion		let	invocationAction
+struct	SiriSuggestionsAPI.Suggestion		let	rankInfo
+struct	SiriSuggestionsAPI.Suggestion		let	loggingAction
+struct	SiriSuggestionsAPI.Suggestion		let	channelAndScore
+struct	SiriSuggestionsAPI.Suggestion		let	objective
+struct	SiriSuggestionsAPI.Suggestion		let	associatedTool
+struct	SiriSuggestionsAPI.Suggestion		let	suggestionType
+struct	SiriSuggestionsAPI.SuggestionChannelAndScore			
+struct	SiriSuggestionsAPI.SuggestionChannelAndScore		let	channel
+struct	SiriSuggestionsAPI.SuggestionChannelAndScore		let	score
+struct	SiriSuggestionsAPI.SuggestionPresentation			
+struct	SiriSuggestionsAPI.SuggestionPresentation		let	spokenText
+struct	SiriSuggestionsAPI.SuggestionPresentation		let	displayText
+struct	SiriSuggestionsAPI.SuggestionPresentation		let	description
+struct	SiriSuggestionsAPI.SuggestionPresentation		let	assets
+struct	SiriSuggestionsAPI.SuggestionPresentation		let	locale
+struct	SiriSuggestionsAPI.SuggestionPresentation		let	policyResult
+struct	SiriSuggestionsAPI.RankInfo			
+struct	SiriSuggestionsAPI.RankInfo		let	rank
+struct	SiriSuggestionsAPI.RankInfo		let	score
+struct	SiriSuggestionsAPI.RankInfo		var	tier
+struct	SiriSuggestionsAPI.RankInfo		let	windowTs
+enum	SiriSuggestionsAPI.Tier			
+enum	SiriSuggestionsAPI.Tier		case	tier1
+enum	SiriSuggestionsAPI.Tier		case	tier2
+enum	SiriSuggestionsAPI.Tier		case	fallback
+enum	SiriSuggestionsAPI.RankInfo.CodingKeys			
+enum	SiriSuggestionsAPI.RankInfo.CodingKeys		case	rank
+enum	SiriSuggestionsAPI.RankInfo.CodingKeys		case	score
+enum	SiriSuggestionsAPI.RankInfo.CodingKeys		case	tier
+enum	SiriSuggestionsAPI.RankInfo.CodingKeys		case	windowTs
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys		case	spokenText
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys		case	displayText
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys		case	description
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys		case	assets
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys		case	policyResult
+enum	SiriSuggestionsAPI.SuggestionPresentation.CodingKeys		case	locale
+enum	SiriSuggestionsAPI.SuggestionChannelAndScore.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionChannelAndScore.CodingKeys		case	channel
+enum	SiriSuggestionsAPI.SuggestionChannelAndScore.CodingKeys		case	score
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys			
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	identifier
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	suggestionId
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	deliveryVehicle
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	owner
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	sourceOwner
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	presentation
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	invocationAction
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	rankInfo
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	loggingAction
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	channelAndScore
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	objective
+enum	SiriSuggestionsAPI.Suggestion.CodingKeys		case	associatedTool
+class	SiriSuggestionsAPI.BaseSink			
+class	SiriSuggestionsAPI.BaseSink		let	callback
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory			
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory		let	featureFlagProvider
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory		let	uiDisplayTimeout
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory		let	kvStoreManager
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory		let	selfLogger
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory		let	cachedDialogProvider
+class	SiriSuggestionsAPI.SiriHintsACEViewFactory		let	userDefaultsProvider
+class	SiriSuggestionsAPI.ContinuationsManager			
+class	SiriSuggestionsAPI.ContinuationsManager		var	continuationsResumers
+struct	SiriSuggestionsAPI.ContinuationsManager.ManagedContinuation<B	Swift.Error>		
+struct	SiriSuggestionsAPI.ContinuationsManager.ManagedContinuation<B	Swift.Error>	let	continuation
+struct	SiriSuggestionsAPI.ContinuationsManager.ManagedContinuation<B	Swift.Error>	let	manager
+struct	SiriSuggestionsAPI.ContinuationsManager.ManagedContinuation<B	Swift.Error>	let	continuationId
+enum	SiriSuggestionsAPI.SalientEntityExtractors			
+class	SiriSuggestionsAPI.UsoSalientEntityExtractor			
+class	SiriSuggestionsAPI.UsoSalientEntityExtractor		let	queries
+class	SiriSuggestionsAPI.UsoSalientEntityExtractor		let	transformer
+enum	SiriSuggestionsAPI.TypingSessionEndReason			
+enum	SiriSuggestionsAPI.TypingSessionEndReason		case	dismiss
+enum	SiriSuggestionsAPI.TypingSessionEndReason		case	suggestionTap
+enum	SiriSuggestionsAPI.TypingSessionEndReason		case	switchMode
+enum	SiriSuggestionsAPI.TypingSessionEndReason		case	submit
+class	SiriSuggestionsAPI.SiriSuggestionsFacade			
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	client
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	inAppDispatcherFactory
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	selfLogger
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	flagProvider
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	hintsViewService
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	autoCompleteService
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	siriRequestState
+class	SiriSuggestionsAPI.SiriSuggestionsFacade		let	suggestionsLogger
+enum	SiriSuggestionsAPI.SuggestionErrors			
+enum	SiriSuggestionsAPI.SuggestionErrors		case	runtimeNotInitiated
+enum	SiriSuggestionsAPI.SuggestionErrors		case	clientInitalisationError
+enum	SiriSuggestionsAPI.SuggestionErrors		case	featureDisabled
+struct	SiriSuggestionsAPI.InAppSuggestions			
+struct	SiriSuggestionsAPI.InAppSuggestions		let	suggestionsStream
+struct	SiriSuggestionsAPI.InAppSuggestions		let	displayedCallback
+struct	SiriSuggestionsAPI.InAppSuggestions		let	disconnect
+struct	SiriSuggestionsAPI.PreGeneratedSiriHint			
+struct	SiriSuggestionsAPI.PreGeneratedSiriHint		let	topHint
+struct	SiriSuggestionsAPI.PreGeneratedSiriHint		let	exposureCallback
+struct	SiriSuggestionsAPI.InAppSuggestion			
+struct	SiriSuggestionsAPI.InAppSuggestion		let	suggestion
+struct	SiriSuggestionsAPI.InAppSuggestion		let	exposureCallback
+struct	SiriSuggestionsAPI.AssistantEngineSuggestions			
+struct	SiriSuggestionsAPI.AssistantEngineSuggestions		let	suggestions
+struct	SiriSuggestionsAPI.AssistantEngineSuggestions		let	exposureCallback
+struct	SiriSuggestionsAPI.AssistantEngineSuggestions		let	tappedCallback
+struct	SiriSuggestionsAPI.AssistantEngineSuggestions		let	renderedCallback
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion			
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	displayText
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	invocationText
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	iconInfo
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	uuidIdentifier
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	appBundleId
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	loggingIdentifier
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	source
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	toolInvocation
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	zkwGenerationId
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestion		let	suggestionType
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestionList			
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestionList		let	autoCompleteSuggestions
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestionList		let	tappedCallback
+struct	SiriSuggestionsAPI.SiriAutoCompleteSuggestionList		let	exposureCallback
+struct	SiriSuggestionsAPI.HintsSuggestionsUI			
+struct	SiriSuggestionsAPI.HintsSuggestionsUI		let	snippet
+struct	SiriSuggestionsAPI.HintsSuggestionsUI		let	aceView
+struct	SiriSuggestionsAPI.HintsSuggestionsUI		let	supportingCommands
+struct	SiriSuggestionsAPI.SuggestionExecutionContextData			
+struct	SiriSuggestionsAPI.SuggestionExecutionContextData		let	dialogPhase
+struct	SiriSuggestionsAPI.SuggestionExecutionContextData		let	hasAdditionalCommands
+struct	SiriSuggestionsAPI.SuggestionExecutionContextData		let	patternId
+struct	SiriSuggestionsAPI.PresentationContext			
+struct	SiriSuggestionsAPI.PresentationContext		let	displayAllSuggestions
+struct	SiriSuggestionsAPI.PresentationContext		let	invocationType
+struct	SiriSuggestionsAPI.PresentationContext		var	requestId
+struct	SiriSuggestionsAPI.PresentationContext		let	dialogContextId
+struct	SiriSuggestionsAPI.PresentationContext		var	invokedBefore
+enum	SiriSuggestionsAPI.PresentationContext.CodingKeys			
+enum	SiriSuggestionsAPI.PresentationContext.CodingKeys		case	displayAllSuggestions
+enum	SiriSuggestionsAPI.PresentationContext.CodingKeys		case	invocationType
+enum	SiriSuggestionsAPI.PresentationContext.CodingKeys		case	requestId
+enum	SiriSuggestionsAPI.PresentationContext.CodingKeys		case	dialogContextId
+enum	SiriSuggestionsAPI.PresentationContext.CodingKeys		case	invokedBefore
+class	SiriSuggestionsAPI.ACEViewFactoryChain			
+class	SiriSuggestionsAPI.ACEViewFactoryChain		let	chain
+enum	SiriSuggestionsAPI.SuggestionsDispatchers			
+struct	SiriSuggestionsAPI.NoopSuggestionDispatcher			
+struct	SiriSuggestionsAPI.ChainedDispatcher			
+struct	SiriSuggestionsAPI.ChainedDispatcher		let	chain
+struct	SiriSuggestionsAPI.SiriHelpSuggestion			
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	suggestionId
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	showIcon
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	iconData
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	iconSymbolTintName
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	iconSymbolTintRGBA
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	iconAppBundleId
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	displayText
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	formattedDisplayText
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	iconSymbol
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	description
+struct	SiriSuggestionsAPI.SiriHelpSuggestion		var	directInvocation
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters			
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	displayAllSuggestions
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	speakSuggestions
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	suggestions
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	otherSuggestions
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	conversationalContinuer
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	appBundleId
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	moreSuggestionsDirectInvocation
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	learnMorePunchout
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	appName
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	expectedAppName
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	isSaeEnabled
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	repeatedInvocation
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	isFallback
+struct	SiriSuggestionsAPI.SiriHelpPatternParameters		var	isTipsAppInstalled
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels		case	hintsView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels		case	helpView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels		case	announcementsView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels		case	expandedSuggestionsView
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel			
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel		var	requestId
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel		var	uiDisplayTimeout
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel		var	crossDomainHint
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel			
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	displayAllSuggestions
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	speakSuggestions
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	suggestions
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	otherSuggestions
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	conversationalContinuer
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	appBundleId
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	moreSuggestionsDirectInvocation
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	learnMorePunchout
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		let	isSmartSnippet
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	isSaeEnabled
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	moreCat
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	siriHelpWithAppNameCat
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	learnMoreCat
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	trySayingCat
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	otherIntro
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	siriHelpHeader
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	unsupportedAppHeader
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	seeOtherSuggestionsButton
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel		var	isUnsupportedSnippet
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel			
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	requestId
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	featureType
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementThumbnailName
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementTitle
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementText
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementSpokenDialogDisplayText
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementSpokenDialogSpokenText
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementButtonLabel
+struct	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel		let	announcementPunchOutUri
+enum	SiriSuggestionsAPI.FeatureType			
+enum	SiriSuggestionsAPI.FeatureType		case	magus
+enum	SiriSuggestionsAPI.FeatureType		case	panIndia
+enum	SiriSuggestionsAPI.CrossDomainHintType			
+enum	SiriSuggestionsAPI.CrossDomainHintType		case	goBack
+struct	SiriSuggestionsAPI.CrossDomainHint			
+struct	SiriSuggestionsAPI.CrossDomainHint		let	hintType
+struct	SiriSuggestionsAPI.CrossDomainHint		let	hintText
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel			
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	more
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	siriHelpWithAppName
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	learnMore
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	trySaying
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	otherIntro
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	siriHelpHeader
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	learnMoreWebsite
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	unsupportedApp
+enum	SiriSuggestionsAPI.SiriHelpSnippetLabel		case	seeOtherSuggestionsButton
+enum	SiriSuggestionsAPI.CrossDomainHint.CodingKeys			
+enum	SiriSuggestionsAPI.CrossDomainHint.CodingKeys		case	hintType
+enum	SiriSuggestionsAPI.CrossDomainHint.CodingKeys		case	hintText
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.CodingKeys		case	hintsView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.CodingKeys		case	helpView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.CodingKeys		case	announcementsView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.CodingKeys		case	expandedSuggestionsView
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.HintsViewCodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.HintsViewCodingKeys		case	_0
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.HelpViewCodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.HelpViewCodingKeys		case	_0
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.AnnouncementsViewCodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.AnnouncementsViewCodingKeys		case	_0
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.ExpandedSuggestionsViewCodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.ExpandedSuggestionsViewCodingKeys		case	_0
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	requestId
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	featureType
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementThumbnailName
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementTitle
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementText
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementSpokenDialogDisplayText
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementSpokenDialogSpokenText
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementButtonLabel
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.FeatureAnnouncementDataModel.CodingKeys		case	announcementPunchOutUri
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	displayAllSuggestions
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	speakSuggestions
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	suggestions
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	otherSuggestions
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	conversationalContinuer
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	appBundleId
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	moreSuggestionsDirectInvocation
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	learnMorePunchout
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	isSmartSnippet
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	isSaeEnabled
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	moreCat
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	siriHelpWithAppNameCat
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	learnMoreCat
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	trySayingCat
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	otherIntro
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	siriHelpHeader
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	unsupportedAppHeader
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	seeOtherSuggestionsButton
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHelpDataModel.CodingKeys		case	isUnsupportedSnippet
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel.CodingKeys			
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel.CodingKeys		case	requestId
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel.CodingKeys		case	uiDisplayTimeout
+enum	SiriSuggestionsAPI.SuggestionsRFDataModels.SuggestionHintsDataModel.CodingKeys		case	crossDomainHint
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys			
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	suggestionId
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	showIcon
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	iconData
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	iconSymbolTintName
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	iconSymbolTintRGBA
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	iconAppBundleId
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	displayText
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	formattedDisplayText
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	iconSymbol
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	description
+enum	SiriSuggestionsAPI.SiriHelpSuggestion.CodingKeys		case	directInvocation
+class	SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient			
+class	SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient		let	delegate
+class	SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient		let	catGlobals
+class	SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient		let	deviceState
+class	SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient		let	salientEntitiesService
+class	SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient		let	siriRequestState
+class	SiriSuggestionsAPI.DispatchSELFLogger			
+class	SiriSuggestionsAPI.DispatchSELFLogger		let	validRequestLinkInvocationTypes
+class	SiriSuggestionsAPI.DispatchSELFLogger		let	selfLogger
+class	SiriSuggestionsAPI.SuggestionsOverXPCLogger			
+class	SiriSuggestionsAPI.SuggestionsOverXPCLogger		let	client
+class	SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider			
+class	SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider		let	deviceState
+class	SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider		let	requestState
+class	SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider		let	catGlobalsHolder
+class	SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider		let	salientEntitiesService
+class	SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider		let	xpcClientOverride
+class	SiriSuggestionsAPI.SiriRuntimeSuggestionsAPIClientProvider			
+class	SiriSuggestionsAPI.SiriRuntimeSuggestionsAPIClientProvider		let	assistantTurnState
+class	SiriSuggestionsAPI.SiriSuggestionsXPCOnlyAPIClientProvider			
+class	SiriSuggestionsAPI.NoOpSiriSuggestionsAPIClientProvider			
+class	SiriSuggestionsAPI.SiriSuggestionsXPCClient			
+class	SiriSuggestionsAPI.SiriSuggestionsXPCClient		let	xpcConnection
+class	SiriSuggestionsAPI.SiriSuggestionsXPCClient		let	continuationsManager
+class	SiriSuggestionsAPI.SiriSuggestionsXPCClient		let	description
+enum	SiriSuggestionsAPI.SuggestionsXPCError			
+enum	SiriSuggestionsAPI.SuggestionsXPCError		case	remoteError
+enum	SiriSuggestionsAPI.SuggestionsXPCError		case	connectionFailed
+enum	SiriSuggestionsAPI.SuggestionsXPCError		case	deserializationError
+enum	SiriSuggestionsAPI.SuggestionsXPCError		case	serializationError
+class	SiriSuggestionsAPI.BaseXPCBridge	NSObject		
+class	SiriSuggestionsAPI.BaseXPCBridge	NSObject	let	continuation
+class	SiriSuggestionsAPI.BaseXPCBridge	NSObject	let	dataMapper
+class	SiriSuggestionsAPI.ContinuationBasedXPCBridge	NSObject		
+class	SiriSuggestionsAPI.ContinuationBasedXPCBridge	NSObject	let	baseBridge
+struct	SiriSuggestionsAPI.Interaction			
+struct	SiriSuggestionsAPI.Interaction		let	dialogIdentifiers
+struct	SiriSuggestionsAPI.Interaction		let	executionParameters
+struct	SiriSuggestionsAPI.Interaction		let	intent
+struct	SiriSuggestionsAPI.Interaction		let	owner
+struct	SiriSuggestionsAPI.Interaction		let	verb
+struct	SiriSuggestionsAPI.Interaction		let	requestId
+struct	SiriSuggestionsAPI.Interaction		let	catGlobalProperties
+struct	SiriSuggestionsAPI.Interaction		let	salientEntities
+struct	SiriSuggestionsAPI.Interaction		let	deviceState
+struct	SiriSuggestionsAPI.Interaction		let	generationId
+struct	SiriSuggestionsAPI.Interaction		let	invocationType
+struct	SiriSuggestionsAPI.Interaction		let	relatedIntents
+struct	SiriSuggestionsAPI.Interaction		let	isFirstInvocationSinceOSInstalled
+class	SiriSuggestionsAPI.SiriSuggestionsXPCConstants			
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys			
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	intentProperties
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	dialogIdentifier
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	activityType
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	catGlobalProperties
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	salientEntities
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	deviceState
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	siriRequestState
+enum	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys		case	owner
+class	SiriSuggestionsAPI.FeatureAnnouncementCATsSimple			
+class	SiriSuggestionsAPI.FeatureAnnouncementCATsSimple		let	internalCATWrapperSimple
+class	SiriSuggestionsAPI.FeatureAnnouncementCATsSimple		let	catGlobals
+enum	SiriSuggestionsAPI.Constants			
+class	SiriSuggestionsAPI.SignalledOwner			
+class	SiriSuggestionsAPI.SignalledOwner		let	rootOwner
+class	SiriSuggestionsAPI.SignalledOwner		let	isConversationalContinuer
+class	SiriSuggestionsAPI.SignalledOwner		let	matchedSignalDetails
+struct	SiriSuggestionsAPI.SignalledOwner.SignalKey			
+struct	SiriSuggestionsAPI.SignalledOwner.SignalKey		let	subscribedSignal
+struct	SiriSuggestionsAPI.SignalledOwner.SignalKey		let	activeSignal
+struct	SiriSuggestionsAPI.SignalledOwner.SignalKey		let	distanceFromActive
+enum	SiriSuggestionsAPI.SignalledOwner.CodingKeys			
+enum	SiriSuggestionsAPI.SignalledOwner.CodingKeys		case	rootOwner
+enum	SiriSuggestionsAPI.SignalledOwner.CodingKeys		case	matchedSignalDetails
+enum	SiriSuggestionsAPI.SignalledOwner.CodingKeys		case	isConversationalContinuer
+struct	SiriSuggestionsAPI.CatGlobalsHolder			
+struct	SiriSuggestionsAPI.CatGlobalsHolder		let	properties
+struct	SiriSuggestionsAPI.CatGlobalsHolder		let	deviceName
+enum	SiriSuggestionsAPI.CatGlobalsHolder.CatPropertyKeys			
+enum	SiriSuggestionsAPI.CatGlobalsHolder.CatPropertyKeys		case	properties
+enum	SiriSuggestionsAPI.CatGlobalsHolder.CatPropertyKeys		case	deviceName
+struct	SiriSuggestionsAPI.SiriSuggestionsXPCBridge			
+struct	SiriSuggestionsAPI.SiriSuggestionsXPCBridge		let	delegate
+protocol	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient			
+protocol	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient			
+protocol	SiriSuggestionsAPI.SiriSuggestionsAPIClient			
+protocol	SiriSuggestionsAPI.ACECommandSuggestionDispatcherFactory			
+protocol	SiriSuggestionsAPI.ClaimDeterminer			
+protocol	SiriSuggestionsAPI.EventSuggestionsProvider			
+protocol	SiriSuggestionsAPI.SiriFeatureSupportPolicyProviding			
+protocol	SiriSuggestionsAPI.CoreSpeechPolicyProviding			
+protocol	SiriSuggestionsAPI.SiriHintsViewService			
+protocol	SiriSuggestionsAPI.SELFLogger			
+protocol	SiriSuggestionsAPI.MessageEmitterProto			
+protocol	SiriSuggestionsAPI.SELFPerfContext			
+protocol	SiriSuggestionsAPI.SELFPerfEvent			
+protocol	SiriSuggestionsAPI.ShadowLogger			
+protocol	SiriSuggestionsAPI.RemembersDonator			
+protocol	SiriSuggestionsAPI.CachedDialogProviding			
+protocol	SiriSuggestionsAPI.KVStoreManager			
+protocol	SiriSuggestionsAPI.SuggestionsDispatcherFactory	SinkEventType		
+protocol	SiriSuggestionsAPI.NextSuggestionsProvider			
+protocol	SiriSuggestionsAPI.SalientEntitiesService			
+protocol	SiriSuggestionsAPI.ReferenceResolverProtocol			
+protocol	SiriSuggestionsAPI.ContextRetriever			
+protocol	SiriSuggestionsAPI.SiriSuggestionsBaseClient			
+protocol	SiriSuggestionsAPI.SiriSuggestionsClient			
+protocol	SiriSuggestionsAPI.DelegatingSiriSuggestionsClient			
+protocol	SiriSuggestionsAPI.ACEViewFactory			
+protocol	SiriSuggestionsAPI.SuggestionsDispatcher			
+protocol	SiriSuggestionsAPI.SuggestionDispatcher			
+protocol	SiriSuggestionsAPI.RRSalientEntityExtractor			
+protocol	SiriSuggestionsAPI.SuggestionCATExecuting	ExecuteResult		
+protocol	SiriSuggestionsAPI.CacheKeyCovertible	ExecuteResult		
+protocol	SiriSuggestionsAPI.SiriSuggestionsAPIClientProvider			
+protocol	SiriSuggestionsAPI.SuggestionsLogger			
+protocol	SiriSuggestionsAPI.OfflineSuggestionsProvider			
+protocol	conformance SiriSuggestionsAPI.DonationPolicy	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.DonationPolicy	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsIntentPropertiesTransport	Swift.Encodable		
+protocol	conformance SiriSuggestionsIntentPropertiesTransport.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriSuggestionsIntentPropertiesTransport.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsIntentPropertiesTransport.CodingKeys	Swift.Hashable		
+protocol	conformance SiriSuggestionsIntentPropertiesTransport.CodingKeys	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.SiriSuggestionsAPIClient		
+protocol	conformance SiriSuggestionsIntentPropertiesTransport.CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSuggestionsAPI.ACECommandSuggestionDispatcher	SiriSuggestionsAPI.SuggestionDispatcher		
+protocol	conformance SiriSuggestionsAPI.ACECommandSuggestionDispatcher	SiriSuggestionsAPI.SuggestionsDispatcher		
+protocol	conformance SiriSuggestionsAPI.DefaultACECommandSuggestionDispatcherFactory	SiriSuggestionsAPI.ACECommandSuggestionDispatcherFactory		
+protocol	conformance SiriSuggestionsAPI.SinkCapture	Swift.Actor		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	Swift.Actor		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.DelegatingSiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.ClaimDeterminer		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.SiriSuggestionsAPIClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.SiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.SiriSuggestionsBaseClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriAutoCompleteAPI.AutoCompleteXPCClient		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.EventSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.NextSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.LocalStateStoreClient	SiriSuggestionsAPI.OfflineSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.StoreCache	Swift.Actor		
+protocol	conformance SiriSuggestionsAPI.CoreSpeechPolicyProvider	SiriSuggestionsAPI.CoreSpeechPolicyProviding		
+protocol	conformance SiriSuggestionsAPI.SiriFeatureSupportPolicyProvider	SiriSuggestionsAPI.SiriFeatureSupportPolicyProviding		
+protocol	conformance SiriSuggestionsAPI.FeatureAnnouncementACEViewFactory	SiriSuggestionsAPI.ACEViewFactory		
+protocol	conformance SiriSuggestionsAPI.DefaultSiriHintsViewService	SiriSuggestionsAPI.SiriHintsViewService		
+protocol	conformance SuggestionList	Swift.Decodable		
+protocol	conformance SuggestionList	Swift.Encodable		
+protocol	conformance SuggestionList.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SuggestionList.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SuggestionList.CodingKeys	Swift.Hashable		
+protocol	conformance SuggestionList.CodingKeys	Swift.Equatable		
+protocol	conformance SuggestionList.CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSuggestionsAPI.UIActivity	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.UIActivity	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.UIActivity	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.DefaultSELFLogger	SiriSuggestionsAPI.SELFLogger		
+protocol	conformance SiriSuggestionsAPI.SELFPerfBlock	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.SELFPerfBlock	Swift.Hashable		
+protocol	conformance SUGSchemaSUGRequestContext	SiriSuggestionsAPI.SELFPerfContext		
+protocol	conformance SUGSchemaSUGGenerationStepContext	SiriSuggestionsAPI.SELFPerfContext		
+protocol	conformance SUGSchemaSUGResolutionStepContext	SiriSuggestionsAPI.SELFPerfContext		
+protocol	conformance SUGSchemaSUGFilteringStepContext	SiriSuggestionsAPI.SELFPerfContext		
+protocol	conformance SUGSchemaSUGRankingStepContext	SiriSuggestionsAPI.SELFPerfContext		
+protocol	conformance SUGSchemaSUGRequestStarted	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGRequestEnded	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGGenerationStepStarted	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGGenerationStepEnded	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGResolutionStepStarted	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGResolutionStepEnded	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGFilteringStepStarted	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGFilteringStepEnded	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGRankingStepStarted	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SUGSchemaSUGRankingStepEnded	SiriSuggestionsAPI.SELFPerfEvent		
+protocol	conformance SiriSuggestionsAPI.SelfEmitter	SiriSuggestionsAPI.MessageEmitterProto		
+protocol	conformance SiriSuggestionsAPI.PolicyResult	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.PolicyResult	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.PolicyResult	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSuggestionsAPI.SiriRemembersLogger	SiriSuggestionsAPI.SuggestionsLogger		
+protocol	conformance SiriSuggestionsAPI.SiriRemembersLogger	SiriSuggestionsAPI.ShadowLogger		
+protocol	conformance SiriSuggestionsAPI.XPCRemembersDonator	SiriSuggestionsAPI.RemembersDonator		
+protocol	conformance SiriSuggestionsAPI.InProcessRemembersDonator	SiriSuggestionsAPI.RemembersDonator		
+protocol	conformance SiriSuggestionsAPI.SuggestionType	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.SuggestionDialogCacheProvider	SiriSuggestionsAPI.CachedDialogProviding		
+protocol	conformance SiriSuggestionsAPI.SuggestionsCloudKVStoreManager	SiriSuggestionsAPI.KVStoreManager		
+protocol	conformance SiriSuggestionsAPI.SiriHintsSuggestionsDispatcherFactory	SiriSuggestionsAPI.SuggestionsDispatcherFactory		
+protocol	conformance SiriSuggestionsAPI.InAppSuggestionsDispatcherFactory	SiriSuggestionsAPI.SuggestionsDispatcherFactory		
+protocol	conformance SiriSuggestionsAPI.SELFDispatcherFactory	SiriSuggestionsAPI.SuggestionsDispatcherFactory		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifier	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifier	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifier	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifier	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifier	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifierType	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.InteractionIdentifierType	Swift.Hashable		
+protocol	conformance SessionIdCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionIdCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionIdCodingKeys	Swift.Hashable		
+protocol	conformance SessionIdCodingKeys	Swift.Equatable		
+protocol	conformance RequestIdCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestIdCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestIdCodingKeys	Swift.Hashable		
+protocol	conformance RequestIdCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RequestIdCodingKeys	Swift.CodingKey		
+protocol	conformance SessionIdCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CrossDomainHintCATsSimple.GoBackDialogIds	Swift.Hashable		
+protocol	conformance CrossDomainHintCATsSimple.GoBackDialogIds	Swift.Equatable		
+protocol	conformance CrossDomainHintCATsSimple.GoBackDialogIds	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.NoOpSalientEntitiesService	SiriSuggestionsAPI.SalientEntitiesService		
+protocol	conformance SiriReferenceResolution.ReferenceResolutionClient	SiriSuggestionsAPI.ReferenceResolverProtocol		
+protocol	conformance SiriSuggestionsAPI.RRSalientEntitiesService	SiriSuggestionsAPI.SalientEntitiesService		
+protocol	conformance IntelligenceFlowContext.ContextRetrieval	SiriSuggestionsAPI.ContextRetriever		
+protocol	conformance SiriSuggestionsAPI.IFSalientEntitiesService	SiriSuggestionsAPI.SalientEntitiesService		
+protocol	conformance SiriSuggestionsAPI.RRErrors	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.RRErrors	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.RRErrors	Swift.Error		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.OfflineSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.NextSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.EventSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriAutoCompleteAPI.AutoCompleteXPCClient		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.SiriSuggestionsBaseClient		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsClient	SiriSuggestionsAPI.SiriSuggestionsClient		
+protocol	conformance Suggestion	Swift.Hashable		
+protocol	conformance Suggestion	Swift.Decodable		
+protocol	conformance Suggestion	Swift.Encodable		
+protocol	conformance Suggestion	Swift.CustomStringConvertible		
+protocol	conformance Suggestion	Swift.Equatable		
+protocol	conformance SuggestionChannelAndScore	Swift.Hashable		
+protocol	conformance SuggestionChannelAndScore	Swift.Decodable		
+protocol	conformance SuggestionChannelAndScore	Swift.Encodable		
+protocol	conformance SuggestionChannelAndScore	Swift.Equatable		
+protocol	conformance SuggestionPresentation	Swift.Hashable		
+protocol	conformance SuggestionPresentation	Swift.Decodable		
+protocol	conformance SuggestionPresentation	Swift.Encodable		
+protocol	conformance SuggestionPresentation	Swift.Equatable		
+protocol	conformance RankInfo	Swift.Decodable		
+protocol	conformance RankInfo	Swift.Encodable		
+protocol	conformance RankInfo	Swift.Equatable		
+protocol	conformance Tier	Swift.Equatable		
+protocol	conformance Tier	Swift.Hashable		
+protocol	conformance Tier	Swift.RawRepresentable		
+protocol	conformance Tier	Swift.Decodable		
+protocol	conformance Tier	Swift.Encodable		
+protocol	conformance Tier	Swift.CaseIterable		
+protocol	conformance Suggestion.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Suggestion.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Suggestion.CodingKeys	Swift.Hashable		
+protocol	conformance Suggestion.CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SuggestionPresentation.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SuggestionPresentation.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SuggestionPresentation.CodingKeys	Swift.Hashable		
+protocol	conformance SuggestionPresentation.CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SuggestionPresentation.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Suggestion.CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSuggestionsAPI.SiriHintsACEViewFactory	SiriSuggestionsAPI.ACEViewFactory		
+protocol	conformance SiriSuggestionsAPI.ContinuationsManager	Swift.Actor		
+protocol	conformance SiriSuggestionsAPI.UsoSalientEntityExtractor	SiriSuggestionsAPI.RRSalientEntityExtractor		
+protocol	conformance SiriSuggestionsAPI.TypingSessionEndReason	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.TypingSessionEndReason	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.TypingSessionEndReason	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsFacade	SiriSuggestionsAPI.SiriSuggestionsAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsFacade	SiriSuggestionsAPI.NextSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsFacade	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsFacade	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient		
+protocol	conformance SiriSuggestionsAPI.SuggestionErrors	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.SuggestionErrors	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.SuggestionErrors	Swift.Error		
+protocol	conformance SiriSuggestionsAPI.PresentationContext	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.PresentationContext	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.PresentationContext	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSuggestionsAPI.ACEViewFactoryChain	SiriSuggestionsAPI.ACEViewFactory		
+protocol	conformance SiriSuggestionsAPI.NoopSuggestionDispatcher	SiriSuggestionsAPI.SuggestionsDispatcher		
+protocol	conformance SiriSuggestionsAPI.ChainedDispatcher	SiriSuggestionsAPI.SuggestionsDispatcher		
+protocol	conformance SiriSuggestionsAPI.SiriHelpSuggestion	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.SiriHelpSuggestion	Swift.Encodable		
+protocol	conformance SuggestionsRFDataModels.SuggestionHintsDataModel	SnippetKit.SnippetModel		
+protocol	conformance SuggestionsRFDataModels.SuggestionHintsDataModel	Swift.Decodable		
+protocol	conformance SuggestionsRFDataModels.SuggestionHintsDataModel	Swift.Encodable		
+protocol	conformance SuggestionsRFDataModels.SuggestionHelpDataModel	SnippetKit.SnippetModel		
+protocol	conformance SuggestionsRFDataModels.SuggestionHelpDataModel	Swift.Decodable		
+protocol	conformance SuggestionsRFDataModels.SuggestionHelpDataModel	Swift.Encodable		
+protocol	conformance SuggestionsRFDataModels.FeatureAnnouncementDataModel	SnippetKit.SnippetModel		
+protocol	conformance SuggestionsRFDataModels.FeatureAnnouncementDataModel	Swift.Decodable		
+protocol	conformance SuggestionsRFDataModels.FeatureAnnouncementDataModel	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.SuggestionsRFDataModels	SnippetKit.SnippetPluginModel		
+protocol	conformance SiriSuggestionsAPI.SuggestionsRFDataModels	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.SuggestionsRFDataModels	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.FeatureType	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.FeatureType	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.FeatureType	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.FeatureType	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.FeatureType	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHintType	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHintType	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHintType	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHintType	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHintType	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHint	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHint	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.SiriHelpSnippetLabel	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.SiriHelpSnippetLabel	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.SiriHelpSnippetLabel	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ExpandedSuggestionsViewCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ExpandedSuggestionsViewCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ExpandedSuggestionsViewCodingKeys	Swift.Hashable		
+protocol	conformance ExpandedSuggestionsViewCodingKeys	Swift.Equatable		
+protocol	conformance AnnouncementsViewCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AnnouncementsViewCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AnnouncementsViewCodingKeys	Swift.Hashable		
+protocol	conformance AnnouncementsViewCodingKeys	Swift.Equatable		
+protocol	conformance HelpViewCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HelpViewCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HelpViewCodingKeys	Swift.Hashable		
+protocol	conformance HelpViewCodingKeys	Swift.Equatable		
+protocol	conformance HintsViewCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HintsViewCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HintsViewCodingKeys	Swift.Hashable		
+protocol	conformance HintsViewCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HintsViewCodingKeys	Swift.CodingKey		
+protocol	conformance HelpViewCodingKeys	Swift.CodingKey		
+protocol	conformance AnnouncementsViewCodingKeys	Swift.CodingKey		
+protocol	conformance ExpandedSuggestionsViewCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.DelegatingSiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.SiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.SiriSuggestionsBaseClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriAutoCompleteAPI.AutoCompleteXPCClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.SiriSuggestionsAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.EventSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.NextSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsSupportingDataClient	SiriSuggestionsAPI.OfflineSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.DispatchSELFLogger	SiriSuggestionsAPI.SuggestionsDispatcher		
+protocol	conformance SiriSuggestionsAPI.CrossDomainHintCATsSimple	SiriSuggestionsAPI.SuggestionCATExecuting		
+protocol	conformance SiriSuggestionsAPI.FeatureAnnouncementCATsSimple	SiriSuggestionsAPI.SuggestionCATExecuting		
+protocol	conformance SiriSuggestionsAPI.SuggestionsOverXPCLogger	SiriSuggestionsAPI.SuggestionsLogger		
+protocol	conformance SiriSuggestionsAPI.ConfigurableSuggestionsAPIClientProvider	SiriSuggestionsAPI.SiriSuggestionsAPIClientProvider		
+protocol	conformance SiriSuggestionsAPI.SiriRuntimeSuggestionsAPIClientProvider	SiriSuggestionsAPI.SiriSuggestionsAPIClientProvider		
+protocol	conformance SiriSuggestionsAPI.NoOpSiriSuggestionsAPIClientProvider	SiriSuggestionsAPI.SiriSuggestionsAPIClientProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCOnlyAPIClientProvider	SiriSuggestionsAPI.SiriSuggestionsAPIClientProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.SiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.SiriSuggestionsBaseClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriAutoCompleteAPI.AutoCompleteXPCClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.SiriSuggestionsAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.EventSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.NextSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCClient	SiriSuggestionsAPI.OfflineSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SuggestionsXPCError	Swift.Error		
+protocol	conformance Interaction	Swift.CustomStringConvertible		
+protocol	conformance Interaction	SiriSuggestionsKit.Interaction		
+protocol	conformance Interaction	SiriSuggestionsKit.OwnerProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys	Swift.Equatable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys	Swift.Hashable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys	Swift.RawRepresentable		
+protocol	conformance SiriSuggestionsAPI.SignalledOwner	SiriSuggestionsKit.Owner		
+protocol	conformance SiriSuggestionsAPI.SignalledOwner	SiriSuggestionsKit.Wrappable		
+protocol	conformance SiriSuggestionsAPI.SignalledOwner	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.SignalledOwner	SiriSuggestionsKit.OwnerProvider		
+protocol	conformance SiriSuggestionsAPI.SignalledOwner	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.SignalledOwner	Swift.Encodable		
+protocol	conformance SignalledOwner.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SignalledOwner.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SignalledOwner.CodingKeys	Swift.Hashable		
+protocol	conformance SignalledOwner.CodingKeys	Swift.Equatable		
+protocol	conformance SignalKey	Swift.Equatable		
+protocol	conformance SignalKey	Swift.Hashable		
+protocol	conformance SignalledOwner.CodingKeys	Swift.CodingKey		
+protocol	conformance CatGlobalsHolder.CatPropertyKeys	Swift.Equatable		
+protocol	conformance CatGlobalsHolder.CatPropertyKeys	Swift.Hashable		
+protocol	conformance CatGlobalsHolder.CatPropertyKeys	Swift.CodingKey		
+protocol	conformance CatGlobalsHolder.CatPropertyKeys	Swift.CustomStringConvertible		
+protocol	conformance CatGlobalsHolder.CatPropertyKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriSuggestionsAPI.CatGlobalsHolder	Swift.Decodable		
+protocol	conformance SiriSuggestionsAPI.CatGlobalsHolder	Swift.Encodable		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.DelegatingSiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.SiriSuggestionsClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.SiriSuggestionsBaseClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.SiriSuggestionsEngagementAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriAutoCompleteAPI.AutoCompleteXPCClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	Swift.CustomStringConvertible		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.SiriSuggestionsAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.SiriSuggestionsBaseAPIClient		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.EventSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.NextSuggestionsProvider		
+protocol	conformance SiriSuggestionsAPI.SiriSuggestionsXPCBridge	SiriSuggestionsAPI.OfflineSuggestionsProvider		
+extension	SiriSuggestionsAPI.SiriSuggestionsClientPredefinedTypes	RawRepresentable		
+extension	SiriSuggestionsAPI.UIActivity	RawRepresentable		
+extension	SiriSuggestionsAPI.SiriHintsSuggestionsDispatcherFactory	SuggestionsDispatcherFactory		
+extension	SiriSuggestionsAPI.InAppSuggestionsDispatcherFactory	SuggestionsDispatcherFactory		
+extension	SiriSuggestionsAPI.SELFDispatcherFactory	SuggestionsDispatcherFactory		
+extension	SiriSuggestionsAPI.CrossDomainHintCATsSimple.GoBackDialogIds	RawRepresentable		
+extension	SiriSuggestionsAPI.Tier	RawRepresentable		
+extension	SiriSuggestionsAPI.Tier	CaseIterable		
+extension	SiriSuggestionsAPI.TypingSessionEndReason	RawRepresentable		
+extension	SiriSuggestionsAPI.FeatureType	RawRepresentable		
+extension	SiriSuggestionsAPI.CrossDomainHintType	RawRepresentable		
+extension	SiriSuggestionsAPI.SiriHelpSnippetLabel	RawRepresentable		
+extension	SiriSuggestionsAPI.CrossDomainHintCATsSimple	SuggestionCATExecuting		
+extension	SiriSuggestionsAPI.FeatureAnnouncementCATsSimple	SuggestionCATExecuting		
+extension	SiriSuggestionsAPI.SiriSuggestionsStateStoreDefaultKeys	RawRepresentable		

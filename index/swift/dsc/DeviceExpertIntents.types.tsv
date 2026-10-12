@@ -1,0 +1,1323 @@
+kind	type	conformance	member_kind	member
+struct	DeviceExpertIntents.ContentViewedEvent			
+struct	DeviceExpertIntents.ContentViewedEvent		let	name
+struct	DeviceExpertIntents.ContentViewedEvent		let	sessionIdentifier
+struct	DeviceExpertIntents.ContentViewedEvent		let	clusterIdentifier
+struct	DeviceExpertIntents.ContentViewedEvent		var	context
+struct	DeviceExpertIntents.ContentViewedEvent		var	hasSymbols
+struct	DeviceExpertIntents.ContentViewedEvent		var	responseType
+struct	DeviceExpertIntents.ContentViewedEvent		var	tipCorrelationID
+struct	DeviceExpertIntents.ContentViewedEvent		var	rewriteSummary
+struct	DeviceExpertIntents.ContentViewedEvent		var	highlight
+struct	DeviceExpertIntents.LinkUsedEvent			
+struct	DeviceExpertIntents.LinkUsedEvent		let	name
+struct	DeviceExpertIntents.LinkUsedEvent		let	sessionIdentifier
+struct	DeviceExpertIntents.LinkUsedEvent		let	clusterIdentifier
+struct	DeviceExpertIntents.LinkUsedEvent		let	linkUsed
+struct	DeviceExpertIntents.LinkUsedEvent		let	rewriteSummary
+struct	DeviceExpertIntents.LinkUsedEvent		let	highlight
+enum	DeviceExpertIntents.LinkUsedEvent.LinkType			
+enum	DeviceExpertIntents.LinkUsedEvent.LinkType		case	appIntent
+enum	DeviceExpertIntents.LinkUsedEvent.LinkType		case	href
+struct	DeviceExpertIntents.LinkUsedEvent.AppIntentConfiguration			
+struct	DeviceExpertIntents.LinkUsedEvent.AppIntentConfiguration		let	bundleID
+struct	DeviceExpertIntents.LinkUsedEvent.AppIntentConfiguration		let	name
+struct	DeviceExpertIntents.LinkUsedEvent.AppIntentConfiguration		let	param
+struct	DeviceExpertIntents.SiriSuggestionsEvent			
+struct	DeviceExpertIntents.SiriSuggestionsEvent		let	name
+struct	DeviceExpertIntents.SiriSuggestionsEvent		let	sessionIdentifier
+struct	DeviceExpertIntents.SiriSuggestionsEvent		let	clusterIdentifier
+struct	DeviceExpertIntents.SiriSuggestionsEvent		let	suggestion
+struct	DeviceExpertIntents.SiriSuggestionsEvent		let	suggestionShown
+enum	DeviceExpertIntents.SiriSuggestionsEvent.Suggestion			
+enum	DeviceExpertIntents.SiriSuggestionsEvent.Suggestion		case	appIntent
+enum	DeviceExpertIntents.SiriSuggestionsEvent.Suggestion		case	query
+struct	DeviceExpertIntents.SiriSuggestionsEvent.AppIntentConfiguration			
+struct	DeviceExpertIntents.SiriSuggestionsEvent.AppIntentConfiguration		let	bundleID
+struct	DeviceExpertIntents.SiriSuggestionsEvent.AppIntentConfiguration		let	name
+struct	DeviceExpertIntents.CoreAnalyticsLogger			
+class	DeviceExpertIntents.AnalyticsManager			
+class	DeviceExpertIntents.AnalyticsManager		let	backend
+enum	DeviceExpertIntents.DeviceExpertDiscoverabilityEvent			
+enum	DeviceExpertIntents.DeviceExpertDiscoverabilityEvent		case	contentViewed
+struct	DeviceExpertIntents.BiomeEventSender			
+struct	DeviceExpertIntents.BiomeEventSender		let	discoverabilitySource
+enum	DeviceExpertIntents.AnswerFormatterError			
+enum	DeviceExpertIntents.AnswerFormatterError		case	invalidSymbolFormat
+class	DeviceExpertIntents.AnswerFormatter			
+class	DeviceExpertIntents.AnswerFormatter		var	formattingMap
+class	DeviceExpertIntents.AnswerFormatter		var	skippedOutro
+class	DeviceExpertIntents.AnswerGeneration			
+class	DeviceExpertIntents.AnswerGeneration		let	contextRetriever
+class	DeviceExpertIntents.AnswerGeneration		let	promptManager
+class	DeviceExpertIntents.ContextRetriever			
+class	DeviceExpertIntents.ContextRetriever		let	assistantSupportClient
+class	DeviceExpertIntents.ContextRetriever		let	preferenceProvider
+enum	DeviceExpertIntents.ContextType			
+enum	DeviceExpertIntents.ContextType		case	minimumOSVersion
+enum	DeviceExpertIntents.ContextType		case	minimumHardwareModel
+enum	DeviceExpertIntents.ContextType		case	relevantApp
+enum	DeviceExpertIntents.ContextType		case	settingContext
+enum	DeviceExpertIntents.SettingContextType			
+enum	DeviceExpertIntents.SettingContextType		case	bluetooth
+enum	DeviceExpertIntents.SettingContextType		case	wifi
+enum	DeviceExpertIntents.SettingContextType		case	lowPowerMode
+enum	DeviceExpertIntents.SettingContextType		case	airPlaneMode
+enum	DeviceExpertIntents.SettingContextType		case	locationServices
+enum	DeviceExpertIntents.SettingContextType		case	appleAccountSignedIn
+enum	DeviceExpertIntents.SettingContextType		case	familySharingMember
+enum	DeviceExpertIntents.SettingContextType		case	familyOrganizer
+enum	DeviceExpertIntents.SettingContextType		case	findMy
+enum	DeviceExpertIntents.SettingContextType		case	defaultSilentActionButton
+enum	DeviceExpertIntents.SettingContextType		case	defaultCameraControl
+enum	DeviceExpertIntents.SettingContextType		case	applePaySetup
+enum	DeviceExpertIntents.SettingContextType		case	iCloudBackup
+enum	DeviceExpertIntents.SettingContextType		case	focusModeOn
+enum	DeviceExpertIntents.SettingContextType		case	faceIDSetup
+enum	DeviceExpertIntents.SettingContextType		case	iCloudPhotos
+enum	DeviceExpertIntents.SettingContextType		case	silentMode
+enum	DeviceExpertIntents.BluetoothState			
+enum	DeviceExpertIntents.BluetoothState		case	on
+enum	DeviceExpertIntents.BluetoothState		case	off
+enum	DeviceExpertIntents.WiFiState			
+enum	DeviceExpertIntents.WiFiState		case	connected
+enum	DeviceExpertIntents.WiFiState		case	disconnected
+enum	DeviceExpertIntents.LowPowerModeState			
+enum	DeviceExpertIntents.LowPowerModeState		case	active
+enum	DeviceExpertIntents.LowPowerModeState		case	inactive
+enum	DeviceExpertIntents.AirPlaneModeState			
+enum	DeviceExpertIntents.AirPlaneModeState		case	enabled
+enum	DeviceExpertIntents.AirPlaneModeState		case	disabled
+enum	DeviceExpertIntents.LocationServicesState			
+enum	DeviceExpertIntents.LocationServicesState		case	enabled
+enum	DeviceExpertIntents.LocationServicesState		case	disabled
+enum	DeviceExpertIntents.AppleAccountSignedInState			
+enum	DeviceExpertIntents.AppleAccountSignedInState		case	signedIn
+enum	DeviceExpertIntents.AppleAccountSignedInState		case	signedOut
+enum	DeviceExpertIntents.FamilySharingMemberState			
+enum	DeviceExpertIntents.FamilySharingMemberState		case	member
+enum	DeviceExpertIntents.FamilySharingMemberState		case	notMember
+enum	DeviceExpertIntents.FamilyOrganizerState			
+enum	DeviceExpertIntents.FamilyOrganizerState		case	organizer
+enum	DeviceExpertIntents.FamilyOrganizerState		case	notOrganizer
+enum	DeviceExpertIntents.FindMyState			
+enum	DeviceExpertIntents.FindMyState		case	enabled
+enum	DeviceExpertIntents.FindMyState		case	disabled
+enum	DeviceExpertIntents.FocusModeState			
+enum	DeviceExpertIntents.FocusModeState		case	on
+enum	DeviceExpertIntents.FocusModeState		case	off
+enum	DeviceExpertIntents.ActionButtonState			
+enum	DeviceExpertIntents.ActionButtonState		case	silent
+enum	DeviceExpertIntents.ActionButtonState		case	customized
+enum	DeviceExpertIntents.CameraControlState			
+enum	DeviceExpertIntents.CameraControlState		case	defaultSetting
+enum	DeviceExpertIntents.CameraControlState		case	customized
+enum	DeviceExpertIntents.SetupState			
+enum	DeviceExpertIntents.SetupState		case	setup
+enum	DeviceExpertIntents.SetupState		case	notSetup
+enum	DeviceExpertIntents.CloudServiceState			
+enum	DeviceExpertIntents.CloudServiceState		case	enabled
+enum	DeviceExpertIntents.CloudServiceState		case	disabled
+enum	DeviceExpertIntents.SilentModeState			
+enum	DeviceExpertIntents.SilentModeState		case	silent
+enum	DeviceExpertIntents.SilentModeState		case	notSilent
+enum	DeviceExpertIntents.AppState			
+enum	DeviceExpertIntents.AppState		case	onScreen
+enum	DeviceExpertIntents.AppState		case	offScreen
+enum	DeviceExpertIntents.AppState		case	missing
+class	DeviceExpertIntents.TokenGeneratorActor			
+class	DeviceExpertIntents.PromptManager			
+class	DeviceExpertIntents.PromptManager		let	promptTemplateId
+class	DeviceExpertIntents.SystemPreferenceProvider			
+struct	DeviceExpertIntents.DeviceExpertResult			
+struct	DeviceExpertIntents.DeviceExpertResult		let	id
+struct	DeviceExpertIntents.DeviceExpertResult		let	question
+struct	DeviceExpertIntents.DeviceExpertResult		let	templateType
+struct	DeviceExpertIntents.DeviceExpertResult		let	answer
+struct	DeviceExpertIntents.DeviceExpertResult		let	disclaimer
+struct	DeviceExpertIntents.DeviceExpertResult		let	actions
+struct	DeviceExpertIntents.DeviceExpertResult		let	attributions
+struct	DeviceExpertIntents.DeviceExpertResult		let	deviceContext
+struct	DeviceExpertIntents.DeviceExpertResult		let	metadata
+struct	DeviceExpertIntents.DeviceExpertResult		let	contentReferences
+struct	DeviceExpertIntents.DeviceExpertResult		let	contextTags
+struct	DeviceExpertIntents.DeviceExpertResult		let	siriSuggestions
+enum	DeviceExpertIntents.DeviceExpertResult.Platform			
+enum	DeviceExpertIntents.DeviceExpertResult.Platform		case	iOS
+enum	DeviceExpertIntents.DeviceExpertResult.Platform		case	macOS
+enum	DeviceExpertIntents.DeviceExpertResult.Platform		case	tvOS
+enum	DeviceExpertIntents.DeviceExpertResult.Platform		case	watchOS
+enum	DeviceExpertIntents.DeviceExpertResult.Platform		case	visionOS
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily			
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily		case	iPhone
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily		case	iPad
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily		case	mac
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily		case	appleTV
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily		case	appleWatch
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceFamily		case	appleVision
+struct	DeviceExpertIntents.DeviceExpertResult.DeviceContext			
+struct	DeviceExpertIntents.DeviceExpertResult.DeviceContext		let	platform
+struct	DeviceExpertIntents.DeviceExpertResult.DeviceContext		let	version
+struct	DeviceExpertIntents.DeviceExpertResult.DeviceContext		let	families
+struct	DeviceExpertIntents.DeviceExpertResult.DeviceContext		let	language
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata			
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata		let	relevanceScore
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata		let	isLiveAnswer
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata		let	isCrossDeviceSnippet
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata		let	clusterID
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata		let	snippetResponseType
+struct	DeviceExpertIntents.DeviceExpertResult.ResultMetadata		let	summary
+struct	DeviceExpertIntents.DeviceExpertResult.ContentReferences			
+struct	DeviceExpertIntents.DeviceExpertResult.ContentReferences		let	tipsReference
+struct	DeviceExpertIntents.DeviceExpertResult.ContentReferences		let	supportFlowID
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference			
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference		case	tip
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference		case	collection
+enum	DeviceExpertIntents.DeviceExpertResult.TemplateType			
+enum	DeviceExpertIntents.DeviceExpertResult.TemplateType		case	unknown
+enum	DeviceExpertIntents.DeviceExpertResult.TemplateType		case	generatedAnswer
+enum	DeviceExpertIntents.DeviceExpertResult.TemplateType		case	terminology
+enum	DeviceExpertIntents.DeviceExpertResult.TemplateType		case	redirect
+enum	DeviceExpertIntents.DeviceExpertResult.TemplateType		case	searchResults
+struct	DeviceExpertIntents.DeviceExpertResult.Answer			
+struct	DeviceExpertIntents.DeviceExpertResult.Answer		let	title
+struct	DeviceExpertIntents.DeviceExpertResult.Answer		let	summary
+struct	DeviceExpertIntents.DeviceExpertResult.Answer		let	intro
+struct	DeviceExpertIntents.DeviceExpertResult.Answer		let	outro
+struct	DeviceExpertIntents.DeviceExpertResult.Answer		let	steps
+struct	DeviceExpertIntents.DeviceExpertResult.Answer		let	listStyle
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.ListStyle			
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.ListStyle		case	unknown
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.ListStyle		case	ordered
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.ListStyle		case	unordered
+struct	DeviceExpertIntents.DeviceExpertResult.AnswerStep			
+struct	DeviceExpertIntents.DeviceExpertResult.AnswerStep		let	tokens
+struct	DeviceExpertIntents.DeviceExpertResult.AnswerToken			
+struct	DeviceExpertIntents.DeviceExpertResult.AnswerToken		let	tokenType
+struct	DeviceExpertIntents.DeviceExpertResult.AnswerToken		let	color
+struct	DeviceExpertIntents.DeviceExpertResult.AnswerToken		let	isHighlighted
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType		case	text
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType		case	symbol
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor		case	primary
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor		case	secondary
+struct	DeviceExpertIntents.DeviceExpertResult.FormattedText			
+struct	DeviceExpertIntents.DeviceExpertResult.FormattedText		let	tokens
+struct	DeviceExpertIntents.DeviceExpertResult.Action			
+struct	DeviceExpertIntents.DeviceExpertResult.Action		let	id
+struct	DeviceExpertIntents.DeviceExpertResult.Action		let	label
+struct	DeviceExpertIntents.DeviceExpertResult.Action		let	actionType
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType		case	intent
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType		case	url
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType		case	unknown
+struct	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent			
+struct	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent		let	bundleID
+struct	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent		let	intentName
+struct	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent		let	parameters
+struct	DeviceExpertIntents.DeviceExpertResult.Action.ActionUrl			
+struct	DeviceExpertIntents.DeviceExpertResult.Action.ActionUrl		let	href
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution			
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution		let	id
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution		let	type
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType		case	article
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType		case	topic
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle			
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle		let	label
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle		let	articleID
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle		let	url
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic			
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic		let	label
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic		let	productID
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic		let	topicID
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic		let	url
+struct	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic		let	userGuideName
+struct	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion			
+struct	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion		let	id
+struct	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion		let	suggestionType
+struct	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion		let	suggestionText
+struct	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion		let	appIntent
+struct	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion		let	appBundle
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.SuggestionType			
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.SuggestionType		case	unknown
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.SuggestionType		case	related
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.SuggestionType		case	action
+struct	DeviceExpertIntents.DeviceExpertResult.ContextTag			
+struct	DeviceExpertIntents.DeviceExpertResult.ContextTag		let	tagName
+struct	DeviceExpertIntents.DeviceExpertResult.ContextTag		let	values
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	id
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	question
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	templateType
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	answer
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	disclaimer
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	actions
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	attributions
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	deviceContext
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	metadata
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	contentReferences
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	contextTags
+enum	DeviceExpertIntents.DeviceExpertResult.CodingKeys		case	siriSuggestions
+enum	DeviceExpertIntents.DeviceExpertResult.ContextTag.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.ContextTag.CodingKeys		case	tagName
+enum	DeviceExpertIntents.DeviceExpertResult.ContextTag.CodingKeys		case	values
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.CodingKeys		case	id
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.CodingKeys		case	suggestionType
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.CodingKeys		case	suggestionText
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.CodingKeys		case	appIntent
+enum	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.CodingKeys		case	appBundle
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.CodingKeys		case	id
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.CodingKeys		case	type
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.CodingKeys		case	article
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.CodingKeys		case	topic
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.ArticleCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.ArticleCodingKeys		case	_0
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.TopicCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.TopicCodingKeys		case	_0
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic.CodingKeys		case	label
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic.CodingKeys		case	productID
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic.CodingKeys		case	topicID
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic.CodingKeys		case	url
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionTopic.CodingKeys		case	userGuideName
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle.CodingKeys		case	label
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle.CodingKeys		case	articleID
+enum	DeviceExpertIntents.DeviceExpertResult.Attribution.AttributionType.AttributionArticle.CodingKeys		case	url
+enum	DeviceExpertIntents.DeviceExpertResult.Action.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.CodingKeys		case	id
+enum	DeviceExpertIntents.DeviceExpertResult.Action.CodingKeys		case	label
+enum	DeviceExpertIntents.DeviceExpertResult.Action.CodingKeys		case	actionType
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionUrl.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionUrl.CodingKeys		case	href
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent.CodingKeys		case	bundleID
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent.CodingKeys		case	intentName
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionIntent.CodingKeys		case	parameters
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.CodingKeys		case	unknown
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.CodingKeys		case	intent
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.CodingKeys		case	url
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.UnknownCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.IntentCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.IntentCodingKeys		case	_0
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.UrlCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Action.ActionType.UrlCodingKeys		case	_0
+enum	DeviceExpertIntents.DeviceExpertResult.FormattedText.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.FormattedText.CodingKeys		case	tokens
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.CodingKeys		case	tokenType
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.CodingKeys		case	color
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.CodingKeys		case	isHighlighted
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor.CodingKeys		case	primary
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor.CodingKeys		case	secondary
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor.PrimaryCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor.SecondaryCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.CodingKeys		case	text
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.CodingKeys		case	symbol
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.TextCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.TextCodingKeys		case	_0
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.SymbolCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.SymbolCodingKeys		case	name
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenType.SymbolCodingKeys		case	altText
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerStep.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.AnswerStep.CodingKeys		case	tokens
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys		case	title
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys		case	summary
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys		case	intro
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys		case	outro
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys		case	steps
+enum	DeviceExpertIntents.DeviceExpertResult.Answer.CodingKeys		case	listStyle
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.CodingKeys		case	tipsReference
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.CodingKeys		case	supportFlowID
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.CodingKeys		case	tip
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.CodingKeys		case	collection
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.TipCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.TipCodingKeys		case	tipID
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.CollectionCodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.ContentReferences.TipsReference.CollectionCodingKeys		case	collectionID
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys		case	relevanceScore
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys		case	isLiveAnswer
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys		case	isCrossDeviceSnippet
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys		case	clusterID
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys		case	snippetResponseType
+enum	DeviceExpertIntents.DeviceExpertResult.ResultMetadata.CodingKeys		case	summary
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceContext.CodingKeys			
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceContext.CodingKeys		case	platform
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceContext.CodingKeys		case	version
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceContext.CodingKeys		case	families
+enum	DeviceExpertIntents.DeviceExpertResult.DeviceContext.CodingKeys		case	language
+struct	DeviceExpertIntents.DeviceExpertIntentAttributes			
+struct	DeviceExpertIntents.DeviceExpertIntentAttributes		let	attributionGroup
+struct	DeviceExpertIntents.DeviceExpertIntentAttributes		let	foundation
+enum	DeviceExpertIntents.DeviceExpertIntentAttributes.AttributionGroupKey			
+struct	DeviceExpertIntents.OutputHelper			
+struct	DeviceExpertIntents.OutputHelper		let	responseGenerator
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow			
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	outputPublisher
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	assistantSupportClient
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	catProvider
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	biomeEventSender
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	siriKitEventSender
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	tipKitEventSender
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	locProvider
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	outputHelper
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	enableSuggestions
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	enableContextualRewrite
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	analyticsManager
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		let	deviceState
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		var	pommesResponse
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		var	experience
+class	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow		var	feedbackModel
+enum	DeviceExpertIntents.RewriteTimeoutError			
+enum	DeviceExpertIntents.RewriteTimeoutError		case	timeout
+class	DeviceExpertIntents.DeviceExpertCATsSimple	SiriDialogEngine.CATWrapperSimple		
+enum	DeviceExpertIntents.DeviceExpertCATsSimple.AttributionGroupDialogIds			
+enum	DeviceExpertIntents.DeviceExpertCATsSimple.AttributionGroupDialogIds		case	attributionGroupDisplayName
+enum	DeviceExpertIntents.DeviceExpertCATsSimple.AttributionListDialogIds			
+enum	DeviceExpertIntents.DeviceExpertCATsSimple.AttributionListDialogIds		case	attributionGroupsDisplayName
+struct	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag			
+struct	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag		let	tagName
+struct	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag		let	values
+struct	DeviceExpertIntents.ContentViewedDebugInfo			
+struct	DeviceExpertIntents.ContentViewedDebugInfo		let	question
+struct	DeviceExpertIntents.ContentViewedDebugInfo		let	qnaID
+struct	DeviceExpertIntents.ContentViewedDebugInfo		let	attributionsURLs
+struct	DeviceExpertIntents.ContentViewedDebugInfo		let	contextTags
+enum	DeviceExpertIntents.ContentViewedDebugInfo.CodingKeys			
+enum	DeviceExpertIntents.ContentViewedDebugInfo.CodingKeys		case	question
+enum	DeviceExpertIntents.ContentViewedDebugInfo.CodingKeys		case	qnaID
+enum	DeviceExpertIntents.ContentViewedDebugInfo.CodingKeys		case	attributionsURLs
+enum	DeviceExpertIntents.ContentViewedDebugInfo.CodingKeys		case	contextTags
+enum	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag.CodingKeys			
+enum	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag.CodingKeys		case	tagName
+enum	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag.CodingKeys		case	values
+struct	DeviceExpertIntents.AttributionItem			
+struct	DeviceExpertIntents.AttributionItem		var	id
+struct	DeviceExpertIntents.AttributionItem		var	group
+struct	DeviceExpertIntents.AttributionItem		var	title
+struct	DeviceExpertIntents.AttributionItem		var	subtitle
+struct	DeviceExpertIntents.AttributionItem		var	thumbnailImage
+struct	DeviceExpertIntents.AttributionItem		var	_appPunchOut
+struct	DeviceExpertIntents.AttributionGroup			
+struct	DeviceExpertIntents.AttributionGroup		var	name
+struct	DeviceExpertIntents.AttributionGroup		var	displayLabel
+struct	DeviceExpertIntents.AttributionGroup		var	attributions
+enum	DeviceExpertIntents.AttributionGroup.CodingKeys			
+enum	DeviceExpertIntents.AttributionGroup.CodingKeys		case	name
+enum	DeviceExpertIntents.AttributionGroup.CodingKeys		case	displayLabel
+enum	DeviceExpertIntents.AttributionGroup.CodingKeys		case	attributions
+enum	DeviceExpertIntents.AttributionItem.CodingKeys			
+enum	DeviceExpertIntents.AttributionItem.CodingKeys		case	id
+enum	DeviceExpertIntents.AttributionItem.CodingKeys		case	group
+enum	DeviceExpertIntents.AttributionItem.CodingKeys		case	title
+enum	DeviceExpertIntents.AttributionItem.CodingKeys		case	subtitle
+enum	DeviceExpertIntents.AttributionItem.CodingKeys		case	thumbnailImage
+enum	DeviceExpertIntents.AttributionItem.CodingKeys		case	appPunchOut
+enum	DeviceExpertIntents.SelectableContentItemStyle			
+enum	DeviceExpertIntents.SelectableContentItemStyle		case	numbered
+enum	DeviceExpertIntents.SelectableContentItemStyle		case	bullet
+enum	DeviceExpertIntents.SelectableContentItemStyle		case	none
+struct	DeviceExpertIntents.AttributionListSnippetModel			
+struct	DeviceExpertIntents.AttributionListSnippetModel		var	_attributions
+struct	DeviceExpertIntents.AttributionListSnippetModel		var	_context
+enum	DeviceExpertIntents.AttributionListSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.AttributionListSnippetModel.CodingKeys		case	attributions
+enum	DeviceExpertIntents.AttributionListSnippetModel.CodingKeys		case	context
+struct	DeviceExpertIntents.AttributionSnippetModel			
+struct	DeviceExpertIntents.AttributionSnippetModel		var	_attributionModel
+struct	DeviceExpertIntents.AttributionSnippetModel		var	_context
+enum	DeviceExpertIntents.AttributionSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.AttributionSnippetModel.CodingKeys		case	attributionModel
+enum	DeviceExpertIntents.AttributionSnippetModel.CodingKeys		case	context
+struct	DeviceExpertIntents.LearnMoreSnippetModel			
+struct	DeviceExpertIntents.LearnMoreSnippetModel		var	_body
+struct	DeviceExpertIntents.LearnMoreSnippetModel		var	_context
+enum	DeviceExpertIntents.LearnMoreSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.LearnMoreSnippetModel.CodingKeys		case	body
+enum	DeviceExpertIntents.LearnMoreSnippetModel.CodingKeys		case	context
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel			
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_title
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_intro
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_steps
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_outro
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_disclaimer
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_attributionModel
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	_context
+struct	DeviceExpertIntents.ListStyleAnswerSnippetModel		var	listStyle
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle			
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle		case	ordered
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle		case	unordered
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	title
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	intro
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	steps
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	outro
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	disclaimer
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	attributionModel
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	context
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.CodingKeys		case	listStyle
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle.CodingKeys			
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle.CodingKeys		case	ordered
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle.CodingKeys		case	unordered
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle.OrderedCodingKeys			
+enum	DeviceExpertIntents.ListStyleAnswerSnippetModel.ListStyle.UnorderedCodingKeys			
+struct	DeviceExpertIntents.SummarizedAnswerSnippetModel			
+struct	DeviceExpertIntents.SummarizedAnswerSnippetModel		var	_title
+struct	DeviceExpertIntents.SummarizedAnswerSnippetModel		var	_body
+struct	DeviceExpertIntents.SummarizedAnswerSnippetModel		var	_disclaimer
+struct	DeviceExpertIntents.SummarizedAnswerSnippetModel		var	_attributionModel
+struct	DeviceExpertIntents.SummarizedAnswerSnippetModel		var	_context
+enum	DeviceExpertIntents.SummarizedAnswerSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.SummarizedAnswerSnippetModel.CodingKeys		case	title
+enum	DeviceExpertIntents.SummarizedAnswerSnippetModel.CodingKeys		case	body
+enum	DeviceExpertIntents.SummarizedAnswerSnippetModel.CodingKeys		case	disclaimer
+enum	DeviceExpertIntents.SummarizedAnswerSnippetModel.CodingKeys		case	attributionModel
+enum	DeviceExpertIntents.SummarizedAnswerSnippetModel.CodingKeys		case	context
+struct	DeviceExpertIntents.SupplementarySnippetModel			
+struct	DeviceExpertIntents.SupplementarySnippetModel		var	_actions
+struct	DeviceExpertIntents.SupplementarySnippetModel		var	_attributionModel
+struct	DeviceExpertIntents.SupplementarySnippetModel		var	_tipCollectionModel
+struct	DeviceExpertIntents.SupplementarySnippetModel		var	_context
+enum	DeviceExpertIntents.SupplementarySnippetModel.CodingKeys			
+enum	DeviceExpertIntents.SupplementarySnippetModel.CodingKeys		case	actions
+enum	DeviceExpertIntents.SupplementarySnippetModel.CodingKeys		case	attributionModel
+enum	DeviceExpertIntents.SupplementarySnippetModel.CodingKeys		case	tipCollectionModel
+enum	DeviceExpertIntents.SupplementarySnippetModel.CodingKeys		case	context
+struct	DeviceExpertIntents.TipSnippetModel			
+struct	DeviceExpertIntents.TipSnippetModel		var	_identifier
+struct	DeviceExpertIntents.TipSnippetModel		var	_title
+struct	DeviceExpertIntents.TipSnippetModel		var	_bodyContent
+struct	DeviceExpertIntents.TipSnippetModel		var	_language
+struct	DeviceExpertIntents.TipSnippetModel		var	_thumbnailAssetConfiguration
+struct	DeviceExpertIntents.TipSnippetModel		var	_context
+struct	DeviceExpertIntents.TipSnippetModel.AssetConfiguration			
+struct	DeviceExpertIntents.TipSnippetModel.AssetConfiguration		var	lightThumbnailURL
+struct	DeviceExpertIntents.TipSnippetModel.AssetConfiguration		var	darkThumbnailURL
+struct	DeviceExpertIntents.TipSnippetModel.AssetConfiguration		var	heightToWidthRatio
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys		case	identifier
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys		case	title
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys		case	bodyContentData
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys		case	language
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys		case	thumbnailAssetConfiguration
+enum	DeviceExpertIntents.TipSnippetModel.CodingKeys		case	context
+enum	DeviceExpertIntents.TipSnippetModel.AssetConfiguration.CodingKeys			
+enum	DeviceExpertIntents.TipSnippetModel.AssetConfiguration.CodingKeys		case	lightThumbnailURL
+enum	DeviceExpertIntents.TipSnippetModel.AssetConfiguration.CodingKeys		case	darkThumbnailURL
+enum	DeviceExpertIntents.TipSnippetModel.AssetConfiguration.CodingKeys		case	heightToWidthRatio
+struct	DeviceExpertIntents.TroubleshootingSnippetModel			
+struct	DeviceExpertIntents.TroubleshootingSnippetModel		var	issueType
+struct	DeviceExpertIntents.TroubleshootingSnippetModel		var	_actions
+struct	DeviceExpertIntents.TroubleshootingSnippetModel		var	_body
+struct	DeviceExpertIntents.TroubleshootingSnippetModel		var	_context
+enum	DeviceExpertIntents.TroubleshootingSnippetModel.CodingKeys			
+enum	DeviceExpertIntents.TroubleshootingSnippetModel.CodingKeys		case	issueType
+enum	DeviceExpertIntents.TroubleshootingSnippetModel.CodingKeys		case	actions
+enum	DeviceExpertIntents.TroubleshootingSnippetModel.CodingKeys		case	body
+enum	DeviceExpertIntents.TroubleshootingSnippetModel.CodingKeys		case	context
+struct	DeviceExpertIntents.AttributionModel			
+struct	DeviceExpertIntents.AttributionModel		let	storage
+enum	DeviceExpertIntents.AttributionModel.CodingKeys			
+enum	DeviceExpertIntents.AttributionModel.CodingKeys		case	storage
+enum	DeviceExpertIntents.AttributionModel.Storage			
+enum	DeviceExpertIntents.AttributionModel.Storage		case	groups
+enum	DeviceExpertIntents.AttributionModel.Storage		case	label
+enum	DeviceExpertIntents.AttributionModel.Storage.CodingKeys			
+enum	DeviceExpertIntents.AttributionModel.Storage.CodingKeys		case	groups
+enum	DeviceExpertIntents.AttributionModel.Storage.CodingKeys		case	label
+struct	DeviceExpertIntents.ContextualRewriteResult			
+struct	DeviceExpertIntents.ContextualRewriteResult		var	resolvedResult
+struct	DeviceExpertIntents.ContextualRewriteResult		var	rewriteSummary
+struct	DeviceExpertIntents.ContextualRewriteSummary			
+struct	DeviceExpertIntents.ContextualRewriteSummary		var	rewriteAttempt
+struct	DeviceExpertIntents.ContextualRewriteSummary		var	rewriteShown
+struct	DeviceExpertIntents.ContextualRewriteSummary		var	rewriteElapsedTime
+struct	DeviceExpertIntents.ContextualRewriteSummary		var	rewritePromptWordCount
+struct	DeviceExpertIntents.ContextualRewriteSummary		var	rewriteOutputWordCount
+enum	DeviceExpertIntents.ContextualRewriteSummary.CodingKeys			
+enum	DeviceExpertIntents.ContextualRewriteSummary.CodingKeys		case	rewriteAttempt
+enum	DeviceExpertIntents.ContextualRewriteSummary.CodingKeys		case	rewriteShown
+enum	DeviceExpertIntents.ContextualRewriteSummary.CodingKeys		case	rewriteElapsedTime
+enum	DeviceExpertIntents.ContextualRewriteSummary.CodingKeys		case	rewritePromptWordCount
+enum	DeviceExpertIntents.ContextualRewriteSummary.CodingKeys		case	rewriteOutputWordCount
+struct	DeviceExpertIntents.FeedbackModel			
+struct	DeviceExpertIntents.FeedbackModel		var	question
+struct	DeviceExpertIntents.FeedbackModel		var	answer
+enum	DeviceExpertIntents.FeedbackModel.CodingKeys			
+enum	DeviceExpertIntents.FeedbackModel.CodingKeys		case	question
+enum	DeviceExpertIntents.FeedbackModel.CodingKeys		case	answer
+class	DeviceExpertIntents.FlowContext			
+class	DeviceExpertIntents.FlowContext		var	sessionId
+class	DeviceExpertIntents.FlowContext		var	clusterId
+class	DeviceExpertIntents.FlowContext		var	rewriteSummary
+class	DeviceExpertIntents.FlowContext		var	highlight
+enum	DeviceExpertIntents.FlowContext.CodingKeys			
+enum	DeviceExpertIntents.FlowContext.CodingKeys		case	sessionId
+enum	DeviceExpertIntents.FlowContext.CodingKeys		case	clusterId
+enum	DeviceExpertIntents.FlowContext.CodingKeys		case	rewriteSummary
+enum	DeviceExpertIntents.FlowContext.CodingKeys		case	highlight
+struct	DeviceExpertIntents.SnippetResponseComponents			
+struct	DeviceExpertIntents.SnippetResponseComponents		var	resultModel
+struct	DeviceExpertIntents.SnippetResponseComponents		var	smartDialogModel
+struct	DeviceExpertIntents.SnippetResponseComponents		var	attributionModel
+enum	DeviceExpertIntents.SnippetResponseType			
+enum	DeviceExpertIntents.SnippetResponseType		case	unknown
+enum	DeviceExpertIntents.SnippetResponseType		case	orderedList
+enum	DeviceExpertIntents.SnippetResponseType		case	unorderedList
+enum	DeviceExpertIntents.SnippetResponseType		case	passage
+enum	DeviceExpertIntents.SnippetResponseType		case	learnMore
+enum	DeviceExpertIntents.SnippetResponseType		case	tip
+enum	DeviceExpertIntents.SnippetResponseType		case	troubleshooting
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	attributionList
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	attribution
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	learnMore
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	listStyleAnswer
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	summarizedAnswer
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	supplementary
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	tip
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels		case	troubleshooting
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	attributionList
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	attribution
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	learnMore
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	listStyleAnswer
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	summarizedAnswer
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	supplementary
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	tip
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.CodingKeys		case	troubleshooting
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.AttributionListCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.AttributionListCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.AttributionCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.AttributionCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.LearnMoreCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.LearnMoreCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.ListStyleAnswerCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.ListStyleAnswerCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.SummarizedAnswerCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.SummarizedAnswerCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.SupplementaryCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.SupplementaryCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.TipCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.TipCodingKeys		case	_0
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.TroubleshootingCodingKeys			
+enum	DeviceExpertIntents.TellMeGeneratedSnippetModels.TroubleshootingCodingKeys		case	_0
+struct	DeviceExpertIntents.TipCollectionModel			
+struct	DeviceExpertIntents.TipCollectionModel		var	collectionIdentifier
+struct	DeviceExpertIntents.TipCollectionModel		var	collectionSymbol
+struct	DeviceExpertIntents.TipCollectionModel		var	title
+struct	DeviceExpertIntents.TipCollectionModel		var	bodyText
+enum	DeviceExpertIntents.TipCollectionModel.CodingKeys			
+enum	DeviceExpertIntents.TipCollectionModel.CodingKeys		case	collectionIdentifier
+enum	DeviceExpertIntents.TipCollectionModel.CodingKeys		case	collectionSymbol
+enum	DeviceExpertIntents.TipCollectionModel.CodingKeys		case	title
+enum	DeviceExpertIntents.TipCollectionModel.CodingKeys		case	bodyText
+struct	DeviceExpertIntents.ResponseContext			
+struct	DeviceExpertIntents.ResponseContext		var	deviceIdiom
+class	DeviceExpertIntents.SiriKitTaskLoggingProvider			
+struct	DeviceExpertIntents.TipKitEventSender			
+enum	DeviceExpertIntents.DeviceExpertTip			
+enum	DeviceExpertIntents.DeviceExpertTip		case	askSiriHow
+class	DeviceExpertIntents.AttributionBuilder			
+class	DeviceExpertIntents.AttributionBuilder		let	catProvider
+class	DeviceExpertIntents.AttributionItemFactory			
+class	DeviceExpertIntents.AttributionItemFactory		let	supportedAppInfoProvider
+class	DeviceExpertIntents.AttributionItemFactory		let	catProvider
+class	DeviceExpertIntents.AttributionItemFactory		let	locProvider
+struct	DeviceExpertIntents.DeviceExpertPreferences			
+class	DeviceExpertIntents.DialogResultGenerator			
+class	DeviceExpertIntents.DialogResultGenerator		let	catProvider
+class	DeviceExpertIntents.FeatureFlagService			
+enum	DeviceExpertIntents.FeatureFlagService.FeatureFlag			
+class	DeviceExpertIntents.LocalizedResourceProvider			
+class	DeviceExpertIntents.LocalizedResourceProvider		let	siriLocale
+class	DeviceExpertIntents.SnippetModelProvider			
+class	DeviceExpertIntents.SnippetModelProvider		let	assistantSupportClient
+class	DeviceExpertIntents.SnippetModelProvider		let	catProvider
+class	DeviceExpertIntents.SnippetModelProvider		let	locProvider
+class	DeviceExpertIntents.SnippetModelProvider		let	responseContext
+class	DeviceExpertIntents.DefaultSupportApp			
+class	DeviceExpertIntents.DefaultSupportApp		let	appBundleIdentifier
+protocol	DeviceExpertIntents.AnalyticsEvent			
+protocol	DeviceExpertIntents.AnalyticsLogging			
+protocol	DeviceExpertIntents.BiomeEventSending			
+protocol	DeviceExpertIntents.SettingStateProtocol			
+protocol	DeviceExpertIntents.PreferenceProviding			
+protocol	DeviceExpertIntents.CodableMessage	Proto		
+protocol	DeviceExpertIntents.LoggableEntry			
+protocol	DeviceExpertIntents.ComponentsContentSelectable			
+protocol	DeviceExpertIntents.ContentSelectable			
+protocol	DeviceExpertIntents.HighlightContaining			
+protocol	DeviceExpertIntents.SymbolContaining			
+protocol	DeviceExpertIntents.SiriKitTaskLoggingProviding			
+protocol	DeviceExpertIntents.TipKitEventSending			
+protocol	DeviceExpertIntents.AttributionFactoryProviding			
+protocol	DeviceExpertIntents.DialogResultGenerating			
+protocol	DeviceExpertIntents.SiriLocaleProviding			
+protocol	DeviceExpertIntents.SnippetModelProviding			
+protocol	DeviceExpertIntents.SupportedAppInfoProviding			
+protocol	conformance DeviceExpertIntents.ContentViewedEvent	DeviceExpertIntents.AnalyticsEvent		
+protocol	conformance DeviceExpertIntents.LinkUsedEvent	DeviceExpertIntents.AnalyticsEvent		
+protocol	conformance DeviceExpertIntents.SiriSuggestionsEvent	DeviceExpertIntents.AnalyticsEvent		
+protocol	conformance DeviceExpertIntents.CoreAnalyticsLogger	DeviceExpertIntents.AnalyticsLogging		
+protocol	conformance DeviceExpertIntents.DeviceExpertDiscoverabilityEvent	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.DeviceExpertDiscoverabilityEvent	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.BiomeEventSender	DeviceExpertIntents.BiomeEventSending		
+protocol	conformance DeviceExpertIntents.AnswerFormatterError	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.AnswerFormatterError	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AnswerFormatterError	Swift.Error		
+protocol	conformance DeviceExpertIntents.ContextType	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.ContextType	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.ContextType	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.ContextType	Swift.CaseIterable		
+protocol	conformance DeviceExpertIntents.SettingContextType	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.SettingContextType	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.SettingContextType	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.SettingContextType	Swift.CaseIterable		
+protocol	conformance DeviceExpertIntents.BluetoothState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.BluetoothState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.BluetoothState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.BluetoothState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.WiFiState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.WiFiState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.WiFiState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.WiFiState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.LowPowerModeState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.LowPowerModeState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.LowPowerModeState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.LowPowerModeState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.AirPlaneModeState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.AirPlaneModeState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AirPlaneModeState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.AirPlaneModeState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.LocationServicesState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.LocationServicesState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.LocationServicesState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.LocationServicesState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.AppleAccountSignedInState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.AppleAccountSignedInState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AppleAccountSignedInState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.AppleAccountSignedInState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.FamilySharingMemberState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.FamilySharingMemberState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.FamilySharingMemberState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.FamilySharingMemberState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.FamilyOrganizerState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.FamilyOrganizerState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.FamilyOrganizerState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.FamilyOrganizerState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.FindMyState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.FindMyState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.FindMyState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.FindMyState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.FocusModeState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.FocusModeState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.FocusModeState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.FocusModeState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.ActionButtonState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.ActionButtonState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.ActionButtonState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.ActionButtonState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.CameraControlState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.CameraControlState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.CameraControlState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.CameraControlState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.SetupState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.SetupState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.SetupState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.SetupState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.CloudServiceState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.CloudServiceState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.CloudServiceState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.CloudServiceState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.SilentModeState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.SilentModeState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.SilentModeState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.SilentModeState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.AppState	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.AppState	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AppState	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.AppState	DeviceExpertIntents.SettingStateProtocol		
+protocol	conformance DeviceExpertIntents.TokenGeneratorActor	Swift.GlobalActor		
+protocol	conformance DeviceExpertIntents.TokenGeneratorActor	Swift.Actor		
+protocol	conformance DeviceExpertIntents.SystemPreferenceProvider	DeviceExpertIntents.PreferenceProviding		
+protocol	conformance DeviceExpertResult.Platform	Swift.Equatable		
+protocol	conformance DeviceExpertResult.Platform	Swift.Hashable		
+protocol	conformance DeviceExpertResult.Platform	Swift.RawRepresentable		
+protocol	conformance DeviceExpertResult.Platform	Swift.Decodable		
+protocol	conformance DeviceExpertResult.Platform	Swift.Encodable		
+protocol	conformance DeviceExpertResult.Platform	Swift.CaseIterable		
+protocol	conformance DeviceExpertResult.DeviceFamily	Swift.Equatable		
+protocol	conformance DeviceExpertResult.DeviceFamily	Swift.Hashable		
+protocol	conformance DeviceExpertResult.DeviceFamily	Swift.RawRepresentable		
+protocol	conformance DeviceExpertResult.DeviceFamily	Swift.Decodable		
+protocol	conformance DeviceExpertResult.DeviceFamily	Swift.Encodable		
+protocol	conformance DeviceExpertResult.DeviceFamily	Swift.CaseIterable		
+protocol	conformance DeviceExpertResult.DeviceContext	Swift.Decodable		
+protocol	conformance DeviceExpertResult.DeviceContext	Swift.Encodable		
+protocol	conformance DeviceExpertResult.ResultMetadata	Swift.Decodable		
+protocol	conformance DeviceExpertResult.ResultMetadata	Swift.Encodable		
+protocol	conformance ContentReferences.TipsReference	Swift.Decodable		
+protocol	conformance ContentReferences.TipsReference	Swift.Encodable		
+protocol	conformance DeviceExpertResult.ContentReferences	Swift.Decodable		
+protocol	conformance DeviceExpertResult.ContentReferences	Swift.Encodable		
+protocol	conformance DeviceExpertResult.TemplateType	Swift.Equatable		
+protocol	conformance DeviceExpertResult.TemplateType	Swift.Hashable		
+protocol	conformance DeviceExpertResult.TemplateType	Swift.RawRepresentable		
+protocol	conformance DeviceExpertResult.TemplateType	Swift.Decodable		
+protocol	conformance DeviceExpertResult.TemplateType	Swift.Encodable		
+protocol	conformance DeviceExpertResult.TemplateType	Swift.CaseIterable		
+protocol	conformance Answer.ListStyle	Swift.Equatable		
+protocol	conformance Answer.ListStyle	Swift.Hashable		
+protocol	conformance Answer.ListStyle	Swift.RawRepresentable		
+protocol	conformance Answer.ListStyle	Swift.Decodable		
+protocol	conformance Answer.ListStyle	Swift.Encodable		
+protocol	conformance Answer.ListStyle	Swift.CaseIterable		
+protocol	conformance DeviceExpertResult.Answer	Swift.Decodable		
+protocol	conformance DeviceExpertResult.Answer	Swift.Encodable		
+protocol	conformance DeviceExpertResult.AnswerStep	Swift.Decodable		
+protocol	conformance DeviceExpertResult.AnswerStep	Swift.Encodable		
+protocol	conformance DeviceExpertResult.AnswerStep	Swift.Hashable		
+protocol	conformance DeviceExpertResult.AnswerStep	Swift.Equatable		
+protocol	conformance AnswerToken.TokenType	Swift.Decodable		
+protocol	conformance AnswerToken.TokenType	Swift.Encodable		
+protocol	conformance AnswerToken.TokenType	Swift.Hashable		
+protocol	conformance AnswerToken.TokenType	Swift.Equatable		
+protocol	conformance AnswerToken.TokenColor	Swift.Equatable		
+protocol	conformance AnswerToken.TokenColor	Swift.Decodable		
+protocol	conformance AnswerToken.TokenColor	Swift.Encodable		
+protocol	conformance AnswerToken.TokenColor	Swift.CaseIterable		
+protocol	conformance AnswerToken.TokenColor	Swift.Hashable		
+protocol	conformance DeviceExpertResult.AnswerToken	Swift.Decodable		
+protocol	conformance DeviceExpertResult.AnswerToken	Swift.Encodable		
+protocol	conformance DeviceExpertResult.AnswerToken	Swift.Hashable		
+protocol	conformance DeviceExpertResult.AnswerToken	Swift.Equatable		
+protocol	conformance DeviceExpertResult.FormattedText	Swift.Decodable		
+protocol	conformance DeviceExpertResult.FormattedText	Swift.Encodable		
+protocol	conformance Action.ActionType	Swift.Decodable		
+protocol	conformance Action.ActionType	Swift.Encodable		
+protocol	conformance Action.ActionIntent	Swift.Decodable		
+protocol	conformance Action.ActionIntent	Swift.Encodable		
+protocol	conformance Action.ActionUrl	Swift.Decodable		
+protocol	conformance Action.ActionUrl	Swift.Encodable		
+protocol	conformance DeviceExpertResult.Action	Swift.Decodable		
+protocol	conformance DeviceExpertResult.Action	Swift.Encodable		
+protocol	conformance DeviceExpertResult.Action	Swift.Identifiable		
+protocol	conformance AttributionType.AttributionArticle	Swift.Decodable		
+protocol	conformance AttributionType.AttributionArticle	Swift.Encodable		
+protocol	conformance AttributionType.AttributionTopic	Swift.Decodable		
+protocol	conformance AttributionType.AttributionTopic	Swift.Encodable		
+protocol	conformance Attribution.AttributionType	Swift.Decodable		
+protocol	conformance Attribution.AttributionType	Swift.Encodable		
+protocol	conformance DeviceExpertResult.Attribution	Swift.Decodable		
+protocol	conformance DeviceExpertResult.Attribution	Swift.Encodable		
+protocol	conformance DeviceExpertResult.Attribution	Swift.Identifiable		
+protocol	conformance SiriSuggestion.SuggestionType	Swift.Equatable		
+protocol	conformance SiriSuggestion.SuggestionType	Swift.Hashable		
+protocol	conformance SiriSuggestion.SuggestionType	Swift.RawRepresentable		
+protocol	conformance SiriSuggestion.SuggestionType	Swift.Decodable		
+protocol	conformance SiriSuggestion.SuggestionType	Swift.Encodable		
+protocol	conformance SiriSuggestion.SuggestionType	Swift.CaseIterable		
+protocol	conformance DeviceExpertResult.SiriSuggestion	Swift.Decodable		
+protocol	conformance DeviceExpertResult.SiriSuggestion	Swift.Encodable		
+protocol	conformance DeviceExpertResult.SiriSuggestion	Swift.Identifiable		
+protocol	conformance DeviceExpertResult.ContextTag	Swift.Decodable		
+protocol	conformance DeviceExpertResult.ContextTag	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.DeviceExpertResult	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.DeviceExpertResult	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.DeviceExpertResult	Swift.Identifiable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CollectionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.Hashable		
+protocol	conformance CollectionCodingKeys	Swift.Equatable		
+protocol	conformance TipCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TipCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TipCodingKeys	Swift.Hashable		
+protocol	conformance TipCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SymbolCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SymbolCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SymbolCodingKeys	Swift.Hashable		
+protocol	conformance SymbolCodingKeys	Swift.Equatable		
+protocol	conformance TextCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TextCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TextCodingKeys	Swift.Hashable		
+protocol	conformance TextCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SecondaryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SecondaryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrimaryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrimaryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UrlCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UrlCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UrlCodingKeys	Swift.Hashable		
+protocol	conformance UrlCodingKeys	Swift.Equatable		
+protocol	conformance IntentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntentCodingKeys	Swift.Hashable		
+protocol	conformance IntentCodingKeys	Swift.Equatable		
+protocol	conformance UnknownCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnknownCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TopicCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TopicCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TopicCodingKeys	Swift.Hashable		
+protocol	conformance TopicCodingKeys	Swift.Equatable		
+protocol	conformance ArticleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ArticleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ArticleCodingKeys	Swift.Hashable		
+protocol	conformance ArticleCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ArticleCodingKeys	Swift.CodingKey		
+protocol	conformance TopicCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UnknownCodingKeys	Swift.CodingKey		
+protocol	conformance IntentCodingKeys	Swift.CodingKey		
+protocol	conformance UrlCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PrimaryCodingKeys	Swift.CodingKey		
+protocol	conformance SecondaryCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TextCodingKeys	Swift.CodingKey		
+protocol	conformance SymbolCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TipCodingKeys	Swift.CodingKey		
+protocol	conformance CollectionCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntentAttributes.AttributionGroupKey	Foundation.DecodableAttributedStringKey		
+protocol	conformance DeviceExpertIntentAttributes.AttributionGroupKey	Foundation.EncodableAttributedStringKey		
+protocol	conformance DeviceExpertIntentAttributes.AttributionGroupKey	Foundation.AttributedStringKey		
+protocol	conformance DeviceExpertIntentAttributes	Foundation.AttributeScope		
+protocol	conformance DeviceExpertIntentAttributes	Foundation.DecodingConfigurationProviding		
+protocol	conformance DeviceExpertIntentAttributes	Foundation.EncodingConfigurationProviding		
+protocol	conformance DeviceExpertIntents.DeviceExpertResult.FormattedText	DeviceExpertIntents.ContentSelectable		
+protocol	conformance Swift.Array	DeviceExpertIntents.ContentSelectable		
+protocol	conformance DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow	SiriKitFlow.Flow		
+protocol	conformance DeviceExpertIntents.RewriteTimeoutError	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.RewriteTimeoutError	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.RewriteTimeoutError	Swift.Error		
+protocol	conformance DeviceExpertCATsSimple.AttributionListDialogIds	Swift.Hashable		
+protocol	conformance DeviceExpertCATsSimple.AttributionListDialogIds	Swift.Equatable		
+protocol	conformance DeviceExpertCATsSimple.AttributionGroupDialogIds	Swift.Hashable		
+protocol	conformance DeviceExpertCATsSimple.AttributionGroupDialogIds	Swift.Equatable		
+protocol	conformance DeviceExpertCATsSimple.AttributionGroupDialogIds	Swift.RawRepresentable		
+protocol	conformance DeviceExpertCATsSimple.AttributionListDialogIds	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.ContentViewedDebugInfo	DeviceExpertIntents.LoggableEntry		
+protocol	conformance DeviceExpertIntents.ContentViewedDebugInfo	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.ContentViewedDebugInfo	Swift.Decodable		
+protocol	conformance ContentViewedDebugInfo.ContextTag	Swift.Equatable		
+protocol	conformance ContentViewedDebugInfo.ContextTag	Swift.Encodable		
+protocol	conformance ContentViewedDebugInfo.ContextTag	Swift.Decodable		
+protocol	conformance ContextTag.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ContextTag.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ContextTag.CodingKeys	Swift.RawRepresentable		
+protocol	conformance ContextTag.CodingKeys	Swift.Hashable		
+protocol	conformance ContextTag.CodingKeys	Swift.Equatable		
+protocol	conformance ContentViewedDebugInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ContentViewedDebugInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ContentViewedDebugInfo.CodingKeys	Swift.RawRepresentable		
+protocol	conformance ContentViewedDebugInfo.CodingKeys	Swift.Hashable		
+protocol	conformance ContentViewedDebugInfo.CodingKeys	Swift.Equatable		
+protocol	conformance ContentViewedDebugInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance ContextTag.CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.AttributionItem	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.AttributionItem	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.AttributionItem	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AttributionItem	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.AttributionGroup	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.AttributionGroup	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.AttributionGroup	Swift.Identifiable		
+protocol	conformance DeviceExpertIntents.AttributionGroup	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AttributionGroup	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.SelectableContentItemStyle	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.SelectableContentItemStyle	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AttributionListSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.AttributionListSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.AttributionListSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.AttributionListSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.AttributionListSnippetModel	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.AttributionSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.AttributionSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.AttributionSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.AttributionSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.AttributionSnippetModel	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	DeviceExpertIntents.ComponentsContentSelectable		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.LearnMoreSnippetModel	DeviceExpertIntents.ContentSelectable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ListStyleAnswerSnippetModel.ListStyle	Swift.Equatable		
+protocol	conformance ListStyleAnswerSnippetModel.ListStyle	Swift.Hashable		
+protocol	conformance ListStyleAnswerSnippetModel.ListStyle	Swift.Decodable		
+protocol	conformance ListStyleAnswerSnippetModel.ListStyle	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	DeviceExpertIntents.ComponentsContentSelectable		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.ListStyleAnswerSnippetModel	DeviceExpertIntents.ContentSelectable		
+protocol	conformance UnorderedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnorderedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance OrderedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance OrderedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance OrderedCodingKeys	Swift.CodingKey		
+protocol	conformance UnorderedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	DeviceExpertIntents.ComponentsContentSelectable		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.SummarizedAnswerSnippetModel	DeviceExpertIntents.ContentSelectable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.SupplementarySnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.SupplementarySnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.SupplementarySnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.SupplementarySnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.SupplementarySnippetModel	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TipSnippetModel.AssetConfiguration	Swift.Decodable		
+protocol	conformance TipSnippetModel.AssetConfiguration	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.TipSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.TipSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.TipSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.TipSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.TipSnippetModel	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	SnippetKit.SnippetModel		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	DeviceExpertIntents.ComponentsContentSelectable		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.TroubleshootingSnippetModel	DeviceExpertIntents.ContentSelectable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.AttributionModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.AttributionModel	Swift.Encodable		
+protocol	conformance AttributionModel.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttributionModel.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttributionModel.CodingKeys	Swift.RawRepresentable		
+protocol	conformance AttributionModel.CodingKeys	Swift.Hashable		
+protocol	conformance AttributionModel.CodingKeys	Swift.Equatable		
+protocol	conformance AttributionModel.Storage	Swift.Encodable		
+protocol	conformance AttributionModel.Storage	Swift.Decodable		
+protocol	conformance AttributionModel.CodingKeys	Swift.CodingKey		
+protocol	conformance Storage.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Storage.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Storage.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Storage.CodingKeys	Swift.Hashable		
+protocol	conformance Storage.CodingKeys	Swift.Equatable		
+protocol	conformance Storage.CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.ContextualRewriteSummary	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.ContextualRewriteSummary	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.FeedbackModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.FeedbackModel	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.FlowContext	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.FlowContext	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.SnippetResponseComponents	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.SnippetResponseComponents	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.SnippetResponseType	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.SnippetResponseType	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.SnippetResponseType	Swift.RawRepresentable		
+protocol	conformance DeviceExpertIntents.SnippetResponseType	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.SnippetResponseType	Swift.Encodable		
+protocol	conformance DeviceExpertIntents.TellMeGeneratedSnippetModels	SnippetKit.SnippetPluginModel		
+protocol	conformance DeviceExpertIntents.TellMeGeneratedSnippetModels	DeviceExpertIntents.SymbolContaining		
+protocol	conformance DeviceExpertIntents.TellMeGeneratedSnippetModels	DeviceExpertIntents.HighlightContaining		
+protocol	conformance DeviceExpertIntents.TellMeGeneratedSnippetModels	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.TellMeGeneratedSnippetModels	Swift.Encodable		
+protocol	conformance TroubleshootingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TroubleshootingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TroubleshootingCodingKeys	Swift.Hashable		
+protocol	conformance TroubleshootingCodingKeys	Swift.Equatable		
+protocol	conformance TipCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TipCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TipCodingKeys	Swift.Hashable		
+protocol	conformance TipCodingKeys	Swift.Equatable		
+protocol	conformance SupplementaryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SupplementaryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SupplementaryCodingKeys	Swift.Hashable		
+protocol	conformance SupplementaryCodingKeys	Swift.Equatable		
+protocol	conformance SummarizedAnswerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SummarizedAnswerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SummarizedAnswerCodingKeys	Swift.Hashable		
+protocol	conformance SummarizedAnswerCodingKeys	Swift.Equatable		
+protocol	conformance ListStyleAnswerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ListStyleAnswerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ListStyleAnswerCodingKeys	Swift.Hashable		
+protocol	conformance ListStyleAnswerCodingKeys	Swift.Equatable		
+protocol	conformance LearnMoreCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LearnMoreCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LearnMoreCodingKeys	Swift.Hashable		
+protocol	conformance LearnMoreCodingKeys	Swift.Equatable		
+protocol	conformance AttributionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttributionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttributionCodingKeys	Swift.Hashable		
+protocol	conformance AttributionCodingKeys	Swift.Equatable		
+protocol	conformance AttributionListCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttributionListCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttributionListCodingKeys	Swift.Hashable		
+protocol	conformance AttributionListCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AttributionListCodingKeys	Swift.CodingKey		
+protocol	conformance AttributionCodingKeys	Swift.CodingKey		
+protocol	conformance LearnMoreCodingKeys	Swift.CodingKey		
+protocol	conformance ListStyleAnswerCodingKeys	Swift.CodingKey		
+protocol	conformance SummarizedAnswerCodingKeys	Swift.CodingKey		
+protocol	conformance SupplementaryCodingKeys	Swift.CodingKey		
+protocol	conformance TipCodingKeys	Swift.CodingKey		
+protocol	conformance TroubleshootingCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.TipCollectionModel	Swift.Decodable		
+protocol	conformance DeviceExpertIntents.TipCollectionModel	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceExpertIntents.ResponseContext	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.ResponseContext	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.SiriKitTaskLoggingProvider	DeviceExpertIntents.SiriKitTaskLoggingProviding		
+protocol	conformance DeviceExpertIntents.TipKitEventSender	DeviceExpertIntents.TipKitEventSending		
+protocol	conformance DeviceExpertIntents.DeviceExpertTip	Swift.Equatable		
+protocol	conformance DeviceExpertIntents.DeviceExpertTip	Swift.Hashable		
+protocol	conformance DeviceExpertIntents.AttributionItemFactory	DeviceExpertIntents.AttributionFactoryProviding		
+protocol	conformance DeviceExpertIntents.DialogResultGenerator	DeviceExpertIntents.DialogResultGenerating		
+protocol	conformance FeatureFlagService.FeatureFlag	FeatureFlags.FeatureFlagsKey		
+protocol	conformance DeviceExpertIntents.SnippetModelProvider	DeviceExpertIntents.SnippetModelProviding		
+protocol	conformance DeviceExpertIntents.DefaultSupportApp	DeviceExpertIntents.SupportedAppInfoProviding		
+extension	DeviceExpertIntents.ContextType	RawRepresentable		
+extension	DeviceExpertIntents.ContextType	CaseIterable		
+extension	DeviceExpertIntents.SettingContextType	RawRepresentable		
+extension	DeviceExpertIntents.SettingContextType	CaseIterable		
+extension	DeviceExpertIntents.BluetoothState	RawRepresentable		
+extension	DeviceExpertIntents.WiFiState	RawRepresentable		
+extension	DeviceExpertIntents.LowPowerModeState	RawRepresentable		
+extension	DeviceExpertIntents.AirPlaneModeState	RawRepresentable		
+extension	DeviceExpertIntents.LocationServicesState	RawRepresentable		
+extension	DeviceExpertIntents.AppleAccountSignedInState	RawRepresentable		
+extension	DeviceExpertIntents.FamilySharingMemberState	RawRepresentable		
+extension	DeviceExpertIntents.FamilyOrganizerState	RawRepresentable		
+extension	DeviceExpertIntents.FindMyState	RawRepresentable		
+extension	DeviceExpertIntents.FocusModeState	RawRepresentable		
+extension	DeviceExpertIntents.ActionButtonState	RawRepresentable		
+extension	DeviceExpertIntents.CameraControlState	RawRepresentable		
+extension	DeviceExpertIntents.SetupState	RawRepresentable		
+extension	DeviceExpertIntents.CloudServiceState	RawRepresentable		
+extension	DeviceExpertIntents.SilentModeState	RawRepresentable		
+extension	DeviceExpertIntents.AppState	RawRepresentable		
+extension	DeviceExpertIntents.TokenGeneratorActor	GlobalActor		
+extension	DeviceExpertIntents.DeviceExpertResult.Platform	RawRepresentable		
+extension	DeviceExpertIntents.DeviceExpertResult.Platform	CaseIterable		
+extension	DeviceExpertIntents.DeviceExpertResult.DeviceFamily	RawRepresentable		
+extension	DeviceExpertIntents.DeviceExpertResult.DeviceFamily	CaseIterable		
+extension	DeviceExpertIntents.DeviceExpertResult.TemplateType	RawRepresentable		
+extension	DeviceExpertIntents.DeviceExpertResult.TemplateType	CaseIterable		
+extension	DeviceExpertIntents.DeviceExpertResult.Answer.ListStyle	RawRepresentable		
+extension	DeviceExpertIntents.DeviceExpertResult.Answer.ListStyle	CaseIterable		
+extension	DeviceExpertIntents.DeviceExpertResult.AnswerToken.TokenColor	CaseIterable		
+extension	DeviceExpertIntents.DeviceExpertResult.Action	Identifiable		
+extension	DeviceExpertIntents.DeviceExpertResult.Attribution	Identifiable		
+extension	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.SuggestionType	RawRepresentable		
+extension	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion.SuggestionType	CaseIterable		
+extension	DeviceExpertIntents.DeviceExpertResult.SiriSuggestion	Identifiable		
+extension	DeviceExpertIntents.DeviceExpertResult	Identifiable		
+extension	DeviceExpertIntents.DeviceExpertIntentAttributes.AttributionGroupKey	AttributedStringKey		
+extension	DeviceExpertIntents.DeviceExpertIntentAttributes	DecodingConfigurationProviding		
+extension	DeviceExpertIntents.DeviceExpertIntentAttributes	EncodingConfigurationProviding		
+extension	DeviceExpertIntents.DeviceExpertTellMeGeneratedFlow	Flow		
+extension	DeviceExpertIntents.DeviceExpertCATsSimple.AttributionGroupDialogIds	RawRepresentable		
+extension	DeviceExpertIntents.DeviceExpertCATsSimple.AttributionListDialogIds	RawRepresentable		
+extension	DeviceExpertIntents.ContentViewedDebugInfo.ContextTag.CodingKeys	RawRepresentable		
+extension	DeviceExpertIntents.ContentViewedDebugInfo.CodingKeys	RawRepresentable		
+extension	DeviceExpertIntents.AttributionGroup	Identifiable		
+extension	DeviceExpertIntents.TipSnippetModel.CodingKeys	RawRepresentable		
+extension	DeviceExpertIntents.AttributionModel.CodingKeys	RawRepresentable		
+extension	DeviceExpertIntents.AttributionModel.Storage.CodingKeys	RawRepresentable		
+extension	DeviceExpertIntents.SnippetResponseType	RawRepresentable		

@@ -1,0 +1,118 @@
+kind	type	conformance	member_kind	member
+struct	SiriReferenceResolver.MessageConversationStructuredDataHandler			
+class	SiriReferenceResolver.BaseQueryMatcher			
+class	SiriReferenceResolver.BaseQueryMatcher		let	logger
+class	SiriReferenceResolver.BaseQueryMatcher		let	equivalentTypesForEntityType
+class	SiriReferenceResolver.AttachmentQueryMatcher			
+class	SiriReferenceResolver.AttachmentQueryMatcher		var	compatibleEntityTypeForAttachmentType
+class	SiriReferenceResolver.PersonQueryMatcher			
+class	SiriReferenceResolver.CalendarEventQueryMatcher			
+class	SiriReferenceResolver.ApplicationQueryMatcher			
+class	SiriReferenceResolver.RRLinkMatcher			
+class	SiriReferenceResolver.RRLinkMatcher		var	cachedEntities
+class	SiriReferenceResolver.RRLinkMatcher		var	lazy
+class	SiriReferenceResolver.RRLinkMatcher		var	lazy
+class	SiriReferenceResolver.RRLinkMatcher		let	logger
+class	SiriReferenceResolver.CachedEntityInfo			
+class	SiriReferenceResolver.CachedEntityInfo		let	cacheKey
+class	SiriReferenceResolver.CachedEntityInfo		var	annotatedEntityByType
+struct	SiriReferenceResolver.CachedEntityKey			
+struct	SiriReferenceResolver.CachedEntityKey		let	linkId
+struct	SiriReferenceResolver.CachedEntityKey		let	appBundleId
+enum	SiriReferenceResolver.StructuredDataHandlingError			
+enum	SiriReferenceResolver.StructuredDataHandlingError		case	wrongType
+enum	SiriReferenceResolver.StructuredDataHandlingError		case	notSerializable
+enum	SiriReferenceResolver.StructuredDataHandlingError		case	identifierNotFound
+struct	SiriReferenceResolver.EnvironmentStructuredDataHandler			
+struct	SiriReferenceResolver.EnvironmentStructuredDataHandler		var	intentTypeName
+class	SiriReferenceResolver.LinkAppConnectionPool			
+class	SiriReferenceResolver.LinkAppConnectionPool		var	capacity
+class	SiriReferenceResolver.LinkAppConnectionPool		var	cache
+class	SiriReferenceResolver.LinkAppConnectionPool		var	lifo
+enum	SiriReferenceResolver.RRConstants			
+enum	SiriReferenceResolver.RREntityMatcher			
+class	SiriReferenceResolver.RRResolver			
+class	SiriReferenceResolver.RRResolver		let	logger
+class	SiriReferenceResolver.RRResolver		var	entities
+struct	SiriReferenceResolver.MediaItemStructuredDataHandler			
+struct	SiriReferenceResolver.MediaItemStructuredDataHandler		let	logger
+class	SiriReferenceResolver.RRReaderMatcher			
+class	SiriReferenceResolver.RRReaderMatcher		let	logger
+class	SiriReferenceResolver.SiriReferenceResolverDefaults			
+struct	SiriReferenceResolver.ApplicationStructuredDataHandler			
+struct	SiriReferenceResolver.ApplicationStructuredDataHandler		var	intentTypeName
+enum	SiriReferenceResolver.ResolutionError			
+enum	SiriReferenceResolver.ResolutionError		case	unsupportedParameter
+enum	SiriReferenceResolver.ResolutionError		case	ordinalSeqError
+enum	SiriReferenceResolver.LinkError			
+enum	SiriReferenceResolver.LinkError		case	unknownError
+enum	SiriReferenceResolver.LinkError		case	timedOutError
+enum	SiriReferenceResolver.LinkError		case	linkDataNil
+enum	SiriReferenceResolver.LinkError		case	mockDataNonSupportedTypeError
+enum	SiriReferenceResolver.LinkError		case	mockDataTypeNotRecognizedError
+enum	SiriReferenceResolver.TransformerError			
+enum	SiriReferenceResolver.TransformerError		case	usoBuilderCreationFailed
+enum	SiriReferenceResolver.TransformerError		case	usoEntityCreationFailed
+enum	SiriReferenceResolver.RRResolverLog			
+struct	SiriReferenceResolver.PersonStructuredDataHandler			
+struct	SiriReferenceResolver.TimerStructuredDataHandler			
+struct	SiriReferenceResolver.TaskStructuredDataHandler			
+struct	SiriReferenceResolver.TaskListStructuredDataHandler			
+protocol	SiriReferenceResolver.RRLinkSystemEntityHandling			
+protocol	SiriReferenceResolver.QueryMatcher			
+protocol	SiriReferenceResolver.RRLinkMatching			
+protocol	SiriReferenceResolver.RRLinkStructuredDataHandling			
+protocol	SiriReferenceResolver.ContactStoring			
+protocol	SiriReferenceResolver.RRResolverServerProtocol			
+protocol	SiriReferenceResolver.RRLinkHandling	ExpectedDataType		
+protocol	conformance SiriReferenceResolver.MessageConversationStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.MessageConversationStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance SiriReferenceResolver.ApplicationQueryMatcher	SiriReferenceResolver.QueryMatcher		
+protocol	conformance SiriReferenceResolver.CalendarEventQueryMatcher	SiriReferenceResolver.QueryMatcher		
+protocol	conformance SiriReferenceResolver.PersonQueryMatcher	SiriReferenceResolver.QueryMatcher		
+protocol	conformance SiriReferenceResolver.AttachmentQueryMatcher	SiriReferenceResolver.QueryMatcher		
+protocol	conformance SiriReferenceResolver.BaseQueryMatcher	SiriReferenceResolver.QueryMatcher		
+protocol	conformance CachedEntityKey	Swift.Equatable		
+protocol	conformance CachedEntityKey	Swift.Hashable		
+protocol	conformance SiriReferenceResolver.RRLinkMatcher	SiriReferenceResolver.RRLinkMatching		
+protocol	conformance SiriReferenceResolver.StructuredDataHandlingError	Swift.RawRepresentable		
+protocol	conformance SiriReferenceResolver.StructuredDataHandlingError	Swift.Hashable		
+protocol	conformance SiriReferenceResolver.StructuredDataHandlingError	Swift.Equatable		
+protocol	conformance SiriReferenceResolver.StructuredDataHandlingError	Swift.Error		
+protocol	conformance SiriReferenceResolver.EnvironmentStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.EnvironmentStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance CNContactStore	SiriReferenceResolver.ContactStoring		
+protocol	conformance SiriReferenceResolver.RRResolver	SiriReferenceResolver.RRResolverServerProtocol		
+protocol	conformance SiriReferenceResolver.MediaItemStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.MediaItemStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance SiriReferenceResolver.ApplicationStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.ApplicationStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance SiriReferenceResolver.ResolutionError	Swift.Equatable		
+protocol	conformance SiriReferenceResolver.ResolutionError	Swift.Hashable		
+protocol	conformance SiriReferenceResolver.ResolutionError	Swift.Error		
+protocol	conformance SiriReferenceResolver.ResolutionError	Foundation.LocalizedError		
+protocol	conformance SiriReferenceResolver.LinkError	Swift.Equatable		
+protocol	conformance SiriReferenceResolver.LinkError	Swift.Hashable		
+protocol	conformance SiriReferenceResolver.LinkError	Swift.RawRepresentable		
+protocol	conformance SiriReferenceResolver.LinkError	Swift.Error		
+protocol	conformance SiriReferenceResolver.TransformerError	Swift.Equatable		
+protocol	conformance SiriReferenceResolver.TransformerError	Swift.Hashable		
+protocol	conformance SiriReferenceResolver.TransformerError	Swift.Error		
+protocol	conformance SiriReferenceResolver.PersonStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.PersonStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance SiriReferenceResolver.TimerStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.TimerStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance SiriReferenceResolver.TaskStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.TaskStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+protocol	conformance SiriReferenceResolver.TaskListStructuredDataHandler	SiriReferenceResolver.RRLinkStructuredDataHandling		
+protocol	conformance SiriReferenceResolver.TaskListStructuredDataHandler	SiriReferenceResolver.RRLinkHandling		
+extension	SiriReferenceResolver.MessageConversationStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.StructuredDataHandlingError	RawRepresentable		
+extension	SiriReferenceResolver.EnvironmentStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.MediaItemStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.ApplicationStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.LinkError	RawRepresentable		
+extension	SiriReferenceResolver.PersonStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.TimerStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.TaskStructuredDataHandler	RRLinkHandling		
+extension	SiriReferenceResolver.TaskListStructuredDataHandler	RRLinkHandling		

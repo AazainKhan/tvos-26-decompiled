@@ -1,0 +1,27 @@
+owner	kind	declaration
+AUCExecutable	-	- (id)initWithPath:(id)path signingIdentifier:(id)identifier teamIdentifier:(id)identifier;
+AUCExecutable	property	@property (readonly, nonatomic) NSString *path;
+AUCExecutable	property	@property (readonly, nonatomic) NSString *signingIdentifier;
+AUCExecutable	property	@property (readonly, nonatomic) NSString *teamIdentifier;
+AUCIdentity	-	- (_Bool)isPlatformSigned;
+AUCIdentity	-	- (void)clearCachedData;
+AUCIdentity	property	@property (readonly, copy, nonatomic) NSData *persistentIdentifier;
+AUCIdentity	property	@property (readonly, copy, nonatomic) NSDictionary *entitlements;
+AUCIdentity	property	@property (readonly, nonatomic) AUCExecutable *executable;
+AUCIdentity	property	@property (readonly, nonatomic) AUCExecutable *hostedExecutable;
+AUCIdentity	property	@property (readonly, nonatomic) _Bool platformSigned;
+AUCIdentity	property	@property (readonly, nonatomic) unsigned long long codeSigningFlags;
+AUCIdentity	property	@property (readonly, nonatomic) unsigned long long platform;
+AUCIdentity	property	@property (readonly, nonatomic) unsigned long long sdkVersion;
+AUCProcessIdentity	+	+ (id)selfIdentity;
+AUCProcessIdentity	-	- (_Bool)_isSelfIdentity;
+AUCProcessIdentity	-	- (_Bool)_reloadIdentityDataWithError:(out id *)error;
+AUCProcessIdentity	-	- (_Bool)claimRootWithError:(out id *)error;
+AUCProcessIdentity	-	- (_Bool)setExecutableHostedPath:(id)path error:(out id *)error;
+AUCProcessIdentity	-	- (_Bool)setExecutableHostedTeamID:(id)id error:(out id *)error;
+AUCProcessIdentity	-	- (_Bool)setRootIdentity:(id)identity error:(out id *)error;
+AUCProcessIdentity	-	- (id)initWithAuditToken:(struct { unsigned int x0[8]; })token;
+AUCProcessIdentity	-	- (struct auc_identity_data { union { unsigned char x0[16]; unsigned int x1[4]; } x0; signed char x1[1024]; signed char x2[64]; signed char x3[128]; signed char x4[1024]; signed char x5[64]; signed char x6[128]; unsigned char x7[32]; unsigned int x8; unsigned int x9; unsigned int x10; _Bool x11; long long x12; unsigned long long x13; unsigned char x14[0]; } *)identityData;
+AUCProcessIdentity	-	- (void)dealloc;
+AUCProcessIdentity	property	@property (readonly, nonatomic) struct { unsigned int x0[8]; } auditToken;
+AUCProcessIdentity	property	@property (readonly, nonatomic) struct { unsigned int x0[8]; } identityToken;

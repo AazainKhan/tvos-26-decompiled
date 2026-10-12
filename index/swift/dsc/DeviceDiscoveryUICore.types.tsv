@@ -1,0 +1,276 @@
+kind	type	conformance	member_kind	member
+class	DeviceDiscoveryUICore.DDUIAppSettingsManager			
+class	DeviceDiscoveryUICore.DDUIAppSettingsManager		let	settingsKey
+class	DeviceDiscoveryUICore.DDUIAppSettingsManager		let	userDefaults
+class	DeviceDiscoveryUICore.DDUIAppSettingsManager		var	settingsByBundleID
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting			
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting		case	enabled
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting		case	disabled
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting.CodingKeys			
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting.CodingKeys		case	enabled
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting.CodingKeys		case	disabled
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting.EnabledCodingKeys			
+enum	DeviceDiscoveryUICore.DDUIAppSettingsManager.Setting.DisabledCodingKeys			
+class	DeviceDiscoveryUICore.DDUINoticeXPCService	NSObject		
+class	DeviceDiscoveryUICore.DDUINoticeXPCService	NSObject	let	listener
+class	DeviceDiscoveryUICore.DDUINoticeXPCService	NSObject	var	continuation
+class	DeviceDiscoveryUICore.DDUINoticeXPCClient			
+class	DeviceDiscoveryUICore.DDUINoticeXPCClient		var	connection
+enum	DeviceDiscoveryUICore.DDUIError			
+enum	DeviceDiscoveryUICore.DDUIError		case	missingBundleID
+enum	DeviceDiscoveryUICore.DDUIError		case	missingDeviceID
+enum	DeviceDiscoveryUICore.DDUIError		case	missingIdentity
+enum	DeviceDiscoveryUICore.DDUIError		case	missingDeviceName
+enum	DeviceDiscoveryUICore.DDUIError		case	failedToCreateMapping
+enum	DeviceDiscoveryUICore.DDUIError		case	failedToCreateListener
+enum	DeviceDiscoveryUICore.DDUIError		case	askedForConfirmationWhileAwaitingConfirmation
+enum	DeviceDiscoveryUICore.DDUIError		case	confirmationError
+enum	DeviceDiscoveryUICore.DDUIError		case	receiverDeclined
+enum	DeviceDiscoveryUICore.DDUIError		case	unableToGetEndpointKind
+enum	DeviceDiscoveryUICore.DDUIError		case	noAppNameAvailable
+enum	DeviceDiscoveryUICore.BoopConnectionError			
+enum	DeviceDiscoveryUICore.BoopConnectionError		case	failedToConnect
+struct	DeviceDiscoveryUICore.TapLaunchResponse			
+struct	DeviceDiscoveryUICore.TapLaunchResponse		let	endpointID
+struct	DeviceDiscoveryUICore.TapLaunchRequest			
+struct	DeviceDiscoveryUICore.TapLaunchRequest		let	bundleID
+struct	DeviceDiscoveryUICore.TapLaunchRequest		let	serviceIdentifier
+struct	DeviceDiscoveryUICore.TapLaunchRequest		let	kind
+struct	DeviceDiscoveryUICore.TapLaunchRequest		let	deviceName
+struct	DeviceDiscoveryUICore.BoopLaunchRequest			
+struct	DeviceDiscoveryUICore.BoopLaunchRequest		let	bundleID
+struct	DeviceDiscoveryUICore.BoopLaunchRequest		let	serviceIdentifier
+struct	DeviceDiscoveryUICore.BoopLaunchRequest		let	deviceName
+struct	DeviceDiscoveryUICore.BoopLaunchRequest		let	publicKey
+struct	DeviceDiscoveryUICore.BoopConnectionResponse			
+struct	DeviceDiscoveryUICore.BoopConnectionResponse		let	serviceName
+struct	DeviceDiscoveryUICore.BoopConnectionResponse		let	publicKey
+class	DeviceDiscoveryUICore.DDUIServiceActor			
+class	DeviceDiscoveryUICore.DDUIServiceActor		let	id
+class	DeviceDiscoveryUICore.DDUIServiceActor		let	actorSystem
+class	DeviceDiscoveryUICore.DDUIServiceActor		let	suspendedBundleIdentifiers
+class	DeviceDiscoveryUICore.DDUIServiceActor		let	scenelessBundleIdentifiers
+class	DeviceDiscoveryUICore.DDUIServiceActor		let	senderDetails
+struct	DeviceDiscoveryUICore.DDUIServiceActor.SenderDetails			
+struct	DeviceDiscoveryUICore.DDUIServiceActor.SenderDetails		let	contactID
+struct	DeviceDiscoveryUICore.DDUIServiceActor.SenderDetails		let	deviceModel
+struct	DeviceDiscoveryUICore.DDUIServiceActor.SenderDetails		let	deviceName
+enum	DeviceDiscoveryUICore.BoopConnectionResponse.CodingKeys			
+enum	DeviceDiscoveryUICore.BoopConnectionResponse.CodingKeys		case	serviceName
+enum	DeviceDiscoveryUICore.BoopConnectionResponse.CodingKeys		case	publicKey
+enum	DeviceDiscoveryUICore.BoopLaunchRequest.CodingKeys			
+enum	DeviceDiscoveryUICore.BoopLaunchRequest.CodingKeys		case	bundleID
+enum	DeviceDiscoveryUICore.BoopLaunchRequest.CodingKeys		case	serviceIdentifier
+enum	DeviceDiscoveryUICore.BoopLaunchRequest.CodingKeys		case	deviceName
+enum	DeviceDiscoveryUICore.BoopLaunchRequest.CodingKeys		case	publicKey
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind			
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind		case	proxyApplication
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind		case	application
+enum	DeviceDiscoveryUICore.TapLaunchRequest.CodingKeys			
+enum	DeviceDiscoveryUICore.TapLaunchRequest.CodingKeys		case	bundleID
+enum	DeviceDiscoveryUICore.TapLaunchRequest.CodingKeys		case	serviceIdentifier
+enum	DeviceDiscoveryUICore.TapLaunchRequest.CodingKeys		case	kind
+enum	DeviceDiscoveryUICore.TapLaunchRequest.CodingKeys		case	deviceName
+enum	DeviceDiscoveryUICore.TapLaunchResponse.CodingKeys			
+enum	DeviceDiscoveryUICore.TapLaunchResponse.CodingKeys		case	endpointID
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.CodingKeys			
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.CodingKeys		case	proxyApplication
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.CodingKeys		case	application
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.ProxyApplicationCodingKeys			
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.ProxyApplicationCodingKeys		case	appBundleID
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.ProxyApplicationCodingKeys		case	appName
+enum	DeviceDiscoveryUICore.TapLaunchRequest.Kind.ApplicationCodingKeys			
+enum	DeviceDiscoveryUICore.DDUINotice			
+struct	DeviceDiscoveryUICore.DDUINoticeLaunchOptions			
+struct	DeviceDiscoveryUICore.DDUINoticeLaunchOptions		let	id
+struct	DeviceDiscoveryUICore.DDUINoticeLaunchOptions		let	deviceName
+struct	DeviceDiscoveryUICore.DDUINoticeLaunchOptions		let	iconImage
+struct	DeviceDiscoveryUICore.DDUINoticeLaunchOptions		let	appName
+enum	DeviceDiscoveryUICore.DDUINoticeFailure			
+enum	DeviceDiscoveryUICore.DDUINoticeFailure		case	failedToGetSurfBoardService
+enum	DeviceDiscoveryUICore.DDUINoticeLaunchOptions.CodingKeys			
+enum	DeviceDiscoveryUICore.DDUINoticeLaunchOptions.CodingKeys		case	id
+enum	DeviceDiscoveryUICore.DDUINoticeLaunchOptions.CodingKeys		case	deviceName
+enum	DeviceDiscoveryUICore.DDUINoticeLaunchOptions.CodingKeys		case	iconImage
+enum	DeviceDiscoveryUICore.DDUINoticeLaunchOptions.CodingKeys		case	appName
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest			
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest		let	identifier
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest		let	appName
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest		let	icon
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest		let	kind
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest		let	serviceIdentifier
+struct	DeviceDiscoveryUICore.DDUIPermissionRequest		let	appBundleID
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind		case	sameAccount
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind		case	contact
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind		case	pinPaired
+class	DeviceDiscoveryUICore.DDUIPermissionPresenterFactory			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys		case	identifier
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys		case	appName
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys		case	icon
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys		case	kind
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys		case	serviceIdentifier
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.CodingKeys		case	appBundleID
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.CodingKeys			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.CodingKeys		case	sameAccount
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.CodingKeys		case	contact
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.CodingKeys		case	pinPaired
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.SameAccountCodingKeys			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.SameAccountCodingKeys		case	deviceModel
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.SameAccountCodingKeys		case	deviceName
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.ContactCodingKeys			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.ContactCodingKeys		case	contactID
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.PinPairedCodingKeys			
+enum	DeviceDiscoveryUICore.DDUIPermissionRequest.Kind.PinPairedCodingKeys		case	deviceName
+class	DeviceDiscoveryUICore.DDUIPermissionService			
+class	DeviceDiscoveryUICore.DDUIPermissionService		let	queue
+class	DeviceDiscoveryUICore.DDUIPermissionService		let	xpcListener
+class	DeviceDiscoveryUICore.DDUIPermissionService		let	lock
+class	DeviceDiscoveryUICore.DDUIPermissionService		var	continuationsByIdentifier
+class	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond	Sharing.SFXPCInvocation		
+class	DeviceDiscoveryUICore.DDUIPermissionClient	NSObject		
+class	DeviceDiscoveryUICore.DDUIPermissionClient	NSObject	let	connection
+class	DeviceDiscoveryUICore.DDUIPermissionClient	NSObject	let	queue
+class	DeviceDiscoveryUICore.DDUIPermissionClient	NSObject	let	identifier
+struct	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond.Parameters			
+struct	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond.Parameters		let	identifier
+struct	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond.Parameters		let	accepted
+enum	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond.Parameters.CodingKeys			
+enum	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond.Parameters.CodingKeys		case	identifier
+enum	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond.Parameters.CodingKeys		case	accepted
+enum	DeviceDiscoveryUICore.DDUIPermissionInvocations			
+protocol	DeviceDiscoveryUICore.DDUIPermissionPresenter			
+protocol	conformance DDUIAppSettingsManager.Setting	Swift.Equatable		
+protocol	conformance DDUIAppSettingsManager.Setting	Swift.Hashable		
+protocol	conformance DDUIAppSettingsManager.Setting	Swift.Decodable		
+protocol	conformance DDUIAppSettingsManager.Setting	Swift.Encodable		
+protocol	conformance DDUIAppSettingsManager.Setting	Swift.CustomStringConvertible		
+protocol	conformance DeviceDiscoveryUICore.DDUIAppSettingsManager	Swift.Actor		
+protocol	conformance DisabledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DisabledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EnabledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EnabledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance EnabledCodingKeys	Swift.CodingKey		
+protocol	conformance DisabledCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceDiscoveryUICore.DDUIError	Swift.Equatable		
+protocol	conformance DeviceDiscoveryUICore.DDUIError	Swift.Hashable		
+protocol	conformance DeviceDiscoveryUICore.DDUIError	Swift.Error		
+protocol	conformance DeviceDiscoveryUICore.BoopConnectionError	Swift.Equatable		
+protocol	conformance DeviceDiscoveryUICore.BoopConnectionError	Swift.Hashable		
+protocol	conformance DeviceDiscoveryUICore.BoopConnectionError	Swift.Error		
+protocol	conformance DeviceDiscoveryUICore.TapLaunchResponse	Swift.Decodable		
+protocol	conformance DeviceDiscoveryUICore.TapLaunchResponse	Swift.Encodable		
+protocol	conformance DeviceDiscoveryUICore.TapLaunchResponse	Swift.CustomStringConvertible		
+protocol	conformance DeviceDiscoveryUICore.TapLaunchRequest	Swift.Decodable		
+protocol	conformance DeviceDiscoveryUICore.TapLaunchRequest	Swift.Encodable		
+protocol	conformance DeviceDiscoveryUICore.TapLaunchRequest	Swift.CustomStringConvertible		
+protocol	conformance DeviceDiscoveryUICore.BoopLaunchRequest	Swift.Decodable		
+protocol	conformance DeviceDiscoveryUICore.BoopLaunchRequest	Swift.Encodable		
+protocol	conformance DeviceDiscoveryUICore.BoopLaunchRequest	Swift.CustomStringConvertible		
+protocol	conformance DeviceDiscoveryUICore.BoopConnectionResponse	Swift.Decodable		
+protocol	conformance DeviceDiscoveryUICore.BoopConnectionResponse	Swift.Encodable		
+protocol	conformance DeviceDiscoveryUICore.BoopConnectionResponse	Swift.CustomStringConvertible		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Distributed.DistributedActor		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Network.NWSingletonPublishedActor		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Swift.Hashable		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Swift.Identifiable		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Swift.Equatable		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Swift.Encodable		
+protocol	conformance DeviceDiscoveryUICore.DDUIServiceActor	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TapLaunchRequest.Kind	Swift.CustomStringConvertible		
+protocol	conformance TapLaunchRequest.Kind	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DDUIServiceActor.SenderDetails	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TapLaunchRequest.Kind	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ApplicationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ApplicationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ProxyApplicationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ProxyApplicationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ProxyApplicationCodingKeys	Swift.Hashable		
+protocol	conformance ProxyApplicationCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ProxyApplicationCodingKeys	Swift.CodingKey		
+protocol	conformance ApplicationCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceDiscoveryUICore.DDUINoticeLaunchOptions	Swift.Decodable		
+protocol	conformance DeviceDiscoveryUICore.DDUINoticeLaunchOptions	Swift.Encodable		
+protocol	conformance DeviceDiscoveryUICore.DDUINoticeFailure	Swift.Equatable		
+protocol	conformance DeviceDiscoveryUICore.DDUINoticeFailure	Swift.Hashable		
+protocol	conformance DeviceDiscoveryUICore.DDUINoticeFailure	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DDUIPermissionRequest.Kind	Swift.Decodable		
+protocol	conformance DDUIPermissionRequest.Kind	Swift.Encodable		
+protocol	conformance DDUIPermissionRequest.Kind	Swift.CustomStringConvertible		
+protocol	conformance DeviceDiscoveryUICore.DDUIPermissionRequest	Swift.Decodable		
+protocol	conformance DeviceDiscoveryUICore.DDUIPermissionRequest	Swift.Encodable		
+protocol	conformance PinPairedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PinPairedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PinPairedCodingKeys	Swift.Hashable		
+protocol	conformance PinPairedCodingKeys	Swift.Equatable		
+protocol	conformance ContactCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ContactCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ContactCodingKeys	Swift.Hashable		
+protocol	conformance ContactCodingKeys	Swift.Equatable		
+protocol	conformance SameAccountCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SameAccountCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SameAccountCodingKeys	Swift.Hashable		
+protocol	conformance SameAccountCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SameAccountCodingKeys	Swift.CodingKey		
+protocol	conformance ContactCodingKeys	Swift.CodingKey		
+protocol	conformance PinPairedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Respond.Parameters	Swift.Encodable		
+protocol	conformance Respond.Parameters	Swift.Decodable		
+protocol	conformance DDUIPermissionInvocations.Respond	Sharing._SFXPCAsyncInvocableProtocol		
+protocol	conformance DDUIPermissionInvocations.Respond	Sharing._AnySFXPCAsyncInvocableProtocol		
+protocol	conformance DDUIPermissionInvocations.Respond	Sharing.SFXPCInvocableProtocol		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	DeviceDiscoveryUICore.DDUIServiceActor	DistributedActor		
+extension	DeviceDiscoveryUICore.DDUIServiceActor	Identifiable		
+extension	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond	_SFXPCAsyncInvocableProtocol		
+extension	DeviceDiscoveryUICore.DDUIPermissionInvocations.Respond	SFXPCInvocableProtocol		

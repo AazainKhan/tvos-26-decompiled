@@ -1,0 +1,57 @@
+kind	type	conformance	member_kind	member
+class	MediaRemoteUI.VolumeHUDPresentable	NSObject		
+class	MediaRemoteUI.VolumeHUDPresentable	NSObject	let	requesterIdentifier
+class	MediaRemoteUI.VolumeHUDPresentable	NSObject	let	requestIdentifier
+class	MediaRemoteUI.VolumeHUDPresentable	NSObject	var	didDisappear
+class	MediaRemoteUI.Client	NSObject		
+class	MediaRemoteUI.Client	NSObject	let	connection
+class	MediaRemoteUI.Client	NSObject	let	identifier
+class	MediaRemoteUI.Client	NSObject	let	bannerController
+class	MediaRemoteUI.ClientConnectionManager	NSObject		
+class	MediaRemoteUI.ClientConnectionManager	NSObject	let	allowedBundleIDs
+class	MediaRemoteUI.ClientConnectionManager	NSObject	let	connectionQueue
+class	MediaRemoteUI.ClientConnectionManager	NSObject	var	listener
+class	MediaRemoteUI.ClientConnectionManager	NSObject	var	clients
+class	MediaRemoteUI.ClientConnectionManager	NSObject	var	interface
+struct	MediaRemoteUI.Main			
+struct	MediaRemoteUI.Main		var	_viewModel
+struct	MediaRemoteUI.Main		var	server
+class	MediaRemoteUI.BannerPresenter	NSObject		
+class	MediaRemoteUI.BannerPresenter	NSObject	var	delegate
+class	MediaRemoteUI.BannerPresenter	NSObject	let	source
+class	MediaRemoteUI.BannerController	NSObject		
+class	MediaRemoteUI.BannerController	NSObject	var	delegate
+class	MediaRemoteUI.BannerController	NSObject	var	lazy
+class	MediaRemoteUI.BannerController	NSObject	var	lazy
+class	MediaRemoteUI.BannerController	NSObject	let	source
+enum	MediaRemoteUI.BannerController.Errors			
+enum	MediaRemoteUI.BannerController.Errors		case	missingBannerConfiguration
+enum	MediaRemoteUI.BannerController.Errors		case	unsupportedBannerConfiguration
+class	MediaRemoteUI.EnvironmentModel			
+class	MediaRemoteUI.EnvironmentModel		var	_currentBannerPresentation
+class	MediaRemoteUI.EnvironmentModel		var	_currentVolumeHUDPresentation
+struct	MediaRemoteUI.VolumeHUDPresentation			
+struct	MediaRemoteUI.VolumeHUDPresentation		var	request
+struct	MediaRemoteUI.BannerPresentation			
+struct	MediaRemoteUI.BannerPresentation		var	request
+struct	MediaRemoteUI.BannerPresentation		var	bannerDelegate
+class	MediaRemoteUI.MainServer	NSObject		
+class	MediaRemoteUI.MainServer	NSObject	var	clientConnectionManager
+class	MediaRemoteUI.SuggestedRouteBannerPresenter	MediaRemoteUI.BannerPresenter		
+class	MediaRemoteUI.SuggestedRoutePresentable	NSObject		
+class	MediaRemoteUI.SuggestedRoutePresentable	NSObject	let	requesterIdentifier
+class	MediaRemoteUI.SuggestedRoutePresentable	NSObject	let	requestIdentifier
+class	MediaRemoteUI.SuggestedRoutePresentable	NSObject	var	delegate
+class	MediaRemoteUI.ResourceBundleClass			
+protocol	MediaRemoteUI.BannerDelegate			
+protocol	MediaRemoteUI.BannerControllerDelegate			
+protocol	conformance MediaRemoteUI.Client	MediaRemoteUI.BannerControllerDelegate		
+protocol	conformance MediaRemoteUI.Main	protocol descriptor for App		
+protocol	conformance MediaRemoteUI.BannerPresenter	MediaRemoteUI.BannerDelegate		
+protocol	conformance MediaRemoteUI.BannerController	MediaRemoteUI.BannerControllerDelegate		
+protocol	conformance BannerController.Errors	protocol descriptor for Hashable		
+protocol	conformance BannerController.Errors	protocol descriptor for Equatable		
+protocol	conformance BannerController.Errors	protocol descriptor for Error		
+protocol	conformance MediaRemoteUI.EnvironmentModel	protocol descriptor for ObservableObject		
+extension	MediaRemoteUI.Main	App		
+extension	MediaRemoteUI.EnvironmentModel	ObservableObject		

@@ -1,0 +1,157 @@
+kind	type	conformance	member_kind	member
+class	hvf.RenderContextTrampoline			
+class	hvf.RenderContextTrampoline		let	closure
+enum	hvf.AxisExtremum			
+enum	hvf.AxisExtremum		case	minimum
+enum	hvf.AxisExtremum		case	maximum
+enum	hvf.SegmentBlendType			
+enum	hvf.SegmentBlendType		case	curve
+enum	hvf.SegmentBlendType		case	corner
+enum	hvf.SegmentBlendType		case	tangent
+enum	hvf.SegmentBlendType		case	tangentTangent1
+enum	hvf.SegmentBlendType		case	tangentTangent2
+enum	hvf.SegmentPoint			
+enum	hvf.SegmentPoint		case	on
+enum	hvf.SegmentPoint		case	off
+enum	hvf.PointCoordinate			
+enum	hvf.PointCoordinate		case	xOrParallel
+enum	hvf.PointCoordinate		case	yOrZero
+class	hvf.LoadShapeWriter			
+class	hvf.LoadShapeWriter		var	pathSizes
+class	hvf.LoadShapeWriter		var	blendTypes
+class	hvf.LoadShapeWriter		var	masterVector
+class	hvf.LoadShapeWriter		var	denseDeltaMatrix
+class	hvf.LoadShapeWriter		let	shape
+class	hvf.LoadShapeWriter		let	shim
+struct	hvf.CompositeSubpart			
+struct	hvf.CompositeSubpart		var	partIndex
+struct	hvf.CompositeSubpart		var	treePartOffset
+struct	hvf.CompositeSubpart		var	treeAxisOffset
+struct	hvf.CompositeSubpartTranslation			
+struct	hvf.CompositeSubpartTranslation		var	dx
+struct	hvf.CompositeSubpartTranslation		var	dy
+struct	hvf.CompositeExtremumIndex			
+struct	hvf.CompositeExtremumIndex		var	row
+struct	hvf.CompositeExtremumIndex		var	column
+class	hvf.LoadCompositeWriter			
+class	hvf.LoadCompositeWriter		var	subparts
+class	hvf.LoadCompositeWriter		var	extremumCSCColumnStarts
+class	hvf.LoadCompositeWriter		var	masterCSCRowIndices
+class	hvf.LoadCompositeWriter		var	extremumCSCRowIndices
+class	hvf.LoadCompositeWriter		var	masterCSCAxisValues
+class	hvf.LoadCompositeWriter		var	extremumCSCAxisValues
+class	hvf.LoadCompositeWriter		var	masterTranslationIndices
+class	hvf.LoadCompositeWriter		var	masterTranslations
+class	hvf.LoadCompositeWriter		var	masterRotationIndices
+class	hvf.LoadCompositeWriter		var	masterRotations
+class	hvf.LoadCompositeWriter		var	extremumTranslationIndices
+class	hvf.LoadCompositeWriter		var	extremumTranslations
+class	hvf.LoadCompositeWriter		var	extremumRotationIndices
+class	hvf.LoadCompositeWriter		var	extremumRotations
+class	hvf.LoadCompositeWriter		let	composite
+class	hvf.LoadCompositeWriter		let	shim
+enum	hvf.PartResult			
+enum	hvf.PartResult		case	shape
+enum	hvf.PartResult		case	composite
+enum	hvf.PartResult		case	notFound
+class	hvf.CustomLoaderTrampoline			
+class	hvf.CustomLoaderTrampoline		let	closure
+class	hvf.HVGLPartLoader			
+class	hvf.HVGLPartLoader		var	loader
+struct	hvf.PartCacheTrampoline			
+struct	hvf.PartCacheTrampoline		let	cache
+class	hvf.PartRenderer			
+class	hvf.PartRenderer		var	renderer
+class	hvf.PartRenderer		var	trampoline
+class	hvf.PartRenderer		var	hvglLoader
+class	hvf.PartRenderer		var	partIndex
+struct	hvf.PartRenderer.Translation			
+struct	hvf.PartRenderer.Translation		var	dx
+struct	hvf.PartRenderer.Translation		var	dy
+enum	hvf.PartRenderer.Instruction			
+enum	hvf.PartRenderer.Instruction		case	beginPart
+enum	hvf.PartRenderer.Instruction		case	addPoint
+enum	hvf.PartRenderer.Instruction		case	addLine
+enum	hvf.PartRenderer.Instruction		case	addQuad
+enum	hvf.PartRenderer.Instruction		case	addCubic
+enum	hvf.PartRenderer.Instruction		case	endPart
+enum	hvf.PartRenderer.Instruction		case	beginPath
+enum	hvf.PartRenderer.Instruction		case	closePath
+enum	hvf.PartRenderer.Instruction		case	endPath
+enum	hvf.PartRenderer.Instruction		case	stop
+enum	hvf.PartRenderer.Action			
+enum	hvf.PartRenderer.Action		case	continue
+enum	hvf.PartRenderer.Action		case	skip
+enum	hvf.PartRenderer.Action		case	stop
+struct	hvf.PartRenderer.Point			
+struct	hvf.PartRenderer.Point		var	x
+struct	hvf.PartRenderer.Point		var	y
+class	hvf.PartRenderer.AxisValues			
+class	hvf.PartRenderer.AxisValues		let	base
+class	hvf.PartRenderer.AxisValues		let	basePartIndex
+class	hvf.PartRenderer.AxisValues		let	treeAxisOffset
+class	hvf.PartRenderer.AxisValues		let	axisCount
+class	hvf.PartRenderer.AxisValues		var	isNested
+class	hvf.PartRenderer.AxisValues		let	startIndex
+class	hvf.PartRenderer.PartParameters			
+class	hvf.PartRenderer.PartParameters		let	base
+class	hvf.PartRenderer.PartParameters		let	basePartIndex
+class	hvf.PartRenderer.PartParameters		let	partIndex
+class	hvf.PartRenderer.PartParameters		let	treeSubpartOffset
+class	hvf.PartRenderer.PartParameters		let	treeAxisOffset
+struct	hvf.PartRenderer.Subparts			
+struct	hvf.PartRenderer.Subparts		let	base
+struct	hvf.PartRenderer.Subparts		let	basePartIndex
+struct	hvf.PartRenderer.Subparts		let	partIndex
+struct	hvf.PartRenderer.Subparts		let	treeSubpartOffset
+struct	hvf.PartRenderer.Subparts		let	treeAxisOffset
+struct	hvf.PartRenderer.Subparts		let	subpartCount
+struct	hvf.PartRenderer.Subparts		let	startIndex
+protocol	hvf.ShapeWriter			
+protocol	hvf.CompositeWriter			
+protocol	hvf.PartGenerator			
+protocol	conformance hvf.AxisExtremum	Swift.Equatable		
+protocol	conformance hvf.AxisExtremum	Swift.Hashable		
+protocol	conformance hvf.AxisExtremum	Swift.RawRepresentable		
+protocol	conformance hvf.SegmentBlendType	Swift.Equatable		
+protocol	conformance hvf.SegmentBlendType	Swift.Hashable		
+protocol	conformance hvf.SegmentBlendType	Swift.RawRepresentable		
+protocol	conformance hvf.SegmentPoint	Swift.Equatable		
+protocol	conformance hvf.SegmentPoint	Swift.Hashable		
+protocol	conformance hvf.SegmentPoint	Swift.RawRepresentable		
+protocol	conformance hvf.PointCoordinate	Swift.Equatable		
+protocol	conformance hvf.PointCoordinate	Swift.Hashable		
+protocol	conformance hvf.PointCoordinate	Swift.RawRepresentable		
+protocol	conformance hvf.LoadShapeWriter	hvf.ShapeWriter		
+protocol	conformance hvf.CompositeSubpart	Swift.Hashable		
+protocol	conformance hvf.CompositeSubpart	Swift.Equatable		
+protocol	conformance hvf.CompositeSubpartTranslation	Swift.Hashable		
+protocol	conformance hvf.CompositeSubpartTranslation	Swift.Equatable		
+protocol	conformance hvf.CompositeExtremumIndex	Swift.Hashable		
+protocol	conformance hvf.CompositeExtremumIndex	Swift.Equatable		
+protocol	conformance hvf.LoadCompositeWriter	hvf.CompositeWriter		
+protocol	conformance hvf.PartCacheTrampoline	hvf.PartGenerator		
+protocol	conformance PartRenderer.Translation	Swift.Hashable		
+protocol	conformance PartRenderer.Translation	Swift.Equatable		
+protocol	conformance PartRenderer.Action	Swift.Equatable		
+protocol	conformance PartRenderer.Action	Swift.Hashable		
+protocol	conformance PartRenderer.Point	Swift.Hashable		
+protocol	conformance PartRenderer.Point	Swift.Equatable		
+protocol	conformance PartRenderer.AxisValues	Swift.MutableCollection		
+protocol	conformance PartRenderer.AxisValues	Swift.Collection		
+protocol	conformance PartRenderer.AxisValues	Swift.Sequence		
+protocol	conformance PartRenderer.Subparts	Swift.RandomAccessCollection		
+protocol	conformance PartRenderer.Subparts	Swift.BidirectionalCollection		
+protocol	conformance PartRenderer.Subparts	Swift.Collection		
+protocol	conformance PartRenderer.Subparts	Swift.Sequence		
+extension	hvf.AxisExtremum	RawRepresentable		
+extension	hvf.SegmentBlendType	RawRepresentable		
+extension	hvf.SegmentPoint	RawRepresentable		
+extension	hvf.PointCoordinate	RawRepresentable		
+extension	hvf.PartRenderer.AxisValues	MutableCollection		
+extension	hvf.PartRenderer.AxisValues	Collection		
+extension	hvf.PartRenderer.AxisValues	Sequence		
+extension	hvf.PartRenderer.Subparts	RandomAccessCollection		
+extension	hvf.PartRenderer.Subparts	BidirectionalCollection		
+extension	hvf.PartRenderer.Subparts	Collection		
+extension	hvf.PartRenderer.Subparts	Sequence		

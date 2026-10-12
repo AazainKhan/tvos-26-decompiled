@@ -1,0 +1,659 @@
+kind	type	conformance	member_kind	member
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResultReason			
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResultReason		case	minConfigFetchTimeIntervalNotPassed
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResultReason		case	noAssembly
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResultReason		case	termsAndConditionsNotAccepted
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResult			
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResult		case	yes
+enum	PegasusConfiguration.ShouldThrottleConfigFetchResult		case	no
+struct	PegasusConfiguration.LocalCachePaths			
+struct	PegasusConfiguration.LocalCachePaths		let	standard
+struct	PegasusConfiguration.LocalCachePaths		let	legacy
+class	PegasusConfiguration.PegasusConfigController			
+class	PegasusConfiguration.PegasusConfigController		let	activityMonitor
+class	PegasusConfiguration.PegasusConfigController		let	requestFactory
+class	PegasusConfiguration.PegasusConfigController		let	configSession
+class	PegasusConfiguration.PegasusConfigController		let	context
+class	PegasusConfiguration.PegasusConfigController		let	fileManager
+class	PegasusConfiguration.PegasusConfigController		let	configFactory
+class	PegasusConfiguration.PegasusConfigController		let	userAgent
+class	PegasusConfiguration.PegasusConfigController		let	taskCoordinator
+class	PegasusConfiguration.PegasusConfigController		let	taskController
+class	PegasusConfiguration.PegasusConfigController		let	usageReporter
+class	PegasusConfiguration.PegasusConfigController		var	delegate
+class	PegasusConfiguration.PegasusConfigController		let	configContainer
+class	PegasusConfiguration.ConfigTaskController			
+class	PegasusConfiguration.ConfigTaskController		let	configContainer
+class	PegasusConfiguration.ConfigTaskController		var	remoteTask
+class	PegasusConfiguration.ConfigTaskController		var	localTask
+class	PegasusConfiguration.ConfigTaskController		var	hasRemoteConfig
+class	PegasusConfiguration.ConfigTaskController		var	hasLocalRequest
+class	PegasusConfiguration.Container			
+class	PegasusConfiguration.Container		var	savedContent
+class	PegasusConfiguration.Container		let	locker
+class	PegasusConfiguration.Container		var	callback
+class	PegasusConfiguration.ConfigUsageReporter			
+class	PegasusConfiguration.ConfigUsageReporter		let	reportingState
+class	PegasusConfiguration.ConfigUsageReporter.State			
+class	PegasusConfiguration.ConfigUsageReporter.State		var	bagExpiredState
+class	PegasusConfiguration.ConfigUsageReporter.State		var	bagInvalidState
+class	PegasusConfiguration.ConfigUsageReporter.State		var	requestsToExpired
+class	PegasusConfiguration.ConfigUsageReporter.State		var	requestsToInvalid
+struct	PegasusConfiguration.PegasusConfigControllerInternals			
+struct	PegasusConfiguration.ConfigResult			
+struct	PegasusConfiguration.ConfigResult		let	outcome
+struct	PegasusConfiguration.ConfigResult		let	config
+struct	PegasusConfiguration.ConfigFetchThrottle			
+struct	PegasusConfiguration.ConfigFetchThrottle		let	lastFetchTime
+struct	PegasusConfiguration.ConfigFetchThrottle		let	minFetchInterval
+struct	PegasusConfiguration.ConfigFetchThrottle		let	expirationDate
+struct	PegasusConfiguration.ConfigFetchThrottle		let	lastURL
+enum	PegasusConfiguration.PegasusConfigFetchError			
+enum	PegasusConfiguration.PegasusConfigFetchError		case	errorStatusCode
+enum	PegasusConfiguration.PegasusConfigFetchError		case	wrappedError
+enum	PegasusConfiguration.PegasusConfigFetchError		case	badRequest
+enum	PegasusConfiguration.PegasusConfigFetchError		case	missingContext
+enum	PegasusConfiguration.PegasusConfigFetchError		case	throttledCacheReadFailed
+enum	PegasusConfiguration.PegasusConfigFetchError		case	fetchCompletedCacheReadFailed
+enum	PegasusConfiguration.PegasusConfigFetchError		case	invalidConfig
+enum	PegasusConfiguration.PegasusConfigFetchError		case	invalidJson
+enum	PegasusConfiguration.PegasusConfigFetchError		case	other
+enum	PegasusConfiguration.PegasusConfigFetchError		case	invalidState
+class	PegasusConfiguration.ResourceAccessNetworkSpan	PegasusConfiguration.NetworkSpan PegasusConfiguration.ResourceNetworkActivity		
+class	PegasusConfiguration.ResourceAccessNetworkSpan	PegasusConfiguration.NetworkSpan PegasusConfiguration.ResourceNetworkActivity	let	client
+class	PegasusConfiguration.ResourceAccessNetworkSpan	PegasusConfiguration.NetworkSpan PegasusConfiguration.ResourceNetworkActivity	var	identifier
+struct	PegasusConfiguration.ResourceNetworkActivity			
+struct	PegasusConfiguration.ResourceNetworkActivity		var	parent
+struct	PegasusConfiguration.ConfigurationContext			
+class	PegasusConfiguration.ParsecCAEvent.DimensionWrapper			
+class	PegasusConfiguration.ParsecCAEvent.DimensionWrapper		let	dimensions
+class	PegasusConfiguration.BoundedSerialQueue			
+class	PegasusConfiguration.BoundedSerialQueue		let	lock
+enum	PegasusConfiguration.PegasusClientName			
+enum	PegasusConfiguration.PegasusClientName		case	Unknown
+enum	PegasusConfiguration.PegasusClientName		case	Safari
+enum	PegasusConfiguration.PegasusClientName		case	Spotlight
+enum	PegasusConfiguration.PegasusClientName		case	Siri
+enum	PegasusConfiguration.PegasusClientName		case	Lookup
+enum	PegasusConfiguration.PegasusClientName		case	Messages
+enum	PegasusConfiguration.PegasusClientName		case	News
+enum	PegasusConfiguration.PegasusClientName		case	Parsecd
+enum	PegasusConfiguration.PegasusClientName		case	ParsecTool
+enum	PegasusConfiguration.PegasusClientName		case	CoreSuggestions
+enum	PegasusConfiguration.PegasusClientName		case	FlightUtilities
+enum	PegasusConfiguration.PegasusClientName		case	MapsSuggestions
+enum	PegasusConfiguration.PegasusClientName		case	Mail
+enum	PegasusConfiguration.PegasusClientName		case	VisualIntelligence
+enum	PegasusConfiguration.PegasusClientName		case	Trystero
+enum	PegasusConfiguration.PegasusClientName		case	DuetExpert
+enum	PegasusConfiguration.PegasusClientName		case	ReverseTemplated
+enum	PegasusConfiguration.PegasusClientName		case	MediaAnalysisd
+enum	PegasusConfiguration.PegasusClientName		case	NotificationsLogging
+enum	PegasusConfiguration.PegasusClientName		case	PegasusKit
+enum	PegasusConfiguration.PegasusClientName		case	Photos
+enum	PegasusConfiguration.PegasusClientName		case	PhotoPicker
+enum	PegasusConfiguration.PegasusClientName		case	IntelligencePlatform
+enum	PegasusConfiguration.PegasusClientName		case	IntelligenceFlow
+enum	PegasusConfiguration.PegasusClientName		case	SafariBrowsingAssistant
+enum	PegasusConfiguration.PegasusClientName		case	ClockFace
+enum	PegasusConfiguration.PegasusClientName		case	LookupSearch
+enum	PegasusConfiguration.PegasusClientName		case	EncryptedVisualSearch
+enum	PegasusConfiguration.PegasusClientName		case	SearchAnalyticsWorker
+enum	PegasusConfiguration.PegasusClientName		case	CameraVisualSearch
+enum	PegasusConfiguration.PegasusClientName		case	EncryptedPQAGeo
+enum	PegasusConfiguration.PegasusClientName		case	EncryptedPhotosLocationSearch
+enum	PegasusConfiguration.PegasusClientName		case	Tips
+class	PegasusConfiguration.Locker			
+class	PegasusConfiguration.Locker		let	lock
+class	PegasusConfiguration.ParsecKeys			
+class	PegasusConfiguration.ParsecKeys		let	encryptedToken
+struct	PegasusConfiguration.URLDataSourceOutput			
+struct	PegasusConfiguration.URLDataSourceOutput		let	data
+struct	PegasusConfiguration.URLDataSourceOutput		let	response
+struct	PegasusConfiguration.URLDataSourceOutput		let	timingInfo
+class	PegasusConfiguration.URLSessionDataSource			
+class	PegasusConfiguration.URLSessionDataSource		let	urlSession
+class	PegasusConfiguration.URLSessionDataSource		let	onSetup
+class	PegasusConfiguration.URLSessionDataSource		let	stashedLastTaskTimingMetrics
+struct	PegasusConfiguration.BiomeStreamConfig			
+struct	PegasusConfiguration.BiomeStreamConfig		let	tableName
+struct	PegasusConfiguration.BiomeStreamConfig		let	messageSchemaName
+struct	PegasusConfiguration.BiomeStreamConfig		let	storeConfig
+struct	PegasusConfiguration.BiomeStreamConfig		let	identifier
+class	PegasusConfiguration.ConfigurationManager			
+class	PegasusConfiguration.ConfigurationManager		let	controller
+enum	PegasusConfiguration.ResourceAccessOutcome			
+enum	PegasusConfiguration.ResourceAccessOutcome		case	unknown
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cacheHit
+enum	PegasusConfiguration.ResourceAccessOutcome		case	networkCallSucceed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	xpcCallSucceed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	finished
+enum	PegasusConfiguration.ResourceAccessOutcome		case	canceled
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cacheMiss
+enum	PegasusConfiguration.ResourceAccessOutcome		case	configFetchSynchronized
+enum	PegasusConfiguration.ResourceAccessOutcome		case	configFetchThrottled
+enum	PegasusConfiguration.ResourceAccessOutcome		case	configFetchInBackground
+enum	PegasusConfiguration.ResourceAccessOutcome		case	skipSearch
+enum	PegasusConfiguration.ResourceAccessOutcome		case	pretendSearch
+enum	PegasusConfiguration.ResourceAccessOutcome		case	warmNotRequired
+enum	PegasusConfiguration.ResourceAccessOutcome		case	connectionStillWarm
+enum	PegasusConfiguration.ResourceAccessOutcome		case	skipSearchBecauseURL
+enum	PegasusConfiguration.ResourceAccessOutcome		case	notFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	warmError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	badRequest
+enum	PegasusConfiguration.ResourceAccessOutcome		case	badResponse
+enum	PegasusConfiguration.ResourceAccessOutcome		case	badResponseStatus
+enum	PegasusConfiguration.ResourceAccessOutcome		case	emptyDataInResponse
+enum	PegasusConfiguration.ResourceAccessOutcome		case	invalidJSON
+enum	PegasusConfiguration.ResourceAccessOutcome		case	dataTaskFailure
+enum	PegasusConfiguration.ResourceAccessOutcome		case	responseNotHTTP
+enum	PegasusConfiguration.ResourceAccessOutcome		case	otherNetworkError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	requestError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	rpcError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	timedOut
+enum	PegasusConfiguration.ResourceAccessOutcome		case	xpcError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	missingContext
+enum	PegasusConfiguration.ResourceAccessOutcome		case	configFetchThrottledCacheReadFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	configFetchCompletedCacheReadFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	invalidConfig
+enum	PegasusConfiguration.ResourceAccessOutcome		case	otherConfigError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	featureDisabled
+enum	PegasusConfiguration.ResourceAccessOutcome		case	deviceSetupIncomplete
+enum	PegasusConfiguration.ResourceAccessOutcome		case	ensureBagFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	noUserAgent
+enum	PegasusConfiguration.ResourceAccessOutcome		case	noBag
+enum	PegasusConfiguration.ResourceAccessOutcome		case	noAssembly
+enum	PegasusConfiguration.ResourceAccessOutcome		case	searchDisabledFromBag
+enum	PegasusConfiguration.ResourceAccessOutcome		case	missingSearchURLInBag
+enum	PegasusConfiguration.ResourceAccessOutcome		case	missingProxy
+enum	PegasusConfiguration.ResourceAccessOutcome		case	requestIneligible
+enum	PegasusConfiguration.ResourceAccessOutcome		case	badResource
+enum	PegasusConfiguration.ResourceAccessOutcome		case	proxyInitError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	otherProxyError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	notConfiguredError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	otherPegasusError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	contextError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	otherContextError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	otherSearchError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	contextFetchFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	contextFetchSuccessUnchanged
+enum	PegasusConfiguration.ResourceAccessOutcome		case	contextFetchSuccessUpdated
+enum	PegasusConfiguration.ResourceAccessOutcome		case	contextFetchSuccessUpdatedStale
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sqlError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	v1Finished
+enum	PegasusConfiguration.ResourceAccessOutcome		case	v2Finished
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorCancelled
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorBadURL
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorTimedOut
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorUnsupportedURL
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorCannotFindHost
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorNetworkConnectionLost
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorDNSLookupFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorHTTPTooManyRedirects
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorResourceUnavailable
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorNotConnectedToInternet
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorRedirectToNonExistentLocation
+enum	PegasusConfiguration.ResourceAccessOutcome		case	urlErrorDataNotAllowed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	appWhitelistImmediateUpdateTransactionMissing
+enum	PegasusConfiguration.ResourceAccessOutcome		case	appWhitelistDeferredUpdateBegan
+enum	PegasusConfiguration.ResourceAccessOutcome		case	appwhitelistDeferredUpdateTransactionMissing
+enum	PegasusConfiguration.ResourceAccessOutcome		case	appWhitelistDeferredUpdateSuperseded
+enum	PegasusConfiguration.ResourceAccessOutcome		case	failedToCreateFile
+enum	PegasusConfiguration.ResourceAccessOutcome		case	failedToCreateFileHandle
+enum	PegasusConfiguration.ResourceAccessOutcome		case	failedToSetExtendedAttributes
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cacheDirectoryNotFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cacheDirEnumeratorInitFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	disallowedNonPlatformBinary
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryFinished
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryMissingContext
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryNotFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetSet
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetName
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetLocation
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetMetadata
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryMissingMetadataEntry
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryCannotReadAsset
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryInvalidJSON
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryBadResource
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryBadURL
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryRequestIneligible
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryTaskCancelled
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryHashNotFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliverySameVersion
+enum	PegasusConfiguration.ResourceAccessOutcome		case	assetDeliveryInvalidContext
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskCompleted
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskCompletedWithEvents
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskObservedEvents
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskNoEventsFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskBiomeStreamIterationEmpty
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaTaskNoBookmarkFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaEventSavedToFL
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorReadingFromBiome
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorWriteToFL
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorPBDecode
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorPBEncode
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorPBSchemaMismatch
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorWebIDMissing
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sbaErrorBookmarkDecodeError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionInvalidRemoteObject
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionMissingPayload
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionUnsubscribeError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionSubscribeError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionSubscribeSuccess
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionUnsubscribeSuccess
+enum	PegasusConfiguration.ResourceAccessOutcome		case	cloudConnectionNoPushMessage
+enum	PegasusConfiguration.ResourceAccessOutcome		case	protoSterilizationFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	parsecKeysMissingTokenError
+enum	PegasusConfiguration.ResourceAccessOutcome		case	parsecKeysFound
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sessionSuccess
+enum	PegasusConfiguration.ResourceAccessOutcome		case	sessionUnknown
+enum	PegasusConfiguration.ResourceAccessOutcome		case	timestampOutOfRange
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenSuccess
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenChallengeFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenChallengeDataMissing
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenFetcherInitFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenFetchFailed
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenPermissionDenied
+enum	PegasusConfiguration.ResourceAccessOutcome		case	patTokenNetworkError
+enum	PegasusConfiguration.ResourceAccessActivity			
+class	PegasusConfiguration.ParsecURLRequestBuilder			
+class	PegasusConfiguration.ParsecURLRequestBuilder		let	urlComponents
+class	PegasusConfiguration.ParsecURLRequestBuilder		var	queryItems
+class	PegasusConfiguration.ParsecURLRequestBuilder		var	httpHeader
+enum	PegasusConfiguration.ParsecURLRequestBuilder.URLError			
+enum	PegasusConfiguration.ParsecURLRequestBuilder.URLError		case	InvalidURLSchemeError
+enum	PegasusConfiguration.ParsecURLRequestBuilder.URLError		case	InvalidURL
+struct	PegasusConfiguration.DeviceContextUtil			
+enum	PegasusConfiguration.KnownAggregationRecipeClient			
+enum	PegasusConfiguration.KnownAggregationRecipeClient		case	spotlight
+enum	PegasusConfiguration.KnownAggregationProcessBundleId			
+enum	PegasusConfiguration.KnownAggregationProcessBundleId		case	SearchAnalyticsWorker
+enum	PegasusConfiguration.KnownAggregationRecipeName			
+enum	PegasusConfiguration.KnownAggregationRecipeName		case	SpotlightFeatureExtraction
+enum	PegasusConfiguration.KnownAggregationRecipeName		case	SpotlightFeatureReport
+enum	PegasusConfiguration.KnownAggregationRecipeName		case	SpotlightSurveyDaily
+enum	PegasusConfiguration.KnownAggregationRecipeName		case	SpotlightSurveyWeekly
+struct	PegasusConfiguration.ConfigContext			
+class	PegasusConfiguration.TaskCoordinator			
+class	PegasusConfiguration.TaskCoordinator		let	lock
+struct	PegasusConfiguration.TaskCoordinator.State			
+struct	PegasusConfiguration.TaskCoordinator.State		var	status
+struct	PegasusConfiguration.TaskCoordinator.State		var	tasksInFlight
+struct	PegasusConfiguration.TaskCoordinator.State		var	continuations
+struct	PegasusConfiguration.TaskCoordinator.State		var	timeoutTask
+enum	PegasusConfiguration.TaskCoordinator.TaskError			
+enum	PegasusConfiguration.TaskCoordinator.TaskError		case	timeoutWaitingOnConnection
+enum	PegasusConfiguration.TaskCoordinator.Status			
+enum	PegasusConfiguration.TaskCoordinator.Status		case	pendingStart
+enum	PegasusConfiguration.TaskCoordinator.Status		case	active
+enum	PegasusConfiguration.TaskCoordinator.Status		case	waitingOnConnection
+enum	PegasusConfiguration.TaskCoordinator.Status		case	completed
+class	PegasusConfiguration.LifetimeSpanPrototype	PegasusConfiguration.ActivitySpan PegasusConfiguration.LifetimeTrackingActivity _$sxG -><A: PegasusConfiguration.LifetimeTrackable>		
+enum	PegasusConfiguration.LifetimeTrackingActivity<A	PegasusConfiguration.LifetimeTrackable>		
+enum	PegasusConfiguration.LifetimeTrackingActivity<A	PegasusConfiguration.LifetimeTrackable>	case	lifetime
+struct	PegasusConfiguration.UserAgent			
+struct	PegasusConfiguration.UserAgent		let	client
+struct	PegasusConfiguration.UserAgent		let	requestor
+struct	PegasusConfiguration.UserAgent		let	fullString
+struct	PegasusConfiguration.UserAgent		let	nameVersion
+enum	PegasusConfiguration.Requestor			
+enum	PegasusConfiguration.Requestor		case	parsecd
+enum	PegasusConfiguration.Requestor		case	PegasusKit
+enum	PegasusConfiguration.PegasusConfigPathError			
+enum	PegasusConfiguration.PegasusConfigPathError		case	singleResultFailed
+enum	PegasusConfiguration.PegasusConfigPathError		case	pathNotFound
+enum	PegasusConfiguration.PegasusConfigPathError		case	queryCreationFailed
+enum	PegasusConfiguration.PegasusConfigPathError		case	emptyPathFound
+struct	PegasusConfiguration.PrimaryPersonaContainerPathLookup			
+struct	PegasusConfiguration.FeedbackStoreConfig			
+struct	PegasusConfiguration.FeedbackStoreConfig		let	streamConfigs
+class	PegasusConfiguration.ConfigurationLogging			
+enum	PegasusConfiguration.Useragentpb_ClientID			
+enum	PegasusConfiguration.Useragentpb_ClientID		case	UNRECOGNIZED
+enum	PegasusConfiguration.Useragentpb_ClientID		case	unknownClient
+enum	PegasusConfiguration.Useragentpb_ClientID		case	safari
+enum	PegasusConfiguration.Useragentpb_ClientID		case	spotlight
+enum	PegasusConfiguration.Useragentpb_ClientID		case	lookup
+enum	PegasusConfiguration.Useragentpb_ClientID		case	siri
+enum	PegasusConfiguration.Useragentpb_ClientID		case	messages
+enum	PegasusConfiguration.Useragentpb_ClientID		case	news
+enum	PegasusConfiguration.Useragentpb_ClientID		case	parsecd
+enum	PegasusConfiguration.Useragentpb_ClientID		case	dprivacyd
+enum	PegasusConfiguration.Useragentpb_ClientID		case	coreSuggestions
+enum	PegasusConfiguration.Useragentpb_ClientID		case	flightUtilities
+enum	PegasusConfiguration.Useragentpb_ClientID		case	trystero
+enum	PegasusConfiguration.Useragentpb_ClientID		case	mapsSuggestions
+enum	PegasusConfiguration.Useragentpb_ClientID		case	duetExpert
+enum	PegasusConfiguration.Useragentpb_ClientID		case	visualIntelligence
+enum	PegasusConfiguration.Useragentpb_ClientID		case	amp
+enum	PegasusConfiguration.Useragentpb_ClientID		case	mail
+enum	PegasusConfiguration.Useragentpb_ClientID		case	sideband
+class	PegasusConfiguration.NetworkSpan	PegasusConfiguration.ActivitySpan A<A: PegasusConfiguration.ActivityDescription>		
+class	PegasusConfiguration.NetworkSpan	PegasusConfiguration.ActivitySpan A<A: PegasusConfiguration.ActivityDescription>	let	task
+class	PegasusConfiguration.NetworkSpan	PegasusConfiguration.ActivitySpan A<A: PegasusConfiguration.ActivityDescription>	var	error
+class	PegasusConfiguration.NetworkSpan	PegasusConfiguration.ActivitySpan A<A: PegasusConfiguration.ActivityDescription>	var	networkActivity
+enum	PegasusConfiguration.FeedbackStreamDescriptor			
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	session
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	safari
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	spotlight
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	siri
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	lookup
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	messages
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	news
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	parsecd
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	parsectool
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	coresuggestions
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	flightutilities
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	mail
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	mediaanalysisd
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	duetexpert
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	trystero
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	photopicker
+enum	PegasusConfiguration.FeedbackStreamDescriptor		case	photos
+enum	PegasusConfiguration.FeedbackStreamError			
+enum	PegasusConfiguration.FeedbackStreamError		case	logicError
+enum	PegasusConfiguration.FeedbackStreamError		case	cannotFindAppGroupContainer
+class	PegasusConfiguration.ActivityMonitor			
+class	PegasusConfiguration.ActivityMonitor		var	delegate
+class	PegasusConfiguration.ActivityMonitor		let	locker
+class	PegasusConfiguration.ActivityMonitor		var	spans
+class	PegasusConfiguration.ActivityMonitor.WeakReference			
+class	PegasusConfiguration.ActivityMonitor.WeakReference		var	reference
+class	PegasusConfiguration.ResourceAccessSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.ResourceAccessActivity		
+class	PegasusConfiguration.ResourceAccessSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.ResourceAccessActivity	var	outcome
+class	PegasusConfiguration.ResourceAccessSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.ResourceAccessActivity	var	networkSpan
+class	PegasusConfiguration.ResourceAccessSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.ResourceAccessActivity	var	identifier
+class	PegasusConfiguration.ResourceAccessSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.ResourceAccessActivity	let	client
+class	PegasusConfiguration.ResourceAccessSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.ResourceAccessActivity	var	excludeOutcomeForAnalytics
+struct	PegasusConfiguration.FederatedIdentifier			
+struct	PegasusConfiguration.FederatedIdentifier		let	uuid
+struct	PegasusConfiguration.FederatedIdentifier		let	dateCreated
+enum	PegasusConfiguration.FederatedIdentifier.CodingKeys			
+enum	PegasusConfiguration.FederatedIdentifier.CodingKeys		case	uuid
+enum	PegasusConfiguration.FederatedIdentifier.CodingKeys		case	dateCreated
+enum	PegasusConfiguration.DataVaultStorageClass			
+enum	PegasusConfiguration.DataVaultStorageClass		case	feedbacks
+enum	PegasusConfiguration.DataVaultStorageClass		case	aggregations
+enum	PegasusConfiguration.DataVaultStorageClass		case	uploadables
+enum	PegasusConfiguration.DataVaultPathError			
+enum	PegasusConfiguration.DataVaultPathError		case	fileConflict
+enum	PegasusConfiguration.DataVaultPathError		case	convertFailure
+enum	PegasusConfiguration.DataVaultPathError		case	makeDirectorFailure
+enum	PegasusConfiguration.DataVaultPathError		case	userDirectoryNotFound
+enum	PegasusConfiguration.DataVaultPathError		case	groupContainerNotFound
+enum	PegasusConfiguration.DataVaultPathError		case	directoryCreationFailure
+struct	PegasusConfiguration.DataVaultPathProvider			
+struct	PegasusConfiguration.DataVaultPathProvider		let	fileManager
+struct	PegasusConfiguration.DataVaultPathProvider		let	container
+class	PegasusConfiguration.DiskWriteSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.DiskWriteActivity<A: PegasusConfiguration.DiskOperationMetrics>		
+class	PegasusConfiguration.DiskWriteSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.DiskWriteActivity<A: PegasusConfiguration.DiskOperationMetrics>	var	error
+class	PegasusConfiguration.DiskWriteSpan	PegasusConfiguration.ActivitySpan PegasusConfiguration.DiskWriteActivity<A: PegasusConfiguration.DiskOperationMetrics>	var	metrics
+enum	PegasusConfiguration.DiskWriteActivity			
+enum	PegasusConfiguration.DiskWriteActivity		case	unknown
+enum	PegasusConfiguration.DiskWriteActivity		case	parsecSession
+enum	PegasusConfiguration.DiskWriteActivity		case	parsecFeedbackEvent
+enum	PegasusConfiguration.DiskWriteActivity		case	customFeedback
+enum	PegasusConfiguration.DiskWriteActivity		case	batchedInstrumentation
+enum	PegasusConfiguration.DiskWriteActivity		case	fileInstrumentation
+enum	PegasusConfiguration.DiskWriteActivity		case	pegasusConfiguration
+enum	PegasusConfiguration.DiskWriteActivity		case	bagResource
+enum	PegasusConfiguration.DiskWriteActivity		case	bag
+enum	PegasusConfiguration.DiskWriteError			
+enum	PegasusConfiguration.DiskWriteError		case	unknown
+enum	PegasusConfiguration.DiskWriteError		case	noAssembly
+enum	PegasusConfiguration.DiskWriteError		case	readError
+enum	PegasusConfiguration.DiskWriteError		case	writeError
+enum	PegasusConfiguration.DiskWriteError		case	quotaExceeded
+enum	PegasusConfiguration.DiskWriteError		case	customFeedbackNoFile
+enum	PegasusConfiguration.DiskWriteError		case	errorMakingTempFile
+enum	PegasusConfiguration.DiskWriteError		case	mmapError
+enum	PegasusConfiguration.DiskWriteError		case	pathError
+struct	PegasusConfiguration.BasicDiskOperationMetrics			
+struct	PegasusConfiguration.BasicDiskOperationMetrics		var	bytesWritten
+struct	PegasusConfiguration.Client			
+struct	PegasusConfiguration.Client		let	type
+struct	PegasusConfiguration.Client		let	name
+enum	PegasusConfiguration.ClientType			
+enum	PegasusConfiguration.SessionType			
+enum	PegasusConfiguration.SessionType		case	unknown
+enum	PegasusConfiguration.SessionType		case	safari
+enum	PegasusConfiguration.SessionType		case	spotlight
+enum	PegasusConfiguration.SessionType		case	siri
+enum	PegasusConfiguration.SessionType		case	lookup
+enum	PegasusConfiguration.SessionType		case	messages
+enum	PegasusConfiguration.SessionType		case	news
+enum	PegasusConfiguration.SessionType		case	parsecd
+enum	PegasusConfiguration.SessionType		case	parsectool
+enum	PegasusConfiguration.SessionType		case	coresuggestions
+enum	PegasusConfiguration.SessionType		case	flightutilities
+enum	PegasusConfiguration.SessionType		case	mail
+enum	PegasusConfiguration.SessionType		case	mediaanalysisd
+enum	PegasusConfiguration.SessionType		case	duetexpert
+enum	PegasusConfiguration.SessionType		case	trystero
+enum	PegasusConfiguration.SessionType		case	photopicker
+enum	PegasusConfiguration.SessionType		case	photos
+struct	PegasusConfiguration.PegasusConfigContainerURLProvider			
+enum	PegasusConfiguration.DataWarehouseConfigError			
+enum	PegasusConfiguration.DataWarehouseConfigError		case	nonFileSystemURL
+enum	PegasusConfiguration.DataWarehouseConfigError		case	cannotResolveWarehouseUrl
+struct	PegasusConfiguration.DataWarehouseConfig			
+struct	PegasusConfiguration.DataWarehouseConfig		let	dataWarehouseUrl
+struct	PegasusConfiguration.DataWarehouseConfig		let	databaseAlias
+struct	PegasusConfiguration.DataWarehouseConfig		let	streamDescriptor
+struct	PegasusConfiguration.DataWarehouseConfig.Context			
+class	PegasusConfiguration.ConfigFactoryInternal	NSObject		
+class	PegasusConfiguration.ConfigInternal	NSObject		
+class	PegasusConfiguration.ConfigInternal	NSObject	let	data
+class	PegasusConfiguration.ConfigInternal	NSObject	let	userAgent
+class	PegasusConfiguration.ConfigInternal	NSObject	let	clientName
+class	PegasusConfiguration.ConfigInternal	NSObject	var	userDefaults
+struct	PegasusConfiguration.LegacyDataWarehouseConfig			
+struct	PegasusConfiguration.LegacyDataWarehouseConfig		let	dataWarehouseUrl
+struct	PegasusConfiguration.LegacyDataWarehouseConfig		let	streamDescriptor
+class	PegasusConfiguration.AtomicProperty			
+class	PegasusConfiguration.AtomicProperty		var	value
+class	PegasusConfiguration.AtomicProperty		let	lock
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>		
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	var	monitor
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	var	data
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	let	activity
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	var	isDone
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	let	osLog
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	var	signpostID
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	var	timestamp
+class	PegasusConfiguration.ActivitySpan<A	PegasusConfiguration.ActivityDescription>	var	locker
+struct	PegasusConfiguration.ActivitySpan.ActivityData<A	PegasusConfiguration.ActivityDescription>		
+struct	PegasusConfiguration.ActivitySpan.ActivityData<A	PegasusConfiguration.ActivityDescription>	var	format
+struct	PegasusConfiguration.ActivitySpan.ActivityData<A	PegasusConfiguration.ActivityDescription>	var	analytics
+struct	PegasusConfiguration.ActivitySpan.ActivityData<A	PegasusConfiguration.ActivityDescription>	var	arguments
+struct	PegasusConfiguration.ActivitySpan.ActivityData<A	PegasusConfiguration.ActivityDescription>	var	cancellables
+struct	PegasusConfiguration.ActivitySpan.ActivityData<A	PegasusConfiguration.ActivityDescription>	var	transaction
+class	PegasusConfiguration.PARNetworkRequestFactory			
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameVersion
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameCard
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemValueTrue
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemInternalBuild
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemSeedBuild
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemSiriLocaleIdentifier
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemHeySiriEnabled
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameLatLng
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameGeoSrc
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecLocationSourceUserNo
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameEncryptedAuthToken
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameLocale
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameEffectiveSystemLanguage
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameDeviceCountryCode
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecQueryItemNameAgent
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecBagFetchURLKey
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecBagFetchURLDefault
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecBagFetchURLChina
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecHTTPHeaderNameLanguages
+class	PegasusConfiguration.PARNetworkRequestFactory		let	ParsecHTTPHeaderNameUserAgent
+class	PegasusConfiguration.PARNetworkRequestFactory		let	userDefaults
+class	PegasusConfiguration.PARNetworkRequestFactory		let	authTokenProvider
+protocol	PegasusConfiguration.PegasusConfigDelegate			
+protocol	PegasusConfiguration.NetworkAuthTokenProviding			
+protocol	PegasusConfiguration.URLDataSource			
+protocol	PegasusConfiguration.URLDataSourceConvertible			
+protocol	PegasusConfiguration.ConfigController			
+protocol	PegasusConfiguration.ConfigAccessProvider			
+protocol	PegasusConfiguration.ConfigFetcher			
+protocol	PegasusConfiguration.NetworkRequestFactory			
+protocol	PegasusConfiguration.ContextProtocol			
+protocol	PegasusConfiguration.LifetimeTrackable			
+protocol	PegasusConfiguration.OSVariantInspector			
+protocol	PegasusConfiguration.ActivityDescription			
+protocol	PegasusConfiguration.__CoreAnalyticsActivity			
+protocol	PegasusConfiguration.CoreAnalyticsActivity			
+protocol	PegasusConfiguration.TransactionActivity			
+protocol	PegasusConfiguration.__CrashSimulationActivity			
+protocol	PegasusConfiguration.OptionalCrashSimulationActivity			
+protocol	PegasusConfiguration.CrashSimulationActivity			
+protocol	PegasusConfiguration.SubActivityDescription	ParentActivity		
+protocol	PegasusConfiguration.NetworkTask			
+protocol	PegasusConfiguration.SpanProtocol			
+protocol	PegasusConfiguration.ActivityAdopter	Activity		
+protocol	PegasusConfiguration.ActivityMonitorAdopter			
+protocol	PegasusConfiguration.ActivityMonitorDelegate			
+protocol	PegasusConfiguration.ResourceAccessProvider			
+protocol	PegasusConfiguration.DiskOperationMetrics			
+protocol	PegasusConfiguration.PegasusConfigContainerURLResolver			
+protocol	conformance PegasusConfiguration.ShouldThrottleConfigFetchResultReason	Swift.Equatable		
+protocol	conformance PegasusConfiguration.ShouldThrottleConfigFetchResultReason	Swift.Hashable		
+protocol	conformance PegasusConfiguration.ShouldThrottleConfigFetchResult	Swift.Equatable		
+protocol	conformance PegasusConfiguration.LocalCachePaths	Swift.Equatable		
+protocol	conformance __C.BMStreamIdentifier	Swift._HasCustomAnyHashableRepresentation: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.RawRepresentable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift._SwiftNewtypeWrapper: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.Equatable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.Hashable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift._ObjectiveCBridgeable: BiomeStreams		
+protocol	conformance ConfigTaskController	Swift.Actor		
+protocol	conformance PegasusConfiguration.PegasusConfigController	PegasusConfiguration.ConfigAccessProvider		
+protocol	conformance PegasusConfiguration.PegasusConfigController	PegasusConfiguration.ResourceAccessProvider		
+protocol	conformance PegasusConfiguration.PegasusConfigController	PegasusConfiguration.ConfigController		
+protocol	conformance PegasusConfiguration.PegasusConfigFetchError	Swift.Error		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	Swift.Equatable		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	Swift.Hashable		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	PegasusConfiguration.__CrashSimulationActivity		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	PegasusConfiguration.__CoreAnalyticsActivity		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	PegasusConfiguration.ActivityDescription		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	PegasusConfiguration.OptionalCrashSimulationActivity		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	PegasusConfiguration.CoreAnalyticsActivity		
+protocol	conformance PegasusConfiguration.ResourceNetworkActivity	PegasusConfiguration.SubActivityDescription		
+protocol	conformance PegasusConfiguration.PegasusClientName	Swift.Equatable		
+protocol	conformance PegasusConfiguration.PegasusClientName	Swift.Hashable		
+protocol	conformance PegasusConfiguration.PegasusClientName	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.PegasusClientName	Swift.CaseIterable		
+protocol	conformance PegasusConfiguration.ParsecKeys	PegasusConfiguration.NetworkAuthTokenProviding		
+protocol	conformance NSURLSession	PegasusConfiguration.URLDataSourceConvertible		
+protocol	conformance URLSessionDataSource	PegasusConfiguration.URLDataSource		
+protocol	conformance PegasusConfiguration.ConfigurationManager	PegasusConfiguration.ConfigFetcher		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	Swift.Hashable		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	Swift.Equatable		
+protocol	conformance PegasusConfiguration.ResourceAccessOutcome	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.ResourceAccessOutcome	Swift.Hashable		
+protocol	conformance PegasusConfiguration.ResourceAccessOutcome	Swift.Equatable		
+protocol	conformance ParsecURLRequestBuilder.URLError	Swift.Hashable		
+protocol	conformance ParsecURLRequestBuilder.URLError	Swift.Equatable		
+protocol	conformance ParsecURLRequestBuilder.URLError	Swift.Error		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeClient	Swift.Equatable		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeClient	Swift.Hashable		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeClient	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.KnownAggregationProcessBundleId	Swift.Equatable		
+protocol	conformance PegasusConfiguration.KnownAggregationProcessBundleId	Swift.Hashable		
+protocol	conformance PegasusConfiguration.KnownAggregationProcessBundleId	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeName	Swift.Equatable		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeName	Swift.Hashable		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeName	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.KnownAggregationRecipeName	Swift.CaseIterable		
+protocol	conformance PegasusConfiguration.ConfigContext	PegasusConfiguration.ContextProtocol		
+protocol	conformance Status	Swift.Equatable		
+protocol	conformance Status	Swift.Hashable		
+protocol	conformance TaskCoordinator.TaskError	Swift.Hashable		
+protocol	conformance TaskCoordinator.TaskError	Swift.Equatable		
+protocol	conformance TaskCoordinator.TaskError	Swift.Error		
+protocol	conformance PegasusConfiguration.LifetimeTrackingActivity	PegasusConfiguration.__CrashSimulationActivity		
+protocol	conformance PegasusConfiguration.LifetimeTrackingActivity	PegasusConfiguration.CrashSimulationActivity		
+protocol	conformance PegasusConfiguration.LifetimeTrackingActivity	PegasusConfiguration.ActivityDescription		
+protocol	conformance PegasusConfiguration.LifetimeTrackingActivity	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.LifetimeTrackingActivity	Swift.Hashable		
+protocol	conformance PegasusConfiguration.LifetimeTrackingActivity	Swift.Equatable		
+protocol	conformance PegasusConfiguration.UserAgent	Swift.Equatable		
+protocol	conformance PegasusConfiguration.Requestor	Swift.Equatable		
+protocol	conformance PegasusConfiguration.Requestor	Swift.Hashable		
+protocol	conformance PegasusConfiguration.PegasusConfigPathError	Swift.Error		
+protocol	conformance PegasusConfiguration.Useragentpb_ClientID	InternalSwiftProtobuf.Enum		
+protocol	conformance PegasusConfiguration.Useragentpb_ClientID	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.Useragentpb_ClientID	Swift.Hashable		
+protocol	conformance PegasusConfiguration.Useragentpb_ClientID	Swift.Equatable		
+protocol	conformance PegasusConfiguration.Useragentpb_ClientID	Swift.CaseIterable		
+protocol	conformance PegasusConfiguration.Useragentpb_ClientID	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance NSURLSessionTask	PegasusConfiguration.NetworkTask		
+protocol	conformance PegasusConfiguration.FeedbackStreamDescriptor	Swift.Equatable		
+protocol	conformance PegasusConfiguration.FeedbackStreamDescriptor	Swift.Hashable		
+protocol	conformance PegasusConfiguration.FeedbackStreamDescriptor	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.FeedbackStreamDescriptor	Swift.CaseIterable		
+protocol	conformance PegasusConfiguration.FeedbackStreamError	Swift.Error		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	PegasusConfiguration.__CrashSimulationActivity		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	PegasusConfiguration.__CoreAnalyticsActivity		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	PegasusConfiguration.TransactionActivity		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	PegasusConfiguration.OptionalCrashSimulationActivity		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	PegasusConfiguration.CoreAnalyticsActivity		
+protocol	conformance PegasusConfiguration.ResourceAccessActivity	PegasusConfiguration.ActivityDescription		
+protocol	conformance PegasusConfiguration.FederatedIdentifier	Swift.Decodable		
+protocol	conformance PegasusConfiguration.FederatedIdentifier	Swift.Encodable		
+protocol	conformance PegasusConfiguration.FederatedIdentifier	Swift.Hashable		
+protocol	conformance PegasusConfiguration.FederatedIdentifier	Swift.Equatable		
+protocol	conformance PegasusConfiguration.FederatedIdentifier	Swift.Comparable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PegasusConfiguration.DataVaultStorageClass	Swift.Equatable		
+protocol	conformance PegasusConfiguration.DataVaultStorageClass	Swift.Hashable		
+protocol	conformance PegasusConfiguration.DataVaultStorageClass	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.DataVaultStorageClass	Swift.CaseIterable		
+protocol	conformance PegasusConfiguration.DataVaultPathError	Swift.Error		
+protocol	conformance PegasusConfiguration.DiskWriteActivity	PegasusConfiguration.__CoreAnalyticsActivity		
+protocol	conformance PegasusConfiguration.DiskWriteActivity	PegasusConfiguration.CoreAnalyticsActivity		
+protocol	conformance PegasusConfiguration.DiskWriteActivity	PegasusConfiguration.ActivityDescription		
+protocol	conformance PegasusConfiguration.DiskWriteActivity	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.DiskWriteActivity	Swift.Hashable		
+protocol	conformance PegasusConfiguration.DiskWriteActivity	Swift.Equatable		
+protocol	conformance PegasusConfiguration.BasicDiskOperationMetrics	PegasusConfiguration.DiskOperationMetrics		
+protocol	conformance PegasusConfiguration.DiskWriteError	Swift.Hashable		
+protocol	conformance PegasusConfiguration.DiskWriteError	Swift.Equatable		
+protocol	conformance PegasusConfiguration.DiskWriteError	Swift.Error		
+protocol	conformance PegasusConfiguration.ClientType	Swift.Equatable		
+protocol	conformance PegasusConfiguration.ClientType	Swift.Hashable		
+protocol	conformance PegasusConfiguration.ClientType	Swift.RawRepresentable		
+protocol	conformance PegasusConfiguration.SessionType	Swift.Hashable		
+protocol	conformance PegasusConfiguration.SessionType	Swift.Equatable		
+protocol	conformance PegasusConfiguration.SessionType	Swift.CustomStringConvertible		
+protocol	conformance PegasusConfiguration.DataWarehouseConfigError	Swift.Error		
+protocol	conformance PegasusConfiguration.ActivitySpan	PegasusConfiguration.SpanProtocol		
+protocol	conformance PegasusConfiguration.PARNetworkRequestFactory	PegasusConfiguration.NetworkRequestFactory		
+extension	PegasusConfiguration.ResourceNetworkActivity	RawRepresentable		
+extension	PegasusConfiguration.ResourceNetworkActivity	SubActivityDescription		
+extension	PegasusConfiguration.PegasusClientName	RawRepresentable		
+extension	PegasusConfiguration.PegasusClientName	CaseIterable		
+extension	PegasusConfiguration.ResourceAccessActivity	RawRepresentable		
+extension	PegasusConfiguration.ResourceAccessOutcome	RawRepresentable		
+extension	PegasusConfiguration.KnownAggregationRecipeClient	RawRepresentable		
+extension	PegasusConfiguration.KnownAggregationProcessBundleId	RawRepresentable		
+extension	PegasusConfiguration.KnownAggregationRecipeName	RawRepresentable		
+extension	PegasusConfiguration.KnownAggregationRecipeName	CaseIterable		
+extension	PegasusConfiguration.LifetimeTrackingActivity	RawRepresentable		
+extension	PegasusConfiguration.Useragentpb_ClientID	RawRepresentable		
+extension	PegasusConfiguration.Useragentpb_ClientID	CaseIterable		
+extension	PegasusConfiguration.FeedbackStreamDescriptor	RawRepresentable		
+extension	PegasusConfiguration.FeedbackStreamDescriptor	CaseIterable		
+extension	PegasusConfiguration.DataVaultStorageClass	RawRepresentable		
+extension	PegasusConfiguration.DataVaultStorageClass	CaseIterable		
+extension	PegasusConfiguration.DiskWriteActivity	RawRepresentable		
+extension	PegasusConfiguration.ClientType	RawRepresentable		

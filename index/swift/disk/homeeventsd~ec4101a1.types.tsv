@@ -1,0 +1,382 @@
+kind	type	conformance	member_kind	member
+class	homeeventsd.MainDriver			
+class	homeeventsd.MainDriver		let	completion
+class	homeeventsd.MainDriver		let	promise
+class	homeeventsd.MainDriver		var	server
+class	homeeventsd.MainDriver		var	isCoreDataSetUp
+class	homeeventsd.MainDriver		var	isCloudKitLoggedIn
+class	homeeventsd.MainDriver		var	didRecordProcessLaunchMetrics
+class	homeeventsd.MainDriver		let	features
+class	homeeventsd.MainDriver		let	accountStore
+class	homeeventsd.MainDriver		let	notificationCenter
+class	homeeventsd.MainDriver		var	accountChangedListener
+class	homeeventsd.MainDriver		let	localStorageProperties
+class	homeeventsd.MainDriver		let	cloudKitContainer
+class	homeeventsd.MainDriver		let	scheduler
+class	homeeventsd.MainDriver		let	maxCloudKitRecordsPerOperation
+class	homeeventsd.MainDriver		let	storageDirectory
+class	homeeventsd.MainDriver		let	localDatabaseName
+class	homeeventsd.MainDriver		let	resetFlag
+struct	homeeventsd.MainDriver.LocalStorageProperties			
+struct	homeeventsd.MainDriver.LocalStorageProperties		let	persistentContainer
+struct	homeeventsd.MainDriver.LocalStorageProperties		let	eventUploadTask
+struct	homeeventsd.MainDriver.AccountStore			
+enum	homeeventsd.MainDriver.CoreDataError			
+enum	homeeventsd.MainDriver.CoreDataError		case	loadingError
+struct	__C_Synthesized.CKErrorCode			
+struct	__C_Synthesized.CKErrorCode		let	_nsError
+struct	__C_Synthesized.BGSystemTaskSchedulerErrorCode			
+struct	__C_Synthesized.BGSystemTaskSchedulerErrorCode		let	_nsError
+class	homeeventsd.XPCServer	NSObject		
+class	homeeventsd.XPCServer	NSObject	var	mainDriver
+class	homeeventsd.XPCServer	NSObject	let	features
+class	homeeventsd.XPCServer	NSObject	let	serviceName
+class	homeeventsd.XPCServer	NSObject	let	isCoreDataSetUp
+class	homeeventsd.XPCServer	NSObject	let	proxyConnectionFactory
+class	homeeventsd.XPCServer	NSObject	let	listener
+class	homeeventsd.CloudUploadResultLogEvent	HMMLogEvent		
+class	homeeventsd.CloudUploadResultLogEvent	HMMLogEvent	let	numErrorResults
+class	homeeventsd.CloudUploadResultLogEvent	HMMLogEvent	let	attributedToFakeData
+class	homeeventsd.CloudUploadVolumeLogEvent	HMMLogEvent		
+class	homeeventsd.CloudUploadVolumeLogEvent	HMMLogEvent	let	volumeKB
+class	homeeventsd.CloudUploadVolumeLogEvent	HMMLogEvent	let	numRecords
+class	homeeventsd.CloudUploadVolumeLogEvent	HMMLogEvent	let	numCloudUploads
+class	homeeventsd.CloudUploadVolumeLogEvent	HMMLogEvent	let	attributedToFakeData
+enum	homeeventsd.CloudKitError			
+enum	homeeventsd.CloudKitError		case	all
+enum	homeeventsd.CloudKitError		case	someRecords
+enum	homeeventsd.CloudKitError		case	someZones
+enum	homeeventsd.CloudKitAccountError			
+enum	homeeventsd.CloudKitAccountError		case	unknownError
+enum	homeeventsd.CloudKitAccountError		case	noAccount
+enum	homeeventsd.CloudKitAccountError		case	restrictedAccount
+struct	homeeventsd.PendingEventData			
+struct	homeeventsd.PendingEventData		let	identifier
+struct	homeeventsd.PendingEventData		let	homeIdentifier
+struct	homeeventsd.PendingEventData		let	date
+struct	homeeventsd.PendingEventData		let	dataType
+struct	homeeventsd.PendingEventData		let	data
+struct	homeeventsd.PendingEventData		let	unencryptedTags
+struct	homeeventsd.PendingEventData		let	database
+enum	homeeventsd.TargetDatabase			
+enum	homeeventsd.TargetDatabase		case	private
+enum	homeeventsd.TargetDatabase		case	shared
+enum	homeeventsd.TargetDatabase		case	unknown
+class	homeeventsd.SignalHandler			
+class	homeeventsd.SignalHandler		var	sources
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent		
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	let	previousLaunchTimeMetadataKey
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	var	previousLaunchTime
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	var	numLaunchesWithPendingEvents
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	var	numPendingEventsAtLaunch
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	var	pendingEventsFetchFailureCount
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	var	previousExitType
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	var	previousExitReason
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	let	database
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	let	metricsManager
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	let	attributedToFakeData
+class	homeeventsd.ProcessLaunchLogEvent	HMMLogEvent	let	launchedByClientRequest
+enum	homeeventsd.ProcessExitType			
+enum	homeeventsd.ProcessExitType		case	crash
+enum	homeeventsd.ProcessExitType		case	jetsam
+enum	homeeventsd.ProcessExitType		case	valid
+struct	homeeventsd.BackgroundSystemTaskRequest			
+struct	homeeventsd.BackgroundSystemTaskRequest		let	identifier
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requiresNetworkConnectivity
+struct	homeeventsd.BackgroundSystemTaskRequest		var	shouldWakeDevice
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requiresExternalPower
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requestPriority
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requestResources
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requestTrySchedulingBefore
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requestScheduleAfter
+struct	homeeventsd.BackgroundSystemTaskRequest		var	preventsDeviceSleep
+struct	homeeventsd.BackgroundSystemTaskRequest		var	randomInitialDelay
+struct	homeeventsd.BackgroundSystemTaskRequest		var	requiresBuddyComplete
+struct	homeeventsd.BackgroundSystemTaskRequestResources			
+struct	homeeventsd.BackgroundSystemTaskRequestResources		let	rawValue
+enum	homeeventsd.BackgroundSystemTaskRequestPriority			
+enum	homeeventsd.BackgroundSystemTaskRequestPriority		case	none
+enum	homeeventsd.BackgroundSystemTaskRequestPriority		case	maintenance
+enum	homeeventsd.BackgroundSystemTaskRequestPriority		case	utility
+enum	homeeventsd.BackgroundSystemTaskRequestPriority		case	userInitiated
+struct	homeeventsd.DiagnosticFileCollector			
+struct	homeeventsd.DiagnosticFileCollector		let	includeSensitiveData
+struct	homeeventsd.DiagnosticFileCollector		let	coreDataCoordinator
+struct	homeeventsd.DiagnosticFileCollector		let	targetDirectory
+struct	homeeventsd.DiagnosticFileCollector		let	container
+struct	homeeventsd.DiagnosticFileCollector		let	operationGroup
+enum	homeeventsd.Main			
+class	homeeventsd.EventUploadTask			
+class	homeeventsd.EventUploadTask		let	features
+class	homeeventsd.EventUploadTask		let	scheduler
+class	homeeventsd.EventUploadTask		let	persistentContainer
+class	homeeventsd.EventUploadTask		let	tagEncryptionKeyCache
+class	homeeventsd.EventUploadTask		let	maxCloudKitRecordsPerOperation
+class	homeeventsd.EventUploadTask		var	eventUploader
+class	homeeventsd.EventUploadTask		var	isCurrentlyRunning
+class	homeeventsd.EventUploadTask		var	nextBackOffTimeInterval
+class	homeeventsd.EventUploadTask		var	mainDriver
+class	homeeventsd.EventUploadTask		var	scheduledWaitMetric
+struct	homeeventsd.HMVCommandHandlers.ZoneInfo			
+struct	homeeventsd.HMVCommandHandlers.ZoneInfo		let	homeIdentifier
+struct	homeeventsd.HMVCommandHandlers.ZoneInfo		let	target
+enum	homeeventsd.HMVCommandHandlerError			
+enum	homeeventsd.HMVCommandHandlerError		case	cloudKitAccountError
+enum	homeeventsd.HMVCommandHandlerError		case	argumentError
+enum	homeeventsd.HMVCommandHandlerError		case	unexpectedError
+enum	homeeventsd.HMVCommandHandlerError		case	partialFailure
+enum	homeeventsd.HMVCommandHandlers			
+struct	homeeventsd.EventDigestController.DefaultDelegate.QueryResults			
+struct	homeeventsd.EventDigestController.DefaultDelegate.QueryResults		var	count
+struct	homeeventsd.EventDigestController.DefaultDelegate.QueryResults		var	categories
+class	homeeventsd.EventUploadSubtaskLogEvent	HMMLogEvent		
+class	homeeventsd.EventUploadSubtaskLogEvent	HMMLogEvent	let	subtaskType
+class	homeeventsd.EventUploadSubtaskLogEvent	HMMLogEvent	let	attributedToFakeData
+class	homeeventsd.EventUploadSubtaskLogEvent	HMMLogEvent	var	numRecords
+class	homeeventsd.EventUploadSubtaskLogEvent	HMMLogEvent	let	metricsManager
+enum	homeeventsd.EventUploadSubtask			
+enum	homeeventsd.EventUploadSubtask		case	localDatabaseWrite
+enum	homeeventsd.EventUploadSubtask		case	cloudDatabaseUpload
+enum	homeeventsd.EventUploadSubtask		case	localDatabaseDelete
+struct	homeeventsd.FileBackedBooleanFlag			
+struct	homeeventsd.FileBackedBooleanFlag		let	url
+struct	homeeventsd.EventRecordUploader			
+struct	homeeventsd.EventRecordUploader		let	configuration
+struct	homeeventsd.EventRecordUploader.Configuration			
+struct	homeeventsd.EventRecordUploader.Configuration		let	features
+struct	homeeventsd.EventRecordUploader.Configuration		let	operationGroup
+struct	homeeventsd.EventRecordUploader.Configuration		let	preventZoneCreation
+struct	homeeventsd.EventRecordUploader.Configuration		let	maxCloudKitRecordsPerOperation
+struct	homeeventsd.EventRecordUploader.Configuration		let	tagEncryptionKeyCache
+class	homeeventsd.TagEncryptionKeyController			
+class	homeeventsd.TagEncryptionKeyController		let	database
+class	homeeventsd.TagEncryptionKeyController		let	cache
+class	homeeventsd.TagEncryptionKeyController		let	qualityOfService
+class	homeeventsd.TagEncryptionKeyController		let	preventZoneCreation
+struct	homeeventsd.BackgroundSystemTaskScheduler			
+struct	homeeventsd.BackgroundSystemTaskScheduler		var	internalScheduler
+enum	homeeventsd.BackgroundSystemTaskSchedulerError			
+enum	homeeventsd.BackgroundSystemTaskSchedulerError		case	unknownError
+enum	homeeventsd.BackgroundSystemTaskSchedulerError		case	failedToRegister
+enum	homeeventsd.BackgroundSystemTaskSchedulerError		case	alreadyScheduled
+class	homeeventsd.EventDigestController.DefaultDelegate			
+class	homeeventsd.EventDigestController.DefaultDelegate		let	configuration
+class	homeeventsd.EventDigestController.DefaultDelegate		var	digestMetadata
+struct	homeeventsd.EventDigestController.DefaultDelegate.DigestMetadata			
+struct	homeeventsd.EventDigestController.DefaultDelegate.DigestMetadata		let	dateInterval
+struct	homeeventsd.EventDigestController.DefaultDelegate.DigestMetadata		let	count
+struct	homeeventsd.EventDigestController.DefaultDelegate.DigestMetadata		let	categories
+struct	homeeventsd.EventDigestController.DefaultDelegate.DigestMetadata		let	tags
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration			
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	features
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	homeIdentifier
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	cloudDatabase
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	digestFileURL
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	eventCategories
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	eventMinimumAgeInWeeksForDigest
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	qualityOfService
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	encoding
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	customCreationDate
+struct	homeeventsd.EventDigestController.DefaultDelegate.Configuration		let	targetCloudKitZone
+class	homeeventsd.XPCServer.Listener	NSObject		
+class	homeeventsd.XPCServer.Listener	NSObject	let	listener
+class	homeeventsd.XPCServer.Listener	NSObject	var	hmDelegate
+class	homeeventsd.XPCServerProxy			
+class	homeeventsd.XPCServerProxy		var	connection
+class	homeeventsd.XPCServerProxy		var	mainDriver
+class	homeeventsd.XPCServerProxy		let	features
+class	homeeventsd.XPCServerProxy		let	database
+class	homeeventsd.XPCServerProxy		let	eventUploadTask
+enum	homeeventsd.XPCServerProxy.ConnectionError			
+enum	homeeventsd.XPCServerProxy.ConnectionError		case	unexpectedError
+enum	homeeventsd.XPCServerProxy.ConnectionError		case	entitlementError
+enum	homeeventsd.XPCServerProxy.ConnectionError		case	badParameter
+class	homeeventsd.EventUploadRequestLogEvent	HMMLogEvent		
+class	homeeventsd.EventUploadRequestLogEvent	HMMLogEvent	let	clientName
+class	homeeventsd.EventUploadRequestLogEvent	HMMLogEvent	let	numEventsToUpload
+class	homeeventsd.EventUploadRequestLogEvent	HMMLogEvent	let	attributedToFakeData
+enum	homeeventsd.SharedHandlers			
+class	homeeventsd.EventDigestController			
+class	homeeventsd.EventDigestController		let	configuration
+class	homeeventsd.EventDigestController		let	delegate
+class	homeeventsd.EventDigestController		let	state
+struct	homeeventsd.EventDigestController.State			
+struct	homeeventsd.EventDigestController.State		var	task
+struct	homeeventsd.EventDigestController.Configuration			
+struct	homeeventsd.EventDigestController.Configuration		let	features
+struct	homeeventsd.BackgroundSystemTask			
+struct	homeeventsd.BackgroundSystemTask		var	internalTask
+struct	homeeventsd.ZoneUtils			
+struct	homeeventsd.ZoneUtils		let	database
+struct	homeeventsd.ZoneUtils		let	operationGroup
+class	homeeventsd.EventUploader			
+class	homeeventsd.EventUploader		let	features
+class	homeeventsd.EventUploader		let	database
+class	homeeventsd.EventUploader		let	cloudKitContainer
+class	homeeventsd.EventUploader		let	tagEncryptionKeyCache
+class	homeeventsd.EventUploader		let	eventRecordUploaderCreator
+class	homeeventsd.EventUploader		let	coalescingWindowSeconds
+class	homeeventsd.EventUploader		let	maxCloudKitRecordsPerOperation
+enum	homeeventsd.EventUploader.UploadFailure			
+enum	homeeventsd.EventUploader.UploadFailure		case	partial
+enum	homeeventsd.EventUploader.UploadFailure		case	recoverable
+enum	homeeventsd.EventUploader.UploadFailure		case	fatal
+class	homeeventsd.CoreDataDatabase			
+class	homeeventsd.CoreDataDatabase		let	moc
+class	homeeventsd.CoreDataDatabase		let	defaultFetchBatchSize
+enum	homeeventsd.LocalDatabaseError			
+enum	homeeventsd.LocalDatabaseError		case	unexpected
+class	homeeventsd.EventUploadScheduledWaitLogEvent	HMMLogEvent		
+class	homeeventsd.EventUploadScheduledWaitLogEvent	HMMLogEvent	var	outcome
+class	homeeventsd.EventUploadScheduledWaitLogEvent	HMMLogEvent	let	metricsManager
+enum	homeeventsd.EventUploadScheduledWaitOutcome			
+enum	homeeventsd.EventUploadScheduledWaitOutcome		case	waitErrored
+enum	homeeventsd.EventUploadScheduledWaitOutcome		case	waitDeferred
+enum	homeeventsd.EventUploadScheduledWaitOutcome		case	waitOrphaned
+enum	homeeventsd.EventUploadScheduledWaitOutcome		case	waitSucceeded
+class	homeeventsd.AccountChangedListener	NSObject		
+class	homeeventsd.AccountChangedListener	NSObject	var	mainDriver
+class	homeeventsd.PendingUploadEvent	NSManagedObject		
+protocol	homeeventsd.XPCListenerProtocol			
+protocol	homeeventsd.XPCListenerDelegate			
+protocol	homeeventsd.PendingEventProtocol			
+protocol	homeeventsd.BackgroundSystemTaskRequestProtocol			
+protocol	homeeventsd.FileBackedBooleanFlagProtocol			
+protocol	homeeventsd.TagEncryptionKeyControllerProtocol			
+protocol	homeeventsd.BackgroundSystemTaskSchedulerProtocol			
+protocol	homeeventsd.EventRecordUploaderProtocol			
+protocol	EventDigestController.Delegate			
+protocol	homeeventsd.BackgroundSystemTaskProtocol			
+protocol	homeeventsd.XPCConnection			
+protocol	homeeventsd.LocalDatabase			
+protocol	homeeventsd.AccountStoreProtocol			
+protocol	conformance homeeventsd.MainDriver	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.MainDriver	protocol descriptor for Logging		
+protocol	conformance homeeventsd.MainDriver	protocol descriptor for Actor		
+protocol	conformance __C.Code	protocol descriptor for Equatable: CloudKit		
+protocol	conformance __C.Code	protocol descriptor for RawRepresentable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for Equatable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for Error: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for Hashable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for _ObjectiveCBridgeableError: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for CustomNSError: CloudKit		
+protocol	conformance __C.Code	protocol descriptor for Equatable		
+protocol	conformance __C.Code	protocol descriptor for RawRepresentable		
+protocol	conformance MainDriver.AccountStore	homeeventsd.AccountStoreProtocol		
+protocol	conformance MainDriver.CoreDataError	protocol descriptor for Error		
+protocol	conformance __C.Code	protocol descriptor for _ErrorCodeProtocol		
+protocol	conformance __C_Synthesized.BGSystemTaskSchedulerError	protocol descriptor for _BridgedStoredNSError		
+protocol	conformance __C_Synthesized.BGSystemTaskSchedulerError	protocol descriptor for Hashable		
+protocol	conformance __C_Synthesized.BGSystemTaskSchedulerError	protocol descriptor for Equatable		
+protocol	conformance __C_Synthesized.BGSystemTaskSchedulerError	protocol descriptor for _ObjectiveCBridgeableError		
+protocol	conformance __C_Synthesized.BGSystemTaskSchedulerError	protocol descriptor for Error		
+protocol	conformance __C_Synthesized.BGSystemTaskSchedulerError	protocol descriptor for CustomNSError		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for _BridgedStoredNSError: CloudKit		
+protocol	conformance __C.Code	protocol descriptor for _ErrorCodeProtocol: CloudKit		
+protocol	conformance homeeventsd.XPCServer	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.XPCServer	protocol descriptor for Logging		
+protocol	conformance homeeventsd.XPCServer	homeeventsd.XPCListenerDelegate		
+protocol	conformance homeeventsd.CloudUploadResultLogEvent	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.CloudUploadResultLogEvent	protocol descriptor for Logging		
+protocol	conformance homeeventsd.CloudUploadVolumeLogEvent	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.CloudUploadVolumeLogEvent	protocol descriptor for Logging		
+protocol	conformance homeeventsd.CloudKitError	protocol descriptor for Error		
+protocol	conformance homeeventsd.CloudKitAccountError	protocol descriptor for Error		
+protocol	conformance homeeventsd.TargetDatabase	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.TargetDatabase	protocol descriptor for RawRepresentable		
+protocol	conformance homeeventsd.TargetDatabase	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.PendingEventData	homeeventsd.PendingEventProtocol		
+protocol	conformance homeeventsd.SignalHandler	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.SignalHandler	protocol descriptor for Logging		
+protocol	conformance homeeventsd.SignalHandler	protocol descriptor for Actor		
+protocol	conformance homeeventsd.ProcessExitType	protocol descriptor for CaseIterable		
+protocol	conformance homeeventsd.ProcessExitType	protocol descriptor for RawRepresentable		
+protocol	conformance homeeventsd.ProcessExitType	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.ProcessExitType	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.ProcessLaunchLogEvent	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.ProcessLaunchLogEvent	protocol descriptor for Logging		
+protocol	conformance BGNonRepeatingSystemTaskRequest	homeeventsd.BackgroundSystemTaskRequestProtocol		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequest	homeeventsd.BackgroundSystemTaskRequestProtocol		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestPriority	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestPriority	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestResources	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestResources	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestResources	protocol descriptor for RawRepresentable		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestResources	protocol descriptor for SetAlgebra		
+protocol	conformance homeeventsd.BackgroundSystemTaskRequestResources	protocol descriptor for OptionSet		
+protocol	conformance homeeventsd.DiagnosticFileCollector	protocol descriptor for Logging		
+protocol	conformance homeeventsd.DiagnosticFileCollector	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.Main	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.Main	protocol descriptor for Logging		
+protocol	conformance homeeventsd.EventUploadTask	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventUploadTask	protocol descriptor for Logging		
+protocol	conformance homeeventsd.EventUploadTask	protocol descriptor for Actor		
+protocol	conformance homeeventsd.HMVCommandHandlers	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.HMVCommandHandlers	protocol descriptor for Logging		
+protocol	conformance ZoneInfo	protocol descriptor for Equatable		
+protocol	conformance ZoneInfo	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.HMVCommandHandlerError	protocol descriptor for Error		
+protocol	conformance homeeventsd.EventUploadSubtask	protocol descriptor for CaseIterable		
+protocol	conformance homeeventsd.EventUploadSubtask	protocol descriptor for RawRepresentable		
+protocol	conformance homeeventsd.EventUploadSubtask	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.EventUploadSubtask	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.EventUploadSubtaskLogEvent	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventUploadSubtaskLogEvent	protocol descriptor for Logging		
+protocol	conformance homeeventsd.FileBackedBooleanFlag	homeeventsd.FileBackedBooleanFlagProtocol		
+protocol	conformance homeeventsd.EventRecordUploader	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventRecordUploader	protocol descriptor for Logging		
+protocol	conformance homeeventsd.EventRecordUploader	homeeventsd.EventRecordUploaderProtocol		
+protocol	conformance homeeventsd.TagEncryptionKeyController	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.TagEncryptionKeyController	protocol descriptor for Logging		
+protocol	conformance homeeventsd.TagEncryptionKeyController	homeeventsd.TagEncryptionKeyControllerProtocol		
+protocol	conformance BGSystemTaskScheduler	homeeventsd.BackgroundSystemTaskSchedulerProtocol		
+protocol	conformance homeeventsd.BackgroundSystemTaskScheduler	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.BackgroundSystemTaskScheduler	protocol descriptor for Logging		
+protocol	conformance homeeventsd.BackgroundSystemTaskSchedulerError	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.BackgroundSystemTaskSchedulerError	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.BackgroundSystemTaskSchedulerError	protocol descriptor for Error		
+protocol	conformance EventDigestController.DefaultDelegate	protocol descriptor for HMF.Logging		
+protocol	conformance EventDigestController.DefaultDelegate	protocol descriptor for Logging		
+protocol	conformance EventDigestController.DefaultDelegate	homeeventsd.EventDigestController.Delegate		
+protocol	conformance EventDigestController.DefaultDelegate	protocol descriptor for Actor		
+protocol	conformance XPCServer.Listener	homeeventsd.XPCListenerProtocol		
+protocol	conformance NSXPCConnection	homeeventsd.XPCConnection		
+protocol	conformance homeeventsd.XPCServerProxy	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.XPCServerProxy	protocol descriptor for Logging		
+protocol	conformance ConnectionError	protocol descriptor for Error		
+protocol	conformance homeeventsd.EventUploadRequestLogEvent	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventUploadRequestLogEvent	protocol descriptor for Logging		
+protocol	conformance homeeventsd.SharedHandlers	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.SharedHandlers	protocol descriptor for Logging		
+protocol	conformance homeeventsd.EventDigestController	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventDigestController	protocol descriptor for Logging		
+protocol	conformance BGSystemTask	homeeventsd.BackgroundSystemTaskProtocol		
+protocol	conformance homeeventsd.ZoneUtils	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.ZoneUtils	protocol descriptor for Logging		
+protocol	conformance homeeventsd.EventUploader	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventUploader	protocol descriptor for Logging		
+protocol	conformance EventUploader.UploadFailure	protocol descriptor for Error		
+protocol	conformance homeeventsd.CoreDataDatabase	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.CoreDataDatabase	protocol descriptor for Logging		
+protocol	conformance homeeventsd.CoreDataDatabase	homeeventsd.LocalDatabase		
+protocol	conformance homeeventsd.LocalDatabaseError	protocol descriptor for Error		
+protocol	conformance homeeventsd.EventUploadScheduledWaitOutcome	protocol descriptor for CaseIterable		
+protocol	conformance homeeventsd.EventUploadScheduledWaitOutcome	protocol descriptor for RawRepresentable		
+protocol	conformance homeeventsd.EventUploadScheduledWaitOutcome	protocol descriptor for Hashable		
+protocol	conformance homeeventsd.EventUploadScheduledWaitOutcome	protocol descriptor for Equatable		
+protocol	conformance homeeventsd.EventUploadScheduledWaitLogEvent	protocol descriptor for HMF.Logging		
+protocol	conformance homeeventsd.EventUploadScheduledWaitLogEvent	protocol descriptor for Logging		
+protocol	conformance homeeventsd.PendingUploadEvent	homeeventsd.PendingEventProtocol		
+extension	__C_Synthesized.BGSystemTaskSchedulerError	_BridgedStoredNSError		
+extension	__C_Synthesized.CKError	_BridgedStoredNSError		
+extension	homeeventsd.TargetDatabase	RawRepresentable		
+extension	homeeventsd.ProcessExitType	CaseIterable		
+extension	homeeventsd.ProcessExitType	RawRepresentable		
+extension	homeeventsd.BackgroundSystemTaskRequestResources	ExpressibleByArrayLiteral		
+extension	homeeventsd.BackgroundSystemTaskRequestResources	RawRepresentable		
+extension	homeeventsd.BackgroundSystemTaskRequestResources	SetAlgebra		
+extension	homeeventsd.BackgroundSystemTaskRequestResources	OptionSet		
+extension	homeeventsd.EventUploadSubtask	CaseIterable		
+extension	homeeventsd.EventUploadSubtask	RawRepresentable		
+extension	homeeventsd.EventUploadScheduledWaitOutcome	CaseIterable		
+extension	homeeventsd.EventUploadScheduledWaitOutcome	RawRepresentable		

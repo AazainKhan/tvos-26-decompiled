@@ -1,0 +1,64 @@
+kind	type	conformance	member_kind	member
+class	OnDeviceStorage.Connection			
+class	OnDeviceStorage.Connection		var	state
+class	OnDeviceStorage.Connection		let	credential
+class	OnDeviceStorage.Connection		let	userId
+class	OnDeviceStorage.Connection		let	insertValuesBatchSize
+class	OnDeviceStorage.Connection		let	selectStatementBatchSize
+class	OnDeviceStorage.Connection		let	daemonSession
+struct	OnDeviceStorage.Connection.Page			
+struct	OnDeviceStorage.Connection.Page		let	rows
+struct	OnDeviceStorage.Connection.PaginationOptions			
+struct	OnDeviceStorage.Connection.PaginationOptions		let	pageSize
+enum	OnDeviceStorage.Connection.PaginationOptions.PageSize			
+enum	OnDeviceStorage.Connection.PaginationOptions.PageSize		case	fixed
+enum	OnDeviceStorage.Connection.PaginationOptions.PageSize		case	automatic
+class	OnDeviceStorage.Connection.PaginatedSelectIterator			
+class	OnDeviceStorage.Connection.PaginatedSelectIterator		let	query
+class	OnDeviceStorage.Connection.PaginatedSelectIterator		let	pageSize
+class	OnDeviceStorage.Connection.PaginatedSelectIterator		var	connection
+class	OnDeviceStorage.Connection.PaginatedSelectIterator		var	batchIndex
+class	OnDeviceStorage.Connection.PaginatedSelectIterator		var	isComplete
+class	OnDeviceStorage.Connection.PaginatedSelectIterator		var	cachedBatchRowCount
+struct	OnDeviceStorage.Connection.PaginatedSelectSequence			
+struct	OnDeviceStorage.Connection.PaginatedSelectSequence		let	iterator
+enum	OnDeviceStorage.Connection.State			
+enum	OnDeviceStorage.Connection.State		case	open
+enum	OnDeviceStorage.Connection.State		case	idle
+enum	OnDeviceStorage.Connection.State		case	closed
+class	OnDeviceStorage.DaemonSessionImplementation			
+class	OnDeviceStorage.DaemonSessionImplementation		var	sessionIfValid
+class	OnDeviceStorage.DaemonSessionImplementation		let	workQueue
+enum	OnDeviceStorage.OnDeviceStorageError			
+enum	OnDeviceStorage.OnDeviceStorageError		case	invalidConnectionState
+enum	OnDeviceStorage.OnDeviceStorageError		case	responseFailed
+enum	OnDeviceStorage.OnDeviceStorageError		case	invalidValueType
+enum	OnDeviceStorage.OnDeviceStorageError		case	requestIsTooLarge
+enum	OnDeviceStorage.OnDeviceStorageError		case	unqualifiedTableName
+enum	OnDeviceStorage.OnDeviceStorageError		case	allRowsDropped
+enum	OnDeviceStorage.OnDeviceStorageError		case	generic
+enum	OnDeviceStorage.OnDeviceStorageError		case	error
+struct	OnDeviceStorage.DictionaryUpsert			
+struct	OnDeviceStorage.DictionaryUpsert		let	query
+struct	OnDeviceStorage.DictionaryUpsert		let	values
+protocol	OnDeviceStorage.SendableAsyncSequence			
+protocol	OnDeviceStorage.DaemonSession			
+protocol	conformance PaginationOptions.PageSize	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance PaginationOptions.PageSize	Swift.Equatable		
+protocol	conformance OnDeviceStorage.Connection	Swift.Actor		
+protocol	conformance State	Swift.CustomStringConvertible		
+protocol	conformance PaginatedSelectSequence	Swift.AsyncSequence		
+protocol	conformance PaginatedSelectIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance PaginatedSelectIterator	Swift.Actor		
+protocol	conformance PaginatedSelectSequence	OnDeviceStorage.SendableAsyncSequence		
+protocol	conformance OnDeviceStorage.DaemonSessionImplementation	OnDeviceStorage.DaemonSession		
+protocol	conformance OnDeviceStorage.DaemonSessionImplementation	Swift.Actor		
+protocol	conformance OnDeviceStorage.OnDeviceStorageError	Foundation.LocalizedError		
+protocol	conformance OnDeviceStorage.OnDeviceStorageError	Foundation.CustomNSError		
+protocol	conformance OnDeviceStorage.OnDeviceStorageError	Swift.CustomStringConvertible		
+protocol	conformance OnDeviceStorage.OnDeviceStorageError	Swift.CustomDebugStringConvertible		
+protocol	conformance OnDeviceStorage.OnDeviceStorageError	Swift.Error		
+protocol	conformance OnDeviceStorage.DictionaryUpsert	Swift.CustomStringConvertible		
+extension	OnDeviceStorage.Connection.PaginationOptions.PageSize	ExpressibleByIntegerLiteral		
+extension	OnDeviceStorage.Connection.PaginatedSelectSequence	AsyncSequence		
+extension	OnDeviceStorage.Connection.PaginatedSelectIterator	AsyncIteratorProtocol		

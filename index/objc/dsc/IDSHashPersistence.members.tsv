@@ -1,0 +1,25 @@
+owner	kind	declaration
+IDSHashPersistenceAWDLogging	+	+ (id)sharedInstance;
+IDSHashPersistenceAWDLogging	-	- (_Bool)shouldSubmit;
+IDSHashPersistenceAWDLogging	-	- (id)_metricContainerForMetricType:(unsigned int)type;
+IDSHashPersistenceAWDLogging	-	- (id)init;
+IDSHashPersistenceAWDLogging	-	- (void)_submitAWDMetric:(id)awdmetric withContainer:(id)container;
+IDSHashPersistenceAWDLogging	-	- (void)dealloc;
+IDSHashPersistenceAWDLogging	-	- (void)duplicateMessageEncounted;
+IDSMessageHashStore	+	+ (id)sharedInstance;
+IDSMessageHashStore	-	- (_Bool)containsMessageHash:(id)hash;
+IDSMessageHashStore	-	- (id)init;
+IDSMessageHashStore	-	- (unsigned long long)_currentLocalTime;
+IDSMessageHashStore	-	- (void)_performInitialHousekeeping;
+IDSMessageHashStore	-	- (void)_runCleanup;
+IDSMessageHashStore	-	- (void)_setDatabaseCloseTimerOnIvarQueue;
+IDSMessageHashStore	-	- (void)_startCleanupTimer;
+IDSMessageHashStore	-	- (void)addMessageHash:(id)hash;
+IDSMessageHashStore	-	- (void)closeDatabase;
+IDSMessageHashStore	-	- (void)updateCreationDateForHash:(id)hash;
+IDSMessageHashStore	property	@property (nonatomic) double databaseLastUpdateTime;
+IDSMessageHashStore	property	@property (nonatomic) unsigned long long initialProcessTime;
+IDSMessageHashStore	property	@property (nonatomic) unsigned long long initialServerTime;
+IDSMessageHashStore	property	@property (retain, nonatomic) NSMutableArray *recentlySeenHashes;
+IDSMessageHashStore	property	@property (retain, nonatomic) NSObject<OS_dispatch_queue> *ivarQueue;
+IDSMessageHashStore	property	@property (retain, nonatomic) NSObject<OS_dispatch_source> *databaseCloseTimer;

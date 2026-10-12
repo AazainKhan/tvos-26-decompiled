@@ -1,0 +1,19 @@
+owner	kind	declaration
+IMDMessageServicesCenter	+	+ (id)sharedInstance;
+IMDMessageServicesCenter	-	- (_Bool)_connect;
+IMDMessageServicesCenter	-	- (_Bool)_disconnect;
+IMDMessageServicesCenter	-	- (id)init;
+IMDMessageServicesCenter	-	- (void)_disconnected;
+IMDMessageServicesCenter	-	- (void)_requestExpireStateWithGUID:(id)guid handler:(id /* block */)handler;
+IMDMessageServicesCenter	-	- (void)_requestRoutingWithGUID:(id)guid chatGUID:(id)guid downgradableServices:(id)services error:(unsigned int)error handler:(id /* block */)handler;
+IMDMessageServicesCenter	-	- (void)_requestScheduleMessagesWithGUID:(id)guid handler:(id /* block */)handler;
+IMDMessageServicesCenter	-	- (void)_requestWatchdogWithGUID:(id)guid handler:(id /* block */)handler;
+IMDMessageServicesCenter	-	- (void)dealloc;
+IMDMessageServicesCenter	-	- (void)requestExpireStateForMessageGuid:(id)guid completionBlock:(id /* block */)block;
+IMDMessageServicesCenter	-	- (void)requestExpireStateWithCompletion:(id /* block */)completion;
+IMDMessageServicesCenter	-	- (void)requestRoutingForMessageGuid:(id)guid inChat:(id)chat downgradableServices:(id)services error:(unsigned int)error completionBlock:(id /* block */)block;
+IMDMessageServicesCenter	-	- (void)requestRoutingWithDowngradableServices:(id)services completion:(id /* block */)completion;
+IMDMessageServicesCenter	-	- (void)requestScheduledMessageForGuid:(id)guid completionBlock:(id /* block */)block;
+IMDMessageServicesCenter	-	- (void)requestScheduledMessagesWithCompletion:(id /* block */)completion;
+IMDMessageServicesCenter	-	- (void)requestWatchdogForMessageGuid:(id)guid completionBlock:(id /* block */)block;
+IMDMessageServicesCenter	-	- (void)requestWatchdogWithCompletion:(id /* block */)completion;

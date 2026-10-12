@@ -1,0 +1,272 @@
+kind	type	conformance	member_kind	member
+class	PoirotSQLite.SQLiteDatabase			
+class	PoirotSQLite.SQLiteDatabase		var	connection
+enum	PoirotSQLite.SQLiteDatabase.TransactionError			
+enum	PoirotSQLite.SQLiteDatabase.TransactionError		case	fatal
+enum	PoirotSQLite.SQLiteDatabase.TransactionError		case	recoverable
+struct	PoirotSQLite.SQLiteRow			
+struct	PoirotSQLite.SQLiteRow		let	context
+struct	PoirotSQLite.SQLiteStatement			
+struct	PoirotSQLite.SQLiteStatement		let	context
+struct	PoirotSQLite.SQLiteStatement		let	sqlString
+struct	PoirotSQLite.SQLiteStatement		let	minRows
+struct	PoirotSQLite.SQLiteStatement		let	maxRows
+struct	PoirotSQLite.SQLiteStatement		let	verboseLog
+class	PoirotSQLite.SQLiteStatement.Context			
+class	PoirotSQLite.SQLiteStatement.Context		var	_database
+class	PoirotSQLite.SQLiteStatement.Context		var	_statement
+class	PoirotSQLite.SQLiteStatement.BoundableContext	PoirotSQLite.SQLiteStatement.Context		
+class	PoirotSQLite.SQLiteStatement.BoundableContext	PoirotSQLite.SQLiteStatement.Context	let	_paramCount
+class	PoirotSQLite.SQLiteStatement.BoundableContext	PoirotSQLite.SQLiteStatement.Context	var	unboundParams
+class	PoirotSQLite.SQLiteTableUDF	PoirotSQLite.SQLiteVTab<A: PoirotSQLite.SQLiteTableUDFConfig>		
+class	PoirotSQLite.SQLiteTableUDF.BaseConnection	PoirotSQLite.SQLiteVTab.Connection<A: PoirotSQLite.SQLiteTableUDFConfig>		
+class	PoirotSQLite.SQLiteTableUDF.BaseConnection	PoirotSQLite.SQLiteVTab.Connection<A: PoirotSQLite.SQLiteTableUDFConfig>	var	allColumns
+class	PoirotSQLite.SQLiteTableUDF.CaseIterableColumnSchemaConnection	PoirotSQLite.SQLiteTableUDF.BaseConnection A first-element-marker <A: PoirotSQLite.SQLiteTableUDFConfig, PoirotSQLite.SQLiteTableUDFConfig.ColumnSchema ==: PoirotSQLite.UDFCaseIterableColumnSchema>		
+class	PoirotSQLite.SQLiteTableUDF.BaseCursor	PoirotSQLite.SQLiteVTab.Cursor<A: PoirotSQLite.SQLiteTableUDFConfig>		
+enum	PoirotSQLite.SQLiteTableUDFError			
+enum	PoirotSQLite.SQLiteTableUDFError		case	unknownColumnIndex
+enum	PoirotSQLite.SQLiteTableUDFError		case	invalidVTabClass
+enum	PoirotSQLite.SQLiteTableUDFError		case	invalidVTabConnectionClass
+class	PoirotSQLite.SQLiteVTab			
+class	PoirotSQLite.SQLiteVTab		let	moduleName
+class	PoirotSQLite.SQLiteVTab		let	modulePointer
+class	PoirotSQLite.SQLiteVTab		let	style
+enum	PoirotSQLite.SQLiteVTab.Style			
+enum	PoirotSQLite.SQLiteVTab.Style		case	module
+enum	PoirotSQLite.SQLiteVTab.Style		case	eponymous
+enum	PoirotSQLite.SQLiteVTab.Style		case	eponymousOnly
+class	PoirotSQLite.SQLiteVTab.Connection			
+class	PoirotSQLite.SQLiteVTab.Connection		let	tableName
+class	PoirotSQLite.SQLiteVTab.Connection		let	table
+class	PoirotSQLite.SQLiteVTab.Cursor			
+class	PoirotSQLite.SQLiteVTab.Cursor		var	_rowid
+class	PoirotSQLite.SQLiteVTab.Cursor		let	connection
+struct	PoirotSQLite.SQLiteArgument			
+struct	PoirotSQLite.SQLiteArgument		let	argument
+struct	PoirotSQLite.SQLiteConstructor			
+struct	PoirotSQLite.SQLiteConstructor.sqlite			
+struct	PoirotSQLite.SQLiteDestructor			
+struct	PoirotSQLite.SQLiteDestructor		let	block
+struct	PoirotSQLite.SQLiteContext			
+struct	PoirotSQLite.SQLiteContext		let	context
+struct	PoirotSQLite.SQLColumn			
+struct	PoirotSQLite.SQLColumn		let	columnName
+struct	PoirotSQLite.SQLColumn		let	columnType
+enum	PoirotSQLite.SQLiteColumnType			
+enum	PoirotSQLite.SQLiteColumnType		case	text
+enum	PoirotSQLite.SQLiteColumnType		case	blob
+enum	PoirotSQLite.SQLiteColumnType		case	int32
+enum	PoirotSQLite.SQLiteColumnType		case	int64
+enum	PoirotSQLite.SQLiteColumnType		case	uint32
+enum	PoirotSQLite.SQLiteColumnType		case	uint64
+enum	PoirotSQLite.SQLiteColumnType		case	float
+enum	PoirotSQLite.SQLiteColumnType		case	double
+enum	PoirotSQLite.SQLiteColumnType		case	datetime
+enum	PoirotSQLite.SQLiteColumnType		case	bool
+enum	PoirotSQLite.SQLiteColumnType		case	any
+enum	PoirotSQLite.SQLiteDataType			
+enum	PoirotSQLite.SQLiteDataType		case	integer
+enum	PoirotSQLite.SQLiteDataType		case	text
+enum	PoirotSQLite.SQLiteDataType		case	blob
+enum	PoirotSQLite.SQLiteDataType		case	float
+enum	PoirotSQLite.SQLiteDataType		case	null
+enum	PoirotSQLite.SQLiteError			
+enum	PoirotSQLite.SQLiteError		case	resultCode
+enum	PoirotSQLite.SQLiteError		case	columnNotFound
+enum	PoirotSQLite.SQLiteError		case	failedToCreateVTable
+enum	PoirotSQLite.SQLiteError		case	unexpectedType
+enum	PoirotSQLite.SQLiteError		case	unexpectedError
+enum	PoirotSQLite.SQLiteError		case	noBindingParameters
+enum	PoirotSQLite.SQLiteError		case	bindingParameterIsMissing
+enum	PoirotSQLite.SQLiteError		case	unboundParameters
+enum	PoirotSQLite.SQLiteError		case	repetitiveBinding
+enum	PoirotSQLite.SQLiteError		case	configurationError
+enum	PoirotSQLite.SQLiteError		case	notThreadSafe
+enum	PoirotSQLite.SQLiteError		case	excessiveNumberOfResults
+enum	PoirotSQLite.SQLiteError		case	unexpectedlyFinalizedStatement
+enum	PoirotSQLite.SQLiteError		case	databaseIsClosed
+enum	PoirotSQLite.SQLiteError		case	insufficientNumberOfResults
+enum	PoirotSQLite.SQLiteError		case	valueIsNull
+enum	PoirotSQLite.SQLiteError		case	parametersExpected
+enum	PoirotSQLite.SQLiteError		case	notRepresentable
+enum	PoirotSQLite.SQLiteError		case	bindingParameterNotFound
+enum	PoirotSQLite.SQLiteError		case	invalidCharacter
+enum	PoirotSQLite.SQLiteError		case	attemptToDowngradeVersion
+struct	PoirotSQLite.SQLiteFunctionFlag			
+struct	PoirotSQLite.SQLiteFunctionFlag		let	rawValue
+struct	PoirotSQLite.SQLiteSyntaxError			
+struct	PoirotSQLite.SQLiteSyntaxError		let	errorCode
+struct	PoirotSQLite.SQLiteSyntaxError		let	sqlMessage
+struct	PoirotSQLite.SQLiteSyntaxError		let	query
+struct	PoirotSQLite.SQLiteSyntaxError		let	errorInfo
+struct	PoirotSQLite.SQLiteSyntaxError.Info			
+struct	PoirotSQLite.SQLiteSyntaxError.Info		let	line
+struct	PoirotSQLite.SQLiteSyntaxError.Info		let	lineNumber
+struct	PoirotSQLite.SQLiteSyntaxError.Info		let	lineOffset
+enum	PoirotSQLite.SQLiteFunctionType			
+enum	PoirotSQLite.SQLiteFunctionType		case	other
+enum	PoirotSQLite.SQLiteFunctionType		case	scalar
+enum	PoirotSQLite.SQLiteFunctionType		case	aggregate
+enum	PoirotSQLite.SQLiteFunctionType		case	window
+struct	PoirotSQLite.SQLiteUDFSyntax			
+struct	PoirotSQLite.SQLiteUDFSyntax		let	name
+struct	PoirotSQLite.SQLiteUDFSyntax		let	isBuiltin
+struct	PoirotSQLite.SQLiteUDFSyntax		let	type
+struct	PoirotSQLite.SQLiteUDFSyntax		let	encoding
+struct	PoirotSQLite.SQLiteUDFSyntax		let	numArgs
+struct	PoirotSQLite.SQLiteUDFSyntax		let	flags
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys			
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys		case	name
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys		case	isBuiltin
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys		case	type
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys		case	encoding
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys		case	numArgs
+enum	PoirotSQLite.SQLiteUDFSyntax.CodingKeys		case	flags
+struct	PoirotSQLite.SQLiteUndefined			
+struct	PoirotSQLite.SQLiteTableDescription			
+struct	PoirotSQLite.SQLiteTableDescription		let	name
+struct	PoirotSQLite.SQLiteTableDescription		let	schema
+class	PoirotSQLite.SQLiteLogger			
+protocol	PoirotSQLite.StatementContext			
+protocol	PoirotSQLite.SQLiteAggregateUDF	AggregateContext		
+protocol	PoirotSQLite.SQLiteScalarUDF			
+protocol	PoirotSQLite.SQLiteSingleValueUDF			
+protocol	PoirotSQLite.UDFColumnSchema			
+protocol	PoirotSQLite.UDFCaseIterableColumnSchema			
+protocol	PoirotSQLite.SQLiteTableUDFConfig	ColumnSchema, Cursor, Connection		
+protocol	PoirotSQLite.SQLiteUDF			
+protocol	PoirotSQLite.SQLiteColumnDescribing			
+protocol	PoirotSQLite.SQLiteNamesValidating			
+protocol	PoirotSQLite.SQLiteSchemaDescribing			
+protocol	PoirotSQLite.SQLiteCompoundSafeType			
+protocol	PoirotSQLite.SQLiteCompoundUnsafeType			
+protocol	PoirotSQLite.IntPatternMap			
+protocol	PoirotSQLite.IntSafeConvert			
+protocol	PoirotSQLite.SQLiteInteger			
+protocol	PoirotSQLite.SQLiteBindable			
+protocol	PoirotSQLite.SQLiteSafeType			
+protocol	PoirotSQLite.SQLiteType			
+protocol	PoirotSQLite.SQLiteUnsafeType			
+protocol	PoirotSQLite.SQLiteDatabaseInspector			
+protocol	PoirotSQLite.SQLiteDatabaseManager			
+protocol	conformance SQLiteDatabase.TransactionError	Swift.Error		
+protocol	conformance SQLiteStatement.Context	PoirotSQLite.StatementContext		
+protocol	conformance PoirotSQLite.SQLiteTableUDF	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotSQLite.SQLiteTableUDFError	Swift.Error		
+protocol	conformance SQLiteVTab.Style	Swift.Equatable		
+protocol	conformance SQLiteVTab.Style	Swift.Hashable		
+protocol	conformance PoirotSQLite.SQLColumn	PoirotSQLite.SQLiteColumnDescribing		
+protocol	conformance PoirotSQLite.SQLColumn	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLColumn	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance Swift.String	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance PoirotSQLite.SQLiteSchema	PoirotSQLite.SQLiteSchemaDescribing		
+protocol	conformance PoirotSQLite.SQLiteSchema	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance Swift.Array	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance Swift.Array	PoirotSQLite.SQLiteSchemaDescribing		
+protocol	conformance Swift.Array	PoirotSQLite.SQLiteCompoundSafeType		
+protocol	conformance Swift.Int8	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.Int8	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Int8	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Int8	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.UInt8	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.UInt8	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.UInt8	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.UInt8	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Int16	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.Int16	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Int16	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Int16	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.UInt16	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.UInt16	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.UInt16	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.UInt16	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Int32	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.Int32	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Int32	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Int32	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.UInt32	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.UInt32	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.UInt32	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.UInt32	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Int64	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.Int64	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Int64	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Int64	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.UInt64	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.UInt64	PoirotSQLite.IntPatternMap		
+protocol	conformance Swift.UInt64	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.UInt64	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.UInt64	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Int	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.Int	PoirotSQLite.IntSafeConvert		
+protocol	conformance Swift.Int	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Int	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Int	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.UInt	PoirotSQLite.SQLiteInteger		
+protocol	conformance Swift.UInt	PoirotSQLite.IntPatternMap		
+protocol	conformance Swift.UInt	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.UInt	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.UInt	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Bool	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Float	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Double	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.String	PoirotSQLite.SQLiteBindable		
+protocol	conformance Foundation.Data	PoirotSQLite.SQLiteBindable		
+protocol	conformance Swift.Optional	PoirotSQLite.SQLiteBindable		
+protocol	conformance PoirotSQLite.SQLiteColumnType	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteColumnType	Swift.Hashable		
+protocol	conformance PoirotSQLite.SQLiteColumnType	Swift.RawRepresentable		
+protocol	conformance PoirotSQLite.SQLiteColumnType	Swift.CaseIterable		
+protocol	conformance PoirotSQLite.SQLiteDataType	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteDataType	Swift.Hashable		
+protocol	conformance PoirotSQLite.SQLiteDataType	Swift.RawRepresentable		
+protocol	conformance PoirotSQLite.SQLiteError	Swift.Error		
+protocol	conformance PoirotSQLite.SQLiteError	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteError	Foundation.LocalizedError		
+protocol	conformance PoirotSQLite.SQLiteFunctionFlag	Swift.OptionSet		
+protocol	conformance PoirotSQLite.SQLiteFunctionFlag	Swift.CustomStringConvertible		
+protocol	conformance PoirotSQLite.SQLiteFunctionFlag	Swift.SetAlgebra		
+protocol	conformance PoirotSQLite.SQLiteFunctionFlag	Swift.RawRepresentable		
+protocol	conformance PoirotSQLite.SQLiteFunctionFlag	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteFunctionFlag	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Swift.Bool	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Float	PoirotSQLite.SQLiteSafeType		
+protocol	conformance Swift.Double	PoirotSQLite.SQLiteSafeType		
+protocol	conformance SQLiteSyntaxError.Info	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteSyntaxError	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteSyntaxError	Swift.Error		
+protocol	conformance PoirotSQLite.SQLiteSyntaxError	Swift.CustomStringConvertible		
+protocol	conformance PoirotSQLite.SQLiteSyntaxError	Foundation.LocalizedError		
+protocol	conformance Swift.Bool	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Float	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Double	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.String	PoirotSQLite.SQLiteType		
+protocol	conformance Foundation.Data	PoirotSQLite.SQLiteType		
+protocol	conformance Swift.Optional	PoirotSQLite.SQLiteType		
+protocol	conformance PoirotSQLite.SQLiteFunctionType	Swift.Decodable		
+protocol	conformance PoirotSQLite.SQLiteFunctionType	Swift.Encodable		
+protocol	conformance PoirotSQLite.SQLiteFunctionType	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteUDFSyntax	Swift.Decodable		
+protocol	conformance PoirotSQLite.SQLiteUDFSyntax	Swift.Encodable		
+protocol	conformance PoirotSQLite.SQLiteUDFSyntax	Swift.Equatable		
+protocol	conformance PoirotSQLite.SQLiteUDFSyntax	Swift.Identifiable		
+protocol	conformance PoirotSQLite.SQLiteUDFSyntax	PoirotSQLite.SQLiteCompoundSafeType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotSQLite.SQLiteUndefined	PoirotSQLite.SQLiteType		
+protocol	conformance PoirotSQLite.SQLiteUndefined	PoirotSQLite.SQLiteBindable		
+protocol	conformance PoirotSQLite.SQLiteUndefined	Swift.Hashable		
+protocol	conformance PoirotSQLite.SQLiteUndefined	Swift.Equatable		
+protocol	conformance Swift.String	PoirotSQLite.SQLiteUnsafeType		
+protocol	conformance Foundation.Data	PoirotSQLite.SQLiteUnsafeType		
+extension	PoirotSQLite.SQLiteColumnType	RawRepresentable		
+extension	PoirotSQLite.SQLiteColumnType	CaseIterable		
+extension	PoirotSQLite.SQLiteDataType	RawRepresentable		
+extension	PoirotSQLite.SQLiteFunctionFlag	OptionSet		
+extension	PoirotSQLite.SQLiteFunctionFlag	SetAlgebra		
+extension	PoirotSQLite.SQLiteFunctionFlag	RawRepresentable		
+extension	PoirotSQLite.SQLiteFunctionFlag	ExpressibleByArrayLiteral		
+extension	PoirotSQLite.SQLiteUDFSyntax	Identifiable		

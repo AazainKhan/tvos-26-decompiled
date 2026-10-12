@@ -1,0 +1,93 @@
+kind	type	conformance	member_kind	member
+struct	ManagedSettingsSupport.KeyGenerator			
+struct	ManagedSettingsSupport.Cryptor			
+enum	ManagedSettingsSupport.CryptorError			
+enum	ManagedSettingsSupport.CryptorError		case	emptyBox
+enum	ManagedSettingsSupport.CryptorError		case	invalidKeySize
+enum	ManagedSettingsSupport.CryptorError		case	randomizerFailure
+struct	ManagedSettingsSupport.Cryptor.Key			
+struct	ManagedSettingsSupport.Cryptor.Key		let	data
+struct	ManagedSettingsSupport.KeyRetriever			
+struct	ManagedSettingsSupport.KeyRetriever		let	store
+enum	ManagedSettingsSupport.KeyRetrieverError			
+enum	ManagedSettingsSupport.KeyRetrieverError		case	missingKeyData
+class	ManagedSettingsSupport.TokenEncoder			
+class	ManagedSettingsSupport.TokenEncoder		let	cryptor
+class	ManagedSettingsSupport.TokenEncoder		let	jsonEncoder
+class	ManagedSettingsSupport.TokenEncoder		let	teamIdentifierData
+class	ManagedSettingsSupport.TokenEncoder		let	keyRetriever
+class	ManagedSettingsSupport.TokenDecoder			
+class	ManagedSettingsSupport.TokenDecoder		let	cryptor
+class	ManagedSettingsSupport.TokenDecoder		let	jsonDecoder
+class	ManagedSettingsSupport.TokenDecoder		let	jsonEncoder
+class	ManagedSettingsSupport.TokenDecoder		let	teamIdentifierData
+class	ManagedSettingsSupport.TokenDecoder		let	keyRetriever
+enum	ManagedSettingsSupport.AnnotationError			
+enum	ManagedSettingsSupport.AnnotationError		case	invalidAnnotation
+enum	ManagedSettingsSupport.PaddingError			
+enum	ManagedSettingsSupport.PaddingError		case	invalidPadding
+struct	ManagedSettingsSupport.Annotated<A	Swift.Decodable, A: Swift.Encodable>		
+struct	ManagedSettingsSupport.Annotated<A	Swift.Decodable, A: Swift.Encodable>	let	item
+struct	ManagedSettingsSupport.Annotated<A	Swift.Decodable, A: Swift.Encodable>	let	annotation
+enum	ManagedSettingsSupport.Annotation			
+enum	ManagedSettingsSupport.Annotation		case	bundleID
+enum	ManagedSettingsSupport.Annotation		case	categoryID
+enum	ManagedSettingsSupport.Annotation		case	webDomain
+enum	ManagedSettingsSupport.DecoderError			
+enum	ManagedSettingsSupport.DecoderError		case	decryptionError
+enum	ManagedSettingsSupport.Annotated.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	ManagedSettingsSupport.Annotated.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	item
+enum	ManagedSettingsSupport.Annotated.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	annotation
+enum	ManagedSettingsSupport.Padded.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, B: Combine.TopLevelEncoder, Combine.TopLevelEncoder.Output ==: Foundation.Data>		
+enum	ManagedSettingsSupport.Padded.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, B: Combine.TopLevelEncoder, Combine.TopLevelEncoder.Output ==: Foundation.Data>	case	item
+enum	ManagedSettingsSupport.Padded.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, B: Combine.TopLevelEncoder, Combine.TopLevelEncoder.Output ==: Foundation.Data>	case	padding
+enum	ManagedSettingsSupport.TeamIdentifierRetrieverError			
+enum	ManagedSettingsSupport.TeamIdentifierRetrieverError		case	malformedSecTask
+enum	ManagedSettingsSupport.TeamIdentifierRetrieverError		case	missingAuditToken
+enum	ManagedSettingsSupport.TeamIdentifierRetrieverError		case	unknownTeamIdentifier
+struct	ManagedSettingsSupport.TeamIdentifierRetriever			
+protocol	ManagedSettingsSupport.KeyRetrieving			
+protocol	ManagedSettingsSupport.Crypting	Key		
+protocol	ManagedSettingsSupport.TeamIdentifierRetrieving			
+protocol	conformance ManagedSettingsSupport.Cryptor	ManagedSettingsSupport.Crypting		
+protocol	conformance ManagedSettingsSupport.CryptorError	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.CryptorError	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.CryptorError	Swift.Error		
+protocol	conformance ManagedSettingsSupport.KeyRetriever	ManagedSettingsSupport.KeyRetrieving		
+protocol	conformance ManagedSettingsSupport.KeyRetrieverError	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.KeyRetrieverError	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.KeyRetrieverError	Swift.Error		
+protocol	conformance ManagedSettingsSupport.DecoderError	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.DecoderError	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.Annotation	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.Annotation	Swift.Encodable		
+protocol	conformance ManagedSettingsSupport.Annotation	Swift.Decodable		
+protocol	conformance ManagedSettingsSupport.Annotation	Swift.RawRepresentable		
+protocol	conformance ManagedSettingsSupport.Annotation	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.Annotated	Swift.Encodable		
+protocol	conformance ManagedSettingsSupport.Annotated	Swift.Decodable		
+protocol	conformance ManagedSettingsSupport.PaddingError	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.PaddingError	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.AnnotationError	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.AnnotationError	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.Padded	Swift.Encodable		
+protocol	conformance ManagedSettingsSupport.AnnotationError	Swift.Error		
+protocol	conformance ManagedSettingsSupport.PaddingError	Swift.Error		
+protocol	conformance ManagedSettingsSupport.Padded	Swift.Decodable		
+protocol	conformance ManagedSettingsSupport.DecoderError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ManagedSettingsSupport.TeamIdentifierRetrieverError	Swift.Equatable		
+protocol	conformance ManagedSettingsSupport.TeamIdentifierRetrieverError	Swift.Hashable		
+protocol	conformance ManagedSettingsSupport.TeamIdentifierRetrieverError	Swift.Error		
+protocol	conformance ManagedSettingsSupport.TeamIdentifierRetriever	ManagedSettingsSupport.TeamIdentifierRetrieving		
+extension	ManagedSettingsSupport.Cryptor	Crypting		
+extension	ManagedSettingsSupport.Annotation	RawRepresentable		

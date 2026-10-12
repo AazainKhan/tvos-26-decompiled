@@ -1,0 +1,91 @@
+kind	type	conformance	member_kind	member
+enum	SiriCorrections.Logger			
+enum	SiriCorrections.Logger.Subsystem			
+enum	SiriCorrections.Logger.Subsystem		case	siriCorrections
+enum	SiriCorrections.Logger.Category			
+enum	SiriCorrections.Logger.Category		case	corrections
+enum	SiriCorrections.Logger.Category		case	instrumentation
+class	SiriCorrections.CorrectionsPlatformClient			
+class	SiriCorrections.CorrectionsPlatformClient		let	undoFollowUpPluginActionUserDataKey
+enum	SiriCorrections.CorrectionType			
+enum	SiriCorrections.CorrectionType		case	append
+enum	SiriCorrections.CorrectionType		case	remove
+enum	SiriCorrections.CorrectionType		case	replace
+enum	SiriCorrections.CorrectionType		case	underspecified
+enum	SiriCorrections.CorrectionType		case	clear
+struct	SiriCorrections.CorrectionOperation			
+struct	SiriCorrections.CorrectionOperation		let	attribute
+struct	SiriCorrections.CorrectionOperation		let	correction
+enum	SiriCorrections.WildcardStringSet			
+enum	SiriCorrections.WildcardStringSet		case	values
+enum	SiriCorrections.WildcardStringSet		case	any
+struct	SiriCorrections.CorrectionsCustomizationsAllowingAllEntities			
+struct	SiriCorrections.CorrectionsCustomizationsAllowingAllEntities		var	attributesNotAllowedToBeCorrected
+struct	SiriCorrections.CorrectionsCustomizationsAllowingAllEntities		var	explicitCorrectionVerbs
+class	SiriCorrections.CorrectionsDomainClient			
+class	SiriCorrections.CorrectionsDomainClient		let	undoFollowUpPluginActionUserDataKey
+enum	SiriCorrections.CorrectionsParse			
+enum	SiriCorrections.CorrectionsParse		case	uso
+enum	SiriCorrections.CorrectionsParse		case	NLv4IntentOnly
+enum	SiriCorrections.CorrectionsParse		case	directInvocation
+enum	SiriCorrections.CorrectionsParse		case	empty
+struct	SiriCorrections.CorrectionsUSOParse			
+struct	SiriCorrections.CorrectionsUSOParse		let	userParse
+struct	SiriCorrections.CorrectionsUSOParse		let	parserIdentifier
+struct	SiriCorrections.CorrectionsUSOParse		let	appBundleId
+struct	SiriCorrections.CorrectionsDirectInvocation			
+struct	SiriCorrections.CorrectionsDirectInvocation		let	identifier
+struct	SiriCorrections.CorrectionsDirectInvocation		let	userData
+enum	SiriCorrections.CorrectionsDirectInvocation.CodingKeys			
+enum	SiriCorrections.CorrectionsDirectInvocation.CodingKeys		case	identifier
+enum	SiriCorrections.CorrectionsDirectInvocation.CodingKeys		case	userData
+struct	SiriCorrections.CorrectionsContext			
+struct	SiriCorrections.CorrectionsContext		let	userId
+struct	SiriCorrections.CorrectionsContext		let	assistantId
+struct	SiriCorrections.CorrectionsContext		let	resultCandidateId
+struct	SiriCorrections.CorrectionsContext		let	executionRequestId
+class	SiriCorrections.CorrectionsContext.Builder			
+class	SiriCorrections.CorrectionsContext.Builder		var	userId
+class	SiriCorrections.CorrectionsContext.Builder		var	assistantId
+class	SiriCorrections.CorrectionsContext.Builder		var	resultCandidateId
+class	SiriCorrections.CorrectionsContext.Builder		var	executionRequestId
+class	SiriCorrections.CorrectionsSELFHelper			
+class	SiriCorrections.CorrectionsSELFHelper		var	correctionsId
+class	SiriCorrections.CorrectionsSELFHelper		var	executionRequestId
+class	SiriCorrections.CorrectionsEngine			
+class	SiriCorrections.CorrectionsEngine		let	undoFollowUpPluginActionUserDataKey
+struct	SiriCorrections.UndoAction			
+struct	SiriCorrections.UndoAction		let	directInvocation
+struct	SiriCorrections.UndoAction		let	isExclusive
+struct	SiriCorrections.UndoAction		let	parseExludingUndoUserDialogActs
+struct	SiriCorrections.ModifiedNode			
+struct	SiriCorrections.ModifiedNode		var	attribute
+struct	SiriCorrections.ModifiedNode		var	operations
+struct	SiriCorrections.CorrectionCandidateTask			
+struct	SiriCorrections.CorrectionCandidateTask		var	taskEntity
+struct	SiriCorrections.CorrectionCandidateTask		var	taskVerb
+struct	SiriCorrections.CorrectionCandidateTask		var	modifiedNodes
+class	SiriCorrections.ReferenceResolutionUtils			
+protocol	SiriCorrections.CorrectionsCustomizing			
+protocol	SiriCorrections.Corrections			
+protocol	conformance Logger.Subsystem	Swift.Equatable		
+protocol	conformance Logger.Subsystem	Swift.Hashable		
+protocol	conformance Logger.Subsystem	Swift.RawRepresentable		
+protocol	conformance Logger.Category	Swift.Equatable		
+protocol	conformance Logger.Category	Swift.Hashable		
+protocol	conformance Logger.Category	Swift.RawRepresentable		
+protocol	conformance SiriCorrections.CorrectionsCustomizationsAllowingAllEntities	SiriCorrections.CorrectionsCustomizing		
+protocol	conformance SiriCorrections.CorrectionsUSOParse	Swift.Equatable		
+protocol	conformance SiriCorrections.CorrectionsUSOParse	Swift.CustomDebugStringConvertible		
+protocol	conformance CorrectionsDirectInvocation.CodingKeys	Swift.Equatable		
+protocol	conformance CorrectionsDirectInvocation.CodingKeys	Swift.Hashable		
+protocol	conformance CorrectionsDirectInvocation.CodingKeys	Swift.CodingKey		
+protocol	conformance CorrectionsDirectInvocation.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CorrectionsDirectInvocation.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriCorrections.CorrectionsDirectInvocation	Swift.Decodable		
+protocol	conformance SiriCorrections.CorrectionsDirectInvocation	Swift.Encodable		
+protocol	conformance SiriCorrections.CorrectionsContext	Swift.Equatable		
+protocol	conformance SiriCorrections.CorrectionsContext	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriCorrections.CorrectionsEngine	SiriCorrections.Corrections		
+extension	SiriCorrections.Logger.Subsystem	RawRepresentable		
+extension	SiriCorrections.Logger.Category	RawRepresentable		

@@ -1,0 +1,25 @@
+owner	kind	declaration
+CECIOCECInterface	+	+ (id)interfaceWithIOCECInterface:(struct __IOCECInterface *)iocecinterface listener:(id)listener;
+CECIOCECInterface	-	- (_Bool)errorIsNack:(id)nack;
+CECIOCECInterface	-	- (_Bool)sendFrame:(struct CECFrame { unsigned char x0[16]; unsigned int x1:5; unsigned int x2:3; })frame withRetryCount:(unsigned char)count error:(id *)error;
+CECIOCECInterface	-	- (_Bool)setHardwareAddressMask:(unsigned short)mask error:(id *)error;
+CECIOCECInterface	-	- (id)init;
+CECIOCECInterface	-	- (id)initWithIOCECInterface:(struct __IOCECInterface *)iocecinterface listener:(id)listener;
+CECIOCECInterface	-	- (id)properties;
+CECIOCECInterface	-	- (void)_close;
+CECIOCECInterface	-	- (void)_interfaceTerminated:(struct __IOCECInterface *)terminated;
+CECIOCECInterface	-	- (void)_open;
+CECIOCECInterface	-	- (void)_updateStatusWithEDID:(struct { unsigned short x0; unsigned short x1; unsigned short x2; unsigned char x3; unsigned short x4; signed char x5[32]; signed char x6[37]; })edid HPD:(_Bool)hpd hibernate:(_Bool)hibernate;
+CECIOCECInterface	-	- (void)dealloc;
+CECIOCECInterface	-	- (void)scheduleWithDispatchQueue:(id)queue;
+CECIOCECInterface	-	- (void)unscheduleFromDispatchQueue:(id)queue;
+CECIOCECInterface	property	@property (nonatomic) _Bool hibernate;
+CECIOCECInterface	property	@property (nonatomic) _Bool hpd;
+CECIOCECInterface	property	@property (nonatomic) struct { unsigned short x0; unsigned short x1; unsigned short x2; unsigned char x3; unsigned short x4; signed char x5[32]; signed char x6[37]; } attributes;
+CECIOCECInterface	property	@property (readonly, nonatomic) struct __IOCECInterface * iocecInterface;
+CECIOCECInterface	property	@property (retain, nonatomic) NSObject<OS_dispatch_workloop> *receiveWorkloop;
+CECIOCECInterfaceListener	-	- (id)initWithInterfaceController:(id)controller;
+CECIOCECInterfaceListener	-	- (void)addIOCECInterface:(struct __IOCECInterface *)iocecinterface;
+CECIOCECInterfaceListener	-	- (void)dealloc;
+CECIOCECInterfaceListener	-	- (void)scheduleWithDispatchQueue:(id)queue;
+CECIOCECInterfaceListener	-	- (void)unscheduleFromDispatchQueue:(id)queue;

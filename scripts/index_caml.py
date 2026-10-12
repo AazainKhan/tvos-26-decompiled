@@ -3,7 +3,7 @@
 
 Usage: index_caml.py <mounted_root> <out.tsv>
 
-Walks <mounted_root> for *.ca/main.caml and records, per animation element:
+Walks <mounted_root> for *.ca/main.caml (XML) and *.caar (NSKeyedArchiver) and records, per animation element:
 file, layer, element, keyPath, duration, beginTime, repeatCount, autoreverses,
 timing function, and spring parameters (mass, stiffness, damping,
 initialVelocity) when present. Values only; no artwork is copied.
@@ -59,6 +59,60 @@ def walk(path: Path, root_dir: Path, rows: list) -> None:
     visit(tree.getroot(), "")
 
 
+def walk_caar(path: Path, root_dir: Path, rows: list) -> None:
+    """Binary .caar packages are NSKeyedArchiver plists holding the same CAAnimation objects."""
+    import plistlib
+    try:
+        objs = plistlib.load(open(path, "rb"))["$objects"]
+    except Exception:
+        return
+
+    def deref(v):
+        return objs[v.data] if isinstance(v, plistlib.UID) else v
+
+    def classname(o) -> str:
+        if isinstance(o, dict) and "$class" in o:
+            return deref(o["$class"]).get("$classname", "")
+        return ""
+
+    def scalar(v, depth: int = 0) -> str:
+        v = deref(v)
+        if isinstance(v, bool):
+            return str(v).lower()
+        if isinstance(v, (int, float)):
+            return f"{v:g}" if isinstance(v, float) else str(v)
+        if isinstance(v, str):
+            return "" if v == "$null" else v
+        if isinstance(v, dict) and depth < 3:
+            items = v.get("NS.objects")
+            if items is not None:
+                return ",".join(scalar(i, depth + 1) for i in items[:64])
+            name = classname(v)
+            if name == "LKNSArrayCodingProxy" and "array" in v:
+                return scalar(v["array"], depth + 1)
+            if name == "LKNSValueCodingProxy":
+                nums = [f"{k}={scalar(v[k])}" for k in ("x", "y", "width", "height") if k in v]
+                return "(" + " ".join(nums) + ")" if nums else name
+            if name == "CAMediaTimingFunction":
+                pts = [v.get(k) for k in ("c1x", "c1y", "c2x", "c2y") if k in v]
+                return "bezier(" + ",".join(scalar(p) for p in pts) + ")" if pts else name
+            return name
+        return ""
+
+    rel = str(path.relative_to(root_dir))
+    key_map = {a: a for a in ATTRS}
+    key_map["initialVelocity"] = "velocity"
+    for o in objs:
+        name = classname(o)
+        if not name.endswith("Animation") or name.startswith("LKStateRemove"):
+            continue
+        row = [rel, "", name] + [scalar(o.get(key_map[a])) if key_map[a] in o else "" for a in ATTRS]
+        tf = o.get("timingFunctions") or o.get("timingFunction")
+        row += [scalar(tf) if tf is not None else "", scalar(o["keyTimes"]) if "keyTimes" in o else "",
+                scalar(o["values"]) if "values" in o else ""]
+        rows.append(row)
+
+
 def main() -> None:
     root_dir, out = Path(sys.argv[1]), Path(sys.argv[2])
     rows: list = []
@@ -66,6 +120,9 @@ def main() -> None:
         if "/Caches/" in str(caml):
             continue
         walk(caml, root_dir, rows)
+    for caar in sorted(root_dir.rglob("*.caar")):
+        if "/Caches/" not in str(caar):
+            walk_caar(caar, root_dir, rows)
     with open(out, "w") as f:
         f.write("\t".join(["package", "layer", "type"] + ATTRS + ["timingFunctions", "keyTimes", "values"]) + "\n")
         for r in rows:

@@ -1,0 +1,11 @@
+owner	kind	declaration
+NSMutableData(MobileStorageMounter)	+	+ (id)dataWithHexString:(id)string;
+NSMutableData(MobileStorageMounter)	-	- (id)initDataWithHexString:(id)string;
+NSString(MobileStorageMounter)	+	+ (id)hexStringWithData:(id)data;
+NSString(MobileStorageMounter)	-	- (id)initHexStringWithData:(id)data;
+PlistProcessor	+	+ (id)sharedPlistProcessor;
+PlistProcessor	-	- (_Bool)jobIsManagedByMSM:(id)msm;
+PlistProcessor	-	- (_Bool)verifyPlist:(id)plist forMountPoint:(id)point withError:(id *)error;
+PlistProcessor	-	- (id)copyAndFixPlist:(id)plist forMountPoint:(id)point withError:(id *)error;
+PlistProcessor	-	- (id)copyPlistWithMSMKeys:(id)msmkeys isAngel:(_Bool)angel withError:(id *)error;
+PlistProcessor	-	- (void)scanPlistsAtPath:(id)path execBlock:(id /* block */)block;

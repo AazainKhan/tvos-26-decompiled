@@ -1,0 +1,452 @@
+kind	type	conformance	member_kind	member
+class	CommunicationTrust.CommunicationTrustClient			
+class	CommunicationTrust.CommunicationTrustClient		let	client
+class	CommunicationTrust.CommunicationTrustClient		let	requestedInitialState
+struct	CommunicationTrust.CommunicationTrustDaemon			
+struct	CommunicationTrust.CommunicationTrustDaemon		let	xpcHost
+struct	CommunicationTrust.CommunicationTrustDaemon		let	dataSourceManager
+enum	CommunicationTrust.CommunicationTrustInterface			
+struct	CommunicationTrust.IsHandleBlocked			
+struct	CommunicationTrust.IsHandleBlocked		let	handle
+enum	CommunicationTrust.IsHandleBlocked.CodingKeys			
+enum	CommunicationTrust.IsHandleBlocked.CodingKeys		case	handle
+struct	CommunicationTrust.AreHandlesBlocked			
+struct	CommunicationTrust.AreHandlesBlocked		let	handles
+enum	CommunicationTrust.AreHandlesBlocked.CodingKeys			
+enum	CommunicationTrust.AreHandlesBlocked.CodingKeys		case	handles
+struct	CommunicationTrust.GetTrustScores			
+struct	CommunicationTrust.GetTrustScores		let	handlesWithOptions
+struct	CommunicationTrust.GetTrustScores		let	service
+enum	CommunicationTrust.GetTrustScores.CodingKeys			
+enum	CommunicationTrust.GetTrustScores.CodingKeys		case	handlesWithOptions
+enum	CommunicationTrust.GetTrustScores.CodingKeys		case	service
+struct	CommunicationTrust.GetTrustScoresSync			
+struct	CommunicationTrust.GetTrustScoresSync		let	handlesWithOptions
+struct	CommunicationTrust.GetTrustScoresSync		let	service
+enum	CommunicationTrust.GetTrustScoresSync.CodingKeys			
+enum	CommunicationTrust.GetTrustScoresSync.CodingKeys		case	handlesWithOptions
+enum	CommunicationTrust.GetTrustScoresSync.CodingKeys		case	service
+struct	CommunicationTrust.UpdateServerTrust			
+struct	CommunicationTrust.UpdateServerTrust		let	handle
+struct	CommunicationTrust.UpdateServerTrust		let	isTrusted
+struct	CommunicationTrust.UpdateServerTrust		let	service
+enum	CommunicationTrust.UpdateServerTrust.CodingKeys			
+enum	CommunicationTrust.UpdateServerTrust.CodingKeys		case	handle
+enum	CommunicationTrust.UpdateServerTrust.CodingKeys		case	isTrusted
+enum	CommunicationTrust.UpdateServerTrust.CodingKeys		case	service
+struct	CommunicationTrust.FetchHandlesRequest			
+enum	CommunicationTrust.FetchHandlesRequest.CodingKeys			
+struct	CommunicationTrust.FetchBlockedContactsRequest			
+enum	CommunicationTrust.FetchBlockedContactsRequest.CodingKeys			
+struct	CommunicationTrust.SaveHandles			
+struct	CommunicationTrust.SaveHandles		let	handles
+enum	CommunicationTrust.SaveHandles.CodingKeys			
+enum	CommunicationTrust.SaveHandles.CodingKeys		case	handles
+struct	CommunicationTrust.UpdateHandles			
+struct	CommunicationTrust.UpdateHandles		let	handles
+enum	CommunicationTrust.UpdateHandles.CodingKeys			
+enum	CommunicationTrust.UpdateHandles.CodingKeys		case	handles
+struct	CommunicationTrust.RemoveHandles			
+struct	CommunicationTrust.RemoveHandles		let	handles
+enum	CommunicationTrust.RemoveHandles.CodingKeys			
+enum	CommunicationTrust.RemoveHandles.CodingKeys		case	handles
+struct	CommunicationTrust.IsBlockListEmpty			
+enum	CommunicationTrust.IsBlockListEmpty.CodingKeys			
+class	CommunicationTrust.ContainerProvider			
+class	CommunicationTrust.ContainerProvider		let	name
+class	CommunicationTrust.ContainerProvider		let	databaseURL
+class	CommunicationTrust.ContainerProvider		let	_container
+class	CommunicationTrust.BlockListDataSource			
+class	CommunicationTrust.BlockListDataSource		var	containerProvider
+class	CommunicationTrust.CallDirectoryDataSource			
+class	CommunicationTrust.CallHistoryDataSource			
+class	CommunicationTrust.CallHistoryDataSource		let	callHistoryDataSourceProvider
+struct	CommunicationTrust.CallHistoryDataSourceProvider			
+struct	CommunicationTrust.CallHistoryDataSourceProvider		let	callHistoryManager
+struct	CommunicationTrust.CallHistoryDataSourceProvider		let	usTollFreePrefixes
+struct	CommunicationTrust.CMFBlockList			
+struct	CommunicationTrust.CMFBlockListDataSource			
+struct	CommunicationTrust.CMFBlockListDataSource		let	cmfBlockList
+class	CommunicationTrust.ContactsDataSource			
+class	CommunicationTrust.ContactsDataSource		let	dataSourceProvider
+class	CommunicationTrust.PeopleSuggesterDataSource			
+class	CommunicationTrust.PeopleSuggesterDataSource		let	dataSource
+class	CommunicationTrust.SensitiveContentDataSource			
+class	CommunicationTrust.SensitiveContentDataSource		let	host
+struct	CommunicationTrust.ServerTrustScore			
+struct	CommunicationTrust.ServerTrustScore		let	handle
+struct	CommunicationTrust.ServerTrustScore		let	service
+class	CommunicationTrust.ServerTrustScoreDataSource			
+class	CommunicationTrust.ServerTrustScoreDataSource		let	untrustedCache
+class	CommunicationTrust.CommunicationTrustDataSourceManager			
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	cmfBlockListDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	contactsDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	callHistoryDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	peopleSuggesterDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	callDirectoryDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	sensitiveContentDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	serverTrustScoreDataSource
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	abcReporter
+class	CommunicationTrust.CommunicationTrustDataSourceManager		let	dataSourceFilterQueue
+enum	CommunicationTrust.CommunicationTrustDataSourceManagerError			
+enum	CommunicationTrust.CommunicationTrustDataSourceManagerError		case	deallocated
+enum	CommunicationTrust.CommunicationTrustDataSourceManagerError		case	invalidFilterResult
+class	CommunicationTrust.ManagedAllowedApp			
+class	CommunicationTrust.ManagedAllowedApp		var	_bundleIdentifier
+class	CommunicationTrust.ManagedAllowedApp		var	_associatedHandles
+class	CommunicationTrust.ManagedAllowedApp		var	_
+class	CommunicationTrust.ManagedAllowedApp		let	_
+struct	CommunicationTrust.ManagedAllowedApp._SwiftDataNoType			
+class	CommunicationTrust.ManagedContact			
+class	CommunicationTrust.ManagedContact		var	_localContactIdentifier
+class	CommunicationTrust.ManagedContact		var	_externalContactIdentifier
+class	CommunicationTrust.ManagedContact		var	_idsIdentifier
+class	CommunicationTrust.ManagedContact		var	_associatedHandles
+class	CommunicationTrust.ManagedContact		var	_
+class	CommunicationTrust.ManagedContact		let	_
+struct	CommunicationTrust.ManagedContact._SwiftDataNoType			
+class	CommunicationTrust.ManagedHandle			
+class	CommunicationTrust.ManagedHandle		var	_type
+class	CommunicationTrust.ManagedHandle		var	_value
+class	CommunicationTrust.ManagedHandle		var	_normalizedValue
+class	CommunicationTrust.ManagedHandle		var	_associatedContacts
+class	CommunicationTrust.ManagedHandle		var	_allowedApps
+class	CommunicationTrust.ManagedHandle		var	_
+class	CommunicationTrust.ManagedHandle		let	_
+struct	CommunicationTrust.ManagedHandle._SwiftDataNoType			
+struct	CommunicationTrust.BlockedHandle			
+struct	CommunicationTrust.BlockedHandle		var	handle
+struct	CommunicationTrust.BlockedHandle		var	normalizedValue
+struct	CommunicationTrust.BlockedHandle		var	associatedContacts
+struct	CommunicationTrust.BlockedHandle		var	allowedApps
+struct	CommunicationTrust.BlockedHandle		var	isoCountryCode
+struct	CommunicationTrust.BlockedHandle.AssociatedContact			
+struct	CommunicationTrust.BlockedHandle.AssociatedContact		var	localContactIdentifier
+struct	CommunicationTrust.BlockedHandle.AssociatedContact		var	externalContactIdentifier
+struct	CommunicationTrust.BlockedHandle.AssociatedContact		var	idsIdentifier
+enum	CommunicationTrust.BlockedHandle.AssociatedContact.CodingKeys			
+enum	CommunicationTrust.BlockedHandle.AssociatedContact.CodingKeys		case	localContactIdentifier
+enum	CommunicationTrust.BlockedHandle.AssociatedContact.CodingKeys		case	externalContactIdentifier
+enum	CommunicationTrust.BlockedHandle.AssociatedContact.CodingKeys		case	idsIdentifier
+struct	CommunicationTrust.BlockedHandle.AllowedApp			
+struct	CommunicationTrust.BlockedHandle.AllowedApp		var	bundleIdentifier
+enum	CommunicationTrust.BlockedHandle.AllowedApp.CodingKeys			
+enum	CommunicationTrust.BlockedHandle.AllowedApp.CodingKeys		case	bundleIdentifier
+enum	CommunicationTrust.BlockedHandle.CodingKeys			
+enum	CommunicationTrust.BlockedHandle.CodingKeys		case	handle
+enum	CommunicationTrust.BlockedHandle.CodingKeys		case	normalizedValue
+enum	CommunicationTrust.BlockedHandle.CodingKeys		case	associatedContacts
+enum	CommunicationTrust.BlockedHandle.CodingKeys		case	allowedApps
+enum	CommunicationTrust.BlockedHandle.CodingKeys		case	isoCountryCode
+class	CommunicationTrust.BlockList			
+class	CommunicationTrust.BlockList		let	server
+class	CommunicationTrust.BlockList		let	cache
+struct	CommunicationTrust.BlockListCacheState			
+struct	CommunicationTrust.BlockListCacheState		var	queryState
+struct	CommunicationTrust.BlockListCacheState		var	didFetchAllContacts
+struct	CommunicationTrust.BlockListCacheState		var	didFetchAllHandles
+enum	CommunicationTrust.BlockListCacheState.QueryState			
+enum	CommunicationTrust.BlockListCacheState.QueryState		case	isEmpty
+enum	CommunicationTrust.BlockListCacheState.QueryState		case	notQueried
+enum	CommunicationTrust.BlockListCacheState.QueryState.CodingKeys			
+enum	CommunicationTrust.BlockListCacheState.QueryState.CodingKeys		case	notQueried
+enum	CommunicationTrust.BlockListCacheState.QueryState.CodingKeys		case	isEmpty
+enum	CommunicationTrust.BlockListCacheState.QueryState.NotQueriedCodingKeys			
+enum	CommunicationTrust.BlockListCacheState.QueryState.IsEmptyCodingKeys			
+enum	CommunicationTrust.BlockListCacheState.QueryState.IsEmptyCodingKeys		case	_0
+enum	CommunicationTrust.BlockListCacheState.CodingKeys			
+enum	CommunicationTrust.BlockListCacheState.CodingKeys		case	queryState
+enum	CommunicationTrust.BlockListCacheState.CodingKeys		case	didFetchAllContacts
+enum	CommunicationTrust.BlockListCacheState.CodingKeys		case	didFetchAllHandles
+class	CommunicationTrust.BlockListCache			
+class	CommunicationTrust.BlockListCache		let	_state
+class	CommunicationTrust.BlockListCache		let	_didFetchAllContacts
+class	CommunicationTrust.BlockListCache		let	_didFetchAllHandles
+class	CommunicationTrust.BlockListCache		let	contactCache
+class	CommunicationTrust.BlockListCache		let	handleCache
+class	CommunicationTrust.BlockListCache		let	cmfSyncAgentBlockListUpdatedNotificationToken
+enum	CommunicationTrust.CommunicationTrustManagerError			
+enum	CommunicationTrust.CommunicationTrustManagerError		case	notAvailable
+class	CommunicationTrust.CommunicationTrustManager	NSObject		
+class	CommunicationTrust.CommunicationTrustManager	NSObject	let	server
+enum	CommunicationTrust.CommunicationTrustManager.HandleOptionsOrOverride			
+enum	CommunicationTrust.CommunicationTrustManager.HandleOptionsOrOverride		case	override
+enum	CommunicationTrust.CommunicationTrustManager.HandleOptionsOrOverride		case	HandleOptions
+enum	CommunicationTrust.CommunicationTrustScore			
+struct	CommunicationTrust.CommunicationTrustScoreOptions			
+struct	CommunicationTrust.CommunicationTrustScoreOptions		let	rawValue
+enum	CommunicationTrust.Service			
+enum	CommunicationTrust.Service		case	Messages
+enum	CommunicationTrust.Service		case	FaceTime
+enum	CommunicationTrust.StoreError			
+enum	CommunicationTrust.StoreError		case	saveFailure
+enum	CommunicationTrust.StoreError		case	updateFailure
+enum	CommunicationTrust.StoreError		case	deleteFailure
+enum	CommunicationTrust.StoreError		case	initFailure
+class	CommunicationTrust.AsyncStreamManager<A	Swift.Equatable>		
+class	CommunicationTrust.AsyncStreamManager<A	Swift.Equatable>	let	state
+struct	CommunicationTrust.AsyncStreamManager.State<A	Swift.Equatable>		
+struct	CommunicationTrust.AsyncStreamManager.State<A	Swift.Equatable>	var	generation
+struct	CommunicationTrust.AsyncStreamManager.State<A	Swift.Equatable>	var	continuations
+struct	CommunicationTrust.AsyncStreamManager.State<A	Swift.Equatable>	var	currentValue
+struct	CommunicationTrust.AsyncStreamManager.State<A	Swift.Equatable>	var	isExcludedValue
+struct	CommunicationTrust.Constants			
+enum	CommunicationTrust.DaemonContainerError			
+enum	CommunicationTrust.DaemonContainerError		case	pathNotFound
+enum	CommunicationTrust.DaemonContainerError		case	singleResultFailed
+enum	CommunicationTrust.DaemonContainerError		case	emptyPathFound
+enum	CommunicationTrust.DaemonContainerError		case	queryCreationFailed
+enum	CommunicationTrust.DaemonContainer			
+enum	CommunicationTrust.FileUtilities			
+enum	CommunicationTrust.Log			
+enum	CommunicationTrust.Signpost			
+enum	CommunicationTrust.PhoneNumberUtilities			
+class	CommunicationTrust.ThreadSafeCache<A	Swift.Hashable>		
+class	CommunicationTrust.ThreadSafeCache<A	Swift.Hashable>	let	storageLock
+protocol	CommunicationTrust.CommunicationTrustClientProtocol			
+protocol	CommunicationTrust.BlockListDataSourceProtocol			
+protocol	CommunicationTrust.CallDirectoryDataSourceProtocol			
+protocol	CommunicationTrust.CallDirectoryDataSourceProviderProtocol			
+protocol	CommunicationTrust.CallHistoryDataSourceProtocol			
+protocol	CommunicationTrust.CallHistoryDataSourceProviderProtocol			
+protocol	CommunicationTrust.CMFBlockListDataSourceProtocol			
+protocol	CommunicationTrust.CMFBlockListProtocol			
+protocol	CommunicationTrust.ContactsDataSourceProtocol			
+protocol	CommunicationTrust.ContactsDataSourceProviderProtocol			
+protocol	CommunicationTrust.PeopleSuggesterDataSourceProtocol			
+protocol	CommunicationTrust.ServerTrustScoreDataSourceProtocol			
+protocol	CommunicationTrust.BlockListCacheProtocol			
+protocol	conformance __C.CFPhoneNumberStringOptions	Swift.ExpressibleByArrayLiteral: CorePhoneNumbers		
+protocol	conformance __C.CFPhoneNumberStringOptions	Swift.Equatable: CorePhoneNumbers		
+protocol	conformance __C.CFPhoneNumberStringOptions	Swift.RawRepresentable: CorePhoneNumbers		
+protocol	conformance __C.CFPhoneNumberStringOptions	Swift.OptionSet: CorePhoneNumbers		
+protocol	conformance __C.container_query_flags_t	Swift.ExpressibleByArrayLiteral		
+protocol	conformance __C.container_query_flags_t	Swift.Equatable		
+protocol	conformance __C.container_query_flags_t	Swift.RawRepresentable		
+protocol	conformance __C.container_query_flags_t	Swift.OptionSet		
+protocol	conformance __C.container_query_flags_t	Swift.SetAlgebra		
+protocol	conformance CommunicationTrust.CommunicationTrustClient	CommunicationTrust.CommunicationTrustClientProtocol		
+protocol	conformance __C.CFPhoneNumberStringOptions	Swift.SetAlgebra: CorePhoneNumbers		
+protocol	conformance CommunicationTrust.CommunicationTrustDaemon	CallsUtilities.Daemon		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CommunicationTrust.IsBlockListEmpty	Swift.Encodable		
+protocol	conformance CommunicationTrust.IsBlockListEmpty	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.RemoveHandles	Swift.Encodable		
+protocol	conformance CommunicationTrust.RemoveHandles	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.UpdateHandles	Swift.Encodable		
+protocol	conformance CommunicationTrust.UpdateHandles	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.SaveHandles	Swift.Encodable		
+protocol	conformance CommunicationTrust.SaveHandles	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CommunicationTrust.FetchBlockedContactsRequest	Swift.Encodable		
+protocol	conformance CommunicationTrust.FetchBlockedContactsRequest	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CommunicationTrust.FetchHandlesRequest	Swift.Encodable		
+protocol	conformance CommunicationTrust.FetchHandlesRequest	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.UpdateServerTrust	Swift.Encodable		
+protocol	conformance CommunicationTrust.UpdateServerTrust	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.GetTrustScoresSync	Swift.Encodable		
+protocol	conformance CommunicationTrust.GetTrustScoresSync	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.GetTrustScores	Swift.Encodable		
+protocol	conformance CommunicationTrust.GetTrustScores	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.AreHandlesBlocked	Swift.Encodable		
+protocol	conformance CommunicationTrust.AreHandlesBlocked	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CommunicationTrust.IsHandleBlocked	Swift.Encodable		
+protocol	conformance CommunicationTrust.IsHandleBlocked	Swift.Decodable		
+protocol	conformance CommunicationTrust.CommunicationTrustInterface	CallsXPC.XPCInterface		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CommunicationTrust.IsBlockListEmpty	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.RemoveHandles	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.UpdateHandles	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.SaveHandles	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.UpdateServerTrust	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.GetTrustScores	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.GetTrustScoresSync	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.AreHandlesBlocked	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.IsHandleBlocked	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.FetchBlockedContactsRequest	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.FetchHandlesRequest	CallsXPC.XPCMessage		
+protocol	conformance CommunicationTrust.BlockListDataSource	CommunicationTrust.BlockListDataSourceProtocol		
+protocol	conformance CommunicationTrust.CallDirectoryDataSource	CommunicationTrust.CallDirectoryDataSourceProtocol		
+protocol	conformance CommunicationTrust.CallHistoryDataSource	CommunicationTrust.CallHistoryDataSourceProtocol		
+protocol	conformance CommunicationTrust.CallHistoryDataSourceProvider	CommunicationTrust.CallHistoryDataSourceProviderProtocol		
+protocol	conformance CommunicationTrust.CMFBlockList	CommunicationTrust.CMFBlockListProtocol		
+protocol	conformance CommunicationTrust.CMFBlockListDataSource	CommunicationTrust.CMFBlockListDataSourceProtocol		
+protocol	conformance CNContactStore	CommunicationTrust.ContactsDataSourceProviderProtocol		
+protocol	conformance CommunicationTrust.ContactsDataSource	CommunicationTrust.ContactsDataSourceProtocol		
+protocol	conformance CommunicationTrust.PeopleSuggesterDataSource	CommunicationTrust.PeopleSuggesterDataSourceProtocol		
+protocol	conformance CommunicationTrust.ServerTrustScoreDataSource	CommunicationTrust.ServerTrustScoreDataSourceProtocol		
+protocol	conformance CommunicationTrust.ServerTrustScore	Swift.Equatable		
+protocol	conformance CommunicationTrust.ServerTrustScore	Swift.Hashable		
+protocol	conformance CommunicationTrust.CommunicationTrustDataSourceManagerError	Swift.Equatable		
+protocol	conformance CommunicationTrust.CommunicationTrustDataSourceManagerError	Swift.Error		
+protocol	conformance CommunicationTrust.CommunicationTrustDataSourceManagerError	Swift.Hashable		
+protocol	conformance CommunicationTrust.ManagedAllowedApp	Swift.Identifiable		
+protocol	conformance CommunicationTrust.ManagedAllowedApp	Swift.Equatable		
+protocol	conformance CommunicationTrust.ManagedAllowedApp	Swift.Hashable		
+protocol	conformance CommunicationTrust.ManagedAllowedApp	SwiftData.PersistentModel		
+protocol	conformance CommunicationTrust.ManagedAllowedApp	Observation.Observable		
+protocol	conformance CommunicationTrust.ManagedContact	Swift.Identifiable		
+protocol	conformance CommunicationTrust.ManagedContact	Swift.Equatable		
+protocol	conformance CommunicationTrust.ManagedContact	Swift.Hashable		
+protocol	conformance CommunicationTrust.ManagedContact	Observation.Observable		
+protocol	conformance CommunicationTrust.ManagedContact	SwiftData.PersistentModel		
+protocol	conformance CommunicationTrust.ManagedHandle	Swift.Identifiable		
+protocol	conformance CommunicationTrust.ManagedHandle	Swift.Equatable		
+protocol	conformance CommunicationTrust.ManagedHandle	Swift.Hashable		
+protocol	conformance CommunicationTrust.ManagedHandle	Observation.Observable		
+protocol	conformance CommunicationTrust.ManagedHandle	SwiftData.PersistentModel		
+protocol	conformance BlockedHandle.AssociatedContact	Swift.Decodable		
+protocol	conformance BlockedHandle.AssociatedContact	Swift.Encodable		
+protocol	conformance BlockedHandle.AssociatedContact	Swift.Hashable		
+protocol	conformance BlockedHandle.AssociatedContact	Swift.Equatable		
+protocol	conformance BlockedHandle.AllowedApp	Swift.Decodable		
+protocol	conformance BlockedHandle.AllowedApp	Swift.Encodable		
+protocol	conformance BlockedHandle.AllowedApp	Swift.Hashable		
+protocol	conformance BlockedHandle.AllowedApp	Swift.Equatable		
+protocol	conformance CommunicationTrust.BlockedHandle	Swift.Decodable		
+protocol	conformance CommunicationTrust.BlockedHandle	Swift.Encodable		
+protocol	conformance CommunicationTrust.BlockedHandle	Swift.Hashable		
+protocol	conformance CommunicationTrust.BlockedHandle	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance IsEmptyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsEmptyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsEmptyCodingKeys	Swift.Equatable		
+protocol	conformance NotQueriedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotQueriedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance BlockListCacheState.QueryState	Swift.Equatable		
+protocol	conformance BlockListCacheState.QueryState	Swift.Encodable		
+protocol	conformance BlockListCacheState.QueryState	Swift.Decodable		
+protocol	conformance CommunicationTrust.BlockListCacheState	Swift.Equatable		
+protocol	conformance CommunicationTrust.BlockListCacheState	Swift.Encodable		
+protocol	conformance CommunicationTrust.BlockListCacheState	Swift.Decodable		
+protocol	conformance CommunicationTrust.BlockListCacheState	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance BlockListCacheState.QueryState	Swift.Hashable		
+protocol	conformance NotQueriedCodingKeys	Swift.CodingKey		
+protocol	conformance IsEmptyCodingKeys	Swift.CodingKey		
+protocol	conformance IsEmptyCodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CommunicationTrust.BlockListCache	CommunicationTrust.BlockListCacheProtocol		
+protocol	conformance CommunicationTrust.CommunicationTrustManagerError	Swift.Error		
+protocol	conformance CommunicationTrust.CommunicationTrustManagerError	Swift.Equatable		
+protocol	conformance CommunicationTrust.CommunicationTrustManagerError	Swift.Hashable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.Equatable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.RawRepresentable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.Decodable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.Encodable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.Hashable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.Comparable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	ArgumentParserInternal.ExpressibleByArgument		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.CaseIterable		
+protocol	conformance CommunicationTrust.CommunicationTrustScore	Swift.CustomStringConvertible		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.OptionSet		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.Decodable		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.Encodable		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.SetAlgebra		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.RawRepresentable		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.Equatable		
+protocol	conformance CommunicationTrust.CommunicationTrustScoreOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance CommunicationTrust.Service	Swift.Equatable		
+protocol	conformance CommunicationTrust.Service	Swift.RawRepresentable		
+protocol	conformance CommunicationTrust.Service	Swift.CustomStringConvertible		
+protocol	conformance CommunicationTrust.Service	Swift.Decodable		
+protocol	conformance CommunicationTrust.Service	Swift.Encodable		
+protocol	conformance CommunicationTrust.Service	Swift.Hashable		
+protocol	conformance CommunicationTrust.Service	ArgumentParserInternal.ExpressibleByArgument		
+protocol	conformance CommunicationTrust.Service	Swift.CaseIterable		
+protocol	conformance CommunicationTrust.StoreError	Swift.Error		
+protocol	conformance CommunicationTrust.DaemonContainerError	Swift.Error		
+extension	CommunicationTrust.CommunicationTrustInterface	XPCInterface		
+extension	CommunicationTrust.IsBlockListEmpty	XPCMessage		
+extension	CommunicationTrust.RemoveHandles	XPCMessage		
+extension	CommunicationTrust.UpdateHandles	XPCMessage		
+extension	CommunicationTrust.SaveHandles	XPCMessage		
+extension	CommunicationTrust.UpdateServerTrust	XPCMessage		
+extension	CommunicationTrust.GetTrustScores	XPCMessage		
+extension	CommunicationTrust.GetTrustScoresSync	XPCMessage		
+extension	CommunicationTrust.AreHandlesBlocked	XPCMessage		
+extension	CommunicationTrust.IsHandleBlocked	XPCMessage		
+extension	CommunicationTrust.FetchBlockedContactsRequest	XPCMessage		
+extension	CommunicationTrust.FetchHandlesRequest	XPCMessage		
+extension	CommunicationTrust.ManagedAllowedApp	Identifiable		
+extension	CommunicationTrust.ManagedAllowedApp	PersistentModel		
+extension	CommunicationTrust.ManagedContact	Identifiable		
+extension	CommunicationTrust.ManagedContact	PersistentModel		
+extension	CommunicationTrust.ManagedHandle	Identifiable		
+extension	CommunicationTrust.ManagedHandle	PersistentModel		
+extension	CommunicationTrust.CommunicationTrustScore	RawRepresentable		
+extension	CommunicationTrust.CommunicationTrustScore	CaseIterable		
+extension	CommunicationTrust.CommunicationTrustScoreOptions	OptionSet		
+extension	CommunicationTrust.CommunicationTrustScoreOptions	SetAlgebra		
+extension	CommunicationTrust.CommunicationTrustScoreOptions	RawRepresentable		
+extension	CommunicationTrust.CommunicationTrustScoreOptions	ExpressibleByArrayLiteral		
+extension	CommunicationTrust.Service	RawRepresentable		
+extension	CommunicationTrust.Service	CaseIterable		

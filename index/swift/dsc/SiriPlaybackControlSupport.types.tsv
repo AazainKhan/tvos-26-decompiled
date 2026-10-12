@@ -1,0 +1,781 @@
+kind	type	conformance	member_kind	member
+class	SiriPlaybackControlSupport.PlaybackControlsCommandProvider			
+class	SiriPlaybackControlSupport.PlaybackControlsCommandProvider		let	isXRDevice
+class	SiriPlaybackControlSupport.PlaybackControlsCommandProvider		let	assistantDiscovery
+class	SiriPlaybackControlSupport.PlaybackControlsCommandProvider		let	audioRouteProvider
+class	SiriPlaybackControlSupport.PlaybackControlsCommandProvider		var	mrQuickControllers
+class	SiriPlaybackControlSupport.PlaybackControlsCommandProvider		var	lazy
+struct	SiriPlaybackControlSupport.UsoIdentifierBuilder			
+struct	SiriPlaybackControlSupport.UsoIdentifierBuilder		let	semantic
+struct	SiriPlaybackControlSupport.UsoIdentifierBuilder		let	homeAutomationEntityType
+struct	SiriPlaybackControlSupport.UsoIdentifierBuilder		let	encodedSpanInfo
+struct	SiriPlaybackControlSupport.UsoIdentifierBuilder		let	interpretationGroup
+struct	SiriPlaybackControlSupport.FuzzyMatchType			
+struct	SiriPlaybackControlSupport.FuzzyMatchType		let	matchAccuracy
+struct	SiriPlaybackControlSupport.FuzzyMatchType		var	matchScore
+enum	SiriPlaybackControlSupport.SpanMatchAccuracy			
+enum	SiriPlaybackControlSupport.SpanMatchAccuracy		case	perfectMatch
+enum	SiriPlaybackControlSupport.SpanMatchAccuracy		case	partialMatch
+enum	SiriPlaybackControlSupport.SpanMatchAccuracy		case	approximateMatch
+enum	SiriPlaybackControlSupport.SpanMatchAccuracy		case	aliasMatch
+class	SiriPlaybackControlSupport.HomeManager	NSObject		
+class	SiriPlaybackControlSupport.HomeManager	NSObject	let	homeManagerRefreshTimeout
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	hmHomeManager
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	hmHomeManagerOptions
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	homeData
+class	SiriPlaybackControlSupport.HomeManager	NSObject	let	readyGroup
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	homekitInitSignpostID
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	homekitRefreshSignpostID
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	loadQueue
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	homeKitTracker
+class	SiriPlaybackControlSupport.HomeManager	NSObject	var	mediaGroupTracker
+class	SiriPlaybackControlSupport.HomeManager.DataSourceTracker			
+class	SiriPlaybackControlSupport.HomeManager.DataSourceTracker		let	queue
+class	SiriPlaybackControlSupport.HomeManager.DataSourceTracker		let	readyGroup
+class	SiriPlaybackControlSupport.HomeManager.DataSourceTracker		var	loadState
+class	SiriPlaybackControlSupport.HomeManager.DataSourceTracker		var	caller
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.Caller			
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.Caller		case	homeKit
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.Caller		case	psg
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.DataLoadState			
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.DataLoadState		case	inProgress
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.DataLoadState		case	finishedSuccessfully
+enum	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.DataLoadState		case	finishedFailed
+struct	SiriPlaybackControlSupport.HomeManager.HomeData			
+struct	SiriPlaybackControlSupport.HomeManager.HomeData		var	currentAccessory
+struct	SiriPlaybackControlSupport.HomeManager.HomeData		var	currentRoom
+struct	SiriPlaybackControlSupport.HomeManager.HomeData		var	currentHome
+struct	SiriPlaybackControlSupport.HomeManager.HomeData		var	homes
+struct	SiriPlaybackControlSupport.HomeManager.HomeData		var	mediaGroups
+struct	SiriPlaybackControlSupport.MediaGroup			
+struct	SiriPlaybackControlSupport.MediaGroup		var	members
+struct	SiriPlaybackControlSupport.MediaGroup		let	name
+struct	SiriPlaybackControlSupport.MediaGroup		let	identifier
+class	SiriPlaybackControlSupport.PlaybackController			
+class	SiriPlaybackControlSupport.PlaybackController		let	playbackControlsCommandProvider
+enum	SiriPlaybackControlSupport.HomeError			
+enum	SiriPlaybackControlSupport.HomeError		case	unknown
+enum	SiriPlaybackControlSupport.HomeError		case	notFound
+enum	SiriPlaybackControlSupport.HomeError		case	unsupportedPlatform
+enum	SiriPlaybackControlSupport.HomeError		case	noCurrentHome
+enum	SiriPlaybackControlSupport.HomeError		case	noCurrentAccessory
+enum	SiriPlaybackControlSupport.HomeError		case	timeout
+enum	SiriPlaybackControlSupport.HomeError		case	unimplemented
+struct	SiriPlaybackControlSupport.AccessoryCategory			
+struct	SiriPlaybackControlSupport.AccessoryCategory		let	rawValue
+struct	SiriPlaybackControlSupport.UsoEntitySpanBuilder			
+struct	SiriPlaybackControlSupport.UsoEntitySpanBuilder		let	semantic
+struct	SiriPlaybackControlSupport.UsoEntitySpanBuilder		let	homeAutomationEntityType
+struct	SiriPlaybackControlSupport.UsoEntitySpanBuilder		let	matchInfo
+struct	SiriPlaybackControlSupport.UsoEntitySpanBuilder		let	payloadAttachmentInfo
+struct	SiriPlaybackControlSupport.HomeEntityContainer<A	SiriPlaybackControlSupport.HomeDataWrapper>		
+struct	SiriPlaybackControlSupport.HomeEntityContainer<A	SiriPlaybackControlSupport.HomeDataWrapper>	let	name
+struct	SiriPlaybackControlSupport.HomeEntityContainer<A	SiriPlaybackControlSupport.HomeDataWrapper>	let	inCurrentHome
+struct	SiriPlaybackControlSupport.HomeEntityContainer<A	SiriPlaybackControlSupport.HomeDataWrapper>	let	type
+struct	SiriPlaybackControlSupport.FilteringPredicate			
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	deviceName
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	deviceTypes
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	accessory
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	room
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	home
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	zoneName
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	serviceGroup
+struct	SiriPlaybackControlSupport.FilteringPredicate		var	routeId
+enum	SiriPlaybackControlSupport.FilteringPredicate.Location			
+enum	SiriPlaybackControlSupport.FilteringPredicate.Location		case	named
+enum	SiriPlaybackControlSupport.FilteringPredicate.Location		case	current
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType			
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	accessory
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	room
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	here
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	zone
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	everywhere
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	allDevices
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	deviceType
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	local
+enum	SiriPlaybackControlSupport.FilteringPredicate.GroupType		case	unknown
+struct	SiriPlaybackControlSupport.EndpointInfo			
+struct	SiriPlaybackControlSupport.EndpointInfo		var	endpointId
+struct	SiriPlaybackControlSupport.EndpointInfo		var	mediaRouteIdentifier
+enum	SiriPlaybackControlSupport.DeviceIdiom			
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	sidekick
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	iPhone
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	iPad
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	iPod
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	homePod
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	appleTV
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	mac
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	carplay
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	watch
+enum	SiriPlaybackControlSupport.DeviceIdiom		case	xrDevice
+struct	SiriPlaybackControlSupport.DeviceStateProvider			
+struct	SiriPlaybackControlSupport.DeviceStateProvider		var	_siriLocale
+struct	SiriPlaybackControlSupport.DeviceStateProvider		var	_deviceIdiom
+enum	SiriPlaybackControlSupport.HomeEntityContainerType<A	SiriPlaybackControlSupport.HomeDataWrapper>		
+enum	SiriPlaybackControlSupport.HomeEntityContainerType<A	SiriPlaybackControlSupport.HomeDataWrapper>	case	home
+enum	SiriPlaybackControlSupport.HomeEntityContainerType<A	SiriPlaybackControlSupport.HomeDataWrapper>	case	zone
+enum	SiriPlaybackControlSupport.HomeEntityContainerType<A	SiriPlaybackControlSupport.HomeDataWrapper>	case	room
+enum	SiriPlaybackControlSupport.HomeEntityContainerType<A	SiriPlaybackControlSupport.HomeDataWrapper>	case	accessory
+struct	SiriPlaybackControlSupport.DeviceCategory			
+struct	SiriPlaybackControlSupport.DeviceCategory		let	rawValue
+struct	SiriPlaybackControlSupport.DeviceResolutionProvider			
+struct	SiriPlaybackControlSupport.DeviceResolutionProvider		var	deviceSelector
+struct	SiriPlaybackControlSupport.DeviceResolutionProvider		let	encryptionProvider
+struct	SiriPlaybackControlSupport.DeviceResolutionProvider		let	aceService
+struct	SiriPlaybackControlSupport.HomeEntityMatchingService<A	SiriPlaybackControlSupport.HomeManagerWrapper>		
+struct	SiriPlaybackControlSupport.HomeEntityMatchingService<A	SiriPlaybackControlSupport.HomeManagerWrapper>	let	locale
+class	SiriPlaybackControlSupport.AccessoryVolumeController<A	SiriPlaybackControlSupport.AccessoryWrapper>		
+class	SiriPlaybackControlSupport.AccessoryVolumeController<A	SiriPlaybackControlSupport.AccessoryWrapper>	let	deviceSelector
+class	SiriPlaybackControlSupport.DeviceSelector			
+class	SiriPlaybackControlSupport.DeviceSelector		let	homeProvider
+enum	SiriPlaybackControlSupport.DeviceType			
+enum	SiriPlaybackControlSupport.DeviceType		case	appleTv
+enum	SiriPlaybackControlSupport.DeviceType		case	television
+enum	SiriPlaybackControlSupport.DeviceType		case	homepod
+enum	SiriPlaybackControlSupport.DeviceType		case	speaker
+enum	SiriPlaybackControlSupport.DeviceType		case	airportExpress
+enum	SiriPlaybackControlSupport.DeviceType		case	iPad
+enum	SiriPlaybackControlSupport.DeviceType		case	iPhone
+enum	SiriPlaybackControlSupport.DeviceType		case	airplaySpeaker
+enum	SiriPlaybackControlSupport.DeviceType		case	bluetoothSpeaker
+enum	SiriPlaybackControlSupport.DeviceType		case	robotVacuumCleaner
+enum	SiriPlaybackControlSupport.DeviceType		case	otherAccessory
+enum	SiriPlaybackControlSupport.DeviceType		case	unknown
+enum	SiriPlaybackControlSupport.PlaceHint			
+enum	SiriPlaybackControlSupport.PlaceHint		case	this
+enum	SiriPlaybackControlSupport.PlaceHint		case	here
+enum	SiriPlaybackControlSupport.PlaceHint		case	room
+enum	SiriPlaybackControlSupport.PlaceHint		case	house
+enum	SiriPlaybackControlSupport.PlaceHint		case	commonRooms
+enum	SiriPlaybackControlSupport.PlaceHint		case	hall
+enum	SiriPlaybackControlSupport.PlaceHint		case	kitchen
+enum	SiriPlaybackControlSupport.PlaceHint		case	livingRoom
+enum	SiriPlaybackControlSupport.PlaceHint		case	diningRoom
+enum	SiriPlaybackControlSupport.PlaceHint		case	entrance
+enum	SiriPlaybackControlSupport.PlaceHint		case	bathroom
+enum	SiriPlaybackControlSupport.PlaceHint		case	office
+enum	SiriPlaybackControlSupport.PlaceHint		case	bedroom
+enum	SiriPlaybackControlSupport.PlaceHint		case	masterBedroom
+enum	SiriPlaybackControlSupport.PlaceHint		case	basement
+enum	SiriPlaybackControlSupport.PlaceHint		case	yard
+enum	SiriPlaybackControlSupport.PlaceHint		case	gym
+enum	SiriPlaybackControlSupport.PlaceHint		case	playRoom
+enum	SiriPlaybackControlSupport.PlaceHint		case	tvRoom
+enum	SiriPlaybackControlSupport.PlaceHint		case	workshop
+enum	SiriPlaybackControlSupport.DeviceQuantifier			
+enum	SiriPlaybackControlSupport.DeviceQuantifier		case	one
+enum	SiriPlaybackControlSupport.DeviceQuantifier		case	both
+enum	SiriPlaybackControlSupport.DeviceQuantifier		case	some
+enum	SiriPlaybackControlSupport.DeviceQuantifier		case	all
+enum	SiriPlaybackControlSupport.DeviceQuantifier		case	except
+struct	SiriPlaybackControlSupport.FromEntity			
+struct	SiriPlaybackControlSupport.FromEntity		let	type
+struct	SiriPlaybackControlSupport.FromEntity		let	value
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType			
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType		case	homeAutomationRoom
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType		case	homeAutomationZone
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType		case	homeAutomationAccessory
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType		case	homeAutomationService
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType		case	homeAutomationServiceGroup
+enum	SiriPlaybackControlSupport.FromEntity.FromEntityType		case	unknown
+enum	SiriPlaybackControlSupport.Reference			
+enum	SiriPlaybackControlSupport.Reference		case	one
+enum	SiriPlaybackControlSupport.Reference		case	the
+enum	SiriPlaybackControlSupport.Reference		case	many
+enum	SiriPlaybackControlSupport.Reference		case	definite
+enum	SiriPlaybackControlSupport.Reference		case	indefinite
+enum	SiriPlaybackControlSupport.MediaSettingName			
+enum	SiriPlaybackControlSupport.MediaSettingName		case	airPlay
+enum	SiriPlaybackControlSupport.DeviceNLNodeValues			
+class	SiriPlaybackControlSupport.InterpretationGroup			
+class	SiriPlaybackControlSupport.InterpretationGroup		var	usoIdentifiers
+class	SiriPlaybackControlSupport.InterpretationGroup		var	groupIdentifier
+class	SiriPlaybackControlSupport.InterpretationGroup		var	homeAutomationEntityType
+class	SiriPlaybackControlSupport.InterpretationGroup		var	homeAutomationEntityName
+class	SiriPlaybackControlSupport.InterpretationGroup		var	spanMatchInfo
+enum	SiriPlaybackControlSupport.MRErrorEncoder			
+struct	SiriPlaybackControlSupport.MRErrorEncoder.ResultError			
+struct	SiriPlaybackControlSupport.MRErrorEncoder.ResultError		var	errorCode
+struct	SiriPlaybackControlSupport.MRErrorEncoder.ResultError		var	errorDescription
+enum	SiriPlaybackControlSupport.LanguageGroup			
+enum	SiriPlaybackControlSupport.LanguageGroup		case	subtitles
+enum	SiriPlaybackControlSupport.LanguageGroup		case	audio
+enum	SiriPlaybackControlSupport.LanguageError			
+enum	SiriPlaybackControlSupport.LanguageError		case	unknown
+enum	SiriPlaybackControlSupport.LanguageError		case	missingResponse
+enum	SiriPlaybackControlSupport.LanguageError		case	languageEmpty
+enum	SiriPlaybackControlSupport.LanguageError		case	optionTypeNotMatched
+enum	SiriPlaybackControlSupport.LanguageError		case	unsupported
+enum	SiriPlaybackControlSupport.LanguageError		case	unsupportedPlatform
+enum	SiriPlaybackControlSupport.PlaybackControllingError			
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	mrErrorRepresentation
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	fullerMRErrorRepresentation
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	unknown
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	skipLimitExceeded
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	adSkippingDisallowed
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	unsupportedPlatform
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	unsupportedCommand
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	requestParametersOutOfBounds
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	outputDeviceNotGroupable
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	timedOutForCanBeNowPlaying
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	speakerUnreachable
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	noNowPlayingApp
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	noContentToPlay
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	noNetworkToPlay
+enum	SiriPlaybackControlSupport.PlaybackControllingError		case	defaultImplementation
+enum	SiriPlaybackControlSupport.PlaybackControllingError.UserInfoKeys			
+enum	SiriPlaybackControlSupport.PlaybackControllingError.UserInfoKeys		case	error
+enum	SiriPlaybackControlSupport.PlaybackControllingError.UserInfoKeys		case	cmdID
+enum	SiriPlaybackControlSupport.PlaybackControllingError.UserInfoKeys		case	playerPath
+enum	SiriPlaybackControlSupport.PlaybackControllingError.UserInfoKeys		case	timestamp
+struct	SiriPlaybackControlSupport.PlaybackControllingError.UserInfo			
+struct	SiriPlaybackControlSupport.PlaybackControllingError.UserInfo		var	cmdID
+struct	SiriPlaybackControlSupport.PlaybackControllingError.UserInfo		var	playerPath
+struct	SiriPlaybackControlSupport.PlaybackControllingError.UserInfo		var	timestamp
+enum	SiriPlaybackControlSupport.VolumeControllingError			
+enum	SiriPlaybackControlSupport.VolumeControllingError		case	unknown
+enum	SiriPlaybackControlSupport.VolumeControllingError		case	alreadyMuted
+enum	SiriPlaybackControlSupport.VolumeControllingError		case	alreadyUnmuted
+struct	SiriPlaybackControlSupport.LanguageOption			
+struct	SiriPlaybackControlSupport.LanguageOption		let	identifier
+struct	SiriPlaybackControlSupport.LanguageOption		let	languageTag
+struct	SiriPlaybackControlSupport.LanguageOption		let	displayName
+struct	SiriPlaybackControlSupport.LanguageOption		let	languageCharacteristics
+struct	SiriPlaybackControlSupport.LanguageOption		var	isActive
+struct	SiriPlaybackControlSupport.DurationInfo			
+struct	SiriPlaybackControlSupport.DurationInfo		let	duration
+struct	SiriPlaybackControlSupport.DurationInfo		let	elapsedDuration
+enum	SiriPlaybackControlSupport.ShuffleMode			
+enum	SiriPlaybackControlSupport.ShuffleMode		case	shuffleOn
+enum	SiriPlaybackControlSupport.ShuffleMode		case	shuffleOff
+enum	SiriPlaybackControlSupport.RepeatMode			
+enum	SiriPlaybackControlSupport.RepeatMode		case	repeatOff
+enum	SiriPlaybackControlSupport.RepeatMode		case	repeatOne
+enum	SiriPlaybackControlSupport.RepeatMode		case	repeatAll
+enum	SiriPlaybackControlSupport.RepeatMode		case	repeatUknown
+enum	SiriPlaybackControlSupport.PlaybackState			
+enum	SiriPlaybackControlSupport.PlaybackState		case	unknown
+enum	SiriPlaybackControlSupport.PlaybackState		case	playing
+enum	SiriPlaybackControlSupport.PlaybackState		case	paused
+enum	SiriPlaybackControlSupport.PlaybackState		case	stopped
+enum	SiriPlaybackControlSupport.PlaybackState		case	interrupted
+enum	SiriPlaybackControlSupport.PlaybackState		case	seeking
+enum	SiriPlaybackControlSupport.LanguageCharacteristic			
+enum	SiriPlaybackControlSupport.LanguageCharacteristic		case	DEFAULT
+enum	SiriPlaybackControlSupport.LanguageCharacteristic		case	SDH
+enum	SiriPlaybackControlSupport.LanguageCharacteristic		case	CC
+enum	SiriPlaybackControlSupport.LanguageCharacteristic		case	AD
+struct	SiriPlaybackControlSupport.Home			
+struct	SiriPlaybackControlSupport.Home		let	hmHome
+struct	SiriPlaybackControlSupport.Room			
+struct	SiriPlaybackControlSupport.Room		let	hmRoom
+struct	SiriPlaybackControlSupport.Zone			
+struct	SiriPlaybackControlSupport.Zone		let	hmZone
+struct	SiriPlaybackControlSupport.Accessory			
+struct	SiriPlaybackControlSupport.Accessory		let	hmAccessory
+struct	SiriPlaybackControlSupport.PlaybackControlsFeatureFlagProvider			
+enum	SiriPlaybackControlSupport.Features			
+enum	SiriPlaybackControlSupport.Features		case	mediaControlsOnSiriX
+enum	SiriPlaybackControlSupport.Features		case	mediaControlsOnSiriXv2
+enum	SiriPlaybackControlSupport.Features		case	responseFramework
+enum	SiriPlaybackControlSupport.Features		case	controlsEnabledOnWatch
+enum	SiriPlaybackControlSupport.Features		case	quickStopCallBell
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType			
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	speakerService
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	zone
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	room
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	accessory
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	home
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	serviceName
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	serviceGroup
+enum	SiriPlaybackControlSupport.HomeAutomationEntityType		case	placeHint
+enum	SiriPlaybackControlSupport.ListPosition			
+enum	SiriPlaybackControlSupport.ListPosition		case	ordered
+enum	SiriPlaybackControlSupport.ListPosition		case	reversed
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery			
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	roomName
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	zoneName
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	homeName
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	accessoryName
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	serviceName
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	serviceGroup
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	isFromEntity
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	deviceQuantifier
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	deviceType
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	placeHint
+struct	SiriPlaybackControlSupport.HomeAutomationEntityQuery		var	reference
+class	SiriPlaybackControlSupport.AtomicArray			
+class	SiriPlaybackControlSupport.AtomicArray		var	array
+class	SiriPlaybackControlSupport.AtomicArray		let	lock
+class	SiriPlaybackControlSupport.AtomicArray		let	name
+struct	SiriPlaybackControlSupport.HomeProvider<A	SiriPlaybackControlSupport.HomeManagerWrapper>		
+struct	SiriPlaybackControlSupport.HomeProvider<A	SiriPlaybackControlSupport.HomeManagerWrapper>	let	manager
+struct	SiriPlaybackControlSupport.HomeProvider<A	SiriPlaybackControlSupport.HomeManagerWrapper>	let	locale
+struct	SiriPlaybackControlSupport.HomeProvider<A	SiriPlaybackControlSupport.HomeManagerWrapper>	let	featureFlagProvider
+struct	SiriPlaybackControlSupport.HomeProvider<A	SiriPlaybackControlSupport.HomeManagerWrapper>	let	homeEntityMatchingService
+enum	SiriPlaybackControlSupport.DeviceSelectionConstants			
+enum	SiriPlaybackControlSupport.DeviceSelectionControlType			
+enum	SiriPlaybackControlSupport.DeviceSelectionControlType		case	pausable
+enum	SiriPlaybackControlSupport.DeviceSelectionControlType		case	resumable
+enum	SiriPlaybackControlSupport.DeviceSelectionControlType		case	videoControls
+enum	SiriPlaybackControlSupport.DeviceSelectionControlType		case	volumeControls
+enum	SiriPlaybackControlSupport.DeviceSelectionControlType		case	any
+class	SiriPlaybackControlSupport.LocalizationProvider			
+class	SiriPlaybackControlSupport.LocalizationProvider		var	whaStopWordsCache
+class	SiriPlaybackControlSupport.LocalizationProvider		var	roomStringsCache
+enum	SiriPlaybackControlSupport.LocalizationTable			
+enum	SiriPlaybackControlSupport.LocalizationTable		case	labels
+enum	SiriPlaybackControlSupport.LocalizationKey			
+enum	SiriPlaybackControlSupport.LocalizationKey		case	inHere
+enum	SiriPlaybackControlSupport.LocalizationKey		case	everywhere
+enum	SiriPlaybackControlSupport.LocalizationKey		case	roomAndOneOtherRoom
+enum	SiriPlaybackControlSupport.LocalizationKey		case	roomAndNOtherRooms
+enum	SiriPlaybackControlSupport.LocalizationKey		case	confirmationCancel
+enum	SiriPlaybackControlSupport.LocalizationKey		case	confirmationConfirm
+enum	SiriPlaybackControlSupport.LocalizationKey		case	roomNameTV
+enum	SiriPlaybackControlSupport.LocalizationKey		case	roomNameSpeaker
+enum	SiriPlaybackControlSupport.LocalizationKey		case	autoLanguage
+enum	SiriPlaybackControlSupport.LocalizationKey		case	roomStrings
+enum	SiriPlaybackControlSupport.LocalizationKey		case	whaStopWords
+struct	SiriPlaybackControlSupport.EncryptionProvider			
+class	SiriPlaybackControlSupport.AudioRouteProvider			
+class	SiriPlaybackControlSupport.TailspinHelper			
+enum	SiriPlaybackControlSupport.ControlsError			
+enum	SiriPlaybackControlSupport.ControlsError		case	unknown
+enum	SiriPlaybackControlSupport.ControlsError		case	ce1
+enum	SiriPlaybackControlSupport.ControlsError		case	ce2
+enum	SiriPlaybackControlSupport.ControlsError		case	ce3
+enum	SiriPlaybackControlSupport.ControlsError		case	ce4
+enum	SiriPlaybackControlSupport.ControlsError		case	ce5
+enum	SiriPlaybackControlSupport.ControlsError		case	ce6
+enum	SiriPlaybackControlSupport.ControlsError		case	ce7
+enum	SiriPlaybackControlSupport.ControlsError		case	ce8
+enum	SiriPlaybackControlSupport.ControlsError		case	ce9
+enum	SiriPlaybackControlSupport.ControlsError		case	ce10
+enum	SiriPlaybackControlSupport.ControlsError		case	ce11
+enum	SiriPlaybackControlSupport.ControlsError		case	ce12
+enum	SiriPlaybackControlSupport.ControlsError		case	ce13
+enum	SiriPlaybackControlSupport.ControlsError		case	ce14
+enum	SiriPlaybackControlSupport.ControlsError		case	ce15
+enum	SiriPlaybackControlSupport.ControlsError		case	ce16
+enum	SiriPlaybackControlSupport.ControlsError		case	ce17
+enum	SiriPlaybackControlSupport.ControlsError		case	ce18
+enum	SiriPlaybackControlSupport.ControlsError		case	ce19
+enum	SiriPlaybackControlSupport.ControlsError		case	ce20
+enum	SiriPlaybackControlSupport.ControlsError		case	ce21
+enum	SiriPlaybackControlSupport.ControlsError		case	ce22
+enum	SiriPlaybackControlSupport.ControlsError		case	ce23
+enum	SiriPlaybackControlSupport.ControlsError		case	ce24
+enum	SiriPlaybackControlSupport.ControlsError		case	ce25
+enum	SiriPlaybackControlSupport.ControlsError		case	ce26
+enum	SiriPlaybackControlSupport.ControlsError		case	ce27
+enum	SiriPlaybackControlSupport.ControlsError		case	ce28
+enum	SiriPlaybackControlSupport.ControlsError		case	ce29
+enum	SiriPlaybackControlSupport.ControlsError		case	ce30
+enum	SiriPlaybackControlSupport.ControlsError		case	ce31
+enum	SiriPlaybackControlSupport.ControlsError		case	ce32
+enum	SiriPlaybackControlSupport.ControlsError		case	ce33
+enum	SiriPlaybackControlSupport.ControlsError		case	ce34
+enum	SiriPlaybackControlSupport.ControlsError		case	ce35
+enum	SiriPlaybackControlSupport.ControlsError		case	ce36
+enum	SiriPlaybackControlSupport.ControlsError		case	ce37
+enum	SiriPlaybackControlSupport.ControlsError		case	ce38
+enum	SiriPlaybackControlSupport.ControlsError		case	ce39
+enum	SiriPlaybackControlSupport.ControlsError		case	ce40
+enum	SiriPlaybackControlSupport.ControlsError		case	ce41
+enum	SiriPlaybackControlSupport.ControlsError		case	ce42
+enum	SiriPlaybackControlSupport.ControlsError		case	ce43
+enum	SiriPlaybackControlSupport.ControlsError		case	ce44
+enum	SiriPlaybackControlSupport.ControlsError		case	ce45
+enum	SiriPlaybackControlSupport.ControlsError		case	ce46
+enum	SiriPlaybackControlSupport.ControlsError		case	ce47
+enum	SiriPlaybackControlSupport.ControlsError		case	ce48
+enum	SiriPlaybackControlSupport.ControlsError		case	ce49
+enum	SiriPlaybackControlSupport.ControlsError		case	ce50
+enum	SiriPlaybackControlSupport.ControlsError		case	ce51
+enum	SiriPlaybackControlSupport.ControlsError		case	ce52
+enum	SiriPlaybackControlSupport.ControlsError		case	ce53
+enum	SiriPlaybackControlSupport.ControlsError		case	ce54
+enum	SiriPlaybackControlSupport.ControlsError		case	ce55
+enum	SiriPlaybackControlSupport.ControlsError		case	ce56
+enum	SiriPlaybackControlSupport.ControlsError		case	ce57
+enum	SiriPlaybackControlSupport.ControlsError		case	ce58
+enum	SiriPlaybackControlSupport.ControlsError		case	ce59
+enum	SiriPlaybackControlSupport.ControlsError		case	ce60
+enum	SiriPlaybackControlSupport.ControlsError		case	ce61
+enum	SiriPlaybackControlSupport.ControlsError		case	ce62
+enum	SiriPlaybackControlSupport.ControlsError		case	ce63
+enum	SiriPlaybackControlSupport.ControlsError		case	ce64
+enum	SiriPlaybackControlSupport.ControlsError		case	ce65
+enum	SiriPlaybackControlSupport.ControlsError		case	ce66
+enum	SiriPlaybackControlSupport.ControlsError		case	ce67
+enum	SiriPlaybackControlSupport.ControlsError		case	ce68
+enum	SiriPlaybackControlSupport.ControlsError		case	ce69
+enum	SiriPlaybackControlSupport.ControlsError		case	ce70
+enum	SiriPlaybackControlSupport.ControlsError		case	ce71
+enum	SiriPlaybackControlSupport.ControlsError		case	ce72
+enum	SiriPlaybackControlSupport.ControlsError		case	ce73
+enum	SiriPlaybackControlSupport.ControlsError		case	ce74
+enum	SiriPlaybackControlSupport.ControlsError		case	ce75
+enum	SiriPlaybackControlSupport.ControlsError		case	ce76
+enum	SiriPlaybackControlSupport.ControlsError		case	ce77
+enum	SiriPlaybackControlSupport.ControlsError		case	ce78
+enum	SiriPlaybackControlSupport.ControlsError		case	ce79
+enum	SiriPlaybackControlSupport.ControlsError		case	ce80
+enum	SiriPlaybackControlSupport.ControlsError		case	ce81
+enum	SiriPlaybackControlSupport.ControlsError		case	ce82
+enum	SiriPlaybackControlSupport.ControlsError		case	ce83
+enum	SiriPlaybackControlSupport.ControlsError		case	ce84
+enum	SiriPlaybackControlSupport.ControlsError		case	ce85
+enum	SiriPlaybackControlSupport.ControlsError		case	ce86
+enum	SiriPlaybackControlSupport.ControlsError		case	ce87
+enum	SiriPlaybackControlSupport.ControlsError		case	ce88
+enum	SiriPlaybackControlSupport.ControlsError		case	ce89
+enum	SiriPlaybackControlSupport.ControlsError		case	ce90
+enum	SiriPlaybackControlSupport.ControlsError		case	ce91
+enum	SiriPlaybackControlSupport.ControlsError		case	ce92
+enum	SiriPlaybackControlSupport.ControlsError		case	ce93
+enum	SiriPlaybackControlSupport.ControlsError		case	ce94
+enum	SiriPlaybackControlSupport.ControlsError		case	ce95
+enum	SiriPlaybackControlSupport.ControlsError		case	ce96
+enum	SiriPlaybackControlSupport.ControlsError		case	ce97
+enum	SiriPlaybackControlSupport.ControlsError		case	ce98
+enum	SiriPlaybackControlSupport.ControlsError		case	ce99
+enum	SiriPlaybackControlSupport.ControlsError		case	ce100
+enum	SiriPlaybackControlSupport.ControlsError		case	ce101
+enum	SiriPlaybackControlSupport.ControlsError		case	ce102
+enum	SiriPlaybackControlSupport.ControlsError		case	ce103
+enum	SiriPlaybackControlSupport.ControlsError		case	ce104
+enum	SiriPlaybackControlSupport.ControlsError		case	ce105
+enum	SiriPlaybackControlSupport.ControlsError		case	ce106
+enum	SiriPlaybackControlSupport.ControlsError		case	ce107
+enum	SiriPlaybackControlSupport.ControlsError		case	ce108
+enum	SiriPlaybackControlSupport.ControlsError		case	ce109
+enum	SiriPlaybackControlSupport.ControlsError		case	ce110
+enum	SiriPlaybackControlSupport.ControlsError		case	ce111
+enum	SiriPlaybackControlSupport.ControlsError		case	ce112
+enum	SiriPlaybackControlSupport.ControlsError		case	ce113
+enum	SiriPlaybackControlSupport.ControlsError		case	ce114
+enum	SiriPlaybackControlSupport.ControlsError		case	ce115
+enum	SiriPlaybackControlSupport.ControlsError		case	ce116
+enum	SiriPlaybackControlSupport.ControlsError		case	ce117
+enum	SiriPlaybackControlSupport.ControlsError		case	ce118
+enum	SiriPlaybackControlSupport.ControlsError		case	ce119
+enum	SiriPlaybackControlSupport.ControlsError		case	ce120
+enum	SiriPlaybackControlSupport.ControlsError		case	ce121
+enum	SiriPlaybackControlSupport.ControlsError		case	ce122
+enum	SiriPlaybackControlSupport.ControlsError		case	ce123
+enum	SiriPlaybackControlSupport.ControlsError		case	ce124
+enum	SiriPlaybackControlSupport.ControlsError		case	ce125
+enum	SiriPlaybackControlSupport.ControlsError		case	ce126
+enum	SiriPlaybackControlSupport.ControlsError		case	ce127
+enum	SiriPlaybackControlSupport.ControlsError		case	ce128
+enum	SiriPlaybackControlSupport.ControlsError		case	ce129
+enum	SiriPlaybackControlSupport.ControlsError		case	ce130
+enum	SiriPlaybackControlSupport.ControlsError		case	ce131
+enum	SiriPlaybackControlSupport.ControlsError		case	ce132
+enum	SiriPlaybackControlSupport.ControlsError		case	ce133
+enum	SiriPlaybackControlSupport.ControlsError		case	ce134
+enum	SiriPlaybackControlSupport.ControlsError		case	ce135
+enum	SiriPlaybackControlSupport.ControlsError		case	ce136
+enum	SiriPlaybackControlSupport.ControlsError		case	ce137
+enum	SiriPlaybackControlSupport.ControlsError		case	ce138
+enum	SiriPlaybackControlSupport.ControlsError		case	ce139
+enum	SiriPlaybackControlSupport.ControlsError		case	ce140
+enum	SiriPlaybackControlSupport.ControlsError		case	ce141
+enum	SiriPlaybackControlSupport.ControlsError		case	ce142
+enum	SiriPlaybackControlSupport.ControlsError		case	ce143
+enum	SiriPlaybackControlSupport.ControlsError		case	ce144
+enum	SiriPlaybackControlSupport.ControlsError		case	ce145
+enum	SiriPlaybackControlSupport.ControlsError		case	ce146
+enum	SiriPlaybackControlSupport.ControlsError		case	ce147
+enum	SiriPlaybackControlSupport.ControlsError		case	ce148
+enum	SiriPlaybackControlSupport.ControlsError		case	ce149
+enum	SiriPlaybackControlSupport.ControlsError		case	ce150
+enum	SiriPlaybackControlSupport.ControlsError		case	ce151
+enum	SiriPlaybackControlSupport.ControlsError		case	ce152
+enum	SiriPlaybackControlSupport.ControlsError		case	ce153
+enum	SiriPlaybackControlSupport.ControlsError		case	ce154
+enum	SiriPlaybackControlSupport.ControlsError		case	ce155
+enum	SiriPlaybackControlSupport.ControlsError		case	ce156
+enum	SiriPlaybackControlSupport.ControlsError		case	ce157
+enum	SiriPlaybackControlSupport.ControlsError		case	ce158
+enum	SiriPlaybackControlSupport.ControlsError		case	ce159
+enum	SiriPlaybackControlSupport.ControlsError		case	ce160
+enum	SiriPlaybackControlSupport.ControlsError		case	ce161
+enum	SiriPlaybackControlSupport.ControlsError		case	ce162
+enum	SiriPlaybackControlSupport.ControlsError		case	ce163
+enum	SiriPlaybackControlSupport.ControlsError		case	ce164
+enum	SiriPlaybackControlSupport.ControlsError		case	ce165
+enum	SiriPlaybackControlSupport.ControlsError		case	ce166
+enum	SiriPlaybackControlSupport.ControlsError		case	ce167
+enum	SiriPlaybackControlSupport.ControlsError		case	ce168
+enum	SiriPlaybackControlSupport.ControlsError		case	ce169
+enum	SiriPlaybackControlSupport.ControlsError		case	ce170
+enum	SiriPlaybackControlSupport.ControlsError		case	ce171
+enum	SiriPlaybackControlSupport.ControlsError		case	ce172
+enum	SiriPlaybackControlSupport.ControlsError		case	ce173
+enum	SiriPlaybackControlSupport.ControlsError		case	ce174
+enum	SiriPlaybackControlSupport.ControlsError		case	ce175
+enum	SiriPlaybackControlSupport.ControlsError		case	ce176
+enum	SiriPlaybackControlSupport.ControlsError		case	ce177
+enum	SiriPlaybackControlSupport.ControlsError		case	ce178
+enum	SiriPlaybackControlSupport.ControlsError		case	ce179
+enum	SiriPlaybackControlSupport.ControlsError		case	ce180
+enum	SiriPlaybackControlSupport.ControlsError		case	ce181
+enum	SiriPlaybackControlSupport.ControlsError		case	ce182
+enum	SiriPlaybackControlSupport.ControlsError		case	ce183
+enum	SiriPlaybackControlSupport.ControlsError		case	ce184
+enum	SiriPlaybackControlSupport.ControlsError		case	ce185
+enum	SiriPlaybackControlSupport.ControlsError		case	ce186
+enum	SiriPlaybackControlSupport.ControlsError		case	ce187
+enum	SiriPlaybackControlSupport.ControlsError		case	ce188
+enum	SiriPlaybackControlSupport.ControlsError		case	ce189
+enum	SiriPlaybackControlSupport.ControlsError		case	ce190
+enum	SiriPlaybackControlSupport.ControlsError		case	ce191
+enum	SiriPlaybackControlSupport.ControlsError		case	ce192
+enum	SiriPlaybackControlSupport.ControlsError		case	ce193
+enum	SiriPlaybackControlSupport.ControlsError		case	ce194
+enum	SiriPlaybackControlSupport.ControlsError		case	ce195
+enum	SiriPlaybackControlSupport.ControlsError		case	ce196
+enum	SiriPlaybackControlSupport.ControlsError		case	ce197
+enum	SiriPlaybackControlSupport.ControlsError		case	ce198
+enum	SiriPlaybackControlSupport.MRCommandIDHelper			
+enum	SiriPlaybackControlSupport.AppIdentifier			
+enum	SiriPlaybackControlSupport.AppIdentifier		case	playbackControls
+class	SiriPlaybackControlSupport.LifeCycleManager			
+class	SiriPlaybackControlSupport.LifeCycleManager		let	serialQueue
+class	SiriPlaybackControlSupport.LifeCycleManager		var	workItem
+class	SiriPlaybackControlSupport.LifeCycleManager		var	shutdownHandlers
+class	SiriPlaybackControlSupport.LifeCycleManager		var	needsToResart
+class	SiriPlaybackControlSupport.LifeCycleManager		var	biggestIntervalRegistered
+class	SiriPlaybackControlSupport.LifeCycleManager		var	numberOfWorkItems
+struct	SiriPlaybackControlSupport.Device			
+struct	SiriPlaybackControlSupport.Device		var	identifier
+struct	SiriPlaybackControlSupport.Device		var	mediaSystemId
+struct	SiriPlaybackControlSupport.Device		var	name
+struct	SiriPlaybackControlSupport.Device		var	roomName
+struct	SiriPlaybackControlSupport.Device		var	type
+struct	SiriPlaybackControlSupport.Device		var	isRequestingDevice
+struct	SiriPlaybackControlSupport.Device		var	predicate
+struct	SiriPlaybackControlSupport.Device		var	mediaGroup
+struct	SiriPlaybackControlSupport.Device		var	supportsNativeMatter
+struct	SiriPlaybackControlSupport.Device		var	isSideKick
+protocol	SiriPlaybackControlSupport.HomeAutomationEntityProviding			
+protocol	SiriPlaybackControlSupport.ControlsUsoTask			
+protocol	SiriPlaybackControlSupport.StringComparable			
+protocol	SiriPlaybackControlSupport.DeviceStateProviding			
+protocol	SiriPlaybackControlSupport.DeviceSelecting			
+protocol	SiriPlaybackControlSupport.DeviceResolutionProviding			
+protocol	SiriPlaybackControlSupport.HomeAutomationEntity			
+protocol	SiriPlaybackControlSupport.HomeManagerWrapper	HomeDataType		
+protocol	SiriPlaybackControlSupport.HomeDataWrapper	HomeType, RoomType, AccessoryType		
+protocol	SiriPlaybackControlSupport.HomeWrapper	AccessoryType, RoomType, ZoneType		
+protocol	SiriPlaybackControlSupport.RoomWrapper	AccessoryType		
+protocol	SiriPlaybackControlSupport.ZoneWrapper	RoomType		
+protocol	SiriPlaybackControlSupport.AccessoryWrapper	HomeType, RoomType		
+protocol	SiriPlaybackControlSupport.PlaybackControlling			
+protocol	SiriPlaybackControlSupport.PlaybackControlsFeatureFlagProviding			
+protocol	SiriPlaybackControlSupport.ListPositionProviding			
+protocol	SiriPlaybackControlSupport.LocalizationProviding			
+protocol	SiriPlaybackControlSupport.EncryptionProviding			
+protocol	SiriPlaybackControlSupport.AudioRouteProviding			
+protocol	SiriPlaybackControlSupport.AccessoryVolumeControlling			
+protocol	SiriPlaybackControlSupport.PlaybackControlsCommandProviding			
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.HMHomeManagerOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance __C.HMHomeManagerOptions	Swift.Equatable		
+protocol	conformance __C.HMHomeManagerOptions	Swift.RawRepresentable		
+protocol	conformance __C.HMHomeManagerOptions	Swift.SetAlgebra		
+protocol	conformance __C.HMHomeManagerOptions	Swift.OptionSet		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance __C.CFError	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFError	Swift.Hashable: CoreFoundation		
+protocol	conformance __C.CFError	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance SiriPlaybackControlSupport.PlaybackControlsCommandProvider	SiriPlaybackControlSupport.PlaybackControlsCommandProviding		
+protocol	conformance SiriPlaybackControlSupport.FuzzyMatchType	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.FuzzyMatchType	Swift.Comparable		
+protocol	conformance SiriPlaybackControlSupport.FuzzyMatchType	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.SpanMatchAccuracy	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.SpanMatchAccuracy	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.SpanMatchAccuracy	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.SpanMatchAccuracy	Swift.CustomStringConvertible		
+protocol	conformance HomeManager.HomeData	SiriPlaybackControlSupport.HomeDataWrapper		
+protocol	conformance DataLoadState	Swift.RawRepresentable		
+protocol	conformance DataLoadState	Swift.Hashable		
+protocol	conformance DataLoadState	Swift.Equatable		
+protocol	conformance DataSourceTracker.Caller	Swift.RawRepresentable		
+protocol	conformance DataSourceTracker.Caller	Swift.Hashable		
+protocol	conformance DataSourceTracker.Caller	Swift.Equatable		
+protocol	conformance HomeManager.DataSourceTracker	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.HomeManager	SiriPlaybackControlSupport.HomeManagerWrapper		
+protocol	conformance SiriPlaybackControlSupport.MediaGroup	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.PlaybackController	SiriPlaybackControlSupport.PlaybackControlling		
+protocol	conformance SiriPlaybackControlSupport.HomeError	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.HomeError	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.HomeError	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.HomeError	Swift.Error		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.OptionSet		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.SetAlgebra		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.AccessoryCategory	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Swift.String	SiriPlaybackControlSupport.StringComparable		
+protocol	conformance SiriPlaybackControlSupport.HomeEntityContainer	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.HomeEntityContainer	SiriPlaybackControlSupport.StringComparable		
+protocol	conformance FilteringPredicate.Location	Swift.Equatable		
+protocol	conformance FilteringPredicate.GroupType	Swift.Equatable		
+protocol	conformance FilteringPredicate.GroupType	Swift.Hashable		
+protocol	conformance FilteringPredicate.GroupType	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.FilteringPredicate	Swift.CustomStringConvertible		
+protocol	conformance SiriOntology.UsoTask	SiriPlaybackControlSupport.ControlsUsoTask		
+protocol	conformance SiriOntology.UsoTask	SiriPlaybackControlSupport.HomeAutomationEntityProviding		
+protocol	conformance SiriOntology.UsoTask	SiriPlaybackControlSupport.ListPositionProviding		
+protocol	conformance SiriPlaybackControlSupport.EndpointInfo	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceIdiom	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceStateProvider	SiriPlaybackControlSupport.DeviceStateProviding		
+protocol	conformance SiriPlaybackControlSupport.HomeEntityContainerType	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.HomeEntityContainerType	Swift.Comparable		
+protocol	conformance SiriPlaybackControlSupport.HomeEntityContainerType	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.OptionSet		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.SetAlgebra		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceCategory	Swift.ExpressibleByArrayLiteral		
+protocol	conformance SiriPlaybackControlSupport.DeviceResolutionProvider	SiriPlaybackControlSupport.DeviceResolutionProviding		
+protocol	conformance SiriPlaybackControlSupport.AccessoryVolumeController	SiriPlaybackControlSupport.AccessoryVolumeControlling		
+protocol	conformance SiriPlaybackControlSupport.DeviceSelector	SiriPlaybackControlSupport.DeviceSelecting		
+protocol	conformance SiriPlaybackControlSupport.DeviceType	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceType	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.DeviceType	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.DeviceType	Swift.CaseIterable		
+protocol	conformance SiriPlaybackControlSupport.PlaceHint	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.PlaceHint	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.PlaceHint	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.PlaceHint	Swift.CaseIterable		
+protocol	conformance SiriPlaybackControlSupport.DeviceQuantifier	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceQuantifier	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.DeviceQuantifier	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.DeviceQuantifier	Swift.CaseIterable		
+protocol	conformance FromEntity.FromEntityType	Swift.Equatable		
+protocol	conformance FromEntity.FromEntityType	Swift.Hashable		
+protocol	conformance FromEntity.FromEntityType	Swift.RawRepresentable		
+protocol	conformance FromEntity.FromEntityType	Swift.CaseIterable		
+protocol	conformance SiriPlaybackControlSupport.Reference	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.Reference	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.Reference	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.Reference	Swift.CaseIterable		
+protocol	conformance SiriPlaybackControlSupport.MediaSettingName	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.MediaSettingName	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.MediaSettingName	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.MediaSettingName	Swift.CaseIterable		
+protocol	conformance SiriPlaybackControlSupport.InterpretationGroup	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.LanguageGroup	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.LanguageGroup	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.LanguageGroup	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.LanguageError	Swift.Error		
+protocol	conformance PlaybackControllingError.UserInfoKeys	Swift.Equatable		
+protocol	conformance PlaybackControllingError.UserInfoKeys	Swift.Hashable		
+protocol	conformance PlaybackControllingError.UserInfoKeys	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.PlaybackControllingError	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.PlaybackControllingError	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.PlaybackControllingError	Swift.Error		
+protocol	conformance SiriPlaybackControlSupport.VolumeControllingError	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.VolumeControllingError	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.VolumeControllingError	Swift.Error		
+protocol	conformance SiriPlaybackControlSupport.LanguageOption	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.LanguageOption	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DurationInfo	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.ShuffleMode	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.ShuffleMode	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.RepeatMode	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.RepeatMode	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.PlaybackState	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.PlaybackState	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.LanguageCharacteristic	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.LanguageCharacteristic	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.LanguageCharacteristic	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.Home	SiriPlaybackControlSupport.HomeWrapper		
+protocol	conformance SiriPlaybackControlSupport.Home	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.Home	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.Room	SiriPlaybackControlSupport.RoomWrapper		
+protocol	conformance SiriPlaybackControlSupport.Room	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.Room	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.Zone	SiriPlaybackControlSupport.ZoneWrapper		
+protocol	conformance SiriPlaybackControlSupport.Zone	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.Zone	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.Accessory	SiriPlaybackControlSupport.AccessoryWrapper		
+protocol	conformance SiriPlaybackControlSupport.Accessory	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.Accessory	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.PlaybackControlsFeatureFlagProvider	SiriPlaybackControlSupport.PlaybackControlsFeatureFlagProviding		
+protocol	conformance Features	Swift.Hashable		
+protocol	conformance Features	Swift.Equatable		
+protocol	conformance Features	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriPlaybackControlSupport.HomeAutomationEntityType	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.HomeAutomationEntityType	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.HomeAutomationEntityType	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.HomeAutomationEntityQuery	SiriPlaybackControlSupport.HomeAutomationEntity		
+protocol	conformance SiriPlaybackControlSupport.HomeAutomationEntityQuery	Swift.CustomStringConvertible		
+protocol	conformance SiriPlaybackControlSupport.DeviceSelectionControlType	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.DeviceSelectionControlType	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.DeviceSelectionControlType	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.LocalizationProvider	SiriPlaybackControlSupport.LocalizationProviding		
+protocol	conformance SiriPlaybackControlSupport.LocalizationTable	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.LocalizationTable	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.LocalizationTable	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.LocalizationKey	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.LocalizationKey	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.LocalizationKey	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.EncryptionProvider	SiriPlaybackControlSupport.EncryptionProviding		
+protocol	conformance SiriPlaybackControlSupport.AudioRouteProvider	SiriPlaybackControlSupport.AudioRouteProviding		
+protocol	conformance SiriPlaybackControlSupport.ControlsError	Swift.Hashable		
+protocol	conformance SiriPlaybackControlSupport.ControlsError	Swift.Equatable		
+protocol	conformance SiriPlaybackControlSupport.ControlsError	Swift.Error		
+protocol	conformance AppIdentifier	Swift.Equatable		
+protocol	conformance AppIdentifier	Swift.Hashable		
+protocol	conformance AppIdentifier	Swift.RawRepresentable		
+protocol	conformance SiriPlaybackControlSupport.Device	Swift.CustomStringConvertible		
+extension	SiriPlaybackControlSupport.SpanMatchAccuracy	RawRepresentable		
+extension	SiriPlaybackControlSupport.HomeManager.HomeData	HomeDataWrapper		
+extension	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.DataLoadState	RawRepresentable		
+extension	SiriPlaybackControlSupport.HomeManager.DataSourceTracker.Caller	RawRepresentable		
+extension	SiriPlaybackControlSupport.HomeManager	HomeManagerWrapper		
+extension	SiriPlaybackControlSupport.HomeError	RawRepresentable		
+extension	SiriPlaybackControlSupport.AccessoryCategory	OptionSet		
+extension	SiriPlaybackControlSupport.AccessoryCategory	SetAlgebra		
+extension	SiriPlaybackControlSupport.AccessoryCategory	RawRepresentable		
+extension	SiriPlaybackControlSupport.AccessoryCategory	ExpressibleByArrayLiteral		
+extension	SiriPlaybackControlSupport.FilteringPredicate.GroupType	RawRepresentable		
+extension	SiriPlaybackControlSupport.DeviceCategory	OptionSet		
+extension	SiriPlaybackControlSupport.DeviceCategory	SetAlgebra		
+extension	SiriPlaybackControlSupport.DeviceCategory	RawRepresentable		
+extension	SiriPlaybackControlSupport.DeviceCategory	ExpressibleByArrayLiteral		
+extension	SiriPlaybackControlSupport.DeviceType	RawRepresentable		
+extension	SiriPlaybackControlSupport.DeviceType	CaseIterable		
+extension	SiriPlaybackControlSupport.PlaceHint	RawRepresentable		
+extension	SiriPlaybackControlSupport.PlaceHint	CaseIterable		
+extension	SiriPlaybackControlSupport.DeviceQuantifier	RawRepresentable		
+extension	SiriPlaybackControlSupport.DeviceQuantifier	CaseIterable		
+extension	SiriPlaybackControlSupport.FromEntity.FromEntityType	RawRepresentable		
+extension	SiriPlaybackControlSupport.FromEntity.FromEntityType	CaseIterable		
+extension	SiriPlaybackControlSupport.Reference	RawRepresentable		
+extension	SiriPlaybackControlSupport.Reference	CaseIterable		
+extension	SiriPlaybackControlSupport.MediaSettingName	RawRepresentable		
+extension	SiriPlaybackControlSupport.MediaSettingName	CaseIterable		
+extension	SiriPlaybackControlSupport.LanguageGroup	RawRepresentable		
+extension	SiriPlaybackControlSupport.PlaybackControllingError.UserInfoKeys	RawRepresentable		
+extension	SiriPlaybackControlSupport.LanguageCharacteristic	RawRepresentable		
+extension	SiriPlaybackControlSupport.Home	HomeWrapper		
+extension	SiriPlaybackControlSupport.Room	RoomWrapper		
+extension	SiriPlaybackControlSupport.Zone	ZoneWrapper		
+extension	SiriPlaybackControlSupport.Accessory	AccessoryWrapper		
+extension	SiriPlaybackControlSupport.HomeAutomationEntityType	RawRepresentable		
+extension	SiriPlaybackControlSupport.DeviceSelectionControlType	RawRepresentable		
+extension	SiriPlaybackControlSupport.LocalizationTable	RawRepresentable		
+extension	SiriPlaybackControlSupport.LocalizationKey	RawRepresentable		
+extension	SiriPlaybackControlSupport.AppIdentifier	RawRepresentable		

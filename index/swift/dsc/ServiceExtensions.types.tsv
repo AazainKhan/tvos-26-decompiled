@@ -1,0 +1,145 @@
+kind	type	conformance	member_kind	member
+class	ServiceExtensions.BackgroundTransferManager			
+class	ServiceExtensions.BackgroundTransferManager		var	_transfers
+struct	ServiceExtensions.BackgroundTransferManager.Download			
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	id
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	title
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	type
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	description
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	sourceURL
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	sourceDescription
+struct	ServiceExtensions.BackgroundTransferManager.Download		var	destinationURL
+struct	ServiceExtensions.BackgroundTransferManager.Download		let	progress
+struct	ServiceExtensions.BackgroundTransferManager._Transfer			
+struct	ServiceExtensions.BackgroundTransferManager._Transfer		let	id
+struct	ServiceExtensions.BackgroundTransferManager._Transfer		let	inner
+struct	ServiceExtensions.BackgroundTransferManager._Transfer		let	observers
+class	ServiceExtensions._ServiceManager			
+enum	ServiceExtensions._ServiceManager.ServiceExtensionsErrorCodes			
+enum	ServiceExtensions._ServiceManager.ServiceExtensionsErrorCodes		case	notFound
+enum	ServiceExtensions._ServiceManager.ServiceExtensionPointIdentifier			
+enum	ServiceExtensions._ServiceManager.ServiceExtensionPointIdentifier		case	networking
+enum	ServiceExtensions._ServiceManager.ServiceExtensionPointIdentifier		case	gpu
+enum	ServiceExtensions._ServiceManager.ServiceExtensionPointIdentifier		case	content
+class	ServiceExtensions._SEServiceManager	NSObject		
+class	ServiceExtensions._SEServiceConfiguration	NSObject		
+class	ServiceExtensions._SEServiceConfiguration	NSObject	var	serviceIdentifier
+class	ServiceExtensions._SEServiceConfiguration	NSObject	var	interruptionHandler
+enum	ServiceExtensions._ProcessErrorCode			
+enum	ServiceExtensions._ProcessErrorCode		case	invalidCapability
+struct	ServiceExtensions._NetworkProcess			
+struct	ServiceExtensions._NetworkProcess		let	appExtensionProcess
+struct	ServiceExtensions._NetworkProcess		let	launchAssertionInvalidator
+struct	ServiceExtensions._GPUProcess			
+struct	ServiceExtensions._GPUProcess		let	appExtensionProcess
+struct	ServiceExtensions._GPUProcess		let	launchAssertionInvalidator
+struct	ServiceExtensions._ContentProcess			
+struct	ServiceExtensions._ContentProcess		let	appExtensionProcess
+struct	ServiceExtensions._ContentProcess		let	launchAssertionInvalidator
+struct	ServiceExtensions._BrowserProcess			
+struct	ServiceExtensions._BrowserProcess		var	auditToken
+class	ServiceExtensions._SEExtensionProcess	NSObject		
+class	ServiceExtensions._SEInternalGrant	NSObject		
+class	ServiceExtensions._SEInternalGrant	NSObject	let	inner
+class	ServiceExtensions._SEContentProcess	ServiceExtensions._SEExtensionProcess		
+class	ServiceExtensions._SEContentProcess	ServiceExtensions._SEExtensionProcess	let	inner
+class	ServiceExtensions._SEGPUProcess	ServiceExtensions._SEExtensionProcess		
+class	ServiceExtensions._SEGPUProcess	ServiceExtensions._SEExtensionProcess	let	inner
+class	ServiceExtensions._SENetworkProcess	ServiceExtensions._SEExtensionProcess		
+class	ServiceExtensions._SENetworkProcess	ServiceExtensions._SEExtensionProcess	let	inner
+class	ServiceExtensions._SEBrowserProcess	NSObject		
+class	ServiceExtensions._SEBrowserProcess	NSObject	let	inner
+class	ServiceExtensions.LaunchAssertionInvalidator			
+class	ServiceExtensions.LaunchAssertionInvalidator		var	process
+class	ServiceExtensions.LaunchAssertionInvalidator		let	lock
+enum	ServiceExtensions._BrowserProcess.Error			
+enum	ServiceExtensions._BrowserProcess.Error		case	missingRequiredEntitlement
+enum	ServiceExtensions.ServiceExtensionError			
+enum	ServiceExtensions.ServiceExtensionError		case	sourceDoesNotMatchTargetEnvironment
+enum	ServiceExtensions.ServiceExtensionError		case	couldNotFetchCurrentBundleID
+enum	ServiceExtensions.ServiceExtensionError		case	nonMediaCase
+enum	ServiceExtensions.ServiceExtensionError		case	unknownCapability
+enum	ServiceExtensions._Capability			
+enum	ServiceExtensions._Capability		case	assertion
+enum	ServiceExtensions._Capability		case	assertion
+enum	ServiceExtensions._Capability		case	assertion
+enum	ServiceExtensions._Capability		case	mediaPlaying
+struct	ServiceExtensions._Capability.Grant			
+struct	ServiceExtensions._Capability.Grant		let	assertion
+struct	ServiceExtensions._Capability.Grant		var	assertionObserver
+class	ServiceExtensions._Capability.AssertionObserver	NSObject		
+class	ServiceExtensions._Capability.AssertionObserver	NSObject	var	_willInvalidate
+class	ServiceExtensions._Capability.AssertionObserver	NSObject	var	_didInvalidate
+class	ServiceExtensions._Capability.AssertionObserver	NSObject	let	invalidationLock
+class	ServiceExtensions._SECapability	NSObject		
+class	ServiceExtensions._SECapability	NSObject	let	inner
+class	ServiceExtensions._SECapabilities	ServiceExtensions._SECapability		
+struct	ServiceExtensions.Process			
+struct	ServiceExtensions._Capability.AssertionCapability			
+struct	ServiceExtensions._Capability.AssertionCapability		let	domain
+struct	ServiceExtensions._Capability.AssertionCapability		let	name
+struct	ServiceExtensions._Capability.AssertionCapability		let	environmentIdentifier
+struct	ServiceExtensions._Capability.AssertionCapability		let	didInvalidate
+struct	ServiceExtensions._Capability.AssertionCapability		let	willInvalidate
+class	ServiceExtensions._SEHostingHandle	NSObject		
+class	ServiceExtensions._SEHostingHandle	NSObject	let	pid
+class	ServiceExtensions._SEHostingHandle	NSObject	let	contextID
+class	ServiceExtensions._SEHostable	NSObject		
+class	ServiceExtensions._SEHostable	NSObject	let	_context
+class	ServiceExtensions._SEHostable	NSObject	let	_invalidationSignal
+class	ServiceExtensions._SEHostable	NSObject	let	handle
+class	ServiceExtensions._SEHostingView	UIView		
+class	ServiceExtensions._SEHostingView	UIView	var	_visibility
+class	ServiceExtensions._SEHostingView	UIView	var	handle
+class	ServiceExtensions._SEHostingUpdateCoordinator	NSObject		
+class	ServiceExtensions._SEHostingUpdateCoordinator	NSObject	let	_fence
+class	ServiceExtensions._SEHostingUpdateCoordinator	NSObject	let	_commitLock
+class	ServiceExtensions._SEHostingUpdateCoordinator	NSObject	var	_commitLock_hostables
+class	ServiceExtensions._SEHostingUpdateCoordinator	NSObject	var	_commitLock_hostingViews
+class	ServiceExtensions._SEHostingUpdateCoordinator	NSObject	var	_commitLock_committed
+enum	ServiceExtensions._LockdownVersion			
+enum	ServiceExtensions._LockdownVersion		case	one
+protocol	ServiceExtensions.GPUServiceExtension			
+protocol	ServiceExtensions.BackroundableTransfer			
+protocol	ServiceExtensions.ContentServiceExtension			
+protocol	ServiceExtensions._Process			
+protocol	ServiceExtensions._ExtensionProcess			
+protocol	ServiceExtensions.NetworkingServiceExtension			
+protocol	conformance BackgroundTransferManager.Download	ServiceExtensions.BackroundableTransfer		
+protocol	conformance BackgroundTransferManager.Download	Swift.Identifiable		
+protocol	conformance ServiceExtensions.BackgroundTransferManager	Swift.Actor		
+protocol	conformance _Transfer	Swift.Equatable		
+protocol	conformance _Transfer	Swift.Identifiable		
+protocol	conformance ServiceExtensions._ServiceManager	Swift.Actor		
+protocol	conformance _ServiceManager.ServiceExtensionsErrorCodes	Swift.Equatable		
+protocol	conformance _ServiceManager.ServiceExtensionsErrorCodes	Swift.Hashable		
+protocol	conformance _ServiceManager.ServiceExtensionsErrorCodes	Swift.RawRepresentable		
+protocol	conformance _ServiceManager.ServiceExtensionPointIdentifier	Swift.Equatable		
+protocol	conformance _ServiceManager.ServiceExtensionPointIdentifier	Swift.Hashable		
+protocol	conformance _ServiceManager.ServiceExtensionPointIdentifier	Swift.RawRepresentable		
+protocol	conformance ServiceExtensions._ProcessErrorCode	Swift.Equatable		
+protocol	conformance ServiceExtensions._ProcessErrorCode	Swift.Hashable		
+protocol	conformance ServiceExtensions._ProcessErrorCode	Swift.RawRepresentable		
+protocol	conformance ServiceExtensions._NetworkProcess	ServiceExtensions._ExtensionProcess		
+protocol	conformance ServiceExtensions._NetworkProcess	ServiceExtensions._Process		
+protocol	conformance ServiceExtensions._GPUProcess	ServiceExtensions._ExtensionProcess		
+protocol	conformance ServiceExtensions._GPUProcess	ServiceExtensions._Process		
+protocol	conformance ServiceExtensions._ContentProcess	ServiceExtensions._ExtensionProcess		
+protocol	conformance ServiceExtensions._ContentProcess	ServiceExtensions._Process		
+protocol	conformance ServiceExtensions._BrowserProcess	ServiceExtensions._Process		
+protocol	conformance _BrowserProcess.Error	Swift.Hashable		
+protocol	conformance _BrowserProcess.Error	Swift.Equatable		
+protocol	conformance _BrowserProcess.Error	Swift.Error		
+protocol	conformance ServiceExtensions.ServiceExtensionError	Swift.Equatable		
+protocol	conformance ServiceExtensions.ServiceExtensionError	Swift.Hashable		
+protocol	conformance ServiceExtensions.ServiceExtensionError	Swift.Error		
+protocol	conformance ServiceExtensions.Process	ServiceExtensions._Process		
+protocol	conformance ServiceExtensions._LockdownVersion	Swift.Equatable		
+protocol	conformance ServiceExtensions._LockdownVersion	Swift.Hashable		
+protocol	conformance ServiceExtensions._LockdownVersion	Swift.RawRepresentable		
+extension	ServiceExtensions.BackgroundTransferManager.Download	Identifiable		
+extension	ServiceExtensions.BackgroundTransferManager._Transfer	Identifiable		
+extension	ServiceExtensions._ServiceManager.ServiceExtensionsErrorCodes	RawRepresentable		
+extension	ServiceExtensions._ServiceManager.ServiceExtensionPointIdentifier	RawRepresentable		
+extension	ServiceExtensions._ProcessErrorCode	RawRepresentable		
+extension	ServiceExtensions._LockdownVersion	RawRepresentable		

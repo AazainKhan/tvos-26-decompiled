@@ -1,0 +1,818 @@
+kind	type	conformance	member_kind	member
+struct	__C_Synthesized.CKUnderlyingErrorCode			
+struct	__C_Synthesized.CKUnderlyingErrorCode		let	_nsError
+struct	__C_Synthesized.CKErrorCode			
+struct	__C_Synthesized.CKErrorCode		let	_nsError
+struct	CloudKit.AssetInfo			
+struct	CloudKit.AssetInfo		let	fileSignature
+struct	CloudKit.AssetInfo		let	referenceSignature
+struct	CloudKit.AssetInfo		let	chunks
+enum	CloudKit.AssetInfo.CodingKeys			
+enum	CloudKit.AssetInfo.CodingKeys		case	fileSignature
+enum	CloudKit.AssetInfo.CodingKeys		case	referenceSignature
+enum	CloudKit.AssetInfo.CodingKeys		case	chunks
+struct	CloudKit.ChunkInfo			
+struct	CloudKit.ChunkInfo		let	encryptedWrapKey
+struct	CloudKit.ChunkInfo		let	checksum
+struct	CloudKit.ChunkInfo		let	length
+struct	CloudKit.ChunkInfo		let	encryptedChunkUrl
+enum	CloudKit.ChunkInfo.CodingKeys			
+enum	CloudKit.ChunkInfo.CodingKeys		case	encryptedWrapKey
+enum	CloudKit.ChunkInfo.CodingKeys		case	checksum
+enum	CloudKit.ChunkInfo.CodingKeys		case	length
+enum	CloudKit.ChunkInfo.CodingKeys		case	encryptedChunkUrl
+class	CloudKit.AssetStreamHandle	NSObject		
+class	CloudKit.AssetStreamHandle	NSObject	let	assetStreamHandleInternal
+struct	CloudKit.AssetStreamHandleInternal			
+struct	CloudKit.AssetStreamHandleInternal		let	chunkHandles
+struct	CloudKit.AssetStreamHandleInternal		let	assetType
+enum	CloudKit.AssetStreamHandleInternal.CodingKeys			
+enum	CloudKit.AssetStreamHandleInternal.CodingKeys		case	chunkHandles
+enum	CloudKit.AssetStreamHandleInternal.CodingKeys		case	assetType
+enum	CloudKit.AssetStreamHandle.CodingKeys			
+enum	CloudKit.AssetStreamHandle.CodingKeys		case	assetStreamHandleInternal
+class	CloudKit.ChunkDataDecryptor			
+class	CloudKit.ChunkDataDecryptor		let	cryptor
+enum	CloudKit.ChunkDataDecryptor.Error			
+enum	CloudKit.ChunkDataDecryptor.Error		case	cryptorInitializationFailure
+class	CloudKit.ChunkStreamHandle	NSObject		
+class	CloudKit.ChunkStreamHandle	NSObject	let	downloadURL
+class	CloudKit.ChunkStreamHandle	NSObject	let	key
+class	CloudKit.ChunkStreamHandle	NSObject	let	signature
+class	CloudKit.ChunkStreamHandle	NSObject	let	chunkReader
+class	CloudKit.ChunkStreamHandle	NSObject	let	range
+class	CloudKit.ChunkStreamHandle.ChunkReader			
+class	CloudKit.ChunkStreamHandle.ChunkReader		let	url
+class	CloudKit.ChunkStreamHandle.ChunkReader		let	signature
+class	CloudKit.ChunkStreamHandle.ChunkReader		let	key
+class	CloudKit.ChunkStreamHandle.ChunkReader		let	cacheFile
+class	CloudKit.ChunkStreamHandle.ChunkReader		var	cacheState
+enum	CloudKit.ChunkStreamHandle.ChunkReader.CacheState			
+enum	CloudKit.ChunkStreamHandle.ChunkReader.CacheState		case	inProgress
+enum	CloudKit.ChunkStreamHandle.ChunkReader.CacheState		case	empty
+enum	CloudKit.ChunkStreamHandle.ChunkReader.CacheState		case	ready
+enum	CloudKit.ChunkStreamHandle.CodingKeys			
+enum	CloudKit.ChunkStreamHandle.CodingKeys		case	downloadURL
+enum	CloudKit.ChunkStreamHandle.CodingKeys		case	key
+enum	CloudKit.ChunkStreamHandle.CodingKeys		case	signature
+enum	CloudKit.ChunkStreamHandle.CodingKeys		case	range
+enum	CloudKit.ChunkStreamHandle.StreamError			
+enum	CloudKit.ChunkStreamHandle.StreamError		case	invalidRequestedRange
+enum	CloudKit.ChunkStreamHandle.StreamError		case	corruptedChunk
+class	CloudKit.CloudAssetsAssetStreamHandle	NSObject		
+class	CloudKit.CloudAssetsAssetStreamHandle	NSObject	let	assetStreamHandle
+enum	CloudKit.Application			
+enum	CloudKit.DatabaseChange			
+struct	CloudKit.DatabaseChange.Modification			
+struct	CloudKit.DatabaseChange.Modification		var	_zoneID
+struct	CloudKit.DatabaseChange.Deletion			
+struct	CloudKit.DatabaseChange.Deletion		var	_zoneID
+struct	CloudKit.DatabaseChange.Deletion		var	_reason
+enum	CloudKit.DatabaseChange.Deletion.Reason			
+enum	CloudKit.DatabaseChange.Deletion.Reason		case	deleted
+enum	CloudKit.DatabaseChange.Deletion.Reason		case	purged
+enum	CloudKit.DatabaseChange.Deletion.Reason		case	encryptedDataReset
+enum	CloudKit.RecordZoneChange			
+struct	CloudKit.RecordZoneChange.Modification			
+struct	CloudKit.RecordZoneChange.Modification		var	_record
+struct	CloudKit.RecordZoneChange.Deletion			
+struct	CloudKit.RecordZoneChange.Deletion		var	_recordID
+struct	CloudKit.RecordZoneChange.Deletion		var	_recordType
+struct	CloudKit.RecordZoneChange.ZoneAttributesModification			
+struct	CloudKit.RecordZoneChange.ZoneAttributesModification		var	_zone
+struct	CloudKit.CKDeviceCapability			
+struct	CloudKit.CKDeviceCapability		var	level
+struct	CloudKit.CKDeviceCapability		var	name
+struct	CloudKit.CKDeviceCapability		var	value
+enum	CloudKit.CKDeviceCapability.Level			
+enum	CloudKit.CKDeviceCapability.Level		case	zone
+enum	CloudKit.CKDeviceCapability.Level		case	record
+enum	CloudKit.CKDeviceCapability.Level		case	field
+struct	CloudKit.CKDeviceCapabilitySet			
+struct	CloudKit.CKDeviceCapabilitySet		var	_sortedCapabilities
+struct	CloudKit.CKDeviceCapabilityCheckOptions			
+struct	CloudKit.CKDeviceCapabilityCheckOptions		var	excludeDevicesWithoutCapabilityCheckingSupport
+struct	CloudKit.CKDeviceCapabilityCheckOptions		var	_excludeZoneAccessBefore
+struct	CloudKit.CKDeviceCapabilityCheckResult			
+struct	CloudKit.CKDeviceCapabilityCheckResult		let	isSupported
+struct	CloudKit.JsonSerializableDeviceCapability			
+struct	CloudKit.JsonSerializableDeviceCapability		var	level
+struct	CloudKit.JsonSerializableDeviceCapability		var	name
+struct	CloudKit.JsonSerializableDeviceCapability		var	value
+enum	CloudKit.JsonSerializableDeviceCapability.CodingKeys			
+enum	CloudKit.JsonSerializableDeviceCapability.CodingKeys		case	level
+enum	CloudKit.JsonSerializableDeviceCapability.CodingKeys		case	name
+enum	CloudKit.JsonSerializableDeviceCapability.CodingKeys		case	value
+struct	CloudKit.CKZoneFeature			
+struct	CloudKit.CKZoneFeature		var	name
+struct	CloudKit.CKZoneFeature		var	value
+struct	CloudKit.CKRecordFeature			
+struct	CloudKit.CKRecordFeature		var	name
+struct	CloudKit.CKRecordFeature		var	value
+struct	CloudKit.CKFieldFeature			
+struct	CloudKit.CKFieldFeature		var	name
+struct	CloudKit.CKFieldFeature		var	value
+struct	CloudKit.CKFeatureSet<A	CloudKit.CKFeatureProtocol>		
+struct	CloudKit.CKFeatureSet<A	CloudKit.CKFeatureProtocol>	var	featureMap
+struct	CloudKit.CKFeatureSet.Iterator<A	CloudKit.CKFeatureProtocol>		
+struct	CloudKit.CKFeatureSet.Iterator<A	CloudKit.CKFeatureProtocol>	let	collection
+struct	CloudKit.CKFeatureSet.Iterator<A	CloudKit.CKFeatureProtocol>	var	collectionIterator
+struct	CloudKit.CKRequiredFeatureSet			
+struct	CloudKit.CKRequiredFeatureSet		var	zone
+struct	CloudKit.CKRequiredFeatureSet		var	record
+struct	CloudKit.CKRequiredFeatureSet		var	field
+struct	CloudKit.CKRecordKeyValueIterator			
+struct	CloudKit.CKRecordKeyValueIterator		var	keyArray
+struct	CloudKit.CKRecordKeyValueIterator		var	record
+struct	CloudKit.CKRecordKeyValueIterator		var	index
+enum	CloudKit.SystemType			
+enum	CloudKit.SystemFieldKey			
+enum	CloudKit.CodingKeys			
+enum	CloudKit.CodingKeys		case	recordName
+enum	CloudKit.CodingKeys		case	zoneID
+struct	CloudKit.CKRecordValueStoreIterator			
+struct	CloudKit.CKRecordValueStoreIterator		let	recordValueSetting
+struct	CloudKit.CKRecordValueStoreIterator		var	keyArray
+struct	CloudKit.CKRecordValueStoreIterator		var	index
+enum	CloudKit.CodingKeys			
+enum	CloudKit.CodingKeys		case	zoneName
+enum	CloudKit.CodingKeys		case	ownerName
+enum	CloudKit.CodingKeys		case	anonymousCKUserID
+enum	CloudKit.CodingKeys		case	databaseScope
+class	CloudKit.Reference	NSObject		
+class	CloudKit.Reference	NSObject	let	zoneID
+class	CloudKit.Reference	NSObject	let	action
+enum	CloudKit.Reference.Action			
+enum	CloudKit.Reference.Action		case	none
+enum	CloudKit.Reference.Action		case	deleteSelf
+enum	CloudKit.Reference.Action		case	validate
+enum	CloudKit.SystemFieldKey			
+struct	CloudKit.CKCodeServiceConfiguration			
+struct	CloudKit.CKCodeServiceConfiguration		var	name
+struct	CloudKit.CKCodeServiceConfiguration		var	serviceInstanceURL
+struct	CloudKit.CKDatabaseConfiguration			
+struct	CloudKit.CKDatabaseConfiguration		var	scope
+class	CloudKit.CKSessionAcquiredInfo	CloudKit.CKSecureCodingBox		
+class	CloudKit.CKSessionAcquirer			
+class	CloudKit.CKSessionAcquirer		let	acquisitionStreamContinuation
+class	CloudKit.CKSessionAcquirer		let	sessionID
+class	CloudKit.CKSessionAcquirer		let	sessionConfiguration
+class	CloudKit.CKSessionAcquirer		let	previousInvalidationContext
+class	CloudKit.CKSessionAcquirer		let	testDeviceReferenceProtocol
+class	CloudKit.CKSessionAcquirer		let	daemonErrorBackoff
+class	CloudKit.CKSessionAcquirer		let	stateMutex
+enum	CloudKit.CKSessionAcquirer.State			
+enum	CloudKit.CKSessionAcquirer.State		case	listeningToDaemon
+enum	CloudKit.CKSessionAcquirer.State		case	acquired
+enum	CloudKit.CKSessionAcquirer.State		case	initialized
+enum	CloudKit.CKSessionAcquirer.State		case	cancelled
+struct	CloudKit.CKSessionAcquirer.State.ListeningToDaemon			
+struct	CloudKit.CKSessionAcquirer.State.ListeningToDaemon		var	task
+struct	CloudKit.CKSessionAcquirer.State.ListeningToDaemon		var	taskUUID
+struct	CloudKit.CKSessionAcquirer.State.ListeningToDaemon		var	lastReadinessError
+struct	CloudKit.CKSessionAcquirer.State.ListeningToDaemon		var	lastDaemonError
+enum	CloudKit.CKSessionAcquirer.State.NoteAcquiredInfoAction			
+enum	CloudKit.CKSessionAcquirer.State.NoteAcquiredInfoAction		case	yieldSuccess
+struct	CloudKit.CKSessionAcquirer.State.InvalidTransition			
+struct	CloudKit.CKSessionAcquirer.State.InvalidTransition		var	description
+enum	CloudKit.CKSessionAcquirer.State.NoteSessionReadinessErrorAction			
+enum	CloudKit.CKSessionAcquirer.State.NoteSessionReadinessErrorAction		case	yieldReadinessError
+class	CloudKit.CKSessionAcquirerXPCProxy	NSObject		
+class	CloudKit.CKSessionAcquirerXPCProxy	NSObject	var	sessionAcquirer
+class	CloudKit.CKSessionAcquirerXPCProxy	NSObject	let	taskUUID
+class	CloudKit.CKSessionAcquisitionManager			
+class	CloudKit.CKSessionAcquisitionStream			
+class	CloudKit.CKSessionAcquisitionStream		var	hasMadeIterator
+class	CloudKit.CKSessionAcquisitionStream		let	acquisitionStream
+class	CloudKit.CKSessionAcquisitionStream		var	acquisitionStreamIterator
+class	CloudKit.CKSessionAcquisitionStream		let	acquirer
+class	CloudKit.CKSessionConfiguration	CloudKit.CKSecureCodingBox		
+class	CloudKit.CKSessionID	CloudKit.CKSecureCodingBox		
+class	CloudKit.CKSessionInvalidationContext	CloudKit.CKSecureCodingBox		
+class	CloudKit.CKSessionReadinessErrorBox	CloudKit.CKSecureCodingBox		
+class	CloudKit.CloudCoreContainer	CKContainer		
+class	CloudKit.CloudCoreContainer	CKContainer	let	subContainersMutex
+class	CloudKit.CloudCoreContainerImplementation	CKContainerImplementation		
+class	CloudKit.CloudCoreContainerImplementation	CKContainerImplementation	let	sessionID
+class	CloudKit.CloudCoreContainerImplementation	CKContainerImplementation	var	invalidationHandler
+class	CloudKit.CloudCoreContainerImplementation	CKContainerImplementation	var	sessionInvalidationRegistrationToken
+class	CloudKit.CloudCoreContainerOptions	CKContainerOptions		
+class	CloudKit.CKSecureCodingBox	NSObject		
+class	CloudKit.CKSecureCodingBox	NSObject	var	wrapped
+class	CloudKit.CloudCoreEntryPoint	NSObject		
+class	CloudKit.SignpostIntervalStateWrapper	NSObject		
+class	CloudKit.SignpostIntervalStateWrapper	NSObject	let	wrapped
+class	CloudKit.CKSymptomDiagnosticsReporter			
+class	CloudKit.CKSymptomDiagnosticsReporter		let	diagnosticReporterProvider
+class	CloudKit.SyncEngine			
+class	CloudKit.SyncEngine		var	engine
+class	CloudKit.SyncEngine		var	objcEngine
+class	CloudKit.SyncEngine		let	state
+class	CloudKit.SyncEngine		let	database
+class	CloudKit.SyncEngine		let	container
+class	CloudKit.SyncEngine		let	delegate
+class	CloudKit.SyncEngine		let	delegatePrivate
+class	CloudKit.SyncEngine		let	delegateInternal
+class	CloudKit.SyncEngine		let	sendQueue
+class	CloudKit.SyncEngine		let	maxZonesPerSendDatabaseChangesBatchMutex
+class	CloudKit.SyncEngine		let	continueSendingChangesAfterFailure
+class	CloudKit.SyncEngine		let	repeatZoneModificationsUntilNoneLeft
+class	CloudKit.SyncEngine		let	fetchQueue
+class	CloudKit.SyncEngine		var	outstandingFetchChangesZones
+class	CloudKit.SyncEngine		let	maxZonesPerFetchChangesRequestMutex
+class	CloudKit.SyncEngine		let	assetDownloadStagingManager
+class	CloudKit.SyncEngine		var	cancellableSyncTasks
+class	CloudKit.SyncEngine		var	cancellableAssetSyncTasks
+class	CloudKit.SyncEngine		let	accountInfoQueue
+class	CloudKit.SyncEngine		var	updateAccountInfoTask
+class	CloudKit.SyncEngine		var	isWaitingForDeviceToDeviceEncryption
+class	CloudKit.SyncEngine		var	isWaitingForAccountToVerifyTerms
+class	CloudKit.SyncEngine		var	isWaitingForIdentityUpdate
+class	CloudKit.SyncEngine		var	identityUpdateObserver
+class	CloudKit.SyncEngine		var	stateUpdateTask
+class	CloudKit.SyncEngine		var	lastStateVersion
+class	CloudKit.SyncEngine		let	subscriptionQueue
+class	CloudKit.SyncEngine		let	apsMachServiceName
+class	CloudKit.SyncEngine		let	useOpportunisticPushTopic
+class	CloudKit.SyncEngine		var	notificationListener
+class	CloudKit.SyncEngine		let	subscriptionIDOverride
+class	CloudKit.SyncEngine		let	isImmediateSyncEnabled
+class	CloudKit.SyncEngine		var	lastForegroundTriggeredFetchDate
+class	CloudKit.SyncEngine		var	earliestStartDateForSchedulerActivities
+class	CloudKit.SyncEngine		let	priority
+class	CloudKit.SyncEngine		let	isAutomaticSyncEnabledMutex
+class	CloudKit.SyncEngine		let	automaticSyncOptionsMutex
+class	CloudKit.SyncEngine		let	accountProviderMutex
+class	CloudKit.SyncEngine		let	xpcActivityCriteriaWrapper
+class	CloudKit.SyncEngine		var	scheduleSyncTask
+class	CloudKit.SyncEngine		let	allowFetchAndModifyConcurrentlyMutex
+class	CloudKit.SyncEngine		var	stateTelemetrySubmissionDate
+class	CloudKit.SyncEngine		let	loggingIDMutex
+class	CloudKit.SyncEngine		let	notificationObserverTasksMutex
+class	CloudKit.SyncEngine.DefaultAccountProvider			
+class	CloudKit.SyncEngine.DefaultAccountProvider		let	container
+class	CloudKit.SyncEngine.FetchChangesPageIterationState			
+class	CloudKit.SyncEngine.FetchChangesPageIterationState		let	context
+class	CloudKit.SyncEngine.FetchChangesPageIterationState		let	perZoneErrorMutex
+class	CloudKit.SyncEngine.FetchChangesPageIterationState		let	operationWideErrorMutex
+struct	CloudKit.SyncEngine.SyncActionGroup			
+struct	CloudKit.SyncEngine.SyncActionGroup		let	fetchChangesAction
+struct	CloudKit.SyncEngine.SyncActionGroup		let	sendChangesAction
+struct	CloudKit.SyncEngine.SyncActionGroup		let	fetchAssetsAction
+struct	CloudKit.SyncEngine.SyncPlan			
+struct	CloudKit.SyncEngine.SyncPlan		var	fetchChangesSyncActions
+struct	CloudKit.SyncEngine.SyncPlan		var	sendChangesSyncActions
+struct	CloudKit.SyncEngine.SyncPlan		var	fetchAssetsSyncActions
+struct	CloudKit.SyncEngine.SyncPlan		var	automaticSyncOptions
+enum	CloudKit.SyncEngine.SyncAction.SyncType			
+enum	CloudKit.SyncEngine.SyncAction.SyncType		case	fetchChanges
+enum	CloudKit.SyncEngine.SyncAction.SyncType		case	sendChanges
+enum	CloudKit.SyncEngine.SyncAction.SyncType		case	fetchAssets
+struct	CloudKit.SyncEngine.SyncAction			
+struct	CloudKit.SyncEngine.SyncAction		let	syncType
+struct	CloudKit.SyncEngine.SyncAction		var	zoneIDs
+struct	CloudKit.SyncEngine.SyncAction		var	assetContentsFetchTypeByZoneID
+struct	CloudKit.SyncEngine.SyncAction		var	assets
+class	CloudKit.CKSyncEngine			
+class	CloudKit.CKSyncEngine		let	actorMutex
+class	CloudKit.CKSyncEngineObjCDelegateAdapter			
+class	CloudKit.CKSyncEngineObjCDelegateAdapter		var	weakDelegate
+class	CloudKit.CKSyncEngineObjCDelegateAdapter		let	dataSourceAdapter
+struct	CloudKit.CKSyncEngine.Account			
+struct	CloudKit.CKSyncEngine.Account		let	accountInfo
+struct	CloudKit.CKSyncEngine.Account		let	identifier
+struct	CloudKit.CKSyncEngine.Account		var	userRecordID
+struct	CloudKit.CKSyncEngine.Configuration			
+struct	CloudKit.CKSyncEngine.Configuration		var	database
+struct	CloudKit.CKSyncEngine.Configuration		var	stateSerialization
+struct	CloudKit.CKSyncEngine.Configuration		var	delegate
+struct	CloudKit.CKSyncEngine.Configuration		var	automaticallySync
+struct	CloudKit.CKSyncEngine.Configuration		var	subscriptionID
+struct	CloudKit.CKSyncEngine.Configuration		var	delegatePrivate
+struct	CloudKit.CKSyncEngine.Configuration		var	apsMachServiceName
+struct	CloudKit.CKSyncEngine.Configuration		let	xpcObjectWrapper
+struct	CloudKit.CKSyncEngine.Configuration		var	useOpportunisticPushTopic
+struct	CloudKit.CKSyncEngine.Configuration		var	allowFetchAndModifyConcurrently
+struct	CloudKit.CKSyncEngine.Configuration		var	assetDownloadStagingManager
+struct	CloudKit.CKSyncEngine.Configuration		var	continueSendingChangesAfterFailure
+struct	CloudKit.CKSyncEngine.Configuration		var	isImmediateSyncEnabled
+struct	CloudKit.CKSyncEngine.Configuration		var	delegateInternal
+struct	CloudKit.CKSyncEngine.Configuration		var	repeatZoneModificationsUntilNoneLeft
+struct	CloudKit.CKSyncEngine.Configuration		var	objcEngine
+class	CloudKit.DelegateContainer			
+class	CloudKit.DelegateContainer		var	weakObject
+class	CloudKit.DelegateContainer		let	queue
+enum	CloudKit.CKSyncEngine.Event			
+enum	CloudKit.CKSyncEngine.Event		case	stateUpdate
+enum	CloudKit.CKSyncEngine.Event		case	accountChange
+enum	CloudKit.CKSyncEngine.Event		case	fetchedDatabaseChanges
+enum	CloudKit.CKSyncEngine.Event		case	fetchedRecordZoneChanges
+enum	CloudKit.CKSyncEngine.Event		case	sentDatabaseChanges
+enum	CloudKit.CKSyncEngine.Event		case	sentRecordZoneChanges
+enum	CloudKit.CKSyncEngine.Event		case	willFetchChanges
+enum	CloudKit.CKSyncEngine.Event		case	willFetchRecordZoneChanges
+enum	CloudKit.CKSyncEngine.Event		case	didFetchRecordZoneChanges
+enum	CloudKit.CKSyncEngine.Event		case	didFetchChanges
+enum	CloudKit.CKSyncEngine.Event		case	willSendChanges
+enum	CloudKit.CKSyncEngine.Event		case	didSendChanges
+enum	CloudKit.CKSyncEngine.Event		case	willFetchAsset
+enum	CloudKit.CKSyncEngine.Event		case	fetchedAsset
+enum	CloudKit.CKSyncEngine.Event		case	didFetchAsset
+struct	CloudKit.CKSyncEngine.Event.StateUpdate			
+struct	CloudKit.CKSyncEngine.Event.StateUpdate		let	stateSerialization
+struct	CloudKit.CKSyncEngine.Event.AccountChange			
+struct	CloudKit.CKSyncEngine.Event.AccountChange		let	changeType
+enum	CloudKit.CKSyncEngine.Event.AccountChange.ChangeType			
+enum	CloudKit.CKSyncEngine.Event.AccountChange.ChangeType		case	signIn
+enum	CloudKit.CKSyncEngine.Event.AccountChange.ChangeType		case	signOut
+enum	CloudKit.CKSyncEngine.Event.AccountChange.ChangeType		case	switchAccounts
+struct	CloudKit.CKSyncEngine.Event.FetchedDatabaseChanges			
+struct	CloudKit.CKSyncEngine.Event.FetchedDatabaseChanges		let	modifications
+struct	CloudKit.CKSyncEngine.Event.FetchedDatabaseChanges		let	deletions
+struct	CloudKit.CKSyncEngine.Event.FetchedRecordZoneChanges			
+struct	CloudKit.CKSyncEngine.Event.FetchedRecordZoneChanges		let	modifications
+struct	CloudKit.CKSyncEngine.Event.FetchedRecordZoneChanges		let	deletions
+struct	CloudKit.CKSyncEngine.Event.FetchedRecordZoneChanges		let	zoneAttributesModifications
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges			
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges		let	savedZones
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges		let	failedZoneSaves
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges		let	deletedZoneIDs
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges		let	failedZoneDeletes
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges.FailedZoneSave			
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges.FailedZoneSave		let	zone
+struct	CloudKit.CKSyncEngine.Event.SentDatabaseChanges.FailedZoneSave		let	error
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges			
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges		let	savedRecords
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges		let	failedRecordSaves
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges		let	deletedRecordIDs
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges		let	failedRecordDeletes
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges.FailedRecordSave			
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges.FailedRecordSave		let	record
+struct	CloudKit.CKSyncEngine.Event.SentRecordZoneChanges.FailedRecordSave		let	error
+struct	CloudKit.CKSyncEngine.Event.WillFetchChanges			
+struct	CloudKit.CKSyncEngine.Event.WillFetchChanges		let	context
+struct	CloudKit.CKSyncEngine.Event.WillFetchRecordZoneChanges			
+struct	CloudKit.CKSyncEngine.Event.WillFetchRecordZoneChanges		let	zoneID
+struct	CloudKit.CKSyncEngine.Event.DidFetchRecordZoneChanges			
+struct	CloudKit.CKSyncEngine.Event.DidFetchRecordZoneChanges		let	zoneID
+struct	CloudKit.CKSyncEngine.Event.DidFetchRecordZoneChanges		let	error
+struct	CloudKit.CKSyncEngine.Event.DidFetchChanges			
+struct	CloudKit.CKSyncEngine.Event.DidFetchChanges		let	context
+struct	CloudKit.CKSyncEngine.Event.WillSendChanges			
+struct	CloudKit.CKSyncEngine.Event.WillSendChanges		let	context
+struct	CloudKit.CKSyncEngine.Event.DidSendChanges			
+struct	CloudKit.CKSyncEngine.Event.DidSendChanges		let	context
+struct	CloudKit.CKSyncEngine.Event.WillFetchAsset			
+struct	CloudKit.CKSyncEngine.Event.WillFetchAsset		let	asset
+struct	CloudKit.CKSyncEngine.Event.FetchedAsset			
+struct	CloudKit.CKSyncEngine.Event.FetchedAsset		let	asset
+struct	CloudKit.CKSyncEngine.Event.DidFetchAsset			
+struct	CloudKit.CKSyncEngine.Event.DidFetchAsset		let	asset
+struct	CloudKit.CKSyncEngine.Event.DidFetchAsset		let	error
+struct	CloudKit.CKSyncEngine.RecordZoneChangeBatch			
+struct	CloudKit.CKSyncEngine.RecordZoneChangeBatch		var	recordsToSave
+struct	CloudKit.CKSyncEngine.RecordZoneChangeBatch		var	recordIDsToDelete
+struct	CloudKit.CKSyncEngine.RecordZoneChangeBatch		var	atomicByZone
+class	CloudKit.CKSyncEngine.State			
+class	CloudKit.CKSyncEngine.State		let	stateObject
+struct	CloudKit.CKSyncEngine.State.Serialization			
+struct	CloudKit.CKSyncEngine.State.Serialization		let	data
+enum	CloudKit.CKSyncEngine.PendingRecordZoneChange			
+enum	CloudKit.CKSyncEngine.PendingRecordZoneChange		case	saveRecord
+enum	CloudKit.CKSyncEngine.PendingRecordZoneChange		case	deleteRecord
+enum	CloudKit.CKSyncEngine.PendingDatabaseChange			
+enum	CloudKit.CKSyncEngine.PendingDatabaseChange		case	saveZone
+enum	CloudKit.CKSyncEngine.PendingDatabaseChange		case	deleteZone
+enum	CloudKit.CKSyncEngine.PendingAssetSync			
+enum	CloudKit.CKSyncEngine.PendingAssetSync		case	fetchAsset
+enum	CloudKit.CKSyncEngine.State.Serialization.CodingKeys			
+enum	CloudKit.CKSyncEngine.State.Serialization.CodingKeys		case	data
+struct	CloudKit.CKSyncEngine.FetchChangesOptions			
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	scope
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	_operationGroup
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	prioritizedZoneIDs
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	zoneConfigurations
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	defaultZoneConfiguration
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	forceFetchChanges
+struct	CloudKit.CKSyncEngine.FetchChangesOptions		var	fetchType
+struct	CloudKit.CKSyncEngine.FetchChangesOptions.ZoneConfiguration			
+struct	CloudKit.CKSyncEngine.FetchChangesOptions.ZoneConfiguration		var	shouldFetchAssetContents
+struct	CloudKit.CKSyncEngine.FetchChangesOptions.ZoneConfiguration		var	resultsLimit
+enum	CloudKit.CKSyncEngine.FetchChangesOptions.Scope			
+enum	CloudKit.CKSyncEngine.FetchChangesOptions.Scope		case	allExcluding
+enum	CloudKit.CKSyncEngine.FetchChangesOptions.Scope		case	zoneIDs
+enum	CloudKit.CKSyncEngine.FetchChangesOptions.Scope		case	all
+struct	CloudKit.CKSyncEngine.FetchChangesContext			
+struct	CloudKit.CKSyncEngine.FetchChangesContext		let	reason
+struct	CloudKit.CKSyncEngine.FetchChangesContext		let	options
+struct	CloudKit.CKSyncEngine.SendChangesOptions			
+struct	CloudKit.CKSyncEngine.SendChangesOptions		var	scope
+struct	CloudKit.CKSyncEngine.SendChangesOptions		var	_operationGroup
+enum	CloudKit.CKSyncEngine.SendChangesOptions.Scope			
+enum	CloudKit.CKSyncEngine.SendChangesOptions.Scope		case	allExcluding
+enum	CloudKit.CKSyncEngine.SendChangesOptions.Scope		case	zoneIDs
+enum	CloudKit.CKSyncEngine.SendChangesOptions.Scope		case	recordIDs
+enum	CloudKit.CKSyncEngine.SendChangesOptions.Scope		case	all
+struct	CloudKit.CKSyncEngine.SendChangesContext			
+struct	CloudKit.CKSyncEngine.SendChangesContext		let	reason
+struct	CloudKit.CKSyncEngine.SendChangesContext		let	options
+enum	CloudKit.CKSyncEngine.SyncReason			
+enum	CloudKit.CKSyncEngine.SyncReason		case	scheduled
+enum	CloudKit.CKSyncEngine.SyncReason		case	manual
+struct	CloudKit.CKSyncEngine.FetchAssetOptions			
+struct	CloudKit.CKSyncEngine.FetchAssetOptions		var	_operationGroup
+struct	CloudKit.CKSyncEngine.FetchAssetOptions		let	asset
+struct	CloudKit.CKSyncEngine.FetchAssetOptions		let	progress
+struct	CloudKit.CKSyncEngine.FetchAssetContext			
+struct	CloudKit.CKSyncEngine.FetchAssetContext		let	reason
+struct	CloudKit.CKSyncEngine.FetchAssetContext		let	options
+struct	CloudKit.CKSyncEngine.FetchChangesOptions.FetchType			
+struct	CloudKit.CKSyncEngine.FetchChangesOptions.FetchType		let	rawValue
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions			
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions		var	defaultZoneOption
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions		var	defaultAssetOption
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions		var	zoneOptions
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions		var	assetOptions
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions		var	fileProtectionType
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._SyncPriority			
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._SyncPriority		let	id
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions._AssetContentsFetchType			
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions._AssetContentsFetchType		let	id
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._AssetOptions			
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._AssetOptions		var	fetchPriority
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions			
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions		var	fetchChangesPriority
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions		var	sendChangesPriority
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions		var	syncEnabled
+struct	CloudKit.CKSyncEngine._AutomaticSyncOptions._ZoneOptions		var	assetContentsFetchType
+class	CloudKit.CKAsyncSerialQueue			
+class	CloudKit.CKAsyncSerialQueue		let	ordering
+class	CloudKit.CKAsyncSerialQueue		var	nextWaiterID
+class	CloudKit.CKAsyncSerialQueue		var	isProcessing
+class	CloudKit.CKAsyncSerialQueue		var	waiters
+struct	CloudKit.CKAsyncSerialQueue.WaitContext			
+struct	CloudKit.CKAsyncSerialQueue.WaitContext		var	waiterID
+struct	CloudKit.CKAsyncSerialQueue.WaitContext		var	priority
+struct	CloudKit.CKAsyncSerialQueue.WaitContext		var	continuation
+enum	CloudKit.CKAsyncSerialQueue.OrderingPolicy			
+enum	CloudKit.CKAsyncSerialQueue.OrderingPolicy		case	fifo
+enum	CloudKit.CKAsyncSerialQueue.OrderingPolicy		case	taskPriority
+enum	CloudKit.__CKLogSubsystem			
+class	CloudKit.CKCheckedUnsafeObjectTransfer			
+class	CloudKit.CKCheckedUnsafeObjectTransfer		var	wrapped
+class	CloudKit.CKUnsafeObjectTransfer			
+class	CloudKit.CKUnsafeObjectTransfer		var	wrapped
+protocol	CloudKit.CKFeatureProtocol			
+protocol	CloudKit.CKRecordValueProtocol			
+protocol	CKObjCRecordValueConvertible			
+protocol	CloudKit.CKRecordValueConvertible			
+protocol	SyncEngine.AccountProvider			
+protocol	CloudKit.CKSyncEngineDelegate			
+protocol	CloudKit.CKSyncEngineDelegatePrivate			
+protocol	CloudKit.CKSyncEngineDelegateInternal			
+protocol	CKSyncEngine.ProgressReporting			
+protocol	conformance __C_Synthesized.CKError	Swift.Equatable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	Swift.Error: CloudKit		
+protocol	conformance __C_Synthesized.CKError	Swift.Hashable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	Foundation._ObjectiveCBridgeableError: CloudKit		
+protocol	conformance __C_Synthesized.CKError	Foundation.CustomNSError: CloudKit		
+protocol	conformance __C_Synthesized.CKUnderlyingError	Swift.Equatable		
+protocol	conformance __C_Synthesized.CKUnderlyingError	Swift.Error		
+protocol	conformance __C_Synthesized.CKUnderlyingError	Swift.Hashable		
+protocol	conformance __C_Synthesized.CKUnderlyingError	Foundation._ObjectiveCBridgeableError		
+protocol	conformance __C_Synthesized.CKUnderlyingError	Foundation.CustomNSError		
+protocol	conformance __C.Scope	Swift.Hashable: CloudKit		
+protocol	conformance __C.Scope	Swift.Equatable: CloudKit		
+protocol	conformance __C.Scope	Swift.RawRepresentable: CloudKit		
+protocol	conformance __C_Synthesized.CKUnderlyingError	Foundation._BridgedStoredNSError		
+protocol	conformance __C.Code	Swift.RawRepresentable		
+protocol	conformance __C.Code	Foundation._ErrorCodeProtocol		
+protocol	conformance __C.Code	Swift.Equatable		
+protocol	conformance __C_Synthesized.CKError	Foundation._BridgedStoredNSError: CloudKit		
+protocol	conformance __C.Code	Swift.RawRepresentable: CloudKit		
+protocol	conformance __C.Code	Foundation._ErrorCodeProtocol: CloudKit		
+protocol	conformance __C.Code	Swift.Equatable: CloudKit		
+protocol	conformance __C.FileProtectionType	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Equatable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Hashable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudKit.AssetInfo	Swift.Encodable		
+protocol	conformance CloudKit.AssetInfo	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CloudKit.ChunkInfo	Swift.Encodable		
+protocol	conformance CloudKit.ChunkInfo	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CloudKit.AssetStreamHandleInternal	Swift.Encodable		
+protocol	conformance CloudKit.AssetStreamHandleInternal	Swift.Decodable		
+protocol	conformance CloudKit.AssetStreamHandleInternal	CloudAsset.StreamHandle		
+protocol	conformance CloudKit.AssetStreamHandle	Swift.Encodable		
+protocol	conformance CloudKit.AssetStreamHandle	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ChunkDataDecryptor.Error	Swift.Hashable		
+protocol	conformance ChunkDataDecryptor.Error	Swift.Equatable		
+protocol	conformance ChunkDataDecryptor.Error	Swift.Error		
+protocol	conformance ChunkReader	Swift.Actor		
+protocol	conformance CloudKit.ChunkStreamHandle	Swift.Encodable		
+protocol	conformance CloudKit.ChunkStreamHandle	Swift.Decodable		
+protocol	conformance ChunkStreamHandle.StreamError	Swift.Hashable		
+protocol	conformance ChunkStreamHandle.StreamError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ChunkStreamHandle.StreamError	Swift.Error		
+protocol	conformance __C.Scope	Swift.Decodable		
+protocol	conformance __C.Scope	Swift.Encodable		
+protocol	conformance __C.Scope	Swift.CustomStringConvertible		
+protocol	conformance Deletion.Reason	Swift.Hashable		
+protocol	conformance Deletion.Reason	Swift.Equatable		
+protocol	conformance DatabaseChange.Modification	Swift.Equatable		
+protocol	conformance DatabaseChange.Modification	Swift.Hashable		
+protocol	conformance DatabaseChange.Deletion	Swift.Equatable		
+protocol	conformance DatabaseChange.Deletion	Swift.Hashable		
+protocol	conformance RecordZoneChange.Modification	Swift.Equatable		
+protocol	conformance RecordZoneChange.Modification	Swift.Hashable		
+protocol	conformance RecordZoneChange.Deletion	Swift.Equatable		
+protocol	conformance RecordZoneChange.Deletion	Swift.Hashable		
+protocol	conformance DatabaseChange.Modification	Swift.CustomStringConvertible		
+protocol	conformance DatabaseChange.Deletion	Swift.CustomStringConvertible		
+protocol	conformance RecordZoneChange.Modification	Swift.CustomStringConvertible		
+protocol	conformance RecordZoneChange.Deletion	Swift.CustomStringConvertible		
+protocol	conformance CKDeviceCapability.Level	Swift.Equatable		
+protocol	conformance CKDeviceCapability.Level	Swift.Hashable		
+protocol	conformance CKDeviceCapability.Level	Swift.RawRepresentable		
+protocol	conformance CloudKit.CKDeviceCapability	Swift.Hashable		
+protocol	conformance CloudKit.CKDeviceCapability	Swift.Equatable		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.Hashable		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.Equatable		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.RandomAccessCollection		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.BidirectionalCollection		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.Collection		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.Sequence		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance CloudKit.CKDeviceCapabilitySet	Swift.ExpressibleByArrayLiteral		
+protocol	conformance CloudKit.CKDeviceCapabilityCheckOptions	Swift.Hashable		
+protocol	conformance CloudKit.CKDeviceCapabilityCheckOptions	Swift.Equatable		
+protocol	conformance CloudKit.CKDeviceCapabilityCheckResult	Swift.Hashable		
+protocol	conformance CloudKit.CKDeviceCapabilityCheckResult	Swift.Equatable		
+protocol	conformance JsonSerializableDeviceCapability	Swift.Decodable		
+protocol	conformance JsonSerializableDeviceCapability	Swift.Encodable		
+protocol	conformance JsonSerializableDeviceCapability.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance JsonSerializableDeviceCapability.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance JsonSerializableDeviceCapability.CodingKeys	Swift.Hashable		
+protocol	conformance JsonSerializableDeviceCapability.CodingKeys	Swift.Equatable		
+protocol	conformance JsonSerializableDeviceCapability.CodingKeys	Swift.CodingKey		
+protocol	conformance __C_Synthesized.CKError	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKZoneFeature	CloudKit.CKFeatureProtocol		
+protocol	conformance CloudKit.CKZoneFeature	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKZoneFeature	Swift.Comparable		
+protocol	conformance CloudKit.CKZoneFeature	Swift.Equatable		
+protocol	conformance CloudKit.CKZoneFeature	Swift.Hashable		
+protocol	conformance CloudKit.CKRecordFeature	CloudKit.CKFeatureProtocol		
+protocol	conformance CloudKit.CKRecordFeature	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKRecordFeature	Swift.Comparable		
+protocol	conformance CloudKit.CKRecordFeature	Swift.Equatable		
+protocol	conformance CloudKit.CKRecordFeature	Swift.Hashable		
+protocol	conformance CloudKit.CKFieldFeature	CloudKit.CKFeatureProtocol		
+protocol	conformance CloudKit.CKFieldFeature	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKFieldFeature	Swift.Comparable		
+protocol	conformance CloudKit.CKFieldFeature	Swift.Equatable		
+protocol	conformance CloudKit.CKFieldFeature	Swift.Hashable		
+protocol	conformance CloudKit.CKFeatureSet	Swift.Equatable		
+protocol	conformance CloudKit.CKFeatureSet	Swift.Hashable		
+protocol	conformance CloudKit.CKFeatureSet	Swift.CustomStringConvertible		
+protocol	conformance CKFeatureSet.Iterator	Swift.IteratorProtocol		
+protocol	conformance CloudKit.CKFeatureSet	Swift.Sequence		
+protocol	conformance CloudKit.CKFeatureSet	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance CloudKit.CKFeatureSet	Swift.ExpressibleByArrayLiteral		
+protocol	conformance CloudKit.CKRequiredFeatureSet	Swift.Equatable		
+protocol	conformance CloudKit.CKRequiredFeatureSet	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKRequiredFeatureSet	Swift.Hashable		
+protocol	conformance CloudKit.CKRecordKeyValueIterator	Swift.IteratorProtocol		
+protocol	conformance CKRecord	Swift.Sequence		
+protocol	conformance CKRecordID	Swift.Decodable		
+protocol	conformance CKRecordID	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Swift.String	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.String	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Foundation.Date	CloudKit.CKRecordValueProtocol		
+protocol	conformance Foundation.Date	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Foundation.Data	CloudKit.CKRecordValueProtocol		
+protocol	conformance Foundation.Data	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Bool	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Bool	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Double	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Double	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Int	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Int	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.UInt	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.UInt	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Int8	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Int8	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.UInt8	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.UInt8	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Int16	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Int16	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.UInt16	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.UInt16	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Int32	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Int32	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.UInt32	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.UInt32	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Int64	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Int64	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.UInt64	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.UInt64	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Float	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Float	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance Swift.Array	CloudKit.CKRecordValueProtocol		
+protocol	conformance Swift.Array	CloudKit.CKObjCRecordValueConvertible		
+protocol	conformance NSString	CloudKit.CKRecordValueProtocol		
+protocol	conformance NSString	CloudKit.CKRecordValueConvertible		
+protocol	conformance NSDate	CloudKit.CKRecordValueProtocol		
+protocol	conformance NSDate	CloudKit.CKRecordValueConvertible		
+protocol	conformance NSData	CloudKit.CKRecordValueProtocol		
+protocol	conformance NSData	CloudKit.CKRecordValueConvertible		
+protocol	conformance NSNumber	CloudKit.CKRecordValueProtocol		
+protocol	conformance NSNumber	CloudKit.CKRecordValueConvertible		
+protocol	conformance NSArray	CloudKit.CKRecordValueProtocol		
+protocol	conformance NSArray	CloudKit.CKRecordValueConvertible		
+protocol	conformance CKReference	CloudKit.CKRecordValueProtocol		
+protocol	conformance CKAsset	CloudKit.CKRecordValueProtocol		
+protocol	conformance CLLocation	CloudKit.CKRecordValueProtocol		
+protocol	conformance CKPackage	CloudKit.CKRecordValueProtocol		
+protocol	conformance CKStreamingAsset	CloudKit.CKRecordValueProtocol		
+protocol	conformance CKMergeableRecordValue	CloudKit.CKRecordValueProtocol		
+protocol	conformance CKEncryptedData	CloudKit.CKRecordValueProtocol		
+protocol	conformance CloudKit.CKRecordValueStoreIterator	Swift.IteratorProtocol		
+protocol	conformance CKRecordValueStore	Swift.Sequence: CloudKit		
+protocol	conformance CKRecordZoneID	Swift.Decodable		
+protocol	conformance CKRecordZoneID	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Reference.Action	Swift.Equatable		
+protocol	conformance Reference.Action	Swift.Hashable		
+protocol	conformance Reference.Action	Swift.RawRepresentable		
+protocol	conformance CloudKit.CKCodeServiceConfiguration	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKCodeServiceConfiguration	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CKDatabaseConfiguration	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKDatabaseConfiguration	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CKSessionAcquirer	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CKSessionAcquirer	Swift.CustomStringConvertible		
+protocol	conformance State.ListeningToDaemon	CloudCoreInternal.PropertyDescribable		
+protocol	conformance State.ListeningToDaemon	Swift.CustomStringConvertible		
+protocol	conformance State.InvalidTransition	Swift.CustomStringConvertible		
+protocol	conformance State.InvalidTransition	Swift.Error		
+protocol	conformance CloudKit.CKSessionAcquirerXPCProxy	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CKSessionAcquisitionManager	CloudCoreInternal.CKImplementingCC.SessionAcquisitionManagerProtocol		
+protocol	conformance CloudKit.CKSessionAcquisitionManager	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKSessionAcquisitionManager	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CKSessionAcquisitionStream	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CKSessionAcquisitionStream	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKSessionAcquisitionStream	Swift.AsyncIteratorProtocol		
+protocol	conformance CloudKit.CKSessionAcquisitionStream	Swift.AsyncSequence		
+protocol	conformance CloudKit.CloudCoreContainer	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CloudCoreContainer	CloudCoreInternal.CKImplementingCC.ContainerProtocol		
+protocol	conformance CloudKit.CKSecureCodingBox	CloudCoreInternal.PropertyDescribable		
+protocol	conformance CloudKit.CloudCoreEntryPoint	CloudCoreInternal.CKImplementingCC.EntryPointProtocol		
+protocol	conformance CloudKit.SyncEngine	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.SyncEngine	Swift.Actor		
+protocol	conformance SyncEngine.DefaultAccountProvider	CloudKit.SyncEngine.AccountProvider		
+protocol	conformance SyncEngine.SyncAction	Swift.CustomStringConvertible		
+protocol	conformance SyncAction.SyncType	Swift.Hashable		
+protocol	conformance SyncAction.SyncType	Swift.Equatable		
+protocol	conformance CloudKit.CKSyncEngine	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.CKSyncEngineObjCDelegateAdapter	CloudKit.CKSyncEngineDelegatePrivate		
+protocol	conformance CloudKit.CKSyncEngineObjCDelegateAdapter	CloudKit.CKSyncEngineDelegate		
+protocol	conformance CloudKit.CKSyncEngineObjCDelegateAdapter	Swift.Actor		
+protocol	conformance CKSyncEngine.Account	Swift.Equatable		
+protocol	conformance CKSyncEngine.Account	Swift.Identifiable		
+protocol	conformance CKSyncEngine.Account	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.Account	Swift.Hashable		
+protocol	conformance CKSyncEngine.Configuration	Swift.CustomStringConvertible		
+protocol	conformance CloudKit.DelegateContainer	Swift.Actor		
+protocol	conformance CKSyncEngine.Event	Swift.CustomStringConvertible		
+protocol	conformance Event.StateUpdate	Swift.CustomStringConvertible		
+protocol	conformance Event.AccountChange	Swift.CustomStringConvertible		
+protocol	conformance AccountChange.ChangeType	Swift.Equatable		
+protocol	conformance Event.FetchedDatabaseChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.FetchedRecordZoneChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.SentDatabaseChanges	Swift.CustomStringConvertible		
+protocol	conformance SentDatabaseChanges.FailedZoneSave	Swift.CustomStringConvertible		
+protocol	conformance Event.SentRecordZoneChanges	Swift.CustomStringConvertible		
+protocol	conformance SentRecordZoneChanges.FailedRecordSave	Swift.CustomStringConvertible		
+protocol	conformance Event.WillFetchChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.WillFetchRecordZoneChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.DidFetchRecordZoneChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.DidFetchChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.WillSendChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.DidSendChanges	Swift.CustomStringConvertible		
+protocol	conformance Event.WillFetchAsset	Swift.CustomStringConvertible		
+protocol	conformance Event.FetchedAsset	Swift.CustomStringConvertible		
+protocol	conformance Event.DidFetchAsset	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.RecordZoneChangeBatch	Swift.CustomStringConvertible		
+protocol	conformance State.Serialization	Swift.Decodable		
+protocol	conformance State.Serialization	Swift.Encodable		
+protocol	conformance CKSyncEngine.PendingRecordZoneChange	Swift.Hashable		
+protocol	conformance CKSyncEngine.PendingRecordZoneChange	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.PendingRecordZoneChange	Swift.Equatable		
+protocol	conformance CKSyncEngine.PendingDatabaseChange	Swift.Hashable		
+protocol	conformance CKSyncEngine.PendingDatabaseChange	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.PendingDatabaseChange	Swift.Equatable		
+protocol	conformance CKSyncEngine.PendingAssetSync	Swift.Hashable		
+protocol	conformance CKSyncEngine.PendingAssetSync	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.PendingAssetSync	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CKSyncEngine.SyncReason	Swift.Equatable		
+protocol	conformance CKSyncEngine.SyncReason	Swift.Hashable		
+protocol	conformance CKSyncEngine.FetchAssetOptions	CloudKit.CKSyncEngine.ProgressReporting		
+protocol	conformance CKSyncEngine.FetchChangesOptions	Swift.CustomStringConvertible		
+protocol	conformance FetchChangesOptions.Scope	Swift.Equatable		
+protocol	conformance FetchChangesOptions.ZoneConfiguration	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.SendChangesOptions	Swift.CustomStringConvertible		
+protocol	conformance SendChangesOptions.Scope	Swift.Equatable		
+protocol	conformance CKSyncEngine.SendChangesContext	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.FetchChangesContext	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.SyncReason	Swift.CustomStringConvertible		
+protocol	conformance SendChangesOptions.Scope	Swift.CustomStringConvertible		
+protocol	conformance FetchChangesOptions.Scope	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.FetchAssetOptions	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine.FetchAssetContext	Swift.CustomStringConvertible		
+protocol	conformance CKSyncEngine._AutomaticSyncOptions	Swift.Equatable		
+protocol	conformance FetchChangesOptions.FetchType	Swift.ExpressibleByArrayLiteral		
+protocol	conformance FetchChangesOptions.FetchType	Swift.Equatable		
+protocol	conformance FetchChangesOptions.FetchType	Swift.RawRepresentable		
+protocol	conformance FetchChangesOptions.FetchType	Swift.SetAlgebra		
+protocol	conformance FetchChangesOptions.FetchType	Swift.OptionSet		
+protocol	conformance _AutomaticSyncOptions._ZoneOptions	Swift.Equatable		
+protocol	conformance _AutomaticSyncOptions._AssetOptions	Swift.Equatable		
+protocol	conformance _ZoneOptions._AssetContentsFetchType	Swift.Equatable		
+protocol	conformance _AutomaticSyncOptions._SyncPriority	Swift.Equatable		
+protocol	conformance _AutomaticSyncOptions._SyncPriority	Swift.Hashable		
+protocol	conformance CKAsyncSerialQueue.OrderingPolicy	Swift.Hashable		
+protocol	conformance CKAsyncSerialQueue.OrderingPolicy	Swift.Equatable		
+protocol	conformance CloudKit.CKAsyncSerialQueue	Swift.Identifiable		
+protocol	conformance CloudKit.CKAsyncSerialQueue	Swift.Actor		
+protocol	conformance __C.CKPersonaType	Swift.CaseIterable: CloudKit		
+protocol	conformance __C.CKPersonaType	Swift.CustomStringConvertible: CloudKit		
+extension	__C_Synthesized.CKUnderlyingError	_BridgedStoredNSError		
+extension	__C_Synthesized.CKError	_BridgedStoredNSError		
+extension	CloudKit.CKDeviceCapability.Level	RawRepresentable		
+extension	CloudKit.CKDeviceCapabilitySet	RandomAccessCollection		
+extension	CloudKit.CKDeviceCapabilitySet	BidirectionalCollection		
+extension	CloudKit.CKDeviceCapabilitySet	Collection		
+extension	CloudKit.CKDeviceCapabilitySet	Sequence		
+extension	CloudKit.CKDeviceCapabilitySet	ExpressibleByDictionaryLiteral		
+extension	CloudKit.CKDeviceCapabilitySet	ExpressibleByArrayLiteral		
+extension	CloudKit.CKFeatureSet.Iterator	IteratorProtocol		
+extension	CloudKit.CKFeatureSet	Sequence		
+extension	CloudKit.CKFeatureSet	ExpressibleByDictionaryLiteral		
+extension	CloudKit.CKFeatureSet	ExpressibleByArrayLiteral		
+extension	CloudKit.CKRecordKeyValueIterator	IteratorProtocol		
+extension	CKRecord	Sequence		
+extension	CloudKit.CodingKeys	RawRepresentable		
+extension	CloudKit.CKRecordValueStoreIterator	IteratorProtocol		
+extension	CKRecordValueStore	Sequence		
+extension	CloudKit.CodingKeys	RawRepresentable		
+extension	CloudKit.Reference.Action	RawRepresentable		
+extension	CloudKit.CKSessionAcquisitionStream	AsyncIteratorProtocol		
+extension	CloudKit.CKSessionAcquisitionStream	AsyncSequence		
+extension	CloudKit.CKSyncEngine.Account	Identifiable		
+extension	CloudKit.CKSyncEngine.FetchChangesOptions.FetchType	ExpressibleByArrayLiteral		
+extension	CloudKit.CKSyncEngine.FetchChangesOptions.FetchType	RawRepresentable		
+extension	CloudKit.CKSyncEngine.FetchChangesOptions.FetchType	SetAlgebra		
+extension	CloudKit.CKSyncEngine.FetchChangesOptions.FetchType	OptionSet		
+extension	CloudKit.CKAsyncSerialQueue	Identifiable		

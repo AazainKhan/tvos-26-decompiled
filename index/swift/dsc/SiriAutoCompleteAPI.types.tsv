@@ -1,0 +1,228 @@
+kind	type	conformance	member_kind	member
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource			
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	assistantSuggestions
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	siriKitIntentTranscript
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	appIntentTranscript
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	appLaunch
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	appShortcut
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	voiceShortcut
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	baseSetAppIntentSuggestions
+enum	SiriAutoCompleteAPI.AutoCompletePhraseSource		case	staticSuggestions
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames			
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	phrase
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	bundleId
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	actionIdentifier
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	source
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	uuidIdentifier
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	zkwGenerationId
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	normalizedScore
+enum	SiriAutoCompleteAPI.AutoCompleteTableColumnNames		case	tapCount
+class	SiriAutoCompleteAPI.AutoCompletePhrase			
+class	SiriAutoCompleteAPI.AutoCompletePhrase		var	phrase
+class	SiriAutoCompleteAPI.AutoCompletePhrase		var	invocationPhrase
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	bundleId
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	iconInfo
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	actionIdentifier
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	source
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	uuidIdentifier
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	toolInvocation
+class	SiriAutoCompleteAPI.AutoCompletePhrase		var	zkwGenerationId
+class	SiriAutoCompleteAPI.AutoCompletePhrase		var	normalizedScore
+class	SiriAutoCompleteAPI.AutoCompletePhrase		var	tapCount
+class	SiriAutoCompleteAPI.AutoCompletePhrase		var	recentTapTimeStamp
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	searchTokens
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	normalizedPhraseTokens
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	locale
+class	SiriAutoCompleteAPI.AutoCompletePhrase		let	suggestionType
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys			
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	phrase
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	invocationPhrase
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	bundleId
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	iconInfo
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	actionIdentifier
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	source
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	uuidIdentifier
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	toolInvocation
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	zkwGenerationId
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	normalizedScore
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	tapCount
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	recentTapTimeStamp
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	searchTokens
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	normalizedPhraseTokens
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	locale
+enum	SiriAutoCompleteAPI.AutoCompletePhrase.CodingKeys		case	suggestionType
+class	SiriAutoCompleteAPI.StopWordAndNonSignificantWordList			
+class	SiriAutoCompleteAPI.StopWordAndNonSignificantWordList		let	wordList
+enum	SiriAutoCompleteAPI.Logger			
+enum	SiriAutoCompleteAPI.SiriAutoCompleteSignpostOSLog			
+enum	SiriAutoCompleteAPI.SiriAutoCompleteSignpost			
+class	SiriAutoCompleteAPI.SignpostLogger			
+class	SiriAutoCompleteAPI.DefaultLocaleProvider			
+class	SiriAutoCompleteAPI.DefaultLocaleProvider		let	currentLocale
+class	SiriAutoCompleteAPI.DefaultMorphunTokenizer			
+class	SiriAutoCompleteAPI.DefaultMorphunTokenizer		let	tokenizerLocale
+class	SiriAutoCompleteAPI.DefaultMorphunTokenizer		let	assetRegisteredStatus
+class	SiriAutoCompleteAPI.DefaultMorphunTokenizer		let	tokenizer
+class	SiriAutoCompleteAPI.DefaultBlockedAppsProvider			
+class	SiriAutoCompleteAPI.DefaultBlockedAppsProvider		let	blockedApps
+class	SiriAutoCompleteAPI.DefaultTypingCache			
+class	SiriAutoCompleteAPI.DefaultTypingCache		var	dbQueryCache
+class	SiriAutoCompleteAPI.DefaultTypingCache		var	previousQueryNearMatches
+class	SiriAutoCompleteAPI.DefaultTypingCache		var	assetIdToPhraseMap
+class	SiriAutoCompleteAPI.DefaultTypingCache		var	previousQueryResponse
+class	SiriAutoCompleteAPI.DefaultTypingCache		let	cacheLimit
+class	SiriAutoCompleteAPI.TypingSessionCacheProvider			
+class	SiriAutoCompleteAPI.TypingSessionCacheProvider		var	cache
+class	SiriAutoCompleteAPI.TypingSessionCacheProvider		let	enabled
+class	SiriAutoCompleteAPI.TypingSessionCacheProvider		let	cacheLimit
+class	SiriAutoCompleteAPI.TypingSessionCacheProvider.DisabledTypingCache			
+struct	SiriAutoCompleteAPI.TypingSessionCacheProvider.TypingSessionCache			
+struct	SiriAutoCompleteAPI.TypingSessionCacheProvider.TypingSessionCache		let	cache
+struct	SiriAutoCompleteAPI.TypingSessionCacheProvider.TypingSessionCache		let	validSessionId
+class	SiriAutoCompleteAPI.VectorDBWriteClientManager			
+class	SiriAutoCompleteAPI.VectorDBWriteClientManager		let	databaseDirectory
+class	SiriAutoCompleteAPI.VectorDBWriteClientManager		let	featureFlagsProvider
+class	SiriAutoCompleteAPI.VectorDBWriteClientManager		var	writeEnabledClient
+class	SiriAutoCompleteAPI.VectorDBWriteClientManager		var	isActivated
+enum	SiriAutoCompleteAPI.VectorDBWriteClientManager.DBWriteClientManagerErrors			
+enum	SiriAutoCompleteAPI.VectorDBWriteClientManager.DBWriteClientManagerErrors		case	nilWriteEnabledClient
+class	SiriAutoCompleteAPI.DefaultProfanityPreferenceProvider			
+class	SiriAutoCompleteAPI.DefaultProfanityPreferenceProvider		var	_allowExplicitLanguage
+struct	SiriAutoCompleteAPI.VectorSearchAssets			
+struct	SiriAutoCompleteAPI.VectorSearchAssets		var	assets
+class	SiriAutoCompleteAPI.VectorSearchAssets.Builder			
+class	SiriAutoCompleteAPI.VectorSearchAssets.Builder		var	phrases
+class	SiriAutoCompleteAPI.VectorSearchAssets.Builder		var	seenPhrases
+class	SiriAutoCompleteAPI.TypoRecoveryManager			
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService			
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	featureFlagProvider
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	dbWriteClientManager
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	profanityPreferenceProvider
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	blockedAppsProvider
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	typingSessionCacheProvider
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	morphunTokenizer
+class	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService		let	localeProvider
+struct	SiriAutoCompleteAPI.AutoCompleteResult			
+struct	SiriAutoCompleteAPI.AutoCompleteResult		let	query
+struct	SiriAutoCompleteAPI.AutoCompleteResult		let	phrases
+struct	SiriAutoCompleteAPI.AutoCompleteResult		let	state
+enum	SiriAutoCompleteAPI.AutoCompleteResult.ResultState			
+enum	SiriAutoCompleteAPI.AutoCompleteResult.ResultState		case	fromIndex
+enum	SiriAutoCompleteAPI.AutoCompleteResult.ResultState		case	fromCache
+enum	SiriAutoCompleteAPI.AutoCompleteResult.ResultState		case	error
+enum	SiriAutoCompleteAPI.AutoCompleteResult.ResultState		case	fromPreviousRequest
+enum	SiriAutoCompleteAPI.AutoCompleteResult.CodingKeys			
+enum	SiriAutoCompleteAPI.AutoCompleteResult.CodingKeys		case	query
+enum	SiriAutoCompleteAPI.AutoCompleteResult.CodingKeys		case	phrases
+enum	SiriAutoCompleteAPI.AutoCompleteResult.CodingKeys		case	state
+struct	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService.UniqueIdentifiers			
+struct	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService.UniqueIdentifiers		let	bundleId
+struct	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService.UniqueIdentifiers		let	actionIdentifier
+struct	SiriAutoCompleteAPI.DefaultSiriAutoCompleteService.UniqueIdentifiers		let	source
+enum	SiriAutoCompleteAPI.RankingExclusionReasons			
+enum	SiriAutoCompleteAPI.RankingExclusionReasons		case	none
+enum	SiriAutoCompleteAPI.RankingExclusionReasons		case	appBlocked
+enum	SiriAutoCompleteAPI.RankingExclusionReasons		case	stopwordsOnlyMatch
+enum	SiriAutoCompleteAPI.RankingExclusionReasons		case	duplicateActionId
+enum	SiriAutoCompleteAPI.RankingExclusionReasons		case	localeMissmatch
+enum	SiriAutoCompleteAPI.RankingExclusionReasons		case	tooManyCandidates
+struct	SiriAutoCompleteAPI.RankingData			
+struct	SiriAutoCompleteAPI.RankingData		let	phrase
+struct	SiriAutoCompleteAPI.RankingData		var	normalizedScore
+struct	SiriAutoCompleteAPI.RankingData		var	tapScore
+struct	SiriAutoCompleteAPI.RankingData		var	editDistance
+struct	SiriAutoCompleteAPI.RankingData		var	exclusionReason
+struct	SiriAutoCompleteAPI.RankingData		var	isTopSource
+struct	SiriAutoCompleteAPI.RankingData		var	isStopWordMatch
+struct	SiriAutoCompleteAPI.RankingData		var	isNonsignificantWordMatch
+struct	SiriAutoCompleteAPI.RankingData		var	promotedByTapScore
+struct	SiriAutoCompleteAPI.RankingData		var	downrankedById
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService			
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService		let	client
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService		let	directAccessService
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService		let	featureFlagsProvider
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService		let	sequentialProcessor
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService		var	lastSessionId
+class	SiriAutoCompleteAPI.SiriAutoCompleteXPCService		var	lastResult
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags			
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	searchIndex
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	searchIndexMac
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	ftsQuery
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	ftsQueryMac
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	appIntentSources
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	appIntentSourcesMac
+enum	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags		case	localizedSuggestions
+enum	SiriAutoCompleteAPI.SiriUIFeatureFlags			
+enum	SiriAutoCompleteAPI.SiriUIFeatureFlags		case	sae
+struct	SiriAutoCompleteAPI.DefaultSiriAutoCompleteFeatureFlagsProvider			
+protocol	SiriAutoCompleteAPI.AutoCompleteXPCClient			
+protocol	SiriAutoCompleteAPI.StopWordAndNonSignificantWordListUpdater			
+protocol	SiriAutoCompleteAPI.LocaleProvider			
+protocol	SiriAutoCompleteAPI.MorphunTokenizer			
+protocol	SiriAutoCompleteAPI.BlockedAppsProvider			
+protocol	SiriAutoCompleteAPI.TypingCache			
+protocol	SiriAutoCompleteAPI.ProfanityPreferenceProvider			
+protocol	SiriAutoCompleteAPI.SiriAutoCompleteService			
+protocol	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlagsProvider			
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhraseSource	Swift.Equatable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhraseSource	Swift.Hashable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhraseSource	Swift.RawRepresentable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhraseSource	Swift.Decodable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhraseSource	Swift.Encodable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompleteTableColumnNames	Swift.Equatable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompleteTableColumnNames	Swift.Hashable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompleteTableColumnNames	Swift.RawRepresentable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhrase	Swift.CustomStringConvertible		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhrase	Swift.Equatable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhrase	Swift.Decodable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhrase	Swift.Encodable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompletePhrase	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriAutoCompleteAPI.StopWordAndNonSignificantWordList	SiriAutoCompleteAPI.StopWordAndNonSignificantWordListUpdater		
+protocol	conformance SiriAutoCompleteAPI.DefaultLocaleProvider	SiriAutoCompleteAPI.LocaleProvider		
+protocol	conformance SiriAutoCompleteAPI.DefaultMorphunTokenizer	SiriAutoCompleteAPI.MorphunTokenizer		
+protocol	conformance SiriAutoCompleteAPI.DefaultBlockedAppsProvider	SiriAutoCompleteAPI.BlockedAppsProvider		
+protocol	conformance DisabledTypingCache	SiriAutoCompleteAPI.TypingCache		
+protocol	conformance DisabledTypingCache	Swift.Actor		
+protocol	conformance SiriAutoCompleteAPI.TypingSessionCacheProvider	Swift.Actor		
+protocol	conformance SiriAutoCompleteAPI.DefaultTypingCache	SiriAutoCompleteAPI.TypingCache		
+protocol	conformance SiriAutoCompleteAPI.DefaultTypingCache	Swift.Actor		
+protocol	conformance SiriAutoCompleteAPI.VectorDBWriteClientManager	Swift.Actor		
+protocol	conformance VectorDBWriteClientManager.DBWriteClientManagerErrors	Swift.Hashable		
+protocol	conformance VectorDBWriteClientManager.DBWriteClientManagerErrors	Swift.Equatable		
+protocol	conformance VectorDBWriteClientManager.DBWriteClientManagerErrors	Swift.Error		
+protocol	conformance SiriAutoCompleteAPI.DefaultProfanityPreferenceProvider	SiriAutoCompleteAPI.ProfanityPreferenceProvider		
+protocol	conformance SiriAutoCompleteAPI.DefaultSiriAutoCompleteService	SiriAutoCompleteAPI.SiriAutoCompleteService		
+protocol	conformance AutoCompleteResult.ResultState	Swift.Equatable		
+protocol	conformance AutoCompleteResult.ResultState	Swift.Hashable		
+protocol	conformance AutoCompleteResult.ResultState	Swift.RawRepresentable		
+protocol	conformance AutoCompleteResult.ResultState	Swift.Decodable		
+protocol	conformance AutoCompleteResult.ResultState	Swift.Encodable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompleteResult	Swift.Decodable		
+protocol	conformance SiriAutoCompleteAPI.AutoCompleteResult	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriAutoCompleteAPI.RankingExclusionReasons	Swift.RawRepresentable		
+protocol	conformance SiriAutoCompleteAPI.RankingExclusionReasons	Swift.Hashable		
+protocol	conformance SiriAutoCompleteAPI.RankingExclusionReasons	Swift.Equatable		
+protocol	conformance DefaultSiriAutoCompleteService.UniqueIdentifiers	Swift.Equatable		
+protocol	conformance DefaultSiriAutoCompleteService.UniqueIdentifiers	Swift.Hashable		
+protocol	conformance SiriAutoCompleteAPI.SiriAutoCompleteXPCService	SiriAutoCompleteAPI.SiriAutoCompleteService		
+protocol	conformance SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags	Swift.Equatable		
+protocol	conformance SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags	Swift.Hashable		
+protocol	conformance SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriAutoCompleteAPI.SiriUIFeatureFlags	Swift.Equatable		
+protocol	conformance SiriAutoCompleteAPI.SiriUIFeatureFlags	Swift.Hashable		
+protocol	conformance SiriAutoCompleteAPI.SiriUIFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriAutoCompleteAPI.DefaultSiriAutoCompleteFeatureFlagsProvider	SiriAutoCompleteAPI.SiriAutoCompleteFeatureFlagsProvider		
+extension	SiriAutoCompleteAPI.AutoCompletePhraseSource	RawRepresentable		
+extension	SiriAutoCompleteAPI.AutoCompleteTableColumnNames	RawRepresentable		
+extension	SiriAutoCompleteAPI.AutoCompleteResult.ResultState	RawRepresentable		
+extension	SiriAutoCompleteAPI.RankingExclusionReasons	RawRepresentable		

@@ -1,0 +1,760 @@
+kind	type	conformance	member_kind	member
+class	modelmanagerd.RemoteXPCProvider			
+class	modelmanagerd.PowerProvider			
+class	modelmanagerd.RequestManager.ExecutionGroup			
+class	modelmanagerd.RequestManager.ExecutionGroup		let	uuid
+class	modelmanagerd.RequestManager.ExecutionGroup		let	assets
+class	modelmanagerd.RequestManager.ExecutionGroup		let	runtimeAssets
+class	modelmanagerd.RequestManager.ExecutionGroup		let	acquireBlock
+class	modelmanagerd.RequestManager.ExecutionGroup		let	releaseBlock
+class	modelmanagerd.RequestManager.ExecutionGroup		let	inferenceProviderDescriptor
+class	modelmanagerd.RequestManager.ExecutionGroup		var	unsafeManagerOwnedState
+struct	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState			
+struct	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState		var	state
+struct	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState		var	acquireTask
+struct	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState		var	executeTask
+struct	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState		var	releaseTask
+struct	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState		var	executionTasks
+enum	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState.State			
+enum	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState.State		case	initial
+enum	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState.State		case	acquiring
+enum	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState.State		case	executing
+enum	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState.State		case	releasing
+enum	modelmanagerd.RequestManager.ExecutionGroup.ManagerOwnedState.State		case	done
+class	modelmanagerd.ReportingProvider			
+class	modelmanagerd.ReportingProvider		let	eventReporter
+enum	modelmanagerd.StepIdentifier			
+enum	modelmanagerd.StepIdentifier		case	executeRequest
+enum	modelmanagerd.StepIdentifier		case	queueRequest
+enum	modelmanagerd.StepIdentifier		case	prewarmSession
+class	modelmanagerd.ReportingProvidingMock			
+class	modelmanagerd.ReportingProvidingMock		var	emitInferenceStepEventStartClosure
+class	modelmanagerd.ReportingProvidingMock		var	emitInferenceStepEventEndClosure
+class	modelmanagerd.ReportingProvidingMock		var	emitPrewarmSessionEventClosure
+class	modelmanagerd.PolicyManager			
+class	modelmanagerd.PolicyManager		let	filesystem
+class	modelmanagerd.PolicyManager		let	osVariant
+class	modelmanagerd.PolicyManager		let	requestManager
+class	modelmanagerd.PolicyManager		let	assetManager
+class	modelmanagerd.PolicyManager		let	modelCatalog
+class	modelmanagerd.PolicyManager		var	_filePolicies
+class	modelmanagerd.PolicyManager		var	_trialPolicies
+class	modelmanagerd.PolicyManager		var	policies
+class	modelmanagerd.PolicyManager		var	allowList
+class	modelmanagerd.PolicyManager		let	_workQueue
+class	modelmanagerd.PolicyManager		var	_assertions
+class	modelmanagerd.PolicyManager		var	_currentPolicy
+class	modelmanagerd.PolicyManager		var	_transaction
+class	modelmanagerd.RegulatoryDomainProvider			
+class	modelmanagerd.DaemonContext			
+class	modelmanagerd.DaemonContext		let	inferenceProviderManager
+class	modelmanagerd.DaemonContext		let	assetManager
+class	modelmanagerd.DaemonContext		let	requestManager
+class	modelmanagerd.DaemonContext		let	remoteManager
+class	modelmanagerd.DaemonContext		let	sessionManager
+class	modelmanagerd.DaemonContext		let	policyManager
+class	modelmanagerd.DaemonContext		let	trialManager
+class	modelmanagerd.DaemonContext		let	modelCatalog
+class	modelmanagerd.DaemonContext		let	remoteXPC
+class	modelmanagerd.DaemonContext		let	modelXPCDispatcher
+class	modelmanagerd.DaemonContext		let	remoteXPCDispatcher
+class	modelmanagerd.DaemonContext		let	simulatorXPCDispatcher
+class	modelmanagerd.DaemonContext		let	telemetryManager
+class	modelmanagerd.DaemonContext		let	neuralEngine
+class	modelmanagerd.DaemonContext		let	filesystem
+class	modelmanagerd.DaemonContext		let	sysctl
+class	modelmanagerd.DaemonContext		let	runningBoard
+class	modelmanagerd.DaemonContext		let	trialFramework
+class	modelmanagerd.DaemonContext		let	osVariant
+class	modelmanagerd.DaemonContext		let	useCaseManager
+class	modelmanagerd.DaemonContext		let	memoryPressureObserver
+class	modelmanagerd.DaemonContext		let	stateDumpManager
+class	modelmanagerd.DaemonContext		let	regulatoryDomain
+class	modelmanagerd.DaemonContext		let	reportingProvider
+class	modelmanagerd.DaemonContext		let	osEligibility
+class	modelmanagerd.DaemonContext		let	currentTime
+class	modelmanagerd.DaemonContext		let	extensionKit
+class	modelmanagerd.Daemon			
+class	modelmanagerd.Daemon		let	info
+class	modelmanagerd.Daemon		let	logHandle
+class	modelmanagerd.Daemon		let	context
+class	modelmanagerd.Daemon		var	simulatorListener
+class	modelmanagerd.ModelXPCMessageHandler			
+class	modelmanagerd.ModelXPCMessageHandler		let	dispatcher
+class	modelmanagerd.ModelXPCMessageHandler		let	sessionPeerProcess
+class	modelmanagerd.ModelXPCMessageHandler		let	verifiedEntitlements
+class	modelmanagerd.SessionManager			
+class	modelmanagerd.SessionManager		var	sessions
+class	modelmanagerd.SessionManager		let	queue
+class	modelmanagerd.SessionManager		let	runningBoard
+class	modelmanagerd.SessionManager		let	assetManager
+class	modelmanagerd.SessionManager		let	modelCatalog
+class	modelmanagerd.SessionManager		let	sysctl
+class	modelmanagerd.SessionManager		let	osVariant
+class	modelmanagerd.SessionManager		let	requestManager
+class	modelmanagerd.SessionManager		let	telemetryManager
+class	modelmanagerd.SessionManager		let	useCaseManager
+class	modelmanagerd.SessionManager		let	inferenceProviderManager
+class	modelmanagerd.SessionManager		var	currentlyExecuting
+class	modelmanagerd.SessionManager		let	reportingProvider
+class	modelmanagerd.SessionManager		let	osEligibility
+class	modelmanagerd.SessionManager		var	processStateUpdateTask
+class	modelmanagerd.ModelXPCDispatcher			
+class	modelmanagerd.ModelXPCDispatcher		let	assertionDispatcher
+class	modelmanagerd.ModelXPCDispatcher		let	assetVersionSwitcher
+class	modelmanagerd.ModelXPCDispatcher		let	runningBoard
+class	modelmanagerd.ModelXPCDispatcher		let	osVariant
+class	modelmanagerd.ModelXPCDispatcher		let	assetManager
+class	modelmanagerd.ModelXPCDispatcher		let	policyManager
+class	modelmanagerd.ModelXPCDispatcher		let	sessionManager
+class	modelmanagerd.ModelXPCDispatcher		let	remoteManager
+class	modelmanagerd.ModelXPCDispatcher		let	modelCatalog
+class	modelmanagerd.ModelXPCDispatcher		let	stateDumpManager
+class	modelmanagerd.ModelXPCDispatcher		let	requestManager
+class	modelmanagerd.ModelXPCDispatcher		let	useCaseManager
+class	modelmanagerd.ModelXPCDispatcher		let	sysctl
+class	modelmanagerd.UseCaseManager			
+class	modelmanagerd.UseCaseManager		let	modelCatalog
+class	modelmanagerd.UseCaseManager		let	regulatoryDomain
+class	modelmanagerd.UseCaseManager		let	osEligibility
+class	modelmanagerd.UseCaseManager		var	disabledIdentifiers
+struct	modelmanagerd.DisabledUseCaseFile			
+struct	modelmanagerd.DisabledUseCaseFile		let	disabled
+enum	modelmanagerd.DisabledUseCaseInternalError			
+enum	modelmanagerd.DisabledUseCaseInternalError		case	assetNotAvailable
+enum	modelmanagerd.DisabledUseCaseFile.CodingKeys			
+enum	modelmanagerd.DisabledUseCaseFile.CodingKeys		case	disabled
+class	modelmanagerd.InferenceProviderExtensionConnection			
+class	modelmanagerd.InferenceProviderExtensionConnection		var	sender
+class	modelmanagerd.InferenceProviderExtensionConnection		var	handle
+class	modelmanagerd.InferenceProviderExtensionConnection		var	isValid
+class	modelmanagerd.InferenceProviderExtensionConnection		var	processDeathTask
+class	modelmanagerd.InferenceProviderExtensionConnection		var	extensionCleanupTask
+class	modelmanagerd.InferenceProviderExtensionConnection		var	lastExitContext
+class	modelmanagerd.InferenceProviderExtensionConnection		var	lastPid
+class	modelmanagerd.InferenceProviderExtensionConnection		var	inTerminationCleanup
+class	modelmanagerd.InferenceProviderExtensionConnection		var	assertion
+class	modelmanagerd.InferenceProviderExtensionConnection		let	descriptor
+class	modelmanagerd.InferenceProviderExtensionConnection		let	providerIdentification
+class	modelmanagerd.InferenceProviderExtensionConnection		let	extensionKit
+class	modelmanagerd.InferenceProviderExtensionConnection		var	loadingCount
+class	modelmanagerd.InferenceProviderExtensionConnection		var	activeRequest
+class	modelmanagerd.InferenceProviderExtensionConnection		var	activePriority
+class	modelmanagerd.InferenceProviderExtensionConnection		let	workQueue
+class	modelmanagerd.InferenceProviderExtensionConnection		var	terminationHandlers
+struct	modelmanagerd.InferenceProviderExtensionConnection.TerminationHandlerWrapper			
+struct	modelmanagerd.InferenceProviderExtensionConnection.TerminationHandlerWrapper		var	handler
+struct	modelmanagerd.InferenceProviderExtensionConnection.TerminationHandlerWrapper		let	identifier
+enum	modelmanagerd.InferenceProviderExtensionConnection.ProviderIdentification			
+enum	modelmanagerd.InferenceProviderExtensionConnection.ProviderIdentification		case	builtIn
+enum	modelmanagerd.InferenceProviderExtensionConnection.ProviderIdentification		case	external
+class	modelmanagerd.RemoteIPCMessageHandler			
+class	modelmanagerd.RemoteIPCMessageHandler		let	remoteManager
+class	modelmanagerd.InferenceProviderManager			
+class	modelmanagerd.InferenceProviderManager		var	inferenceProviderConnections
+class	modelmanagerd.InferenceProviderManager		let	expectedNumberOfUpdates
+class	modelmanagerd.InferenceProviderManager		var	updatesReceived
+class	modelmanagerd.InferenceProviderManager		var	firstUpdateContinuations
+class	modelmanagerd.InferenceProviderManager		let	extensionKit
+class	modelmanagerd.InferenceProviderManager		let	_workQueue
+class	modelmanagerd.InferenceProviderManager		var	assetPurgeHandler
+class	modelmanagerd.InferenceProviderManager		var	discoveredIdentities
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection			
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection		var	groupsByIdentifier
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection		let	extensionKit
+struct	modelmanagerd.InferenceProviderManager.InferenceProviderExtensionInformation			
+struct	modelmanagerd.InferenceProviderManager.InferenceProviderExtensionInformation		let	identifier
+struct	modelmanagerd.InferenceProviderManager.InferenceProviderExtensionInformation		let	uuid
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group			
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group		let	prototype
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group		var	defaultConnection
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group		var	perInstanceConnections
+struct	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group		let	extensionKit
+enum	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group.Prototype			
+enum	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group.Prototype		case	builtin
+enum	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group.Prototype		case	external
+enum	modelmanagerd.InferenceProviderManager.ConnectionCollection.Group.Prototype		case	connection
+struct	modelmanagerd.CurrentTimeProvider			
+struct	modelmanagerd.AssetInferenceProvider			
+struct	modelmanagerd.AssetInferenceProvider		let	id
+struct	modelmanagerd.AssetInferenceProvider		let	instanceID
+struct	modelmanagerd.AssetInferenceProvider		let	hostedOnServer
+struct	modelmanagerd.ModelCatalogAsset			
+struct	modelmanagerd.ModelCatalogAsset		let	id
+struct	modelmanagerd.ModelCatalogAsset		let	dependencies
+struct	modelmanagerd.ModelCatalogAsset		let	inferenceProviders
+struct	modelmanagerd.ModelCatalogAsset		let	vmInferenceProviders
+struct	modelmanagerd.ModelCatalogAsset		let	cost
+struct	modelmanagerd.ModelCatalogAsset		let	isCacheable
+struct	modelmanagerd.ModelCatalogAsset		let	shouldAvoidUnload
+struct	modelmanagerd.ModelCatalogAsset		let	dynamicModeAllowed
+struct	modelmanagerd.ModelCatalogAsset		let	useEnergyEfficientMode
+struct	modelmanagerd.ModelCatalogAsset		let	unentitledGatedByFoundationModels
+struct	modelmanagerd.ModelCatalogAsset		let	unentitledUseCases
+struct	modelmanagerd.ModelCatalogAsset		let	preferUnload
+struct	modelmanagerd.ModelCatalogAssetVersionedData			
+struct	modelmanagerd.ModelCatalogAssetVersionedData		let	version
+struct	modelmanagerd.ModelCatalogAssetVersionedData		let	path
+struct	modelmanagerd.ModelCatalogAssetVersionedData		let	versionLock
+struct	modelmanagerd.RemoteXPCReceivedMessage			
+struct	modelmanagerd.RemoteXPCReceivedMessage		var	provider
+struct	modelmanagerd.RemoteXPCReceivedMessage		var	xpcDictionary
+struct	modelmanagerd.RemoteXPCReceivedMessage		let	expectsReply
+struct	modelmanagerd.RemoteXPCReceivedMessage		let	isSync
+struct	modelmanagerd.RemoteXPCReceivedMessage		var	auditToken
+struct	modelmanagerd.InferenceProviderAssetManager.Policy			
+struct	modelmanagerd.InferenceProviderAssetManager.Policy		let	assetPolicy
+struct	modelmanagerd.InferenceProviderAssetManager.Policy		let	memoryBudget
+struct	modelmanagerd.InferenceProviderAssetManager.Policy		let	inactiveAssetTimeout
+struct	modelmanagerd.InferenceProviderAssetManager.Policy		let	assetTransitionDelay
+struct	modelmanagerd.InferenceProviderAssetManager.Policy		let	activeAssertions
+class	modelmanagerd.TrialFrameworkProvider			
+class	modelmanagerd.TrialFrameworkProvider		let	client
+struct	modelmanagerd.OSEligibilityDomain			
+struct	modelmanagerd.OSEligibilityDomain		let	rawValue
+class	modelmanagerd.EKExtensionProcess			
+class	modelmanagerd.EKExtensionProcess		let	process
+class	modelmanagerd.EKQueryDelegate	NSObject		
+class	modelmanagerd.EKQueryDelegate	NSObject	let	onUpdate
+class	modelmanagerd.ExtensionKitProvider			
+class	modelmanagerd.ExtensionKitProvider		let	delegate
+class	modelmanagerd.ExtensionKitProvider		let	queryController
+struct	modelmanagerd.EKExtensionIdentity			
+struct	modelmanagerd.EKExtensionIdentity		let	identity
+class	modelmanagerd.InferenceProviderAssetManager			
+class	modelmanagerd.InferenceProviderAssetManager		let	workQueue
+class	modelmanagerd.InferenceProviderAssetManager		var	assets
+class	modelmanagerd.InferenceProviderAssetManager		var	policy
+class	modelmanagerd.InferenceProviderAssetManager		var	purgeInactiveAssetsTask
+class	modelmanagerd.InferenceProviderAssetManager		var	delayedAssetTransitionTask
+class	modelmanagerd.InferenceProviderAssetManager		var	assetVersionChangeUnloadTask
+class	modelmanagerd.InferenceProviderAssetManager		let	modelCatalog
+class	modelmanagerd.InferenceProviderAssetManager		let	providerManager
+class	modelmanagerd.InferenceProviderAssetManager		let	telemetryManager
+class	modelmanagerd.InferenceProviderAssetManager		let	neuralEngine
+class	modelmanagerd.InferenceProviderAssetManager		let	sysctl
+enum	modelmanagerd.InferenceProviderAssetManagerInternalError			
+enum	modelmanagerd.InferenceProviderAssetManagerInternalError		case	assetNotFound
+enum	modelmanagerd.InferenceProviderAssetManagerInternalError		case	assetInUse
+class	modelmanagerd.InferenceProviderAsset			
+class	modelmanagerd.InferenceProviderAsset		let	descriptor
+class	modelmanagerd.InferenceProviderAsset		let	path
+class	modelmanagerd.InferenceProviderAsset		let	cost
+class	modelmanagerd.InferenceProviderAsset		let	isCacheable
+class	modelmanagerd.InferenceProviderAsset		let	shouldAvoidUnload
+class	modelmanagerd.InferenceProviderAsset		let	preferUnload
+class	modelmanagerd.InferenceProviderAsset		let	dynamicModeAllowed
+class	modelmanagerd.InferenceProviderAsset		let	useEnergyEfficientMode
+class	modelmanagerd.InferenceProviderAsset		let	inferenceProviderConnection
+class	modelmanagerd.InferenceProviderAsset		var	unsafeManagerOwnedState
+class	modelmanagerd.InferenceProviderAsset		let	telemetryManager
+class	modelmanagerd.InferenceProviderAsset		let	neuralEngine
+class	modelmanagerd.InferenceProviderAsset		let	weakManagerWrapper
+class	modelmanagerd.InferenceProviderAsset		let	connectionTerminationIdentifier
+struct	modelmanagerd.InferenceProviderAsset.WeakManagerWrapper			
+struct	modelmanagerd.InferenceProviderAsset.WeakManagerWrapper		var	assetManager
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState			
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	loadState
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	pendingLoadState
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	hasFailedToUnload
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	pendingTransitionTask
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	timeLastRequestEnded
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	timeLastForegroundSessionEnded
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	requiredByOtherAssets
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	foregroundSessions
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	executionGroups
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	invalidated
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		var	updateAvailable
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		let	versionLock
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		let	shouldAvoidUnload
+struct	modelmanagerd.InferenceProviderAsset.ManagerOwnedState		let	preferUnload
+class	modelmanagerd.ModelXPCDispatcher.AssetVersionSwitcher			
+class	modelmanagerd.ModelXPCDispatcher.AssetVersionSwitcher		let	logHandle
+class	modelmanagerd.ModelXPCDispatcher.AssetVersionSwitcher		let	assetManager
+class	modelmanagerd.ModelXPCDispatcher.AssetVersionSwitcher		let	modelCatalog
+class	modelmanagerd.ModelXPCDispatcher.AssetVersionSwitcher		let	requestManager
+class	modelmanagerd.ModelXPCDispatcher.AssetVersionSwitcher		var	forceVersionSwitchTask
+struct	modelmanagerd.RequestManager.Policy			
+struct	modelmanagerd.RequestManager.Policy		let	cancelRequestsAtOrBelowPriority
+struct	modelmanagerd.RequestManager.Policy		let	unentitledBackgroundInferenceWindow
+struct	modelmanagerd.RequestManager.Policy		let	unentitledBackgroundInferenceCap
+struct	modelmanagerd.RequestManager.Policy		let	activeAssertions
+struct	modelmanagerd.OSVariantProvider			
+class	modelmanagerd.TelemetrySignposter			
+class	modelmanagerd.TelemetrySignposter		let	signPoster
+class	modelmanagerd.TelemetrySignposter		let	execRequestPostString
+class	modelmanagerd.TelemetrySignposter		let	queueRequestPostString
+class	modelmanagerd.TelemetrySignposter		let	assetTransitionPostString
+class	modelmanagerd.TelemetrySignposter		let	addSessionPostString
+class	modelmanagerd.TelemetrySignposter		let	removeSessionPostString
+class	modelmanagerd.TelemetrySignposter		let	preWarmPostString
+class	modelmanagerd.TelemetrySignposter		let	logHandle
+class	modelmanagerd.TrialFrameworkMock			
+class	modelmanagerd.TrialFrameworkMock		var	isEnrolled
+class	modelmanagerd.TrialFrameworkMock		var	boolFactorLevels
+class	modelmanagerd.TrialFrameworkMock		var	int64FactorLevels
+class	modelmanagerd.TrialFrameworkMock		var	updateHandlers
+class	modelmanagerd.FilesystemProvider			
+class	modelmanagerd.RemoteManager			
+class	modelmanagerd.RemoteManager		let	modelCatalog
+class	modelmanagerd.RemoteManager		let	inferenceProviderManager
+class	modelmanagerd.RemoteManager		let	requestManager
+class	modelmanagerd.RemoteManager		let	sysctl
+class	modelmanagerd.RemoteManager		var	activeRequests
+class	modelmanagerd.RemoteManager		var	ongoingStreams
+class	modelmanagerd.RemoteManager		var	internalStreamSet
+struct	modelmanagerd.RemoteManager.InternalRemoteRequestState			
+struct	modelmanagerd.RemoteManager.InternalRemoteRequestState		let	sessionID
+struct	modelmanagerd.RemoteManager.InternalRemoteRequestState		let	requestID
+struct	modelmanagerd.RemoteManager.InternalRemoteRequestState		let	interface
+struct	modelmanagerd.RemoteManager.StreamBacking			
+struct	modelmanagerd.RemoteManager.StreamBacking		let	requestID
+struct	modelmanagerd.RemoteManager.StreamBacking		let	firstElement
+struct	modelmanagerd.RemoteManager.StreamBacking		let	directSender
+struct	modelmanagerd.RemoteManager.StreamBacking		var	emittedFirstElement
+struct	modelmanagerd.RemoteManager.StreamBacking		let	invalidator
+enum	modelmanagerd.RemoteManager.InternalRemoteRequestState.CodingKeys			
+enum	modelmanagerd.RemoteManager.InternalRemoteRequestState.CodingKeys		case	sessionID
+enum	modelmanagerd.RemoteManager.InternalRemoteRequestState.CodingKeys		case	requestID
+enum	modelmanagerd.RemoteManager.InternalRemoteRequestState.CodingKeys		case	interface
+class	modelmanagerd.RunningBoardProvider			
+class	modelmanagerd.RunningBoardProvider		let	_processMonitor
+class	modelmanagerd.RunningBoardProvider		var	_monitoredPids
+class	modelmanagerd.RunningBoardProvider		let	queue
+class	modelmanagerd.RunningBoardProvider		let	_workQueue
+class	modelmanagerd.RunningBoardProvider		var	lazy
+class	modelmanagerd.SysctlProvider			
+class	modelmanagerd.SysctlProvider		let	isRunningInVM
+class	modelmanagerd.SysctlProvider		let	isRunningInSimulator
+struct	modelmanagerd.AssetTransitionDelayTrial			
+class	modelmanagerd.AssertionRequestDispatcher			
+class	modelmanagerd.AssertionRequestDispatcher		let	runningBoard
+class	modelmanagerd.AssertionRequestDispatcher		let	policyManager
+class	modelmanagerd.TrialManager			
+class	modelmanagerd.TrialManager		let	trialFramework
+class	modelmanagerd.TrialManager		let	policyManager
+class	modelmanagerd.TrialManager		let	workQueue
+class	modelmanagerd.TrialManager		let	trials
+class	modelmanagerd.TrialManager		var	enrollments
+struct	modelmanagerd.StateDumpManager			
+struct	modelmanagerd.StateDumpManager		let	assetManager
+struct	modelmanagerd.StateDumpManager		let	inferenceProviderManager
+struct	modelmanagerd.StateDumpManager		let	policyManager
+struct	modelmanagerd.StateDumpManager		let	sessionManager
+struct	modelmanagerd.StateDumpManager		let	remoteManager
+struct	modelmanagerd.StateDumpManager		let	requestManager
+struct	modelmanagerd.StateDumpManager		let	useCasemanager
+struct	modelmanagerd.StateDumpManager		let	trialManager
+class	modelmanagerd.RemoteXPCListener.IncomingSessionRequest			
+class	modelmanagerd.SimulatorXPCListener.IncomingSessionRequest			
+struct	modelmanagerd.SimulatorXPCSession			
+struct	modelmanagerd.SimulatorXPCListener			
+struct	modelmanagerd.SimulatorXPCListener		let	listener
+class	modelmanagerd.DaemonSession			
+class	modelmanagerd.DaemonSession		let	metadata
+class	modelmanagerd.DaemonSession		let	auditToken
+class	modelmanagerd.DaemonSession		let	isFoundationModelsEligible
+class	modelmanagerd.DaemonSession		let	isUnentitled
+class	modelmanagerd.DaemonSession		let	modelCatalog
+class	modelmanagerd.DaemonSession		let	requestManager
+class	modelmanagerd.DaemonSession		let	sysctl
+class	modelmanagerd.DaemonSession		var	unsafeManagerOwnedState
+class	modelmanagerd.DaemonSession		let	_lazyState
+struct	modelmanagerd.DaemonSession.LazyState			
+struct	modelmanagerd.DaemonSession.LazyState		var	assetBundleIdentifier
+struct	modelmanagerd.DaemonSession.LazyState		var	assets
+struct	modelmanagerd.DaemonSession.LazyState		var	inferenceProvider
+struct	modelmanagerd.DaemonSession.LazyState		var	inferenceProviderLocked
+struct	modelmanagerd.DaemonSession.LazyState		var	allowUnentitled
+struct	modelmanagerd.DaemonSession.ManagerOwnedState			
+struct	modelmanagerd.DaemonSession.ManagerOwnedState		var	hasBeenPrewarmed
+struct	modelmanagerd.DaemonSession.ManagerOwnedState		var	extantRequests
+struct	modelmanagerd.DaemonSession.ManagerOwnedState		var	isCancelled
+struct	modelmanagerd.DaemonInferenceMonitor			
+struct	modelmanagerd.DaemonInferenceMonitor		let	session
+struct	modelmanagerd.DaemonInferenceMonitor		let	pid
+struct	modelmanagerd.DaemonInferenceMonitor		let	onCancel
+struct	modelmanagerd.RemoteXPCConnection			
+struct	modelmanagerd.RemoteXPCConnection		let	connection
+class	modelmanagerd.AssetBackedResourceVersionLock			
+class	modelmanagerd.AssetBackedResourceVersionLock		let	lockWithState
+class	modelmanagerd.ModelCatalogProvider			
+class	modelmanagerd.ModelCatalogProvider		let	defaultMemoryBudget
+class	modelmanagerd.ModelCatalogProvider		let	foregroundOvercommitBudget
+class	modelmanagerd.ModelCatalogProvider		let	queue
+class	modelmanagerd.ModelCatalogProvider		var	assetLock
+class	modelmanagerd.ModelCatalogProvider		var	ignoreAssetUpdates
+class	modelmanagerd.ModelCatalogProvider		var	onAssetUpdateHandlers
+struct	modelmanagerd.AssetBackedResourceVersionLock.LockWithState			
+struct	modelmanagerd.AssetBackedResourceVersionLock.LockWithState		let	assetLock
+struct	modelmanagerd.AssetBackedResourceVersionLock.LockWithState		let	identifier
+struct	modelmanagerd.AssetBackedResourceVersionLock.LockWithState		var	refCount
+struct	modelmanagerd.NonAssetBackedResourceVersionLock			
+struct	modelmanagerd.NonAssetBackedResourceVersionLock		let	identifier
+struct	modelmanagerd.ModelCatalogProvider.CatalogAssetProtocolData			
+struct	modelmanagerd.ModelCatalogProvider.CatalogAssetProtocolData		let	baseURL
+struct	modelmanagerd.ModelCatalogProvider.CatalogAssetProtocolData		let	versionNumber
+class	modelmanagerd.OSEligibilityChecker			
+class	modelmanagerd.OSEligibilityChecker		var	cache
+class	modelmanagerd._OSActivity			
+class	modelmanagerd._OSActivity		let	internalActivity
+class	modelmanagerd._OSActivity		var	activityState
+enum	modelmanagerd.ModelManager			
+enum	modelmanagerd.ModelManager		case	block_allowlist_enforcement
+enum	modelmanagerd.ModelManager		case	virtualization
+enum	modelmanagerd.ModelManager		case	simulator
+enum	modelmanagerd.ModelManager		case	idle_exit
+enum	modelmanagerd.GenerativeModels			
+enum	modelmanagerd.GenerativeModels		case	foundationModelsExtensions
+struct	modelmanagerd.ProcessHandle			
+struct	modelmanagerd.ProcessHandle		let	isDaemon
+struct	modelmanagerd.ProcessHandle		let	daemonJobLabel
+struct	modelmanagerd.ProcessHandle		let	bundleIdentifier
+struct	modelmanagerd.ProcessHandle		let	executablePath
+struct	modelmanagerd.ProcessEvent			
+struct	modelmanagerd.ProcessEvent		let	pid
+struct	modelmanagerd.ProcessEvent		let	priority
+enum	modelmanagerd.ProcessPriority			
+enum	modelmanagerd.ProcessPriority		case	userInteractive
+enum	modelmanagerd.ProcessPriority		case	background
+enum	modelmanagerd.ProcessPriority		case	suspended
+enum	modelmanagerd.ProcessPriority		case	terminated
+enum	modelmanagerd.ProcessPriority		case	unknown
+class	modelmanagerd.EventReporterWrapper			
+class	modelmanagerd.EventReporterWrapper		let	eventReporter
+class	modelmanagerd.TelemetryIntervalState			
+class	modelmanagerd.TelemetryIntervalState		let	intervalState
+class	modelmanagerd.TelemetryManager			
+class	modelmanagerd.TelemetryManager		let	eventReporters
+class	modelmanagerd.TelemetryManager		let	eventReporterProvider
+class	modelmanagerd.TelemetryManager		let	defaultEventReporter
+class	modelmanagerd.TelemetryManager		let	telemetrySignposter
+class	modelmanagerd.RemoteXPCMessageHandler			
+class	modelmanagerd.RemoteXPCMessageHandler		let	handler
+class	modelmanagerd.RemoteXPCDispatcher			
+class	modelmanagerd.RemoteXPCDispatcher		let	remoteIPCMessageHandler
+class	modelmanagerd.NeuralEngine			
+struct	modelmanagerd.MemoryPressureEventProvider			
+struct	modelmanagerd.PolicyFile			
+struct	modelmanagerd.PolicyFile		let	policies
+struct	modelmanagerd.PolicyFile		let	allowList
+enum	modelmanagerd.PolicyFile.CodingKeys			
+enum	modelmanagerd.PolicyFile.CodingKeys		case	policies
+enum	modelmanagerd.PolicyFile.CodingKeys		case	allowList
+class	modelmanagerd.InferenceMonitorManager			
+class	modelmanagerd.InferenceMonitorManager		let	_events
+class	modelmanagerd.InferenceMonitorManager		let	_continuation
+class	modelmanagerd.InferenceMonitorManager		var	_inferenceMonitors
+class	modelmanagerd.InferenceMonitorManager		var	_mostRecentState
+class	modelmanagerd.InferenceMonitorManager		var	_transaction
+class	modelmanagerd.TimeoutExecutor			
+class	modelmanagerd.TimeoutExecutor		var	continuation
+class	modelmanagerd.TimeoutExecutor		var	hitTimeout
+class	modelmanagerd.RequestManager			
+class	modelmanagerd.RequestManager		var	currentPolicy
+class	modelmanagerd.RequestManager		let	assetManager
+class	modelmanagerd.RequestManager		let	neuralEngine
+class	modelmanagerd.RequestManager		let	telemetryManager
+class	modelmanagerd.RequestManager		let	reportingProvider
+class	modelmanagerd.RequestManager		let	runningBoard
+class	modelmanagerd.RequestManager		let	currentTime
+class	modelmanagerd.RequestManager		let	foregroundOvercommitBudget
+class	modelmanagerd.RequestManager		var	activeGroups
+class	modelmanagerd.RequestManager		var	pendingForegroundGroups
+class	modelmanagerd.RequestManager		var	pendingBackgroundGroups
+class	modelmanagerd.RequestManager		let	inferenceMonitorManager
+class	modelmanagerd.RequestManager		let	rateLimiter
+class	modelmanagerd.RequestManager		var	inputStreamRequests
+class	modelmanagerd.RequestManager		var	nextExecutionGroupToAcquire
+class	modelmanagerd.RequestManager		var	extantRequests
+class	modelmanagerd.RequestManager.InputStreamRequestInfo			
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	nextToProcess
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	currentRequest
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	clientDataArray
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	pendingUnprocessedData
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	totalSubrequests
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	subrequestsProcessed
+class	modelmanagerd.RequestManager.InputStreamRequestInfo		var	pendingSubrequests
+class	modelmanagerd.RateLimiter			
+class	modelmanagerd.RateLimiter		let	_currentTime
+class	modelmanagerd.RateLimiter		let	_runningBoard
+class	modelmanagerd.RateLimiter		let	_powerStatus
+class	modelmanagerd.RateLimiter		var	_maxEvents
+class	modelmanagerd.RateLimiter		var	_windowInterval
+class	modelmanagerd.RateLimiter		var	_allEvents
+class	modelmanagerd.RateLimiter		var	_expirationTask
+class	modelmanagerd.SimulatorMessageHandler			
+class	modelmanagerd.SimulatorMessageHandler		let	handler
+class	modelmanagerd.SimulatorXPCDispatcher			
+class	modelmanagerd.SimulatorXPCDispatcher		let	remoteIPCMessageHandler
+enum	modelmanagerd.MemoryPressure			
+enum	modelmanagerd.MemoryPressure		case	critical
+enum	modelmanagerd.MemoryPressure		case	nonCritical
+enum	modelmanagerd.MemoryPressure		case	unknown
+struct	modelmanagerd.Country			
+struct	modelmanagerd.Country		let	code
+class	modelmanagerd.DaemonRequest			
+class	modelmanagerd.DaemonRequest		let	modelAssets
+class	modelmanagerd.DaemonRequest		let	runtimeAssets
+class	modelmanagerd.DaemonRequest		let	inferenceProviderConnection
+class	modelmanagerd.DaemonRequest		let	isUnentitled
+class	modelmanagerd.DaemonRequest		let	isFallback
+class	modelmanagerd.DaemonRequest		let	initiatedFromForeground
+class	modelmanagerd.DaemonRequest		let	metadata
+class	modelmanagerd.DaemonRequest		var	unsafeManagerOwnedState
+struct	modelmanagerd.DaemonRequest.ManagerOwnedState			
+struct	modelmanagerd.DaemonRequest.ManagerOwnedState		var	config
+struct	modelmanagerd.DaemonRequest.ManagerOwnedState		var	runningTask
+struct	modelmanagerd.DaemonRequest.ManagerOwnedState		var	isCancelled
+struct	modelmanagerd.DaemonRequest.ManagerOwnedState		var	cancellationReason
+class	modelmanagerd.MemoryPressureObserver			
+class	modelmanagerd.MemoryPressureObserver		let	policyManager
+class	modelmanagerd.MemoryPressureObserver		let	eventSource
+class	modelmanagerd.MemoryPressureObserver		var	activeAssertionID
+class	modelmanagerd.MemoryPressureObserver		let	criticalMemoryPressureWatchdogInterval
+class	modelmanagerd.MemoryPressureObserver		var	criticalMemoryPressureWatchdogTask
+class	modelmanagerd.SysctlMock			
+class	modelmanagerd.SysctlMock		var	isRunningInVM
+class	modelmanagerd.SysctlMock		var	isRunningInSimulator
+protocol	modelmanagerd.PowerProviding			
+protocol	modelmanagerd.ExtensionIdentity			
+protocol	modelmanagerd.ExtensionProcess			
+protocol	modelmanagerd.ExtensionKitProviding			
+protocol	modelmanagerd.ReportingProviding			
+protocol	modelmanagerd.PolicyManaging			
+protocol	modelmanagerd.ModelManagerInferenceStream			
+protocol	modelmanagerd.InferenceProviderConnection			
+protocol	modelmanagerd.ConnectionTerminationHandling			
+protocol	modelmanagerd.RemoteIPCRequestProtocol			
+protocol	modelmanagerd.ManagerActorIsolated	Manager, IsolatedState		
+protocol	modelmanagerd.InferenceProviderManaging			
+protocol	modelmanagerd.TrialFrameworkProviding			
+protocol	modelmanagerd.ModelCatalogAssetVersionLocking			
+protocol	modelmanagerd.ModelCatalogProviding			
+protocol	modelmanagerd.OSEligibilityChecking			
+protocol	modelmanagerd.InferenceProviderAssetManaging			
+protocol	modelmanagerd.Trial			
+protocol	modelmanagerd.RemoteXPCConnecting			
+protocol	modelmanagerd.ModelXPCDispatcherProtocol			
+protocol	modelmanagerd.FilesystemProviding			
+protocol	modelmanagerd.RemoteXPCProviding			
+protocol	modelmanagerd.RunningBoardProviding			
+protocol	modelmanagerd.OSVariantProviding			
+protocol	modelmanagerd.EventReporting			
+protocol	modelmanagerd.TelemetryManaging			
+protocol	modelmanagerd.RemoteDeviceProtocol			
+protocol	modelmanagerd.RemoteServiceDiscoveryProviding			
+protocol	modelmanagerd.MemoryPressureEventProviding			
+protocol	modelmanagerd.RegulatoryDomainProviding			
+protocol	modelmanagerd.ModelXPCRequestProtocol			
+protocol	modelmanagerd.InferenceXPCRequestProtocol			
+protocol	modelmanagerd.AssertionXPCRequestProtocol			
+protocol	modelmanagerd.QueryXPCRequestProtocol			
+protocol	modelmanagerd.SysctlProviding			
+protocol	modelmanagerd.CurrentTimeProviding			
+protocol	conformance modelmanagerd.RemoteXPCProvider	modelmanagerd.RemoteXPCProviding		
+protocol	conformance modelmanagerd.PowerProvider	modelmanagerd.PowerProviding		
+protocol	conformance RequestManager.ExecutionGroup	modelmanagerd.ManagerActorIsolated		
+protocol	conformance RequestManager.ExecutionGroup	protocol descriptor for CustomStringConvertible		
+protocol	conformance RequestManager.ExecutionGroup	protocol descriptor for Equatable		
+protocol	conformance RequestManager.ExecutionGroup	protocol descriptor for Hashable		
+protocol	conformance ManagerOwnedState.State	protocol descriptor for CustomStringConvertible		
+protocol	conformance RequestManager.ExecutionGroup	protocol descriptor for UUIDIdentifiable		
+protocol	conformance ManagerOwnedState.State	protocol descriptor for Comparable		
+protocol	conformance ManagerOwnedState.State	protocol descriptor for Hashable		
+protocol	conformance ManagerOwnedState.State	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.ReportingProvider	modelmanagerd.ReportingProviding		
+protocol	conformance modelmanagerd.StepIdentifier	protocol descriptor for RawRepresentable		
+protocol	conformance modelmanagerd.StepIdentifier	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.StepIdentifier	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.ReportingProvidingMock	modelmanagerd.ReportingProviding		
+protocol	conformance nominal type descriptor for AssetPolicy	protocol descriptor for Comparable: modelmanagerd		
+protocol	conformance modelmanagerd.PolicyManager	modelmanagerd.PolicyManaging		
+protocol	conformance modelmanagerd.PolicyManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.RegulatoryDomainProvider	modelmanagerd.RegulatoryDomainProviding		
+protocol	conformance modelmanagerd.Daemon	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.ModelXPCMessageHandler	protocol descriptor for TaskCancellablePeerHandler		
+protocol	conformance modelmanagerd.SessionManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.ModelXPCDispatcher	modelmanagerd.ModelXPCDispatcherProtocol		
+protocol	conformance modelmanagerd.UseCaseManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.DisabledUseCaseInternalError	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.DisabledUseCaseInternalError	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.DisabledUseCaseFile	protocol descriptor for Decodable		
+protocol	conformance modelmanagerd.DisabledUseCaseInternalError	protocol descriptor for Error		
+protocol	conformance DisabledUseCaseFile.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance DisabledUseCaseFile.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance DisabledUseCaseFile.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance DisabledUseCaseFile.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance DisabledUseCaseFile.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance DisabledUseCaseFile.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance nominal type descriptor for ResponseStreamOverridingError	modelmanagerd.ModelManagerInferenceStream		
+protocol	conformance InferenceProviderExtensionConnection.TerminationHandlerWrapper	protocol descriptor for Equatable		
+protocol	conformance InferenceProviderExtensionConnection.TerminationHandlerWrapper	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.InferenceProviderExtensionConnection	modelmanagerd.InferenceProviderConnection		
+protocol	conformance modelmanagerd.InferenceProviderExtensionConnection	protocol descriptor for Actor		
+protocol	conformance nominal type descriptor for RemoteIPCRequest	protocol descriptor for TaskCancellableIPCRequest: modelmanagerd		
+protocol	conformance nominal type descriptor for RemoteIPCRequest.CheckAvailabilityRequest	modelmanagerd.RemoteIPCRequestProtocol		
+protocol	conformance nominal type descriptor for RemoteIPCRequest.IsVersionSupported	modelmanagerd.RemoteIPCRequestProtocol		
+protocol	conformance nominal type descriptor for RemoteIPCRequest.ExecuteRemoteRequest	modelmanagerd.RemoteIPCRequestProtocol		
+protocol	conformance nominal type descriptor for RemoteIPCRequest.ExecuteRemoteStreamingRequest	modelmanagerd.RemoteIPCRequestProtocol		
+protocol	conformance nominal type descriptor for RemoteIPCRequest.FetchNextStreamingResult	modelmanagerd.RemoteIPCRequestProtocol		
+protocol	conformance modelmanagerd.RemoteIPCMessageHandler	protocol descriptor for TaskCancellablePeerHandler		
+protocol	conformance modelmanagerd.InferenceProviderManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.InferenceProviderManager	modelmanagerd.InferenceProviderManaging		
+protocol	conformance InferenceProviderManager.InferenceProviderExtensionInformation	protocol descriptor for Hashable		
+protocol	conformance InferenceProviderManager.InferenceProviderExtensionInformation	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.CurrentTimeProvider	modelmanagerd.CurrentTimeProviding		
+protocol	conformance modelmanagerd.AssetInferenceProvider	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.AssetInferenceProvider	protocol descriptor for Identifiable		
+protocol	conformance modelmanagerd.AssetInferenceProvider	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.ModelCatalogAsset	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.ModelCatalogAsset	protocol descriptor for Identifiable		
+protocol	conformance modelmanagerd.ModelCatalogAsset	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.RemoteXPCReceivedMessage	protocol descriptor for IPCReceivedMessage		
+protocol	conformance InferenceProviderAssetManager.Policy	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.TrialFrameworkProvider	modelmanagerd.TrialFrameworkProviding		
+protocol	conformance modelmanagerd.TrialFrameworkProvider	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.OSEligibilityDomain	protocol descriptor for RawRepresentable		
+protocol	conformance modelmanagerd.OSEligibilityDomain	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.OSEligibilityDomain	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.ExtensionKitProvider	modelmanagerd.ExtensionKitProviding		
+protocol	conformance modelmanagerd.EKExtensionProcess	modelmanagerd.ExtensionProcess		
+protocol	conformance modelmanagerd.EKExtensionProcess	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.EKExtensionIdentity	modelmanagerd.ExtensionIdentity		
+protocol	conformance modelmanagerd.InferenceProviderAssetManager	modelmanagerd.InferenceProviderAssetManaging		
+protocol	conformance modelmanagerd.InferenceProviderAssetManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.InferenceProviderAssetManagerInternalError	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.InferenceProviderAssetManagerInternalError	protocol descriptor for Error		
+protocol	conformance modelmanagerd.InferenceProviderAsset	modelmanagerd.ManagerActorIsolated		
+protocol	conformance modelmanagerd.InferenceProviderAsset	protocol descriptor for CustomStringConvertible		
+protocol	conformance modelmanagerd.InferenceProviderAsset	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.InferenceProviderAsset	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.InferenceProviderAsset	modelmanagerd.ConnectionTerminationHandling		
+protocol	conformance ModelXPCDispatcher.AssetVersionSwitcher	protocol descriptor for Actor		
+protocol	conformance RequestManager.Policy	protocol descriptor for CustomStringConvertible		
+protocol	conformance RequestManager.Policy	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.OSVariantProvider	modelmanagerd.OSVariantProviding		
+protocol	conformance modelmanagerd.TelemetrySignposter	modelmanagerd.TelemetryManaging		
+protocol	conformance modelmanagerd.TrialFrameworkMock	modelmanagerd.TrialFrameworkProviding		
+protocol	conformance modelmanagerd.FilesystemProvider	modelmanagerd.FilesystemProviding		
+protocol	conformance RemoteManager.InternalRemoteRequestState	protocol descriptor for Equatable		
+protocol	conformance RemoteManager.InternalRemoteRequestState	protocol descriptor for Encodable		
+protocol	conformance RemoteManager.InternalRemoteRequestState	protocol descriptor for Decodable		
+protocol	conformance RemoteManager.InternalRemoteRequestState	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.RemoteManager	protocol descriptor for Actor		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StreamBacking	protocol descriptor for GreedyBufferBacking		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance modelmanagerd.RunningBoardProvider	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.RunningBoardProvider	modelmanagerd.RunningBoardProviding		
+protocol	conformance modelmanagerd.SysctlProvider	modelmanagerd.SysctlProviding		
+protocol	conformance modelmanagerd.AssetTransitionDelayTrial	modelmanagerd.Trial		
+protocol	conformance modelmanagerd.AssertionRequestDispatcher	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.TrialManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.DaemonSession	modelmanagerd.ManagerActorIsolated		
+protocol	conformance modelmanagerd.DaemonSession	protocol descriptor for CustomStringConvertible		
+protocol	conformance modelmanagerd.DaemonSession	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.DaemonSession	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.DaemonInferenceMonitor	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.DaemonInferenceMonitor	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.RemoteXPCConnection	modelmanagerd.RemoteXPCConnecting		
+protocol	conformance modelmanagerd.ModelCatalogProvider	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.AssetBackedResourceVersionLock	modelmanagerd.ModelCatalogAssetVersionLocking		
+protocol	conformance modelmanagerd.ModelCatalogProvider	modelmanagerd.ModelCatalogProviding		
+protocol	conformance modelmanagerd.NonAssetBackedResourceVersionLock	modelmanagerd.ModelCatalogAssetVersionLocking		
+protocol	conformance modelmanagerd.OSEligibilityChecker	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.OSEligibilityChecker	modelmanagerd.OSEligibilityChecking		
+protocol	conformance modelmanagerd.ModelManager	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.ModelManager	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.ModelManager	protocol descriptor for FeatureFlagsKey		
+protocol	conformance modelmanagerd.GenerativeModels	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.GenerativeModels	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.GenerativeModels	protocol descriptor for FeatureFlagsKey		
+protocol	conformance modelmanagerd.ProcessPriority	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.ProcessPriority	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.EventReporterWrapper	modelmanagerd.EventReporting		
+protocol	conformance modelmanagerd.TelemetryManager	modelmanagerd.TelemetryManaging		
+protocol	conformance modelmanagerd.RemoteXPCMessageHandler	protocol descriptor for TaskCancellablePeerHandler		
+protocol	conformance modelmanagerd.MemoryPressureEventProvider	modelmanagerd.MemoryPressureEventProviding		
+protocol	conformance modelmanagerd.PolicyFile	protocol descriptor for Decodable		
+protocol	conformance PolicyFile.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance PolicyFile.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance PolicyFile.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance PolicyFile.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance PolicyFile.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance PolicyFile.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance modelmanagerd.InferenceMonitorManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.TimeoutExecutor	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.RequestManager	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.RateLimiter	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.SimulatorMessageHandler	protocol descriptor for TaskCancellablePeerHandler		
+protocol	conformance modelmanagerd.MemoryPressure	protocol descriptor for CustomStringConvertible		
+protocol	conformance modelmanagerd.MemoryPressure	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.MemoryPressure	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.Country	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.DaemonRequest	modelmanagerd.ManagerActorIsolated		
+protocol	conformance modelmanagerd.DaemonRequest	protocol descriptor for Hashable		
+protocol	conformance modelmanagerd.DaemonRequest	protocol descriptor for Equatable		
+protocol	conformance modelmanagerd.MemoryPressureObserver	protocol descriptor for Actor		
+protocol	conformance modelmanagerd.SysctlMock	modelmanagerd.SysctlProviding		
+protocol	conformance nominal type descriptor for ModelXPCRequest	protocol descriptor for TaskCancellableIPCRequest: modelmanagerd		
+protocol	conformance nominal type descriptor for ModelXPCRequest.CreateSessionRequest	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.CreateSessionRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.DeleteSessionRequest	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.DeleteSessionRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.PrewarmSession	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.PrewarmSession	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.CancelSessionRequest	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.CancelSessionRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ExecuteInputStreamRequest	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ExecuteInputStreamRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ExecuteRequest	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ExecuteRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.CancelRequest	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.CancelRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchModelInstance	modelmanagerd.InferenceXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchModelInstance	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.AcquireRequest	modelmanagerd.AssertionXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.AcquireRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ReleaseRequest	modelmanagerd.AssertionXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ReleaseRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchAssertionsRequest	modelmanagerd.AssertionXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchAssertionsRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.RestoreAssertionsRequest	modelmanagerd.AssertionXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.RestoreAssertionsRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchAssetsRequest	modelmanagerd.QueryXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchAssetsRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchDynamicAssetsRequest	modelmanagerd.QueryXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchDynamicAssetsRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchPolicyRequest	modelmanagerd.QueryXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchPolicyRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchDisabledUseCasesRequest	modelmanagerd.QueryXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchDisabledUseCasesRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchAvailabilityRequest	modelmanagerd.QueryXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.FetchAvailabilityRequest	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.LoadAssetBundle	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.HoldAssetBundle	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.ForceAssetVersionSwitch	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.DumpState	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.SetAssetsHaveUpdated	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.IgnoreAssetUpdates	modelmanagerd.ModelXPCRequestProtocol		
+protocol	conformance nominal type descriptor for ModelXPCRequest.StartMonitoringInferences	modelmanagerd.ModelXPCRequestProtocol		
+extension	modelmanagerd.RequestManager.ExecutionGroup	ManagerActorIsolated		
+extension	modelmanagerd.StepIdentifier	RawRepresentable		
+extension	modelmanagerd.ModelXPCMessageHandler	TaskCancellablePeerHandler		
+extension	modelmanagerd.DisabledUseCaseFile.CodingKeys	RawRepresentable		
+extension	nominal type descriptor for RemoteIPCRequest	TaskCancellableIPCRequest		
+extension	modelmanagerd.RemoteIPCMessageHandler	TaskCancellablePeerHandler		
+extension	modelmanagerd.AssetInferenceProvider	Identifiable		
+extension	modelmanagerd.ModelCatalogAsset	Identifiable		
+extension	modelmanagerd.OSEligibilityDomain	RawRepresentable		
+extension	modelmanagerd.InferenceProviderAsset	ManagerActorIsolated		
+extension	modelmanagerd.DaemonSession	ManagerActorIsolated		
+extension	modelmanagerd.RemoteXPCMessageHandler	TaskCancellablePeerHandler		
+extension	modelmanagerd.PolicyFile.CodingKeys	RawRepresentable		
+extension	modelmanagerd.SimulatorMessageHandler	TaskCancellablePeerHandler		
+extension	modelmanagerd.DaemonRequest	ManagerActorIsolated		
+extension	nominal type descriptor for ModelXPCRequest	TaskCancellableIPCRequest		

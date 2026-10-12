@@ -1,0 +1,27 @@
+owner	kind	declaration
+PCSDelayedAction	-	- (id)initWithLabel:(id)label delay:(unsigned long long)delay operationQueue:(id)queue;
+PCSDelayedAction	-	- (void)run;
+PCSDelayedAction	-	- (void)setAction:(id /* block */)action;
+PCSDelayedAction	-	- (void)setHoldTransaction:(_Bool)transaction;
+PCSDelayedAction	-	- (void)trigger;
+PCSDelayedAction	property	@property (copy) id /* block */ actionOnTrigger;
+PCSDelayedAction	property	@property (retain) NSObject<OS_dispatch_queue> *queue;
+PCSDelayedAction	property	@property (retain) NSObject<OS_dispatch_source> *waitSource;
+PCSDelayedAction	property	@property (retain) NSObject<OS_os_transaction> *pendingTransaction;
+PCSDelayedAction	property	@property (retain) NSOperationQueue *operationQueue;
+PCSDelayedAction	property	@property (retain) NSString *label;
+PCSDelayedAction	property	@property _Bool running;
+PCSDelayedAction	property	@property long long noTransaction;
+PCSDelayedAction	property	@property unsigned long long delayInSeconds;
+PCSRegistryOperation	-	- (id)debugDescription;
+PCSRegistryOperation	-	- (id)description;
+PCSRegistryOperation	-	- (id)init;
+PCSRegistryOperation	-	- (id)operationStateString;
+PCSRegistryOperation	-	- (id)pendingDependenciesString:(id)string;
+PCSRegistryOperation	-	- (id)selfname;
+PCSRegistryOperation	property	@property (retain) NSError *error;
+PCSRegistryOperation	property	@property (retain) NSString *operationUUID;
+PCSRegistryOperationPair	-	- (id)description;
+PCSRegistryOperationPair	-	- (id)init:(id)init finish:(id)finish;
+PCSRegistryOperationPair	property	@property (retain) PCSRegistryOperation *actualOperation;
+PCSRegistryOperationPair	property	@property (retain) PCSRegistryOperation *finishOperation;

@@ -1,0 +1,90 @@
+kind	type	conformance	member_kind	member
+struct	UnilogCoordination.BiomeNativeObjCStreamInspector<A	BMStoreData>		
+struct	UnilogCoordination.BiomeNativeObjCStreamInspector<A	BMStoreData>	let	stream
+class	UnilogCoordination.BaseCoordinationExtension			
+class	UnilogCoordination.BaseCoordinationExtension		let	workflowState
+class	UnilogCoordination.BaseCoordinationExtension		let	readConfig
+class	UnilogCoordination.BaseCoordinationExtension		let	stagingStreamCounters
+class	UnilogCoordination.BaseCoordinationExtension		let	stagingStreamInspectors
+class	UnilogCoordination.BaseCoordinationExtension		let	processedStreamCounters
+class	UnilogCoordination.BaseCoordinationExtension		let	processedStreamInspectors
+struct	UnilogCoordination.TenantSession<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>		
+struct	UnilogCoordination.TenantSession<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>	var	underlying
+struct	UnilogCoordination.TenantSession<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>	var	attributes
+struct	UnilogCoordination.TenantSession<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>	var	entries
+struct	UnilogCoordination.TenantLogEntry<A	Dendrite.ProtoMessage, A: Swift.Encodable>		
+struct	UnilogCoordination.TenantLogEntry<A	Dendrite.ProtoMessage, A: Swift.Encodable>	var	underlying
+struct	UnilogCoordination.TenantLogEntry<A	Dendrite.ProtoMessage, A: Swift.Encodable>	var	payload
+enum	UnilogCoordination.TenantLogEntry.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable>		
+enum	UnilogCoordination.TenantLogEntry.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable>	case	underlying
+enum	UnilogCoordination.TenantLogEntry.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable>	case	payload
+enum	UnilogCoordination.TenantSession.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>		
+enum	UnilogCoordination.TenantSession.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>	case	underlying
+enum	UnilogCoordination.TenantSession.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>	case	attributes
+enum	UnilogCoordination.TenantSession.CodingKeys<A	Dendrite.ProtoMessage, A: Swift.Encodable, B: Dendrite.ProtoMessage, B: Swift.Encodable>	case	entries
+enum	UnilogCoordination.StreamType			
+enum	UnilogCoordination.StreamType		case	biomeNative
+enum	UnilogCoordination.StreamType		case	unilogNative
+class	UnilogCoordination.SessionInfoXPC	NSObject		
+class	UnilogCoordination.SessionInfoXPC	NSObject	let	sessiondId
+class	UnilogCoordination.SessionInfoXPC	NSObject	let	startedOn
+class	UnilogCoordination.SessionInfoXPC	NSObject	let	state
+class	UnilogCoordination.SessionInfoXPC	NSObject	let	last
+class	UnilogCoordination.ConcreteConfiguration.ExportedObject	NSObject<A: UnilogCoordination.UnilogCoordinationExtension>		
+class	UnilogCoordination.ConcreteConfiguration.ExportedObject	NSObject<A: UnilogCoordination.UnilogCoordinationExtension>	let	appExtension
+class	UnilogCoordination.ConcreteConfiguration.ExportedObject	NSObject<A: UnilogCoordination.UnilogCoordinationExtension>	let	sigTermSourceSignal
+class	UnilogCoordination.ConcreteConfiguration.ExportedObject	NSObject<A: UnilogCoordination.UnilogCoordinationExtension>	var	task
+struct	UnilogCoordination.ConcreteConfiguration<A	UnilogCoordination.UnilogCoordinationExtension>		
+struct	UnilogCoordination.ConcreteConfiguration<A	UnilogCoordination.UnilogCoordinationExtension>	let	exportedObject
+struct	UnilogCoordination.ExtensionPoint			
+struct	UnilogCoordination.ExtensionPoint		let	identifier
+struct	UnilogCoordination.UnilogCoordinator			
+struct	UnilogCoordination.UnilogCoordinator		let	extensionPoint
+struct	UnilogCoordination.UnilogCoordinator		let	extensions
+struct	UnilogCoordination.UnilogPipelineCoordinator			
+struct	UnilogCoordination.UnilogPipelineCoordinator		let	name
+struct	UnilogCoordination.UnilogPipelineCoordinator		let	xpc
+enum	UnilogCoordination.UnilogCoordinator.CoordinatorError			
+enum	UnilogCoordination.UnilogCoordinator.CoordinatorError		case	extensionNotFound
+enum	UnilogCoordination.UnilogCoordinator.CoordinatorError		case	noExtensionsFound
+enum	UnilogCoordination.UnilogPipelineCoordinator.CoordinationXPCError			
+enum	UnilogCoordination.UnilogPipelineCoordinator.CoordinationXPCError		case	noValueReturned
+protocol	UnilogCoordination.BiomeStreamInspector			
+protocol	UnilogCoordination.UnilogCoordinationExtension			
+protocol	UnilogCoordination.UnilogCoordinationConfiguration			
+protocol	conformance UnilogCoordination.BiomeNativeObjCStreamInspector	UnilogCoordination.BiomeStreamInspector		
+protocol	conformance UnilogCoordination.UnilogNativeProcessedQueueInspector	UnilogCoordination.BiomeStreamInspector		
+protocol	conformance UnilogCoordination.UnilogNativeStreamInspector	UnilogCoordination.BiomeStreamInspector		
+protocol	conformance UnilogCoordination.BaseCoordinationExtension	UnilogCoordination.UnilogCoordinationExtension		
+protocol	conformance UnilogCoordination.BaseCoordinationExtension	ExtensionFoundation.AppExtension		
+protocol	conformance UnilogCoordination.TenantSession	Dendrite.ProtoMessage		
+protocol	conformance UnilogCoordination.TenantSession	Swift.Encodable		
+protocol	conformance UnilogCoordination.TenantSession	Dendrite.ProtoMessageReader		
+protocol	conformance UnilogCoordination.TenantSession	Dendrite.ProtoMessageWriter		
+protocol	conformance UnilogCoordination.TenantSession	Dendrite.DataRepresentable		
+protocol	conformance UnilogCoordination.TenantLogEntry	Dendrite.ProtoMessage		
+protocol	conformance UnilogCoordination.TenantLogEntry	Swift.Encodable		
+protocol	conformance UnilogCoordination.TenantLogEntry	Dendrite.ProtoMessageReader		
+protocol	conformance UnilogCoordination.TenantLogEntry	Dendrite.ProtoMessageWriter		
+protocol	conformance UnilogCoordination.TenantLogEntry	Dendrite.DataRepresentable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UnilogCoordination.StreamType	Swift.Equatable		
+protocol	conformance UnilogCoordination.StreamType	Swift.Hashable		
+protocol	conformance UnilogCoordination.ConcreteConfiguration	ExtensionFoundation.AppExtensionConfiguration		
+protocol	conformance UnilogCoordination.ConcreteConfiguration	UnilogCoordination.UnilogCoordinationConfiguration		
+protocol	conformance UnilogCoordinator.CoordinatorError	Swift.Error		
+protocol	conformance UnilogPipelineCoordinator.CoordinationXPCError	Swift.Hashable		
+protocol	conformance UnilogPipelineCoordinator.CoordinationXPCError	Swift.Equatable		
+protocol	conformance UnilogPipelineCoordinator.CoordinationXPCError	Swift.Error		
+extension	UnilogCoordination.BaseCoordinationExtension	AppExtension		
+extension	UnilogCoordination.TenantSession	ProtoMessage		
+extension	UnilogCoordination.TenantLogEntry	ProtoMessage		

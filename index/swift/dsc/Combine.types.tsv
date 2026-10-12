@@ -1,0 +1,1405 @@
+kind	type	conformance	member_kind	member
+enum	Combine.Subscriptions			
+class	Combine.AnyCancellable			
+class	Combine.AnyCancellable		var	storage
+class	Combine.AnyCancellable		let	lock
+enum	Combine.SubscriptionStatus			
+enum	Combine.SubscriptionStatus		case	subscribed
+enum	Combine.SubscriptionStatus		case	pendingTerminal
+enum	Combine.SubscriptionStatus		case	awaitingSubscription
+enum	Combine.SubscriptionStatus		case	terminal
+enum	Combine.AnyCancellable.Storage			
+enum	Combine.AnyCancellable.Storage		case	cancel
+enum	Combine.AnyCancellable.Storage		case	cancellable
+enum	Combine.AnyCancellable.Storage		case	cancelled
+struct	Combine.Subscriptions._EmptySubscription			
+struct	Combine.Subscriptions._EmptySubscription		let	combineIdentifier
+struct	Combine.Publishers.SubscribeOn<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.SubscribeOn<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.SubscribeOn<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.SubscribeOn<A	Combine.Publisher, B: Combine.Scheduler>	let	options
+enum	Combine.FilterProducer.State<A	Combine.Subscriber, C: Combine.Subscriber.Input ==, D: Swift.Error>		
+enum	Combine.FilterProducer.State<A	Combine.Subscriber, C: Combine.Subscriber.Input ==, D: Swift.Error>	case	connected
+enum	Combine.FilterProducer.State<A	Combine.Subscriber, C: Combine.Subscriber.Input ==, D: Swift.Error>	case	awaitingSubscription
+enum	Combine.FilterProducer.State<A	Combine.Subscriber, C: Combine.Subscriber.Input ==, D: Swift.Error>	case	completed
+struct	Combine.Publishers.MeasureInterval<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.MeasureInterval<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.MeasureInterval<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.DropWhile<A	Combine.Publisher>		
+struct	Combine.Publishers.DropWhile<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.DropWhile<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryDropWhile<A	Combine.Publisher>		
+struct	Combine.Publishers.TryDropWhile<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryDropWhile<A	Combine.Publisher>	let	predicate
+struct	Combine.Record<B	Swift.Error>		
+struct	Combine.Record<B	Swift.Error>	let	recording
+struct	Combine.Record.Recording<B	Swift.Error>		
+struct	Combine.Record.Recording<B	Swift.Error>	var	state
+struct	Combine.Record.Recording<B	Swift.Error>	var	output
+struct	Combine.Record.Recording<B	Swift.Error>	var	completion
+enum	Combine.Record.Recording.State<B	Swift.Error>		
+enum	Combine.Record.Recording.State<B	Swift.Error>	case	input
+enum	Combine.Record.Recording.State<B	Swift.Error>	case	complete
+enum	Combine.Record.CodingKeys<B	Swift.Error>		
+enum	Combine.Record.CodingKeys<B	Swift.Error>	case	recording
+enum	Combine.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Error>		
+enum	Combine.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Error>	case	output
+enum	Combine.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Error>	case	completion
+struct	Combine.Publishers.Filter<A	Combine.Publisher>		
+struct	Combine.Publishers.Filter<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Filter<A	Combine.Publisher>	let	isIncluded
+struct	Combine.Publishers.TryFilter<A	Combine.Publisher>		
+struct	Combine.Publishers.TryFilter<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryFilter<A	Combine.Publisher>	let	isIncluded
+struct	Combine.Publishers.Breakpoint<A	Combine.Publisher>		
+struct	Combine.Publishers.Breakpoint<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Breakpoint<A	Combine.Publisher>	let	receiveSubscription
+struct	Combine.Publishers.Breakpoint<A	Combine.Publisher>	let	receiveOutput
+struct	Combine.Publishers.Breakpoint<A	Combine.Publisher>	let	receiveCompletion
+struct	Combine.Deferred<A	Combine.Publisher>		
+struct	Combine.Deferred<A	Combine.Publisher>	let	createPublisher
+struct	Combine.Publishers.AllSatisfy<A	Combine.Publisher>		
+struct	Combine.Publishers.AllSatisfy<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.AllSatisfy<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryAllSatisfy<A	Combine.Publisher>		
+struct	Combine.Publishers.TryAllSatisfy<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryAllSatisfy<A	Combine.Publisher>	let	predicate
+class	Combine.Subscribers.Sink<B	Swift.Error>		
+class	Combine.Subscribers.Sink<B	Swift.Error>	var	receiveValue
+class	Combine.Subscribers.Sink<B	Swift.Error>	var	receiveCompletion
+class	Combine.Subscribers.Sink<B	Swift.Error>	var	status
+class	Combine.Subscribers.Sink<B	Swift.Error>	let	lock
+class	Combine.AnySubscriberBase<B	Swift.Error>		
+class	Combine.AnySubscriberBox	Combine.AnySubscriberBase  empty-list Input Combine.Subscriber _$sQz7FailureACQz<A: Combine.Subscriber>		
+class	Combine.AnySubscriberBox	Combine.AnySubscriberBase  empty-list Input Combine.Subscriber _$sQz7FailureACQz<A: Combine.Subscriber>	let	base
+class	Combine.ClosureBasedAnySubscriber	Combine.AnySubscriberBase <A, B><B: Swift.Error>		
+class	Combine.ClosureBasedAnySubscriber	Combine.AnySubscriberBase <A, B><B: Swift.Error>	let	receiveSubscriptionThunk
+class	Combine.ClosureBasedAnySubscriber	Combine.AnySubscriberBase <A, B><B: Swift.Error>	let	receiveValueThunk
+class	Combine.ClosureBasedAnySubscriber	Combine.AnySubscriberBase <A, B><B: Swift.Error>	let	receiveCompletionThunk
+struct	Combine.AnySubscriber<B	Swift.Error>		
+struct	Combine.AnySubscriber<B	Swift.Error>	let	box
+struct	Combine.AnySubscriber<B	Swift.Error>	let	descriptionThunk
+struct	Combine.AnySubscriber<B	Swift.Error>	let	customMirrorThunk
+struct	Combine.AnySubscriber<B	Swift.Error>	let	playgroundDescriptionThunk
+struct	Combine.AnySubscriber<B	Swift.Error>	let	combineIdentifier
+class	Combine._ReferencedBasedAnySubscriber<B	Swift.Error>		
+class	Combine._ReferencedBasedAnySubscriber<B	Swift.Error>	let	box
+class	Combine._ReferencedBasedAnySubscriber<B	Swift.Error>	let	descriptionThunk
+class	Combine._ReferencedBasedAnySubscriber<B	Swift.Error>	let	customMirrorThunk
+class	Combine._ReferencedBasedAnySubscriber<B	Swift.Error>	let	playgroundDescriptionThunk
+class	Combine._ReferencedBasedAnySubscriber<B	Swift.Error>	let	combineIdentifier
+struct	Combine.Publishers.RemoveDuplicates<A	Combine.Publisher>		
+struct	Combine.Publishers.RemoveDuplicates<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.RemoveDuplicates<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryRemoveDuplicates<A	Combine.Publisher>		
+struct	Combine.Publishers.TryRemoveDuplicates<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryRemoveDuplicates<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.Encode<A	Combine.Publisher, B: Combine.TopLevelEncoder, Combine.Publisher.Output ==: Swift.Encodable>		
+struct	Combine.Publishers.Encode<A	Combine.Publisher, B: Combine.TopLevelEncoder, Combine.Publisher.Output ==: Swift.Encodable>	let	upstream
+struct	Combine.Publishers.Encode<A	Combine.Publisher, B: Combine.TopLevelEncoder, Combine.Publisher.Output ==: Swift.Encodable>	let	_encode
+struct	Combine.Just			
+struct	Combine.Just		let	output
+class	Combine.PublishedSubject			
+class	Combine.PublishedSubject		let	lock
+class	Combine.PublishedSubject		var	downstreams
+class	Combine.PublishedSubject		var	currentValue
+class	Combine.PublishedSubject		var	upstreamSubscriptions
+class	Combine.PublishedSubject		var	hasAnyDownstreamDemand
+class	Combine.PublishedSubject		var	changePublisher
+class	Combine.PassthroughSubject<B	Swift.Error>		
+class	Combine.PassthroughSubject<B	Swift.Error>	let	lock
+class	Combine.PassthroughSubject<B	Swift.Error>	var	active
+class	Combine.PassthroughSubject<B	Swift.Error>	var	completion
+class	Combine.PassthroughSubject<B	Swift.Error>	var	downstreams
+class	Combine.PassthroughSubject<B	Swift.Error>	var	upstreamSubscriptions
+class	Combine.PassthroughSubject<B	Swift.Error>	var	hasAnyDownstreamDemand
+struct	Combine.Publishers.Contains<A	Combine.Publisher, Combine.Publisher.Output ==: Swift.Equatable>		
+struct	Combine.Publishers.Contains<A	Combine.Publisher, Combine.Publisher.Output ==: Swift.Equatable>	let	upstream
+struct	Combine.Publishers.Contains<A	Combine.Publisher, Combine.Publisher.Output ==: Swift.Equatable>	let	output
+struct	Combine.Publishers.Label<A	Combine.Publisher>		
+struct	Combine.Publishers.Label<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Label<A	Combine.Publisher>	let	name
+struct	Combine.Publishers.Label<A	Combine.Publisher>	let	category
+struct	Combine.Publishers.Label<A	Combine.Publisher>	let	dsoHandle
+struct	Combine.Publishers.Label.Category<A	Combine.Publisher>		
+struct	Combine.Publishers.Label.Category<A	Combine.Publisher>	let	rawValue
+class	Combine.Publishers.Autoconnect<A	Combine.ConnectablePublisher>		
+class	Combine.Publishers.Autoconnect<A	Combine.ConnectablePublisher>	let	upstream
+class	Combine.Publishers.Autoconnect<A	Combine.ConnectablePublisher>	let	lock
+class	Combine.Publishers.Autoconnect<A	Combine.ConnectablePublisher>	var	state
+enum	Combine.Publishers.Autoconnect.State<A	Combine.ConnectablePublisher>		
+enum	Combine.Publishers.Autoconnect.State<A	Combine.ConnectablePublisher>	case	connected
+enum	Combine.Publishers.Autoconnect.State<A	Combine.ConnectablePublisher>	case	disconnected
+struct	Combine.Publishers.Autoconnect.SideEffectSubscription<A	Combine.ConnectablePublisher>		
+struct	Combine.Publishers.Autoconnect.SideEffectSubscription<A	Combine.ConnectablePublisher>	let	onCancel
+struct	Combine.Publishers.Autoconnect.SideEffectSubscription<A	Combine.ConnectablePublisher>	let	upstreamSubscription
+struct	Combine.Publishers.Print<A	Combine.Publisher>		
+struct	Combine.Publishers.Print<A	Combine.Publisher>	let	prefix
+struct	Combine.Publishers.Print<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Print<A	Combine.Publisher>	let	stream
+class	Combine.ObservableObjectPublisher			
+class	Combine.ObservableObjectPublisher		let	_registrar
+class	Combine.ObservableObjectPublisher		let	lock
+class	Combine.ObservableObjectPublisher		var	connections
+class	Combine.ObservableObjectPublisher		let	identifier
+class	Combine.ObservableObjectPublisher.Conduit			
+enum	Combine.ObservableObjectPublisher.Inner.State<A	Combine.Subscriber, Combine.Subscriber.Failure ==: Swift.Never, Combine.Subscriber.Input ==: ()>		
+enum	Combine.ObservableObjectPublisher.Inner.State<A	Combine.Subscriber, Combine.Subscriber.Failure ==: Swift.Never, Combine.Subscriber.Input ==: ()>	case	initialized
+enum	Combine.ObservableObjectPublisher.Inner.State<A	Combine.Subscriber, Combine.Subscriber.Failure ==: Swift.Never, Combine.Subscriber.Input ==: ()>	case	active
+enum	Combine.ObservableObjectPublisher.Inner.State<A	Combine.Subscriber, Combine.Subscriber.Failure ==: Swift.Never, Combine.Subscriber.Input ==: ()>	case	terminal
+struct	Combine.ObservableObjectTable			
+struct	Combine.ObservableObjectTable.Storage			
+struct	Combine.ObservableObjectTable.Storage		var	object
+struct	Combine.ObservableObjectTable.Storage		var	identifier
+struct	Combine.Publishers.PrefixWhile<A	Combine.Publisher>		
+struct	Combine.Publishers.PrefixWhile<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.PrefixWhile<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryPrefixWhile<A	Combine.Publisher>		
+struct	Combine.Publishers.TryPrefixWhile<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryPrefixWhile<A	Combine.Publisher>	let	predicate
+class	Combine.Future<B	Swift.Error>		
+class	Combine.Future<B	Swift.Error>	let	lock
+class	Combine.Future<B	Swift.Error>	var	downstreams
+class	Combine.Future<B	Swift.Error>	var	result
+enum	Combine.Future.Conduit.State<A	Input Combine.Subscriber _$sQyd__, B: Failure Combine.Subscriber _$sQyd__, A1: Combine.Subscriber>		
+enum	Combine.Future.Conduit.State<A	Input Combine.Subscriber _$sQyd__, B: Failure Combine.Subscriber _$sQyd__, A1: Combine.Subscriber>	case	initialized
+enum	Combine.Future.Conduit.State<A	Input Combine.Subscriber _$sQyd__, B: Failure Combine.Subscriber _$sQyd__, A1: Combine.Subscriber>	case	pending
+enum	Combine.Future.Conduit.State<A	Input Combine.Subscriber _$sQyd__, B: Failure Combine.Subscriber _$sQyd__, A1: Combine.Subscriber>	case	active
+enum	Combine.Future.Conduit.State<A	Input Combine.Subscriber _$sQyd__, B: Failure Combine.Subscriber _$sQyd__, A1: Combine.Subscriber>	case	terminal
+struct	Combine.Empty<B	Swift.Error>		
+struct	Combine.Empty<B	Swift.Error>	let	completeImmediately
+struct	Combine.Publisher			
+struct	Combine.Publisher		let	output
+struct	Combine.Publishers.ContainsWhere<A	Combine.Publisher>		
+struct	Combine.Publishers.ContainsWhere<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.ContainsWhere<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryContainsWhere<A	Combine.Publisher>		
+struct	Combine.Publishers.TryContainsWhere<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryContainsWhere<A	Combine.Publisher>	let	predicate
+enum	Combine.Publishers			
+struct	Combine.Published			
+struct	Combine.Published		var	storage
+struct	Combine.Published.Publisher			
+struct	Combine.Published.Publisher		let	subject
+struct	Combine.PublishedSubscriber			
+struct	Combine.PublishedSubscriber		let	combineIdentifier
+struct	Combine.PublishedSubscriber		var	subject
+enum	Combine.Published.Storage			
+enum	Combine.Published.Storage		case	value
+enum	Combine.Published.Storage		case	publisher
+struct	Combine.Publishers.MakeConnectable<A	Combine.Publisher>		
+struct	Combine.Publishers.MakeConnectable<A	Combine.Publisher>	var	inner
+enum	Combine.Publishers.TimeGroupingStrategy<A	Combine.Scheduler>		
+enum	Combine.Publishers.TimeGroupingStrategy<A	Combine.Scheduler>	case	byTime
+enum	Combine.Publishers.TimeGroupingStrategy<A	Combine.Scheduler>	case	byTimeOrCount
+struct	Combine.Publishers.CollectByTime<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.CollectByTime<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.CollectByTime<A	Combine.Publisher, B: Combine.Scheduler>	let	strategy
+struct	Combine.Publishers.CollectByTime<A	Combine.Publisher, B: Combine.Scheduler>	let	options
+struct	Combine.Publishers.Collect<A	Combine.Publisher>		
+struct	Combine.Publishers.Collect<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.CollectByCount<A	Combine.Publisher>		
+struct	Combine.Publishers.CollectByCount<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.CollectByCount<A	Combine.Publisher>	let	count
+struct	Combine.Publishers.ReceiveOn<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.ReceiveOn<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.ReceiveOn<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.ReceiveOn<A	Combine.Publisher, B: Combine.Scheduler>	let	options
+enum	Combine.Subscribers			
+enum	Combine.Subscribers.Completion<A	Swift.Error>		
+enum	Combine.Subscribers.Completion<A	Swift.Error>	case	failure
+enum	Combine.Subscribers.Completion<A	Swift.Error>	case	finished
+struct	Combine.Subscribers.Demand			
+struct	Combine.Subscribers.Demand		let	rawValue
+enum	Combine.Subscribers.Completion.CodingKeys<A	Swift.Error>		
+enum	Combine.Subscribers.Completion.CodingKeys<A	Swift.Error>	case	success
+enum	Combine.Subscribers.Completion.CodingKeys<A	Swift.Error>	case	error
+struct	Combine.Publishers.MapKeyPath<A	Combine.Publisher>		
+struct	Combine.Publishers.MapKeyPath<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.MapKeyPath<A	Combine.Publisher>	let	keyPath
+struct	Combine.Publishers.MapKeyPath2<A	Combine.Publisher>		
+struct	Combine.Publishers.MapKeyPath2<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.MapKeyPath2<A	Combine.Publisher>	let	keyPath0
+struct	Combine.Publishers.MapKeyPath2<A	Combine.Publisher>	let	keyPath1
+struct	Combine.Publishers.MapKeyPath3<A	Combine.Publisher>		
+struct	Combine.Publishers.MapKeyPath3<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.MapKeyPath3<A	Combine.Publisher>	let	keyPath0
+struct	Combine.Publishers.MapKeyPath3<A	Combine.Publisher>	let	keyPath1
+struct	Combine.Publishers.MapKeyPath3<A	Combine.Publisher>	let	keyPath2
+class	Combine.DebugHook			
+class	Combine.DebugHook		var	lock
+class	Combine.DebugHook		var	handlers
+struct	Combine.DebugHook.Handler			
+struct	Combine.DebugHook.Handler		var	handler
+struct	Combine.SubscriberTap<A	Combine.Subscriber>		
+struct	Combine.SubscriberTap<A	Combine.Subscriber>	var	subscriber
+struct	Combine.SubscriptionTap			
+struct	Combine.SubscriptionTap		var	subscription
+class	Combine.ConduitBase<B	Swift.Error>		
+enum	Combine.ConduitList<B	Swift.Error>		
+enum	Combine.ConduitList<B	Swift.Error>	case	single
+enum	Combine.ConduitList<B	Swift.Error>	case	many
+enum	Combine.ConduitList<B	Swift.Error>	case	empty
+struct	Combine.AsyncThrowingPublisher<A	Combine.Publisher>		
+struct	Combine.AsyncThrowingPublisher<A	Combine.Publisher>	let	publisher
+struct	Combine.AsyncThrowingPublisher.Iterator<A	Combine.Publisher>		
+struct	Combine.AsyncThrowingPublisher.Iterator<A	Combine.Publisher>	let	inner
+struct	Combine.AsyncThrowingPublisher.Iterator<A	Combine.Publisher>	var	reference
+class	Combine.AsyncThrowingPublisher.Iterator.Inner<A	Combine.Publisher>		
+class	Combine.AsyncThrowingPublisher.Iterator.Inner<A	Combine.Publisher>	let	lock
+class	Combine.AsyncThrowingPublisher.Iterator.Inner<A	Combine.Publisher>	var	pending
+class	Combine.AsyncThrowingPublisher.Iterator.Inner<A	Combine.Publisher>	var	state
+class	Combine.AsyncThrowingPublisher.Iterator.Inner<A	Combine.Publisher>	var	pendingDemand
+enum	Combine.AsyncThrowingPublisher.Iterator.Inner.State<A	Combine.Publisher>		
+enum	Combine.AsyncThrowingPublisher.Iterator.Inner.State<A	Combine.Publisher>	case	subscribed
+enum	Combine.AsyncThrowingPublisher.Iterator.Inner.State<A	Combine.Publisher>	case	terminal
+enum	Combine.AsyncThrowingPublisher.Iterator.Inner.State<A	Combine.Publisher>	case	awaitingSubscription
+enum	Combine.AsyncPublisher.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>		
+enum	Combine.AsyncPublisher.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>	case	subscribed
+enum	Combine.AsyncPublisher.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>	case	awaitingSubscription
+enum	Combine.AsyncPublisher.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>	case	terminal
+struct	Combine.Publishers.PrefixUntilOutput<A	Combine.Publisher, B: Combine.Publisher>		
+struct	Combine.Publishers.PrefixUntilOutput<A	Combine.Publisher, B: Combine.Publisher>	let	upstream
+struct	Combine.Publishers.PrefixUntilOutput<A	Combine.Publisher, B: Combine.Publisher>	let	other
+class	Combine.SubjectSubscriber<A	Combine.Subject>		
+class	Combine.SubjectSubscriber<A	Combine.Subject>	let	lock
+class	Combine.SubjectSubscriber<A	Combine.Subject>	var	downstreamSubject
+class	Combine.SubjectSubscriber<A	Combine.Subject>	var	upstreamSubscription
+struct	Combine.Publishers.Reduce<A	Combine.Publisher>		
+struct	Combine.Publishers.Reduce<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Reduce<A	Combine.Publisher>	let	initial
+struct	Combine.Publishers.Reduce<A	Combine.Publisher>	let	nextPartialResult
+struct	Combine.Publishers.TryReduce<A	Combine.Publisher>		
+struct	Combine.Publishers.TryReduce<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryReduce<A	Combine.Publisher>	let	initial
+struct	Combine.Publishers.TryReduce<A	Combine.Publisher>	let	nextPartialResult
+struct	Combine.Publishers.CompactMap<A	Combine.Publisher>		
+struct	Combine.Publishers.CompactMap<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.CompactMap<A	Combine.Publisher>	let	transform
+struct	Combine.Publishers.TryCompactMap<A	Combine.Publisher>		
+struct	Combine.Publishers.TryCompactMap<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryCompactMap<A	Combine.Publisher>	let	transform
+struct	Combine.Publishers.MergeMany<A	Combine.Publisher>		
+struct	Combine.Publishers.MergeMany<A	Combine.Publisher>	let	publishers
+struct	Combine.Publisher<B	Swift.Error>		
+struct	Combine.Publisher<B	Swift.Error>	let	result
+enum	Combine.PartialCompletion<B	Swift.Error>		
+enum	Combine.PartialCompletion<B	Swift.Error>	case	continue
+enum	Combine.PartialCompletion<B	Swift.Error>	case	failure
+enum	Combine.PartialCompletion<B	Swift.Error>	case	finished
+struct	Combine.Publishers.Scan<A	Combine.Publisher>		
+struct	Combine.Publishers.Scan<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Scan<A	Combine.Publisher>	let	initialResult
+struct	Combine.Publishers.Scan<A	Combine.Publisher>	let	nextPartialResult
+struct	Combine.Publishers.TryScan<A	Combine.Publisher>		
+struct	Combine.Publishers.TryScan<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryScan<A	Combine.Publisher>	let	initialResult
+struct	Combine.Publishers.TryScan<A	Combine.Publisher>	let	nextPartialResult
+struct	Combine.ImmediateScheduler			
+struct	Combine.ImmediateScheduler.SchedulerTimeType			
+struct	Combine.ImmediateScheduler.SchedulerTimeType.Stride			
+struct	Combine.ImmediateScheduler.SchedulerTimeType.Stride		var	magnitude
+enum	Combine.ImmediateScheduler.SchedulerTimeType.Stride.CodingKeys			
+enum	Combine.ImmediateScheduler.SchedulerTimeType.Stride.CodingKeys		case	magnitude
+struct	Combine.Publishers.Count<A	Combine.Publisher>		
+struct	Combine.Publishers.Count<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.LastWhere<A	Combine.Publisher>		
+struct	Combine.Publishers.LastWhere<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.LastWhere<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryLastWhere<A	Combine.Publisher>		
+struct	Combine.Publishers.TryLastWhere<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryLastWhere<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.IgnoreOutput<A	Combine.Publisher>		
+struct	Combine.Publishers.IgnoreOutput<A	Combine.Publisher>	let	upstream
+class	Combine.CurrentValueSubject<B	Swift.Error>		
+class	Combine.CurrentValueSubject<B	Swift.Error>	let	lock
+class	Combine.CurrentValueSubject<B	Swift.Error>	var	active
+class	Combine.CurrentValueSubject<B	Swift.Error>	var	completion
+class	Combine.CurrentValueSubject<B	Swift.Error>	var	downstreams
+class	Combine.CurrentValueSubject<B	Swift.Error>	var	currentValue
+class	Combine.CurrentValueSubject<B	Swift.Error>	var	upstreamSubscriptions
+class	Combine.CurrentValueSubject<B	Swift.Error>	var	hasAnyDownstreamDemand
+class	Combine.Subscribers.Assign			
+class	Combine.Subscribers.Assign		let	lock
+class	Combine.Subscribers.Assign		var	object
+class	Combine.Subscribers.Assign		let	keyPath
+class	Combine.Subscribers.Assign		var	status
+struct	Combine.Publishers.Retry<A	Combine.Publisher>		
+struct	Combine.Publishers.Retry<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Retry<A	Combine.Publisher>	let	retries
+enum	Combine.Publishers.Retry.Chances<A	Combine.Publisher>		
+enum	Combine.Publishers.Retry.Chances<A	Combine.Publisher>	case	finite
+enum	Combine.Publishers.Retry.Chances<A	Combine.Publisher>	case	infinite
+enum	Combine.Publishers.Retry.Inner.State<A	Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>		
+enum	Combine.Publishers.Retry.Inner.State<A	Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	ready
+enum	Combine.Publishers.Retry.Inner.State<A	Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	terminal
+class	Combine.ContinuationSubscriber<B	Swift.Error, C: Swift.Error>		
+class	Combine.ContinuationSubscriber<B	Swift.Error, C: Swift.Error>	var	continuation
+class	Combine.ContinuationSubscriber<B	Swift.Error, C: Swift.Error>	var	subscription
+class	Combine.ContinuationSubscriber<B	Swift.Error, C: Swift.Error>	let	lock
+struct	Combine.Publishers.MapError<A	Combine.Publisher, B: Swift.Error>		
+struct	Combine.Publishers.MapError<A	Combine.Publisher, B: Swift.Error>	let	upstream
+struct	Combine.Publishers.MapError<A	Combine.Publisher, B: Swift.Error>	let	transform
+struct	Combine.Publishers.Throttle<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.Throttle<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.Throttle<A	Combine.Publisher, B: Combine.Scheduler>	let	interval
+struct	Combine.Publishers.Throttle<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.Throttle<A	Combine.Publisher, B: Combine.Scheduler>	let	latest
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>		
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	lock
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	downstreamLock
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	state
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	demand
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	currentValue
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	dueTime
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	scheduledToEmit
+class	Combine.Publishers.Throttle.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	alreadySentSubscription
+enum	Combine.Publishers.Throttle.Inner.State<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>		
+enum	Combine.Publishers.Throttle.Inner.State<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	case	ready
+enum	Combine.Publishers.Throttle.Inner.State<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	case	subscribed
+enum	Combine.Publishers.Throttle.Inner.State<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	case	terminal
+struct	Combine.Publishers.Throttle.Inner.Scheduling<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>		
+struct	Combine.Publishers.Throttle.Inner.Scheduling<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	interval
+struct	Combine.Publishers.Throttle.Inner.Scheduling<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	scheduler
+struct	Combine.Publishers.Throttle.Inner.Scheduling<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	latest
+class	Combine.Publishers.Share<A	Combine.Publisher>		
+class	Combine.Publishers.Share<A	Combine.Publisher>	var	inner
+class	Combine.Publishers.Share<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Comparison<A	Combine.Publisher>		
+struct	Combine.Publishers.Comparison<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Comparison<A	Combine.Publisher>	let	areInIncreasingOrder
+struct	Combine.Publishers.TryComparison<A	Combine.Publisher>		
+struct	Combine.Publishers.TryComparison<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryComparison<A	Combine.Publisher>	let	areInIncreasingOrder
+struct	Combine.Publishers.ReplaceEmpty<A	Combine.Publisher>		
+struct	Combine.Publishers.ReplaceEmpty<A	Combine.Publisher>	let	output
+struct	Combine.Publishers.ReplaceEmpty<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.ReplaceError<A	Combine.Publisher>		
+struct	Combine.Publishers.ReplaceError<A	Combine.Publisher>	let	output
+struct	Combine.Publishers.ReplaceError<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.AssertNoFailure<A	Combine.Publisher>		
+struct	Combine.Publishers.AssertNoFailure<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.AssertNoFailure<A	Combine.Publisher>	let	prefix
+struct	Combine.Publishers.AssertNoFailure<A	Combine.Publisher>	let	file
+struct	Combine.Publishers.AssertNoFailure<A	Combine.Publisher>	let	line
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>		
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>	var	receiveSubscription
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>	var	receiveOutput
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>	var	receiveCompletion
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>	var	receiveCancel
+struct	Combine.Publishers.HandleEvents<A	Combine.Publisher>	var	receiveRequest
+struct	Combine.CombineIdentifier			
+struct	Combine.CombineIdentifier		let	rawValue
+struct	Combine.Publishers.Debounce<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.Debounce<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.Debounce<A	Combine.Publisher, B: Combine.Scheduler>	let	dueTime
+struct	Combine.Publishers.Debounce<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.Debounce<A	Combine.Publisher, B: Combine.Scheduler>	let	options
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>		
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	lock
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	downstreamLock
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	downstream
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	dueTime
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	scheduler
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	let	options
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	state
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	currentCancellers
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	currentValue
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	currentGeneration
+class	Combine.Publishers.Debounce.Inner<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	var	downstreamDemand
+enum	Combine.Publishers.Debounce.Inner.CancellerState<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>		
+enum	Combine.Publishers.Debounce.Inner.CancellerState<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	case	active
+enum	Combine.Publishers.Debounce.Inner.CancellerState<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	case	pending
+enum	Combine.Publishers.Debounce.Inner.CancellerState<A	Combine.Publisher, B: Combine.Scheduler, A1: Combine.Subscriber>	case	cancelled
+struct	Combine.Fail<B	Swift.Error>		
+struct	Combine.Fail<B	Swift.Error>	let	error
+struct	Combine.Publishers.Last<A	Combine.Publisher>		
+struct	Combine.Publishers.Last<A	Combine.Publisher>	let	upstream
+class	Combine.PublisherBoxBase<B	Swift.Error>		
+class	Combine.PublisherBox	Combine.PublisherBoxBase  empty-list Output Combine.Publisher _$sQz7FailureACQz<A: Combine.Publisher>		
+class	Combine.PublisherBox	Combine.PublisherBoxBase  empty-list Output Combine.Publisher _$sQz7FailureACQz<A: Combine.Publisher>	let	base
+struct	Combine.AnyPublisher<B	Swift.Error>		
+struct	Combine.AnyPublisher<B	Swift.Error>	let	box
+struct	Combine.Publishers.Map<A	Combine.Publisher>		
+struct	Combine.Publishers.Map<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Map<A	Combine.Publisher>	let	transform
+struct	Combine.Publishers.TryMap<A	Combine.Publisher>		
+struct	Combine.Publishers.TryMap<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryMap<A	Combine.Publisher>	let	transform
+struct	Combine.Publishers.Timeout<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.Timeout<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.Timeout<A	Combine.Publisher, B: Combine.Scheduler>	let	interval
+struct	Combine.Publishers.Timeout<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.Timeout<A	Combine.Publisher, B: Combine.Scheduler>	let	options
+struct	Combine.Publishers.Timeout<A	Combine.Publisher, B: Combine.Scheduler>	let	customError
+enum	Combine.Publishers.PrefetchStrategy			
+enum	Combine.Publishers.PrefetchStrategy		case	keepFull
+enum	Combine.Publishers.PrefetchStrategy		case	byRequest
+enum	Combine.Publishers.BufferingStrategy<A	Swift.Error>		
+enum	Combine.Publishers.BufferingStrategy<A	Swift.Error>	case	customError
+enum	Combine.Publishers.BufferingStrategy<A	Swift.Error>	case	dropNewest
+enum	Combine.Publishers.BufferingStrategy<A	Swift.Error>	case	dropOldest
+struct	Combine.Publishers.Buffer<A	Combine.Publisher>		
+struct	Combine.Publishers.Buffer<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Buffer<A	Combine.Publisher>	let	size
+struct	Combine.Publishers.Buffer<A	Combine.Publisher>	let	prefetch
+struct	Combine.Publishers.Buffer<A	Combine.Publisher>	let	whenFull
+struct	Combine.Publishers.Sequence<A	Swift.Sequence, B: Swift.Error>		
+struct	Combine.Publishers.Sequence<A	Swift.Sequence, B: Swift.Error>	let	sequence
+struct	Combine.Publishers.Output<A	Combine.Publisher>		
+struct	Combine.Publishers.Output<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Output<A	Combine.Publisher>	let	range
+enum	Combine.Publishers.TryCatch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__, Failure Combine.Subscriber _$sQyd__: Swift.Error>		
+enum	Combine.Publishers.TryCatch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__, Failure Combine.Subscriber _$sQyd__: Swift.Error>	case	pendingPre
+enum	Combine.Publishers.TryCatch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__, Failure Combine.Subscriber _$sQyd__: Swift.Error>	case	pre
+enum	Combine.Publishers.TryCatch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__, Failure Combine.Subscriber _$sQyd__: Swift.Error>	case	post
+enum	Combine.Publishers.TryCatch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__, Failure Combine.Subscriber _$sQyd__: Swift.Error>	case	pendingPost
+enum	Combine.Publishers.TryCatch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__, Failure Combine.Subscriber _$sQyd__: Swift.Error>	case	cancelled
+enum	Combine.Publishers.Catch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>		
+enum	Combine.Publishers.Catch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	pendingPre
+enum	Combine.Publishers.Catch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	pre
+enum	Combine.Publishers.Catch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	post
+enum	Combine.Publishers.Catch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	pendingPost
+enum	Combine.Publishers.Catch.Inner.State<A	Combine.Publisher, B: Combine.Publisher, A1: Combine.Subscriber, Combine.Publisher.Output ==: Combine.Publisher.Output ==, Combine.Publisher.Failure ==: Failure Combine.Subscriber _$sQyd__, Combine.Publisher.Output ==: Input Combine.Subscriber _$sQyd__>	case	cancelled
+struct	Combine.Publishers.Delay<A	Combine.Publisher, B: Combine.Scheduler>		
+struct	Combine.Publishers.Delay<A	Combine.Publisher, B: Combine.Scheduler>	let	upstream
+struct	Combine.Publishers.Delay<A	Combine.Publisher, B: Combine.Scheduler>	let	interval
+struct	Combine.Publishers.Delay<A	Combine.Publisher, B: Combine.Scheduler>	let	tolerance
+struct	Combine.Publishers.Delay<A	Combine.Publisher, B: Combine.Scheduler>	let	scheduler
+struct	Combine.Publishers.Delay<A	Combine.Publisher, B: Combine.Scheduler>	let	options
+struct	Combine.Publishers.Drop<A	Combine.Publisher>		
+struct	Combine.Publishers.Drop<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.Drop<A	Combine.Publisher>	let	count
+struct	Combine.Publishers.First<A	Combine.Publisher>		
+struct	Combine.Publishers.First<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.FirstWhere<A	Combine.Publisher>		
+struct	Combine.Publishers.FirstWhere<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.FirstWhere<A	Combine.Publisher>	let	predicate
+struct	Combine.Publishers.TryFirstWhere<A	Combine.Publisher>		
+struct	Combine.Publishers.TryFirstWhere<A	Combine.Publisher>	let	upstream
+struct	Combine.Publishers.TryFirstWhere<A	Combine.Publisher>	let	predicate
+protocol	Combine.Cancellable			
+protocol	Combine.Subscription			
+protocol	Combine.TopLevelDecoder	Input		
+protocol	Combine.TopLevelEncoder	Output		
+protocol	Combine.ObservableObject	ObjectWillChangePublisher		
+protocol	Combine._ObservableObjectProperty			
+protocol	Combine.Publisher	Output, Failure		
+protocol	Combine.ConnectablePublisher			
+protocol	Combine.Subscriber	Input, Failure		
+protocol	Combine._Introspection			
+protocol	Combine.SubscriberTapMarker			
+protocol	Combine.Subject			
+protocol	Combine.SchedulerTimeIntervalConvertible			
+protocol	Combine.Scheduler	SchedulerTimeType, SchedulerOptions		
+protocol	Combine.CustomCombineIdentifierConvertible			
+protocol	conformance Publishers.Multicast	Combine.ConnectablePublisher		
+protocol	conformance Publishers.Multicast	Combine.Publisher		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.AnyCancellable	Combine.Cancellable		
+protocol	conformance Combine.AnyCancellable	Swift.Hashable		
+protocol	conformance Combine.AnyCancellable	Swift.Equatable		
+protocol	conformance _EmptySubscription	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance _EmptySubscription	Combine.Cancellable		
+protocol	conformance _EmptySubscription	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance _EmptySubscription	Swift.CustomReflectable		
+protocol	conformance _EmptySubscription	Swift.CustomStringConvertible		
+protocol	conformance _EmptySubscription	Combine.Subscription		
+protocol	conformance Publishers.SubscribeOn	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.FilterProducer	Combine.Cancellable		
+protocol	conformance Combine.FilterProducer	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.FilterProducer	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Combine.FilterProducer	Swift.CustomReflectable		
+protocol	conformance Combine.FilterProducer	Swift.CustomStringConvertible		
+protocol	conformance Combine.FilterProducer	Combine.Subscription		
+protocol	conformance Combine.FilterProducer	Combine.Subscriber		
+protocol	conformance Publishers.MeasureInterval	Combine.Publisher		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.DropWhile	Combine.Publisher		
+protocol	conformance Publishers.TryDropWhile	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.Record	Combine.Publisher		
+protocol	conformance Record.Recording	Swift.Decodable		
+protocol	conformance Record.Recording	Swift.Encodable		
+protocol	conformance Combine.Record	Swift.Decodable		
+protocol	conformance Combine.Record	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Recording.State	Swift.Hashable		
+protocol	conformance Recording.State	Swift.Equatable		
+protocol	conformance Record.Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Record.Inner	Combine.Cancellable		
+protocol	conformance Record.Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Record.Inner	Swift.CustomReflectable		
+protocol	conformance Record.Inner	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Record.Inner	Combine.Subscription		
+protocol	conformance Publishers.Filter	Combine.Publisher		
+protocol	conformance Publishers.TryFilter	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Breakpoint	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.WeakSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Publishers.WeakSubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Publishers.WeakSubscriber	Swift.CustomReflectable		
+protocol	conformance Publishers.WeakSubscriber	Swift.CustomStringConvertible		
+protocol	conformance Publishers.WeakSubscriber	Combine.Subscriber		
+protocol	conformance Combine.Deferred	Combine.Publisher		
+protocol	conformance Publishers.AllSatisfy	Combine.Publisher		
+protocol	conformance Publishers.TryAllSatisfy	Combine.Publisher		
+protocol	conformance Subscribers.Sink	Combine.Subscriber		
+protocol	conformance Subscribers.Sink	Combine.Cancellable		
+protocol	conformance Subscribers.Sink	Swift.CustomStringConvertible		
+protocol	conformance Subscribers.Sink	Swift.CustomReflectable		
+protocol	conformance Subscribers.Sink	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Subscribers.Sink	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.AnySubscriberBase	Combine.Subscriber		
+protocol	conformance Combine.AnySubscriberBase	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.AnySubscriber	Combine.Subscriber		
+protocol	conformance Combine.AnySubscriber	Swift.CustomStringConvertible		
+protocol	conformance Combine.AnySubscriber	Swift.CustomReflectable		
+protocol	conformance Combine.AnySubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Combine.AnySubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine._ReferencedBasedAnySubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine._ReferencedBasedAnySubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Combine._ReferencedBasedAnySubscriber	Swift.CustomReflectable		
+protocol	conformance Combine._ReferencedBasedAnySubscriber	Swift.CustomStringConvertible		
+protocol	conformance Combine._ReferencedBasedAnySubscriber	Combine.Subscriber		
+protocol	conformance Publishers.RemoveDuplicates	Combine.Publisher		
+protocol	conformance Publishers.TryRemoveDuplicates	Combine.Publisher		
+protocol	conformance Publishers.Decode	Combine.Publisher		
+protocol	conformance Publishers.Encode	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.Just	Combine.Publisher		
+protocol	conformance Combine.Just	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance PublishedSubject.Conduit	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance PublishedSubject.Conduit	Swift.CustomReflectable		
+protocol	conformance PublishedSubject.Conduit	Swift.CustomStringConvertible		
+protocol	conformance Combine.PublishedSubject	Combine.Publisher		
+protocol	conformance Combine.PublishedSubject	Combine.Subject		
+protocol	conformance Combine.PassthroughSubject	Combine.Subject		
+protocol	conformance Combine.PassthroughSubject	Combine.Publisher		
+protocol	conformance PassthroughSubject.Conduit	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance PassthroughSubject.Conduit	Swift.CustomReflectable		
+protocol	conformance PassthroughSubject.Conduit	Swift.CustomStringConvertible		
+protocol	conformance Publishers.Contains	Combine.Publisher		
+protocol	conformance Publishers.Contains	Swift.Equatable		
+protocol	conformance Publishers.CombineLatest	Combine.Publisher		
+protocol	conformance Publishers.CombineLatest3	Combine.Publisher		
+protocol	conformance Publishers.CombineLatest4	Combine.Publisher		
+protocol	conformance Publishers.CombineLatest	Swift.Equatable		
+protocol	conformance Publishers.CombineLatest3	Swift.Equatable		
+protocol	conformance Publishers.CombineLatest4	Swift.Equatable		
+protocol	conformance AbstractCombineLatest.Side	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance AbstractCombineLatest.Side	Swift.CustomStringConvertible		
+protocol	conformance AbstractCombineLatest	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance AbstractCombineLatest	Combine.Cancellable		
+protocol	conformance AbstractCombineLatest	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance AbstractCombineLatest	Swift.CustomReflectable		
+protocol	conformance AbstractCombineLatest	Swift.CustomStringConvertible		
+protocol	conformance AbstractCombineLatest	Combine.Subscription		
+protocol	conformance AbstractCombineLatest.Side	Combine.Subscriber		
+protocol	conformance Label.Category	Swift.RawRepresentable		
+protocol	conformance Publishers.Label	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Autoconnect	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance SideEffectSubscription	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance SideEffectSubscription	Swift.CustomStringConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance SideEffectSubscription	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance SideEffectSubscription	Combine.Cancellable		
+protocol	conformance SideEffectSubscription	Combine.Subscription		
+protocol	conformance Publishers.Print	Combine.Publisher		
+protocol	conformance Inner.PrintTarget	Swift.TextOutputStream		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.ObservableObjectPublisher	Combine.Publisher		
+protocol	conformance Combine.Published	Combine._ObservableObjectProperty		
+protocol	conformance Inner.State	Swift.Hashable		
+protocol	conformance Inner.State	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Conduit	Swift.Equatable		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Conduit	Swift.Hashable		
+protocol	conformance ObservableObjectTable.Storage	Swift.Equatable		
+protocol	conformance ObservableObjectTable.Storage	Swift.Hashable		
+protocol	conformance Publishers.PrefixWhile	Combine.Publisher		
+protocol	conformance Publishers.TryPrefixWhile	Combine.Publisher		
+protocol	conformance Combine.Future	Combine.Publisher		
+protocol	conformance Conduit	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Conduit	Swift.CustomReflectable		
+protocol	conformance Conduit	Swift.CustomStringConvertible		
+protocol	conformance Combine.Empty	Combine.Publisher		
+protocol	conformance Combine.Empty	Swift.Equatable		
+protocol	conformance Publishers.SetFailureType	Combine.Publisher		
+protocol	conformance Publishers.SetFailureType	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publisher	Combine.Publisher		
+protocol	conformance Publisher	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Publishers.ContainsWhere	Combine.Publisher		
+protocol	conformance Publishers.TryContainsWhere	Combine.Publisher		
+protocol	conformance Published.Publisher	Combine.Publisher		
+protocol	conformance Combine.PublishedSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.PublishedSubscriber	Combine.Subscriber		
+protocol	conformance Publishers.MakeConnectable	Combine.ConnectablePublisher		
+protocol	conformance Publishers.MakeConnectable	Combine.Publisher		
+protocol	conformance Publishers.CollectByTime	Combine.Publisher		
+protocol	conformance Publishers.Collect	Combine.Publisher		
+protocol	conformance Publishers.CollectByCount	Combine.Publisher		
+protocol	conformance Publishers.Collect	Swift.Equatable		
+protocol	conformance Publishers.CollectByCount	Swift.Equatable		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.ReceiveOn	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Subscribers.Completion	Swift.Equatable		
+protocol	conformance Subscribers.Completion	Swift.Hashable		
+protocol	conformance Subscribers.Completion	Swift.Encodable		
+protocol	conformance Subscribers.Completion	Swift.Decodable		
+protocol	conformance Subscribers.Demand	Swift.Equatable		
+protocol	conformance Subscribers.Demand	Swift.Comparable		
+protocol	conformance Subscribers.Demand	Swift.Hashable		
+protocol	conformance Subscribers.Demand	Swift.Decodable		
+protocol	conformance Subscribers.Demand	Swift.Encodable		
+protocol	conformance Subscribers.Demand	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Combine.ReduceProducer	Combine.Cancellable		
+protocol	conformance Combine.ReduceProducer	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.ReduceProducer	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Combine.ReduceProducer	Swift.CustomReflectable		
+protocol	conformance Combine.ReduceProducer	Swift.CustomStringConvertible		
+protocol	conformance Combine.ReduceProducer	Combine.Subscription		
+protocol	conformance Combine.ReduceProducer	Combine.Subscriber		
+protocol	conformance Publishers.MapKeyPath	Combine.Publisher		
+protocol	conformance Publishers.MapKeyPath2	Combine.Publisher		
+protocol	conformance Publishers.MapKeyPath3	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.SubscriberTap	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.SubscriberTap	Swift.CustomStringConvertible		
+protocol	conformance Combine.SubscriberTap	Combine.SubscriberTapMarker		
+protocol	conformance DebugHook.Handler	Swift.Equatable		
+protocol	conformance DebugHook.Handler	Swift.Hashable		
+protocol	conformance Combine.SubscriberTap	Combine.Subscriber		
+protocol	conformance Combine.SubscriptionTap	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.SubscriptionTap	Combine.Cancellable		
+protocol	conformance Combine.SubscriptionTap	Swift.CustomStringConvertible		
+protocol	conformance Combine.SubscriptionTap	Combine.Subscription		
+protocol	conformance Combine.ConduitBase	Swift.Equatable		
+protocol	conformance Combine.ConduitBase	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.ConduitBase	Combine.Cancellable		
+protocol	conformance Combine.ConduitBase	Swift.Hashable		
+protocol	conformance Combine.ConduitBase	Combine.Subscription		
+protocol	conformance AsyncPublisher.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance Combine.AsyncPublisher	Swift.AsyncSequence		
+protocol	conformance AsyncThrowingPublisher.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance Combine.AsyncThrowingPublisher	Swift.AsyncSequence		
+protocol	conformance Iterator.Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Iterator.Inner	Combine.Cancellable		
+protocol	conformance Iterator.Inner	Combine.Subscriber		
+protocol	conformance Iterator.Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Iterator.Inner	Combine.Cancellable		
+protocol	conformance Iterator.Inner	Combine.Subscriber		
+protocol	conformance Publishers.PrefixUntilOutput	Combine.Publisher		
+protocol	conformance Inner.Termination	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.Termination	Combine.Subscriber		
+protocol	conformance PrefixUntilOutput.Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance PrefixUntilOutput.Inner	Combine.Cancellable		
+protocol	conformance PrefixUntilOutput.Inner	Combine.Subscription		
+protocol	conformance PrefixUntilOutput.Inner	Combine.Subscriber		
+protocol	conformance Combine.SubjectSubscriber	Swift.CustomReflectable		
+protocol	conformance Combine.SubjectSubscriber	Combine.Subscription		
+protocol	conformance Combine.SubjectSubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Combine.SubjectSubscriber	Swift.CustomStringConvertible		
+protocol	conformance Combine.SubjectSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.SubjectSubscriber	Combine.Cancellable		
+protocol	conformance Combine.SubjectSubscriber	Combine.Subscriber		
+protocol	conformance Publishers.Reduce	Combine.Publisher		
+protocol	conformance Publishers.TryReduce	Combine.Publisher		
+protocol	conformance Publishers.CompactMap	Combine.Publisher		
+protocol	conformance Publishers.TryCompactMap	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Merge	Combine.Publisher		
+protocol	conformance Publishers.Merge3	Combine.Publisher		
+protocol	conformance Publishers.Merge4	Combine.Publisher		
+protocol	conformance Publishers.Merge5	Combine.Publisher		
+protocol	conformance Publishers.Merge6	Combine.Publisher		
+protocol	conformance Publishers.Merge7	Combine.Publisher		
+protocol	conformance Publishers.Merge8	Combine.Publisher		
+protocol	conformance Publishers.MergeMany	Combine.Publisher		
+protocol	conformance Publishers.Merge	Swift.Equatable		
+protocol	conformance Publishers.Merge3	Swift.Equatable		
+protocol	conformance Publishers.Merge4	Swift.Equatable		
+protocol	conformance Publishers.Merge5	Swift.Equatable		
+protocol	conformance Publishers.Merge6	Swift.Equatable		
+protocol	conformance Publishers.Merge7	Swift.Equatable		
+protocol	conformance Publishers.Merge8	Swift.Equatable		
+protocol	conformance Publishers.MergeMany	Swift.Equatable		
+protocol	conformance _Merged.Side	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance _Merged.Side	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance _Merged.Side	Swift.CustomReflectable		
+protocol	conformance _Merged.Side	Swift.CustomStringConvertible		
+protocol	conformance _Merged	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance _Merged	Combine.Cancellable		
+protocol	conformance _Merged	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance _Merged	Swift.CustomReflectable		
+protocol	conformance _Merged	Swift.CustomStringConvertible		
+protocol	conformance _Merged.Side	Combine.Subscriber		
+protocol	conformance _Merged	Combine.Subscription		
+protocol	conformance Publisher	Combine.Publisher		
+protocol	conformance Publisher	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Scan	Combine.Publisher		
+protocol	conformance Publishers.TryScan	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance SchedulerTimeType.Stride	Swift.ExpressibleByFloatLiteral		
+protocol	conformance SchedulerTimeType.Stride	Swift.Comparable		
+protocol	conformance SchedulerTimeType.Stride	Swift.SignedNumeric		
+protocol	conformance SchedulerTimeType.Stride	Swift.Decodable		
+protocol	conformance SchedulerTimeType.Stride	Swift.Encodable		
+protocol	conformance SchedulerTimeType.Stride	Combine.SchedulerTimeIntervalConvertible		
+protocol	conformance SchedulerTimeType.Stride	Swift.Equatable		
+protocol	conformance SchedulerTimeType.Stride	Swift.Numeric		
+protocol	conformance SchedulerTimeType.Stride	Swift.AdditiveArithmetic		
+protocol	conformance SchedulerTimeType.Stride	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance ImmediateScheduler.SchedulerTimeType	Swift.Strideable		
+protocol	conformance ImmediateScheduler.SchedulerTimeType	Swift.Comparable		
+protocol	conformance ImmediateScheduler.SchedulerTimeType	Swift.Equatable		
+protocol	conformance Combine.ImmediateScheduler	Combine.Scheduler		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Publishers.Count	Combine.Publisher		
+protocol	conformance Publishers.Count	Swift.Equatable		
+protocol	conformance Publishers.LastWhere	Combine.Publisher		
+protocol	conformance Publishers.TryLastWhere	Combine.Publisher		
+protocol	conformance Publishers.IgnoreOutput	Combine.Publisher		
+protocol	conformance Publishers.IgnoreOutput	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.CurrentValueSubject	Combine.Subject		
+protocol	conformance Combine.CurrentValueSubject	Combine.Publisher		
+protocol	conformance CurrentValueSubject.Conduit	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance CurrentValueSubject.Conduit	Swift.CustomReflectable		
+protocol	conformance CurrentValueSubject.Conduit	Swift.CustomStringConvertible		
+protocol	conformance Subscribers.Assign	Combine.Subscriber		
+protocol	conformance Subscribers.Assign	Combine.Cancellable		
+protocol	conformance Subscribers.Assign	Swift.CustomStringConvertible		
+protocol	conformance Subscribers.Assign	Swift.CustomReflectable		
+protocol	conformance Subscribers.Assign	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Subscribers.Assign	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Publishers.SwitchToLatest	Combine.Publisher		
+protocol	conformance Outer	Combine.Cancellable		
+protocol	conformance Outer	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Outer	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Outer	Swift.CustomReflectable		
+protocol	conformance Outer	Swift.CustomStringConvertible		
+protocol	conformance Outer	Combine.Subscriber		
+protocol	conformance Outer	Combine.Subscription		
+protocol	conformance Outer.Side	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Outer.Side	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Outer.Side	Swift.CustomReflectable		
+protocol	conformance Outer.Side	Swift.CustomStringConvertible		
+protocol	conformance Outer.Side	Combine.Subscriber		
+protocol	conformance Publishers.Retry	Combine.Publisher		
+protocol	conformance Publishers.Retry	Swift.Equatable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.ContinuationSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Combine.ContinuationSubscriber	Combine.Subscriber		
+protocol	conformance Publishers.MapError	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Throttle	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Share	Combine.Publisher		
+protocol	conformance Publishers.Share	Swift.Equatable		
+protocol	conformance Publishers.Comparison	Combine.Publisher		
+protocol	conformance Publishers.TryComparison	Combine.Publisher		
+protocol	conformance Publishers.ReplaceEmpty	Combine.Publisher		
+protocol	conformance Publishers.ReplaceError	Combine.Publisher		
+protocol	conformance Publishers.ReplaceEmpty	Swift.Equatable		
+protocol	conformance Publishers.ReplaceError	Swift.Equatable		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.AssertNoFailure	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.DropUntilOutput	Combine.Publisher		
+protocol	conformance Publishers.DropUntilOutput	Swift.Equatable		
+protocol	conformance Inner.OtherSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.OtherSubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.OtherSubscriber	Swift.CustomReflectable		
+protocol	conformance Inner.OtherSubscriber	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner.OtherSubscriber	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Publishers.HandleEvents	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Concatenate	Combine.Publisher		
+protocol	conformance Publishers.Concatenate	Swift.Equatable		
+protocol	conformance Inner.PrefixSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.PrefixSubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.PrefixSubscriber	Swift.CustomReflectable		
+protocol	conformance Inner.PrefixSubscriber	Swift.CustomStringConvertible		
+protocol	conformance Concatenate.Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Concatenate.Inner	Combine.Cancellable		
+protocol	conformance Concatenate.Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Concatenate.Inner	Swift.CustomReflectable		
+protocol	conformance Concatenate.Inner	Swift.CustomStringConvertible		
+protocol	conformance Concatenate.Inner	Combine.Subscription		
+protocol	conformance Inner.PrefixSubscriber	Combine.Subscriber		
+protocol	conformance Inner.SuffixSubscriber	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.SuffixSubscriber	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.SuffixSubscriber	Swift.CustomReflectable		
+protocol	conformance Inner.SuffixSubscriber	Swift.CustomStringConvertible		
+protocol	conformance Inner.SuffixSubscriber	Combine.Subscriber		
+protocol	conformance Combine.CombineIdentifier	Swift.Hashable		
+protocol	conformance Combine.CombineIdentifier	Swift.CustomStringConvertible		
+protocol	conformance Combine.CombineIdentifier	Swift.Equatable		
+protocol	conformance Publishers.Debounce	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Combine.Fail	Combine.Publisher		
+protocol	conformance Combine.Fail	Swift.Equatable		
+protocol	conformance Publishers.Last	Combine.Publisher		
+protocol	conformance Publishers.Last	Swift.Equatable		
+protocol	conformance Combine.PublisherBoxBase	Combine.Publisher		
+protocol	conformance Combine.AnyPublisher	Swift.CustomStringConvertible		
+protocol	conformance Combine.AnyPublisher	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Combine.AnyPublisher	Combine.Publisher		
+protocol	conformance Publishers.Map	Combine.Publisher		
+protocol	conformance Publishers.TryMap	Combine.Publisher		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Timeout	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.PrefetchStrategy	Swift.Equatable		
+protocol	conformance Publishers.PrefetchStrategy	Swift.Hashable		
+protocol	conformance Publishers.Buffer	Combine.Publisher		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Sequence	Combine.Publisher		
+protocol	conformance Publishers.Sequence	Swift.Equatable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Publishers.Zip	Combine.Publisher		
+protocol	conformance Publishers.Zip3	Combine.Publisher		
+protocol	conformance Publishers.Zip4	Combine.Publisher		
+protocol	conformance Publishers.Zip	Swift.Equatable		
+protocol	conformance Publishers.Zip3	Swift.Equatable		
+protocol	conformance Publishers.Zip4	Swift.Equatable		
+protocol	conformance AbstractZip.Side	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance AbstractZip.Side	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance AbstractZip.Side	Swift.CustomReflectable		
+protocol	conformance AbstractZip.Side	Swift.CustomStringConvertible		
+protocol	conformance AbstractZip	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance AbstractZip	Combine.Cancellable		
+protocol	conformance AbstractZip	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance AbstractZip	Swift.CustomReflectable		
+protocol	conformance AbstractZip	Swift.CustomStringConvertible		
+protocol	conformance AbstractZip	Combine.Subscription		
+protocol	conformance AbstractZip.Side	Combine.Subscriber		
+protocol	conformance Publishers.Output	Combine.Publisher		
+protocol	conformance Publishers.Output	Swift.Equatable		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Catch	Combine.Publisher		
+protocol	conformance Publishers.TryCatch	Combine.Publisher		
+protocol	conformance Inner.UncaughtS	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.UncaughtS	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.UncaughtS	Swift.CustomReflectable		
+protocol	conformance Inner.UncaughtS	Swift.CustomStringConvertible		
+protocol	conformance Inner.UncaughtS	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.UncaughtS	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.UncaughtS	Swift.CustomReflectable		
+protocol	conformance Inner.UncaughtS	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner.UncaughtS	Combine.Subscriber		
+protocol	conformance Inner.UncaughtS	Combine.Subscriber		
+protocol	conformance Inner.CaughtS	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.CaughtS	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.CaughtS	Swift.CustomReflectable		
+protocol	conformance Inner.CaughtS	Swift.CustomStringConvertible		
+protocol	conformance Inner.CaughtS	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner.CaughtS	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner.CaughtS	Swift.CustomReflectable		
+protocol	conformance Inner.CaughtS	Swift.CustomStringConvertible		
+protocol	conformance Inner.CaughtS	Combine.Subscriber		
+protocol	conformance Inner.CaughtS	Combine.Subscriber		
+protocol	conformance Publishers.FlatMap	Combine.Publisher		
+protocol	conformance Outer	Combine.Cancellable		
+protocol	conformance Outer	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Outer	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Outer	Swift.CustomReflectable		
+protocol	conformance Outer	Swift.CustomStringConvertible		
+protocol	conformance Outer	Combine.Subscriber		
+protocol	conformance Outer	Combine.Subscription		
+protocol	conformance Outer.Side	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Outer.Side	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Outer.Side	Swift.CustomReflectable		
+protocol	conformance Outer.Side	Swift.CustomStringConvertible		
+protocol	conformance Outer.Side	Combine.Subscriber		
+protocol	conformance Publishers.Delay	Combine.Publisher		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Publishers.Drop	Combine.Publisher		
+protocol	conformance Publishers.Drop	Swift.Equatable		
+protocol	conformance Inner	Combine.Cancellable		
+protocol	conformance Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance Inner	Swift.CustomPlaygroundDisplayConvertible		
+protocol	conformance Inner	Swift.CustomReflectable		
+protocol	conformance Inner	Swift.CustomStringConvertible		
+protocol	conformance Inner	Combine.Subscriber		
+protocol	conformance Inner	Combine.Subscription		
+protocol	conformance Publishers.First	Combine.Publisher		
+protocol	conformance Publishers.FirstWhere	Combine.Publisher		
+protocol	conformance Publishers.TryFirstWhere	Combine.Publisher		
+protocol	conformance Publishers.First	Swift.Equatable		
+extension	Combine.Publishers.Multicast	Publisher		
+extension	Combine.Publishers.Multicast.Inner	Subscriber		
+extension	Combine.Publishers.SubscribeOn	Publisher		
+extension	Combine.Publishers.SubscribeOn.Inner	Subscriber		
+extension	Combine.FilterProducer	Subscriber		
+extension	Combine.Publishers.MeasureInterval	Publisher		
+extension	Combine.Publishers.MeasureInterval.Inner	Subscriber		
+extension	Combine.Publishers.DropWhile	Publisher		
+extension	Combine.Publishers.TryDropWhile	Publisher		
+extension	Combine.Publishers.TryDropWhile.Inner	Subscriber		
+extension	Combine.Publishers.DropWhile.Inner	Subscriber		
+extension	Combine.Record	Publisher		
+extension	Combine.CodingKeys	RawRepresentable		
+extension	Combine.Publishers.Filter	Publisher		
+extension	Combine.Publishers.TryFilter	Publisher		
+extension	Combine.Publishers.Filter.Inner	Subscriber		
+extension	Combine.Publishers.Breakpoint	Publisher		
+extension	Combine.Publishers.Breakpoint.Inner	Subscriber		
+extension	Combine.Publishers.WeakSubscriber	Subscriber		
+extension	Combine.Deferred	Publisher		
+extension	Combine.Publishers.AllSatisfy	Publisher		
+extension	Combine.Publishers.TryAllSatisfy	Publisher		
+extension	Combine.Subscribers.Sink	Subscriber		
+extension	Combine.AnySubscriberBase	Subscriber		
+extension	Combine.AnySubscriber	Subscriber		
+extension	Combine._ReferencedBasedAnySubscriber	Subscriber		
+extension	Combine.Publishers.RemoveDuplicates	Publisher		
+extension	Combine.Publishers.TryRemoveDuplicates	Publisher		
+extension	Combine.Publishers.Decode	Publisher		
+extension	Combine.Publishers.Encode	Publisher		
+extension	Combine.Publishers.Encode.Inner	Subscriber		
+extension	Combine.Publishers.Decode.Inner	Subscriber		
+extension	Combine.Just	Publisher		
+extension	Combine.PublishedSubject	Publisher		
+extension	Combine.PassthroughSubject	Publisher		
+extension	Combine.Publishers.Contains	Publisher		
+extension	Combine.Publishers.CombineLatest	Publisher		
+extension	Combine.Publishers.CombineLatest3	Publisher		
+extension	Combine.Publishers.CombineLatest4	Publisher		
+extension	Combine.AbstractCombineLatest.Side	Subscriber		
+extension	Combine.Publishers.Label.Category	RawRepresentable		
+extension	Combine.Publishers.Label	Publisher		
+extension	Combine.Publishers.Label.Inner	Subscriber		
+extension	Combine.Publishers.Autoconnect	Publisher		
+extension	Combine.Publishers.Autoconnect.Inner	Subscriber		
+extension	Combine.Publishers.Print	Publisher		
+extension	Combine.Publishers.Print.Inner	Subscriber		
+extension	Combine.ObservableObjectPublisher	Publisher		
+extension	Combine.Publishers.PrefixWhile	Publisher		
+extension	Combine.Publishers.TryPrefixWhile	Publisher		
+extension	Combine.Future	Publisher		
+extension	Combine.Empty	Publisher		
+extension	Combine.Publishers.SetFailureType	Publisher		
+extension	Combine.Publishers.SetFailureType.Inner	Subscriber		
+extension	Combine.Publisher	Publisher		
+extension	Combine.Publishers.ContainsWhere	Publisher		
+extension	Combine.Publishers.TryContainsWhere	Publisher		
+extension	Combine.Published.Publisher	Publisher		
+extension	Combine.PublishedSubscriber	Subscriber		
+extension	Combine.Publishers.MakeConnectable	Publisher		
+extension	Combine.Publishers.CollectByTime	Publisher		
+extension	Combine.Publishers.Collect	Publisher		
+extension	Combine.Publishers.CollectByCount	Publisher		
+extension	Combine.Publishers.CollectByTrigger.Inner	Subscriber		
+extension	Combine.Publishers.CollectByCount.Inner	Subscriber		
+extension	Combine.Publishers.CollectByTime.Inner	Subscriber		
+extension	Combine.Publishers.ReceiveOn	Publisher		
+extension	Combine.Publishers.ReceiveOn.Inner	Subscriber		
+extension	Combine.Subscribers.Completion.CodingKeys	RawRepresentable		
+extension	Combine.ReduceProducer	Subscriber		
+extension	Combine.Publishers.MapKeyPath	Publisher		
+extension	Combine.Publishers.MapKeyPath2	Publisher		
+extension	Combine.Publishers.MapKeyPath3	Publisher		
+extension	Combine.Publishers.MapKeyPath3.Inner	Subscriber		
+extension	Combine.Publishers.MapKeyPath2.Inner	Subscriber		
+extension	Combine.Publishers.MapKeyPath.Inner	Subscriber		
+extension	Combine.SubscriberTap	Subscriber		
+extension	Combine.AsyncPublisher.Iterator	AsyncIteratorProtocol		
+extension	Combine.AsyncPublisher	AsyncSequence		
+extension	Combine.AsyncThrowingPublisher.Iterator	AsyncIteratorProtocol		
+extension	Combine.AsyncThrowingPublisher	AsyncSequence		
+extension	Combine.AsyncThrowingPublisher.Iterator.Inner	Subscriber		
+extension	Combine.AsyncPublisher.Iterator.Inner	Subscriber		
+extension	Combine.Publishers.PrefixUntilOutput	Publisher		
+extension	Combine.Publishers.PrefixUntilOutput.Inner.Termination	Subscriber		
+extension	Combine.Publishers.PrefixUntilOutput.Inner	Subscriber		
+extension	Combine.SubjectSubscriber	Subscriber		
+extension	Combine.Publishers.Reduce	Publisher		
+extension	Combine.Publishers.TryReduce	Publisher		
+extension	Combine.Publishers.CompactMap	Publisher		
+extension	Combine.Publishers.TryCompactMap	Publisher		
+extension	Combine.Publishers.CompactMap.Inner	Subscriber		
+extension	Combine.Publishers.Merge	Publisher		
+extension	Combine.Publishers.Merge3	Publisher		
+extension	Combine.Publishers.Merge4	Publisher		
+extension	Combine.Publishers.Merge5	Publisher		
+extension	Combine.Publishers.Merge6	Publisher		
+extension	Combine.Publishers.Merge7	Publisher		
+extension	Combine.Publishers.Merge8	Publisher		
+extension	Combine.Publishers.MergeMany	Publisher		
+extension	Combine.Publishers._Merged.Side	Subscriber		
+extension	Combine.Publisher	Publisher		
+extension	Combine.Publishers.Invoke2I1O.Inner	Subscriber		
+extension	Combine.Publishers.Invoke1I1O.Inner	Subscriber		
+extension	Combine.Publishers.Scan	Publisher		
+extension	Combine.Publishers.TryScan	Publisher		
+extension	Combine.Publishers.TryScan.Inner	Subscriber		
+extension	Combine.Publishers.Scan.Inner	Subscriber		
+extension	Combine.ImmediateScheduler.SchedulerTimeType.Stride	ExpressibleByFloatLiteral		
+extension	Combine.ImmediateScheduler.SchedulerTimeType.Stride	Numeric		
+extension	Combine.ImmediateScheduler.SchedulerTimeType.Stride	ExpressibleByIntegerLiteral		
+extension	Combine.ImmediateScheduler.SchedulerTimeType	Strideable		
+extension	Combine.ImmediateScheduler	Scheduler		
+extension	Combine.Publishers.Count	Publisher		
+extension	Combine.Publishers.LastWhere	Publisher		
+extension	Combine.Publishers.TryLastWhere	Publisher		
+extension	Combine.Publishers.IgnoreOutput	Publisher		
+extension	Combine.Publishers.IgnoreOutput.Inner	Subscriber		
+extension	Combine.CurrentValueSubject	Publisher		
+extension	Combine.Subscribers.Assign	Subscriber		
+extension	Combine.Publishers.SwitchToLatest	Publisher		
+extension	Combine.Publishers.SwitchToLatest.Outer	Subscriber		
+extension	Combine.Publishers.SwitchToLatest.Outer.Side	Subscriber		
+extension	Combine.Publishers.Retry	Publisher		
+extension	Combine.Publishers.Retry.Inner	Subscriber		
+extension	Combine.ContinuationSubscriber	Subscriber		
+extension	Combine.Publishers.MapError	Publisher		
+extension	Combine.Publishers.MapError.Inner	Subscriber		
+extension	Combine.Publishers.Throttle	Publisher		
+extension	Combine.Publishers.Throttle.Inner	Subscriber		
+extension	Combine.Publishers.Share	Publisher		
+extension	Combine.Publishers.Comparison	Publisher		
+extension	Combine.Publishers.TryComparison	Publisher		
+extension	Combine.Publishers.ReplaceEmpty	Publisher		
+extension	Combine.Publishers.ReplaceError	Publisher		
+extension	Combine.Publishers.ReplaceError.Inner	Subscriber		
+extension	Combine.Publishers.ReplaceEmpty.Inner	Subscriber		
+extension	Combine.Publishers.AssertNoFailure	Publisher		
+extension	Combine.Publishers.AssertNoFailure.Inner	Subscriber		
+extension	Combine.Publishers.DropUntilOutput	Publisher		
+extension	Combine.Publishers.DropUntilOutput.Inner	Subscriber		
+extension	Combine.Publishers.DropUntilOutput.Inner.OtherSubscriber	Subscriber		
+extension	Combine.Publishers.HandleEvents	Publisher		
+extension	Combine.Publishers.HandleEvents.Inner	Subscriber		
+extension	Combine.Publishers.Concatenate	Publisher		
+extension	Combine.Publishers.Concatenate.Inner.PrefixSubscriber	Subscriber		
+extension	Combine.Publishers.Concatenate.Inner.SuffixSubscriber	Subscriber		
+extension	Combine.Publishers.Debounce	Publisher		
+extension	Combine.Publishers.Debounce.Inner	Subscriber		
+extension	Combine.Fail	Publisher		
+extension	Combine.Publishers.Last	Publisher		
+extension	Combine.PublisherBoxBase	Publisher		
+extension	Combine.AnyPublisher	Publisher		
+extension	Combine.Publishers.Map	Publisher		
+extension	Combine.Publishers.TryMap	Publisher		
+extension	Combine.Publishers.TryMap.Inner	Subscriber		
+extension	Combine.Publishers.Map.Inner	Subscriber		
+extension	Combine.Publishers.Timeout	Publisher		
+extension	Combine.Publishers.Timeout.Inner	Subscriber		
+extension	Combine.Publishers.Buffer	Publisher		
+extension	Combine.Publishers.Buffer.Inner	Subscriber		
+extension	Combine.Publishers.Sequence	Publisher		
+extension	Combine.Publishers.Zip	Publisher		
+extension	Combine.Publishers.Zip3	Publisher		
+extension	Combine.Publishers.Zip4	Publisher		
+extension	Combine.AbstractZip.Side	Subscriber		
+extension	Combine.Publishers.Output	Publisher		
+extension	Combine.Publishers.Output.Inner	Subscriber		
+extension	Combine.Publishers.Catch	Publisher		
+extension	Combine.Publishers.TryCatch	Publisher		
+extension	Combine.Publishers.TryCatch.Inner.UncaughtS	Subscriber		
+extension	Combine.Publishers.Catch.Inner.UncaughtS	Subscriber		
+extension	Combine.Publishers.TryCatch.Inner.CaughtS	Subscriber		
+extension	Combine.Publishers.Catch.Inner.CaughtS	Subscriber		
+extension	Combine.Publishers.FlatMap	Publisher		
+extension	Combine.Publishers.FlatMap.Outer	Subscriber		
+extension	Combine.Publishers.FlatMap.Outer.Side	Subscriber		
+extension	Combine.Publishers.Delay	Publisher		
+extension	Combine.Publishers.Delay.Inner	Subscriber		
+extension	Combine.Publishers.Drop	Publisher		
+extension	Combine.Publishers.Drop.Inner	Subscriber		
+extension	Combine.Publishers.First	Publisher		
+extension	Combine.Publishers.FirstWhere	Publisher		
+extension	Combine.Publishers.TryFirstWhere	Publisher		

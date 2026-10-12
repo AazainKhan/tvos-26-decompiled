@@ -1,0 +1,95 @@
+kind	type	conformance	member_kind	member
+class	lighthouse_runtime.GenericReporter<A	lighthouse_runtime.Result>		
+class	lighthouse_runtime.GenericReporter<A	lighthouse_runtime.Result>	let	reporter
+class	lighthouse_runtime.GenericWorker<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>		
+class	lighthouse_runtime.GenericWorker<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	let	worker
+class	lighthouse_runtime.LighthouseRuntimeProcessor<A	lighthouse_runtime.LighthousePlugin>		
+class	lighthouse_runtime.LighthouseRuntimeProcessor<A	lighthouse_runtime.LighthousePlugin>	let	runtime
+class	lighthouse_runtime.LighthouseRuntimeProcessor<A	lighthouse_runtime.LighthousePlugin>	var	task
+struct	lighthouse_runtime.LighthouseProcessorTaskAlreadyRunning			
+enum	lighthouse_runtime.LighthouseRuntimeProcessorResult			
+enum	lighthouse_runtime.LighthouseRuntimeProcessorResult		case	error
+enum	lighthouse_runtime.LighthouseRuntimeProcessorResult		case	success
+enum	lighthouse_runtime.LighthouseRuntimeProcessorResult		case	cancelled
+enum	lighthouse_runtime.LighthouseRuntimeProcessorResult		case	notAllowedToProcess
+class	lighthouse_runtime.GenericDataProvider<A	lighthouse_runtime.DataRecord>		
+class	lighthouse_runtime.GenericDataProvider<A	lighthouse_runtime.DataRecord>	let	loader
+struct	lighthouse_runtime.PluginContext			
+struct	lighthouse_runtime.PluginContext		var	parameters
+struct	lighthouse_runtime.PluginContext		var	attachments
+struct	lighthouse_runtime.PluginContext		var	correlationID
+struct	lighthouse_runtime.PluginContext		let	mlhostContext
+enum	lighthouse_runtime.LighthouseRuntimeError			
+enum	lighthouse_runtime.LighthouseRuntimeError		case	missingDataRecords
+enum	lighthouse_runtime.LighthouseRuntimeError		case	missingWorkerResult
+enum	lighthouse_runtime.LHRStates			
+enum	lighthouse_runtime.LHRStates		case	start
+enum	lighthouse_runtime.LHRStates		case	load
+enum	lighthouse_runtime.LHRStates		case	process
+enum	lighthouse_runtime.LHRStates		case	upload
+enum	lighthouse_runtime.LHRStates		case	finished
+enum	lighthouse_runtime.LRSignpostName			
+enum	lighthouse_runtime.LRSignpostName		case	loadData
+enum	lighthouse_runtime.LRSignpostName		case	doWork
+enum	lighthouse_runtime.LRSignpostName		case	report
+enum	lighthouse_runtime.LRSignpostName		case	totalRuntime
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>		
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	var	dataProvider
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	var	worker
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	var	reporter
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	let	operationQueue
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	let	telemetrySignposter
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	let	ledgerClient
+class	lighthouse_runtime.LighthouseRuntime<A	lighthouse_runtime.DataRecord, B: lighthouse_runtime.Result>	let	mlrTask
+struct	lighthouse_runtime.LighthouseRuntimeParams			
+struct	lighthouse_runtime.LighthouseRuntimeParams		let	processTimeoutInMilliseconds
+struct	lighthouse_runtime.LighthouseRuntimeParams		let	processTimeoutInMiliseconds
+enum	lighthouse_runtime.LighthouseRuntimeParams.CodingKeys			
+enum	lighthouse_runtime.LighthouseRuntimeParams.CodingKeys		case	processTimeoutInMilliseconds
+enum	lighthouse_runtime.LighthouseRuntimeParams.CodingKeys		case	processTimeoutInMiliseconds
+class	lighthouse_runtime.AsyncOperation	NSOperation		
+class	lighthouse_runtime.AsyncOperation	NSOperation	let	lockQueue
+class	lighthouse_runtime.AsyncOperation	NSOperation	let	action
+class	lighthouse_runtime.AsyncOperation	NSOperation	var	task
+class	lighthouse_runtime.AsyncOperation	NSOperation	var	error
+class	lighthouse_runtime.AsyncOperation	NSOperation	var	_isExecuting
+class	lighthouse_runtime.AsyncOperation	NSOperation	var	_isFinished
+struct	lighthouse_runtime.TimedOutError			
+protocol	lighthouse_runtime.Reporter	ResultType		
+protocol	lighthouse_runtime.Result			
+protocol	lighthouse_runtime.Worker	ResultType, DataRecordType		
+protocol	lighthouse_runtime.DataRecord			
+protocol	lighthouse_runtime.DataProvider	DataRecordType		
+protocol	lighthouse_runtime.LighthousePlugin			
+protocol	lighthouse_runtime.StaticStringConvertible			
+protocol	conformance lighthouse_runtime.GenericReporter	lighthouse_runtime.Reporter		
+protocol	conformance lighthouse_runtime.GenericWorker	lighthouse_runtime.Worker		
+protocol	conformance lighthouse_runtime.LighthouseProcessorTaskAlreadyRunning	Swift.Error		
+protocol	conformance lighthouse_runtime.GenericDataProvider	lighthouse_runtime.DataProvider		
+protocol	conformance lighthouse_runtime.LighthouseRuntimeError	Swift.Equatable		
+protocol	conformance lighthouse_runtime.LighthouseRuntimeError	Swift.Hashable		
+protocol	conformance lighthouse_runtime.LighthouseRuntimeError	Swift.Error		
+protocol	conformance lighthouse_runtime.LHRStates	Swift.Equatable		
+protocol	conformance lighthouse_runtime.LHRStates	Swift.Hashable		
+protocol	conformance lighthouse_runtime.LHRStates	Swift.RawRepresentable		
+protocol	conformance lighthouse_runtime.LHRStates	LighthouseBackground.MLHostCustomEvent		
+protocol	conformance lighthouse_runtime.LHRStates	Swift.CaseIterable		
+protocol	conformance lighthouse_runtime.LRSignpostName	Swift.Equatable		
+protocol	conformance lighthouse_runtime.LRSignpostName	Swift.Hashable		
+protocol	conformance lighthouse_runtime.LRSignpostName	Swift.RawRepresentable		
+protocol	conformance lighthouse_runtime.LRSignpostName	lighthouse_runtime.StaticStringConvertible		
+protocol	conformance lighthouse_runtime.LighthouseRuntimeParams	Swift.Decodable		
+protocol	conformance lighthouse_runtime.LighthouseRuntimeParams	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance lighthouse_runtime.TimedOutError	Swift.Error		
+protocol	conformance lighthouse_runtime.TimedOutError	Swift.Equatable		
+extension	lighthouse_runtime.GenericReporter	Reporter		
+extension	lighthouse_runtime.GenericWorker	Worker		
+extension	lighthouse_runtime.GenericDataProvider	DataProvider		
+extension	lighthouse_runtime.LHRStates	RawRepresentable		
+extension	lighthouse_runtime.LHRStates	CaseIterable		
+extension	lighthouse_runtime.LRSignpostName	RawRepresentable		

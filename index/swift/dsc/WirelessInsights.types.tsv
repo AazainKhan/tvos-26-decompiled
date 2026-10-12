@@ -1,0 +1,1066 @@
+kind	type	conformance	member_kind	member
+enum	WirelessInsights.WIS			
+struct	WirelessInsights.WIS.SimulatedPredictionItem			
+struct	WirelessInsights.WIS.SimulatedPredictionItem		let	startTime
+struct	WirelessInsights.WIS.SimulatedPredictionItem		let	duration
+struct	WirelessInsights.WIS.SimulatedPredictionItem		let	confidence
+struct	WirelessInsights.WIS.SimulatedPredictionItem		let	impact
+struct	WirelessInsights.WIS.XPC			
+enum	WirelessInsights.WIS.XPC.ResponseError			
+enum	WirelessInsights.WIS.XPC.ResponseError		case	unknownError
+enum	WirelessInsights.WIS.XPC.ResponseError		case	missingEntitlement
+struct	WirelessInsights.WIS.XPC.MissingEntitlementResponse			
+enum	WirelessInsights.WIS.XPC.MissingEntitlementResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MissingEntitlementResponse.CodingKeys		case	missingEntitlementFailure
+enum	WirelessInsights.WIS.XPC.DefaultRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.DefaultRequestCodingKeys		case	requestType
+enum	WirelessInsights.WIS.XPC.RequestType			
+enum	WirelessInsights.WIS.XPC.RequestType		case	servicePredictionRequest
+enum	WirelessInsights.WIS.XPC.RequestType		case	mapsSuggestionRequest
+enum	WirelessInsights.WIS.XPC.RequestType		case	mapsNavigationRequest
+enum	WirelessInsights.WIS.XPC.RequestType		case	walkoutPredictionRequest
+enum	WirelessInsights.WIS.XPC.UpdateType			
+enum	WirelessInsights.WIS.XPC.UpdateType		case	servicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType			
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType		case	servicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType		case	privateServicePredictionUpdate
+struct	WirelessInsights.WIS.XPC.ServicePredictionFetchRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionFetchResponse			
+struct	WirelessInsights.WIS.XPC.ServicePredictionFetchResponse		let	predictions
+struct	WirelessInsights.WIS.XPC.ServicePredictionSubscribeRequest<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>		
+struct	WirelessInsights.WIS.XPC.ServicePredictionSubscribeResponse<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>		
+struct	WirelessInsights.WIS.XPC.ServicePredictionSubscribeResponse<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	predictions
+struct	WirelessInsights.WIS.XPC.ServicePredictionUnsubscribeRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionUnsubscribeResponse			
+struct	WirelessInsights.WIS.XPC.ServicePredictionSimulateRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionSimulateRequest		let	simulatedPredictions
+enum	WirelessInsights.WIS.XPC.ServicePredictionSimulateRequest.RequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSimulateRequest.RequestCodingKeys		case	servicePredictionSimulateRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionSimulateRequest.RequestCodingKeys		case	simulatedPredictions
+struct	WirelessInsights.WIS.XPC.ServicePredictionSimulateResponse			
+struct	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest		let	simulationMode
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode		case	unrestricted
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode		case	simulatedOnly
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode		case	real
+struct	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeResponse			
+struct	WirelessInsights.WIS.XPC.ServicePredictionGetSimulationModeRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionGetSimulationModeResponse			
+struct	WirelessInsights.WIS.XPC.ServicePredictionGetSimulationModeResponse		let	simulationMode
+struct	WirelessInsights.WIS.XPC.ServicePredictionSupportedRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionSupportedResponse			
+struct	WirelessInsights.WIS.XPC.ServicePredictionSupportedResponse		let	supported
+struct	WirelessInsights.WIS.XPC.ServicePredictionUpdate			
+struct	WirelessInsights.WIS.XPC.ServicePredictionUpdate		let	predictions
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdate.RequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdate.RequestCodingKeys		case	servicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdate.RequestCodingKeys		case	predictions
+struct	WirelessInsights.WIS.XPC.PrivateServicePredictionUpdate			
+struct	WirelessInsights.WIS.XPC.PrivateServicePredictionUpdate		let	predictions
+enum	WirelessInsights.WIS.XPC.PrivateServicePredictionUpdate.RequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.PrivateServicePredictionUpdate.RequestCodingKeys		case	privateServicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.PrivateServicePredictionUpdate.RequestCodingKeys		case	privatePredictions
+struct	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest			
+struct	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest		let	session
+struct	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest		let	state
+struct	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateResponse			
+class	WirelessInsights.WIS.XPC.ServerConnection			
+class	WirelessInsights.WIS.XPC.ServerConnection		let	serviceName
+class	WirelessInsights.WIS.XPC.ServerConnection		let	queue
+class	WirelessInsights.WIS.XPC.ServerConnection		var	session
+class	WirelessInsights.WIS.XPC.ServerConnection		var	subscribers
+enum	WirelessInsights.WIS.XPC.ServerConnection.ServerError			
+enum	WirelessInsights.WIS.XPC.ServerConnection.ServerError		case	uninitializedError
+enum	WirelessInsights.WIS.XPC.ServerConnection.ServerError		case	missingEntitlement
+enum	WirelessInsights.WIS.XPC.ServerConnection.ServerError		case	unknownError
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionSubscribeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionPrivateSubscribeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionUnsubscribeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionFetchRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionIsSupportedRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionSimulateRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionSetSimulationModeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionGetSimulationModeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType		case	servicePredictionClientStateUpdateRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType		case	mapsSuggestionsPredictionFetchRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType		case	mapsSuggestionsPredictionSetOutOfServiceThresholdRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType		case	mapsSuggestionsPredictionSetRsrpThresholdRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType		case	mapsSuggestionsPredictionSetUpdateInterval
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType		case	mapsSuggestionsPredictionSimulateFlightTravelRequest
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionFetchRequest			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionFetchResponse			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionFetchResponse		let	predictions
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest		let	threshold
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdResponse			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest		let	threshold
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdResponse			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest		let	updateInterval
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalResponse			
+enum	WirelessInsights.WIS.XPC.MapsNavigationRequestType			
+enum	WirelessInsights.WIS.XPC.MapsNavigationRequestType		case	mapsNavigationPredicionSetLookAheadTimeRequest
+struct	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeRequest			
+struct	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeRequest		let	lookAhead
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest		let	departureLatitude
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest		let	departureLongitude
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest		let	arrivalLatitude
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest		let	arrivalLongitude
+struct	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeResponse			
+struct	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelResponse			
+enum	WirelessInsights.WIS.XPC.Entitlement			
+enum	WirelessInsights.WIS.XPC.Entitlement		case	managerAccess
+enum	WirelessInsights.WIS.XPC.Entitlement		case	internalTool
+enum	WirelessInsights.WIS.XPC.Entitlement		case	spi
+enum	WirelessInsights.WIS.XPC.Entitlement		case	predictions
+enum	WirelessInsights.WIS.XPC.Entitlement		case	apiPredictions
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest.CodingKeys		case	departureLatitude
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest.CodingKeys		case	departureLongitude
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest.CodingKeys		case	arrivalLatitude
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest.CodingKeys		case	arrivalLongitude
+enum	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeRequest.CodingKeys		case	lookAhead
+enum	WirelessInsights.WIS.XPC.MapsNavigationRequestType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsNavigationRequestType.CodingKeys		case	mapsNavigationPredicionSetLookAheadTimeRequest
+enum	WirelessInsights.WIS.XPC.MapsNavigationRequestType.MapsNavigationPredicionSetLookAheadTimeRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest.CodingKeys		case	updateInterval
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest.CodingKeys		case	threshold
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest.CodingKeys		case	threshold
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionFetchResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionFetchResponse.CodingKeys		case	predictions
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.CodingKeys		case	mapsSuggestionsPredictionFetchRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.CodingKeys		case	mapsSuggestionsPredictionSetOutOfServiceThresholdRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.CodingKeys		case	mapsSuggestionsPredictionSetRsrpThresholdRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.CodingKeys		case	mapsSuggestionsPredictionSetUpdateInterval
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.CodingKeys		case	mapsSuggestionsPredictionSimulateFlightTravelRequest
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.MapsSuggestionsPredictionFetchRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.MapsSuggestionsPredictionSetOutOfServiceThresholdRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.MapsSuggestionsPredictionSetRsrpThresholdRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.MapsSuggestionsPredictionSetUpdateIntervalCodingKeys			
+enum	WirelessInsights.WIS.XPC.MapsSuggestionRequestType.MapsSuggestionsPredictionSimulateFlightTravelRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionSubscribeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionPrivateSubscribeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionUnsubscribeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionFetchRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionIsSupportedRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionSimulateRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionSetSimulationModeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionGetSimulationModeRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.CodingKeys		case	servicePredictionClientStateUpdateRequest
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionSubscribeRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionPrivateSubscribeRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionUnsubscribeRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionFetchRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionIsSupportedRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionSimulateRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionSetSimulationModeRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionGetSimulationModeRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionRequestType.ServicePredictionClientStateUpdateRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest.CodingKeys		case	session
+enum	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest.CodingKeys		case	state
+enum	WirelessInsights.WIS.XPC.ServicePredictionSupportedResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSupportedResponse.CodingKeys		case	supported
+enum	WirelessInsights.WIS.XPC.ServicePredictionGetSimulationModeResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionGetSimulationModeResponse.CodingKeys		case	simulationMode
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.CodingKeys		case	simulationMode
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.CodingKeys		case	unrestricted
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.CodingKeys		case	simulatedOnly
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.CodingKeys		case	real
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.UnrestrictedCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.SimulatedOnlyCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest.SimulationMode.RealCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSimulateResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionUnsubscribeResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionSubscribeResponse.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>		
+enum	WirelessInsights.WIS.XPC.ServicePredictionSubscribeResponse.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	case	predictions
+enum	WirelessInsights.WIS.XPC.ServicePredictionFetchResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionFetchResponse.CodingKeys		case	predictions
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType.CodingKeys		case	servicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType.CodingKeys		case	privateServicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType.ServicePredictionUpdateCodingKeys			
+enum	WirelessInsights.WIS.XPC.ServicePredictionUpdateType.PrivateServicePredictionUpdateCodingKeys			
+enum	WirelessInsights.WIS.XPC.UpdateType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.UpdateType.CodingKeys		case	servicePredictionUpdate
+enum	WirelessInsights.WIS.XPC.UpdateType.ServicePredictionUpdateCodingKeys			
+enum	WirelessInsights.WIS.XPC.UpdateType.ServicePredictionUpdateCodingKeys		case	_0
+enum	WirelessInsights.WIS.XPC.RequestType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.RequestType.CodingKeys		case	servicePredictionRequest
+enum	WirelessInsights.WIS.XPC.RequestType.CodingKeys		case	mapsSuggestionRequest
+enum	WirelessInsights.WIS.XPC.RequestType.CodingKeys		case	mapsNavigationRequest
+enum	WirelessInsights.WIS.XPC.RequestType.CodingKeys		case	walkoutPredictionRequest
+enum	WirelessInsights.WIS.XPC.RequestType.ServicePredictionRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.RequestType.ServicePredictionRequestCodingKeys		case	_0
+enum	WirelessInsights.WIS.XPC.RequestType.MapsSuggestionRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.RequestType.MapsSuggestionRequestCodingKeys		case	_0
+enum	WirelessInsights.WIS.XPC.RequestType.MapsNavigationRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.RequestType.MapsNavigationRequestCodingKeys		case	_0
+enum	WirelessInsights.WIS.XPC.RequestType.WalkoutPredictionRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.RequestType.WalkoutPredictionRequestCodingKeys		case	_0
+enum	WirelessInsights.WIS.XPC.ResponseError.CodingKeys			
+enum	WirelessInsights.WIS.XPC.ResponseError.CodingKeys		case	unknownError
+enum	WirelessInsights.WIS.XPC.ResponseError.CodingKeys		case	missingEntitlement
+enum	WirelessInsights.WIS.XPC.ResponseError.UnknownErrorCodingKeys			
+enum	WirelessInsights.WIS.XPC.ResponseError.MissingEntitlementCodingKeys			
+enum	WirelessInsights.WIS.SimulatedPredictionItem.CodingKeys			
+enum	WirelessInsights.WIS.SimulatedPredictionItem.CodingKeys		case	startTime
+enum	WirelessInsights.WIS.SimulatedPredictionItem.CodingKeys		case	duration
+enum	WirelessInsights.WIS.SimulatedPredictionItem.CodingKeys		case	confidence
+enum	WirelessInsights.WIS.SimulatedPredictionItem.CodingKeys		case	impact
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType		case	walkoutPredictionTreatDissasocAsBeaconLostRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType		case	walkoutPredictionSimulateRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType		case	walkoutPredictionAllowSnapshotsAndPredictionRequest
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest			
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest		let	enabled
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys		case	walkoutPredictionTreatDissasocAsBeaconLostRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys		case	enabled
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostResponse			
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest			
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest		let	enabled
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys		case	walkoutPredictionAllowSnapshotsAndPredictionRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys		case	enabled
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionResponse			
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionSimulateRequest			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionSimulateRequest.RequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionSimulateRequest.RequestCodingKeys		case	walkoutPredictionSimulateRequest
+struct	WirelessInsights.WIS.XPC.WalkoutPredictionSimulateResponse			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionSimulateResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostResponse.CodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.CodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.CodingKeys		case	walkoutPredictionTreatDissasocAsBeaconLostRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.CodingKeys		case	walkoutPredictionSimulateRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.CodingKeys		case	walkoutPredictionAllowSnapshotsAndPredictionRequest
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.WalkoutPredictionTreatDissasocAsBeaconLostRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.WalkoutPredictionSimulateRequestCodingKeys			
+enum	WirelessInsights.WIS.XPC.WalkoutPredictionRequestType.WalkoutPredictionAllowSnapshotsAndPredictionRequestCodingKeys			
+struct	WirelessInsights.ServicePrediction			
+struct	WirelessInsights.ServicePrediction		let	impact
+struct	WirelessInsights.ServicePrediction		let	predictedStartTime
+struct	WirelessInsights.ServicePrediction		let	predictedInterval
+struct	WirelessInsights.ServicePrediction		let	confidenceScore
+enum	WirelessInsights.ServicePrediction.Impact			
+enum	WirelessInsights.ServicePrediction.Impact		case	low
+enum	WirelessInsights.ServicePrediction.Impact		case	medium
+enum	WirelessInsights.ServicePrediction.Impact		case	high
+enum	WirelessInsights.ServicePrediction.Confidence			
+enum	WirelessInsights.ServicePrediction.Confidence		case	low
+enum	WirelessInsights.ServicePrediction.Confidence		case	medium
+enum	WirelessInsights.ServicePrediction.Confidence		case	high
+struct	WirelessInsights.ServicePrediction.QuantizedInterval			
+struct	WirelessInsights.ServicePrediction.ConfidenceScore			
+struct	WirelessInsights.ServicePrediction.ConfidenceScore		let	prediction
+struct	WirelessInsights.ServicePrediction.ConfidenceScore		let	startTime
+struct	WirelessInsights.ServicePrediction.ConfidenceScore		let	duration
+struct	WirelessInsights.PredictionFilterResult			
+struct	WirelessInsights.PredictionFilterResult		let	didPassFilterCriteria
+struct	WirelessInsights.PredictionFilterResult		let	filterCriteriaFailReason
+struct	WirelessInsights.PrivateServicePrediction			
+struct	WirelessInsights.PrivateServicePrediction		let	type
+struct	WirelessInsights.PrivateServicePrediction		let	source
+struct	WirelessInsights.PrivateServicePrediction		let	predictedStartTime
+struct	WirelessInsights.PrivateServicePrediction		let	predictedDuration
+struct	WirelessInsights.PrivateServicePrediction		let	filterResult
+struct	WirelessInsights.PrivateServicePrediction		let	confidenceScore
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType		case	noCellularDataService
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType		case	cellularDataCongestion
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType		case	lowSignalStrength
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource		case	cellularLearning
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource		case	userDataLearning
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource		case	navigation
+struct	WirelessInsights.PrivateServicePrediction.ConfidenceScore			
+struct	WirelessInsights.PrivateServicePrediction.ConfidenceScore		let	predictionConfidence
+struct	WirelessInsights.PrivateServicePrediction.ConfidenceScore		let	startTimeConfidence
+struct	WirelessInsights.PrivateServicePrediction.ConfidenceScore		let	durationConfidence
+struct	WirelessInsights.PrivateServicePrediction.ConfidenceScore		let	numPrevPredictions
+enum	WirelessInsights.ServicePredictionClientState			
+enum	WirelessInsights.ServicePredictionClientState		case	active
+enum	WirelessInsights.ServicePredictionClientState		case	paused
+enum	WirelessInsights.ServicePredictionClientState		case	impacted
+enum	WirelessInsights.ServicePredictionClientState		case	ended
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	numRetries
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	isConnected
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	reconnectTask
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	servicePredictionsContinuation
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	serverConnection
+class	WirelessInsights.ServicePredictionHandle<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	id
+enum	WirelessInsights.ServicePredictionError			
+enum	WirelessInsights.ServicePredictionError		case	unsupportedDevice
+enum	WirelessInsights.ServicePredictionError		case	connectionError
+class	WirelessInsights.ServicePredictionProvider			
+class	WirelessInsights.ServicePredictionProvider		var	lazy
+class	WirelessInsights.ServicePredictionProvider		let	handles
+class	WirelessInsights.ServicePredictionProvider		let	id
+enum	WirelessInsights.ServicePredictionProvider.PredictionError			
+enum	WirelessInsights.ServicePredictionProvider.PredictionError		case	unsupported
+class	WirelessInsights.LegacyServicePrediction	NSObject		
+class	WirelessInsights.LegacyServicePrediction	NSObject	var	servicePrediction
+enum	WirelessInsights.ServicePredictionHandle.ConnectionState<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+enum	WirelessInsights.ServicePredictionHandle.ConnectionState<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	notConnected
+enum	WirelessInsights.ServicePredictionHandle.ConnectionState<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	connected
+enum	WirelessInsights.ServicePredictionHandle.ConnectionState<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	terminated
+enum	WirelessInsights.ServicePredictionClientState.CodingKeys			
+enum	WirelessInsights.ServicePredictionClientState.CodingKeys		case	active
+enum	WirelessInsights.ServicePredictionClientState.CodingKeys		case	paused
+enum	WirelessInsights.ServicePredictionClientState.CodingKeys		case	impacted
+enum	WirelessInsights.ServicePredictionClientState.CodingKeys		case	ended
+enum	WirelessInsights.ServicePredictionClientState.ActiveCodingKeys			
+enum	WirelessInsights.ServicePredictionClientState.PausedCodingKeys			
+enum	WirelessInsights.ServicePredictionClientState.ImpactedCodingKeys			
+enum	WirelessInsights.ServicePredictionClientState.EndedCodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys		case	type
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys		case	source
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys		case	predictedStartTime
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys		case	predictedDuration
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys		case	filterResult
+enum	WirelessInsights.PrivateServicePrediction.CodingKeys		case	confidenceScore
+enum	WirelessInsights.PrivateServicePrediction.ConfidenceScore.CodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ConfidenceScore.CodingKeys		case	predictionConfidence
+enum	WirelessInsights.PrivateServicePrediction.ConfidenceScore.CodingKeys		case	startTimeConfidence
+enum	WirelessInsights.PrivateServicePrediction.ConfidenceScore.CodingKeys		case	durationConfidence
+enum	WirelessInsights.PrivateServicePrediction.ConfidenceScore.CodingKeys		case	numPrevPredictions
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.CodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.CodingKeys		case	cellularLearning
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.CodingKeys		case	userDataLearning
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.CodingKeys		case	navigation
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.CellularLearningCodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.UserDataLearningCodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionSource.NavigationCodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.CodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.CodingKeys		case	noCellularDataService
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.CodingKeys		case	cellularDataCongestion
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.CodingKeys		case	lowSignalStrength
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.NoCellularDataServiceCodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.CellularDataCongestionCodingKeys			
+enum	WirelessInsights.PrivateServicePrediction.ServicePredictionType.LowSignalStrengthCodingKeys			
+enum	WirelessInsights.PredictionFilterResult.CodingKeys			
+enum	WirelessInsights.PredictionFilterResult.CodingKeys		case	didPassFilterCriteria
+enum	WirelessInsights.PredictionFilterResult.CodingKeys		case	filterCriteriaFailReason
+enum	WirelessInsights.ServicePrediction.CodingKeys			
+enum	WirelessInsights.ServicePrediction.CodingKeys		case	impact
+enum	WirelessInsights.ServicePrediction.CodingKeys		case	predictedStartTime
+enum	WirelessInsights.ServicePrediction.CodingKeys		case	predictedInterval
+enum	WirelessInsights.ServicePrediction.CodingKeys		case	confidenceScore
+enum	WirelessInsights.ServicePrediction.ConfidenceScore.CodingKeys			
+enum	WirelessInsights.ServicePrediction.ConfidenceScore.CodingKeys		case	prediction
+enum	WirelessInsights.ServicePrediction.ConfidenceScore.CodingKeys		case	startTime
+enum	WirelessInsights.ServicePrediction.ConfidenceScore.CodingKeys		case	duration
+enum	WirelessInsights.ServicePrediction.Confidence.CodingKeys			
+enum	WirelessInsights.ServicePrediction.Confidence.CodingKeys		case	low
+enum	WirelessInsights.ServicePrediction.Confidence.CodingKeys		case	medium
+enum	WirelessInsights.ServicePrediction.Confidence.CodingKeys		case	high
+enum	WirelessInsights.ServicePrediction.Confidence.LowCodingKeys			
+enum	WirelessInsights.ServicePrediction.Confidence.MediumCodingKeys			
+enum	WirelessInsights.ServicePrediction.Confidence.HighCodingKeys			
+enum	WirelessInsights.ServicePrediction.Impact.CodingKeys			
+enum	WirelessInsights.ServicePrediction.Impact.CodingKeys		case	low
+enum	WirelessInsights.ServicePrediction.Impact.CodingKeys		case	medium
+enum	WirelessInsights.ServicePrediction.Impact.CodingKeys		case	high
+enum	WirelessInsights.ServicePrediction.Impact.LowCodingKeys			
+enum	WirelessInsights.ServicePrediction.Impact.MediumCodingKeys			
+enum	WirelessInsights.ServicePrediction.Impact.HighCodingKeys			
+protocol	XPC.Request	Response		
+protocol	XPC.Response			
+protocol	XPC.DefaultEncodingRequest			
+protocol	XPC.UpdateHandler	T		
+protocol	XPC.Update			
+protocol	XPC.UpdateConsumer			
+protocol	XPC.ServicePredictionUpdateContainer	Prediction		
+protocol	conformance WIS.SimulatedPredictionItem	Swift.Decodable		
+protocol	conformance WIS.SimulatedPredictionItem	Swift.Encodable		
+protocol	conformance WIS.SimulatedPredictionItem	Swift.Hashable		
+protocol	conformance WIS.SimulatedPredictionItem	Swift.Equatable		
+protocol	conformance XPC.ResponseError	Swift.Hashable		
+protocol	conformance XPC.ResponseError	Swift.Decodable		
+protocol	conformance XPC.ResponseError	Swift.Encodable		
+protocol	conformance XPC.ResponseError	Swift.Equatable		
+protocol	conformance MissingEntitlementResponse.CodingKeys	Swift.Equatable		
+protocol	conformance MissingEntitlementResponse.CodingKeys	Swift.Hashable		
+protocol	conformance MissingEntitlementResponse.CodingKeys	Swift.CodingKey		
+protocol	conformance MissingEntitlementResponse.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingEntitlementResponse.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.MissingEntitlementResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MissingEntitlementResponse	Swift.Decodable		
+protocol	conformance XPC.MissingEntitlementResponse	Swift.Encodable		
+protocol	conformance XPC.MissingEntitlementResponse	Swift.Equatable		
+protocol	conformance XPC.DefaultRequestCodingKeys	Swift.Equatable		
+protocol	conformance XPC.DefaultRequestCodingKeys	Swift.Hashable		
+protocol	conformance XPC.DefaultRequestCodingKeys	Swift.CodingKey		
+protocol	conformance XPC.DefaultRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance XPC.DefaultRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.RequestType	Swift.Decodable		
+protocol	conformance XPC.RequestType	Swift.Encodable		
+protocol	conformance XPC.RequestType	Swift.Equatable		
+protocol	conformance XPC.RequestType	Swift.CustomStringConvertible		
+protocol	conformance XPC.UpdateType	Swift.Decodable		
+protocol	conformance XPC.UpdateType	Swift.Encodable		
+protocol	conformance XPC.UpdateType	Swift.Hashable		
+protocol	conformance XPC.UpdateType	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionUpdateType	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionUpdateType	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionUpdateType	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionUpdateType	Swift.Hashable		
+protocol	conformance XPC.ServicePredictionFetchRequest	WirelessInsights.WIS.XPC.DefaultEncodingRequest		
+protocol	conformance XPC.ServicePredictionFetchRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionFetchRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionFetchRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionFetchRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionFetchResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionFetchResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionFetchResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionFetchResponse	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionSubscribeRequest	WirelessInsights.WIS.XPC.DefaultEncodingRequest		
+protocol	conformance XPC.ServicePredictionSubscribeRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionSubscribeRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSubscribeRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSubscribeRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionSubscribeResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionSubscribeResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSubscribeResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSubscribeResponse	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionUnsubscribeRequest	WirelessInsights.WIS.XPC.DefaultEncodingRequest		
+protocol	conformance XPC.ServicePredictionUnsubscribeRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionUnsubscribeRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionUnsubscribeRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionUnsubscribeRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionUnsubscribeResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionUnsubscribeResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionUnsubscribeResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionUnsubscribeResponse	Swift.Equatable		
+protocol	conformance ServicePredictionSimulateRequest.RequestCodingKeys	Swift.Equatable		
+protocol	conformance ServicePredictionSimulateRequest.RequestCodingKeys	Swift.Hashable		
+protocol	conformance ServicePredictionSimulateRequest.RequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionSimulateRequest.RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionSimulateRequest.RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.ServicePredictionSimulateRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionSimulateRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSimulateRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSimulateRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionSimulateResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionSimulateResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSimulateResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSimulateResponse	Swift.Equatable		
+protocol	conformance ServicePredictionSetSimulationModeRequest.SimulationMode	Swift.Hashable		
+protocol	conformance ServicePredictionSetSimulationModeRequest.SimulationMode	Swift.Equatable		
+protocol	conformance ServicePredictionSetSimulationModeRequest.SimulationMode	Swift.Decodable		
+protocol	conformance ServicePredictionSetSimulationModeRequest.SimulationMode	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSetSimulationModeRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionSetSimulationModeRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSetSimulationModeRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSetSimulationModeRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionSetSimulationModeResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionSetSimulationModeResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSetSimulationModeResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSetSimulationModeResponse	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionGetSimulationModeRequest	WirelessInsights.WIS.XPC.DefaultEncodingRequest		
+protocol	conformance XPC.ServicePredictionGetSimulationModeRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionGetSimulationModeRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionGetSimulationModeRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionGetSimulationModeRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionGetSimulationModeResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionGetSimulationModeResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionGetSimulationModeResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionGetSimulationModeResponse	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionSupportedRequest	WirelessInsights.WIS.XPC.DefaultEncodingRequest		
+protocol	conformance XPC.ServicePredictionSupportedRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionSupportedRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSupportedRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSupportedRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionSupportedResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionSupportedResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionSupportedResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionSupportedResponse	Swift.Equatable		
+protocol	conformance ServicePredictionUpdate.RequestCodingKeys	Swift.Equatable		
+protocol	conformance ServicePredictionUpdate.RequestCodingKeys	Swift.Hashable		
+protocol	conformance ServicePredictionUpdate.RequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionUpdate.RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionUpdate.RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.ServicePredictionUpdate	WirelessInsights.WIS.XPC.ServicePredictionUpdateContainer		
+protocol	conformance XPC.ServicePredictionUpdate	Swift.Hashable		
+protocol	conformance XPC.ServicePredictionUpdate	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionUpdate	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionUpdate	WirelessInsights.WIS.XPC.Update		
+protocol	conformance XPC.ServicePredictionUpdate	Swift.Equatable		
+protocol	conformance PrivateServicePredictionUpdate.RequestCodingKeys	Swift.Equatable		
+protocol	conformance PrivateServicePredictionUpdate.RequestCodingKeys	Swift.Hashable		
+protocol	conformance PrivateServicePredictionUpdate.RequestCodingKeys	Swift.CodingKey		
+protocol	conformance PrivateServicePredictionUpdate.RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrivateServicePredictionUpdate.RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.PrivateServicePredictionUpdate	WirelessInsights.WIS.XPC.Update		
+protocol	conformance XPC.PrivateServicePredictionUpdate	Swift.Hashable		
+protocol	conformance XPC.PrivateServicePredictionUpdate	Swift.Decodable		
+protocol	conformance XPC.PrivateServicePredictionUpdate	Swift.Encodable		
+protocol	conformance XPC.PrivateServicePredictionUpdate	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionClientStateUpdateRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.ServicePredictionClientStateUpdateRequest	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionClientStateUpdateRequest	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionClientStateUpdateRequest	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionClientStateUpdateResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.ServicePredictionClientStateUpdateResponse	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionClientStateUpdateResponse	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionClientStateUpdateResponse	Swift.Equatable		
+protocol	conformance ServerConnection.ServerError	Swift.Equatable		
+protocol	conformance ServerConnection.ServerError	Swift.Hashable		
+protocol	conformance ServerConnection.ServerError	Swift.Error		
+protocol	conformance XPC.ServerConnection	Swift.Actor		
+protocol	conformance XPC.ServicePredictionRequestType	Swift.Hashable		
+protocol	conformance XPC.ServicePredictionRequestType	Swift.Decodable		
+protocol	conformance XPC.ServicePredictionRequestType	Swift.Encodable		
+protocol	conformance XPC.ServicePredictionRequestType	Swift.Equatable		
+protocol	conformance XPC.ServicePredictionRequestType	Swift.CustomStringConvertible		
+protocol	conformance XPC.MapsSuggestionRequestType	Swift.Hashable		
+protocol	conformance XPC.MapsSuggestionRequestType	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionRequestType	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionRequestType	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionRequestType	Swift.CustomStringConvertible		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchRequest	WirelessInsights.WIS.XPC.DefaultEncodingRequest		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchRequest	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchRequest	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchRequest	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchResponse	Swift.CustomStringConvertible		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchResponse	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchResponse	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionFetchResponse	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdResponse	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdResponse	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdResponse	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdResponse	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdResponse	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetRsrpThresholdResponse	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalResponse	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalResponse	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSetUpdateIntervalResponse	Swift.Equatable		
+protocol	conformance XPC.MapsNavigationRequestType	Swift.Hashable		
+protocol	conformance XPC.MapsNavigationRequestType	Swift.Decodable		
+protocol	conformance XPC.MapsNavigationRequestType	Swift.Encodable		
+protocol	conformance XPC.MapsNavigationRequestType	Swift.Equatable		
+protocol	conformance XPC.MapsNavigationRequestType	Swift.CustomStringConvertible		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeRequest	Swift.Decodable		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeRequest	Swift.Encodable		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeRequest	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest	Swift.Equatable		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeResponse	Swift.Decodable		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeResponse	Swift.Encodable		
+protocol	conformance XPC.MapsNavigationPredicionSetLookAheadTimeResponse	Swift.Equatable		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelResponse	Swift.Decodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelResponse	Swift.Encodable		
+protocol	conformance XPC.MapsSuggestionsPredictionSimulateFlightTravelResponse	Swift.Equatable		
+protocol	conformance XPC.Entitlement	Swift.Hashable		
+protocol	conformance XPC.Entitlement	Swift.Decodable		
+protocol	conformance XPC.Entitlement	Swift.Encodable		
+protocol	conformance XPC.Entitlement	Swift.Equatable		
+protocol	conformance XPC.Entitlement	Swift.RawRepresentable		
+protocol	conformance XPC.Entitlement	Swift.CaseIterable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MissingEntitlementCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingEntitlementCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnknownErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnknownErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance WalkoutPredictionRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WalkoutPredictionRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionRequestCodingKeys	Swift.Hashable		
+protocol	conformance WalkoutPredictionRequestCodingKeys	Swift.Equatable		
+protocol	conformance MapsNavigationRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsNavigationRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsNavigationRequestCodingKeys	Swift.Hashable		
+protocol	conformance MapsNavigationRequestCodingKeys	Swift.Equatable		
+protocol	conformance MapsSuggestionRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsSuggestionRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsSuggestionRequestCodingKeys	Swift.Hashable		
+protocol	conformance MapsSuggestionRequestCodingKeys	Swift.Equatable		
+protocol	conformance ServicePredictionRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionRequestCodingKeys	Swift.Hashable		
+protocol	conformance ServicePredictionRequestCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.Hashable		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PrivateServicePredictionUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateServicePredictionUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RealCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RealCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SimulatedOnlyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SimulatedOnlyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnrestrictedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnrestrictedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionClientStateUpdateRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionClientStateUpdateRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionGetSimulationModeRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionGetSimulationModeRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionSetSimulationModeRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionSetSimulationModeRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionSimulateRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionSimulateRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionIsSupportedRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionIsSupportedRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionFetchRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionFetchRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionUnsubscribeRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionUnsubscribeRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionPrivateSubscribeRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionPrivateSubscribeRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServicePredictionSubscribeRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ServicePredictionSubscribeRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MapsSuggestionsPredictionSimulateFlightTravelRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSimulateFlightTravelRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSetUpdateIntervalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSetUpdateIntervalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSetRsrpThresholdRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSetRsrpThresholdRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSetOutOfServiceThresholdRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsSuggestionsPredictionSetOutOfServiceThresholdRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsSuggestionsPredictionFetchRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsSuggestionsPredictionFetchRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MapsNavigationPredicionSetLookAheadTimeRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MapsNavigationPredicionSetLookAheadTimeRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MapsNavigationPredicionSetLookAheadTimeRequestCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MapsSuggestionsPredictionFetchRequestCodingKeys	Swift.CodingKey		
+protocol	conformance MapsSuggestionsPredictionSetOutOfServiceThresholdRequestCodingKeys	Swift.CodingKey		
+protocol	conformance MapsSuggestionsPredictionSetRsrpThresholdRequestCodingKeys	Swift.CodingKey		
+protocol	conformance MapsSuggestionsPredictionSetUpdateIntervalCodingKeys	Swift.CodingKey		
+protocol	conformance MapsSuggestionsPredictionSimulateFlightTravelRequestCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionSubscribeRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionPrivateSubscribeRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionUnsubscribeRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionFetchRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionIsSupportedRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionSimulateRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionSetSimulationModeRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionGetSimulationModeRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionClientStateUpdateRequestCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UnrestrictedCodingKeys	Swift.CodingKey		
+protocol	conformance SimulatedOnlyCodingKeys	Swift.CodingKey		
+protocol	conformance RealCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance PrivateServicePredictionUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ServicePredictionRequestCodingKeys	Swift.CodingKey		
+protocol	conformance MapsSuggestionRequestCodingKeys	Swift.CodingKey		
+protocol	conformance MapsNavigationRequestCodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionRequestCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UnknownErrorCodingKeys	Swift.CodingKey		
+protocol	conformance MissingEntitlementCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance XPC.WalkoutPredictionRequestType	Swift.Hashable		
+protocol	conformance XPC.WalkoutPredictionRequestType	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionRequestType	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionRequestType	Swift.Equatable		
+protocol	conformance XPC.WalkoutPredictionRequestType	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys	Swift.Equatable		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys	Swift.Hashable		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequest.RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest	Swift.Equatable		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostResponse	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostResponse	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionTreatDissasocAsBeaconLostResponse	Swift.Equatable		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys	Swift.Equatable		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys	Swift.Hashable		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequest.RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest	Swift.Equatable		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionResponse	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionResponse	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionAllowSnapshotsAndPredictionResponse	Swift.Equatable		
+protocol	conformance WalkoutPredictionSimulateRequest.RequestCodingKeys	Swift.Equatable		
+protocol	conformance WalkoutPredictionSimulateRequest.RequestCodingKeys	Swift.Hashable		
+protocol	conformance WalkoutPredictionSimulateRequest.RequestCodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionSimulateRequest.RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionSimulateRequest.RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance XPC.WalkoutPredictionSimulateRequest	WirelessInsights.WIS.XPC.Request		
+protocol	conformance XPC.WalkoutPredictionSimulateRequest	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionSimulateRequest	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionSimulateRequest	Swift.Equatable		
+protocol	conformance XPC.WalkoutPredictionSimulateResponse	WirelessInsights.WIS.XPC.Response		
+protocol	conformance XPC.WalkoutPredictionSimulateResponse	Swift.Decodable		
+protocol	conformance XPC.WalkoutPredictionSimulateResponse	Swift.Encodable		
+protocol	conformance XPC.WalkoutPredictionSimulateResponse	Swift.Equatable		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionSimulateRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WalkoutPredictionSimulateRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionTreatDissasocAsBeaconLostRequestCodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionSimulateRequestCodingKeys	Swift.CodingKey		
+protocol	conformance WalkoutPredictionAllowSnapshotsAndPredictionRequestCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ServicePrediction.Impact	Swift.Equatable		
+protocol	conformance ServicePrediction.Impact	Swift.Hashable		
+protocol	conformance ServicePrediction.Impact	Swift.Decodable		
+protocol	conformance ServicePrediction.Impact	Swift.Encodable		
+protocol	conformance ServicePrediction.Impact	Swift.Comparable		
+protocol	conformance ServicePrediction.Confidence	Swift.Equatable		
+protocol	conformance ServicePrediction.Confidence	Swift.Hashable		
+protocol	conformance ServicePrediction.Confidence	Swift.Decodable		
+protocol	conformance ServicePrediction.Confidence	Swift.Encodable		
+protocol	conformance ServicePrediction.Confidence	Swift.Comparable		
+protocol	conformance ServicePrediction.ConfidenceScore	Swift.Hashable		
+protocol	conformance ServicePrediction.ConfidenceScore	Swift.Decodable		
+protocol	conformance ServicePrediction.ConfidenceScore	Swift.Encodable		
+protocol	conformance ServicePrediction.ConfidenceScore	Swift.Equatable		
+protocol	conformance WirelessInsights.ServicePrediction	Swift.Hashable		
+protocol	conformance WirelessInsights.ServicePrediction	Swift.Decodable		
+protocol	conformance WirelessInsights.ServicePrediction	Swift.Encodable		
+protocol	conformance WirelessInsights.ServicePrediction	Swift.Equatable		
+protocol	conformance WirelessInsights.PredictionFilterResult	Swift.Hashable		
+protocol	conformance WirelessInsights.PredictionFilterResult	Swift.Decodable		
+protocol	conformance WirelessInsights.PredictionFilterResult	Swift.Encodable		
+protocol	conformance WirelessInsights.PredictionFilterResult	Swift.Equatable		
+protocol	conformance PrivateServicePrediction.ServicePredictionType	Swift.Equatable		
+protocol	conformance PrivateServicePrediction.ServicePredictionType	Swift.Hashable		
+protocol	conformance PrivateServicePrediction.ServicePredictionType	Swift.Decodable		
+protocol	conformance PrivateServicePrediction.ServicePredictionType	Swift.Encodable		
+protocol	conformance PrivateServicePrediction.ServicePredictionSource	Swift.Equatable		
+protocol	conformance PrivateServicePrediction.ServicePredictionSource	Swift.Hashable		
+protocol	conformance PrivateServicePrediction.ServicePredictionSource	Swift.Decodable		
+protocol	conformance PrivateServicePrediction.ServicePredictionSource	Swift.Encodable		
+protocol	conformance PrivateServicePrediction.ConfidenceScore	Swift.Hashable		
+protocol	conformance PrivateServicePrediction.ConfidenceScore	Swift.Decodable		
+protocol	conformance PrivateServicePrediction.ConfidenceScore	Swift.Encodable		
+protocol	conformance PrivateServicePrediction.ConfidenceScore	Swift.Equatable		
+protocol	conformance WirelessInsights.PrivateServicePrediction	Swift.Hashable		
+protocol	conformance WirelessInsights.PrivateServicePrediction	Swift.Decodable		
+protocol	conformance WirelessInsights.PrivateServicePrediction	Swift.Encodable		
+protocol	conformance WirelessInsights.PrivateServicePrediction	Swift.Equatable		
+protocol	conformance WirelessInsights.ServicePredictionClientState	Swift.Equatable		
+protocol	conformance WirelessInsights.ServicePredictionClientState	Swift.Hashable		
+protocol	conformance WirelessInsights.ServicePredictionClientState	Swift.Decodable		
+protocol	conformance WirelessInsights.ServicePredictionClientState	Swift.Encodable		
+protocol	conformance WirelessInsights.ServicePredictionClientState	Swift.CustomStringConvertible		
+protocol	conformance WirelessInsights.ServicePredictionError	Swift.Equatable		
+protocol	conformance WirelessInsights.ServicePredictionError	Swift.Hashable		
+protocol	conformance WirelessInsights.ServicePredictionError	Swift.Error		
+protocol	conformance ServicePredictionProvider.PredictionError	Swift.Equatable		
+protocol	conformance ServicePredictionProvider.PredictionError	Swift.Hashable		
+protocol	conformance HighCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HighCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MediumCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MediumCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LowCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LowCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance HighCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HighCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MediumCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MediumCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LowCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LowCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance LowSignalStrengthCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LowSignalStrengthCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CellularDataCongestionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CellularDataCongestionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoCellularDataServiceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoCellularDataServiceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NavigationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NavigationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UserDataLearningCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UserDataLearningCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CellularLearningCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CellularLearningCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance EndedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EndedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ImpactedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ImpactedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PausedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PausedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ActiveCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ActiveCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ServicePredictionHandle.ConnectionState	Swift.Hashable		
+protocol	conformance ServicePredictionHandle.ConnectionState	Swift.Equatable		
+protocol	conformance ServicePredictionHandle	Swift.Hashable		
+protocol	conformance ServicePredictionHandle	Swift.Equatable		
+protocol	conformance ServicePredictionHandle	WirelessInsights.WIS.XPC.UpdateConsumer		
+protocol	conformance ServicePredictionHandle	Swift.Actor		
+protocol	conformance ActiveCodingKeys	Swift.CodingKey		
+protocol	conformance PausedCodingKeys	Swift.CodingKey		
+protocol	conformance ImpactedCodingKeys	Swift.CodingKey		
+protocol	conformance EndedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CellularLearningCodingKeys	Swift.CodingKey		
+protocol	conformance UserDataLearningCodingKeys	Swift.CodingKey		
+protocol	conformance NavigationCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NoCellularDataServiceCodingKeys	Swift.CodingKey		
+protocol	conformance CellularDataCongestionCodingKeys	Swift.CodingKey		
+protocol	conformance LowSignalStrengthCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LowCodingKeys	Swift.CodingKey		
+protocol	conformance MediumCodingKeys	Swift.CodingKey		
+protocol	conformance HighCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LowCodingKeys	Swift.CodingKey		
+protocol	conformance MediumCodingKeys	Swift.CodingKey		
+protocol	conformance HighCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	WirelessInsights.WIS.XPC.ServicePredictionFetchRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionSubscribeRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionUnsubscribeRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionSimulateRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionSetSimulationModeRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionGetSimulationModeRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionSupportedRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.ServicePredictionUpdate	WIS.XPC.ServicePredictionUpdateContainer		
+extension	WirelessInsights.WIS.XPC.ServicePredictionClientStateUpdateRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionFetchRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetOutOfServiceThresholdRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetRsrpThresholdRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSetUpdateIntervalRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.MapsNavigationPredicionSetLookAheadTimeRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.MapsSuggestionsPredictionSimulateFlightTravelRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.Entitlement	RawRepresentable		
+extension	WirelessInsights.WIS.XPC.Entitlement	CaseIterable		
+extension	WirelessInsights.WIS.XPC.WalkoutPredictionTreatDissasocAsBeaconLostRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.WalkoutPredictionAllowSnapshotsAndPredictionRequest	WIS.XPC.Request		
+extension	WirelessInsights.WIS.XPC.WalkoutPredictionSimulateRequest	WIS.XPC.Request		

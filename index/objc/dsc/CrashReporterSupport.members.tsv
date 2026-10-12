@@ -1,0 +1,21 @@
+owner	kind	declaration
+OTATaskingAgent	-	- (void)awdKeyWithReply:(id /* block */)reply;
+OTATaskingAgent	-	- (void)crashreporterKeyWithReply:(id /* block */)reply;
+OTATaskingAgent	-	- (void)deletePreferenceForDomain:(id)domain preference:(id)preference UID:(unsigned int)uid withReply:(id /* block */)reply;
+OTATaskingAgent	-	- (void)setPreferenceForDomain:(id)domain preference:(id)preference value:(id)value UID:(unsigned int)uid withReply:(id /* block */)reply;
+OTATaskingAgentClient	+	+ (id)sharedClient;
+OTATaskingAgentClient	-	- (_Bool)deletePreference:(id)preference forUser:(id)user inDomain:(id)domain;
+OTATaskingAgentClient	-	- (_Bool)setPreference:(id)preference forUser:(id)user inDomain:(id)domain toValue:(void *)value;
+OTATaskingAgentClient	-	- (id)awdKey;
+OTATaskingAgentClient	-	- (id)crashreporterKey;
+OTATaskingAgentClient	-	- (id)init;
+OTATaskingAgentClient	-	- (unsigned int)uidForUser:(id)user;
+StructuredDataReport	-	- (_Bool)isActionable;
+StructuredDataReport	-	- (id)appleCareDetails;
+StructuredDataReport	-	- (id)initWithType:(int)type withFile:(id)file;
+StructuredDataReport	-	- (id)problemType;
+StructuredDataReport	-	- (id)reportNamePrefix;
+StructuredDataReport	-	- (int)streamContentAtLevel:(_Bool)level withBlock:(id /* block */)block;
+StructuredDataReport	-	- (void)dealloc;
+StructuredDataReport	-	- (void)generateCustomLogAtLevel:(_Bool)level withBlock:(id /* block */)block;
+StructuredDataReport	-	- (void)generateLogAtLevel:(_Bool)level withBlock:(id /* block */)block;

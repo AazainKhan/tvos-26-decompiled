@@ -1,0 +1,1548 @@
+kind	type	conformance	member_kind	member
+enum	VideoIntelligence.AssetState			
+enum	VideoIntelligence.AssetState		case	notDetermined
+enum	VideoIntelligence.AssetState		case	unavailable
+enum	VideoIntelligence.AssetState		case	notFetched
+enum	VideoIntelligence.AssetState		case	fetching
+enum	VideoIntelligence.AssetState		case	ready
+enum	VideoIntelligence.AssetState.CodingKeys			
+enum	VideoIntelligence.AssetState.CodingKeys		case	notDetermined
+enum	VideoIntelligence.AssetState.CodingKeys		case	unavailable
+enum	VideoIntelligence.AssetState.CodingKeys		case	notFetched
+enum	VideoIntelligence.AssetState.CodingKeys		case	fetching
+enum	VideoIntelligence.AssetState.CodingKeys		case	ready
+enum	VideoIntelligence.AssetState.NotDeterminedCodingKeys			
+enum	VideoIntelligence.AssetState.UnavailableCodingKeys			
+enum	VideoIntelligence.AssetState.NotFetchedCodingKeys			
+enum	VideoIntelligence.AssetState.FetchingCodingKeys			
+enum	VideoIntelligence.AssetState.ReadyCodingKeys			
+enum	VideoIntelligence.CompoundAssetContainerError<A	Swift.Error>		
+enum	VideoIntelligence.CompoundAssetContainerError<A	Swift.Error>	case	someAssetError
+enum	VideoIntelligence.CompoundAssetContainerError<A	Swift.Error>	case	cancelled
+struct	VideoIntelligence.AssetMetadata			
+struct	VideoIntelligence.AssetMetadata		let	schemaVersion
+struct	VideoIntelligence.AssetMetadata		let	identifier
+struct	VideoIntelligence.AssetMetadata		let	kind
+struct	VideoIntelligence.AssetMetadata		let	version
+struct	VideoIntelligence.AssetMetadata		let	compatibilityVersion
+struct	VideoIntelligence.AssetMetadata		let	payload
+enum	VideoIntelligence.AssetMetadata.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.CodingKeys		case	schemaVersion
+enum	VideoIntelligence.AssetMetadata.CodingKeys		case	identifier
+enum	VideoIntelligence.AssetMetadata.CodingKeys		case	kind
+enum	VideoIntelligence.AssetMetadata.CodingKeys		case	version
+enum	VideoIntelligence.AssetMetadata.CodingKeys		case	compatibilityVersion
+enum	VideoIntelligence.AssetMetadata.CodingKeys		case	payload
+enum	VideoIntelligence.AssetMetadata.CompilationFlavor			
+enum	VideoIntelligence.AssetMetadata.CompilationFlavor		case	precompiled
+enum	VideoIntelligence.AssetMetadata.CompilationFlavor		case	onDevice
+struct	VideoIntelligence.VCDoorInferenceIOs			
+struct	VideoIntelligence.VCDoorInferenceIOs		let	inputFeatures
+struct	VideoIntelligence.VCDoorInferenceIOs		let	outputScore1
+struct	VideoIntelligence.VCDoorInferenceIOs		let	outputClass1
+struct	VideoIntelligence.VCDoorInferenceIOs		let	outputScore2
+struct	VideoIntelligence.VCDoorInferenceIOs		let	outputClass2
+enum	VideoIntelligence.VCDoorInferenceIOs.OutputClass2			
+enum	VideoIntelligence.VCDoorInferenceIOs.OutputScore2			
+enum	VideoIntelligence.VCDoorInferenceIOs.OutputClass1			
+enum	VideoIntelligence.VCDoorInferenceIOs.OutputScore1			
+enum	VideoIntelligence.VCDoorInferenceIOs.InputFeatures			
+struct	VideoIntelligence.VCHeadInferenceIOs			
+struct	VideoIntelligence.VCHeadInferenceIOs		let	inputFeatures
+struct	VideoIntelligence.VCHeadInferenceIOs		let	outputScore
+struct	VideoIntelligence.VCHeadInferenceIOs		let	outputClass
+enum	VideoIntelligence.VCHeadInferenceIOs.OutputClass			
+enum	VideoIntelligence.VCHeadInferenceIOs.OutputScore			
+enum	VideoIntelligence.VCHeadInferenceIOs.InputFeatures			
+class	VideoIntelligence.VCInferenceProvider<A	VideoIntelligence.VCInferenceIOs>		
+class	VideoIntelligence.VCInferenceProvider<A	VideoIntelligence.VCInferenceIOs>	let	_e5rtInferenceProvider
+class	VideoIntelligence.VCInferenceProvider<A	VideoIntelligence.VCInferenceIOs>	let	model
+struct	VideoIntelligence.VCModelOutputName<A	VideoIntelligence.VCInferenceIOs>		
+struct	VideoIntelligence.VCModelOutputName<A	VideoIntelligence.VCInferenceIOs>	let	ioType
+struct	VideoIntelligence.VCModelInputName<A	VideoIntelligence.VCInferenceIOs>		
+struct	VideoIntelligence.VCModelInputName<A	VideoIntelligence.VCInferenceIOs>	let	ioType
+struct	VideoIntelligence.VCVisualInferenceIOs			
+struct	VideoIntelligence.VCVisualInferenceIOs		let	inputImage
+struct	VideoIntelligence.VCVisualInferenceIOs		let	outputClassFeature
+struct	VideoIntelligence.VCVisualInferenceIOs		let	outputPatchFeature
+enum	VideoIntelligence.VCVisualInferenceIOs.OutputPatchFeature			
+enum	VideoIntelligence.VCVisualInferenceIOs.OutputClassFeature			
+enum	VideoIntelligence.VCVisualInferenceIOs.InputImage			
+enum	VideoIntelligence.VideoCaptioningError			
+enum	VideoIntelligence.VideoCaptioningError		case	preprocessingError
+enum	VideoIntelligence.VideoCaptioningError		case	inferenceIOError
+enum	VideoIntelligence.VideoCaptioningError		case	inferenceProviderError
+enum	VideoIntelligence.VideoCaptioningError		case	assetStateResolvingError
+enum	VideoIntelligence.VideoCaptioningError		case	assetFetchingError
+enum	VideoIntelligence.VideoCaptioningError		case	notReady
+enum	VideoIntelligence.VideoCaptioningError		case	cancelled
+enum	VideoIntelligence.VideoCaptioningError		case	internalInconsistency
+enum	VideoIntelligence.VideoCaptioningError		case	invalidInputFormat
+enum	VideoIntelligence.VideoCaptioningError		case	invalidRegionOfInterest
+enum	VideoIntelligence.VideoCaptioningError		case	unsupportedVersion
+enum	VideoIntelligence.VideoCaptioningError		case	assetNotUnavailable
+struct	VideoIntelligence.VideoCaptioningInput			
+struct	VideoIntelligence.VideoCaptioningInput		let	storage
+struct	VideoIntelligence.VideoCaptioningInput.Format			
+struct	VideoIntelligence.VideoCaptioningInput.Format		let	pixelBufferIOProperties
+class	VideoIntelligence.VideoCaptioningInputStorage			
+class	VideoIntelligence.VideoCaptioningInputStorage		let	_underlyingStorage
+class	VideoIntelligence.VideoCaptioningUseCase			
+class	VideoIntelligence.VideoCaptioningUseCase		var	_resolvedUseCaseRequirement
+class	VideoIntelligence.VideoCaptioningUseCase		var	_resolvedAssets
+class	VideoIntelligence.VideoCaptioningUseCase		let	_lock
+class	VideoIntelligence.VideoCaptioningUseCase		let	id
+class	VideoIntelligence.VideoCaptioningUseCase		let	_registry
+class	VideoIntelligence.VideoCaptioningModel			
+class	VideoIntelligence.VideoCaptioningModel		let	id
+class	VideoIntelligence.VideoCaptioningModel		let	_useCase
+struct	VideoIntelligence.VideoCaptioningUseCaseIdentifier			
+struct	VideoIntelligence.VideoCaptioningUseCaseIdentifier		let	useCaseRequirement
+struct	VideoIntelligence.VideoCaptioningUseCaseIdentifier		let	version
+struct	VideoIntelligence.VideoCaptioningModelIdentifier			
+struct	VideoIntelligence.VideoCaptioningModelIdentifier		let	kind
+struct	VideoIntelligence.VideoCaptioningModelIdentifier		let	useCaseIdentifier
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.CodingKeys			
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.CodingKeys		case	kind
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.CodingKeys		case	useCaseIdentifier
+enum	VideoIntelligence.VideoCaptioningUseCaseIdentifier.CodingKeys			
+enum	VideoIntelligence.VideoCaptioningUseCaseIdentifier.CodingKeys		case	useCaseRequirement
+enum	VideoIntelligence.VideoCaptioningUseCaseIdentifier.CodingKeys		case	version
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind			
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind		case	visual
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind		case	visualDoor
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind		case	head
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind		case	door
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.CodingKeys			
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.CodingKeys		case	visual
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.CodingKeys		case	visualDoor
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.CodingKeys		case	head
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.CodingKeys		case	door
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.VisualCodingKeys			
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.VisualDoorCodingKeys			
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.HeadCodingKeys			
+enum	VideoIntelligence.VideoCaptioningModelIdentifier.Kind.DoorCodingKeys			
+class	VideoIntelligence._VideoCaptioningStateStorage			
+class	VideoIntelligence._VideoCaptioningStateStorage		let	_currentCaptionStorage
+class	VideoIntelligence._VideoCaptioningStateStorage		let	_numberOfFeaturesStorage
+class	VideoIntelligence._VideoCaptioningStateStorage		let	_scoresStorage
+class	VideoIntelligence._VideoCaptioningStateStorage		let	_previousFilteredActionsStorage
+class	VideoIntelligence._VideoCaptioningStateStorage		let	_previousDoorOrientationStorage
+class	VideoIntelligence._VideoCaptioningStateStorage		let	_isInitialDoorOrientationStorage
+class	VideoIntelligence.VideoCaptioningProvider			
+class	VideoIntelligence.VideoCaptioningProvider		let	version
+class	VideoIntelligence.VideoCaptioningProvider		let	_registry
+class	VideoIntelligence.VideoCaptioningProvider		var	_resolvedConfiguration
+class	VideoIntelligence.VideoCaptioningProvider		var	_resolvedVersion
+class	VideoIntelligence.VideoCaptioningProvider		let	_useCaseID
+class	VideoIntelligence.VideoCaptioningProvider		let	_visualModelID
+class	VideoIntelligence.VideoCaptioningProvider		let	_visualDoorModelID
+class	VideoIntelligence.VideoCaptioningProvider		let	_headModelID
+class	VideoIntelligence.VideoCaptioningProvider		let	_doorModelID
+class	VideoIntelligence.VideoCaptioningProvider		var	_visualInferenceProvider
+class	VideoIntelligence.VideoCaptioningProvider		var	_visualDoorInferenceProvider
+class	VideoIntelligence.VideoCaptioningProvider		var	_headInferenceProvider
+class	VideoIntelligence.VideoCaptioningProvider		var	_doorInferenceProvider
+class	VideoIntelligence.VideoCaptioningProvider		var	_visualOutputClassFeature
+class	VideoIntelligence.VideoCaptioningProvider		var	_visualOutputPatchFeature
+class	VideoIntelligence.VideoCaptioningProvider		var	_visualDoorOutputClassFeature
+class	VideoIntelligence.VideoCaptioningProvider		var	_visualDoorOutputPatchFeature
+class	VideoIntelligence.VideoCaptioningProvider		var	_headInputFeatures
+class	VideoIntelligence.VideoCaptioningProvider		var	_headOutputScore
+class	VideoIntelligence.VideoCaptioningProvider		var	_headOutputClass
+class	VideoIntelligence.VideoCaptioningProvider		var	_doorInputFeatures
+class	VideoIntelligence.VideoCaptioningProvider		var	_doorOutputScore1
+class	VideoIntelligence.VideoCaptioningProvider		var	_doorOutputClass1
+class	VideoIntelligence.VideoCaptioningProvider		var	_doorOutputScore2
+class	VideoIntelligence.VideoCaptioningProvider		var	_doorOutputClass2
+class	VideoIntelligence.VideoCaptioningProvider		var	_pixelBufferPool
+class	VideoIntelligence.VideoCaptioningProvider		var	_pixelBufferRotated90Pool
+class	VideoIntelligence.VideoCaptioningProvider		var	_pixelTransferSession
+class	VideoIntelligence.VideoCaptioningProvider		var	_pixelTransferSession_forDoor
+class	VideoIntelligence.VideoCaptioningProvider		var	_pixelRotationSession
+class	VideoIntelligence.VideoCaptioningProvider		var	lazy
+class	VideoIntelligence.VideoCaptioningProvider		var	lazy
+class	VideoIntelligence.VideoCaptioningProvider		var	_isReady
+struct	VideoIntelligence.DoorOrientation			
+struct	VideoIntelligence.DoorOrientation		let	coronalOrientation
+struct	VideoIntelligence.DoorOrientation		let	transverseOrientation
+enum	VideoIntelligence.WellKnownAction			
+enum	VideoIntelligence.WellKnownAction		case	sitting
+enum	VideoIntelligence.WellKnownAction		case	callingOnPhone
+enum	VideoIntelligence.WellKnownAction		case	pettingPets
+enum	VideoIntelligence.WellKnownAction		case	drinking
+enum	VideoIntelligence.WellKnownAction		case	holdingTheDoor
+enum	VideoIntelligence.WellKnownAction		case	doingWorkouts
+enum	VideoIntelligence.WellKnownAction		case	lying
+enum	VideoIntelligence.WellKnownAction		case	standingWithADog
+enum	VideoIntelligence.WellKnownAction		case	playingMusicInstrument
+enum	VideoIntelligence.WellKnownAction		case	walkingWithADog
+enum	VideoIntelligence.WellKnownAction		case	unknown
+enum	VideoIntelligence.WellKnownAction		case	usingElectronicDevice
+enum	VideoIntelligence.WellKnownAction		case	eating
+enum	VideoIntelligence.WellKnownAction		case	cycling
+enum	VideoIntelligence.WellKnownAction		case	wateringPlant
+enum	VideoIntelligence.WellKnownAction		case	reading
+enum	VideoIntelligence.WellKnownAction		case	skateboarding
+enum	VideoIntelligence.VersionedConfiguration_v1_3			
+enum	VideoIntelligence.DoorOrientation.CodingKeys			
+enum	VideoIntelligence.DoorOrientation.CodingKeys		case	coronalOrientation
+enum	VideoIntelligence.DoorOrientation.CodingKeys		case	transverseOrientation
+enum	VideoIntelligence.DoorOrientation.TransverseOrientation			
+enum	VideoIntelligence.DoorOrientation.TransverseOrientation		case	in
+enum	VideoIntelligence.DoorOrientation.TransverseOrientation		case	out
+enum	VideoIntelligence.DoorOrientation.CoronalOrientation			
+enum	VideoIntelligence.DoorOrientation.CoronalOrientation		case	left
+enum	VideoIntelligence.DoorOrientation.CoronalOrientation		case	right
+enum	VideoIntelligence.VideoCaptioningStateResetReason			
+enum	VideoIntelligence.VideoCaptioningStateResetReason		case	contextChanged
+enum	VideoIntelligence.VideoCaptioningStateResetReason		case	regionOfInterestRelinquished
+struct	VideoIntelligence.VideoCaptioningState			
+struct	VideoIntelligence.VideoCaptioningState		var	storage
+enum	VideoIntelligence.VideoCaptioningVersion			
+enum	VideoIntelligence.VideoCaptioningVersion		case	v1
+enum	VideoIntelligence.VideoCaptioningVersion		case	v1_1
+enum	VideoIntelligence.VideoCaptioningVersion		case	v1_2
+enum	VideoIntelligence.VideoCaptioningVersion		case	v1_3
+enum	VideoIntelligence.VideoCaptioningVersion.CodingKeys			
+enum	VideoIntelligence.VideoCaptioningVersion.CodingKeys		case	v1
+enum	VideoIntelligence.VideoCaptioningVersion.CodingKeys		case	v1_1
+enum	VideoIntelligence.VideoCaptioningVersion.CodingKeys		case	v1_2
+enum	VideoIntelligence.VideoCaptioningVersion.CodingKeys		case	v1_3
+enum	VideoIntelligence.VideoCaptioningVersion.V1CodingKeys			
+enum	VideoIntelligence.VideoCaptioningVersion.V1_1CodingKeys			
+enum	VideoIntelligence.VideoCaptioningVersion.V1_2CodingKeys			
+enum	VideoIntelligence.VideoCaptioningVersion.V1_3CodingKeys			
+enum	VideoIntelligence.AssetMetadata.Kind			
+enum	VideoIntelligence.AssetMetadata.Kind		case	metadata
+enum	VideoIntelligence.AssetMetadata.Kind		case	useCase
+enum	VideoIntelligence.AssetMetadata.Kind		case	baseModel
+enum	VideoIntelligence.AssetMetadata.Kind		case	adapter
+enum	VideoIntelligence.AssetMetadata.Kind		case	model
+enum	VideoIntelligence.AssetMetadata.ModelPayload.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.ModelPayload.CodingKeys		case	compilationFlavor
+enum	VideoIntelligence.AssetMetadata.ModelPayload.CodingKeys		case	relativePath
+enum	VideoIntelligence.AssetMetadata.ModelPayload.CodingKeys		case	functionName
+enum	VideoIntelligence.AssetMetadata.AdapterPayload.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.AdapterPayload.CodingKeys		case	name
+enum	VideoIntelligence.AssetMetadata.AdapterPayload.CodingKeys		case	relativePath
+enum	VideoIntelligence.AssetMetadata.AdapterPayload.CodingKeys		case	baseModel
+enum	VideoIntelligence.AssetMetadata.AdapterPayload.CodingKeys		case	functionName
+enum	VideoIntelligence.AssetMetadata.BaseModelPayload.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.BaseModelPayload.CodingKeys		case	compilationFlavor
+enum	VideoIntelligence.AssetMetadata.BaseModelPayload.CodingKeys		case	relativePath
+enum	VideoIntelligence.AssetMetadata.UseCasePayload.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.UseCasePayload.CodingKeys		case	essentials
+enum	VideoIntelligence.AssetMetadata.MetadataPayload.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.MetadataPayload.CodingKeys		case	availableUseCases
+struct	VideoIntelligence.AssetMetadata.MetadataPayload			
+struct	VideoIntelligence.AssetMetadata.MetadataPayload		let	availableUseCases
+struct	VideoIntelligence.AssetMetadata.UseCasePayload			
+struct	VideoIntelligence.AssetMetadata.UseCasePayload		let	essentials
+struct	VideoIntelligence.AssetMetadata.BaseModelPayload			
+struct	VideoIntelligence.AssetMetadata.BaseModelPayload		let	compilationFlavor
+struct	VideoIntelligence.AssetMetadata.BaseModelPayload		let	relativePath
+struct	VideoIntelligence.AssetMetadata.AdapterPayload			
+struct	VideoIntelligence.AssetMetadata.AdapterPayload		let	name
+struct	VideoIntelligence.AssetMetadata.AdapterPayload		let	relativePath
+struct	VideoIntelligence.AssetMetadata.AdapterPayload		let	baseModel
+struct	VideoIntelligence.AssetMetadata.AdapterPayload		let	functionName
+struct	VideoIntelligence.AssetMetadata.ModelPayload			
+struct	VideoIntelligence.AssetMetadata.ModelPayload		let	compilationFlavor
+struct	VideoIntelligence.AssetMetadata.ModelPayload		let	relativePath
+struct	VideoIntelligence.AssetMetadata.ModelPayload		let	functionName
+struct	VideoIntelligence.AssetMetadata.AnyPayload.DecodingConfiguration			
+struct	VideoIntelligence.AssetMetadata.AnyPayload.DecodingConfiguration		let	kind
+struct	VideoIntelligence.AssetMetadata.AnyPayload			
+struct	VideoIntelligence.AssetMetadata.AnyPayload		let	payload
+struct	VideoIntelligence.AssetMetadata.Requirement			
+struct	VideoIntelligence.AssetMetadata.Requirement		let	identifier
+struct	VideoIntelligence.AssetMetadata.Requirement		let	compatibilityVersion
+enum	VideoIntelligence.AssetMetadata.Requirement.CodingKeys			
+enum	VideoIntelligence.AssetMetadata.Requirement.CodingKeys		case	identifier
+enum	VideoIntelligence.AssetMetadata.Requirement.CodingKeys		case	compatibilityVersion
+enum	VideoIntelligence.AssetMetadata.SchemaVersion			
+enum	VideoIntelligence.AssetMetadata.SchemaVersion		case	v1
+class	VideoIntelligence.AssetMetadataResolver<A	VideoIntelligence.AssetMetadataProviding>		
+class	VideoIntelligence.AssetMetadataResolver<A	VideoIntelligence.AssetMetadataProviding>	let	provider
+class	VideoIntelligence.AssetMetadataResolver<A	VideoIntelligence.AssetMetadataProviding>	let	_workloop
+class	VideoIntelligence.AssetMetadataResolver<A	VideoIntelligence.AssetMetadataProviding>	var	_loadedMetadataCache
+class	VideoIntelligence.AssetMetadataResolver<A	VideoIntelligence.AssetMetadataProviding>	var	_resolutionCache
+class	VideoIntelligence.AssetMetadataResolver<A	VideoIntelligence.AssetMetadataProviding>	var	_requirementsInResolving
+struct	VideoIntelligence.AssetMetadataResolver._Resolution<A	VideoIntelligence.AssetMetadataProviding>		
+struct	VideoIntelligence.AssetMetadataResolver._Resolution<A	VideoIntelligence.AssetMetadataProviding>	let	metadata
+struct	VideoIntelligence.AssetMetadataResolver._Resolution<A	VideoIntelligence.AssetMetadataProviding>	var	dependencies
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>		
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>	case	providerError
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>	case	providerReturnsInvalidMetadata
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>	case	unexpectedMetadataKind
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>	case	conflictingMetadata
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>	case	recursiveRequirementDetected
+enum	VideoIntelligence.AssetMetadataResolver.ResolverError<A	VideoIntelligence.AssetMetadataProviding>	case	cyclicRequirementsDetected
+class	VideoIntelligence.AssetRegistry			
+class	VideoIntelligence.AssetRegistry		let	_debugIDStorage
+class	VideoIntelligence.AssetRegistry		let	_overridenSearchList
+class	VideoIntelligence.AssetRegistry		let	_resolvedProviders
+class	VideoIntelligence.AssetRegistry		let	_resolvedProvidersTable
+class	VideoIntelligence.AssetRegistry		let	_queue
+class	VideoIntelligence.AssetRegistry		let	_cache
+class	VideoIntelligence.AssetRegistry._DebugIDStorage			
+class	VideoIntelligence.AssetRegistry._DebugIDStorage		let	debugID
+class	VideoIntelligence.AssetRegistry._Provider			
+class	VideoIntelligence.AssetRegistry._Provider		let	sourceKind
+class	VideoIntelligence.AssetRegistry._AssetsBundleProvider	VideoIntelligence.AssetRegistry._CommonProvider  empty-list  first-element-marker  VideoIntelligence.AssetRegistryAssetsBundleSource		
+class	VideoIntelligence.AssetRegistry._MobileAssetProvider	VideoIntelligence.AssetRegistry._CommonProvider  empty-list  first-element-marker  VideoIntelligence.AssetRegistryMobileAssetSource		
+class	VideoIntelligence.AssetRegistry._ResolvedProvider			
+class	VideoIntelligence.AssetRegistry._ResolvedProvider		let	sourceKind
+class	VideoIntelligence.AssetRegistry._ResolvedProvider		var	owningRegistry
+class	VideoIntelligence.AssetRegistry._ResolvedProvider		var	_provider
+enum	VideoIntelligence.AssetRegistryError			
+enum	VideoIntelligence.AssetRegistryError		case	assetsBundleResolvingError
+enum	VideoIntelligence.AssetRegistryError		case	localAssetError
+enum	VideoIntelligence.AssetRegistryError		case	remoteAssetError
+enum	VideoIntelligence.AssetRegistryError		case	sourcePolicyEvaluationFailure
+enum	VideoIntelligence.AssetRegistryError		case	sourceNotAvailable
+enum	VideoIntelligence.AssetRegistryError		case	resolvedUseCaseRequirementExpected
+enum	VideoIntelligence.AssetRegistryError		case	allSourcesNotAvailable
+enum	VideoIntelligence.AssetRegistryError		case	owningRegistryAlreadyDeallocated
+enum	VideoIntelligence.AssetRegistryError		case	timedOut
+enum	VideoIntelligence.AssetRegistryError		case	cancelled
+struct	VideoIntelligence.AssetRegistry._Cache			
+struct	VideoIntelligence.AssetRegistry._Cache		var	_resolution
+struct	VideoIntelligence.AssetRegistry._Cache		var	_assetsResolution
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind		case	path
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind		case	appleInternal
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind		case	bundled
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind		case	environmentVariable
+enum	VideoIntelligence.AssetRegistrySourceKind			
+enum	VideoIntelligence.AssetRegistrySourceKind		case	assetsBundle
+enum	VideoIntelligence.AssetRegistrySourceKind		case	mobileAsset
+enum	VideoIntelligence.AssetRegistrySourceKind.CodingKeys			
+enum	VideoIntelligence.AssetRegistrySourceKind.CodingKeys		case	assetsBundle
+enum	VideoIntelligence.AssetRegistrySourceKind.CodingKeys		case	mobileAsset
+enum	VideoIntelligence.AssetRegistrySourceKind.AssetsBundleCodingKeys			
+enum	VideoIntelligence.AssetRegistrySourceKind.AssetsBundleCodingKeys		case	_0
+enum	VideoIntelligence.AssetRegistrySourceKind.MobileAssetCodingKeys			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.CodingKeys			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.CodingKeys		case	appleInternal
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.CodingKeys		case	bundled
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.CodingKeys		case	environmentVariable
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.CodingKeys		case	path
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.AppleInternalCodingKeys			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.BundledCodingKeys			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.EnvironmentVariableCodingKeys			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.PathCodingKeys			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSourceKind.PathCodingKeys		case	_0
+class	VideoIntelligence.AssetRegistryAssetsBundleSource			
+class	VideoIntelligence.AssetRegistryAssetsBundleSource		let	kind
+class	VideoIntelligence.AssetRegistryAssetsBundleSource		let	bundle
+class	VideoIntelligence.AssetRegistryAssetsBundleSource		let	compatibilityVersion
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAssetError			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAssetError		case	unsupportedCompatibilityVersion
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAssetError		case	unsupportedAssetKind
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAssetError		case	unableToLocateMetadata
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAssetError		case	unbaleToLoadMetadata
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAssetError		case	metadataResolvingError
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError			
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	unreachableBundleURL
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	unableToInstantiateAssetsBundle
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	unableToDetermineCompatibilityVersionFromAssetsBundle
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	deniedByPolicy
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	internalContentRequired
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	unableToLocateAppleInternalLibrary
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	unableToLocateAssetsBundleWithinMainBundle
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	environmentVariableNotSetOrEmpty
+enum	VideoIntelligence.AssetRegistryAssetsBundleSource.ResolvingError		case	pathIsEmptyOrInvalid
+struct	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset			
+struct	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset		let	id
+struct	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset		var	state
+struct	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset		var	assetURL
+struct	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset		let	_bundle
+struct	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset		let	_relativePath
+class	VideoIntelligence.AssetRegistryMobileAssetSource			
+class	VideoIntelligence.AssetRegistryMobileAssetSource		let	_workloop
+class	VideoIntelligence.AssetRegistryMobileAssetSource		let	_lastCatalogUpdateTime
+class	VideoIntelligence.AssetRegistryMobileAssetSource		let	_catalogUpdatingGroup
+class	VideoIntelligence.AssetRegistryMobileAssetSource		let	_lastCatalogErrorTime
+class	VideoIntelligence.AssetRegistryMobileAssetSource		let	_cachedMetadataAssets
+class	VideoIntelligence.AssetRegistryMobileAssetSource		let	_cachedAssets
+class	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset			
+class	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset		let	id
+class	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset		let	_useCaseMetadata
+class	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset		let	_isResolvingState
+class	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset		let	_isFetching
+class	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset		let	_internal
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal			
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal		var	state
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal		var	assetURL
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal		var	_asset
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal		var	resolvingStateCompletionHandlers
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal		var	fetchingCompletionHandlers
+struct	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset._Internal		var	owningSource
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError			
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	metadataResolvingError
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	catalogDownloadError
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	assetQueryError
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	assetDownloadError
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	unsupportedAssetKind
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	unableToLocateMetadata
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	unbaleToLoadMetadata
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	sourceAlreadyDeallocated
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	catalogDownloadThrottled
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	internalInconsistency
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	catalogNotDownloaded
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	assetNotFound
+enum	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAssetError		case	assetAlreadyDownloaded
+struct	VideoIntelligence.AssetRegistryMobileAssetSource._AssetCacheKey			
+struct	VideoIntelligence.AssetRegistryMobileAssetSource._AssetCacheKey		let	metadata
+struct	VideoIntelligence.AssetRegistryMobileAssetSource._AssetCacheKey		let	useCaseMetadata
+enum	VideoIntelligence._MobileAssetError			
+enum	VideoIntelligence._MobileAssetError		case	downloadFailed
+enum	VideoIntelligence._MobileAssetError		case	queryFailed
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation			
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation		case	denied
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation		case	allowed
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation.CodingKeys			
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation.CodingKeys		case	allowed
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation.CodingKeys		case	denied
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation.AllowedCodingKeys			
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation.DeniedCodingKeys			
+enum	VideoIntelligence.AssetRegistrySourcePolicyEvaluation.DeniedCodingKeys		case	reason
+struct	VideoIntelligence.MobileAssetError			
+struct	VideoIntelligence.MobileAssetError		let	code
+struct	VideoIntelligence.MobileAssetError		let	_underlyingError
+enum	VideoIntelligence._MobileAssetResultError			
+enum	VideoIntelligence._MobileAssetResultError		case	anyError
+enum	VideoIntelligence._MobileAssetResultError		case	unsucessfulResult
+enum	VideoIntelligence._MobileAssetResultError		case	unsucessfulResult
+enum	VideoIntelligence.MobileAssetError.Code			
+enum	VideoIntelligence.MobileAssetError.Code		case	notEntitled
+enum	VideoIntelligence.MobileAssetError.Code		case	xpcError
+enum	VideoIntelligence.MobileAssetError.Code		case	catalogNotDownloaded
+enum	VideoIntelligence.MobileAssetError.Code		case	assetAlreadyDownloaded
+enum	VideoIntelligence.MobileAssetError.Code		case	operationFailed
+enum	VideoIntelligence.MobileAssetError.Code		case	queryFailed
+enum	VideoIntelligence.MobileAssetError.Code		case	downloadFailed
+enum	VideoIntelligence.MobileAssetError.Code		case	purgeFailed
+enum	VideoIntelligence.MobileAssetError.Code		case	cancelDownloadFailed
+enum	VideoIntelligence.MobileAssetError.Code		case	addKeyValueFailed
+enum	VideoIntelligence._MobileAssetResult			
+enum	VideoIntelligence._MobileAssetResult		case	operation
+enum	VideoIntelligence._MobileAssetResult		case	query
+enum	VideoIntelligence._MobileAssetResult		case	download
+enum	VideoIntelligence._MobileAssetResult		case	purge
+enum	VideoIntelligence._MobileAssetResult		case	cancelDownload
+enum	VideoIntelligence._MobileAssetResult		case	addKeyValue
+struct	VideoIntelligence.ResolvedAssetID			
+struct	VideoIntelligence.ResolvedAssetID		let	metadata
+struct	VideoIntelligence.ResolvedAssetID		let	sourceKind
+struct	VideoIntelligence.ResolvedAsset			
+struct	VideoIntelligence.ResolvedAsset		let	id
+struct	VideoIntelligence.ResolvedAsset		let	asset
+struct	VideoIntelligence.ResolvedAsset		let	_resolvingStateHandler
+struct	VideoIntelligence.ResolvedAsset		let	_fetchingHandler
+enum	VideoIntelligence.ResolvedAssetID.CodingKeys			
+enum	VideoIntelligence.ResolvedAssetID.CodingKeys		case	metadata
+enum	VideoIntelligence.ResolvedAssetID.CodingKeys		case	sourceKind
+struct	VideoIntelligence.ResolvedAssetID._Version			
+struct	VideoIntelligence.ResolvedAssetID._Version		let	rawValue
+enum	VideoIntelligence.ResolvedAssetError			
+enum	VideoIntelligence.ResolvedAssetError		case	anyError
+enum	VideoIntelligence.ResolvedAssetError		case	cancelled
+struct	VideoIntelligence.ResolvedAssets			
+struct	VideoIntelligence.ResolvedAssets		let	resolvedRequirement
+struct	VideoIntelligence.ResolvedAssets		let	_resolvedAssets
+struct	VideoIntelligence.ResolvedRequirement			
+struct	VideoIntelligence.ResolvedRequirement		let	id
+struct	VideoIntelligence.ResolvedRequirement		let	_dependencies
+enum	VideoIntelligence.ResolvedRequirement.CodingKeys			
+enum	VideoIntelligence.ResolvedRequirement.CodingKeys		case	id
+enum	VideoIntelligence.ResolvedRequirement.CodingKeys		case	_dependencies
+struct	VideoIntelligence.Image			
+enum	VideoIntelligence.Image.Orientation			
+enum	VideoIntelligence.Image.Orientation		case	up
+enum	VideoIntelligence.Image.Orientation		case	upMirrored
+enum	VideoIntelligence.Image.Orientation		case	down
+enum	VideoIntelligence.Image.Orientation		case	downMirrored
+enum	VideoIntelligence.Image.Orientation		case	left
+enum	VideoIntelligence.Image.Orientation		case	leftMirrored
+enum	VideoIntelligence.Image.Orientation		case	right
+enum	VideoIntelligence.Image.Orientation		case	rightMirrored
+enum	VideoIntelligence.Image.Orientation.CodingKeys			
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	up
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	upMirrored
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	down
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	downMirrored
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	left
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	leftMirrored
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	right
+enum	VideoIntelligence.Image.Orientation.CodingKeys		case	rightMirrored
+enum	VideoIntelligence.Image.Orientation.UpCodingKeys			
+enum	VideoIntelligence.Image.Orientation.UpMirroredCodingKeys			
+enum	VideoIntelligence.Image.Orientation.DownCodingKeys			
+enum	VideoIntelligence.Image.Orientation.DownMirroredCodingKeys			
+enum	VideoIntelligence.Image.Orientation.LeftCodingKeys			
+enum	VideoIntelligence.Image.Orientation.LeftMirroredCodingKeys			
+enum	VideoIntelligence.Image.Orientation.RightCodingKeys			
+enum	VideoIntelligence.Image.Orientation.RightMirroredCodingKeys			
+struct	VideoIntelligence.PixelBuffer			
+struct	VideoIntelligence.PixelBuffer		let	pixelBuffer
+class	VideoIntelligence.PixelBuffer.Pool			
+class	VideoIntelligence.PixelBuffer.Pool		let	pixelBufferPool
+struct	VideoIntelligence.PixelBufferAllocator.Attributes			
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	width
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	height
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	pixelFormatType
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	bytesPerRowAlignment
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	planeAlignment
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	isCGBitmapContextCompatible
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	isCGImageCompatible
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	isMetalCompatible
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	surfaceProperties
+struct	VideoIntelligence.PixelBufferAllocator.Attributes		var	isSurfaceCoreAnimationCompatible
+enum	VideoIntelligence.PixelBufferAllocator.AllocationError			
+enum	VideoIntelligence.PixelBufferAllocator.AllocationError		case	coreVideoFailure
+enum	VideoIntelligence.PixelBufferAllocator.AllocationError		case	allocationFailed
+enum	VideoIntelligence.PixelBufferAllocator			
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys			
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	width
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	height
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	pixelFormatType
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	bytesPerRowAlignment
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	planeAlignment
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	isCGBitmapContextCompatible
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	isCGImageCompatible
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	isMetalCompatible
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	surfaceProperties
+enum	VideoIntelligence.PixelBufferAllocator.Attributes.CodingKeys		case	isSurfaceCoreAnimationCompatible
+struct	VideoIntelligence.PixelFormatType			
+struct	VideoIntelligence.PixelFormatType		let	pixelFormatType
+class	VideoIntelligence.PixelTransferSession			
+class	VideoIntelligence.PixelTransferSession		let	session
+class	VideoIntelligence.PixelTransferSession		let	configuration
+class	VideoIntelligence.PixelTransferSession		let	debugName
+class	VideoIntelligence.PixelRotationSession			
+class	VideoIntelligence.PixelRotationSession		let	session
+class	VideoIntelligence.PixelRotationSession		let	configuration
+class	VideoIntelligence.PixelRotationSession		let	debugName
+struct	VideoIntelligence.PixelRotationSession.Configuration			
+struct	VideoIntelligence.PixelRotationSession.Configuration		var	options
+struct	VideoIntelligence.PixelRotationSession.Configuration		var	rotationDegrees
+struct	VideoIntelligence.PixelRotationSession.Configuration		var	flipsHorizontal
+struct	VideoIntelligence.PixelRotationSession.Configuration		var	flipsVertical
+struct	VideoIntelligence.PixelRotationSession.Configuration		var	zeroFills
+struct	VideoIntelligence.PixelTransferSession.Configuration			
+struct	VideoIntelligence.PixelTransferSession.Configuration		var	options
+struct	VideoIntelligence.PixelTransferSession.Configuration		var	scalingMode
+struct	VideoIntelligence.PixelTransferSession.Configuration		var	downsamplingMode
+struct	VideoIntelligence.PixelTransferSession.Configuration		var	isRealTime
+enum	VideoIntelligence.PixelManipulationError			
+enum	VideoIntelligence.PixelManipulationError		case	propertyNotSupported
+enum	VideoIntelligence.PixelManipulationError		case	videoToolboxFailure
+enum	VideoIntelligence.PixelManipulationError		case	optionsInContradiction
+enum	VideoIntelligence.PixelManipulationError		case	optionsNotSupported
+enum	VideoIntelligence.PixelManipulationError		case	internalInconsistency
+enum	VideoIntelligence.PixelManipulationError		case	allocationFailed
+enum	VideoIntelligence.PixelRotationSession.RotationDegrees			
+enum	VideoIntelligence.PixelRotationSession.RotationDegrees		case	_0
+enum	VideoIntelligence.PixelRotationSession.RotationDegrees		case	_90
+enum	VideoIntelligence.PixelRotationSession.RotationDegrees		case	_180
+enum	VideoIntelligence.PixelRotationSession.RotationDegrees		case	_270
+enum	VideoIntelligence.PixelTransferSession.DownsamplingMode			
+enum	VideoIntelligence.PixelTransferSession.DownsamplingMode		case	decimate
+enum	VideoIntelligence.PixelTransferSession.DownsamplingMode		case	average
+enum	VideoIntelligence.PixelTransferSession.ScalingMode			
+enum	VideoIntelligence.PixelTransferSession.ScalingMode		case	normal
+enum	VideoIntelligence.PixelTransferSession.ScalingMode		case	letterbox
+enum	VideoIntelligence.PixelTransferSession.ScalingMode		case	trim
+struct	VideoIntelligence.PixelManipulationOptions			
+struct	VideoIntelligence.PixelManipulationOptions		let	rawValue
+class	VideoIntelligence._CachedKey<A	Swift.Hashable>		
+class	VideoIntelligence._CachedKey<A	Swift.Hashable>	let	key
+class	VideoIntelligence._CachedValue			
+class	VideoIntelligence._CachedValue		let	value
+class	VideoIntelligence.Cache<A	Swift.Hashable>		
+class	VideoIntelligence.Cache<A	Swift.Hashable>	let	_nsCache
+enum	VideoIntelligence.FeatureFlags			
+enum	VideoIntelligence.FeatureFlags		case	mobileAsset
+class	VideoIntelligence.LoggingDomainCache<A	VideoIntelligence.LoggingDomain>		
+class	VideoIntelligence.LoggingDomainCache<A	VideoIntelligence.LoggingDomain>	let	_osLog
+struct	VideoIntelligence.UncheckedSendable			
+struct	VideoIntelligence.UncheckedSendable		var	wrappedValue
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>		
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	model
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	let	uuid
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	state
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	_e5rtNetwork
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	_hasUncommitedIOBindings
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	_allInputTensorDescriptors
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	_allOutputTensorDescriptors
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	_allInputProperties
+class	VideoIntelligence.E5RTInferenceProvider<A	VideoIntelligence.E5RTModelAsset, B: VideoIntelligence.E5RTInferenceInputName, C: VideoIntelligence.E5RTInferenceOutputName>	var	_allOutputProperties
+enum	VideoIntelligence._E5RTInferenceProviderState			
+enum	VideoIntelligence._E5RTInferenceProviderState		case	error
+enum	VideoIntelligence._E5RTInferenceProviderState		case	modelNotLoaded
+enum	VideoIntelligence._E5RTInferenceProviderState		case	idle
+enum	VideoIntelligence._E5RTInferenceProviderState		case	running
+struct	VideoIntelligence.E5RTModelAssetWrappedModel<A	VideoIntelligence.ModelAsset>		
+struct	VideoIntelligence.E5RTModelAssetWrappedModel<A	VideoIntelligence.ModelAsset>	var	model
+struct	VideoIntelligence.E5RTModelAssetWrappedModel<A	VideoIntelligence.ModelAsset>	let	modelMetadata
+enum	VideoIntelligence.E5RTModelAssetWrappedLoRAModel._ID.CodingKeys<A	VideoIntelligence.ModelAsset, VideoIntelligence.Asset.AssetError ==: VideoIntelligence.CompoundAssetError, VideoIntelligence.Asset.AssetError ==: AssetError VideoIntelligence.Asset _$s_04SomeaB0 VideoIntelligence.CompoundAssetError _$sQZ>		
+enum	VideoIntelligence.E5RTModelAssetWrappedLoRAModel._ID.CodingKeys<A	VideoIntelligence.ModelAsset, VideoIntelligence.Asset.AssetError ==: VideoIntelligence.CompoundAssetError, VideoIntelligence.Asset.AssetError ==: AssetError VideoIntelligence.Asset _$s_04SomeaB0 VideoIntelligence.CompoundAssetError _$sQZ>	case	baseModelID
+enum	VideoIntelligence.E5RTModelAssetWrappedLoRAModel._ID.CodingKeys<A	VideoIntelligence.ModelAsset, VideoIntelligence.Asset.AssetError ==: VideoIntelligence.CompoundAssetError, VideoIntelligence.Asset.AssetError ==: AssetError VideoIntelligence.Asset _$s_04SomeaB0 VideoIntelligence.CompoundAssetError _$sQZ>	case	adapterModelID
+enum	VideoIntelligence.InferenceIOError			
+enum	VideoIntelligence.InferenceIOError		case	invalidPixelBufferBacking
+enum	VideoIntelligence.InferenceIOError		case	allocationFailed
+enum	VideoIntelligence.InferenceIOKind			
+enum	VideoIntelligence.InferenceIOKind		case	tensor
+enum	VideoIntelligence.InferenceIOKind		case	pixelBuffer
+struct	VideoIntelligence.InferenceTensorIOProperties			
+struct	VideoIntelligence.InferenceTensorIOProperties		let	tensorProperties
+struct	VideoIntelligence.InferencePixelBufferIOProperties			
+struct	VideoIntelligence.InferencePixelBufferIOProperties		var	pixelFormat
+struct	VideoIntelligence.InferencePixelBufferIOProperties		var	width
+struct	VideoIntelligence.InferencePixelBufferIOProperties		var	height
+struct	VideoIntelligence.InferenceTensorIO			
+struct	VideoIntelligence.InferenceTensorIO		let	tensor
+struct	VideoIntelligence.InferenceTensorIO		let	properties
+struct	VideoIntelligence.InferencePixelBufferIO			
+struct	VideoIntelligence.InferencePixelBufferIO		let	_pixelBufferBox
+struct	VideoIntelligence.InferencePixelBufferIO		let	properties
+struct	VideoIntelligence.InferencePixelBufferIO._PixelBufferBox			
+struct	VideoIntelligence.InferencePixelBufferIO._PixelBufferBox		let	pixelBuffer
+enum	VideoIntelligence.InferencePixelBufferIOProperties.CodingKeys			
+enum	VideoIntelligence.InferencePixelBufferIOProperties.CodingKeys		case	pixelFormat
+enum	VideoIntelligence.InferencePixelBufferIOProperties.CodingKeys		case	width
+enum	VideoIntelligence.InferencePixelBufferIOProperties.CodingKeys		case	height
+enum	VideoIntelligence.InferenceTensorIOProperties.CodingKeys			
+enum	VideoIntelligence.InferenceTensorIOProperties.CodingKeys		case	tensorProperties
+enum	VideoIntelligence.InferenceIOKind.CodingKeys			
+enum	VideoIntelligence.InferenceIOKind.CodingKeys		case	tensor
+enum	VideoIntelligence.InferenceIOKind.CodingKeys		case	pixelBuffer
+enum	VideoIntelligence.InferenceIOKind.TensorCodingKeys			
+enum	VideoIntelligence.InferenceIOKind.PixelBufferCodingKeys			
+enum	VideoIntelligence.InferenceIO_SurfaceAccessError			
+enum	VideoIntelligence.InferenceIO_SurfaceAccessError		case	lockingFailed
+enum	VideoIntelligence.InferenceIO_SurfaceAccessError		case	scalarTypeMismatch
+enum	VideoIntelligence.InferenceProviderError			
+enum	VideoIntelligence.InferenceProviderError		case	missingInput
+enum	VideoIntelligence.InferenceProviderError		case	missingOutput
+enum	VideoIntelligence.InferenceProviderError		case	invalidInput
+enum	VideoIntelligence.InferenceProviderError		case	invalidOutput
+enum	VideoIntelligence.InferenceProviderError		case	transportError
+enum	VideoIntelligence.InferenceProviderError		case	modelUnavailable
+enum	VideoIntelligence.InferenceProviderError		case	modelStateResolutionFailed
+enum	VideoIntelligence.InferenceProviderError		case	modelFetchingFailed
+enum	VideoIntelligence.InferenceProviderError		case	modelLoadingFailed
+enum	VideoIntelligence.InferenceProviderError		case	modelCompilationFailed
+enum	VideoIntelligence.InferenceProviderError		case	modelNotReady
+enum	VideoIntelligence.InferenceProviderError		case	allocationFailed
+enum	VideoIntelligence.InferenceProviderError		case	inferenceFailed
+enum	VideoIntelligence.InferenceProviderError		case	bindingFailed
+enum	VideoIntelligence.InferenceProviderError		case	notSupported
+enum	VideoIntelligence.InferenceProviderError		case	busy
+enum	VideoIntelligence.InferenceProviderError		case	timedOut
+struct	VideoIntelligence.Surface			
+struct	VideoIntelligence.Surface		let	surface
+enum	VideoIntelligence.SurfaceAllocator.Error			
+enum	VideoIntelligence.SurfaceAllocator.Error		case	allocationFailed
+struct	VideoIntelligence.SurfaceAllocator.Properties			
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	allocationSize
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	width
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	height
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	bytesPerRow
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	bytesPerElement
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	offset
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	cacheMode
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	pixelFormat
+struct	VideoIntelligence.SurfaceAllocator.Properties		var	name
+struct	VideoIntelligence.SurfaceAllocator			
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys			
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	allocationSize
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	width
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	height
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	bytesPerRow
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	bytesPerElement
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	offset
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	cacheMode
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	pixelFormat
+enum	VideoIntelligence.SurfaceAllocator.Properties.CodingKeys		case	name
+struct	VideoIntelligence.Tensor			
+struct	VideoIntelligence.Tensor		let	tensorProperties
+struct	VideoIntelligence.Tensor		let	strides
+struct	VideoIntelligence.Tensor		let	surface
+enum	VideoIntelligence.TensorError			
+enum	VideoIntelligence.TensorError		case	invalidScalarType
+enum	VideoIntelligence.TensorError		case	mismatchedRank
+enum	VideoIntelligence.TensorError		case	stridesTooSmall
+enum	VideoIntelligence.TensorError		case	insufficientStorage
+enum	VideoIntelligence.TensorError		case	surfaceAllocationFailed
+struct	VideoIntelligence.TensorProperties			
+struct	VideoIntelligence.TensorProperties		let	shape
+struct	VideoIntelligence.TensorProperties		let	scalarKind
+enum	VideoIntelligence.TensorProperties.CodingKeys			
+enum	VideoIntelligence.TensorProperties.CodingKeys		case	shape
+enum	VideoIntelligence.TensorProperties.CodingKeys		case	scalarKind
+enum	VideoIntelligence.TensorScalarKind			
+enum	VideoIntelligence.TensorScalarKind		case	int8
+enum	VideoIntelligence.TensorScalarKind		case	int16
+enum	VideoIntelligence.TensorScalarKind		case	int32
+enum	VideoIntelligence.TensorScalarKind		case	int64
+enum	VideoIntelligence.TensorScalarKind		case	int128
+enum	VideoIntelligence.TensorScalarKind		case	uint8
+enum	VideoIntelligence.TensorScalarKind		case	uint16
+enum	VideoIntelligence.TensorScalarKind		case	uint32
+enum	VideoIntelligence.TensorScalarKind		case	uint64
+enum	VideoIntelligence.TensorScalarKind		case	uint128
+enum	VideoIntelligence.TensorScalarKind		case	float16
+enum	VideoIntelligence.TensorScalarKind		case	float32
+enum	VideoIntelligence.TensorScalarKind		case	float64
+enum	VideoIntelligence.TensorScalarKind.CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	int8
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	int16
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	int32
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	int64
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	int128
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	uint8
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	uint16
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	uint32
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	uint64
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	uint128
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	float16
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	float32
+enum	VideoIntelligence.TensorScalarKind.CodingKeys		case	float64
+enum	VideoIntelligence.TensorScalarKind.Int8CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Int16CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Int32CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Int64CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Int128CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Uint8CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Uint16CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Uint32CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Uint64CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Uint128CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Float16CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Float32CodingKeys			
+enum	VideoIntelligence.TensorScalarKind.Float64CodingKeys			
+struct	VideoIntelligence.Nothing			
+enum	VideoIntelligence.VideoCaptioningInputStorage._UnderlyingStorage			
+enum	VideoIntelligence.VideoCaptioningInputStorage._UnderlyingStorage		case	directlyBindable
+enum	VideoIntelligence.VideoCaptioningInputStorage._UnderlyingStorage		case	unprocessed
+protocol	VideoIntelligence.Asset	AssetError		
+protocol	VideoIntelligence.CompoundAssetError	SomeAssetError		
+protocol	VideoIntelligence.CompoundAsset			
+protocol	VideoIntelligence.ModelID			
+protocol	VideoIntelligence.ModelVersion			
+protocol	VideoIntelligence.VersionedModelID	Version		
+protocol	VideoIntelligence.ModelAsset			
+protocol	VideoIntelligence.VCInferenceIO	IO		
+protocol	VideoIntelligence.VCInferenceStatefulIO	PairedIO		
+protocol	VideoIntelligence.VCInferenceIOs			
+protocol	VideoIntelligence.VCModelIOName	InferenceIOs		
+protocol	VersionedConfiguration			
+protocol	VideoIntelligence.VideoCaptioningStateStorage			
+protocol	AssetMetadata.Payload			
+protocol	VideoIntelligence.AssetMetadataProviding	AssetMetadataError		
+protocol	VideoIntelligence.AssetMetadataResolving	ResolutionError		
+protocol	VideoIntelligence.AssetProviding	AssetType, AssetError		
+protocol	VideoIntelligence.AssetRegistrySource			
+protocol	VideoIntelligence.AssetRegistrySourcePolicyEvaluable			
+protocol	VideoIntelligence.MobileAssetTypeRepresentable			
+protocol	VideoIntelligence.MobileAssetSpecifierRepresentable			
+protocol	VideoIntelligence.PixelManipulating			
+protocol	VideoIntelligence.PixelManipulatingVT	Session		
+protocol	VideoIntelligence.LoggingDomain			
+protocol	VideoIntelligence.LoggingDomainCacheProtocol			
+protocol	VideoIntelligence.E5RTInferenceIOName	AllValues		
+protocol	VideoIntelligence.E5RTInferenceInputName			
+protocol	VideoIntelligence.E5RTInferenceOutputName			
+protocol	VideoIntelligence.E5RTModelAsset			
+protocol	VideoIntelligence.E5RTModelAssetWrapping	Model		
+protocol	VideoIntelligence.InferenceIOProperties			
+protocol	VideoIntelligence.InferenceIO	Properties		
+protocol	VideoIntelligence.InferenceProvider	Model, InputName, InputNames, OutputName, OutputNames		
+protocol	VideoIntelligence.TensorScalar			
+protocol	conformance VideoIntelligence.AssetState	Swift.Equatable		
+protocol	conformance VideoIntelligence.AssetState	Swift.Hashable		
+protocol	conformance VideoIntelligence.AssetState	Swift.Decodable		
+protocol	conformance VideoIntelligence.AssetState	Swift.Encodable		
+protocol	conformance VideoIntelligence.AssetState	Swift.CustomStringConvertible		
+protocol	conformance ReadyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReadyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FetchingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotFetchedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotFetchedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnavailableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnavailableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotDeterminedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotDeterminedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance NotDeterminedCodingKeys	Swift.CodingKey		
+protocol	conformance UnavailableCodingKeys	Swift.CodingKey		
+protocol	conformance NotFetchedCodingKeys	Swift.CodingKey		
+protocol	conformance FetchingCodingKeys	Swift.CodingKey		
+protocol	conformance ReadyCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance __C.ComparisonResult	Swift.Equatable: Foundation		
+protocol	conformance __C.ComparisonResult	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.MADownloadResult	Swift.Hashable		
+protocol	conformance __C.MADownloadResult	Swift.Equatable		
+protocol	conformance __C.MADownloadResult	Swift.RawRepresentable		
+protocol	conformance __C.MAQueryResult	Swift.Hashable		
+protocol	conformance __C.MAQueryResult	Swift.Equatable		
+protocol	conformance __C.MAQueryResult	Swift.RawRepresentable		
+protocol	conformance __C.MAOperationResult	Swift.Hashable		
+protocol	conformance __C.MAOperationResult	Swift.Equatable		
+protocol	conformance __C.MAOperationResult	Swift.RawRepresentable		
+protocol	conformance __C.MAPurgeResult	Swift.Hashable		
+protocol	conformance __C.MAPurgeResult	Swift.Equatable		
+protocol	conformance __C.MAPurgeResult	Swift.RawRepresentable		
+protocol	conformance __C.MACancelDownloadResult	Swift.Hashable		
+protocol	conformance __C.MACancelDownloadResult	Swift.Equatable		
+protocol	conformance __C.MACancelDownloadResult	Swift.RawRepresentable		
+protocol	conformance __C.MAAddKeyValueResult	Swift.Hashable		
+protocol	conformance __C.MAAddKeyValueResult	Swift.Equatable		
+protocol	conformance __C.MAAddKeyValueResult	Swift.RawRepresentable		
+protocol	conformance Swift.Never	VideoIntelligence.CompoundAssetError		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.Identifiable		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	VideoIntelligence.CompoundAsset		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.ExpressibleByArrayLiteral		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.RandomAccessCollection		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.BidirectionalCollection		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.Collection		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	Swift.Sequence		
+protocol	conformance VideoIntelligence.CompoundAssetContainer	VideoIntelligence.Asset		
+protocol	conformance VideoIntelligence.CompoundAssetContainerError	Swift.Error		
+protocol	conformance VideoIntelligence.CompoundAssetContainerError	VideoIntelligence.CompoundAssetError		
+protocol	conformance VideoIntelligence.AssetMetadata	Swift.Encodable		
+protocol	conformance VideoIntelligence.AssetMetadata	Swift.Decodable		
+protocol	conformance VideoIntelligence.AssetMetadata	Swift.Hashable		
+protocol	conformance VideoIntelligence.AssetMetadata	Swift.Equatable		
+protocol	conformance VideoIntelligence.AssetMetadata	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AssetMetadata.CompilationFlavor	Swift.CustomStringConvertible		
+protocol	conformance AssetMetadata.CompilationFlavor	Swift.Encodable		
+protocol	conformance AssetMetadata.CompilationFlavor	Swift.RawRepresentable		
+protocol	conformance AssetMetadata.CompilationFlavor	Swift.Hashable		
+protocol	conformance AssetMetadata.CompilationFlavor	Swift.Equatable		
+protocol	conformance AssetMetadata.CompilationFlavor	Swift.Decodable		
+protocol	conformance VideoIntelligence.VCDoorInferenceIOs	VideoIntelligence.VCInferenceIOs		
+protocol	conformance VCDoorInferenceIOs.InputFeatures	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCDoorInferenceIOs.OutputScore1	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCDoorInferenceIOs.OutputClass1	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCDoorInferenceIOs.OutputScore2	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCDoorInferenceIOs.OutputClass2	VideoIntelligence.VCInferenceIO		
+protocol	conformance VideoIntelligence.VCHeadInferenceIOs	VideoIntelligence.VCInferenceIOs		
+protocol	conformance VCHeadInferenceIOs.InputFeatures	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCHeadInferenceIOs.OutputScore	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCHeadInferenceIOs.OutputClass	VideoIntelligence.VCInferenceIO		
+protocol	conformance VideoIntelligence.VCModelInputName	Swift.Encodable		
+protocol	conformance VideoIntelligence.VCModelInputName	Swift.Decodable		
+protocol	conformance VideoIntelligence.VCModelInputName	Swift.Hashable		
+protocol	conformance VideoIntelligence.VCModelInputName	Swift.Equatable		
+protocol	conformance VideoIntelligence.VCModelInputName	VideoIntelligence.E5RTInferenceIOName		
+protocol	conformance VideoIntelligence.VCModelInputName	Swift.RawRepresentable		
+protocol	conformance VideoIntelligence.VCModelInputName	VideoIntelligence.E5RTInferenceInputName		
+protocol	conformance VideoIntelligence.VCModelInputName	VideoIntelligence.VCModelIOName		
+protocol	conformance VideoIntelligence.VCModelOutputName	Swift.Encodable		
+protocol	conformance VideoIntelligence.VCModelOutputName	Swift.Decodable		
+protocol	conformance VideoIntelligence.VCModelOutputName	Swift.Hashable		
+protocol	conformance VideoIntelligence.VCModelOutputName	Swift.Equatable		
+protocol	conformance VideoIntelligence.VCModelOutputName	VideoIntelligence.E5RTInferenceIOName		
+protocol	conformance VideoIntelligence.VCModelOutputName	Swift.RawRepresentable		
+protocol	conformance VideoIntelligence.VCModelOutputName	VideoIntelligence.E5RTInferenceOutputName		
+protocol	conformance VideoIntelligence.VCModelOutputName	VideoIntelligence.VCModelIOName		
+protocol	conformance VideoIntelligence.VCInferenceProvider	VideoIntelligence.InferenceProvider		
+protocol	conformance VideoIntelligence.VCVisualInferenceIOs	VideoIntelligence.VCInferenceIOs		
+protocol	conformance VCVisualInferenceIOs.InputImage	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCVisualInferenceIOs.OutputClassFeature	VideoIntelligence.VCInferenceIO		
+protocol	conformance VCVisualInferenceIOs.OutputPatchFeature	VideoIntelligence.VCInferenceIO		
+protocol	conformance VideoIntelligence.VideoCaptioningError	Swift.Error		
+protocol	conformance VideoIntelligence.VideoCaptioningError	VideoIntelligence.CompoundAssetError		
+protocol	conformance VideoCaptioningInput.Format	Swift.Equatable		
+protocol	conformance VideoCaptioningInput.Format	Swift.Hashable		
+protocol	conformance VideoCaptioningInput.Format	Swift.Decodable		
+protocol	conformance VideoCaptioningInput.Format	Swift.Encodable		
+protocol	conformance VideoCaptioningInput.Format	Swift.CustomReflectable		
+protocol	conformance VideoCaptioningInput.Format	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.VideoCaptioningInput	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.VideoCaptioningInput	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.VideoCaptioningModelIdentifier	Swift.Encodable		
+protocol	conformance VideoIntelligence.VideoCaptioningModelIdentifier	Swift.Decodable		
+protocol	conformance VideoIntelligence.VideoCaptioningModelIdentifier	Swift.Hashable		
+protocol	conformance VideoIntelligence.VideoCaptioningModelIdentifier	Swift.Equatable		
+protocol	conformance VideoIntelligence.VideoCaptioningModelIdentifier	VideoIntelligence.ModelID		
+protocol	conformance VideoIntelligence.VideoCaptioningUseCaseIdentifier	Swift.Encodable		
+protocol	conformance VideoIntelligence.VideoCaptioningUseCaseIdentifier	Swift.Decodable		
+protocol	conformance VideoIntelligence.VideoCaptioningUseCaseIdentifier	Swift.Hashable		
+protocol	conformance VideoIntelligence.VideoCaptioningUseCaseIdentifier	Swift.Equatable		
+protocol	conformance VideoIntelligence.VideoCaptioningModel	VideoIntelligence.E5RTModelAsset		
+protocol	conformance VideoIntelligence.VideoCaptioningModel	Swift.Identifiable		
+protocol	conformance VideoIntelligence.VideoCaptioningModel	VideoIntelligence.Asset		
+protocol	conformance VideoIntelligence.VideoCaptioningModel	VideoIntelligence.ModelAsset		
+protocol	conformance VideoIntelligence.VideoCaptioningUseCase	Swift.Identifiable		
+protocol	conformance VideoIntelligence.VideoCaptioningUseCase	VideoIntelligence.Asset		
+protocol	conformance VideoCaptioningModelIdentifier.Kind	Swift.Hashable		
+protocol	conformance VideoCaptioningModelIdentifier.Kind	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance VideoCaptioningModelIdentifier.Kind	Swift.Encodable		
+protocol	conformance VideoCaptioningModelIdentifier.Kind	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DoorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DoorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HeadCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HeadCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance VisualDoorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance VisualDoorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance VisualCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance VisualCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance VisualCodingKeys	Swift.CodingKey		
+protocol	conformance VisualDoorCodingKeys	Swift.CodingKey		
+protocol	conformance HeadCodingKeys	Swift.CodingKey		
+protocol	conformance DoorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance WellKnownAction	Swift.Encodable		
+protocol	conformance WellKnownAction	Swift.Decodable		
+protocol	conformance WellKnownAction	Swift.RawRepresentable		
+protocol	conformance WellKnownAction	Swift.Hashable		
+protocol	conformance WellKnownAction	Swift.Equatable		
+protocol	conformance DoorOrientation	Swift.Encodable		
+protocol	conformance DoorOrientation	Swift.Decodable		
+protocol	conformance DoorOrientation	Swift.Hashable		
+protocol	conformance DoorOrientation	Swift.Equatable		
+protocol	conformance DoorOrientation	Swift.CustomStringConvertible		
+protocol	conformance _VideoCaptioningStateStorage	VideoIntelligence.VideoCaptioningStateStorage		
+protocol	conformance VersionedConfiguration_v1_3	VideoIntelligence.VersionedConfiguration		
+protocol	conformance DoorOrientation.CoronalOrientation	Swift.RawRepresentable		
+protocol	conformance DoorOrientation.CoronalOrientation	Swift.Hashable		
+protocol	conformance DoorOrientation.CoronalOrientation	Swift.Equatable		
+protocol	conformance DoorOrientation.TransverseOrientation	Swift.RawRepresentable		
+protocol	conformance DoorOrientation.TransverseOrientation	Swift.Hashable		
+protocol	conformance DoorOrientation.TransverseOrientation	Swift.Equatable		
+protocol	conformance DoorOrientation.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DoorOrientation.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DoorOrientation.CodingKeys	Swift.Hashable		
+protocol	conformance DoorOrientation.CodingKeys	Swift.Equatable		
+protocol	conformance DoorOrientation.TransverseOrientation	Swift.Encodable		
+protocol	conformance DoorOrientation.CoronalOrientation	Swift.Encodable		
+protocol	conformance DoorOrientation.TransverseOrientation	Swift.Decodable		
+protocol	conformance DoorOrientation.CoronalOrientation	Swift.Decodable		
+protocol	conformance DoorOrientation.CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.VideoCaptioningStateResetReason	Swift.Equatable		
+protocol	conformance VideoIntelligence.VideoCaptioningStateResetReason	Swift.Hashable		
+protocol	conformance VideoIntelligence.VideoCaptioningState	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.VideoCaptioningState	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.VideoCaptioningVersion	Swift.Equatable		
+protocol	conformance VideoIntelligence.VideoCaptioningVersion	Swift.Comparable		
+protocol	conformance VideoIntelligence.VideoCaptioningVersion	Swift.Hashable		
+protocol	conformance VideoIntelligence.VideoCaptioningVersion	Swift.Decodable		
+protocol	conformance VideoIntelligence.VideoCaptioningVersion	Swift.Encodable		
+protocol	conformance VideoIntelligence.VideoCaptioningVersion	Swift.CustomStringConvertible		
+protocol	conformance V1_3CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V1_3CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V1_2CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V1_2CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V1_1CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V1_1CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V1CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V1CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance V1CodingKeys	Swift.CodingKey		
+protocol	conformance V1_1CodingKeys	Swift.CodingKey		
+protocol	conformance V1_2CodingKeys	Swift.CodingKey		
+protocol	conformance V1_3CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AssetMetadata.Kind	Swift.Encodable		
+protocol	conformance AssetMetadata.Kind	Swift.Decodable		
+protocol	conformance AssetMetadata.Kind	Swift.RawRepresentable		
+protocol	conformance AssetMetadata.Kind	Swift.Hashable		
+protocol	conformance AssetMetadata.Kind	Swift.Equatable		
+protocol	conformance AssetMetadata.Kind	Swift.CustomStringConvertible		
+protocol	conformance AssetMetadata.AnyPayload	Swift.Encodable		
+protocol	conformance AssetMetadata.AnyPayload	Foundation.DecodableWithConfiguration		
+protocol	conformance AssetMetadata.AnyPayload	Swift.CustomReflectable		
+protocol	conformance AssetMetadata.AnyPayload	Swift.CustomDebugStringConvertible		
+protocol	conformance AssetMetadata.AnyPayload	Swift.CustomStringConvertible		
+protocol	conformance AssetMetadata.AnyPayload	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance AssetMetadata.AnyPayload	Swift.Hashable		
+protocol	conformance AssetMetadata.AnyPayload	Swift.Equatable		
+protocol	conformance AssetMetadata.ModelPayload	Swift.Encodable		
+protocol	conformance AssetMetadata.ModelPayload	Swift.Decodable		
+protocol	conformance AssetMetadata.ModelPayload	Swift.Hashable		
+protocol	conformance AssetMetadata.ModelPayload	Swift.Equatable		
+protocol	conformance AssetMetadata.AdapterPayload	Swift.Encodable		
+protocol	conformance AssetMetadata.AdapterPayload	Swift.Decodable		
+protocol	conformance AssetMetadata.AdapterPayload	Swift.Hashable		
+protocol	conformance AssetMetadata.AdapterPayload	Swift.Equatable		
+protocol	conformance AssetMetadata.BaseModelPayload	Swift.Encodable		
+protocol	conformance AssetMetadata.BaseModelPayload	Swift.Decodable		
+protocol	conformance AssetMetadata.BaseModelPayload	Swift.Hashable		
+protocol	conformance AssetMetadata.BaseModelPayload	Swift.Equatable		
+protocol	conformance AssetMetadata.UseCasePayload	Swift.Encodable		
+protocol	conformance AssetMetadata.UseCasePayload	Swift.Decodable		
+protocol	conformance AssetMetadata.UseCasePayload	Swift.Hashable		
+protocol	conformance AssetMetadata.UseCasePayload	Swift.Equatable		
+protocol	conformance AssetMetadata.MetadataPayload	Swift.Encodable		
+protocol	conformance AssetMetadata.MetadataPayload	Swift.Decodable		
+protocol	conformance AssetMetadata.MetadataPayload	Swift.Hashable		
+protocol	conformance AssetMetadata.MetadataPayload	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AssetMetadata.MetadataPayload	VideoIntelligence.AssetMetadata.Payload		
+protocol	conformance AssetMetadata.UseCasePayload	VideoIntelligence.AssetMetadata.Payload		
+protocol	conformance AssetMetadata.BaseModelPayload	VideoIntelligence.AssetMetadata.Payload		
+protocol	conformance AssetMetadata.AdapterPayload	VideoIntelligence.AssetMetadata.Payload		
+protocol	conformance AssetMetadata.ModelPayload	VideoIntelligence.AssetMetadata.Payload		
+protocol	conformance AssetMetadata.Requirement	Swift.Encodable		
+protocol	conformance AssetMetadata.Requirement	Swift.Decodable		
+protocol	conformance AssetMetadata.Requirement	Swift.Hashable		
+protocol	conformance AssetMetadata.Requirement	Swift.Equatable		
+protocol	conformance AssetMetadata.Requirement	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AssetMetadata.SchemaVersion	Swift.CustomStringConvertible		
+protocol	conformance AssetMetadata.SchemaVersion	Swift.RawRepresentable		
+protocol	conformance AssetMetadata.SchemaVersion	Swift.Hashable		
+protocol	conformance AssetMetadata.SchemaVersion	Swift.Equatable		
+protocol	conformance AssetMetadata.SchemaVersion	Swift.Encodable		
+protocol	conformance AssetMetadata.SchemaVersion	Swift.Decodable		
+protocol	conformance AssetMetadataResolver.ResolverError	Swift.Error		
+protocol	conformance _Resolution	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.AssetMetadataResolver	VideoIntelligence.AssetMetadataResolving		
+protocol	conformance VideoIntelligence.AssetMetadataResolver	Swift.Actor		
+protocol	conformance VideoIntelligence.AssetRegistryError	Swift.Error		
+protocol	conformance _ResolvedProvider	Swift.CustomStringConvertible		
+protocol	conformance _Provider	Swift.CustomStringConvertible		
+protocol	conformance _Provider	VideoIntelligence.AssetProviding		
+protocol	conformance _Provider	VideoIntelligence.AssetMetadataResolving		
+protocol	conformance _Provider	VideoIntelligence.AssetMetadataProviding		
+protocol	conformance VideoIntelligence.AssetRegistrySourceKind	Swift.Encodable		
+protocol	conformance VideoIntelligence.AssetRegistrySourceKind	Swift.Decodable		
+protocol	conformance VideoIntelligence.AssetRegistrySourceKind	Swift.Hashable		
+protocol	conformance VideoIntelligence.AssetRegistrySourceKind	Swift.Equatable		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSourceKind	Swift.Encodable		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSourceKind	Swift.Decodable		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSourceKind	Swift.Hashable		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSourceKind	Swift.Equatable		
+protocol	conformance VideoIntelligence.AssetRegistrySourceKind	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSourceKind	Swift.CustomStringConvertible		
+protocol	conformance PathCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PathCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PathCodingKeys	Swift.Hashable		
+protocol	conformance PathCodingKeys	Swift.Equatable		
+protocol	conformance EnvironmentVariableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EnvironmentVariableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BundledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BundledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppleInternalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppleInternalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MobileAssetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MobileAssetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AssetsBundleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AssetsBundleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AssetsBundleCodingKeys	Swift.Hashable		
+protocol	conformance AssetsBundleCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AssetsBundleCodingKeys	Swift.CodingKey		
+protocol	conformance MobileAssetCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AppleInternalCodingKeys	Swift.CodingKey		
+protocol	conformance BundledCodingKeys	Swift.CodingKey		
+protocol	conformance EnvironmentVariableCodingKeys	Swift.CodingKey		
+protocol	conformance PathCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AssetRegistryAssetsBundleSource.ResolvingError	Swift.Error		
+protocol	conformance AssetRegistryAssetsBundleSource.LocalAssetError	Swift.Error		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSource	VideoIntelligence.AssetProviding		
+protocol	conformance AssetRegistryAssetsBundleSource.LocalAsset	VideoIntelligence.Asset		
+protocol	conformance AssetRegistryAssetsBundleSource.LocalAsset	Swift.Identifiable		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSource	VideoIntelligence.AssetMetadataProviding		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSource	VideoIntelligence.AssetRegistrySource		
+protocol	conformance AssetRegistryAssetsBundleSource.LocalAsset	VideoIntelligence.ModelAsset		
+protocol	conformance Swift.String	VideoIntelligence.MobileAssetSpecifierRepresentable		
+protocol	conformance _AssetCacheKey	Swift.Hashable		
+protocol	conformance _AssetCacheKey	Swift.Equatable		
+protocol	conformance AssetRegistryMobileAssetSource.RemoteAssetError	Swift.Error		
+protocol	conformance VideoIntelligence.AssetRegistryMobileAssetSource	VideoIntelligence.AssetProviding		
+protocol	conformance AssetRegistryMobileAssetSource.RemoteAsset	Swift.Identifiable		
+protocol	conformance AssetRegistryMobileAssetSource.RemoteAsset	VideoIntelligence.ModelAsset		
+protocol	conformance AssetRegistryMobileAssetSource.RemoteAsset	VideoIntelligence.Asset		
+protocol	conformance VideoIntelligence.AssetRegistryMobileAssetSource	VideoIntelligence.AssetMetadataProviding		
+protocol	conformance VideoIntelligence.AssetRegistryMobileAssetSource	VideoIntelligence.AssetRegistrySource		
+protocol	conformance _MobileAssetError	Swift.Error		
+protocol	conformance VideoIntelligence.AssetRegistrySourcePolicyEvaluation	Swift.Encodable		
+protocol	conformance VideoIntelligence.AssetRegistrySourcePolicyEvaluation	Swift.Decodable		
+protocol	conformance VideoIntelligence.AssetRegistrySourcePolicyEvaluation	Swift.Hashable		
+protocol	conformance VideoIntelligence.AssetRegistrySourcePolicyEvaluation	Swift.Equatable		
+protocol	conformance VideoIntelligence.AssetRegistrySourceKind	VideoIntelligence.AssetRegistrySourcePolicyEvaluable		
+protocol	conformance VideoIntelligence.AssetRegistryAssetsBundleSourceKind	VideoIntelligence.AssetRegistrySourcePolicyEvaluable		
+protocol	conformance VideoIntelligence.AssetRegistrySourcePolicyEvaluation	Swift.CustomStringConvertible		
+protocol	conformance DeniedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeniedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeniedCodingKeys	Swift.Hashable		
+protocol	conformance DeniedCodingKeys	Swift.Equatable		
+protocol	conformance AllowedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AllowedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AllowedCodingKeys	Swift.CodingKey		
+protocol	conformance DeniedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance _MobileAssetResultError	Swift.Error		
+protocol	conformance VideoIntelligence.MobileAssetError	Swift.Error		
+protocol	conformance _MobileAssetResult	Swift.Hashable		
+protocol	conformance _MobileAssetResult	Swift.Equatable		
+protocol	conformance MobileAssetError.Code	Swift.Hashable		
+protocol	conformance MobileAssetError.Code	Swift.Equatable		
+protocol	conformance VideoIntelligence.ResolvedAsset	Swift.Identifiable		
+protocol	conformance VideoIntelligence.ResolvedAsset	VideoIntelligence.ModelAsset		
+protocol	conformance VideoIntelligence.ResolvedAsset	VideoIntelligence.Asset		
+protocol	conformance VideoIntelligence.ResolvedAssetError	Swift.Error		
+protocol	conformance VideoIntelligence.ResolvedAssetID	Swift.Encodable		
+protocol	conformance VideoIntelligence.ResolvedAssetID	Swift.Decodable		
+protocol	conformance VideoIntelligence.ResolvedAssetID	Swift.Hashable		
+protocol	conformance VideoIntelligence.ResolvedAssetID	Swift.Equatable		
+protocol	conformance VideoIntelligence.ResolvedAssetID	VideoIntelligence.ModelID		
+protocol	conformance VideoIntelligence.ResolvedAssetID	VideoIntelligence.VersionedModelID		
+protocol	conformance VideoIntelligence.ResolvedAsset	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.ResolvedAsset	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.ResolvedAssetError	VideoIntelligence.CompoundAssetError		
+protocol	conformance VideoIntelligence.ResolvedAssetID	Swift.CustomStringConvertible		
+protocol	conformance _Version	Swift.Encodable		
+protocol	conformance _Version	Swift.Decodable		
+protocol	conformance _Version	Swift.Hashable		
+protocol	conformance _Version	Swift.Comparable		
+protocol	conformance _Version	Swift.Equatable		
+protocol	conformance _Version	Swift.RawRepresentable		
+protocol	conformance _Version	VideoIntelligence.ModelVersion		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.ResolvedAssets	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.ResolvedAssets	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.ResolvedRequirement	Swift.Encodable		
+protocol	conformance VideoIntelligence.ResolvedRequirement	Swift.Decodable		
+protocol	conformance VideoIntelligence.ResolvedRequirement	Swift.Hashable		
+protocol	conformance VideoIntelligence.ResolvedRequirement	Swift.Equatable		
+protocol	conformance VideoIntelligence.ResolvedRequirement	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.ResolvedRequirement	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.ResolvedRequirement	VideoIntelligence.ModelID		
+protocol	conformance VideoIntelligence.ResolvedRequirement	VideoIntelligence.VersionedModelID		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Image.Orientation	Swift.Equatable		
+protocol	conformance Image.Orientation	Swift.Hashable		
+protocol	conformance Image.Orientation	Swift.Decodable		
+protocol	conformance Image.Orientation	Swift.Encodable		
+protocol	conformance Image.Orientation	Swift.CustomStringConvertible		
+protocol	conformance RightMirroredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RightMirroredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RightCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RightCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LeftMirroredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LeftMirroredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LeftCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LeftCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DownMirroredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DownMirroredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DownCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DownCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpMirroredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpMirroredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UpCodingKeys	Swift.CodingKey		
+protocol	conformance UpMirroredCodingKeys	Swift.CodingKey		
+protocol	conformance DownCodingKeys	Swift.CodingKey		
+protocol	conformance DownMirroredCodingKeys	Swift.CodingKey		
+protocol	conformance LeftCodingKeys	Swift.CodingKey		
+protocol	conformance LeftMirroredCodingKeys	Swift.CodingKey		
+protocol	conformance RightCodingKeys	Swift.CodingKey		
+protocol	conformance RightMirroredCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.PixelBuffer	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.PixelBuffer	Swift.CustomDebugStringConvertible		
+protocol	conformance VideoIntelligence.PixelBuffer	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.PixelBuffer	Swift.Hashable		
+protocol	conformance VideoIntelligence.PixelBuffer	Swift.Equatable		
+protocol	conformance PixelBufferAllocator.Attributes	Swift.Encodable		
+protocol	conformance PixelBufferAllocator.Attributes	Swift.Decodable		
+protocol	conformance PixelBufferAllocator.Attributes	Swift.Hashable		
+protocol	conformance PixelBufferAllocator.Attributes	Swift.Equatable		
+protocol	conformance PixelBufferAllocator.AllocationError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.PixelFormatType	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.PixelFormatType	Swift.RawRepresentable		
+protocol	conformance VideoIntelligence.PixelFormatType	Swift.Encodable		
+protocol	conformance VideoIntelligence.PixelFormatType	Swift.Decodable		
+protocol	conformance VideoIntelligence.PixelFormatType	Swift.Hashable		
+protocol	conformance VideoIntelligence.PixelFormatType	Swift.Equatable		
+protocol	conformance PixelTransferSession.Configuration	Swift.Equatable		
+protocol	conformance PixelRotationSession.Configuration	Swift.Equatable		
+protocol	conformance PixelRotationSession.Configuration	Swift.CustomStringConvertible		
+protocol	conformance PixelRotationSession.RotationDegrees	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.PixelRotationSession	VideoIntelligence.PixelManipulating		
+protocol	conformance VideoIntelligence.PixelRotationSession	VideoIntelligence.PixelManipulatingVT		
+protocol	conformance PixelTransferSession.Configuration	Swift.CustomStringConvertible		
+protocol	conformance PixelTransferSession.DownsamplingMode	Swift.CustomStringConvertible		
+protocol	conformance PixelTransferSession.ScalingMode	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.PixelTransferSession	VideoIntelligence.PixelManipulating		
+protocol	conformance VideoIntelligence.PixelTransferSession	VideoIntelligence.PixelManipulatingVT		
+protocol	conformance VideoIntelligence.PixelManipulationOptions	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.PixelManipulationOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance VideoIntelligence.PixelManipulationOptions	Swift.Equatable		
+protocol	conformance VideoIntelligence.PixelManipulationOptions	Swift.RawRepresentable		
+protocol	conformance VideoIntelligence.PixelManipulationOptions	Swift.SetAlgebra		
+protocol	conformance VideoIntelligence.PixelManipulationOptions	Swift.OptionSet		
+protocol	conformance PixelTransferSession.ScalingMode	Swift.Hashable		
+protocol	conformance PixelTransferSession.ScalingMode	Swift.Equatable		
+protocol	conformance PixelTransferSession.DownsamplingMode	Swift.Hashable		
+protocol	conformance PixelTransferSession.DownsamplingMode	Swift.Equatable		
+protocol	conformance PixelRotationSession.RotationDegrees	Swift.RawRepresentable		
+protocol	conformance PixelRotationSession.RotationDegrees	Swift.Hashable		
+protocol	conformance PixelRotationSession.RotationDegrees	Swift.Equatable		
+protocol	conformance VideoIntelligence.PixelManipulationError	Swift.Error		
+protocol	conformance VideoIntelligence.Cache	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance _CachedKey	Swift.Equatable		
+protocol	conformance _CachedKey	Swift.Hashable		
+protocol	conformance VideoIntelligence.FeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance VideoIntelligence.FeatureFlags	Swift.Hashable		
+protocol	conformance VideoIntelligence.FeatureFlags	Swift.Equatable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.RawRepresentable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.CustomDebugStringConvertible		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.Encodable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.Decodable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.Comparable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.Hashable		
+protocol	conformance VideoIntelligence.UncheckedSendable	Swift.Equatable		
+protocol	conformance VideoIntelligence.E5RTInferenceProvider	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.E5RTInferenceProvider	VideoIntelligence.InferenceProvider		
+protocol	conformance _E5RTInferenceProviderState	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedModel	Swift.Identifiable		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedModel	VideoIntelligence.Asset		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedModel	VideoIntelligence.ModelAsset		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedModel	VideoIntelligence.E5RTModelAsset		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedLoRAModel	Swift.Identifiable		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedLoRAModel	VideoIntelligence.Asset		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedLoRAModel	VideoIntelligence.ModelAsset		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedLoRAModel	VideoIntelligence.E5RTModelAsset		
+protocol	conformance _ID	Swift.Encodable		
+protocol	conformance _ID	Swift.Decodable		
+protocol	conformance _ID	Swift.Hashable		
+protocol	conformance _ID	Swift.Equatable		
+protocol	conformance _ID	VideoIntelligence.ModelID		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedLoRAModel	VideoIntelligence.E5RTModelAssetWrapping		
+protocol	conformance VideoIntelligence.E5RTModelAssetWrappedModel	VideoIntelligence.E5RTModelAssetWrapping		
+protocol	conformance _ID.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance _ID.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance _ID.CodingKeys	Swift.Hashable		
+protocol	conformance _ID.CodingKeys	Swift.Equatable		
+protocol	conformance _ID.CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.InferenceIOError	Swift.Equatable		
+protocol	conformance VideoIntelligence.InferenceIOError	Swift.Hashable		
+protocol	conformance VideoIntelligence.InferenceIOError	Swift.Error		
+protocol	conformance VideoIntelligence.InferenceIOKind	Swift.Equatable		
+protocol	conformance VideoIntelligence.InferenceIOKind	Swift.Hashable		
+protocol	conformance VideoIntelligence.InferenceIOKind	Swift.Decodable		
+protocol	conformance VideoIntelligence.InferenceIOKind	Swift.Encodable		
+protocol	conformance VideoIntelligence.InferenceTensorIOProperties	VideoIntelligence.InferenceIOProperties		
+protocol	conformance VideoIntelligence.InferenceTensorIOProperties	Swift.Equatable		
+protocol	conformance VideoIntelligence.InferenceTensorIOProperties	Swift.Hashable		
+protocol	conformance VideoIntelligence.InferenceTensorIOProperties	Swift.Decodable		
+protocol	conformance VideoIntelligence.InferenceTensorIOProperties	Swift.Encodable		
+protocol	conformance VideoIntelligence.InferenceTensorIOProperties	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.InferencePixelBufferIOProperties	VideoIntelligence.InferenceIOProperties		
+protocol	conformance VideoIntelligence.InferencePixelBufferIOProperties	Swift.Equatable		
+protocol	conformance VideoIntelligence.InferencePixelBufferIOProperties	Swift.Hashable		
+protocol	conformance VideoIntelligence.InferencePixelBufferIOProperties	Swift.Decodable		
+protocol	conformance VideoIntelligence.InferencePixelBufferIOProperties	Swift.Encodable		
+protocol	conformance VideoIntelligence.InferenceTensorIO	VideoIntelligence.InferenceIO		
+protocol	conformance VideoIntelligence.InferencePixelBufferIO	VideoIntelligence.InferenceIO		
+protocol	conformance PixelBufferCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PixelBufferCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TensorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TensorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TensorCodingKeys	Swift.CodingKey		
+protocol	conformance PixelBufferCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.InferenceIO_SurfaceAccessError	Swift.Equatable		
+protocol	conformance VideoIntelligence.InferenceIO_SurfaceAccessError	Swift.Hashable		
+protocol	conformance VideoIntelligence.InferenceIO_SurfaceAccessError	Swift.Error		
+protocol	conformance VideoIntelligence.InferenceProviderError	Swift.Error		
+protocol	conformance VideoIntelligence.Surface	Swift.Identifiable		
+protocol	conformance VideoIntelligence.Surface	Swift.Equatable		
+protocol	conformance VideoIntelligence.Surface	Swift.Hashable		
+protocol	conformance VideoIntelligence.Surface	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.Surface	Swift.CustomReflectable		
+protocol	conformance SurfaceAllocator.Properties	Swift.Encodable		
+protocol	conformance SurfaceAllocator.Properties	Swift.Decodable		
+protocol	conformance SurfaceAllocator.Properties	Swift.Hashable		
+protocol	conformance SurfaceAllocator.Properties	Swift.Equatable		
+protocol	conformance SurfaceAllocator.Error	Swift.Hashable		
+protocol	conformance SurfaceAllocator.Error	Swift.Equatable		
+protocol	conformance SurfaceAllocator.Error	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VideoIntelligence.Tensor	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.Tensor	Swift.CustomReflectable		
+protocol	conformance VideoIntelligence.TensorError	Swift.Error		
+protocol	conformance VideoIntelligence.TensorProperties	Swift.Hashable		
+protocol	conformance VideoIntelligence.TensorProperties	Swift.Equatable		
+protocol	conformance VideoIntelligence.TensorProperties	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.TensorProperties	Swift.Decodable		
+protocol	conformance VideoIntelligence.TensorProperties	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Swift.Int8	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Int16	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Int32	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Int64	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Int128	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.UInt8	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.UInt16	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.UInt32	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.UInt64	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.UInt128	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Int	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.UInt	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Float16	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Float	VideoIntelligence.TensorScalar		
+protocol	conformance Swift.Double	VideoIntelligence.TensorScalar		
+protocol	conformance VideoIntelligence.TensorScalarKind	Swift.CustomStringConvertible		
+protocol	conformance VideoIntelligence.TensorScalarKind	Swift.Hashable		
+protocol	conformance VideoIntelligence.TensorScalarKind	Swift.Equatable		
+protocol	conformance VideoIntelligence.TensorScalarKind	Swift.Decodable		
+protocol	conformance VideoIntelligence.TensorScalarKind	Swift.Encodable		
+protocol	conformance Float64CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Float64CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Float32CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Float32CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Float16CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Float16CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Uint128CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Uint128CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Uint64CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Uint64CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Uint32CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Uint32CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Uint16CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Uint16CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Uint8CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Uint8CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Int128CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Int128CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Int64CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Int64CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Int32CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Int32CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Int16CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Int16CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Int8CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Int8CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Int8CodingKeys	Swift.CodingKey		
+protocol	conformance Int16CodingKeys	Swift.CodingKey		
+protocol	conformance Int32CodingKeys	Swift.CodingKey		
+protocol	conformance Int64CodingKeys	Swift.CodingKey		
+protocol	conformance Int128CodingKeys	Swift.CodingKey		
+protocol	conformance Uint8CodingKeys	Swift.CodingKey		
+protocol	conformance Uint16CodingKeys	Swift.CodingKey		
+protocol	conformance Uint32CodingKeys	Swift.CodingKey		
+protocol	conformance Uint64CodingKeys	Swift.CodingKey		
+protocol	conformance Uint128CodingKeys	Swift.CodingKey		
+protocol	conformance Float16CodingKeys	Swift.CodingKey		
+protocol	conformance Float32CodingKeys	Swift.CodingKey		
+protocol	conformance Float64CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	Swift.Never	CompoundAssetError		
+extension	VideoIntelligence.CompoundAssetContainer	Identifiable		
+extension	VideoIntelligence.CompoundAssetContainer	ExpressibleByArrayLiteral		
+extension	VideoIntelligence.CompoundAssetContainer	RandomAccessCollection		
+extension	VideoIntelligence.CompoundAssetContainer	BidirectionalCollection		
+extension	VideoIntelligence.CompoundAssetContainer	Collection		
+extension	VideoIntelligence.CompoundAssetContainer	Sequence		
+extension	VideoIntelligence.CompoundAssetContainer	Asset		
+extension	VideoIntelligence.CompoundAssetContainerError	CompoundAssetError		
+extension	VideoIntelligence.AssetMetadata.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.CompilationFlavor	RawRepresentable		
+extension	VideoIntelligence.VCDoorInferenceIOs.InputFeatures	VCInferenceIO		
+extension	VideoIntelligence.VCDoorInferenceIOs.OutputScore1	VCInferenceIO		
+extension	VideoIntelligence.VCDoorInferenceIOs.OutputClass1	VCInferenceIO		
+extension	VideoIntelligence.VCDoorInferenceIOs.OutputScore2	VCInferenceIO		
+extension	VideoIntelligence.VCDoorInferenceIOs.OutputClass2	VCInferenceIO		
+extension	VideoIntelligence.VCHeadInferenceIOs.InputFeatures	VCInferenceIO		
+extension	VideoIntelligence.VCHeadInferenceIOs.OutputScore	VCInferenceIO		
+extension	VideoIntelligence.VCHeadInferenceIOs.OutputClass	VCInferenceIO		
+extension	VideoIntelligence.VCModelInputName	E5RTInferenceIOName		
+extension	VideoIntelligence.VCModelInputName	RawRepresentable		
+extension	VideoIntelligence.VCModelInputName	VCModelIOName		
+extension	VideoIntelligence.VCModelOutputName	E5RTInferenceIOName		
+extension	VideoIntelligence.VCModelOutputName	RawRepresentable		
+extension	VideoIntelligence.VCModelOutputName	VCModelIOName		
+extension	VideoIntelligence.VCInferenceProvider	InferenceProvider		
+extension	VideoIntelligence.VCVisualInferenceIOs.InputImage	VCInferenceIO		
+extension	VideoIntelligence.VCVisualInferenceIOs.OutputClassFeature	VCInferenceIO		
+extension	VideoIntelligence.VCVisualInferenceIOs.OutputPatchFeature	VCInferenceIO		
+extension	VideoIntelligence.VideoCaptioningError	CompoundAssetError		
+extension	VideoIntelligence.VideoCaptioningModel	Identifiable		
+extension	VideoIntelligence.VideoCaptioningModel	Asset		
+extension	VideoIntelligence.VideoCaptioningUseCase	Identifiable		
+extension	VideoIntelligence.VideoCaptioningUseCase	Asset		
+extension	VideoIntelligence.WellKnownAction	RawRepresentable		
+extension	VideoIntelligence.DoorOrientation.CoronalOrientation	RawRepresentable		
+extension	VideoIntelligence.DoorOrientation.TransverseOrientation	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.Kind	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.AnyPayload	DecodableWithConfiguration		
+extension	VideoIntelligence.AssetMetadata.MetadataPayload.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.UseCasePayload.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.BaseModelPayload.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.AdapterPayload.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.ModelPayload.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.Requirement.CodingKeys	RawRepresentable		
+extension	VideoIntelligence.AssetMetadata.SchemaVersion	RawRepresentable		
+extension	VideoIntelligence.AssetMetadataResolver	AssetMetadataResolving		
+extension	VideoIntelligence.AssetRegistry._Provider	AssetProviding		
+extension	VideoIntelligence.AssetRegistry._Provider	AssetMetadataResolving		
+extension	VideoIntelligence.AssetRegistry._Provider	AssetMetadataProviding		
+extension	VideoIntelligence.AssetRegistryAssetsBundleSource	AssetProviding		
+extension	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset	Asset		
+extension	VideoIntelligence.AssetRegistryAssetsBundleSource.LocalAsset	Identifiable		
+extension	VideoIntelligence.AssetRegistryAssetsBundleSource	AssetMetadataProviding		
+extension	VideoIntelligence.AssetRegistryMobileAssetSource	AssetProviding		
+extension	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset	Identifiable		
+extension	VideoIntelligence.AssetRegistryMobileAssetSource.RemoteAsset	Asset		
+extension	VideoIntelligence.AssetRegistryMobileAssetSource	AssetMetadataProviding		
+extension	VideoIntelligence.ResolvedAsset	Identifiable		
+extension	VideoIntelligence.ResolvedAsset	Asset		
+extension	VideoIntelligence.ResolvedAssetID	VersionedModelID		
+extension	VideoIntelligence.ResolvedAssetError	CompoundAssetError		
+extension	VideoIntelligence.ResolvedAssetID._Version	RawRepresentable		
+extension	VideoIntelligence.ResolvedRequirement	VersionedModelID		
+extension	VideoIntelligence.PixelFormatType	RawRepresentable		
+extension	VideoIntelligence.PixelRotationSession	PixelManipulatingVT		
+extension	VideoIntelligence.PixelTransferSession	PixelManipulatingVT		
+extension	VideoIntelligence.PixelManipulationOptions	ExpressibleByArrayLiteral		
+extension	VideoIntelligence.PixelManipulationOptions	RawRepresentable		
+extension	VideoIntelligence.PixelManipulationOptions	SetAlgebra		
+extension	VideoIntelligence.PixelManipulationOptions	OptionSet		
+extension	VideoIntelligence.PixelRotationSession.RotationDegrees	RawRepresentable		
+extension	VideoIntelligence.Cache	ExpressibleByDictionaryLiteral		
+extension	VideoIntelligence.UncheckedSendable	RawRepresentable		
+extension	VideoIntelligence.E5RTInferenceProvider	InferenceProvider		
+extension	VideoIntelligence.E5RTModelAssetWrappedModel	Identifiable		
+extension	VideoIntelligence.E5RTModelAssetWrappedModel	Asset		
+extension	VideoIntelligence.E5RTModelAssetWrappedLoRAModel	Identifiable		
+extension	VideoIntelligence.E5RTModelAssetWrappedLoRAModel	Asset		
+extension	VideoIntelligence.E5RTModelAssetWrappedLoRAModel	E5RTModelAssetWrapping		
+extension	VideoIntelligence.E5RTModelAssetWrappedModel	E5RTModelAssetWrapping		
+extension	VideoIntelligence.InferenceTensorIO	InferenceIO		
+extension	VideoIntelligence.InferencePixelBufferIO	InferenceIO		
+extension	VideoIntelligence.Surface	Identifiable		

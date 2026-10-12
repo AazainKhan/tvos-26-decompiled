@@ -1,0 +1,71 @@
+kind	type	conformance	member_kind	member
+class	speechmaintenanced.EntityAllocator_AppEntity			
+class	speechmaintenanced.EntityAllocator_AppEntity		let	supportedItemTypes
+class	speechmaintenanced.EntityAllocator_AppEntity		let	deniedApps
+class	speechmaintenanced.EntityAllocator_AppEntity		let	itemLimit
+class	speechmaintenanced.EntityAllocator_AppEntity		let	perAppEntityMinimum
+class	speechmaintenanced.EntityAllocator_AppEntity		let	perAppIncrementalLimit
+class	speechmaintenanced.EntityAllocator_AppEntity		let	fallbackAllocationStrategyType
+class	speechmaintenanced.EntityAllocator_AppEntity		let	proportionTransformationFunction
+class	speechmaintenanced.EntityAllocator_AppEntity		let	proportionTransformationAlpha
+struct	speechmaintenanced.InOrderAllocationStrategy			
+struct	speechmaintenanced.InOrderAllocationStrategy		var	itemLimit
+struct	speechmaintenanced.EqualAllocationStrategy			
+struct	speechmaintenanced.EqualAllocationStrategy		var	itemLimit
+struct	speechmaintenanced.WeightedProportionalAllocationStrategy			
+struct	speechmaintenanced.WeightedProportionalAllocationStrategy		let	itemLimit
+struct	speechmaintenanced.WeightedProportionalAllocationStrategy		let	transformationFunction
+struct	speechmaintenanced.WeightedProportionalAllocationStrategy		let	transformationAlpha
+enum	speechmaintenanced.EntityAllocationError			
+enum	speechmaintenanced.EntityAllocationError		case	itemLimitTooLow
+enum	speechmaintenanced.EntityAllocationError		case	enumerationFailed
+enum	speechmaintenanced.EntityAllocationError		case	rankerInitializationFailed
+enum	speechmaintenanced.EntityAllocationError		case	rankingFailed
+enum	speechmaintenanced.EntityAllocationError		case	noSetsProvided
+enum	speechmaintenanced.EntityAllocationError		case	rankingNotSupported
+class	speechmaintenanced.SMEntityExtraction			
+class	speechmaintenanced.SMEntityExtraction		let	kNLTaggerConfigTimeoutSec
+class	speechmaintenanced.SMEntityExtraction		let	kSpeechCategoryName_appcontact
+class	speechmaintenanced.SMEntityExtraction		let	kCascadeItemCreationFailureCountLimit
+class	speechmaintenanced.SMEntityExtraction		let	overallExtractionLimit
+class	speechmaintenanced.SMEntityExtraction		let	extractionLimitPerCategory
+class	speechmaintenanced.SMEntityExtraction		let	extractionExecutionTimeoutSec
+class	speechmaintenanced.SMEntityExtraction		var	entityTagger
+struct	speechmaintenanced.SMEntityExtractionResult			
+struct	speechmaintenanced.SMEntityExtractionResult		let	namedEntity
+struct	speechmaintenanced.SMEntityExtractionResult		let	lmeTag
+struct	speechmaintenanced.SMEntityExtractionResult		let	lmeTemplate
+struct	speechmaintenanced.SMEntityExtractionResult		var	frequency
+struct	speechmaintenanced.SMEntityExtractionResult		let	typeIdentifier
+struct	speechmaintenanced.SMEntityExtractionResult		let	metaContent
+class	speechmaintenanced.EntityMapper			
+class	speechmaintenanced.EntityMapper		let	appEntityMapping
+class	speechmaintenanced.EntityMapper		let	linkMetadataProvider
+class	speechmaintenanced.EntityMapper		let	schemaLibrary
+class	speechmaintenanced.EntityMapper		var	cachedMetadata
+class	speechmaintenanced.EntityMapper		var	failedLookupKeys
+class	speechmaintenanced.EntityManager			
+class	speechmaintenanced.EntityManager		let	cascadeChangeRegistry
+class	speechmaintenanced.EntityManager		let	activeEntityAllocators
+class	speechmaintenanced.EntityManager		let	entityMapper
+class	speechmaintenanced.EntityManager		let	entityExtraction
+class	speechmaintenanced.EntityManager		let	selfComponentId
+class	speechmaintenanced.SpeechMaintenanceDaemon			
+class	speechmaintenanced.SpeechMaintenanceDaemon		var	server
+class	speechmaintenanced.SpeechMaintenanceDaemon		let	entityManagementQueue
+class	speechmaintenanced.SpeechMaintenanceDaemon		var	cascadeSetChangeListener
+class	speechmaintenanced.SpeechMaintenanceServer	NSObject		
+class	speechmaintenanced.SpeechMaintenanceServerConnection			
+class	speechmaintenanced.SpeechMaintenanceServerConnection		let	connection
+protocol	speechmaintenanced.EntityAllocator			
+protocol	speechmaintenanced.AllocationStrategy			
+protocol	conformance speechmaintenanced.EntityAllocator_AppEntity	speechmaintenanced.EntityAllocator		
+protocol	conformance speechmaintenanced.InOrderAllocationStrategy	speechmaintenanced.AllocationStrategy		
+protocol	conformance speechmaintenanced.EqualAllocationStrategy	speechmaintenanced.AllocationStrategy		
+protocol	conformance speechmaintenanced.WeightedProportionalAllocationStrategy	speechmaintenanced.AllocationStrategy		
+protocol	conformance speechmaintenanced.EntityAllocationError	protocol descriptor for Error		
+protocol	conformance speechmaintenanced.SMEntityExtraction	protocol descriptor for Actor		
+protocol	conformance speechmaintenanced.SMEntityExtractionResult	protocol descriptor for Equatable		
+protocol	conformance speechmaintenanced.SMEntityExtractionResult	protocol descriptor for Hashable		
+protocol	conformance speechmaintenanced.EntityMapper	protocol descriptor for Actor		
+protocol	conformance speechmaintenanced.EntityManager	protocol descriptor for Actor		

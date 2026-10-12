@@ -1,0 +1,29 @@
+kind	type	conformance	member_kind	member
+struct	UIIntelligenceInteraction.PrimaryActionActuation			
+struct	UIIntelligenceInteraction.PrimaryActionActuation		var	input
+struct	UIIntelligenceInteraction.InteractionComposer			
+struct	UIIntelligenceInteraction.InteractionComposer		var	interactions
+enum	UIIntelligenceInteraction.Interaction			
+enum	UIIntelligenceInteraction.Interaction		case	primaryAction
+struct	UIIntelligenceInteraction.Interaction.PrimaryAction			
+struct	UIIntelligenceInteraction.Interaction.PrimaryAction		var	location
+enum	UIIntelligenceInteraction.ActuationErrors			
+enum	UIIntelligenceInteraction.ActuationErrors		case	unimplemented
+struct	UIIntelligenceInteraction.InteractionRunner			
+struct	UIIntelligenceInteraction.InteractionRunner		var	target
+struct	UIIntelligenceInteraction.InteractionRunner		var	interactions
+class	UIIntelligenceInteraction.InteractionSession			
+class	UIIntelligenceInteraction.InteractionSession		var	state
+class	UIIntelligenceInteraction.InteractionSession		var	label
+enum	UIIntelligenceInteraction.InteractionSession.State			
+enum	UIIntelligenceInteraction.InteractionSession.State		case	created
+enum	UIIntelligenceInteraction.InteractionSession.State		case	started
+enum	UIIntelligenceInteraction.InteractionSession.State		case	ended
+protocol	UIIntelligenceInteraction.Actuation	Input		
+protocol	conformance UIIntelligenceInteraction.PrimaryActionActuation	UIIntelligenceInteraction.Actuation		
+protocol	conformance UIIntelligenceInteraction.ActuationErrors	Swift.Hashable		
+protocol	conformance UIIntelligenceInteraction.ActuationErrors	Swift.Equatable		
+protocol	conformance UIIntelligenceInteraction.ActuationErrors	Swift.Error		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+extension	UIIntelligenceInteraction.PrimaryActionActuation	Actuation		

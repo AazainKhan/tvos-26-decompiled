@@ -1,0 +1,30 @@
+kind	type	conformance	member_kind	member
+struct	SnippetCommands.OpenPunchoutCommandConverter			
+struct	SnippetCommands.AnySFCommandConverter			
+struct	SnippetCommands.AnySFCommandConverter		let	convert
+struct	SnippetCommands.AnySFCommandConverter		let	supports
+enum	SnippetCommands.Log			
+enum	SnippetCommands.Category			
+struct	SnippetCommands.Signpost			
+struct	SnippetCommands.Signpost		let	name
+struct	SnippetCommands.AnySFCommandExecutor			
+struct	SnippetCommands.AnySFCommandExecutor		let	execute
+struct	SnippetCommands.AnySFCommandExecutor		let	supports
+struct	SnippetCommands.BeginMapsRoutingExecutor			
+class	SnippetCommands.SnippetCommandExecutor			
+enum	SnippetCommands.ExecutionResult			
+enum	SnippetCommands.ExecutionResult		case	convertedToAce
+enum	SnippetCommands.ExecutionResult		case	failure
+enum	SnippetCommands.ExecutionResult		case	commandExecuted
+enum	SnippetCommands.SnippetCommandError			
+enum	SnippetCommands.SnippetCommandError		case	unsupportedSFCommand
+enum	SnippetCommands.SnippetCommandError		case	unableToCastCommandToExpectedType
+enum	SnippetCommands.SnippetCommandError		case	unableToConvertSFCommandToAceCommand
+enum	SnippetCommands.SnippetCommandError		case	unableToExecuteSFCommand
+protocol	SnippetCommands.SFCommandConverter	Command, AceCommand		
+protocol	SnippetCommands.SFCommandExecutor	Command		
+protocol	conformance SnippetCommands.OpenPunchoutCommandConverter	SnippetCommands.SFCommandConverter		
+protocol	conformance SnippetCommands.BeginMapsRoutingExecutor	SnippetCommands.SFCommandExecutor		
+protocol	conformance SnippetCommands.SnippetCommandError	Swift.Error		
+extension	SnippetCommands.OpenPunchoutCommandConverter	SFCommandConverter		
+extension	SnippetCommands.BeginMapsRoutingExecutor	SFCommandExecutor		

@@ -1,0 +1,218 @@
+kind	type	conformance	member_kind	member
+enum	SiriFlowEnvironment.UserSessionType			
+enum	SiriFlowEnvironment.UserSessionType		case	enrolledUserSession
+enum	SiriFlowEnvironment.UserSessionType		case	ambient
+enum	SiriFlowEnvironment.UserSessionType		case	guest
+struct	SiriFlowEnvironment.UserSessionState			
+struct	SiriFlowEnvironment.UserSessionState		let	userSessionType
+struct	SiriFlowEnvironment.UserSessionState		let	isSessionActiveForRecognizedUser
+enum	SiriFlowEnvironment.UserSessionState.CodingKeys			
+enum	SiriFlowEnvironment.UserSessionState.CodingKeys		case	userSessionType
+enum	SiriFlowEnvironment.UserSessionState.CodingKeys		case	isSessionActiveForRecognizedUser
+enum	SiriFlowEnvironment.UserSessionType.CodingKeys			
+enum	SiriFlowEnvironment.UserSessionType.CodingKeys		case	ambient
+enum	SiriFlowEnvironment.UserSessionType.CodingKeys		case	guest
+enum	SiriFlowEnvironment.UserSessionType.CodingKeys		case	enrolledUserSession
+enum	SiriFlowEnvironment.UserSessionType.AmbientCodingKeys			
+enum	SiriFlowEnvironment.UserSessionType.GuestCodingKeys			
+enum	SiriFlowEnvironment.UserSessionType.EnrolledUserSessionCodingKeys			
+enum	SiriFlowEnvironment.UserSessionType.EnrolledUserSessionCodingKeys		case	highConfidenceSession
+struct	SiriFlowEnvironment.FlowTaskMetadata			
+struct	SiriFlowEnvironment.FlowTaskMetadata		var	id
+struct	SiriFlowEnvironment.FlowTaskMetadata		var	isClientInitiated
+struct	SiriFlowEnvironment.FlowTaskMetadata		var	creationTime
+struct	SiriFlowEnvironment.InteractionTypeHelper			
+struct	SiriFlowEnvironment.InteractionTypeHelper		let	accessibilityStatusProvider
+struct	SiriFlowEnvironment.InteractionTypeHelper		let	deviceClassProvider
+struct	SiriFlowEnvironment.AccessibilityStatusProviderImpl			
+struct	SiriFlowEnvironment.DummyLocationProvider			
+struct	SiriFlowEnvironment.MeCardOptions			
+struct	SiriFlowEnvironment.MeCardOptions		let	rawValue
+enum	SiriFlowEnvironment.MultiUserState			
+enum	SiriFlowEnvironment.MultiUserState		case	enabled
+enum	SiriFlowEnvironment.MultiUserState		case	disabled
+struct	SiriFlowEnvironment.MultiUserContext			
+struct	SiriFlowEnvironment.MultiUserContext		let	requiresUserGrounding
+struct	SiriFlowEnvironment.MultiUserContext		var	meCardProxy
+struct	SiriFlowEnvironment.MultiUserContext		let	handoffTargetDeviceID
+struct	SiriFlowEnvironment.MultiUserContext		let	userSessionState
+enum	SiriFlowEnvironment.SharedContext			
+class	SiriFlowEnvironment.RefreshableSharedContext			
+class	SiriFlowEnvironment.RefreshableSharedContext		var	sharedContext
+enum	SiriFlowEnvironment.CurrentRequestOverrides			
+enum	SiriFlowEnvironment.CurrentRequestOverrides.Field			
+enum	SiriFlowEnvironment.CurrentRequestOverrides.Field		case	responseMode
+enum	SiriFlowEnvironment.CurrentRequestOverrides.OverrideError			
+enum	SiriFlowEnvironment.CurrentRequestOverrides.OverrideError		case	invalidKey
+enum	SiriFlowEnvironment.CurrentRequestOverrides.OverrideError		case	invalidValue
+enum	SiriFlowEnvironment.CurrentRequestOverrides.OverrideError		case	emptyOverrides
+enum	SiriFlowEnvironment.RequestPositionInSession			
+enum	SiriFlowEnvironment.RequestPositionInSession		case	unknown
+enum	SiriFlowEnvironment.RequestPositionInSession		case	first
+enum	SiriFlowEnvironment.RequestPositionInSession		case	following
+class	SiriFlowEnvironment.CurrentRequest			
+class	SiriFlowEnvironment.CurrentRequest		var	mock
+class	SiriFlowEnvironment.CurrentRequest		var	_refId
+class	SiriFlowEnvironment.CurrentRequest		var	_aceId
+class	SiriFlowEnvironment.CurrentRequest		var	_executionRequestId
+class	SiriFlowEnvironment.CurrentRequest		var	_sessionHandoffContinuityID
+class	SiriFlowEnvironment.CurrentRequest		var	_peerName
+class	SiriFlowEnvironment.CurrentRequest		var	_inputOrigin
+class	SiriFlowEnvironment.CurrentRequest		var	_interactionType
+class	SiriFlowEnvironment.CurrentRequest		var	_interactionId
+class	SiriFlowEnvironment.CurrentRequest		var	_audioSource
+class	SiriFlowEnvironment.CurrentRequest		var	_audioDestination
+class	SiriFlowEnvironment.CurrentRequest		var	_responseMode
+class	SiriFlowEnvironment.CurrentRequest		var	_multiUserState
+class	SiriFlowEnvironment.CurrentRequest		var	_bargeInContext
+class	SiriFlowEnvironment.CurrentRequest		var	_sharedContextService
+class	SiriFlowEnvironment.CurrentRequest		var	_originatingHome
+class	SiriFlowEnvironment.CurrentRequest		var	_speechPackage
+class	SiriFlowEnvironment.CurrentRequest		var	_resultCandidateId
+class	SiriFlowEnvironment.CurrentRequest		var	_asrOnDevice
+class	SiriFlowEnvironment.CurrentRequest		var	_currentDeviceAssistantId
+class	SiriFlowEnvironment.CurrentRequest		var	_voiceTriggerEventInfo
+class	SiriFlowEnvironment.CurrentRequest		var	_asrExecutionLocation
+class	SiriFlowEnvironment.CurrentRequest		var	_nlExecutionLocation
+class	SiriFlowEnvironment.CurrentRequest		var	_companionName
+class	SiriFlowEnvironment.CurrentRequest		var	_isRecognizeMyVoiceEnabled
+class	SiriFlowEnvironment.CurrentRequest		var	_flowTaskMetadata
+class	SiriFlowEnvironment.CurrentRequest		var	_voiceAudioSessionId
+class	SiriFlowEnvironment.CurrentRequest		var	_utterance
+class	SiriFlowEnvironment.CurrentRequest		var	_isSystemApertureEnabled
+class	SiriFlowEnvironment.CurrentRequest		var	_isLiveActivitiesSupported
+class	SiriFlowEnvironment.CurrentRequest		var	_isInAmbient
+class	SiriFlowEnvironment.CurrentRequest		var	_positionInSession
+class	SiriFlowEnvironment.CurrentRequest		var	_responseLanguageVariant
+class	SiriFlowEnvironment.CurrentRequest		var	_locationProvider
+class	SiriFlowEnvironment.CurrentRequest		var	_requestLanguageVariant
+class	SiriFlowEnvironment.CurrentRequest		var	_rootRequestId
+class	SiriFlowEnvironment.CurrentRequest		var	_sessionId
+class	SiriFlowEnvironment.CurrentRequest		var	_remoteRequestWasMadeInSession
+class	SiriFlowEnvironment.CurrentRequest		var	_overrideProperties
+struct	SiriFlowEnvironment.Policy			
+struct	SiriFlowEnvironment.Policy		var	supportedOperatingSystems
+struct	SiriFlowEnvironment.Policy		var	ducAllowList
+struct	SiriFlowEnvironment.Policy		var	errorSignatureDenyList
+struct	SiriFlowEnvironment.Policy		var	denyAllErrorSignatures
+struct	SiriFlowEnvironment.Policy		var	tailspinList
+struct	SiriFlowEnvironment.Policy		var	errorSignatureAllowListOverride
+struct	SiriFlowEnvironment.Policy		var	srtRegressionInSeconds
+class	SiriFlowEnvironment.TapToRadarWithPolicyManager	SiriFlowEnvironment.TapToRadarManager		
+class	SiriFlowEnvironment.TapToRadarWithPolicyManager	SiriFlowEnvironment.TapToRadarManager	let	policy
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys			
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	supportedOperatingSystems
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	platform
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	ducAllow
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	ducAllowList
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	errorSignatureDenyList
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	additionalErrorInfo
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	denyAll
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	throttledErrors
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	tailspinList
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	errorSignatureAllowListOverride
+enum	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys		case	srtRegressionInSeconds
+class	SiriFlowEnvironment.HomeKitProvider			
+class	SiriFlowEnvironment.HomeKitProvider		var	mock
+class	SiriFlowEnvironment.HomeKitProvider		var	_homeKitHelper
+class	SiriFlowEnvironment.HomeKitProvider		var	homesConfigured
+class	SiriFlowEnvironment.HomeKitProvider		var	anyAccessoriesConfigured
+class	SiriFlowEnvironment.HomeKitProvider		var	anySpeakersConfigured
+struct	SiriFlowEnvironment.TTRComponentInfo			
+struct	SiriFlowEnvironment.TTRComponentInfo		var	componentName
+struct	SiriFlowEnvironment.TTRComponentInfo		var	componentVersion
+struct	SiriFlowEnvironment.TTRComponentInfo		var	componentID
+struct	SiriFlowEnvironment.RadarFilingExtras			
+struct	SiriFlowEnvironment.RadarFilingExtras		var	attachmentURLs
+struct	SiriFlowEnvironment.RadarFilingExtras		var	extensionIDs
+struct	SiriFlowEnvironment.RadarFilingExtras		var	deviceIDs
+struct	SiriFlowEnvironment.RadarFilingExtras		var	displayReason
+class	SiriFlowEnvironment.TapToRadarManager			
+class	SiriFlowEnvironment.TapToRadarManager		var	requestID
+class	SiriFlowEnvironment.TapToRadarManager		var	ttrRequestManager
+class	SiriFlowEnvironment.TapToRadarManager		var	requestText
+class	SiriFlowEnvironment.TapToRadarManager		let	defaultDisplayTitle
+class	SiriFlowEnvironment.TapToRadarManager		let	defaultsKey
+class	SiriFlowEnvironment.TapToRadarManager		let	contentKeyError
+class	SiriFlowEnvironment.TapToRadarManager		let	bufferSize
+class	SiriFlowEnvironment.TapToRadarManager		let	buffer
+class	SiriFlowEnvironment.TapToRadarManager		let	sysBuildVer
+struct	SiriFlowEnvironment.TapToRadarManager.CreateDraftContainer			
+struct	SiriFlowEnvironment.TapToRadarManager.CreateDraftContainer		var	radarComponentInfo
+struct	SiriFlowEnvironment.TapToRadarManager.CreateDraftContainer		var	title
+struct	SiriFlowEnvironment.TapToRadarManager.CreateDraftContainer		var	description
+struct	SiriFlowEnvironment.TapToRadarManager.CreateDraftContainer		var	radarFilingExtras
+protocol	SiriFlowEnvironment.AccessibilityStatusProvider			
+protocol	SiriFlowEnvironment.SiriLocationProvider			
+protocol	SiriFlowEnvironment.MeCardProxy			
+protocol	SiriFlowEnvironment.SharedContextService			
+protocol	SiriFlowEnvironment.HomeKitHelperProtocol			
+protocol	conformance SiriFlowEnvironment.UserSessionType	Swift.Decodable		
+protocol	conformance SiriFlowEnvironment.UserSessionType	Swift.Encodable		
+protocol	conformance SiriFlowEnvironment.UserSessionType	Swift.Equatable		
+protocol	conformance SiriFlowEnvironment.UserSessionType	Swift.CustomStringConvertible		
+protocol	conformance SiriFlowEnvironment.UserSessionState	Swift.Decodable		
+protocol	conformance SiriFlowEnvironment.UserSessionState	Swift.Encodable		
+protocol	conformance SiriFlowEnvironment.UserSessionState	Swift.Equatable		
+protocol	conformance SiriFlowEnvironment.UserSessionState	Swift.CustomStringConvertible		
+protocol	conformance EnrolledUserSessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EnrolledUserSessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EnrolledUserSessionCodingKeys	Swift.Hashable		
+protocol	conformance EnrolledUserSessionCodingKeys	Swift.Equatable		
+protocol	conformance GuestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GuestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AmbientCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AmbientCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AmbientCodingKeys	Swift.CodingKey		
+protocol	conformance GuestCodingKeys	Swift.CodingKey		
+protocol	conformance EnrolledUserSessionCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriFlowEnvironment.AccessibilityStatusProviderImpl	SiriFlowEnvironment.AccessibilityStatusProvider		
+protocol	conformance SiriFlowEnvironment.DummyLocationProvider	SiriFlowEnvironment.SiriLocationProvider		
+protocol	conformance SiriFlowEnvironment.MeCardOptions	Swift.OptionSet		
+protocol	conformance SiriFlowEnvironment.MeCardOptions	Swift.SetAlgebra		
+protocol	conformance SiriFlowEnvironment.MeCardOptions	Swift.RawRepresentable		
+protocol	conformance SiriFlowEnvironment.MeCardOptions	Swift.Equatable		
+protocol	conformance SiriFlowEnvironment.MeCardOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance SiriFlowEnvironment.RefreshableSharedContext	SiriFlowEnvironment.SharedContextService		
+protocol	conformance CurrentRequestOverrides.Field	Swift.Equatable		
+protocol	conformance CurrentRequestOverrides.Field	Swift.Hashable		
+protocol	conformance CurrentRequestOverrides.Field	Swift.RawRepresentable		
+protocol	conformance CurrentRequestOverrides.OverrideError	Swift.Error		
+protocol	conformance CurrentRequestOverrides.OverrideError	Swift.Equatable		
+protocol	conformance SiriFlowEnvironment.RequestPositionInSession	Swift.Equatable		
+protocol	conformance SiriFlowEnvironment.RequestPositionInSession	Swift.Hashable		
+protocol	conformance SiriFlowEnvironment.RequestPositionInSession	Swift.RawRepresentable		
+protocol	conformance SiriFlowEnvironment.RequestPositionInSession	Swift.Decodable		
+protocol	conformance SiriFlowEnvironment.RequestPositionInSession	Swift.Encodable		
+protocol	conformance SiriFlowEnvironment.CurrentRequest	SiriUtilities.MockableEnvironmentProvider		
+protocol	conformance SiriFlowEnvironment.CurrentRequest	SiriUtilities.Buildable		
+protocol	conformance SiriFlowEnvironment.CurrentRequest	SiriUtilities.SiriEnvironmentProvider		
+protocol	conformance SiriFlowEnvironment.CurrentRequest	Combine.ObservableObject		
+protocol	conformance TapToRadarWithPolicyManager.DefaultPolicyKeys	Swift.Equatable		
+protocol	conformance TapToRadarWithPolicyManager.DefaultPolicyKeys	Swift.Hashable		
+protocol	conformance TapToRadarWithPolicyManager.DefaultPolicyKeys	Swift.RawRepresentable		
+protocol	conformance HomeKitHelper	SiriFlowEnvironment.HomeKitHelperProtocol		
+protocol	conformance SiriFlowEnvironment.HomeKitProvider	SiriUtilities.MockableEnvironmentProvider		
+protocol	conformance SiriFlowEnvironment.HomeKitProvider	SiriUtilities.SiriEnvironmentProvider		
+protocol	conformance SiriFlowEnvironment.HomeKitProvider	Combine.ObservableObject		
+extension	SiriFlowEnvironment.MeCardOptions	OptionSet		
+extension	SiriFlowEnvironment.MeCardOptions	SetAlgebra		
+extension	SiriFlowEnvironment.MeCardOptions	RawRepresentable		
+extension	SiriFlowEnvironment.MeCardOptions	ExpressibleByArrayLiteral		
+extension	SiriFlowEnvironment.CurrentRequestOverrides.Field	RawRepresentable		
+extension	SiriFlowEnvironment.RequestPositionInSession	RawRepresentable		
+extension	SiriFlowEnvironment.CurrentRequest	MockableEnvironmentProvider		
+extension	SiriFlowEnvironment.CurrentRequest	ObservableObject		
+extension	SiriFlowEnvironment.TapToRadarWithPolicyManager.DefaultPolicyKeys	RawRepresentable		
+extension	SiriFlowEnvironment.HomeKitProvider	MockableEnvironmentProvider		
+extension	SiriFlowEnvironment.HomeKitProvider	ObservableObject		

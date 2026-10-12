@@ -1,0 +1,1288 @@
+kind	type	conformance	member_kind	member
+struct	SiriSignals.ActionDisambiguationFrequencySignal			
+struct	SiriSignals.ActionDisambiguationFrequencySignal		let	groupBy
+struct	SiriSignals.ActionDisambiguationFrequencySignal		let	interactionStore
+struct	SiriSignals.ActionDisambiguationFrequencySignal		let	bucket
+class	SiriSignals.Aggregation			
+class	SiriSignals.Aggregation		var	counters
+class	SiriSignals.Aggregation.BucketCounter			
+class	SiriSignals.Aggregation.BucketCounter		let	seconds
+class	SiriSignals.Aggregation.BucketCounter		var	count
+enum	SiriSignals.Aggregation.Bucket			
+enum	SiriSignals.Aggregation.Bucket		case	f2m
+enum	SiriSignals.Aggregation.Bucket		case	f10m
+enum	SiriSignals.Aggregation.Bucket		case	f1h
+enum	SiriSignals.Aggregation.Bucket		case	f6h
+enum	SiriSignals.Aggregation.Bucket		case	f1d
+enum	SiriSignals.Aggregation.Bucket		case	f7d
+enum	SiriSignals.Aggregation.Bucket		case	f28d
+enum	SiriSignals.Aggregation.Bucket		case	inf
+struct	SiriSignals.Aggregation.BucketRange			
+struct	SiriSignals.Aggregation.BucketRange		let	min
+struct	SiriSignals.Aggregation.BucketRange		let	max
+struct	SiriSignals.AppDisambiguationFrequencySignal			
+struct	SiriSignals.AppDisambiguationFrequencySignal		let	groupBy
+struct	SiriSignals.AppDisambiguationFrequencySignal		let	interactionStore
+struct	SiriSignals.AppDisambiguationFrequencySignal		let	bucket
+class	SiriSignals.AppLaunchCountSignal			
+class	SiriSignals.AppLaunchCountSignal		let	bucket
+class	SiriSignals.AppLaunchCountSignal		let	stream
+class	SiriSignals.AppMetadata			
+class	SiriSignals.AppMetadata		let	bundleIdentifier
+class	SiriSignals.AppMetadata		let	localizedAppName
+class	SiriSignals.AppMetadata		let	supportedMediaCategories
+enum	SiriSignals.AppMetadata.CodingKeys			
+enum	SiriSignals.AppMetadata.CodingKeys		case	bundleIdentifier
+enum	SiriSignals.AppMetadata.CodingKeys		case	localizedAppName
+enum	SiriSignals.AppMetadata.CodingKeys		case	supportedMediaCategories
+struct	SiriSignals.AppOpenTime			
+struct	SiriSignals.AppOpenTime		var	startTime
+struct	SiriSignals.AppOpenTime		var	totalSeconds
+class	SiriSignals.LSApplicationRecordProvider			
+class	SiriSignals.AppSelectionActivationFlag			
+struct	SiriSignals.ValueWithTiming			
+struct	SiriSignals.ValueWithTiming		let	value
+struct	SiriSignals.ValueWithTiming		let	timing
+enum	SiriSignals.ConversionError			
+enum	SiriSignals.ConversionError		case	inconsistentType
+enum	SiriSignals.ConversionError		case	unconvertibleString
+struct	SiriSignals.AppUsageRelativeSignal			
+struct	SiriSignals.AppUsageRelativeSignal		let	name
+struct	SiriSignals.AppUsageRelativeSignal		let	candidateAppIds
+struct	SiriSignals.AppUsageRelativeSignal		let	timeInterval
+struct	SiriSignals.AppUsageRelativeSignal		let	maxValue
+struct	SiriSignals.AppUsageRelativeSignal		let	nowProvider
+struct	SiriSignals.AppUsageRelativeSignal		let	dataSource
+class	SiriSignals.Atomic			
+class	SiriSignals.Atomic		let	queue
+class	SiriSignals.Atomic		var	_value
+class	SiriSignals.AtomicOnce			
+class	SiriSignals.AtomicOnce		var	hasRun
+class	SiriSignals.AtomicOnce		var	queue
+class	SiriSignals.AudioAppSignals			
+class	SiriSignals.AudioAppSignals		let	version
+class	SiriSignals.AudioAppSignals		let	candidateAppBundleIds
+class	SiriSignals.AudioAppSignals		let	signalValues
+class	SiriSignals.AudioAppSignals		let	timestamp
+class	SiriSignals.AudioAppSignals		let	apps
+enum	SiriSignals.AudioAppSignals.CodingKeys			
+enum	SiriSignals.AudioAppSignals.CodingKeys		case	version
+enum	SiriSignals.AudioAppSignals.CodingKeys		case	candidateAppBundleIds
+enum	SiriSignals.AudioAppSignals.CodingKeys		case	signalValues
+enum	SiriSignals.AudioAppSignals.CodingKeys		case	timestamp
+enum	SiriSignals.AudioAppSignals.CodingKeys		case	apps
+enum	SiriSignals.AudioAppSignalsCollector.SignalSource			
+enum	SiriSignals.AudioAppSignalsCollector.SignalSource		case	local
+enum	SiriSignals.AudioAppSignalsCollector.SignalSource		case	companion
+enum	SiriSignals.AudioAppSignalsCollector.AudioSignalCollectorError			
+enum	SiriSignals.AudioAppSignalsCollector.AudioSignalCollectorError		case	unsupported
+enum	SiriSignals.AudioAppSignalsCollector.AudioSignalCollectorError		case	noDataForUser
+enum	SiriSignals.AudioAppSignalsCollector.AudioSignalCollectorError		case	decodingError
+enum	SiriSignals.AudioAppSignalsCollector.AudioSignalCollectorError		case	unknown
+enum	SiriSignals.AudioAppSignalsCollector.AudioSignalCollectorError		case	biomeSync
+class	SiriSignals.AudioAppSignalsCollector			
+class	SiriSignals.AudioAppSignalsCollector		let	multiUserConnectionProvider
+class	SiriSignals.AudioAppSignalsCollector		let	installedAudioAppProvider
+class	SiriSignals.AudioAppSignalsCollector		let	audioFeatureFlagProvider
+class	SiriSignals.AudioAppSignalsCollector		let	signalGathererProducer
+class	SiriSignals.AudioAppSignalsDataSyncUtils			
+class	SiriSignals.AudioAppSignalsSyncer			
+class	SiriSignals.AudioAppSignalsSyncer		let	audioSignalCollector
+class	SiriSignals.AudioAppSignalsSyncer		let	audioFeatureFlagProvider
+class	SiriSignals.AudioAppSignalsSyncer		var	audioAppSignalsDataSyncUtils
+class	SiriSignals.AudioAppSignalsSyncer		let	subscriptionStatusProvider
+class	SiriSignals.AudioAppSignalsSyncer		let	donator
+class	SiriSignals.AudioAppSignalsSyncer		let	meDeviceCheck
+class	SiriSignals.AudioAppSignalsSyncer		let	overrides
+enum	SiriSignals.AudioAppSignalsSyncer.SyncTrigger			
+enum	SiriSignals.AudioAppSignalsSyncer.SyncTrigger		case	appInstall
+enum	SiriSignals.AudioAppSignalsSyncer.SyncTrigger		case	appUninstall
+enum	SiriSignals.AudioAppSignalsSyncer.SyncTrigger		case	timer
+struct	SiriSignals.AudioCompanionContextDonator			
+struct	SiriSignals.AudioCompanionContextDonator		let	source
+struct	SiriSignals.AudioFeatureFlagProvider			
+enum	SiriSignals.AudioFeatureFlagProvider.FeatureFlags			
+enum	SiriSignals.AudioFeatureFlagProvider.FeatureFlags		case	audioAppPredictionOnHomePodEnabled
+class	SiriSignals.AudioMegamodelFeatureTransformer			
+class	SiriSignals.AudioMegamodelFeatureTransformer		let	orderedFeatureList
+class	SiriSignals.AudioMegamodelFeatureTransformer		let	candidateBundleIds
+class	SiriSignals.AudioMegamodelFeatureTransformer		var	signalValues
+class	SiriSignals.AudioMegamodelManagertvOS			
+class	SiriSignals.AudioMegamodelManagertvOS		let	trialClient
+class	SiriSignals.AudioMegamodelPredictor			
+class	SiriSignals.AudioMegamodelPredictor		let	orderedFeatureMap
+class	SiriSignals.AudioMegamodelPredictor		let	audioMegamodelManager
+class	SiriSignals.AudioMegamodelPredictor		let	model
+struct	SiriSignals.BiomeLatestEventProcessor<A	BMStoreData>		
+struct	SiriSignals.BiomeLatestEventProcessor<A	BMStoreData>	let	stream
+struct	SiriSignals.BiomeLatestEventProcessor<A	BMStoreData>	let	toSignalValue
+struct	SiriSignals.BiomeListener			
+struct	SiriSignals.BiomeListener		let	streamIdentifier
+struct	SiriSignals.BiomeListener		let	prewarmingQueue
+class	SiriSignals.BiomeQueriesAppInFocus			
+class	SiriSignals.BiomeQueriesAppInFocus		let	bundleIDs
+class	SiriSignals.BiomeQueriesAppInFocus		let	queryProvider
+class	SiriSignals.BiomeQueriesNowPlaying			
+class	SiriSignals.BiomeQueriesNowPlaying		let	bundleIDs
+class	SiriSignals.BiomeQueriesNowPlaying		let	queryProvider
+class	SiriSignals.BiomeQueriesNowPlaying		let	now
+class	SiriSignals.BiomeQueriesNowPlaying		var	cacheCountAggregation
+class	SiriSignals.BiomeQueriesNowPlaying.UserTimeWindowsCache			
+class	SiriSignals.BiomeQueriesNowPlaying.UserTimeWindowsCache		var	underlying
+class	SiriSignals.BiomeQueriesNowPlaying.UserTimeWindowsCache		let	name
+class	SiriSignals.BiomeQueriesRecognizedUser			
+class	SiriSignals.BiomeQueriesRecognizedUser		let	queryProvider
+struct	SiriSignals.BiomeQueriesNowPlaying.AllUserTimeWindows			
+struct	SiriSignals.BiomeQueriesNowPlaying.AllUserTimeWindows		let	timestamp
+struct	SiriSignals.BiomeQueriesNowPlaying.AllUserTimeWindows		let	sharedUserId
+struct	SiriSignals.BiomeQueriesNowPlaying.AllUserTimeWindows		let	windows
+struct	SiriSignals.BiomeQueriesNowPlaying.TimeWindow			
+struct	SiriSignals.BiomeQueriesNowPlaying.TimeWindow		let	start
+struct	SiriSignals.BiomeQueriesNowPlaying.TimeWindow		let	end
+struct	SiriSignals.BiomeQueriesNowPlaying.CachedCountsAggregation			
+struct	SiriSignals.BiomeQueriesNowPlaying.CachedCountsAggregation		let	timestamp
+struct	SiriSignals.BiomeQueriesNowPlaying.CachedCountsAggregation		let	sharedUserId
+struct	SiriSignals.BiomeQueriesNowPlaying.CachedCountsAggregation		let	value
+struct	SiriSignals.BiomeQueriesNowPlaying.NowPlayingRecord			
+struct	SiriSignals.BiomeQueriesNowPlaying.NowPlayingRecord		let	bundleID
+struct	SiriSignals.BiomeQueriesNowPlaying.NowPlayingRecord		let	timestamp
+struct	SiriSignals.BiomeQueriesNowPlaying.BundleIDAndState			
+struct	SiriSignals.BiomeQueriesNowPlaying.BundleIDAndState		let	bundleID
+struct	SiriSignals.BiomeQueriesNowPlaying.BundleIDAndState		let	playbackState
+struct	SiriSignals.BiomeQueriesNowPlaying.BundleCounts			
+struct	SiriSignals.BiomeQueriesNowPlaying.BundleCounts		let	bundleID
+struct	SiriSignals.BiomeQueriesNowPlaying.BundleCounts		let	counts
+struct	SiriSignals.BiomeQueriesNowPlaying.UserTimeWindow			
+struct	SiriSignals.BiomeQueriesNowPlaying.UserTimeWindow		let	sharedUserId
+struct	SiriSignals.BiomeQueriesNowPlaying.UserTimeWindow		let	timeWindow
+struct	SiriSignals.BiomeQueriesNowPlaying.RecognizedUser			
+struct	SiriSignals.BiomeQueriesNowPlaying.RecognizedUser		let	eventTimestamp
+struct	SiriSignals.BiomeQueriesNowPlaying.RecognizedUser		let	sharedUserId
+struct	SiriSignals.BiomeSQLQueryResultProvider			
+struct	SiriSignals.NoOpExpander			
+struct	SiriSignals.BundleIDTimestampRecord			
+struct	SiriSignals.BundleIDTimestampRecord		let	bundleID
+struct	SiriSignals.BundleIDTimestampRecord		let	timestamp
+struct	SiriSignals.CalendarSignal			
+struct	SiriSignals.CalendarSignal		let	id
+struct	SiriSignals.CalendarSignal		let	field
+struct	SiriSignals.CalendarSignal		let	dateNow
+struct	SiriSignals.CalendarSignal		let	timeZone
+enum	SiriSignals.CalendarSignal.Field			
+enum	SiriSignals.CalendarSignal.Field		case	dayOfWeek
+enum	SiriSignals.CalendarSignal.Field		case	hourOfDay
+enum	SiriSignals.CalendarSignal.Field		case	monthOfYear
+enum	SiriSignals.CalendarSignal.Field		case	weekOfMonth
+class	SiriSignals.ClientCarplaySignal	SiriSignals.CoreDuetBackedSignal		
+class	SiriSignals.ClientCarplaySignal	SiriSignals.CoreDuetBackedSignal	let	name
+class	SiriSignals.ClientDaylightSignal	SiriSignals.CoreDuetBackedSignal		
+class	SiriSignals.ClientDaylightSignal	SiriSignals.CoreDuetBackedSignal	var	name
+struct	SiriSignals.ClientDayOfWeekSignal			
+struct	SiriSignals.ClientDayOfWeekSignal		let	id
+struct	SiriSignals.ClientDayOfWeekSignal		let	delegate
+struct	SiriSignals.ClientHourOfDaySignal			
+struct	SiriSignals.ClientHourOfDaySignal		let	id
+struct	SiriSignals.ClientHourOfDaySignal		let	delegate
+struct	SiriSignals.ClientInDayLightHourSignal			
+struct	SiriSignals.ClientInDayLightHourSignal		let	id
+struct	SiriSignals.ClientLanguageSignal			
+struct	SiriSignals.ClientLanguageSignal		let	id
+struct	SiriSignals.ClientLanguageSignal		let	languageString
+struct	SiriSignals.ClientLocaleSignal			
+struct	SiriSignals.ClientLocaleSignal		let	id
+struct	SiriSignals.ClientLocaleSignal		let	localeString
+struct	SiriSignals.ClientRegionSignal			
+struct	SiriSignals.ClientRegionSignal		let	id
+struct	SiriSignals.ClientRegionSignal		let	regionString
+struct	SiriSignals.ClientTimeRangeSignal			
+struct	SiriSignals.ClientTimeRangeSignal		let	id
+struct	SiriSignals.ClientWorkoutSignal			
+struct	SiriSignals.ClientWorkoutSignal		let	latestEvent
+struct	SiriSignals.ClientWorkoutSignal		let	id
+struct	SiriSignals.ClientWorkoutSignal		let	idSynonyms
+class	SiriSignals.CommonSignalValuesProcessor			
+class	SiriSignals.CommonSignalValuesProcessor		let	useCase
+struct	SiriSignals.CommonSignalValuesProcessor.CommonContainer			
+struct	SiriSignals.CommonSignalValuesProcessor.CommonContainer		var	independent
+struct	SiriSignals.CommonSignalValuesProcessor.CommonContainer		var	dependent
+struct	SiriSignals.CommunicationTypeSignal			
+struct	SiriSignals.CommunicationTypeSignal		let	id
+struct	SiriSignals.CommunicationTypeSignal		let	communicationType
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType			
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	unknown
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	audioCall
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	groupAudioCall
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	videoCall
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	groupVideoCall
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	message
+enum	SiriSignals.CommunicationTypeSignal.CommunicationType		case	groupMessage
+struct	SiriSignals.ContactHandleTypeSignal			
+struct	SiriSignals.ContactHandleTypeSignal		let	id
+struct	SiriSignals.ContactHandleTypeSignal		let	contactHandleType
+enum	SiriSignals.ContactHandleTypeSignal.ContactHandleType			
+enum	SiriSignals.ContactHandleTypeSignal.ContactHandleType		case	unknown
+enum	SiriSignals.ContactHandleTypeSignal.ContactHandleType		case	emailID
+enum	SiriSignals.ContactHandleTypeSignal.ContactHandleType		case	mobile
+enum	SiriSignals.ContactHandleTypeSignal.ContactHandleType		case	home
+enum	SiriSignals.ContactHandleTypeSignal.ContactHandleType		case	work
+class	SiriSignals.CoreDuetBackedSignal			
+class	SiriSignals.CoreDuetBackedSignal		var	valuesCache
+class	SiriSignals.CoreDuetBackedSignal		let	keyPath
+struct	SiriSignals.Duration			
+struct	SiriSignals.Duration		let	seconds
+struct	SiriSignals.Duration		let	description
+struct	SiriSignals.RecencyFromStoredTimestamp			
+struct	SiriSignals.RecencyFromStoredTimestamp		let	timeNow
+class	SiriSignals.DefaultAppProvider			
+class	SiriSignals.DESIntentEventStore			
+class	SiriSignals.DESIntentEventStore		let	store
+class	SiriSignals.DESIntentEventStore		let	bundleIdentifier
+enum	SiriSignals.DESIntentEventStoreError			
+enum	SiriSignals.DESIntentEventStoreError		case	recordCreationFailure
+struct	SiriSignals.DeviceClassSignal			
+struct	SiriSignals.DeviceClassSignal		let	id
+struct	SiriSignals.DeviceMotionStateSignal			
+struct	SiriSignals.DeviceMotionStateSignal		let	latestEvent
+struct	SiriSignals.DeviceMotionStateSignal		let	id
+struct	SiriSignals.DeviceMotionStateSignal		let	idSynonyms
+enum	SiriSignals.DeviceSupport			
+enum	SiriSignals.DeviceSupport.DeviceType			
+enum	SiriSignals.DeviceSupport.DeviceType		case	iPhone
+enum	SiriSignals.DeviceSupport.DeviceType		case	iPad
+enum	SiriSignals.DeviceSupport.DeviceType		case	homePod
+enum	SiriSignals.DeviceSupport.DeviceType		case	appleTV
+enum	SiriSignals.DeviceSupport.DeviceType		case	mac
+enum	SiriSignals.DeviceSupport.DeviceType		case	watch
+enum	SiriSignals.DisambiguationDonationFields			
+enum	SiriSignals.DisambiguationDonationFields		case	type
+enum	SiriSignals.DisambiguationDonationFields		case	candidateBundles
+enum	SiriSignals.DisambiguationDonationFields		case	candidateActions
+enum	SiriSignals.DisambiguationDonationFields		case	selectedCandidateIndex
+struct	SiriSignals.DJB2Hash			
+struct	SiriSignals.DJB2Hash		let	value
+struct	SiriSignals.DomainAffinityScoreSignal			
+struct	SiriSignals.DomainAffinityScoreSignal		let	interactionStore
+struct	SiriSignals.DomainAffinityScoreSignal		let	domainUseCase
+struct	SiriSignals.DomainDefaultAppSignal			
+struct	SiriSignals.DomainDefaultAppSignal		let	intent
+struct	SiriSignals.DomainDefaultAppSignal		let	defaultAppProvider
+struct	SiriSignals.DomainFrequencySignal			
+struct	SiriSignals.DomainFrequencySignal		let	interactionStore
+struct	SiriSignals.DomainFrequencySignal		let	domainUseCase
+struct	SiriSignals.DomainFrequencySignal		let	bucket
+struct	SiriSignals.DomainRecencyRankSignal			
+struct	SiriSignals.DomainRecencyRankSignal		let	interactionStore
+struct	SiriSignals.DomainRecencyRankSignal		let	domainUseCase
+struct	SiriSignals.DomainRecencySignal			
+struct	SiriSignals.DomainRecencySignal		let	interactionStore
+struct	SiriSignals.DomainRecencySignal		let	domainUseCase
+struct	SiriSignals.DomainRecencySignal		let	recency
+struct	SiriSignals.DomainRequestByHandleSignal			
+struct	SiriSignals.DomainRequestByHandleSignal		let	intent
+struct	SiriSignals.DomainRequestByLabelSignal			
+struct	SiriSignals.DomainRequestByLabelSignal		let	intent
+struct	SiriSignals.DomainTaskAbandonmentSignal			
+struct	SiriSignals.DomainTaskAbandonmentSignal		let	biomeStream
+struct	SiriSignals.DomainTaskAbandonmentSignal		let	bucket
+struct	SiriSignals.DomainTaskAbandonmentSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactAffinityScoreByIntentSignal			
+struct	SiriSignals.DomainToContactAffinityScoreByIntentSignal		let	interactionStore
+struct	SiriSignals.DomainToContactAffinityScoreByIntentSignal		let	intent
+struct	SiriSignals.DomainToContactAffinityScoreByIntentSignal		let	bundleIds
+struct	SiriSignals.DomainToContactAffinityScoreByIntentSignal		let	appMatcher
+struct	SiriSignals.DomainToContactAffinityScoreByIntentSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactAffinityScoreByNameSignal			
+struct	SiriSignals.DomainToContactAffinityScoreByNameSignal		let	interactionStore
+struct	SiriSignals.DomainToContactAffinityScoreByNameSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactAffinityScoreByNameSignal		let	entityID
+struct	SiriSignals.DomainToContactAffinityScoreSignal			
+struct	SiriSignals.DomainToContactAffinityScoreSignal		let	interactionStore
+struct	SiriSignals.DomainToContactAffinityScoreSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactAffinityScoreSignal		let	entityID
+struct	SiriSignals.DomainToContactFrequencyByIntentSignal			
+struct	SiriSignals.DomainToContactFrequencyByIntentSignal		let	bucket
+struct	SiriSignals.DomainToContactFrequencyByIntentSignal		let	interactionStore
+struct	SiriSignals.DomainToContactFrequencyByIntentSignal		let	intent
+struct	SiriSignals.DomainToContactFrequencyByIntentSignal		let	appMatcher
+struct	SiriSignals.DomainToContactFrequencyByIntentSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactFrequencySignal			
+struct	SiriSignals.DomainToContactFrequencySignal		let	interactionStore
+struct	SiriSignals.DomainToContactFrequencySignal		let	domainUseCase
+struct	SiriSignals.DomainToContactFrequencySignal		let	entityID
+struct	SiriSignals.DomainToContactFrequencySignal		let	bucket
+struct	SiriSignals.DomainToContactRecencyRankSignal			
+struct	SiriSignals.DomainToContactRecencyRankSignal		let	interactionStore
+struct	SiriSignals.DomainToContactRecencyRankSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactRecencyRankSignal		var	entityID
+struct	SiriSignals.DomainToContactRecencySignal			
+struct	SiriSignals.DomainToContactRecencySignal		let	interactionStore
+struct	SiriSignals.DomainToContactRecencySignal		let	domainUseCase
+struct	SiriSignals.DomainToContactRecencySignal		let	recency
+struct	SiriSignals.DomainToContactRecencySignal		let	entityID
+struct	SiriSignals.DomainToContactTimeSinceLastUsedSignal			
+struct	SiriSignals.DomainToContactTimeSinceLastUsedSignal		let	interactionStore
+struct	SiriSignals.DomainToContactTimeSinceLastUsedSignal		let	intent
+struct	SiriSignals.DomainToContactTimeSinceLastUsedSignal		let	appMatcher
+struct	SiriSignals.DomainToContactTimeSinceLastUsedSignal		let	domainUseCase
+struct	SiriSignals.DomainToContactTotalFrequencyByIntentSignal			
+struct	SiriSignals.DomainToContactTotalFrequencyByIntentSignal		let	interactionStore
+struct	SiriSignals.DomainToContactTotalFrequencyByIntentSignal		let	intent
+struct	SiriSignals.DomainToContactTotalFrequencyByIntentSignal		let	appMatcher
+struct	SiriSignals.DomainToContactTotalFrequencyByIntentSignal		let	domainUseCase
+struct	SiriSignals.DomainToHandleAffinityScoreSignal			
+struct	SiriSignals.DomainToHandleAffinityScoreSignal		let	interactionStore
+struct	SiriSignals.DomainToHandleAffinityScoreSignal		let	domainUseCase
+struct	SiriSignals.DomainToHandleAffinityScoreSignal		let	entityID
+struct	SiriSignals.DomainTotalFrequencyByCountryCodeSignal			
+struct	SiriSignals.DomainTotalFrequencyByCountryCodeSignal		let	interactionStore
+struct	SiriSignals.DomainTotalFrequencyByCountryCodeSignal		let	intent
+struct	SiriSignals.DomainTotalFrequencyByCountryCodeSignal		let	appMatcher
+struct	SiriSignals.DomainTotalFrequencyByCountryCodeSignal		let	domainUseCase
+struct	SiriSignals.DomainTotalFrequencySignal			
+struct	SiriSignals.DomainTotalFrequencySignal		let	interactionStore
+struct	SiriSignals.DomainTotalFrequencySignal		let	appMatcher
+struct	SiriSignals.DomainTotalFrequencySignal		let	domainUseCase
+enum	SiriSignals.DomainUseCase			
+enum	SiriSignals.DomainUseCase		case	phoneCall
+enum	SiriSignals.DomainUseCase		case	phoneCallSiri
+enum	SiriSignals.DomainUseCase		case	phoneCallToContact
+enum	SiriSignals.DomainUseCase		case	phoneCallToContactSiri
+enum	SiriSignals.DomainUseCase		case	phoneCallToContactHaptic
+enum	SiriSignals.DomainUseCase		case	phoneCallReceived
+enum	SiriSignals.DomainUseCase		case	phoneCallReceivedFromContact
+enum	SiriSignals.DomainUseCase		case	messageSend
+enum	SiriSignals.DomainUseCase		case	messageSendSiri
+enum	SiriSignals.DomainUseCase		case	messageSendToContact
+enum	SiriSignals.DomainUseCase		case	messageSendToContactSiri
+enum	SiriSignals.DomainUseCase		case	messageSendToContactHaptic
+enum	SiriSignals.DomainUseCase		case	messageReceived
+enum	SiriSignals.DomainUseCase		case	messageReceivedFromContact
+enum	SiriSignals.DomainUseCase		case	noteCreate
+enum	SiriSignals.DomainUseCase		case	remindersAdd
+enum	SiriSignals.DomainUseCase		case	startWorkout
+struct	SiriSignals.DomainUserPersonaSignal			
+struct	SiriSignals.DomainUserPersonaSignal		let	interactionStore
+struct	SiriSignals.DomainUserPersonaSignal		let	domainUseCase
+struct	SiriSignals.ForegroundAppBiomeSignal			
+struct	SiriSignals.ForegroundAppBiomeSignal		let	id
+struct	SiriSignals.ForegroundAppBiomeSignal		let	idSynonyms
+struct	SiriSignals.ForegroundAppBiomeSignal		let	candidateBundleIds
+struct	SiriSignals.ForegroundAppBiomeSignal		let	biomeStream
+struct	SiriSignals.ForegroundAppInFocusSignal			
+struct	SiriSignals.ForegroundAppInFocusSignal		let	id
+struct	SiriSignals.ForegroundAppInFocusSignal		let	candidateBundleIds
+struct	SiriSignals.ForegroundAppInFocusSignal		let	query
+struct	SiriSignals.ForegroundAppRecencySignal			
+struct	SiriSignals.ForegroundAppRecencySignal		let	id
+struct	SiriSignals.ForegroundAppRecencySignal		let	query
+struct	SiriSignals.ForegroundAppRecencySignal		let	recency
+struct	SiriSignals.ForegroundAppRecencySignal		let	idFilter
+class	SiriSignals.ForegroundAppSignal			
+class	SiriSignals.ForegroundAppSignal		let	candidateAppBundleIds
+class	SiriSignals.ForegroundAppSignal		let	cdKeypath
+class	SiriSignals.ForegroundAppSignal		let	name
+struct	SiriSignals.ForegroundBundleIdInFocus			
+struct	SiriSignals.ForegroundBundleIdInFocus		let	bundleID
+struct	SiriSignals.ForegroundBundleIdInFocus		let	timestamp
+struct	SiriSignals.ForegroundBundleIdInFocus		let	isStarting
+struct	SiriSignals.ForegroundWarmAppSignal			
+struct	SiriSignals.ForegroundWarmAppSignal		let	id
+struct	SiriSignals.ForegroundWarmAppSignal		let	candidateBundleIds
+struct	SiriSignals.ForegroundWarmAppSignal		let	query
+class	SiriSignals.GetOnce			
+class	SiriSignals.GetOnce		let	valueGetter
+class	SiriSignals.GetOnce		var	runState
+class	SiriSignals.GetOnce		var	completions
+class	SiriSignals.GetOnce		let	queue
+enum	SiriSignals.GetOnce.RunState			
+enum	SiriSignals.GetOnce.RunState		case	complete
+enum	SiriSignals.GetOnce.RunState		case	notRun
+enum	SiriSignals.GetOnce.RunState		case	running
+struct	SiriSignals.HashedLocationSignal			
+struct	SiriSignals.HashedLocationSignal		let	id
+struct	SiriSignals.HashedLocationSignal		let	latestEvent
+enum	SiriSignals.HashedLocationSignal.Granularity			
+enum	SiriSignals.HashedLocationSignal.Granularity		case	m300
+enum	SiriSignals.HashedLocationSignal.Granularity		case	m2500
+enum	SiriSignals.HashedLocationSignal.Granularity		case	km156
+struct	SiriSignals.InstalledAudioAppProvider			
+struct	SiriSignals.InstalledAudioAppProvider		let	appRecordProvider
+struct	SiriSignals.InstalledApp			
+struct	SiriSignals.InstalledApp		let	bundleIdentifier
+struct	SiriSignals.InstalledApp		let	supportedMediaCategories
+struct	SiriSignals.InstalledApp		let	supportedIntents
+struct	SiriSignals.InstalledApp		let	localizedAppName
+struct	SiriSignals.InstalledApp		let	counterpartBundleIdentifiers
+class	SiriSignals.InteractionStoreFactory			
+class	SiriSignals.InteractionStoreFactory		let	atomic
+class	SiriSignals.InteractionStoreFactory		var	instantiator
+struct	SiriSignals.IsCarPlayConnectedSignal			
+struct	SiriSignals.IsCarPlayConnectedSignal		let	latestEvent
+struct	SiriSignals.IsCarPlayConnectedSignal		let	id
+struct	SiriSignals.IsFirstPartyAppSignal			
+struct	SiriSignals.IsFirstPartyAppSignal		let	id
+struct	SiriSignals.IsFirstPartyAppSignal		let	idSynonyms
+struct	SiriSignals.IsFirstPartyAppSignal		let	values
+struct	SiriSignals.IsScreenLockedSignal			
+struct	SiriSignals.IsScreenLockedSignal		let	latestEvent
+struct	SiriSignals.IsScreenLockedSignal		let	id
+struct	SiriSignals.IsScreenLockedSignal		let	idSynonyms
+struct	SiriSignals.LastActionDisambiguationRecencySignal			
+struct	SiriSignals.LastActionDisambiguationRecencySignal		let	id
+struct	SiriSignals.LastActionDisambiguationRecencySignal		let	interactionStore
+struct	SiriSignals.LastActionDisambiguationRecencySignal		var	groupBy
+struct	SiriSignals.LastActionDisambiguationRecencySignal		let	recency
+struct	SiriSignals.LastActionDisambiguationResultSignal			
+struct	SiriSignals.LastActionDisambiguationResultSignal		let	id
+struct	SiriSignals.LastActionDisambiguationResultSignal		let	interactionStore
+struct	SiriSignals.LastActionDisambiguationResultSignal		var	groupBy
+struct	SiriSignals.LastAppDisambiguationRecencySignal			
+struct	SiriSignals.LastAppDisambiguationRecencySignal		let	id
+struct	SiriSignals.LastAppDisambiguationRecencySignal		let	interactionStore
+struct	SiriSignals.LastAppDisambiguationRecencySignal		var	groupBy
+struct	SiriSignals.LastAppDisambiguationRecencySignal		let	recency
+struct	SiriSignals.LastAppDisambiguationResultSignal			
+struct	SiriSignals.LastAppDisambiguationResultSignal		let	id
+struct	SiriSignals.LastAppDisambiguationResultSignal		let	interactionStore
+struct	SiriSignals.LastAppDisambiguationResultSignal		var	groupBy
+class	SiriSignals.LastNowPlayingAtSignal			
+class	SiriSignals.LastNowPlayingAtSignal		let	id
+class	SiriSignals.LastNowPlayingAtSignal		let	query
+class	SiriSignals.LastNowPlayingAtSignal		let	idFilter
+class	SiriSignals.LastNowPlayingAtSignal		var	sharedUserId
+class	SiriSignals.LastNowPlayingRecencySignal			
+class	SiriSignals.LastNowPlayingRecencySignal		let	id
+class	SiriSignals.LastNowPlayingRecencySignal		let	query
+class	SiriSignals.LastNowPlayingRecencySignal		let	idFilter
+class	SiriSignals.LastNowPlayingRecencySignal		let	recency
+class	SiriSignals.LastNowPlayingRecencySignal		var	sharedUserId
+class	SiriSignals.LastNowPlayingSignal			
+class	SiriSignals.LastNowPlayingSignal		let	id
+class	SiriSignals.LastNowPlayingSignal		let	query
+class	SiriSignals.LastNowPlayingSignal		var	sharedUserId
+class	SiriSignals.LastNowPlayingSignal		let	idFilter
+class	SiriSignals.MeDeviceCheck			
+class	SiriSignals.MeDeviceCheck		var	systemMonitor
+class	SiriSignals.MeDeviceCheck		var	isMe
+struct	SiriSignals.MediaCategorySupportedSignal			
+struct	SiriSignals.MediaCategorySupportedSignal		let	candidateAppBundleIds
+struct	SiriSignals.MediaCategorySupportedSignal		let	category
+struct	SiriSignals.MediaCategorySupportedSignal		let	appInfoCache
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory			
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory		case	music
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory		case	video
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory		case	podcast
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory		case	radio
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory		case	audiobook
+enum	SiriSignals.MediaCategorySupportedSignal.MediaCategory		case	general
+class	SiriSignals.MediaItemsBucketProvider			
+enum	SiriSignals.MediaItemsBucketProvider.MediaBuckets			
+enum	SiriSignals.MediaItemsBucketProvider.MediaBuckets		case	music
+enum	SiriSignals.MediaItemsBucketProvider.MediaBuckets		case	podcasts
+enum	SiriSignals.MediaItemsBucketProvider.MediaBuckets		case	books
+enum	SiriSignals.MediaItemsBucketProvider.MediaBuckets		case	radio
+enum	SiriSignals.MediaItemsBucketProvider.MediaBuckets		case	musicWithoutRadio
+enum	SiriSignals.MediaItemsBucketProvider.SiriRemembersQueryOperator			
+enum	SiriSignals.MediaItemsBucketProvider.SiriRemembersQueryOperator		case	AND
+enum	SiriSignals.MediaItemsBucketProvider.SiriRemembersQueryOperator		case	OR
+struct	SiriSignals.MediaSubscriptionStatusSignal			
+struct	SiriSignals.MediaSubscriptionStatusSignal		let	id
+struct	SiriSignals.MediaSubscriptionStatusSignal		let	idSynonyms
+struct	SiriSignals.MediaSubscriptionStatusSignal		let	bundleIds
+struct	SiriSignals.MediaSubscriptionStatusSignal		let	idFilter
+struct	SiriSignals.MediaSubscriptionStatusSignal		let	subscriptionStatusProvider
+class	SiriSignals.MockAppRecordProvider			
+class	SiriSignals.MockAppRecordProvider		let	resultPrefix
+class	SiriSignals.MultiUserConnectionProvider			
+class	SiriSignals.MultiUserConnectionProvider		let	multiUserConnection
+class	SiriSignals.NotesIntentContainsSignal			
+class	SiriSignals.NotesIntentContainsSignal		let	id
+class	SiriSignals.NotesIntentContainsSignal		let	rawValue
+enum	SiriSignals.NotesIntentContainsSignal.Field			
+enum	SiriSignals.NotesIntentContainsSignal.Field		case	title
+enum	SiriSignals.NotesIntentContainsSignal.Field		case	body
+enum	SiriSignals.NotesIntentContainsSignal.Field		case	group
+struct	SiriSignals.NotificationsCountByContactSignal			
+struct	SiriSignals.NotificationsCountByContactSignal		let	biomeStream
+struct	SiriSignals.NotificationsCountByContactSignal		let	bucket
+struct	SiriSignals.NotificationsCountByContactSignal		let	contactIdentifier
+struct	SiriSignals.NowPlayingCountSignal			
+struct	SiriSignals.NowPlayingCountSignal		let	sharedUserId
+struct	SiriSignals.NowPlayingCountSignal		let	bucket
+struct	SiriSignals.NowPlayingCountSignal		let	query
+struct	SiriSignals.NowPlayingCountSignal		let	idFilter
+class	SiriSignals.NowPlayingOneDayCountSignal			
+class	SiriSignals.NowPlayingOneDayCountSignal		let	id
+class	SiriSignals.NowPlayingOneDayCountSignal		let	query
+class	SiriSignals.NowPlayingOneDayCountSignal		let	idFilter
+struct	SiriSignals.Normalize			
+class	SiriSignals.NowPlayingScoresSignal			
+class	SiriSignals.NowPlayingScoresSignal		let	id
+class	SiriSignals.NowPlayingScoresSignal		let	query
+class	SiriSignals.NowPlayingScoresSignal		var	sharedUserId
+class	SiriSignals.NowPlayingScoresSignal		var	bundleIds
+class	SiriSignals.NowPlayingScoresSignal		var	cachedAggregations
+struct	SiriSignals.NowPlayingSignal			
+struct	SiriSignals.NowPlayingSignal		let	id
+struct	SiriSignals.NowPlayingSignal		let	idSynonyms
+struct	SiriSignals.NowPlayingSignal		let	query
+struct	SiriSignals.NowPlayingSignal		let	idFilter
+struct	SiriSignals.NowPlayingStateSignal			
+struct	SiriSignals.NowPlayingStateSignal		let	id
+struct	SiriSignals.NowPlayingStateSignal		let	query
+class	SiriSignals.OrderedFeatureMap			
+class	SiriSignals.OrderedFeatureMap		let	orderedFeatureNames
+class	SiriSignals.OrderedFeatureMap		let	candidateBundleIds
+class	SiriSignals.OrderedFeatureMap		let	signalValues
+struct	SiriSignals.UserOverrides			
+struct	SiriSignals.UserOverrides		let	fetchCompanionContextFromBiome
+struct	SiriSignals.UserOverrides		let	ignoreCache
+struct	SiriSignals.UserOverrides		let	debounceTimeInterval
+struct	SiriSignals.CannedOverrides			
+struct	SiriSignals.CannedOverrides		var	fetchCompanionContextFromBiome
+struct	SiriSignals.CannedOverrides		let	ignoreCache
+struct	SiriSignals.CannedOverrides		let	debounceTimeInterval
+enum	SiriSignals.PredictionError			
+enum	SiriSignals.PredictionError		case	featureNotFound
+enum	SiriSignals.PredictionError		case	failedToBuildInput
+enum	SiriSignals.PredictionError		case	failedToLoadModel
+enum	SiriSignals.PrewarmDeviceTypeRestriction			
+enum	SiriSignals.PrewarmDeviceTypeRestriction		case	include
+enum	SiriSignals.PrewarmDeviceTypeRestriction		case	exclude
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType			
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	iPhone
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	iPad
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	homePod
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	appleTV
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	mac
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	watch
+enum	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType		case	unknown
+struct	SiriSignals.IntervalFrequency			
+struct	SiriSignals.IntervalFrequency		var	interval
+struct	SiriSignals.IntervalFrequency		var	count
+enum	SiriSignals.PriorDistributionUtils			
+struct	SiriSignals.SelectedActionDisambiguationFrequencySignal			
+struct	SiriSignals.SelectedActionDisambiguationFrequencySignal		let	groupBy
+struct	SiriSignals.SelectedActionDisambiguationFrequencySignal		let	interactionStore
+struct	SiriSignals.SelectedActionDisambiguationFrequencySignal		let	bucket
+struct	SiriSignals.SelectedAppDisambiguationFrequencySignal			
+struct	SiriSignals.SelectedAppDisambiguationFrequencySignal		let	groupBy
+struct	SiriSignals.SelectedAppDisambiguationFrequencySignal		let	interactionStore
+struct	SiriSignals.SelectedAppDisambiguationFrequencySignal		let	bucket
+struct	SiriSignals.Signal			
+struct	SiriSignals.Signal		let	value
+struct	SiriSignals.Signal		let	metadata
+enum	SiriSignals.Signal.Source			
+enum	SiriSignals.Signal.Source		case	server
+enum	SiriSignals.Signal.Source		case	client
+struct	SiriSignals.Signal.Metadata			
+struct	SiriSignals.Signal.Metadata		let	turnId
+struct	SiriSignals.Signal.Metadata		let	resultCandidateId
+struct	SiriSignals.Signal.Metadata		let	source
+struct	SiriSignals.Signal.Metadata		let	timestamp
+struct	SiriSignals.SignalCache.Record			
+struct	SiriSignals.SignalCache.Record		let	value
+struct	SiriSignals.SignalCache.Record		let	cachedAt
+enum	SiriSignals.SignalCache.Record.CodingKeys			
+enum	SiriSignals.SignalCache.Record.CodingKeys		case	value
+enum	SiriSignals.SignalCache.Record.CodingKeys		case	cachedAt
+class	SiriSignals.SignalCache			
+class	SiriSignals.SignalCache		var	cacheProvider
+class	SiriSignals.SignalCache		var	connection
+class	SiriSignals.SignalCache		let	now
+class	SiriSignals.SignalCacheInspector			
+enum	SiriSignals.SignalCacheError			
+enum	SiriSignals.SignalCacheError		case	cacheCreationAccessDefinedError
+enum	SiriSignals.SignalCacheError		case	cacheCreationUnexpectedError
+enum	SiriSignals.SignalCacheError		case	cacheConnectionNotCreated
+enum	SiriSignals.SignalCacheError		case	keyNotPresentError
+enum	SiriSignals.SignalCacheExpirationPolicy			
+enum	SiriSignals.SignalCacheExpirationPolicy		case	timeBased
+enum	SiriSignals.SignalCachingStrategyOption			
+enum	SiriSignals.SignalCachingStrategyOption		case	perBiomeEvent
+enum	SiriSignals.SignalCachingStrategyOption		case	perAppIntentEvent
+enum	SiriSignals.SignalCachingStrategyOption		case	perCoreDuetEvent
+enum	SiriSignals.SignalCachingStrategyOption		case	perSystemNotification
+enum	SiriSignals.SignalCachingStrategyOption		case	perHourOnBiomeEventUpdate
+enum	SiriSignals.SignalCachingStrategyOption		case	perHour
+enum	SiriSignals.SignalCachingStrategyOption		case	perDay
+enum	SiriSignals.SignalCachingStrategyOption		case	perRequest
+struct	SiriSignals.SignalComputationContext			
+struct	SiriSignals.SignalComputationContext		let	bundleIds
+struct	SiriSignals.SignalComputationContext		let	entityId
+struct	SiriSignals.SignalComputationContext		let	sharedUserId
+struct	SiriSignals.SignalComputationContext		let	domainUseCases
+struct	SiriSignals.EntityValue			
+struct	SiriSignals.EntityValue		let	fieldName
+struct	SiriSignals.EntityValue		let	fieldValue
+struct	SiriSignals.NoParameters			
+struct	SiriSignals.SignalDefinitionParametersProvider			
+struct	SiriSignals.SignalDefinitionParametersProvider		let	bundleIds
+struct	SiriSignals.SignalDefinitionParametersProvider		let	sharedUserId
+struct	SiriSignals.SignalDefinitionParametersProvider		let	domainUseCases
+struct	SiriSignals.SignalDefinitionParametersProvider		let	entityValue
+struct	SiriSignals.SignalDefinitionParametersProvider		let	usingSiri
+struct	SiriSignals.SignalDefinitionParametersProvider		let	intent
+class	SiriSignals.SignalDefinitionParametersProvider.Builder			
+class	SiriSignals.SignalDefinitionParametersProvider.Builder		var	bundleIds
+class	SiriSignals.SignalDefinitionParametersProvider.Builder		var	sharedUserId
+class	SiriSignals.SignalDefinitionParametersProvider.Builder		var	domainUseCases
+class	SiriSignals.SignalDefinitionParametersProvider.Builder		var	entityValue
+class	SiriSignals.SignalDefinitionParametersProvider.Builder		var	usingSiri
+class	SiriSignals.SignalDefinitionParametersProvider.Builder		var	intent
+struct	SiriSignals.SignalFactory			
+struct	SiriSignals.SignalFactory		let	instances
+enum	SiriSignals.SignalGathererError			
+enum	SiriSignals.SignalGathererError		case	gatherFailure
+enum	SiriSignals.SignalGathererError		case	timedOut
+class	SiriSignals.SignalGatherer			
+class	SiriSignals.SignalGatherer		let	signals
+class	SiriSignals.SignalGatherer		let	candidateAppBundleIds
+class	SiriSignals.SignalGatherer		let	signalCache
+class	SiriSignals.SignalGatherer		let	coreDuetContextCache
+struct	SiriSignals.SignalGatherer.ValuesWithTimings			
+struct	SiriSignals.SignalGatherer.ValuesWithTimings		let	values
+struct	SiriSignals.SignalGatherer.ValuesWithTimings		let	timings
+struct	SiriSignals.SignalGatherer.ValuesWithTimings		let	overallTime
+struct	SiriSignals.SignalProvidingAdapter			
+struct	SiriSignals.SignalProvidingAdapter		let	delegate
+struct	SiriSignals.SignalGatheringResults			
+struct	SiriSignals.SignalGatheringResults		let	values
+struct	SiriSignals.SignalGatheringResults		let	candidateAppBundleIds
+class	SiriSignals.SignalGraph.Node			
+class	SiriSignals.SignalGraph.Node		let	signal
+class	SiriSignals.SignalGraph.Node		var	edges
+class	SiriSignals.SignalGraph			
+class	SiriSignals.SignalGraph		var	nodes
+enum	SiriSignals.SignalGraph.InitializationError			
+enum	SiriSignals.SignalGraph.InitializationError		case	cycleInGraph
+class	SiriSignals.SignalListBuilder			
+class	SiriSignals.SignalListBuilder		var	signalList
+class	SiriSignals.SignalListBuilder		let	context
+struct	SiriSignals.SignalParameterization			
+struct	SiriSignals.SignalParameterization		let	types
+enum	SiriSignals.SignalParameterization.ParameterizationType			
+enum	SiriSignals.SignalParameterization.ParameterizationType		case	bundleId
+enum	SiriSignals.SignalParameterization.ParameterizationType		case	entityId
+enum	SiriSignals.SignalParameterization.ParameterizationType		case	domainUseCase
+enum	SiriSignals.SignalParameterization.ParameterizationType		case	sharedUserId
+enum	SiriSignals.SignalParameterization.ParameterizationType		case	intent
+class	SiriSignals.SignalRepository			
+class	SiriSignals.SignalRepository		let	signals
+class	SiriSignals.SignalRepository		let	signalCache
+class	SiriSignals.SignalRepository		let	now
+class	SiriSignals.SignalRepository		let	timeout
+class	SiriSignals.SignalRepository		let	triggerLockout
+class	SiriSignals.SignalRepository		let	prewarmStatus
+class	SiriSignals.SignalRepository		let	lastBiomeEventAt
+class	SiriSignals.SignalRepository		let	lastRecognizedUser
+class	SiriSignals.SignalRepository		let	lastAppInstallEventAt
+class	SiriSignals.SignalRepository.PrewarmStatus			
+class	SiriSignals.SignalRepository.PrewarmStatus		let	records
+class	SiriSignals.SignalRepository.PrewarmStatus		let	override
+class	SiriSignals.SignalRepository.LastRecognizedUser			
+class	SiriSignals.SignalRepository.LastRecognizedUser		let	stored
+class	SiriSignals.SignalRepository.ProcessingTimeout			
+class	SiriSignals.SignalRepository.ProcessingTimeout		var	value
+class	SiriSignals.SignalRepository.ProcessingTimeout		var	successes
+class	SiriSignals.SignalRepository.ProcessingTimeout		var	timeoutsTotal
+class	SiriSignals.SignalRepository.ProcessingTimeout		var	timeoutsConsecutive
+struct	SiriSignals.SignalRepository.LastRecognizedUser.Record			
+struct	SiriSignals.SignalRepository.LastRecognizedUser.Record		let	sharedUserId
+struct	SiriSignals.SignalRepository.LastRecognizedUser.Record		let	when
+struct	SiriSignals.SignalRepository.PrewarmStatus.Record			
+struct	SiriSignals.SignalRepository.PrewarmStatus.Record		let	name
+struct	SiriSignals.SignalRepository.PrewarmStatus.Record		let	lastUpdatedAt
+struct	SiriSignals.SignalRepository.PrewarmStatus.Record		let	currentlyPrewarming
+enum	SiriSignals.SignalStoreError			
+enum	SiriSignals.SignalStoreError		case	loggingError
+enum	SiriSignals.SignalStoreError		case	queryError
+class	SiriSignals.SignalStore	NSObject		
+class	SiriSignals.SignalStore	NSObject	let	backingStore
+enum	SiriSignals.SignalStore.UnexpectedSignalTypeError			
+enum	SiriSignals.SignalStore.UnexpectedSignalTypeError		case	unexpectedSignalTypeError
+enum	SiriSignals.SignalStore.BackingStore			
+enum	SiriSignals.SignalStore.BackingStore		case	intentEvent
+enum	SiriSignals.SignalStore.BackingStore		case	des
+enum	SiriSignals.SignalStore.UnarchiveError			
+enum	SiriSignals.SignalStore.UnarchiveError		case	unexpectedUnarchiveError
+enum	SiriSignals.SignalValue			
+enum	SiriSignals.SignalValue		case	independent
+enum	SiriSignals.SignalValue		case	dependent
+enum	SiriSignals.SignalValue		case	independentDouble
+enum	SiriSignals.SignalValue		case	dependentDouble
+class	SiriSignals.SignalValue.Computation			
+class	SiriSignals.SignalValue.Computation		var	result
+struct	SiriSignals.SignalValue.BundleIDFilter			
+struct	SiriSignals.SignalValue.BundleIDFilter		let	ids
+struct	SiriSignals.SignalValue.BundleIDFilter		let	fillInt
+struct	SiriSignals.SignalValue.BundleIDFilter		let	fillDouble
+enum	SiriSignals.SignalValue.CodingKeys			
+enum	SiriSignals.SignalValue.CodingKeys		case	independent
+enum	SiriSignals.SignalValue.CodingKeys		case	dependent
+enum	SiriSignals.SignalValue.CodingKeys		case	independentDouble
+enum	SiriSignals.SignalValue.CodingKeys		case	dependentDouble
+enum	SiriSignals.SignalValue.IndependentCodingKeys			
+enum	SiriSignals.SignalValue.IndependentCodingKeys		case	_0
+enum	SiriSignals.SignalValue.DependentCodingKeys			
+enum	SiriSignals.SignalValue.DependentCodingKeys		case	_0
+enum	SiriSignals.SignalValue.IndependentDoubleCodingKeys			
+enum	SiriSignals.SignalValue.IndependentDoubleCodingKeys		case	_0
+enum	SiriSignals.SignalValue.DependentDoubleCodingKeys			
+enum	SiriSignals.SignalValue.DependentDoubleCodingKeys		case	_0
+class	SiriSignals.SiriSignalsService	NSObject		
+struct	SiriSignals.SiriSignalsSignpost			
+struct	SiriSignals.SiriSignalsSignpost		let	id
+struct	SiriSignals.SiriSignalsSignpost		let	name
+enum	SiriSignals.SiriSignalsXPCError			
+enum	SiriSignals.SiriSignalsXPCError		case	connectionInterrupted
+enum	SiriSignals.SiriSignalsXPCError		case	noResponse
+class	SiriSignals.SQLBackedCacheProvider			
+class	SiriSignals.SQLBackedCacheProvider		let	store
+enum	SiriSignals.StreamedEventsAggregator			
+struct	SiriSignals.StreamedEventsAggregator.AppEvent			
+struct	SiriSignals.StreamedEventsAggregator.AppEvent		let	appId
+struct	SiriSignals.StreamedEventsAggregator.AppEvent		let	time
+struct	SiriSignals.StreamedEventsAggregator.AppEvent		let	type
+enum	SiriSignals.StreamedEventsAggregator.AppEvent.EventType			
+enum	SiriSignals.StreamedEventsAggregator.AppEvent.EventType		case	start
+enum	SiriSignals.StreamedEventsAggregator.AppEvent.EventType		case	end
+enum	SiriSignals.StreamedEventsAggregator.AppEvent.EventType		case	other
+enum	SiriSignals.StreamedEventsAggregator.Event			
+enum	SiriSignals.StreamedEventsAggregator.Event		case	reset
+enum	SiriSignals.StreamedEventsAggregator.Event		case	app
+struct	SiriSignals.SubscriptionStatusProvider			
+enum	SiriSignals.SupportedMediaCategory			
+enum	SiriSignals.SupportedMediaCategory		case	musicCategory
+enum	SiriSignals.SupportedMediaCategory		case	podcastsCategory
+enum	SiriSignals.SupportedMediaCategory		case	radioCategory
+enum	SiriSignals.SupportedMediaCategory		case	audiobooksCategory
+enum	SiriSignals.SupportedMediaCategory		case	generalCategory
+struct	SiriSignals.SyncedCompanionContextLookup			
+struct	SiriSignals.TimeSinceAppLastInstalledSignal			
+struct	SiriSignals.TimeSinceAppLastInstalledSignal		let	id
+struct	SiriSignals.TimeSinceAppLastLaunchedSignal			
+struct	SiriSignals.TimeSinceAppLastLaunchedSignal		let	id
+struct	SiriSignals.TimeSinceAppLastLaunchedSignal		let	biomeStream
+struct	SiriSignals.TimeSinceAppLastLaunchedSignal		let	recency
+struct	SiriSignals.TimeSinceAppLastLaunchedSignal		let	idFilter
+struct	SiriSignals.TimeSpentInAppAffinityScore			
+struct	SiriSignals.TimeSpentInAppAffinityScore		let	id
+struct	SiriSignals.TimeSpentInAppAffinityScore		let	biomeStream
+struct	SiriSignals.TimeTodaySpentInApp			
+struct	SiriSignals.TimeTodaySpentInApp		let	id
+struct	SiriSignals.TimeTodaySpentInApp		let	biomeStream
+struct	SiriSignals.TimeTodaySpentInApp		let	timeNow
+struct	SiriSignals.TimeTodaySpentInApp		let	idFilter
+struct	SiriSignals.TotalTimeSpentInApp			
+struct	SiriSignals.TotalTimeSpentInApp		let	id
+struct	SiriSignals.TotalTimeSpentInApp		let	biomeStream
+struct	SiriSignals.TotalTimeSpentInApp		let	idFilter
+class	SiriSignals.TrainingMessageBuilder			
+class	SiriSignals.TrainingMessageBuilder		let	delegate
+class	SiriSignals.TrainingMessageProvider			
+class	SiriSignals.TrainingMessageProvider		let	signalGatherer
+class	SiriSignals.TriggerLockout			
+class	SiriSignals.TriggerLockout		let	now
+class	SiriSignals.TriggerLockout		let	keyAll
+class	SiriSignals.UsageScoreSignal			
+class	SiriSignals.UsageScoreSignal		let	sharedUserId
+class	SiriSignals.UsageScoreSignal		let	bundleIds
+class	SiriSignals.UsageScoreSignal		let	user
+class	SiriSignals.UsageScoreSignal		let	interactionStore
+class	SiriSignals.UsageScoreSignal		let	bucket
+class	SiriSignals.UsageScoreSignal		let	query
+struct	SiriSignals.WifiStateSignal			
+struct	SiriSignals.WifiStateSignal		let	latestEvent
+struct	SiriSignals.WifiStateSignal		let	id
+class	SiriSignals.AudioMegamodelHAInput			
+class	SiriSignals.AudioMegamodelHAInput		var	inputs
+class	SiriSignals.AudioMegamodelHAOutput			
+class	SiriSignals.AudioMegamodelHAOutput		let	provider
+class	SiriSignals.AudioMegamodelHA			
+class	SiriSignals.AudioMegamodelHA		let	model
+class	SiriSignals.AudioMegamodeltvOSInput			
+class	SiriSignals.AudioMegamodeltvOSInput		var	inputs
+class	SiriSignals.AudioMegamodeltvOSOutput			
+class	SiriSignals.AudioMegamodeltvOSOutput		let	provider
+class	SiriSignals.AudioMegamodeltvOS			
+class	SiriSignals.AudioMegamodeltvOS		let	model
+protocol	SiriSignals.AppRecordProviding			
+protocol	SiriSignals.ActivationProviding			
+protocol	SiriSignals.AppSelectionSignalComponent			
+protocol	SiriSignals.SyncSignalCollector			
+protocol	SiriSignals.AudioAppPredicting			
+protocol	SiriSignals.AudioAppPredictionDisambiguationMaskProviding			
+protocol	SiriSignals.AppPredictionTvOSOutput			
+protocol	SiriSignals.AudioAppSignalsCollecting			
+protocol	SiriSignals.AudioAppSignalsDataSyncUtilsProviding			
+protocol	SiriSignals.AudioAppSignalsSyncProviding			
+protocol	SiriSignals.AudioCompanionContextDonationProviding			
+protocol	SiriSignals.AudioFeatureFlagProviding			
+protocol	SiriSignals.TrialClientProviding			
+protocol	SiriSignals.AudioMegamodelManaging			
+protocol	SiriSignals.AppSelectionPredictor			
+protocol	SiriSignals.BiomeAccumulating			
+protocol	SiriSignals.BiomeListening			
+protocol	SiriSignals.BiomeSQLQueryResultProviding			
+protocol	SiriSignals.BundleIDSynonymExpanding			
+protocol	SiriSignals.DESRecordStoreWritableProviding			
+protocol	SiriSignals.GroupByFieldsSerializing			
+protocol	SiriSignals.DisambiguationFrequencySignalProviding			
+protocol	SiriSignals.EntityIDParameterizedSignalProviding			
+protocol	SiriSignals.InstalledAppProviding			
+protocol	SiriSignals.LastDisambiguationResultSignalProviding			
+protocol	SiriSignals.LastDisambiguationRecencySignalProviding			
+protocol	SiriSignals.LastDisambiguationSignalProviding			
+protocol	SiriSignals.MeDeviceProviding			
+protocol	SiriSignals.MultiUserConnectionProviding			
+protocol	SiriSignals.OverridesProviding			
+protocol	SiriSignals.PersistentSignalCache			
+protocol	SiriSignals.SignalCacheConnection			
+protocol	SiriSignals.SELFMessageBuilding	Message, IndependentSignals, DependentSignals		
+protocol	SiriSignals.SharedInMemoryCache			
+protocol	SiriSignals.SignalDefinitionParametersProviding			
+protocol	SiriSignals.SignalListBuilding			
+protocol	SiriSignals.SignalLoggable			
+protocol	SiriSignals.SignalProviding			
+protocol	SiriSignals.DependentSignalProviding			
+protocol	SiriSignals.PrewarmableSignalProviding			
+protocol	SiriSignals.SignalQueryable			
+protocol	SiriSignals.SiriRemembersFrequencySignalProviding			
+protocol	SiriSignals.SiriRemembersRecencyRankSignalProviding			
+protocol	SiriSignals.SiriRemembersRecencySignalProviding			
+protocol	SiriSignals.SubscriptionStatusProviding			
+protocol	SiriSignals.TrainingMessageProviding			
+protocol	SiriSignals.TriggerLockoutProviding			
+protocol	conformance SiriSignals.ActionDisambiguationFrequencySignal	SiriSignals.DisambiguationFrequencySignalProviding		
+protocol	conformance SiriSignals.ActionDisambiguationFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ActionDisambiguationFrequencySignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.ActionDisambiguationFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance __C.MLModelMetadataKey	Swift._HasCustomAnyHashableRepresentation: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift.RawRepresentable: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift._SwiftNewtypeWrapper: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift.Equatable: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift._ObjectiveCBridgeable: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift.Hashable: CoreML		
+protocol	conformance __C.INMediaItemType	Swift.Equatable: Intents		
+protocol	conformance __C.INMediaItemType	Swift.RawRepresentable: Intents		
+protocol	conformance __C.INMediaItemType	Swift.Hashable: Intents		
+protocol	conformance Aggregation.Bucket	Swift.CaseIterable		
+protocol	conformance Aggregation.Bucket	Swift.RawRepresentable		
+protocol	conformance Aggregation.Bucket	Swift.Equatable		
+protocol	conformance Aggregation.Bucket	Swift.Hashable		
+protocol	conformance SiriSignals.Aggregation	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.AppDisambiguationFrequencySignal	SiriSignals.DisambiguationFrequencySignalProviding		
+protocol	conformance SiriSignals.AppDisambiguationFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.AppDisambiguationFrequencySignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.AppDisambiguationFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.AppLaunchCountSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.AppLaunchCountSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.AppMetadata	Swift.Decodable		
+protocol	conformance SiriSignals.AppMetadata	Swift.Encodable		
+protocol	conformance SiriSignals.AppMetadata	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSignals.LSApplicationRecordProvider	SiriSignals.AppRecordProviding		
+protocol	conformance SiriSignals.AppSelectionActivationFlag	SiriSignals.ActivationProviding		
+protocol	conformance SiriSignals.ConversionError	Swift.Hashable		
+protocol	conformance SiriSignals.ConversionError	Swift.Equatable		
+protocol	conformance SiriSignals.ConversionError	Swift.Error		
+protocol	conformance SiriSignals.AppUsageRelativeSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.AppUsageRelativeSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.AudioMegamodeltvOS	SiriSignals.AudioAppPredicting		
+protocol	conformance SiriSignals.AudioMegamodeltvOSOutput	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.AudioMegamodeltvOSOutput	SiriSignals.AppPredictionTvOSOutput		
+protocol	conformance SiriSignals.AudioMegamodeltvOSOutput	SiriSignals.AudioAppPredictionDisambiguationMaskProviding		
+protocol	conformance SiriSignals.AudioAppSignals	Swift.Decodable		
+protocol	conformance SiriSignals.AudioAppSignals	Swift.Encodable		
+protocol	conformance SiriSignals.AudioAppSignals	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AudioAppSignalsCollector.AudioSignalCollectorError	Swift.Equatable		
+protocol	conformance AudioAppSignalsCollector.AudioSignalCollectorError	Swift.Hashable		
+protocol	conformance AudioAppSignalsCollector.AudioSignalCollectorError	Swift.Error		
+protocol	conformance SiriSignals.AudioAppSignalsCollector	SiriSignals.AudioAppSignalsCollecting		
+protocol	conformance SiriSignals.AudioAppSignalsDataSyncUtils	SiriSignals.AudioAppSignalsDataSyncUtilsProviding		
+protocol	conformance SiriSignals.AudioAppSignalsSyncer	SiriSignals.AudioAppSignalsSyncProviding		
+protocol	conformance SiriSignals.AudioCompanionContextDonator	SiriSignals.AudioCompanionContextDonationProviding		
+protocol	conformance SiriSignals.AudioFeatureFlagProvider	SiriSignals.AudioFeatureFlagProviding		
+protocol	conformance AudioFeatureFlagProvider.FeatureFlags	Swift.Hashable		
+protocol	conformance AudioFeatureFlagProvider.FeatureFlags	Swift.Equatable		
+protocol	conformance AudioFeatureFlagProvider.FeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance TRIClient	SiriSignals.TrialClientProviding		
+protocol	conformance SiriSignals.AudioMegamodelManagertvOS	SiriSignals.AudioMegamodelManaging		
+protocol	conformance SiriSignals.AudioMegamodelPredictor	SiriSignals.AppSelectionPredictor		
+protocol	conformance SiriSignals.BiomeListener	SiriSignals.BiomeListening		
+protocol	conformance BiomeQueriesNowPlaying.UserTimeWindowsCache	SiriSignals.SharedInMemoryCache		
+protocol	conformance BiomeQueriesNowPlaying.RecognizedUser	Swift.CustomStringConvertible		
+protocol	conformance BundleCounts	Swift.CustomStringConvertible		
+protocol	conformance BundleIDAndState	Swift.CustomStringConvertible		
+protocol	conformance NowPlayingRecord	Swift.Equatable		
+protocol	conformance NowPlayingRecord	Swift.CustomStringConvertible		
+protocol	conformance NowPlayingRecord	Swift.Comparable		
+protocol	conformance SiriSignals.BiomeSQLQueryResultProvider	SiriSignals.BiomeSQLQueryResultProviding		
+protocol	conformance SiriSignals.NoOpExpander	SiriSignals.BundleIDSynonymExpanding		
+protocol	conformance SiriSignals.BundleIDTimestampRecord	Swift.Equatable		
+protocol	conformance SiriSignals.BundleIDTimestampRecord	Swift.Comparable		
+protocol	conformance CalendarSignal.Field	Swift.Equatable		
+protocol	conformance CalendarSignal.Field	Swift.Hashable		
+protocol	conformance CalendarSignal.Field	Swift.RawRepresentable		
+protocol	conformance CalendarSignal.Field	Swift.CaseIterable		
+protocol	conformance SiriSignals.CalendarSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.CalendarSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientCarplaySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientCarplaySignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ClientDaylightSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientDaylightSignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ClientDayOfWeekSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientDayOfWeekSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientHourOfDaySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientHourOfDaySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientInDayLightHourSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientInDayLightHourSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientLanguageSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientLanguageSignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ClientLanguageSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientLocaleSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientLocaleSignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ClientLocaleSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientRegionSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientRegionSignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ClientRegionSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientTimeRangeSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientTimeRangeSignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ClientTimeRangeSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ClientWorkoutSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ClientWorkoutSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.CommonSignalValuesProcessor	SiriSignals.SELFMessageBuilding		
+protocol	conformance CommunicationTypeSignal.CommunicationType	Swift.Equatable		
+protocol	conformance CommunicationTypeSignal.CommunicationType	Swift.Hashable		
+protocol	conformance CommunicationTypeSignal.CommunicationType	Swift.RawRepresentable		
+protocol	conformance CommunicationTypeSignal.CommunicationType	Swift.CaseIterable		
+protocol	conformance SiriSignals.CommunicationTypeSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.CommunicationTypeSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance ContactHandleTypeSignal.ContactHandleType	Swift.Equatable		
+protocol	conformance ContactHandleTypeSignal.ContactHandleType	Swift.Hashable		
+protocol	conformance ContactHandleTypeSignal.ContactHandleType	Swift.RawRepresentable		
+protocol	conformance ContactHandleTypeSignal.ContactHandleType	Swift.CaseIterable		
+protocol	conformance SiriSignals.ContactHandleTypeSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ContactHandleTypeSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.Duration	Swift.CustomStringConvertible		
+protocol	conformance DESRecordStore	SiriSignals.DESRecordStoreWritableProviding		
+protocol	conformance SiriSignals.DESIntentEventStoreError	Swift.Hashable		
+protocol	conformance SiriSignals.DESIntentEventStoreError	Swift.Equatable		
+protocol	conformance SiriSignals.DESIntentEventStoreError	Swift.Error		
+protocol	conformance SiriSignals.DeviceClassSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DeviceClassSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DeviceMotionStateSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DeviceMotionStateSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance DeviceSupport.DeviceType	Swift.Hashable		
+protocol	conformance DeviceSupport.DeviceType	Swift.Equatable		
+protocol	conformance SiriSignals.DisambiguationDonationFields	Swift.RawRepresentable		
+protocol	conformance SiriSignals.DisambiguationDonationFields	Swift.Hashable		
+protocol	conformance SiriSignals.DisambiguationDonationFields	Swift.Equatable		
+protocol	conformance SiriSignals.DJB2Hash	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.DJB2Hash	Swift.Equatable		
+protocol	conformance SiriSignals.DomainAffinityScoreSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainAffinityScoreSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainDefaultAppSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainDefaultAppSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainRecencyRankSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainRecencyRankSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainRecencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainRecencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainRequestByHandleSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainRequestByHandleSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainRequestByLabelSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainRequestByLabelSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainTaskAbandonmentSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainTaskAbandonmentSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreByIntentSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreByIntentSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreByNameSignal	SiriSignals.EntityIDParameterizedSignalProviding		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreByNameSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreByNameSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreSignal	SiriSignals.EntityIDParameterizedSignalProviding		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactAffinityScoreSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactFrequencyByIntentSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactFrequencyByIntentSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactFrequencySignal	SiriSignals.EntityIDParameterizedSignalProviding		
+protocol	conformance SiriSignals.DomainToContactFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactRecencyRankSignal	SiriSignals.EntityIDParameterizedSignalProviding		
+protocol	conformance SiriSignals.DomainToContactRecencyRankSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactRecencyRankSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactRecencySignal	SiriSignals.EntityIDParameterizedSignalProviding		
+protocol	conformance SiriSignals.DomainToContactRecencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactRecencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactTimeSinceLastUsedSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactTimeSinceLastUsedSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToContactTotalFrequencyByIntentSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToContactTotalFrequencyByIntentSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainToHandleAffinityScoreSignal	SiriSignals.EntityIDParameterizedSignalProviding		
+protocol	conformance SiriSignals.DomainToHandleAffinityScoreSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainToHandleAffinityScoreSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainTotalFrequencyByCountryCodeSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainTotalFrequencyByCountryCodeSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainTotalFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainTotalFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.DomainUseCase	Swift.Equatable		
+protocol	conformance SiriSignals.DomainUseCase	Swift.Hashable		
+protocol	conformance SiriSignals.DomainUseCase	Swift.RawRepresentable		
+protocol	conformance SiriSignals.DomainUserPersonaSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.DomainUserPersonaSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ForegroundAppBiomeSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ForegroundAppBiomeSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ForegroundAppInFocusSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ForegroundAppInFocusSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ForegroundAppRecencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ForegroundAppRecencySignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.ForegroundAppRecencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ForegroundAppSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.ForegroundAppSignal	SiriSignals.SyncSignalCollector		
+protocol	conformance SiriSignals.ForegroundBundleIdInFocus	Swift.Equatable		
+protocol	conformance SiriSignals.ForegroundBundleIdInFocus	Swift.Comparable		
+protocol	conformance SiriSignals.ForegroundWarmAppSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.ForegroundWarmAppSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance HashedLocationSignal.Granularity	Swift.Equatable		
+protocol	conformance HashedLocationSignal.Granularity	Swift.Hashable		
+protocol	conformance HashedLocationSignal.Granularity	Swift.RawRepresentable		
+protocol	conformance HashedLocationSignal.Granularity	Swift.CaseIterable		
+protocol	conformance SiriSignals.HashedLocationSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.HashedLocationSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.InstalledAudioAppProvider	SiriSignals.InstalledAppProviding		
+protocol	conformance InstalledApp	Swift.Equatable		
+protocol	conformance InstalledApp	Swift.Hashable		
+protocol	conformance SiriSignals.IsCarPlayConnectedSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.IsCarPlayConnectedSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.IsFirstPartyAppSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.IsFirstPartyAppSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.IsScreenLockedSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.IsScreenLockedSignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.IsScreenLockedSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastActionDisambiguationRecencySignal	SiriSignals.LastDisambiguationRecencySignalProviding		
+protocol	conformance SiriSignals.LastActionDisambiguationRecencySignal	SiriSignals.LastDisambiguationSignalProviding		
+protocol	conformance SiriSignals.LastActionDisambiguationRecencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastActionDisambiguationRecencySignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.LastActionDisambiguationRecencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastActionDisambiguationResultSignal	SiriSignals.LastDisambiguationResultSignalProviding		
+protocol	conformance SiriSignals.LastActionDisambiguationResultSignal	SiriSignals.LastDisambiguationSignalProviding		
+protocol	conformance SiriSignals.LastActionDisambiguationResultSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastActionDisambiguationResultSignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.LastActionDisambiguationResultSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastAppDisambiguationRecencySignal	SiriSignals.LastDisambiguationRecencySignalProviding		
+protocol	conformance SiriSignals.LastAppDisambiguationRecencySignal	SiriSignals.LastDisambiguationSignalProviding		
+protocol	conformance SiriSignals.LastAppDisambiguationRecencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastAppDisambiguationRecencySignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.LastAppDisambiguationRecencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastAppDisambiguationResultSignal	SiriSignals.LastDisambiguationResultSignalProviding		
+protocol	conformance SiriSignals.LastAppDisambiguationResultSignal	SiriSignals.LastDisambiguationSignalProviding		
+protocol	conformance SiriSignals.LastAppDisambiguationResultSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastAppDisambiguationResultSignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.LastAppDisambiguationResultSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastNowPlayingAtSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastNowPlayingAtSignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.LastNowPlayingAtSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastNowPlayingRecencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastNowPlayingRecencySignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.LastNowPlayingRecencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.LastNowPlayingSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.LastNowPlayingSignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.LastNowPlayingSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance CUSystemMonitor	SiriSignals.MeDeviceProviding		
+protocol	conformance MediaCategorySupportedSignal.MediaCategory	Swift.Equatable		
+protocol	conformance MediaCategorySupportedSignal.MediaCategory	Swift.Hashable		
+protocol	conformance MediaCategorySupportedSignal.MediaCategory	Swift.RawRepresentable		
+protocol	conformance SiriSignals.MediaCategorySupportedSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.MediaCategorySupportedSignal	SiriSignals.PrewarmableSignalProviding		
+protocol	conformance SiriSignals.MediaCategorySupportedSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance MediaItemsBucketProvider.MediaBuckets	Swift.CaseIterable		
+protocol	conformance MediaItemsBucketProvider.MediaBuckets	Swift.RawRepresentable		
+protocol	conformance MediaItemsBucketProvider.MediaBuckets	Swift.Hashable		
+protocol	conformance MediaItemsBucketProvider.MediaBuckets	Swift.Equatable		
+protocol	conformance SiriRemembersQueryOperator	Swift.Hashable		
+protocol	conformance SiriRemembersQueryOperator	Swift.Equatable		
+protocol	conformance SiriSignals.MediaSubscriptionStatusSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.MediaSubscriptionStatusSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.MockAppRecordProvider	SiriSignals.AppRecordProviding		
+protocol	conformance SiriSignals.MultiUserConnectionProvider	SiriSignals.MultiUserConnectionProviding		
+protocol	conformance NotesIntentContainsSignal.Field	Swift.Equatable		
+protocol	conformance NotesIntentContainsSignal.Field	Swift.Hashable		
+protocol	conformance NotesIntentContainsSignal.Field	Swift.RawRepresentable		
+protocol	conformance NotesIntentContainsSignal.Field	Swift.CaseIterable		
+protocol	conformance SiriSignals.NotesIntentContainsSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NotesIntentContainsSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.NotificationsCountByContactSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NotificationsCountByContactSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.NowPlayingCountSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NowPlayingCountSignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.NowPlayingCountSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.NowPlayingOneDayCountSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NowPlayingOneDayCountSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.NowPlayingScoresSignal	SiriSignals.DependentSignalProviding		
+protocol	conformance SiriSignals.NowPlayingScoresSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NowPlayingScoresSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.NowPlayingSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NowPlayingSignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.NowPlayingSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.NowPlayingStateSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.NowPlayingStateSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.UserOverrides	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.UserOverrides	SiriSignals.OverridesProviding		
+protocol	conformance SiriSignals.CannedOverrides	SiriSignals.OverridesProviding		
+protocol	conformance SiriSignals.PredictionError	Swift.Error		
+protocol	conformance SiriSignals.PredictionError	Swift.CustomStringConvertible		
+protocol	conformance PrewarmDeviceTypeRestriction.DeviceType	Swift.Equatable		
+protocol	conformance PrewarmDeviceTypeRestriction.DeviceType	Swift.Hashable		
+protocol	conformance PrewarmDeviceTypeRestriction.DeviceType	Swift.RawRepresentable		
+protocol	conformance PrewarmDeviceTypeRestriction.DeviceType	Swift.CaseIterable		
+protocol	conformance SiriSignals.PrewarmDeviceTypeRestriction	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.IntervalFrequency	Swift.Equatable		
+protocol	conformance SiriSignals.SelectedActionDisambiguationFrequencySignal	SiriSignals.DisambiguationFrequencySignalProviding		
+protocol	conformance SiriSignals.SelectedActionDisambiguationFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.SelectedActionDisambiguationFrequencySignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.SelectedActionDisambiguationFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.SelectedAppDisambiguationFrequencySignal	SiriSignals.DisambiguationFrequencySignalProviding		
+protocol	conformance SiriSignals.SelectedAppDisambiguationFrequencySignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.SelectedAppDisambiguationFrequencySignal	SiriSignals.GroupByFieldsSerializing		
+protocol	conformance SiriSignals.SelectedAppDisambiguationFrequencySignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance Signal.Source	Swift.Equatable		
+protocol	conformance Signal.Source	Swift.Hashable		
+protocol	conformance SignalCache.Record	Swift.Hashable		
+protocol	conformance SignalCache.Record	Swift.Equatable		
+protocol	conformance SignalCache.Record	Swift.Encodable		
+protocol	conformance SignalCache.Record	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSignals.SignalCacheError	Swift.Hashable		
+protocol	conformance SiriSignals.SignalCacheError	Swift.Equatable		
+protocol	conformance SiriSignals.SignalCacheError	Swift.Error		
+protocol	conformance SiriSignals.SignalCachingStrategyOption	Swift.Hashable		
+protocol	conformance SiriSignals.SignalCachingStrategyOption	Swift.Equatable		
+protocol	conformance SiriSignals.SignalComputationContext	SiriSignals.SignalDefinitionParametersProviding		
+protocol	conformance SiriSignals.NoParameters	SiriSignals.SignalDefinitionParametersProviding		
+protocol	conformance SiriSignals.SignalDefinitionParametersProvider	SiriSignals.SignalDefinitionParametersProviding		
+protocol	conformance SiriSignals.SignalGathererError	Swift.Equatable		
+protocol	conformance SiriSignals.SignalGathererError	Swift.Hashable		
+protocol	conformance SiriSignals.SignalGathererError	Swift.Error		
+protocol	conformance SignalProvidingAdapter	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SignalProvidingAdapter	SiriSignals.SignalProviding		
+protocol	conformance SignalGraph.Node	Swift.Equatable		
+protocol	conformance SignalGraph.Node	Swift.Hashable		
+protocol	conformance SignalGraph.InitializationError	Swift.Hashable		
+protocol	conformance SignalGraph.InitializationError	Swift.Equatable		
+protocol	conformance SignalGraph.InitializationError	Swift.Error		
+protocol	conformance SiriSignals.SignalListBuilder	SiriSignals.SignalListBuilding		
+protocol	conformance SignalParameterization.ParameterizationType	Swift.Equatable		
+protocol	conformance SignalParameterization.ParameterizationType	Swift.Hashable		
+protocol	conformance SignalParameterization.ParameterizationType	Swift.RawRepresentable		
+protocol	conformance SignalParameterization.ParameterizationType	Swift.CaseIterable		
+protocol	conformance SiriSignals.SignalParameterization	Swift.CustomStringConvertible		
+protocol	conformance PrewarmStatus.Record	Swift.CustomStringConvertible		
+protocol	conformance SignalRepository.ProcessingTimeout	Swift.CustomStringConvertible		
+protocol	conformance SignalRepository.PrewarmStatus	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.SignalStoreError	Swift.Error		
+protocol	conformance SiriSignals.SignalStore	SiriSignals.SignalLoggable		
+protocol	conformance SiriSignals.SignalStore	SiriSignals.SignalQueryable		
+protocol	conformance SignalStore.UnexpectedSignalTypeError	Swift.Hashable		
+protocol	conformance SignalStore.UnexpectedSignalTypeError	Swift.Equatable		
+protocol	conformance SignalStore.UnexpectedSignalTypeError	Swift.Error		
+protocol	conformance SignalStore.UnarchiveError	Swift.Hashable		
+protocol	conformance SignalStore.UnarchiveError	Swift.Equatable		
+protocol	conformance SignalStore.UnarchiveError	Swift.Error		
+protocol	conformance SiriSignals.SignalValue	Swift.Decodable		
+protocol	conformance SiriSignals.SignalValue	Swift.Encodable		
+protocol	conformance SiriSignals.SignalValue	Swift.Equatable		
+protocol	conformance SiriSignals.SignalValue	Swift.CustomStringConvertible		
+protocol	conformance SiriSignals.SignalValue	Swift.Hashable		
+protocol	conformance DependentDoubleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DependentDoubleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DependentDoubleCodingKeys	Swift.Hashable		
+protocol	conformance DependentDoubleCodingKeys	Swift.Equatable		
+protocol	conformance IndependentDoubleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IndependentDoubleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IndependentDoubleCodingKeys	Swift.Hashable		
+protocol	conformance IndependentDoubleCodingKeys	Swift.Equatable		
+protocol	conformance DependentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DependentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DependentCodingKeys	Swift.Hashable		
+protocol	conformance DependentCodingKeys	Swift.Equatable		
+protocol	conformance IndependentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IndependentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IndependentCodingKeys	Swift.Hashable		
+protocol	conformance IndependentCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance IndependentCodingKeys	Swift.CodingKey		
+protocol	conformance DependentCodingKeys	Swift.CodingKey		
+protocol	conformance IndependentDoubleCodingKeys	Swift.CodingKey		
+protocol	conformance DependentDoubleCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriSignals.SiriSignalsXPCError	Swift.Equatable		
+protocol	conformance SiriSignals.SiriSignalsXPCError	Swift.Hashable		
+protocol	conformance SiriSignals.SiriSignalsXPCError	Swift.RawRepresentable		
+protocol	conformance SiriSignals.SiriSignalsXPCError	Swift.Error		
+protocol	conformance SiriSignals.SQLBackedCacheProvider	SiriSignals.PersistentSignalCache		
+protocol	conformance SiriSignals.SQLBackedCacheProvider	SiriSignals.SignalCacheConnection		
+protocol	conformance AppEvent.EventType	Swift.Equatable		
+protocol	conformance AppEvent.EventType	Swift.Hashable		
+protocol	conformance SiriSignals.SubscriptionStatusProvider	SiriSignals.SubscriptionStatusProviding		
+protocol	conformance SiriSignals.SupportedMediaCategory	Swift.CaseIterable		
+protocol	conformance SiriSignals.SupportedMediaCategory	Swift.Hashable		
+protocol	conformance SiriSignals.SupportedMediaCategory	Swift.Equatable		
+protocol	conformance SiriSignals.TimeSinceAppLastInstalledSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.TimeSinceAppLastInstalledSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.TimeSinceAppLastLaunchedSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.TimeSinceAppLastLaunchedSignal	SiriSignals.BiomeAccumulating		
+protocol	conformance SiriSignals.TimeSinceAppLastLaunchedSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.TimeSpentInAppAffinityScore	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.TimeSpentInAppAffinityScore	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.TimeTodaySpentInApp	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.TimeTodaySpentInApp	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.TotalTimeSpentInApp	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.TotalTimeSpentInApp	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.TrainingMessageProvider	SiriSignals.TrainingMessageProviding		
+protocol	conformance SiriSignals.TriggerLockout	SiriSignals.TriggerLockoutProviding		
+protocol	conformance SiriSignals.UsageScoreSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.UsageScoreSignal	SiriSignals.AppSelectionSignalComponent		
+protocol	conformance SiriSignals.WifiStateSignal	SiriSignals.SignalProviding		
+protocol	conformance SiriSignals.WifiStateSignal	SiriSignals.AppSelectionSignalComponent		
+extension	SiriSignals.Aggregation.Bucket	CaseIterable		
+extension	SiriSignals.Aggregation.Bucket	RawRepresentable		
+extension	SiriSignals.CalendarSignal.Field	RawRepresentable		
+extension	SiriSignals.CalendarSignal.Field	CaseIterable		
+extension	SiriSignals.CommonSignalValuesProcessor	SELFMessageBuilding		
+extension	SiriSignals.CommunicationTypeSignal.CommunicationType	RawRepresentable		
+extension	SiriSignals.CommunicationTypeSignal.CommunicationType	CaseIterable		
+extension	SiriSignals.ContactHandleTypeSignal.ContactHandleType	RawRepresentable		
+extension	SiriSignals.ContactHandleTypeSignal.ContactHandleType	CaseIterable		
+extension	SiriSignals.DisambiguationDonationFields	RawRepresentable		
+extension	SiriSignals.DomainUseCase	RawRepresentable		
+extension	SiriSignals.HashedLocationSignal.Granularity	RawRepresentable		
+extension	SiriSignals.HashedLocationSignal.Granularity	CaseIterable		
+extension	SiriSignals.MediaCategorySupportedSignal.MediaCategory	RawRepresentable		
+extension	SiriSignals.MediaItemsBucketProvider.MediaBuckets	CaseIterable		
+extension	SiriSignals.MediaItemsBucketProvider.MediaBuckets	RawRepresentable		
+extension	SiriSignals.NotesIntentContainsSignal.Field	RawRepresentable		
+extension	SiriSignals.NotesIntentContainsSignal.Field	CaseIterable		
+extension	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType	RawRepresentable		
+extension	SiriSignals.PrewarmDeviceTypeRestriction.DeviceType	CaseIterable		
+extension	SiriSignals.SignalParameterization.ParameterizationType	RawRepresentable		
+extension	SiriSignals.SignalParameterization.ParameterizationType	CaseIterable		
+extension	SiriSignals.SiriSignalsXPCError	RawRepresentable		
+extension	SiriSignals.SupportedMediaCategory	CaseIterable		

@@ -1,0 +1,629 @@
+kind	type	conformance	member_kind	member
+class	VisualUnderstanding.VUGallery			
+class	VisualUnderstanding.VUGallery		var	index
+class	VisualUnderstanding.VUGallery		let	indexQueue
+class	VisualUnderstanding.VUGallery		let	signposter
+class	VisualUnderstanding.VUGallery		let	client
+class	VisualUnderstanding.VUGallery		let	path
+class	VisualUnderstanding.VUGallery		let	isSecurityScoped
+class	VisualUnderstanding.VUGallery		let	logger
+class	VisualUnderstanding.VUGallery		var	cache
+enum	VisualUnderstanding.VUGallery.Client			
+enum	VisualUnderstanding.VUGallery.Client		case	photos
+enum	VisualUnderstanding.VUGallery.Client		case	homekit
+enum	VisualUnderstanding.VUGallery.Client		case	contacts
+enum	VisualUnderstanding.VUGallery.Client		case	syndication
+enum	VisualUnderstanding.VUGallery.Client		case	reserved
+enum	VisualUnderstanding.VUGallery.Client		case	shared
+enum	VisualUnderstanding.VUGallery.Source			
+enum	VisualUnderstanding.VUGallery.Source		case	frontCamera
+enum	VisualUnderstanding.VUGallery.Source		case	backCamera
+enum	VisualUnderstanding.VUGallery.Source		case	other
+struct	VisualUnderstanding.VUGallery.Context			
+struct	VisualUnderstanding.VUGallery.Context		var	moment
+struct	VisualUnderstanding.VUGallery.Context		var	asset
+struct	VisualUnderstanding.VUGallery.Context		var	source
+enum	VisualUnderstanding.VUGallery.EntityClass			
+enum	VisualUnderstanding.VUGallery.EntityClass		case	invalid
+enum	VisualUnderstanding.VUGallery.EntityClass		case	person
+enum	VisualUnderstanding.VUGallery.EntityClass		case	animal
+enum	VisualUnderstanding.VUGallery.EntityClass		case	scene
+enum	VisualUnderstanding.VUGallery.RecognitionPreset			
+enum	VisualUnderstanding.VUGallery.RecognitionPreset		case	photos
+enum	VisualUnderstanding.VUGallery.RecognitionPreset		case	photosVIP
+enum	VisualUnderstanding.VUGallery.RecognitionPreset		case	unfiltered
+struct	VisualUnderstanding.VUGallery.RecognitionResult			
+struct	VisualUnderstanding.VUGallery.RecognitionResult		let	entityIdentifier
+struct	VisualUnderstanding.VUGallery.RecognitionResult		let	tag
+struct	VisualUnderstanding.VUGallery.RecognitionResult		let	confidence
+struct	VisualUnderstanding.VUGallery.ProgressStatus			
+struct	VisualUnderstanding.VUGallery.ProgressStatus		let	fractionCompleted
+enum	VisualUnderstanding.VUGallery.UpdateMode			
+enum	VisualUnderstanding.VUGallery.UpdateMode		case	full
+enum	VisualUnderstanding.VUGallery.UpdateMode		case	fast
+class	VisualUnderstanding.VUGallery.Bookmark	NSObject		
+class	VisualUnderstanding.VUGallery.Bookmark	NSObject	var	token
+class	VisualUnderstanding.VUGallery.Bookmark	NSObject	var	changeID
+class	VisualUnderstanding.VUGallery.ChangeSequence			
+class	VisualUnderstanding.VUGallery.ChangeSequence		var	bookmark
+class	VisualUnderstanding.VUGallery.ChangeSequence		var	changes
+class	VisualUnderstanding.VUGallery.ChangeSequence		var	store
+class	VisualUnderstanding.VUGallery.ChangeSequence		let	batchSize
+enum	VisualUnderstanding.VUGallery.ResetType			
+enum	VisualUnderstanding.VUGallery.ResetType		case	all
+enum	VisualUnderstanding.VUGallery.ResetType		case	tags
+struct	VisualUnderstanding.VUGallery.EntityView			
+struct	VisualUnderstanding.VUGallery.EntityView		let	entityIdentifier
+struct	VisualUnderstanding.VUGallery.EntityView		let	tag
+struct	VisualUnderstanding.VUGallery.EntityView		let	observations
+struct	VisualUnderstanding.VUGallery.EntitySequence			
+struct	VisualUnderstanding.VUGallery.EntitySequence		let	bookmark
+struct	VisualUnderstanding.VUGallery.EntitySequence		let	entities
+struct	VisualUnderstanding.VUGallery.TagView			
+struct	VisualUnderstanding.VUGallery.TagView		let	client
+struct	VisualUnderstanding.VUGallery.TagView		let	tag
+struct	VisualUnderstanding.VUGallery.TagView		let	confirmed
+struct	VisualUnderstanding.VUGallery.TagView		let	entity
+struct	VisualUnderstanding.VUGallery.ObservationView			
+struct	VisualUnderstanding.VUGallery.ObservationView		let	identifier
+struct	VisualUnderstanding.VUGallery.ObservationView		let	tags
+struct	VisualUnderstanding.VUGallery.ObservationView		let	client
+struct	VisualUnderstanding.VUGallery.ObservationView		let	type
+struct	VisualUnderstanding.VUGallery.ObservationView		let	contextualOnly
+struct	VisualUnderstanding.VUGallery.ObservationView		let	asset
+struct	VisualUnderstanding.VUGallery.ObservationView		let	quality
+struct	VisualUnderstanding.VUGallery.ObservationView		let	confidence
+struct	VisualUnderstanding.VUGallery.ObservationView		let	label
+struct	VisualUnderstanding.VUGallery.ObservationView		let	source
+struct	VisualUnderstanding.VUGallery.ObservationView		let	isPrimary
+struct	VisualUnderstanding.VUGallery.ObservationView		let	similarity
+struct	VisualUnderstanding.VUGallery.ObservationView		let	partner
+struct	VisualUnderstanding.VUGallery.ObservationView		let	density
+struct	VisualUnderstanding.VUGallery.ObservationView		let	embedding
+struct	VisualUnderstanding.VUGallery.ObservationView		let	contextualEmbedding
+enum	VisualUnderstanding.VUGallery.SimilarityMetric			
+enum	VisualUnderstanding.VUGallery.SimilarityMetric		case	pairwise
+struct	VisualUnderstanding.VUGallery.ClusteringOptions			
+struct	VisualUnderstanding.VUGallery.ClusteringOptions		var	threshold
+struct	VisualUnderstanding.VUGallery.ClusteringOptions		var	forceFullClustering
+struct	VisualUnderstanding.VUGallery.ClusteringResults			
+struct	VisualUnderstanding.VUGallery.ClusteringResults		let	assetGroups
+struct	VisualUnderstanding.VUGallery.ClusteringResults		let	clusteringCompleted
+struct	VisualUnderstanding.VUGallery.ClusteringResults		let	fullModeCount
+struct	VisualUnderstanding.VUGallery.ClusteringResults		let	fastModeCount
+struct	VisualUnderstanding.VUGallery.AccuracyMetrics			
+struct	VisualUnderstanding.VUGallery.AccuracyMetrics		let	overallPrecision
+struct	VisualUnderstanding.VUGallery.AccuracyMetrics		let	overallRecall
+struct	VisualUnderstanding.VUGallery.AccuracyMetrics		let	entityPrecision
+struct	VisualUnderstanding.VUGallery.AccuracyMetrics		let	entityRecall
+struct	VisualUnderstanding.VUGallery.AccuracyMetrics		let	count
+enum	VisualUnderstanding.VUGallery.EvaluationType			
+enum	VisualUnderstanding.VUGallery.EvaluationType		case	standard
+enum	VisualUnderstanding.VUGallery.EvaluationType		case	bcubed
+struct	VisualUnderstanding.VUGallery.SocialGroup			
+struct	VisualUnderstanding.VUGallery.SocialGroup		let	numberOfMomentNodes
+struct	VisualUnderstanding.VUGallery.SocialGroup		let	tags
+class	VisualUnderstanding.VUGenerationConditioner			
+class	VisualUnderstanding.VUGenerationConditioner		let	logger
+class	VisualUnderstanding.VUGenerationConditioner		let	signposter
+class	VisualUnderstanding.VUGenerationConditioner		let	adapterIdentifier
+class	VisualUnderstanding.VUGenerationConditioner		let	personalizationModel
+class	VisualUnderstanding.VUGenerationConditioner		let	style
+class	VisualUnderstanding.VUGenerationConditioner		let	facePositionBoundingBoxes
+enum	VisualUnderstanding.VUGenerationConditioner.ConditionerError			
+enum	VisualUnderstanding.VUGenerationConditioner.ConditionerError		case	modelNotAvailable
+enum	VisualUnderstanding.VUGenerationConditioner.ConditionerError		case	internalError
+enum	VisualUnderstanding.VUGenerationConditioner.ConditionerError		case	unsupportedRepresentation
+enum	VisualUnderstanding.VUGenerationConditioner.ConditionerError		case	invalidTextEmbedding
+struct	VisualUnderstanding.VUGenerationConditioner.GenerationOptions			
+struct	VisualUnderstanding.VUGenerationConditioner.GenerationOptions		var	seed
+struct	VisualUnderstanding.VUGenerationConditioner.GenerationOptions		var	targetBoundingBox
+struct	VisualUnderstanding.VUGenerationConditioner.GenerationOptions		var	ageCategory
+enum	VisualUnderstanding.VUGenerationConditioner.Style			
+enum	VisualUnderstanding.VUGenerationConditioner.Style		case	genmoji
+enum	VisualUnderstanding.VUGenerationConditioner.Style		case	animation
+enum	VisualUnderstanding.VUGenerationConditioner.Style		case	illustration
+enum	VisualUnderstanding.VUGenerationConditioner.Style		case	sketch
+enum	VisualUnderstanding.VUGenerationConditioner.GenerationOptions.CodingKeys			
+enum	VisualUnderstanding.VUGenerationConditioner.GenerationOptions.CodingKeys		case	seed
+enum	VisualUnderstanding.VUGenerationConditioner.GenerationOptions.CodingKeys		case	targetBoundingBox
+enum	VisualUnderstanding.VUGenerationConditioner.GenerationOptions.CodingKeys		case	ageCategory
+enum	VisualUnderstanding.VUGenerationConditioner.FacePosition			
+enum	VisualUnderstanding.VUGenerationConditioner.FacePosition		case	closeupCenter
+enum	VisualUnderstanding.VUGenerationConditioner.FacePosition		case	closeupCenterUp
+enum	VisualUnderstanding.VUGenerationConditioner.FacePosition		case	mediumCenter
+enum	VisualUnderstanding.VUGenerationConditioner.FacePosition		case	fullBody
+class	VisualUnderstanding.VUEnrollmentGallery	VisualUnderstanding.VUStreamingGallery		
+class	VisualUnderstanding.VUEnrollmentGallery	VisualUnderstanding.VUStreamingGallery	var	observationIdentifierBucketMap
+class	VisualUnderstanding.VUEnrollmentGallery	VisualUnderstanding.VUStreamingGallery	var	observationIdentifierEnrollmentSortingDataMap
+enum	VisualUnderstanding.VUEnrollmentGallery.VUEnrollmentGalleryError			
+enum	VisualUnderstanding.VUEnrollmentGallery.VUEnrollmentGalleryError		case	noObservations
+enum	VisualUnderstanding.VUEnrollmentGallery.VUEnrollmentGalleryError		case	badState
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation			
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	pitch
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	yaw
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	embedding
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	embeddingRevision
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	embeddingConfidence
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	direction
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentFaceObservation		let	faceCaptureQuality
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction			
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	center
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	north
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	northEast
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	east
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	southEast
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	south
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	southWest
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	west
+enum	VisualUnderstanding.VUEnrollmentGallery.Direction		case	northWest
+enum	VisualUnderstanding.VUEnrollmentGallery.EnrollmentCompletionStatus			
+enum	VisualUnderstanding.VUEnrollmentGallery.EnrollmentCompletionStatus		case	InsufficientObservations
+enum	VisualUnderstanding.VUEnrollmentGallery.EnrollmentCompletionStatus		case	PoorObservations
+enum	VisualUnderstanding.VUEnrollmentGallery.EnrollmentCompletionStatus		case	Complete
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentSortingData			
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentSortingData		var	pitch
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentSortingData		var	yaw
+struct	VisualUnderstanding.VUEnrollmentGallery.EnrollmentSortingData		var	identifier
+class	VisualUnderstanding.VUIndexScanner			
+class	VisualUnderstanding.VUIndexScanner		let	store
+class	VisualUnderstanding.VUIndexScanner		let	quantizer
+class	VisualUnderstanding.VUIndexScanner		let	logger
+class	VisualUnderstanding.VUIndexScanner		let	cacheSize
+class	VisualUnderstanding.VUIndexScanner		let	partitionCache
+class	VisualUnderstanding.VUIndexScanner		let	contextCache
+class	VisualUnderstanding.VUIndexScanner		let	signposter
+struct	VisualUnderstanding.VUIndexScanner.ObservationEmbedding			
+struct	VisualUnderstanding.VUIndexScanner.ObservationEmbedding		let	identifier
+struct	VisualUnderstanding.VUIndexScanner.ObservationEmbedding		let	embedding
+struct	VisualUnderstanding.VUIndexScanner.ObservationEmbedding		let	contextualEmbedding
+struct	VisualUnderstanding.VUIndexScanner.ObservationEmbedding		let	context
+enum	VisualUnderstanding.VUGalleryUpdateType			
+enum	VisualUnderstanding.VUGalleryUpdateType		case	add
+enum	VisualUnderstanding.VUGalleryUpdateType		case	update
+enum	VisualUnderstanding.VUGalleryUpdateType		case	remove
+struct	VisualUnderstanding.VUGalleryObservationUpdate			
+struct	VisualUnderstanding.VUGalleryObservationUpdate		let	updateType
+struct	VisualUnderstanding.VUGalleryObservationUpdate		let	observationIdentifier
+struct	VisualUnderstanding.VUGalleryObservationUpdate		let	entityIdentifier
+struct	VisualUnderstanding.VUGalleryEntityUpdate			
+struct	VisualUnderstanding.VUGalleryEntityUpdate		let	updateType
+struct	VisualUnderstanding.VUGalleryEntityUpdate		let	entityIdentifier
+struct	VisualUnderstanding.VUGalleryEntityUpdate		let	tag
+enum	VisualUnderstanding.VUGalleryUpdate			
+enum	VisualUnderstanding.VUGalleryUpdate		case	observationUpdate
+enum	VisualUnderstanding.VUGalleryUpdate		case	entityUpdate
+class	VisualUnderstanding.VUIndexParameters			
+class	VisualUnderstanding.VUIndexParameters		let	type
+class	VisualUnderstanding.VUIndexParameters		let	embeddingRevision
+class	VisualUnderstanding.VUIndexParameters		let	contextualEmbeddingRevision
+class	VisualUnderstanding.VUIndexParameters		let	isStreamingEnabled
+class	VisualUnderstanding.VUIndexParameters		var	embeddingSize
+class	VisualUnderstanding.VUIndexParameters		var	embeddingPrecision
+class	VisualUnderstanding.VUIndexParameters		let	numClusteringNeighbors
+class	VisualUnderstanding.VUIndexParameters		let	numClusteringProbes
+class	VisualUnderstanding.VUIndexParameters		var	classificationThreshold
+class	VisualUnderstanding.VUIndexParameters		let	contextualScalingFactor
+class	VisualUnderstanding.VUIndexParameters		let	rankedDensityExponent
+class	VisualUnderstanding.VUIndexParameters		let	densityFiltering
+class	VisualUnderstanding.VUIndexParameters		let	logger
+class	VisualUnderstanding.VUIndexStreamingScanner			
+class	VisualUnderstanding.VUIndexStreamingScanner		let	store
+class	VisualUnderstanding.VUIndexStreamingScanner		let	logger
+class	VisualUnderstanding.VUIndexStreamingStore			
+class	VisualUnderstanding.VUIndexStreamingStore		var	parameters
+class	VisualUnderstanding.VUIndexStreamingStore		var	observationSet
+class	VisualUnderstanding.VUIndexStreamingStore		var	staleObservations
+class	VisualUnderstanding.VUIndexStreamingStore		var	staleTags
+class	VisualUnderstanding.VUIndexStreamingStore		let	logger
+class	VisualUnderstanding.VUIndexStreamingStore		let	isStreamingEnabled
+class	VisualUnderstanding.VUIndexStreamingStore		var	contextualEmbeddingSize
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet			
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	identifiers
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	embeddings
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	embeddingsExpiration
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	contextualEmbeddings
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	contextualEmbeddingsExpiration
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	labels
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	confidences
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	tags
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	partners
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	similarities
+class	VisualUnderstanding.VUIndexStreamingStore.ObservationSet		var	densities
+class	VisualUnderstanding.Metrics			
+class	VisualUnderstanding.VUStreamingIndex			
+class	VisualUnderstanding.VUStreamingIndex		var	store
+class	VisualUnderstanding.VUStreamingIndex		var	scanner
+class	VisualUnderstanding.VUStreamingIndex		let	clusterer
+class	VisualUnderstanding.VUStreamingIndex		let	logger
+class	VisualUnderstanding.VUIndexQuantizer			
+class	VisualUnderstanding.VUIndexQuantizer		let	averagePartitionSize
+class	VisualUnderstanding.VUIndexQuantizer		let	maxUpdates
+class	VisualUnderstanding.VUIndexQuantizer		let	miniBatchSize
+class	VisualUnderstanding.VUIndexQuantizer		let	numBatchFactor
+class	VisualUnderstanding.VUIndexQuantizer		var	centroids
+class	VisualUnderstanding.VUIndexQuantizer		let	store
+class	VisualUnderstanding.VUIndexQuantizer		let	logger
+class	VisualUnderstanding.VUIndexQuantizer		let	lockQueue
+class	VisualUnderstanding.VUIndexQuantizer		let	signposter
+class	VisualUnderstanding.VUStreamingGallery			
+class	VisualUnderstanding.VUStreamingGallery		var	videoIndex
+class	VisualUnderstanding.VUStreamingGallery		var	keyIndex
+class	VisualUnderstanding.VUStreamingGallery		var	observationTimestamp
+class	VisualUnderstanding.VUStreamingGallery		var	observationTrackMap
+class	VisualUnderstanding.VUStreamingGallery		var	maxIdentities
+class	VisualUnderstanding.VUStreamingGallery		var	maxObservationsPerIdentity
+class	VisualUnderstanding.VUStreamingGallery		var	minObservationsPerEntity
+class	VisualUnderstanding.VUStreamingGallery		var	maxClustersPerTrack
+class	VisualUnderstanding.VUStreamingGallery		var	isStreamingEnabled
+class	VisualUnderstanding.VUStreamingGallery		var	autoRefresh
+class	VisualUnderstanding.VUStreamingGallery		let	minFaceprintConfidence
+class	VisualUnderstanding.VUStreamingGallery		let	minTorsoprintConfidence
+class	VisualUnderstanding.VUStreamingGallery		let	minAnimalprintConfidence
+class	VisualUnderstanding.VUStreamingGallery		let	matchScore
+class	VisualUnderstanding.VUStreamingGallery		var	countToUpdate
+class	VisualUnderstanding.VUStreamingGallery		var	clusteringThreshold
+class	VisualUnderstanding.VUStreamingGallery		var	pruningType
+class	VisualUnderstanding.VUStreamingGallery		let	logger
+class	VisualUnderstanding.VUStreamingGallery		let	signposter
+enum	VisualUnderstanding.VUStreamingGallery.PruningType			
+enum	VisualUnderstanding.VUStreamingGallery.PruningType		case	legacy
+enum	VisualUnderstanding.VUStreamingGallery.PruningType		case	clusterBased
+enum	VisualUnderstanding.VUStreamingGallery.Label			
+enum	VisualUnderstanding.VUStreamingGallery.Label		case	int
+enum	VisualUnderstanding.VUStreamingGallery.Label		case	uuid
+struct	VisualUnderstanding.VUStreamingGallery.Configuration			
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	maxIdentities
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	maxObservationsPerIdentity
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	minObservationsPerEntity
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	maxKeyObservationsPerEntity
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	maxClustersPerTrack
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	autoUpdate
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	isStreamingEnabled
+struct	VisualUnderstanding.VUStreamingGallery.Configuration		var	clusteringThreshold
+enum	VisualUnderstanding.VUStreamingGallery.DataType			
+enum	VisualUnderstanding.VUStreamingGallery.DataType		case	float16
+enum	VisualUnderstanding.VUStreamingGallery.DataType		case	float32
+enum	VisualUnderstanding.VUStreamingGallery.Tag			
+enum	VisualUnderstanding.VUStreamingGallery.Tag		case	confirmed
+enum	VisualUnderstanding.VUStreamingGallery.Tag		case	inferred
+enum	VisualUnderstanding.VUStreamingGallery.ObservationMatchType			
+enum	VisualUnderstanding.VUStreamingGallery.ObservationMatchType		case	faceAndTorso
+enum	VisualUnderstanding.VUStreamingGallery.ObservationMatchType		case	face
+enum	VisualUnderstanding.VUStreamingGallery.ObservationMatchType		case	torso
+enum	VisualUnderstanding.VUStreamingGallery.ObservationMatchType		case	unknown
+struct	VisualUnderstanding.VUStreamingGallery.ClusterResult			
+struct	VisualUnderstanding.VUStreamingGallery.ClusterResult		let	observationIdentifier
+struct	VisualUnderstanding.VUStreamingGallery.ClusterResult		let	clusterIdentifier
+struct	VisualUnderstanding.VUStreamingGallery.ClusterResult		let	isKeyFace
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionResult			
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionResult		let	label
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionResult		let	score
+struct	VisualUnderstanding.VUStreamingGallery.Recognition			
+struct	VisualUnderstanding.VUStreamingGallery.Recognition		let	label
+struct	VisualUnderstanding.VUStreamingGallery.Recognition		let	score
+struct	VisualUnderstanding.VUStreamingGallery.Recognition		var	tag
+struct	VisualUnderstanding.VUStreamingGallery.Recognition		let	match
+struct	VisualUnderstanding.VUStreamingGallery.Recognition		let	expirationDate
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionKey			
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionKey		let	label
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionKey		let	isConfirmed
+struct	VisualUnderstanding.VUStreamingGallery.RecognitionKey		let	hasExpiration
+enum	VisualUnderstanding.VUError			
+enum	VisualUnderstanding.VUError		case	invalidIndexStore
+enum	VisualUnderstanding.VUError		case	invalidObservation
+enum	VisualUnderstanding.VUError		case	invalidIdentifier
+enum	VisualUnderstanding.VUError		case	invalidTag
+enum	VisualUnderstanding.VUError		case	badState
+enum	VisualUnderstanding.VUError		case	internalError
+enum	VisualUnderstanding.VUError		case	invalidClient
+enum	VisualUnderstanding.VUError		case	invalidBookmark
+enum	VisualUnderstanding.VUError		case	invalidParameters
+enum	VisualUnderstanding.VUError		case	modelNotAvailable
+enum	VisualUnderstanding.VUError		case	clientCancelled
+enum	VisualUnderstanding.VUError		case	cannotSaveToStore
+enum	VisualUnderstanding.VUIndexStoreTagType			
+enum	VisualUnderstanding.VUIndexStoreTagType		case	confirmation
+enum	VisualUnderstanding.VUIndexStoreTagType		case	rejection
+enum	VisualUnderstanding.VUIndexStoreTagType		case	inferred
+enum	VisualUnderstanding.VUPluginType			
+enum	VisualUnderstanding.VUPluginType		case	deviceOwner
+enum	VisualUnderstanding.VUPluginType		case	personalization
+class	VisualUnderstanding.MinHeap			
+class	VisualUnderstanding.MinHeap		var	storage
+class	VisualUnderstanding.MinHeap		let	maxCount
+struct	VisualUnderstanding.MinHeap.Element			
+struct	VisualUnderstanding.MinHeap.Element		let	index
+struct	VisualUnderstanding.MinHeap.Element		let	score
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>		
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	var	maxSize
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	var	cache
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	var	keysList
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	var	size
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	let	lockQueue
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	var	misses
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	var	hits
+class	VisualUnderstanding.ConcurrentCache<A	Swift.Hashable>	let	statsQueue
+struct	VisualUnderstanding.CacheEntry			
+struct	VisualUnderstanding.CacheEntry		var	identifiers
+struct	VisualUnderstanding.CacheEntry		var	embeddings
+class	VisualUnderstanding.VUPersistedIndex			
+class	VisualUnderstanding.VUPersistedIndex		let	store
+class	VisualUnderstanding.VUPersistedIndex		let	signposter
+class	VisualUnderstanding.VUPersistedIndex		let	scanner
+class	VisualUnderstanding.VUPersistedIndex		let	quantizer
+class	VisualUnderstanding.VUPersistedIndex		let	clusterer
+class	VisualUnderstanding.VUPersistedIndex		let	logger
+class	VisualUnderstanding.VUPersistedIndex		let	scannerCacheSize
+class	VisualUnderstanding.VUPersistedIndex		let	quantizerAveragePartitionSize
+class	VisualUnderstanding.VUPersistedIndex		let	callbackQueue
+class	VisualUnderstanding.VUIndexCoreDataStore			
+class	VisualUnderstanding.VUIndexCoreDataStore		var	managedContext
+class	VisualUnderstanding.VUIndexCoreDataStore		let	logger
+class	VisualUnderstanding.VUIndexCoreDataStore		let	lockQueue
+class	VisualUnderstanding.VUIndexCoreDataStore		let	signposter
+class	VisualUnderstanding.VUIndexCoreDataStore		var	parameters
+class	VisualUnderstanding.VUIndexCoreDataStore		var	historySupport
+class	VisualUnderstanding.VUIndexCoreDataStore.UniqueIdentifierMergePolicy	NSMergePolicy		
+class	VisualUnderstanding.VUIndexCoreDataStore.UniqueIdentifierMergePolicy	NSMergePolicy	let	logger
+struct	VisualUnderstanding.VUIndexCoreDataStore.ClientLabel			
+struct	VisualUnderstanding.VUIndexCoreDataStore.ClientLabel		let	client
+struct	VisualUnderstanding.VUIndexCoreDataStore.ClientLabel		let	label
+class	VisualUnderstanding.VUIndexClusterer			
+class	VisualUnderstanding.VUIndexClusterer		let	store
+class	VisualUnderstanding.VUIndexClusterer		let	logger
+class	VisualUnderstanding.VUIndexClusterer		let	lockQueue
+class	VisualUnderstanding.VUIndexClusterer		let	signposter
+class	VisualUnderstanding.VUIndexClusterer.NodeTags			
+class	VisualUnderstanding.VUIndexClusterer.NodeTags		var	bestTag
+class	VisualUnderstanding.VUIndexClusterer.NodeTags		var	bestTagScore
+class	VisualUnderstanding.VUIndexClusterer.NodeTags		var	bestTagIsConfirmed
+class	VisualUnderstanding.VUIndexClusterer.NodeTags		var	rejectionTagScores
+class	VisualUnderstanding.VUIndexClusterer.NodeTags		var	localRejectionTags
+class	VisualUnderstanding.VUFaceRepresentation			
+class	VisualUnderstanding.VUFaceRepresentation		let	embeddings
+class	VisualUnderstanding.VUFaceRepresentation		let	version
+enum	VisualUnderstanding.VUFaceRepresentation.FaceRepresentationError			
+enum	VisualUnderstanding.VUFaceRepresentation.FaceRepresentationError		case	invalidParameters
+enum	VisualUnderstanding.VUFaceRepresentation.FaceRepresentationError		case	internalError
+enum	VisualUnderstanding.VUFaceRepresentation.CodingKeys			
+enum	VisualUnderstanding.VUFaceRepresentation.CodingKeys		case	embeddings
+enum	VisualUnderstanding.VUFaceRepresentation.CodingKeys		case	version
+struct	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata			
+struct	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata		let	version
+struct	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata		let	expansionFactor
+enum	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata.CodingKeys			
+enum	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata.CodingKeys		case	version
+enum	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata.CodingKeys		case	expansionFactor
+class	VisualUnderstanding.Vector			
+enum	VisualUnderstanding.Vector.DataType			
+enum	VisualUnderstanding.Vector.DataType		case	float16
+enum	VisualUnderstanding.Vector.DataType		case	float32
+enum	VisualUnderstanding.VUObservationRevision			
+enum	VisualUnderstanding.VUObservationRevision		case	VURevisionRequestUnspecified
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateVisionRevisionANFRv4MD2
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateVisionRevisionExclaveANFR_v4md2
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateVisionRevisionExclaveANFR
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateFaceprintRequestPrivateRevisionANFRv4_MD2
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateFaceprintRequestPrivateRevision3_1MD3
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateTorsoprintRequestPrivateRevision5MD2
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateTorsoprintRequestPrivateRevisionSydroMD2HomeAIHumanDetectorBasedTorso
+enum	VisualUnderstanding.VUObservationRevision		case	VUCreateTorsoprintRequestPrivateRevision3MD2HumanDetectorBasedTorso
+enum	VisualUnderstanding.VUAnimalObservationRevision			
+enum	VisualUnderstanding.VUAnimalObservationRevision		case	VURevisionRequestUnspecified
+enum	VisualUnderstanding.VUAnimalObservationRevision		case	VUCreateAnimalprintRequestRevision1
+enum	VisualUnderstanding.VUAnimalObservationRevision		case	VUCreateAnimalprintRequestPrivateRevision2MD3
+enum	VisualUnderstanding.VUSceneObservationRevision			
+enum	VisualUnderstanding.VUSceneObservationRevision		case	VURevisionRequestUnspecified
+enum	VisualUnderstanding.VUObservationType			
+enum	VisualUnderstanding.VUObservationType		case	person
+enum	VisualUnderstanding.VUObservationType		case	animal
+enum	VisualUnderstanding.VUObservationType		case	scene
+enum	VisualUnderstanding.VUObservationType		case	custom
+class	VisualUnderstanding.VUObservation			
+class	VisualUnderstanding.VUObservation		let	type
+class	VisualUnderstanding.VUObservation		let	embedding
+class	VisualUnderstanding.VUObservation		let	embeddingRevision
+class	VisualUnderstanding.VUObservation		let	embeddingExpiration
+class	VisualUnderstanding.VUObservation		let	contextualEmbedding
+class	VisualUnderstanding.VUObservation		let	contextualEmbeddingRevision
+class	VisualUnderstanding.VUObservation		let	contextualEmbeddingExpiration
+class	VisualUnderstanding.VUObservation		let	embeddingConfidence
+class	VisualUnderstanding.VUObservation		let	contextualEmbeddingConfidence
+class	VisualUnderstanding.VUGalleryTransaction			
+class	VisualUnderstanding.VUGalleryTransaction		let	client
+class	VisualUnderstanding.VUGalleryTransaction		var	gallery
+class	VisualUnderstanding.VUGalleryTransaction		var	addedCount
+class	VisualUnderstanding.VUGalleryTransaction		var	removedCount
+class	VisualUnderstanding.VUGalleryTransaction		let	logger
+enum	VisualUnderstanding.VUGalleryTransaction.Priority			
+enum	VisualUnderstanding.VUGalleryTransaction.Priority		case	primary
+enum	VisualUnderstanding.VUGalleryTransaction.Priority		case	secondary
+enum	VisualUnderstanding.VUGalleryTransaction.TagType			
+enum	VisualUnderstanding.VUGalleryTransaction.TagType		case	confirmation
+enum	VisualUnderstanding.VUGalleryTransaction.TagType		case	rejection
+enum	VisualUnderstanding.VUGalleryTransaction.TagType		case	inferred
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner		
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner	let	vdbConfig
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner	let	vdbClient
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner	let	embeddingRevision
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner	let	logger
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner	let	lockQueue
+class	VisualUnderstanding.VUVectorSearchScanner	VisualUnderstanding.VUIndexScanner	let	defaultAssetSuffix
+class	VisualUnderstanding.VUIndexMapping	NSManagedObject		
+class	VisualUnderstanding.VUIndexObservation	NSManagedObject		
+class	VisualUnderstanding.VUIndexPartition	NSManagedObject		
+class	VisualUnderstanding.VUIndexSubset	NSManagedObject		
+class	VisualUnderstanding.VUIndexTag	NSManagedObject		
+protocol	VisualUnderstanding.VUIndexSearchable			
+protocol	VisualUnderstanding.VUIndexState			
+protocol	VisualUnderstanding.VUPlugin			
+protocol	conformance VUGallery.Client	Swift.Equatable		
+protocol	conformance VUGallery.Client	Swift.Hashable		
+protocol	conformance VUGallery.Client	Swift.RawRepresentable		
+protocol	conformance VUGallery.Client	Swift.CustomStringConvertible		
+protocol	conformance VUGallery.Source	Swift.Equatable		
+protocol	conformance VUGallery.Source	Swift.Hashable		
+protocol	conformance VUGallery.Source	Swift.RawRepresentable		
+protocol	conformance VUGallery.EntityClass	Swift.Equatable		
+protocol	conformance VUGallery.EntityClass	Swift.Hashable		
+protocol	conformance VUGallery.EntityClass	Swift.RawRepresentable		
+protocol	conformance VUGallery.RecognitionPreset	Swift.Equatable		
+protocol	conformance VUGallery.RecognitionPreset	Swift.Hashable		
+protocol	conformance VUGallery.UpdateMode	Swift.Equatable		
+protocol	conformance VUGallery.UpdateMode	Swift.Hashable		
+protocol	conformance VUGallery.ChangeSequence	Swift.Sequence		
+protocol	conformance VUGallery.ChangeSequence	Swift.IteratorProtocol		
+protocol	conformance VUGallery.ResetType	Swift.Equatable		
+protocol	conformance VUGallery.ResetType	Swift.Hashable		
+protocol	conformance VUGallery.EntitySequence	Swift.Sequence		
+protocol	conformance VUGallery.SimilarityMetric	Swift.Equatable		
+protocol	conformance VUGallery.SimilarityMetric	Swift.Hashable		
+protocol	conformance VUGallery.EvaluationType	Swift.Equatable		
+protocol	conformance VUGallery.EvaluationType	Swift.Hashable		
+protocol	conformance __C.MLMultiArrayDataType	Swift.Equatable: CoreML		
+protocol	conformance __C.MLMultiArrayDataType	Swift.RawRepresentable: CoreML		
+protocol	conformance __C.VNImageOption	Swift._HasCustomAnyHashableRepresentation: Vision		
+protocol	conformance __C.VNImageOption	Swift.RawRepresentable: Vision		
+protocol	conformance __C.VNImageOption	Swift._SwiftNewtypeWrapper: Vision		
+protocol	conformance __C.VNImageOption	Swift.Equatable: Vision		
+protocol	conformance __C.VNImageOption	Swift._ObjectiveCBridgeable: Vision		
+protocol	conformance __C.MLModelMetadataKey	Swift._HasCustomAnyHashableRepresentation: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift.RawRepresentable: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift._SwiftNewtypeWrapper: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift.Equatable: CoreML		
+protocol	conformance __C.MLModelMetadataKey	Swift._ObjectiveCBridgeable: CoreML		
+protocol	conformance __C.NSPersistentHistoryTrackingOptionKey	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.NSPersistentHistoryTrackingOptionKey	Swift.RawRepresentable		
+protocol	conformance __C.NSPersistentHistoryTrackingOptionKey	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.NSPersistentHistoryTrackingOptionKey	Swift.Equatable		
+protocol	conformance __C.NSPersistentHistoryTrackingOptionKey	Swift._ObjectiveCBridgeable		
+protocol	conformance __C.NSPersistentHistoryTrackingOptionKey	Swift.Hashable		
+protocol	conformance __C.MLModelMetadataKey	Swift.Hashable: CoreML		
+protocol	conformance __C.VNImageOption	Swift.Hashable: Vision		
+protocol	conformance VUGenerationConditioner.ConditionerError	Swift.Equatable		
+protocol	conformance VUGenerationConditioner.ConditionerError	Swift.Hashable		
+protocol	conformance VUGenerationConditioner.ConditionerError	Swift.Error		
+protocol	conformance VUGenerationConditioner.GenerationOptions	Swift.Decodable		
+protocol	conformance VUGenerationConditioner.GenerationOptions	Swift.Encodable		
+protocol	conformance FacePosition	Swift.CaseIterable		
+protocol	conformance FacePosition	Swift.Hashable		
+protocol	conformance FacePosition	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Style	Swift.RawRepresentable		
+protocol	conformance Style	Swift.Hashable		
+protocol	conformance Style	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VUEnrollmentGallery.VUEnrollmentGalleryError	Swift.Equatable		
+protocol	conformance VUEnrollmentGallery.VUEnrollmentGalleryError	Swift.Hashable		
+protocol	conformance VUEnrollmentGallery.VUEnrollmentGalleryError	Swift.Error		
+protocol	conformance VUEnrollmentGallery.Direction	Swift.Equatable		
+protocol	conformance VUEnrollmentGallery.Direction	Swift.Hashable		
+protocol	conformance VUEnrollmentGallery.Direction	Swift.RawRepresentable		
+protocol	conformance VUEnrollmentGallery.Direction	Swift.CaseIterable		
+protocol	conformance VUEnrollmentGallery.EnrollmentCompletionStatus	Swift.Equatable		
+protocol	conformance VUEnrollmentGallery.EnrollmentCompletionStatus	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUIndexScanner	VisualUnderstanding.VUIndexSearchable		
+protocol	conformance VisualUnderstanding.VUGalleryUpdateType	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUGalleryUpdateType	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUGalleryUpdateType	Swift.RawRepresentable		
+protocol	conformance VisualUnderstanding.VUIndexStreamingScanner	VisualUnderstanding.VUIndexSearchable		
+protocol	conformance VisualUnderstanding.VUIndexStreamingStore	VisualUnderstanding.VUIndexState		
+protocol	conformance VUStreamingGallery.PruningType	Swift.Equatable		
+protocol	conformance VUStreamingGallery.PruningType	Swift.Hashable		
+protocol	conformance VUStreamingGallery.Label	Swift.Hashable		
+protocol	conformance VUStreamingGallery.Label	Swift.Equatable		
+protocol	conformance VUStreamingGallery.DataType	Swift.Equatable		
+protocol	conformance VUStreamingGallery.DataType	Swift.Hashable		
+protocol	conformance VUStreamingGallery.ObservationMatchType	Swift.Equatable		
+protocol	conformance VUStreamingGallery.ObservationMatchType	Swift.Hashable		
+protocol	conformance RecognitionKey	Swift.Equatable		
+protocol	conformance RecognitionKey	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUError	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUError	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUError	Swift.Error		
+protocol	conformance VisualUnderstanding.VUIndexStoreTagType	Swift.RawRepresentable		
+protocol	conformance VisualUnderstanding.VUIndexStoreTagType	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUIndexStoreTagType	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUPluginType	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUPluginType	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUPluginType	Swift.RawRepresentable		
+protocol	conformance VisualUnderstanding.VUPluginType	Swift.CaseIterable		
+protocol	conformance MinHeap.Element	Swift.Equatable		
+protocol	conformance MinHeap.Element	Swift.Comparable		
+protocol	conformance VisualUnderstanding.VUIndexCoreDataStore	VisualUnderstanding.VUIndexState		
+protocol	conformance ClientLabel	Swift.Equatable		
+protocol	conformance ClientLabel	Swift.Hashable		
+protocol	conformance NodeTags	Swift.CustomStringConvertible		
+protocol	conformance VUFaceRepresentation.FaceRepresentationError	Swift.Equatable		
+protocol	conformance VUFaceRepresentation.FaceRepresentationError	Swift.Hashable		
+protocol	conformance VUFaceRepresentation.FaceRepresentationError	Swift.Error		
+protocol	conformance VisualUnderstanding.VUFaceRepresentation	Swift.Decodable		
+protocol	conformance VisualUnderstanding.VUFaceRepresentation	Swift.Encodable		
+protocol	conformance VisualUnderstanding.VUFaceRepresentation	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VUFaceRepresentation.FaceEncoderMetadata	Swift.Encodable		
+protocol	conformance VUFaceRepresentation.FaceEncoderMetadata	Swift.Decodable		
+protocol	conformance VUFaceRepresentation.FaceEncoderMetadata	Swift.CustomStringConvertible		
+protocol	conformance FaceEncoderMetadata.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FaceEncoderMetadata.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FaceEncoderMetadata.CodingKeys	Swift.RawRepresentable		
+protocol	conformance FaceEncoderMetadata.CodingKeys	Swift.Hashable		
+protocol	conformance FaceEncoderMetadata.CodingKeys	Swift.Equatable		
+protocol	conformance FaceEncoderMetadata.CodingKeys	Swift.CodingKey		
+protocol	conformance Vector.DataType	Swift.Hashable		
+protocol	conformance Vector.DataType	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUObservationRevision	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUObservationRevision	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUObservationRevision	Swift.RawRepresentable		
+protocol	conformance VisualUnderstanding.VUAnimalObservationRevision	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUAnimalObservationRevision	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUAnimalObservationRevision	Swift.RawRepresentable		
+protocol	conformance VisualUnderstanding.VUSceneObservationRevision	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUSceneObservationRevision	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUSceneObservationRevision	Swift.RawRepresentable		
+protocol	conformance VisualUnderstanding.VUObservationType	Swift.Equatable		
+protocol	conformance VisualUnderstanding.VUObservationType	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUObservationType	Swift.RawRepresentable		
+protocol	conformance VUGalleryTransaction.Priority	Swift.Equatable		
+protocol	conformance VUGalleryTransaction.Priority	Swift.Hashable		
+protocol	conformance VUGalleryTransaction.TagType	Swift.Equatable		
+protocol	conformance VUGalleryTransaction.TagType	Swift.Hashable		
+protocol	conformance VisualUnderstanding.VUIndexMapping	Swift.Identifiable		
+protocol	conformance VisualUnderstanding.VUIndexObservation	Swift.Identifiable		
+protocol	conformance VisualUnderstanding.VUIndexPartition	Swift.Identifiable		
+protocol	conformance VisualUnderstanding.VUIndexSubset	Swift.Identifiable		
+protocol	conformance VisualUnderstanding.VUIndexTag	Swift.Identifiable		
+extension	VisualUnderstanding.VUGallery.Client	RawRepresentable		
+extension	VisualUnderstanding.VUGallery.Source	RawRepresentable		
+extension	VisualUnderstanding.VUGallery.EntityClass	RawRepresentable		
+extension	VisualUnderstanding.VUGallery.ChangeSequence	Sequence		
+extension	VisualUnderstanding.VUGallery.ChangeSequence	IteratorProtocol		
+extension	VisualUnderstanding.VUGallery.EntitySequence	Sequence		
+extension	VisualUnderstanding.VUGenerationConditioner.FacePosition	CaseIterable		
+extension	VisualUnderstanding.VUGenerationConditioner.Style	RawRepresentable		
+extension	VisualUnderstanding.VUEnrollmentGallery.Direction	RawRepresentable		
+extension	VisualUnderstanding.VUEnrollmentGallery.Direction	CaseIterable		
+extension	VisualUnderstanding.VUGalleryUpdateType	RawRepresentable		
+extension	VisualUnderstanding.VUIndexStoreTagType	RawRepresentable		
+extension	VisualUnderstanding.VUPluginType	RawRepresentable		
+extension	VisualUnderstanding.VUPluginType	CaseIterable		
+extension	VisualUnderstanding.VUFaceRepresentation.CodingKeys	RawRepresentable		
+extension	VisualUnderstanding.VUFaceRepresentation.FaceEncoderMetadata.CodingKeys	RawRepresentable		
+extension	VisualUnderstanding.VUObservationRevision	RawRepresentable		
+extension	VisualUnderstanding.VUAnimalObservationRevision	RawRepresentable		
+extension	VisualUnderstanding.VUSceneObservationRevision	RawRepresentable		
+extension	VisualUnderstanding.VUObservationType	RawRepresentable		
+extension	VisualUnderstanding.VUIndexMapping	Identifiable		
+extension	VisualUnderstanding.VUIndexObservation	Identifiable		
+extension	VisualUnderstanding.VUIndexPartition	Identifiable		
+extension	VisualUnderstanding.VUIndexSubset	Identifiable		
+extension	VisualUnderstanding.VUIndexTag	Identifiable		

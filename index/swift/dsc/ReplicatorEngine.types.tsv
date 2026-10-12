@@ -1,0 +1,1538 @@
+kind	type	conformance	member_kind	member
+class	ReplicatorEngine.MockNearbyCompanionSubscriber			
+class	ReplicatorEngine.MockNearbyCompanionSubscriber		let	isAwayFromCompanion
+class	ReplicatorEngine.TimedHandshakeTask			
+class	ReplicatorEngine.TimedHandshakeTask		let	handshakeDescriptor
+class	ReplicatorEngine.TimedHandshakeTask		let	schedule
+class	ReplicatorEngine.TimedHandshakeTask		let	creationDate
+class	ReplicatorEngine.TimedHandshakeTask		let	queue
+class	ReplicatorEngine.TimedHandshakeTask		var	queue_handler
+class	ReplicatorEngine.TimedHandshakeTask		var	queue_timer
+struct	ReplicatorEngine.ProtocolVersion			
+struct	ReplicatorEngine.ProtocolVersion		var	current
+struct	ReplicatorEngine.ProtocolVersion		var	minimum
+enum	ReplicatorEngine.ProtocolVersion.CodingKeys			
+enum	ReplicatorEngine.ProtocolVersion.CodingKeys		case	current
+enum	ReplicatorEngine.ProtocolVersion.CodingKeys		case	minimum
+class	ReplicatorEngine.IDSZoneAdvertiser			
+class	ReplicatorEngine.IDSZoneAdvertiser		var	isEnabled
+class	ReplicatorEngine.IDSZoneAdvertiser		var	lazy
+class	ReplicatorEngine.IDSZoneAdvertiser		let	_zoneVersionPublisher
+enum	ReplicatorEngine.PublicationMethod			
+enum	ReplicatorEngine.PublicationMethod		case	handshake
+enum	ReplicatorEngine.PublicationMethod		case	advertise
+class	ReplicatorEngine.StatusKitZoneAdvertiser			
+class	ReplicatorEngine.StatusKitZoneAdvertiser		var	isEnabled
+class	ReplicatorEngine.StatusKitZoneAdvertiser		var	lazy
+class	ReplicatorEngine.StatusKitZoneAdvertiser		let	_zoneVersionPublisher
+enum	ReplicatorEngine.RecordDestination			
+enum	ReplicatorEngine.RecordDestination		case	collection
+enum	ReplicatorEngine.RecordDestination		case	all
+enum	ReplicatorEngine.RecordDestination.CodingKeys			
+enum	ReplicatorEngine.RecordDestination.CodingKeys		case	collection
+enum	ReplicatorEngine.RecordDestination.CodingKeys		case	all
+enum	ReplicatorEngine.RecordDestination.CollectionCodingKeys			
+enum	ReplicatorEngine.RecordDestination.CollectionCodingKeys		case	_0
+enum	ReplicatorEngine.RecordDestination.AllCodingKeys			
+struct	ReplicatorEngine.DefaultSuspensionPolicy			
+struct	ReplicatorEngine.DefaultSuspensionPolicy		var	discardInterval
+struct	ReplicatorEngine.DefaultSuspensionPolicy		var	unpairInterval
+class	ReplicatorEngine.Replicator			
+class	ReplicatorEngine.Replicator		let	activeWatchIDSIDProvider
+class	ReplicatorEngine.Replicator		var	activeWatchPairingEnforcer
+class	ReplicatorEngine.Replicator		let	deviceType
+class	ReplicatorEngine.Replicator		let	screenDescriptor
+class	ReplicatorEngine.Replicator		let	_pairingRelationshipPublisher
+class	ReplicatorEngine.Replicator		var	lazy
+class	ReplicatorEngine.Replicator		var	_forgottenRelationshipPublisher
+class	ReplicatorEngine.Replicator		var	lazy
+class	ReplicatorEngine.Replicator		let	syncService
+class	ReplicatorEngine.Replicator		var	_metadataStore
+class	ReplicatorEngine.Replicator		let	queue
+class	ReplicatorEngine.Replicator		var	sourcesByZone
+class	ReplicatorEngine.Replicator		var	localDeviceIdentifierOverride
+class	ReplicatorEngine.Replicator		var	replicationPolicy
+class	ReplicatorEngine.Replicator		var	suspensionPolicy
+class	ReplicatorEngine.Replicator		var	zoneVersionAdvertiser
+class	ReplicatorEngine.Replicator		let	handshakeScheduler
+class	ReplicatorEngine.Replicator		let	personaMonitor
+class	ReplicatorEngine.Replicator		var	subscriptions
+class	ReplicatorEngine.Replicator		var	checkedMigration
+class	ReplicatorEngine.Replicator		let	pinnedIdentityManager
+class	ReplicatorEngine.Replicator		let	permittedRemoteDeviceTypes
+class	ReplicatorEngine.Replicator		let	logIdentifier
+class	ReplicatorEngine.Replicator		var	sessionManager
+class	ReplicatorEngine.Replicator		let	pairedRelationshipReconciler
+class	ReplicatorEngine.Replicator		let	powerLogger
+class	ReplicatorEngine.Replicator		var	_queue_syncQueue
+class	ReplicatorEngine.Replicator		var	_queue_pendingPairingRequestsByRemoteDeviceID
+class	ReplicatorEngine.Replicator		var	_queue_recordExpirationTimer
+class	ReplicatorEngine.Replicator		var	_queue_suspensionTimer
+class	ReplicatorEngine.Replicator		var	_queue_isEnabled
+class	ReplicatorEngine.Replicator		var	_queue_pendingDeviceReconciliationOptions
+class	ReplicatorEngine.Replicator		var	_queue_idsIdentityBlob
+class	ReplicatorEngine.Replicator		var	_queue_messageTypes
+class	ReplicatorEngine.Replicator		var	_queue_disabledClientIDs
+enum	ReplicatorEngine.Replicator.Constants			
+class	ReplicatorEngine.Replicator.WeakSource			
+class	ReplicatorEngine.Replicator.WeakSource		var	value
+struct	ReplicatorEngine.Replicator.Session			
+struct	ReplicatorEngine.Replicator.Session		let	id
+struct	ReplicatorEngine.Replicator.Session		let	remoteDeviceID
+struct	ReplicatorEngine.Replicator.RelationshipReconciliationOptions			
+struct	ReplicatorEngine.Replicator.RelationshipReconciliationOptions		let	rawValue
+struct	ReplicatorEngine.Replicator.SizeEntry			
+struct	ReplicatorEngine.Replicator.SizeEntry		var	records
+struct	ReplicatorEngine.Replicator.SizeEntry		var	local
+struct	ReplicatorEngine.Replicator.SizeEntry		var	remote
+struct	ReplicatorEngine.Replicator.SizeEntry		var	id
+struct	ReplicatorEngine.Replicator.SizeEntry		var	clientID
+struct	ReplicatorEngine.Replicator.SizeEntry		var	data
+enum	ReplicatorEngine.Replicator.HandshakePrerequisiteError			
+enum	ReplicatorEngine.Replicator.HandshakePrerequisiteError		case	missingDeviceID
+struct	ReplicatorEngine.DeviceDescriptor			
+struct	ReplicatorEngine.DeviceDescriptor		var	id
+struct	ReplicatorEngine.DeviceDescriptor		var	name
+struct	ReplicatorEngine.DeviceDescriptor		var	protocolVersion
+struct	ReplicatorEngine.DeviceDescriptor		var	deviceType
+struct	ReplicatorEngine.DeviceDescriptor		var	screenDescriptor
+struct	ReplicatorEngine.DeviceDescriptor		var	zones
+struct	ReplicatorEngine.DeviceDescriptor		var	messageTypes
+struct	ReplicatorEngine.DeviceDescriptor		var	idsIdentityBlob
+struct	ReplicatorEngine.DeviceDescriptor		var	marketingName
+struct	ReplicatorEngine.DeviceDescriptor		var	productType
+struct	ReplicatorEngine.DeviceDescriptor		var	personaID
+struct	ReplicatorEngine.DeviceDescriptor		var	serialNumber
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys			
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	id
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	name
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	deviceType
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	screenDescriptor
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	zones
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	messageTypes
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	idsIdentityBlob
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	marketingName
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	productType
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	personaID
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	serialNumber
+enum	ReplicatorEngine.DeviceDescriptor.CodingKeys		case	isSource
+class	ReplicatorEngine.NetworkBrowser			
+class	ReplicatorEngine.NetworkBrowser		let	lock
+class	ReplicatorEngine.NetworkBrowser		let	queue
+class	ReplicatorEngine.NetworkBrowser		let	serviceName
+class	ReplicatorEngine.NetworkBrowser		let	deviceType
+class	ReplicatorEngine.NetworkBrowser		var	_lock_browsers
+class	ReplicatorEngine.NetworkBrowser		var	_lock_monitors
+class	ReplicatorEngine.NetworkBrowser		var	_lock_timer
+class	ReplicatorEngine.NetworkBrowser		var	_lock_timedMonitorAssertions
+class	ReplicatorEngine.NetworkBrowser		var	_lock_foundDevices
+struct	ReplicatorEngine.NetworkBrowser.Monitor			
+struct	ReplicatorEngine.NetworkBrowser.Monitor		var	deviceID
+struct	ReplicatorEngine.NetworkBrowser.Monitor		var	personaID
+struct	ReplicatorEngine.NetworkBrowser.Monitor		var	timeout
+struct	ReplicatorEngine.NetworkBrowser.Monitor		var	handler
+struct	ReplicatorEngine.NetworkBrowser.Monitor		var	startDate
+struct	ReplicatorEngine.NetworkBrowser.Monitor		var	fired
+enum	ReplicatorEngine.NetworkBrowser.MonitoredPersona			
+enum	ReplicatorEngine.NetworkBrowser.MonitoredPersona		case	persona
+enum	ReplicatorEngine.NetworkBrowser.MonitoredPersona		case	noPersona
+enum	ReplicatorEngine.NetworkBrowser.NetworkBrowserError			
+enum	ReplicatorEngine.NetworkBrowser.NetworkBrowserError		case	failed
+enum	ReplicatorEngine.NetworkBrowser.NetworkBrowserError		case	timeout
+struct	ReplicatorEngine.RecordStub			
+struct	ReplicatorEngine.RecordStub		var	recordID
+struct	ReplicatorEngine.RecordStub		var	clientDefinedID
+struct	ReplicatorEngine.RecordStub		var	version
+struct	ReplicatorEngine.RecordStub		var	expiration
+struct	ReplicatorEngine.RecordStub		var	options
+struct	ReplicatorEngine.MismatchedRecordIDResolver			
+struct	ReplicatorEngine.Record			
+struct	ReplicatorEngine.Record		var	metadata
+struct	ReplicatorEngine.Record		var	value
+class	ReplicatorEngine.Record.ID			
+class	ReplicatorEngine.Record.ID		let	identifier
+class	ReplicatorEngine.Record.ID		let	zoneIdentifier
+class	ReplicatorEngine.Record.ID		let	ownership
+enum	ReplicatorEngine.Record.ID.Ownership			
+enum	ReplicatorEngine.Record.ID.Ownership		case	remote
+enum	ReplicatorEngine.Record.ID.Ownership		case	local
+struct	ReplicatorEngine.Record.Value			
+struct	ReplicatorEngine.Record.Value		var	data
+struct	ReplicatorEngine.Record.Value		var	url
+struct	ReplicatorEngine.Record.Value		var	protocolVersion
+struct	ReplicatorEngine.Record.Value.Versions.V0			
+struct	ReplicatorEngine.Record.Value.Versions.V0		var	data
+struct	ReplicatorEngine.Record.Value.Versions.V0		var	url
+struct	ReplicatorEngine.Record.Value.Versions.V8			
+struct	ReplicatorEngine.Record.Value.Versions.V8		var	data
+struct	ReplicatorEngine.Record.Value.Versions.V8		var	url
+struct	ReplicatorEngine.Record.Value.Versions.V8		var	protocolVersion
+enum	ReplicatorEngine.Record.CodingKeys			
+enum	ReplicatorEngine.Record.CodingKeys		case	metadata
+enum	ReplicatorEngine.Record.CodingKeys		case	value
+struct	ReplicatorEngine.Record.ID.Versions.V0			
+struct	ReplicatorEngine.Record.ID.Versions.V0		var	identifier
+struct	ReplicatorEngine.Record.ID.Versions.V0		var	zone
+struct	ReplicatorEngine.Record.ID.Versions.V0		var	ownership
+struct	ReplicatorEngine.Record.ID.Versions.V8			
+struct	ReplicatorEngine.Record.ID.Versions.V8		var	identifier
+struct	ReplicatorEngine.Record.ID.Versions.V8		var	zoneIdentifier
+struct	ReplicatorEngine.Record.ID.Versions.V8		var	ownership
+enum	ReplicatorEngine.Record.ID.Ownership.CodingKeys			
+enum	ReplicatorEngine.Record.ID.Ownership.CodingKeys		case	local
+enum	ReplicatorEngine.Record.ID.Ownership.CodingKeys		case	remote
+enum	ReplicatorEngine.Record.ID.Ownership.LocalCodingKeys			
+enum	ReplicatorEngine.Record.ID.Ownership.RemoteCodingKeys			
+enum	ReplicatorEngine.Record.ID.Ownership.RemoteCodingKeys		case	_0
+enum	ReplicatorEngine.Record.Value.Versions.V0.CodingKeys			
+enum	ReplicatorEngine.Record.Value.Versions.V0.CodingKeys		case	data
+enum	ReplicatorEngine.Record.Value.Versions.V0.CodingKeys		case	url
+enum	ReplicatorEngine.Record.Value.Versions			
+enum	ReplicatorEngine.Record.Value.Versions.V8.CodingKeys			
+enum	ReplicatorEngine.Record.Value.Versions.V8.CodingKeys		case	data
+enum	ReplicatorEngine.Record.Value.Versions.V8.CodingKeys		case	url
+enum	ReplicatorEngine.Record.Value.Versions.V8.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.Record.ID.Versions.V0.CodingKeys			
+enum	ReplicatorEngine.Record.ID.Versions.V0.CodingKeys		case	identifier
+enum	ReplicatorEngine.Record.ID.Versions.V0.CodingKeys		case	zone
+enum	ReplicatorEngine.Record.ID.Versions.V0.CodingKeys		case	ownership
+enum	ReplicatorEngine.Record.ID.Versions			
+enum	ReplicatorEngine.Record.ID.Versions.V8.CodingKeys			
+enum	ReplicatorEngine.Record.ID.Versions.V8.CodingKeys		case	identifier
+enum	ReplicatorEngine.Record.ID.Versions.V8.CodingKeys		case	zoneIdentifier
+enum	ReplicatorEngine.Record.ID.Versions.V8.CodingKeys		case	ownership
+class	ReplicatorEngine.KeepAliveTransaction			
+class	ReplicatorEngine.KeepAliveTransaction		var	transaction
+class	ReplicatorEngine.KeepAliveTransaction		let	signalSource
+class	ReplicatorEngine.KeepAliveTransaction		let	reason
+struct	ReplicatorEngine.ZoneVersionAdvertisementUpdate			
+struct	ReplicatorEngine.ZoneVersionAdvertisementUpdate		let	advertisement
+struct	ReplicatorEngine.ZoneVersionAdvertisementUpdate		let	isChanged
+struct	ReplicatorEngine.ZoneVersionAdvertisement			
+struct	ReplicatorEngine.ZoneVersionAdvertisement		let	remoteDevice
+struct	ReplicatorEngine.ZoneVersionAdvertisement		let	zoneVersions
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor			
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	id
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	name
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	protocolVersion
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	deviceType
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	screenDescriptor
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	zones
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	messageTypes
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	idsIdentityBlob
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	marketingName
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	productType
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	personaID
+struct	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor		var	serialNumber
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys			
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	id
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	name
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	isSource
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	deviceType
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	screenDescriptor
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	zones
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	messageTypes
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	idsIdentityBlob
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	marketingName
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	productType
+enum	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys		case	serialNumber
+enum	ReplicatorEngine.ZoneVersionAdvertisement.CodingKeys			
+enum	ReplicatorEngine.ZoneVersionAdvertisement.CodingKeys		case	remoteDevice
+enum	ReplicatorEngine.ZoneVersionAdvertisement.CodingKeys		case	zoneVersions
+class	ReplicatorEngine.Compressor			
+enum	ReplicatorEngine.Compressor.CompressorError			
+enum	ReplicatorEngine.Compressor.CompressorError		case	initialization
+enum	ReplicatorEngine.Compressor.CompressorError		case	compression
+class	ReplicatorEngine.BasicTimer			
+class	ReplicatorEngine.BasicTimer		var	_lock_timer
+class	ReplicatorEngine.BasicTimer		var	lock
+class	ReplicatorEngine.ReliableKnownPairingRelationshipFilter			
+class	ReplicatorEngine.ReliableKnownPairingRelationshipFilter		let	queue
+class	ReplicatorEngine.ReliableKnownPairingRelationshipFilter		let	queryCount
+class	ReplicatorEngine.ReliableKnownPairingRelationshipFilter		let	queryDelay
+class	ReplicatorEngine.ReliableKnownPairingRelationshipFilter		let	filter
+class	ReplicatorEngine.ConnectionDurationMonitor			
+class	ReplicatorEngine.ConnectionDurationMonitor		let	queue
+class	ReplicatorEngine.ConnectionDurationMonitor		var	queue_connections
+class	ReplicatorEngine.ConnectionDurationMonitor		var	queue_timer
+class	ReplicatorEngine.ConnectionDurationMonitor		let	capturer
+struct	ReplicatorEngine.ConnectionDurationMonitor.ConnectionDescriptor			
+struct	ReplicatorEngine.ConnectionDurationMonitor.ConnectionDescriptor		var	deviceID
+struct	ReplicatorEngine.ConnectionDurationMonitor.ConnectionDescriptor		var	connectionID
+struct	ReplicatorEngine.ConnectionDurationMonitor.ConnectionDescriptor		var	dateCreated
+class	ReplicatorEngine.PinnedIdentityManager			
+class	ReplicatorEngine.PinnedIdentityManager		let	pinnedIdentityManager
+class	ReplicatorEngine.PinnedIdentityManager		let	firstLockStateProvider
+class	ReplicatorEngine.PinnedIdentityManager		let	fetchQueue
+class	ReplicatorEngine.PinnedIdentityManager		let	calloutQueue
+class	ReplicatorEngine.IDSServiceWrapper	NSObject		
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	let	idsService
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	let	queue
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	var	lazy
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	let	_messagePublisher
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	var	lazy
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	let	_devicesDidChangePublisher
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	var	lazy
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	let	_didUpdatePairedDevicePublisher
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	var	pairedDeviceLock
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	var	_lock_pairedDevice
+class	ReplicatorEngine.IDSServiceWrapper	NSObject	var	pairedDeviceNotificationToken
+enum	ReplicatorEngine.PowerLogEvent			
+enum	ReplicatorEngine.PowerLogEvent		case	recordSync
+class	ReplicatorEngine.MuxingZoneAdvertiser			
+class	ReplicatorEngine.MuxingZoneAdvertiser		let	zoneAdvertisersLock
+class	ReplicatorEngine.MuxingZoneAdvertiser		var	lazy
+class	ReplicatorEngine.MuxingZoneAdvertiser		let	_zoneVersionPublisher
+class	ReplicatorEngine.MuxingZoneAdvertiser		var	subscriptions
+class	ReplicatorEngine.KeepAliveTimer			
+class	ReplicatorEngine.KeepAliveTimer		let	innerTimer
+class	ReplicatorEngine.KeepAliveTimer		var	keepAliveTransaction
+class	ReplicatorEngine.PersonaIntroducer			
+class	ReplicatorEngine.PersonaIntroducer		let	personaMonitor
+class	ReplicatorEngine.PersonaIntroducer		let	syncService
+class	ReplicatorEngine.PersonaIntroducer		let	replicator
+class	ReplicatorEngine.PersonaIntroducer		var	subscriptions
+enum	ReplicatorEngine.PersonaIntroducer.IntroductionMessage.CodingKeys			
+enum	ReplicatorEngine.PersonaIntroducer.IntroductionMessage.CodingKeys		case	deviceDescriptor
+struct	ReplicatorEngine.PersonaIntroducer.IntroductionMessage			
+struct	ReplicatorEngine.PersonaIntroducer.IntroductionMessage		var	deviceDescriptor
+struct	ReplicatorEngine.PersonaIntroducer.AckMessage			
+enum	ReplicatorEngine.PersonaIntroducer.AckMessage.CodingKeys			
+class	ReplicatorEngine.ExponentialBackoffRetryTimer	ReplicatorEngine.CustomizableRetryTimer		
+class	ReplicatorEngine.SessionManager			
+class	ReplicatorEngine.SessionManager		var	lazy
+class	ReplicatorEngine.SessionManager		let	_sessionExpiredPublisher
+class	ReplicatorEngine.SessionManager		let	queue
+class	ReplicatorEngine.SessionManager		let	calloutQueue
+class	ReplicatorEngine.SessionManager		let	expirationDuration
+class	ReplicatorEngine.SessionManager		var	queue_sessions
+class	ReplicatorEngine.SessionManager		var	queue_timer
+class	ReplicatorEngine.SessionManager		var	queue_keepAlive
+struct	ReplicatorEngine.SessionManager.Session			
+struct	ReplicatorEngine.SessionManager.Session		var	id
+struct	ReplicatorEngine.SessionManager.Session		var	handshakeDescriptor
+struct	ReplicatorEngine.SessionManager.Session		var	state
+struct	ReplicatorEngine.SessionManager.Session		var	lastInteractionDate
+struct	ReplicatorEngine.SessionManager.Session		var	expirationDuration
+struct	ReplicatorEngine.SessionManager.Session		var	replicationSchedule
+enum	ReplicatorEngine.SessionManager.Session.State			
+enum	ReplicatorEngine.SessionManager.Session.State		case	handshaking
+enum	ReplicatorEngine.SessionManager.Session.State		case	syncing
+class	ReplicatorEngine.PowerLogger			
+class	ReplicatorEngine.PowerLogger		let	queue
+class	ReplicatorEngine.PowerLogger		var	entries
+class	ReplicatorEngine.PowerLogger		var	flushTimer
+enum	ReplicatorEngine.PersonaMonitorEvent			
+enum	ReplicatorEngine.PersonaMonitorEvent		case	device
+enum	ReplicatorEngine.PersonaMonitorEvent		case	personas
+struct	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent			
+struct	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent		var	deviceID
+struct	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent		var	personaID
+struct	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent		var	eventType
+enum	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent.EventType			
+enum	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent.EventType		case	available
+enum	ReplicatorEngine.PersonaMonitorEvent.DeviceEvent.EventType		case	unavailable
+class	ReplicatorEngine.UnifyingPairingRelationshipFilter			
+class	ReplicatorEngine.UnifyingPairingRelationshipFilter		let	filters
+class	ReplicatorEngine.UnifyingPairingRelationshipFilter		let	queue
+class	ReplicatorEngine.UnifyingPairingRelationshipFilter		let	calloutQueue
+struct	ReplicatorEngine.PairingRelationship			
+struct	ReplicatorEngine.PairingRelationship		var	id
+struct	ReplicatorEngine.PairingRelationship		var	remoteDevice
+struct	ReplicatorEngine.PairingRelationship		var	lastIncomingConnectionDate
+struct	ReplicatorEngine.PairingRelationship		var	lastOutgoingConnectionDate
+struct	ReplicatorEngine.PairingRelationship		var	state
+struct	ReplicatorEngine.PairingRelationship		var	initialPairingDate
+enum	ReplicatorEngine.PairingRelationship.State			
+enum	ReplicatorEngine.PairingRelationship.State		case	migrating
+enum	ReplicatorEngine.PairingRelationship.State		case	introduced
+enum	ReplicatorEngine.PairingRelationship.State		case	pairing
+enum	ReplicatorEngine.PairingRelationship.State		case	paired
+enum	ReplicatorEngine.PairingRelationship.State		case	inactive
+enum	ReplicatorEngine.PairingRelationship.State.CodingKeys			
+enum	ReplicatorEngine.PairingRelationship.State.CodingKeys		case	introduced
+enum	ReplicatorEngine.PairingRelationship.State.CodingKeys		case	pairing
+enum	ReplicatorEngine.PairingRelationship.State.CodingKeys		case	paired
+enum	ReplicatorEngine.PairingRelationship.State.CodingKeys		case	migrating
+enum	ReplicatorEngine.PairingRelationship.State.CodingKeys		case	inactive
+enum	ReplicatorEngine.PairingRelationship.State.IntroducedCodingKeys			
+enum	ReplicatorEngine.PairingRelationship.State.PairingCodingKeys			
+enum	ReplicatorEngine.PairingRelationship.State.PairedCodingKeys			
+enum	ReplicatorEngine.PairingRelationship.State.MigratingCodingKeys			
+enum	ReplicatorEngine.PairingRelationship.State.MigratingCodingKeys		case	from
+enum	ReplicatorEngine.PairingRelationship.State.InactiveCodingKeys			
+enum	ReplicatorEngine.NetworkSyncHeader.NetworkSyncHeaderError			
+enum	ReplicatorEngine.NetworkSyncHeader.NetworkSyncHeaderError		case	malformedData
+struct	ReplicatorEngine.NetworkSyncHeaderPreamble			
+struct	ReplicatorEngine.NetworkSyncHeaderPreamble		let	prefix
+struct	ReplicatorEngine.NetworkSyncHeaderPreamble		let	headerLength
+struct	ReplicatorEngine.NetworkSyncHeader			
+struct	ReplicatorEngine.NetworkSyncHeader		let	prefix
+struct	ReplicatorEngine.NetworkSyncHeader		let	headerLength
+struct	ReplicatorEngine.NetworkSyncHeader		let	messageID
+struct	ReplicatorEngine.NetworkSyncHeader		let	senderID
+struct	ReplicatorEngine.NetworkSyncHeader		let	length
+struct	ReplicatorEngine.NetworkSyncHeader		let	messageType
+struct	ReplicatorEngine.NetworkSyncHeader		let	sequenceCount
+struct	ReplicatorEngine.NetworkSyncHeader		let	sequenceIndex
+struct	ReplicatorEngine.NetworkSyncHeader		let	priority
+enum	ReplicatorEngine.NetworkSyncHeader.MessageType			
+enum	ReplicatorEngine.NetworkSyncHeader.MessageType		case	data
+enum	ReplicatorEngine.NetworkSyncHeader.MessageType		case	file
+enum	ReplicatorEngine.NetworkSyncHeader.MessageType		case	extendedAttributes
+enum	ReplicatorEngine.NetworkSyncHeader.MessageType		case	failure
+enum	ReplicatorEngine.NetworkSyncHeader.MessageType		case	compressedFile
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys			
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	prefix
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	headerLength
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	messageID
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	senderID
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	length
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	messageType
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	sequenceCount
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	sequenceIndex
+enum	ReplicatorEngine.NetworkSyncHeader.CodingKeys		case	priority
+struct	ReplicatorEngine.HandshakeDescriptor			
+struct	ReplicatorEngine.HandshakeDescriptor		var	remoteDeviceID
+struct	ReplicatorEngine.HandshakeDescriptor		var	personaID
+struct	ReplicatorEngine.HandshakeDescriptor		var	deviceType
+struct	ReplicatorEngine.HandshakeDescriptor		var	protocolVersion
+struct	ReplicatorEngine.HandshakeSchedulerEvent			
+struct	ReplicatorEngine.HandshakeSchedulerEvent		var	handshakeDescriptor
+struct	ReplicatorEngine.HandshakeSchedulerEvent		var	schedule
+class	ReplicatorEngine.HandshakeZoneAdvertiser			
+class	ReplicatorEngine.HandshakeZoneAdvertiser		var	lazy
+class	ReplicatorEngine.HandshakeZoneAdvertiser		let	_zoneVersionPublisher
+class	ReplicatorEngine.HandshakeZoneAdvertiser		let	lock
+class	ReplicatorEngine.HandshakeZoneAdvertiser		var	lock_enabled
+class	ReplicatorEngine.HandshakeZoneAdvertiser		let	handshakeScheduler
+class	ReplicatorEngine.HandshakeZoneAdvertiser		let	pairingRelationshipReader
+class	ReplicatorEngine.HandshakeZoneAdvertiser		let	eligibleDeviceTypes
+class	ReplicatorEngine.HandshakeZoneAdvertiser		var	lock_latestAdvertisement
+class	ReplicatorEngine.HandshakeZoneAdvertiser		var	lock_knownRelationshipIDs
+class	ReplicatorEngine.WatchAssertionMonitor			
+class	ReplicatorEngine.WatchAssertionMonitor		let	queue
+class	ReplicatorEngine.WatchAssertionMonitor		let	capturer
+class	ReplicatorEngine.WatchAssertionMonitor		let	options
+class	ReplicatorEngine.WatchAssertionMonitor		var	queue_assertionCreationDates
+class	ReplicatorEngine.WatchAssertionMonitor		var	queue_currentAssertionCreationDate
+class	ReplicatorEngine.WatchAssertionMonitor		var	queue_assertionTimer
+struct	ReplicatorEngine.WatchAssertionMonitor.Options			
+struct	ReplicatorEngine.WatchAssertionMonitor.Options		var	maximumExpectedAssertionDuration
+struct	ReplicatorEngine.WatchAssertionMonitor.Options		var	maximumExpectedAssertionCountPerPeriod
+struct	ReplicatorEngine.WatchAssertionMonitor.Options		var	assertionTrackingPeriodDuration
+struct	ReplicatorEngine.WatchAssertionMonitor.Options		var	maximumUnreleasedAssertionDuration
+struct	ReplicatorEngine.UnfilteredReplicationPolicy			
+class	ReplicatorEngine.ZoneVersionInMemoryStore			
+class	ReplicatorEngine.ZoneVersionInMemoryStore		var	zoneVersions
+enum	ReplicatorEngine.ZoneVersion			
+enum	ReplicatorEngine.ZoneVersion		case	hash
+enum	ReplicatorEngine.ZoneVersion		case	empty
+enum	ReplicatorEngine.ZoneVersion.CodingKeys			
+enum	ReplicatorEngine.ZoneVersion.CodingKeys		case	empty
+enum	ReplicatorEngine.ZoneVersion.CodingKeys		case	hash
+enum	ReplicatorEngine.ZoneVersion.EmptyCodingKeys			
+enum	ReplicatorEngine.ZoneVersion.HashCodingKeys			
+enum	ReplicatorEngine.ZoneVersion.HashCodingKeys		case	_0
+class	ReplicatorEngine.SyncQueue			
+class	ReplicatorEngine.SyncQueue		var	itemsBySessionID
+struct	ReplicatorEngine.SyncQueue.SyncItem			
+struct	ReplicatorEngine.SyncQueue.SyncItem		var	recordID
+struct	ReplicatorEngine.SyncQueue.SyncItem		var	sessionID
+struct	ReplicatorEngine.SyncQueue.SyncItem		var	dataSize
+struct	ReplicatorEngine.SyncQueue.SyncItem		var	hasURL
+class	ReplicatorEngine.AuthKitPairingRelationshipFilter			
+class	ReplicatorEngine.AuthKitPairingRelationshipFilter		let	calloutQueue
+enum	ReplicatorEngine.AuthKitPairingRelationshipFilter.AuthKitPairingRelationshipFilterError			
+enum	ReplicatorEngine.AuthKitPairingRelationshipFilter.AuthKitPairingRelationshipFilterError		case	noAccounts
+enum	ReplicatorEngine.AuthKitPairingRelationshipFilter.AuthKitPairingRelationshipFilterError		case	authKit
+class	ReplicatorEngine.MetadataStore			
+class	ReplicatorEngine.MetadataStore		var	persistentStore
+class	ReplicatorEngine.MetadataStore		let	zoneVersionStore
+class	ReplicatorEngine.MetadataStore		let	lock
+class	ReplicatorEngine.MetadataStore		var	lock_pairingRelationships
+class	ReplicatorEngine.MetadataStore		var	lock_recordMetadata
+class	ReplicatorEngine.MetadataStore		var	lock_localDeviceID
+class	ReplicatorEngine.MetadataStore		var	lock_isEnabled
+class	ReplicatorEngine.MetadataStore		var	lock_allowListEnabled
+class	ReplicatorEngine.MetadataStore		var	lock_allowList
+class	ReplicatorEngine.MetadataStore		var	lock_lastAuthKitReconciliationDate
+struct	ReplicatorEngine.ScreenDescriptor			
+struct	ReplicatorEngine.ScreenDescriptor		var	size
+struct	ReplicatorEngine.ScreenDescriptor		var	scale
+struct	ReplicatorEngine.ScreenDescriptor		var	cornerRadius
+enum	ReplicatorEngine.ScreenDescriptor.CodingKeys			
+enum	ReplicatorEngine.ScreenDescriptor.CodingKeys		case	size
+enum	ReplicatorEngine.ScreenDescriptor.CodingKeys		case	scale
+enum	ReplicatorEngine.ScreenDescriptor.CodingKeys		case	cornerRadius
+class	ReplicatorEngine.NetworkMessenger			
+class	ReplicatorEngine.NetworkMessenger		let	_messagePublisher
+class	ReplicatorEngine.NetworkMessenger		let	queue
+class	ReplicatorEngine.NetworkMessenger		let	calloutQueue
+class	ReplicatorEngine.NetworkMessenger		var	_queue_listener
+class	ReplicatorEngine.NetworkMessenger		var	_queue_unrepliedWakeEvent
+class	ReplicatorEngine.NetworkMessenger		var	_queue_connections
+class	ReplicatorEngine.NetworkMessenger		var	_queue_responseHandlers
+class	ReplicatorEngine.NetworkMessenger		var	_queue_incomingMessages
+class	ReplicatorEngine.NetworkMessenger		var	_queue_expirationTimer
+class	ReplicatorEngine.NetworkMessenger		var	_queue_preventSleepAssertion
+class	ReplicatorEngine.NetworkMessenger		var	_queue_watchAssertionMonitor
+class	ReplicatorEngine.NetworkMessenger		let	_queue_connectionDurationMonitor
+class	ReplicatorEngine.NetworkMessenger		let	serviceName
+class	ReplicatorEngine.NetworkMessenger		let	temporaryFileURL
+class	ReplicatorEngine.NetworkMessenger		var	idsDependency
+class	ReplicatorEngine.NetworkMessenger		let	terminusRemoteDeviceIDLock
+class	ReplicatorEngine.NetworkMessenger		var	subscriptions
+class	ReplicatorEngine.NetworkMessenger		let	connectionType
+class	ReplicatorEngine.NetworkMessenger		let	nearbyCompanionSubscriber
+struct	ReplicatorEngine.NetworkMessenger.PartialIncomingMessage			
+struct	ReplicatorEngine.NetworkMessenger.PartialIncomingMessage		var	message
+struct	ReplicatorEngine.NetworkMessenger.PartialIncomingMessage		var	extendedAttributes
+struct	ReplicatorEngine.NetworkMessenger.PartialIncomingMessage		var	priority
+struct	ReplicatorEngine.NetworkMessenger.ExtendedAttributes			
+struct	ReplicatorEngine.NetworkMessenger.ExtendedAttributes		var	attributes
+struct	ReplicatorEngine.NetworkMessenger.ExpiringConnection			
+struct	ReplicatorEngine.NetworkMessenger.ExpiringConnection		var	connection
+struct	ReplicatorEngine.NetworkMessenger.ExpiringConnection		var	lastActivityDate
+struct	ReplicatorEngine.NetworkMessenger.ExpiringConnection		var	ready
+enum	ReplicatorEngine.NetworkMessenger.ExtendedAttributes.CodingKeys			
+enum	ReplicatorEngine.NetworkMessenger.ExtendedAttributes.CodingKeys		case	attributes
+enum	ReplicatorEngine.NetworkMessenger.NetworkMessengerOperationalError			
+enum	ReplicatorEngine.NetworkMessenger.NetworkMessengerOperationalError		case	fileNotFound
+enum	ReplicatorEngine.NetworkMessenger.NetworkMessengerOperationalError		case	fileSendFailure
+enum	ReplicatorEngine.NetworkMessenger.NetworkMessengerOperationalError		case	unexpectedFailure
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject		
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	_accountsChanged
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	lazy
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	_devicesChanged
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	lazy
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	let	serviceName
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	let	service
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	let	lock
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	lock_identityBlob
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	let	calloutQueue
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	let	identityFetchQueue
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	lock_localDeviceID
+class	ReplicatorEngine.ConcreteIDSDependency	NSObject	var	lock_fetchingLocalDeviceID
+struct	ReplicatorEngine.MetadataRecordPredicate			
+struct	ReplicatorEngine.MetadataRecordPredicate		var	originatedHere
+struct	ReplicatorEngine.MetadataRecordPredicate		var	originatedThere
+struct	ReplicatorEngine.MetadataRecordPredicate		var	sentThere
+struct	ReplicatorEngine.MetadataRecordPredicate		var	zoneIDs
+struct	ReplicatorEngine.MetadataRecordPredicate		var	pairingRelationship
+enum	ReplicatorEngine.MessagePriority			
+enum	ReplicatorEngine.MessagePriority		case	high
+enum	ReplicatorEngine.MessagePriority		case	medium
+enum	ReplicatorEngine.MessagePriority		case	low
+struct	ReplicatorEngine.IDSDependencyDevice			
+struct	ReplicatorEngine.IDSDependencyDevice		var	id
+class	ReplicatorEngine.ActiveWatchPairingEnforcer			
+class	ReplicatorEngine.ActiveWatchIDSIDProvider			
+struct	ReplicatorEngine.SyncServiceConfiguration			
+struct	ReplicatorEngine.SyncServiceConfiguration		let	networkServiceNames
+struct	ReplicatorEngine.SyncServiceConfiguration		let	idsServiceNames
+struct	ReplicatorEngine.SyncServiceConfiguration		let	deviceType
+struct	ReplicatorEngine.SyncServiceConfiguration		let	temporaryFileURL
+struct	ReplicatorEngine.SyncServiceConfiguration		let	pairingRelationshipPublisher
+struct	ReplicatorEngine.SyncServiceConfiguration		let	allowListStore
+enum	ReplicatorEngine.SyncServiceFactory			
+struct	ReplicatorEngine.NetworkBrowsingEvent			
+struct	ReplicatorEngine.NetworkBrowsingEvent		var	type
+struct	ReplicatorEngine.NetworkBrowsingEvent		var	device
+enum	ReplicatorEngine.NetworkBrowsingEvent.EventType			
+enum	ReplicatorEngine.NetworkBrowsingEvent.EventType		case	added
+enum	ReplicatorEngine.NetworkBrowsingEvent.EventType		case	removed
+struct	ReplicatorEngine.NetworkDevice			
+struct	ReplicatorEngine.NetworkDevice		var	id
+struct	ReplicatorEngine.NetworkDevice		var	name
+struct	ReplicatorEngine.NetworkDevice		var	endpoint
+class	ReplicatorEngine.Zone			
+class	ReplicatorEngine.Zone		let	id
+class	ReplicatorEngine.Zone		let	protocolVersion
+class	ReplicatorEngine.Zone		let	maximumLocalRecordCount
+class	ReplicatorEngine.Zone.ID			
+class	ReplicatorEngine.Zone.ID		let	id
+class	ReplicatorEngine.Zone.ID		let	clientID
+class	ReplicatorEngine.Zone.ID.Pool			
+enum	ReplicatorEngine.Zone.CodingKeys			
+enum	ReplicatorEngine.Zone.CodingKeys		case	id
+enum	ReplicatorEngine.Zone.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.Zone.CodingKeys		case	maximumLocalRecordCount
+enum	ReplicatorEngine.Zone.ID.CodingKeys			
+enum	ReplicatorEngine.Zone.ID.CodingKeys		case	id
+enum	ReplicatorEngine.Zone.ID.CodingKeys		case	clientID
+struct	ReplicatorEngine.ReconciledPairedRelationships			
+struct	ReplicatorEngine.ReconciledPairedRelationships		var	knownRelationships
+struct	ReplicatorEngine.ReconciledPairedRelationships		var	unknownRelationships
+class	ReplicatorEngine.PairedRelationshipReconciler			
+class	ReplicatorEngine.PairedRelationshipReconciler		let	filter
+class	ReplicatorEngine.PairedRelationshipReconciler		let	queue
+class	ReplicatorEngine.PairedRelationshipReconciler		let	calloutQueue
+enum	ReplicatorEngine.NetworkSyncServiceError			
+enum	ReplicatorEngine.NetworkSyncServiceError		case	connection
+enum	ReplicatorEngine.NetworkSyncServiceError		case	unknownDestination
+enum	ReplicatorEngine.NetworkSyncServiceError		case	blockedByAllowList
+class	ReplicatorEngine.NearbyCompanionSubscriber			
+class	ReplicatorEngine.NearbyCompanionSubscriber		var	isAwayFromCompanion
+enum	ReplicatorEngine.ReplicatorCodingError			
+enum	ReplicatorEngine.ReplicatorCodingError		case	decodingFailure
+enum	ReplicatorEngine.ReplicatorCodingError		case	encodingFailure
+enum	ReplicatorEngine.DeviceType			
+enum	ReplicatorEngine.DeviceType		case	unknown
+enum	ReplicatorEngine.DeviceType		case	mac
+enum	ReplicatorEngine.DeviceType		case	phone
+enum	ReplicatorEngine.DeviceType		case	pad
+enum	ReplicatorEngine.DeviceType		case	watch
+enum	ReplicatorEngine.DeviceType		case	tv
+class	ReplicatorEngine.Watchdog			
+class	ReplicatorEngine.Watchdog		var	lock_timer
+class	ReplicatorEngine.Watchdog		var	lock
+class	ReplicatorEngine.Watchdog		var	lock_expired
+struct	ReplicatorEngine.IncomingNetworkMessage			
+struct	ReplicatorEngine.IncomingNetworkMessage		var	message
+struct	ReplicatorEngine.IncomingNetworkMessage		var	url
+struct	ReplicatorEngine.IncomingNetworkMessage		var	connection
+enum	ReplicatorEngine.NetworkMessagingCriticalError			
+enum	ReplicatorEngine.NetworkMessagingCriticalError		case	networkFailure
+enum	ReplicatorEngine.NetworkMessagingCriticalError		case	stoppingServer
+enum	ReplicatorEngine.NetworkMessagingConnectionType			
+enum	ReplicatorEngine.NetworkMessagingConnectionType		case	standard
+enum	ReplicatorEngine.NetworkMessagingConnectionType		case	terminus
+class	ReplicatorEngine.PropertyListTypeDecoder			
+class	ReplicatorEngine.PropertyListTypeDecoder		let	version
+struct	ReplicatorEngine.PropertyListTypeDecoder.RootDecoder			
+struct	ReplicatorEngine.PropertyListTypeDecoder.RootDecoder		var	codingPath
+struct	ReplicatorEngine.PropertyListTypeDecoder.RootDecoder		var	userInfo
+struct	ReplicatorEngine.PropertyListTypeDecoder.RootDecoder		var	storage
+struct	ReplicatorEngine.PropertyListTypeDecoder.RootDecoder		var	version
+struct	ReplicatorEngine.PropertyListTypeDecoder.KeyedDecoder<A	Swift.CodingKey>		
+struct	ReplicatorEngine.PropertyListTypeDecoder.KeyedDecoder<A	Swift.CodingKey>	var	codingPath
+struct	ReplicatorEngine.PropertyListTypeDecoder.KeyedDecoder<A	Swift.CodingKey>	var	version
+struct	ReplicatorEngine.PropertyListTypeDecoder.KeyedDecoder<A	Swift.CodingKey>	let	storage
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder			
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder		var	codingPath
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder		var	currentIndex
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder		let	storage
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder		let	version
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder.__AKey			
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder.__AKey		var	stringValue
+struct	ReplicatorEngine.PropertyListTypeDecoder.UnkeyedDecoder.__AKey		var	intValue
+enum	ReplicatorEngine.ReplicationSchedule			
+enum	ReplicatorEngine.ReplicationSchedule		case	immediate
+enum	ReplicatorEngine.ReplicationSchedule		case	opportunistic
+enum	ReplicatorEngine.ReplicationSchedule		case	delayed
+struct	ReplicatorEngine.PrioritizedRecordValue			
+struct	ReplicatorEngine.PrioritizedRecordValue		let	value
+struct	ReplicatorEngine.PrioritizedRecordValue		let	priority
+enum	ReplicatorEngine.RecordValidationResult			
+enum	ReplicatorEngine.RecordValidationResult		case	illegalDestinations
+enum	ReplicatorEngine.RecordValidationResult		case	valid
+enum	ReplicatorEngine.RecordValidationResult		case	missingDataSource
+enum	ReplicatorEngine.RecordValidationResult		case	invalidRecordID
+enum	ReplicatorEngine.RecordValidationResult		case	invalidRecordData
+class	ReplicatorEngine.SyncServiceKnownPairingRelationshipFilter			
+class	ReplicatorEngine.SyncServiceKnownPairingRelationshipFilter		let	calloutQueue
+class	ReplicatorEngine.SyncServiceKnownPairingRelationshipFilter		let	syncService
+class	ReplicatorEngine.BugCapture			
+struct	ReplicatorEngine.PairingRelationshipFilter			
+struct	ReplicatorEngine.PairingRelationshipFilter		let	rawValue
+struct	ReplicatorEngine.ReplicatorMessage.Ack			
+enum	ReplicatorEngine.ReplicatorMessage.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.CodingKeys		case	handshake
+enum	ReplicatorEngine.ReplicatorMessage.CodingKeys		case	sync
+enum	ReplicatorEngine.ReplicatorMessage.CodingKeys		case	ack
+enum	ReplicatorEngine.ReplicatorMessage.HandshakeCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.HandshakeCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.SyncCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.SyncCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.AckCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.AckCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.Handshake			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake		case	request
+enum	ReplicatorEngine.ReplicatorMessage.Handshake		case	response
+enum	ReplicatorEngine.ReplicatorMessage.Handshake		case	complete
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Request			
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Request		var	sessionID
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Request		var	relationshipState
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Request		var	device
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Request		var	zoneVersions
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Response			
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Response		var	sessionID
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Response		var	relationshipState
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Response		var	device
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Response		var	zoneVersions
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Response		var	recordManifest
+struct	ReplicatorEngine.ReplicatorMessage.RecordManifest			
+struct	ReplicatorEngine.ReplicatorMessage.RecordManifest		var	recordVersions
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Complete			
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Complete		var	sessionID
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Complete		var	relationshipState
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Complete		var	mismatchedZones
+struct	ReplicatorEngine.ReplicatorMessage.Handshake.Complete		var	recordManifest
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8.CodingKeys		case	id
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8.CodingKeys		case	value
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.ReplicatorMessage			
+enum	ReplicatorEngine.ReplicatorMessage		case	handshake
+enum	ReplicatorEngine.ReplicatorMessage		case	sync
+enum	ReplicatorEngine.ReplicatorMessage		case	ack
+struct	ReplicatorEngine.ReplicatorMessage.Sync			
+struct	ReplicatorEngine.ReplicatorMessage.Sync		var	sessionID
+struct	ReplicatorEngine.ReplicatorMessage.Sync		var	record
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions			
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V0			
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V0		var	id
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V0		var	value
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V0.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V0.CodingKeys		case	id
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V0.CodingKeys		case	value
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8			
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8		var	id
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8		var	value
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Versions.V8		var	protocolVersion
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value			
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value		case	data
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value		case	none
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord			
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord		var	id
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord		var	value
+struct	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord		var	protocolVersion
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Complete.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Complete.CodingKeys		case	sessionID
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Complete.CodingKeys		case	relationshipState
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Complete.CodingKeys		case	mismatchedZones
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Complete.CodingKeys		case	recordManifest
+enum	ReplicatorEngine.ReplicatorMessage.RecordManifest.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.RecordManifest.CodingKeys		case	recordVersions
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Response.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Response.CodingKeys		case	sessionID
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Response.CodingKeys		case	relationshipState
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Response.CodingKeys		case	device
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Response.CodingKeys		case	zoneVersions
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Response.CodingKeys		case	recordManifest
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Request.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Request.CodingKeys		case	sessionID
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Request.CodingKeys		case	relationshipState
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Request.CodingKeys		case	device
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.Request.CodingKeys		case	zoneVersions
+enum	ReplicatorEngine.ReplicatorMessage.Ack.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.CodingKeys		case	request
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.CodingKeys		case	response
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.CodingKeys		case	complete
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.RequestCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.RequestCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.ResponseCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.ResponseCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.CompleteCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Handshake.CompleteCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.Sync.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Sync.CodingKeys		case	sessionID
+enum	ReplicatorEngine.ReplicatorMessage.Sync.CodingKeys		case	record
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.CodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.CodingKeys		case	data
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.CodingKeys		case	none
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.DataCodingKeys			
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.DataCodingKeys		case	_0
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.DataCodingKeys		case	_1
+enum	ReplicatorEngine.ReplicatorMessage.Sync.SyncRecord.Value.NoneCodingKeys			
+struct	ReplicatorEngine.Message			
+struct	ReplicatorEngine.Message		var	id
+struct	ReplicatorEngine.Message		var	responseToID
+struct	ReplicatorEngine.Message		var	messageType
+struct	ReplicatorEngine.Message		var	senderDeviceID
+struct	ReplicatorEngine.Message		var	protocolVersion
+struct	ReplicatorEngine.Message		var	encodedBody
+enum	ReplicatorEngine.Message.CodingKeys			
+enum	ReplicatorEngine.Message.CodingKeys		case	id
+enum	ReplicatorEngine.Message.CodingKeys		case	responseToID
+enum	ReplicatorEngine.Message.CodingKeys		case	messageType
+enum	ReplicatorEngine.Message.CodingKeys		case	senderDeviceID
+enum	ReplicatorEngine.Message.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.Message.CodingKeys		case	encodedBody
+class	ReplicatorEngine.MetadataInMemoryStore			
+class	ReplicatorEngine.MetadataInMemoryStore		var	recordMetadata
+class	ReplicatorEngine.MetadataInMemoryStore		var	pairingRelationships
+class	ReplicatorEngine.MetadataInMemoryStore		var	localDeviceID
+class	ReplicatorEngine.MetadataInMemoryStore		var	isEnabled
+class	ReplicatorEngine.MetadataInMemoryStore		var	allowListEnabled
+class	ReplicatorEngine.MetadataInMemoryStore		var	allowList
+class	ReplicatorEngine.MetadataInMemoryStore		var	lastAuthKitReconciliationDate
+class	ReplicatorEngine.MetadataInMemoryStore		var	clientDefinedIDs
+class	ReplicatorEngine.CustomizableRetryTimer			
+class	ReplicatorEngine.CustomizableRetryTimer		let	maxRetries
+class	ReplicatorEngine.CustomizableRetryTimer		let	intervalUntilRetry
+class	ReplicatorEngine.CustomizableRetryTimer		var	retriesAvailable
+class	ReplicatorEngine.CustomizableRetryTimer		var	timer
+class	ReplicatorEngine.CustomizableRetryTimer		var	lock
+struct	ReplicatorEngine.MessageType			
+struct	ReplicatorEngine.MessageType		var	id
+struct	ReplicatorEngine.MessageType		var	protocolVersion
+struct	ReplicatorEngine.MessageType.ID			
+struct	ReplicatorEngine.MessageType.ID		var	id
+struct	ReplicatorEngine.MessageType.ID		var	clientID
+enum	ReplicatorEngine.MessageType.CodingKeys			
+enum	ReplicatorEngine.MessageType.CodingKeys		case	id
+enum	ReplicatorEngine.MessageType.CodingKeys		case	protocolVersion
+enum	ReplicatorEngine.MessageType.ID.CodingKeys			
+enum	ReplicatorEngine.MessageType.ID.CodingKeys		case	id
+enum	ReplicatorEngine.MessageType.ID.CodingKeys		case	clientID
+class	ReplicatorEngine.RecordMetadata			
+class	ReplicatorEngine.RecordMetadata		let	id
+class	ReplicatorEngine.RecordMetadata		let	_clientDefinedID
+class	ReplicatorEngine.RecordMetadata		let	version
+class	ReplicatorEngine.RecordMetadata		let	destination
+class	ReplicatorEngine.RecordMetadata		let	expiration
+class	ReplicatorEngine.RecordMetadata		let	options
+struct	ReplicatorEngine.RecordMetadata.Options			
+struct	ReplicatorEngine.RecordMetadata.Options		let	rawValue
+class	ReplicatorEngine.RecordMetadata.ClientDefinedID			
+class	ReplicatorEngine.RecordMetadata.ClientDefinedID		let	value
+enum	ReplicatorEngine.RecordMetadata.CodingKeys			
+enum	ReplicatorEngine.RecordMetadata.CodingKeys		case	id
+enum	ReplicatorEngine.RecordMetadata.CodingKeys		case	clientDefinedID
+enum	ReplicatorEngine.RecordMetadata.CodingKeys		case	version
+enum	ReplicatorEngine.RecordMetadata.CodingKeys		case	destination
+enum	ReplicatorEngine.RecordMetadata.CodingKeys		case	expiration
+enum	ReplicatorEngine.RecordMetadata.CodingKeys		case	options
+struct	ReplicatorEngine.UniformHasher			
+struct	ReplicatorEngine.UniformHasher		var	hasher
+struct	ReplicatorEngine.IncomingSyncServiceMessage			
+struct	ReplicatorEngine.IncomingSyncServiceMessage		var	message
+struct	ReplicatorEngine.IncomingSyncServiceMessage		var	url
+struct	ReplicatorEngine.IncomingSyncServiceMessage		var	deviceID
+enum	ReplicatorEngine.FileCompressionType			
+enum	ReplicatorEngine.FileCompressionType		case	none
+enum	ReplicatorEngine.FileCompressionType		case	automatic
+struct	ReplicatorEngine.MessageSendOptions			
+struct	ReplicatorEngine.MessageSendOptions		var	timeout
+struct	ReplicatorEngine.MessageSendOptions		var	retries
+class	ReplicatorEngine.PropertyListTypeEncoder			
+class	ReplicatorEngine.PropertyListTypeEncoder		let	version
+class	ReplicatorEngine.PropertyListTypeEncoder.RootEncoder			
+class	ReplicatorEngine.PropertyListTypeEncoder.RootEncoder		var	storage
+class	ReplicatorEngine.PropertyListTypeEncoder.RootEncoder		let	version
+struct	ReplicatorEngine.PropertyListTypeEncoder.KeyedEncoder<A	Swift.CodingKey>		
+struct	ReplicatorEngine.PropertyListTypeEncoder.KeyedEncoder<A	Swift.CodingKey>	var	codingPath
+struct	ReplicatorEngine.PropertyListTypeEncoder.KeyedEncoder<A	Swift.CodingKey>	var	storage
+struct	ReplicatorEngine.PropertyListTypeEncoder.KeyedEncoder<A	Swift.CodingKey>	var	version
+struct	ReplicatorEngine.PropertyListTypeEncoder.UnkeyedEncoder			
+struct	ReplicatorEngine.PropertyListTypeEncoder.UnkeyedEncoder		var	codingPath
+struct	ReplicatorEngine.PropertyListTypeEncoder.UnkeyedEncoder		var	storage
+struct	ReplicatorEngine.PropertyListTypeEncoder.UnkeyedEncoder		var	version
+struct	ReplicatorEngine.PairedDevice			
+struct	ReplicatorEngine.PairedDevice		let	identifier
+struct	ReplicatorEngine.PairedDevice		let	name
+struct	ReplicatorEngine.PairedDevice		let	deviceClass
+enum	ReplicatorEngine.PairedDevice.PairedDeviceClass			
+enum	ReplicatorEngine.PairedDevice.PairedDeviceClass		case	invalid
+enum	ReplicatorEngine.PairedDevice.PairedDeviceClass		case	phone
+enum	ReplicatorEngine.PairedDevice.PairedDeviceClass		case	mac
+enum	ReplicatorEngine.PairedDevice.PairedDeviceClass		case	watch
+enum	ReplicatorEngine.PairedDevice.PairedDeviceClass		case	tv
+class	ReplicatorEngine.OPACKCoder	NSObject		
+class	ReplicatorEngine.LinearRetryTimer	ReplicatorEngine.CustomizableRetryTimer		
+class	ReplicatorEngine.DuetHandshakeTask			
+class	ReplicatorEngine.DuetHandshakeTask		let	handshakeDescriptor
+class	ReplicatorEngine.DuetHandshakeTask		let	schedule
+class	ReplicatorEngine.DuetHandshakeTask		let	creationDate
+class	ReplicatorEngine.DuetHandshakeTask		var	bgHandlerRegistered
+class	ReplicatorEngine.DuetHandshakeTask		var	bgTaskRequest
+class	ReplicatorEngine.DuetHandshakeTask		var	bgTaskRequestActive
+class	ReplicatorEngine.DuetHandshakeTask		let	queue
+class	ReplicatorEngine.DuetHandshakeTask		var	handler
+class	ReplicatorEngine.DuetHandshakeTask		let	identifier
+class	ReplicatorEngine.CallbackZoneAdvertiser			
+class	ReplicatorEngine.CallbackZoneAdvertiser		var	isEnabled
+class	ReplicatorEngine.CallbackZoneAdvertiser		var	lazy
+class	ReplicatorEngine.CallbackZoneAdvertiser		let	_zoneVersionPublisher
+class	ReplicatorEngine.CallbackZoneAdvertiser		var	callback
+enum	ReplicatorEngine.ExtendedAttributeError			
+enum	ReplicatorEngine.ExtendedAttributeError		case	attributeNameNotFound
+enum	ReplicatorEngine.ExtendedAttributeError		case	posixFailure
+enum	ReplicatorEngine.ReplicatorError			
+enum	ReplicatorEngine.ReplicatorError		case	illegalModification
+enum	ReplicatorEngine.ReplicatorError		case	unknownPairingRelationship
+enum	ReplicatorEngine.ReplicatorError		case	pairingFailed
+enum	ReplicatorEngine.ReplicatorError		case	allowListDisabled
+enum	ReplicatorEngine.ReplicatorError		case	nanoregistryNotReady
+enum	ReplicatorEngine.ReplicatorError		case	idsFailed
+enum	ReplicatorEngine.ReplicatorError		case	connection
+enum	ReplicatorEngine.ReplicatorError		case	configuration
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>		
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	var	lazy
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	let	_handshakePublisher
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	let	queue
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	var	queue_executingHandshakes
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	var	queue_scheduledHandshakes
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	var	queue_pendingHandshakes
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	let	firstLockStateProvider
+class	ReplicatorEngine.HandshakeScheduler<A	ReplicatorEngine.HandshakeTask, B: ReplicatorEngine.HandshakeTask, C: ReplicatorEngine.HandshakeTask>	var	subscriptions
+protocol	ReplicatorEngine.KnownPairingRelationshipFiltering			
+protocol	ReplicatorEngine.ZoneVersionStoring			
+protocol	ReplicatorEngine.ZoneVersionAdvertising			
+protocol	ReplicatorEngine.PinnedIdentityManaging			
+protocol	ReplicatorEngine.TimerProtocol			
+protocol	ReplicatorEngine.PowerLogEntry			
+protocol	ReplicatorEngine.PowerLogging			
+protocol	ReplicatorEngine.HandshakeTask			
+protocol	ReplicatorEngine.PersonaMonitoring			
+protocol	ReplicatorEngine.HandshakeScheduling			
+protocol	ReplicatorEngine.PairingRelationshipReading			
+protocol	ReplicatorEngine.MetadataStoring			
+protocol	ReplicatorEngine.MutableMetadataStoring			
+protocol	ReplicatorEngine.IDSDependency			
+protocol	ReplicatorEngine.ActiveWatchIDSIDProviding			
+protocol	ReplicatorEngine.ActiveWatchPairingEnforcing			
+protocol	ReplicatorEngine.OpaqueEndpoint	Endpoint		
+protocol	ReplicatorEngine.NetworkEndpointProviding	Endpoint		
+protocol	ReplicatorEngine.NetworkDeviceBrowsing	Endpoint		
+protocol	ReplicatorEngine.PairedRelationshipReconciling			
+protocol	ReplicatorEngine.NearbyCompanionSubscribing			
+protocol	ReplicatorEngine.VersionedEncoder			
+protocol	ReplicatorEngine.VersionedDecoder			
+protocol	ReplicatorEngine.AllowListStoring			
+protocol	ReplicatorEngine.NetworkMessaging	Endpoint, Connection		
+protocol	ReplicatorEngine.ReplicationPolicy			
+protocol	ReplicatorEngine.FirstLockStateProviding			
+protocol	ReplicatorEngine.ReplicatorDataSource			
+protocol	ReplicatorEngine.BugCapturing			
+protocol	ReplicatorEngine.ReplicatorRetryTimer			
+protocol	ReplicatorEngine.PairingRelationshipProviding			
+protocol	ReplicatorEngine.MessageTypeManaging			
+protocol	ReplicatorEngine.AllowListManaging			
+protocol	ReplicatorEngine.PairingRelationshipManaging			
+protocol	ReplicatorEngine.StuckPairedRelationshipRepairing			
+protocol	ReplicatorEngine.Replicating			
+protocol	ReplicatorEngine.SyncServiceDelegate			
+protocol	ReplicatorEngine.SyncServiceDeviceProviding			
+protocol	ReplicatorEngine.SyncServicing			
+protocol	ReplicatorEngine.MetadataPersisting			
+protocol	ReplicatorEngine.MutableMetadataPersisting			
+protocol	ReplicatorEngine.SuspensionPolicy			
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Equatable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Hashable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance __C.nw_connection_state_t	Swift.RawRepresentable: Network		
+protocol	conformance __C.nw_connection_state_t	Swift.Equatable: Network		
+protocol	conformance __C.nw_listener_state_t	Swift.RawRepresentable: Network		
+protocol	conformance __C.nw_listener_state_t	Swift.Equatable: Network		
+protocol	conformance ReplicatorEngine.MockNearbyCompanionSubscriber	ReplicatorEngine.NearbyCompanionSubscribing		
+protocol	conformance ReplicatorEngine.TimedHandshakeTask	ReplicatorEngine.HandshakeTask		
+protocol	conformance ReplicatorEngine.ProtocolVersion	Swift.Decodable		
+protocol	conformance ReplicatorEngine.ProtocolVersion	Swift.Encodable		
+protocol	conformance ReplicatorEngine.ProtocolVersion	Swift.Hashable		
+protocol	conformance ReplicatorEngine.ProtocolVersion	Swift.Equatable		
+protocol	conformance ReplicatorEngine.ProtocolVersion	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.IDSZoneAdvertiser	ReplicatorEngine.ZoneVersionAdvertising		
+protocol	conformance ReplicatorEngine.PublicationMethod	Swift.Equatable		
+protocol	conformance ReplicatorEngine.PublicationMethod	Swift.Hashable		
+protocol	conformance ReplicatorEngine.StatusKitZoneAdvertiser	ReplicatorEngine.ZoneVersionAdvertising		
+protocol	conformance ReplicatorEngine.RecordDestination	Swift.Decodable		
+protocol	conformance ReplicatorEngine.RecordDestination	Swift.Encodable		
+protocol	conformance ReplicatorEngine.RecordDestination	Swift.Equatable		
+protocol	conformance ReplicatorEngine.RecordDestination	Swift.Hashable		
+protocol	conformance AllCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AllCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.Hashable		
+protocol	conformance CollectionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CollectionCodingKeys	Swift.CodingKey		
+protocol	conformance AllCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.DefaultSuspensionPolicy	ReplicatorEngine.SuspensionPolicy		
+protocol	conformance Replicator.Session	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.MessageTypeManaging		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.AllowListManaging		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.PairingRelationshipProviding		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.PairingRelationshipManaging		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.Replicating		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.StuckPairedRelationshipRepairing		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorEngine.SyncServiceDelegate		
+protocol	conformance ReplicatorEngine.Replicator	Swift.CustomStringConvertible		
+protocol	conformance Replicator.RelationshipReconciliationOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Replicator.RelationshipReconciliationOptions	Swift.Equatable		
+protocol	conformance Replicator.RelationshipReconciliationOptions	Swift.RawRepresentable		
+protocol	conformance Replicator.RelationshipReconciliationOptions	Swift.SetAlgebra		
+protocol	conformance Replicator.RelationshipReconciliationOptions	Swift.CustomStringConvertible		
+protocol	conformance Replicator.RelationshipReconciliationOptions	Swift.OptionSet		
+protocol	conformance Replicator.WeakSource	ReplicatorEngine.ReplicatorDataSource		
+protocol	conformance HandshakePrerequisiteError	Swift.Hashable		
+protocol	conformance HandshakePrerequisiteError	Swift.Equatable		
+protocol	conformance HandshakePrerequisiteError	Swift.Error		
+protocol	conformance ReplicatorEngine.DeviceDescriptor	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.DeviceDescriptor	Swift.Equatable		
+protocol	conformance ReplicatorEngine.DeviceDescriptor	Swift.Hashable		
+protocol	conformance ReplicatorEngine.DeviceDescriptor	Swift.Decodable		
+protocol	conformance ReplicatorEngine.DeviceDescriptor	Swift.Encodable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.RawRepresentable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.Hashable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.Equatable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.CodingKey		
+protocol	conformance NetworkBrowser.MonitoredPersona	Swift.Equatable		
+protocol	conformance NetworkBrowser.MonitoredPersona	Swift.Hashable		
+protocol	conformance ReplicatorEngine.NetworkBrowser	ReplicatorEngine.NetworkDeviceBrowsing		
+protocol	conformance NetworkBrowser.NetworkBrowserError	Swift.Hashable		
+protocol	conformance NetworkBrowser.NetworkBrowserError	Swift.Equatable		
+protocol	conformance NetworkBrowser.NetworkBrowserError	Swift.Error		
+protocol	conformance ID.Ownership	Swift.Decodable		
+protocol	conformance ID.Ownership	Swift.Encodable		
+protocol	conformance ID.Ownership	Swift.Hashable		
+protocol	conformance ID.Ownership	Swift.Equatable		
+protocol	conformance Record.ID	Swift.Hashable		
+protocol	conformance Record.ID	Swift.Equatable		
+protocol	conformance Record.ID	Swift.CustomStringConvertible		
+protocol	conformance Record.Value	Swift.Equatable		
+protocol	conformance ReplicatorEngine.Record	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.Record	Swift.Decodable		
+protocol	conformance ReplicatorEngine.Record	Swift.Encodable		
+protocol	conformance ReplicatorEngine.Record	Swift.Equatable		
+protocol	conformance ReplicatorEngine.Record	Swift.CustomStringConvertible		
+protocol	conformance Record.ID	Swift.Decodable		
+protocol	conformance Record.ID	Swift.Encodable		
+protocol	conformance Record.Value	Swift.Decodable		
+protocol	conformance Record.Value	Swift.Encodable		
+protocol	conformance RemoteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemoteCodingKeys	Swift.Hashable		
+protocol	conformance RemoteCodingKeys	Swift.Equatable		
+protocol	conformance LocalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LocalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Versions.V8	Swift.Decodable		
+protocol	conformance Versions.V0	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Versions.V8	Swift.Decodable		
+protocol	conformance Versions.V0	Swift.Decodable		
+protocol	conformance Versions.V0	Swift.Encodable		
+protocol	conformance Versions.V8	Swift.Encodable		
+protocol	conformance Versions.V0	Swift.Encodable		
+protocol	conformance Versions.V8	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LocalCodingKeys	Swift.CodingKey		
+protocol	conformance RemoteCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance V8.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V8.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V8.CodingKeys	Swift.RawRepresentable		
+protocol	conformance V8.CodingKeys	Swift.Hashable		
+protocol	conformance V8.CodingKeys	Swift.Equatable		
+protocol	conformance V0.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.RawRepresentable		
+protocol	conformance V0.CodingKeys	Swift.Hashable		
+protocol	conformance V0.CodingKeys	Swift.Equatable		
+protocol	conformance V8.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V8.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V8.CodingKeys	Swift.Hashable		
+protocol	conformance V8.CodingKeys	Swift.Equatable		
+protocol	conformance V0.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.Hashable		
+protocol	conformance V0.CodingKeys	Swift.Equatable		
+protocol	conformance V0.CodingKeys	Swift.CodingKey		
+protocol	conformance V8.CodingKeys	Swift.CodingKey		
+protocol	conformance V0.CodingKeys	Swift.CodingKey		
+protocol	conformance V8.CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.KeepAliveTransaction	Swift.CustomStringConvertible		
+protocol	conformance ZoneVersionAdvertisement.DeviceDescriptor	Swift.Identifiable		
+protocol	conformance ZoneVersionAdvertisement.DeviceDescriptor	Swift.Equatable		
+protocol	conformance ZoneVersionAdvertisement.DeviceDescriptor	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.ZoneVersionAdvertisement	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.ZoneVersionAdvertisement	Swift.Equatable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.Equatable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.Hashable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.RawRepresentable		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.CodingKey		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceDescriptor.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ZoneVersionAdvertisement.DeviceDescriptor	Swift.Decodable		
+protocol	conformance ZoneVersionAdvertisement.DeviceDescriptor	Swift.Encodable		
+protocol	conformance ZoneVersionAdvertisement.CodingKeys	Swift.Equatable		
+protocol	conformance ZoneVersionAdvertisement.CodingKeys	Swift.Hashable		
+protocol	conformance ZoneVersionAdvertisement.CodingKeys	Swift.RawRepresentable		
+protocol	conformance ZoneVersionAdvertisement.CodingKeys	Swift.CodingKey		
+protocol	conformance ZoneVersionAdvertisement.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ZoneVersionAdvertisement.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplicatorEngine.ZoneVersionAdvertisement	Swift.Decodable		
+protocol	conformance ReplicatorEngine.ZoneVersionAdvertisement	Swift.Encodable		
+protocol	conformance Compressor.CompressorError	Swift.Hashable		
+protocol	conformance Compressor.CompressorError	Swift.Equatable		
+protocol	conformance Compressor.CompressorError	Swift.Error		
+protocol	conformance ReplicatorEngine.BasicTimer	ReplicatorEngine.TimerProtocol		
+protocol	conformance ReplicatorEngine.ReliableKnownPairingRelationshipFilter	ReplicatorEngine.KnownPairingRelationshipFiltering		
+protocol	conformance ConnectionDurationMonitor.ConnectionDescriptor	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.PinnedIdentityManager	ReplicatorEngine.PinnedIdentityManaging		
+protocol	conformance ReplicatorEngine.PowerLogEvent	Swift.Hashable		
+protocol	conformance ReplicatorEngine.PowerLogEvent	Swift.Equatable		
+protocol	conformance ReplicatorEngine.MuxingZoneAdvertiser	ReplicatorEngine.ZoneVersionAdvertising		
+protocol	conformance ReplicatorEngine.KeepAliveTimer	ReplicatorEngine.TimerProtocol		
+protocol	conformance ReplicatorEngine.PersonaIntroducer	ReplicatorEngine.SyncServiceDelegate		
+protocol	conformance PersonaIntroducer.AckMessage	Swift.Decodable		
+protocol	conformance PersonaIntroducer.IntroductionMessage	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PersonaIntroducer.IntroductionMessage	Swift.Encodable		
+protocol	conformance PersonaIntroducer.AckMessage	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Session.State	Swift.Equatable		
+protocol	conformance Session.State	Swift.Hashable		
+protocol	conformance SessionManager.Session	Swift.Identifiable		
+protocol	conformance SessionManager.Session	Swift.Equatable		
+protocol	conformance ReplicatorEngine.PowerLogger	ReplicatorEngine.PowerLogging		
+protocol	conformance DeviceEvent.EventType	Swift.Equatable		
+protocol	conformance DeviceEvent.EventType	Swift.Hashable		
+protocol	conformance ReplicatorEngine.UnifyingPairingRelationshipFilter	ReplicatorEngine.KnownPairingRelationshipFiltering		
+protocol	conformance PairingRelationship.State	Swift.Decodable		
+protocol	conformance PairingRelationship.State	Swift.Encodable		
+protocol	conformance PairingRelationship.State	Swift.Equatable		
+protocol	conformance PairingRelationship.State	Swift.CustomStringConvertible		
+protocol	conformance PairingRelationship.State	Swift.Hashable		
+protocol	conformance ReplicatorEngine.PairingRelationship	Swift.Equatable		
+protocol	conformance ReplicatorEngine.PairingRelationship	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.PairingRelationship	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.PairingRelationship	Swift.Hashable		
+protocol	conformance InactiveCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InactiveCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MigratingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MigratingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MigratingCodingKeys	Swift.Hashable		
+protocol	conformance MigratingCodingKeys	Swift.Equatable		
+protocol	conformance PairedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PairedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PairingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PairingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntroducedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntroducedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance IntroducedCodingKeys	Swift.CodingKey		
+protocol	conformance PairingCodingKeys	Swift.CodingKey		
+protocol	conformance PairedCodingKeys	Swift.CodingKey		
+protocol	conformance MigratingCodingKeys	Swift.CodingKey		
+protocol	conformance InactiveCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NetworkSyncHeader.MessageType	Swift.Equatable		
+protocol	conformance NetworkSyncHeader.MessageType	Swift.Encodable		
+protocol	conformance NetworkSyncHeader.MessageType	Swift.Decodable		
+protocol	conformance NetworkSyncHeader.MessageType	Swift.RawRepresentable		
+protocol	conformance NetworkSyncHeader.MessageType	Swift.Hashable		
+protocol	conformance ReplicatorEngine.NetworkSyncHeader	Swift.Equatable		
+protocol	conformance ReplicatorEngine.NetworkSyncHeader	Swift.Encodable		
+protocol	conformance ReplicatorEngine.NetworkSyncHeader	Swift.Decodable		
+protocol	conformance ReplicatorEngine.NetworkSyncHeaderPreamble	Swift.Equatable		
+protocol	conformance NetworkSyncHeader.NetworkSyncHeaderError	Swift.Hashable		
+protocol	conformance NetworkSyncHeader.NetworkSyncHeaderError	Swift.Equatable		
+protocol	conformance NetworkSyncHeader.NetworkSyncHeaderError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.HandshakeDescriptor	Swift.Hashable		
+protocol	conformance ReplicatorEngine.HandshakeDescriptor	Swift.Equatable		
+protocol	conformance ReplicatorEngine.HandshakeZoneAdvertiser	ReplicatorEngine.ZoneVersionAdvertising		
+protocol	conformance ReplicatorEngine.UnfilteredReplicationPolicy	ReplicatorEngine.ReplicationPolicy		
+protocol	conformance ReplicatorEngine.ZoneVersionInMemoryStore	ReplicatorEngine.ZoneVersionStoring		
+protocol	conformance ReplicatorEngine.ZoneVersion	Swift.Equatable		
+protocol	conformance ReplicatorEngine.ZoneVersion	Swift.Decodable		
+protocol	conformance ReplicatorEngine.ZoneVersion	Swift.Encodable		
+protocol	conformance ReplicatorEngine.ZoneVersion	Swift.CustomStringConvertible		
+protocol	conformance HashCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HashCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HashCodingKeys	Swift.Hashable		
+protocol	conformance HashCodingKeys	Swift.Equatable		
+protocol	conformance EmptyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EmptyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance EmptyCodingKeys	Swift.CodingKey		
+protocol	conformance HashCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SyncQueue.SyncItem	Swift.Equatable		
+protocol	conformance SyncQueue.SyncItem	Swift.Comparable		
+protocol	conformance ReplicatorEngine.AuthKitPairingRelationshipFilter	ReplicatorEngine.PairedRelationshipReconciling		
+protocol	conformance AuthKitPairingRelationshipFilter.AuthKitPairingRelationshipFilterError	Swift.Hashable		
+protocol	conformance AuthKitPairingRelationshipFilter.AuthKitPairingRelationshipFilterError	Swift.Equatable		
+protocol	conformance AuthKitPairingRelationshipFilter.AuthKitPairingRelationshipFilterError	Swift.Error		
+protocol	conformance ReplicatorEngine.MetadataStore	ReplicatorEngine.PairingRelationshipReading		
+protocol	conformance ReplicatorEngine.MetadataStore	ReplicatorEngine.MutableMetadataStoring		
+protocol	conformance ReplicatorEngine.MetadataStore	ReplicatorEngine.MetadataStoring		
+protocol	conformance ReplicatorEngine.MetadataStore	ReplicatorEngine.MetadataPersisting		
+protocol	conformance ReplicatorEngine.MetadataStore	ReplicatorEngine.MutableMetadataPersisting		
+protocol	conformance ReplicatorEngine.MetadataStore	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.MetadataStore	ReplicatorEngine.AllowListStoring		
+protocol	conformance ReplicatorEngine.ScreenDescriptor	Swift.Equatable		
+protocol	conformance ReplicatorEngine.ScreenDescriptor	Swift.Decodable		
+protocol	conformance ReplicatorEngine.ScreenDescriptor	Swift.Encodable		
+protocol	conformance ReplicatorEngine.ScreenDescriptor	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.ScreenDescriptor	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ExtendedAttributes	Swift.Encodable		
+protocol	conformance ExtendedAttributes	Swift.Decodable		
+protocol	conformance ReplicatorEngine.NetworkMessenger	ReplicatorEngine.NetworkMessaging		
+protocol	conformance NetworkMessenger.NetworkMessengerOperationalError	Swift.Hashable		
+protocol	conformance NetworkMessenger.NetworkMessengerOperationalError	Swift.Equatable		
+protocol	conformance ExtendedAttributes.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ExtendedAttributes.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ExtendedAttributes.CodingKeys	Swift.Hashable		
+protocol	conformance ExtendedAttributes.CodingKeys	Swift.Equatable		
+protocol	conformance ExtendedAttributes.CodingKeys	Swift.CodingKey		
+protocol	conformance NetworkMessenger.NetworkMessengerOperationalError	Swift.Error		
+protocol	conformance ReplicatorEngine.ConcreteIDSDependency	ReplicatorEngine.IDSDependency		
+protocol	conformance ReplicatorEngine.MessagePriority	Swift.Hashable		
+protocol	conformance ReplicatorEngine.MessagePriority	Swift.RawRepresentable		
+protocol	conformance ReplicatorEngine.MessagePriority	Swift.Decodable		
+protocol	conformance ReplicatorEngine.MessagePriority	Swift.Encodable		
+protocol	conformance ReplicatorEngine.MessagePriority	Swift.Equatable		
+protocol	conformance ReplicatorEngine.MessagePriority	Swift.CaseIterable		
+protocol	conformance ReplicatorEngine.IDSDependencyDevice	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.ActiveWatchPairingEnforcer	ReplicatorEngine.ActiveWatchPairingEnforcing		
+protocol	conformance ReplicatorEngine.ActiveWatchIDSIDProvider	ReplicatorEngine.ActiveWatchIDSIDProviding		
+protocol	conformance NetworkBrowsingEvent.EventType	Swift.Equatable		
+protocol	conformance NetworkBrowsingEvent.EventType	Swift.Hashable		
+protocol	conformance ReplicatorEngine.NetworkDevice	ReplicatorEngine.NetworkEndpointProviding		
+protocol	conformance ReplicatorEngine.NetworkDevice	Swift.Identifiable		
+protocol	conformance Zone.ID	Swift.Identifiable		
+protocol	conformance Zone.ID	Swift.Equatable		
+protocol	conformance Zone.ID	Swift.Hashable		
+protocol	conformance Zone.ID	Swift.Decodable		
+protocol	conformance Zone.ID	Swift.Encodable		
+protocol	conformance Zone.ID	Swift.CustomStringConvertible		
+protocol	conformance Zone.CodingKeys	Swift.Equatable		
+protocol	conformance Zone.CodingKeys	Swift.Hashable		
+protocol	conformance Zone.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Zone.CodingKeys	Swift.CodingKey		
+protocol	conformance Zone.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Zone.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplicatorEngine.Zone	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.Zone	Swift.Equatable		
+protocol	conformance ReplicatorEngine.Zone	Swift.Decodable		
+protocol	conformance ReplicatorEngine.Zone	Swift.Encodable		
+protocol	conformance ReplicatorEngine.Zone	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.Zone	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.PairedRelationshipReconciler	ReplicatorEngine.PairedRelationshipReconciling		
+protocol	conformance NetworkSyncService.WeakDelegate	ReplicatorEngine.SyncServiceDelegate		
+protocol	conformance ReplicatorEngine.NetworkSyncService	ReplicatorEngine.SyncServiceDeviceProviding		
+protocol	conformance ReplicatorEngine.NetworkSyncService	ReplicatorEngine.SyncServicing		
+protocol	conformance ReplicatorEngine.NetworkSyncServiceError	Swift.Hashable		
+protocol	conformance ReplicatorEngine.NetworkSyncServiceError	Swift.Equatable		
+protocol	conformance ReplicatorEngine.NetworkSyncServiceError	Swift.Error		
+protocol	conformance ReplicatorEngine.NearbyCompanionSubscriber	ReplicatorEngine.NearbyCompanionSubscribing		
+protocol	conformance ReplicatorEngine.ReplicatorCodingError	Swift.Equatable		
+protocol	conformance ReplicatorEngine.ReplicatorCodingError	Swift.Hashable		
+protocol	conformance ReplicatorEngine.ReplicatorCodingError	Swift.Error		
+protocol	conformance ReplicatorEngine.DeviceType	Swift.Hashable		
+protocol	conformance ReplicatorEngine.DeviceType	Swift.RawRepresentable		
+protocol	conformance ReplicatorEngine.DeviceType	Swift.Decodable		
+protocol	conformance ReplicatorEngine.DeviceType	Swift.Encodable		
+protocol	conformance ReplicatorEngine.DeviceType	Swift.Equatable		
+protocol	conformance ReplicatorEngine.DeviceType	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.NetworkMessagingCriticalError	Swift.Equatable		
+protocol	conformance ReplicatorEngine.NetworkMessagingCriticalError	Swift.Hashable		
+protocol	conformance ReplicatorEngine.NetworkMessagingCriticalError	Swift.Error		
+protocol	conformance ReplicatorEngine.NetworkMessagingConnectionType	Swift.Equatable		
+protocol	conformance ReplicatorEngine.NetworkMessagingConnectionType	Swift.Hashable		
+protocol	conformance ReplicatorEngine.NetworkMessagingConnectionType	Swift.CustomStringConvertible		
+protocol	conformance RootDecoder	ReplicatorEngine.VersionedDecoder		
+protocol	conformance RootDecoder	Swift.SingleValueDecodingContainer		
+protocol	conformance RootDecoder	Swift.Decoder		
+protocol	conformance KeyedDecoder	Swift.KeyedDecodingContainerProtocol		
+protocol	conformance UnkeyedDecoder	Swift.UnkeyedDecodingContainer		
+protocol	conformance UnkeyedDecoder.__AKey	Swift.CustomDebugStringConvertible		
+protocol	conformance UnkeyedDecoder.__AKey	Swift.CustomStringConvertible		
+protocol	conformance UnkeyedDecoder.__AKey	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.ReplicationSchedule	Swift.Comparable		
+protocol	conformance ReplicatorEngine.ReplicationSchedule	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.ReplicationSchedule	Swift.Equatable		
+protocol	conformance ReplicatorEngine.SyncServiceKnownPairingRelationshipFilter	ReplicatorEngine.KnownPairingRelationshipFiltering		
+protocol	conformance ReplicatorEngine.BugCapture	ReplicatorEngine.BugCapturing		
+protocol	conformance ReplicatorEngine.PairingRelationshipFilter	Swift.OptionSet		
+protocol	conformance ReplicatorEngine.PairingRelationshipFilter	Swift.SetAlgebra		
+protocol	conformance ReplicatorEngine.PairingRelationshipFilter	Swift.RawRepresentable		
+protocol	conformance ReplicatorEngine.PairingRelationshipFilter	Swift.Equatable		
+protocol	conformance ReplicatorEngine.PairingRelationshipFilter	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Sync.SyncRecord	Swift.Encodable		
+protocol	conformance Sync.SyncRecord	Swift.Decodable		
+protocol	conformance SyncRecord.Value	Swift.Encodable		
+protocol	conformance Versions.V8	Swift.Decodable		
+protocol	conformance V0.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.Hashable		
+protocol	conformance V0.CodingKeys	Swift.Equatable		
+protocol	conformance Versions.V0	Swift.Decodable		
+protocol	conformance ReplicatorMessage.Sync	Swift.Encodable		
+protocol	conformance ReplicatorEngine.ReplicatorMessage	Swift.Decodable		
+protocol	conformance V8.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V8.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V8.CodingKeys	Swift.Hashable		
+protocol	conformance V8.CodingKeys	Swift.Equatable		
+protocol	conformance Handshake.Complete	Swift.Encodable		
+protocol	conformance Handshake.Complete	Swift.Decodable		
+protocol	conformance ReplicatorMessage.RecordManifest	Swift.Encodable		
+protocol	conformance ReplicatorMessage.RecordManifest	Swift.Decodable		
+protocol	conformance Handshake.Response	Swift.Encodable		
+protocol	conformance Handshake.Response	Swift.Decodable		
+protocol	conformance Handshake.Request	Swift.Encodable		
+protocol	conformance Handshake.Request	Swift.Decodable		
+protocol	conformance ReplicatorMessage.Handshake	Swift.Encodable		
+protocol	conformance AckCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AckCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AckCodingKeys	Swift.Hashable		
+protocol	conformance AckCodingKeys	Swift.Equatable		
+protocol	conformance SyncCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncCodingKeys	Swift.Hashable		
+protocol	conformance SyncCodingKeys	Swift.Equatable		
+protocol	conformance HandshakeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HandshakeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HandshakeCodingKeys	Swift.Hashable		
+protocol	conformance HandshakeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ReplicatorMessage.Ack	Swift.Encodable		
+protocol	conformance ReplicatorMessage.Handshake	Swift.Decodable		
+protocol	conformance HandshakeCodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorMessage.Sync	Swift.Decodable		
+protocol	conformance SyncCodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorMessage.Ack	Swift.Decodable		
+protocol	conformance AckCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.ReplicatorMessage	Swift.Encodable		
+protocol	conformance Versions.V0	Swift.Encodable		
+protocol	conformance Versions.V8	Swift.Encodable		
+protocol	conformance V8.CodingKeys	Swift.CodingKey		
+protocol	conformance SyncRecord.Value	Swift.Decodable		
+protocol	conformance V0.CodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DataCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DataCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DataCodingKeys	Swift.Hashable		
+protocol	conformance DataCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CompleteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CompleteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CompleteCodingKeys	Swift.Hashable		
+protocol	conformance CompleteCodingKeys	Swift.Equatable		
+protocol	conformance ResponseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResponseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResponseCodingKeys	Swift.Hashable		
+protocol	conformance ResponseCodingKeys	Swift.Equatable		
+protocol	conformance RequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestCodingKeys	Swift.Hashable		
+protocol	conformance RequestCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RequestCodingKeys	Swift.CodingKey		
+protocol	conformance ResponseCodingKeys	Swift.CodingKey		
+protocol	conformance CompleteCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DataCodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.Message	Swift.Decodable		
+protocol	conformance ReplicatorEngine.Message	Swift.Encodable		
+protocol	conformance ReplicatorEngine.Message	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.Message	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorEngine.MetadataInMemoryStore	ReplicatorEngine.MutableMetadataPersisting		
+protocol	conformance ReplicatorEngine.MetadataInMemoryStore	ReplicatorEngine.MetadataPersisting		
+protocol	conformance ReplicatorEngine.CustomizableRetryTimer	ReplicatorEngine.ReplicatorRetryTimer		
+protocol	conformance MessageType.ID	Swift.Identifiable		
+protocol	conformance MessageType.ID	Swift.Equatable		
+protocol	conformance MessageType.ID	Swift.Hashable		
+protocol	conformance MessageType.ID	Swift.Decodable		
+protocol	conformance MessageType.ID	Swift.Encodable		
+protocol	conformance MessageType.ID	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.MessageType	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.MessageType	Swift.Equatable		
+protocol	conformance ReplicatorEngine.MessageType	Swift.Decodable		
+protocol	conformance ReplicatorEngine.MessageType	Swift.Encodable		
+protocol	conformance ReplicatorEngine.MessageType	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.MessageType	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RecordMetadata.Options	Swift.OptionSet		
+protocol	conformance RecordMetadata.Options	Swift.Equatable		
+protocol	conformance RecordMetadata.Options	Swift.Hashable		
+protocol	conformance RecordMetadata.Options	Swift.Decodable		
+protocol	conformance RecordMetadata.Options	Swift.Encodable		
+protocol	conformance RecordMetadata.Options	Swift.SetAlgebra		
+protocol	conformance RecordMetadata.Options	Swift.RawRepresentable		
+protocol	conformance RecordMetadata.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance ReplicatorEngine.RecordMetadata	Swift.Identifiable		
+protocol	conformance ReplicatorEngine.RecordMetadata	Swift.Equatable		
+protocol	conformance ReplicatorEngine.RecordMetadata	Swift.Hashable		
+protocol	conformance ReplicatorEngine.RecordMetadata	Swift.CustomStringConvertible		
+protocol	conformance RecordMetadata.CodingKeys	Swift.Equatable		
+protocol	conformance RecordMetadata.CodingKeys	Swift.Hashable		
+protocol	conformance RecordMetadata.CodingKeys	Swift.RawRepresentable		
+protocol	conformance RecordMetadata.CodingKeys	Swift.CodingKey		
+protocol	conformance RecordMetadata.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RecordMetadata.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplicatorEngine.RecordMetadata	Swift.Decodable		
+protocol	conformance ReplicatorEngine.RecordMetadata	Swift.Encodable		
+protocol	conformance ClientDefinedID	Swift.Hashable		
+protocol	conformance ClientDefinedID	Swift.Equatable		
+protocol	conformance ReplicatorEngine.FileCompressionType	Swift.Equatable		
+protocol	conformance ReplicatorEngine.FileCompressionType	Swift.Hashable		
+protocol	conformance RootEncoder	ReplicatorEngine.VersionedEncoder		
+protocol	conformance RootEncoder	Swift.SingleValueEncodingContainer		
+protocol	conformance RootEncoder	Swift.Encoder		
+protocol	conformance KeyedEncoder	Swift.KeyedEncodingContainerProtocol		
+protocol	conformance UnkeyedEncoder	Swift.UnkeyedEncodingContainer		
+protocol	conformance PairedDevice.PairedDeviceClass	Swift.Equatable		
+protocol	conformance PairedDevice.PairedDeviceClass	Swift.Hashable		
+protocol	conformance PairedDevice.PairedDeviceClass	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.PairedDevice	Swift.Equatable		
+protocol	conformance ReplicatorEngine.PairedDevice	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorEngine.DuetHandshakeTask	ReplicatorEngine.HandshakeTask		
+protocol	conformance ReplicatorEngine.CallbackZoneAdvertiser	ReplicatorEngine.ZoneVersionAdvertising		
+protocol	conformance ExtendedAttributeError	Foundation.LocalizedError		
+protocol	conformance ExtendedAttributeError	Swift.Equatable		
+protocol	conformance ExtendedAttributeError	Swift.Error		
+protocol	conformance ReplicatorEngine.ReplicatorError	Swift.Equatable		
+protocol	conformance ReplicatorEngine.ReplicatorError	Swift.Hashable		
+protocol	conformance ReplicatorEngine.ReplicatorError	Swift.Error		
+protocol	conformance ReplicatorEngine.HandshakeScheduler	ReplicatorEngine.HandshakeScheduling		
+extension	ReplicatorEngine.Replicator.Session	Identifiable		
+extension	ReplicatorEngine.Replicator.RelationshipReconciliationOptions	ExpressibleByArrayLiteral		
+extension	ReplicatorEngine.Replicator.RelationshipReconciliationOptions	RawRepresentable		
+extension	ReplicatorEngine.Replicator.RelationshipReconciliationOptions	SetAlgebra		
+extension	ReplicatorEngine.Replicator.RelationshipReconciliationOptions	OptionSet		
+extension	ReplicatorEngine.DeviceDescriptor	Identifiable		
+extension	ReplicatorEngine.DeviceDescriptor.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.NetworkBrowser	NetworkDeviceBrowsing		
+extension	ReplicatorEngine.Record	Identifiable		
+extension	ReplicatorEngine.Record.ID.Versions.V8.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.Record.ID.Versions.V0.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor	Identifiable		
+extension	ReplicatorEngine.ZoneVersionAdvertisement.DeviceDescriptor.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.ZoneVersionAdvertisement.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.SessionManager.Session	Identifiable		
+extension	ReplicatorEngine.PairingRelationship	Identifiable		
+extension	ReplicatorEngine.NetworkSyncHeader.MessageType	RawRepresentable		
+extension	ReplicatorEngine.NetworkMessenger	NetworkMessaging		
+extension	ReplicatorEngine.MessagePriority	RawRepresentable		
+extension	ReplicatorEngine.MessagePriority	CaseIterable		
+extension	ReplicatorEngine.IDSDependencyDevice	Identifiable		
+extension	ReplicatorEngine.NetworkDevice	NetworkEndpointProviding		
+extension	ReplicatorEngine.NetworkDevice	Identifiable		
+extension	ReplicatorEngine.Zone.ID	Identifiable		
+extension	ReplicatorEngine.Zone.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.Zone	Identifiable		
+extension	ReplicatorEngine.DeviceType	RawRepresentable		
+extension	ReplicatorEngine.PropertyListTypeDecoder.KeyedDecoder	KeyedDecodingContainerProtocol		
+extension	ReplicatorEngine.PairingRelationshipFilter	OptionSet		
+extension	ReplicatorEngine.PairingRelationshipFilter	SetAlgebra		
+extension	ReplicatorEngine.PairingRelationshipFilter	RawRepresentable		
+extension	ReplicatorEngine.PairingRelationshipFilter	ExpressibleByArrayLiteral		
+extension	ReplicatorEngine.Message	Identifiable		
+extension	ReplicatorEngine.Message.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.MessageType.ID	Identifiable		
+extension	ReplicatorEngine.MessageType	Identifiable		
+extension	ReplicatorEngine.RecordMetadata.Options	OptionSet		
+extension	ReplicatorEngine.RecordMetadata.Options	SetAlgebra		
+extension	ReplicatorEngine.RecordMetadata.Options	RawRepresentable		
+extension	ReplicatorEngine.RecordMetadata.Options	ExpressibleByArrayLiteral		
+extension	ReplicatorEngine.RecordMetadata	Identifiable		
+extension	ReplicatorEngine.RecordMetadata.CodingKeys	RawRepresentable		
+extension	ReplicatorEngine.PropertyListTypeEncoder.KeyedEncoder	KeyedEncodingContainerProtocol		

@@ -1,0 +1,2031 @@
+kind	type	conformance	member_kind	member
+class	parsecd.ServiceState			
+class	parsecd.ServiceState		let	service
+class	parsecd.ServiceState		let	listener
+class	parsecd.ServiceState		let	sigHandlers
+class	parsecd.ServiceState		var	assembly
+class	parsecd.NotificationBarrier			
+class	parsecd.NotificationBarrier		let	lock
+enum	parsecd.NotificationBarrier.State			
+enum	parsecd.NotificationBarrier.State		case	pending
+enum	parsecd.NotificationBarrier.State		case	completed
+class	parsecd.ParsecSubscriptionManager	NSObject		
+class	parsecd.ParsecSubscriptionManager	NSObject	var	lifetimeSpan
+class	parsecd.ParsecSubscriptionManager	NSObject	var	assembly
+class	parsecd.ParsecSubscriptionManager	NSObject	let	fuseProvider
+class	parsecd.ParsecSubscriptionManager	NSObject	let	storefrontIdentifierProvider
+class	parsecd.FileWriter			
+class	parsecd.FileWriter		var	assembly
+class	parsecd.FileWriter		let	queue
+class	parsecd.FileWriter		var	_fileUrl
+class	parsecd.FileWriter		var	maxFileSize
+class	parsecd.FileWriter		let	closingBufferSize
+class	parsecd.FileWriter		let	writeTx
+class	parsecd.FileWriter		var	eventWriteSpan
+class	parsecd.FileWriter		var	fileHandle
+class	parsecd.LazyFileWriter			
+class	parsecd.LazyFileWriter		var	assembly
+class	parsecd.LazyFileWriter		var	session
+class	parsecd.LazyFileWriter		var	writer
+class	parsecd.LazyFileWriter		let	locker
+class	parsecd.BasicEngagedSuggestionController			
+class	parsecd.BasicEngagedSuggestionController		var	clientState
+class	parsecd.BasicEngagedSuggestionController		var	client
+class	parsecd.BagContext			
+class	parsecd.BagContext		let	geoDeviceCountryCode
+class	parsecd.BagContext		let	effectiveSystemLanguage
+class	parsecd.BagContext		let	localeIdentifier
+class	parsecd.BagContext		let	preferredLanguages
+class	parsecd.BagContext		let	region
+class	parsecd.ParsecCAEvent.DimensionWrapper			
+class	parsecd.ParsecCAEvent.DimensionWrapper		let	dimensions
+class	parsecd.BoundedSerialQueue			
+class	parsecd.BoundedSerialQueue		let	lock
+class	parsecd.ClientSession			
+class	parsecd.ClientSession		let	assembly
+class	parsecd.ClientSession		let	storageHandle
+class	parsecd.ClientSession		let	tokens
+class	parsecd.ClientSession		let	type
+class	parsecd.ClientSession		let	userAgent
+class	parsecd.ClientSession		let	backingStore
+class	parsecd.ClientSession		var	minFeedbackTime
+class	parsecd.ClientSession		var	maxFeedbackTime
+class	parsecd.ClientSession		var	fulfilled
+class	parsecd.ClientSession		var	connectionInvalidationFeedbacks
+class	parsecd.ClientSession		var	reportOutOfRangeTelemetry
+class	parsecd.ClientSession		let	tailLog
+enum	parsecd.ClientSessionOutOfRangeTelemetryState			
+enum	parsecd.ClientSessionOutOfRangeTelemetryState		case	none
+enum	parsecd.ClientSessionOutOfRangeTelemetryState		case	hadOutOfRange
+enum	parsecd.ClientSessionOutOfRangeTelemetryState		case	isOutOfRange
+enum	parsecd.ClientSessionOutOfRangeTelemetryState		case	isRedundantOutOfRange
+struct	parsecd.SessionTokens			
+struct	parsecd.SessionTokens		let	timestamp
+struct	parsecd.SessionTokens		let	uuid
+struct	parsecd.SessionTokens		let	trialExperiments
+enum	parsecd.JSONSerializationUtilError			
+enum	parsecd.JSONSerializationUtilError		case	invalidJSON
+struct	parsecd.JSONSerializationUtil			
+class	parsecd.SiriSettingsManager			
+class	parsecd.SiriSettingsManager		var	languageCodeChangeToken
+class	parsecd.SiriSettingsManager		var	heySiriChangeToken
+class	parsecd.SiriSettingsManager		var	siriEnabledChangeToken
+class	parsecd.SiriSettingsManager		var	siriContext
+class	parsecd.SiriSettingsManager		var	assembly
+class	parsecd.AtomicLazy			
+class	parsecd.AtomicLazy		let	lock
+class	parsecd.AtomicLazy		var	inner
+enum	parsecd.AtomicLazy.Inner			
+enum	parsecd.AtomicLazy.Inner		case	uninitialized
+enum	parsecd.AtomicLazy.Inner		case	initialized
+class	parsecd.CompressedOutputStream	NSOutputStream		
+class	parsecd.CompressedOutputStream	NSOutputStream	let	outputStream
+class	parsecd.CompressedOutputStream	NSOutputStream	var	stream
+class	parsecd.CompressedOutputStream	NSOutputStream	var	status
+class	parsecd.CompressedOutputStream	NSOutputStream	var	destBuffer
+class	parsecd.CompressedOutputStream	NSOutputStream	var	shaContext
+class	parsecd.CompressedOutputStream	NSOutputStream	var	digest
+class	parsecd.CompressedOutputStream	NSOutputStream	var	_uncompressedBytesWritten
+class	parsecd.CompressedOutputStream	NSOutputStream	var	_compressedBytesWritten
+enum	parsecd.EngagedCompletionCacheClient			
+enum	parsecd.EngagedCompletionCacheClient		case	unknown
+enum	parsecd.EngagedCompletionCacheClient		case	safari
+enum	parsecd.EngagedCompletionCacheClient		case	spotlight
+class	parsecd.EngagedCompletionSQLCache			
+class	parsecd.EngagedCompletionSQLCache		var	_spotlightExpiration
+class	parsecd.EngagedCompletionSQLCache		var	activityMonitor
+class	parsecd.EngagedCompletionSQLCache		let	queryQueue
+class	parsecd.EngagedCompletionSQLCache		let	completionQueue
+class	parsecd.EngagedCompletionSQLCache		let	paramsLocker
+class	parsecd.EngagedCompletionSQLCache		var	params
+class	parsecd.EngagedCompletionSQLCache		let	dbURL
+class	parsecd.EngagedCompletionSQLCache		let	database
+struct	parsecd.EngagedCompletionSQLCache.Params			
+struct	parsecd.EngagedCompletionSQLCache.Params		var	scoreV1Params
+struct	parsecd.EngagedCompletionSQLCache.Params		var	scoreV2Params
+struct	parsecd.EngagedCompletionSQLCache.Params		var	maxRows
+struct	parsecd.EngagedCompletionSQLCache.Params		var	queryTimeout
+struct	parsecd.ECCQuery			
+struct	parsecd.ECCQuery		let	input
+struct	parsecd.ECCQuery		let	client
+struct	parsecd.ECCQuery		let	count
+struct	parsecd.ECCQuery		let	useTimeout
+struct	parsecd.ECCQuery		let	distinguishByType
+struct	parsecd.ECCQuery		let	distinguishByTopicData
+struct	parsecd.ECCQuery		let	reportedAfter
+struct	parsecd.ECCQuery		let	isZKWQuery
+struct	parsecd.ECCQuery		let	useGroupBy
+struct	parsecd.ECCQuery		let	filterByEngagementDate
+enum	parsecd.EngagedCompletionCacheError			
+enum	parsecd.EngagedCompletionCacheError		case	unableToResolveDatabaseDirectory
+enum	parsecd.EngagedCompletionSQLCache.SchemaState			
+enum	parsecd.EngagedCompletionSQLCache.SchemaState		case	current
+enum	parsecd.EngagedCompletionSQLCache.SchemaState		case	upgradable
+enum	parsecd.EngagedCompletionSQLCache.SchemaState		case	stale
+class	parsecd.TimedReference			
+class	parsecd.TimedReference		let	lock
+class	parsecd.TimedReference.State			
+class	parsecd.TimedReference.State		var	value
+class	parsecd.TimedReference.State		var	validUntil
+class	parsecd.TimedReference.State		let	timeoutInterval
+class	parsecd.TimedReference.State		var	invalidationHandler
+class	parsecd.TimedReference.State		var	cleanupHandler
+class	parsecd.TimedReference.State		var	task
+class	parsecd.DeviceRestrictionsManager			
+class	parsecd.DeviceRestrictionsManager		var	assembly
+class	parsecd.DeviceRestrictionsManager		var	isManagedAccount
+class	parsecd.DeviceRestrictionsManager		var	deviceRestricted
+class	parsecd.DeviceRestrictionsManager		let	updateQueue
+class	parsecd.VisibilityManager			
+class	parsecd.VisibilityManager		var	assembly
+class	parsecd.VisibilityManager		let	hashtagImagesMacOSPluginPath
+class	parsecd.SpotlightEngagedSuggestionController	parsecd.BasicEngagedSuggestionController		
+struct	parsecd.PegasusContext			
+struct	parsecd.PegasusContext		var	localeIdentifier
+struct	parsecd.PegasusContext		var	localeMeasurementSystem
+struct	parsecd.PegasusContext		var	storeFrontIdentifier
+struct	parsecd.PegasusContext		var	is24HourDateFormat
+struct	parsecd.PegasusContext		var	localTimeZoneName
+struct	parsecd.PegasusContext		var	effectiveSystemLanguage
+struct	parsecd.PegasusContext		var	preferredLanguages
+struct	parsecd.PegasusContext		var	subscriptionInfo
+struct	parsecd.PegasusContext		var	tempUnits
+struct	parsecd.PegasusContext		var	region
+struct	parsecd.PegasusContext		var	geoLocation
+struct	parsecd.PegasusContext		var	geoLocationAge
+struct	parsecd.PegasusContext		var	geoPlacemark
+struct	parsecd.PegasusContext		var	geoLocationLatLng
+struct	parsecd.PegasusContext		var	geoLocationSource
+struct	parsecd.PegasusContext		var	geoDeviceCountryCode
+struct	parsecd.PegasusContext		var	geoDeviceCountryCodeSource
+struct	parsecd.PegasusContext		var	geoDeviceCountryCodeSourceDevice
+struct	parsecd.PegasusContext		var	geoClientMetadata
+struct	parsecd.PegasusContext		var	lookupGeoLocationLatLng
+struct	parsecd.PegasusContext		var	locationAuthorizationStatus
+struct	parsecd.PegasusContext		var	supportedGeoLocationSources
+struct	parsecd.PegasusContext		var	regionCode
+struct	parsecd.PegasusContext		var	silhouetteTopicsStr
+struct	parsecd.PegasusContext		var	portraitVersion
+struct	parsecd.PegasusContext		var	alwaysSendTophit
+struct	parsecd.PegasusContext		var	deviceIsInternalCarry
+struct	parsecd.PegasusContext		var	isManagedAccount
+struct	parsecd.PegasusContext		var	deviceRestricted
+struct	parsecd.PegasusContext		var	siriLocaleIdentifier
+struct	parsecd.PegasusContext		var	heySiriEnabled
+struct	parsecd.PegasusContext		var	transportationMode
+enum	parsecd.TransportationMode			
+enum	parsecd.TransportationMode		case	unknown
+enum	parsecd.TransportationMode		case	stationary
+enum	parsecd.TransportationMode		case	walking
+enum	parsecd.TransportationMode		case	running
+enum	parsecd.TransportationMode		case	cycling
+enum	parsecd.TransportationMode		case	driving
+struct	parsecd.SiriSettingsContext			
+struct	parsecd.SiriSettingsContext		let	siriLocaleIdentifier
+struct	parsecd.SiriSettingsContext		let	heySiriEnabled
+enum	parsecd.CodingKeys			
+enum	parsecd.CodingKeys		case	latitude
+enum	parsecd.CodingKeys		case	longitude
+enum	parsecd.CodingKeys			
+enum	parsecd.CodingKeys		case	experimentNamespace
+enum	parsecd.CodingKeys		case	experimentID
+enum	parsecd.CodingKeys		case	treatmentID
+enum	parsecd.CodingKeys		case	deploymentID
+enum	parsecd.CodingKeys		case	compatibilityVersion
+struct	parsecd.LocalContext			
+struct	parsecd.LocalContext		var	localeIdentifier
+struct	parsecd.LocalContext		var	localeMeasurementSystem
+struct	parsecd.LocalContext		var	is24hDateFormat
+struct	parsecd.LocalContext		var	localTimeZoneName
+struct	parsecd.LocalContext		var	effectiveSystemLanguage
+struct	parsecd.LocalContext		var	preferredLanguages
+struct	parsecd.LocalContext		var	tempUnits
+struct	parsecd.LocalContext		var	region
+struct	parsecd.LocationContext			
+struct	parsecd.LocationContext		var	geoLocation
+struct	parsecd.LocationContext		var	geoLocationAge
+struct	parsecd.LocationContext		var	geoPlacemark
+struct	parsecd.LocationContext		var	geoLocationLatLng
+struct	parsecd.LocationContext		var	geoLocationSource
+struct	parsecd.LocationContext		var	lookupGeoLocationLatLng
+struct	parsecd.LocationContext		var	locationAuthorizationStatus
+struct	parsecd.LocationContext		var	supportedGeoLocationSources
+enum	parsecd.PegasusContext.CodingKeys			
+enum	parsecd.PegasusContext.CodingKeys		case	localeIdentifier
+enum	parsecd.PegasusContext.CodingKeys		case	localeMeasurementSystem
+enum	parsecd.PegasusContext.CodingKeys		case	storeFrontIdentifier
+enum	parsecd.PegasusContext.CodingKeys		case	is24HourDateFormat
+enum	parsecd.PegasusContext.CodingKeys		case	localTimeZoneName
+enum	parsecd.PegasusContext.CodingKeys		case	effectiveSystemLanguage
+enum	parsecd.PegasusContext.CodingKeys		case	preferredLanguages
+enum	parsecd.PegasusContext.CodingKeys		case	subscriptionInfo
+enum	parsecd.PegasusContext.CodingKeys		case	tempUnits
+enum	parsecd.PegasusContext.CodingKeys		case	region
+enum	parsecd.PegasusContext.CodingKeys		case	geoLocation
+enum	parsecd.PegasusContext.CodingKeys		case	geoLocationAge
+enum	parsecd.PegasusContext.CodingKeys		case	geoPlacemark
+enum	parsecd.PegasusContext.CodingKeys		case	geoLocationLatLng
+enum	parsecd.PegasusContext.CodingKeys		case	geoLocationSource
+enum	parsecd.PegasusContext.CodingKeys		case	geoDeviceCountryCode
+enum	parsecd.PegasusContext.CodingKeys		case	geoDeviceCountryCodeSource
+enum	parsecd.PegasusContext.CodingKeys		case	geoDeviceCountryCodeSourceDevice
+enum	parsecd.PegasusContext.CodingKeys		case	geoClientMetadata
+enum	parsecd.PegasusContext.CodingKeys		case	lookupGeoLocationLatLng
+enum	parsecd.PegasusContext.CodingKeys		case	locationAuthorizationStatus
+enum	parsecd.PegasusContext.CodingKeys		case	supportedGeoLocationSources
+enum	parsecd.PegasusContext.CodingKeys		case	regionCode
+enum	parsecd.PegasusContext.CodingKeys		case	silhouetteTopicsStr
+enum	parsecd.PegasusContext.CodingKeys		case	portraitVersion
+enum	parsecd.PegasusContext.CodingKeys		case	alwaysSendTophit
+enum	parsecd.PegasusContext.CodingKeys		case	deviceIsInternalCarry
+enum	parsecd.PegasusContext.CodingKeys		case	isManagedAccount
+enum	parsecd.PegasusContext.CodingKeys		case	deviceRestricted
+enum	parsecd.PegasusContext.CodingKeys		case	siriLocaleIdentifier
+enum	parsecd.PegasusContext.CodingKeys		case	heySiriEnabled
+enum	parsecd.PegasusContext.CodingKeys		case	transportationMode
+enum	parsecd.ContextUpdate			
+enum	parsecd.ContextUpdate		case	localState
+enum	parsecd.ContextUpdate		case	timeZone
+enum	parsecd.ContextUpdate		case	locationState
+enum	parsecd.ContextUpdate		case	clientMetadata
+enum	parsecd.ContextUpdate		case	countryCode
+enum	parsecd.ContextUpdate		case	silhouetteState
+enum	parsecd.ContextUpdate		case	alwaysSendTopHit
+enum	parsecd.ContextUpdate		case	managedAccount
+enum	parsecd.ContextUpdate		case	deviceRestricted
+enum	parsecd.ContextUpdate		case	transportation
+enum	parsecd.ContextUpdate		case	subscriptionInfo
+enum	parsecd.ContextUpdate		case	storefrontIdentifier
+enum	parsecd.ContextUpdate		case	siriSettings
+enum	parsecd.ContextUpdate		case	deviceIsInternalCarry
+struct	parsecd.SilhouetteContext			
+struct	parsecd.SilhouetteContext		let	silhouetteTopicsStr
+struct	parsecd.SilhouetteContext		let	portraitVersion
+struct	parsecd.CountryCodeContext			
+struct	parsecd.CountryCodeContext		var	countryCode
+struct	parsecd.CountryCodeContext		var	countryCodeSource
+struct	parsecd.CountryCodeContext		var	countryCodeSourceDevice
+struct	parsecd.TimeZoneContext			
+struct	parsecd.TimeZoneContext		let	timeZoneName
+class	parsecd.ReferenceTracker			
+class	parsecd.ReferenceTracker		var	reference
+class	parsecd.ReferenceTracker		let	lock
+class	parsecd.ClientName	NSObject		
+struct	parsecd.RemoteConnectorIdentity			
+struct	parsecd.RemoteConnectorIdentity		let	isCodeSigned
+struct	parsecd.RemoteConnectorIdentity		let	isPlatformBinary
+class	parsecd.UserDefaultsManager	NSObject		
+class	parsecd.UserDefaultsManager	NSObject	var	assembly
+class	parsecd.UserDefaultsManager	NSObject	let	userDefaults
+class	parsecd.ParsecLogger			
+class	parsecd.DeviceSetupStatus			
+class	parsecd.DeviceSetupStatus		let	locker
+class	parsecd.DeviceSetupStatus		var	setupComplete
+class	parsecd.DeviceSetupStatus		let	setupEventComplete
+class	parsecd.ExperimentalFeedbackDatabase			
+class	parsecd.ExperimentalFeedbackDatabase		let	db
+class	parsecd.CloudNotificationChannelConnection	NSObject		
+class	parsecd.CloudNotificationChannelConnection	NSObject	let	apsConnection
+class	parsecd.CloudNotificationChannelConnection	NSObject	let	latestMessage
+class	parsecd.CloudNotificationChannelConnection	NSObject	let	xpcEventsManager
+struct	parsecd.ChannelIdentifier			
+struct	parsecd.ChannelIdentifier		let	channel
+struct	parsecd.ChannelIdentifier		let	topic
+enum	parsecd.CloudNotificationChannelError			
+enum	parsecd.CloudNotificationChannelError		case	failedToCreateAPSConnection
+enum	parsecd.SpotlightUIFeatureFlag			
+enum	parsecd.SpotlightUIFeatureFlag		case	snippetModernization
+enum	parsecd.ParsecFeatureFlag			
+enum	parsecd.ParsecFeatureFlag		case	corelocationRevgeo
+enum	parsecd.ParsecFeatureFlag		case	feedbackDatabase
+enum	parsecd.ParsecFeatureFlag		case	responseFramework
+enum	parsecd.ParsecFeatureFlag		case	lookupGRPC
+enum	parsecd.ParsecFeatureFlag		case	lookupEngagementGRPC
+enum	parsecd.ParsecFeatureFlag		case	spotlightEngagementGRPC
+enum	parsecd.ParsecFeatureFlag		case	safariSearchGRPC
+enum	parsecd.ParsecFeatureFlag		case	safariSearchEngagementGRPC
+enum	parsecd.ParsecFeatureFlag		case	grpcSwift
+enum	parsecd.ParsecFeatureFlag		case	grpcSwiftLookupSearch
+enum	parsecd.ParsecFeatureFlag		case	patToken
+class	parsecd.NotificationsListener			
+class	parsecd.NotificationsListener		var	tokenLookup
+class	parsecd.NotificationsListener		let	logger
+class	parsecd.TrialExperimentsProvider			
+class	parsecd.TrialExperimentsProvider		var	_activeExperiments
+class	parsecd.TrialExperimentsProvider		var	statusProvider
+class	parsecd.TrialExperimentsProvider		let	environment
+class	parsecd.TrialExperimentsProvider		var	subscriptionToken
+class	parsecd.TrialExperimentsProvider		var	trialExperimentsUpdateStatus
+enum	parsecd.TrialExperimentsProvider.TrialExperimentsUpdateStatus			
+enum	parsecd.TrialExperimentsProvider.TrialExperimentsUpdateStatus		case	waitingForFirstUnlock
+enum	parsecd.TrialExperimentsProvider.TrialExperimentsUpdateStatus		case	notUpdated
+enum	parsecd.TrialExperimentsProvider.TrialExperimentsUpdateStatus		case	updated
+class	parsecd.QCCritbitOptimized	parsecd.QCCritbit		
+class	parsecd.QCCritbitOptimized	parsecd.QCCritbit	var	history
+class	parsecd.QCCritbitCompressed	parsecd.QCCritbitOptimized		
+struct	parsecd.QCCritbitOptimized.HistoryItem			
+struct	parsecd.QCCritbitOptimized.HistoryItem		let	query
+struct	parsecd.QCCritbitOptimized.HistoryItem		let	cost
+class	parsecd.ResourceAccessSpan	parsecd.ActivitySpan parsecd.ResourceAccessActivity		
+class	parsecd.ResourceAccessSpan	parsecd.ActivitySpan parsecd.ResourceAccessActivity	var	outcome
+class	parsecd.ResourceAccessSpan	parsecd.ActivitySpan parsecd.ResourceAccessActivity	var	networkSpan
+class	parsecd.ResourceAccessSpan	parsecd.ActivitySpan parsecd.ResourceAccessActivity	var	identifier
+class	parsecd.ResourceAccessSpan	parsecd.ActivitySpan parsecd.ResourceAccessActivity	let	client
+class	parsecd.ResourceAccessSpan	parsecd.ActivitySpan parsecd.ResourceAccessActivity	var	excludeOutcomeForAnalytics
+class	parsecd.LocationManager	NSObject		
+class	parsecd.LocationManager	NSObject	var	assembly
+class	parsecd.LocationManager	NSObject	var	locationService
+class	parsecd.LocationManager	NSObject	let	updateQueue
+class	parsecd.LocationManager	NSObject	let	geoCoder
+class	parsecd.LocationManager	NSObject	var	geoLocation
+class	parsecd.LocationManager	NSObject	var	lastGeoLocationUpdate
+class	parsecd.LocationManager	NSObject	var	geoPlacemark
+class	parsecd.LocationManager	NSObject	var	geoLocationLatLng
+class	parsecd.LocationManager	NSObject	var	geoLocationAge
+class	parsecd.LocationManager	NSObject	var	geoLocationSource
+class	parsecd.LocationManager	NSObject	var	geoClientMetadata
+class	parsecd.LocationManager	NSObject	var	lookupGeoLocationLatLng
+class	parsecd.LocationManager	NSObject	var	_locationAuthorizationStatus
+class	parsecd.LocationManager	NSObject	var	_lastLocationUpdateDate
+enum	parsecd.CountryCodeSourceDevice			
+enum	parsecd.CountryCodeSourceDevice		case	deviceLocal
+enum	parsecd.CountryCodeSource			
+enum	parsecd.CountryCodeSource		case	none
+enum	parsecd.CountryCodeSource		case	unknown
+enum	parsecd.CountryCodeSource		case	override
+enum	parsecd.CountryCodeSource		case	nsLocale
+enum	parsecd.CountryCodeSource		case	geoIP
+enum	parsecd.CountryCodeSource		case	mcc
+class	parsecd.Assembly			
+class	parsecd.Assembly		var	fbDatabase
+class	parsecd.Assembly		var	_sessionDatabaseManager
+class	parsecd.Assembly		var	receivingStreamListener
+class	parsecd.Assembly		var	_locationManager
+class	parsecd.Assembly		var	_bagController
+class	parsecd.Assembly		var	_authTokenProvider
+class	parsecd.Assembly		var	_downloadManager
+class	parsecd.Assembly		var	_clientStateManager
+class	parsecd.Assembly		var	_parsecSessionManager
+class	parsecd.Assembly		var	_persistentStorage
+class	parsecd.Assembly		var	_visibilityManager
+class	parsecd.Assembly		var	_engagedCompletionCache
+class	parsecd.Assembly		var	eccLocker
+class	parsecd.Assembly		var	lazy
+class	parsecd.Assembly		var	_devicePersistentDataManager
+class	parsecd.Assembly		var	lazy
+class	parsecd.Assembly		var	_trialSearchServerExperimentsProvider
+class	parsecd.Assembly		var	_trialSiriServerExperimentsProvider
+class	parsecd.Assembly		var	_trialDeviceExperimentsProvider
+class	parsecd.Assembly		var	_amsBaselineSiriTreatmentProvider
+class	parsecd.Assembly		let	xpcEventsManager
+class	parsecd.Assembly		var	_cloudNotificationChannelConnection
+class	parsecd.Assembly		let	diskBagCacheEnabled
+class	parsecd.Assembly		let	deviceSetupStatus
+class	parsecd.Assembly		let	persistenceQueue
+class	parsecd.Assembly		let	backgroundQueue
+class	parsecd.Assembly		let	userInitiatedQueue
+class	parsecd.Assembly		let	userInteractiveQueue
+class	parsecd.Assembly		let	parsecTimingDataOptions
+class	parsecd.Assembly		var	_urlSession
+class	parsecd.Assembly		var	_bagSession
+class	parsecd.Assembly		var	_downloadURLSession
+class	parsecd.Assembly		var	_contextManager
+class	parsecd.Assembly		var	_currentContext
+class	parsecd.Assembly		var	_activityMonitor
+class	parsecd.Assembly		var	_bagURLProvider
+class	parsecd.Assembly		var	clock
+class	parsecd.Assembly.Clock			
+enum	parsecd.SessionLookupKey			
+enum	parsecd.SessionLookupKey		case	userGUID
+enum	parsecd.SessionLookupKey		case	userAgent
+class	parsecd.LocalStateManager			
+class	parsecd.LocalStateManager		var	assembly
+class	parsecd.LocalStateManager		let	ParsecQueryItemValueUMS_US
+class	parsecd.LocalStateManager		let	ParsecQueryItemValueUMS_UK
+class	parsecd.LocalStateManager		let	ParsecQueryItemValueUMS_SI
+class	parsecd.LocalStateManager		var	significantTimeChangeSubscription
+struct	parsecd.CombinedContext			
+struct	parsecd.CombinedContext		let	pegasusContextBase64String
+struct	parsecd.CombinedContext		let	patBase64String
+enum	parsecd.CombinedContext.CodingKeys			
+enum	parsecd.CombinedContext.CodingKeys		case	pegasusContextBase64String
+enum	parsecd.CombinedContext.CodingKeys		case	patBase64String
+class	parsecd.Locker			
+class	parsecd.Locker		let	lock
+class	parsecd.PARNetworkRequestFactory			
+class	parsecd.PARNetworkRequestFactory		var	assembly
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameGeoSrc
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameEncryptedAuthToken
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemInternalBuild
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemSeedBuild
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemSiriLocaleIdentifier
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemHeySiriEnabled
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLatLng
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameQueryString
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameQueryLanguage
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameStoreFront
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameValueZKW
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueSuggested
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueExplicit
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLocale
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemName24hDateFormat
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameSilhouette
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueTrue
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueFalse
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameVersion
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameKeyboardInputMode
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLookupHintDomain
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameContext
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameTempUnitOverride
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLookupContextLanguage
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLookupSelectionType
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueLookupSelectionTypeDefault
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueLookupSelectionTypeHint
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueLookupSelectionTypeExplicit
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameMode
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueManaged
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameDeviceCountryCode
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameTimeZone
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameTimestamp
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameAgent
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameCard
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameEffectiveSystemLanguage
+class	parsecd.PARNetworkRequestFactory		let	ParsecHeaderItemNameIfNoneMatch
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueSuggestQueriesOnly
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueSuggestQueriesAndTopHit
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueSuggestWithResults
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemValueSuggestQueriesAndTopHitAsResult
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameL2Version
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameL3Version
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLocalCompletionOrigin
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameLocalCompletionScore
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameAlwaysSendTopHit
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameTransportationMode
+class	parsecd.PARNetworkRequestFactory		let	ParsecLocationSourceUserNo
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameUMeasurementSystem
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNamePreviouslyEngagedQuery
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameMagic
+class	parsecd.PARNetworkRequestFactory		let	ParsecHeaderItemNameAccept
+class	parsecd.PARNetworkRequestFactory		let	ParsecHeaderItemValueContentTypeProtobuf
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameExp
+class	parsecd.PARNetworkRequestFactory		let	ParsecQueryItemNameWebContextStriction
+enum	parsecd.PARNetworkRequestFactory.NetworkRequestError			
+enum	parsecd.PARNetworkRequestFactory.NetworkRequestError		case	nilAssembly
+enum	parsecd.PARNetworkRequestFactory.NetworkRequestError		case	missingBagURL
+struct	parsecd.ExperimentsMetadata			
+struct	parsecd.ExperimentsMetadata		let	record
+class	parsecd.ContextProviderInterface			
+class	parsecd.ContextProviderInterface		var	lifetimeSpan
+class	parsecd.ContextProviderInterface		var	assembly
+class	parsecd.ContextProviderInterface		var	locationManager
+class	parsecd.ContextProviderInterface		var	localStateManager
+class	parsecd.ContextProviderInterface		var	motionManager
+class	parsecd.ContextProviderInterface		var	restrictionsManager
+class	parsecd.ContextProviderInterface		var	silhouetteManager
+class	parsecd.ContextProviderInterface		var	userDefaultsManager
+class	parsecd.ContextProviderInterface		var	siriSettingsManager
+class	parsecd.Critbit.Internal			
+class	parsecd.Critbit.Internal		var	left
+class	parsecd.Critbit.Internal		var	right
+class	parsecd.Critbit.Internal		let	offset
+class	parsecd.Critbit.Internal		let	bit
+class	parsecd.Critbit.Internal		let	cont
+class	parsecd.Critbit.External			
+class	parsecd.Critbit.External		let	key
+class	parsecd.Critbit.External		var	value
+class	parsecd.Critbit.Node			
+class	parsecd.Critbit.Node		var	internal
+class	parsecd.Critbit.Node		var	external
+struct	parsecd.Critbit			
+struct	parsecd.Critbit		var	root
+struct	parsecd.Critbit		var	size
+struct	parsecd.Critbit.Iterator			
+struct	parsecd.Critbit.Iterator		var	node
+struct	parsecd.Critbit.Iterator		var	stack
+class	parsecd.LifetimeSpanPrototype	parsecd.ActivitySpan parsecd.LifetimeTrackingActivity _$sxG -><A: parsecd.LifetimeTrackable>		
+enum	parsecd.LifetimeTrackingActivity<A	parsecd.LifetimeTrackable>		
+enum	parsecd.LifetimeTrackingActivity<A	parsecd.LifetimeTrackable>	case	lifetime
+class	parsecd.ClientConnection	XPCConnectionDelegateShim		
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	var	assembly
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	connectionID
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	backgroundQueue
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	clientStateManager
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	remoteObject
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	connection
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	timer
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	transactionOpen
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	var	isActiveListener
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	transaction
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	cancellableLock
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	var	cancellables
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	var	parClientRequiresStateChangeNotifications
+class	parsecd.ClientConnection	XPCConnectionDelegateShim	let	_lastState
+struct	parsecd.ForceFetchBagTask			
+struct	parsecd.ForceFetchBagTask		let	state
+struct	parsecd.ForceFetchBagTask		let	userAgent
+struct	parsecd.ForceFetchBagTask		let	reply
+struct	parsecd.OSVariant			
+class	parsecd.TopicCacheController			
+class	parsecd.TopicCacheController		let	locker
+class	parsecd.TopicCacheController		let	notificationCenter
+class	parsecd.TopicCacheController		let	activityMonitor
+class	parsecd.TopicCacheController		var	cache
+class	parsecd.TopicCacheController		var	timer
+class	parsecd.DownloadResource			
+class	parsecd.DownloadResource		var	identifier
+class	parsecd.DownloadResource		var	url
+class	parsecd.DownloadResource		var	redirectUrl
+class	parsecd.DownloadManager	NSObject		
+class	parsecd.DownloadManager	NSObject	var	assembly
+class	parsecd.DownloadManager	NSObject	let	queue
+class	parsecd.DownloadManager	NSObject	let	hasStarted
+class	parsecd.DownloadManager	NSObject	var	resources
+class	parsecd.DownloadManager	NSObject	var	spans
+class	parsecd.SafariEngagedSuggestionController	parsecd.BasicEngagedSuggestionController		
+class	parsecd.AMSBaselineTreatmentProvider			
+class	parsecd.AMSBaselineTreatmentProvider		let	enabledNamespace
+class	parsecd.AMSBaselineTreatmentProvider		let	assembly
+class	parsecd.AMSBaselineTreatmentProvider		var	__treatmentsPayload
+enum	parsecd.PegasusClientName			
+enum	parsecd.PegasusClientName		case	Unknown
+enum	parsecd.PegasusClientName		case	Safari
+enum	parsecd.PegasusClientName		case	Spotlight
+enum	parsecd.PegasusClientName		case	Siri
+enum	parsecd.PegasusClientName		case	Lookup
+enum	parsecd.PegasusClientName		case	Messages
+enum	parsecd.PegasusClientName		case	News
+enum	parsecd.PegasusClientName		case	Parsecd
+enum	parsecd.PegasusClientName		case	ParsecTool
+enum	parsecd.PegasusClientName		case	CoreSuggestions
+enum	parsecd.PegasusClientName		case	FlightUtilities
+enum	parsecd.PegasusClientName		case	MapsSuggestions
+enum	parsecd.PegasusClientName		case	Mail
+enum	parsecd.PegasusClientName		case	VisualIntelligence
+enum	parsecd.PegasusClientName		case	Trystero
+enum	parsecd.PegasusClientName		case	DuetExpert
+enum	parsecd.PegasusClientName		case	ReverseTemplated
+enum	parsecd.PegasusClientName		case	MediaAnalysisd
+enum	parsecd.PegasusClientName		case	NotificationsLogging
+enum	parsecd.PegasusClientName		case	PegasusKit
+enum	parsecd.PegasusClientName		case	Photos
+enum	parsecd.PegasusClientName		case	PhotoPicker
+enum	parsecd.PegasusClientName		case	IntelligencePlatform
+enum	parsecd.PegasusClientName		case	IntelligenceFlow
+enum	parsecd.PegasusClientName		case	SafariBrowsingAssistant
+enum	parsecd.PegasusClientName		case	ClockFace
+enum	parsecd.PegasusClientName		case	LookupSearch
+enum	parsecd.PegasusClientName		case	EncryptedVisualSearch
+enum	parsecd.PegasusClientName		case	SearchAnalyticsWorker
+enum	parsecd.PegasusClientName		case	CameraVisualSearch
+enum	parsecd.PegasusClientName		case	EncryptedPQAGeo
+enum	parsecd.PegasusClientName		case	EncryptedPhotosLocationSearch
+enum	parsecd.PegasusClientName		case	Tips
+class	parsecd.DevicePersistentDataManager			
+class	parsecd.DevicePersistentDataManager		let	activityMonitor
+class	parsecd.DevicePersistentDataManager		let	logger
+class	parsecd.DevicePersistentDataManager		let	fileManager
+class	parsecd.DevicePersistentDataManager		var	cachedData
+class	parsecd.DevicePersistentDataManager		var	locker
+enum	parsecd.DevicePersistentDataManager.Activity			
+enum	parsecd.DevicePersistentDataManager.Activity		case	creating
+enum	parsecd.DevicePersistentDataManager.Activity		case	updating
+enum	parsecd.DevicePersistentDataManager.Activity		case	failedToGetURL
+enum	parsecd.DevicePersistentDataManager.Activity		case	failedToRead
+enum	parsecd.DevicePersistentDataManager.Activity		case	failedToWrite
+struct	parsecd.ObjcExceptionUtil			
+class	parsecd.WarmupContext			
+class	parsecd.WarmupContext		let	lastNetworkActivityDateByHost
+class	parsecd.WarmupContext		let	warmupTaskInProgress
+class	parsecd.WarmupContext		let	warmupQueue
+class	parsecd.PegasusResponseState			
+class	parsecd.PegasusResponseState		let	oncePerTaskFlag
+class	parsecd.PegasusResponseState		var	promises
+class	parsecd.PegasusResponseState		let	lock
+enum	parsecd.ResponseError			
+enum	parsecd.ResponseError		case	nonHttpResponse
+enum	parsecd.ResponseError		case	dataTaskFailure
+class	parsecd.BiomeStreamsLedger			
+class	parsecd.BiomeStreamsLedger		var	assembly
+class	parsecd.ActivityMonitor			
+class	parsecd.ActivityMonitor		var	delegate
+class	parsecd.ActivityMonitor		let	locker
+class	parsecd.ActivityMonitor		var	spans
+class	parsecd.ActivityMonitor.WeakReference			
+class	parsecd.ActivityMonitor.WeakReference		var	reference
+enum	parsecd.ResourceAccessOutcome			
+enum	parsecd.ResourceAccessOutcome		case	unknown
+enum	parsecd.ResourceAccessOutcome		case	cacheHit
+enum	parsecd.ResourceAccessOutcome		case	networkCallSucceed
+enum	parsecd.ResourceAccessOutcome		case	xpcCallSucceed
+enum	parsecd.ResourceAccessOutcome		case	finished
+enum	parsecd.ResourceAccessOutcome		case	canceled
+enum	parsecd.ResourceAccessOutcome		case	cacheMiss
+enum	parsecd.ResourceAccessOutcome		case	configFetchSynchronized
+enum	parsecd.ResourceAccessOutcome		case	configFetchThrottled
+enum	parsecd.ResourceAccessOutcome		case	configFetchInBackground
+enum	parsecd.ResourceAccessOutcome		case	skipSearch
+enum	parsecd.ResourceAccessOutcome		case	pretendSearch
+enum	parsecd.ResourceAccessOutcome		case	warmNotRequired
+enum	parsecd.ResourceAccessOutcome		case	connectionStillWarm
+enum	parsecd.ResourceAccessOutcome		case	skipSearchBecauseURL
+enum	parsecd.ResourceAccessOutcome		case	notFound
+enum	parsecd.ResourceAccessOutcome		case	warmError
+enum	parsecd.ResourceAccessOutcome		case	badRequest
+enum	parsecd.ResourceAccessOutcome		case	badResponse
+enum	parsecd.ResourceAccessOutcome		case	badResponseStatus
+enum	parsecd.ResourceAccessOutcome		case	emptyDataInResponse
+enum	parsecd.ResourceAccessOutcome		case	invalidJSON
+enum	parsecd.ResourceAccessOutcome		case	dataTaskFailure
+enum	parsecd.ResourceAccessOutcome		case	responseNotHTTP
+enum	parsecd.ResourceAccessOutcome		case	otherNetworkError
+enum	parsecd.ResourceAccessOutcome		case	requestError
+enum	parsecd.ResourceAccessOutcome		case	rpcError
+enum	parsecd.ResourceAccessOutcome		case	timedOut
+enum	parsecd.ResourceAccessOutcome		case	xpcError
+enum	parsecd.ResourceAccessOutcome		case	missingContext
+enum	parsecd.ResourceAccessOutcome		case	configFetchThrottledCacheReadFailed
+enum	parsecd.ResourceAccessOutcome		case	configFetchCompletedCacheReadFailed
+enum	parsecd.ResourceAccessOutcome		case	invalidConfig
+enum	parsecd.ResourceAccessOutcome		case	otherConfigError
+enum	parsecd.ResourceAccessOutcome		case	featureDisabled
+enum	parsecd.ResourceAccessOutcome		case	deviceSetupIncomplete
+enum	parsecd.ResourceAccessOutcome		case	ensureBagFailed
+enum	parsecd.ResourceAccessOutcome		case	noUserAgent
+enum	parsecd.ResourceAccessOutcome		case	noBag
+enum	parsecd.ResourceAccessOutcome		case	noAssembly
+enum	parsecd.ResourceAccessOutcome		case	searchDisabledFromBag
+enum	parsecd.ResourceAccessOutcome		case	missingSearchURLInBag
+enum	parsecd.ResourceAccessOutcome		case	missingProxy
+enum	parsecd.ResourceAccessOutcome		case	requestIneligible
+enum	parsecd.ResourceAccessOutcome		case	badResource
+enum	parsecd.ResourceAccessOutcome		case	proxyInitError
+enum	parsecd.ResourceAccessOutcome		case	otherProxyError
+enum	parsecd.ResourceAccessOutcome		case	notConfiguredError
+enum	parsecd.ResourceAccessOutcome		case	otherPegasusError
+enum	parsecd.ResourceAccessOutcome		case	contextError
+enum	parsecd.ResourceAccessOutcome		case	otherContextError
+enum	parsecd.ResourceAccessOutcome		case	otherSearchError
+enum	parsecd.ResourceAccessOutcome		case	contextFetchFailed
+enum	parsecd.ResourceAccessOutcome		case	contextFetchSuccessUnchanged
+enum	parsecd.ResourceAccessOutcome		case	contextFetchSuccessUpdated
+enum	parsecd.ResourceAccessOutcome		case	contextFetchSuccessUpdatedStale
+enum	parsecd.ResourceAccessOutcome		case	sqlError
+enum	parsecd.ResourceAccessOutcome		case	v1Finished
+enum	parsecd.ResourceAccessOutcome		case	v2Finished
+enum	parsecd.ResourceAccessOutcome		case	urlErrorCancelled
+enum	parsecd.ResourceAccessOutcome		case	urlErrorBadURL
+enum	parsecd.ResourceAccessOutcome		case	urlErrorTimedOut
+enum	parsecd.ResourceAccessOutcome		case	urlErrorUnsupportedURL
+enum	parsecd.ResourceAccessOutcome		case	urlErrorCannotFindHost
+enum	parsecd.ResourceAccessOutcome		case	urlErrorNetworkConnectionLost
+enum	parsecd.ResourceAccessOutcome		case	urlErrorDNSLookupFailed
+enum	parsecd.ResourceAccessOutcome		case	urlErrorHTTPTooManyRedirects
+enum	parsecd.ResourceAccessOutcome		case	urlErrorResourceUnavailable
+enum	parsecd.ResourceAccessOutcome		case	urlErrorNotConnectedToInternet
+enum	parsecd.ResourceAccessOutcome		case	urlErrorRedirectToNonExistentLocation
+enum	parsecd.ResourceAccessOutcome		case	urlErrorDataNotAllowed
+enum	parsecd.ResourceAccessOutcome		case	appWhitelistImmediateUpdateTransactionMissing
+enum	parsecd.ResourceAccessOutcome		case	appWhitelistDeferredUpdateBegan
+enum	parsecd.ResourceAccessOutcome		case	appwhitelistDeferredUpdateTransactionMissing
+enum	parsecd.ResourceAccessOutcome		case	appWhitelistDeferredUpdateSuperseded
+enum	parsecd.ResourceAccessOutcome		case	failedToCreateFile
+enum	parsecd.ResourceAccessOutcome		case	failedToCreateFileHandle
+enum	parsecd.ResourceAccessOutcome		case	failedToSetExtendedAttributes
+enum	parsecd.ResourceAccessOutcome		case	cacheDirectoryNotFound
+enum	parsecd.ResourceAccessOutcome		case	cacheDirEnumeratorInitFailed
+enum	parsecd.ResourceAccessOutcome		case	disallowedNonPlatformBinary
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryFinished
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryMissingContext
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryNotFound
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetSet
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetName
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetLocation
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetMetadata
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryMissingMetadataEntry
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryCannotReadAsset
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryInvalidJSON
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryBadResource
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryBadURL
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryRequestIneligible
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryTaskCancelled
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryHashNotFound
+enum	parsecd.ResourceAccessOutcome		case	assetDeliverySameVersion
+enum	parsecd.ResourceAccessOutcome		case	assetDeliveryInvalidContext
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskCompleted
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskError
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskCompletedWithEvents
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskObservedEvents
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskNoEventsFound
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskBiomeStreamIterationEmpty
+enum	parsecd.ResourceAccessOutcome		case	sbaTaskNoBookmarkFound
+enum	parsecd.ResourceAccessOutcome		case	sbaEventSavedToFL
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorReadingFromBiome
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorWriteToFL
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorPBDecode
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorPBEncode
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorPBSchemaMismatch
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorWebIDMissing
+enum	parsecd.ResourceAccessOutcome		case	sbaErrorBookmarkDecodeError
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionInvalidRemoteObject
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionMissingPayload
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionUnsubscribeError
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionSubscribeError
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionSubscribeSuccess
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionUnsubscribeSuccess
+enum	parsecd.ResourceAccessOutcome		case	cloudConnectionNoPushMessage
+enum	parsecd.ResourceAccessOutcome		case	protoSterilizationFailed
+enum	parsecd.ResourceAccessOutcome		case	parsecKeysMissingTokenError
+enum	parsecd.ResourceAccessOutcome		case	parsecKeysFound
+enum	parsecd.ResourceAccessOutcome		case	sessionSuccess
+enum	parsecd.ResourceAccessOutcome		case	sessionUnknown
+enum	parsecd.ResourceAccessOutcome		case	timestampOutOfRange
+enum	parsecd.ResourceAccessOutcome		case	patTokenSuccess
+enum	parsecd.ResourceAccessOutcome		case	patTokenChallengeFailed
+enum	parsecd.ResourceAccessOutcome		case	patTokenChallengeDataMissing
+enum	parsecd.ResourceAccessOutcome		case	patTokenFetcherInitFailed
+enum	parsecd.ResourceAccessOutcome		case	patTokenFetchFailed
+enum	parsecd.ResourceAccessOutcome		case	patTokenPermissionDenied
+enum	parsecd.ResourceAccessOutcome		case	patTokenNetworkError
+enum	parsecd.ResourceAccessActivity			
+class	parsecd.TrialAllocationStatusProvider			
+struct	parsecd.DevicePersistentData			
+struct	parsecd.DevicePersistentData		let	d20
+struct	parsecd.DevicePersistentData		let	deviceUUID
+enum	parsecd.DevicePersistentData.CodingKeys			
+enum	parsecd.DevicePersistentData.CodingKeys		case	d20
+enum	parsecd.DevicePersistentData.CodingKeys		case	deviceUUID
+class	parsecd.ClientState			
+class	parsecd.ClientState		var	assembly
+class	parsecd.ClientState		let	bagFetchSemaphore
+class	parsecd.ClientState		let	identifier
+class	parsecd.ClientState		let	activityMonitor
+class	parsecd.ClientState		var	_sessionManager
+class	parsecd.ClientState		let	sessionType
+class	parsecd.ClientState		let	_bag
+class	parsecd.ClientState		let	_client
+class	parsecd.ClientState		let	_userAgent
+class	parsecd.ClientState		var	lastNetworkRequest
+class	parsecd.ClientState		var	_configuration
+class	parsecd.ClientState		var	engagedSuggestionController
+class	parsecd.ClientState		var	zkwProxy
+class	parsecd.ClientState		var	engagementProxy
+class	parsecd.ClientState		var	safariAssistantProxy
+class	parsecd.ClientState		var	lookupSearchProxy
+class	parsecd.ClientState		var	safariSearchProxy
+class	parsecd.ClientState		let	pegasusProxyLocker
+enum	parsecd.ClientState.ResponseError			
+enum	parsecd.ClientState.ResponseError		case	badStatus
+enum	parsecd.ClientState.ResponseError		case	emptyData
+enum	parsecd.ClientState.ResponseError		case	badJSON
+class	parsecd.NetworkSpan	parsecd.ActivitySpan A<A: parsecd.ActivityDescription>		
+class	parsecd.NetworkSpan	parsecd.ActivitySpan A<A: parsecd.ActivityDescription>	let	task
+class	parsecd.NetworkSpan	parsecd.ActivitySpan A<A: parsecd.ActivityDescription>	var	error
+class	parsecd.NetworkSpan	parsecd.ActivitySpan A<A: parsecd.ActivityDescription>	var	networkActivity
+class	parsecd.QCCritbit			
+class	parsecd.QCCritbit		var	tree
+class	parsecd.QCCritbit		var	currentCost
+class	parsecd.SilhouetteContextProvider			
+class	parsecd.SilhouetteContextProvider		var	assembly
+class	parsecd.SilhouetteContextProvider		let	queue
+class	parsecd.SilhouetteContextProvider		let	filename
+class	parsecd.MotionManager			
+class	parsecd.ClientSessionManager			
+class	parsecd.ClientSessionManager		var	_session
+class	parsecd.ClientSessionManager		var	queryCache
+class	parsecd.ClientSessionManager		var	_previouslyEngagedQuery
+class	parsecd.ClientSessionManager		let	persistenceQueue
+class	parsecd.ClientSessionManager		let	identifier
+class	parsecd.ClientSessionManager		var	assembly
+class	parsecd.ClientSessionManager		var	currentState
+class	parsecd.ClientSessionManager		var	timekeeper
+class	parsecd.ClientSessionManager		let	sessionEndEventController
+class	parsecd.ClientSessionManager		var	_nonSessionTokens
+class	parsecd.ClientSessionManager		var	isNonSessionTokenUnused
+class	parsecd.SessionEndEventController			
+class	parsecd.SessionEndEventController		var	connectionIDs
+class	parsecd.SessionEndEventController		var	transaction
+class	parsecd.SessionEndEventController		let	lock
+enum	parsecd.ClientSessionState			
+enum	parsecd.ClientSessionState		case	start
+enum	parsecd.ClientSessionState		case	softLimit
+enum	parsecd.ClientSessionState		case	flushed
+enum	parsecd.Incident			
+enum	parsecd.Incident		case	objCException
+enum	parsecd.Incident		case	excessiveNumberOfFeedbackFilesPerType
+enum	parsecd.Incident		case	cacheFolderDisappeared
+enum	parsecd.ParsecService.Error			
+enum	parsecd.ParsecService.Error		case	unavailable
+enum	parsecd.ParsecService.Error		case	internalError
+enum	parsecd.ParsecService.Error		case	notAuthorized
+enum	parsecd.ParsecService.Error		case	invalidValue
+enum	parsecd.ParsecService.Error		case	noPushMessage
+enum	parsecd.ParsecService.Error		case	failedToParsePushMessage
+class	parsecd.QueryCache			
+class	parsecd.QueryCache		let	impl
+class	parsecd.QueryCache		let	activityMonitor
+class	parsecd.QueryCache		var	lifetimeSpan
+class	parsecd.QueryCache		var	assembly
+class	parsecd.QueryCache		let	queue
+class	parsecd.QueryCache		var	source
+enum	parsecd.QueryCache.Activity			
+enum	parsecd.QueryCache.Activity		case	lifetime
+enum	parsecd.QueryCache.Activity		case	cacheAccess
+enum	parsecd.QueryCache.Activity		case	cacheWrite
+enum	parsecd.QueryCache.Activity		case	resultLifetime
+struct	parsecd.TopicCacheEntry			
+struct	parsecd.TopicCacheEntry		let	expiration
+struct	parsecd.TopicCacheEntry		let	results
+enum	parsecd.TopicCacheEntryError			
+enum	parsecd.TopicCacheEntryError		case	noResultToCache
+enum	parsecd.TopicCacheEntryError		case	allResultsHaveExpired
+class	parsecd.ContextManager			
+class	parsecd.ContextManager		let	activityMonitor
+class	parsecd.ContextManager		var	lifetimeSpan
+class	parsecd.ContextManager		var	assembly
+class	parsecd.ContextManager		let	contextLocker
+class	parsecd.ContextManager		var	context
+class	parsecd.ContextManager		let	locker
+class	parsecd.ContextManager		let	logger
+class	parsecd.ContextManager		var	contextAccessQueue
+class	parsecd.ContextManager		var	configuration
+class	parsecd.ContextManager		var	_parsecSubscriptionManager
+class	parsecd.ContextManager		var	_contextProviderInterface
+class	parsecd.ContextManager		var	notBagFetchableSpan
+struct	parsecd.ContextManager.Configuration			
+struct	parsecd.ContextManager.Configuration		let	contextProviderInterfaceIdleSeconds
+struct	parsecd.ContextManager.Configuration		let	parsecSubscriptionManagerIdleSeconds
+enum	parsecd.ContextManager.Activity			
+enum	parsecd.ContextManager.Activity		case	lifetime
+enum	parsecd.ContextManager.Activity		case	contextUpdate
+enum	parsecd.ContextManager.Activity		case	notBagFetchable
+class	parsecd.DeferredSetup			
+class	parsecd.DeferredSetup		let	state
+enum	parsecd.DeferredSetup.State			
+enum	parsecd.DeferredSetup.State		case	setupPending
+enum	parsecd.DeferredSetup.State		case	setupComplete
+class	parsecd.FlusherClient	NSObject		
+class	parsecd.FlusherClient	NSObject	let	connection
+struct	parsecd.CancellableStoreKey			
+struct	parsecd.CancellableStoreKey		let	id
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>		
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	var	monitor
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	var	data
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	let	activity
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	var	isDone
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	let	osLog
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	var	signpostID
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	var	timestamp
+class	parsecd.ActivitySpan<A	parsecd.ActivityDescription>	var	locker
+struct	parsecd.ActivitySpan.ActivityData<A	parsecd.ActivityDescription>		
+struct	parsecd.ActivitySpan.ActivityData<A	parsecd.ActivityDescription>	var	format
+struct	parsecd.ActivitySpan.ActivityData<A	parsecd.ActivityDescription>	var	analytics
+struct	parsecd.ActivitySpan.ActivityData<A	parsecd.ActivityDescription>	var	arguments
+struct	parsecd.ActivitySpan.ActivityData<A	parsecd.ActivityDescription>	var	cancellables
+struct	parsecd.ActivitySpan.ActivityData<A	parsecd.ActivityDescription>	var	transaction
+class	parsecd.QueryCacheSpan	parsecd.ActivitySpan parsecd.QueryCache.Activity		
+class	parsecd.QueryCacheSpan	parsecd.ActivitySpan parsecd.QueryCache.Activity	var	result
+enum	parsecd.QueryCacheSpan.Error			
+enum	parsecd.QueryCacheSpan.Error		case	tooExpansiveToCache
+enum	parsecd.QueryCacheSpan.Error		case	noQuery
+enum	parsecd.QueryCacheSpan.Error		case	emptyQuery
+enum	parsecd.QueryCacheSpan.Error		case	inconsistentQuery
+class	parsecd.ConfigurationController			
+class	parsecd.ConfigurationController		var	assembly
+class	parsecd.ConfigurationController		var	configurationManager
+class	parsecd.ConfigurationController		var	newsVisibility
+class	parsecd.ConfigurationController		let	areFetchRequestsThrottledOnSetupComplete
+class	parsecd.ConfigurationController		let	lastBagContext
+class	parsecd.PARBagConfigFactory	NSObject		
+enum	parsecd.ConfigurationController.ConfigError			
+enum	parsecd.ConfigurationController.ConfigError		case	invalidConfigType
+enum	parsecd.BagFetchURL.Error			
+enum	parsecd.BagFetchURL.Error		case	invalidURL
+struct	parsecd.ConfigurationController.FeedbackContext			
+struct	parsecd.ConfigurationController.FeedbackContext		let	start
+struct	parsecd.ConfigurationController.FeedbackContext		let	sessionManager
+class	parsecd.AtomicProperty			
+class	parsecd.AtomicProperty		var	value
+class	parsecd.AtomicProperty		let	lock
+class	parsecd.DiskWriteSpan	parsecd.ActivitySpan parsecd.DiskWriteActivity<A: parsecd.DiskOperationMetrics>		
+class	parsecd.DiskWriteSpan	parsecd.ActivitySpan parsecd.DiskWriteActivity<A: parsecd.DiskOperationMetrics>	var	error
+class	parsecd.DiskWriteSpan	parsecd.ActivitySpan parsecd.DiskWriteActivity<A: parsecd.DiskOperationMetrics>	var	metrics
+enum	parsecd.DiskWriteActivity			
+enum	parsecd.DiskWriteActivity		case	unknown
+enum	parsecd.DiskWriteActivity		case	parsecSession
+enum	parsecd.DiskWriteActivity		case	parsecFeedbackEvent
+enum	parsecd.DiskWriteActivity		case	customFeedback
+enum	parsecd.DiskWriteActivity		case	batchedInstrumentation
+enum	parsecd.DiskWriteActivity		case	fileInstrumentation
+enum	parsecd.DiskWriteActivity		case	pegasusConfiguration
+enum	parsecd.DiskWriteActivity		case	bagResource
+enum	parsecd.DiskWriteActivity		case	bag
+struct	parsecd.BasicDiskOperationMetrics			
+struct	parsecd.BasicDiskOperationMetrics		var	bytesWritten
+struct	parsecd.FeedbackDiskWriteMetrics			
+struct	parsecd.FeedbackDiskWriteMetrics		var	bytesWritten
+struct	parsecd.FeedbackDiskWriteMetrics		let	feedbackType
+enum	parsecd.DiskWriteError			
+enum	parsecd.DiskWriteError		case	unknown
+enum	parsecd.DiskWriteError		case	noAssembly
+enum	parsecd.DiskWriteError		case	readError
+enum	parsecd.DiskWriteError		case	writeError
+enum	parsecd.DiskWriteError		case	quotaExceeded
+enum	parsecd.DiskWriteError		case	customFeedbackNoFile
+enum	parsecd.DiskWriteError		case	errorMakingTempFile
+enum	parsecd.DiskWriteError		case	mmapError
+enum	parsecd.DiskWriteError		case	pathError
+class	parsecd.StorefrontIdentifierProvider			
+class	parsecd.StorefrontIdentifierProvider		var	observer
+class	parsecd.StorefrontIdentifierProvider		var	storefrontIdentifier
+class	parsecd.StorefrontIdentifierProvider		var	assembly
+class	parsecd.StorefrontIdentifierProvider		let	queue
+class	parsecd.StorefrontIdentifierProvider		var	registrationToken
+class	parsecd.StorefrontIdentifierProvider		let	accountMonitor
+class	parsecd.AppleAccountMonitor	NSObject		
+class	parsecd.AppleAccountMonitor	NSObject	var	monitoredAccountStore
+class	parsecd.AppleAccountMonitor	NSObject	var	queue
+class	parsecd.AppleAccountMonitor	NSObject	let	registrations
+class	parsecd.AppleAccountMonitor	NSObject	var	lastAccount
+class	parsecd.AppleAccountMonitor	NSObject	var	didRegister
+struct	parsecd.StorefrontAccount			
+struct	parsecd.StorefrontAccount		let	identifier
+struct	parsecd.StorefrontAccount		let	isManagedAppleID
+struct	parsecd.AppleAccountMonitor.Registration			
+struct	parsecd.AppleAccountMonitor.Registration		let	token
+struct	parsecd.AppleAccountMonitor.Registration		let	block
+struct	parsecd.AppleAccountMonitor.RegisterToken			
+struct	parsecd.AppleAccountMonitor.RegisterToken		let	value
+class	parsecd.SessionFilename			
+class	parsecd.SessionFilename		var	sessionID
+class	parsecd.SessionFilename		var	processID
+class	parsecd.SessionFilename		var	state
+class	parsecd.SessionFilename		var	uploadPending
+enum	parsecd.SessionFilename.SessionFileState			
+enum	parsecd.SessionFilename.SessionFileState		case	open
+enum	parsecd.SessionFilename.SessionFileState		case	closed
+enum	parsecd.SessionFilename.SessionFileState		case	processing
+enum	parsecd.SessionFilename.SessionFileState		case	uploaded
+class	parsecd.NullStream	NSOutputStream		
+class	parsecd.NullStream	NSOutputStream	var	_bytesWritten
+class	parsecd.ParsecPersistentStorage			
+class	parsecd.ParsecPersistentStorage		var	assembly
+class	parsecd.ParsecPersistentStorage		var	numberOfSessionFiles
+enum	parsecd.SessionFileCreationError			
+enum	parsecd.SessionFileCreationError		case	createFileWithPermissionFailed
+enum	parsecd.SessionFileCreationError		case	fileHandleForWritingFailed
+enum	parsecd.SessionFileCreationError		case	sessionGUIDNotFound
+enum	parsecd.SessionFileCreationError		case	failedToSetExtendedAttributes
+enum	parsecd.SessionFileCreationError		case	assemblyIsNil
+enum	parsecd.SessionFileCreationError		case	uploadFromSessionDBEnabled
+enum	parsecd.SessionFileCreationError		case	sessionFilenameInitFailed
+enum	parsecd.SessionFileCreationError		case	cacheDirectoryMissing
+class	parsecd.BiomeDatabaseManager			
+class	parsecd.BiomeDatabaseManager		var	assembly
+class	parsecd.BiomeDatabaseManager		let	sessionDatabase
+class	parsecd.CachedResultSet			
+class	parsecd.CachedResultSet		var	span
+class	parsecd.CachedResultSet		var	result
+struct	parsecd.CachedResultSet.Result			
+struct	parsecd.CachedResultSet.Result		let	input
+struct	parsecd.CachedResultSet.Result		let	query
+struct	parsecd.CachedResultSet.Result		let	expireTime
+struct	parsecd.CachedResultSet.Result		let	uuid
+struct	parsecd.CachedResultSet.Result		let	uiScale
+struct	parsecd.CachedResultSet.Result		let	completionScore
+struct	parsecd.CachedResultSet.Result		var	data
+struct	parsecd.CachedResultSet.Result		let	qtype
+struct	parsecd.CachedResultSet.Result		let	suggest_queries
+struct	parsecd.CachedResultSet.Result		let	localCompletion
+enum	parsecd.CachedResultSet.Result.CodingKeys			
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	input
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	query
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	expireTime
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	uuid
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	uiScale
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	completionScore
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	data
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	qtype
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	suggest_queries
+enum	parsecd.CachedResultSet.Result.CodingKeys		case	localCompletion
+struct	parsecd.ClientSessionTimekeeper			
+struct	parsecd.ClientSessionTimekeeper		let	softLimitTime
+struct	parsecd.ClientSessionTimekeeper		let	idleTime
+struct	parsecd.ClientSessionTimekeeper		var	maxTime
+struct	parsecd.ClientSessionTimekeeper		var	expirationTime
+enum	parsecd.ExtendedAttributeError			
+enum	parsecd.ExtendedAttributeError		case	posixError
+enum	parsecd.ExtendedAttributeError		case	failedToEncodeValue
+class	parsecd.ClientStateManager			
+class	parsecd.ClientStateManager		var	assembly
+class	parsecd.ClientStateManager		let	store
+class	parsecd.SubscriptionProvider			
+class	parsecd.SubscriptionProvider		var	observer
+class	parsecd.SubscriptionProvider		var	enabled
+class	parsecd.SubscriptionProvider		var	queue
+class	parsecd.FuseSubscriptionProvider	parsecd.SubscriptionProvider		
+class	parsecd.FuseSubscriptionProvider	parsecd.SubscriptionProvider	let	musicSubscriptionStatusMonitor
+class	parsecd.FuseSubscriptionProvider	parsecd.SubscriptionProvider	var	musicSubscriptionObservationToken
+struct	parsecd.SubscriptionProvider.SubscriptionState			
+struct	parsecd.SubscriptionProvider.SubscriptionState		let	provider
+struct	parsecd.SubscriptionProvider.SubscriptionState		let	attribute
+struct	parsecd.SubscriptionProvider.SubscriptionState		let	active
+enum	parsecd.SubscriptionProvider.SubscriptionState.CodingKeys			
+enum	parsecd.SubscriptionProvider.SubscriptionState.CodingKeys		case	provider
+enum	parsecd.SubscriptionProvider.SubscriptionState.CodingKeys		case	attribute
+enum	parsecd.SubscriptionProvider.SubscriptionState.CodingKeys		case	active
+class	parsecd.ParsecService	NSObject		
+class	parsecd.ParsecService	NSObject	var	connections
+class	parsecd.ParsecService	NSObject	let	queue
+class	parsecd.ParsecService	NSObject	var	_assembly
+class	parsecd.XPCEventsManager			
+class	parsecd.XPCEventsManager		let	eventPublishingQueue
+class	parsecd.XPCEventsManager		let	xpcEventPublisher
+class	parsecd.XPCEventsManager		let	xpcEventTokens
+enum	parsecd.XPCEventsError			
+enum	parsecd.XPCEventsError		case	missingXPCEventToken
+enum	parsecd.XPCEventsError		case	internalError
+class	parsecd.ResourceAccessNetworkSpan	parsecd.NetworkSpan parsecd.ResourceNetworkActivity		
+class	parsecd.ResourceAccessNetworkSpan	parsecd.NetworkSpan parsecd.ResourceNetworkActivity	let	client
+class	parsecd.ResourceAccessNetworkSpan	parsecd.NetworkSpan parsecd.ResourceNetworkActivity	var	identifier
+struct	parsecd.ResourceNetworkActivity			
+struct	parsecd.ResourceNetworkActivity		var	parent
+struct	parsecd.FeedbackFile			
+struct	parsecd.FeedbackFile		let	url
+struct	parsecd.FeedbackFile		let	fileHandle
+class	parsecd.ParsecURLRequestBuilder			
+class	parsecd.ParsecURLRequestBuilder		let	urlComponents
+class	parsecd.ParsecURLRequestBuilder		var	queryItems
+class	parsecd.ParsecURLRequestBuilder		var	httpHeader
+enum	parsecd.ParsecURLRequestBuilder.URLError			
+enum	parsecd.ParsecURLRequestBuilder.URLError		case	InvalidURLSchemeError
+enum	parsecd.ParsecURLRequestBuilder.URLError		case	InvalidURL
+struct	parsecd.PegasusConfigURLProvider			
+struct	parsecd.PegasusConfigURLProvider		let	fileManager
+struct	parsecd.PegasusConfigURLProvider		let	pegasusConfigCacheDirectoryURL
+class	parsecd.TopicCacheInMemoryImpl			
+class	parsecd.TopicCacheInMemoryImpl		var	maxEntryCount
+class	parsecd.TopicCacheInMemoryImpl		var	topicToEntryMap
+struct	SwiftAvro.AvroSchema			
+struct	SwiftAvro.AvroSchema		var	wrapped
+struct	SwiftAvro.AvroRecordSchema			
+struct	SwiftAvro.AvroRecordSchema		var	type
+struct	SwiftAvro.AvroRecordSchema		var	name
+struct	SwiftAvro.AvroRecordSchema		var	namespace
+struct	SwiftAvro.AvroRecordSchema		var	fields
+struct	SwiftAvro.AvroRecordSchema.Field			
+struct	SwiftAvro.AvroRecordSchema.Field		var	name
+struct	SwiftAvro.AvroRecordSchema.Field		var	type
+struct	SwiftAvro.AvroArraySchema			
+struct	SwiftAvro.AvroArraySchema		var	type
+struct	SwiftAvro.AvroArraySchema		var	items
+struct	SwiftAvro.AvroMapSchema			
+struct	SwiftAvro.AvroMapSchema		var	type
+struct	SwiftAvro.AvroMapSchema		var	values
+struct	SwiftAvro.AvroPrimitiveSchema			
+struct	SwiftAvro.AvroPrimitiveSchema		var	wrapped
+struct	SwiftAvro.AvroUnionSchema			
+struct	SwiftAvro.AvroUnionSchema		let	schemas
+enum	SwiftAvro.AvroSchema._Schema			
+enum	SwiftAvro.AvroSchema._Schema		case	primitive
+enum	SwiftAvro.AvroSchema._Schema		case	array
+enum	SwiftAvro.AvroSchema._Schema		case	map
+enum	SwiftAvro.AvroSchema._Schema		case	record
+enum	SwiftAvro.AvroSchema._Schema		case	union
+enum	SwiftAvro.AvroRecordSchema.Field.CodingKeys			
+enum	SwiftAvro.AvroRecordSchema.Field.CodingKeys		case	name
+enum	SwiftAvro.AvroRecordSchema.Field.CodingKeys		case	type
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive			
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	null
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	boolean
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	int
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	long
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	float
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	double
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	string
+enum	SwiftAvro.AvroPrimitiveSchema.Primitive		case	bytes
+enum	SwiftAvro.AvroRecordSchema.CodingKeys			
+enum	SwiftAvro.AvroRecordSchema.CodingKeys		case	type
+enum	SwiftAvro.AvroRecordSchema.CodingKeys		case	name
+enum	SwiftAvro.AvroRecordSchema.CodingKeys		case	namespace
+enum	SwiftAvro.AvroRecordSchema.CodingKeys		case	fields
+enum	SwiftAvro.AvroMapSchema.CodingKeys			
+enum	SwiftAvro.AvroMapSchema.CodingKeys		case	type
+enum	SwiftAvro.AvroMapSchema.CodingKeys		case	values
+enum	SwiftAvro.AvroArraySchema.CodingKeys			
+enum	SwiftAvro.AvroArraySchema.CodingKeys		case	type
+enum	SwiftAvro.AvroArraySchema.CodingKeys		case	items
+enum	SwiftAvro.AvroPrimitiveSchema.CodingKeys			
+enum	SwiftAvro.AvroPrimitiveSchema.CodingKeys		case	type
+enum	SwiftAvro.Endianness			
+enum	SwiftAvro.Endianness		case	big
+enum	SwiftAvro.Endianness		case	little
+struct	SwiftAvro.ByteBuffer			
+struct	SwiftAvro.ByteBuffer		var	data
+struct	SwiftAvro.ByteBuffer		var	readerIndex
+struct	SwiftAvro.ByteBufferView			
+struct	SwiftAvro.ByteBufferView		var	_buffer
+struct	SwiftAvro.ByteBufferView		var	_range
+struct	SwiftAvro.SchemaMismatchError			
+struct	SwiftAvro.SchemaMismatchError		var	expected
+struct	SwiftAvro.SchemaMismatchError		var	actual
+struct	SwiftAvro.InvalidFieldError			
+struct	SwiftAvro.InvalidFieldError		var	name
+struct	SwiftAvro.InternalError			
+struct	SwiftAvro.InternalError		var	description
+struct	SwiftAvro.AvroValue			
+struct	SwiftAvro.AvroValue		var	wrapped
+struct	SwiftAvro.AvroRecord			
+struct	SwiftAvro.AvroRecord		let	schema
+struct	SwiftAvro.AvroRecord		var	fields
+struct	SwiftAvro.AvroArray			
+struct	SwiftAvro.AvroArray		let	schema
+struct	SwiftAvro.AvroArray		var	values
+struct	SwiftAvro.AvroMap			
+struct	SwiftAvro.AvroMap		let	schema
+struct	SwiftAvro.AvroMap		var	values
+struct	SwiftAvro.AvroPrimitive			
+struct	SwiftAvro.AvroPrimitive		var	wrapped
+struct	SwiftAvro.AvroUnion			
+struct	SwiftAvro.AvroUnion		let	schema
+struct	SwiftAvro.AvroUnion		var	value
+struct	SwiftAvro.AvroUnion		var	index
+enum	SwiftAvro.AvroPrimitive.Value			
+enum	SwiftAvro.AvroPrimitive.Value		case	boolean
+enum	SwiftAvro.AvroPrimitive.Value		case	int
+enum	SwiftAvro.AvroPrimitive.Value		case	long
+enum	SwiftAvro.AvroPrimitive.Value		case	float
+enum	SwiftAvro.AvroPrimitive.Value		case	double
+enum	SwiftAvro.AvroPrimitive.Value		case	string
+enum	SwiftAvro.AvroPrimitive.Value		case	bytes
+enum	SwiftAvro.AvroPrimitive.Value		case	null
+enum	SwiftAvro.AvroPrimitive.SomeBytes			
+enum	SwiftAvro.AvroPrimitive.SomeBytes		case	array
+enum	SwiftAvro.AvroPrimitive.SomeBytes		case	byteBuffer
+enum	SwiftAvro.AvroPrimitive.SomeBytes		case	data
+enum	SwiftAvro.AvroValue.Value			
+enum	SwiftAvro.AvroValue.Value		case	primitive
+enum	SwiftAvro.AvroValue.Value		case	array
+enum	SwiftAvro.AvroValue.Value		case	map
+enum	SwiftAvro.AvroValue.Value		case	record
+enum	SwiftAvro.AvroValue.Value		case	union
+struct	SwiftAvro.AvroSchemaEncoder			
+struct	SwiftAvro.AvroSchemaEncoder		var	outputFormatting
+struct	SwiftAvro.AvroSchemaEncoder.OutputFormatting			
+struct	SwiftAvro.AvroSchemaEncoder.OutputFormatting		var	indentation
+class	SwiftAvro.SchemaEncoder			
+class	SwiftAvro.SchemaEncoder		var	codingPath
+class	SwiftAvro.SchemaEncoder		let	userInfo
+class	SwiftAvro.SchemaEncoder		var	records
+class	SwiftAvro.SchemaEncoder		var	tokens
+class	SwiftAvro.SchemaEncoder		var	containerStack
+enum	SwiftAvro.SchemaEncoder.ContainerKind			
+enum	SwiftAvro.SchemaEncoder.ContainerKind		case	array
+enum	SwiftAvro.SchemaEncoder.ContainerKind		case	object
+enum	SwiftAvro.SchemaEncoder.Token			
+enum	SwiftAvro.SchemaEncoder.Token		case	begin
+enum	SwiftAvro.SchemaEncoder.Token		case	end
+enum	SwiftAvro.SchemaEncoder.Token		case	key
+enum	SwiftAvro.SchemaEncoder.Token		case	value
+struct	SwiftAvro.KeyedContainer<A	protocol descriptor for CodingKey>		
+struct	SwiftAvro.KeyedContainer<A	protocol descriptor for CodingKey>	let	codingPath
+struct	SwiftAvro.KeyedContainer<A	protocol descriptor for CodingKey>	let	encoder
+struct	SwiftAvro.UnkeyedContainer			
+struct	SwiftAvro.UnkeyedContainer		var	count
+struct	SwiftAvro.UnkeyedContainer		var	codingPath
+struct	SwiftAvro.UnkeyedContainer		let	encoder
+struct	SwiftAvro.SingleValueContainer			
+struct	SwiftAvro.SingleValueContainer		let	codingPath
+struct	SwiftAvro.SingleValueContainer		let	encoder
+class	SearchFeedback.BiomeReadableSessionDatabase	SearchFeedback.ReadableSessionDatabase		
+enum	SearchFeedback.UploadFrom			
+enum	SearchFeedback.UploadFrom		case	files
+enum	SearchFeedback.UploadFrom		case	biome
+enum	SearchFeedback.SessionDBFeatureFlags			
+enum	SearchFeedback.SessionDBFeatureFlags		case	sessionDBUpload
+class	SearchFeedback.ReadableSessionDatabase			
+class	SearchFeedback.ReadableSessionDatabase		let	reader
+struct	SearchFeedback.BiomeStreamsTelemetryReporter			
+class	SearchFeedback.BiomeDatabaseReader			
+class	SearchFeedback.BiomeDatabaseReader		var	fileManager
+enum	SearchFeedback.BiomeReadError			
+enum	SearchFeedback.BiomeReadError		case	noEventInstance
+enum	SearchFeedback.BiomeReadError		case	invalidPayload
+enum	SearchFeedback.BiomeReadError		case	cannotLocateStream
+enum	SearchFeedback.BiomeReadError		case	memoryError
+enum	SearchFeedback.BiomeReadError		case	unknownStream
+enum	SearchFeedback.BiomeReadError		case	invalidEnumeratorTimeInterval
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy			
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	type
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	session
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	bookmark
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	time
+class	SearchFeedback.BiomeDatabaseWriter			
+class	SearchFeedback.BiomeDatabaseWriter		var	feedbackStreamWriters
+class	SearchFeedback.BiomeDatabaseWriter		var	_sessionStreamWriter
+class	SearchFeedback.BiomeDatabaseWriter		let	fileManager
+class	SearchFeedback.BiomeDatabaseWriter		let	telemetryReporter
+enum	SearchFeedback.UploadStateStoreError			
+enum	SearchFeedback.UploadStateStoreError		case	cannotResolveCacheFolder
+enum	SearchFeedback.UploadStateStoreError		case	attemptToStartWhenUploaded
+enum	SearchFeedback.UploadStateStoreError		case	attemptToFinishWhenUploaded
+enum	SearchFeedback.UploadStateStoreError		case	attemptToFinishWhenNotStarted
+enum	SearchFeedback.UploadStateStoreError		case	invalidUploadOrder
+class	SearchFeedback.UploadStateFileStore			
+class	SearchFeedback.UploadStateFileStore		let	logger
+class	SearchFeedback.UploadStateFileStore		let	fileManager
+class	SearchFeedback.UploadStateFileStore		let	sessionUploadStateFileName
+class	SearchFeedback.UploadStateFileStore		var	uploadStateCache
+struct	SearchFeedback.UploadStateFileStore.UploadState			
+struct	SearchFeedback.UploadStateFileStore.UploadState		let	bookmark
+struct	SearchFeedback.UploadStateFileStore.UploadState		var	state
+struct	SearchFeedback.UploadStateFileStore.UploadStates			
+struct	SearchFeedback.UploadStateFileStore.UploadStates		var	states
+enum	SearchFeedback.UploadStateFileStore.UploadState.CodingKeys			
+enum	SearchFeedback.UploadStateFileStore.UploadState.CodingKeys		case	bookmark
+enum	SearchFeedback.UploadStateFileStore.UploadState.CodingKeys		case	state
+enum	SearchFeedback.UploadStateFileStore.State			
+enum	SearchFeedback.UploadStateFileStore.State		case	uploading
+enum	SearchFeedback.UploadStateFileStore.State		case	uploaded
+enum	SearchFeedback.UploadStateFileStore.UploadStates.CodingKeys			
+enum	SearchFeedback.UploadStateFileStore.UploadStates.CodingKeys		case	states
+class	SearchFeedback.RawPayload	BMEventBase		
+class	SearchFeedback.RawPayload	BMEventBase	let	dataVersion
+class	SearchFeedback.RawPayload	BMEventBase	let	data
+class	SearchFeedback.SessionFeedback			
+class	SearchFeedback.SessionFeedback		var	backingStore
+class	SearchFeedback.SessionFeedback		let	type
+class	SearchFeedback.SessionFeedback		let	sessionId
+class	SearchFeedback.SessionFeedback		let	creationDate
+class	SearchFeedback.SessionFeedback		var	closingDate
+struct	SearchFeedback.BiomeSessionWrapper			
+struct	SearchFeedback.BiomeSessionWrapper		let	type
+struct	SearchFeedback.BiomeSessionWrapper		let	payload
+enum	SearchFeedback.BiomeSessionError			
+enum	SearchFeedback.BiomeSessionError		case	invalidSchema
+enum	SearchFeedback.BiomeSessionError		case	invalidSessionType
+enum	SearchFeedback.BiomeSessionError		case	unknownSessionType
+enum	SearchFeedback.BiomeSessionError		case	invalidPayload
+enum	SearchFeedback.BiomeSessionError		case	invalidSessionId
+struct	SearchFeedback.BiomeSessionWrapper.Schema			
+struct	SearchFeedback.BiomeSessionWrapper.Schema		let	store
+struct	SearchFeedback.BiomeSessionWrapper.Schema		let	wrapperMessage
+struct	SearchFeedback.BiomeSessionWrapper.Schema		let	sessionMessage
+class	SearchFeedback.Locker			
+class	SearchFeedback.Locker		let	lock
+enum	SearchFeedback.SessionDatabaseError			
+enum	SearchFeedback.SessionDatabaseError		case	streamIsNotSupported
+enum	SearchFeedback.SessionDatabaseError		case	unknownSessionType
+enum	SearchFeedback.SessionDatabaseError		case	failedToOpenSessionStore
+enum	SearchFeedback.SessionDatabaseError		case	failedToCreateEnumerator
+enum	SearchFeedback.SessionDatabaseError		case	emptySessionPayload
+enum	SearchFeedback.SessionDatabaseError		case	emptyFeedbackPayload
+struct	SearchFeedback.SessionFeedbackReference			
+struct	SearchFeedback.SessionFeedbackReference		let	session
+struct	SearchFeedback.SessionFeedbackReference		let	sessionBookmark
+class	SearchFeedback.SessionBookmark			
+class	SearchFeedback.SessionBookmark		let	bmBookmark
+class	SearchFeedback.SessionBookmark		let	sessionId
+class	SearchFeedback.SessionBookmark		let	timestamp
+enum	SearchFeedback.SessionBookmark.CodingKeys			
+enum	SearchFeedback.SessionBookmark.CodingKeys		case	bmBookmark
+enum	SearchFeedback.SessionBookmark.CodingKeys		case	sessionId
+enum	SearchFeedback.SessionBookmark.CodingKeys		case	timestamp
+enum	SearchFeedback.SessionBookmarkError			
+enum	SearchFeedback.SessionBookmarkError		case	failedToDecodeBookmark
+enum	SearchFeedback.SessionBookmarkError		case	failedToEncodeBookmark
+class	SearchFeedback.WritableSessionDatabase			
+class	SearchFeedback.WritableSessionDatabase		let	writer
+class	SearchFeedback.WritableSessionDatabase		let	ledger
+class	SearchFeedback.WritableSessionDatabase		let	locker
+class	SearchFeedback.WritableSessionDatabase		var	sessions
+struct	SQLiter.SQLiteRow			
+struct	SQLiter.SQLiteRow		let	context
+struct	SQLiter.SQLiteUndefined			
+enum	SQLiter.SQLiteError			
+enum	SQLiter.SQLiteError		case	resultCode
+enum	SQLiter.SQLiteError		case	columnNotFound
+enum	SQLiter.SQLiteError		case	failedToCreateVTable
+enum	SQLiter.SQLiteError		case	unexpectedError
+enum	SQLiter.SQLiteError		case	configurationError
+enum	SQLiter.SQLiteError		case	notThreadSafe
+enum	SQLiter.SQLiteError		case	excessiveNumberOfResults
+enum	SQLiter.SQLiteError		case	unexpectedlyFinalizedStatement
+enum	SQLiter.SQLiteError		case	databaseIsClosed
+enum	SQLiter.SQLiteError		case	insufficientNumberOfResults
+enum	SQLiter.SQLiteError		case	valueIsNull
+enum	SQLiter.SQLiteError		case	parametersExpected
+enum	SQLiter.SQLiteError		case	notRepresentable
+enum	SQLiter.SQLiteError		case	bindingParameterNotFound
+enum	SQLiter.SQLiteError		case	invalidCharacter
+enum	SQLiter.SQLiteError		case	attemptToDowngradeVersion
+class	SQLiter.SQLiteLogger			
+class	SQLiter.SQLiteDatabase			
+class	SQLiter.SQLiteDatabase		var	connection
+enum	SQLiter.SQLiteDatabase.TransactionError			
+enum	SQLiter.SQLiteDatabase.TransactionError		case	fatal
+enum	SQLiter.SQLiteDatabase.TransactionError		case	recoverable
+struct	SQLiter.SQLiteArgument			
+struct	SQLiter.SQLiteArgument		let	argument
+enum	SQLiter.SQLiteDataType			
+enum	SQLiter.SQLiteDataType		case	integer
+enum	SQLiter.SQLiteDataType		case	text
+enum	SQLiter.SQLiteDataType		case	blob
+enum	SQLiter.SQLiteDataType		case	float
+enum	SQLiter.SQLiteDataType		case	null
+struct	SQLiter.SQLiteStatement			
+struct	SQLiter.SQLiteStatement		let	context
+struct	SQLiter.SQLiteStatement		let	sqlString
+struct	SQLiter.SQLiteStatement		let	minRows
+struct	SQLiter.SQLiteStatement		let	maxRows
+struct	SQLiter.SQLiteStatement		let	verboseLog
+class	SQLiter.SQLiteStatement.Context			
+class	SQLiter.SQLiteStatement.Context		var	_database
+class	SQLiter.SQLiteStatement.Context		var	_statement
+class	SQLiter.SQLiteStatement.Context		var	columnNameToIndexCache
+enum	SQLiter.SQLiteColumnType			
+enum	SQLiter.SQLiteColumnType		case	text
+enum	SQLiter.SQLiteColumnType		case	blob
+enum	SQLiter.SQLiteColumnType		case	int32
+enum	SQLiter.SQLiteColumnType		case	int64
+enum	SQLiter.SQLiteColumnType		case	uInt32
+enum	SQLiter.SQLiteColumnType		case	uInt64
+enum	SQLiter.SQLiteColumnType		case	float
+enum	SQLiter.SQLiteColumnType		case	double
+enum	SQLiter.SQLiteColumnType		case	datetime
+enum	SQLiter.SQLiteColumnType		case	bool
+enum	SQLiter.SQLiteColumnType		case	any
+protocol	parsecd.ParsecContextProviding			
+protocol	parsecd.ClientSessionProtocol			
+protocol	parsecd.QCProtocol			
+protocol	parsecd.DeviceUserOptionsInspector			
+protocol	parsecd.EngagedCompletionCache			
+protocol	parsecd.CloudNotificationChannelConnectionProtocol			
+protocol	parsecd.OverridableFeatureFlagsKey			
+protocol	parsecd.MagicProviding			
+protocol	parsecd.ResourceAccessProvider			
+protocol	parsecd.LocationServiceProtocol			
+protocol	parsecd.DownloadManagerProtocol			
+protocol	parsecd.BagController			
+protocol	parsecd.NetworkRequestFactory			
+protocol	parsecd.ClientStateManagerProtocol			
+protocol	parsecd.ClientSessionManagerProtocol			
+protocol	parsecd.SubscriptionManagerProtocol			
+protocol	parsecd.SessionWriter			
+protocol	parsecd.PersistentStorageProtocol			
+protocol	parsecd.LocationManagerProtocol			
+protocol	parsecd.ContextManagerProtocol			
+protocol	parsecd.VisibilityManagerProtocol			
+protocol	parsecd.ClockProtocol			
+protocol	parsecd.AssemblyProtocol			
+protocol	parsecd.ContextProviderProtocol			
+protocol	parsecd.LifetimeTrackable			
+protocol	parsecd.OSVariantInspector			
+protocol	parsecd.TopicCacheControllerProtocol			
+protocol	parsecd.AMSBaselineTreatmentProviderProtocol			
+protocol	parsecd._CPRedactable			
+protocol	parsecd._CPFeedbackContainingResults			
+protocol	parsecd._CPFeedbackContainingRedactables			
+protocol	parsecd.SpanProtocol			
+protocol	parsecd.ActivityAdopter	Activity		
+protocol	parsecd.ActivityMonitorAdopter			
+protocol	parsecd.ActivityMonitorDelegate			
+protocol	parsecd.TrialAllocationStatusProviderProtocol			
+protocol	parsecd.DevicePersistentDataManagerProtocol			
+protocol	parsecd.NetworkTask			
+protocol	parsecd.EngagedSuggestionController			
+protocol	parsecd.ActivityDescription			
+protocol	parsecd.__CoreAnalyticsActivity			
+protocol	parsecd.CoreAnalyticsActivity			
+protocol	parsecd.TransactionActivity			
+protocol	parsecd.__CrashSimulationActivity			
+protocol	parsecd.OptionalCrashSimulationActivity			
+protocol	parsecd.CrashSimulationActivity			
+protocol	parsecd.SubActivityDescription	ParentActivity		
+protocol	parsecd.ParsecContextObserving			
+protocol	parsecd.EagerSessionUploader			
+protocol	parsecd.CancellableStore			
+protocol	VerifyingSecureCoding			
+protocol	parsecd.DiskOperationMetrics			
+protocol	parsecd.MonitoredAccountStoreProviding			
+protocol	parsecd.ClientSessionTimekeeperProtocol			
+protocol	parsecd.ClientSessionTimekeeperExtProtocol			
+protocol	parsecd.XPCEventsManaging			
+protocol	parsecd.BagURLProvider			
+protocol	parsecd.TopicCache			
+protocol	SearchFeedback.BiomeStreamsBookkeeping			
+protocol	SearchFeedback.UploadableSessionDatabaseProtocol			
+protocol	SearchFeedback.BiomeStreamsTelemetryReporting			
+protocol	SearchFeedback.SessionDatabaseReading			
+protocol	SearchFeedback.SessionDatabaseWriting			
+protocol	SearchFeedback.WritableSessionDatabaseProtocol			
+protocol	SQLiter.SQLiteSafeType			
+protocol	SQLiter.SQLiteType			
+protocol	SQLiter.SQLiteInteger32			
+protocol	SQLiter.SQLiteInteger64			
+protocol	SQLiter.SQLiteNamesValidating			
+protocol	SQLiter.SQLiteUnsafeType			
+protocol	SQLiter.SQLiteSchemaDescribing			
+protocol	SQLiter.SQLiteColumnDescribing			
+protocol	SQLiter.SQLiteBindable			
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for Equatable		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.compression_status	protocol descriptor for RawRepresentable: Compression		
+protocol	conformance __C.compression_status	protocol descriptor for Equatable: Compression		
+protocol	conformance __C.CLAuthorizationStatus	protocol descriptor for Equatable: CoreLocation		
+protocol	conformance __C.CLAuthorizationStatus	protocol descriptor for RawRepresentable: CoreLocation		
+protocol	conformance __C._TimingDataOptions	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance __C._TimingDataOptions	protocol descriptor for Equatable		
+protocol	conformance __C._TimingDataOptions	protocol descriptor for RawRepresentable		
+protocol	conformance __C._TimingDataOptions	protocol descriptor for SetAlgebra		
+protocol	conformance __C._TimingDataOptions	protocol descriptor for OptionSet		
+protocol	conformance __C.PAREnabledStatus	protocol descriptor for Equatable: CoreParsec		
+protocol	conformance __C.PAREnabledStatus	protocol descriptor for RawRepresentable: CoreParsec		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.xpc_event_publisher_action_t	protocol descriptor for RawRepresentable		
+protocol	conformance __C.xpc_event_publisher_action_t	protocol descriptor for Equatable		
+protocol	conformance __C.ICMusicSubscriptionStatusType	protocol descriptor for Equatable		
+protocol	conformance __C.ICMusicSubscriptionStatusType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.Name	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.Name	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.Name	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.Name	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.Name	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.Name	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance parsecd.ParsecSubscriptionManager	parsecd.SubscriptionManagerProtocol		
+protocol	conformance parsecd.ParsecSubscriptionManager	parsecd.LifetimeTrackable		
+protocol	conformance parsecd.ParsecSubscriptionManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.LazyFileWriter	parsecd.SessionWriter		
+protocol	conformance parsecd.FileWriter	parsecd.SessionWriter		
+protocol	conformance parsecd.BasicEngagedSuggestionController	parsecd.EngagedSuggestionController		
+protocol	conformance parsecd.BagContext	protocol descriptor for Equatable		
+protocol	conformance parsecd.ClientSessionOutOfRangeTelemetryState	protocol descriptor for Hashable		
+protocol	conformance parsecd.ClientSessionOutOfRangeTelemetryState	protocol descriptor for Equatable		
+protocol	conformance parsecd.ClientSession	parsecd.ClientSessionProtocol		
+protocol	conformance parsecd.SessionTokens	protocol descriptor for Equatable		
+protocol	conformance parsecd.JSONSerializationUtilError	protocol descriptor for Error		
+protocol	conformance parsecd.SiriSettingsManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.EngagedCompletionCacheClient	protocol descriptor for Equatable		
+protocol	conformance parsecd.EngagedCompletionCacheClient	protocol descriptor for Hashable		
+protocol	conformance parsecd.EngagedCompletionCacheClient	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.EngagedCompletionSQLCache	parsecd.EngagedCompletionCache		
+protocol	conformance SchemaState	protocol descriptor for Hashable		
+protocol	conformance SchemaState	protocol descriptor for Equatable		
+protocol	conformance parsecd.EngagedCompletionCacheError	protocol descriptor for Hashable		
+protocol	conformance parsecd.EngagedCompletionCacheError	protocol descriptor for Equatable		
+protocol	conformance parsecd.EngagedCompletionCacheError	protocol descriptor for Error		
+protocol	conformance parsecd.DeviceRestrictionsManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.VisibilityManager	parsecd.VisibilityManagerProtocol		
+protocol	conformance nominal type descriptor for Trialpb_TrialExperiment	protocol descriptor for Encodable: parsecd		
+protocol	conformance nominal type descriptor for Trialpb_TrialExperiment	protocol descriptor for Decodable: parsecd		
+protocol	conformance CLLocation	protocol descriptor for Encodable: parsecd		
+protocol	conformance CLPlacemark	protocol descriptor for Encodable: parsecd		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance parsecd.TransportationMode	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.TransportationMode	protocol descriptor for Hashable		
+protocol	conformance parsecd.TransportationMode	protocol descriptor for Equatable		
+protocol	conformance parsecd.PegasusContext	protocol descriptor for Encodable		
+protocol	conformance parsecd.TransportationMode	protocol descriptor for Encodable		
+protocol	conformance parsecd.ContextUpdate	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for Decodable: parsecd		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for Encodable: parsecd		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for CaseIterable: parsecd		
+protocol	conformance parsecd.RemoteConnectorIdentity	protocol descriptor for CustomStringConvertible		
+protocol	conformance parsecd.RemoteConnectorIdentity	protocol descriptor for Equatable		
+protocol	conformance parsecd.RemoteConnectorIdentity	protocol descriptor for Hashable		
+protocol	conformance parsecd.UserDefaultsManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.ChannelIdentifier	protocol descriptor for Equatable		
+protocol	conformance parsecd.ChannelIdentifier	protocol descriptor for CustomStringConvertible		
+protocol	conformance parsecd.ChannelIdentifier	protocol descriptor for Hashable		
+protocol	conformance parsecd.CloudNotificationChannelConnection	parsecd.CloudNotificationChannelConnectionProtocol		
+protocol	conformance parsecd.CloudNotificationChannelError	protocol descriptor for Hashable		
+protocol	conformance parsecd.CloudNotificationChannelError	protocol descriptor for Equatable		
+protocol	conformance parsecd.CloudNotificationChannelError	protocol descriptor for Error		
+protocol	conformance parsecd.ParsecFeatureFlag	parsecd.MagicProviding		
+protocol	conformance parsecd.ParsecFeatureFlag	parsecd.OverridableFeatureFlagsKey		
+protocol	conformance parsecd.ParsecFeatureFlag	protocol descriptor for Hashable		
+protocol	conformance parsecd.ParsecFeatureFlag	protocol descriptor for Equatable		
+protocol	conformance parsecd.SpotlightUIFeatureFlag	protocol descriptor for FeatureFlagsKey		
+protocol	conformance parsecd.SpotlightUIFeatureFlag	parsecd.MagicProviding		
+protocol	conformance parsecd.SpotlightUIFeatureFlag	protocol descriptor for Hashable		
+protocol	conformance parsecd.SpotlightUIFeatureFlag	protocol descriptor for Equatable		
+protocol	conformance parsecd.SpotlightUIFeatureFlag	parsecd.OverridableFeatureFlagsKey		
+protocol	conformance parsecd.ParsecFeatureFlag	protocol descriptor for FeatureFlagsKey		
+protocol	conformance parsecd.ResourceAccessActivity	parsecd.__CrashSimulationActivity		
+protocol	conformance parsecd.ResourceAccessActivity	parsecd.__CoreAnalyticsActivity		
+protocol	conformance parsecd.ResourceAccessActivity	parsecd.TransactionActivity		
+protocol	conformance parsecd.ResourceAccessActivity	parsecd.OptionalCrashSimulationActivity		
+protocol	conformance parsecd.ResourceAccessActivity	parsecd.CoreAnalyticsActivity		
+protocol	conformance parsecd.ResourceAccessActivity	parsecd.ActivityDescription		
+protocol	conformance CLLocationManager	parsecd.LocationServiceProtocol		
+protocol	conformance parsecd.LocationManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.LocationManager	parsecd.LocationManagerProtocol		
+protocol	conformance parsecd.CountryCodeSource	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.CountryCodeSource	protocol descriptor for Hashable		
+protocol	conformance parsecd.CountryCodeSource	protocol descriptor for Equatable		
+protocol	conformance parsecd.CountryCodeSourceDevice	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.CountryCodeSourceDevice	protocol descriptor for Hashable		
+protocol	conformance parsecd.CountryCodeSourceDevice	protocol descriptor for Equatable		
+protocol	conformance Clock	parsecd.ClockProtocol		
+protocol	conformance parsecd.Assembly	parsecd.AssemblyProtocol		
+protocol	conformance parsecd.LocalStateManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.CombinedContext	protocol descriptor for Decodable		
+protocol	conformance parsecd.CombinedContext	protocol descriptor for Encodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance parsecd.PARNetworkRequestFactory	parsecd.NetworkRequestFactory		
+protocol	conformance PARNetworkRequestFactory.NetworkRequestError	protocol descriptor for Hashable		
+protocol	conformance PARNetworkRequestFactory.NetworkRequestError	protocol descriptor for Equatable		
+protocol	conformance PARNetworkRequestFactory.NetworkRequestError	protocol descriptor for Error		
+protocol	conformance parsecd.ContextProviderInterface	parsecd.LifetimeTrackable		
+protocol	conformance parsecd.Critbit	protocol descriptor for Sequence		
+protocol	conformance Critbit.Iterator	protocol descriptor for IteratorProtocol		
+protocol	conformance Critbit.Iterator	protocol descriptor for Sequence		
+protocol	conformance parsecd.LifetimeTrackingActivity	parsecd.__CrashSimulationActivity		
+protocol	conformance parsecd.LifetimeTrackingActivity	parsecd.CrashSimulationActivity		
+protocol	conformance parsecd.LifetimeTrackingActivity	parsecd.ActivityDescription		
+protocol	conformance parsecd.LifetimeTrackingActivity	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.LifetimeTrackingActivity	protocol descriptor for Hashable		
+protocol	conformance parsecd.LifetimeTrackingActivity	protocol descriptor for Equatable		
+protocol	conformance parsecd.ClientConnection	parsecd.CancellableStore		
+protocol	conformance parsecd.OSVariant	parsecd.OSVariantInspector		
+protocol	conformance parsecd.TopicCacheController	parsecd.TopicCacheControllerProtocol		
+protocol	conformance parsecd.DownloadManager	parsecd.DownloadManagerProtocol		
+protocol	conformance parsecd.AMSBaselineTreatmentProvider	parsecd.AMSBaselineTreatmentProviderProtocol		
+protocol	conformance parsecd.PegasusClientName	protocol descriptor for Equatable		
+protocol	conformance parsecd.PegasusClientName	protocol descriptor for Hashable		
+protocol	conformance parsecd.PegasusClientName	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.PegasusClientName	protocol descriptor for CaseIterable		
+protocol	conformance parsecd.DevicePersistentDataManager	parsecd.ActivityAdopter		
+protocol	conformance DevicePersistentDataManager.Activity	parsecd.ActivityDescription		
+protocol	conformance DevicePersistentDataManager.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance DevicePersistentDataManager.Activity	protocol descriptor for Hashable		
+protocol	conformance DevicePersistentDataManager.Activity	protocol descriptor for Equatable		
+protocol	conformance parsecd.DevicePersistentDataManager	parsecd.ActivityMonitorAdopter		
+protocol	conformance parsecd.DevicePersistentDataManager	parsecd.DevicePersistentDataManagerProtocol		
+protocol	conformance ResponseError	protocol descriptor for CustomStringConvertible		
+protocol	conformance ResponseError	protocol descriptor for Error		
+protocol	conformance _CPSearchResultForFeedback	parsecd._CPRedactable		
+protocol	conformance _CPCardSectionEngagementFeedback	parsecd._CPRedactable		
+protocol	conformance _CPPunchoutForFeedback	parsecd._CPRedactable		
+protocol	conformance _CPSectionRankingFeedback	parsecd._CPRedactable		
+protocol	conformance _CPCardSectionForFeedback	parsecd._CPRedactable		
+protocol	conformance _CPStartLocalSearchFeedback	parsecd._CPRedactable		
+protocol	conformance _CPStartNetworkSearchFeedback	parsecd._CPRedactable		
+protocol	conformance PBCodable	parsecd._CPFeedbackContainingResults		
+protocol	conformance PBCodable	parsecd._CPFeedbackContainingRedactables		
+protocol	conformance parsecd.BiomeStreamsLedger	SearchFeedback.BiomeStreamsBookkeeping		
+protocol	conformance parsecd.ResourceAccessActivity	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.ResourceAccessActivity	protocol descriptor for Hashable		
+protocol	conformance parsecd.ResourceAccessActivity	protocol descriptor for Equatable		
+protocol	conformance parsecd.ResourceAccessOutcome	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.ResourceAccessOutcome	protocol descriptor for Hashable		
+protocol	conformance parsecd.ResourceAccessOutcome	protocol descriptor for Equatable		
+protocol	conformance parsecd.TrialAllocationStatusProvider	parsecd.TrialAllocationStatusProviderProtocol		
+protocol	conformance parsecd.DevicePersistentData	protocol descriptor for Equatable		
+protocol	conformance parsecd.DevicePersistentData	protocol descriptor for Encodable		
+protocol	conformance parsecd.DevicePersistentData	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance parsecd.ClientState	parsecd.ActivityAdopter		
+protocol	conformance parsecd.ClientState	parsecd.ActivityMonitorAdopter		
+protocol	conformance ClientState.ResponseError	protocol descriptor for Error		
+protocol	conformance NSURLSessionTask	parsecd.NetworkTask		
+protocol	conformance parsecd.QCCritbit	parsecd.QCProtocol		
+protocol	conformance parsecd.SilhouetteContextProvider	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.MotionManager	parsecd.ContextProviderProtocol		
+protocol	conformance parsecd.ClientSessionState	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.ClientSessionState	protocol descriptor for Hashable		
+protocol	conformance parsecd.ClientSessionState	protocol descriptor for Equatable		
+protocol	conformance parsecd.ClientSessionManager	parsecd.ClientSessionManagerProtocol		
+protocol	conformance parsecd.Incident	protocol descriptor for Error		
+protocol	conformance ParsecService.Error	protocol descriptor for Hashable		
+protocol	conformance ParsecService.Error	protocol descriptor for Equatable		
+protocol	conformance ParsecService.Error	protocol descriptor for Error		
+protocol	conformance QueryCache.Activity	parsecd.ActivityDescription		
+protocol	conformance QueryCache.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance QueryCache.Activity	protocol descriptor for Hashable		
+protocol	conformance QueryCache.Activity	protocol descriptor for Equatable		
+protocol	conformance parsecd.QueryCache	parsecd.ActivityAdopter		
+protocol	conformance parsecd.QueryCache	parsecd.ActivityMonitorAdopter		
+protocol	conformance parsecd.TopicCacheEntryError	protocol descriptor for Hashable		
+protocol	conformance parsecd.TopicCacheEntryError	protocol descriptor for Equatable		
+protocol	conformance parsecd.TopicCacheEntryError	protocol descriptor for Error		
+protocol	conformance ContextManager.Activity	parsecd.ActivityDescription		
+protocol	conformance ContextManager.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance ContextManager.Activity	protocol descriptor for Hashable		
+protocol	conformance ContextManager.Activity	protocol descriptor for Equatable		
+protocol	conformance parsecd.ContextManager	parsecd.ParsecContextObserving		
+protocol	conformance parsecd.ContextManager	parsecd.ActivityAdopter		
+protocol	conformance parsecd.ContextManager	parsecd.ActivityMonitorAdopter		
+protocol	conformance parsecd.ContextManager	parsecd.ContextManagerProtocol		
+protocol	conformance parsecd.FlusherClient	parsecd.EagerSessionUploader		
+protocol	conformance parsecd.CancellableStoreKey	protocol descriptor for Equatable		
+protocol	conformance parsecd.CancellableStoreKey	protocol descriptor for Hashable		
+protocol	conformance parsecd.ActivitySpan	parsecd.SpanProtocol		
+protocol	conformance QueryCacheSpan.Error	protocol descriptor for Error		
+protocol	conformance ConfigurationController	protocol descriptor for PegasusConfigDelegate		
+protocol	conformance ConfigurationController	parsecd.BagController		
+protocol	conformance BagFetchURL.Error	protocol descriptor for Hashable		
+protocol	conformance BagFetchURL.Error	protocol descriptor for Equatable		
+protocol	conformance ConfigurationController.ConfigError	protocol descriptor for Hashable		
+protocol	conformance ConfigurationController.ConfigError	protocol descriptor for Equatable		
+protocol	conformance ConfigurationController.ConfigError	protocol descriptor for Error		
+protocol	conformance BagFetchURL.Error	protocol descriptor for Error		
+protocol	conformance nominal type descriptor for Dictionary	parsecd.VerifyingSecureCoding		
+protocol	conformance nominal type descriptor for Array	parsecd.VerifyingSecureCoding		
+protocol	conformance parsecd.BasicDiskOperationMetrics	parsecd.DiskOperationMetrics		
+protocol	conformance parsecd.DiskWriteActivity	parsecd.__CoreAnalyticsActivity		
+protocol	conformance parsecd.DiskWriteActivity	parsecd.CoreAnalyticsActivity		
+protocol	conformance parsecd.DiskWriteActivity	parsecd.ActivityDescription		
+protocol	conformance parsecd.DiskWriteActivity	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.DiskWriteActivity	protocol descriptor for Hashable		
+protocol	conformance parsecd.DiskWriteActivity	protocol descriptor for Equatable		
+protocol	conformance parsecd.DiskWriteError	protocol descriptor for Hashable		
+protocol	conformance parsecd.DiskWriteError	protocol descriptor for Equatable		
+protocol	conformance parsecd.FeedbackDiskWriteMetrics	parsecd.DiskOperationMetrics		
+protocol	conformance parsecd.DiskWriteError	protocol descriptor for Error		
+protocol	conformance ACMonitoredAccountStore	parsecd.MonitoredAccountStoreProviding		
+protocol	conformance AppleAccountMonitor.RegisterToken	protocol descriptor for Equatable		
+protocol	conformance parsecd.StorefrontAccount	protocol descriptor for Equatable		
+protocol	conformance parsecd.StorefrontIdentifierProvider	parsecd.ParsecContextProviding		
+protocol	conformance SessionFilename.SessionFileState	protocol descriptor for Equatable		
+protocol	conformance SessionFilename.SessionFileState	protocol descriptor for Hashable		
+protocol	conformance SessionFilename.SessionFileState	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.ParsecPersistentStorage	parsecd.PersistentStorageProtocol		
+protocol	conformance parsecd.SessionFileCreationError	protocol descriptor for Error		
+protocol	conformance CachedResultSet.Result	protocol descriptor for Encodable		
+protocol	conformance CachedResultSet.Result	protocol descriptor for Decodable		
+protocol	conformance parsecd.CachedResultSet	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ClientSessionTimekeeper	parsecd.ClientSessionTimekeeperExtProtocol		
+protocol	conformance ClientSessionTimekeeper	parsecd.ClientSessionTimekeeperProtocol		
+protocol	conformance ExtendedAttributeError	protocol descriptor for Error		
+protocol	conformance parsecd.ClientStateManager	parsecd.ClientStateManagerProtocol		
+protocol	conformance parsecd.SubscriptionProvider	parsecd.ParsecContextProviding		
+protocol	conformance SubscriptionProvider.SubscriptionState	protocol descriptor for Encodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance parsecd.XPCEventsManager	parsecd.XPCEventsManaging		
+protocol	conformance parsecd.XPCEventsError	protocol descriptor for Hashable		
+protocol	conformance parsecd.XPCEventsError	protocol descriptor for Equatable		
+protocol	conformance parsecd.XPCEventsError	protocol descriptor for Error		
+protocol	conformance parsecd.ResourceNetworkActivity	protocol descriptor for Equatable		
+protocol	conformance parsecd.ResourceNetworkActivity	protocol descriptor for RawRepresentable		
+protocol	conformance parsecd.ResourceNetworkActivity	protocol descriptor for Hashable		
+protocol	conformance parsecd.ResourceNetworkActivity	parsecd.__CrashSimulationActivity		
+protocol	conformance parsecd.ResourceNetworkActivity	parsecd.__CoreAnalyticsActivity		
+protocol	conformance parsecd.ResourceNetworkActivity	parsecd.ActivityDescription		
+protocol	conformance parsecd.ResourceNetworkActivity	parsecd.OptionalCrashSimulationActivity		
+protocol	conformance parsecd.ResourceNetworkActivity	parsecd.CoreAnalyticsActivity		
+protocol	conformance parsecd.ResourceNetworkActivity	parsecd.SubActivityDescription		
+protocol	conformance ParsecURLRequestBuilder.URLError	protocol descriptor for Hashable		
+protocol	conformance ParsecURLRequestBuilder.URLError	protocol descriptor for Equatable		
+protocol	conformance ParsecURLRequestBuilder.URLError	protocol descriptor for Error		
+protocol	conformance parsecd.PegasusConfigURLProvider	parsecd.BagURLProvider		
+protocol	conformance parsecd.TopicCacheInMemoryImpl	parsecd.TopicCache		
+protocol	conformance SwiftAvro.AvroSchema	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroSchema	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroSchema	protocol descriptor for Encodable		
+protocol	conformance SwiftAvro.AvroSchema	protocol descriptor for Decodable		
+protocol	conformance SwiftAvro.AvroSchema	protocol descriptor for CustomStringConvertible		
+protocol	conformance AvroRecordSchema.Field	protocol descriptor for Hashable		
+protocol	conformance AvroRecordSchema.Field	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroRecordSchema	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroRecordSchema	protocol descriptor for Equatable		
+protocol	conformance AvroRecordSchema.Field	protocol descriptor for Decodable		
+protocol	conformance AvroRecordSchema.Field	protocol descriptor for Encodable		
+protocol	conformance SwiftAvro.AvroRecordSchema	protocol descriptor for Decodable		
+protocol	conformance SwiftAvro.AvroRecordSchema	protocol descriptor for Encodable		
+protocol	conformance AvroRecordSchema.Field	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroRecordSchema	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroArraySchema	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroArraySchema	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroArraySchema	protocol descriptor for Decodable		
+protocol	conformance SwiftAvro.AvroArraySchema	protocol descriptor for Encodable		
+protocol	conformance SwiftAvro.AvroArraySchema	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroMapSchema	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroMapSchema	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroMapSchema	protocol descriptor for Decodable		
+protocol	conformance SwiftAvro.AvroMapSchema	protocol descriptor for Encodable		
+protocol	conformance SwiftAvro.AvroMapSchema	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroPrimitiveSchema	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroPrimitiveSchema	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroPrimitiveSchema	protocol descriptor for Encodable		
+protocol	conformance SwiftAvro.AvroPrimitiveSchema	protocol descriptor for Decodable		
+protocol	conformance SwiftAvro.AvroPrimitiveSchema	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroUnionSchema	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroUnionSchema	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroUnionSchema	protocol descriptor for Encodable		
+protocol	conformance SwiftAvro.AvroUnionSchema	protocol descriptor for Decodable		
+protocol	conformance SwiftAvro.AvroUnionSchema	protocol descriptor for CustomStringConvertible		
+protocol	conformance AvroPrimitiveSchema.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance AvroPrimitiveSchema.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance AvroPrimitiveSchema.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance AvroPrimitiveSchema.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance AvroPrimitiveSchema.Primitive	protocol descriptor for RawRepresentable		
+protocol	conformance AvroPrimitiveSchema.Primitive	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance AvroPrimitiveSchema.Primitive	protocol descriptor for Encodable		
+protocol	conformance AvroPrimitiveSchema.Primitive	protocol descriptor for Hashable		
+protocol	conformance AvroSchema._Schema	protocol descriptor for Equatable		
+protocol	conformance AvroSchema._Schema	protocol descriptor for Hashable		
+protocol	conformance AvroPrimitiveSchema.Primitive	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance AvroPrimitiveSchema.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance SwiftAvro.Endianness	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.Endianness	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.ByteBuffer	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.ByteBuffer	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.ByteBufferView	protocol descriptor for RandomAccessCollection		
+protocol	conformance SwiftAvro.ByteBufferView	protocol descriptor for BidirectionalCollection		
+protocol	conformance SwiftAvro.ByteBufferView	protocol descriptor for Collection		
+protocol	conformance SwiftAvro.ByteBufferView	protocol descriptor for Sequence		
+protocol	conformance SwiftAvro.SchemaMismatchError	protocol descriptor for Error		
+protocol	conformance SwiftAvro.SchemaMismatchError	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.SchemaMismatchError	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.SchemaMismatchError	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.InvalidFieldError	protocol descriptor for Error		
+protocol	conformance SwiftAvro.InvalidFieldError	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.InvalidFieldError	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.InvalidFieldError	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.InternalError	protocol descriptor for Error		
+protocol	conformance SwiftAvro.InternalError	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.InternalError	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.InternalError	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByBooleanLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByIntegerLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByFloatLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByStringLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByUnicodeScalarLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for ExpressibleByStringInterpolation		
+protocol	conformance SwiftAvro.AvroValue	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroRecord	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroRecord	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroRecord	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroArray	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroArray	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroArray	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroMap	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroMap	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroMap	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroPrimitive	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroPrimitive	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroPrimitive	protocol descriptor for CustomStringConvertible		
+protocol	conformance SwiftAvro.AvroUnion	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroUnion	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroUnion	protocol descriptor for CustomStringConvertible		
+protocol	conformance AvroValue.Value	protocol descriptor for Equatable		
+protocol	conformance AvroValue.Value	protocol descriptor for Hashable		
+protocol	conformance AvroPrimitive.SomeBytes	protocol descriptor for Equatable		
+protocol	conformance AvroPrimitive.SomeBytes	protocol descriptor for Hashable		
+protocol	conformance AvroPrimitive.Value	protocol descriptor for Equatable		
+protocol	conformance AvroPrimitive.Value	protocol descriptor for Hashable		
+protocol	conformance AvroSchemaEncoder.OutputFormatting	protocol descriptor for Hashable		
+protocol	conformance AvroSchemaEncoder.OutputFormatting	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.AvroSchemaEncoder	protocol descriptor for Hashable		
+protocol	conformance SwiftAvro.AvroSchemaEncoder	protocol descriptor for Equatable		
+protocol	conformance SchemaEncoder.Token	protocol descriptor for Equatable		
+protocol	conformance SchemaEncoder.Token	protocol descriptor for Hashable		
+protocol	conformance SchemaEncoder.ContainerKind	protocol descriptor for Hashable		
+protocol	conformance SchemaEncoder.ContainerKind	protocol descriptor for Equatable		
+protocol	conformance SwiftAvro.SchemaEncoder	protocol descriptor for Encoder		
+protocol	conformance SwiftAvro.KeyedContainer	protocol descriptor for KeyedEncodingContainerProtocol		
+protocol	conformance SwiftAvro.UnkeyedContainer	protocol descriptor for UnkeyedEncodingContainer		
+protocol	conformance SwiftAvro.SingleValueContainer	protocol descriptor for SingleValueEncodingContainer		
+protocol	conformance SearchFeedback.UploadFrom	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.UploadFrom	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionDBFeatureFlags	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SessionDBFeatureFlags	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionDBFeatureFlags	protocol descriptor for FeatureFlagsKey		
+protocol	conformance SearchFeedback.ReadableSessionDatabase	SearchFeedback.UploadableSessionDatabaseProtocol		
+protocol	conformance SearchFeedback.BiomeStreamsTelemetryReporter	SearchFeedback.BiomeStreamsTelemetryReporting		
+protocol	conformance SearchFeedback.BiomeDatabaseReader	SearchFeedback.SessionDatabaseReading		
+protocol	conformance SearchFeedback.BiomeReadError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.BiomeDatabaseWriter	SearchFeedback.SessionDatabaseWriting		
+protocol	conformance SearchFeedback.UploadStateStoreError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.UploadStateStoreError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.UploadStateStoreError	protocol descriptor for Error		
+protocol	conformance UploadStateFileStore.UploadState	protocol descriptor for Encodable		
+protocol	conformance UploadStateFileStore.UploadState	protocol descriptor for Decodable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for RawRepresentable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Hashable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance UploadStateFileStore.UploadStates	protocol descriptor for Decodable		
+protocol	conformance UploadStateFileStore.UploadStates	protocol descriptor for Encodable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Encodable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance SearchFeedback.BiomeSessionError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.BiomeSessionError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.BiomeSessionError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.SessionDatabaseError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.SessionDatabaseError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionDatabaseError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Comparable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Decodable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Encodable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Equatable		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance SearchFeedback.SessionBookmarkError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionBookmarkError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SessionBookmarkError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.WritableSessionDatabase	SearchFeedback.WritableSessionDatabaseProtocol		
+protocol	conformance nominal type descriptor for Bool	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Float	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Double	SQLiter.SQLiteSafeType		
+protocol	conformance SQLiter.SQLiteUndefined	SQLiter.SQLiteType		
+protocol	conformance SQLiter.SQLiteUndefined	SQLiter.SQLiteBindable		
+protocol	conformance SQLiter.SQLiteUndefined	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteUndefined	protocol descriptor for Equatable		
+protocol	conformance SQLiter.SQLiteError	protocol descriptor for Error		
+protocol	conformance SQLiter.SQLiteError	protocol descriptor for Equatable		
+protocol	conformance nominal type descriptor for Bool	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Float	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Double	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Data	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Optional	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteType		
+protocol	conformance SQLiteDatabase.TransactionError	protocol descriptor for Error		
+protocol	conformance SQLiter.SQLiteDataType	protocol descriptor for Equatable		
+protocol	conformance SQLiter.SQLiteDataType	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteDataType	protocol descriptor for RawRepresentable		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteNamesValidating		
+protocol	conformance SQLiter.SQLiteColumnType	protocol descriptor for Equatable		
+protocol	conformance SQLiter.SQLiteColumnType	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteColumnType	protocol descriptor for RawRepresentable		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteUnsafeType		
+protocol	conformance nominal type descriptor for Data	SQLiter.SQLiteUnsafeType		
+protocol	conformance SQLiter.SQLiteSchema	SQLiter.SQLiteSchemaDescribing		
+protocol	conformance SQLiter.SQLiteSchema	SQLiter.SQLiteNamesValidating		
+protocol	conformance nominal type descriptor for Bool	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Float	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Double	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Data	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Array	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Optional	SQLiter.SQLiteBindable		
+extension	parsecd.EngagedCompletionCacheClient	RawRepresentable		
+extension	parsecd.CodingKeys	RawRepresentable		
+extension	parsecd.CodingKeys	RawRepresentable		
+extension	parsecd.TransportationMode	RawRepresentable		
+extension	parsecd.CountryCodeSource	RawRepresentable		
+extension	parsecd.CountryCodeSourceDevice	RawRepresentable		
+extension	parsecd.Critbit	Sequence		
+extension	parsecd.Critbit.Iterator	IteratorProtocol		
+extension	parsecd.Critbit.Iterator	Sequence		
+extension	parsecd.LifetimeTrackingActivity	RawRepresentable		
+extension	parsecd.PegasusClientName	RawRepresentable		
+extension	parsecd.PegasusClientName	CaseIterable		
+extension	parsecd.DevicePersistentDataManager	ActivityAdopter		
+extension	parsecd.DevicePersistentDataManager.Activity	RawRepresentable		
+extension	parsecd.ResourceAccessActivity	RawRepresentable		
+extension	parsecd.ResourceAccessOutcome	RawRepresentable		
+extension	parsecd.ClientState	ActivityAdopter		
+extension	parsecd.ClientSessionState	RawRepresentable		
+extension	parsecd.QueryCache.Activity	RawRepresentable		
+extension	parsecd.QueryCache	ActivityAdopter		
+extension	parsecd.ContextManager.Activity	RawRepresentable		
+extension	parsecd.ContextManager	ActivityAdopter		
+extension	parsecd.DiskWriteActivity	RawRepresentable		
+extension	parsecd.SessionFilename.SessionFileState	RawRepresentable		
+extension	parsecd.ResourceNetworkActivity	RawRepresentable		
+extension	parsecd.ResourceNetworkActivity	SubActivityDescription		
+extension	SwiftAvro.AvroPrimitiveSchema.Primitive	RawRepresentable		
+extension	SwiftAvro.ByteBufferView	RandomAccessCollection		
+extension	SwiftAvro.ByteBufferView	BidirectionalCollection		
+extension	SwiftAvro.ByteBufferView	Collection		
+extension	SwiftAvro.ByteBufferView	Sequence		
+extension	SwiftAvro.AvroValue	ExpressibleByBooleanLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByIntegerLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByFloatLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByStringLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByUnicodeScalarLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByArrayLiteral		
+extension	SwiftAvro.AvroValue	ExpressibleByStringInterpolation		
+extension	SwiftAvro.KeyedContainer	KeyedEncodingContainerProtocol		
+extension	SearchFeedback.UploadStateFileStore.State	RawRepresentable		
+extension	SQLiter.SQLiteDataType	RawRepresentable		
+extension	SQLiter.SQLiteColumnType	RawRepresentable		

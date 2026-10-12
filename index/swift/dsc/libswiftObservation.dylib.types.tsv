@@ -1,0 +1,76 @@
+kind	type	conformance	member_kind	member
+struct	Observation.Lock			
+struct	Observation.Lock		let	platformLock
+struct	Observation._ManagedCriticalState			
+struct	Observation._ManagedCriticalState		let	buffer
+class	Observation._ManagedCriticalState.LockedBuffer	Swift.ManagedBuffer  empty-list A __C.os_unfair_lock_s		
+struct	Observation.ObservationRegistrar			
+struct	Observation.ObservationRegistrar		var	extent
+class	Observation.ObservationRegistrar.ValueObservationStorage			
+struct	Observation.ObservationRegistrar.Context			
+struct	Observation.ObservationRegistrar.Context		let	state
+class	Observation.ObservationRegistrar.Extent			
+class	Observation.ObservationRegistrar.Extent		let	context
+struct	Observation.ObservationRegistrar.State			
+struct	Observation.ObservationRegistrar.State		var	id
+struct	Observation.ObservationRegistrar.State		var	observations
+struct	Observation.ObservationRegistrar.State		var	lookups
+struct	Observation.ObservationRegistrar.State.Observation			
+struct	Observation.ObservationRegistrar.State.Observation		var	kind
+struct	Observation.ObservationRegistrar.State.Observation		var	properties
+enum	Observation.ObservationRegistrar.State.ObservationKind			
+enum	Observation.ObservationRegistrar.State.ObservationKind		case	willSetTracking
+enum	Observation.ObservationRegistrar.State.ObservationKind		case	didSetTracking
+struct	Observation.ObservationTracking			
+struct	Observation.ObservationTracking		let	state
+struct	Observation.ObservationTracking		let	list
+enum	Observation.ObservationTracking.Id			
+enum	Observation.ObservationTracking.Id		case	willSet
+enum	Observation.ObservationTracking.Id		case	didSet
+enum	Observation.ObservationTracking.Id		case	full
+struct	Observation.ObservationTracking.Entry			
+struct	Observation.ObservationTracking.Entry		let	context
+struct	Observation.ObservationTracking.Entry		var	properties
+struct	Observation.ObservationTracking._AccessList			
+struct	Observation.ObservationTracking._AccessList		var	entries
+struct	Observation.ObservationTracking.State			
+struct	Observation.ObservationTracking.State		var	values
+struct	Observation.ObservationTracking.State		var	cancelled
+struct	Observation.ObservationTracking.State		var	changed
+struct	Swift.Dictionary<A	Swift.Hashable>		
+struct	Swift.Dictionary<A	Swift.Hashable>	var	_variant
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	Observation.Observations<B	Swift.Error>		
+struct	Observation.Observations<B	Swift.Error>	let	state
+struct	Observation.Observations<B	Swift.Error>	let	emit
+enum	Observation.Observations.Iteration<B	Swift.Error>		
+enum	Observation.Observations.Iteration<B	Swift.Error>	case	next
+enum	Observation.Observations.Iteration<B	Swift.Error>	case	finish
+struct	Observation.Observations.State<B	Swift.Error>		
+struct	Observation.Observations.State<B	Swift.Error>	var	id
+struct	Observation.Observations.State<B	Swift.Error>	var	continuations
+struct	Observation.Observations.State<B	Swift.Error>	var	dirty
+enum	Observation.Observations.State.Continuation<B	Swift.Error>		
+enum	Observation.Observations.State.Continuation<B	Swift.Error>	case	active
+enum	Observation.Observations.State.Continuation<B	Swift.Error>	case	cancelled
+enum	Observation.Observations.Emit<B	Swift.Error>		
+enum	Observation.Observations.Emit<B	Swift.Error>	case	iteration
+enum	Observation.Observations.Emit<B	Swift.Error>	case	element
+struct	Observation.Observations.Iterator<B	Swift.Error>		
+struct	Observation.Observations.Iterator<B	Swift.Error>	var	state
+struct	Observation.Observations.Iterator<B	Swift.Error>	let	emit
+struct	Observation.Observations.Iterator<B	Swift.Error>	var	started
+struct	Observation._ThreadLocal			
+protocol	Observation.Observable			
+protocol	conformance Observation._ManagedCriticalState	Swift.Identifiable		
+protocol	conformance Observation.ObservationRegistrar	Swift.Decodable		
+protocol	conformance Observation.ObservationRegistrar	Swift.Encodable		
+protocol	conformance Observation.ObservationRegistrar	Swift.Hashable		
+protocol	conformance Observation.ObservationRegistrar	Swift.Equatable		
+protocol	conformance Observations.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance Observation.Observations	Swift.AsyncSequence		
+extension	Observation._ManagedCriticalState	Identifiable		
+extension	Observation.Observations.Iterator	AsyncIteratorProtocol		
+extension	Observation.Observations	AsyncSequence		

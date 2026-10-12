@@ -1,0 +1,779 @@
+kind	type	conformance	member_kind	member
+class	SiriCam.AssetMetadataProvider			
+struct	SiriCam.CamInputFeatureExtractor			
+struct	SiriCam.CamInputFeatureExtractor		let	constantStepFeatureExtractor
+struct	SiriCam.CamInputFeatureExtractor		let	asrSimpleFeatureExtractor
+struct	SiriCam.CamInputFeatureExtractor		let	latticePathFeatureExtractor
+struct	SiriCam.CamInputFeatureExtractor		let	snrFeatureExtractor
+class	SiriCam.LatticePathFeatureExtractor			
+struct	SiriCam.AutoSendPersonalFeatureExtractor			
+struct	SiriCam.AutoSendPersonalFeatureExtractor		let	autoSendInputFeatureExtractor
+struct	SiriCam.AutoSendPersonalFeatureExtractor		let	personalContextFeatureExtractor
+struct	SiriCam.AutoSendPersonalFeatureExtractor		let	crrFeatureExtractor
+class	SiriCam.AutoSendPersonalHandlerProvider			
+class	SiriCam.AutoSendPersonalHandlerProvider		var	handler
+class	SiriCam.AutoSendPersonalHandler			
+class	SiriCam.AutoSendPersonalHandler		let	privateModelHandler
+class	SiriCam.AutoSendPersonalHandler		let	mixingModelHandler
+class	SiriCam.AutoSendPersonalHandler		let	autoSendPersonalFeatureExtractor
+class	SiriCam.AutoSendPersonalHandler		let	autoSendOuputProvider
+class	SiriCam.ConversationHistoryFeatureExtractor			
+class	SiriCam.ConversationHistoryFeatureExtractor		let	previousConversationHandlerId
+struct	SiriCam.TopTwo			
+struct	SiriCam.TopTwo		let	top
+struct	SiriCam.TopTwo		let	second
+enum	SiriCam.FeatureDictionaryError			
+enum	SiriCam.FeatureDictionaryError		case	duplicateKeyError
+struct	SiriCam.MixingModel			
+struct	SiriCam.MixingModel		let	scoreHeuristic
+struct	SiriCam.MixingModel		let	opPointHeuristic
+struct	SiriCam.MixingModel		let	requiredInputs
+struct	SiriCam.AppLaunchCountFeatureExtractor			
+struct	SiriCam.AppLaunchCountFeatureExtractor		let	siriSignalsContainer
+class	SiriCam.AutoSendOutput	SiriCam.CamLogOutput		
+class	SiriCam.AutoSendOutput	SiriCam.CamLogOutput	let	predictedAction
+class	SiriCam.AutoSendOutput	SiriCam.CamLogOutput	var	action
+struct	SiriCam.AutoSendInput			
+struct	SiriCam.AutoSendInput		let	autoSendId
+struct	SiriCam.AutoSendInput		let	speechPackage
+struct	SiriCam.AutoSendInput		let	rcId
+struct	SiriCam.AutoSendInput		let	featureOptInStatus
+struct	SiriCam.AutoSendInput		let	requestId
+struct	SiriCam.AutoSendInput		let	deviceIdiom
+struct	SiriCam.AutoSendOutputProvider			
+struct	SiriCam.RankerContext			
+struct	SiriCam.RankerContext		let	rrCandidates
+struct	SiriCam.RankerContext		let	responseMode
+struct	SiriCam.RankerContext		let	previousConversationHandlerId
+struct	SiriCam.RankerContext		let	maxNLProba
+enum	SiriCam.CaarError			
+enum	SiriCam.CaarError		case	initialisationError
+enum	SiriCam.CaarError		case	featureExtractionError
+enum	SiriCam.CaarError		case	modelNotFoundError
+enum	SiriCam.CaarError		case	modelOutputError
+enum	SiriCam.CoreMLError			
+enum	SiriCam.CoreMLError		case	dataTypeError
+enum	SiriCam.CoreMLError		case	conversionError
+enum	SiriCam.CoreMLError		case	indexOutOfBoundsError
+enum	SiriCam.MLMultiArrayCodingKeys			
+enum	SiriCam.MLMultiArrayCodingKeys		case	shape
+enum	SiriCam.MLMultiArrayCodingKeys		case	dataType
+enum	SiriCam.MLMultiArrayCodingKeys		case	data
+struct	SiriCam.AnyEncodable			
+struct	SiriCam.AnyEncodable		let	_encode
+enum	SiriCam.ForcedDisambiguation			
+enum	SiriCam.ForcedDisambiguation		case	APP_SHORTCUT_SMART_DISAMBIGUATION
+enum	SiriCam.ForcedDisambiguation		case	FOR_RANKING_EVALUATION
+enum	SiriCam.ForcedDisambiguation		case	ALL_TIES
+enum	SiriCam.ForcedDisambiguation		case	AUTOSEND
+struct	SiriCam.AutoSendInputFeatureExtractor			
+struct	SiriCam.AutoSendInputFeatureExtractor		let	asrSimpleFeatureExtractor
+struct	SiriCam.AutoSendInputFeatureExtractor		let	constantStepFeatureExtractor
+struct	SiriCam.AutoSendInputFeatureExtractor		let	deviceContextFeatureExtractor
+struct	SiriCam.AutoSendInputFeatureExtractor		let	latticePathFeatureExtractor
+struct	SiriCam.AutoSendInputFeatureExtractor		let	snrFeatureExtractor
+struct	SiriCam.AutoSendInputFeatureExtractor		var	wordEmbeddingExtractor
+class	SiriCam.DawnHeuristicScorer			
+struct	SiriCam.UserParseFeatureExtractor			
+struct	SiriCam.UserParseFeatureExtractor		let	onScreenAppBundleIds
+struct	SiriCam.UserParseFeatureExtractor		let	maxNLProba
+class	SiriCam.HeuristicScorer			
+struct	SiriCam.PommesFeatureExtractor			
+struct	SiriCam.PommesFeatureExtractor		let	confidenceThreshold
+class	SiriCam.CamSingletonProvider			
+class	SiriCam.CamSingletonProvider		var	camHandler
+class	SiriCam.CamLogOutput			
+class	SiriCam.CamLogOutput		let	prediction
+class	SiriCam.CamLogOutput		let	score
+class	SiriCam.CamLogOutput		let	threshold
+class	SiriCam.CamLogOutput		var	enforcer
+struct	SiriCam.CamModelMetadata			
+struct	SiriCam.CamModelMetadata		let	modelName
+struct	SiriCam.CamModelMetadata		let	version
+struct	SiriCam.CamModelMetadata		var	shadowLog
+struct	SiriCam.CamModelMetadata		var	locale
+struct	SiriCam.CamModelVersion			
+struct	SiriCam.CamModelVersion		let	major
+struct	SiriCam.CamModelVersion		let	minor
+struct	SiriCam.CamModelVersion		let	patch
+struct	SiriCam.CamModelVersion		let	prerelease
+enum	SiriCam.CamLogOutput.CodingKeys			
+enum	SiriCam.CamLogOutput.CodingKeys		case	prediction
+enum	SiriCam.CamLogOutput.CodingKeys		case	score
+enum	SiriCam.CamLogOutput.CodingKeys		case	threshold
+enum	SiriCam.CamLogOutput.CodingKeys		case	enforcer
+enum	SiriCam.CamModelVersion.CodingKeys			
+enum	SiriCam.CamModelVersion.CodingKeys		case	major
+enum	SiriCam.CamModelVersion.CodingKeys		case	minor
+enum	SiriCam.CamModelVersion.CodingKeys		case	patch
+enum	SiriCam.CamModelVersion.CodingKeys		case	prerelease
+enum	SiriCam.CamModelMetadata.CodingKeys			
+enum	SiriCam.CamModelMetadata.CodingKeys		case	modelName
+enum	SiriCam.CamModelMetadata.CodingKeys		case	version
+enum	SiriCam.CamModelMetadata.CodingKeys		case	shadowLog
+enum	SiriCam.CamModelMetadata.CodingKeys		case	locale
+enum	SiriCam.CamModelVersionError			
+enum	SiriCam.CamModelVersionError		case	emptyVersionString
+enum	SiriCam.CamModelVersionError		case	invalidNumberOfVersionComponents
+enum	SiriCam.CamModelVersionError		case	invalidVersion
+enum	SiriCam.CamUserParse			
+enum	SiriCam.CamUserParse		case	nlv4
+enum	SiriCam.CamUserParse		case	pegasus
+struct	SiriCam.CamRequest			
+struct	SiriCam.CamRequest		let	requestId
+struct	SiriCam.CamRequest		let	camId
+struct	SiriCam.CamRequest		let	rcId
+struct	SiriCam.CamRequest		let	trpId
+struct	SiriCam.CamRequest		let	speechPackage
+struct	SiriCam.CamRequest		let	rankedUserParses
+struct	SiriCam.CamRequest		let	rankedActions
+struct	SiriCam.CamRequest		let	requestContext
+struct	SiriCam.CamRequest		let	previousCamAction
+struct	SiriCam.CamRequest		let	camEnabledFeatures
+struct	SiriCam.CamResponse			
+struct	SiriCam.CamResponse		let	camAction
+struct	SiriCam.CamResponse		let	responseStatusCode
+enum	SiriCam.CamAction			
+enum	SiriCam.CamAction		case	UNKNOWN
+enum	SiriCam.CamAction		case	EXECUTE_TOP_HYPOTHESIS
+enum	SiriCam.CamAction		case	ASK_REPEAT
+enum	SiriCam.CamAction		case	GIVE_UP_REPEAT
+enum	SiriCam.CamAction		case	DISAMBIGUATE_TOP_TWO
+enum	SiriCam.CamError			
+enum	SiriCam.CamError		case	initialisationError
+enum	SiriCam.CamError		case	featureExtractionError
+enum	SiriCam.CamError		case	modelNotFoundError
+enum	SiriCam.CamError		case	modelOutputError
+enum	SiriCam.CamError		case	featureStoreError
+struct	SiriCam.DisabledAppShortcutTieBreaker			
+struct	SiriCam.DisabledAppShortcutTieBreaker		let	enabled
+struct	SiriCam.DisabledAppShortcutTieBreaker		let	forcedDisambiguation
+struct	SiriCam.DisabledAppShortcutTieBreaker		let	topIsDisabledAS
+struct	SiriCam.DisabledAppShortcutTieBreaker		let	secondIsDisabledAS
+struct	SiriCam.DisabledAppShortcutTieBreaker		let	appShortcutAction
+struct	SiriCam.DisabledAppShortcutTieBreaker		let	otherAction
+struct	SiriCam.AppLaunchRecencyFeatureExtractor			
+struct	SiriCam.AppLaunchRecencyFeatureExtractor		let	siriSignalsContainer
+class	SiriCam.NLEmbeddingsAssetsManager			
+struct	SiriCam.WordEmbeddingFeatureExtractor			
+struct	SiriCam.WordEmbeddingFeatureExtractor		let	siriLocale
+struct	SiriCam.WordEmbeddingFeatureExtractor		var	analyzer
+struct	SiriCam.WordEmbeddingFeatureExtractor		var	wordEmbedder
+struct	SiriCam.WordEmbeddingFeatureExtractor		var	oovEmbedding
+enum	SiriCam.WordEmbeddingFeatureExtractorError			
+enum	SiriCam.WordEmbeddingFeatureExtractorError		case	languageError
+enum	SiriCam.WordEmbeddingFeatureExtractorError		case	embeddingError
+enum	SiriCam.WordEmbeddingFeatureExtractorError		case	morphunError
+enum	SiriCam.WordEmbeddingFeatureExtractorError		case	missingMorphunAssets
+enum	SiriCam.WordEmbeddingFeatureExtractorError		case	missingNlEmbeddingsAssets
+struct	SiriCam.CAARTrialEnrollment			
+struct	SiriCam.CAARTrialEnrollment		let	experimentId
+struct	SiriCam.CAARTrialEnrollment		let	treatmentId
+struct	SiriCam.CAARTrialEnrollment		let	deploymentId
+struct	SiriCam.CAARTrialEnrollment		let	rolloutId
+class	SiriCam.CodeBasedRankerHandler			
+class	SiriCam.CodeBasedRankerHandler		let	scorer
+class	SiriCam.CodeBasedRankerHandler		let	modelName
+class	SiriCam.CodeBasedRankerHandler		let	modelVersion
+class	SiriCam.CodeBasedRankerHandler		let	tieBreakerChain
+class	SiriCam.ActionAmbiguityHeuristicHandler			
+class	SiriCam.ActionAmbiguityHeuristicHandler		var	modelMetadata
+class	SiriCam.ActionAmbiguityHeuristicHandler		var	overrideDisambiguateForRankingEvaluationRate
+struct	SiriCam.AmbiguousFirstRunHelper			
+struct	SiriCam.RankedAction			
+struct	SiriCam.RankedAction		let	flowHandlerId
+struct	SiriCam.RankedAction		let	parse
+struct	SiriCam.RankedAction		let	alternatives
+struct	SiriCam.RankedAction		let	score
+struct	SiriCam.RankedAction		let	userData
+struct	SiriCam.RankedAction		let	loggingId
+struct	SiriCam.RankedAction		var	inferredBundleId
+struct	SiriCam.RankedAction		var	features
+enum	SiriCam.RankedAction.CodingKeys			
+enum	SiriCam.RankedAction.CodingKeys		case	flowHandlerId
+enum	SiriCam.RankedAction.CodingKeys		case	userData
+enum	SiriCam.RankedAction.CodingKeys		case	parse
+enum	SiriCam.RankedAction.CodingKeys		case	alternatives
+enum	SiriCam.RankedAction.CodingKeys		case	score
+struct	SiriCam.DisambiguationSerialiser			
+struct	SiriCam.DisambiguationSerialiser		let	actions
+enum	SiriCam.DisambiguationSerialiser.DonationFields			
+enum	SiriCam.DisambiguationSerialiser.DonationFields		case	candidateBundles
+enum	SiriCam.DisambiguationSerialiser.DonationFields		case	candidateActions
+enum	SiriCam.DisambiguationSerialiser.DonationFields		case	selectedCandidateIndex
+struct	SiriCam.SiriSignalsQueryManager			
+struct	SiriCam.SiriSignalsQueryManager		let	serialiser
+struct	SiriCam.UserHistoryTieBreaker			
+struct	SiriCam.UserHistoryTieBreaker		let	top
+struct	SiriCam.UserHistoryTieBreaker		let	second
+struct	SiriCam.UserHistoryTieBreaker		let	kMaxUserHistoryBoost
+struct	SiriCam.UserHistoryTieBreaker		let	kRecentDisambigSameActionsTimeLimit
+struct	SiriCam.UserHistoryTieBreaker		let	kRecentDisambigSameAppsTimeLimit
+struct	SiriCam.UserHistoryTieBreaker		let	kRecentInstallTimeLimit
+struct	SiriCam.UserHistoryTieBreaker		let	kRecentLaunchTimeLimit
+struct	SiriCam.UserHistoryTieBreaker		let	kPreferenceSameActionsMinDisambigs
+struct	SiriCam.UserHistoryTieBreaker		let	kPreferenceSameActionsMinSelectedFrac
+struct	SiriCam.UserHistoryTieBreaker		let	kPreferenceSameAppsMinDisambigs
+struct	SiriCam.UserHistoryTieBreaker		let	kPreferenceSameAppsMinSelectedFrac
+struct	SiriCam.RankedActionFeatureExtractor			
+struct	SiriCam.TrialOverridesTieBreaker			
+struct	SiriCam.TrialOverridesTieBreaker		let	enabled
+struct	SiriCam.TrialOverridesTieBreaker		let	favouredAction
+enum	SiriCam.TopRecogntionFeatureExtractorError			
+enum	SiriCam.TopRecogntionFeatureExtractorError		case	emptyRecognitionError
+enum	SiriCam.MLFeatureValueCodingKeys			
+enum	SiriCam.MLFeatureValueCodingKeys		case	dataType
+enum	SiriCam.MLFeatureValueCodingKeys		case	data
+struct	SiriCam.AsrSimpleFeatureExtractor			
+class	SiriCam.UncertaintyPromptHandler			
+class	SiriCam.UncertaintyPromptHandler		let	featureExtractor
+class	SiriCam.UncertaintyPromptHandler		let	camOutputProvider
+class	SiriCam.UncertaintyPromptHandler		let	modelHandler
+class	SiriCam.UncertaintyPromptHandler		let	actionEnforcer
+class	SiriCam.MixingModelHandler			
+class	SiriCam.MixingModelHandler		let	model
+class	SiriCam.MixingModelHandler		let	modelName
+class	SiriCam.MixingModelHandler		let	modelMetadata
+struct	SiriCam.AutoConfirmMagicWordsActionEnforcer			
+struct	SiriCam.AutoConfirmSequentialEnforcer			
+struct	SiriCam.AutoConfirmSequentialEnforcer		let	enforcers
+struct	SiriCam.UserDefaultsActionEnforcer			
+struct	SiriCam.ForcedConfirmationActionEnforcer			
+class	SiriCam.AutoSendHandler			
+class	SiriCam.AutoSendHandler		var	autoSendCoreHandler
+class	SiriCam.AutoSendHandler		var	siriLocale
+struct	SiriCam.AppLaunchTieBreaker			
+struct	SiriCam.AppLaunchTieBreaker		let	enabled
+struct	SiriCam.AppLaunchTieBreaker		let	forcedDisambiguation
+struct	SiriCam.AppLaunchTieBreaker		let	top
+struct	SiriCam.AppLaunchTieBreaker		let	second
+enum	SiriCam.CamResponseStatusCode			
+enum	SiriCam.CamResponseStatusCode		case	SUCCESS
+enum	SiriCam.CamResponseStatusCode		case	INTERNAL_ERROR
+enum	SiriCam.CamResponseStatusCode		case	MODEL_VERSION_ERROR__EMPTY_VERION_STRING
+enum	SiriCam.CamResponseStatusCode		case	MODEL_VERSION_ERROR__INVALID_NUMBER_OF_VERION_COMPONENT
+enum	SiriCam.CamResponseStatusCode		case	MODEL_VERSION_ERROR__INVALID_VERSION
+enum	SiriCam.CamResponseStatusCode		case	MODEL_ERROR__MODEL_LOAD_FAILED
+enum	SiriCam.CamResponseStatusCode		case	MODEL_ERROR__MODEL_NOT_FOUND
+enum	SiriCam.CamResponseStatusCode		case	MODEL_ERROR__PREDICTION_INPUT_CONVERSION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	MODEL_ERROR__PREDICTION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	FEATURE_DICTIONARY_ERROR__DUPLICATED_KEY_ERROR
+enum	SiriCam.CamResponseStatusCode		case	COREML_ERROR__DATA_TYPE_ERROR
+enum	SiriCam.CamResponseStatusCode		case	COREML_ERROR__CONVERSION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	COREML_ERROR__INDEX_OUT_OF_BOUNDS_ERROR
+enum	SiriCam.CamResponseStatusCode		case	WORD_EMBEDDING_FEATURE_EXTRACTOR_ERROR__LANGUAGE_ERROR
+enum	SiriCam.CamResponseStatusCode		case	WORD_EMBEDDING_FEATURE_EXTRACTOR_ERROR__EMBEDDING_ERROR
+enum	SiriCam.CamResponseStatusCode		case	WORD_EMBEDDING_FEATURE_EXTRACTOR_ERROR__MORPHUN_ERROR
+enum	SiriCam.CamResponseStatusCode		case	WORD_EMBEDDING_FEATURE_EXTRACTOR_ERROR__EMPTY_RECOGNITION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	WORD_EMBEDDING_FEATURE_EXTRACTOR_ERROR__MISSING_MORPHUN_ASSETS_ERROR
+enum	SiriCam.CamResponseStatusCode		case	WORD_EMBEDDING_FEATURE_EXTRACTOR_ERROR__MISSING_NL_EMBEDDINGS_ASSETS_ERROR
+enum	SiriCam.CamResponseStatusCode		case	CAM_ERROR__INITIALISATION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	CAM_ERROR__FEATURE_EXTRACTION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	CAM_ERROR__MODEL_NOT_FOUND_ERROR
+enum	SiriCam.CamResponseStatusCode		case	CAM_ERROR__MODEL_OUTPUT_ERROR
+enum	SiriCam.CamResponseStatusCode		case	AUTO_CONFIRM_ERROR__INITIALISATION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	AUTO_CONFIRM_ERROR__INTERNAL_ERROR
+enum	SiriCam.CamResponseStatusCode		case	AUTO_CONFIRM_ERROR__INVALID_INPUT_ERROR
+enum	SiriCam.CamResponseStatusCode		case	AUTO_CONFIRM_ERROR__FEATURE_EXTRACTION_ERROR
+enum	SiriCam.CamResponseStatusCode		case	AUTO_CONFIRM_ERROR__MODEL_NOT_FOUND_ERROR
+enum	SiriCam.CamResponseStatusCode		case	AUTO_CONFIRM_ERROR__MODEL_OUTPUT_ERROR
+enum	SiriCam.CamResponseStatusCode		case	TOP_RECOGNITION_EXTRACTOR_ERROR__EMPTY_RECOGNITION_ERROR
+class	SiriCam.DummyClassToIdentifyTheCamFramework			
+struct	SiriCam.UncertaintyPromptMagicWordsActionEnforcer			
+struct	SiriCam.UncertaintyPromptSequentialEnforcer			
+struct	SiriCam.UncertaintyPromptSequentialEnforcer		let	enforcers
+struct	SiriCam.UserEntityVocabActionEnforcer			
+struct	SiriCam.OverrideParseActionEnforcer			
+struct	SiriCam.ExactShortcutActionEnforcer			
+struct	SiriCam.ZeroAsrConfidenceActionEnforcer			
+struct	SiriCam.ShadowLogActionEnforcer			
+struct	SiriCam.ExecuteActionEnforcer			
+struct	SiriCam.GiveUpRepeatActionEnforcer			
+struct	SiriCam.MessageDictationActionEnforcer			
+struct	SiriCam.SiriVocabActionEnforcer			
+struct	SiriCam.UserConfirmationActionEnforcer			
+struct	SiriCam.LongPayloadActionEnforcer			
+struct	SiriCam.CamUSOParse			
+struct	SiriCam.CamUSOParse		let	userParse
+struct	SiriCam.CamUSOParse		let	parserIdentifier
+struct	SiriCam.CamUSOParse		let	appBundleId
+struct	SiriCam.CamUSOParse		let	groupIndex
+enum	SiriCam.CamParse			
+enum	SiriCam.CamParse		case	uso
+enum	SiriCam.CamParse		case	pommesResponse
+enum	SiriCam.CamParse		case	empty
+enum	SiriCam.CodingKeys			
+enum	SiriCam.CodingKeys		case	pluginIdentifier
+enum	SiriCam.CodingKeys		case	queryConfidence
+enum	SiriCam.CodingKeys		case	metadataDomainName
+enum	SiriCam.CamParse.CodingKeys			
+enum	SiriCam.CamParse.CodingKeys		case	uso
+enum	SiriCam.CamParse.CodingKeys		case	pommesResponse
+enum	SiriCam.CamParse.CodingKeys		case	empty
+enum	SiriCam.CamParse.UsoCodingKeys			
+enum	SiriCam.CamParse.UsoCodingKeys		case	_0
+enum	SiriCam.CamParse.PommesResponseCodingKeys			
+enum	SiriCam.CamParse.PommesResponseCodingKeys		case	_0
+enum	SiriCam.CamParse.EmptyCodingKeys			
+enum	SiriCam.CamUSOParse.CodingKeys			
+enum	SiriCam.CamUSOParse.CodingKeys		case	userParse
+enum	SiriCam.CamUSOParse.CodingKeys		case	parserIdentifier
+enum	SiriCam.CamUSOParse.CodingKeys		case	appBundleId
+enum	SiriCam.CamUSOParse.CodingKeys		case	groupIndex
+class	SiriCam.UseCloudThreshold			
+class	SiriCam.UseCloudThreshold		let	requiredInputs
+struct	SiriCam.CamRequestContext			
+struct	SiriCam.CamRequestContext		let	siriLocale
+struct	SiriCam.CamRequestContext		let	renderDeviceIdiom
+struct	SiriCam.CamRequestContext		let	requestIsDictation
+enum	SiriCam.DeviceIdiom			
+enum	SiriCam.DeviceIdiom		case	car
+enum	SiriCam.DeviceIdiom		case	homepod
+enum	SiriCam.DeviceIdiom		case	mac
+enum	SiriCam.DeviceIdiom		case	pad
+enum	SiriCam.DeviceIdiom		case	pod
+enum	SiriCam.DeviceIdiom		case	phone
+enum	SiriCam.DeviceIdiom		case	watch
+enum	SiriCam.DeviceIdiom		case	tv
+enum	SiriCam.DeviceIdiom		case	unknown
+class	SiriCam.SiriSignalsContainer			
+class	SiriCam.SiriSignalsContainer		var	signalValues
+enum	SiriCam.SiriKitRuntimeAmbiguityFeatureFlags			
+enum	SiriCam.SiriKitRuntimeAmbiguityFeatureFlags		case	inputParaphrasingFlows
+struct	SiriCam.DawnRankerFeatureExtractor			
+struct	SiriCam.DawnRankerFeatureExtractor		let	conversationHistoryFeatureExtractor
+struct	SiriCam.DawnRankerFeatureExtractor		let	appShortcutAffinity
+struct	SiriCam.DawnRankerFeatureExtractor		let	onScreenAppBundleIds
+struct	SiriCam.RankerFeatureExtractor			
+struct	SiriCam.RankerFeatureExtractor		let	rankerContext
+struct	SiriCam.RankerFeatureExtractor		let	userParseFeatureExtractor
+struct	SiriCam.RankerFeatureExtractor		let	affinityRankFeatureExtractor
+struct	SiriCam.RankerFeatureExtractor		let	appShortcutFeatureExtractor
+struct	SiriCam.RankerFeatureExtractor		let	conversationHistoryFeatureExtractor
+struct	SiriCam.RankerFeatureExtractor		let	pommesFeatureExtractor
+enum	SiriCam.Domain3PProtectionLevel			
+enum	SiriCam.Domain3PProtectionLevel		case	UNKNOWN
+enum	SiriCam.Domain3PProtectionLevel		case	NON_PROTECTED
+enum	SiriCam.Domain3PProtectionLevel		case	PROTECTED
+enum	SiriCam.Domain3PProtectionLevel		case	STRONGLY_PROTECTED
+struct	SiriCam.CamFeatureStoreLogger			
+struct	SiriCam.CaarFeatureStoreLogger			
+struct	SiriCam.DisambiguationFeatureExtractor			
+struct	SiriCam.DisambiguationFeatureExtractor		let	queryManager
+struct	SiriCam.DisambiguationFeatureExtractor		let	siriSignalsContainer
+struct	SiriCam.TrialTieBreakingOverride			
+struct	SiriCam.TrialTieBreakingOverride		let	favour
+struct	SiriCam.TrialTieBreakingOverride		let	over
+enum	SiriCam.TrialTieBreakingOverride.CodingKeys			
+enum	SiriCam.TrialTieBreakingOverride.CodingKeys		case	favour
+enum	SiriCam.TrialTieBreakingOverride.CodingKeys		case	over
+struct	SiriCam.CamHandler			
+struct	SiriCam.CamHandler		let	camEnabledFeatures
+struct	SiriCam.CamHandler		var	actionHandlers
+class	SiriCam.ActionAmbiguityHandler			
+class	SiriCam.ActionAmbiguityHandler		let	rankedActionFeatureExtractor
+class	SiriCam.ActionAmbiguityHandler		let	camOutputProvider
+class	SiriCam.ActionAmbiguityHandler		let	modelHandler
+class	SiriCam.ActionAmbiguityHandler		let	actionEnforcer
+enum	SiriCam.AutoConfirmAction			
+enum	SiriCam.AutoConfirmAction		case	unknown
+enum	SiriCam.AutoConfirmAction		case	confirmWithUser
+enum	SiriCam.AutoConfirmAction		case	skipConfirmation
+enum	SiriCam.AutoConfirmError			
+enum	SiriCam.AutoConfirmError		case	initialisationError
+enum	SiriCam.AutoConfirmError		case	internalError
+enum	SiriCam.AutoConfirmError		case	invalidInputError
+enum	SiriCam.AutoConfirmError		case	featureExtractionError
+enum	SiriCam.AutoConfirmError		case	modelNotFoundError
+enum	SiriCam.AutoConfirmError		case	modelOutputError
+struct	SiriCam.CRRFeatureExtractor			
+struct	SiriCam.ConstantStepFeatureExtractor			
+struct	SiriCam.ConstantStepFeatureExtractor		let	STEP_VALUE
+enum	SiriCam.PluginToBundleMap			
+enum	SiriCam.PluginToBundleMap		case	alarm
+enum	SiriCam.PluginToBundleMap		case	appLaunch
+enum	SiriCam.PluginToBundleMap		case	audio
+enum	SiriCam.PluginToBundleMap		case	cam
+enum	SiriCam.PluginToBundleMap		case	calendar
+enum	SiriCam.PluginToBundleMap		case	carCommands
+enum	SiriCam.PluginToBundleMap		case	clock
+enum	SiriCam.PluginToBundleMap		case	contacts
+enum	SiriCam.PluginToBundleMap		case	playbackControls
+enum	SiriCam.PluginToBundleMap		case	dailyBriefing
+enum	SiriCam.PluginToBundleMap		case	edutainment
+enum	SiriCam.PluginToBundleMap		case	emergency
+enum	SiriCam.PluginToBundleMap		case	findMy
+enum	SiriCam.PluginToBundleMap		case	geo
+enum	SiriCam.PluginToBundleMap		case	health
+enum	SiriCam.PluginToBundleMap		case	homeAutomation
+enum	SiriCam.PluginToBundleMap		case	homeCommunication
+enum	SiriCam.PluginToBundleMap		case	identity
+enum	SiriCam.PluginToBundleMap		case	information
+enum	SiriCam.PluginToBundleMap		case	messages
+enum	SiriCam.PluginToBundleMap		case	notebook
+enum	SiriCam.PluginToBundleMap		case	notifications
+enum	SiriCam.PluginToBundleMap		case	phoneCall
+enum	SiriCam.PluginToBundleMap		case	settings
+enum	SiriCam.PluginToBundleMap		case	siriLink
+enum	SiriCam.PluginToBundleMap		case	suggestions
+enum	SiriCam.PluginToBundleMap		case	socialConversation
+enum	SiriCam.PluginToBundleMap		case	systemCommands
+enum	SiriCam.PluginToBundleMap		case	timer
+enum	SiriCam.PluginToBundleMap		case	translation
+enum	SiriCam.PluginToBundleMap		case	video
+enum	SiriCam.PluginToBundleMap		case	wellness
+class	SiriCam.FallbackRanker			
+class	SiriCam.CaarProvider			
+class	SiriCam.CaarProvider		let	caarHandler
+struct	SiriCam.ScoreBoost			
+struct	SiriCam.ScoreBoost		let	boost
+struct	SiriCam.ScoreBoost		let	reason
+struct	SiriCam.ScoreBoost		let	loggingId
+enum	SiriCam.CamFeatureFlag			
+enum	SiriCam.CamFeatureFlag		case	verboseLogging
+enum	SiriCam.CamFeatureFlag		case	wordEmbeddings
+enum	SiriCam.CamFeatureFlag		case	intent_disambiguation
+enum	SiriCam.CamFeatureFlag		case	personalAutoSend
+enum	SiriCam.CamFeatureFlag		case	cdmRefactor
+enum	SiriCam.CamFeatureFlag		case	smartDisambiguation
+enum	SiriCam.CamFeatureFlag		case	disambiguateAllRankingTies
+enum	SiriCam.CamFeatureFlag		case	disambiguateForRankingEvaluation
+class	SiriCam.AutoConfirmProvider			
+class	SiriCam.AutoConfirmProvider		var	autoSendHandler
+class	SiriCam.PersonalContextFeatureExtractor			
+class	SiriCam.AffinityRankFeatureExtractor			
+class	SiriCam.AffinityRankFeatureExtractor		let	affinityRanks
+struct	SiriCam.AffinityRankKey			
+struct	SiriCam.AffinityRankKey		let	flowHandlerId
+struct	SiriCam.AffinityRankKey		let	parseId
+struct	SiriCam.CamOutputProvider			
+struct	SiriCam.CamOutputProvider		let	scoreKey
+struct	SiriCam.CamOutputProvider		let	thresholdKey
+struct	SiriCam.CamOutputProvider		let	decisionKey
+struct	SiriCam.CamOutputProvider		let	predictionActionMap
+enum	SiriCam.ModelError			
+enum	SiriCam.ModelError		case	predictionInputConversionError
+enum	SiriCam.ModelError		case	predictionError
+enum	SiriCam.ModelError		case	modelLoadFailed
+enum	SiriCam.ModelError		case	modelNotFound
+struct	SiriCam.ForcedDisambiguationForRankingEvaluationActionEnforcer			
+enum	SiriCam.CamFeature			
+enum	SiriCam.CamFeature		case	ASK_REPEAT
+enum	SiriCam.CamFeature		case	SMS_AUTOSEND
+enum	SiriCam.CamFeature		case	ACTION_AMBIGUITY
+struct	SiriCam.SnrFeatureExtractor			
+struct	SiriCam.DeviceContextFeatureExtractor			
+struct	SiriCam.DeviceContextFeatureExtractor		let	UNKNOWN_VALUE
+class	SiriCam.CamOutput	SiriCam.CamLogOutput		
+class	SiriCam.CamOutput	SiriCam.CamLogOutput	var	action
+struct	SiriCam.CamInput			
+struct	SiriCam.CamInput		let	requestId
+struct	SiriCam.CamInput		let	camId
+struct	SiriCam.CamInput		let	rcId
+struct	SiriCam.CamInput		let	trpId
+struct	SiriCam.CamInput		let	speechPackage
+struct	SiriCam.CamInput		let	previousCamAction
+struct	SiriCam.CamInput		let	rankedUserParses
+struct	SiriCam.CamInput		let	rankedActions
+struct	SiriCam.CamInput		let	enabledFeatures
+class	SiriCam.CoreMLHandler			
+class	SiriCam.CoreMLHandler		var	modelName
+class	SiriCam.CoreMLHandler		var	modelInstance
+class	SiriCam.CoreMLHandler		var	modelMetadata
+struct	SiriCam.ActionCandidate			
+struct	SiriCam.ActionCandidate		let	flowHandlerId
+struct	SiriCam.ActionCandidate		let	parse
+struct	SiriCam.ActionCandidate		let	affinityScore
+struct	SiriCam.ActionCandidate		let	userData
+struct	SiriCam.ActionCandidate		let	loggingId
+struct	SiriCam.ActionCandidate		var	inferredBundleId
+struct	SiriCam.AppShortcutFeatureExtractor			
+class	SiriCam.AutoSendCoreHandler			
+class	SiriCam.AutoSendCoreHandler		let	autoSendModelHandler
+class	SiriCam.AutoSendCoreHandler		var	autoSendInputFeatureExtractor
+class	SiriCam.AutoSendCoreHandler		let	autoSendOuputProvider
+class	SiriCam.AutoSendCoreHandler		let	autoSendEnforcer
+protocol	SiriCam.CaarHandler			
+protocol	SiriCam.Scoring			
+protocol	SiriCam.ScoreHeuristic			
+protocol	SiriCam.Caar			
+protocol	SiriCam.FeatureStoreLoggingProtocol			
+protocol	SiriCam.WithForcedValuesOffering	T		
+protocol	SiriCam.ActionHandler			
+protocol	SiriCam.Cam			
+protocol	SiriCam.ReflectedStringConvertible			
+protocol	SiriCam.AmbiguousFirstRunHelping			
+protocol	SiriCam.ActionProtocol			
+protocol	SiriCam.TopRecognitionExtractor			
+protocol	SiriCam.ModelLoggingProtocol			
+protocol	SiriCam.AutoConfirmActionEnforcer			
+protocol	SiriCam.MockableFeaturesProviding			
+protocol	SiriCam.UncertaintyPromptActionEnforcer			
+protocol	SiriCam.OperatingPointHeuristic			
+protocol	SiriCam.SiriSignalsContaining			
+protocol	SiriCam.CamFeatureStoreLoggingProtocol			
+protocol	SiriCam.CaarFeatureStoreLoggingProtocol			
+protocol	SiriCam.AutoConfirming			
+protocol	SiriCam.LoggingProtocol	SourceMessage, DestinationMessage		
+protocol	SiriCam.CamLoggingProtocol			
+protocol	SiriCam.CaarLoggingProtocol			
+protocol	SiriCam.TieBreaking			
+protocol	SiriCam.ModelHandler			
+protocol	SiriCam.ActionAmbiguityActionEnforcer			
+protocol	SiriCam.FeatureExtracting	FeatureSourceType, FeatureOutputValueType		
+protocol	SiriCam.ScalarFeatureExtracting			
+protocol	SiriCam.ActionScalarFeatureExtracting			
+protocol	conformance __C.MLMultiArrayDataType	Swift.Equatable: CoreML		
+protocol	conformance __C.MLMultiArrayDataType	Swift.RawRepresentable: CoreML		
+protocol	conformance SiriCam.CamInputFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.LatticePathFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.AutoSendPersonalFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.ConversationHistoryFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.ConversationHistoryFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.FeatureDictionaryError	Swift.Error		
+protocol	conformance SiriCam.AppLaunchCountFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.AppLaunchCountFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.RankerContext	Swift.CustomStringConvertible		
+protocol	conformance SiriCam.CaarError	Swift.Error		
+protocol	conformance __C.MLMultiArrayDataType	Swift.CustomStringConvertible: SiriCam		
+protocol	conformance MLMultiArray	Swift.Encodable: SiriCam		
+protocol	conformance MLMultiArrayCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MLMultiArrayCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MLMultiArrayCodingKeys	Swift.Hashable		
+protocol	conformance MLMultiArrayCodingKeys	Swift.Equatable		
+protocol	conformance SiriCam.CoreMLError	Swift.Error		
+protocol	conformance MLMultiArrayCodingKeys	Swift.CodingKey		
+protocol	conformance SiriCam.AnyEncodable	Swift.Encodable		
+protocol	conformance SiriCam.ForcedDisambiguation	Swift.RawRepresentable		
+protocol	conformance SiriCam.ForcedDisambiguation	Swift.Hashable		
+protocol	conformance SiriCam.ForcedDisambiguation	Swift.Equatable		
+protocol	conformance SiriCam.AutoSendInputFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.DawnHeuristicScorer	SiriCam.Scoring		
+protocol	conformance SiriCam.UserParseFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.UserParseFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.HeuristicScorer	SiriCam.Scoring		
+protocol	conformance SiriCam.PommesFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.PommesFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.CamModelVersion	Swift.Equatable		
+protocol	conformance SiriCam.CamModelVersion	Swift.Encodable		
+protocol	conformance SiriCam.CamModelVersion	Swift.Decodable		
+protocol	conformance SiriCam.CamModelMetadata	Swift.Encodable		
+protocol	conformance SiriCam.CamModelMetadata	Swift.Decodable		
+protocol	conformance SiriCam.CamLogOutput	Swift.CustomStringConvertible		
+protocol	conformance SiriCam.CamLogOutput	SiriCam.ReflectedStringConvertible		
+protocol	conformance SiriCam.CamLogOutput	Swift.Encodable		
+protocol	conformance SiriCam.CamModelVersionError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriCam.CamModelVersionError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriCam.CamAction	Swift.Equatable		
+protocol	conformance SiriCam.CamAction	Swift.Hashable		
+protocol	conformance SiriCam.CamAction	Swift.RawRepresentable		
+protocol	conformance SiriCam.CamError	Swift.Error		
+protocol	conformance SiriCam.DisabledAppShortcutTieBreaker	SiriCam.TieBreaking		
+protocol	conformance SiriCam.AppLaunchRecencyFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.AppLaunchRecencyFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.WordEmbeddingFeatureExtractor	SiriCam.TopRecognitionExtractor		
+protocol	conformance SiriCam.WordEmbeddingFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.NLEmbeddingsAssetsManager	Swift.Actor		
+protocol	conformance SiriCam.WordEmbeddingFeatureExtractorError	Swift.Error		
+protocol	conformance SiriCam.CodeBasedRankerHandler	SiriCam.Caar		
+protocol	conformance SiriCam.CodeBasedRankerHandler	SiriCam.CaarHandler		
+protocol	conformance SiriCam.ActionAmbiguityHeuristicHandler	SiriCam.ModelHandler		
+protocol	conformance SiriCam.AmbiguousFirstRunHelper	SiriCam.AmbiguousFirstRunHelping		
+protocol	conformance SiriCam.RankedAction	Swift.CustomStringConvertible		
+protocol	conformance SiriCam.RankedAction	Swift.Encodable		
+protocol	conformance SiriCam.RankedAction	SiriCam.ActionProtocol		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DisambiguationSerialiser.DonationFields	Swift.Equatable		
+protocol	conformance DisambiguationSerialiser.DonationFields	Swift.Hashable		
+protocol	conformance DisambiguationSerialiser.DonationFields	Swift.RawRepresentable		
+protocol	conformance SiriCam.UserHistoryTieBreaker	SiriCam.MockableFeaturesProviding		
+protocol	conformance SiriCam.UserHistoryTieBreaker	SiriCam.TieBreaking		
+protocol	conformance SiriCam.RankedActionFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.TrialOverridesTieBreaker	SiriCam.TieBreaking		
+protocol	conformance SiriCam.TopRecogntionFeatureExtractorError	Swift.Error		
+protocol	conformance MLFeatureValue	Swift.Encodable: SiriCam		
+protocol	conformance MLFeatureValueCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MLFeatureValueCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MLFeatureValueCodingKeys	Swift.Hashable		
+protocol	conformance MLFeatureValueCodingKeys	Swift.Equatable		
+protocol	conformance MLFeatureValueCodingKeys	Swift.CodingKey		
+protocol	conformance SiriCam.AsrSimpleFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.UncertaintyPromptHandler	SiriCam.ActionHandler		
+protocol	conformance SiriCam.AutoConfirmMagicWordsActionEnforcer	SiriCam.TopRecognitionExtractor		
+protocol	conformance SiriCam.AutoConfirmMagicWordsActionEnforcer	SiriCam.AutoConfirmActionEnforcer		
+protocol	conformance SiriCam.AutoConfirmSequentialEnforcer	SiriCam.AutoConfirmActionEnforcer		
+protocol	conformance SiriCam.UserDefaultsActionEnforcer	SiriCam.AutoConfirmActionEnforcer		
+protocol	conformance SiriCam.ForcedConfirmationActionEnforcer	SiriCam.AutoConfirmActionEnforcer		
+protocol	conformance SiriCam.AutoSendHandler	SiriCam.AutoConfirming		
+protocol	conformance SiriCam.AppLaunchTieBreaker	SiriCam.TieBreaking		
+protocol	conformance SiriCam.CamResponseStatusCode	Swift.Equatable		
+protocol	conformance SiriCam.CamResponseStatusCode	Swift.Hashable		
+protocol	conformance SiriCam.CamResponseStatusCode	Swift.RawRepresentable		
+protocol	conformance __C.RepetitionType	Swift.CustomStringConvertible: SiriCam		
+protocol	conformance SiriCam.UncertaintyPromptMagicWordsActionEnforcer	SiriCam.TopRecognitionExtractor		
+protocol	conformance SiriCam.UncertaintyPromptMagicWordsActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.UncertaintyPromptSequentialEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.UserEntityVocabActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.OverrideParseActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.ExactShortcutActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.ZeroAsrConfidenceActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.ShadowLogActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.ExecuteActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.GiveUpRepeatActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.MessageDictationActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.SiriVocabActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.UserConfirmationActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.LongPayloadActionEnforcer	SiriCam.UncertaintyPromptActionEnforcer		
+protocol	conformance SiriCam.CamUSOParse	Swift.Equatable		
+protocol	conformance SiriCam.CamUSOParse	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriCam.CamUSOParse	Swift.Encodable		
+protocol	conformance SiriCam.CamParse	Swift.Encodable		
+protocol	conformance SiriInformationSearch.PommesResponse	Swift.Encodable: SiriCam		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance EmptyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EmptyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PommesResponseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PommesResponseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PommesResponseCodingKeys	Swift.Hashable		
+protocol	conformance PommesResponseCodingKeys	Swift.Equatable		
+protocol	conformance UsoCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UsoCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UsoCodingKeys	Swift.Hashable		
+protocol	conformance UsoCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UsoCodingKeys	Swift.CodingKey		
+protocol	conformance PommesResponseCodingKeys	Swift.CodingKey		
+protocol	conformance EmptyCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriCam.UseCloudThreshold	SiriCam.OperatingPointHeuristic		
+protocol	conformance SiriCam.DeviceIdiom	Swift.Equatable		
+protocol	conformance SiriCam.DeviceIdiom	Swift.Hashable		
+protocol	conformance SiriCam.DeviceIdiom	Swift.RawRepresentable		
+protocol	conformance SiriCam.SiriSignalsContainer	SiriCam.SiriSignalsContaining		
+protocol	conformance SiriCam.SiriKitRuntimeAmbiguityFeatureFlags	Swift.Hashable		
+protocol	conformance SiriCam.SiriKitRuntimeAmbiguityFeatureFlags	Swift.Equatable		
+protocol	conformance SiriCam.SiriKitRuntimeAmbiguityFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriCam.RankerFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.DawnRankerFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.DawnRankerFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.RankerFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.Domain3PProtectionLevel	Swift.RawRepresentable		
+protocol	conformance SiriCam.Domain3PProtectionLevel	Swift.Hashable		
+protocol	conformance SiriCam.Domain3PProtectionLevel	Swift.Equatable		
+protocol	conformance SiriCam.CamFeatureStoreLogger	SiriCam.FeatureStoreLoggingProtocol		
+protocol	conformance SiriCam.CamFeatureStoreLogger	SiriCam.CamFeatureStoreLoggingProtocol		
+protocol	conformance SiriCam.CaarFeatureStoreLogger	SiriCam.FeatureStoreLoggingProtocol		
+protocol	conformance SiriCam.CaarFeatureStoreLogger	SiriCam.CaarFeatureStoreLoggingProtocol		
+protocol	conformance SiriCam.DisambiguationFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.DisambiguationFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.TrialTieBreakingOverride	Swift.Equatable		
+protocol	conformance SiriCam.TrialTieBreakingOverride	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriCam.TrialTieBreakingOverride	Swift.Encodable		
+protocol	conformance SiriCam.TrialTieBreakingOverride	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriCam.CamHandler	SiriCam.Cam		
+protocol	conformance SiriCam.ActionAmbiguityHandler	SiriCam.ActionHandler		
+protocol	conformance SiriCam.AutoConfirmAction	Swift.Equatable		
+protocol	conformance SiriCam.AutoConfirmAction	Swift.Hashable		
+protocol	conformance SiriCam.AutoConfirmAction	Swift.RawRepresentable		
+protocol	conformance SiriCam.AutoConfirmError	Swift.Error		
+protocol	conformance SiriCam.CRRFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.ConstantStepFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.PluginToBundleMap	Swift.Equatable		
+protocol	conformance SiriCam.PluginToBundleMap	Swift.Hashable		
+protocol	conformance SiriCam.PluginToBundleMap	Swift.RawRepresentable		
+protocol	conformance SiriCam.FallbackRanker	SiriCam.Caar		
+protocol	conformance SiriCam.CamFeatureFlag	Swift.Hashable		
+protocol	conformance SiriCam.CamFeatureFlag	Swift.Equatable		
+protocol	conformance SiriCam.CamFeatureFlag	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriCam.RankedAction	Swift.Comparable		
+protocol	conformance SiriCam.RankedAction	Swift.Equatable		
+protocol	conformance SiriCam.PersonalContextFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.AffinityRankKey	Swift.Equatable		
+protocol	conformance SiriCam.AffinityRankKey	Swift.Hashable		
+protocol	conformance SiriCam.AffinityRankFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.AffinityRankFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+protocol	conformance SiriCam.ModelError	Swift.Error		
+protocol	conformance SiriCam.ForcedDisambiguationForRankingEvaluationActionEnforcer	SiriCam.ActionAmbiguityActionEnforcer		
+protocol	conformance SiriCam.CamFeature	Swift.Equatable		
+protocol	conformance SiriCam.CamFeature	Swift.Hashable		
+protocol	conformance SiriCam.CamFeature	Swift.RawRepresentable		
+protocol	conformance SiriCam.SnrFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.DeviceContextFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.CoreMLHandler	SiriCam.ModelHandler		
+protocol	conformance SiriCam.ActionCandidate	Swift.CustomStringConvertible		
+protocol	conformance SiriCam.ActionCandidate	SiriCam.ActionProtocol		
+protocol	conformance SiriCam.AppShortcutFeatureExtractor	SiriCam.FeatureExtracting		
+protocol	conformance SiriCam.AppShortcutFeatureExtractor	SiriCam.ScalarFeatureExtracting		
+extension	SiriCam.CamInputFeatureExtractor	FeatureExtracting		
+extension	SiriCam.LatticePathFeatureExtractor	FeatureExtracting		
+extension	SiriCam.AutoSendPersonalFeatureExtractor	FeatureExtracting		
+extension	SiriCam.ConversationHistoryFeatureExtractor	FeatureExtracting		
+extension	SiriCam.AppLaunchCountFeatureExtractor	FeatureExtracting		
+extension	SiriCam.ForcedDisambiguation	RawRepresentable		
+extension	SiriCam.AutoSendInputFeatureExtractor	FeatureExtracting		
+extension	SiriCam.UserParseFeatureExtractor	FeatureExtracting		
+extension	SiriCam.PommesFeatureExtractor	FeatureExtracting		
+extension	SiriCam.CamAction	RawRepresentable		
+extension	SiriCam.AppLaunchRecencyFeatureExtractor	FeatureExtracting		
+extension	SiriCam.WordEmbeddingFeatureExtractor	FeatureExtracting		
+extension	SiriCam.RankedAction.CodingKeys	RawRepresentable		
+extension	SiriCam.DisambiguationSerialiser.DonationFields	RawRepresentable		
+extension	SiriCam.RankedActionFeatureExtractor	FeatureExtracting		
+extension	SiriCam.AsrSimpleFeatureExtractor	FeatureExtracting		
+extension	SiriCam.CamResponseStatusCode	RawRepresentable		
+extension	SiriCam.CamUSOParse.CodingKeys	RawRepresentable		
+extension	SiriCam.CodingKeys	RawRepresentable		
+extension	SiriCam.DeviceIdiom	RawRepresentable		
+extension	SiriCam.DawnRankerFeatureExtractor	FeatureExtracting		
+extension	SiriCam.RankerFeatureExtractor	FeatureExtracting		
+extension	SiriCam.Domain3PProtectionLevel	RawRepresentable		
+extension	SiriCam.DisambiguationFeatureExtractor	FeatureExtracting		
+extension	SiriCam.AutoConfirmAction	RawRepresentable		
+extension	SiriCam.CRRFeatureExtractor	FeatureExtracting		
+extension	SiriCam.ConstantStepFeatureExtractor	FeatureExtracting		
+extension	SiriCam.PluginToBundleMap	RawRepresentable		
+extension	SiriCam.PersonalContextFeatureExtractor	FeatureExtracting		
+extension	SiriCam.AffinityRankFeatureExtractor	FeatureExtracting		
+extension	SiriCam.CamFeature	RawRepresentable		
+extension	SiriCam.SnrFeatureExtractor	FeatureExtracting		
+extension	SiriCam.DeviceContextFeatureExtractor	FeatureExtracting		
+extension	SiriCam.AppShortcutFeatureExtractor	FeatureExtracting		

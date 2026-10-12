@@ -1,0 +1,154 @@
+kind	type	conformance	member_kind	member
+class	UnilogTelemetry.SessionState			
+class	UnilogTelemetry.SessionState		let	client
+class	UnilogTelemetry.SessionState		let	component
+class	UnilogTelemetry.SessionState		let	componentVersion
+class	UnilogTelemetry.SessionState		let	configVersion
+class	UnilogTelemetry.SessionState		var	sessionID
+class	UnilogTelemetry.SessionState		var	startTime
+class	UnilogTelemetry.SessionState		var	endTime
+class	UnilogTelemetry.SessionState		var	inputEvents
+class	UnilogTelemetry.SessionState		var	outputEvents
+class	UnilogTelemetry.SessionState		var	processedEvents
+class	UnilogTelemetry.SessionState		var	outcome
+class	UnilogTelemetry.SessionState		var	error
+class	UnilogTelemetry.SessionState		var	isOpen
+class	UnilogTelemetry.SessionState		var	isClosed
+enum	UnilogTelemetry.UnilogTelemetryError			
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToCreateWriter
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToSubmitRawTelemetry
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToDecodeTelemetryData
+enum	UnilogTelemetry.UnilogTelemetryError		case	missingFieldsTelemetryData
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToCalculateAggregate
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToSubmitAggregate
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToReadAggregateStream
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToAccessAggregateStreamSource
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToReadTelemetryStream
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToAccessTelemetryStreamSource
+enum	UnilogTelemetry.UnilogTelemetryError		case	aggregateMissingClient
+enum	UnilogTelemetry.UnilogTelemetryError		case	aggregateMissingStartTime
+enum	UnilogTelemetry.UnilogTelemetryError		case	aggregateMissingAggregationInterval
+enum	UnilogTelemetry.UnilogTelemetryError		case	componentSummaryMissingComponent
+enum	UnilogTelemetry.UnilogTelemetryError		case	aggregateMissingComponentSummaries
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToDecodeAggregateData
+enum	UnilogTelemetry.UnilogTelemetryError		case	failedToReadDeviceContextStream
+enum	UnilogTelemetry.UnilogTelemetryError		case	cannotFindDeviceContext
+struct	UnilogTelemetry.UserDefaultTelemetryBookmarkManager			
+struct	UnilogTelemetry.UserDefaultTelemetryBookmarkManager		let	userDefaultBookmarkKey
+struct	UnilogTelemetry.UserDefaultTelemetryBookmarkManager		let	userPrefsLock
+struct	UnilogTelemetry.TemporaryTelemetryBookmarkManager			
+struct	UnilogTelemetry.TemporaryTelemetryBookmarkManager		let	lock
+struct	UnilogTelemetry.HealthMonitoringSession			
+struct	UnilogTelemetry.HealthMonitoringSession		let	client
+struct	UnilogTelemetry.HealthMonitoringSession		let	component
+struct	UnilogTelemetry.HealthMonitoringSession		let	outcome
+struct	UnilogTelemetry.HealthMonitoringSession		let	inputEvents
+struct	UnilogTelemetry.HealthMonitoringSession		let	outputEvents
+struct	UnilogTelemetry.HealthMonitoringSession		let	processedEvents
+struct	UnilogTelemetry.HealthMonitoringSession		let	duration
+struct	UnilogTelemetry.HealthMonitoringSession		let	runId
+struct	UnilogTelemetry.HealthMonitoringSession		let	componentVersion
+struct	UnilogTelemetry.HealthMonitoringSession		let	configVersion
+struct	UnilogTelemetry.HealthMonitoringSession		let	error
+class	UnilogTelemetry.HealthMonitoringSessionTracker			
+class	UnilogTelemetry.HealthMonitoringSessionTracker		let	state
+class	UnilogTelemetry.HealthMonitoringSessionTracker		let	lock
+class	UnilogTelemetry.HealthMonitoringSessionTracker		let	writer
+struct	UnilogTelemetry.TelemetrySubmitter			
+enum	UnilogTelemetry.BiomeConfiguration			
+struct	UnilogTelemetry.ValidatedAggregate			
+struct	UnilogTelemetry.ValidatedAggregate		let	client
+struct	UnilogTelemetry.ValidatedAggregate		let	aggregationStartSince1970
+struct	UnilogTelemetry.ValidatedAggregate		let	aggregationInterval
+struct	UnilogTelemetry.ValidatedAggregate		let	deviceContextHasChanged
+struct	UnilogTelemetry.ValidatedAggregate		let	componentSummaries
+enum	UnilogTelemetry.Logs			
+enum	UnilogTelemetry.Logs		case	donate
+enum	UnilogTelemetry.Logs		case	aggregate
+enum	UnilogTelemetry.Logs		case	telemetry
+enum	UnilogTelemetry.Logs		case	worker
+enum	UnilogTelemetry.Logs		case	tooling
+struct	UnilogTelemetry.BiomeDeviceContextProvider			
+struct	UnilogTelemetry.ExternalSchemaBiomeManager			
+struct	UnilogTelemetry.ExternalSchemaBiomeManager		var	telemetryReader
+struct	UnilogTelemetry.ExternalSchemaBiomeManager		var	aggregateReader
+struct	UnilogTelemetry.ExternalSchemaBiomeManager		var	telemetryWriter
+struct	UnilogTelemetry.ExternalSchemaBiomeManager		var	aggregateWriter
+struct	UnilogTelemetry.HealthAggregatedSummaryReader			
+class	UnilogTelemetry.HealthAggregatedSummaryWriter			
+class	UnilogTelemetry.HealthAggregatedSummaryWriter		var	lazy
+struct	UnilogTelemetry.HealthTelemetryReader			
+class	UnilogTelemetry.HealthTelemetryWriter			
+class	UnilogTelemetry.HealthTelemetryWriter		var	lazy
+struct	UnilogTelemetry.TelemetryAggregator			
+struct	UnilogTelemetry.TelemetryAggregator		var	observer
+struct	UnilogTelemetry.TelemetryAggregator		let	aggregateReader
+struct	UnilogTelemetry.TelemetryAggregator		let	aggregateWriter
+struct	UnilogTelemetry.TelemetryAggregator		let	deviceContextProvider
+struct	UnilogTelemetry.ComponentAggregator			
+struct	UnilogTelemetry.ComponentAggregator		var	component
+struct	UnilogTelemetry.ComponentAggregator		var	inputEventCount
+struct	UnilogTelemetry.ComponentAggregator		var	outputEventCount
+struct	UnilogTelemetry.ComponentAggregator		var	eventsSuccessfullyProcessedCount
+struct	UnilogTelemetry.ComponentAggregator		var	totalRunCount
+struct	UnilogTelemetry.ComponentAggregator		var	latestConfigVersion
+struct	UnilogTelemetry.ComponentAggregator		var	outcomeCounts
+struct	UnilogTelemetry.ComponentAggregator		var	errors
+struct	UnilogTelemetry.ComponentAggregator		var	durations
+protocol	UnilogTelemetry.TelemetryBookmarkManager			
+protocol	UnilogTelemetry.AggregationIntervalProviding			
+protocol	UnilogTelemetry.ClientProviding			
+protocol	UnilogTelemetry.DeviceContextProvider			
+protocol	UnilogTelemetry.EventReader	Event		
+protocol	UnilogTelemetry.EventWriter	Event		
+protocol	UnilogTelemetry.ExternalSchemaBiomeEventReader	BiomeStream		
+protocol	UnilogTelemetry.ExternalSchemaBiomeEventWriter	BiomeStream		
+protocol	UnilogTelemetry.ExternalSchemaBiomeAggregateReader			
+protocol	UnilogTelemetry.NextAggregationDateProviding	Aggregate		
+protocol	UnilogTelemetry.StartDateProviding			
+protocol	UnilogTelemetry.StartTimestampProviding			
+protocol	UnilogTelemetry.TelemetryAggregatorObserver			
+protocol	conformance UnilogTelemetry.UnilogTelemetryError	Swift.RawRepresentable		
+protocol	conformance UnilogTelemetry.UnilogTelemetryError	Swift.Hashable		
+protocol	conformance UnilogTelemetry.UnilogTelemetryError	Swift.Equatable		
+protocol	conformance UnilogTelemetry.UnilogTelemetryError	Swift.Error		
+protocol	conformance UnilogTelemetry.UserDefaultTelemetryBookmarkManager	UnilogTelemetry.TelemetryBookmarkManager		
+protocol	conformance UnilogTelemetry.TemporaryTelemetryBookmarkManager	UnilogTelemetry.TelemetryBookmarkManager		
+protocol	conformance UnilogPlatformLibrary.TelemetryError	Swift.Hashable: UnilogTelemetry		
+protocol	conformance UnilogCommonLibrary.Client	Swift.CaseIterable: UnilogTelemetry		
+protocol	conformance UnilogPlatformLibrary.HealthTelemetry	Swift.CustomStringConvertible: UnilogTelemetry		
+protocol	conformance UnilogPlatformLibrary.HealthAggregatedSummary	Swift.CustomStringConvertible: UnilogTelemetry		
+protocol	conformance UnilogPlatformLibrary.Version	Swift.Comparable: UnilogTelemetry		
+protocol	conformance UnilogTelemetry.Logs	Swift.Equatable		
+protocol	conformance UnilogTelemetry.Logs	Swift.RawRepresentable		
+protocol	conformance UnilogTelemetry.Logs	Swift.Hashable		
+protocol	conformance UnilogTelemetry.Logs	Swift.CaseIterable		
+protocol	conformance UnilogPlatformLibrary.HealthAggregatedSummary	UnilogTelemetry.AggregationIntervalProviding		
+protocol	conformance UnilogPlatformLibrary.HealthTelemetry	UnilogTelemetry.ClientProviding		
+protocol	conformance UnilogPlatformLibrary.HealthAggregatedSummary	UnilogTelemetry.ClientProviding		
+protocol	conformance UnilogTelemetry.BiomeDeviceContextProvider	UnilogTelemetry.DeviceContextProvider		
+protocol	conformance UnilogTelemetry.HealthAggregatedSummaryReader	UnilogTelemetry.ExternalSchemaBiomeAggregateReader		
+protocol	conformance UnilogTelemetry.HealthAggregatedSummaryReader	UnilogTelemetry.ExternalSchemaBiomeEventReader		
+protocol	conformance UnilogTelemetry.HealthAggregatedSummaryReader	UnilogTelemetry.NextAggregationDateProviding		
+protocol	conformance UnilogTelemetry.HealthAggregatedSummaryReader	UnilogTelemetry.EventReader		
+protocol	conformance UnilogTelemetry.HealthAggregatedSummaryWriter	UnilogTelemetry.ExternalSchemaBiomeEventWriter		
+protocol	conformance UnilogTelemetry.HealthAggregatedSummaryWriter	UnilogTelemetry.EventWriter		
+protocol	conformance UnilogTelemetry.HealthTelemetryReader	UnilogTelemetry.ExternalSchemaBiomeEventReader		
+protocol	conformance UnilogTelemetry.HealthTelemetryReader	UnilogTelemetry.EventReader		
+protocol	conformance UnilogTelemetry.HealthTelemetryWriter	UnilogTelemetry.ExternalSchemaBiomeEventWriter		
+protocol	conformance UnilogTelemetry.HealthTelemetryWriter	UnilogTelemetry.EventWriter		
+protocol	conformance UnilogPlatformLibrary.HealthAggregatedSummary	UnilogTelemetry.StartDateProviding		
+protocol	conformance UnilogPlatformLibrary.HealthAggregatedSummary	UnilogTelemetry.StartTimestampProviding		
+extension	UnilogTelemetry.UnilogTelemetryError	RawRepresentable		
+extension	UnilogCommonLibrary.Client	CaseIterable		
+extension	UnilogTelemetry.Logs	RawRepresentable		
+extension	UnilogTelemetry.Logs	CaseIterable		
+extension	UnilogTelemetry.HealthAggregatedSummaryReader	ExternalSchemaBiomeEventReader		
+extension	UnilogTelemetry.HealthAggregatedSummaryReader	NextAggregationDateProviding		
+extension	UnilogTelemetry.HealthAggregatedSummaryReader	EventReader		
+extension	UnilogTelemetry.HealthAggregatedSummaryWriter	ExternalSchemaBiomeEventWriter		
+extension	UnilogTelemetry.HealthAggregatedSummaryWriter	EventWriter		
+extension	UnilogTelemetry.HealthTelemetryReader	ExternalSchemaBiomeEventReader		
+extension	UnilogTelemetry.HealthTelemetryReader	EventReader		
+extension	UnilogTelemetry.HealthTelemetryWriter	ExternalSchemaBiomeEventWriter		
+extension	UnilogTelemetry.HealthTelemetryWriter	EventWriter		

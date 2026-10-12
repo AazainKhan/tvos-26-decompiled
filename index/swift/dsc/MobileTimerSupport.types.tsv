@@ -1,0 +1,531 @@
+kind	type	conformance	member_kind	member
+struct	MobileTimerSupport.MTLogger			
+struct	MobileTimerSupport.MTLogger		let	logger
+struct	MobileTimerSupport.MTLogger		let	subsystem
+struct	MobileTimerSupport.OpenAlarmIntent			
+struct	MobileTimerSupport.OpenAlarmIntent		var	_target
+struct	MobileTimerSupport.RepeatDayOptionsProvider			
+struct	MobileTimerSupport.CreateAlarmIntent			
+struct	MobileTimerSupport.CreateAlarmIntent		var	_dateComponents
+struct	MobileTimerSupport.CreateAlarmIntent		var	_name
+struct	MobileTimerSupport.CreateAlarmIntent		var	_repeats
+struct	MobileTimerSupport.CreateAlarmIntent		var	_allowsSnooze
+struct	MobileTimerSupport.CreateAlarmIntent		var	dateComponentsFormatter
+enum	MobileTimerSupport.CreateAlarmIntent.ActionError			
+enum	MobileTimerSupport.CreateAlarmIntent.ActionError		case	noDateComponents
+struct	MobileTimerSupport.StopwatchAutoFormatter			
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	underOneHourFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	underTenHourFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	underHundredHourFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	underThousandHourFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	underYearFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	dayOverYearFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	overYearFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	overThousandYearFormatter
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	oneHour
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	tenHours
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	hundredHours
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	thousandHours
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	threeSixtyFiveDays
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	threeSixtySixDays
+struct	MobileTimerSupport.StopwatchAutoFormatter		let	nineNinetyNineYears
+struct	MobileTimerSupport.AddWorldClockIntent			
+struct	MobileTimerSupport.AddWorldClockIntent		var	_city
+struct	MobileTimerSupport.RemoveWorldClockIntent			
+struct	MobileTimerSupport.RemoveWorldClockIntent		var	_entities
+struct	MobileTimerSupport.GetTimeForCityIntent			
+struct	MobileTimerSupport.GetTimeForCityIntent		var	_city
+struct	MobileTimerSupport.DeleteAlarmIntent			
+struct	MobileTimerSupport.DeleteAlarmIntent		var	_entities
+enum	MobileTimerSupport.DeleteAlarmIntent.ActionError			
+enum	MobileTimerSupport.DeleteAlarmIntent.ActionError		case	cannotDeleteSleepAlarm
+struct	MobileTimerSupport.CancelTimerIntent			
+struct	MobileTimerSupport.CancelTimerIntent		var	timerManager
+class	MobileTimerSupport.MTReporterProxy	NSObject		
+class	MobileTimerSupport.MTReporterProxy	NSObject	let	actor
+class	MobileTimerSupport.Reporter			
+class	MobileTimerSupport.Reporter		var	alarms
+class	MobileTimerSupport.Reporter		var	router
+class	MobileTimerSupport.Router<A	MobileTimerSupport.Report, B: MobileTimerSupport.Validating>		
+class	MobileTimerSupport.Router<A	MobileTimerSupport.Report, B: MobileTimerSupport.Validating>	let	debouncer
+class	MobileTimerSupport.Router<A	MobileTimerSupport.Report, B: MobileTimerSupport.Validating>	let	stream
+class	MobileTimerSupport.Router<A	MobileTimerSupport.Report, B: MobileTimerSupport.Validating>	let	submitted
+class	MobileTimerSupport.Router<A	MobileTimerSupport.Report, B: MobileTimerSupport.Validating>	let	validator
+class	MobileTimerSupport.Router<A	MobileTimerSupport.Report, B: MobileTimerSupport.Validating>	let	analytics
+struct	MobileTimerSupport.MTCoreAnalytics			
+struct	MobileTimerSupport.AlarmValidating			
+struct	MobileTimerSupport.AlarmValidating		let	immediateDismissThreshold
+struct	MobileTimerSupport.AlarmValidating		let	immediatePlaybackStopThreshold
+struct	MobileTimerSupport.AlarmReport			
+struct	MobileTimerSupport.AlarmReport		var	fullNotificationId
+struct	MobileTimerSupport.AlarmReport		var	shortNotificationId
+struct	MobileTimerSupport.AlarmReport		var	firedDate
+struct	MobileTimerSupport.AlarmReport		var	notificationPostedDate
+struct	MobileTimerSupport.AlarmReport		var	notificationDeliveredDate
+struct	MobileTimerSupport.AlarmReport		var	showedCoverSheetDate
+struct	MobileTimerSupport.AlarmReport		var	liveActivityId
+struct	MobileTimerSupport.AlarmReport		var	liveActivitySceneType
+struct	MobileTimerSupport.AlarmReport		var	liveActivityCreatedDate
+struct	MobileTimerSupport.AlarmReport		var	duckAttentionAwarenessDate
+struct	MobileTimerSupport.AlarmReport		var	toneAlertPostedDate
+struct	MobileTimerSupport.AlarmReport		var	toneAlertTornDownDate
+struct	MobileTimerSupport.AlarmReport		var	toneIdentifier
+struct	MobileTimerSupport.AlarmReport		var	soundPlayedDate
+struct	MobileTimerSupport.AlarmReport		var	audioReporterId
+struct	MobileTimerSupport.AlarmReport		var	soundStoppedDate
+struct	MobileTimerSupport.AlarmReport		var	dismissedDate
+struct	MobileTimerSupport.AlarmReport		var	isSleep
+struct	MobileTimerSupport.AlarmReport		var	isOverride
+struct	MobileTimerSupport.AlarmReport		var	isSilent
+struct	MobileTimerSupport.AlarmReport		var	isMedia
+struct	MobileTimerSupport.AlarmReport		var	lockedAtFire
+struct	MobileTimerSupport.AlarmReport		var	concerns
+struct	MobileTimerSupport.AlarmReport		var	noConcerns
+struct	MobileTimerSupport.AlarmReport		var	coreAnalyticsEventName
+struct	MobileTimerSupport.AlarmReport		var	id
+enum	MobileTimerSupport.AlarmConcern			
+enum	MobileTimerSupport.AlarmConcern		case	almostImmediateDismiss
+enum	MobileTimerSupport.AlarmConcern		case	almostImmediatePlaybackStop
+enum	MobileTimerSupport.AlarmConcern		case	firedDateMissing
+enum	MobileTimerSupport.AlarmConcern		case	fullNotificationIdMissing
+enum	MobileTimerSupport.AlarmConcern		case	shortNotificationIdMissing
+enum	MobileTimerSupport.AlarmConcern		case	notificationPostedDateMissing
+enum	MobileTimerSupport.AlarmConcern		case	notificationDeliveredDateMissing
+enum	MobileTimerSupport.AlarmConcern		case	liveActivityIdMissing
+enum	MobileTimerSupport.AlarmConcern		case	liveActivitySceneTypeMissing
+enum	MobileTimerSupport.AlarmConcern		case	liveActivityCreatedDateMissing
+enum	MobileTimerSupport.AlarmConcern		case	isSilent
+enum	MobileTimerSupport.AlarmConcern		case	isMedia
+enum	MobileTimerSupport.AlarmConcern		case	undefined
+enum	MobileTimerSupport.AlarmConcern		case	noConcern
+enum	MobileTimerSupport.AlarmReport.CodingKeys			
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	fullNotificationId
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	shortNotificationId
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	firedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	notificationPostedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	notificationDeliveredDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	showedCoverSheetDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	liveActivityId
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	liveActivitySceneType
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	liveActivityCreatedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	duckAttentionAwarenessDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	toneAlertPostedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	toneAlertTornDownDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	toneIdentifier
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	soundPlayedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	audioReporterId
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	soundStoppedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	dismissedDate
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	isSleep
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	isOverride
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	isSilent
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	isMedia
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	lockedAtFire
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	concerns
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	noConcerns
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	coreAnalyticsEventName
+enum	MobileTimerSupport.AlarmReport.CodingKeys		case	id
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey			
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	alarmId
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	fullNotificationId
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	shortNotificationId
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	firedDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	notificationPostCompleted
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	notificationDeliveredDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	showedCoverSheetDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	liveActivityId
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	liveActivitySceneType
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	liveActivityCreatedDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	duckAttentionAwarenessDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	toneAlertPostedDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	toneAlertTornDownDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	toneIdentifier
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	soundPlayedDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	soundStoppedDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	dismissedDate
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	isSleep
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	isOverride
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	isSilent
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	isMedia
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	lockedAtFire
+enum	MobileTimerSupport.AlarmReport.AlarmCaKey		case	concerns
+class	MobileTimerSupport.WatchActivityManager			
+class	MobileTimerSupport.WatchActivityManager		let	alarmBundleID
+class	MobileTimerSupport.WatchActivityManager		let	logger
+class	MobileTimerSupport.MTSUtilities			
+class	MobileTimerSupport.Preferences			
+class	MobileTimerSupport.Preferences		let	userDefaults
+class	MobileTimerSupport.Preferences		var	preferencesChangedSubject
+struct	MobileTimerSupport.AlarmsQuery.ParameterMapping			
+struct	MobileTimerSupport.AlarmsQuery.ParameterMapping		let	keyPath
+struct	MobileTimerSupport.AlarmsQuery.ParameterMapping		let	operation
+struct	MobileTimerSupport.AlarmsQuery.ParameterMapping		let	value
+struct	MobileTimerSupport.AlarmsQuery			
+enum	MobileTimerSupport.AlarmEntity.RepeatDay			
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	sunday
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	monday
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	tuesday
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	wednesday
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	thursday
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	friday
+enum	MobileTimerSupport.AlarmEntity.RepeatDay		case	saturday
+struct	MobileTimerSupport.AlarmEntity			
+struct	MobileTimerSupport.AlarmEntity		var	id
+struct	MobileTimerSupport.AlarmEntity		var	_label
+struct	MobileTimerSupport.AlarmEntity		var	_url
+struct	MobileTimerSupport.AlarmEntity		var	_hours
+struct	MobileTimerSupport.AlarmEntity		var	_minutes
+struct	MobileTimerSupport.AlarmEntity		var	_enabled
+struct	MobileTimerSupport.AlarmEntity		var	_repeats
+struct	MobileTimerSupport.AlarmEntity		var	_repeatDays
+struct	MobileTimerSupport.AlarmEntity		var	_snooze
+struct	MobileTimerSupport.AlarmEntity		var	_dateComponents
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation			
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation		case	contains
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation		case	lessThan
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation		case	greaterThan
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation		case	boolEqual
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation		case	intEqual
+enum	MobileTimerSupport.AlarmsQuery.ParameterMapping.Operation		case	stringEqual
+class	MobileTimerSupport.MTAppIntentsAppState			
+struct	MobileTimerSupport.OpenTab			
+struct	MobileTimerSupport.OpenTab		var	_tab
+enum	MobileTimerSupport.MTAppIntentsTab			
+enum	MobileTimerSupport.MTAppIntentsTab		case	clock
+enum	MobileTimerSupport.MTAppIntentsTab		case	alarm
+enum	MobileTimerSupport.MTAppIntentsTab		case	stopwatch
+enum	MobileTimerSupport.MTAppIntentsTab		case	timer
+struct	MobileTimerSupport.CreateTimerIntent			
+struct	MobileTimerSupport.CreateTimerIntent		var	_duration
+struct	MobileTimerSupport.CreateTimerIntent		var	timerManager
+enum	MobileTimerSupport.CreateTimerIntent.ActionError			
+enum	MobileTimerSupport.CreateTimerIntent.ActionError		case	durationExceedsMax
+struct	MobileTimerSupport.WorldClocksCityQuery			
+struct	MobileTimerSupport.WorldClockCityEntity			
+struct	MobileTimerSupport.WorldClockCityEntity		var	id
+struct	MobileTimerSupport.WorldClockCityEntity		var	_name
+enum	MobileTimerSupport.MobileTimerFeatureFlags			
+enum	MobileTimerSupport.MobileTimerFeatureFlags		case	liveActivityAlerting
+enum	MobileTimerSupport.MobileTimerFeatureFlags		case	liveActivityAlertTone
+enum	MobileTimerSupport.MobileTimerFeatureFlags		case	liveActivityBanners
+class	MobileTimerSupport.IntentWorldClockManager			
+class	MobileTimerSupport.IntentWorldClockManager		let	manager
+class	MobileTimerSupport.IntentWorldClockManager		let	timeFormatter
+enum	MobileTimerSupport.MTTab			
+class	MobileTimerSupport.MTAppIntentsManager	NSObject		
+class	MobileTimerSupport.MTAppIntentsManager	NSObject	var	delegate
+struct	MobileTimerSupport.GetCurrentTimerDetailsIntent			
+struct	MobileTimerSupport.GetCurrentTimerDetailsIntent		var	_mode
+struct	MobileTimerSupport.GetCurrentTimerDetailsIntent		var	timerManager
+enum	MobileTimerSupport.GetCurrentTimerDetailsIntent.GetCurrentTimerMode			
+enum	MobileTimerSupport.GetCurrentTimerDetailsIntent.GetCurrentTimerMode		case	duration
+enum	MobileTimerSupport.GetCurrentTimerDetailsIntent.GetCurrentTimerMode		case	remainingTime
+struct	MobileTimerSupport.MobileTimerAppShortcuts			
+class	MobileTimerSupport.MTWatchActivityManager	NSObject		
+class	MobileTimerSupport.MTWatchActivityManager	NSObject	let	activityManager
+class	MobileTimerSupport.TimerViewModel			
+class	MobileTimerSupport.TimerViewModel		var	manager
+class	MobileTimerSupport.TimerViewModel		var	cancellables
+class	MobileTimerSupport.TimerViewModel		let	timersAddedStream
+class	MobileTimerSupport.TimerViewModel		let	timersAddedContinuation
+class	MobileTimerSupport.TimerViewModel		let	timersRemovedStream
+class	MobileTimerSupport.TimerViewModel		let	timersRemovedContinuation
+class	MobileTimerSupport.TimerViewModel		let	timersUpdatedStream
+class	MobileTimerSupport.TimerViewModel		let	timersUpdatedContinuation
+class	MobileTimerSupport.TimerViewModel		let	timerFiredStream
+class	MobileTimerSupport.TimerViewModel		let	timerFiredContinuation
+class	MobileTimerSupport.TimerViewModel		let	recentsStream
+class	MobileTimerSupport.TimerViewModel		let	recentsContinuation
+class	MobileTimerSupport.TimerViewModel		let	latestStream
+class	MobileTimerSupport.TimerViewModel		let	latestContinuation
+enum	MobileTimerSupport.TimerViewModel.TimerManagerError			
+enum	MobileTimerSupport.TimerViewModel.TimerManagerError		case	coundntCreateFuture
+enum	MobileTimerSupport.TimerViewModel.TimerManagerError		case	coundntConvertResult
+enum	MobileTimerSupport.TimerViewModel.TimerManagerError		case	couldntFetchTimers
+struct	MobileTimerSupport.PauseTimerIntent			
+struct	MobileTimerSupport.PauseTimerIntent		var	timerManager
+struct	MobileTimerSupport.SolarTerminatorPath			
+struct	MobileTimerSupport.SolarTerminatorPath		let	isNorthernHemisphereSummer
+struct	MobileTimerSupport.SolarTerminatorPath		let	coordinates
+struct	MobileTimerSupport.SolarTerminatorPath		let	preferredRenderingMethod
+enum	MobileTimerSupport.SolarTerminatorPath.PreferredRenderingMethod			
+enum	MobileTimerSupport.SolarTerminatorPath.PreferredRenderingMethod		case	catmullRomSpline
+enum	MobileTimerSupport.SolarTerminatorPath.PreferredRenderingMethod		case	discrete
+class	MobileTimerSupport.ObservableStore			
+class	MobileTimerSupport.ObservableStore		var	observers
+class	MobileTimerSupport.DataStore<A	MobileTimerSupport.DataEntry>		
+class	MobileTimerSupport.DataStore<A	MobileTimerSupport.DataEntry>	var	entries
+class	MobileTimerSupport.DataStore<A	MobileTimerSupport.DataEntry>	let	id
+class	MobileTimerSupport.DataStore<A	MobileTimerSupport.DataEntry>	let	serializerQueue
+class	MobileTimerSupport.DataStore<A	MobileTimerSupport.DataEntry>	let	observerUpdateQueue
+class	MobileTimerSupport.DataStore<A	MobileTimerSupport.DataEntry>	var	observerStore
+struct	MobileTimerSupport.ResumeTimerIntent			
+struct	MobileTimerSupport.ResumeTimerIntent		var	timerManager
+class	MobileTimerSupport.AlarmsViewModel			
+class	MobileTimerSupport.AlarmsViewModel		var	alarmAddedCancellable
+class	MobileTimerSupport.AlarmsViewModel		var	alarmUpdatedCancellable
+class	MobileTimerSupport.AlarmsViewModel		var	alarmFiringCancellable
+class	MobileTimerSupport.AlarmsViewModel		var	alarmDeletedCancellable
+class	MobileTimerSupport.AlarmsViewModel		var	delegate
+class	MobileTimerSupport.AlarmsViewModel		let	manager
+class	MobileTimerSupport.AlarmsViewModel		var	alarms
+enum	MobileTimerSupport.AlarmsViewModel.AlarmViewModelError			
+enum	MobileTimerSupport.AlarmsViewModel.AlarmViewModelError		case	couldntFetchAlarms
+class	MobileTimerSupport.SerialTaskQueue			
+class	MobileTimerSupport.SerialTaskQueue		let	_streamContinuation
+class	MobileTimerSupport.SerialTaskQueue		let	_task
+class	MobileTimerSupport.Emitter			
+class	MobileTimerSupport.Emitter		var	value
+class	MobileTimerSupport.Emitter		let	delay
+class	MobileTimerSupport.Emitter		let	scheduler
+class	MobileTimerSupport.Emitter		var	cancels
+struct	MobileTimerSupport.ToggleAlarmIntent			
+struct	MobileTimerSupport.ToggleAlarmIntent		var	_operation
+struct	MobileTimerSupport.ToggleAlarmIntent		var	_state
+struct	MobileTimerSupport.ToggleAlarmIntent		var	_alarm
+enum	MobileTimerSupport.ToggleAlarmIntent.Operation			
+enum	MobileTimerSupport.ToggleAlarmIntent.Operation		case	turn
+enum	MobileTimerSupport.ToggleAlarmIntent.Operation		case	toggle
+protocol	MobileTimerSupport.Report	ConcernType		
+protocol	MobileTimerSupport.MTCoreAnalyticsEvent	MTCAKey		
+protocol	MobileTimerSupport.Concern			
+protocol	MobileTimerSupport.Validating	R, C		
+protocol	MobileTimerSupport.BaseViewModel			
+protocol	MobileTimerSupport.DataEntry			
+protocol	MobileTimerSupport.ObserverIdentifiable			
+protocol	MobileTimerSupport.DataStoreObserver			
+protocol	MobileTimerSupport.AlarmViewModelDelegate			
+protocol	conformance MobileTimerSupport.OpenAlarmIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.OpenAlarmIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.OpenAlarmIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.CreateAlarmIntent	AppIntents.CreateIntent		
+protocol	conformance MobileTimerSupport.CreateAlarmIntent	AppIntents.SystemIntent		
+protocol	conformance MobileTimerSupport.CreateAlarmIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.CreateAlarmIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.CreateAlarmIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance RepeatDayOptionsProvider	AppIntents.DynamicOptionsProvider		
+protocol	conformance RepeatDayOptionsProvider	AppIntents._SupportsAppDependencies		
+protocol	conformance ActionError	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance ActionError	Swift.Hashable		
+protocol	conformance ActionError	Swift.Equatable		
+protocol	conformance ActionError	Swift.Error		
+protocol	conformance MobileTimerSupport.AddWorldClockIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.AddWorldClockIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.AddWorldClockIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.RemoveWorldClockIntent	AppIntents.DeleteIntent		
+protocol	conformance MobileTimerSupport.RemoveWorldClockIntent	AppIntents.SystemIntent		
+protocol	conformance MobileTimerSupport.RemoveWorldClockIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.RemoveWorldClockIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.RemoveWorldClockIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.GetTimeForCityIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.GetTimeForCityIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.GetTimeForCityIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.DeleteAlarmIntent	AppIntents.DeleteIntent		
+protocol	conformance MobileTimerSupport.DeleteAlarmIntent	AppIntents.SystemIntent		
+protocol	conformance MobileTimerSupport.DeleteAlarmIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.DeleteAlarmIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.DeleteAlarmIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance ActionError	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance ActionError	Swift.Hashable		
+protocol	conformance ActionError	Swift.Equatable		
+protocol	conformance ActionError	Swift.Error		
+protocol	conformance MobileTimerSupport.CancelTimerIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.CancelTimerIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.CancelTimerIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.AlarmConcern	Swift.RawRepresentable		
+protocol	conformance MobileTimerSupport.AlarmConcern	Swift.Hashable		
+protocol	conformance MobileTimerSupport.AlarmConcern	Swift.Equatable		
+protocol	conformance MobileTimerSupport.AlarmConcern	Swift.Encodable		
+protocol	conformance MobileTimerSupport.AlarmConcern	Swift.Decodable		
+protocol	conformance MobileTimerSupport.AlarmConcern	Swift.CustomStringConvertible		
+protocol	conformance MobileTimerSupport.AlarmConcern	MobileTimerSupport.Concern		
+protocol	conformance MobileTimerSupport.AlarmReport	Swift.Equatable		
+protocol	conformance MobileTimerSupport.AlarmReport	MobileTimerSupport.MTCoreAnalyticsEvent		
+protocol	conformance AlarmReport.AlarmCaKey	Swift.RawRepresentable		
+protocol	conformance AlarmReport.AlarmCaKey	Swift.Hashable		
+protocol	conformance AlarmReport.AlarmCaKey	Swift.Equatable		
+protocol	conformance AlarmReport.AlarmCaKey	Swift.CustomStringConvertible		
+protocol	conformance MobileTimerSupport.AlarmReport	Swift.CustomStringConvertible		
+protocol	conformance MobileTimerSupport.AlarmReport	Swift.Encodable		
+protocol	conformance MobileTimerSupport.AlarmReport	Swift.Decodable		
+protocol	conformance MobileTimerSupport.AlarmReport	Swift.Hashable		
+protocol	conformance MobileTimerSupport.AlarmReport	Swift.Identifiable		
+protocol	conformance MobileTimerSupport.AlarmReport	MobileTimerSupport.Report		
+protocol	conformance MobileTimerSupport.AlarmValidating	MobileTimerSupport.Validating		
+protocol	conformance MobileTimerSupport.Reporter	Swift.Actor		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AlarmEntity.RepeatDay	Swift.Equatable		
+protocol	conformance AlarmEntity.RepeatDay	Swift.Hashable		
+protocol	conformance AlarmEntity.RepeatDay	Swift.RawRepresentable		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents.AppEnum		
+protocol	conformance AlarmEntity.RepeatDay	Swift.CaseIterable		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents.AppValue		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents._IntentValue		
+protocol	conformance AlarmEntity.RepeatDay	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AlarmEntity.RepeatDay	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents.AppEntity		
+protocol	conformance MobileTimerSupport.AlarmEntity	Swift.Equatable		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents.AppValue		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents.DisplayRepresentable		
+protocol	conformance MobileTimerSupport.AlarmEntity	Swift.Identifiable		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents.TypeDisplayRepresentable		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents._IntentValue		
+protocol	conformance MobileTimerSupport.AlarmEntity	AppIntents.InstanceDisplayRepresentable		
+protocol	conformance MobileTimerSupport.AlarmEntity	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance MobileTimerSupport.AlarmsQuery	AppIntents.EntityPropertyQuery		
+protocol	conformance MobileTimerSupport.AlarmsQuery	AppIntents.EntityQuery		
+protocol	conformance MobileTimerSupport.AlarmsQuery	AppIntents.DynamicOptionsProvider		
+protocol	conformance MobileTimerSupport.AlarmsQuery	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.AlarmsQuery	AppIntents._SupportsAppDependencies		
+protocol	conformance ParameterMapping.Operation	Swift.Hashable		
+protocol	conformance ParameterMapping.Operation	Swift.Equatable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	Swift.Equatable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	Swift.Hashable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	Swift.RawRepresentable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents.AppEnum		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents.AppValue		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents.StaticDisplayRepresentable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents.TypeDisplayRepresentable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents._IntentValue		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	AppIntents.CaseDisplayRepresentable		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance MobileTimerSupport.MTAppIntentsTab	Swift.CaseIterable		
+protocol	conformance MobileTimerSupport.OpenTab	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.OpenTab	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.OpenTab	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.MTAppIntentsAppState	Combine.ObservableObject		
+protocol	conformance MobileTimerSupport.CreateTimerIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.CreateTimerIntent	AppIntents.CustomIntentMigratedAppIntent		
+protocol	conformance MobileTimerSupport.CreateTimerIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.CreateTimerIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance ActionError	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance ActionError	Swift.Hashable		
+protocol	conformance ActionError	Swift.Equatable		
+protocol	conformance ActionError	Swift.Error		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents.AppEntity		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents.AppValue		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents.DisplayRepresentable		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	Swift.Identifiable		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents.TypeDisplayRepresentable		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents._IntentValue		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	AppIntents.InstanceDisplayRepresentable		
+protocol	conformance MobileTimerSupport.WorldClockCityEntity	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance MobileTimerSupport.WorldClocksCityQuery	AppIntents.EntityQuery		
+protocol	conformance MobileTimerSupport.WorldClocksCityQuery	AppIntents.EntityStringQuery		
+protocol	conformance MobileTimerSupport.WorldClocksCityQuery	AppIntents.DynamicOptionsProvider		
+protocol	conformance MobileTimerSupport.WorldClocksCityQuery	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.WorldClocksCityQuery	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.MobileTimerFeatureFlags	Swift.Equatable		
+protocol	conformance MobileTimerSupport.MobileTimerFeatureFlags	Swift.Hashable		
+protocol	conformance MobileTimerSupport.MobileTimerFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance MobileTimerSupport.MTTab	Swift.Equatable		
+protocol	conformance MobileTimerSupport.MTTab	Swift.Hashable		
+protocol	conformance MobileTimerSupport.MTTab	Swift.RawRepresentable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	Swift.Equatable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	Swift.Hashable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	Swift.RawRepresentable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents.AppEnum		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents.AppValue		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents._IntentValue		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance GetCurrentTimerDetailsIntent.GetCurrentTimerMode	Swift.CaseIterable		
+protocol	conformance MobileTimerSupport.GetCurrentTimerDetailsIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.GetCurrentTimerDetailsIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.GetCurrentTimerDetailsIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.MobileTimerAppShortcuts	AppIntents.AppShortcutsProvider		
+protocol	conformance MobileTimerSupport.TimerViewModel	MobileTimerSupport.BaseViewModel		
+protocol	conformance TimerViewModel.TimerManagerError	Swift.Hashable		
+protocol	conformance TimerViewModel.TimerManagerError	Swift.Equatable		
+protocol	conformance TimerViewModel.TimerManagerError	Swift.Error		
+protocol	conformance MobileTimerSupport.PauseTimerIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.PauseTimerIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.PauseTimerIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance SolarTerminatorPath.PreferredRenderingMethod	Swift.Equatable		
+protocol	conformance MobileTimerSupport.SolarTerminatorPath	Swift.Equatable		
+protocol	conformance MobileTimerSupport.DataStore	Swift.Identifiable		
+protocol	conformance MobileTimerSupport.ResumeTimerIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.ResumeTimerIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.ResumeTimerIntent	AppIntents._SupportsAppDependencies		
+protocol	conformance MobileTimerSupport.AlarmsViewModel	MobileTimerSupport.BaseViewModel		
+protocol	conformance AlarmsViewModel.AlarmViewModelError	Swift.Hashable		
+protocol	conformance AlarmsViewModel.AlarmViewModelError	Swift.Equatable		
+protocol	conformance AlarmsViewModel.AlarmViewModelError	Swift.Error		
+protocol	conformance MobileTimerSupport.SerialTaskQueue	Swift.Actor		
+protocol	conformance ToggleAlarmIntent.Operation	Swift.Equatable		
+protocol	conformance ToggleAlarmIntent.Operation	Swift.Hashable		
+protocol	conformance ToggleAlarmIntent.Operation	Swift.RawRepresentable		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents.AppEnum		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents.AppValue		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents.StaticDisplayRepresentable		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents.PersistentlyIdentifiable		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents.TypeDisplayRepresentable		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents._IntentValue		
+protocol	conformance ToggleAlarmIntent.Operation	AppIntents.CaseDisplayRepresentable		
+protocol	conformance ToggleAlarmIntent.Operation	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance ToggleAlarmIntent.Operation	Swift.CaseIterable		
+protocol	conformance MobileTimerSupport.ToggleAlarmIntent	AppIntents.AppIntent		
+protocol	conformance MobileTimerSupport.ToggleAlarmIntent	AppIntents.PersistentlyIdentifiable		
+protocol	conformance MobileTimerSupport.ToggleAlarmIntent	AppIntents._SupportsAppDependencies		
+extension	MobileTimerSupport.OpenAlarmIntent	AppIntent		
+extension	MobileTimerSupport.CreateAlarmIntent	CreateIntent		
+extension	MobileTimerSupport.CreateAlarmIntent	AppIntent		
+extension	MobileTimerSupport.RepeatDayOptionsProvider	DynamicOptionsProvider		
+extension	MobileTimerSupport.AddWorldClockIntent	AppIntent		
+extension	MobileTimerSupport.RemoveWorldClockIntent	DeleteIntent		
+extension	MobileTimerSupport.RemoveWorldClockIntent	AppIntent		
+extension	MobileTimerSupport.GetTimeForCityIntent	AppIntent		
+extension	MobileTimerSupport.DeleteAlarmIntent	DeleteIntent		
+extension	MobileTimerSupport.DeleteAlarmIntent	AppIntent		
+extension	MobileTimerSupport.CancelTimerIntent	AppIntent		
+extension	MobileTimerSupport.AlarmConcern	RawRepresentable		
+extension	MobileTimerSupport.AlarmReport	MTCoreAnalyticsEvent		
+extension	MobileTimerSupport.AlarmReport.AlarmCaKey	RawRepresentable		
+extension	MobileTimerSupport.AlarmReport	Identifiable		
+extension	MobileTimerSupport.AlarmReport	Report		
+extension	MobileTimerSupport.AlarmValidating	Validating		
+extension	MobileTimerSupport.AlarmEntity.RepeatDay	RawRepresentable		
+extension	MobileTimerSupport.AlarmEntity.RepeatDay	CaseIterable		
+extension	MobileTimerSupport.AlarmEntity.RepeatDay	_IntentValue		
+extension	MobileTimerSupport.AlarmEntity	AppEntity		
+extension	MobileTimerSupport.AlarmEntity	Identifiable		
+extension	MobileTimerSupport.AlarmEntity	_IntentValue		
+extension	MobileTimerSupport.AlarmsQuery	EntityPropertyQuery		
+extension	MobileTimerSupport.AlarmsQuery	EntityQuery		
+extension	MobileTimerSupport.AlarmsQuery	DynamicOptionsProvider		
+extension	MobileTimerSupport.MTAppIntentsTab	RawRepresentable		
+extension	MobileTimerSupport.MTAppIntentsTab	_IntentValue		
+extension	MobileTimerSupport.MTAppIntentsTab	CaseIterable		
+extension	MobileTimerSupport.OpenTab	AppIntent		
+extension	MobileTimerSupport.MTAppIntentsAppState	ObservableObject		
+extension	MobileTimerSupport.CreateTimerIntent	AppIntent		
+extension	MobileTimerSupport.WorldClockCityEntity	AppEntity		
+extension	MobileTimerSupport.WorldClockCityEntity	Identifiable		
+extension	MobileTimerSupport.WorldClockCityEntity	_IntentValue		
+extension	MobileTimerSupport.WorldClocksCityQuery	EntityQuery		
+extension	MobileTimerSupport.WorldClocksCityQuery	DynamicOptionsProvider		
+extension	MobileTimerSupport.MTTab	RawRepresentable		
+extension	MobileTimerSupport.GetCurrentTimerDetailsIntent.GetCurrentTimerMode	RawRepresentable		
+extension	MobileTimerSupport.GetCurrentTimerDetailsIntent.GetCurrentTimerMode	_IntentValue		
+extension	MobileTimerSupport.GetCurrentTimerDetailsIntent.GetCurrentTimerMode	CaseIterable		
+extension	MobileTimerSupport.GetCurrentTimerDetailsIntent	AppIntent		
+extension	MobileTimerSupport.PauseTimerIntent	AppIntent		
+extension	MobileTimerSupport.DataStore	Identifiable		
+extension	MobileTimerSupport.ResumeTimerIntent	AppIntent		
+extension	MobileTimerSupport.ToggleAlarmIntent.Operation	RawRepresentable		
+extension	MobileTimerSupport.ToggleAlarmIntent.Operation	_IntentValue		
+extension	MobileTimerSupport.ToggleAlarmIntent.Operation	CaseIterable		
+extension	MobileTimerSupport.ToggleAlarmIntent	AppIntent		

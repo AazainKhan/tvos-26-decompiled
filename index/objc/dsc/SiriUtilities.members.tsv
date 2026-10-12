@@ -1,0 +1,23 @@
+owner	kind	declaration
+SUCurrentProcess	+	+ (id)default;
+SUCurrentProcess	-	- (id)init;
+SUCurrentProcess	property	@property (nonatomic, retain) SUIdleTracker *idleTracker;
+SUIdleTracker	-	- (id)init;
+SUIdleTracker	-	- (id)initWithName:(id)name queue:(id)queue timeoutSeconds:(long long)seconds timeoutAction:(id /* block */)action;
+SUIdleTracker	-	- (id)initWithName:(id)name;
+SUIdleTracker	-	- (id)track;
+SUIdleTracker	-	- (id)trackWithName:(id)name;
+SUIdleTracker	property	@property (nonatomic, readonly) _Bool idle;
+SUIdleTracker	property	@property (nonatomic, readonly) long long count;
+SUIdleTrackerActivity	-	- (id)init;
+SUNetworkReachability	-	- (id)init;
+SUNetworkReachability	property	@property (readonly, nonatomic) unsigned long long reachabilityState;
+TailSpinHelper	+	+ (_Bool)isValidToCreateTailSpin:(id)spin;
+TailSpinHelper	+	+ (_Bool)isValidToDeleteTailSpinDir:(id)dir;
+TailSpinHelper	+	+ (id)getLastSuccessfulTailSpinDate:(id)date;
+TailSpinHelper	+	+ (id)getLogger;
+TailSpinHelper	+	+ (id)getTailSpinDir:(id)dir;
+TailSpinHelper	+	+ (void)setSuccessfulTailSpinDate:(id)date date:(id)date;
+TailSpinHelper	-	- (void)clearDirectory:(id)directory queue:(id)queue;
+TailSpinHelper	-	- (void)dumpTailSpinOutputToFile:(id)file suiteName:(id)name options:(id)options queue:(id)queue handler:(id /* block */)handler;
+_TtC13SiriUtilities19NetworkAvailability	property	@property (nonatomic, readonly) SUNetworkReachability *networkReachability;

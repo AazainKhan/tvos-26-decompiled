@@ -1,0 +1,22 @@
+kind	type	conformance	member_kind	member
+enum	SyncedDefaults.GetObjectError			
+enum	SyncedDefaults.GetObjectError		case	wrongType
+enum	SyncedDefaults.SyncError			
+enum	SyncedDefaults.SyncError		case	syncFailed
+enum	SyncedDefaults.SyncError		case	networkFailure
+enum	SyncedDefaults.SyncError		case	noAccount
+enum	SyncedDefaults.SyncError		case	quotaExceeded
+enum	SyncedDefaults.SyncError		case	endToEndEncryptionUnavailable
+struct	SyncedDefaults.SYDBundleRecordEntitlements			
+struct	SyncedDefaults.SYDBundleRecordEntitlements		let	bundleRecord
+struct	SyncedDefaults.SYDSecTaskEntitlements			
+struct	SyncedDefaults.SYDSecTaskEntitlements		let	secTask
+struct	SyncedDefaults.SYDNoEntitlements			
+protocol	SYDEntitlementsProtocol			
+protocol	conformance SyncedDefaults.GetObjectError	Swift.Error		
+protocol	conformance SyncedDefaults.SyncError	Swift.Equatable		
+protocol	conformance SyncedDefaults.SyncError	Swift.Hashable		
+protocol	conformance SyncedDefaults.SyncError	Swift.Error		
+protocol	conformance SYDBundleRecordEntitlements	SyncedDefaults.SYDEntitlementsProtocol		
+protocol	conformance SYDSecTaskEntitlements	SyncedDefaults.SYDEntitlementsProtocol		
+protocol	conformance SYDNoEntitlements	SyncedDefaults.SYDEntitlementsProtocol		

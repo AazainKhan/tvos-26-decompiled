@@ -1,0 +1,21 @@
+owner	kind	declaration
+SpatialAudioProfileClient	+	+ (_Bool)supportsSecureCoding;
+SpatialAudioProfileClient	-	- (id)_ensureXPCStarted;
+SpatialAudioProfileClient	-	- (id)init;
+SpatialAudioProfileClient	-	- (id)initWithCoder:(id)coder;
+SpatialAudioProfileClient	-	- (void)_fetchSpatialAudioProfileRecordWithCompletion:(id /* block */)completion;
+SpatialAudioProfileClient	-	- (void)_interrupted;
+SpatialAudioProfileClient	-	- (void)_invalidated;
+SpatialAudioProfileClient	-	- (void)encodeWithCoder:(id)coder;
+SpatialAudioProfileClient	-	- (void)fetchSpatialAudioProfileRecordWithCompletion:(id /* block */)completion;
+SpatialAudioProfileClient	-	- (void)invalidate;
+SpatialAudioProfileClient	property	@property (copy, nonatomic) id /* block */ interruptionHandler;
+SpatialAudioProfileClient	property	@property (copy, nonatomic) id /* block */ invalidationHandler;
+SpatialAudioProfileClient	property	@property (retain, nonatomic) NSObject<OS_dispatch_queue> *dispatchQueue;
+SpatialAudioProfileRecord	+	+ (_Bool)supportsSecureCoding;
+SpatialAudioProfileRecord	-	- (id)description;
+SpatialAudioProfileRecord	-	- (id)initWithCoder:(id)coder;
+SpatialAudioProfileRecord	-	- (void)encodeWithCoder:(id)coder;
+SpatialAudioProfileRecord	property	@property (retain, nonatomic) NSData *profileData;
+SpatialAudioProfileRecord	property	@property (retain, nonatomic) NSURL *profileURL;
+SpatialAudioProfileXPCServiceInterface	-	- (void)fetchSpatialAudioProfileRecordForClient:(id)client WithCompletion:(id /* block */)completion;

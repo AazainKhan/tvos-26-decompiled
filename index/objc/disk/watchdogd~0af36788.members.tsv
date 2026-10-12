@@ -1,0 +1,13 @@
+owner	kind	declaration
+WDUnblockTracker	+	+ (id)existingUnblockTrackerForLaunchdLabel:(id)label triggeredRoundID:(unsigned long long)id;
+WDUnblockTracker	+	+ (void)addNewUnblockTracker:(id)tracker;
+WDUnblockTracker	+	+ (void)removeUnblockTrackerForLaunchdLabel:(id)label triggeredRoundID:(unsigned long long)id;
+WDUnblockTracker	-	- (id)copyHeaderDescription;
+WDUnblockTracker	-	- (id)initWithPid:(int)pid launchdLabel:(id)label triggeredRoundID:(unsigned long long)id tids:(id)tids;
+WDUnblockTracker	-	- (void)reportEffectiveness;
+WDUnblockTracker	property	@property (nonatomic) _Bool watchdogTookAction;
+WDUnblockTracker	property	@property (readonly, nonatomic) NSMutableSet *threadsStillBlocked;
+WDUnblockTracker	property	@property (readonly, nonatomic) NSString *launchdLabel;
+WDUnblockTracker	property	@property (readonly, nonatomic) int pid;
+WDUnblockTracker	property	@property (readonly, nonatomic) unsigned long long triggeredRoundID;
+WDUnblockTracker	property	@property (retain, nonatomic) NSDictionary *unblockRecoveryResults;

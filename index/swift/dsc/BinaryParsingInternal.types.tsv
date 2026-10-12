@@ -1,0 +1,46 @@
+kind	type	conformance	member_kind	member
+struct	BinaryParsingInternal.Endianness			
+struct	BinaryParsingInternal.Endianness		var	_isBigEndian
+struct	BinaryParsingInternal.ParserRange			
+struct	BinaryParsingInternal.ParserRange		var	range
+struct	BinaryParsingInternal.ParsingError			
+struct	BinaryParsingInternal.ParsingError		var	status
+struct	BinaryParsingInternal.ParsingError		var	_location
+struct	BinaryParsingInternal.ParsingError		var	userError
+struct	BinaryParsingInternal.ParsingError.Status			
+struct	BinaryParsingInternal.ParsingError.Status		var	rawValue
+enum	BinaryParsingInternal.ParsingError.Status.RawValue			
+enum	BinaryParsingInternal.ParsingError.Status.RawValue		case	insufficientData
+enum	BinaryParsingInternal.ParsingError.Status.RawValue		case	invalidValue
+enum	BinaryParsingInternal.ParsingError.Status.RawValue		case	userError
+struct	BinaryParsingInternal.ParserSpan			
+struct	BinaryParsingInternal.ParserSpan		var	_bytes
+struct	BinaryParsingInternal.ParserSpan		var	_lowerBound
+struct	BinaryParsingInternal.ParserSpan		var	_upperBound
+protocol	BinaryParsingInternal.ExpressibleByParsing			
+protocol	BinaryParsingInternal.ParserSpanProvider			
+protocol	BinaryParsingInternal.SingleByteInteger			
+protocol	BinaryParsingInternal.MultiByteInteger			
+protocol	BinaryParsingInternal.PlatformWidthInteger			
+protocol	conformance BinaryParsingInternal.Endianness	Swift.Hashable		
+protocol	conformance BinaryParsingInternal.Endianness	Swift.Equatable		
+protocol	conformance BinaryParsingInternal.ParserRange	Swift.Hashable		
+protocol	conformance BinaryParsingInternal.ParserRange	Swift.Equatable		
+protocol	conformance Swift.Array	BinaryParsingInternal.ParserSpanProvider		
+protocol	conformance Swift.ArraySlice	BinaryParsingInternal.ParserSpanProvider		
+protocol	conformance ParsingError.Status	Swift.Equatable		
+protocol	conformance BinaryParsingInternal.ParsingError	Swift.Error		
+protocol	conformance BinaryParsingInternal.ParsingError	Swift.CustomStringConvertible		
+protocol	conformance ParsingError.Status	Swift.CustomStringConvertible		
+protocol	conformance Status.RawValue	Swift.Hashable		
+protocol	conformance Status.RawValue	Swift.Equatable		
+protocol	conformance Swift.UInt8	BinaryParsingInternal.SingleByteInteger		
+protocol	conformance Swift.Int8	BinaryParsingInternal.SingleByteInteger		
+protocol	conformance Swift.UInt16	BinaryParsingInternal.MultiByteInteger		
+protocol	conformance Swift.Int16	BinaryParsingInternal.MultiByteInteger		
+protocol	conformance Swift.UInt32	BinaryParsingInternal.MultiByteInteger		
+protocol	conformance Swift.Int32	BinaryParsingInternal.MultiByteInteger		
+protocol	conformance Swift.UInt64	BinaryParsingInternal.MultiByteInteger		
+protocol	conformance Swift.Int64	BinaryParsingInternal.MultiByteInteger		
+protocol	conformance Swift.UInt	BinaryParsingInternal.PlatformWidthInteger		
+protocol	conformance Swift.Int	BinaryParsingInternal.PlatformWidthInteger		

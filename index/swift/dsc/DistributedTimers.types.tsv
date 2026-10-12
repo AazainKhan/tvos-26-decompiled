@@ -1,0 +1,442 @@
+kind	type	conformance	member_kind	member
+enum	DistributedTimers.DTAnalyticsEvent			
+enum	DistributedTimers.DTAnalyticsEvent		case	monitor
+enum	DistributedTimers.DTAnalyticsEvent		case	timer
+enum	DistributedTimers.DTAnalyticsAccessoryType			
+enum	DistributedTimers.DTAnalyticsAccessoryType		case	unknown
+enum	DistributedTimers.DTAnalyticsAccessoryType		case	apple
+enum	DistributedTimers.DTAnalyticsAccessoryType		case	other
+enum	DistributedTimers.DTAnalyticsTimerAction			
+enum	DistributedTimers.DTAnalyticsTimerAction		case	unknown
+enum	DistributedTimers.DTAnalyticsTimerAction		case	addTimer
+enum	DistributedTimers.DTAnalyticsTimerAction		case	updateTimer
+enum	DistributedTimers.DTAnalyticsTimerAction		case	removeTimer
+enum	DistributedTimers.DTAnalyticsTimerAction		case	snoozeTimer
+enum	DistributedTimers.DTAnalyticsTimerAction		case	dismissTimer
+enum	DistributedTimers.DTAnalyticsTimerAction		case	fetchTimers
+enum	DistributedTimers.DTAnalyticsTimerAction		case	monitorStart
+enum	DistributedTimers.DTAnalyticsTimerAction		case	monitorStop
+enum	DistributedTimers.DTAnalyticsTimerAction		case	monitorKeepAlive
+enum	DistributedTimers.DTAnalyticsTimerAction		case	monitorEvent
+struct	DistributedTimers.DTAnalyticsMonitorDetails			
+struct	DistributedTimers.DTAnalyticsMonitorDetails		let	accessoryType
+struct	DistributedTimers.DTAnalyticsMonitorDetails		let	durationSeconds
+struct	DistributedTimers.DTAnalyticsMonitorDetails		let	error
+struct	DistributedTimers.DTAnalyticsTimerDetails			
+struct	DistributedTimers.DTAnalyticsTimerDetails		let	accessoryType
+struct	DistributedTimers.DTAnalyticsTimerDetails		let	error
+struct	DistributedTimers.DTAnalyticsTimerDetails		let	request
+struct	DistributedTimers.DTAnalyticsTimerDetails		let	rttMs
+struct	DistributedTimers.DTAnalyticsTimerDetails		let	source
+class	DistributedTimers.DTError	NSError		
+enum	DistributedTimers.DTConstants			
+enum	DistributedTimers.DTEndpoint			
+enum	DistributedTimers.DTEndpoint		case	homeKitAccessoryID
+enum	DistributedTimers.DTEndpoint		case	local
+enum	DistributedTimers.DTFeatures			
+enum	DistributedTimers.DTFeatures		case	allowHH1
+enum	DistributedTimers.DTFeatures		case	moreDevices
+enum	DistributedTimers.DTFeatures		case	replaceCoordination
+enum	DistributedTimers.DTPrefKey			
+enum	DistributedTimers.DTPrefKey		case	cloudWriteEnable
+enum	DistributedTimers.DTPrefKey		case	cloudMigrated
+enum	DistributedTimers.DTPrefKey		case	multicastWait
+enum	DistributedTimers.DTRequest			
+enum	DistributedTimers.DTRequest		case	addTimer
+enum	DistributedTimers.DTRequest		case	updateTimer
+enum	DistributedTimers.DTRequest		case	removeTimer
+enum	DistributedTimers.DTRequest		case	snoozeTimer
+enum	DistributedTimers.DTRequest		case	dismissTimer
+enum	DistributedTimers.DTRequest		case	echo
+enum	DistributedTimers.DTRequest		case	monitorStart
+enum	DistributedTimers.DTRequest		case	monitorStop
+enum	DistributedTimers.DTRequest		case	monitorEvent
+enum	DistributedTimers.DTRequest		case	diagnostics
+enum	DistributedTimers.DTRequest		case	fetchStatus
+enum	DistributedTimers.DTRequest		case	fetchTimers
+enum	DistributedTimers.DTRequest		case	monitorKeepAlive
+struct	DistributedTimers.DTRequestContext			
+struct	DistributedTimers.DTRequestContext		let	endpoint
+struct	DistributedTimers.DTRequestContext		var	targetIDs
+enum	DistributedTimers.DTDiagnosticsRequest			
+enum	DistributedTimers.DTDiagnosticsRequest		case	homeKitDefer
+enum	DistributedTimers.DTDiagnosticsRequest		case	syncConfigure
+enum	DistributedTimers.DTDiagnosticsRequest		case	syncMigrate
+enum	DistributedTimers.DTDiagnosticsRequest		case	homeKitUpdate
+enum	DistributedTimers.DTDiagnosticsRequest		case	show
+struct	DistributedTimers.DTMonitorContext			
+struct	DistributedTimers.DTMonitorContext		let	clientID
+struct	DistributedTimers.DTMonitorEvent			
+struct	DistributedTimers.DTMonitorEvent		let	clientID
+struct	DistributedTimers.DTMonitorEvent		let	eventType
+struct	DistributedTimers.DTMonitorEvent		let	timers
+struct	DistributedTimers.DTAckResponse			
+struct	DistributedTimers.DTEchoResponse			
+struct	DistributedTimers.DTEchoResponse		let	message
+struct	DistributedTimers.DTFetchStatusResponse			
+struct	DistributedTimers.DTFetchStatusResponse		let	statusFlags
+struct	DistributedTimers.DTFetchTimersResponse			
+struct	DistributedTimers.DTFetchTimersResponse		let	timers
+struct	DistributedTimers.DTMonitorStartResponse			
+struct	DistributedTimers.DTMonitorStartResponse		let	timers
+struct	DistributedTimers.DTShowResponse			
+struct	DistributedTimers.DTShowResponse		let	output
+struct	DistributedTimers.DatabaseURLCUEnvironmentKey			
+struct	DistributedTimers.CloudSyncEnabledCUEnvironmentKey			
+struct	DistributedTimers.CloudKitContainerCUEnvironmentKey			
+struct	DistributedTimers.CloudKitAutomaticallySyncCUEnvironmentKey			
+enum	DistributedTimers.DTShowResponse.CodingKeys			
+enum	DistributedTimers.DTShowResponse.CodingKeys		case	output
+enum	DistributedTimers.DTMonitorStartResponse.CodingKeys			
+enum	DistributedTimers.DTMonitorStartResponse.CodingKeys		case	timers
+enum	DistributedTimers.DTFetchTimersResponse.CodingKeys			
+enum	DistributedTimers.DTFetchTimersResponse.CodingKeys		case	timers
+enum	DistributedTimers.DTFetchStatusResponse.CodingKeys			
+enum	DistributedTimers.DTFetchStatusResponse.CodingKeys		case	statusFlags
+enum	DistributedTimers.DTEchoResponse.CodingKeys			
+enum	DistributedTimers.DTEchoResponse.CodingKeys		case	message
+enum	DistributedTimers.DTAckResponse.CodingKeys			
+enum	DistributedTimers.DTMonitorEvent.CodingKeys			
+enum	DistributedTimers.DTMonitorEvent.CodingKeys		case	clientID
+enum	DistributedTimers.DTMonitorEvent.CodingKeys		case	eventType
+enum	DistributedTimers.DTMonitorEvent.CodingKeys		case	timers
+enum	DistributedTimers.DTMonitorContext.CodingKeys			
+enum	DistributedTimers.DTMonitorContext.CodingKeys		case	clientID
+enum	DistributedTimers.DTDiagnosticsRequest.CodingKeys			
+enum	DistributedTimers.DTDiagnosticsRequest.CodingKeys		case	homeKitDefer
+enum	DistributedTimers.DTDiagnosticsRequest.CodingKeys		case	homeKitUpdate
+enum	DistributedTimers.DTDiagnosticsRequest.CodingKeys		case	syncConfigure
+enum	DistributedTimers.DTDiagnosticsRequest.CodingKeys		case	syncMigrate
+enum	DistributedTimers.DTDiagnosticsRequest.CodingKeys		case	show
+enum	DistributedTimers.DTDiagnosticsRequest.HomeKitDeferCodingKeys			
+enum	DistributedTimers.DTDiagnosticsRequest.HomeKitDeferCodingKeys		case	_0
+enum	DistributedTimers.DTDiagnosticsRequest.HomeKitUpdateCodingKeys			
+enum	DistributedTimers.DTDiagnosticsRequest.SyncConfigureCodingKeys			
+enum	DistributedTimers.DTDiagnosticsRequest.SyncConfigureCodingKeys		case	_0
+enum	DistributedTimers.DTDiagnosticsRequest.SyncMigrateCodingKeys			
+enum	DistributedTimers.DTDiagnosticsRequest.SyncMigrateCodingKeys		case	_0
+enum	DistributedTimers.DTDiagnosticsRequest.ShowCodingKeys			
+enum	DistributedTimers.DTRequestContext.CodingKeys			
+enum	DistributedTimers.DTRequestContext.CodingKeys		case	endpoint
+enum	DistributedTimers.DTRequestContext.CodingKeys		case	targetIDs
+enum	DistributedTimers.DTRequest.CodingKeys			
+enum	DistributedTimers.DTRequest.CodingKeys		case	addTimer
+enum	DistributedTimers.DTRequest.CodingKeys		case	updateTimer
+enum	DistributedTimers.DTRequest.CodingKeys		case	removeTimer
+enum	DistributedTimers.DTRequest.CodingKeys		case	snoozeTimer
+enum	DistributedTimers.DTRequest.CodingKeys		case	dismissTimer
+enum	DistributedTimers.DTRequest.CodingKeys		case	fetchStatus
+enum	DistributedTimers.DTRequest.CodingKeys		case	fetchTimers
+enum	DistributedTimers.DTRequest.CodingKeys		case	echo
+enum	DistributedTimers.DTRequest.CodingKeys		case	monitorStart
+enum	DistributedTimers.DTRequest.CodingKeys		case	monitorStop
+enum	DistributedTimers.DTRequest.CodingKeys		case	monitorKeepAlive
+enum	DistributedTimers.DTRequest.CodingKeys		case	monitorEvent
+enum	DistributedTimers.DTRequest.CodingKeys		case	diagnostics
+enum	DistributedTimers.DTRequest.AddTimerCodingKeys			
+enum	DistributedTimers.DTRequest.AddTimerCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.UpdateTimerCodingKeys			
+enum	DistributedTimers.DTRequest.UpdateTimerCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.RemoveTimerCodingKeys			
+enum	DistributedTimers.DTRequest.RemoveTimerCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.SnoozeTimerCodingKeys			
+enum	DistributedTimers.DTRequest.SnoozeTimerCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.DismissTimerCodingKeys			
+enum	DistributedTimers.DTRequest.DismissTimerCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.FetchStatusCodingKeys			
+enum	DistributedTimers.DTRequest.FetchTimersCodingKeys			
+enum	DistributedTimers.DTRequest.EchoCodingKeys			
+enum	DistributedTimers.DTRequest.EchoCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.MonitorStartCodingKeys			
+enum	DistributedTimers.DTRequest.MonitorStartCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.MonitorStopCodingKeys			
+enum	DistributedTimers.DTRequest.MonitorStopCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.MonitorKeepAliveCodingKeys			
+enum	DistributedTimers.DTRequest.MonitorEventCodingKeys			
+enum	DistributedTimers.DTRequest.MonitorEventCodingKeys		case	_0
+enum	DistributedTimers.DTRequest.DiagnosticsCodingKeys			
+enum	DistributedTimers.DTRequest.DiagnosticsCodingKeys		case	_0
+enum	DistributedTimers.DTEndpoint.CodingKeys			
+enum	DistributedTimers.DTEndpoint.CodingKeys		case	local
+enum	DistributedTimers.DTEndpoint.CodingKeys		case	homeKitAccessoryID
+enum	DistributedTimers.DTEndpoint.LocalCodingKeys			
+enum	DistributedTimers.DTEndpoint.HomeKitAccessoryIDCodingKeys			
+enum	DistributedTimers.DTEndpoint.HomeKitAccessoryIDCodingKeys		case	_0
+enum	DistributedTimers.CodingKeys			
+enum	DistributedTimers.CodingKeys		case	mtAlarm
+enum	DistributedTimers.CodingKeys		case	mtAlarmID
+enum	DistributedTimers.CodingKeys		case	mtTimer
+enum	DistributedTimers.CodingKeys		case	mtTimerID
+class	DistributedTimers.DTXPCClient			
+class	DistributedTimers.DTXPCClient		let	_environment
+class	DistributedTimers.DTXPCClient		var	_invalidateCalled
+class	DistributedTimers.DTXPCClient		var	_monitorMap
+class	DistributedTimers.DTXPCClient		let	_xpcCoder
+class	DistributedTimers.DTXPCClient		var	_xpcConnection
+class	DistributedTimers.DTXPCClient		let	_xpcEndpoint
+struct	DistributedTimers.DTXPCCoder			
+struct	DistributedTimers.DTXPCCoder		let	_encoder
+struct	DistributedTimers.DTXPCCoder		let	_decoder
+struct	DistributedTimers.DTXPCEndpoint			
+struct	DistributedTimers.DTXPCEndpoint		let	xpcEndpoint
+enum	DistributedTimers.DTXPCReplyContent			
+enum	DistributedTimers.DTXPCReplyContent		case	replyData
+enum	DistributedTimers.DTXPCReplyContent		case	replyObject
+struct	DistributedTimers.DTXPCRequest			
+struct	DistributedTimers.DTXPCRequest		let	context
+struct	DistributedTimers.DTXPCRequest		let	request
+enum	DistributedTimers.DTXPCRequest.CodingKeys			
+enum	DistributedTimers.DTXPCRequest.CodingKeys		case	context
+enum	DistributedTimers.DTXPCRequest.CodingKeys		case	request
+protocol	DistributedTimers.DTAnalyticsPayload			
+protocol	DistributedTimers.DTResponse			
+protocol	conformance DistributedTimers.DTAnalyticsEvent	DistributedTimers.DTAnalyticsPayload		
+protocol	conformance DistributedTimers.DTAnalyticsAccessoryType	Swift.Equatable		
+protocol	conformance DistributedTimers.DTAnalyticsAccessoryType	Swift.Hashable		
+protocol	conformance DistributedTimers.DTAnalyticsAccessoryType	Swift.RawRepresentable		
+protocol	conformance DistributedTimers.DTAnalyticsTimerAction	Swift.Equatable		
+protocol	conformance DistributedTimers.DTAnalyticsTimerAction	Swift.Hashable		
+protocol	conformance DistributedTimers.DTAnalyticsTimerAction	Swift.RawRepresentable		
+protocol	conformance DistributedTimers.DTAnalyticsMonitorDetails	DistributedTimers.DTAnalyticsPayload		
+protocol	conformance DistributedTimers.DTAnalyticsTimerDetails	DistributedTimers.DTAnalyticsPayload		
+protocol	conformance __C.DTTimerClientEventType	Swift.RawRepresentable: DistributedTimers		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.ExpressibleByArrayLiteral: DistributedTimers		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.Equatable: DistributedTimers		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.RawRepresentable: DistributedTimers		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.SetAlgebra: DistributedTimers		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.OptionSet: DistributedTimers		
+protocol	conformance DistributedTimers.DTError	Swift.Decodable		
+protocol	conformance DistributedTimers.DTError	Swift.Encodable		
+protocol	conformance DistributedTimers.DTEndpoint	Swift.Decodable		
+protocol	conformance DistributedTimers.DTEndpoint	Swift.Encodable		
+protocol	conformance DistributedTimers.DTEndpoint	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTEndpoint	Swift.Hashable		
+protocol	conformance DistributedTimers.DTEndpoint	Swift.Equatable		
+protocol	conformance DistributedTimers.DTFeatures	Swift.Equatable		
+protocol	conformance DistributedTimers.DTFeatures	Swift.Hashable		
+protocol	conformance DistributedTimers.DTFeatures	FeatureFlags.FeatureFlagsKey		
+protocol	conformance DistributedTimers.DTPrefKey	Swift.Equatable		
+protocol	conformance DistributedTimers.DTPrefKey	Swift.Hashable		
+protocol	conformance DistributedTimers.DTPrefKey	Swift.RawRepresentable		
+protocol	conformance DistributedTimers.DTPrefKey	Swift.CaseIterable		
+protocol	conformance DistributedTimers.DTRequest	Swift.Decodable		
+protocol	conformance DistributedTimers.DTRequest	Swift.Encodable		
+protocol	conformance DistributedTimers.DTRequest	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTRequestContext	Swift.Decodable		
+protocol	conformance DistributedTimers.DTRequestContext	Swift.Encodable		
+protocol	conformance DistributedTimers.DTRequestContext	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTDiagnosticsRequest	Swift.Decodable		
+protocol	conformance DistributedTimers.DTDiagnosticsRequest	Swift.Encodable		
+protocol	conformance DistributedTimers.DTDiagnosticsRequest	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTMonitorContext	Swift.Decodable		
+protocol	conformance DistributedTimers.DTMonitorContext	Swift.Encodable		
+protocol	conformance DistributedTimers.DTMonitorContext	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTMonitorEvent	Swift.Decodable		
+protocol	conformance DistributedTimers.DTMonitorEvent	Swift.Encodable		
+protocol	conformance DistributedTimers.DTMonitorEvent	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTAckResponse	DistributedTimers.DTResponse		
+protocol	conformance DistributedTimers.DTAckResponse	Swift.Decodable		
+protocol	conformance DistributedTimers.DTAckResponse	Swift.Encodable		
+protocol	conformance DistributedTimers.DTAckResponse	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTEchoResponse	DistributedTimers.DTResponse		
+protocol	conformance DistributedTimers.DTEchoResponse	Swift.Decodable		
+protocol	conformance DistributedTimers.DTEchoResponse	Swift.Encodable		
+protocol	conformance DistributedTimers.DTEchoResponse	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTFetchStatusResponse	DistributedTimers.DTResponse		
+protocol	conformance DistributedTimers.DTFetchStatusResponse	Swift.Decodable		
+protocol	conformance DistributedTimers.DTFetchStatusResponse	Swift.Encodable		
+protocol	conformance DistributedTimers.DTFetchStatusResponse	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTFetchTimersResponse	DistributedTimers.DTResponse		
+protocol	conformance DistributedTimers.DTFetchTimersResponse	Swift.Decodable		
+protocol	conformance DistributedTimers.DTFetchTimersResponse	Swift.Encodable		
+protocol	conformance DistributedTimers.DTFetchTimersResponse	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTMonitorStartResponse	DistributedTimers.DTResponse		
+protocol	conformance DistributedTimers.DTMonitorStartResponse	Swift.Decodable		
+protocol	conformance DistributedTimers.DTMonitorStartResponse	Swift.Encodable		
+protocol	conformance DistributedTimers.DTMonitorStartResponse	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTShowResponse	DistributedTimers.DTResponse		
+protocol	conformance DistributedTimers.DTShowResponse	Swift.Decodable		
+protocol	conformance DistributedTimers.DTShowResponse	Swift.Encodable		
+protocol	conformance DistributedTimers.DTShowResponse	Swift.CustomStringConvertible		
+protocol	conformance HomeKitAccessoryIDCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HomeKitAccessoryIDCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HomeKitAccessoryIDCodingKeys	Swift.Hashable		
+protocol	conformance HomeKitAccessoryIDCodingKeys	Swift.Equatable		
+protocol	conformance LocalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LocalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DiagnosticsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DiagnosticsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DiagnosticsCodingKeys	Swift.Hashable		
+protocol	conformance DiagnosticsCodingKeys	Swift.Equatable		
+protocol	conformance MonitorEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MonitorEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MonitorEventCodingKeys	Swift.Hashable		
+protocol	conformance MonitorEventCodingKeys	Swift.Equatable		
+protocol	conformance MonitorKeepAliveCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MonitorKeepAliveCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MonitorStopCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MonitorStopCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MonitorStopCodingKeys	Swift.Hashable		
+protocol	conformance MonitorStopCodingKeys	Swift.Equatable		
+protocol	conformance MonitorStartCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MonitorStartCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MonitorStartCodingKeys	Swift.Hashable		
+protocol	conformance MonitorStartCodingKeys	Swift.Equatable		
+protocol	conformance EchoCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EchoCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EchoCodingKeys	Swift.Hashable		
+protocol	conformance EchoCodingKeys	Swift.Equatable		
+protocol	conformance FetchTimersCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchTimersCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FetchStatusCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchStatusCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DismissTimerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DismissTimerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DismissTimerCodingKeys	Swift.Hashable		
+protocol	conformance DismissTimerCodingKeys	Swift.Equatable		
+protocol	conformance SnoozeTimerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SnoozeTimerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SnoozeTimerCodingKeys	Swift.Hashable		
+protocol	conformance SnoozeTimerCodingKeys	Swift.Equatable		
+protocol	conformance RemoveTimerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoveTimerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemoveTimerCodingKeys	Swift.Hashable		
+protocol	conformance RemoveTimerCodingKeys	Swift.Equatable		
+protocol	conformance UpdateTimerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpdateTimerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpdateTimerCodingKeys	Swift.Hashable		
+protocol	conformance UpdateTimerCodingKeys	Swift.Equatable		
+protocol	conformance AddTimerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AddTimerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AddTimerCodingKeys	Swift.Hashable		
+protocol	conformance AddTimerCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ShowCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShowCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncMigrateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncMigrateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncMigrateCodingKeys	Swift.Hashable		
+protocol	conformance SyncMigrateCodingKeys	Swift.Equatable		
+protocol	conformance SyncConfigureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncConfigureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncConfigureCodingKeys	Swift.Hashable		
+protocol	conformance SyncConfigureCodingKeys	Swift.Equatable		
+protocol	conformance HomeKitUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HomeKitUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HomeKitDeferCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HomeKitDeferCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HomeKitDeferCodingKeys	Swift.Hashable		
+protocol	conformance HomeKitDeferCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DatabaseURLCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance CloudSyncEnabledCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance CloudKitContainerCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance CloudKitAutomaticallySyncCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitDeferCodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance SyncConfigureCodingKeys	Swift.CodingKey		
+protocol	conformance SyncMigrateCodingKeys	Swift.CodingKey		
+protocol	conformance ShowCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AddTimerCodingKeys	Swift.CodingKey		
+protocol	conformance UpdateTimerCodingKeys	Swift.CodingKey		
+protocol	conformance RemoveTimerCodingKeys	Swift.CodingKey		
+protocol	conformance SnoozeTimerCodingKeys	Swift.CodingKey		
+protocol	conformance DismissTimerCodingKeys	Swift.CodingKey		
+protocol	conformance FetchStatusCodingKeys	Swift.CodingKey		
+protocol	conformance FetchTimersCodingKeys	Swift.CodingKey		
+protocol	conformance EchoCodingKeys	Swift.CodingKey		
+protocol	conformance MonitorStartCodingKeys	Swift.CodingKey		
+protocol	conformance MonitorStopCodingKeys	Swift.CodingKey		
+protocol	conformance MonitorKeepAliveCodingKeys	Swift.CodingKey		
+protocol	conformance MonitorEventCodingKeys	Swift.CodingKey		
+protocol	conformance DiagnosticsCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LocalCodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitAccessoryIDCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DTTimer	Swift.Decodable		
+protocol	conformance DTTimer	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance __C.DTTimerClientEventType	Swift.Decodable		
+protocol	conformance __C.DTTimerClientEventType	Swift.Encodable		
+protocol	conformance __C.DTTimerClientEventType	Swift.CustomStringConvertible		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.Decodable		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.Encodable		
+protocol	conformance __C.DTTimerClientStatusFlags	Swift.CustomStringConvertible		
+protocol	conformance DistributedTimers.DTXPCClient	Swift.Actor		
+protocol	conformance DistributedTimers.DTXPCRequest	Swift.Decodable		
+protocol	conformance DistributedTimers.DTXPCRequest	Swift.Encodable		
+protocol	conformance DistributedTimers.DTXPCRequest	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	DistributedTimers.DTAnalyticsAccessoryType	RawRepresentable		
+extension	DistributedTimers.DTAnalyticsTimerAction	RawRepresentable		
+extension	DistributedTimers.DTPrefKey	RawRepresentable		
+extension	DistributedTimers.DTPrefKey	CaseIterable		
+extension	DistributedTimers.DatabaseURLCUEnvironmentKey	CUEnvironmentKey		
+extension	DistributedTimers.CloudSyncEnabledCUEnvironmentKey	CUEnvironmentKey		
+extension	DistributedTimers.CloudKitContainerCUEnvironmentKey	CUEnvironmentKey		
+extension	DistributedTimers.CloudKitAutomaticallySyncCUEnvironmentKey	CUEnvironmentKey		
+extension	DistributedTimers.CodingKeys	RawRepresentable		

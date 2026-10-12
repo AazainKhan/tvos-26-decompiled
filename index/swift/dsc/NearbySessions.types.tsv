@@ -1,0 +1,383 @@
+kind	type	conformance	member_kind	member
+class	NearbySessions.NearbyInvitationServiceClient	CopresenceCore.XPCClient NearbySessions.NearbyInvitationServiceInterface		
+class	NearbySessions.NearbyInvitationServiceClient	CopresenceCore.XPCClient NearbySessions.NearbyInvitationServiceInterface	var	delegate
+struct	NearbySessions.Invitation_HostConnectionInfo			
+struct	NearbySessions.Invitation_HostConnectionInfo		var	publicKey
+struct	NearbySessions.Invitation_HostConnectionInfo		var	handle
+struct	NearbySessions.Invitation_HostConnectionInfo		var	unknownFields
+struct	NearbySessions.Invitation_InvitationData			
+struct	NearbySessions.Invitation_InvitationData		var	invitationID
+struct	NearbySessions.Invitation_InvitationData		var	displayName
+struct	NearbySessions.Invitation_InvitationData		var	unknownFields
+struct	NearbySessions.Invitation_InvitationData		var	_userInfo
+struct	NearbySessions.Invitation_InvitationData		var	_hostConnectionInfo
+enum	NearbySessions.Subsystem			
+enum	NearbySessions.Subsystem		case	nearbySessions
+struct	NearbySessions.Log			
+class	NearbySessions.NearbyGroupMember	NSObject		
+class	NearbySessions.NearbyGroupMember	NSObject	let	handle
+class	NearbySessions.NearbyGroupMember	NSObject	let	tokenID
+class	NearbySessions.NearbySessionInvitation	NSObject		
+class	NearbySessions.NearbySessionInvitation	NSObject	let	identifier
+class	NearbySessions.NearbySessionInvitation	NSObject	let	activityType
+class	NearbySessions.NearbySessionInvitation	NSObject	let	metadata
+class	NearbySessions.NearbySessionInvitation	NSObject	let	sourceProviderID
+class	NearbySessions.NearbySessionInvitation	NSObject	let	sourceProviderName
+class	NearbySessions.NearbySessionInvitation	NSObject	let	isPublic
+class	NearbySessions.NearbySessionInvitation	NSObject	let	displayName
+class	NearbySessions.NearbySessionInvitation	NSObject	let	handle
+class	NearbySessions.NearbySessionInvitation	NSObject	let	userInfo
+enum	NearbySessions.NearbySessionInvitation.CodingKeys			
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	identifier
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	activityType
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	metadata
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	sourceProviderID
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	sourceProviderName
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	isPublic
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	displayName
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	handle
+enum	NearbySessions.NearbySessionInvitation.CodingKeys		case	userInfo
+enum	NearbySessions.NearbyGroupInterface			
+class	NearbySessions.NearbyGroupCreationRequest	NSObject		
+class	NearbySessions.NearbyGroupCreationRequest	NSObject	let	id
+class	NearbySessions.NearbyGroupCreationRequest	NSObject	let	members
+class	NearbySessions.NearbyGroupConnectionInfo	NSObject		
+class	NearbySessions.NearbyGroupConnectionInfo	NSObject	let	id
+class	NearbySessions.NearbyGroupConnectionInfo	NSObject	let	endpoint
+class	NearbySessions.NearbyGroupConnectionInfo	NSObject	let	localMember
+class	NearbySessions.NearbyGroupTable			
+class	NearbySessions.NearbyGroupTable		var	serialQueue
+class	NearbySessions.NearbyGroupTable		var	contents
+struct	NearbySessions.NearbyGroupTable.WeakNearbyGroup			
+struct	NearbySessions.NearbyGroupTable.WeakNearbyGroup		var	group
+class	NearbySessions.NearbyInvitationsController			
+class	NearbySessions.NearbyInvitationsController		let	dataSource
+class	NearbySessions.NearbyInvitationsController		let	queue
+class	NearbySessions.NearbyInvitationsController		let	provider
+class	NearbySessions.NearbyInvitationsController		let	lock
+class	NearbySessions.NearbyInvitationsController		let	observers
+class	NearbySessions.NearbyInvitationsController		var	_groups
+class	NearbySessions.NearbyInvitationsController		var	approvalRequests
+class	NearbySessions.NearbyInvitationsController		let	groupTable
+enum	NearbySessions.NearbyInvitationsController.Errors			
+enum	NearbySessions.NearbyInvitationsController.Errors		case	duplicateObject
+enum	NearbySessions.NearbyInvitationsController.Errors		case	noGroupFound
+enum	NearbySessions.NearbyInvitationsController.Errors		case	notImplemented
+enum	NearbySessions.NearbyGroupTable.Errors			
+enum	NearbySessions.NearbyGroupTable.Errors		case	noGroupFound
+class	NearbySessions.NearbyInvitationAdvertiser<A	NearbySessions.InvitationSourceProvider>		
+class	NearbySessions.NearbyInvitationAdvertiser<A	NearbySessions.InvitationSourceProvider>	let	controller
+class	NearbySessions.NearbyInvitationAdvertiser<A	NearbySessions.InvitationSourceProvider>	let	request
+class	NearbySessions.NearbyInvitationAdvertiser<A	NearbySessions.InvitationSourceProvider>	let	params
+class	NearbySessions.NearbyInvitationAdvertiser<A	NearbySessions.InvitationSourceProvider>	var	_pendingMembers
+enum	NearbySessions.NearbyInvitationAdvertiser.Errors<A	NearbySessions.InvitationSourceProvider>		
+enum	NearbySessions.NearbyInvitationAdvertiser.Errors<A	NearbySessions.InvitationSourceProvider>	case	noMetadata
+enum	NearbySessions.NearbyInvitationAdvertiser.Errors<A	NearbySessions.InvitationSourceProvider>	case	invalidResponse
+struct	NearbySessions.NearbyInvitationAdvertiser.PendingMember<A	NearbySessions.InvitationSourceProvider>		
+struct	NearbySessions.NearbyInvitationAdvertiser.PendingMember<A	NearbySessions.InvitationSourceProvider>	var	advertisement
+struct	NearbySessions.NearbyInvitationAdvertiser.PendingMember<A	NearbySessions.InvitationSourceProvider>	var	invitationData
+enum	NearbySessions.NearbyInvitationAdvertiser.PendingMember.Errors<A	NearbySessions.InvitationSourceProvider>		
+enum	NearbySessions.NearbyInvitationAdvertiser.PendingMember.Errors<A	NearbySessions.InvitationSourceProvider>	case	objectLost
+enum	NearbySessions.NearbyInvitationSessionProvider			
+enum	NearbySessions.NearbyInvitationServiceInterface			
+class	NearbySessions.NearbyInvitationScanner<A	NearbySessions.InvitationSourceProvider>		
+class	NearbySessions.NearbyInvitationScanner<A	NearbySessions.InvitationSourceProvider>	let	uuid
+class	NearbySessions.NearbyInvitationScanner<A	NearbySessions.InvitationSourceProvider>	let	invitationDataBlobs
+class	NearbySessions.NearbyInvitationScanner<A	NearbySessions.InvitationSourceProvider>	let	controller
+class	NearbySessions.NearbyInvitationScanner<A	NearbySessions.InvitationSourceProvider>	let	setup
+class	NearbySessions.NearbyInvitationScanner<A	NearbySessions.InvitationSourceProvider>	var	_advertisements
+enum	NearbySessions.NearbyInvitationScanner.Errors<A	NearbySessions.InvitationSourceProvider>		
+enum	NearbySessions.NearbyInvitationScanner.Errors<A	NearbySessions.InvitationSourceProvider>	case	noMetadata
+enum	NearbySessions.NearbyInvitationScanner.Errors<A	NearbySessions.InvitationSourceProvider>	case	noNearbyGroupReceived
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>		
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	nearbyGroup
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	members
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	id
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	state
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	let	activity
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	cancellables
+class	NearbySessions.NearbyGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	localMember
+class	NearbySessions.NearbyGroup			
+class	NearbySessions.NearbyGroup		let	id
+class	NearbySessions.NearbyGroup		var	_members
+class	NearbySessions.NearbyGroup		var	_state
+class	NearbySessions.NearbyGroup		var	localMemberHandle
+class	NearbySessions.NearbyGroup		let	endpoint
+class	NearbySessions.NearbyGroup		let	queue
+class	NearbySessions.NearbyGroup		let	connection
+enum	NearbySessions.NearbyGroup.State			
+enum	NearbySessions.NearbyGroup.State		case	invalidated
+enum	NearbySessions.NearbyGroup.State		case	waiting
+enum	NearbySessions.NearbyGroup.State		case	joined
+enum	NearbySessions.NearbyGroup.Errors			
+enum	NearbySessions.NearbyGroup.Errors		case	connectionError
+enum	NearbySessions.NearbyGroup.Errors		case	memberNotFound
+enum	NearbySessions.NearbyGroup.Errors		case	groupAlreadyExists
+struct	NearbySessions.NearbyGroup.Member			
+struct	NearbySessions.NearbyGroup.Member		var	handle
+struct	NearbySessions.NearbyGroup.Member		var	tokenDestination
+class	NearbySessions.NearbyGroupClientConnection	CopresenceCore.XPCClient NearbySessions.NearbyGroupInterface		
+class	NearbySessions.NearbyGroupClientConnection	CopresenceCore.XPCClient NearbySessions.NearbyGroupInterface	var	serverDisconnectedCallback
+class	NearbySessions.NearbyGroupClientConnection	CopresenceCore.XPCClient NearbySessions.NearbyGroupInterface	var	setMembersCallback
+class	NearbySessions.NearbyAdvertisementRequest	NSObject		
+class	NearbySessions.NearbyAdvertisementRequest	NSObject	let	identifier
+class	NearbySessions.NearbyAdvertisementRequest	NSObject	let	invitation
+class	NearbySessions.NearbyAdvertisementRequest	NSObject	let	route
+class	NearbySessions.NearbyAdvertisementRequest	NSObject	let	activityType
+enum	NearbySessions.NearbyInvitationActivityType			
+enum	NearbySessions.NearbyInvitationScopeType			
+enum	NearbySessions.NearbyInvitationRouteType			
+class	NearbySessions.NearbyInvitationParameters	NSObject		
+class	NearbySessions.NearbyInvitationParameters	NSObject	let	serviceName
+class	NearbySessions.NearbyInvitationParameters	NSObject	let	browserType
+class	NearbySessions.NearbyInvitationParameters	NSObject	let	routeType
+class	NearbySessions.InvitationJoinResponse	NSObject		
+class	NearbySessions.InvitationJoinResponse	NSObject	let	sessionIdentifier
+class	NearbySessions.InvitationJoinResponse	NSObject	let	memberHandles
+class	NearbySessions.InvitationJoinResponse	NSObject	let	userInfo
+class	NearbySessions.InvitationBlob	NSObject		
+class	NearbySessions.InvitationBlob	NSObject	let	invitationID
+class	NearbySessions.InvitationBlob	NSObject	let	dataBlob
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject		
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	let	invitationID
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	let	remotePseudonym
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	let	remotePublicKey
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	let	displayName
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	let	destinationToken
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	let	userInfo
+class	NearbySessions.IncomingInvitationJoinRequest	NSObject	var	hostInfo
+class	NearbySessions.InvitationRequest<A	NearbySessions.InvitationSourceProvider>		
+class	NearbySessions.InvitationRequest<A	NearbySessions.InvitationSourceProvider>	var	displayName
+class	NearbySessions.InvitationRequest<A	NearbySessions.InvitationSourceProvider>	var	userInfo
+class	NearbySessions.InvitationRequest<A	NearbySessions.InvitationSourceProvider>	let	remoteInvitationData
+enum	NearbySessions.InvitationRequest.Errors<A	NearbySessions.InvitationSourceProvider>		
+enum	NearbySessions.InvitationRequest.Errors<A	NearbySessions.InvitationSourceProvider>	case	incorrectProvider
+enum	NearbySessions.InvitationRequest.Errors<A	NearbySessions.InvitationSourceProvider>	case	invalidDisplayName
+enum	NearbySessions.InvitationRequest.Errors<A	NearbySessions.InvitationSourceProvider>	case	invalidPayload
+struct	NearbySessions.Handle			
+struct	NearbySessions.Handle		let	handle
+struct	NearbySessions.Handle		let	tokenDestination
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>		
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	let	id
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	let	controller
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	let	displayName
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	let	userInfo
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	let	invitationHostInfo
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	let	sourceProvider
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	var	_pendingMembers
+class	NearbySessions.NearbyInvitation<A	NearbySessions.InvitationSourceProvider>	var	cancellables
+struct	NearbySessions.NearbyInvitation.PendingMember<A	NearbySessions.InvitationSourceProvider>		
+struct	NearbySessions.NearbyInvitation.PendingMember<A	NearbySessions.InvitationSourceProvider>	let	joinRequest
+struct	NearbySessions.NearbyInvitation.PendingMember<A	NearbySessions.InvitationSourceProvider>	var	invitation
+enum	NearbySessions.NearbyInvitation.PendingMember.Errors<A	NearbySessions.InvitationSourceProvider>		
+enum	NearbySessions.NearbyInvitation.PendingMember.Errors<A	NearbySessions.InvitationSourceProvider>	case	objectLost
+class	NearbySessions.InvitationApprovalRequest	NSObject		
+class	NearbySessions.InvitationApprovalRequest	NSObject	let	remoteInvitationData
+class	NearbySessions.InvitationApprovalRequest	NSObject	let	displayName
+class	NearbySessions.InvitationApprovalRequest	NSObject	let	userInfo
+class	NearbySessions.NearbyInvitationData	NSObject		
+class	NearbySessions.NearbyInvitationData	NSObject	let	invitationID
+class	NearbySessions.NearbyInvitationData	NSObject	let	displayName
+class	NearbySessions.NearbyInvitationData	NSObject	let	userInfo
+class	NearbySessions.NearbyInvitationData	NSObject	let	hostConnectionInfo
+class	NearbySessions.NearbyInvitationData	NSObject	let	sourceProviderID
+class	NearbySessions.NearbyInvitationData	NSObject	let	sourceProviderName
+enum	NearbySessions.NearbyInvitationData.Errors			
+enum	NearbySessions.NearbyInvitationData.Errors		case	invalidPayload
+class	NearbySessions.NearbyAdvertisement	NSObject		
+class	NearbySessions.NearbyAdvertisement	NSObject	let	scannerID
+class	NearbySessions.NearbyAdvertisement	NSObject	let	identifier
+class	NearbySessions.NearbyAdvertisement	NSObject	let	activityType
+class	NearbySessions.NearbyAdvertisement	NSObject	let	contactID
+class	NearbySessions.NearbyAdvertisement	NSObject	let	handle
+class	NearbySessions.NearbyAdvertisement	NSObject	let	displayName
+class	NearbySessions.NearbyAdvertisement	NSObject	var	deviceColor
+class	NearbySessions.NearbyAdvertisement	NSObject	var	deviceModel
+class	NearbySessions.NearbyAdvertisement	NSObject	var	deviceID
+class	NearbySessions.NearbyAdvertisement	NSObject	let	userInfo
+class	NearbySessions.NearbyAdvertisement	NSObject	var	lazy
+class	NearbySessions.NearbyInvitationJoinRequestMetadata	NSObject		
+class	NearbySessions.NearbyInvitationJoinRequestMetadata	NSObject	let	publicKey
+class	NearbySessions.NearbyInvitationJoinRequestMetadata	NSObject	let	pseudonym
+struct	NearbySessions.InvitationRequestData			
+struct	NearbySessions.InvitationRequestData		let	invitationData
+struct	NearbySessions.InvitationRequestData		let	id
+struct	NearbySessions.InvitationRequestData		let	pseudonym
+enum	NearbySessions.InvitationRequestData.CodingKeys			
+enum	NearbySessions.InvitationRequestData.CodingKeys		case	invitationData
+enum	NearbySessions.InvitationRequestData.CodingKeys		case	id
+enum	NearbySessions.InvitationRequestData.CodingKeys		case	pseudonym
+enum	NearbySessions.NearbyInvitationJoinRequestMetadata.CodingKeys			
+enum	NearbySessions.NearbyInvitationJoinRequestMetadata.CodingKeys		case	publicKey
+enum	NearbySessions.NearbyInvitationJoinRequestMetadata.CodingKeys		case	pseudonym
+enum	NearbySessions.NearbyAdvertisement.CodingKeys			
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	scannerID
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	identifier
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	activityType
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	contactID
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	handle
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	displayName
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	deviceColor
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	deviceModel
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	deviceID
+enum	NearbySessions.NearbyAdvertisement.CodingKeys		case	userInfo
+enum	NearbySessions.NearbyInvitationData.CodingKeys			
+enum	NearbySessions.NearbyInvitationData.CodingKeys		case	invitationID
+enum	NearbySessions.NearbyInvitationData.CodingKeys		case	displayName
+enum	NearbySessions.NearbyInvitationData.CodingKeys		case	userInfo
+enum	NearbySessions.NearbyInvitationData.CodingKeys		case	hostConnectionInfo
+enum	NearbySessions.NearbyInvitationData.CodingKeys		case	sourceProviderID
+enum	NearbySessions.NearbyInvitationData.CodingKeys		case	sourceProviderName
+enum	NearbySessions.InvitationApprovalRequest.CodingKeys			
+enum	NearbySessions.InvitationApprovalRequest.CodingKeys		case	remoteInvitationData
+enum	NearbySessions.InvitationApprovalRequest.CodingKeys		case	displayName
+enum	NearbySessions.InvitationApprovalRequest.CodingKeys		case	userInfo
+enum	NearbySessions.InvitationBlob.CodingKeys			
+enum	NearbySessions.InvitationBlob.CodingKeys		case	invitationID
+enum	NearbySessions.InvitationBlob.CodingKeys		case	dataBlob
+protocol	NearbySessions.NearbyInvitationsControllerDataSourceProtocol			
+protocol	NearbySessions.NearbyInvitationServiceClientDelegateProtocol			
+protocol	NearbySessions.NearbyInvitationServiceClientDelegate			
+protocol	NearbySessions.NearbyInvitationsControllerDataSource			
+protocol	NearbySessions.NearbyInvitationsProvider			
+protocol	NearbySessions.InvitationSourceProvider			
+protocol	conformance NearbySessions.NearbyInvitationServiceClient	NearbySessions.NearbyInvitationsControllerDataSourceProtocol		
+protocol	conformance NearbySessions.NearbyInvitationServiceClient	NearbySessions.NearbyInvitationServiceClientDelegateProtocol		
+protocol	conformance NearbySessions.Invitation_HostConnectionInfo	InternalSwiftProtobuf.Message		
+protocol	conformance NearbySessions.Invitation_HostConnectionInfo	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance NearbySessions.Invitation_HostConnectionInfo	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance NearbySessions.Invitation_HostConnectionInfo	Swift.CustomDebugStringConvertible		
+protocol	conformance NearbySessions.Invitation_HostConnectionInfo	Swift.Hashable		
+protocol	conformance NearbySessions.Invitation_HostConnectionInfo	Swift.Equatable		
+protocol	conformance NearbySessions.Invitation_InvitationData	InternalSwiftProtobuf.Message		
+protocol	conformance NearbySessions.Invitation_InvitationData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance NearbySessions.Invitation_InvitationData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance NearbySessions.Invitation_InvitationData	Swift.CustomDebugStringConvertible		
+protocol	conformance NearbySessions.Invitation_InvitationData	Swift.Hashable		
+protocol	conformance NearbySessions.Invitation_InvitationData	Swift.Equatable		
+protocol	conformance NearbySessions.Subsystem	Swift.Equatable		
+protocol	conformance NearbySessions.Subsystem	Swift.Hashable		
+protocol	conformance NearbySessions.Subsystem	Swift.RawRepresentable		
+protocol	conformance NearbySessions.NearbySessionInvitation	Swift.Decodable		
+protocol	conformance NearbySessions.NearbySessionInvitation	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NearbySessions.NearbyGroupInterface	CopresenceCore.XPCInterface		
+protocol	conformance NearbyInvitationsController.Errors	Swift.Equatable		
+protocol	conformance NearbyInvitationsController.Errors	Swift.Hashable		
+protocol	conformance NearbyInvitationsController.Errors	Swift.Error		
+protocol	conformance NearbySessions.NearbyInvitationsController	NearbySessions.NearbyInvitationServiceClientDelegate		
+protocol	conformance NearbySessions.NearbyInvitationsController	NearbySessions.NearbyInvitationServiceClientDelegateProtocol		
+protocol	conformance Errors	Swift.Hashable		
+protocol	conformance Errors	Swift.Equatable		
+protocol	conformance Errors	Swift.Error		
+protocol	conformance NearbyInvitationAdvertiser.Errors	Swift.Equatable		
+protocol	conformance NearbyInvitationAdvertiser.Errors	Swift.Hashable		
+protocol	conformance NearbyInvitationAdvertiser.Errors	Swift.Error		
+protocol	conformance PendingMember.Errors	Swift.Equatable		
+protocol	conformance PendingMember.Errors	Swift.Hashable		
+protocol	conformance PendingMember.Errors	Swift.Error		
+protocol	conformance NearbyInvitationAdvertiser.PendingMember	Swift.Hashable		
+protocol	conformance NearbyInvitationAdvertiser.PendingMember	Swift.CustomStringConvertible		
+protocol	conformance NearbyInvitationAdvertiser.PendingMember	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyInvitationSessionProvider	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyInvitationSessionProvider	Swift.Hashable		
+protocol	conformance NearbySessions.NearbyInvitationSessionProvider	Swift.RawRepresentable		
+protocol	conformance NearbySessions.NearbyInvitationServiceInterface	CopresenceCore.XPCInterface		
+protocol	conformance NearbyInvitationScanner.Errors	Swift.Equatable		
+protocol	conformance NearbyInvitationScanner.Errors	Swift.Hashable		
+protocol	conformance NearbyInvitationScanner.Errors	Swift.Error		
+protocol	conformance NearbySessions.NearbyGroupSessionProvider	GroupActivities.GroupSessionProvider		
+protocol	conformance NearbySessions.NearbyGroupSessionProvider	Swift.CustomStringConvertible		
+protocol	conformance NearbySessions.NearbyGroupSessionProvider	Swift.Identifiable		
+protocol	conformance NearbyGroup.Errors	Swift.Equatable		
+protocol	conformance NearbyGroup.Errors	Swift.Hashable		
+protocol	conformance NearbyGroup.Errors	Swift.Error		
+protocol	conformance NearbyGroup.Member	Swift.Hashable		
+protocol	conformance NearbyGroup.Member	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyGroup	NearbySessions.InvitationSourceProvider		
+protocol	conformance NearbySessions.NearbyGroup	Swift.CustomStringConvertible		
+protocol	conformance NearbySessions.NearbyInvitationActivityType	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyInvitationActivityType	Swift.Hashable		
+protocol	conformance NearbySessions.NearbyInvitationActivityType	Swift.RawRepresentable		
+protocol	conformance NearbySessions.NearbyInvitationActivityType	Swift.Decodable		
+protocol	conformance NearbySessions.NearbyInvitationActivityType	Swift.Encodable		
+protocol	conformance NearbySessions.NearbyInvitationScopeType	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyInvitationScopeType	Swift.Hashable		
+protocol	conformance NearbySessions.NearbyInvitationScopeType	Swift.RawRepresentable		
+protocol	conformance NearbySessions.NearbyInvitationScopeType	Swift.Decodable		
+protocol	conformance NearbySessions.NearbyInvitationScopeType	Swift.Encodable		
+protocol	conformance NearbySessions.NearbyInvitationRouteType	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyInvitationRouteType	Swift.Hashable		
+protocol	conformance NearbySessions.NearbyInvitationRouteType	Swift.RawRepresentable		
+protocol	conformance NearbySessions.NearbyInvitationRouteType	Swift.Decodable		
+protocol	conformance NearbySessions.NearbyInvitationRouteType	Swift.Encodable		
+protocol	conformance NearbySessions.InvitationBlob	Swift.Decodable		
+protocol	conformance NearbySessions.InvitationBlob	Swift.Encodable		
+protocol	conformance InvitationRequest.Errors	Swift.Equatable		
+protocol	conformance InvitationRequest.Errors	Swift.Hashable		
+protocol	conformance InvitationRequest.Errors	Swift.Error		
+protocol	conformance NearbySessions.Handle	Swift.CustomStringConvertible		
+protocol	conformance PendingMember.Errors	Swift.Equatable		
+protocol	conformance PendingMember.Errors	Swift.Hashable		
+protocol	conformance PendingMember.Errors	Swift.Error		
+protocol	conformance NearbyInvitation.PendingMember	Swift.Hashable		
+protocol	conformance NearbyInvitation.PendingMember	Swift.CustomStringConvertible		
+protocol	conformance NearbyInvitation.PendingMember	Swift.Equatable		
+protocol	conformance NearbySessions.NearbyInvitation	Swift.CustomStringConvertible		
+protocol	conformance NearbySessions.InvitationApprovalRequest	Swift.Decodable		
+protocol	conformance NearbySessions.InvitationApprovalRequest	Swift.Encodable		
+protocol	conformance NearbyInvitationData.Errors	Swift.Equatable		
+protocol	conformance NearbyInvitationData.Errors	Swift.Hashable		
+protocol	conformance NearbyInvitationData.Errors	Swift.Error		
+protocol	conformance NearbySessions.NearbyInvitationData	Swift.Decodable		
+protocol	conformance NearbySessions.NearbyInvitationData	Swift.Encodable		
+protocol	conformance NearbySessions.NearbyAdvertisement	Swift.Decodable		
+protocol	conformance NearbySessions.NearbyAdvertisement	Swift.Encodable		
+protocol	conformance NearbySessions.NearbyInvitationJoinRequestMetadata	Swift.Decodable		
+protocol	conformance NearbySessions.NearbyInvitationJoinRequestMetadata	Swift.Encodable		
+protocol	conformance NearbySessions.InvitationRequestData	Swift.CustomStringConvertible		
+protocol	conformance NearbySessions.InvitationRequestData	Swift.Decodable		
+protocol	conformance NearbySessions.InvitationRequestData	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	NearbySessions.Subsystem	RawRepresentable		
+extension	NearbySessions.NearbyGroupInterface	XPCInterface		
+extension	NearbySessions.NearbyInvitationSessionProvider	RawRepresentable		
+extension	NearbySessions.NearbyInvitationServiceInterface	XPCInterface		
+extension	NearbySessions.NearbyGroupSessionProvider	GroupSessionProvider		
+extension	NearbySessions.NearbyGroupSessionProvider	Identifiable		
+extension	NearbySessions.NearbyInvitationActivityType	RawRepresentable		
+extension	NearbySessions.NearbyInvitationScopeType	RawRepresentable		
+extension	NearbySessions.NearbyInvitationRouteType	RawRepresentable		

@@ -1,0 +1,41 @@
+kind	type	conformance	member_kind	member
+struct	SiriInCall.SICCall			
+struct	SiriInCall.SICCall		let	isMuted
+struct	SiriInCall.SICCall		let	mediaType
+struct	SiriInCall.SICCall		let	status
+struct	SiriInCall.SICCall		let	participantCount
+struct	SiriInCall.SICCall		let	providerType
+class	SiriInCall.ButterflyRequestProcessor	SiriRequestDispatcher.RequestProcessorBase		
+class	SiriInCall.ButterflyRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	requestType
+class	SiriInCall.ButterflyRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	instrumentationUtil
+class	SiriInCall.ButterflyRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	activeCallExists
+class	SiriInCall.ButterflyRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	callCenter
+enum	SiriInCall.ButterflyCallStateManager			
+class	SiriInCall.ButterflyBridge	SiriRequestDispatcher.RequestAwareBridgeBase SiriInCall.ButterflyBridge SiriInCall.ButterflyRequestProcessor		
+enum	SiriInCall.ButterflyBridgeLog			
+class	SiriInCall.SiriInCallInstrumentationUtil			
+class	SiriInCall.SiriInCallInstrumentationUtil		let	stream
+class	SiriInCall.SiriInCallInstrumentationUtil		let	clientMessageStream
+enum	SiriInCall.SiriInCallFeatureFlag			
+enum	SiriInCall.SiriInCallFeatureFlag		case	blushingPhantom
+enum	SiriInCall.SiriInCallFeatureFlag		case	blindedSphinx
+protocol	SiriInCall.StartRequestMessageProtocol			
+protocol	SiriInCall.Conversation			
+protocol	SiriInCall.CallCenter			
+protocol	SiriInCall.Call			
+protocol	SiriInCall.ButterflyRequestHandling			
+protocol	SiriInCall.FeatureFlagging			
+protocol	conformance SiriMessageTypes.StartRequestMessageBase	SiriInCall.StartRequestMessageProtocol		
+protocol	conformance SiriMessageTypes.StartRootSpeechRequestMessage	SiriInCall.StartRequestMessageProtocol		
+protocol	conformance SiriMessageTypes.StartRootTextRequestMessage	SiriInCall.StartRequestMessageProtocol		
+protocol	conformance __C.SICSchemaSICParticipantCountBucket	Swift.CustomDebugStringConvertible: SiriInCall		
+protocol	conformance SiriInCall.ButterflyRequestProcessor	SiriInCall.ButterflyRequestHandling		
+protocol	conformance TUCallCenter	SiriInCall.CallCenter		
+protocol	conformance TUCall	SiriInCall.Call		
+protocol	conformance TUConversation	SiriInCall.Conversation		
+protocol	conformance SiriInCall.ButterflyBridgeLog	SiriRequestDispatcher.SignpostLogger		
+protocol	conformance SiriInCall.SiriInCallFeatureFlag	Swift.Equatable		
+protocol	conformance SiriInCall.SiriInCallFeatureFlag	Swift.Hashable		
+protocol	conformance SiriInCall.SiriInCallFeatureFlag	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriInCall.SiriInCallFeatureFlag	SiriInCall.FeatureFlagging		
+protocol	conformance SiriInCall.SiriInCallFeatureFlag	Swift.CustomStringConvertible		

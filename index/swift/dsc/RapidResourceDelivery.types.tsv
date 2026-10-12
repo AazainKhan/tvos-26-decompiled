@@ -1,0 +1,825 @@
+kind	type	conformance	member_kind	member
+struct	RapidResourceDelivery.ClientCache			
+struct	RapidResourceDelivery.ClientCache		let	defaults
+struct	RapidResourceDelivery.ClientCache		let	fileManager
+struct	RapidResourceDelivery.ClientCache		let	cacheFolder
+enum	RapidResourceDelivery.RRDServiceError			
+enum	RapidResourceDelivery.RRDServiceError		case	underlyingError
+enum	RapidResourceDelivery.RRDServiceError		case	requestProcessingError
+enum	RapidResourceDelivery.RRDServiceError		case	internalError
+enum	RapidResourceDelivery.RRDServiceError		case	invalidRequest
+enum	RapidResourceDelivery.RRDServiceError		case	resourceUpdateError
+enum	RapidResourceDelivery.RRDServiceError		case	unsupportedManifest
+enum	RapidResourceDelivery.RRDServiceError		case	missingManifest
+enum	RapidResourceDelivery.RRDServiceError		case	missingDigest
+enum	RapidResourceDelivery.RRDServiceError		case	updatesNotFound
+enum	RapidResourceDelivery.RRDServiceError		case	fileIO
+enum	RapidResourceDelivery.RRDServiceError		case	coding
+enum	RapidResourceDelivery.RRDServiceError		case	sandboxError
+class	RapidResourceDelivery.RRDClient			
+class	RapidResourceDelivery.RRDClient		let	xpcSession
+class	RapidResourceDelivery.RRDClient		let	log
+class	RapidResourceDelivery.RRDClient		let	defaults
+class	RapidResourceDelivery.RRDClient		let	cache
+class	RapidResourceDelivery.RRDClient		let	cacheFolder
+class	RapidResourceDelivery.RRDClient		let	fileManager
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	underlyingError
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	internalError
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	invalidRequest
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	resourceUpdateError
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	requestProcessingError
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	unsupportedManifest
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	missingManifest
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	missingDigest
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	updatesNotFound
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	fileIO
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	coding
+enum	RapidResourceDelivery.RRDServiceError.CodingKeys		case	sandboxError
+enum	RapidResourceDelivery.RRDServiceError.UnderlyingErrorCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.UnderlyingErrorCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDServiceError.InternalErrorCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.InvalidRequestCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.ResourceUpdateErrorCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.RequestProcessingErrorCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.RequestProcessingErrorCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDServiceError.UnsupportedManifestCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.MissingManifestCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.MissingDigestCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.UpdatesNotFoundCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.FileIOCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.CodingCodingKeys			
+enum	RapidResourceDelivery.RRDServiceError.SandboxErrorCodingKeys			
+enum	RapidResourceDelivery.RRDClient.Error			
+enum	RapidResourceDelivery.RRDClient.Error		case	digestMismatch
+enum	RapidResourceDelivery.RRDClient.Error		case	noConsoleUserFound
+enum	RapidResourceDelivery.RRDClient.Error		case	fileError
+enum	RapidResourceDelivery.RRDClient.Error		case	noCachedUpdates
+enum	RapidResourceDelivery.ReadConfigError			
+enum	RapidResourceDelivery.ReadConfigError		case	invalidPath
+struct	RapidResourceDelivery.DownloadConfiguration			
+struct	RapidResourceDelivery.DownloadConfiguration		let	gracePeriod
+struct	RapidResourceDelivery.DownloadConfiguration		let	lastAttempt
+struct	RapidResourceDelivery.DownloadConfiguration		let	lastSuccess
+struct	RapidResourceDelivery.DownloadConfiguration		let	fileLastSuccess
+struct	RapidResourceDelivery.DownloadConfiguration		let	etag
+struct	RapidResourceDelivery.DownloadConfiguration		let	expectedFileSize
+struct	RapidResourceDelivery.DownloadConfiguration		let	consecutiveFailures
+struct	RapidResourceDelivery.DownloadConfiguration		let	assetValidationFailureInfo
+struct	RapidResourceDelivery.DownloadConfiguration		let	schedule
+struct	RapidResourceDelivery.DownloadErrorInfo			
+struct	RapidResourceDelivery.DownloadErrorInfo		let	error
+struct	RapidResourceDelivery.DownloadErrorInfo		let	statusCode
+struct	RapidResourceDelivery.DownloadErrorInfo		let	etag
+class	RapidResourceDelivery.DownloadManager	NSObject		
+class	RapidResourceDelivery.DownloadManager	NSObject	let	logger
+class	RapidResourceDelivery.DownloadManager	NSObject	let	taskStates
+class	RapidResourceDelivery.DownloadManager	NSObject	let	settings
+class	RapidResourceDelivery.DownloadManager	NSObject	let	tokenBucket
+class	RapidResourceDelivery.DownloadManager	NSObject	let	downloadToFolder
+class	RapidResourceDelivery.DownloadManager	NSObject	let	downloadCompletion
+class	RapidResourceDelivery.DownloadManager	NSObject	let	sessionConstructor
+class	RapidResourceDelivery.DownloadManager	NSObject	let	clock
+class	RapidResourceDelivery.DownloadManager	NSObject	let	_urlSession
+enum	RapidResourceDelivery.DownloadOutcome			
+enum	RapidResourceDelivery.DownloadOutcome		case	error
+enum	RapidResourceDelivery.DownloadOutcome		case	downloaded
+enum	RapidResourceDelivery.DownloadOutcome		case	notModified
+struct	RapidResourceDelivery.DownloadResponse			
+struct	RapidResourceDelivery.DownloadResponse		let	outcome
+struct	RapidResourceDelivery.DownloadResponse		let	metrics
+struct	RapidResourceDelivery.DownloadResponse		let	allHeaderFields
+class	RapidResourceDelivery.DownloadTask			
+class	RapidResourceDelivery.DownloadTask		let	remoteURL
+class	RapidResourceDelivery.DownloadTask		let	downloadTask
+class	RapidResourceDelivery.DownloadTask		var	manager
+class	RapidResourceDelivery.DownloadTaskState			
+class	RapidResourceDelivery.DownloadTaskState		var	continuations
+class	RapidResourceDelivery.DownloadTaskState		let	remoteURL
+class	RapidResourceDelivery.DownloadTaskState		var	downloadOutcome
+class	RapidResourceDelivery.DownloadTaskState		var	allHeaderFields
+class	RapidResourceDelivery.DownloadTaskState		var	metrics
+enum	RapidResourceDelivery.DownloadTaskStateError			
+enum	RapidResourceDelivery.DownloadTaskStateError		case	downloadOutcomeIsMissing
+enum	RapidResourceDelivery.HTTPError			
+enum	RapidResourceDelivery.HTTPError		case	statusCode
+struct	RapidResourceDelivery.Configuration			
+struct	RapidResourceDelivery.Configuration		let	manifestURL
+struct	RapidResourceDelivery.Configuration		let	publicKey
+enum	RapidResourceDelivery.Configuration.Error			
+enum	RapidResourceDelivery.Configuration.Error		case	invalidURL
+enum	RapidResourceDelivery.Configuration.Error		case	invalidURLScheme
+enum	RapidResourceDelivery.Configuration.Error		case	invalidKeyData
+enum	RapidResourceDelivery.Configuration.CodingKeys			
+enum	RapidResourceDelivery.Configuration.CodingKeys		case	manifestURL
+enum	RapidResourceDelivery.Configuration.CodingKeys		case	publicKey
+struct	RapidResourceDelivery.Manifest			
+struct	RapidResourceDelivery.Manifest		let	updatedAt
+struct	RapidResourceDelivery.Manifest		let	supported
+struct	RapidResourceDelivery.Manifest		let	updatesURL
+struct	RapidResourceDelivery.Manifest		let	gracePeriodInSeconds
+struct	RapidResourceDelivery.Manifest		let	estimatedSize
+struct	RapidResourceDelivery.Manifest		let	updateDigest
+struct	RapidResourceDelivery.Manifest		let	manifestSignature
+enum	RapidResourceDelivery.Manifest.CodingKeys			
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	updatedAt
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	supported
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	updatesURL
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	gracePeriodInSeconds
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	estimatedSize
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	updateDigest
+enum	RapidResourceDelivery.Manifest.CodingKeys		case	manifestSignature
+enum	RapidResourceDelivery.Manifest.Error			
+enum	RapidResourceDelivery.Manifest.Error		case	resourceNotFound
+enum	RapidResourceDelivery.Manifest.Error		case	invalidURL
+enum	RapidResourceDelivery.Manifest.Error		case	invalidURLScheme
+enum	RapidResourceDelivery.Manifest.Error		case	missingManifestSignature
+enum	RapidResourceDelivery.Manifest.Error		case	invalidManifestSignature
+enum	RapidResourceDelivery.Manifest.Error		case	updateDigestMismatch
+enum	RapidResourceDelivery.Manifest.Error		case	invalidBase64Encoding
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	resourceNotFound
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	invalidURL
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	invalidURLScheme
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	missingManifestSignature
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	invalidManifestSignature
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	updateDigestMismatch
+enum	RapidResourceDelivery.Manifest.Error.CodingKeys		case	invalidBase64Encoding
+enum	RapidResourceDelivery.Manifest.Error.ResourceNotFoundCodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.ResourceNotFoundCodingKeys		case	_0
+enum	RapidResourceDelivery.Manifest.Error.InvalidURLCodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.InvalidURLCodingKeys		case	_0
+enum	RapidResourceDelivery.Manifest.Error.InvalidURLSchemeCodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.InvalidURLSchemeCodingKeys		case	_0
+enum	RapidResourceDelivery.Manifest.Error.MissingManifestSignatureCodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.InvalidManifestSignatureCodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.UpdateDigestMismatchCodingKeys			
+enum	RapidResourceDelivery.Manifest.Error.InvalidBase64EncodingCodingKeys			
+enum	RapidResourceDelivery.RefreshPolicy			
+enum	RapidResourceDelivery.RefreshPolicy		case	never
+enum	RapidResourceDelivery.RefreshPolicy		case	always
+enum	RapidResourceDelivery.RefreshPolicy		case	fifteenMinutes
+enum	RapidResourceDelivery.RefreshPolicy		case	daily
+struct	RapidResourceDelivery.ContainerizableURL			
+struct	RapidResourceDelivery.ContainerizableURL		let	url
+struct	RapidResourceDelivery.FileInfo			
+struct	RapidResourceDelivery.FileInfo		let	remoteURL
+struct	RapidResourceDelivery.FileInfo		let	localURL
+struct	RapidResourceDelivery.FileInfo		let	etag
+struct	RapidResourceDelivery.FileInfo		let	statusCode
+struct	RapidResourceDelivery.FileInfo		let	digest
+struct	RapidResourceDelivery.FileInfo		let	lastSuccess
+enum	RapidResourceDelivery.FileInfo.CodingKeys			
+enum	RapidResourceDelivery.FileInfo.CodingKeys		case	remoteURL
+enum	RapidResourceDelivery.FileInfo.CodingKeys		case	localURL
+enum	RapidResourceDelivery.FileInfo.CodingKeys		case	etag
+enum	RapidResourceDelivery.FileInfo.CodingKeys		case	statusCode
+enum	RapidResourceDelivery.FileInfo.CodingKeys		case	digest
+enum	RapidResourceDelivery.FileInfo.CodingKeys		case	lastSuccess
+struct	RapidResourceDelivery.PersistenceState			
+struct	RapidResourceDelivery.PersistenceState		var	firstNetworkFailure
+struct	RapidResourceDelivery.PersistenceState		let	manifestInfo
+struct	RapidResourceDelivery.PersistenceState		let	updatesInfo
+enum	RapidResourceDelivery.PersistenceState.CodingKeys			
+enum	RapidResourceDelivery.PersistenceState.CodingKeys		case	firstNetworkFailure
+enum	RapidResourceDelivery.PersistenceState.CodingKeys		case	manifestInfo
+enum	RapidResourceDelivery.PersistenceState.CodingKeys		case	updatesInfo
+struct	RapidResourceDelivery.ResourceInfo			
+struct	RapidResourceDelivery.ResourceInfo		let	fileInfo
+struct	RapidResourceDelivery.ResourceInfo		let	lastSuccess
+struct	RapidResourceDelivery.ResourceInfo		let	lastAttempt
+struct	RapidResourceDelivery.ResourceInfo		let	lastAttemptStatusCode
+struct	RapidResourceDelivery.ResourceInfo		let	downloadState
+struct	RapidResourceDelivery.ResourceInfo		let	consecutiveFailures
+struct	RapidResourceDelivery.ResourceInfo		let	assetValidationFailureInfo
+struct	RapidResourceDelivery.ResourceInfo.DownloadState			
+struct	RapidResourceDelivery.ResourceInfo.DownloadState		let	remoteURL
+struct	RapidResourceDelivery.ResourceInfo.DownloadState		let	startedAt
+struct	RapidResourceDelivery.ResourceInfo.AssetValidationFailureInfo			
+struct	RapidResourceDelivery.ResourceInfo.AssetValidationFailureInfo		let	error
+struct	RapidResourceDelivery.ResourceInfo.AssetValidationFailureInfo		let	etag
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	fileInfo
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	lastSuccess
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	lastAttempt
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	lastAttemptStatusCode
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	downloadState
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	consecutiveFailures
+enum	RapidResourceDelivery.ResourceInfo.CodingKeys		case	assetValidationFailureInfo
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError			
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError		case	manifest
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError		case	resourceManager
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError		case	unknown
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationFailureInfo.CodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationFailureInfo.CodingKeys		case	error
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationFailureInfo.CodingKeys		case	etag
+enum	RapidResourceDelivery.ResourceInfo.DownloadState.CodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.DownloadState.CodingKeys		case	remoteURL
+enum	RapidResourceDelivery.ResourceInfo.DownloadState.CodingKeys		case	startedAt
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.CodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.CodingKeys		case	unknown
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.CodingKeys		case	manifest
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.CodingKeys		case	resourceManager
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.UnknownCodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.ManifestCodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.ManifestCodingKeys		case	_0
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.ResourceManagerCodingKeys			
+enum	RapidResourceDelivery.ResourceInfo.AssetValidationError.ResourceManagerCodingKeys		case	_0
+class	RapidResourceDelivery.StorageHelper			
+class	RapidResourceDelivery.StorageHelper		let	logger
+class	RapidResourceDelivery.StorageHelper		let	storeFileURL
+class	RapidResourceDelivery.StorageHelper		let	transactionFileURL
+struct	RapidResourceDelivery.DirectoryCleaner			
+struct	RapidResourceDelivery.DirectoryCleaner		let	path
+enum	RapidResourceDelivery.PathResolver.Error			
+enum	RapidResourceDelivery.PathResolver.Error		case	containerPathNotFound
+class	RapidResourceDelivery.PersistenceManager			
+class	RapidResourceDelivery.PersistenceManager		let	logger
+class	RapidResourceDelivery.PersistenceManager		let	settings
+class	RapidResourceDelivery.PersistenceManager		let	persistenceFolderURL
+class	RapidResourceDelivery.PersistenceManager		let	clock
+class	RapidResourceDelivery.PersistenceManager		let	state
+class	RapidResourceDelivery.PersistenceManager		let	_manifest
+class	RapidResourceDelivery.PersistenceManager		let	configuration
+class	RapidResourceDelivery.PersistenceManager		let	storageHelper
+struct	RapidResourceDelivery.SanitizedStateSnapshot			
+struct	RapidResourceDelivery.SanitizedStateSnapshot		let	state
+struct	RapidResourceDelivery.SanitizedStateSnapshot		let	store
+struct	RapidResourceDelivery.SanitizedStateSnapshot		let	current_manifest
+enum	RapidResourceDelivery.SanitizedStateSnapshot.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.CodingKeys		case	state
+enum	RapidResourceDelivery.SanitizedStateSnapshot.CodingKeys		case	store
+enum	RapidResourceDelivery.SanitizedStateSnapshot.CodingKeys		case	current_manifest
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData			
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	digest
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	estimated_size
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	grace_period_seconds
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	signature
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	supported
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	updated_at
+struct	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData		let	updates_url
+struct	RapidResourceDelivery.SanitizedStateSnapshot.Store			
+struct	RapidResourceDelivery.SanitizedStateSnapshot.Store		let	updatesInfo
+struct	RapidResourceDelivery.SanitizedStateSnapshot.Store		let	manifestInfo
+struct	RapidResourceDelivery.SanitizedStateSnapshot.State			
+struct	RapidResourceDelivery.SanitizedStateSnapshot.State		let	manifest_url
+struct	RapidResourceDelivery.SanitizedStateSnapshot.State		let	public_key
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	digest
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	estimated_size
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	grace_period_seconds
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	signature
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	supported
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	updated_at
+enum	RapidResourceDelivery.SanitizedStateSnapshot.ManifestData.CodingKeys		case	updates_url
+enum	RapidResourceDelivery.SanitizedStateSnapshot.Store.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.Store.CodingKeys		case	updatesInfo
+enum	RapidResourceDelivery.SanitizedStateSnapshot.Store.CodingKeys		case	manifestInfo
+enum	RapidResourceDelivery.SanitizedStateSnapshot.State.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.State.CodingKeys		case	manifest_url
+enum	RapidResourceDelivery.SanitizedStateSnapshot.State.CodingKeys		case	public_key
+struct	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo			
+struct	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo		let	lastAttempt
+struct	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo		let	fileInfo
+struct	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo		let	lastAttemptStatusCode
+struct	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo		let	lastSuccess
+struct	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo		let	downloadState
+enum	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo.CodingKeys		case	lastAttempt
+enum	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo.CodingKeys		case	fileInfo
+enum	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo.CodingKeys		case	lastAttemptStatusCode
+enum	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo.CodingKeys		case	lastSuccess
+enum	RapidResourceDelivery.SanitizedStateSnapshot.StoreInfo.CodingKeys		case	downloadState
+struct	RapidResourceDelivery.SanitizedStateSnapshot.DownloadState			
+struct	RapidResourceDelivery.SanitizedStateSnapshot.DownloadState		let	remoteURL
+struct	RapidResourceDelivery.SanitizedStateSnapshot.DownloadState		let	startedAt
+struct	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo			
+struct	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo		let	remoteURL
+struct	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo		let	digest
+struct	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo		let	fileURL
+struct	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo		let	statusCode
+struct	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo		let	etag
+enum	RapidResourceDelivery.SanitizedStateSnapshot.DownloadState.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.DownloadState.CodingKeys		case	remoteURL
+enum	RapidResourceDelivery.SanitizedStateSnapshot.DownloadState.CodingKeys		case	startedAt
+enum	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo.CodingKeys			
+enum	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo.CodingKeys		case	remoteURL
+enum	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo.CodingKeys		case	digest
+enum	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo.CodingKeys		case	fileURL
+enum	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo.CodingKeys		case	statusCode
+enum	RapidResourceDelivery.SanitizedStateSnapshot.FileInfo.CodingKeys		case	etag
+class	RapidResourceDelivery.RRDPeerHandler			
+class	RapidResourceDelivery.RRDPeerHandler		let	resourceManager
+struct	RapidResourceDelivery.ResourceUpdatesRequest			
+struct	RapidResourceDelivery.ResourceUpdatesRequest		let	assetsFolderURL
+struct	RapidResourceDelivery.ResourceUpdatesRequest		let	cachedFileInfo
+struct	RapidResourceDelivery.ResourceUpdatesRequest.FileInfo			
+struct	RapidResourceDelivery.ResourceUpdatesRequest.FileInfo		let	name
+struct	RapidResourceDelivery.ResourceUpdatesRequest.FileInfo		let	digest
+enum	RapidResourceDelivery.ResourceUpdatesResponse			
+enum	RapidResourceDelivery.ResourceUpdatesResponse		case	resource
+enum	RapidResourceDelivery.ResourceUpdatesResponse		case	notModified
+enum	RapidResourceDelivery.ResourceUpdatesResponse		case	cached
+enum	RapidResourceDelivery.RRDRequest			
+enum	RapidResourceDelivery.RRDRequest		case	resourceUpdatesFolderForAssets
+enum	RapidResourceDelivery.RRDRequest		case	resourceUpdates
+enum	RapidResourceDelivery.RRDRequest		case	resourceUpdatesFolder
+enum	RapidResourceDelivery.RRDRequest		case	readConfig
+enum	RapidResourceDelivery.RRDResponse			
+enum	RapidResourceDelivery.RRDResponse		case	error
+enum	RapidResourceDelivery.RRDResponse		case	resourceUpdatesFolder
+enum	RapidResourceDelivery.RRDResponse		case	resourceUpdates
+enum	RapidResourceDelivery.RRDResponse		case	sanitizedConfig
+enum	RapidResourceDelivery.ResourceUpdatesResponse.CodingKeys			
+enum	RapidResourceDelivery.ResourceUpdatesResponse.CodingKeys		case	notModified
+enum	RapidResourceDelivery.ResourceUpdatesResponse.CodingKeys		case	cached
+enum	RapidResourceDelivery.ResourceUpdatesResponse.CodingKeys		case	resource
+enum	RapidResourceDelivery.ResourceUpdatesResponse.NotModifiedCodingKeys			
+enum	RapidResourceDelivery.ResourceUpdatesResponse.CachedCodingKeys			
+enum	RapidResourceDelivery.ResourceUpdatesResponse.ResourceCodingKeys			
+enum	RapidResourceDelivery.ResourceUpdatesResponse.ResourceCodingKeys		case	fileName
+enum	RapidResourceDelivery.ResourceUpdatesResponse.ResourceCodingKeys		case	fileHandle
+enum	RapidResourceDelivery.ResourceUpdatesResponse.ResourceCodingKeys		case	digest
+enum	RapidResourceDelivery.ResourceUpdatesRequest.FileInfo.CodingKeys			
+enum	RapidResourceDelivery.ResourceUpdatesRequest.FileInfo.CodingKeys		case	name
+enum	RapidResourceDelivery.ResourceUpdatesRequest.FileInfo.CodingKeys		case	digest
+enum	RapidResourceDelivery.ResourceUpdatesRequest.CodingKeys			
+enum	RapidResourceDelivery.ResourceUpdatesRequest.CodingKeys		case	assetsFolderURL
+enum	RapidResourceDelivery.ResourceUpdatesRequest.CodingKeys		case	cachedFileInfo
+enum	RapidResourceDelivery.RRDResponse.CodingKeys			
+enum	RapidResourceDelivery.RRDResponse.CodingKeys		case	error
+enum	RapidResourceDelivery.RRDResponse.CodingKeys		case	resourceUpdatesFolder
+enum	RapidResourceDelivery.RRDResponse.CodingKeys		case	resourceUpdates
+enum	RapidResourceDelivery.RRDResponse.CodingKeys		case	sanitizedConfig
+enum	RapidResourceDelivery.RRDResponse.ErrorCodingKeys			
+enum	RapidResourceDelivery.RRDResponse.ErrorCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDResponse.ResourceUpdatesFolderCodingKeys			
+enum	RapidResourceDelivery.RRDResponse.ResourceUpdatesFolderCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDResponse.ResourceUpdatesCodingKeys			
+enum	RapidResourceDelivery.RRDResponse.ResourceUpdatesCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDResponse.SanitizedConfigCodingKeys			
+enum	RapidResourceDelivery.RRDResponse.SanitizedConfigCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDRequest.CodingKeys			
+enum	RapidResourceDelivery.RRDRequest.CodingKeys		case	resourceUpdatesFolder
+enum	RapidResourceDelivery.RRDRequest.CodingKeys		case	resourceUpdatesFolderForAssets
+enum	RapidResourceDelivery.RRDRequest.CodingKeys		case	resourceUpdates
+enum	RapidResourceDelivery.RRDRequest.CodingKeys		case	readConfig
+enum	RapidResourceDelivery.RRDRequest.ResourceUpdatesFolderCodingKeys			
+enum	RapidResourceDelivery.RRDRequest.ResourceUpdatesFolderForAssetsCodingKeys			
+enum	RapidResourceDelivery.RRDRequest.ResourceUpdatesFolderForAssetsCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDRequest.ResourceUpdatesCodingKeys			
+enum	RapidResourceDelivery.RRDRequest.ResourceUpdatesCodingKeys		case	_0
+enum	RapidResourceDelivery.RRDRequest.ReadConfigCodingKeys			
+class	RapidResourceDelivery.RRDServiceServer			
+class	RapidResourceDelivery.RRDServiceServer		let	logger
+class	RapidResourceDelivery.RRDServiceServer		let	listener
+class	RapidResourceDelivery.RRDServiceServer		let	environment
+struct	RapidResourceDelivery.Clock			
+class	RapidResourceDelivery.ResourceManager			
+class	RapidResourceDelivery.ResourceManager		let	settings
+class	RapidResourceDelivery.ResourceManager		let	downloadManager
+class	RapidResourceDelivery.ResourceManager		let	persistenceManager
+class	RapidResourceDelivery.ResourceManager		let	fileManager
+enum	RapidResourceDelivery.ResourceManagerError			
+enum	RapidResourceDelivery.ResourceManagerError		case	logicError
+enum	RapidResourceDelivery.ResourceManagerError		case	noManifestRemoteURL
+enum	RapidResourceDelivery.ResourceManagerError		case	noManifestFile
+enum	RapidResourceDelivery.ResourceManagerError		case	noUpdatesRemoteURL
+enum	RapidResourceDelivery.ResourceManagerError		case	noUpdatesFile
+enum	RapidResourceDelivery.ResourceManagerError		case	incorrectAssetsConfigurationFile
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys		case	noManifestRemoteURL
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys		case	noManifestFile
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys		case	noUpdatesRemoteURL
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys		case	noUpdatesFile
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys		case	incorrectAssetsConfigurationFile
+enum	RapidResourceDelivery.ResourceManagerError.CodingKeys		case	logicError
+enum	RapidResourceDelivery.ResourceManagerError.NoManifestRemoteURLCodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.NoManifestFileCodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.NoUpdatesRemoteURLCodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.NoUpdatesFileCodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.IncorrectAssetsConfigurationFileCodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.LogicErrorCodingKeys			
+enum	RapidResourceDelivery.ResourceManagerError.LogicErrorCodingKeys		case	_0
+struct	RapidResourceDelivery.RRDEnvironment			
+struct	RapidResourceDelivery.RRDEnvironment		let	settings
+struct	RapidResourceDelivery.RRDEnvironment		let	persistenceManager
+struct	RapidResourceDelivery.RRDEnvironment		let	resourceManager
+enum	RapidResourceDelivery.RRDEnvironment.Error			
+enum	RapidResourceDelivery.RRDEnvironment.Error		case	missingEnvironment
+enum	RapidResourceDelivery.RRDManifestState			
+enum	RapidResourceDelivery.RRDManifestState		case	unknown
+enum	RapidResourceDelivery.RRDManifestState		case	supported
+enum	RapidResourceDelivery.RRDManifestState		case	unsupported
+struct	RapidResourceDelivery.RRDState			
+struct	RapidResourceDelivery.RRDState		let	environment
+enum	RapidResourceDelivery.Schedule			
+enum	RapidResourceDelivery.Schedule		case	after
+enum	RapidResourceDelivery.Schedule		case	immediate
+struct	RapidResourceDelivery.SecureCodingCodableBridge<A	NSObject, B, A: NSSecureCoding>		
+struct	RapidResourceDelivery.SecureCodingCodableBridge<A	NSObject, B, A: NSSecureCoding>	let	wrappedValue
+class	RapidResourceDelivery.Settings			
+class	RapidResourceDelivery.Settings		let	defaults
+class	RapidResourceDelivery.Settings		let	urlSessionIdentifier
+class	RapidResourceDelivery.Settings		var	_manifestUpdatePeriod
+class	RapidResourceDelivery.Settings		let	manifestExpectedFileSize
+class	RapidResourceDelivery.Settings		let	persistenceFolderURL
+struct	RapidResourceDelivery.DeadlineError			
+enum	RapidResourceDelivery.DeadlineResult			
+enum	RapidResourceDelivery.DeadlineResult		case	opCompleted
+enum	RapidResourceDelivery.DeadlineResult		case	deadlineError
+enum	RapidResourceDelivery.DeadlineResult		case	deadlineReached
+enum	RapidResourceDelivery.DeadlineResult		case	deadlineCanceled
+class	RapidResourceDelivery.TokenBucket			
+class	RapidResourceDelivery.TokenBucket		var	state
+enum	RapidResourceDelivery.TokenBucket.State			
+enum	RapidResourceDelivery.TokenBucket.State		case	empty
+enum	RapidResourceDelivery.TokenBucket.State		case	full
+protocol	RapidResourceDelivery.URLSessionDownloadTaskProtocol			
+protocol	RapidResourceDelivery.URLSessionProtocol			
+protocol	RapidResourceDelivery.StorageHelperProtocol			
+protocol	RapidResourceDelivery.ClockProtocol			
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance RapidResourceDelivery.RRDServiceError	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.RRDServiceError	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.RRDServiceError	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.RRDServiceError	Swift.Error		
+protocol	conformance SandboxErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SandboxErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FileIOCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FileIOCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpdatesNotFoundCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpdatesNotFoundCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingDigestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingDigestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingManifestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingManifestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedManifestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnsupportedManifestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestProcessingErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestProcessingErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestProcessingErrorCodingKeys	Swift.Hashable		
+protocol	conformance RequestProcessingErrorCodingKeys	Swift.Equatable		
+protocol	conformance ResourceUpdateErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUpdateErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidRequestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidRequestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InternalErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InternalErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnderlyingErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnderlyingErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnderlyingErrorCodingKeys	Swift.Hashable		
+protocol	conformance UnderlyingErrorCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UnderlyingErrorCodingKeys	Swift.CodingKey		
+protocol	conformance InternalErrorCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidRequestCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUpdateErrorCodingKeys	Swift.CodingKey		
+protocol	conformance RequestProcessingErrorCodingKeys	Swift.CodingKey		
+protocol	conformance UnsupportedManifestCodingKeys	Swift.CodingKey		
+protocol	conformance MissingManifestCodingKeys	Swift.CodingKey		
+protocol	conformance MissingDigestCodingKeys	Swift.CodingKey		
+protocol	conformance UpdatesNotFoundCodingKeys	Swift.CodingKey		
+protocol	conformance FileIOCodingKeys	Swift.CodingKey		
+protocol	conformance CodingCodingKeys	Swift.CodingKey		
+protocol	conformance SandboxErrorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReadConfigError	Swift.Hashable		
+protocol	conformance ReadConfigError	Swift.Equatable		
+protocol	conformance RRDClient.Error	Swift.Error		
+protocol	conformance ReadConfigError	Swift.Error		
+protocol	conformance RapidResourceDelivery.DownloadErrorInfo	Swift.Equatable		
+protocol	conformance NSURLSession	RapidResourceDelivery.URLSessionProtocol		
+protocol	conformance NSURLSessionDownloadTask	RapidResourceDelivery.URLSessionDownloadTaskProtocol		
+protocol	conformance RapidResourceDelivery.DownloadOutcome	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.DownloadOutcome	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.DownloadResponse	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.DownloadResponse	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.DownloadTaskState	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.DownloadTaskStateError	Swift.Hashable		
+protocol	conformance RapidResourceDelivery.DownloadTaskStateError	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.DownloadTaskStateError	Swift.Error		
+protocol	conformance RapidResourceDelivery.HTTPError	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.HTTPError	Swift.Error		
+protocol	conformance RapidResourceDelivery.Configuration	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.Configuration	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.Configuration	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.Configuration	Swift.Decodable		
+protocol	conformance Configuration.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Configuration.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Configuration.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Configuration.CodingKeys	Swift.Hashable		
+protocol	conformance Configuration.CodingKeys	Swift.Equatable		
+protocol	conformance Configuration.Error	Swift.Equatable		
+protocol	conformance Configuration.Error	Swift.Error		
+protocol	conformance Configuration.CodingKeys	Swift.CodingKey		
+protocol	conformance RapidResourceDelivery.Manifest	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.Manifest	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.Manifest	Swift.Decodable		
+protocol	conformance Manifest.Error	Swift.Equatable		
+protocol	conformance Manifest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Manifest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Manifest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Manifest.CodingKeys	Swift.Hashable		
+protocol	conformance Manifest.CodingKeys	Swift.Equatable		
+protocol	conformance Manifest.Error	Swift.Error		
+protocol	conformance Manifest.CodingKeys	Swift.CodingKey		
+protocol	conformance Manifest.Error	Swift.Decodable		
+protocol	conformance Manifest.Error	Swift.Encodable		
+protocol	conformance InvalidBase64EncodingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidBase64EncodingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpdateDigestMismatchCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpdateDigestMismatchCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidManifestSignatureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidManifestSignatureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingManifestSignatureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingManifestSignatureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidURLSchemeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidURLSchemeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidURLSchemeCodingKeys	Swift.Hashable		
+protocol	conformance InvalidURLSchemeCodingKeys	Swift.Equatable		
+protocol	conformance InvalidURLCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidURLCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidURLCodingKeys	Swift.Hashable		
+protocol	conformance InvalidURLCodingKeys	Swift.Equatable		
+protocol	conformance ResourceNotFoundCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceNotFoundCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceNotFoundCodingKeys	Swift.Hashable		
+protocol	conformance ResourceNotFoundCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ResourceNotFoundCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidURLCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidURLSchemeCodingKeys	Swift.CodingKey		
+protocol	conformance MissingManifestSignatureCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidManifestSignatureCodingKeys	Swift.CodingKey		
+protocol	conformance UpdateDigestMismatchCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidBase64EncodingCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RapidResourceDelivery.RefreshPolicy	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.RefreshPolicy	Swift.Hashable		
+protocol	conformance RapidResourceDelivery.RefreshPolicy	Swift.RawRepresentable		
+protocol	conformance RapidResourceDelivery.RefreshPolicy	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.RefreshPolicy	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.ContainerizableURL	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.ContainerizableURL	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.ContainerizableURL	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.FileInfo	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.FileInfo	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.FileInfo	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RapidResourceDelivery.PersistenceState	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.PersistenceState	Swift.Decodable		
+protocol	conformance PersistenceState.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PersistenceState.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PersistenceState.CodingKeys	Swift.Hashable		
+protocol	conformance PersistenceState.CodingKeys	Swift.Equatable		
+protocol	conformance PersistenceState.CodingKeys	Swift.CodingKey		
+protocol	conformance ResourceInfo.DownloadState	Swift.Decodable		
+protocol	conformance ResourceInfo.DownloadState	Swift.Encodable		
+protocol	conformance ResourceInfo.DownloadState	Swift.Equatable		
+protocol	conformance ResourceInfo.AssetValidationFailureInfo	Swift.Decodable		
+protocol	conformance ResourceInfo.AssetValidationFailureInfo	Swift.Encodable		
+protocol	conformance ResourceInfo.AssetValidationFailureInfo	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.ResourceInfo	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.ResourceInfo	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.ResourceInfo	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ResourceInfo.AssetValidationError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ResourceInfo.AssetValidationError	Swift.Decodable		
+protocol	conformance ResourceInfo.AssetValidationError	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ResourceManagerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceManagerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceManagerCodingKeys	Swift.Hashable		
+protocol	conformance ResourceManagerCodingKeys	Swift.Equatable		
+protocol	conformance ManifestCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ManifestCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ManifestCodingKeys	Swift.Hashable		
+protocol	conformance ManifestCodingKeys	Swift.Equatable		
+protocol	conformance UnknownCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnknownCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UnknownCodingKeys	Swift.CodingKey		
+protocol	conformance ManifestCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceManagerCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RapidResourceDelivery.StorageHelper	RapidResourceDelivery.StorageHelperProtocol		
+protocol	conformance PathResolver.Error	Swift.Hashable		
+protocol	conformance PathResolver.Error	Swift.Equatable		
+protocol	conformance PathResolver.Error	Swift.Error		
+protocol	conformance RapidResourceDelivery.SanitizedStateSnapshot	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SanitizedStateSnapshot.ManifestData	Swift.Encodable		
+protocol	conformance SanitizedStateSnapshot.Store	Swift.Encodable		
+protocol	conformance SanitizedStateSnapshot.State	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SanitizedStateSnapshot.StoreInfo	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SanitizedStateSnapshot.DownloadState	Swift.Encodable		
+protocol	conformance SanitizedStateSnapshot.FileInfo	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RapidResourceDelivery.RRDPeerHandler	XPC.XPCPeerHandler		
+protocol	conformance RapidResourceDelivery.RRDPeerHandler	Swift.Actor		
+protocol	conformance RapidResourceDelivery.RRDResponse	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.RRDResponse	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.RRDResponse	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.RRDRequest	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.RRDRequest	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.RRDRequest	Swift.Hashable		
+protocol	conformance RapidResourceDelivery.RRDRequest	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesResponse	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesResponse	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesResponse	Swift.Decodable		
+protocol	conformance ResourceUpdatesRequest.FileInfo	Swift.CustomStringConvertible		
+protocol	conformance ResourceUpdatesRequest.FileInfo	Swift.Equatable		
+protocol	conformance ResourceUpdatesRequest.FileInfo	Swift.Hashable		
+protocol	conformance ResourceUpdatesRequest.FileInfo	Swift.Encodable		
+protocol	conformance ResourceUpdatesRequest.FileInfo	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesRequest	Swift.CustomStringConvertible		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesRequest	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesRequest	Swift.Hashable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesRequest	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.ResourceUpdatesRequest	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.RRDResponse	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.RRDRequest	Swift.Encodable		
+protocol	conformance ReadConfigCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReadConfigCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.Hashable		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.Equatable		
+protocol	conformance ResourceUpdatesFolderForAssetsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUpdatesFolderForAssetsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUpdatesFolderForAssetsCodingKeys	Swift.Hashable		
+protocol	conformance ResourceUpdatesFolderForAssetsCodingKeys	Swift.Equatable		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SanitizedConfigCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SanitizedConfigCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SanitizedConfigCodingKeys	Swift.Hashable		
+protocol	conformance SanitizedConfigCodingKeys	Swift.Equatable		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.Hashable		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.Equatable		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.Hashable		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.Equatable		
+protocol	conformance ErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.Hashable		
+protocol	conformance ErrorCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ResourceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceCodingKeys	Swift.Hashable		
+protocol	conformance ResourceCodingKeys	Swift.Equatable		
+protocol	conformance CachedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CachedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotModifiedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotModifiedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NotModifiedCodingKeys	Swift.CodingKey		
+protocol	conformance CachedCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ErrorCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.CodingKey		
+protocol	conformance SanitizedConfigCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUpdatesFolderCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUpdatesFolderForAssetsCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUpdatesCodingKeys	Swift.CodingKey		
+protocol	conformance ReadConfigCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RapidResourceDelivery.Clock	RapidResourceDelivery.ClockProtocol		
+protocol	conformance RapidResourceDelivery.ResourceManagerError	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.ResourceManagerError	Swift.Error		
+protocol	conformance RapidResourceDelivery.ResourceManagerError	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.ResourceManagerError	Swift.Encodable		
+protocol	conformance LogicErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LogicErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LogicErrorCodingKeys	Swift.Hashable		
+protocol	conformance LogicErrorCodingKeys	Swift.Equatable		
+protocol	conformance IncorrectAssetsConfigurationFileCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IncorrectAssetsConfigurationFileCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoUpdatesFileCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoUpdatesFileCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoUpdatesRemoteURLCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoUpdatesRemoteURLCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoManifestFileCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoManifestFileCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoManifestRemoteURLCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoManifestRemoteURLCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NoManifestRemoteURLCodingKeys	Swift.CodingKey		
+protocol	conformance NoManifestFileCodingKeys	Swift.CodingKey		
+protocol	conformance NoUpdatesRemoteURLCodingKeys	Swift.CodingKey		
+protocol	conformance NoUpdatesFileCodingKeys	Swift.CodingKey		
+protocol	conformance IncorrectAssetsConfigurationFileCodingKeys	Swift.CodingKey		
+protocol	conformance LogicErrorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RRDEnvironment.Error	Swift.Hashable		
+protocol	conformance RRDEnvironment.Error	Swift.Equatable		
+protocol	conformance RRDEnvironment.Error	Swift.Error		
+protocol	conformance RapidResourceDelivery.RRDManifestState	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.RRDManifestState	Swift.Hashable		
+protocol	conformance RapidResourceDelivery.Schedule	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.SecureCodingCodableBridge	Swift.Equatable		
+protocol	conformance RapidResourceDelivery.SecureCodingCodableBridge	Swift.Encodable		
+protocol	conformance RapidResourceDelivery.SecureCodingCodableBridge	Swift.Decodable		
+protocol	conformance RapidResourceDelivery.DeadlineError	Swift.Error		
+protocol	conformance RapidResourceDelivery.TokenBucket	Swift.Actor		
+extension	RapidResourceDelivery.Configuration.CodingKeys	RawRepresentable		
+extension	RapidResourceDelivery.Manifest.CodingKeys	RawRepresentable		
+extension	RapidResourceDelivery.RefreshPolicy	RawRepresentable		
+extension	RapidResourceDelivery.RRDPeerHandler	XPCPeerHandler		

@@ -1,0 +1,212 @@
+kind	type	conformance	member_kind	member
+enum	Announce.RecipientResolutionResponseCode			
+enum	Announce.RecipientResolutionResponseCode		case	success
+enum	Announce.RecipientResolutionResponseCode		case	failure
+enum	Announce.RecipientResolutionResponseCode		case	notRequired
+enum	Announce.RecipientResolutionResponseCode.FailureReason			
+enum	Announce.RecipientResolutionResponseCode.FailureReason		case	disambiguationRequired
+enum	Announce.RecipientResolutionResponseCode.FailureReason		case	targetNotFound
+enum	Announce.RecipientResolutionResponseCode.FailureReason		case	announcingToSelf
+enum	Announce.RecipientResolutionResponseCode.FailureReason		case	speakerGroupsNotSupported
+enum	Announce.RecipientResolutionResponseCode.FailureReason		case	intercomDisabledOnAllDevices
+enum	Announce.RecipientResolutionResponseCode.FailureReason		case	unsupported
+enum	Announce.SendAnnouncementIntentResponseCode			
+enum	Announce.SendAnnouncementIntentResponseCode		case	unspecified
+enum	Announce.SendAnnouncementIntentResponseCode		case	ready
+enum	Announce.SendAnnouncementIntentResponseCode		case	inProgress
+enum	Announce.SendAnnouncementIntentResponseCode		case	success
+enum	Announce.SendAnnouncementIntentResponseCode		case	failure
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureRequiringAppLaunch
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureRecipientsUnreachable
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureRecipientsAnnouncementsDisabled
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureSenderAnnouncementsDisabled
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureRecipientCannotReceiveAnnouncements
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureNoHomepod
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureRecipientHomepodsUpdateRequired
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureRemoteAccessNotAllowed
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureNoOtherHomepodToReceiveAnnouncements
+enum	Announce.SendAnnouncementIntentResponseCode		case	failureOnlyAnnouncersDeviceIsAvailable
+enum	Announce.AnnouncementResolutionResponseCode			
+enum	Announce.AnnouncementResolutionResponseCode		case	failure
+enum	Announce.AnnouncementResolutionResponseCode		case	success
+enum	Announce.AnnouncementResolutionResponseCode.FailureReason			
+enum	Announce.AnnouncementResolutionResponseCode.FailureReason		case	needsValue
+enum	Announce.AnnouncementResolutionResponseCode.FailureReason		case	noAnnouncementForReply
+enum	Announce.AnnouncementResolutionResponseCode.FailureReason		case	audioFileDurationUnavailable
+enum	Announce.AnnouncementResolutionResponseCode.FailureReason		case	audioFileDurationExceeded
+class	Announce.WeakObject			
+class	Announce.WeakObject		var	value
+enum	Announce.SendAnnouncementIntentError			
+enum	Announce.SendAnnouncementIntentError		case	noSiriEnvironmentForCurrentTask
+enum	Announce.SendAnnouncementIntentError		case	noHomeUserIdFound
+struct	Announce.SendAnnouncementIntentRequest			
+struct	Announce.SendAnnouncementIntentRequest		let	endpointID
+struct	Announce.SendAnnouncementIntentRequest		let	home
+struct	Announce.SendAnnouncementIntentRequest		let	rooms
+struct	Announce.SendAnnouncementIntentRequest		let	zones
+struct	Announce.SendAnnouncementIntentRequest		let	speechDataURL
+struct	Announce.SendAnnouncementIntentRequest		let	sharedUserID
+struct	Announce.SendAnnouncementIntentRequest		let	replyToAnnouncementID
+struct	Announce.SendAnnouncementIntentRequest		let	transcription
+struct	Announce.SendAnnouncementIntentRequest		let	isReply
+struct	Announce.SendAnnouncementIntentResponse			
+struct	Announce.SendAnnouncementIntentResponse		let	code
+struct	Announce.SendAnnouncementIntentResponse		let	records
+struct	Announce.SendAnnouncementIntentResponse		let	transcriptionText
+struct	Announce.SendAnnouncementIntentResponse		let	creationTimestamp
+class	Announce.SendAnnouncementIntentPerformer	Announce.IntentPerformer		
+class	Announce.AnnounceService			
+class	Announce.AnnounceService		let	logger
+class	Announce.AnnounceService		let	helper
+class	Announce.ReadAnnouncementHistory			
+class	Announce.ReadAnnouncementHistory		var	readAnnouncementRecords
+enum	Announce.PlayAnnouncementSoundError			
+enum	Announce.PlayAnnouncementSoundError		case	unsupportedType
+class	Announce.PlayAnnouncementSoundIntentPerformer	Announce.IntentPerformer		
+struct	Announce.AnnouncementRecord			
+struct	Announce.AnnouncementRecord		let	identifier
+struct	Announce.AnnouncementRecord		let	duration
+struct	Announce.AnnouncementRecord		let	originator
+enum	Announce.AnnouncementRecord.Originator			
+enum	Announce.AnnouncementRecord.Originator		case	home
+enum	Announce.AnnouncementRecord.Originator		case	room
+enum	Announce.AnnouncementRecord.Originator		case	zone
+enum	Announce.ReadAnnouncementIntentResponseCode			
+enum	Announce.ReadAnnouncementIntentResponseCode		case	unspecified
+enum	Announce.ReadAnnouncementIntentResponseCode		case	ready
+enum	Announce.ReadAnnouncementIntentResponseCode		case	inProgress
+enum	Announce.ReadAnnouncementIntentResponseCode		case	success
+enum	Announce.ReadAnnouncementIntentResponseCode		case	failure
+enum	Announce.ReadAnnouncementIntentResponseCode		case	failureRequiringAppLaunch
+enum	Announce.ReadAnnouncementIntentResponseCode		case	failureNoAnnouncementsToRead
+class	Announce.StopAnnouncementIntentPerfomer	Announce.IntentPerformer		
+enum	Announce.AnnouncementSoundType			
+enum	Announce.AnnouncementSoundType		case	unknown
+enum	Announce.AnnouncementSoundType		case	announcementSent
+class	Announce.IntentPerformer	NSObject		
+class	Announce.IntentPerformer	NSObject	var	localPlaybackSession
+class	Announce.IntentPerformer	NSObject	var	lazy
+class	Announce.IntentPerformer	NSObject	var	announce
+class	Announce.IntentPerformer	NSObject	var	lazy
+class	Announce.IntentPerformer	NSObject	var	lazy
+class	Announce.IntentPerformer.PlaybackSessionDelegate	NSObject		
+class	Announce.IntentPerformer.PlaybackSessionDelegate	NSObject	let	cleanup
+class	Announce.IntentPerformer.AnnounceDelegate	NSObject		
+class	Announce.IntentPerformer.AnnounceDelegate	NSObject	let	cleanup
+enum	Announce.StopAnnouncementIntentResponseCode			
+enum	Announce.StopAnnouncementIntentResponseCode		case	unspecified
+enum	Announce.StopAnnouncementIntentResponseCode		case	ready
+enum	Announce.StopAnnouncementIntentResponseCode		case	inProgress
+enum	Announce.StopAnnouncementIntentResponseCode		case	success
+enum	Announce.StopAnnouncementIntentResponseCode		case	failure
+enum	Announce.StopAnnouncementIntentResponseCode		case	failureRequiringAppLaunch
+class	Announce.ReadAnnouncementsIntentPerformer	Announce.IntentPerformer		
+class	Announce.ReadAnnouncementsIntentPerformer	Announce.IntentPerformer	var	playbackOptions
+class	Announce.ReadAnnouncementsIntentPerformer	Announce.IntentPerformer	var	endpointIdentifier
+class	Announce.AnnouncePlaybackHelper	NSObject		
+class	Announce.AnnouncePlaybackHelper	NSObject	var	localPlaybackSession
+class	Announce.AnnouncePlaybackHelper	NSObject	var	lazy
+class	Announce.AnnouncePlaybackHelper	NSObject	let	logger
+class	Announce.XPCManager	NSObject		
+class	Announce.XPCManager	NSObject	var	delegate
+class	Announce.XPCManager	NSObject	var	checkInProvider
+class	Announce.XPCManager	NSObject	var	_needsCheckIn
+class	Announce.XPCManager	NSObject	var	isConnectionValid
+class	Announce.XPCManager	NSObject	var	_connection
+class	Announce.XPCManager	NSObject	let	logger
+class	Announce.XPCManager	NSObject	var	notifyRegisterToken
+class	Announce.XPCManager	NSObject	var	checkInObservers
+class	Announce.XPCManager	NSObject	let	lock
+class	Announce.XPCManager	NSObject	let	machServiceName
+class	Announce.XPCManager	NSObject	var	exportedObject
+class	Announce.XPCManager	NSObject	let	remoteObjectInterface
+class	Announce.XPCManager	NSObject	let	exportedInterface
+enum	Announce.XPCManager.XPCManagerError			
+enum	Announce.XPCManager.XPCManagerError		case	noCheckInProvider
+class	Announce.ResourceBundleClass			
+protocol	conformance __C.ANPlaybackOptions	Swift.ExpressibleByArrayLiteral: Announce		
+protocol	conformance __C.ANPlaybackOptions	Swift.RawRepresentable: Announce		
+protocol	conformance __C.ANPlaybackOptions	Swift.SetAlgebra: Announce		
+protocol	conformance __C.ANPlaybackOptions	Swift.OptionSet: Announce		
+protocol	conformance __C.ANPlaybackOptions	Swift.Equatable: Announce		
+protocol	conformance __C.ANPlaybackOptions	Swift.CaseIterable		
+protocol	conformance __C.ANPlaybackOptions	Swift.CustomStringConvertible		
+protocol	conformance __C.ANPlaybackOptions	Swift.Hashable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	Swift.Equatable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	Swift.Hashable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	Swift.RawRepresentable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	Swift.CaseIterable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	Swift.CustomStringConvertible		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents.AppEnum		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents.AppValue		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents._IntentValue		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance Announce.SendAnnouncementIntentResponseCode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance AnnouncementResolutionResponseCode.FailureReason	Swift.Hashable		
+protocol	conformance AnnouncementResolutionResponseCode.FailureReason	Swift.Equatable		
+protocol	conformance Announce.AnnouncementResolutionResponseCode	Swift.Equatable		
+protocol	conformance Announce.SendAnnouncementIntentError	Swift.Equatable		
+protocol	conformance Announce.SendAnnouncementIntentError	Swift.Hashable		
+protocol	conformance Announce.SendAnnouncementIntentError	Swift.Error		
+protocol	conformance Announce.SendAnnouncementIntentResponse	Swift.CustomStringConvertible		
+protocol	conformance __C.ANAnnouncePlaybackState	Swift.CustomStringConvertible		
+protocol	conformance Announce.PlayAnnouncementSoundError	Swift.Error		
+protocol	conformance AnnouncementRecord.Originator	Swift.CustomStringConvertible		
+protocol	conformance Announce.AnnouncementRecord	Swift.CustomStringConvertible		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	Swift.Equatable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	Swift.Hashable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	Swift.RawRepresentable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	Swift.CaseIterable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	Swift.CustomStringConvertible		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents.AppEnum		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents.AppValue		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents._IntentValue		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance Announce.ReadAnnouncementIntentResponseCode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance Announce.AnnouncementSoundType	Swift.Equatable		
+protocol	conformance Announce.AnnouncementSoundType	Swift.Hashable		
+protocol	conformance Announce.AnnouncementSoundType	Swift.RawRepresentable		
+protocol	conformance Announce.AnnouncementSoundType	Swift.CaseIterable		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents.AppEnum		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents.AppValue		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents.StaticDisplayRepresentable		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents.PersistentlyIdentifiable		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents.TypeDisplayRepresentable		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents._IntentValue		
+protocol	conformance Announce.AnnouncementSoundType	AppIntents.CaseDisplayRepresentable		
+protocol	conformance Announce.AnnouncementSoundType	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	Swift.Equatable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	Swift.Hashable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	Swift.RawRepresentable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	Swift.CaseIterable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	Swift.CustomStringConvertible		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents.AppEnum		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents.AppValue		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents._IntentValue		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance Announce.StopAnnouncementIntentResponseCode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance XPCManager.XPCManagerError	Foundation.LocalizedError		
+protocol	conformance XPCManager.XPCManagerError	Swift.Hashable		
+protocol	conformance XPCManager.XPCManagerError	Swift.Equatable		
+protocol	conformance XPCManager.XPCManagerError	Swift.Error		
+extension	Announce.SendAnnouncementIntentResponseCode	RawRepresentable		
+extension	Announce.SendAnnouncementIntentResponseCode	CaseIterable		
+extension	Announce.SendAnnouncementIntentResponseCode	_IntentValue		
+extension	Announce.ReadAnnouncementIntentResponseCode	RawRepresentable		
+extension	Announce.ReadAnnouncementIntentResponseCode	CaseIterable		
+extension	Announce.ReadAnnouncementIntentResponseCode	_IntentValue		
+extension	Announce.AnnouncementSoundType	RawRepresentable		
+extension	Announce.AnnouncementSoundType	CaseIterable		
+extension	Announce.AnnouncementSoundType	_IntentValue		
+extension	Announce.StopAnnouncementIntentResponseCode	RawRepresentable		
+extension	Announce.StopAnnouncementIntentResponseCode	CaseIterable		
+extension	Announce.StopAnnouncementIntentResponseCode	_IntentValue		

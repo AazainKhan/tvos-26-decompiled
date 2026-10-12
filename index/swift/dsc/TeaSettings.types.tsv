@@ -1,0 +1,262 @@
+kind	type	conformance	member_kind	member
+class	TeaSettings.Preset	TeaSettings.Presets		
+class	TeaSettings.Preset	TeaSettings.Presets	let	extends
+class	TeaSettings.Preset	TeaSettings.Presets	var	apply
+class	TeaSettings.SettingGroup			
+class	TeaSettings.SettingGroup		var	enabledSetting
+enum	TeaSettings.Access			
+enum	TeaSettings.Access		case	public
+enum	TeaSettings.Access		case	protected
+enum	TeaSettings.Access		case	debug
+class	TeaSettings.SettingsStore			
+class	TeaSettings.SettingsStore		var	standardUserDefaults
+class	TeaSettings.SettingsStore		var	observers
+class	TeaSettings.SettingsStore.SettingObserver			
+class	TeaSettings.SettingsStore.SettingObserver		var	object
+class	TeaSettings.SettingsStore.SettingObserver		let	closure
+enum	TeaSettings.ChangeBehavior			
+enum	TeaSettings.ChangeBehavior		case	default
+enum	TeaSettings.ChangeBehavior		case	reloadGroup
+enum	TeaSettings.SettingCellStyle			
+enum	TeaSettings.SettingCellStyle		case	switch
+enum	TeaSettings.SettingCellStyle		case	toggle
+enum	TeaSettings.SettingCellStyle		case	textField
+enum	TeaSettings.SettingCellStyle		case	secureTextField
+enum	TeaSettings.SettingCellStyle		case	stepper
+enum	TeaSettings.SettingCellStyle		case	slider
+enum	TeaSettings.SettingCellStyle		case	page
+enum	TeaSettings.SettingCellStyle		case	pageItem
+enum	TeaSettings.SettingCellStyle		case	button
+enum	TeaSettings.SettingCellStyle		case	buttonWithConfirmation
+enum	TeaSettings.SettingCellStyle		case	stringArrayInputPage
+enum	TeaSettings.SettingCellStyle		case	appleFeatureFlag
+enum	TeaSettings.SettingCellStyle		case	unknown
+enum	TeaSettings.SettingCellStyle.ButtonStyle			
+enum	TeaSettings.SettingCellStyle.ButtonStyle		case	default
+enum	TeaSettings.SettingCellStyle.ButtonStyle		case	destructive
+struct	TeaSettings.Group			
+struct	TeaSettings.Group		let	title
+struct	TeaSettings.Group		let	footer
+struct	TeaSettings.Group		let	items
+class	TeaSettings.AppGroup			
+class	TeaSettings.AppGroup		let	identifier
+class	TeaSettings.AppGroup		var	lazy
+class	TeaSettings.AppGroup		let	settingsDomain
+class	TeaSettings.AppGroup		let	userDefaults
+class	TeaSettings.SettingReader			
+class	TeaSettings.SettingReader		let	reader
+class	TeaSettings.SettingReader.Reader			
+class	TeaSettings.PageItem<A	TeaSettings.Settable>		
+class	TeaSettings.PageItem<A	TeaSettings.Settable>	let	item
+class	TeaSettings.PageItem<A	TeaSettings.Settable>	let	layout
+struct	TeaSettings.Option			
+struct	TeaSettings.Option		let	label
+struct	TeaSettings.Option		let	value
+struct	TeaSettings.Option		let	description
+struct	TeaSettings.Page			
+struct	TeaSettings.Page		let	title
+struct	TeaSettings.Page		let	layout
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>		
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	let	key
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	let	defaultValue
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	let	rawDefaultValue
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	let	domain
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	let	access
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	var	conditions
+class	TeaSettings.Setting	TeaSettings.Settings<A: TeaSettings.Settable>	var	trait
+enum	TeaSettings.Trait			
+enum	TeaSettings.Trait		case	options
+enum	TeaSettings.Trait		case	range
+enum	TeaSettings.Trait		case	none
+class	TeaSettings.Settings			
+class	TeaSettings.SettingProperty<A	TeaSettings.Settable>		
+class	TeaSettings.SettingProperty<A	TeaSettings.Settable>	var	key
+class	TeaSettings.SettingProperty<A	TeaSettings.Settable>	var	observers
+struct	TeaSettings.If			
+struct	TeaSettings.If		let	condition
+struct	TeaSettings.If		let	groupable
+class	TeaSettings.PresetItem			
+class	TeaSettings.PresetItem		let	preset
+class	TeaSettings.PresetItem		let	label
+class	TeaSettings.PresetItem		let	actions
+enum	TeaSettings.FeatureState			
+enum	TeaSettings.FeatureState		case	default
+enum	TeaSettings.FeatureState		case	enabled
+enum	TeaSettings.FeatureState		case	disabled
+class	TeaSettings.OptionItem<A	TeaSettings.Settable>		
+class	TeaSettings.OptionItem<A	TeaSettings.Settable>	let	setting
+class	TeaSettings.OptionItem<A	TeaSettings.Settable>	let	option
+class	TeaSettings.OptionItem<A	TeaSettings.Settable>	let	actions
+class	TeaSettings.Item<A	TeaSettings.Settable>		
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	setting
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	label
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	actions
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	isVisible
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	resetBehavior
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	changeBehavior
+class	TeaSettings.Item<A	TeaSettings.Settable>	var	controlType
+class	TeaSettings.Item<A	TeaSettings.Settable>	var	isSecure
+class	TeaSettings.Item<A	TeaSettings.Settable>	let	context
+enum	TeaSettings.Item.RangeControlType<A	TeaSettings.Settable>		
+enum	TeaSettings.Item.RangeControlType<A	TeaSettings.Settable>	case	slider
+enum	TeaSettings.Item.RangeControlType<A	TeaSettings.Settable>	case	stepper
+enum	TeaSettings.Item.RangeControlType.Precision<A	TeaSettings.Settable>		
+enum	TeaSettings.Item.RangeControlType.Precision<A	TeaSettings.Settable>	case	fraction
+enum	TeaSettings.Item.RangeControlType.Precision<A	TeaSettings.Settable>	case	integer
+enum	TeaSettings.Item.ResetBehavior<A	TeaSettings.Settable>		
+enum	TeaSettings.Item.ResetBehavior<A	TeaSettings.Settable>	case	reset
+enum	TeaSettings.Item.ResetBehavior<A	TeaSettings.Settable>	case	persist
+enum	TeaSettings.Item.Context<A	TeaSettings.Settable>		
+enum	TeaSettings.Item.Context<A	TeaSettings.Settable>	case	basic
+enum	TeaSettings.Item.Context<A	TeaSettings.Settable>	case	enum
+class	TeaSettings.SettingActions			
+class	TeaSettings.SettingAction	TeaSettings.SettingActions		
+class	TeaSettings.SettingAction	TeaSettings.SettingActions	let	identifier
+class	TeaSettings.SettingAction	TeaSettings.SettingActions	var	postInstructions
+class	TeaSettings.SettingAction	TeaSettings.SettingActions	let	closure
+enum	TeaSettings.SettingAction.PostInstruction			
+enum	TeaSettings.SettingAction.PostInstruction		case	killProcess
+class	TeaSettings.Updater			
+class	TeaSettings.PresetManager			
+class	TeaSettings.PresetManager		var	updater
+class	TeaSettings.PresetManager		var	presets
+struct	TeaSettings.SettingsBundle			
+struct	TeaSettings.SettingsBundle		let	label
+struct	TeaSettings.SettingsBundle		let	cellStyle
+struct	TeaSettings.SettingsBundle		let	isEnabled
+struct	TeaSettings.SettingsBundle		let	isVisible
+struct	TeaSettings.SettingsBundle		let	layout
+class	TeaSettings.PresetStartupTask			
+class	TeaSettings.PresetStartupTask		let	presetManager
+class	TeaSettings.FeatureFlags			
+class	TeaSettings.FeatureFlags		let	featureFlags
+class	TeaSettings.FeatureFlags.EnableAllItem			
+class	TeaSettings.FeatureFlags.EnableAllItem		let	featureFlags
+class	TeaSettings.FeatureFlags.EnableAllItem		let	label
+class	TeaSettings.FeatureFlags.EnableAllItem		let	isEnabled
+class	TeaSettings.FeatureFlag			
+class	TeaSettings.FeatureFlag		let	item
+class	TeaSettings.FeatureFlag		let	_isEnabled
+class	TeaSettings.FeatureFlag		let	_setEnabled
+struct	TeaSettings.FeatureFlag.FeatureFlagItem			
+struct	TeaSettings.FeatureFlag.FeatureFlagItem		let	label
+struct	TeaSettings.FeatureFlag.FeatureFlagItem		let	cellStyle
+struct	TeaSettings.FeatureFlag.FeatureFlagItem		let	isEnabled
+class	TeaSettings.ResetItem			
+class	TeaSettings.ResetItem		let	isEnabled
+class	TeaSettings.ResetItem		let	isVisible
+class	TeaSettings.ResetItem		let	label
+class	TeaSettings.ResetItem		let	layout
+class	TeaSettings.Presets			
+enum	TeaSettings.DataType			
+enum	TeaSettings.DataType		case	string
+enum	TeaSettings.DataType		case	stringArray
+enum	TeaSettings.DataType		case	bool
+enum	TeaSettings.DataType		case	integer
+enum	TeaSettings.DataType		case	int64
+enum	TeaSettings.DataType		case	float
+enum	TeaSettings.DataType		case	double
+enum	TeaSettings.DataType		case	data
+struct	TeaSettings.ConditionalItem			
+struct	TeaSettings.ConditionalItem		let	item
+struct	TeaSettings.ConditionalItem		let	condition
+enum	TeaSettings.Domain			
+enum	TeaSettings.Domain		case	domain
+enum	TeaSettings.Domain		case	standard
+protocol	TeaSettings.Resettable			
+protocol	TeaSettings.Groupable			
+protocol	TeaSettings.Settable			
+protocol	TeaSettings.RangeType			
+protocol	TeaSettings.OptionType			
+protocol	TeaSettings.Updatable			
+protocol	TeaSettings.ConditionType			
+protocol	TeaSettings.SettingType	Value		
+protocol	TeaSettings.Configurable			
+protocol	TeaSettings.PresetApplicatorType			
+protocol	TeaSettings.PresetManagerType			
+protocol	conformance TeaSettings.SettingGroup	TeaSettings.Updatable		
+protocol	conformance TeaSettings.SettingGroup	TeaSettings.Configurable		
+protocol	conformance TeaSettings.SettingGroup	TeaSettings.ConditionType		
+protocol	conformance TeaSettings.Access	Swift.Equatable		
+protocol	conformance TeaSettings.Access	Swift.Hashable		
+protocol	conformance TeaSettings.Access	TeaSettings.ConditionType		
+protocol	conformance Swift.Bool	TeaSettings.Settable		
+protocol	conformance Swift.Int	TeaSettings.Settable		
+protocol	conformance Swift.Int	TeaSettings.RangeType		
+protocol	conformance Swift.Int	TeaSettings.OptionType		
+protocol	conformance Swift.Int64	TeaSettings.Settable		
+protocol	conformance Swift.Int64	TeaSettings.RangeType		
+protocol	conformance Swift.Int64	TeaSettings.OptionType		
+protocol	conformance Swift.Double	TeaSettings.Settable		
+protocol	conformance Swift.Double	TeaSettings.RangeType		
+protocol	conformance Swift.Double	TeaSettings.OptionType		
+protocol	conformance Swift.Float	TeaSettings.Settable		
+protocol	conformance Swift.Float	TeaSettings.RangeType		
+protocol	conformance Swift.Float	TeaSettings.OptionType		
+protocol	conformance Swift.String	TeaSettings.Settable		
+protocol	conformance Swift.String	TeaSettings.OptionType		
+protocol	conformance Swift.Array	TeaSettings.Settable		
+protocol	conformance Swift.Array	TeaSettings.OptionType		
+protocol	conformance Foundation.Data	TeaSettings.Settable		
+protocol	conformance Foundation.Data	TeaSettings.OptionType		
+protocol	conformance Foundation.Date	TeaSettings.Settable		
+protocol	conformance TeaSettings.SettingsStore	TeaSettings.Configurable		
+protocol	conformance TeaSettings.SettingsStore	TeaSettings.PresetApplicatorType		
+protocol	conformance SettingObserver	TeaFoundation.Disposable		
+protocol	conformance TeaSettings.SettingsStore	TeaSettings.Updatable		
+protocol	conformance TeaSettings.ChangeBehavior	Swift.Equatable		
+protocol	conformance TeaSettings.ChangeBehavior	Swift.Hashable		
+protocol	conformance SettingCellStyle.ButtonStyle	Swift.Equatable		
+protocol	conformance SettingCellStyle.ButtonStyle	Swift.Hashable		
+protocol	conformance Reader	TeaSettings.Updatable		
+protocol	conformance Reader	TeaSettings.Configurable		
+protocol	conformance TeaSettings.PageItem	TeaSettings.Groupable		
+protocol	conformance TeaSettings.PageItem	TeaSettings.Resettable		
+protocol	conformance TeaSettings.PageItem	TeaSettings.Updatable		
+protocol	conformance TeaSettings.PageItem	TeaSettings.Configurable		
+protocol	conformance TeaSettings.Page	TeaSettings.Groupable		
+protocol	conformance TeaSettings.Page	TeaSettings.Resettable		
+protocol	conformance TeaSettings.Setting	TeaSettings.SettingType		
+protocol	conformance TeaSettings.SettingProperty	TeaSettings.Configurable		
+protocol	conformance TeaSettings.SettingProperty	TeaSettings.Updatable		
+protocol	conformance TeaSettings.If	TeaSettings.Groupable		
+protocol	conformance TeaSettings.PresetItem	TeaSettings.Groupable		
+protocol	conformance TeaSettings.PresetItem	TeaSettings.Updatable		
+protocol	conformance TeaSettings.PresetItem	TeaSettings.Configurable		
+protocol	conformance TeaSettings.FeatureState	Swift.Equatable		
+protocol	conformance TeaSettings.FeatureState	Swift.Hashable		
+protocol	conformance TeaSettings.FeatureState	Swift.RawRepresentable		
+protocol	conformance TeaSettings.FeatureState	TeaSettings.Settable		
+protocol	conformance TeaSettings.FeatureState	TeaSettings.OptionType		
+protocol	conformance TeaSettings.OptionItem	TeaSettings.Configurable		
+protocol	conformance TeaSettings.OptionItem	TeaSettings.Updatable		
+protocol	conformance TeaSettings.OptionItem	TeaSettings.Groupable		
+protocol	conformance Item.ResetBehavior	Swift.Equatable		
+protocol	conformance Item.ResetBehavior	Swift.Hashable		
+protocol	conformance TeaSettings.Item	TeaSettings.Groupable		
+protocol	conformance TeaSettings.Item	TeaSettings.Updatable		
+protocol	conformance TeaSettings.Item	TeaSettings.Configurable		
+protocol	conformance TeaSettings.Item	TeaSettings.Resettable		
+protocol	conformance Context	Swift.Hashable		
+protocol	conformance Context	Swift.Equatable		
+protocol	conformance SettingAction.PostInstruction	Swift.Equatable		
+protocol	conformance SettingAction.PostInstruction	Swift.Hashable		
+protocol	conformance TeaSettings.SettingAction	TeaSettings.Updatable		
+protocol	conformance TeaSettings.SettingAction	TeaSettings.Configurable		
+protocol	conformance TeaSettings.SettingAction	TeaFoundation.Identifiable		
+protocol	conformance TeaSettings.SettingAction	Swift.Equatable		
+protocol	conformance TeaSettings.Updater	TeaSettings.Updatable		
+protocol	conformance TeaSettings.Updater	TeaSettings.Configurable		
+protocol	conformance TeaSettings.PresetManager	TeaSettings.PresetManagerType		
+protocol	conformance TeaSettings.SettingsBundle	TeaSettings.Groupable		
+protocol	conformance TeaSettings.PresetStartupTask	TeaFoundation.StartupTaskType		
+protocol	conformance EnableAllItem	TeaSettings.Configurable		
+protocol	conformance EnableAllItem	TeaSettings.Updatable		
+protocol	conformance FeatureFlagItem	TeaSettings.Groupable		
+protocol	conformance EnableAllItem	TeaSettings.Groupable		
+protocol	conformance TeaSettings.ResetItem	TeaSettings.Groupable		
+protocol	conformance TeaSettings.DataType	Swift.Equatable		
+protocol	conformance TeaSettings.DataType	Swift.Hashable		
+protocol	conformance TeaSettings.ConditionalItem	TeaSettings.Groupable		
+extension	TeaSettings.Setting	SettingType		
+extension	TeaSettings.FeatureState	RawRepresentable		

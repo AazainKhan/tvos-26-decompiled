@@ -1,0 +1,535 @@
+kind	type	conformance	member_kind	member
+enum	Dyld.AppleArchive.AppleArchiveEntry			
+enum	Dyld.AppleArchive.AppleArchiveEntry		case	file
+enum	Dyld.AppleArchive.AppleArchiveEntry		case	symlink
+enum	Dyld.AppleArchive.AppleArchiveEntry		case	none
+struct	Dyld.AppleArchive.FileRecord			
+struct	Dyld.AppleArchive.FileRecord		let	range
+struct	Dyld.AppleArchive.FileRecord		var	validation
+enum	Dyld.AARDecoderError			
+enum	Dyld.AARDecoderError		case	badFileType
+enum	Dyld.AARDecoderError		case	unknownHeaderFieldType
+enum	Dyld.AARDecoderError		case	badMagic
+enum	Dyld.AARDecoderError		case	badCRC
+enum	Dyld.AARDecoderError		case	truncated
+enum	Dyld.AARDecoderError		case	missingFileTypeField
+enum	Dyld.AARDecoderError		case	missingFilePathField
+enum	Dyld.AARDecoderError		case	xatParseError
+enum	Dyld.AppleArchive.ValidationState			
+enum	Dyld.AppleArchive.ValidationState		case	unvalidated
+enum	Dyld.AppleArchive.ValidationState		case	nonvalidating
+enum	Dyld.AppleArchive.ValidationState		case	validated
+enum	Dyld.AppleArchive.ValidationState		case	validatationFailed
+struct	Dyld.PreferredAddress			
+struct	Dyld.PreferredAddress		let	value
+struct	Dyld.RebasedAddress			
+struct	Dyld.RebasedAddress		let	value
+struct	Dyld.Slide			
+struct	Dyld.Slide		let	value
+class	Dyld.Image.Impl			
+class	Dyld.Image.Impl		var	info
+class	Dyld.Image.Impl		var	lazy
+class	Dyld.AOTImage.Impl			
+class	Dyld.AOTImage.Impl		var	info
+class	Dyld.Segment.Impl			
+class	Dyld.Segment.Impl		var	info
+class	Dyld.Environment.Impl			
+class	Dyld.Environment.Impl		var	info
+class	Dyld.SharedCache.Impl			
+class	Dyld.SharedCache.Impl		var	info
+class	Dyld.SharedCache.Impl		var	lazy
+class	Dyld.SharedCache.Impl		var	lazy
+class	Dyld.SharedCache.Impl		var	lazy
+class	Dyld.SharedCache.Impl		var	lazy
+class	Dyld.SharedCache.Impl		var	lazy
+class	Dyld.SharedCache.ProcessRecord.Impl			
+class	Dyld.SharedCache.ProcessRecord.Impl		var	info
+class	Dyld.SharedCache.ProcessRecord.Impl		var	lazy
+class	Dyld.SubCache.Impl			
+class	Dyld.SubCache.Impl		var	info
+class	Dyld.Snapshot.Impl			
+class	Dyld.Snapshot.Impl		var	info
+class	Dyld.Snapshot.Impl		var	lazy
+class	Dyld.Snapshot.Impl		var	lazy
+class	Dyld.Snapshot.Impl		var	lazy
+class	Dyld.Snapshot.Impl		var	lazy
+class	Dyld.Snapshot.Impl		var	lazy
+class	Dyld.Snapshot.Impl		var	lazy
+class	Dyld.Process.Impl			
+class	Dyld.Process.Impl		var	notifierClients
+class	Dyld.Process.Impl		var	updateClients
+class	Dyld.Process.Impl		let	task
+class	Dyld.Process.Impl		var	notifierState
+class	Dyld.Process.Impl		var	_queue
+class	Dyld.Process.Impl		var	currentId
+class	Dyld.Process.Impl		var	currentSnapshot
+class	Dyld.Process.Impl.ProcessNotifierRecord			
+class	Dyld.Process.Impl.ProcessNotifierRecord		let	block
+class	Dyld.Process.Impl.ProcessNotifierRecord		let	event
+class	Dyld.Process.Impl.ProcessNotifierRecord		var	active
+class	Dyld.Process.Impl.ProcessUpdateRecord			
+class	Dyld.Process.Impl.ProcessUpdateRecord		let	block
+class	Dyld.Process.Impl.ProcessUpdateRecord		var	active
+class	Dyld.Bitmap			
+class	Dyld.Bitmap		let	buffer
+enum	Dyld.Process.Impl.NotifierState			
+enum	Dyld.Process.Impl.NotifierState		case	connected
+enum	Dyld.Process.Impl.NotifierState		case	disconnecting
+enum	Dyld.Process.Impl.NotifierState		case	failing
+enum	Dyld.Process.Impl.NotifierState		case	failed
+enum	Dyld.Process.Impl.NotifierState		case	disconnected
+struct	Dyld.SharedCache.ProcessRecord			
+enum	Dyld.AtlasError			
+enum	Dyld.AtlasError		case	machError
+enum	Dyld.AtlasError		case	bplistError
+enum	Dyld.AtlasError		case	machOError
+enum	Dyld.AtlasError		case	aarDecoderError
+enum	Dyld.AtlasError		case	missingRequiredPlistField
+enum	Dyld.AtlasError		case	vmReadTooSmall
+enum	Dyld.AtlasError		case	taskInfoFormatUnknown
+enum	Dyld.AtlasError		case	motMachOError
+enum	Dyld.AtlasError		case	schemaValidationError
+enum	Dyld.AtlasError		case	truncatedVMRead
+enum	Dyld.AtlasError		case	truncatedUuid
+enum	Dyld.AtlasError		case	truncatedData
+enum	Dyld.AtlasError		case	missingPlist
+enum	Dyld.AtlasError		case	missingAddressField
+enum	Dyld.AtlasError		case	missingFileError
+enum	Dyld.AtlasError		case	memoryUpdateError
+enum	Dyld.AtlasError		case	scavangerFailed
+enum	Dyld.AtlasError		case	stateMachineError
+struct	Dyld.AtlasCache			
+struct	Dyld.AtlasCache		var	state
+struct	Dyld.AtlasCache.State			
+struct	Dyld.AtlasCache.State		var	uuidMap
+struct	Dyld.AtlasCache.State		var	pathMap
+class	Dyld.Snapshot.DecoderContext			
+class	Dyld.Snapshot.DecoderContext		var	_sharedCachePath
+class	Dyld.Snapshot.DecoderContext		var	_sharedCacheUuid
+class	Dyld.Snapshot.DecoderContext		var	_sharedCacheBitmap
+class	Dyld.Snapshot.DecoderContext		var	lazy
+class	Dyld.Snapshot.DecoderContext		var	cacheInfoLoaded
+class	Dyld.Snapshot.DecoderContext		let	snapshotAtlasBuffer
+class	Dyld.Snapshot.DecoderContext		let	snapshotPreValidated
+class	Dyld.Snapshot.DecoderContext		var	sharedCacheAtlasBuffer
+class	Dyld.Snapshot.DecoderContext		var	mappers
+class	Dyld.Snapshot.DecoderContext		var	lazy
+class	Dyld.Snapshot.DecoderContext		var	lazy
+class	Dyld.Snapshot.DecoderContext		var	forceCacheScavenge
+class	Dyld.Snapshot.DecoderContext		var	_sharedCache
+class	Dyld.Snapshot.DecoderContext		var	_snapshot
+class	Dyld.Snapshot.DecoderContext		var	lazy
+class	Dyld.Snapshot.DecoderContext		var	lazy
+class	Dyld.Snapshot.DecoderContext		var	lazy
+class	Dyld.Snapshot.DecoderContext		var	pinnedMappingRefCount
+class	Dyld.Snapshot.DecoderContext		var	pinnedMapMemoryBuffer
+class	Dyld.Snapshot.DecoderContext		var	pinnedCacheMemoryMap
+struct	Dyld.SubCacheMapping.ValidatorKeys			
+struct	Dyld.SubCacheMapping.ValidatorKeys		let	rawValue
+struct	Dyld.SubCacheMapping			
+struct	Dyld.Snapshot.Impl.ValidatorKeys			
+struct	Dyld.Snapshot.Impl.ValidatorKeys		let	rawValue
+struct	Dyld.Environment.Impl.ValidatorKeys			
+struct	Dyld.Environment.Impl.ValidatorKeys		let	rawValue
+struct	Dyld.SharedCache.Impl.ValidatorKeys			
+struct	Dyld.SharedCache.Impl.ValidatorKeys		let	rawValue
+struct	Dyld.SharedCache.ProcessRecord.ValidatorKeys			
+struct	Dyld.SharedCache.ProcessRecord.ValidatorKeys		let	rawValue
+struct	Dyld.SubCache.Impl.ValidatorKeys			
+struct	Dyld.SubCache.Impl.ValidatorKeys		let	rawValue
+struct	Dyld.Image.Impl.ValidatorKeys			
+struct	Dyld.Image.Impl.ValidatorKeys		let	rawValue
+struct	Dyld.Segment.Impl.ValidatorKeys			
+struct	Dyld.Segment.Impl.ValidatorKeys		let	rawValue
+struct	Dyld.AOTImage.Impl.ValidatorKeys			
+struct	Dyld.AOTImage.Impl.ValidatorKeys		let	rawValue
+class	Dyld.CStringBuffer	Swift.ManagedBuffer  empty-list Int Swift.Int8		
+struct	Dyld.BPList			
+struct	Dyld.BPList		let	bytes
+struct	Dyld.BPList.UnsafeObject			
+struct	Dyld.BPList.UnsafeObject		let	buffer
+struct	Dyld.BPList.UnsafeObject		let	objectIndex
+struct	Dyld.BPList.FastString			
+struct	Dyld.BPList.FastString		let	guts
+struct	Dyld.BPList.FastString		var	_stringBuffer
+struct	Dyld.UnalignedIntArray<A	Swift.FixedWidthInteger>		
+struct	Dyld.UnalignedIntArray<A	Swift.FixedWidthInteger>	let	bytes
+enum	Dyld.BPList.FastString.Guts			
+enum	Dyld.BPList.FastString.Guts		case	asciiBuffer
+enum	Dyld.BPList.FastString.Guts		case	unicodeBuffer
+enum	Dyld.BPList.FastString.Guts		case	illegalEncoding
+enum	Dyld.BPList.FastString.Guts		case	string
+enum	Dyld.BPListError			
+enum	Dyld.BPListError		case	badMagic
+enum	Dyld.BPListError		case	invalidIntSize
+enum	Dyld.BPListError		case	truncated
+enum	Dyld.BPListError		case	expectedInteger
+enum	Dyld.BPListError		case	expectedString
+enum	Dyld.BPListError		case	expectedArray
+enum	Dyld.BPListError		case	expectedData
+enum	Dyld.BPListError		case	expectedDictionary
+struct	Dyld.UnalignedIntArray.Iterator<A	Swift.FixedWidthInteger>		
+struct	Dyld.UnalignedIntArray.Iterator<A	Swift.FixedWidthInteger>	var	bytes
+enum	Dyld.MachO			
+enum	Dyld.MachO		case	thinMachO
+enum	Dyld.MachO		case	universalMachO
+enum	Dyld.MachO.LoadCommand			
+enum	Dyld.MachO.LoadCommand		case	uuid
+enum	Dyld.MachO.LoadCommand		case	unknown
+enum	Dyld.MachOError			
+enum	Dyld.MachOError		case	badMagic
+enum	Dyld.MachOError		case	truncatedRead
+struct	Dyld.MachO.UniversalFile			
+struct	Dyld.MachO.UniversalFile		let	buffer
+struct	Dyld.MachO.UniversalFile		let	is64bit
+struct	Dyld.MachO.File			
+struct	Dyld.MachO.File		let	buffer
+struct	Dyld.MachO.File		let	endian
+struct	Dyld.MachO.File		let	is64bit
+class	Dyld.MappedFileLRUCache.Entry			
+class	Dyld.MappedFileLRUCache.Entry		let	path
+class	Dyld.MappedFileLRUCache.Entry		let	buffer
+class	Dyld.MappedFileLRUCache.Entry		let	range
+class	Dyld.MappedFileLRUCache.Entry		let	zerofillExtension
+class	Dyld.MappedFileLRUCache.Entry		var	next
+class	Dyld.MappedFileLRUCache.Entry		var	prev
+class	Dyld.MemoryBuffer			
+class	Dyld.MemoryBuffer		let	buffer
+class	Dyld.MemoryBuffer		let	deallocator
+class	Dyld.MemoryBufferNSDataBridge	NSData		
+class	Dyld.MemoryBufferNSDataBridge	NSData	let	memoryBuffer
+enum	Dyld.MemoryBuffer.Deallocator			
+enum	Dyld.MemoryBuffer.Deallocator		case	indirect
+enum	Dyld.MemoryBuffer.Deallocator		case	swiftDeallocate
+enum	Dyld.MemoryBuffer.Deallocator		case	munmap
+enum	Dyld.MemoryBuffer.Deallocator		case	free
+enum	Dyld.MemoryBuffer.Deallocator		case	vmDeallocate
+enum	Dyld.MemoryBuffer.Deallocator		case	none
+struct	Dyld.MappedFileLRUCache			
+struct	Dyld.MappedFileLRUCache		let	cache
+enum	Dyld.DecompressionError			
+enum	Dyld.DecompressionError		case	truncatedCompressedArchive
+struct	Dyld.MappedFileLRUCache.Key			
+struct	Dyld.MappedFileLRUCache.Key		let	path
+struct	Dyld.MappedFileLRUCache.Key		let	range
+struct	Dyld.MappedFileLRUCache.Key		let	zerofillExtension
+struct	Dyld.MappedFileLRUCache.CacheState			
+struct	Dyld.MappedFileLRUCache.CacheState		var	entries
+struct	Dyld.MappedFileLRUCache.CacheState		var	first
+struct	Dyld.MappedFileLRUCache.CacheState		var	last
+struct	Dyld.MappedFileLRUCache.CacheState		var	size
+class	Dyld.MachOMapper			
+class	Dyld.MachOMapper		let	address
+class	Dyld.MachOMapper		let	unsafeImageBPList
+class	Dyld.MemoryMap			
+class	Dyld.MemoryMap		var	files
+class	Dyld.MemoryMap		var	mappings
+class	Dyld.MemoryMap		var	lazy
+class	Dyld.MemoryMap		var	lazy
+class	Dyld.MemoryMap		var	lazy
+class	Dyld.MemoryMap		var	lazy
+class	Dyld.MemoryMap		var	lazy
+struct	Dyld.MemoryMap.Mapping			
+struct	Dyld.MemoryMap.Mapping		let	source
+struct	Dyld.MemoryMap.Mapping		let	sourceStart
+struct	Dyld.MemoryMap.Mapping		let	destStart
+struct	Dyld.MemoryMap.Mapping		let	size
+enum	Dyld.MemoryMapError			
+enum	Dyld.MemoryMapError		case	zeroLengthSegment
+enum	Dyld.MemoryMapError		case	inaccessibleFile
+enum	Dyld.MemoryMapError		case	outOfRange
+struct	Dyld.SharedCacheMapper			
+struct	Dyld.SharedCacheMapper		let	unsafeImageBPList
+struct	Dyld.SharedCacheMapper		let	address
+struct	Dyld.SharedCacheMapper		let	prefixPath
+enum	Dyld.MemoryMap.Mapping.Source			
+enum	Dyld.MemoryMap.Mapping.Source		case	file
+enum	Dyld.MemoryMap.Mapping.Source		case	unresolved
+enum	Dyld.MemoryMap.Mapping.Source		case	localMemory
+struct	Dyld.Snapshot			
+struct	Dyld.Snapshot		let	impl
+struct	Dyld.Image			
+struct	Dyld.Image		let	impl
+struct	Dyld.AOTImage			
+struct	Dyld.AOTImage		let	impl
+struct	Dyld.Segment			
+struct	Dyld.Segment		let	impl
+struct	Dyld.Environment			
+struct	Dyld.Environment		let	impl
+struct	Dyld.SharedCache			
+struct	Dyld.SharedCache		let	impl
+struct	Dyld.SubCache			
+struct	Dyld.SubCache		let	impl
+struct	Dyld.Process			
+struct	Dyld.Process		let	impl
+struct	Dyld.CachedCacheTextInfo			
+struct	Dyld.CachedCacheTextInfo		let	memoryMap
+struct	Dyld.CachedCacheTextInfo		let	sharedRegionStart
+struct	Dyld.CachedCacheTextInfo		let	imagesTextOffset
+struct	Dyld.CachedCacheTextInfo		let	imagesTextCount
+enum	Dyld.BufferError			
+enum	Dyld.BufferError		case	truncatedRead
+enum	Dyld.BufferError		case	stringError
+enum	Dyld.Endian			
+enum	Dyld.Endian		case	little
+enum	Dyld.Endian		case	big
+struct	Dyld.AppleArchive			
+struct	Dyld.AppleArchive		var	files
+struct	Dyld.AppleArchive		let	symlinks
+struct	Dyld.AppleArchive		let	bytes
+struct	Dyld.Snapshot.Info			
+struct	Dyld.Snapshot.Info		let	context
+struct	Dyld.Snapshot.Info		let	pid
+struct	Dyld.Snapshot.Info		let	platform
+struct	Dyld.Snapshot.Info		let	timestamp
+struct	Dyld.Snapshot.Info		let	state
+struct	Dyld.Snapshot.Info		let	initialImageCount
+struct	Dyld.Snapshot.Info		let	flags
+struct	Dyld.Snapshot.Info		let	images
+struct	Dyld.Snapshot.Info		let	aotImages
+struct	Dyld.Snapshot.Info		let	sharedCacheProcessRecord
+struct	Dyld.Snapshot.Info		let	environment
+struct	Dyld.Snapshot.Info		let	metrics
+struct	Dyld.SubCache.Info			
+struct	Dyld.SubCache.Info		let	context
+struct	Dyld.SubCache.Info		let	name
+struct	Dyld.SubCache.Info		let	uuid
+struct	Dyld.SubCache.Info		let	vmSize
+struct	Dyld.SubCache.Info		let	fileSize
+struct	Dyld.SubCache.Info		let	virtualOffset
+struct	Dyld.SubCache.Info		let	preferredLoadAddress
+struct	Dyld.SharedCache.ProcessRecord.Info			
+struct	Dyld.SharedCache.ProcessRecord.Info		let	context
+struct	Dyld.SharedCache.ProcessRecord.Info		let	uuid
+struct	Dyld.SharedCache.ProcessRecord.Info		let	address
+struct	Dyld.SharedCache.ProcessRecord.Info		let	bitmap
+struct	Dyld.SharedCache.ProcessRecord.Info		let	filePathString
+struct	Dyld.SharedCache.ProcessRecord.Info		let	aotUuid
+struct	Dyld.SharedCache.ProcessRecord.Info		let	aotAddress
+struct	Dyld.Environment.Info			
+struct	Dyld.Environment.Info		let	rootPath
+struct	Dyld.Segment.Info			
+struct	Dyld.Segment.Info		let	context
+struct	Dyld.Segment.Info		let	name
+struct	Dyld.Segment.Info		let	vmSize
+struct	Dyld.Segment.Info		let	fileSize
+struct	Dyld.Segment.Info		let	preferredAddress
+struct	Dyld.Segment.Info		let	address
+struct	Dyld.Segment.Info		let	permissions
+struct	Dyld.AOTImage.Info			
+struct	Dyld.AOTImage.Info		var	x86Address
+struct	Dyld.AOTImage.Info		var	aotAddress
+struct	Dyld.AOTImage.Info		var	aotSize
+struct	Dyld.AOTImage.Info		var	aotImageKey
+enum	Dyld.Deferrable<A	Dyld.AtlasInfo, A: ~Copyable>		
+enum	Dyld.Deferrable<A	Dyld.AtlasInfo, A: ~Copyable>	case	unresolved
+enum	Dyld.Deferrable<A	Dyld.AtlasInfo, A: ~Copyable>	case	finalized
+struct	Dyld.SharedCache.Info			
+struct	Dyld.SharedCache.Info		let	context
+struct	Dyld.SharedCache.Info		let	preferredLoadAddress
+struct	Dyld.SharedCache.Info		let	uuid
+struct	Dyld.SharedCache.Info		let	pointerSize
+struct	Dyld.SharedCache.Info		let	vmSize
+struct	Dyld.SharedCache.Info		let	localSymbolsUuid
+struct	Dyld.SharedCache.Info		let	localSymbolsFileName
+struct	Dyld.SharedCache.Info		let	images
+struct	Dyld.SharedCache.Info		let	subCaches
+struct	Dyld.Image.Info			
+struct	Dyld.Image.Info		let	context
+struct	Dyld.Image.Info		let	uuid
+struct	Dyld.Image.Info		var	filePath
+struct	Dyld.Image.Info		var	installname
+struct	Dyld.Image.Info		let	preferredAddress
+struct	Dyld.Image.Info		let	address
+struct	Dyld.Image.Info		let	sharedCache
+struct	Dyld.Image.Info		let	segments
+struct	Dyld.MachTask			
+struct	Dyld.MachTask		let	port
+protocol	Dyld.FixedWidthBitwiseCopyableInteger			
+protocol	Dyld.Address			
+protocol	Dyld.AtlasImpl			
+protocol	Dyld.AtlasInfo	Context		
+protocol	Dyld.AtlasSchemaValidator	ValidatorKeys		
+protocol	Dyld.BPListErrorWrapper			
+protocol	Dyld.Mapper			
+protocol	Dyld.ConvertibleFromBufferError			
+protocol	conformance Swift.UInt8	Dyld.FixedWidthBitwiseCopyableInteger		
+protocol	conformance Swift.UInt16	Dyld.FixedWidthBitwiseCopyableInteger		
+protocol	conformance Swift.UInt32	Dyld.FixedWidthBitwiseCopyableInteger		
+protocol	conformance Swift.UInt64	Dyld.FixedWidthBitwiseCopyableInteger		
+protocol	conformance Dyld.AARDecoderError	Swift.Equatable		
+protocol	conformance __C.SnapshotFlags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance __C.SnapshotFlags	Swift.Equatable		
+protocol	conformance __C.SnapshotFlags	Swift.RawRepresentable		
+protocol	conformance __C.SnapshotFlags	Swift.SetAlgebra		
+protocol	conformance __C.SnapshotFlags	Swift.OptionSet		
+protocol	conformance Dyld.AARDecoderError	Swift.Error		
+protocol	conformance Dyld.PreferredAddress	Dyld.Address		
+protocol	conformance Dyld.PreferredAddress	Swift.Comparable		
+protocol	conformance Dyld.PreferredAddress	Swift.Strideable		
+protocol	conformance Dyld.PreferredAddress	Swift.CustomStringConvertible		
+protocol	conformance Dyld.PreferredAddress	Swift.Hashable		
+protocol	conformance Dyld.PreferredAddress	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance Dyld.PreferredAddress	Swift.Equatable		
+protocol	conformance Dyld.RebasedAddress	Dyld.Address		
+protocol	conformance Dyld.RebasedAddress	Swift.Comparable		
+protocol	conformance Dyld.RebasedAddress	Swift.Strideable		
+protocol	conformance Dyld.RebasedAddress	Swift.CustomStringConvertible		
+protocol	conformance Dyld.RebasedAddress	Swift.Hashable		
+protocol	conformance Dyld.RebasedAddress	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance Dyld.RebasedAddress	Swift.Equatable		
+protocol	conformance Dyld.Slide	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance Dyld.AtlasError	Dyld.BPListErrorWrapper		
+protocol	conformance AOTImage.Info	Dyld.AtlasInfo		
+protocol	conformance Segment.Info	Dyld.AtlasInfo		
+protocol	conformance Environment.Info	Dyld.AtlasInfo		
+protocol	conformance Snapshot.Info	Dyld.AtlasInfo		
+protocol	conformance Snapshot.Impl	Dyld.AtlasImpl		
+protocol	conformance SubCache.Impl	Dyld.AtlasImpl		
+protocol	conformance SubCache.Info	Dyld.AtlasInfo		
+protocol	conformance ProcessRecord.Impl	Dyld.AtlasImpl		
+protocol	conformance ProcessRecord.Info	Dyld.AtlasInfo		
+protocol	conformance SharedCache.Impl	Dyld.AtlasImpl		
+protocol	conformance SharedCache.Info	Dyld.AtlasInfo		
+protocol	conformance Environment.Impl	Dyld.AtlasImpl		
+protocol	conformance AOTImage.Impl	Dyld.AtlasImpl		
+protocol	conformance Image.Info	Dyld.AtlasInfo		
+protocol	conformance Image.Impl	Swift.Equatable		
+protocol	conformance Image.Impl	Swift.Hashable		
+protocol	conformance Dyld.AtlasError	Foundation.CustomNSError		
+protocol	conformance Dyld.AtlasError	Swift.Error		
+protocol	conformance Dyld.AOTImage.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.Segment.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.Image.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.SubCache.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.SharedCache.ProcessRecord	Dyld.AtlasSchemaValidator		
+protocol	conformance ProcessRecord.ValidatorKeys	Swift.OptionSet		
+protocol	conformance ProcessRecord.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance ProcessRecord.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance ProcessRecord.ValidatorKeys	Swift.Equatable		
+protocol	conformance ProcessRecord.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.SharedCache.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.Environment.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.Snapshot.Impl	Dyld.AtlasSchemaValidator		
+protocol	conformance Impl.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Impl.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance Impl.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Impl.ValidatorKeys	Swift.Equatable		
+protocol	conformance Impl.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance Dyld.SubCacheMapping	Dyld.AtlasSchemaValidator		
+protocol	conformance SubCacheMapping.ValidatorKeys	Swift.ExpressibleByArrayLiteral		
+protocol	conformance SubCacheMapping.ValidatorKeys	Swift.Equatable		
+protocol	conformance SubCacheMapping.ValidatorKeys	Swift.RawRepresentable		
+protocol	conformance SubCacheMapping.ValidatorKeys	Swift.SetAlgebra		
+protocol	conformance SubCacheMapping.ValidatorKeys	Swift.OptionSet		
+protocol	conformance Dyld.BPListError	Dyld.BPListErrorWrapper		
+protocol	conformance Dyld.BPListError	Swift.Equatable		
+protocol	conformance Dyld.UnalignedIntArray	Swift.Sequence		
+protocol	conformance UnalignedIntArray.Iterator	Swift.IteratorProtocol		
+protocol	conformance Dyld.UnalignedIntArray	Swift.Collection		
+protocol	conformance Dyld.BPListError	Swift.Error		
+protocol	conformance Dyld.MachOError	Swift.Error		
+protocol	conformance MappedFileLRUCache.Key	Swift.Equatable		
+protocol	conformance MappedFileLRUCache.Key	Swift.Hashable		
+protocol	conformance Dyld.DecompressionError	Swift.Hashable		
+protocol	conformance Dyld.DecompressionError	Swift.Equatable		
+protocol	conformance Dyld.DecompressionError	Swift.Error		
+protocol	conformance Dyld.MachOMapper	Dyld.Mapper		
+protocol	conformance Dyld.SharedCacheMapper	Dyld.Mapper		
+protocol	conformance Dyld.MemoryMapError	Swift.Error		
+protocol	conformance Dyld.BufferError	Dyld.ConvertibleFromBufferError		
+protocol	conformance Dyld.BufferError	Swift.Equatable		
+protocol	conformance Dyld.BufferError	Swift.Error		
+protocol	conformance Dyld.Endian	Swift.Hashable		
+protocol	conformance Dyld.Endian	Swift.Equatable		
+extension	Dyld.PreferredAddress	Strideable		
+extension	Dyld.PreferredAddress	ExpressibleByIntegerLiteral		
+extension	Dyld.RebasedAddress	Strideable		
+extension	Dyld.RebasedAddress	ExpressibleByIntegerLiteral		
+extension	Dyld.Slide	ExpressibleByIntegerLiteral		
+extension	Dyld.AOTImage.Info	AtlasInfo		
+extension	Dyld.Segment.Info	AtlasInfo		
+extension	Dyld.Environment.Info	AtlasInfo		
+extension	Dyld.Snapshot.Info	AtlasInfo		
+extension	Dyld.SubCache.Info	AtlasInfo		
+extension	Dyld.SharedCache.ProcessRecord.Info	AtlasInfo		
+extension	Dyld.SharedCache.Info	AtlasInfo		
+extension	Dyld.Image.Info	AtlasInfo		
+extension	Dyld.AOTImage.Impl	AtlasSchemaValidator		
+extension	Dyld.AOTImage.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.AOTImage.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.AOTImage.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.AOTImage.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.Segment.Impl	AtlasSchemaValidator		
+extension	Dyld.Segment.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.Segment.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.Segment.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.Segment.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.Image.Impl	AtlasSchemaValidator		
+extension	Dyld.Image.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.Image.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.Image.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.Image.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.SubCache.Impl	AtlasSchemaValidator		
+extension	Dyld.SubCache.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.SubCache.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.SubCache.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.SubCache.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.SharedCache.ProcessRecord	AtlasSchemaValidator		
+extension	Dyld.SharedCache.ProcessRecord.ValidatorKeys	OptionSet		
+extension	Dyld.SharedCache.ProcessRecord.ValidatorKeys	SetAlgebra		
+extension	Dyld.SharedCache.ProcessRecord.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.SharedCache.ProcessRecord.ValidatorKeys	RawRepresentable		
+extension	Dyld.SharedCache.Impl	AtlasSchemaValidator		
+extension	Dyld.SharedCache.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.SharedCache.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.SharedCache.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.SharedCache.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.Environment.Impl	AtlasSchemaValidator		
+extension	Dyld.Environment.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.Environment.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.Environment.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.Environment.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.Snapshot.Impl	AtlasSchemaValidator		
+extension	Dyld.Snapshot.Impl.ValidatorKeys	OptionSet		
+extension	Dyld.Snapshot.Impl.ValidatorKeys	SetAlgebra		
+extension	Dyld.Snapshot.Impl.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.Snapshot.Impl.ValidatorKeys	RawRepresentable		
+extension	Dyld.SubCacheMapping	AtlasSchemaValidator		
+extension	Dyld.SubCacheMapping.ValidatorKeys	ExpressibleByArrayLiteral		
+extension	Dyld.SubCacheMapping.ValidatorKeys	RawRepresentable		
+extension	Dyld.SubCacheMapping.ValidatorKeys	SetAlgebra		
+extension	Dyld.SubCacheMapping.ValidatorKeys	OptionSet		
+extension	Dyld.UnalignedIntArray	Sequence		
+extension	Dyld.UnalignedIntArray.Iterator	IteratorProtocol		
+extension	Dyld.UnalignedIntArray	Collection		

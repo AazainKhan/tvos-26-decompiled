@@ -1,0 +1,64 @@
+kind	type	conformance	member_kind	member
+class	UnilogInstrumentation.BiomeStorage			
+class	UnilogInstrumentation.BiomeStorage		let	writer
+class	UnilogInstrumentation.BiomeWriter			
+class	UnilogInstrumentation.BiomeWriter		let	sourceWrapper
+class	UnilogInstrumentation.InMemoryStorage			
+class	UnilogInstrumentation.InMemoryStorage		let	events
+class	UnilogInstrumentation.LogStorage			
+class	UnilogInstrumentation.LogStorage		let	logger
+class	UnilogInstrumentation.LogStorage		let	events
+struct	UnilogInstrumentation.InstrumentationContext			
+struct	UnilogInstrumentation.InstrumentationContext		let	clientRaw
+struct	UnilogInstrumentation.InstrumentationContext		let	storage
+struct	UnilogInstrumentation.InstrumentationContext		var	trace
+struct	UnilogInstrumentation.InstrumentationContext		var	span
+enum	UnilogInstrumentation.InstrumentationContext.CodingKeys			
+enum	UnilogInstrumentation.InstrumentationContext.CodingKeys		case	clientRaw
+enum	UnilogInstrumentation.InstrumentationContext.CodingKeys		case	spanId
+enum	UnilogInstrumentation.InstrumentationContext.CodingKeys		case	parentSpanId
+enum	UnilogInstrumentation.InstrumentationContext.CodingKeys		case	traceId
+class	UnilogInstrumentation.Trace			
+class	UnilogInstrumentation.Trace		let	id
+class	UnilogInstrumentation.Trace		let	storage
+class	UnilogInstrumentation.Trace		let	hasEnded
+class	UnilogInstrumentation.Trace		let	deserialized
+class	UnilogInstrumentation.Span			
+class	UnilogInstrumentation.Span		let	id
+class	UnilogInstrumentation.Span		let	traceID
+class	UnilogInstrumentation.Span		let	parent
+class	UnilogInstrumentation.Span		let	name
+class	UnilogInstrumentation.Span		let	storage
+class	UnilogInstrumentation.Span		let	hasEnded
+class	UnilogInstrumentation.Span		let	deserialized
+struct	UnilogInstrumentation.SpanId			
+struct	UnilogInstrumentation.SpanId		let	value
+enum	UnilogInstrumentation.SpanId.CodingKeys			
+enum	UnilogInstrumentation.SpanId.CodingKeys		case	value
+protocol	ExternalSchemaStreamSource			
+protocol	UnilogInstrumentation.UnilogStorage			
+protocol	conformance BiomeWriter	Swift.Actor		
+protocol	conformance UnilogInstrumentation.BiomeStorage	UnilogInstrumentation.UnilogStorage		
+protocol	conformance SourceWrapper	UnilogInstrumentation.ExternalSchemaStreamSource		
+protocol	conformance UnilogInstrumentation.InMemoryStorage	UnilogInstrumentation.UnilogStorage		
+protocol	conformance UnilogInstrumentation.LogStorage	UnilogInstrumentation.UnilogStorage		
+protocol	conformance UnilogInstrumentation.InstrumentationContext	Swift.Decodable		
+protocol	conformance UnilogInstrumentation.InstrumentationContext	Swift.Encodable		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.CaseIterable		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.RawRepresentable		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.Hashable		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.Equatable		
+protocol	conformance InstrumentationContext.CodingKeys	Swift.CodingKey		
+protocol	conformance UnilogInstrumentation.SpanId	Swift.Hashable		
+protocol	conformance UnilogInstrumentation.SpanId	Swift.Decodable		
+protocol	conformance UnilogInstrumentation.SpanId	Swift.Encodable		
+protocol	conformance UnilogInstrumentation.SpanId	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	UnilogInstrumentation.InstrumentationContext.CodingKeys	CaseIterable		
+extension	UnilogInstrumentation.InstrumentationContext.CodingKeys	RawRepresentable		

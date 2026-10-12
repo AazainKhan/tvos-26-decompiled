@@ -1,0 +1,86 @@
+kind	name	superclass	protocols
+category	NSArray(SKTask)		
+category	NSXPCConnection(StorageKit)		
+category	SKAPFSContainerDisk(Daemon)		
+category	SKAPFSDisk(Daemon)		
+category	SKAPFSSnapshotDisk(Daemon)		
+category	SKAPFSStoreDisk(Daemon)		
+category	SKDisk(DaemonAdditions)		
+category	SKEraseDisk(Daemon)		SKEraserProtocol
+category	SKEraseVolume(Daemon)		SKEraserProtocol
+category	SKFilesystem(Daemon)		
+category	SKPartitionDescriptor(Daemon)		
+category	SKVolumeDescriptor(Daemon)		
+interface	FSClient	NSObject	
+interface	FSMessageReceiver	NSObject	
+interface	SKBaseDiskArbOperation	SKManagerOperation	
+interface	SKBlockDevice	SKIOObject	
+interface	SKDaemon	NSObject	NSXPCListenerDelegate
+interface	SKDaemonConnection	NSObject	SKManagerListener,SKDaemonConnectionProtocol
+interface	SKDaemonManager	SKBaseManager	SKDaemonProtocol
+interface	SKDeleteAPFSVolumeOperation	SKManagerOperation	
+interface	SKDiskNotificationWaiter	NSObject	
+interface	SKDiskOperations	NSObject	
+interface	SKDiskPrivateCache	NSObject	
+interface	SKDiskResizerBase	NSObject	
+interface	SKEjectOperation	SKBaseDiskArbOperation	
+interface	SKEraseOperation	SKManagerOperation	
+interface	SKFSTaskMessageHandler	NSObject	FSTaskMessageOperations
+interface	SKFSTaskPair	NSObject	
+interface	SKFSTaskPairsWaiter	NSObject	SKWaitable
+interface	SKFilesystemCreator	NSObject	NSProgressReporting
+interface	SKFilesystemMaintainer	NSObject	NSProgressReporting
+interface	SKGenericOperation	SKManagerOperation	
+interface	SKIOIterator	SKIOObject	
+interface	SKIOMedia	SKIOObject	
+interface	SKIOObject	NSObject	
+interface	SKLastPartitionResizer	SKDiskResizerBase	
+interface	SKLastPartitions	NSObject	
+interface	SKManagerOperation	NSObject	
+interface	SKMediaKit	NSObject	
+interface	SKMediaKitFSInfo	NSObject	
+interface	SKMountOperation	SKBaseDiskArbOperation	
+interface	SKMountState	NSObject	
+interface	SKMultiSerialQueue	NSObject	
+interface	SKNotificationsCache	NSObject	
+interface	SKPartition	NSObject	
+interface	SKPartitionTable	NSObject	
+interface	SKProgress	NSProgress	
+interface	SKProgressObserver	NSObject	
+interface	SKRemoteAPFSFormatTask	NSObject	SKWaitable,SKRemoteTaskDataProtocol,NSProgressReporting
+interface	SKRemoteTaskExecuter	NSObject	SKWaitable
+interface	SKRenameOperation	SKBaseDiskArbOperation	
+interface	SKResizeOperation	SKManagerOperation	
+interface	SKStateMachine	NSObject	
+interface	SKStateTransitionEntry	NSObject	
+interface	SKStateTransitionTable	NSObject	
+interface	SKTask	NSObject	SKWaitable,NSProgressReporting
+interface	SKTaskExecuter	NSObject	SKWaitable
+interface	SKTaskLineParser	NSObject	SKTaskDataParser
+interface	SKTaskNOOPParser	NSObject	SKTaskDataParser
+interface	SKTaskPlistParser	NSObject	SKTaskDataParser
+interface	SKTaskRawParser	NSObject	SKTaskDataParser
+interface	SKUnmountOperation	SKBaseDiskArbOperation	
+interface	SKVolume	NSObject	
+interface	SKWaitableAggregate	NSObject	SKWaitable
+protocol	FSTaskMessageOperations		NSObject
+protocol	NSCoding		
+protocol	NSObject		
+protocol	NSProgressReporting		NSObject
+protocol	NSSecureCoding		NSCoding
+protocol	NSXPCListenerDelegate		NSObject
+protocol	OS_dispatch_group		
+protocol	OS_dispatch_queue		
+protocol	OS_dispatch_semaphore		
+protocol	OS_dispatch_source		
+protocol	SKDaemonCompletionProtocol		NSObject
+protocol	SKDaemonConnectionProtocol		NSObject
+protocol	SKDaemonProtocol		NSObject
+protocol	SKEraserProtocol		NSSecureCoding
+protocol	SKHelperClientProtocol		SKProgressHandler,SKDaemonCompletionProtocol,SKManagerListener
+protocol	SKManagerListener		NSObject
+protocol	SKProgressHandler		NSObject
+protocol	SKRemoteTaskDataProtocol		
+protocol	SKRemoteTaskRunnerProtocol		
+protocol	SKTaskDataParser		NSObject
+protocol	SKWaitable		

@@ -1,0 +1,87 @@
+kind	type	conformance	member_kind	member
+class	SiriTurnRestatement.CalculatorErrorMetricSubmitter			
+class	SiriTurnRestatement.CalculatorErrorMetricSubmitter		let	logger
+enum	SiriTurnRestatement.SiriTurnRestatementFeatureFlags			
+enum	SiriTurnRestatement.SiriTurnRestatementFeatureFlags		case	runOnAllPlatforms
+class	SiriTurnRestatement.SanitizedTextExtractor			
+class	SiriTurnRestatement.SanitizedTextExtractor		let	turnTextExtractor
+class	SiriTurnRestatement.SanitizedTextExtractor		let	turnTextValidator
+class	SiriTurnRestatement.SanitizedTextExtractor		let	turnLanguageCodeReader
+class	SiriTurnRestatement.SanitizedTextExtractor		let	turnTextSanitizer
+enum	SiriTurnRestatement.SiriTurnRestatementError			
+enum	SiriTurnRestatement.SiriTurnRestatementError		case	userDefaultsInit
+enum	SiriTurnRestatement.SiriTurnRestatementError		case	reportFBF
+class	SiriTurnRestatement.SiriTurnRestatementPlugin			
+class	SiriTurnRestatement.SiriTurnRestatementPlugin		let	logger
+class	SiriTurnRestatement.SiriTurnRestatementPlugin		let	dataProvider
+class	SiriTurnRestatement.SiriTurnRestatementPlugin		let	calculator
+class	SiriTurnRestatement.SiriTurnRestatementPlugin		let	reporter
+class	SiriTurnRestatement.SiriTurnRestatementCalculator			
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	maxSeconds
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	maxConsecutiveTurns
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	logger
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	calendar
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	bookmarkService
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	similarityScorer
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	sanitizedTextExtractor
+class	SiriTurnRestatement.SiriTurnRestatementCalculator		let	errorMetricSubmitter
+struct	SiriTurnRestatement.SiriTurnRestatementDataRecord			
+struct	SiriTurnRestatement.SiriTurnRestatementDataRecord		let	featurizedConversationData
+class	SiriTurnRestatement.SiriTurnRestatementDataProvider			
+class	SiriTurnRestatement.SiriTurnRestatementDataProvider		let	logger
+class	SiriTurnRestatement.SiriTurnRestatementDataProvider		let	bookmarkService
+class	SiriTurnRestatement.SiriTurnRestatementDataProvider		let	dimFeatureExtractor
+class	SiriTurnRestatement.SiriTurnRestatementDataProvider		let	ueiFeatureExtractor
+class	SiriTurnRestatement.SiriTurnRestatementSELFReporter			
+class	SiriTurnRestatement.SiriTurnRestatementSELFReporter		let	feedbackLogger
+class	SiriTurnRestatement.SiriTurnRestatementSELFReporter		let	logger
+class	SiriTurnRestatement.TurnLanguageCodeReader			
+enum	SiriTurnRestatement.TurnRestatementError			
+enum	SiriTurnRestatement.TurnRestatementError		case	nilText
+enum	SiriTurnRestatement.TurnRestatementError		case	emptyText
+enum	SiriTurnRestatement.TurnRestatementError		case	sanitizedTextEmpty
+enum	SiriTurnRestatement.TurnRestatementError		case	failedToEmbedUtterances
+enum	SiriTurnRestatement.TurnRestatementError		case	failedToComputeCosineSimilarity
+struct	SiriTurnRestatement.TurnRestatementScores			
+struct	SiriTurnRestatement.TurnRestatementScores		let	currentTurnId
+struct	SiriTurnRestatement.TurnRestatementScores		let	nextTurnId
+struct	SiriTurnRestatement.TurnRestatementScores		let	utteranceRestatementScore
+struct	SiriTurnRestatement.TurnRestatementScores		let	semanticSimilarityScore
+struct	SiriTurnRestatement.TurnRestatementReportBatch			
+struct	SiriTurnRestatement.TurnRestatementReportBatch		let	clockId
+struct	SiriTurnRestatement.TurnRestatementReportBatch		let	clockTimestampSince1970
+struct	SiriTurnRestatement.TurnRestatementReportBatch		var	restatementScores
+struct	SiriTurnRestatement.SiriTurnRestatementResult			
+struct	SiriTurnRestatement.SiriTurnRestatementResult		var	restatementReportBatches
+struct	SiriTurnRestatement.SiriTurnRestatementResult		let	eventStreamMetadata
+struct	SiriTurnRestatement.SiriTurnRestatementResult		let	conversationStreamMetadata
+class	SiriTurnRestatement.TurnTextExtractor			
+class	SiriTurnRestatement.TurnTextSanitizer			
+class	SiriTurnRestatement.TurnTextValidator			
+protocol	SiriTurnRestatement.SimilarityScoring			
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementFeatureFlags	Swift.Equatable		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementFeatureFlags	Swift.Hashable		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance DeepThoughtBiomeFoundation.SemanticSimilarityScorer	SiriTurnRestatement.SimilarityScoring		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementError	Swift.Equatable		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementError	Swift.Hashable		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementError	Swift.Error		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementPlugin	lighthouse_runtime.LighthousePlugin		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementPlugin	lighthouse_runtime.DataProvider		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementPlugin	lighthouse_runtime.Worker		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementPlugin	lighthouse_runtime.Reporter		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementDataRecord	lighthouse_runtime.DataRecord		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementDataProvider	lighthouse_runtime.DataProvider		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementSELFReporter	lighthouse_runtime.Reporter		
+protocol	conformance SiriTurnRestatement.TurnRestatementError	Swift.RawRepresentable		
+protocol	conformance SiriTurnRestatement.TurnRestatementError	Swift.Hashable		
+protocol	conformance SiriTurnRestatement.TurnRestatementError	Swift.Equatable		
+protocol	conformance SiriTurnRestatement.TurnRestatementError	Swift.Error		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementResult	DeepThought.BookmarkedResult		
+protocol	conformance SiriTurnRestatement.SiriTurnRestatementResult	lighthouse_runtime.Result		
+extension	SiriTurnRestatement.SiriTurnRestatementPlugin	DataProvider		
+extension	SiriTurnRestatement.SiriTurnRestatementPlugin	Worker		
+extension	SiriTurnRestatement.SiriTurnRestatementPlugin	Reporter		
+extension	SiriTurnRestatement.SiriTurnRestatementDataProvider	DataProvider		
+extension	SiriTurnRestatement.SiriTurnRestatementSELFReporter	Reporter		
+extension	SiriTurnRestatement.TurnRestatementError	RawRepresentable		

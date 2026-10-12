@@ -1,0 +1,14 @@
+owner	kind	declaration
+AdBlocker	-	- (id)init;
+AdBlocker	-	- (id)initWithAudioFormat:(id)format;
+AdBlocker	-	- (long long)processAndMatchAdsWithAudioBufferPointer:(void *)pointer numSamples:(int)samples;
+AdBlocker	-	- (long long)processAndMatchAdsWithAudioData:(id)data;
+AdBlocker	-	- (long long)processFloatAndMatchAdsWithAudioData:(id)data;
+AdBlocker	-	- (long long)setAssetWithAssetPath:(id)path;
+AdBlocker	-	- (void)session:(id)session didFindMatch:(id)match;
+AdBlocker	-	- (void)setDelegateWithDelegate:(id)delegate;
+AdBlocker	property	@property (nonatomic) float maxFingerprintBufferSize;
+AdBlocker	property	@property (nonatomic, copy) NSString *assetVersion;
+SHSessionDelegate	-	- (void)session:(id)session didFindMatch:(id)match;
+SHSessionDelegate	-	- (void)session:(id)session didNotFindMatchForSignature:(id)signature error:(id)error;
+_TtP9AdBlocker17AdBlockerDelegate_	-	- (void)adBlockerDidMatch:(id)match;

@@ -1,0 +1,73 @@
+kind	type	conformance	member_kind	member
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	Distributed.RemoteCallTarget			
+struct	Distributed.RemoteCallTarget		let	_identifier
+struct	Distributed.RemoteCallArgument			
+struct	Distributed.RemoteCallArgument		let	label
+struct	Distributed.RemoteCallArgument		let	name
+struct	Distributed.RemoteCallArgument		let	value
+struct	Distributed.ExecuteDistributedTargetError			
+struct	Distributed.ExecuteDistributedTargetError		let	errorCode
+struct	Distributed.ExecuteDistributedTargetError		let	message
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode			
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode		case	targetAccessorNotFound
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode		case	invalidParameterCount
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode		case	missingGenericSubstitutions
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode		case	invalidGenericSubstitutions
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode		case	typeDeserializationFailure
+enum	Distributed.ExecuteDistributedTargetError.ErrorCode		case	other
+struct	Distributed.DistributedActorCodingError			
+struct	Distributed.DistributedActorCodingError		let	message
+class	Distributed.DistributedRemoteActorReferenceExecutor			
+class	Distributed.LocalTestingDistributedActorSystem			
+class	Distributed.LocalTestingDistributedActorSystem		var	activeActors
+class	Distributed.LocalTestingDistributedActorSystem		let	activeActorsLock
+class	Distributed.LocalTestingDistributedActorSystem		var	idProvider
+class	Distributed.LocalTestingDistributedActorSystem		var	assignedIDs
+class	Distributed.LocalTestingDistributedActorSystem		let	assignedIDsLock
+struct	Distributed.LocalTestingActorID			
+struct	Distributed.LocalTestingActorID		let	id
+struct	Distributed.LocalTestingInvocationEncoder			
+class	Distributed.LocalTestingInvocationDecoder			
+struct	Distributed.LocalTestingInvocationResultHandler			
+struct	Distributed.LocalTestingDistributedActorSystemError			
+struct	Distributed.LocalTestingDistributedActorSystemError		let	message
+class	Distributed._Lock			
+class	Distributed._Lock		let	underlying
+struct	Distributed.LocalTestingDistributedActorSystem.ActorIDProvider			
+struct	Distributed.LocalTestingDistributedActorSystem.ActorIDProvider		var	counter
+struct	Distributed.LocalTestingDistributedActorSystem.ActorIDProvider		let	counterLock
+protocol	Distributed.DistributedActor	ActorSystem, SerializationRequirement		
+protocol	Distributed._DistributedActorStub			
+protocol	Distributed.DistributedActorSystem	ActorID, InvocationEncoder, InvocationDecoder, ResultHandler, SerializationRequirement		
+protocol	Distributed.DistributedTargetInvocationEncoder	SerializationRequirement		
+protocol	Distributed.DistributedTargetInvocationDecoder	SerializationRequirement		
+protocol	Distributed.DistributedTargetInvocationResultHandler	SerializationRequirement		
+protocol	Distributed.DistributedActorSystemError			
+protocol	conformance Distributed.RemoteCallTarget	Swift.CustomStringConvertible		
+protocol	conformance Distributed.RemoteCallTarget	Swift.Hashable		
+protocol	conformance Distributed.RemoteCallTarget	Swift.Equatable		
+protocol	conformance ExecuteDistributedTargetError.ErrorCode	Swift.Equatable		
+protocol	conformance ExecuteDistributedTargetError.ErrorCode	Swift.Hashable		
+protocol	conformance Distributed.ExecuteDistributedTargetError	Distributed.DistributedActorSystemError		
+protocol	conformance Distributed.ExecuteDistributedTargetError	Swift.Error		
+protocol	conformance Distributed.DistributedActorCodingError	Distributed.DistributedActorSystemError		
+protocol	conformance Distributed.DistributedActorCodingError	Swift.Error		
+protocol	conformance Distributed.DistributedRemoteActorReferenceExecutor	Swift.SerialExecutor		
+protocol	conformance Distributed.DistributedRemoteActorReferenceExecutor	Swift.Executor		
+protocol	conformance Distributed.LocalTestingDistributedActorSystem	Distributed.DistributedActorSystem		
+protocol	conformance Distributed.LocalTestingActorID	Swift.Hashable		
+protocol	conformance Distributed.LocalTestingActorID	Swift.Decodable		
+protocol	conformance Distributed.LocalTestingActorID	Swift.Encodable		
+protocol	conformance Distributed.LocalTestingActorID	Swift.Equatable		
+protocol	conformance Distributed.LocalTestingInvocationEncoder	Distributed.DistributedTargetInvocationEncoder		
+protocol	conformance Distributed.LocalTestingInvocationDecoder	Distributed.DistributedTargetInvocationDecoder		
+protocol	conformance Distributed.LocalTestingInvocationResultHandler	Distributed.DistributedTargetInvocationResultHandler		
+protocol	conformance Distributed.LocalTestingDistributedActorSystemError	Distributed.DistributedActorSystemError		
+protocol	conformance Distributed.LocalTestingDistributedActorSystemError	Swift.Error		
+extension	Distributed.LocalTestingDistributedActorSystem	DistributedActorSystem		
+extension	Distributed.LocalTestingInvocationEncoder	DistributedTargetInvocationEncoder		
+extension	Distributed.LocalTestingInvocationDecoder	DistributedTargetInvocationDecoder		
+extension	Distributed.LocalTestingInvocationResultHandler	DistributedTargetInvocationResultHandler		

@@ -1,0 +1,943 @@
+kind	type	conformance	member_kind	member
+class	SensitiveContentAnalysisML.StandardAFMImageConverter			
+class	SensitiveContentAnalysisML.CustomAFMImageConverter			
+class	SensitiveContentAnalysisML.CustomAFMImageConverter		let	imageEncoder
+class	SensitiveContentAnalysisML.CustomAFMImageConverter		let	bridgeRequestType
+class	SensitiveContentAnalysisML.CustomAFMImageConverter		let	logger
+class	SensitiveContentAnalysisML.CustomAFMImageConverter		let	signposter
+class	SensitiveContentAnalysisML.AFMModel			
+class	SensitiveContentAnalysisML.AFMModel		let	logger
+class	SensitiveContentAnalysisML.AFMModel		let	signposter
+class	SensitiveContentAnalysisML.AFMModel		let	imageConverter
+class	SensitiveContentAnalysisML.AFMModel		let	core
+class	SensitiveContentAnalysisML.AFMModel		let	safetyConfigurationOutputReader
+struct	SensitiveContentAnalysisML.AFMModel.NoResourcePathError			
+struct	SensitiveContentAnalysisML.AFMModel.ImageConverterNotEnabled			
+struct	SensitiveContentAnalysisML.AFMModel.ImageConverterNotEnabled		let	task
+struct	SensitiveContentAnalysisML.AFMModel.LoadFailed			
+struct	SensitiveContentAnalysisML.AFMModel.LoadFailed		let	bundleID
+enum	SensitiveContentAnalysisML.AFMModel.ImageConverterNotEnabled.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.ImageConverterNotEnabled.CodingKeys		case	task
+enum	SensitiveContentAnalysisML.AFMModel.NoResourcePathError.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error		case	unrecognizedOutputType
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error		case	unrecognizedTask
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error		case	tasksMissing
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType		case	json
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType		case	standalone
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.CodingKeys		case	unrecognizedOutputType
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.CodingKeys		case	unrecognizedTask
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.CodingKeys		case	tasksMissing
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.UnrecognizedOutputTypeCodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.UnrecognizedOutputTypeCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.UnrecognizedTaskCodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.UnrecognizedTaskCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.TasksMissingCodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyOutputType.Error.TasksMissingCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.AFMModel.LoadFailed.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.LoadFailed.CodingKeys		case	bundleID
+class	SensitiveContentAnalysisML.AFMModelCore			
+class	SensitiveContentAnalysisML.AFMModelCore		let	logger
+class	SensitiveContentAnalysisML.AFMModelCore		let	signposter
+class	SensitiveContentAnalysisML.AFMModelCore		let	tokenGenerator
+class	SensitiveContentAnalysisML.AFMModelCore		let	locale
+struct	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult			
+struct	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult		let	people
+struct	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult		let	pre
+struct	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult		let	regional
+struct	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult		let	safety
+struct	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult		let	structural
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.CodingKeys		case	people
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.CodingKeys		case	pre
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.CodingKeys		case	regional
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.CodingKeys		case	safety
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.CodingKeys		case	structural
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Structural			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Structural		case	minor
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Structural		case	major
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety		case	safe
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety		case	violence
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety		case	blood
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety		case	weapon
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Regional			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Regional		case	none
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Regional		case	flag
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Regional		case	map
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Pre			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Pre		case	negative
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Pre		case	border
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Pre		case	positive
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.People			
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.People		case	zero
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.People		case	one
+enum	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.People		case	multiple
+enum	SensitiveContentAnalysisML.AFMModel.Task			
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	backgroundEstimation
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	codeSafety
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	flagsAndMaps
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	miscJSON
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	peopleCount
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	peopleDetection
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	prepubescent
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	promptRewriteVariety
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	promptRewriteReducedPHR
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	promptRewritePersonalizedVariety
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	smileyClassification
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	structuralIntegrity
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	textSafety
+enum	SensitiveContentAnalysisML.AFMModel.Task		case	violenceAndGore
+enum	SensitiveContentAnalysisML.AFMModel.Task.AfmPlusMode			
+enum	SensitiveContentAnalysisML.AFMModel.Task.AfmPlusMode		case	none
+enum	SensitiveContentAnalysisML.AFMModel.Task.AfmPlusMode		case	customized
+enum	SensitiveContentAnalysisML.AFMModel.Task.AfmPlusMode		case	standard
+struct	SensitiveContentAnalysisML.AFMModel.BundleContainsNoAdapter			
+struct	SensitiveContentAnalysisML.AFMModel.BundleContainsNoAdapter		let	bundleID
+struct	SensitiveContentAnalysisML.AFMModel.NotAnAssetBackedLLMBundle			
+struct	SensitiveContentAnalysisML.AFMModel.NotAnAssetBackedLLMBundle		let	bundleResourceURI
+struct	SensitiveContentAnalysisML.AFMModel.ResolveModelBundleFailed			
+struct	SensitiveContentAnalysisML.AFMModel.ResolveModelBundleFailed		let	bundleID
+enum	SensitiveContentAnalysisML.AFMModel.ResolveModelBundleFailed.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.ResolveModelBundleFailed.CodingKeys		case	bundleID
+enum	SensitiveContentAnalysisML.AFMModel.NotAnAssetBackedLLMBundle.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.NotAnAssetBackedLLMBundle.CodingKeys		case	bundleResourceURI
+enum	SensitiveContentAnalysisML.AFMModel.BundleContainsNoAdapter.CodingKeys			
+enum	SensitiveContentAnalysisML.AFMModel.BundleContainsNoAdapter.CodingKeys		case	bundleID
+class	SensitiveContentAnalysisML.CoherentAssetLockWrapper			
+class	SensitiveContentAnalysisML.CoherentAssetLockWrapper		let	assetLock
+struct	SensitiveContentAnalysisML.CoherentAssetLockWrapperFactory			
+class	SensitiveContentAnalysisML.CoherentLoadedAssets			
+class	SensitiveContentAnalysisML.CoherentLoadedAssets		let	resources
+class	SensitiveContentAnalysisML.CoherentLoadedAssets		let	loadAssets
+class	SensitiveContentAnalysisML.CoherentLoadedAssets		let	lockFactory
+class	SensitiveContentAnalysisML.CoherentLoadedAssets		let	semaphore
+class	SensitiveContentAnalysisML.CoherentLoadedAssets		var	lockAndData
+struct	SensitiveContentAnalysisML.CoherentLoadedAssets.LockAndData			
+struct	SensitiveContentAnalysisML.CoherentLoadedAssets.LockAndData		let	assetLock
+struct	SensitiveContentAnalysisML.CoherentLoadedAssets.LockAndData		let	loadedAssets
+class	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend			
+class	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend		let	configuration
+class	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend		let	coder
+class	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend		let	coherentAssets
+struct	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend.LoadedAssets			
+struct	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend.LoadedAssets		let	miscSafetyOutputType
+struct	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend.LoadedAssets		let	miscModel
+struct	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend.LoadedAssets		let	structuralIntegrityModel
+struct	SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend.LoadedAssets		let	prepubescentModel
+class	SensitiveContentAnalysisML.CombinedImageSanitizerBackend			
+class	SensitiveContentAnalysisML.CombinedImageSanitizerBackend		let	backends
+class	SensitiveContentAnalysisML.CombinedImageSanitizerBackend		let	config
+class	SensitiveContentAnalysisML.SCMLCombinedImageSanitizerBackend	NSObject		
+class	SensitiveContentAnalysisML.SCMLCombinedImageSanitizerBackend	NSObject	let	backend
+struct	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendError			
+struct	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendError		let	argument
+struct	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendError		var	cause
+struct	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendInitError			
+struct	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendInitError		let	argument
+struct	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendInitError		var	cause
+class	SensitiveContentAnalysisML.BackgroundEstimator			
+class	SensitiveContentAnalysisML.BackgroundEstimator		let	model
+class	SensitiveContentAnalysisML.BackgroundEstimator		let	logger
+class	SensitiveContentAnalysisML.BackgroundEstimator		let	signposter
+struct	SensitiveContentAnalysisML.BackgroundEstimator.Estimation			
+struct	SensitiveContentAnalysisML.BackgroundEstimator.Estimation		let	classifications
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Estimation.Classification			
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Estimation.Classification		case	landscape
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Estimation.CodingKeys			
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Estimation.CodingKeys		case	classifications
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error			
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error		case	parseClassification
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error		case	loadFailed
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error.CodingKeys		case	parseClassification
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error.CodingKeys		case	loadFailed
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error.ParseClassificationCodingKeys			
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error.ParseClassificationCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.BackgroundEstimator.Error.LoadFailedCodingKeys			
+class	SensitiveContentAnalysisML.PeopleCounter			
+class	SensitiveContentAnalysisML.PeopleCounter		let	logger
+class	SensitiveContentAnalysisML.PeopleCounter		let	signposter
+class	SensitiveContentAnalysisML.PeopleCounter		let	coherentAssets
+struct	SensitiveContentAnalysisML.PeopleCounter.Count			
+struct	SensitiveContentAnalysisML.PeopleCounter.Count		let	value
+enum	SensitiveContentAnalysisML.PeopleCounter.Count.Value			
+enum	SensitiveContentAnalysisML.PeopleCounter.Count.Value		case	zero
+enum	SensitiveContentAnalysisML.PeopleCounter.Count.Value		case	one
+enum	SensitiveContentAnalysisML.PeopleCounter.Count.Value		case	multiple
+class	SensitiveContentAnalysisML.SCMLPeopleCount	NSObject		
+class	SensitiveContentAnalysisML.SCMLPeopleCount	NSObject	let	count
+enum	SensitiveContentAnalysisML.PeopleCounter.Count.CodingKeys			
+enum	SensitiveContentAnalysisML.PeopleCounter.Count.CodingKeys		case	value
+struct	SensitiveContentAnalysisML.PeopleCounter.LoadedAssets			
+struct	SensitiveContentAnalysisML.PeopleCounter.LoadedAssets		let	miscSafetyOutputType
+struct	SensitiveContentAnalysisML.PeopleCounter.LoadedAssets		let	miscModel
+class	SensitiveContentAnalysisML.SmileyClassifier			
+class	SensitiveContentAnalysisML.SmileyClassifier		let	model
+class	SensitiveContentAnalysisML.SmileyClassifier		let	logger
+class	SensitiveContentAnalysisML.SmileyClassifier		let	signposter
+struct	SensitiveContentAnalysisML.SmileyClassifier.Result			
+struct	SensitiveContentAnalysisML.SmileyClassifier.Result		let	classifications
+enum	SensitiveContentAnalysisML.SmileyClassifier.Result.Classification			
+enum	SensitiveContentAnalysisML.SmileyClassifier.Result.Classification		case	smiley
+enum	SensitiveContentAnalysisML.SmileyClassifier.Result.CodingKeys			
+enum	SensitiveContentAnalysisML.SmileyClassifier.Result.CodingKeys		case	classifications
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator			
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator		let	imageEncoder
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator		let	textEncoder
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.Result			
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.Result		let	score
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch			
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch		let	a
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch		let	b
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.InvalidEmbeddingSizeError			
+struct	SensitiveContentAnalysisML.TextImageAlignmentCalculator.InvalidEmbeddingSizeError		let	bytes
+enum	SensitiveContentAnalysisML.TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch.CodingKeys			
+enum	SensitiveContentAnalysisML.TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch.CodingKeys		case	a
+enum	SensitiveContentAnalysisML.TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch.CodingKeys		case	b
+enum	SensitiveContentAnalysisML.TextImageAlignmentCalculator.InvalidEmbeddingSizeError.CodingKeys			
+enum	SensitiveContentAnalysisML.TextImageAlignmentCalculator.InvalidEmbeddingSizeError.CodingKeys		case	bytes
+class	SensitiveContentAnalysisML.MultimodalSanitizer.ImageSanitizerBackend			
+class	SensitiveContentAnalysisML.MultimodalSanitizer.ImageSanitizerBackend		let	imageSanitizer
+class	SensitiveContentAnalysisML.MultimodalSanitizer			
+class	SensitiveContentAnalysisML.MultimodalSanitizer		let	signposter
+class	SensitiveContentAnalysisML.MultimodalSanitizer		let	logger
+class	SensitiveContentAnalysisML.MultimodalSanitizer		let	configuration
+class	SensitiveContentAnalysisML.MultimodalSanitizer		let	backends
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.SignalIdentifier			
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.SignalIdentifier		case	gore
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.SignalIdentifier		case	violence
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Configuration			
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Configuration		let	useCaseID
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Configuration		let	signals
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Configuration		var	onBehalfOfProcessID
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Request			
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Request		let	prompt
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Request		let	origin
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Request		var	signals
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Request		var	keepGoing
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Request.Origin			
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Request.Origin		case	input
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Request.Origin		case	output
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.SignalValue			
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.SignalValue		let	safe
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.SignalValue		let	sensitive
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.SignalValue		let	score
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Response			
+struct	SensitiveContentAnalysisML.MultimodalSanitizer.Response		var	signals
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error			
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error		case	requestedSignalNotInConfiguration
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error		case	unsupportedComponent
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.CodingKeys		case	requestedSignalNotInConfiguration
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.CodingKeys		case	unsupportedComponent
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.RequestedSignalNotInConfigurationCodingKeys			
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.RequestedSignalNotInConfigurationCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.UnsupportedComponentCodingKeys			
+enum	SensitiveContentAnalysisML.MultimodalSanitizer.Error.UnsupportedComponentCodingKeys		case	name
+class	SensitiveContentAnalysisML.SCMLPeopleDetectionAttribute	NSObject		
+class	SensitiveContentAnalysisML.SCMLPeopleDetectionAttribute	NSObject	var	term
+class	SensitiveContentAnalysisML.SCMLPeopleDetectionAttribute	NSObject	var	gender
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject		
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	specific
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	isGroup
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	hasAge
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	hasGender
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	hasEthnicity
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	age
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	gender
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	ethnicity
+class	SensitiveContentAnalysisML.SCMLPersonAttributes	NSObject	var	hasImplicitCategoryRequiringPersonalization
+class	SensitiveContentAnalysisML.SCMLPeopleDetectorImplResult	NSObject		
+class	SensitiveContentAnalysisML.SCMLPeopleDetectorImplResult	NSObject	var	people
+class	SensitiveContentAnalysisML.SCMLPeopleDetectorImpl	NSObject		
+class	SensitiveContentAnalysisML.SCMLPeopleDetectorImpl	NSObject	let	model
+class	SensitiveContentAnalysisML.SCMLPeopleDetectorImpl	NSObject	let	logger
+class	SensitiveContentAnalysisML.PromptRewriter			
+class	SensitiveContentAnalysisML.PromptRewriter		let	logger
+class	SensitiveContentAnalysisML.PromptRewriter		let	model
+class	SensitiveContentAnalysisML.PromptRewriter		let	signposter
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle			
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle		case	genmoji
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle		case	variety
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle		case	imagePlayground
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle		case	reducedPHR
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle		case	personalizedGenmoji
+enum	SensitiveContentAnalysisML.PromptRewriter.PromptStyle		case	personalizedVariety
+enum	SensitiveContentAnalysisML.PromptRewriter.Error			
+enum	SensitiveContentAnalysisML.PromptRewriter.Error		case	loadFailed
+enum	SensitiveContentAnalysisML.PromptRewriter.Error		case	parseFailed
+enum	SensitiveContentAnalysisML.PromptRewriter.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.PromptRewriter.Error.CodingKeys		case	loadFailed
+enum	SensitiveContentAnalysisML.PromptRewriter.Error.CodingKeys		case	parseFailed
+enum	SensitiveContentAnalysisML.PromptRewriter.Error.LoadFailedCodingKeys			
+enum	SensitiveContentAnalysisML.PromptRewriter.Error.LoadFailedCodingKeys		case	bundleID
+enum	SensitiveContentAnalysisML.PromptRewriter.Error.ParseFailedCodingKeys			
+struct	SensitiveContentAnalysisML.SafetyOutputConfiguration			
+struct	SensitiveContentAnalysisML.SafetyOutputConfiguration		let	configContents
+struct	SensitiveContentAnalysisML.SafetyOutputConfiguration		let	mappings
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.SafetyLevel			
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.SafetyLevel		case	safe
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.SafetyLevel		case	handleWithCare
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.SafetyLevel		case	unsafe
+struct	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping			
+struct	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping		let	useCases
+struct	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping		let	labelMapping
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping.CodingKeys			
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping.CodingKeys		case	useCases
+enum	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping.CodingKeys		case	labelMapping
+class	SensitiveContentAnalysisML.SCMLNormalizer	NSObject		
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrailResult	NSObject		
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrailResult	NSObject	let	safe
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrailResult	NSObject	let	labels
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject		
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject	let	task
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject	let	model
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject	let	chunkOverlap
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject	let	bundleID
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject	let	logger
+class	SensitiveContentAnalysisML.SCMLSafetyGuardrail	NSObject	let	modelManagerServicesUseCaseID
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError			
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError		case	unsupportedBackend
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError		case	loadFailed
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError.CodingKeys			
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError.CodingKeys		case	loadFailed
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError.CodingKeys		case	unsupportedBackend
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError.LoadFailedCodingKeys			
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError.UnsupportedBackendCodingKeys			
+enum	SensitiveContentAnalysisML.SCMLSafetyGuardrailError.UnsupportedBackendCodingKeys		case	backend
+class	SensitiveContentAnalysisML.TextSplitter			
+enum	SensitiveContentAnalysisML.Error			
+enum	SensitiveContentAnalysisML.Error		case	failedToDecodePath
+enum	SensitiveContentAnalysisML.Error		case	invalidPath
+enum	SensitiveContentAnalysisML.Error		case	failedToCreateImageDestination
+enum	SensitiveContentAnalysisML.Error		case	failedToEncodePNG
+enum	SensitiveContentAnalysisML.Error		case	failedToCreateImageSource
+enum	SensitiveContentAnalysisML.Error		case	failedToDecode
+enum	SensitiveContentAnalysisML.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToCreateImageDestination
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToEncodePNG
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToCreateImageSource
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToDecode
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToDecodePath
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	invalidPath
+enum	SensitiveContentAnalysisML.Error.FailedToCreateImageDestinationCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedToEncodePNGCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedToCreateImageSourceCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedToDecodeCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedToDecodePathCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedToDecodePathCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.Error.InvalidPathCodingKeys			
+enum	SensitiveContentAnalysisML.Error.InvalidPathCodingKeys		case	_0
+class	SensitiveContentAnalysisML.Condition			
+class	SensitiveContentAnalysisML.Condition		var	waiters
+enum	SensitiveContentAnalysisML.Error			
+enum	SensitiveContentAnalysisML.Error		case	failedInCoreVideo
+enum	SensitiveContentAnalysisML.Error		case	invalidDimensions
+enum	SensitiveContentAnalysisML.Error		case	unsupportedFormat
+enum	SensitiveContentAnalysisML.Error		case	failedToCreateCGContext
+enum	SensitiveContentAnalysisML.Error		case	failedToCreateCGImage
+enum	SensitiveContentAnalysisML.Error		case	pixelBufferIsNotIOSurfaceBacked
+enum	SensitiveContentAnalysisML.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedInCoreVideo
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToCreateCGContext
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	failedToCreateCGImage
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	invalidDimensions
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	pixelBufferIsNotIOSurfaceBacked
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	unsupportedFormat
+enum	SensitiveContentAnalysisML.Error.FailedInCoreVideoCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedInCoreVideoCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.Error.FailedInCoreVideoCodingKeys		case	function
+enum	SensitiveContentAnalysisML.Error.FailedToCreateCGContextCodingKeys			
+enum	SensitiveContentAnalysisML.Error.FailedToCreateCGImageCodingKeys			
+enum	SensitiveContentAnalysisML.Error.InvalidDimensionsCodingKeys			
+enum	SensitiveContentAnalysisML.Error.InvalidDimensionsCodingKeys		case	width
+enum	SensitiveContentAnalysisML.Error.InvalidDimensionsCodingKeys		case	height
+enum	SensitiveContentAnalysisML.Error.PixelBufferIsNotIOSurfaceBackedCodingKeys			
+enum	SensitiveContentAnalysisML.Error.UnsupportedFormatCodingKeys			
+enum	SensitiveContentAnalysisML.Error.UnsupportedFormatCodingKeys		case	_0
+struct	SensitiveContentAnalysisML.PublicError			
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer			
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer		case	textTooLong
+struct	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongErrorInfo			
+struct	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongErrorInfo		let	utf16WordCount
+struct	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongErrorInfo		let	utf16WordCountMaximum
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.CodingKeys			
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.CodingKeys		case	textTooLong
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongCodingKeys			
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongCodingKeys		case	_0
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongErrorInfo.CodingKeys			
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongErrorInfo.CodingKeys		case	utf16WordCount
+enum	SensitiveContentAnalysisML.PublicError.TextSanitizer.TextTooLongErrorInfo.CodingKeys		case	utf16WordCountMaximum
+struct	SensitiveContentAnalysisML.SCMLAsset			
+enum	SensitiveContentAnalysisML.FeatureFlags			
+enum	SensitiveContentAnalysisML.FeatureFlags		case	afmPlusCustomized
+enum	SensitiveContentAnalysisML.FeatureFlags		case	afmPlusStandard
+enum	SensitiveContentAnalysisML.FeatureFlags		case	backgroundEstimation
+enum	SensitiveContentAnalysisML.FeatureFlags		case	flagsAndMapsCustomized
+enum	SensitiveContentAnalysisML.FeatureFlags		case	flagsAndMapsStandard
+enum	SensitiveContentAnalysisML.FeatureFlags		case	otaTextSafetyConfig
+enum	SensitiveContentAnalysisML.FeatureFlags		case	peopleCounterCustomized
+enum	SensitiveContentAnalysisML.FeatureFlags		case	peopleCounterStandard
+enum	SensitiveContentAnalysisML.FeatureFlags		case	prepubescentCustomized
+enum	SensitiveContentAnalysisML.FeatureFlags		case	prepubescentStandard
+enum	SensitiveContentAnalysisML.FeatureFlags		case	structuralIntegrityCustomized
+enum	SensitiveContentAnalysisML.FeatureFlags		case	structuralIntegrityStandard
+enum	SensitiveContentAnalysisML.FeatureFlags		case	violenceAndGoreCustomized
+enum	SensitiveContentAnalysisML.FeatureFlags		case	violenceAndGoreStandard
+class	SensitiveContentAnalysisML.SCMLLocale	NSObject		
+class	SensitiveContentAnalysisML.StandaloneBinarySemaphore			
+class	SensitiveContentAnalysisML.StandaloneBinarySemaphore		var	isLocked
+class	SensitiveContentAnalysisML.StandaloneBinarySemaphore		var	lockAvailable
+struct	SensitiveContentAnalysisML.TerseEncoder			
+enum	SensitiveContentAnalysisML.TerseEncoder.TypeNameStyle			
+enum	SensitiveContentAnalysisML.TerseEncoder.TypeNameStyle		case	fullyQualified
+enum	SensitiveContentAnalysisML.TerseEncoder.TypeNameStyle		case	unqualified
+enum	SensitiveContentAnalysisML.TerseEncoder.TypeNameStyle		case	terse
+class	SensitiveContentAnalysisML.TerseEncoder.Impl			
+class	SensitiveContentAnalysisML.TerseEncoder.Impl		let	value
+class	SensitiveContentAnalysisML.TerseEncoder.Impl		let	typeNameStyle
+class	SensitiveContentAnalysisML.TerseEncoder.Impl		var	parts
+class	SensitiveContentAnalysisML.TerseEncoder.Impl		var	enumName
+struct	SensitiveContentAnalysisML.TerseEncoder.KeyedContainer<A	Swift.CodingKey>		
+struct	SensitiveContentAnalysisML.TerseEncoder.KeyedContainer<A	Swift.CodingKey>	var	encoder
+struct	SensitiveContentAnalysisML.TerseEncoder.UnkeyedContainer			
+struct	SensitiveContentAnalysisML.TerseEncoder.UnkeyedContainer		var	encoder
+struct	SensitiveContentAnalysisML.TerseEncoder.SingleValueContainer			
+struct	SensitiveContentAnalysisML.TerseEncoder.SingleValueContainer		var	encoder
+class	SensitiveContentAnalysisML.ThreadSafeLazy			
+class	SensitiveContentAnalysisML.ThreadSafeLazy		let	create
+class	SensitiveContentAnalysisML.ThreadSafeLazy		var	lock
+class	SensitiveContentAnalysisML.ThreadSafeLazy		var	_value
+struct	SensitiveContentAnalysisML.UncheckedSendable			
+struct	SensitiveContentAnalysisML.UncheckedSendable		let	value
+class	SensitiveContentAnalysisML.SCMLUserDefaults	NSObject		
+enum	SensitiveContentAnalysisML.Error			
+enum	SensitiveContentAnalysisML.Error		case	parseBoolean
+enum	SensitiveContentAnalysisML.Error		case	parseEnum
+enum	SensitiveContentAnalysisML.Error.CodingKeys			
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	parseBoolean
+enum	SensitiveContentAnalysisML.Error.CodingKeys		case	parseEnum
+enum	SensitiveContentAnalysisML.Error.ParseBooleanCodingKeys			
+enum	SensitiveContentAnalysisML.Error.ParseBooleanCodingKeys		case	key
+enum	SensitiveContentAnalysisML.Error.ParseBooleanCodingKeys		case	value
+enum	SensitiveContentAnalysisML.Error.ParseEnumCodingKeys			
+enum	SensitiveContentAnalysisML.Error.ParseEnumCodingKeys		case	key
+enum	SensitiveContentAnalysisML.Error.ParseEnumCodingKeys		case	value
+enum	SensitiveContentAnalysisML.Error.ParseEnumCodingKeys		case	enumType
+protocol	SensitiveContentAnalysisML.AFMImageConverter			
+protocol	SensitiveContentAnalysisML.AssetLockWrapper			
+protocol	SensitiveContentAnalysisML.AssetLockWrapperFactory			
+protocol	SensitiveContentAnalysisML.ImageSanitizerBackend			
+protocol	MultimodalSanitizer.Backend			
+protocol	SensitiveContentAnalysisML.CausedError			
+protocol	SensitiveContentAnalysisML.CausedErrorWithArgument	Argument		
+protocol	SensitiveContentAnalysisML.SimpleError			
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.SCMLPeopleDetectionGender	Swift.Equatable: SensitiveContentAnalysisML		
+protocol	conformance __C.SCMLPeopleDetectionGender	Swift.RawRepresentable: SensitiveContentAnalysisML		
+protocol	conformance SensitiveContentAnalysisML.CustomAFMImageConverter	SensitiveContentAnalysisML.AFMImageConverter		
+protocol	conformance SensitiveContentAnalysisML.StandardAFMImageConverter	SensitiveContentAnalysisML.AFMImageConverter		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance __C.SCMLImageSanitizerBackends	Swift.ExpressibleByArrayLiteral: SensitiveContentAnalysisML		
+protocol	conformance __C.SCMLImageSanitizerBackends	Swift.Equatable: SensitiveContentAnalysisML		
+protocol	conformance __C.SCMLImageSanitizerBackends	Swift.RawRepresentable: SensitiveContentAnalysisML		
+protocol	conformance __C.SCMLImageSanitizerBackends	Swift.SetAlgebra: SensitiveContentAnalysisML		
+protocol	conformance __C.SCMLImageSanitizerBackends	Swift.OptionSet: SensitiveContentAnalysisML		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Foundation.CustomNSError		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Swift.Encodable		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Swift.Decodable		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Swift.CustomStringConvertible		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Foundation.LocalizedError		
+protocol	conformance AFMModel.ImageConverterNotEnabled	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance AFMModel.NoResourcePathError	Foundation.CustomNSError		
+protocol	conformance AFMModel.NoResourcePathError	Swift.Encodable		
+protocol	conformance AFMModel.NoResourcePathError	Swift.Decodable		
+protocol	conformance AFMModel.NoResourcePathError	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.NoResourcePathError	Swift.CustomStringConvertible		
+protocol	conformance AFMModel.NoResourcePathError	Foundation.LocalizedError		
+protocol	conformance AFMModel.NoResourcePathError	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance AFMModel.NoResourcePathError	Swift.Error		
+protocol	conformance AFMModel.ImageConverterNotEnabled	Swift.Error		
+protocol	conformance MiscSafetyOutputType.Error	Foundation.CustomNSError		
+protocol	conformance MiscSafetyOutputType.Error	Swift.Encodable		
+protocol	conformance MiscSafetyOutputType.Error	Swift.Decodable		
+protocol	conformance MiscSafetyOutputType.Error	Swift.CustomDebugStringConvertible		
+protocol	conformance MiscSafetyOutputType.Error	Swift.CustomStringConvertible		
+protocol	conformance MiscSafetyOutputType.Error	Foundation.LocalizedError		
+protocol	conformance MiscSafetyOutputType.Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AFMModel.LoadFailed	Foundation.CustomNSError		
+protocol	conformance AFMModel.LoadFailed	Swift.Encodable		
+protocol	conformance AFMModel.LoadFailed	Swift.Decodable		
+protocol	conformance AFMModel.LoadFailed	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.LoadFailed	Swift.CustomStringConvertible		
+protocol	conformance AFMModel.LoadFailed	Foundation.LocalizedError		
+protocol	conformance AFMModel.LoadFailed	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance AFMModel.LoadFailed	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MiscSafetyOutputType.Error	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TasksMissingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TasksMissingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TasksMissingCodingKeys	Swift.Hashable		
+protocol	conformance TasksMissingCodingKeys	Swift.Equatable		
+protocol	conformance UnrecognizedTaskCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnrecognizedTaskCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnrecognizedTaskCodingKeys	Swift.Hashable		
+protocol	conformance UnrecognizedTaskCodingKeys	Swift.Equatable		
+protocol	conformance UnrecognizedOutputTypeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnrecognizedOutputTypeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnrecognizedOutputTypeCodingKeys	Swift.Hashable		
+protocol	conformance UnrecognizedOutputTypeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UnrecognizedOutputTypeCodingKeys	Swift.CodingKey		
+protocol	conformance UnrecognizedTaskCodingKeys	Swift.CodingKey		
+protocol	conformance TasksMissingCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AFMModel.MiscSafetyJSONResult	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.MiscSafetyJSONResult	Swift.Encodable		
+protocol	conformance AFMModel.MiscSafetyJSONResult	GenerativeFunctionsFoundation.Generable		
+protocol	conformance MiscSafetyJSONResult.People	Swift.CaseIterable		
+protocol	conformance MiscSafetyJSONResult.People	Swift.RawRepresentable		
+protocol	conformance MiscSafetyJSONResult.People	Swift.Hashable		
+protocol	conformance MiscSafetyJSONResult.People	Swift.Equatable		
+protocol	conformance MiscSafetyJSONResult.Pre	Swift.CaseIterable		
+protocol	conformance MiscSafetyJSONResult.Pre	Swift.RawRepresentable		
+protocol	conformance MiscSafetyJSONResult.Pre	Swift.Hashable		
+protocol	conformance MiscSafetyJSONResult.Pre	Swift.Equatable		
+protocol	conformance MiscSafetyJSONResult.Regional	Swift.CaseIterable		
+protocol	conformance MiscSafetyJSONResult.Regional	Swift.RawRepresentable		
+protocol	conformance MiscSafetyJSONResult.Regional	Swift.Hashable		
+protocol	conformance MiscSafetyJSONResult.Regional	Swift.Equatable		
+protocol	conformance MiscSafetyJSONResult.Safety	Swift.CaseIterable		
+protocol	conformance MiscSafetyJSONResult.Safety	Swift.RawRepresentable		
+protocol	conformance MiscSafetyJSONResult.Safety	Swift.Hashable		
+protocol	conformance MiscSafetyJSONResult.Safety	Swift.Equatable		
+protocol	conformance MiscSafetyJSONResult.Structural	Swift.CaseIterable		
+protocol	conformance MiscSafetyJSONResult.Structural	Swift.RawRepresentable		
+protocol	conformance MiscSafetyJSONResult.Structural	Swift.Hashable		
+protocol	conformance MiscSafetyJSONResult.Structural	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MiscSafetyJSONResult.Structural	Swift.Encodable		
+protocol	conformance MiscSafetyJSONResult.Safety	Swift.Encodable		
+protocol	conformance MiscSafetyJSONResult.Regional	Swift.Encodable		
+protocol	conformance MiscSafetyJSONResult.Pre	Swift.Encodable		
+protocol	conformance MiscSafetyJSONResult.People	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MiscSafetyJSONResult.Structural	GenerativeFunctionsFoundation.Generable		
+protocol	conformance MiscSafetyJSONResult.Safety	GenerativeFunctionsFoundation.Generable		
+protocol	conformance MiscSafetyJSONResult.Regional	GenerativeFunctionsFoundation.Generable		
+protocol	conformance MiscSafetyJSONResult.Pre	GenerativeFunctionsFoundation.Generable		
+protocol	conformance MiscSafetyJSONResult.People	GenerativeFunctionsFoundation.Generable		
+protocol	conformance Task.AfmPlusMode	Swift.Equatable		
+protocol	conformance Task.AfmPlusMode	Swift.Hashable		
+protocol	conformance Task.AfmPlusMode	Swift.RawRepresentable		
+protocol	conformance AFMModel.Task	Swift.Equatable		
+protocol	conformance AFMModel.Task	Swift.Hashable		
+protocol	conformance AFMModel.Task	Swift.RawRepresentable		
+protocol	conformance AFMModel.Task	Swift.CaseIterable		
+protocol	conformance AFMModel.Task	Swift.Decodable		
+protocol	conformance AFMModel.Task	Swift.Encodable		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Foundation.CustomNSError		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Swift.Encodable		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Swift.Decodable		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Swift.CustomStringConvertible		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Foundation.LocalizedError		
+protocol	conformance AFMModel.ResolveModelBundleFailed	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Foundation.CustomNSError		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Swift.Encodable		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Swift.Decodable		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Swift.CustomStringConvertible		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Foundation.LocalizedError		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Foundation.CustomNSError		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Swift.Encodable		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Swift.Decodable		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Swift.CustomDebugStringConvertible		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Swift.CustomStringConvertible		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Foundation.LocalizedError		
+protocol	conformance AFMModel.BundleContainsNoAdapter	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance AFMModel.BundleContainsNoAdapter	Swift.Error		
+protocol	conformance AFMModel.NotAnAssetBackedLLMBundle	Swift.Error		
+protocol	conformance AFMModel.ResolveModelBundleFailed	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SensitiveContentAnalysisML.CoherentAssetLockWrapper	SensitiveContentAnalysisML.AssetLockWrapper		
+protocol	conformance SensitiveContentAnalysisML.CoherentAssetLockWrapperFactory	SensitiveContentAnalysisML.AssetLockWrapperFactory		
+protocol	conformance SensitiveContentAnalysisML.AFMPlusImageSanitizerBackend	SensitiveContentAnalysisML.ImageSanitizerBackend		
+protocol	conformance CombinedImageSanitizerBackend.BackendError	Foundation.CustomNSError		
+protocol	conformance CombinedImageSanitizerBackend.BackendError	Swift.CustomDebugStringConvertible		
+protocol	conformance CombinedImageSanitizerBackend.BackendError	Swift.CustomStringConvertible		
+protocol	conformance CombinedImageSanitizerBackend.BackendError	Foundation.LocalizedError		
+protocol	conformance CombinedImageSanitizerBackend.BackendError	SensitiveContentAnalysisML.CausedErrorWithArgument		
+protocol	conformance SensitiveContentAnalysisML.CombinedImageSanitizerBackend	SensitiveContentAnalysisML.ImageSanitizerBackend		
+protocol	conformance CombinedImageSanitizerBackend.BackendError	Swift.Error		
+protocol	conformance CombinedImageSanitizerBackend.BackendInitError	Foundation.CustomNSError		
+protocol	conformance CombinedImageSanitizerBackend.BackendInitError	Swift.CustomDebugStringConvertible		
+protocol	conformance CombinedImageSanitizerBackend.BackendInitError	Swift.CustomStringConvertible		
+protocol	conformance CombinedImageSanitizerBackend.BackendInitError	Foundation.LocalizedError		
+protocol	conformance CombinedImageSanitizerBackend.BackendInitError	SensitiveContentAnalysisML.CausedErrorWithArgument		
+protocol	conformance CombinedImageSanitizerBackend.BackendInitError	Swift.Error		
+protocol	conformance Estimation.Classification	Swift.Equatable		
+protocol	conformance Estimation.Classification	Swift.Hashable		
+protocol	conformance Estimation.Classification	Swift.RawRepresentable		
+protocol	conformance Estimation.Classification	Swift.Encodable		
+protocol	conformance BackgroundEstimator.Estimation	Swift.CustomStringConvertible		
+protocol	conformance BackgroundEstimator.Estimation	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance BackgroundEstimator.Error	Foundation.CustomNSError		
+protocol	conformance BackgroundEstimator.Error	Swift.Encodable		
+protocol	conformance BackgroundEstimator.Error	Swift.Decodable		
+protocol	conformance BackgroundEstimator.Error	Swift.CustomDebugStringConvertible		
+protocol	conformance BackgroundEstimator.Error	Swift.CustomStringConvertible		
+protocol	conformance BackgroundEstimator.Error	Foundation.LocalizedError		
+protocol	conformance BackgroundEstimator.Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance BackgroundEstimator.Error	Swift.Error		
+protocol	conformance LoadFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LoadFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParseClassificationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ParseClassificationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParseClassificationCodingKeys	Swift.Hashable		
+protocol	conformance ParseClassificationCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ParseClassificationCodingKeys	Swift.CodingKey		
+protocol	conformance LoadFailedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Count.Value	Swift.Equatable		
+protocol	conformance Count.Value	Swift.Hashable		
+protocol	conformance Count.Value	Swift.RawRepresentable		
+protocol	conformance Count.Value	Swift.Encodable		
+protocol	conformance PeopleCounter.Count	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Result.Classification	Swift.Equatable		
+protocol	conformance Result.Classification	Swift.Hashable		
+protocol	conformance Result.Classification	Swift.RawRepresentable		
+protocol	conformance Result.Classification	Swift.Encodable		
+protocol	conformance SmileyClassifier.Result	Swift.CustomStringConvertible		
+protocol	conformance SmileyClassifier.Result	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Foundation.CustomNSError		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Swift.Encodable		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Swift.Decodable		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Swift.CustomDebugStringConvertible		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Swift.CustomStringConvertible		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Foundation.LocalizedError		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance TextImageAlignmentCalculator.EmbeddingSizesDoNotMatch	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Foundation.CustomNSError		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Swift.Encodable		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Swift.Decodable		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Swift.CustomDebugStringConvertible		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Swift.CustomStringConvertible		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Foundation.LocalizedError		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance TextImageAlignmentCalculator.InvalidEmbeddingSizeError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MultimodalSanitizer.ImageSanitizerBackend	SensitiveContentAnalysisML.MultimodalSanitizer.Backend		
+protocol	conformance MultimodalSanitizer.SignalIdentifier	Swift.Equatable		
+protocol	conformance MultimodalSanitizer.SignalIdentifier	Swift.Hashable		
+protocol	conformance MultimodalSanitizer.SignalIdentifier	Swift.RawRepresentable		
+protocol	conformance MultimodalSanitizer.SignalIdentifier	Swift.CaseIterable		
+protocol	conformance Request.Origin	Swift.Equatable		
+protocol	conformance Request.Origin	Swift.Hashable		
+protocol	conformance Request.Origin	Swift.RawRepresentable		
+protocol	conformance MultimodalSanitizer.Error	Foundation.CustomNSError		
+protocol	conformance MultimodalSanitizer.Error	Swift.Encodable		
+protocol	conformance MultimodalSanitizer.Error	Swift.Decodable		
+protocol	conformance MultimodalSanitizer.Error	Swift.CustomDebugStringConvertible		
+protocol	conformance MultimodalSanitizer.Error	Swift.CustomStringConvertible		
+protocol	conformance MultimodalSanitizer.Error	Foundation.LocalizedError		
+protocol	conformance MultimodalSanitizer.Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance MultimodalSanitizer.Error	Swift.Error		
+protocol	conformance UnsupportedComponentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnsupportedComponentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedComponentCodingKeys	Swift.Hashable		
+protocol	conformance UnsupportedComponentCodingKeys	Swift.Equatable		
+protocol	conformance RequestedSignalNotInConfigurationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestedSignalNotInConfigurationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestedSignalNotInConfigurationCodingKeys	Swift.Hashable		
+protocol	conformance RequestedSignalNotInConfigurationCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RequestedSignalNotInConfigurationCodingKeys	Swift.CodingKey		
+protocol	conformance UnsupportedComponentCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SensitiveContentAnalysisML.SCMLPeopleDetectionAttribute	Swift.Comparable		
+protocol	conformance PromptRewriter.PromptStyle	Swift.Equatable		
+protocol	conformance PromptRewriter.PromptStyle	Swift.Hashable		
+protocol	conformance PromptRewriter.PromptStyle	Swift.RawRepresentable		
+protocol	conformance PromptRewriter.PromptStyle	Swift.CaseIterable		
+protocol	conformance PromptRewriter.PromptStyle	Swift.Decodable		
+protocol	conformance PromptRewriter.PromptStyle	Swift.Encodable		
+protocol	conformance PromptRewriter.Error	Foundation.CustomNSError		
+protocol	conformance PromptRewriter.Error	Swift.Encodable		
+protocol	conformance PromptRewriter.Error	Swift.Decodable		
+protocol	conformance PromptRewriter.Error	Swift.CustomDebugStringConvertible		
+protocol	conformance PromptRewriter.Error	Swift.CustomStringConvertible		
+protocol	conformance PromptRewriter.Error	Foundation.LocalizedError		
+protocol	conformance PromptRewriter.Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance PromptRewriter.Error	Swift.Error		
+protocol	conformance ParseFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ParseFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LoadFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LoadFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LoadFailedCodingKeys	Swift.Hashable		
+protocol	conformance LoadFailedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance LoadFailedCodingKeys	Swift.CodingKey		
+protocol	conformance ParseFailedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SafetyOutputConfiguration.SafetyLevel	Swift.Equatable		
+protocol	conformance SafetyOutputConfiguration.SafetyLevel	Swift.Hashable		
+protocol	conformance SafetyOutputConfiguration.SafetyLevel	Swift.RawRepresentable		
+protocol	conformance SafetyOutputConfiguration.SafetyLevel	Swift.Decodable		
+protocol	conformance SafetyOutputConfiguration.SafetyLevel	Swift.Comparable		
+protocol	conformance SafetyOutputConfiguration.Mapping	Swift.Decodable		
+protocol	conformance Mapping.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Mapping.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Mapping.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Mapping.CodingKeys	Swift.Hashable		
+protocol	conformance Mapping.CodingKeys	Swift.Equatable		
+protocol	conformance Mapping.CodingKeys	Swift.CodingKey		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Foundation.CustomNSError		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Swift.Encodable		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Swift.Decodable		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Swift.CustomDebugStringConvertible		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Swift.CustomStringConvertible		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Foundation.LocalizedError		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance SensitiveContentAnalysisML.SCMLSafetyGuardrailError	Swift.Error		
+protocol	conformance UnsupportedBackendCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnsupportedBackendCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedBackendCodingKeys	Swift.Hashable		
+protocol	conformance UnsupportedBackendCodingKeys	Swift.Equatable		
+protocol	conformance LoadFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LoadFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance LoadFailedCodingKeys	Swift.CodingKey		
+protocol	conformance UnsupportedBackendCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Error	Foundation.CustomNSError		
+protocol	conformance Error	Swift.Encodable		
+protocol	conformance Error	Swift.Decodable		
+protocol	conformance Error	Swift.CustomDebugStringConvertible		
+protocol	conformance Error	Swift.CustomStringConvertible		
+protocol	conformance Error	Foundation.LocalizedError		
+protocol	conformance Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance Error	Swift.Error		
+protocol	conformance InvalidPathCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidPathCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidPathCodingKeys	Swift.Hashable		
+protocol	conformance InvalidPathCodingKeys	Swift.Equatable		
+protocol	conformance FailedToDecodePathCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToDecodePathCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedToDecodePathCodingKeys	Swift.Hashable		
+protocol	conformance FailedToDecodePathCodingKeys	Swift.Equatable		
+protocol	conformance FailedToDecodeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToDecodeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedToCreateImageSourceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToCreateImageSourceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedToEncodePNGCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToEncodePNGCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedToCreateImageDestinationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToCreateImageDestinationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FailedToCreateImageDestinationCodingKeys	Swift.CodingKey		
+protocol	conformance FailedToEncodePNGCodingKeys	Swift.CodingKey		
+protocol	conformance FailedToCreateImageSourceCodingKeys	Swift.CodingKey		
+protocol	conformance FailedToDecodeCodingKeys	Swift.CodingKey		
+protocol	conformance FailedToDecodePathCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidPathCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Error	Foundation.CustomNSError		
+protocol	conformance Error	Swift.Encodable		
+protocol	conformance Error	Swift.Decodable		
+protocol	conformance Error	Swift.CustomDebugStringConvertible		
+protocol	conformance Error	Swift.CustomStringConvertible		
+protocol	conformance Error	Foundation.LocalizedError		
+protocol	conformance Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance Error	Swift.Error		
+protocol	conformance UnsupportedFormatCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnsupportedFormatCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedFormatCodingKeys	Swift.Hashable		
+protocol	conformance UnsupportedFormatCodingKeys	Swift.Equatable		
+protocol	conformance PixelBufferIsNotIOSurfaceBackedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PixelBufferIsNotIOSurfaceBackedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidDimensionsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidDimensionsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidDimensionsCodingKeys	Swift.Hashable		
+protocol	conformance InvalidDimensionsCodingKeys	Swift.Equatable		
+protocol	conformance FailedToCreateCGImageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToCreateCGImageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedToCreateCGContextCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedToCreateCGContextCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedInCoreVideoCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedInCoreVideoCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedInCoreVideoCodingKeys	Swift.Hashable		
+protocol	conformance FailedInCoreVideoCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FailedInCoreVideoCodingKeys	Swift.CodingKey		
+protocol	conformance FailedToCreateCGContextCodingKeys	Swift.CodingKey		
+protocol	conformance FailedToCreateCGImageCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidDimensionsCodingKeys	Swift.CodingKey		
+protocol	conformance PixelBufferIsNotIOSurfaceBackedCodingKeys	Swift.CodingKey		
+protocol	conformance UnsupportedFormatCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TextSanitizer.TextTooLongErrorInfo	Swift.Decodable		
+protocol	conformance TextSanitizer.TextTooLongErrorInfo	Swift.Encodable		
+protocol	conformance PublicError.TextSanitizer	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance PublicError.TextSanitizer	Foundation.LocalizedError		
+protocol	conformance PublicError.TextSanitizer	Swift.CustomStringConvertible		
+protocol	conformance PublicError.TextSanitizer	Swift.CustomDebugStringConvertible		
+protocol	conformance PublicError.TextSanitizer	Swift.Decodable		
+protocol	conformance PublicError.TextSanitizer	Swift.Encodable		
+protocol	conformance PublicError.TextSanitizer	Foundation.CustomNSError		
+protocol	conformance PublicError.TextSanitizer	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TextTooLongCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TextTooLongCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TextTooLongCodingKeys	Swift.Hashable		
+protocol	conformance TextTooLongCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TextTooLongCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SensitiveContentAnalysisML.FeatureFlags	Swift.Equatable		
+protocol	conformance SensitiveContentAnalysisML.FeatureFlags	Swift.Hashable		
+protocol	conformance SensitiveContentAnalysisML.FeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SensitiveContentAnalysisML.StandaloneBinarySemaphore	Swift.Actor		
+protocol	conformance TerseEncoder.TypeNameStyle	Swift.Equatable		
+protocol	conformance TerseEncoder.TypeNameStyle	Swift.Hashable		
+protocol	conformance Impl	Swift.Encoder		
+protocol	conformance KeyedContainer	Swift.KeyedEncodingContainerProtocol		
+protocol	conformance UnkeyedContainer	Swift.UnkeyedEncodingContainer		
+protocol	conformance SingleValueContainer	Swift.SingleValueEncodingContainer		
+protocol	conformance Error	Foundation.CustomNSError		
+protocol	conformance Error	Swift.Encodable		
+protocol	conformance Error	Swift.Decodable		
+protocol	conformance Error	Swift.CustomDebugStringConvertible		
+protocol	conformance Error	Swift.CustomStringConvertible		
+protocol	conformance Error	Foundation.LocalizedError		
+protocol	conformance Error	SensitiveContentAnalysisML.SimpleError		
+protocol	conformance Error	Swift.Error		
+protocol	conformance ParseEnumCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ParseEnumCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParseEnumCodingKeys	Swift.Hashable		
+protocol	conformance ParseEnumCodingKeys	Swift.Equatable		
+protocol	conformance ParseBooleanCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ParseBooleanCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParseBooleanCodingKeys	Swift.Hashable		
+protocol	conformance ParseBooleanCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ParseBooleanCodingKeys	Swift.CodingKey		
+protocol	conformance ParseEnumCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.People	CaseIterable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.People	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Pre	CaseIterable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Pre	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Regional	CaseIterable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Regional	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety	CaseIterable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Safety	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Structural	CaseIterable		
+extension	SensitiveContentAnalysisML.AFMModel.MiscSafetyJSONResult.Structural	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.Task.AfmPlusMode	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.Task	RawRepresentable		
+extension	SensitiveContentAnalysisML.AFMModel.Task	CaseIterable		
+extension	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendError	CausedErrorWithArgument		
+extension	SensitiveContentAnalysisML.CombinedImageSanitizerBackend.BackendInitError	CausedErrorWithArgument		
+extension	SensitiveContentAnalysisML.BackgroundEstimator.Estimation.Classification	RawRepresentable		
+extension	SensitiveContentAnalysisML.PeopleCounter.Count.Value	RawRepresentable		
+extension	SensitiveContentAnalysisML.SmileyClassifier.Result.Classification	RawRepresentable		
+extension	SensitiveContentAnalysisML.MultimodalSanitizer.SignalIdentifier	RawRepresentable		
+extension	SensitiveContentAnalysisML.MultimodalSanitizer.SignalIdentifier	CaseIterable		
+extension	SensitiveContentAnalysisML.MultimodalSanitizer.Request.Origin	RawRepresentable		
+extension	SensitiveContentAnalysisML.PromptRewriter.PromptStyle	RawRepresentable		
+extension	SensitiveContentAnalysisML.PromptRewriter.PromptStyle	CaseIterable		
+extension	SensitiveContentAnalysisML.SafetyOutputConfiguration.SafetyLevel	RawRepresentable		
+extension	SensitiveContentAnalysisML.SafetyOutputConfiguration.Mapping.CodingKeys	RawRepresentable		
+extension	SensitiveContentAnalysisML.TerseEncoder.KeyedContainer	KeyedEncodingContainerProtocol		

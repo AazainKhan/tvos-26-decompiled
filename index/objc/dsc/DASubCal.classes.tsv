@@ -1,0 +1,13 @@
+kind	name	superclass	protocols
+category	NSError(SubCalValidity)		
+category	NSString(SubCalUtilities)		
+interface	SubCalAccount	DAAccount	SubCalValidationTaskDelegate,DASubCalAccount
+interface	SubCalDATask	NSObject	DATask
+interface	SubCalLocalDBHelper	NSObject	
+interface	SubCalURLRequest	NSObject	NSURLSessionDelegate,NSURLSessionTaskDelegate,NSURLSessionDataDelegate
+interface	SubCalValidationTask	SubCalDATask	SubCalURLRequestDelegate
+protocol	DASubCalAccount		NSObject
+protocol	DATask		NSObject
+protocol	SubCalDATaskTrustDelegate		NSObject
+protocol	SubCalURLRequestDelegate		NSObject
+protocol	SubCalValidationTaskDelegate		SubCalDATaskTrustDelegate

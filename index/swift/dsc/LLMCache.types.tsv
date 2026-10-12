@@ -1,0 +1,135 @@
+kind	type	conformance	member_kind	member
+struct	LLMCache.ListResponse			
+struct	LLMCache.ListResponse		let	entries
+struct	LLMCache.CacheEntry			
+struct	LLMCache.CacheEntry		let	llmOutput
+struct	LLMCache.CacheEntry		let	isExactMatch
+enum	LLMCache.Logger			
+enum	LLMCache.Logger.Subsystem			
+enum	LLMCache.Logger.Subsystem		case	llmCache
+enum	LLMCache.Logger.Category			
+enum	LLMCache.Logger.Category		case	cacheManager
+enum	LLMCache.Logger.Category		case	instrumentation
+class	LLMCache.BiomeLogEmitter			
+class	LLMCache.BiomeLogEmitter		let	stream
+enum	LLMCache.BiomeLogEmitter.State			
+enum	LLMCache.BiomeLogEmitter.State		case	started
+enum	LLMCache.BiomeLogEmitter.State		case	ended
+enum	LLMCache.BiomeLogEmitter.State		case	failed
+struct	LLMCache.UniversalEmbeddingProvider			
+struct	LLMCache.UniversalEmbeddingProvider		let	madService
+struct	LLMCache.ListRequest			
+struct	LLMCache.ListRequest		let	searchKey
+struct	LLMCache.ListRequest		let	strategy
+struct	LLMCache.ListRequest		let	loggingTraceId
+struct	LLMCache.ListRequest		let	maxResult
+enum	LLMCache.SearchStrategy			
+enum	LLMCache.SearchStrategy		case	approximateMatch
+enum	LLMCache.SearchStrategy		case	exactMatch
+class	LLMCache.LLMCacheManager			
+class	LLMCache.LLMCacheManager		let	namespace
+class	LLMCache.LLMCacheManager		let	db
+class	LLMCache.LLMCacheManager		let	ttl
+class	LLMCache.LLMCacheManager		let	logEmitter
+enum	LLMCache.LLMCacheManagerError			
+enum	LLMCache.LLMCacheManagerError		case	invalidId
+enum	LLMCache.LLMCacheManagerError		case	internalFailure
+enum	LLMCache.LLMCacheManagerError		case	notFound
+enum	LLMCache.CacheNamespace			
+enum	LLMCache.CacheNamespace		case	fast
+enum	LLMCache.CacheNamespace		case	full
+enum	LLMCache.CacheNamespace		case	responseGeneration
+class	LLMCache.VectorDatabaseAccess			
+class	LLMCache.VectorDatabaseAccess		let	embeddingProvider
+class	LLMCache.VectorDatabaseAccess		let	vectordb
+enum	LLMCache.EmbeddingError			
+enum	LLMCache.EmbeddingError		case	initializationFailed
+enum	LLMCache.EmbeddingError		case	sentenceEmbeddingFailed
+enum	LLMCache.EmbeddingError		case	notSupported
+struct	LLMCache.NextToken			
+struct	LLMCache.NextToken		let	pageSize
+struct	LLMCache.NextToken		let	offset
+struct	LLMCache.AnnotatedCacheEntry			
+struct	LLMCache.AnnotatedCacheEntry		let	id
+struct	LLMCache.AnnotatedCacheEntry		let	lastAccessedTime
+struct	LLMCache.AnnotatedCacheEntry		let	lastCreatedTime
+struct	LLMCache.AnnotatedCacheEntry		let	namespace
+struct	LLMCache.AnnotatedCacheEntry		let	llmOutput
+struct	LLMCache.AnnotatedCacheEntry		let	searchKeys
+struct	LLMCache.AnnotatedCacheEntry		let	ttl
+struct	LLMCache.AnnotatedCacheEntry		let	userId
+struct	LLMCache.AnnotatedCacheEntry		let	score
+class	LLMCache.AnnotatedCacheEntryBuilder			
+class	LLMCache.AnnotatedCacheEntryBuilder		var	id
+class	LLMCache.AnnotatedCacheEntryBuilder		var	lastAccessedTime
+class	LLMCache.AnnotatedCacheEntryBuilder		var	lastCreatedTime
+class	LLMCache.AnnotatedCacheEntryBuilder		var	namespace
+class	LLMCache.AnnotatedCacheEntryBuilder		var	llmOutput
+class	LLMCache.AnnotatedCacheEntryBuilder		var	searchKeys
+class	LLMCache.AnnotatedCacheEntryBuilder		var	ttl
+class	LLMCache.AnnotatedCacheEntryBuilder		var	userId
+class	LLMCache.AnnotatedCacheEntryBuilder		var	score
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys			
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	id
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	lastAccessedTime
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	lastCreatedTime
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	namespace
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	llmOutput
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	searchKeys
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	ttl
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	userId
+enum	LLMCache.AnnotatedCacheEntry.CodingKeys		case	score
+struct	LLMCache.InsertRequest			
+struct	LLMCache.InsertRequest		let	searchKey
+struct	LLMCache.InsertRequest		let	llmOutput
+struct	LLMCache.InsertRequest		let	loggingTraceId
+enum	LLMCache.DBColumns			
+enum	LLMCache.LLMCacheManagerFeatureFlags			
+enum	LLMCache.LLMCacheManagerFeatureFlags		case	fastPlanner
+enum	LLMCache.LLMCacheManagerFeatureFlags		case	fullPlanner
+enum	LLMCache.LLMCacheManagerFeatureFlags		case	responseGeneration
+protocol	LLMCache.CacheDatabase			
+protocol	LLMCache.LLMCacheManaging			
+protocol	LLMCache.EmbeddingProviding			
+protocol	conformance Logger.Subsystem	Swift.Equatable		
+protocol	conformance Logger.Subsystem	Swift.Hashable		
+protocol	conformance Logger.Subsystem	Swift.RawRepresentable		
+protocol	conformance Logger.Category	Swift.Equatable		
+protocol	conformance Logger.Category	Swift.Hashable		
+protocol	conformance Logger.Category	Swift.RawRepresentable		
+protocol	conformance BiomeLogEmitter.State	Swift.Equatable		
+protocol	conformance BiomeLogEmitter.State	Swift.Hashable		
+protocol	conformance LLMCache.UniversalEmbeddingProvider	LLMCache.EmbeddingProviding		
+protocol	conformance LLMCache.SearchStrategy	Swift.Hashable		
+protocol	conformance LLMCache.SearchStrategy	Swift.RawRepresentable		
+protocol	conformance LLMCache.SearchStrategy	Swift.Equatable		
+protocol	conformance LLMCache.LLMCacheManager	Swift.Actor		
+protocol	conformance LLMCache.LLMCacheManager	LLMCache.LLMCacheManaging		
+protocol	conformance LLMCache.LLMCacheManagerError	Swift.Equatable		
+protocol	conformance LLMCache.LLMCacheManagerError	Swift.Hashable		
+protocol	conformance LLMCache.LLMCacheManagerError	Swift.Error		
+protocol	conformance LLMCache.CacheNamespace	Swift.Equatable		
+protocol	conformance LLMCache.CacheNamespace	Swift.Hashable		
+protocol	conformance LLMCache.CacheNamespace	Swift.RawRepresentable		
+protocol	conformance LLMCache.CacheNamespace	Swift.Decodable		
+protocol	conformance LLMCache.CacheNamespace	Swift.Encodable		
+protocol	conformance LLMCache.VectorDatabaseAccess	Swift.Actor		
+protocol	conformance LLMCache.VectorDatabaseAccess	LLMCache.CacheDatabase		
+protocol	conformance LLMCache.EmbeddingError	Swift.Equatable		
+protocol	conformance LLMCache.EmbeddingError	Swift.Hashable		
+protocol	conformance LLMCache.EmbeddingError	Swift.Error		
+protocol	conformance LLMCache.AnnotatedCacheEntry	Swift.Decodable		
+protocol	conformance LLMCache.AnnotatedCacheEntry	Swift.Encodable		
+protocol	conformance LLMCache.AnnotatedCacheEntry	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LLMCache.LLMCacheManagerFeatureFlags	Swift.Equatable		
+protocol	conformance LLMCache.LLMCacheManagerFeatureFlags	Swift.Hashable		
+protocol	conformance LLMCache.LLMCacheManagerFeatureFlags	FeatureFlags.FeatureFlagsKey		
+extension	LLMCache.Logger.Subsystem	RawRepresentable		
+extension	LLMCache.Logger.Category	RawRepresentable		
+extension	LLMCache.SearchStrategy	RawRepresentable		
+extension	LLMCache.CacheNamespace	RawRepresentable		

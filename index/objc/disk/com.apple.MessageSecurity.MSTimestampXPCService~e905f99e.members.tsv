@@ -1,0 +1,11 @@
+owner	kind	declaration
+MSTimestampXPCServer	+	+ (id)allowedTimestampEndpoints;
+MSTimestampXPCServer	-	- (_Bool)isTimestampServerAllowed:(id)allowed;
+MSTimestampXPCServer	-	- (id)createURLRequestForTimestampRequest:(id)request;
+MSTimestampXPCServer	-	- (void)fetchTimestampWithRequest:(id)request completion:(id /* block */)completion;
+MSTimestampXPCServer	-	- (void)handleFetchTimestampRequest:(id)request fromPeer:(id)peer;
+MSTimestampXPCServer	-	- (void)handleMessage:(id)message fromPeer:(id)peer;
+MSTimestampXPCServer	-	- (void)handleNetworkResponse:(id)response response:(id)response error:(id)error completion:(id /* block */)completion;
+MSTimestampXPCServer	-	- (void)performNetworkRequest:(id)request completion:(id /* block */)completion;
+MSTimestampXPCServer	-	- (void)sendErrorReply:(id)reply toPeer:(id)peer errorCode:(long long)code description:(const char *)description;
+MSTimestampXPCServer	-	- (void)sendSuccessReply:(id)reply toPeer:(id)peer response:(id)response;

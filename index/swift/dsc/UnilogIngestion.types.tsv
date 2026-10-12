@@ -1,0 +1,92 @@
+kind	type	conformance	member_kind	member
+struct	UnilogIngestion.SessionBuilder			
+struct	UnilogIngestion.SessionBuilder		var	spans
+struct	UnilogIngestion.SessionBuilder		var	spanLogEntries
+struct	UnilogIngestion.SessionBuilder		var	sessionLogEntries
+struct	UnilogIngestion.SessionBuilder		var	sessionAttributes
+struct	UnilogIngestion.SessionBuilder		var	identifierSpace
+struct	UnilogIngestion.SessionBuilder.Iterator			
+struct	UnilogIngestion.SessionBuilder.Iterator		let	sessionBuilder
+struct	UnilogIngestion.SessionBuilder.Iterator		let	sessionIds
+struct	UnilogIngestion.SessionBuilder.Iterator		var	position
+struct	UnilogIngestion.Timestamp			
+struct	UnilogIngestion.Timestamp		var	durationSince1970
+enum	UnilogIngestion.TracingIdentifier			
+enum	UnilogIngestion.TracingIdentifier		case	session
+enum	UnilogIngestion.TracingIdentifier		case	trace
+enum	UnilogIngestion.TracingIdentifier		case	span
+struct	UnilogIngestion.BiomeNativeObjCStreamMapper<A	BMStoreData>		
+struct	UnilogIngestion.BiomeNativeObjCStreamMapper<A	BMStoreData>	let	stream
+struct	UnilogIngestion.BiomeNativeObjCStreamMapper<A	BMStoreData>	let	useCase
+struct	UnilogIngestion.BiomeNativeObjCStreamMapper<A	BMStoreData>	let	mapper
+enum	UnilogIngestion.BiomeStaging			
+enum	UnilogIngestion.BiomeStaging		let	useCase
+class	UnilogIngestion.UnstagingRun			
+class	UnilogIngestion.UnstagingRun		let	start
+class	UnilogIngestion.UnstagingRun		let	endAt
+class	UnilogIngestion.UnstagingRun		var	endedAt
+struct	UnilogIngestion.PackagingStep			
+struct	UnilogIngestion.PackagingStep		var	context
+struct	UnilogIngestion.PackagingStep		var	unstagingRun
+struct	UnilogIngestion.PackagingStep		let	inputTopic
+struct	UnilogIngestion.PackagingStep		let	dataCollectionPolicy
+struct	UnilogIngestion.PackagingStep		var	builder
+class	UnilogIngestion.WorkflowState			
+class	UnilogIngestion.WorkflowState		let	userDefaults
+class	UnilogIngestion.WorkflowContext			
+class	UnilogIngestion.WorkflowContext		let	state
+class	UnilogIngestion.WorkflowContext		let	useCase
+class	UnilogIngestion.WorkflowContext		var	telemetry
+struct	UnilogIngestion.Device			
+enum	UnilogIngestion.Device.ProgramCode			
+enum	UnilogIngestion.Device.ProgramCode		case	visionOS
+enum	UnilogIngestion.Device.ProgramCode		case	iOS
+enum	UnilogIngestion.Device.ProgramCode		case	tvOS
+enum	UnilogIngestion.Device.ProgramCode		case	watchOS
+enum	UnilogIngestion.Device.ProgramCode		case	macOS
+struct	UnilogIngestion.DeviceClock			
+class	UnilogIngestion.DisjointSets<A	Swift.Hashable>		
+class	UnilogIngestion.DisjointSets<A	Swift.Hashable>	var	map
+class	UnilogIngestion.DisjointSets<A	Swift.Hashable>	var	_all
+class	UnilogIngestion.DisjointSets<A	Swift.Hashable>	var	_allBy
+class	UnilogIngestion.DisjointSets.DisjointSetNode<A	Swift.Hashable>		
+class	UnilogIngestion.DisjointSets.DisjointSetNode<A	Swift.Hashable>	var	head
+class	UnilogIngestion.DisjointSets.DisjointSetNode<A	Swift.Hashable>	var	rank
+class	UnilogIngestion.DisjointSets.DisjointSetNode<A	Swift.Hashable>	var	contained
+enum	UnilogIngestion.PlatformFeatures			
+enum	UnilogIngestion.PlatformFeatures		case	macMailSearchLogProcessorEnabled
+class	UnilogIngestion.ProcessingTelemetry			
+class	UnilogIngestion.ProcessingTelemetry		var	statistics
+class	UnilogIngestion.ProcessingTelemetry		var	lock
+class	UnilogIngestion.ProcessingTelemetry		let	telemetrySession
+enum	UnilogIngestion.ProcessingTelemetry.Statistic			
+enum	UnilogIngestion.ProcessingTelemetry.Statistic		case	enqueued
+enum	UnilogIngestion.ProcessingTelemetry.Statistic		case	processed
+enum	UnilogIngestion.ProcessingTelemetry.Statistic		case	sessionsEnqueued
+protocol	UnilogIngestion.DataCollectionPolicy			
+protocol	UnilogIngestion.OutputTopic	Message		
+protocol	UnilogIngestion.StagingTopic			
+protocol	UnilogIngestion.DeviceLockState			
+protocol	UnilogIngestion.RankableDisjointSetElement			
+protocol	conformance SessionBuilder.Iterator	Swift.IteratorProtocol		
+protocol	conformance UnilogIngestion.SessionBuilder	Swift.Sequence		
+protocol	conformance UnilogIngestion.Timestamp	Swift.Equatable		
+protocol	conformance UnilogIngestion.Timestamp	Swift.Comparable		
+protocol	conformance UnilogIngestion.TracingIdentifier	Swift.Equatable		
+protocol	conformance UnilogIngestion.TracingIdentifier	Swift.Hashable		
+protocol	conformance UnilogIngestion.TracingIdentifier	UnilogIngestion.RankableDisjointSetElement		
+protocol	conformance UnilogIngestion.BiomeNativeObjCStreamMapper	UnilogIngestion.StagingTopic		
+protocol	conformance UnilogIngestion.UnilogOutputTopic	UnilogIngestion.OutputTopic		
+protocol	conformance UnilogIngestion.UnilogStagingTopic	UnilogIngestion.StagingTopic		
+protocol	conformance Device.ProgramCode	Swift.Equatable		
+protocol	conformance Device.ProgramCode	Swift.Hashable		
+protocol	conformance Device.ProgramCode	Swift.RawRepresentable		
+protocol	conformance UnilogIngestion.PlatformFeatures	Swift.Equatable		
+protocol	conformance UnilogIngestion.PlatformFeatures	Swift.Hashable		
+protocol	conformance UnilogIngestion.PlatformFeatures	FeatureFlags.FeatureFlagsKey		
+protocol	conformance ProcessingTelemetry.Statistic	Swift.Equatable		
+protocol	conformance ProcessingTelemetry.Statistic	Swift.Hashable		
+extension	UnilogIngestion.SessionBuilder.Iterator	IteratorProtocol		
+extension	UnilogIngestion.SessionBuilder	Sequence		
+extension	UnilogIngestion.UnilogOutputTopic	OutputTopic		
+extension	UnilogIngestion.Device.ProgramCode	RawRepresentable		

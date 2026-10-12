@@ -1,0 +1,41 @@
+kind	type	conformance	member_kind	member
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEventError			
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEventError		case	contactStoreError
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEventError		case	unknownChangeEvent
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEvent			
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEvent		case	addContact
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEvent		case	updateContact
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEvent		case	dropEverything
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEvent		case	deleteContact
+enum	CMFSyncAgent.CMFContactStoreChangeHistoryEvent		case	error
+class	CMFSyncAgent.BlockedContactsCache	NSObject		
+class	CMFSyncAgent.BlockedContactsCache	NSObject	let	contactStore
+class	CMFSyncAgent.BlockedContactsCache	NSObject	var	historyObserver
+class	CMFSyncAgent.BlockedContactsCache	NSObject	let	blockedCacheLock
+class	CMFSyncAgent.BlockedContactsCache	NSObject	let	blocklistGetter
+class	CMFSyncAgent.ContactStoreChangeHistoryObserver			
+class	CMFSyncAgent.ContactStoreChangeHistoryObserver		var	store
+class	CMFSyncAgent.ContactStoreChangeHistoryObserver		var	changeHistoryToken
+class	CMFSyncAgent.ContactStoreChangeHistoryObserver		let	observer
+class	CMFSyncAgent.ContactStoreChangeHistoryObserver		let	requiredDescriptors
+struct	CMFSyncAgent.HandleBasedFilterItem			
+struct	CMFSyncAgent.HandleBasedFilterItem		var	item
+enum	CMFSyncAgent.PhoneNumberUtilities			
+class	CMFSyncAgent.BlockListAlertManager	NSObject		
+class	CMFSyncAgent.BlockListAlertManager	NSObject	var	lastLimitAlertUptime
+struct	CMFSyncAgent.Alerts.Configuration			
+struct	CMFSyncAgent.Alerts.Configuration		let	identifier
+struct	CMFSyncAgent.Alerts.Configuration		let	title
+struct	CMFSyncAgent.Alerts.Configuration		let	message
+struct	CMFSyncAgent.Alerts.Configuration		let	defaultButton
+struct	CMFSyncAgent.Alerts.Configuration		let	alternateButton
+enum	CMFSyncAgent.Alerts			
+struct	CMFSyncAgent.Alerts.Configuration.Button			
+struct	CMFSyncAgent.Alerts.Configuration.Button		let	title
+struct	CMFSyncAgent.Alerts.Configuration.Button		let	action
+class	CMFSyncAgent.ContactStoreFactory	NSObject		
+protocol	CMFSyncAgent.ContactStore			
+protocol	conformance CMFSyncAgent.CMFContactStoreChangeHistoryEventError	protocol descriptor for Error		
+protocol	conformance CMFSyncAgent.HandleBasedFilterItem	protocol descriptor for Hashable		
+protocol	conformance CMFSyncAgent.HandleBasedFilterItem	protocol descriptor for Equatable		
+protocol	conformance CNContactStore	CMFSyncAgent.ContactStore		

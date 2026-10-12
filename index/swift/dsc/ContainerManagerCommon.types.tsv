@@ -1,0 +1,117 @@
+kind	type	conformance	member_kind	member
+enum	ContainerManagerCommon.AuthorizationError			
+enum	ContainerManagerCommon.AuthorizationError		case	mcmError
+enum	ContainerManagerCommon.AuthorizationError		case	notAuthorized
+enum	ContainerManagerCommon.IssueError			
+enum	ContainerManagerCommon.IssueError		case	mcmError
+struct	ContainerManagerCommon.AppGroupEvent			
+struct	ContainerManagerCommon.AppGroupEvent		let	authResult
+struct	ContainerManagerCommon.AppGroupEvent		let	clientIdentifier
+struct	ContainerManagerCommon.AppGroupEvent		let	groupIdentifier
+struct	ContainerManagerCommon.AppGroupEvent		let	teamIdentifier
+struct	ContainerManagerCommon.AppGroupEvent		let	isEntitled
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.Settings			
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.Settings		let	db
+class	ContainerManagerCommon.MCMResultAuthorize	MCMResultBase		
+class	ContainerManagerCommon.MCMResultAuthorize	MCMResultBase	let	authResult
+class	ContainerManagerCommon.MCMAnalyticsDatabase			
+class	ContainerManagerCommon.MCMAnalyticsDatabase		let	dbPath
+class	ContainerManagerCommon.MCMAnalyticsDatabase		let	db
+class	ContainerManagerCommon.MCMAnalyticsDatabase		let	statements
+class	ContainerManagerCommon.MCMAnalyticsDatabase		let	settings
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.DatabaseError			
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.DatabaseError		case	unableToOpenDatabase
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.DatabaseError		case	unableToCreateSchema
+struct	ContainerManagerCommon.ClassLookup			
+struct	ContainerManagerCommon.ClassLookup		let	identifiers
+struct	ContainerManagerCommon.ClassLookup		let	allowAll
+struct	ContainerManagerCommon.AmbiguousPersonaEvent			
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	identifier
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	proxiedIdentifier
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	proximateIdentifier
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	proximateLaunchPersonaType
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	propagatedPersonaType
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	explicitPersonaType
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	legacyPersonaPolicy
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	propagationFailed
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	originatorProcess
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	originatorLaunchPersonaType
+struct	ContainerManagerCommon.AmbiguousPersonaEvent		let	containerClass
+class	ContainerManagerCommon.MCMXPCMessageAuthorize	MCMXPCMessageQuery		
+class	ContainerManagerCommon.MCMXPCMessageAuthorize	MCMXPCMessageQuery	var	auditToken
+class	ContainerManagerCommon.MCMXPCMessageAuthorize	MCMXPCMessageQuery	var	flags
+class	ContainerManagerCommon.MCMXPCMessageAuthorize	MCMXPCMessageQuery	var	onBehalfOfSelf
+struct	ContainerManagerCommon.ClassLookup			
+struct	ContainerManagerCommon.ClassLookup		let	identifiers
+struct	ContainerManagerCommon.ClassLookup.IdentifierLookup			
+struct	ContainerManagerCommon.ClassLookup.IdentifierLookup		let	parts
+struct	ContainerManagerCommon.ClassLookup.IdentifierLookup.PartLookup			
+struct	ContainerManagerCommon.ClassLookup.IdentifierLookup.PartLookup		let	operations
+struct	ContainerManagerCommon.ClassLookup.IdentifierLookup.PartLookup		let	access
+struct	ContainerManagerCommon.ClassLookup.IdentifierLookup.PartLookup		let	domains
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.AmbiguousPersonaSchema			
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.AmbiguousPersonaSchema		let	db
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.AmbiguousPersona			
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.AmbiguousPersona		let	db
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.AmbiguousPersona		let	handle
+class	ContainerManagerCommon.MCMAnalyticsDatabaseWrapper	NSObject		
+class	ContainerManagerCommon.MCMAnalyticsDatabaseWrapper	NSObject	let	unwrapped
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements			
+struct	ContainerManagerCommon.MCMAnalyticsDatabase.Statements		let	addAmbiguousPersona
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError			
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	prepareFailed
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	bindFailed
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	stepFailed
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	finalizeFailed
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	resetFailed
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	clearFailed
+enum	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementError		case	execFailed
+protocol	EventProvider			
+protocol	Statements.StatementProviding			
+protocol	Statements.StatementIsOneShot			
+protocol	Statements.StatementIsMultistep			
+protocol	Statements.StatementHasTextBindings			
+protocol	Statements.StatementHasIntegerBindings			
+protocol	conformance AuthorizationError	Swift.Error		
+protocol	conformance IssueError	Swift.Error		
+protocol	conformance __C.MCMSandboxExtensionType	Swift.Equatable		
+protocol	conformance __C.MCMSandboxExtensionType	Swift.RawRepresentable		
+protocol	conformance AppGroupEvent	ContainerManagerCommon.EventProvider		
+protocol	conformance AppGroupEvent	Swift.CustomStringConvertible		
+protocol	conformance Statements.Settings	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementIsOneShot		
+protocol	conformance Statements.Settings	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementProviding		
+protocol	conformance __C.MCMAccessType	Swift.CustomStringConvertible: ContainerManagerCommon		
+protocol	conformance __C.MCMAccessType	Swift.CaseIterable: ContainerManagerCommon		
+protocol	conformance __C.MCMAccessType	Swift.Equatable		
+protocol	conformance __C.MCMAccessType	Swift.RawRepresentable		
+protocol	conformance MCMAnalyticsDatabase.DatabaseError	Swift.Error		
+protocol	conformance __C.container_class_t	Swift.RawRepresentable		
+protocol	conformance __C.container_class_t	Swift.Equatable		
+protocol	conformance __C.container_class_t	Swift.Hashable		
+protocol	conformance __C.container_part_t	Swift.CaseIterable: ContainerManagerCommon		
+protocol	conformance __C.MCMSandboxExtensionType	Swift.CustomStringConvertible: ContainerManagerCommon		
+protocol	conformance __C.MCMSandboxExtensionType	Swift.CaseIterable: ContainerManagerCommon		
+protocol	conformance AmbiguousPersonaEvent	ContainerManagerCommon.EventProvider		
+protocol	conformance AmbiguousPersonaEvent	Swift.CustomStringConvertible		
+protocol	conformance __C.container_authorize_flags_t	Swift.ExpressibleByArrayLiteral		
+protocol	conformance __C.container_authorize_flags_t	Swift.Equatable		
+protocol	conformance __C.container_authorize_flags_t	Swift.RawRepresentable		
+protocol	conformance __C.container_authorize_flags_t	Swift.SetAlgebra		
+protocol	conformance __C.container_authorize_flags_t	Swift.OptionSet		
+protocol	conformance __C.container_class_t	Swift.RawRepresentable		
+protocol	conformance __C.container_class_t	Swift.Equatable		
+protocol	conformance __C.container_class_t	Swift.Hashable		
+protocol	conformance __C.container_part_t	Swift.Hashable		
+protocol	conformance __C.container_part_t	Swift.Equatable		
+protocol	conformance __C.container_part_t	Swift.RawRepresentable		
+protocol	conformance __C.MCMOperationType	Swift.Equatable		
+protocol	conformance __C.MCMOperationType	Swift.RawRepresentable		
+protocol	conformance Statements.AmbiguousPersonaSchema	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementIsOneShot		
+protocol	conformance Statements.AmbiguousPersonaSchema	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementProviding		
+protocol	conformance Statements.AmbiguousPersona	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementHasTextBindings		
+protocol	conformance Statements.AmbiguousPersona	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementHasIntegerBindings		
+protocol	conformance Statements.AmbiguousPersona	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementIsMultistep		
+protocol	conformance Statements.AmbiguousPersona	ContainerManagerCommon.MCMAnalyticsDatabase.Statements.StatementProviding		
+protocol	conformance __C.MCMOperationType	Swift.CustomStringConvertible: ContainerManagerCommon		
+protocol	conformance __C.MCMOperationType	Swift.CaseIterable: ContainerManagerCommon		
+protocol	conformance Statements.StatementError	Swift.Error		

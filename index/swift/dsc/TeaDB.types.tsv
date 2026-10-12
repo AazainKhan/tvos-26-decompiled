@@ -1,0 +1,691 @@
+kind	type	conformance	member_kind	member
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>		
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	let	database
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	let	table
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	clock
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	memoryCache
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	let	accessQueue
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	let	memoryWarningSource
+class	TeaDB.KeyValueStore<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	promises
+struct	TeaDB.KeyValueStore.Promises<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>		
+struct	TeaDB.KeyValueStore.Promises<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	kvs
+struct	TeaDB.KVSEntity<A	TeaDB.KeyValueStoreDescriptor>		
+struct	TeaDB.KVSEntity<A	TeaDB.KeyValueStoreDescriptor>	var	id
+struct	TeaDB.KVSEntity<A	TeaDB.KeyValueStoreDescriptor>	var	updatedAt
+struct	TeaDB.KVSEntity<A	TeaDB.KeyValueStoreDescriptor>	var	valueJson
+struct	TeaDB.KVSEntry<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>		
+struct	TeaDB.KVSEntry<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	entity
+struct	TeaDB.KVSEntry<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	value
+enum	TeaDB.KeyValueStore.TranslationError<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>		
+enum	TeaDB.KeyValueStore.TranslationError<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	case	missingRoot
+enum	TeaDB.KVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>		
+enum	TeaDB.KVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>	case	id
+enum	TeaDB.KVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>	case	updatedAt
+enum	TeaDB.KVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>	case	valueJson
+struct	TeaDB._Optional<A	TeaDB.ColumnType>		
+struct	TeaDB._Optional<A	TeaDB.ColumnType>	var	value
+struct	TeaDB.CreateSearchTableCommand<A	TeaDB.SearchEntityType>		
+struct	TeaDB.CreateSearchTableCommand<A	TeaDB.SearchEntityType>	var	parts
+enum	TeaDB.DataType			
+enum	TeaDB.DataType		case	text
+enum	TeaDB.DataType		case	integer
+enum	TeaDB.DataType		case	bool
+enum	TeaDB.DataType		case	double
+enum	TeaDB.DataType		case	blob
+struct	TeaDB.RawEntity			
+enum	TeaDB.RawEntity.CodingKeys			
+enum	TeaDB.SearchExpression<A	TeaDB.SearchEntityType>		
+enum	TeaDB.SearchExpression<A	TeaDB.SearchEntityType>	case	expression
+enum	TeaDB.SearchExpression<A	TeaDB.SearchEntityType>	case	match
+enum	TeaDB.SearchExpression<A	TeaDB.SearchEntityType>	case	and
+enum	TeaDB.SearchExpression<A	TeaDB.SearchEntityType>	case	or
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>		
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>	case	phrases
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>	case	near
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>	case	columnFilter
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>	case	and
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>	case	or
+enum	TeaDB.SearchMatchExpression<A	TeaDB.SearchEntityType>	case	this
+enum	TeaDB.SearchMatchPhrase			
+enum	TeaDB.SearchMatchPhrase		case	phrase
+enum	TeaDB.SearchMatchPhrase		case	plus
+enum	TeaDB.SearchMatchPhrase		case	prefix
+enum	TeaDB.SearchMatchPhrase		case	startsWith
+enum	TeaDB.ValueType			
+enum	TeaDB.ValueType		case	text
+enum	TeaDB.ValueType		case	integer
+enum	TeaDB.ValueType		case	bool
+enum	TeaDB.ValueType		case	double
+enum	TeaDB.ValueType		case	blob
+enum	TeaDB.ValueType		case	null
+enum	TeaDB.ValueType.CodingKeys			
+enum	TeaDB.ValueType.CodingKeys		case	text
+enum	TeaDB.ValueType.CodingKeys		case	integer
+enum	TeaDB.ValueType.CodingKeys		case	bool
+enum	TeaDB.ValueType.CodingKeys		case	double
+enum	TeaDB.ValueType.CodingKeys		case	blob
+enum	TeaDB.ValueType.CodingKeys		case	null
+class	TeaDB.Database			
+class	TeaDB.Database		var	connection
+class	TeaDB.Database		var	db
+class	TeaDB.Database		let	scheduler
+enum	TeaDB.Database.Location			
+enum	TeaDB.Database.Location		case	path
+enum	TeaDB.Database.Location		case	documents
+enum	TeaDB.Database.Location		case	inMemory
+enum	TeaDB.Database.Errors			
+enum	TeaDB.Database.Errors		case	cantOpen
+enum	TeaDB.Database.Errors		case	noConnection
+enum	TeaDB.Database.Errors		case	noDatabase
+enum	TeaDB.Database.JournalingMode			
+enum	TeaDB.Database.JournalingMode		case	wal
+enum	TeaDB.Database.JournalingMode		case	rollback
+enum	TeaDB.Database.JournalingMode		case	memory
+enum	TeaDB.Database.RecoveryMode			
+enum	TeaDB.Database.RecoveryMode		case	throw
+enum	TeaDB.Database.RecoveryMode		case	truncate
+enum	TeaDB.Database.CacheSize			
+enum	TeaDB.Database.CacheSize		case	pages
+enum	TeaDB.Database.CacheSize		case	default
+enum	TeaDB.Database.VacuumMode			
+enum	TeaDB.Database.VacuumMode		case	none
+enum	TeaDB.Database.VacuumMode		case	full
+enum	TeaDB.Database.VacuumMode		case	incremental
+enum	TeaDB.Database.ConnectionMode			
+enum	TeaDB.Database.ConnectionMode		case	transient
+enum	TeaDB.Database.ConnectionMode		case	always
+struct	TeaDB.Database.SchedulingConfiguration			
+struct	TeaDB.Database.SchedulingConfiguration		let	taskQueue
+struct	TeaDB.Database.Configuration			
+struct	TeaDB.Database.Configuration		var	location
+struct	TeaDB.Database.Configuration		var	assertions
+struct	TeaDB.Database.Configuration		var	journalingMode
+struct	TeaDB.Database.Configuration		var	recoveryMode
+struct	TeaDB.Database.Configuration		var	cacheSize
+struct	TeaDB.Database.Configuration		var	vacuumMode
+struct	TeaDB.Database.Configuration		var	busyTimeout
+struct	TeaDB.Database.Configuration		var	schedulingConfiguration
+struct	TeaDB.Database.Scheduler			
+struct	TeaDB.Database.Scheduler		let	configuration
+enum	TeaDB.Expression			
+enum	TeaDB.Expression		case	eq
+enum	TeaDB.Expression		case	neq
+enum	TeaDB.Expression		case	gt
+enum	TeaDB.Expression		case	gte
+enum	TeaDB.Expression		case	lt
+enum	TeaDB.Expression		case	lte
+enum	TeaDB.Expression		case	and
+enum	TeaDB.Expression		case	or
+enum	TeaDB.Expression		case	in
+enum	TeaDB.Expression		case	notIn
+enum	TeaDB.StatementOperation			
+enum	TeaDB.StatementOperation		case	insert
+enum	TeaDB.StatementOperation		case	create
+enum	TeaDB.StatementOperation		case	update
+enum	TeaDB.StatementOperation		case	delete
+enum	TeaDB.StatementOperation		case	query
+enum	TeaDB.StatementOperation		case	run
+class	TeaDB.Query<A	TeaDB.BaseType>		
+class	TeaDB.Query<A	TeaDB.BaseType>	let	connection
+struct	TeaDB.ValueOf			
+struct	TeaDB.ValueOf		let	value
+struct	TeaDB.SearchTable.Delete<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchTable.Delete<A	TeaDB.SearchEntityType>	let	connection
+enum	TeaDB.SearchTable.Delete.Error<A	TeaDB.SearchEntityType>		
+enum	TeaDB.SearchTable.Delete.Error<A	TeaDB.SearchEntityType>	case	onlyQueriedSearchEntitiesCanBeDeleted
+struct	TeaDB.InsertCommand			
+struct	TeaDB.InsertCommand		let	parts
+class	TeaDB.LazyJSON<A	Swift.Decodable, A: Swift.Encodable>		
+class	TeaDB.LazyJSON<A	Swift.Decodable, A: Swift.Encodable>	let	loader
+enum	TeaDB.LazyJSON.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	TeaDB.LazyJSON.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	loader
+class	TeaDB.Store<A	Swift.Decodable, A: Swift.Encodable, B: TeaDB.EntityType>		
+class	TeaDB.Store<A	Swift.Decodable, A: Swift.Encodable, B: TeaDB.EntityType>	let	database
+class	TeaDB.Store<A	Swift.Decodable, A: Swift.Encodable, B: TeaDB.EntityType>	let	table
+class	TeaDB.Store<A	Swift.Decodable, A: Swift.Encodable, B: TeaDB.EntityType>	var	promises
+struct	TeaDB.Store.Promises<A	Swift.Decodable, A: Swift.Encodable, B: TeaDB.EntityType>		
+struct	TeaDB.Store.Promises<A	Swift.Decodable, A: Swift.Encodable, B: TeaDB.EntityType>	var	store
+class	TeaDB.Column<A	TeaDB.ColumnType>		
+class	TeaDB.Column<A	TeaDB.ColumnType>	let	dataType
+class	TeaDB.Column<A	TeaDB.ColumnType>	var	value
+class	TeaDB.Column<A	TeaDB.ColumnType>	var	primaryKey
+class	TeaDB.Column<A	TeaDB.ColumnType>	var	index
+class	TeaDB.Column<A	TeaDB.ColumnType>	var	unique
+class	TeaDB.Column<A	TeaDB.ColumnType>	var	default
+class	TeaDB.Column<A	TeaDB.ColumnType>	var	onUpdate
+enum	TeaDB.Column.Func<A	TeaDB.ColumnType>		
+enum	TeaDB.Column.Func<A	TeaDB.ColumnType>	case	value
+enum	TeaDB.Column.Func<A	TeaDB.ColumnType>	case	block
+struct	TeaDB.CreateIndexCommand<A	TeaDB.BaseType>		
+struct	TeaDB.CreateIndexCommand<A	TeaDB.BaseType>	var	parts
+class	TeaDB.Delete<A	TeaDB.EntityType>		
+class	TeaDB.Delete<A	TeaDB.EntityType>	let	connection
+class	TeaDB.Save<A	TeaDB.EntityType>		
+class	TeaDB.Save<A	TeaDB.EntityType>	let	connection
+struct	TeaDB.CreateTableCommand<A	TeaDB.BaseType>		
+struct	TeaDB.CreateTableCommand<A	TeaDB.BaseType>	var	parts
+struct	TeaDB.SearchTable<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchTable<A	TeaDB.SearchEntityType>	let	connection
+struct	TeaDB.SearchTable.Create<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchTable.Create<A	TeaDB.SearchEntityType>	let	connection
+struct	TeaDB.SearchTable.Create<A	TeaDB.SearchEntityType>	let	versions
+enum	TeaDB.MigratableEntity.CodingKeys<A	TeaDB.EntityType>		
+enum	TeaDB.MigratableEntity.CodingKeys<A	TeaDB.EntityType>	case	entity
+struct	TeaDB.MigratableEntity<A	TeaDB.EntityType>		
+struct	TeaDB.MigratableEntity<A	TeaDB.EntityType>	let	entity
+enum	TeaDB.OrderBy			
+enum	TeaDB.OrderBy		case	descending
+enum	TeaDB.OrderBy		case	ascending
+struct	TeaDB.SelectCommand<A	TeaDB.BaseType>		
+struct	TeaDB.SelectCommand<A	TeaDB.BaseType>	var	parts
+class	TeaDB.RowID			
+class	TeaDB.RowID		let	protectedValue
+enum	TeaDB.RowID.CodingKeys			
+enum	TeaDB.RowID.CodingKeys		case	value
+class	TeaDB.FastEntity			
+class	TeaDB.FastEntity		let	keysAndValues
+class	TeaDB.Connection			
+class	TeaDB.Connection		let	assertions
+class	TeaDB.Connection		let	handle
+struct	TeaDB.Versions			
+struct	TeaDB.Versions		let	create
+struct	TeaDB.Versions		let	save
+struct	TeaDB.Versions		let	query
+struct	TeaDB.Versions.Entity			
+struct	TeaDB.Versions.Entity		var	_id
+struct	TeaDB.Versions.Entity		var	_version
+enum	TeaDB.Versions.Entity.CodingKeys			
+enum	TeaDB.Versions.Entity.CodingKeys		case	id
+enum	TeaDB.Versions.Entity.CodingKeys		case	version
+class	TeaDB.MixedKeyValueStore<A	TeaDB.KeyValueStoreDescriptor>		
+class	TeaDB.MixedKeyValueStore<A	TeaDB.KeyValueStoreDescriptor>	let	database
+class	TeaDB.MixedKeyValueStore<A	TeaDB.KeyValueStoreDescriptor>	let	table
+class	TeaDB.MixedKeyValueStore<A	TeaDB.KeyValueStoreDescriptor>	var	clock
+class	TeaDB.MixedKeyValueStore<A	TeaDB.KeyValueStoreDescriptor>	var	promises
+struct	TeaDB.MixedKeyValueStore.Promises<A	TeaDB.KeyValueStoreDescriptor>		
+struct	TeaDB.MixedKeyValueStore.Promises<A	TeaDB.KeyValueStoreDescriptor>	var	kvs
+struct	TeaDB.MKVSEntry<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>		
+struct	TeaDB.MKVSEntry<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	entity
+struct	TeaDB.MKVSEntry<A	TeaDB.KeyValueStoreDescriptor, B: Swift.Decodable, B: Swift.Encodable>	var	value
+struct	TeaDB.MKVSEntity<A	TeaDB.KeyValueStoreDescriptor>		
+struct	TeaDB.MKVSEntity<A	TeaDB.KeyValueStoreDescriptor>	var	id
+struct	TeaDB.MKVSEntity<A	TeaDB.KeyValueStoreDescriptor>	var	updatedAt
+struct	TeaDB.MKVSEntity<A	TeaDB.KeyValueStoreDescriptor>	var	valueJson
+enum	TeaDB.MixedKeyValueStore.TranslationError<A	TeaDB.KeyValueStoreDescriptor>		
+enum	TeaDB.MixedKeyValueStore.TranslationError<A	TeaDB.KeyValueStoreDescriptor>	case	missingRoot
+enum	TeaDB.MKVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>		
+enum	TeaDB.MKVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>	case	id
+enum	TeaDB.MKVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>	case	updatedAt
+enum	TeaDB.MKVSEntity.CodingKeys<A	TeaDB.KeyValueStoreDescriptor>	case	valueJson
+class	TeaDB.Statement<A	TeaDB.ConstructType>		
+class	TeaDB.Statement<A	TeaDB.ConstructType>	let	command
+class	TeaDB.Statement<A	TeaDB.ConstructType>	let	operation
+class	TeaDB.Statement<A	TeaDB.ConstructType>	let	connection
+class	TeaDB.Statement<A	TeaDB.ConstructType>	var	chainBlocks
+struct	TeaDB.SearchTable.Save<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchTable.Save<A	TeaDB.SearchEntityType>	let	connection
+class	TeaDB.FastColumn<A	TeaDB.ColumnType>		
+class	TeaDB.FastColumn<A	TeaDB.ColumnType>	let	name
+class	TeaDB.FastColumn<A	TeaDB.ColumnType>	var	wrappedValue
+enum	TeaDB.FastColumn.CodingKeys<A	TeaDB.ColumnType>		
+enum	TeaDB.FastColumn.CodingKeys<A	TeaDB.ColumnType>	case	name
+enum	TeaDB.FastColumn.CodingKeys<A	TeaDB.ColumnType>	case	wrappedValue
+struct	TeaDB.SearchSchema<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchSchema<A	TeaDB.SearchEntityType>	var	rowID
+struct	TeaDB.SearchSchema<A	TeaDB.SearchEntityType>	var	columns
+enum	TeaDB.Transaction			
+enum	TeaDB.Transaction		case	deferred
+enum	TeaDB.Transaction		case	immediate
+enum	TeaDB.Transaction		case	exclusive
+class	TeaDB.LazyEntity<A	TeaDB.EntityType>		
+class	TeaDB.LazyEntity<A	TeaDB.EntityType>	let	identifier
+class	TeaDB.LazyEntity<A	TeaDB.EntityType>	let	loader
+enum	TeaDB.LazyEntity.CodingKeys<A	TeaDB.EntityType>		
+enum	TeaDB.LazyEntity.CodingKeys<A	TeaDB.EntityType>	case	identifier
+enum	TeaDB.LazyEntity.CodingKeys<A	TeaDB.EntityType>	case	loader
+enum	TeaDB.Tokenizer			
+enum	TeaDB.Tokenizer		case	porter
+enum	TeaDB.Tokenizer		case	trigram
+enum	TeaDB.Tokenizer		case	unicode61
+enum	TeaDB.Tokenizer		case	ascii
+enum	TeaDB.BaseTokenizer			
+enum	TeaDB.BaseTokenizer		case	unicode61
+enum	TeaDB.BaseTokenizer		case	ascii
+struct	TeaDB.Unicode61TokenizerOptions			
+struct	TeaDB.Unicode61TokenizerOptions		var	removeDiacritics
+struct	TeaDB.Unicode61TokenizerOptions		var	categories
+struct	TeaDB.Unicode61TokenizerOptions		var	tokenChars
+struct	TeaDB.Unicode61TokenizerOptions		var	separators
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	special
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	letter
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	mark
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	number
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	punctuation
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	symbol
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories		case	separator
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special		case	control
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special		case	format
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special		case	privateUse
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special		case	surrogate
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special		case	unassigned
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter		case	uppercase
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter		case	lowercase
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter		case	titlecase
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter		case	other
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter		case	modifier
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Mark			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Mark		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Mark		case	enclosing
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Mark		case	nonspacing
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Mark		case	spacing
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Number			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Number		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Number		case	decimal
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Number		case	other
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Number		case	letter
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	connector
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	close
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	dash
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	final
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	initial
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	other
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation		case	open
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol		case	math
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol		case	currency
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol		case	modifier
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol		case	other
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Separator			
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Separator		case	any
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Separator		case	line
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Separator		case	paragraph
+enum	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Separator		case	space
+struct	TeaDB.AsciiTokenizerOptions			
+struct	TeaDB.AsciiTokenizerOptions		var	tokenChars
+struct	TeaDB.AsciiTokenizerOptions		var	separators
+struct	TeaDB.TrigramTokenizerOptions			
+struct	TeaDB.TrigramTokenizerOptions		var	removeDiacritics
+struct	TeaDB.TrigramTokenizerOptions		var	caseSensitive
+class	TeaDB.QuerySome<A	TeaDB.BaseType, B: TeaDB.PartialEntityType>		
+class	TeaDB.QuerySome<A	TeaDB.BaseType, B: TeaDB.PartialEntityType>	let	connection
+struct	TeaDB.SearchTable.Query<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchTable.Query<A	TeaDB.SearchEntityType>	let	connection
+class	TeaDB.Assertion			
+class	TeaDB.Assertion		let	name
+class	TeaDB.Assertion		var	didAcquireAssertion
+enum	TeaDB.Assertion.Name			
+enum	TeaDB.Assertion.Name		case	finishTaskUninterruptable
+enum	TeaDB.Assertion.Name		case	finishTaskNow
+struct	TeaDB.Assertion.RunningAssertion			
+struct	TeaDB.Assertion.RunningAssertion		let	name
+struct	TeaDB.Assertion.RunningAssertion		let	runningboardAssertion
+struct	TeaDB.Assertion.RunningAssertion		let	interestCount
+enum	TeaDB.UpdateCommand.Errors<A	TeaDB.BaseType>		
+enum	TeaDB.UpdateCommand.Errors<A	TeaDB.BaseType>	case	missingEntityID
+struct	TeaDB.UpdateCommand<A	TeaDB.BaseType>		
+struct	TeaDB.UpdateCommand<A	TeaDB.BaseType>	let	parts
+class	TeaDB.SearchColumn			
+class	TeaDB.SearchColumn		let	protectedState
+enum	TeaDB.SearchColumn.CodingKeys			
+enum	TeaDB.SearchColumn.CodingKeys		case	name
+enum	TeaDB.SearchColumn.CodingKeys		case	weight
+enum	TeaDB.SearchColumn.CodingKeys		case	unindexed
+enum	TeaDB.SearchColumn.CodingKeys		case	value
+struct	TeaDB.SearchColumn.State			
+struct	TeaDB.SearchColumn.State		var	name
+struct	TeaDB.SearchColumn.State		var	weight
+struct	TeaDB.SearchColumn.State		var	unindexed
+struct	TeaDB.SearchColumn.State		var	value
+struct	TeaDB.AssertionOptions			
+struct	TeaDB.AssertionOptions		let	rawValue
+struct	TeaDB.JSON<A	Swift.Decodable, A: Swift.Encodable>		
+struct	TeaDB.JSON<A	Swift.Decodable, A: Swift.Encodable>	let	value
+enum	TeaDB.JSON.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	TeaDB.JSON.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	value
+class	TeaDB.Table<A	TeaDB.EntityType>		
+class	TeaDB.Table<A	TeaDB.EntityType>	let	connection
+class	TeaDB.Drop<A	TeaDB.BaseType>		
+class	TeaDB.Drop<A	TeaDB.BaseType>	let	connection
+class	TeaDB.Update<A	TeaDB.BaseType>		
+class	TeaDB.Update<A	TeaDB.BaseType>	let	connection
+class	TeaDB.PreparedStatement			
+class	TeaDB.PreparedStatement		let	handle
+class	TeaDB.PreparedStatement		let	statement
+class	TeaDB.PreparedStatement		let	query
+enum	TeaDB.SQLError			
+enum	TeaDB.SQLError		case	error
+enum	TeaDB.SQLError		case	internal
+enum	TeaDB.SQLError		case	perm
+enum	TeaDB.SQLError		case	abort
+enum	TeaDB.SQLError		case	busy
+enum	TeaDB.SQLError		case	locked
+enum	TeaDB.SQLError		case	nomem
+enum	TeaDB.SQLError		case	readonly
+enum	TeaDB.SQLError		case	interrupt
+enum	TeaDB.SQLError		case	ioerr
+enum	TeaDB.SQLError		case	corrupt
+enum	TeaDB.SQLError		case	notFound
+enum	TeaDB.SQLError		case	full
+enum	TeaDB.SQLError		case	cantOpen
+enum	TeaDB.SQLError		case	protocol
+enum	TeaDB.SQLError		case	empty
+enum	TeaDB.SQLError		case	schema
+enum	TeaDB.SQLError		case	tooBig
+enum	TeaDB.SQLError		case	constraint
+enum	TeaDB.SQLError		case	mismatch
+enum	TeaDB.SQLError		case	misuse
+enum	TeaDB.SQLError		case	noLFS
+enum	TeaDB.SQLError		case	auth
+enum	TeaDB.SQLError		case	format
+enum	TeaDB.SQLError		case	range
+enum	TeaDB.SQLError		case	notADB
+enum	TeaDB.SQLError		case	notice
+enum	TeaDB.SQLError		case	warning
+enum	TeaDB.SQLError		case	unknown
+enum	TeaDB.SQLError		case	ok
+enum	TeaDB.SQLError		case	row
+enum	TeaDB.SQLError		case	done
+class	TeaDB.Create<A	TeaDB.BaseType>		
+class	TeaDB.Create<A	TeaDB.BaseType>	let	connection
+class	TeaDB.Create<A	TeaDB.BaseType>	let	versions
+struct	TeaDB.EntityMigration<A	TeaDB.EntityType, A1: TeaDB.EntityType>		
+struct	TeaDB.EntityMigration<A	TeaDB.EntityType, A1: TeaDB.EntityType>	var	type
+struct	TeaDB.EntityMigration<A	TeaDB.EntityType, A1: TeaDB.EntityType>	let	migrate
+struct	TeaDB.DeleteCommand<A	TeaDB.BaseType>		
+struct	TeaDB.DeleteCommand<A	TeaDB.BaseType>	var	parts
+struct	TeaDB.SearchOrder<A	TeaDB.SearchEntityType>		
+struct	TeaDB.SearchOrder<A	TeaDB.SearchEntityType>	var	sortBy
+struct	TeaDB.SearchOrder<A	TeaDB.SearchEntityType>	var	direction
+enum	TeaDB.SearchOrder.SortBy<A	TeaDB.SearchEntityType>		
+enum	TeaDB.SearchOrder.SortBy<A	TeaDB.SearchEntityType>	case	column
+enum	TeaDB.SearchOrder.SortBy<A	TeaDB.SearchEntityType>	case	relevancy
+enum	TeaDB.SearchOrder.Direction<A	TeaDB.SearchEntityType>		
+enum	TeaDB.SearchOrder.Direction<A	TeaDB.SearchEntityType>	case	ascending
+enum	TeaDB.SearchOrder.Direction<A	TeaDB.SearchEntityType>	case	descending
+class	TeaDB.LazyLoader<A	Swift.Decodable, A: Swift.Encodable>		
+class	TeaDB.LazyLoader<A	Swift.Decodable, A: Swift.Encodable>	var	state
+class	TeaDB.LazyLoader<A	Swift.Decodable, A: Swift.Encodable>	let	lock
+enum	TeaDB.LazyLoader.LoadState<A	Swift.Decodable, A: Swift.Encodable>		
+enum	TeaDB.LazyLoader.LoadState<A	Swift.Decodable, A: Swift.Encodable>	case	loaded
+enum	TeaDB.LazyLoader.LoadState<A	Swift.Decodable, A: Swift.Encodable>	case	waiting
+enum	TeaDB.LazyLoader.LoadState<A	Swift.Decodable, A: Swift.Encodable>	case	failed
+enum	TeaDB.LazyLoaderError			
+enum	TeaDB.LazyLoaderError		case	noObject
+protocol	TeaDB.KeyValueStoreDescriptor			
+protocol	TeaDB.EntityType			
+protocol	TeaDB.QueryValueType			
+protocol	TeaDB.ColumnType			
+protocol	TeaDB.ColumnCodable			
+protocol	TeaDB.Nullable			
+protocol	TeaDB.CommandType			
+protocol	TeaDB.BaseType			
+protocol	TeaDB.Migratable	Entity		
+protocol	TeaDB.FastEntityProviding			
+protocol	TeaDB.FastEntityType			
+protocol	TeaDB.ConnectionType			
+protocol	TeaDB.UpdatableEntityType			
+protocol	TeaDB.PartialEntityType			
+protocol	TeaDB.SearchEntityType			
+protocol	TeaDB.ConstructType			
+protocol	TeaDB.StatementChainType			
+protocol	conformance TeaDB.KeyValueStore	TeaFoundation.KeyValueStoreType		
+protocol	conformance KVSEntity	TeaDB.StatementChainType		
+protocol	conformance KVSEntity	Swift.Encodable		
+protocol	conformance KVSEntity	Swift.Decodable		
+protocol	conformance KVSEntity	TeaDB.ConstructType		
+protocol	conformance KVSEntity	TeaDB.ColumnType		
+protocol	conformance KVSEntity	TeaDB.BaseType		
+protocol	conformance KVSEntity	TeaDB.EntityType		
+protocol	conformance KVSEntity.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance KVSEntity.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance KVSEntity.CodingKeys	Swift.Hashable		
+protocol	conformance KVSEntity.CodingKeys	Swift.Equatable		
+protocol	conformance TranslationError	Swift.Hashable		
+protocol	conformance TranslationError	Swift.Equatable		
+protocol	conformance TranslationError	Swift.Error		
+protocol	conformance KVSEntity.CodingKeys	Swift.CodingKey		
+protocol	conformance Swift.Optional	TeaDB.ColumnType		
+protocol	conformance Swift.Optional	TeaDB.StatementChainType		
+protocol	conformance TeaDB._Optional	TeaDB.ColumnType		
+protocol	conformance TeaDB._Optional	Swift.Decodable		
+protocol	conformance TeaDB._Optional	Swift.Encodable		
+protocol	conformance TeaDB._Optional	TeaDB.StatementChainType		
+protocol	conformance TeaDB._Optional	TeaDB.Nullable		
+protocol	conformance TeaDB.CreateSearchTableCommand	TeaDB.CommandType		
+protocol	conformance TeaDB.DataType	Swift.Equatable		
+protocol	conformance TeaDB.DataType	Swift.Hashable		
+protocol	conformance TeaDB.RawEntity	Swift.Encodable		
+protocol	conformance TeaDB.RawEntity	Swift.Decodable		
+protocol	conformance TeaDB.RawEntity	TeaDB.BaseType		
+protocol	conformance TeaDB.RawEntity	TeaDB.ConstructType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.SearchMatchExpression	Swift.ExpressibleByArrayLiteral		
+protocol	conformance TeaDB.SearchMatchPhrase	Swift.ExpressibleByStringLiteral		
+protocol	conformance TeaDB.SearchMatchPhrase	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance TeaDB.SearchMatchPhrase	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance Foundation.Data	TeaDB.ColumnType		
+protocol	conformance Foundation.Data	TeaDB.StatementChainType		
+protocol	conformance Foundation.Data	TeaDB.QueryValueType		
+protocol	conformance TeaDB.ValueType	Swift.Decodable		
+protocol	conformance TeaDB.ValueType	Swift.Encodable		
+protocol	conformance TeaDB.ValueType	Swift.CustomStringConvertible		
+protocol	conformance TeaDB.ValueType	Swift.Equatable		
+protocol	conformance TeaDB.ValueType	TeaDB.QueryValueType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Database.Errors	Swift.Error		
+protocol	conformance Database.JournalingMode	Swift.Equatable		
+protocol	conformance Database.JournalingMode	Swift.Hashable		
+protocol	conformance Database.RecoveryMode	Swift.Equatable		
+protocol	conformance Database.RecoveryMode	Swift.Hashable		
+protocol	conformance Database.VacuumMode	Swift.Equatable		
+protocol	conformance Database.VacuumMode	Swift.Hashable		
+protocol	conformance TeaDB.ValueOf	TeaDB.QueryValueType		
+protocol	conformance Delete.Error	Swift.Hashable		
+protocol	conformance Delete.Error	Swift.Equatable		
+protocol	conformance Delete.Error	Swift.Error		
+protocol	conformance TeaDB.InsertCommand	TeaDB.CommandType		
+protocol	conformance TeaDB.LazyJSON	TeaDB.ColumnType		
+protocol	conformance TeaDB.LazyJSON	Swift.Decodable		
+protocol	conformance TeaDB.LazyJSON	Swift.Encodable		
+protocol	conformance TeaDB.LazyJSON	TeaDB.StatementChainType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.Column	TeaDB.ColumnCodable		
+protocol	conformance TeaDB.Column	Swift.Decodable		
+protocol	conformance TeaDB.Column	Swift.Encodable		
+protocol	conformance TeaDB.Column	Swift.CustomStringConvertible		
+protocol	conformance Swift.Optional	TeaDB.Nullable		
+protocol	conformance TeaDB.CreateIndexCommand	TeaDB.CommandType		
+protocol	conformance TeaDB.CreateTableCommand	TeaDB.CommandType		
+protocol	conformance TeaDB.MigratableEntity	TeaDB.Migratable		
+protocol	conformance TeaDB.MigratableEntity	TeaDB.StatementChainType		
+protocol	conformance TeaDB.MigratableEntity	Swift.Encodable		
+protocol	conformance TeaDB.MigratableEntity	Swift.Decodable		
+protocol	conformance TeaDB.MigratableEntity	TeaDB.ConstructType		
+protocol	conformance TeaDB.MigratableEntity	TeaDB.ColumnType		
+protocol	conformance TeaDB.MigratableEntity	TeaDB.BaseType		
+protocol	conformance TeaDB.MigratableEntity	TeaDB.EntityType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance __C.CGRect	TeaDB.ColumnType		
+protocol	conformance __C.CGRect	TeaDB.StatementChainType		
+protocol	conformance TeaDB.SelectCommand	TeaDB.CommandType		
+protocol	conformance TeaDB.RowID	Swift.Decodable		
+protocol	conformance TeaDB.RowID	Swift.Encodable		
+protocol	conformance TeaDB.RowID	Swift.CustomStringConvertible		
+protocol	conformance TeaDB.RowID	Swift.Equatable		
+protocol	conformance TeaDB.RowID	TeaDB.ColumnCodable		
+protocol	conformance RowID.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RowID.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RowID.CodingKeys	Swift.Hashable		
+protocol	conformance RowID.CodingKeys	Swift.Equatable		
+protocol	conformance RowID.CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.Connection	TeaDB.ConnectionType		
+protocol	conformance Versions.Entity	TeaDB.StatementChainType		
+protocol	conformance Versions.Entity	Swift.Encodable		
+protocol	conformance Versions.Entity	Swift.Decodable		
+protocol	conformance Versions.Entity	TeaDB.ColumnType		
+protocol	conformance Versions.Entity	TeaDB.FastEntityType		
+protocol	conformance Versions.Entity	TeaDB.EntityType		
+protocol	conformance Versions.Entity	TeaDB.BaseType		
+protocol	conformance Versions.Entity	TeaDB.FastEntityProviding		
+protocol	conformance Versions.Entity	TeaDB.ConstructType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MKVSEntity	TeaDB.StatementChainType		
+protocol	conformance MKVSEntity	Swift.Encodable		
+protocol	conformance MKVSEntity	Swift.Decodable		
+protocol	conformance MKVSEntity	TeaDB.ConstructType		
+protocol	conformance MKVSEntity	TeaDB.ColumnType		
+protocol	conformance MKVSEntity	TeaDB.BaseType		
+protocol	conformance MKVSEntity	TeaDB.EntityType		
+protocol	conformance MKVSEntity.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MKVSEntity.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MKVSEntity.CodingKeys	Swift.Hashable		
+protocol	conformance MKVSEntity.CodingKeys	Swift.Equatable		
+protocol	conformance TranslationError	Swift.Hashable		
+protocol	conformance TranslationError	Swift.Equatable		
+protocol	conformance TranslationError	Swift.Error		
+protocol	conformance MKVSEntity.CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.Statement	Swift.CustomStringConvertible		
+protocol	conformance Swift.Int	TeaDB.ColumnType		
+protocol	conformance Swift.Int	TeaDB.StatementChainType		
+protocol	conformance Swift.Int	TeaDB.QueryValueType		
+protocol	conformance TeaDB.FastColumn	Swift.Decodable		
+protocol	conformance TeaDB.FastColumn	Swift.Encodable		
+protocol	conformance TeaDB.FastColumn	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.Transaction	Swift.Equatable		
+protocol	conformance TeaDB.Transaction	Swift.Hashable		
+protocol	conformance TeaDB.Transaction	Swift.RawRepresentable		
+protocol	conformance TeaDB.LazyEntity	TeaDB.ColumnType		
+protocol	conformance TeaDB.LazyEntity	Swift.Decodable		
+protocol	conformance TeaDB.LazyEntity	Swift.Encodable		
+protocol	conformance TeaDB.LazyEntity	TeaDB.StatementChainType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UnicodeCategories.Special	Swift.Equatable		
+protocol	conformance UnicodeCategories.Special	Swift.Hashable		
+protocol	conformance UnicodeCategories.Special	Swift.RawRepresentable		
+protocol	conformance UnicodeCategories.Letter	Swift.Equatable		
+protocol	conformance UnicodeCategories.Letter	Swift.Hashable		
+protocol	conformance UnicodeCategories.Letter	Swift.RawRepresentable		
+protocol	conformance UnicodeCategories.Mark	Swift.Equatable		
+protocol	conformance UnicodeCategories.Mark	Swift.Hashable		
+protocol	conformance UnicodeCategories.Mark	Swift.RawRepresentable		
+protocol	conformance UnicodeCategories.Number	Swift.Equatable		
+protocol	conformance UnicodeCategories.Number	Swift.Hashable		
+protocol	conformance UnicodeCategories.Number	Swift.RawRepresentable		
+protocol	conformance UnicodeCategories.Punctuation	Swift.Equatable		
+protocol	conformance UnicodeCategories.Punctuation	Swift.Hashable		
+protocol	conformance UnicodeCategories.Punctuation	Swift.RawRepresentable		
+protocol	conformance UnicodeCategories.Symbol	Swift.Equatable		
+protocol	conformance UnicodeCategories.Symbol	Swift.Hashable		
+protocol	conformance UnicodeCategories.Symbol	Swift.RawRepresentable		
+protocol	conformance UnicodeCategories.Separator	Swift.Equatable		
+protocol	conformance UnicodeCategories.Separator	Swift.Hashable		
+protocol	conformance UnicodeCategories.Separator	Swift.RawRepresentable		
+protocol	conformance Swift.Bool	TeaDB.ColumnType		
+protocol	conformance Swift.Bool	TeaDB.StatementChainType		
+protocol	conformance Swift.Bool	TeaDB.QueryValueType		
+protocol	conformance Assertion.Name	Swift.Equatable		
+protocol	conformance Assertion.Name	Swift.Hashable		
+protocol	conformance TeaDB.UpdateCommand	TeaDB.CommandType		
+protocol	conformance Errors	Swift.Hashable		
+protocol	conformance Errors	Swift.Equatable		
+protocol	conformance Errors	Swift.Error		
+protocol	conformance __C.CGSize	TeaDB.ColumnType		
+protocol	conformance __C.CGSize	TeaDB.StatementChainType		
+protocol	conformance TeaDB.SearchColumn	Swift.Decodable		
+protocol	conformance TeaDB.SearchColumn	Swift.Encodable		
+protocol	conformance TeaDB.SearchColumn	Swift.CustomStringConvertible		
+protocol	conformance TeaDB.SearchColumn	Swift.Equatable		
+protocol	conformance TeaDB.SearchColumn	TeaDB.ColumnCodable		
+protocol	conformance SearchColumn.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SearchColumn.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SearchColumn.CodingKeys	Swift.Hashable		
+protocol	conformance SearchColumn.CodingKeys	Swift.Equatable		
+protocol	conformance SearchColumn.CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.AssertionOptions	Swift.OptionSet		
+protocol	conformance TeaDB.AssertionOptions	Swift.SetAlgebra		
+protocol	conformance TeaDB.AssertionOptions	Swift.RawRepresentable		
+protocol	conformance TeaDB.AssertionOptions	Swift.Equatable		
+protocol	conformance TeaDB.AssertionOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance TeaDB.JSON	TeaDB.ColumnType		
+protocol	conformance TeaDB.JSON	Swift.Decodable		
+protocol	conformance TeaDB.JSON	Swift.Encodable		
+protocol	conformance TeaDB.JSON	TeaDB.StatementChainType		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TeaDB.SQLError	Swift.Equatable		
+protocol	conformance TeaDB.SQLError	Swift.Error		
+protocol	conformance TeaDB.DeleteCommand	TeaDB.CommandType		
+protocol	conformance Foundation.Date	TeaDB.ColumnType		
+protocol	conformance Foundation.Date	TeaDB.StatementChainType		
+protocol	conformance Foundation.Date	TeaDB.QueryValueType		
+protocol	conformance SearchOrder.Direction	Swift.Equatable		
+protocol	conformance SearchOrder.Direction	Swift.Hashable		
+protocol	conformance Swift.String	TeaDB.ColumnType		
+protocol	conformance Swift.String	TeaDB.StatementChainType		
+protocol	conformance Swift.String	TeaDB.QueryValueType		
+protocol	conformance TeaDB.LazyLoader	Swift.Decodable		
+protocol	conformance TeaDB.LazyLoader	Swift.Encodable		
+protocol	conformance TeaDB.LazyLoaderError	Swift.Hashable		
+protocol	conformance TeaDB.LazyLoaderError	Swift.Equatable		
+protocol	conformance TeaDB.LazyLoaderError	Swift.Error		
+protocol	conformance Swift.Double	TeaDB.ColumnType		
+protocol	conformance Swift.Double	TeaDB.StatementChainType		
+protocol	conformance Swift.Double	TeaDB.QueryValueType		
+extension	TeaDB.KeyValueStore	KeyValueStoreType		
+extension	TeaDB.SearchMatchExpression	ExpressibleByArrayLiteral		
+extension	TeaDB.SearchMatchPhrase	ExpressibleByStringLiteral		
+extension	TeaDB.SearchMatchPhrase	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	TeaDB.SearchMatchPhrase	ExpressibleByUnicodeScalarLiteral		
+extension	TeaDB.ValueType.CodingKeys	RawRepresentable		
+extension	TeaDB.MigratableEntity	Migratable		
+extension	TeaDB.Transaction	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Special	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Letter	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Mark	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Number	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Punctuation	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Symbol	RawRepresentable		
+extension	TeaDB.Unicode61TokenizerOptions.UnicodeCategories.Separator	RawRepresentable		
+extension	TeaDB.AssertionOptions	OptionSet		
+extension	TeaDB.AssertionOptions	SetAlgebra		
+extension	TeaDB.AssertionOptions	RawRepresentable		
+extension	TeaDB.AssertionOptions	ExpressibleByArrayLiteral		

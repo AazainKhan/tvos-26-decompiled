@@ -1,0 +1,233 @@
+kind	type	conformance	member_kind	member
+struct	ManagedSettingsAgent.StoreInformation			
+struct	ManagedSettingsAgent.StoreInformation		let	identifier
+struct	ManagedSettingsAgent.StoreInformation		let	version
+struct	ManagedSettingsAgent.StoreInformation		var	active
+struct	ManagedSettingsAgent.StoreInformation		var	syncToWatch
+enum	ManagedSettingsAgent.StoreInformation.CodingKeys			
+enum	ManagedSettingsAgent.StoreInformation.CodingKeys		case	identifier
+enum	ManagedSettingsAgent.StoreInformation.CodingKeys		case	version
+enum	ManagedSettingsAgent.StoreInformation.CodingKeys		case	active
+enum	ManagedSettingsAgent.StoreInformation.CodingKeys		case	syncToWatch
+class	ManagedSettingsAgent.PublisherCenter			
+class	ManagedSettingsAgent.PublisherCenter		var	effectiveSubscriptions
+class	ManagedSettingsAgent.PublisherCenter		var	lock
+class	ManagedSettingsAgent.PublisherCenter.Subscription			
+class	ManagedSettingsAgent.PublisherCenter.Subscription		var	swiftClient
+class	ManagedSettingsAgent.PublisherCenter.Subscription		var	objCClient
+class	ManagedSettingsAgent.PublisherCenter.Client			
+class	ManagedSettingsAgent.PublisherCenter.Client		let	connection
+class	ManagedSettingsAgent.PublisherCenter.Client		var	groupNames
+struct	ManagedSettingsAgent.XPCEventPublisher			
+struct	ManagedSettingsAgent.XPCEventPublisher		let	publisher
+struct	ManagedSettingsAgent.XPCEventPublisher		let	queue
+struct	ManagedSettingsAgent.ClientIdentity			
+struct	ManagedSettingsAgent.ClientIdentity		let	containerIdentifier
+struct	ManagedSettingsAgent.ClientIdentity		let	teamIdentifier
+struct	ManagedSettingsAgent.ClientIdentity		let	isInternal
+enum	ManagedSettingsAgent.ClientIdentity.CodingKeys			
+enum	ManagedSettingsAgent.ClientIdentity.CodingKeys		case	containerIdentifier
+enum	ManagedSettingsAgent.ClientIdentity.CodingKeys		case	teamIdentifier
+enum	ManagedSettingsAgent.ClientIdentity.CodingKeys		case	isInternal
+class	ManagedSettingsAgent.NotificationSender			
+class	ManagedSettingsAgent.NotificationSender		let	name
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher			
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher		let	xpcPublisher
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher		var	started
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher		var	startedSettingsGroups
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher		let	startedQueue
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher		var	subscriptions
+class	ManagedSettingsAgent.EffectiveSettings.EventPublisher		let	subscriptionsQueue
+class	ManagedSettingsAgent.PersistenceRecord			
+class	ManagedSettingsAgent.PersistenceRecord		let	recordIdentifier
+class	ManagedSettingsAgent.PersistenceRecord		let	containerPath
+class	ManagedSettingsAgent.PersistenceRecord		let	client
+class	ManagedSettingsAgent.PersistenceRecord		let	version
+class	ManagedSettingsAgent.PersistenceRecord		var	storeDirectory
+enum	ManagedSettingsAgent.PersistenceRecordError			
+enum	ManagedSettingsAgent.PersistenceRecordError		case	missingRecord
+enum	ManagedSettingsAgent.PersistenceRecordError		case	missingStoreName
+enum	ManagedSettingsAgent.PersistenceRecordError		case	tooManyStores
+enum	ManagedSettingsAgent.PersistenceRecordError		case	immutableStore
+enum	ManagedSettingsAgent.PersistenceRecord.CodingKeys			
+enum	ManagedSettingsAgent.PersistenceRecord.CodingKeys		case	recordIdentifier
+enum	ManagedSettingsAgent.PersistenceRecord.CodingKeys		case	containerPath
+enum	ManagedSettingsAgent.PersistenceRecord.CodingKeys		case	client
+enum	ManagedSettingsAgent.PersistenceRecord.CodingKeys		case	version
+enum	ManagedSettingsAgent.PersistenceRecord.CodingKeys		case	storeDirectory
+enum	ManagedSettingsAgent.ApplicationRecordError			
+enum	ManagedSettingsAgent.ApplicationRecordError		case	invalidBundleIdentifier
+struct	ManagedSettingsAgent.ApplicationRecord			
+struct	ManagedSettingsAgent.ApplicationRecord		let	wrappedRecord
+class	ManagedSettingsAgent.OverrideSettingsExtension			
+class	ManagedSettingsAgent.OverrideSettingsExtension		let	extensionFinder
+class	ManagedSettingsAgent.OverrideSettingsExtension		let	effectiveSettings
+struct	ManagedSettingsAgent.EffectiveSettings.EventSubscription			
+struct	ManagedSettingsAgent.EffectiveSettings.EventSubscription		let	groupNames
+struct	ManagedSettingsAgent.EffectiveSettings.EventSubscription		let	token
+class	ManagedSettingsAgent.PostInstallMigrator			
+class	ManagedSettingsAgent.PostInstallMigrator		var	nextMigrationStep
+class	ManagedSettingsAgent.PostInstallMigrator		var	shouldPauseMigration
+class	ManagedSettingsAgent.PostInstallMigrator		let	locations
+class	ManagedSettingsAgent.PostInstallMigrator		let	persistenceRecordStore
+class	ManagedSettingsAgent.PostInstallMigrator		let	taskIdentifier
+class	ManagedSettingsAgent.PostInstallMigrator		let	activityQueue
+enum	ManagedSettingsAgent.MigrationStep			
+enum	ManagedSettingsAgent.MigrationStep		case	migrationStart
+enum	ManagedSettingsAgent.MigrationStep		case	refreshTokens
+enum	ManagedSettingsAgent.MigrationStep		case	clearEmptyRecords
+enum	ManagedSettingsAgent.MigrationStep		case	recalculateAllEffectiveSettings
+enum	ManagedSettingsAgent.MigrationStep		case	writeNewDataVersion
+enum	ManagedSettingsAgent.MigrationStep		case	migrationCompleted
+enum	ManagedSettingsAgent.ExtensionError			
+enum	ManagedSettingsAgent.ExtensionError		case	invalidExtensionProxy
+enum	ManagedSettingsAgent.ExtensionError		case	noAuxiliaryConnection
+enum	ManagedSettingsAgent.ExtensionError		case	noMatchingExtensions
+enum	ManagedSettingsAgent.ExtensionError		case	noRequestIdentifier
+enum	ManagedSettingsAgent.ExtensionError		case	tookTooLong
+class	ManagedSettingsAgent.ExtensionFinder			
+class	ManagedSettingsAgent.ExtensionFinder		let	extensionPointName
+class	ManagedSettingsAgent.ExtensionFinder		let	nsExtension
+class	ManagedSettingsAgent.ExtensionFinder		let	attributesToMatch
+class	ManagedSettingsAgent.ExtensionFinder		var	extensionLaunchTimeout
+class	ManagedSettingsAgent.ExtensionFinder		var	shieldActionTimeout
+class	ManagedSettingsAgent.ExtensionFinder		var	shieldConfigurationTimeout
+class	ManagedSettingsAgent.ExtensionFinder		let	shieldActionExtensionPointName
+class	ManagedSettingsAgent.ExtensionFinder		let	shieldConfigurationExtensionPointName
+class	ManagedSettingsAgent.Agent	NSObject		
+class	ManagedSettingsAgent.Agent	NSObject	let	managedSettingsService
+class	ManagedSettingsAgent.Agent	NSObject	let	managedSettingsPublisherService
+class	ManagedSettingsAgent.Agent	NSObject	let	listener
+class	ManagedSettingsAgent.Agent	NSObject	let	publisherListener
+class	ManagedSettingsAgent.Agent	NSObject	let	extensionFinder
+class	ManagedSettingsAgent.Agent	NSObject	let	effectiveSettings
+class	ManagedSettingsAgent.Agent	NSObject	let	eventPublisher
+class	ManagedSettingsAgent.Agent	NSObject	let	persistenceRecordStore
+class	ManagedSettingsAgent.Agent	NSObject	let	postInstallMigrator
+class	ManagedSettingsAgent.Agent	NSObject	let	publisherCenter
+class	ManagedSettingsAgent.Agent	NSObject	let	overrideEntitlements
+class	ManagedSettingsAgent.Agent	NSObject	var	lazy
+class	ManagedSettingsAgent.Agent	NSObject	var	lazy
+enum	ManagedSettingsAgent.ManagedSettingsAgentError			
+enum	ManagedSettingsAgent.ManagedSettingsAgentError		case	unauthorized
+enum	ManagedSettingsAgent.ManagedSettingsAgentError		case	invalidArgument
+enum	ManagedSettingsAgent.ManagedSettingsAgentError		case	beforeFirstUnlock
+enum	ManagedSettingsAgent.ManagedSettingsAgentError		case	missingConnection
+class	ManagedSettingsAgent.EffectiveSettings			
+class	ManagedSettingsAgent.EffectiveSettings		let	locations
+class	ManagedSettingsAgent.EffectiveSettings		let	effectiveMediaSettingsNotifier
+class	ManagedSettingsAgent.EffectiveSettings		let	tokenEncodingNotifier
+class	ManagedSettingsAgent.EffectiveSettings		let	publisherCenter
+class	ManagedSettingsAgent.EffectiveSettings		let	eventPublisher
+class	ManagedSettingsAgent.EffectiveSettings		let	extensionFinder
+class	ManagedSettingsAgent.EffectiveSettings		let	retryNotifyingExtensionQueue
+class	ManagedSettingsAgent.EffectiveSettings		var	extensionsByRequestIdentifier
+class	ManagedSettingsAgent.EffectiveSettings		let	extensionsByRequestIdentifierQueue
+class	ManagedSettingsAgent.PersistenceRecordStore			
+class	ManagedSettingsAgent.PersistenceRecordStore		let	locations
+class	ManagedSettingsAgent.PersistenceRecordStore		let	effectiveSettingsNotifier
+class	ManagedSettingsAgent.PersistenceRecordStore		let	applicationRecordKeeper
+class	ManagedSettingsAgent.PersistenceRecordStore		let	keyRetriever
+class	ManagedSettingsAgent.PersistenceRecordStore		let	teamIdentifierRetriever
+class	ManagedSettingsAgent.PersistenceRecordStore		var	pendingUpdateEffectiveSettings
+class	ManagedSettingsAgent.PersistenceRecordStore		var	pendingRefreshTokens
+class	ManagedSettingsAgent.PersistenceRecordStore		var	lock
+class	ManagedSettingsAgent.PersistenceRecordStore		var	recordsByRecordIdentifier
+class	ManagedSettingsAgent.ShieldExtension			
+class	ManagedSettingsAgent.ShieldExtension		var	lazy
+class	ManagedSettingsAgent.ShieldExtension		var	lazy
+class	ManagedSettingsAgent.ShieldExtension		let	effectiveSettings
+class	ManagedSettingsAgent.ShieldExtension		let	persistenceRecordStore
+class	ManagedSettingsAgent.ShieldExtension		let	extensionFinder
+enum	ManagedSettingsAgent.ShieldExtension.ShieldError			
+enum	ManagedSettingsAgent.ShieldExtension.ShieldError		case	noAllowedClient
+enum	ManagedSettingsAgent.SanitizerError			
+enum	ManagedSettingsAgent.SanitizerError		case	keyNotAllowed
+enum	ManagedSettingsAgent.SanitizerError		case	valueNotAllowed
+protocol	ManagedSettingsAgent.XPCEventPublishing			
+protocol	ManagedSettingsAgent.Detokenizable	Item		
+protocol	ManagedSettingsAgent.TokenRefreshable			
+protocol	ManagedSettingsAgent.Extension			
+protocol	ManagedSettingsAgent.ExtensionContext			
+protocol	ManagedSettingsAgent.NotificationSendable			
+protocol	ManagedSettingsAgent.ExtensionFinding			
+protocol	ManagedSettingsAgent.EffectiveSettingsStorable			
+protocol	ManagedSettingsAgent.EffectiveSettingsNotifiable			
+protocol	ManagedSettingsAgent.ApplicationExtensionRecordable			
+protocol	ManagedSettingsAgent.ApplicationRecordable			
+protocol	conformance __C.Name	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.Name	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.Name	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.Name	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.Name	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.Name	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance ManagedSettingsAgent.StoreInformation	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.StoreInformation	protocol descriptor for Encodable		
+protocol	conformance ManagedSettingsAgent.StoreInformation	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ManagedSettingsAgent.XPCEventPublisher	ManagedSettingsAgent.XPCEventPublishing		
+protocol	conformance ManagedSettingsAgent.ClientIdentity	protocol descriptor for Decodable		
+protocol	conformance ManagedSettingsAgent.ClientIdentity	protocol descriptor for Encodable		
+protocol	conformance ManagedSettingsAgent.ClientIdentity	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.ClientIdentity	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.ClientIdentity	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ManagedSettingsAgent.NotificationSender	ManagedSettingsAgent.NotificationSendable		
+protocol	conformance ManagedSettingsAgent.PersistenceRecord	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.PersistenceRecord	protocol descriptor for Encodable		
+protocol	conformance ManagedSettingsAgent.PersistenceRecord	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.PersistenceRecordError	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.PersistenceRecordError	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.PersistenceRecordError	protocol descriptor for Error		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance nominal type descriptor for ActivityCategory	ManagedSettingsAgent.TokenRefreshable		
+protocol	conformance nominal type descriptor for ActivityCategory	ManagedSettingsAgent.Detokenizable		
+protocol	conformance nominal type descriptor for Application	ManagedSettingsAgent.TokenRefreshable		
+protocol	conformance nominal type descriptor for Application	ManagedSettingsAgent.Detokenizable		
+protocol	conformance nominal type descriptor for WebDomain	ManagedSettingsAgent.TokenRefreshable		
+protocol	conformance nominal type descriptor for WebDomain	ManagedSettingsAgent.Detokenizable		
+protocol	conformance nominal type descriptor for UserSafetySettings.ScanningPolicy	ManagedSettingsAgent.TokenRefreshable		
+protocol	conformance nominal type descriptor for UserSafetySettings.ScanningPolicy	ManagedSettingsAgent.Detokenizable		
+protocol	conformance nominal type descriptor for WebContentSettings.FilterPolicy	ManagedSettingsAgent.TokenRefreshable		
+protocol	conformance nominal type descriptor for WebContentSettings.FilterPolicy	ManagedSettingsAgent.Detokenizable		
+protocol	conformance ManagedSettingsAgent.ApplicationRecordError	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.ApplicationRecordError	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.ApplicationRecordError	protocol descriptor for Error		
+protocol	conformance ManagedSettingsAgent.ApplicationRecord	ManagedSettingsAgent.ApplicationRecordable		
+protocol	conformance EffectiveSettings.EventSubscription	protocol descriptor for CustomStringConvertible		
+protocol	conformance NSExtension	ManagedSettingsAgent.Extension		
+protocol	conformance NSExtensionContext	ManagedSettingsAgent.ExtensionContext		
+protocol	conformance ManagedSettingsAgent.MigrationStep	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.MigrationStep	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.ExtensionError	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.ExtensionError	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.ExtensionError	protocol descriptor for Error		
+protocol	conformance ManagedSettingsAgent.ExtensionFinder	ManagedSettingsAgent.ExtensionFinding		
+protocol	conformance ManagedSettingsAgent.ManagedSettingsAgentError	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.ManagedSettingsAgentError	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.ManagedSettingsAgentError	protocol descriptor for Error		
+protocol	conformance ManagedSettingsAgent.EffectiveSettings	ManagedSettingsAgent.EffectiveSettingsStorable		
+protocol	conformance ManagedSettingsAgent.EffectiveSettings	ManagedSettingsAgent.EffectiveSettingsNotifiable		
+protocol	conformance ShieldExtension.ShieldError	protocol descriptor for Hashable		
+protocol	conformance ShieldExtension.ShieldError	protocol descriptor for Equatable		
+protocol	conformance ShieldExtension.ShieldError	protocol descriptor for Error		
+protocol	conformance ManagedSettingsAgent.SanitizerError	protocol descriptor for Hashable		
+protocol	conformance ManagedSettingsAgent.SanitizerError	protocol descriptor for Equatable		
+protocol	conformance ManagedSettingsAgent.SanitizerError	protocol descriptor for Error		
+extension	nominal type descriptor for ActivityCategory	Detokenizable		
+extension	nominal type descriptor for Application	Detokenizable		
+extension	nominal type descriptor for WebDomain	Detokenizable		
+extension	nominal type descriptor for UserSafetySettings.ScanningPolicy	Detokenizable		
+extension	nominal type descriptor for WebContentSettings.FilterPolicy	Detokenizable		

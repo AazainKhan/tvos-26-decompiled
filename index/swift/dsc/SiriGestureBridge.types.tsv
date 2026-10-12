@@ -1,0 +1,80 @@
+kind	type	conformance	member_kind	member
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge		
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	sessionState
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	currentSessionId
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	currentAssistantId
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	sessionUserId
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	gestureController
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	announcementState
+class	SiriGestureBridge.GestureBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriGestureBridge.GestureBridge	var	gestureOutputSubmitter
+enum	SiriGestureBridge.GestureBridgeError			
+enum	SiriGestureBridge.GestureBridgeError		case	unexpectedSessionId
+enum	SiriGestureBridge.GestureBridgeError		case	sessionStateNotFound
+struct	SiriGestureBridge.GestureResponse			
+struct	SiriGestureBridge.GestureResponse		var	userIntent
+struct	SiriGestureBridge.GestureResponse		var	timestamp
+struct	SiriGestureBridge.GestureResponse		var	gesture
+struct	SiriGestureBridge.GestureResponse		var	promptInfo
+struct	SiriGestureBridge.UserIntent			
+struct	SiriGestureBridge.UserIntent		let	rawValue
+struct	SiriGestureBridge.GestureMapping			
+struct	SiriGestureBridge.GestureMapping		let	acceptGesture
+struct	SiriGestureBridge.GestureMapping		let	rejectGesture
+struct	SiriGestureBridge.EventDeduper			
+struct	SiriGestureBridge.EventDeduper		var	lastEventTime
+struct	SiriGestureBridge.EventDeduper		var	dedupeTimeThreshold
+struct	SiriGestureBridge.EventDeduper		var	eventDescription
+struct	SiriGestureBridge.EventDeduper		var	logger
+class	SiriGestureBridge.GestureClientController	NSObject		
+class	SiriGestureBridge.GestureClientController	NSObject	var	gestureMapping
+class	SiriGestureBridge.GestureClientController	NSObject	var	readingAnnouncement
+class	SiriGestureBridge.GestureClientController	NSObject	var	sessionState
+class	SiriGestureBridge.GestureClientController	NSObject	var	announcementState
+class	SiriGestureBridge.GestureClientController	NSObject	var	delegate
+class	SiriGestureBridge.GestureClientController	NSObject	var	siriObserver
+class	SiriGestureBridge.GestureClientController	NSObject	var	lastActionEventId
+class	SiriGestureBridge.GestureController	NSObject		
+class	SiriGestureBridge.GestureController	NSObject	var	gestureMapping
+class	SiriGestureBridge.GestureController	NSObject	var	readingAnnouncement
+class	SiriGestureBridge.GestureController	NSObject	var	sessionState
+class	SiriGestureBridge.GestureController	NSObject	var	announcementState
+class	SiriGestureBridge.GestureController	NSObject	var	delegate
+class	SiriGestureBridge.GestureController	NSObject	var	siriObserver
+class	SiriGestureBridge.GestureController	NSObject	var	lastActionEventId
+class	SiriGestureBridge.GestureOutputSubmitter			
+class	SiriGestureBridge.GestureOutputSubmitter		var	currentSessionId
+class	SiriGestureBridge.GestureOutputSubmitter		var	currentAssistantId
+class	SiriGestureBridge.GestureOutputSubmitter		var	sessionUserId
+class	SiriGestureBridge.GestureOutputSubmitter		let	messagePublisher
+class	SiriGestureBridge.GestureOutputSubmitter		let	serviceHelper
+class	SiriGestureBridge.GestureOutputSubmitter		var	pendingGestureResponse
+class	SiriGestureBridge.GestureOutputSubmitter		var	pendingGestureRequestId
+class	SiriGestureBridge.GestureRequestProcessor	SiriRequestDispatcher.RequestProcessorBase		
+class	SiriGestureBridge.GestureRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	gestureController
+class	SiriGestureBridge.GestureRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	siriConfirmationDeduper
+protocol	SiriGestureBridge.GestureControlling			
+protocol	SiriGestureBridge.GestureControllerDelegate			
+protocol	SiriGestureBridge.SignpostLogger			
+protocol	conformance __C.AFExternalNotificationRequestHandlerState	Swift.Equatable		
+protocol	conformance __C.AFExternalNotificationRequestHandlerState	Swift.RawRepresentable		
+protocol	conformance __C.AFSpeechEvent	Swift.Equatable		
+protocol	conformance __C.AFSpeechEvent	Swift.RawRepresentable		
+protocol	conformance SiriGestureBridge.GestureBridgeError	Swift.Equatable		
+protocol	conformance SiriGestureBridge.GestureBridgeError	Foundation.LocalizedError		
+protocol	conformance SiriGestureBridge.GestureBridgeError	Swift.Hashable		
+protocol	conformance SiriGestureBridge.GestureBridgeError	Swift.Error		
+protocol	conformance SiriGestureBridge.GestureMapping	Swift.Equatable		
+protocol	conformance SiriGestureBridge.UserIntent	Swift.ExpressibleByArrayLiteral		
+protocol	conformance SiriGestureBridge.UserIntent	Swift.Equatable		
+protocol	conformance SiriGestureBridge.UserIntent	Swift.RawRepresentable		
+protocol	conformance SiriGestureBridge.UserIntent	Swift.SetAlgebra		
+protocol	conformance SiriGestureBridge.UserIntent	Swift.OptionSet		
+protocol	conformance SiriGestureBridge.GestureResponse	Swift.Equatable		
+protocol	conformance SiriGestureBridge.GestureResponse	Swift.CustomStringConvertible		
+protocol	conformance SiriGestureBridge.GestureClientController	SiriGestureBridge.GestureControlling		
+protocol	conformance SiriGestureBridge.GestureController	SiriGestureBridge.GestureControlling		
+protocol	conformance SiriGestureBridge.GestureOutputSubmitter	SiriGestureBridge.GestureControllerDelegate		
+extension	SiriGestureBridge.UserIntent	ExpressibleByArrayLiteral		
+extension	SiriGestureBridge.UserIntent	RawRepresentable		
+extension	SiriGestureBridge.UserIntent	SetAlgebra		
+extension	SiriGestureBridge.UserIntent	OptionSet		

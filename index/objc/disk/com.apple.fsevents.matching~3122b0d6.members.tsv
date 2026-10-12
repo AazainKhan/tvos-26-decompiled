@@ -1,0 +1,24 @@
+owner	kind	declaration
+FSEventStreamMultiplexer	-	- (_Bool)unregisterClient:(int)client;
+FSEventStreamMultiplexer	-	- (id)_copyResolvedPathToClientsMap;
+FSEventStreamMultiplexer	-	- (id)init;
+FSEventStreamMultiplexer	-	- (id)initWithLogHandle:(id)handle;
+FSEventStreamMultiplexer	-	- (id)summary;
+FSEventStreamMultiplexer	-	- (int)registerClient:(id)client ofPaths:(id)paths withCallback:(id /* block */)callback;
+FSEventStreamMultiplexer	-	- (void)_handleStream:(struct __FSEventStream *)stream numEvents:(unsigned long long)events eventPaths:(const char * *)paths eventFlags:(const unsigned int *)flags eventIds:(const unsigned long long *)ids;
+FSEventStreamMultiplexer	-	- (void)_refreshStream;
+FSEventStreamMultiplexer	-	- (void)dealloc;
+FSEventStreamMultiplexer	property	@property (readonly, retain) NSObject<OS_dispatch_queue> *queue;
+FSEventStreamMultiplexer	property	@property (readonly, retain) NSObject<OS_os_log> *logHandle;
+FSEventStreamMultiplexer	property	@property (readonly, retain, nonatomic) NSArray *pathsWatched;
+FSEventStreamMultiplexer	property	@property (readonly, retain, nonatomic) NSMutableDictionary *clients;
+FSEventStreamMultiplexer	property	@property (readonly, retain, nonatomic) NSMutableDictionary *pathToClientsMap;
+FSEventStreamMultiplexer	property	@property NSString *streamState;
+FSEventStreamMultiplexer	property	@property int nextAvailableID;
+FSEventStreamMultiplexer	property	@property struct __FSEventStream * eventStream;
+FSEventStreamMultiplexer	property	@property unsigned int eventStreamCreateFlags;
+FSEventStreamMultiplexerClient	-	- (id)initWithID:(int)id name:(id)name callback:(id /* block */)callback;
+FSEventStreamMultiplexerClient	-	- (unsigned long long)hash;
+FSEventStreamMultiplexerClient	property	@property (readonly, copy, nonatomic) id /* block */ callback;
+FSEventStreamMultiplexerClient	property	@property (readonly, retain, nonatomic) NSNumber *clientID;
+FSEventStreamMultiplexerClient	property	@property (readonly, retain, nonatomic) NSString *name;

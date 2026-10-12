@@ -1,0 +1,185 @@
+kind	type	conformance	member_kind	member
+struct	DriverManagement.DriverKitDriver			
+struct	DriverManagement.DriverKitDriver		let	driverIdentifier
+struct	DriverManagement.DriverKitDriver		let	source
+struct	DriverManagement.DriverKitDriver		let	displayName
+struct	DriverManagement.DriverKitDriver		let	usageText
+enum	DriverManagement.DriverKitDriverApp			
+enum	DriverManagement.DriverKitDriverApp		case	installedApp
+enum	DriverManagement.DriverKitDriverApp		case	uninstalledApp
+enum	DriverManagement.ApprovalStateUpdateStatus			
+enum	DriverManagement.ApprovalStateUpdateStatus		case	updateInProgress
+enum	DriverManagement.ApprovalStateUpdateStatus		case	noUpdateInProgress
+enum	DriverManagement.ApprovalState			
+enum	DriverManagement.ApprovalState		case	neverApproved
+enum	DriverManagement.ApprovalState		case	approved
+enum	DriverManagement.ApprovalState		case	unapproved
+enum	DriverManagement.ApprovalDBEntrySource			
+enum	DriverManagement.ApprovalDBEntrySource		case	thirdParty
+enum	DriverManagement.ApprovalDBEntrySource		case	firstParty
+struct	DriverManagement.ApprovalDBEntry			
+struct	DriverManagement.ApprovalDBEntry		let	driverIdentifier
+struct	DriverManagement.ApprovalDBEntry		let	source
+struct	DriverManagement.ApprovalDBEntry		var	approvalState
+struct	DriverManagement.ApprovalDB			
+struct	DriverManagement.ApprovalDB		var	v0
+struct	DriverManagement.ApprovalDB		let	version
+struct	DriverManagement.ApprovalSettingsState			
+struct	DriverManagement.ApprovalSettingsState		let	entries
+struct	DriverManagement.ApprovalSettingsStateEntry			
+struct	DriverManagement.ApprovalSettingsStateEntry		let	driverIdentifier
+struct	DriverManagement.ApprovalSettingsStateEntry		let	displayName
+struct	DriverManagement.ApprovalSettingsStateEntry		let	usageText
+struct	DriverManagement.ApprovalSettingsStateEntry		let	source
+struct	DriverManagement.ApprovalSettingsStateEntry		let	approvalState
+class	DriverManagement.ApprovalStateUpdateRequest			
+class	DriverManagement.ApprovalStateUpdateRequest		let	entry
+class	DriverManagement.ApprovalStateUpdateRequest		let	callback
+class	DriverManagement.ApprovalStateUpdateRequest		let	timestamp
+enum	DriverManagement.ApprovalSettingsStateEntry.CodingKeys			
+enum	DriverManagement.ApprovalSettingsStateEntry.CodingKeys		case	driverIdentifier
+enum	DriverManagement.ApprovalSettingsStateEntry.CodingKeys		case	displayName
+enum	DriverManagement.ApprovalSettingsStateEntry.CodingKeys		case	usageText
+enum	DriverManagement.ApprovalSettingsStateEntry.CodingKeys		case	source
+enum	DriverManagement.ApprovalSettingsStateEntry.CodingKeys		case	approvalState
+enum	DriverManagement.ApprovalSettingsState.CodingKeys			
+enum	DriverManagement.ApprovalSettingsState.CodingKeys		case	entries
+struct	DriverManagement.ApprovalDB.V0			
+struct	DriverManagement.ApprovalDB.V0		var	entries
+enum	DriverManagement.ApprovalDB.CodingKeys			
+enum	DriverManagement.ApprovalDB.CodingKeys		case	v0
+enum	DriverManagement.ApprovalDB.CodingKeys		case	version
+enum	DriverManagement.ApprovalDBEntry.CodingKeys			
+enum	DriverManagement.ApprovalDBEntry.CodingKeys		case	driverIdentifier
+enum	DriverManagement.ApprovalDBEntry.CodingKeys		case	source
+enum	DriverManagement.ApprovalDBEntry.CodingKeys		case	approvalState
+enum	DriverManagement.ApprovalDBEntrySource.CodingKeys			
+enum	DriverManagement.ApprovalDBEntrySource.CodingKeys		case	firstParty
+enum	DriverManagement.ApprovalDBEntrySource.CodingKeys		case	thirdParty
+enum	DriverManagement.ApprovalDBEntrySource.FirstPartyCodingKeys			
+enum	DriverManagement.ApprovalDBEntrySource.ThirdPartyCodingKeys			
+enum	DriverManagement.ApprovalDBEntrySource.ThirdPartyCodingKeys		case	appInstallSessionIdentifier
+enum	DriverManagement.ApprovalDB.V0.CodingKeys			
+enum	DriverManagement.ApprovalDB.V0.CodingKeys		case	entries
+enum	DriverManagement.ApprovalsError			
+enum	DriverManagement.ApprovalsError		case	invalidArgument
+enum	DriverManagement.ApprovalsError		case	notFound
+enum	DriverManagement.DriverKitSettingsFilter			
+enum	DriverManagement.DriverKitSettingsFilter		case	filterByApp
+enum	DriverManagement.DriverKitSettingsFilter		case	thirdParty
+enum	DriverManagement.DriverKitSettingsFilter		case	firstParty
+class	DriverManagement.DriverManager	NSObject		
+class	DriverManagement.DriverManager	NSObject	let	client
+class	DriverManagement.DriverManager	NSObject	let	launchServicesQueue
+class	DriverManagement.DriverManager	NSObject	let	observerLock
+class	DriverManagement.DriverManager	NSObject	var	observers
+class	DriverManagement.DriverManager	NSObject	let	driverApprovalStatesLock
+class	DriverManagement.DriverManager	NSObject	var	_driverApprovalStates
+enum	DriverManagement.DriverKitDaemonXPC			
+enum	DriverManagement.DriverKitDaemonXPC.NotificationType			
+enum	DriverManagement.DriverKitDriverSource			
+enum	DriverManagement.DriverKitDriverSource		case	thirdParty
+enum	DriverManagement.DriverKitDriverSource		case	firstParty
+class	DriverManagement.DriverKitDaemonClient			
+class	DriverManagement.DriverKitDaemonClient		var	lazy
+class	DriverManagement.DriverKitDaemonClient		var	lazy
+class	DriverManagement.DriverApprovalState	NSObject		
+class	DriverManagement.DriverApprovalState	NSObject	let	driver
+class	DriverManagement.DriverApprovalState	NSObject	var	_approvalState
+class	DriverManagement.DriverApprovalState	NSObject	var	_updateStatus
+struct	DriverManagement.SettingsApplicationRecord			
+struct	DriverManagement.SettingsApplicationRecord		let	bundleIdentifier
+struct	DriverManagement.SettingsApplicationRecord		let	url
+struct	DriverManagement.SettingsApplicationRecord		let	uniqueInstallIdentifier
+struct	DriverManagement.SettingsApplicationRecord		let	driverExtensionPaths
+struct	DriverManagement.SettingsApplicationRecord		let	installSessionIdentifier
+struct	DriverManagement.SettingsApplicationRecord		let	localizedName
+protocol	conformance DriverManagement.DriverKitDriver	Swift.Equatable		
+protocol	conformance DriverManagement.DriverKitDriver	Swift.Comparable		
+protocol	conformance DriverManagement.DriverKitDriverApp	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.DriverKitDriverApp	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalStateUpdateStatus	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.ApprovalStateUpdateStatus	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalState	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalState	Swift.Hashable		
+protocol	conformance DriverManagement.ApprovalState	Swift.RawRepresentable		
+protocol	conformance DriverManagement.ApprovalState	Swift.CaseIterable		
+protocol	conformance DriverManagement.ApprovalState	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.ApprovalState	Swift.CustomDebugStringConvertible		
+protocol	conformance DriverManagement.ApprovalState	Swift.Decodable		
+protocol	conformance DriverManagement.ApprovalState	Swift.Encodable		
+protocol	conformance DriverManagement.ApprovalDBEntrySource	Swift.Decodable		
+protocol	conformance DriverManagement.ApprovalDBEntrySource	Swift.Encodable		
+protocol	conformance DriverManagement.ApprovalDBEntrySource	Swift.Hashable		
+protocol	conformance DriverManagement.ApprovalDBEntrySource	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalDBEntrySource	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.ApprovalDBEntry	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.ApprovalDBEntry	Swift.Decodable		
+protocol	conformance DriverManagement.ApprovalDBEntry	Swift.Encodable		
+protocol	conformance DriverManagement.ApprovalDBEntry	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalDB	Swift.Decodable		
+protocol	conformance DriverManagement.ApprovalDB	Swift.Encodable		
+protocol	conformance DriverManagement.ApprovalDB	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalSettingsState	Swift.Decodable		
+protocol	conformance DriverManagement.ApprovalSettingsState	Swift.Encodable		
+protocol	conformance DriverManagement.ApprovalSettingsState	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalSettingsState	Swift.CustomDebugStringConvertible		
+protocol	conformance DriverManagement.ApprovalSettingsStateEntry	Swift.Decodable		
+protocol	conformance DriverManagement.ApprovalSettingsStateEntry	Swift.Encodable		
+protocol	conformance DriverManagement.ApprovalSettingsStateEntry	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalSettingsStateEntry	Swift.Hashable		
+protocol	conformance DriverManagement.ApprovalSettingsStateEntry	Swift.CustomDebugStringConvertible		
+protocol	conformance DriverManagement.ApprovalStateUpdateRequest	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.ApprovalStateUpdateRequest	Swift.Equatable		
+protocol	conformance ThirdPartyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ThirdPartyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ThirdPartyCodingKeys	Swift.Hashable		
+protocol	conformance ThirdPartyCodingKeys	Swift.Equatable		
+protocol	conformance FirstPartyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FirstPartyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance V0	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DriverManagement.ApprovalsError	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance V0	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FirstPartyCodingKeys	Swift.CodingKey		
+protocol	conformance ThirdPartyCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DriverManagement.ApprovalsError	Swift.Error		
+protocol	conformance V0.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance V0.CodingKeys	Swift.Hashable		
+protocol	conformance V0.CodingKeys	Swift.Equatable		
+protocol	conformance V0.CodingKeys	Swift.CodingKey		
+protocol	conformance DriverManagement.DriverManager	Combine.ObservableObject		
+protocol	conformance DriverManagement.DriverKitDriverSource	Swift.CustomStringConvertible		
+protocol	conformance DriverManagement.DriverKitDriverSource	Swift.Equatable		
+protocol	conformance DriverManagement.DriverApprovalState	Combine.ObservableObject		
+protocol	conformance DriverManagement.DriverApprovalState	Swift.Identifiable		
+extension	DriverManagement.ApprovalState	RawRepresentable		
+extension	DriverManagement.ApprovalState	CaseIterable		
+extension	DriverManagement.DriverManager	ObservableObject		
+extension	DriverManagement.DriverApprovalState	ObservableObject		
+extension	DriverManagement.DriverApprovalState	Identifiable		

@@ -1,0 +1,152 @@
+kind	type	conformance	member_kind	member
+class	StorageContainersPrivate.Container			
+class	StorageContainersPrivate.Container		let	libsystemContainer
+class	StorageContainersPrivate.Container		var	sandboxHandle
+class	StorageContainersPrivate.Container		let	accessCountLock
+class	StorageContainersPrivate.Container		let	query
+struct	StorageContainersPrivate.Container.Attributes			
+struct	StorageContainersPrivate.Container.Attributes		let	processType
+struct	StorageContainersPrivate.Container.Attributes		let	ownership
+struct	StorageContainersPrivate.Container.Attributes		let	dataClassification
+struct	StorageContainersPrivate.Container.Attributes		let	scope
+struct	StorageContainersPrivate.Container.Attributes		let	containerClass
+enum	StorageContainersPrivate.Container.Attributes.Scope			
+enum	StorageContainersPrivate.Container.Attributes.Scope		case	owned
+enum	StorageContainersPrivate.Container.Attributes.Scope		case	shared
+enum	StorageContainersPrivate.Container.Attributes.DataClassification			
+enum	StorageContainersPrivate.Container.Attributes.DataClassification		case	user
+enum	StorageContainersPrivate.Container.Attributes.DataClassification		case	system
+enum	StorageContainersPrivate.Container.Attributes.Ownership			
+enum	StorageContainersPrivate.Container.Attributes.Ownership		case	user
+enum	StorageContainersPrivate.Container.Attributes.Ownership		case	role
+enum	StorageContainersPrivate.Container.Attributes.Ownership		case	root
+enum	StorageContainersPrivate.Container.Attributes.Ownership		case	systemusers
+enum	StorageContainersPrivate.Container.Attributes.Ownership		case	install
+enum	StorageContainersPrivate.Container.Attributes.ProcessType			
+enum	StorageContainersPrivate.Container.Attributes.ProcessType		case	app
+enum	StorageContainersPrivate.Container.Attributes.ProcessType		case	appExtension
+enum	StorageContainersPrivate.Container.Attributes.ProcessType		case	xpcServiceBundle
+enum	StorageContainersPrivate.Container.Attributes.ProcessType		case	daemon
+enum	StorageContainersPrivate.Container.ContainerClass			
+enum	StorageContainersPrivate.Container.ContainerClass		case	app
+enum	StorageContainersPrivate.Container.ContainerClass		case	appData
+enum	StorageContainersPrivate.Container.ContainerClass		case	pluginData
+enum	StorageContainersPrivate.Container.ContainerClass		case	daemon
+enum	StorageContainersPrivate.Container.ContainerClass		case	appGroup
+enum	StorageContainersPrivate.Container.ContainerClass		case	system
+enum	StorageContainersPrivate.Container.ContainerClass		case	systemGroup
+enum	StorageContainersPrivate.Container.DeleteError			
+enum	StorageContainersPrivate.Container.DeleteError		case	underlying
+enum	StorageContainersPrivate.Container.DeleteError		case	fileSystem
+enum	StorageContainersPrivate.Container.DeleteError		case	unentitled
+enum	StorageContainersPrivate.Container.EraseError			
+enum	StorageContainersPrivate.Container.EraseError		case	underlying
+enum	StorageContainersPrivate.Container.EraseError		case	fileSystem
+enum	StorageContainersPrivate.Container.EraseError		case	unentitled
+enum	StorageContainersPrivate.Container.EraseError		case	noMatchingContainers
+class	StorageContainersPrivate.Container.Owned			
+class	StorageContainersPrivate.Container.Owned		let	container
+enum	StorageContainersPrivate.Container.Part			
+enum	StorageContainersPrivate.Container.Part		case	userManagedAssets
+enum	StorageContainersPrivate.Container.Part		case	preferences
+enum	StorageContainersPrivate.Container.Part		case	caches
+enum	StorageContainersPrivate.Container.Part		case	systemData
+enum	StorageContainersPrivate.Container.Part		case	documents
+enum	StorageContainersPrivate.Container.Part		case	tmp
+enum	StorageContainersPrivate.Container.Part		case	data
+enum	StorageContainersPrivate.Container.Persona			
+enum	StorageContainersPrivate.Container.Persona		case	dataSeparated
+enum	StorageContainersPrivate.Container.Persona		case	primary
+enum	StorageContainersPrivate.Container.Persona		case	currentVoucher
+enum	StorageContainersPrivate.Container.Persona		case	all
+enum	StorageContainersPrivate.Container.AccessError			
+enum	StorageContainersPrivate.Container.AccessError		case	grantFailure
+enum	StorageContainersPrivate.Container.AccessError		case	notProvisionedForAccess
+struct	StorageContainersPrivate.Containers			
+struct	StorageContainersPrivate.Containers		let	query
+struct	StorageContainersPrivate.Containers		let	endIndexValue
+class	StorageContainersPrivate.Containers.ContainersIterator			
+class	StorageContainersPrivate.Containers.ContainersIterator		let	query
+struct	StorageContainersPrivate.Containers.AppMigration			
+struct	StorageContainersPrivate.Containers.AppMigration		let	query
+struct	StorageContainersPrivate.Containers.AppMigration		let	endIndexValue
+struct	StorageContainersPrivate.Containers.AppMigration		let	identifiers
+enum	StorageContainersPrivate.Containers.AppMigration.EntitlementError			
+enum	StorageContainersPrivate.Containers.AppMigration.EntitlementError		case	unentitled
+enum	StorageContainersPrivate.Containers.AppMigration.EntitlementError		case	malformedEntitlement
+enum	StorageContainersPrivate.Containers.AppMigration.EntitlementError		case	empty
+class	StorageContainersPrivate.Query			
+class	StorageContainersPrivate.Query		let	containerClass
+class	StorageContainersPrivate.Query		let	identifiers
+class	StorageContainersPrivate.Query		let	includeUnowned
+class	StorageContainersPrivate.Query		let	persona
+class	StorageContainersPrivate.Query		let	part
+class	StorageContainersPrivate.Query		let	libsystemQuery
+enum	StorageContainersPrivate.Query.Options			
+enum	StorageContainersPrivate.Query.Options		case	requestAccess
+enum	StorageContainersPrivate.Query.Options		case	create
+enum	StorageContainersPrivate.Query.Options		case	requestPath
+enum	StorageContainersPrivate.Query.Options		case	requestContainerizedAccess
+enum	StorageContainersPrivate.Query.Options		case	requireSecure
+enum	StorageContainersPrivate.Query.QueryError			
+enum	StorageContainersPrivate.Query.QueryError		case	underlying
+enum	StorageContainersPrivate.Query.QueryError		case	fileSystem
+enum	StorageContainersPrivate.Query.QueryError		case	unentitled
+enum	StorageContainersPrivate.Query.QueryError		case	noMatchingContainers
+enum	StorageContainersPrivate.Query.QueryError		case	notAnOwnedContainer
+enum	StorageContainersPrivate.Query.QueryError		case	ambiguousPersona
+enum	StorageContainersPrivate.Query.QueryError		case	notSecure
+protocol	StorageContainersPrivate.ContainerRepresentable			
+protocol	Container.Deletable			
+protocol	Container.Eraseable			
+protocol	Container.ScopesAccess			
+protocol	conformance StorageContainersPrivate.Container	StorageContainersPrivate.ContainerRepresentable		
+protocol	conformance StorageContainersPrivate.Container	Swift.CustomStringConvertible		
+protocol	conformance __C.container_error_t	Swift.RawRepresentable		
+protocol	conformance __C.container_error_t	Swift.Equatable		
+protocol	conformance __C.container_class_t	Swift.RawRepresentable		
+protocol	conformance __C.container_class_t	Swift.Equatable		
+protocol	conformance Container.Attributes	Swift.Equatable		
+protocol	conformance Attributes.ProcessType	Swift.Equatable		
+protocol	conformance Attributes.ProcessType	Swift.Hashable		
+protocol	conformance Attributes.Ownership	Swift.Equatable		
+protocol	conformance Attributes.DataClassification	Swift.Equatable		
+protocol	conformance Attributes.DataClassification	Swift.Hashable		
+protocol	conformance Attributes.Scope	Swift.Equatable		
+protocol	conformance Attributes.Scope	Swift.Hashable		
+protocol	conformance Container.ContainerClass	Swift.Hashable		
+protocol	conformance Container.ContainerClass	Swift.Equatable		
+protocol	conformance Container.DeleteError	Swift.Error		
+protocol	conformance Container.DeleteError	Swift.CustomStringConvertible		
+protocol	conformance Container.DeleteError	Swift.Equatable		
+protocol	conformance StorageContainersPrivate.Container	StorageContainersPrivate.Container.Deletable		
+protocol	conformance Container.EraseError	Swift.Error		
+protocol	conformance Container.EraseError	Swift.CustomStringConvertible		
+protocol	conformance Container.EraseError	Swift.Equatable		
+protocol	conformance StorageContainersPrivate.Container	StorageContainersPrivate.Container.Eraseable		
+protocol	conformance Container.Owned	StorageContainersPrivate.ContainerRepresentable		
+protocol	conformance Container.Owned	StorageContainersPrivate.Container.ScopesAccess		
+protocol	conformance Container.Owned	StorageContainersPrivate.Container.Eraseable		
+protocol	conformance Container.Owned	StorageContainersPrivate.Container.Deletable		
+protocol	conformance Container.Part	Swift.CustomStringConvertible		
+protocol	conformance Container.Part	Swift.Equatable		
+protocol	conformance Container.AccessError	Swift.Error		
+protocol	conformance Container.AccessError	Swift.CustomStringConvertible		
+protocol	conformance Container.AccessError	Swift.Equatable		
+protocol	conformance StorageContainersPrivate.Container	StorageContainersPrivate.Container.ScopesAccess		
+protocol	conformance StorageContainersPrivate.Containers	Swift.Collection		
+protocol	conformance StorageContainersPrivate.Containers	Swift.Sequence		
+protocol	conformance Containers.ContainersIterator	Swift.IteratorProtocol		
+protocol	conformance AppMigration.EntitlementError	Swift.Equatable		
+protocol	conformance AppMigration.EntitlementError	Swift.Hashable		
+protocol	conformance AppMigration.EntitlementError	Swift.Error		
+protocol	conformance Containers.AppMigration	Swift.Collection		
+protocol	conformance Containers.AppMigration	Swift.Sequence		
+protocol	conformance Query.QueryError	Swift.Error		
+protocol	conformance Query.QueryError	Swift.CustomStringConvertible		
+protocol	conformance Query.QueryError	Swift.Equatable		
+extension	StorageContainersPrivate.Containers	Collection		
+extension	StorageContainersPrivate.Containers	Sequence		
+extension	StorageContainersPrivate.Containers.ContainersIterator	IteratorProtocol		
+extension	StorageContainersPrivate.Containers.AppMigration	Collection		
+extension	StorageContainersPrivate.Containers.AppMigration	Sequence		

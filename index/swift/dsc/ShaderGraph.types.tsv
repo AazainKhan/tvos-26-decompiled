@@ -1,0 +1,1539 @@
+kind	type	conformance	member_kind	member
+enum	ShaderGraph.NodePersonality			
+enum	ShaderGraph.NodePersonality		case	constantValue
+enum	ShaderGraph.NodePersonality		case	callFunction
+enum	ShaderGraph.NodePersonality		case	reSurfaceShaderResult
+enum	ShaderGraph.NodePersonality		case	getFunctionArgument
+enum	ShaderGraph.NodePersonality		case	getProperty
+enum	ShaderGraph.NodePersonality		case	materialXNodeDef
+enum	ShaderGraph.NodePersonality		case	graph
+enum	ShaderGraph.NodePersonality		case	getFunctionArguments
+enum	ShaderGraph.NodePersonality		case	createSampler
+enum	ShaderGraph.NodePersonality		case	result
+enum	ShaderGraph.NodePersonality.ShaderType			
+enum	ShaderGraph.NodePersonality.ShaderType		case	surface
+enum	ShaderGraph.NodePersonality.ShaderType		case	geometryModifier
+enum	ShaderGraph.NodePersonalityType			
+enum	ShaderGraph.NodePersonalityType		case	constantValue
+enum	ShaderGraph.NodePersonalityType		case	getFunctionArguments
+enum	ShaderGraph.NodePersonalityType		case	getFunctionArgument
+enum	ShaderGraph.NodePersonalityType		case	createSampler
+enum	ShaderGraph.NodePersonalityType		case	callFunction
+enum	ShaderGraph.NodePersonalityType		case	reSurfaceShaderResult
+enum	ShaderGraph.NodePersonalityType		case	result
+enum	ShaderGraph.NodePersonalityType		case	getProperty
+enum	ShaderGraph.NodePersonalityType		case	materialXNodeDef
+enum	ShaderGraph.NodePersonalityType		case	materialXGraph
+enum	ShaderGraph.NestedError			
+enum	ShaderGraph.NestedError		case	base
+enum	ShaderGraph.NestedError		case	error
+struct	ShaderGraph.RESurfaceShaderMaterial			
+struct	ShaderGraph.RESurfaceShaderMaterial		let	name
+struct	ShaderGraph.RESurfaceShaderMaterial		let	surfaceShader
+struct	ShaderGraph.RESurfaceShaderMaterial		let	geometryModifier
+struct	ShaderGraph.RESurfaceShaderMaterial		let	graph
+struct	ShaderGraph.RESurfaceShaderMaterial		let	uniforms
+struct	ShaderGraph.RESurfaceShaderMaterial		let	textureAssignments
+struct	ShaderGraph.RESurfaceShaderMaterial		let	customUniformsType
+struct	ShaderGraph.RESurfaceShaderMaterial		let	debugHash
+enum	ShaderGraph.TextureSource			
+enum	ShaderGraph.TextureSource		case	constant
+enum	ShaderGraph.TextureSource		case	uniform
+struct	ShaderGraph.TypedTexture			
+struct	ShaderGraph.TypedTexture		let	source
+struct	ShaderGraph.TypedTexture		let	type
+struct	ShaderGraph.TextureAssignment			
+struct	ShaderGraph.TextureAssignment		let	uniformName
+struct	ShaderGraph.TextureAssignment		let	metalType
+struct	ShaderGraph.TextureAssignment		let	source
+struct	ShaderGraph._HashTable.Bucket			
+struct	ShaderGraph._HashTable.Bucket		var	offset
+struct	ShaderGraph.SGDataTypeGraph			
+struct	ShaderGraph.SGDataTypeGraph		var	id
+struct	ShaderGraph.SGDataTypeGraph		let	name
+struct	ShaderGraph.SGDataTypeGraph		let	inputs
+struct	ShaderGraph.SGDataTypeGraph		let	outputs
+struct	ShaderGraph.SGDataTypeGraph		var	graph
+enum	ShaderGraph.SGDataTypeGraph.PersonalityKind			
+enum	ShaderGraph.SGDataTypeGraph.PersonalityKind		case	builtIn
+enum	ShaderGraph.SGDataTypeGraph.PersonalityKind		case	graph
+enum	ShaderGraph.SGDataTypeGraph.PersonalityKind		case	constant
+struct	ShaderGraph.SGDataTypeGraph.Personality			
+struct	ShaderGraph.SGDataTypeGraph.Personality		let	graphID
+struct	ShaderGraph.SGDataTypeGraph.Personality		let	kind
+struct	ShaderGraph.SGDataTypeGraph.Personality		let	name
+struct	ShaderGraph.SGDataTypeGraph.NodeID			
+struct	ShaderGraph.SGDataTypeGraph.NodeID		let	graphID
+struct	ShaderGraph.SGDataTypeGraph.NodeID		let	nodeID
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort			
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort		let	elements
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort		let	graphs
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort		let	nodeElements
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort		let	rootGraph
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Element			
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Element		let	node
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Element		let	graphID
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Element		let	graphName
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Element		var	nodeGraphCallNode
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Element		let	elementIndex
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.GraphNodeIndex			
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.GraphNodeIndex		let	graphID
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.GraphNodeIndex		let	nodeID
+struct	ShaderGraph.InfiniteIntegerSequence			
+struct	ShaderGraph.InfiniteIntegerSequence		var	index
+struct	ShaderGraph.XMLDocument			
+struct	ShaderGraph.XMLDocument		let	data
+struct	ShaderGraph.XMLDocument		let	shouldProcessIncludes
+struct	ShaderGraph.XMLDocument.Options			
+struct	ShaderGraph.XMLDocument.Options		let	rawValue
+class	ShaderGraph.XMLParserDelegate	NSObject		
+class	ShaderGraph.XMLParserDelegate	NSObject	var	currentElement
+class	ShaderGraph.XMLParserDelegate	NSObject	var	rootElement
+class	ShaderGraph.XMLParserDelegate.Element			
+class	ShaderGraph.XMLParserDelegate.Element		var	parent
+class	ShaderGraph.XMLParserDelegate.Element		let	name
+class	ShaderGraph.XMLParserDelegate.Element		var	children
+class	ShaderGraph.XMLParserDelegate.Element		var	attributes
+class	ShaderGraph.XMLParserDelegate.StringNode			
+class	ShaderGraph.XMLParserDelegate.StringNode		var	parent
+class	ShaderGraph.XMLParserDelegate.StringNode		let	name
+class	ShaderGraph.XMLParserDelegate.StringNode		var	children
+class	ShaderGraph.XMLParserDelegate.StringNode		let	stringValue
+class	ShaderGraph.XMLParserDelegate.StringNode		let	attributes
+struct	ShaderGraph._UnsafeBitset			
+struct	ShaderGraph._UnsafeBitset		let	_words
+struct	ShaderGraph._UnsafeBitset		var	_count
+struct	ShaderGraph._UnsafeBitset.Iterator			
+struct	ShaderGraph._UnsafeBitset.Iterator		let	bitset
+struct	ShaderGraph._UnsafeBitset.Iterator		var	index
+struct	ShaderGraph._UnsafeBitset.Iterator		var	word
+struct	ShaderGraph._UnsafeBitset.Word			
+struct	ShaderGraph._UnsafeBitset.Word		var	value
+enum	ShaderGraph.MaterialXNodeTokens			
+struct	ShaderGraph.TopologicalSort.Path			
+struct	ShaderGraph.TopologicalSort.Path		let	edges
+struct	ShaderGraph.TopologicalSort.Path		let	initialNode
+struct	ShaderGraph.TopologicalSort.Path		let	rootGraph
+enum	ShaderGraph.LightSpillNodeFeatures			
+enum	ShaderGraph.LightSpillNodeFeatures		case	none
+enum	ShaderGraph.LightSpillNodeFeatures		case	base
+enum	ShaderGraph.LightSpillNodeFeatures		case	withRoughness
+class	ShaderGraph.SGREMaterialCompilationOptions	NSObject		
+class	ShaderGraph.SGREMaterialCompilationOptions	NSObject	let	workingColorSpace
+class	ShaderGraph.SGREMaterialCompilationOptions	NSObject	var	enableFailedCompileMaterial
+class	ShaderGraph.SGREMaterialCompilationOptions	NSObject	var	forceEnableTier1FallbackSupport
+struct	ShaderGraph.MaterialCodingContainer			
+struct	ShaderGraph.MaterialCodingContainer		let	version
+struct	ShaderGraph.MaterialCodingContainer		let	graph
+struct	ShaderGraph.MaterialCodingContainer		let	materialConfiguration
+enum	ShaderGraph.MaterialCodingContainer.CodingKeys			
+enum	ShaderGraph.MaterialCodingContainer.CodingKeys		case	version
+enum	ShaderGraph.MaterialCodingContainer.CodingKeys		case	graph
+enum	ShaderGraph.MaterialCodingContainer.CodingKeys		case	materialConfiguration
+class	ShaderGraph.SGEdge	NSObject		
+class	ShaderGraph.SGEdge	NSObject	let	from
+class	ShaderGraph.SGEdge	NSObject	let	to
+enum	ShaderGraph.SGEdge.CodingKeys			
+enum	ShaderGraph.SGEdge.CodingKeys		case	from
+enum	ShaderGraph.SGEdge.CodingKeys		case	to
+enum	ShaderGraph.IOAttachment			
+enum	ShaderGraph.IOAttachment		case	attached
+enum	ShaderGraph.IOAttachment		case	unattached
+class	ShaderGraph.SGInput	NSObject		
+class	ShaderGraph.SGInput	NSObject	var	type
+class	ShaderGraph.SGInput	NSObject	let	name
+class	ShaderGraph.SGInput	NSObject	var	attachment
+class	ShaderGraph.SGInput	NSObject	var	edge
+class	ShaderGraph.SGInput	NSObject	var	node
+enum	ShaderGraph.SGInput.CodingKeys			
+enum	ShaderGraph.SGInput.CodingKeys		case	type
+enum	ShaderGraph.SGInput.CodingKeys		case	name
+enum	ShaderGraph.SGInput.CodingKeys		case	attachment
+struct	ShaderGraph.WeakBox<A	class>		
+struct	ShaderGraph.WeakBox<A	class>	var	value
+class	ShaderGraph.SGOutput	NSObject		
+class	ShaderGraph.SGOutput	NSObject	var	type
+class	ShaderGraph.SGOutput	NSObject	let	name
+class	ShaderGraph.SGOutput	NSObject	var	attachment
+class	ShaderGraph.SGOutput	NSObject	var	_edges
+class	ShaderGraph.SGOutput	NSObject	var	node
+enum	ShaderGraph.SGOutput.CodingKeys			
+enum	ShaderGraph.SGOutput.CodingKeys		case	type
+enum	ShaderGraph.SGOutput.CodingKeys		case	name
+enum	ShaderGraph.SGOutput.CodingKeys		case	attachment
+struct	ShaderGraph.OrderedDictionary.Values<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedDictionary.Values<A	Swift.Hashable>	var	_base
+class	ShaderGraph.SGWarning	NSObject		
+class	ShaderGraph.SGWarning	NSObject	let	message
+class	ShaderGraph.ShaderGraphService	NSObject		
+struct	ShaderGraph.DynamicArrayLookupByString			
+struct	ShaderGraph.DynamicArrayLookupByString		let	list
+struct	ShaderGraph.DynamicArrayLookupByString		let	path
+enum	ShaderGraph.DynamicArrayLookupByString.MemberLookupError			
+enum	ShaderGraph.DynamicArrayLookupByString.MemberLookupError		case	multipleItemsFound
+enum	ShaderGraph.DynamicArrayLookupByString.MemberLookupError		case	itemNotFound
+enum	ShaderGraph.DebugConfig			
+enum	ShaderGraph.DebugConfig.Group			
+enum	ShaderGraph.DebugConfig.Group		case	none
+enum	ShaderGraph.DebugConfig.Group		case	summary
+enum	ShaderGraph.DebugConfig.Group		case	archive
+enum	ShaderGraph.DebugConfig.Group		case	dot
+enum	ShaderGraph.DebugConfig.Group		case	metalLibrary
+enum	ShaderGraph.DebugConfig.Group		case	stitchingGraph
+enum	ShaderGraph.DebugConfig.Group		case	minimalDot
+enum	ShaderGraph.DebugConfig.Group		case	apiGraph
+enum	ShaderGraph.DebugConfig.Group		case	functionConstants
+enum	ShaderGraph.DebugConfig.Group		case	metalMakeFunctionSignposts
+struct	ShaderGraph.FunctionConstantValue			
+struct	ShaderGraph.FunctionConstantValue		let	name
+struct	ShaderGraph.FunctionConstantValue		let	type
+struct	ShaderGraph.FunctionConstantValue		let	storage
+enum	ShaderGraph.FunctionConstantValue.CodingKeys			
+enum	ShaderGraph.FunctionConstantValue.CodingKeys		case	name
+enum	ShaderGraph.FunctionConstantValue.CodingKeys		case	type
+enum	ShaderGraph.FunctionConstantValue.CodingKeys		case	storage
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence<A	Swift.Hashable>	var	_base
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence<A	Swift.Hashable>	var	_bounds
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence.Iterator<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence.Iterator<A	Swift.Hashable>	var	_base
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence.Iterator<A	Swift.Hashable>	var	_end
+struct	ShaderGraph.OrderedDictionary.Elements.SubSequence.Iterator<A	Swift.Hashable>	var	_index
+class	ShaderGraph.MetalDataType	ShaderGraph.DataType		
+class	ShaderGraph.MetalDataType	ShaderGraph.DataType	let	metalTypeName
+class	ShaderGraph.MetalDataType	ShaderGraph.DataType	let	note
+class	ShaderGraph.MetalDataType	ShaderGraph.DataType	let	size
+class	ShaderGraph.MetalDataType	ShaderGraph.DataType	let	alignment
+class	ShaderGraph.MetalDataType	ShaderGraph.DataType	var	isConst
+class	ShaderGraph.MetalDataType.Struct	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Vector	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Vector	ShaderGraph.MetalDataType	let	componentType
+class	ShaderGraph.MetalDataType.Vector	ShaderGraph.MetalDataType	let	componentCount
+class	ShaderGraph.MetalDataType.Number	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Enum	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Enum	ShaderGraph.MetalDataType	let	types
+class	ShaderGraph.MetalDataType.Pointer	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Pointer	ShaderGraph.MetalDataType	let	pointee
+class	ShaderGraph.MetalDataType.Pointer	ShaderGraph.MetalDataType	let	addressSpace
+class	ShaderGraph.MetalDataType.Matrix	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Matrix	ShaderGraph.MetalDataType	let	rowCount
+class	ShaderGraph.MetalDataType.Matrix	ShaderGraph.MetalDataType	let	rowType
+class	ShaderGraph.MetalDataType.Function	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Function	ShaderGraph.MetalDataType	let	resultType
+class	ShaderGraph.MetalDataType.Function	ShaderGraph.MetalDataType	let	argumentTypes
+enum	ShaderGraph.MetalDataType.AddressSpace			
+enum	ShaderGraph.MetalDataType.AddressSpace		case	constant
+enum	ShaderGraph.MetalDataType.AddressSpace		case	device
+enum	ShaderGraph.MetalDataType.AddressSpace		case	thread
+enum	ShaderGraph.MetalDataType.AddressSpace		case	threadgroup
+class	ShaderGraph.MetalDataType.Reference	ShaderGraph.MetalDataType		
+class	ShaderGraph.MetalDataType.Reference	ShaderGraph.MetalDataType	let	referredToType
+class	ShaderGraph.MetalDataType.Reference	ShaderGraph.MetalDataType	let	addressSpace
+struct	ShaderGraph.OrderedDictionary.Elements<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedDictionary.Elements<A	Swift.Hashable>	var	_base
+class	ShaderGraph.SGREMaterialSource	NSObject		
+class	ShaderGraph.SGREMaterialSource	NSObject	let	config
+class	ShaderGraph.SGREMaterialSource	NSObject	var	uniforms
+class	ShaderGraph.SGREMaterialSource	NSObject	var	textures
+class	ShaderGraph.SGREMaterialSource	NSObject	var	containsPreReleaseNodes
+class	ShaderGraph.SGREMaterialSource	NSObject	let	graph
+class	ShaderGraph.SGREMaterialSource	NSObject	let	edgeDigest
+class	ShaderGraph.SGREMaterialFunctionConstantValues	NSObject		
+class	ShaderGraph.SGREMaterialFunctionConstantValues	NSObject	var	scalarFunctionConstants
+class	ShaderGraph.SGREMaterialFunctionConstantValues	NSObject	var	vectorFunctionConstants
+struct	ShaderGraph.GeomPropDef			
+struct	ShaderGraph.GeomPropDef		let	name
+struct	ShaderGraph.GeomPropDef		let	type
+struct	ShaderGraph.GeomPropDef		let	geomprop
+struct	ShaderGraph.GeomPropDef		let	space
+struct	ShaderGraph.GeomPropDef		let	index
+enum	ShaderGraph.GeomPropDef.Space			
+enum	ShaderGraph.GeomPropDef.Space		case	model
+enum	ShaderGraph.GeomPropDef.Space		case	object
+enum	ShaderGraph.GeomPropDef.Space		case	world
+enum	ShaderGraph.GeomPropDef.GeomProp			
+enum	ShaderGraph.GeomPropDef.GeomProp		case	builtin
+enum	ShaderGraph.GeomPropDef.GeomProp		case	unknown
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp			
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp		case	position
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp		case	normal
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp		case	tangent
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp		case	bitangent
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp		case	texcoord
+enum	ShaderGraph.GeomPropDef.BuiltinGeomProp		case	geomcolor
+struct	ShaderGraph.SGDataTypeStorage.ValueConversionContext			
+struct	ShaderGraph.SGDataTypeStorage.ValueConversionContext		let	workingColorSpace
+struct	ShaderGraph.SGGraph.ReplacementNode			
+struct	ShaderGraph.SGGraph.ReplacementNode		let	name
+struct	ShaderGraph.SGGraph.ReplacementNode		let	additionalInputValues
+struct	ShaderGraph._HashTable.BucketIterator			
+struct	ShaderGraph._HashTable.BucketIterator		let	_hashTable
+struct	ShaderGraph._HashTable.BucketIterator		var	_currentBucket
+struct	ShaderGraph._HashTable.BucketIterator		var	_currentRawValue
+struct	ShaderGraph._HashTable.BucketIterator		var	_nextBits
+struct	ShaderGraph._HashTable.BucketIterator		var	_remainingBitCount
+struct	ShaderGraph._HashTable.BucketIterator		var	_wrappedAround
+struct	ShaderGraph._HashTable.UnsafeHandle			
+struct	ShaderGraph._HashTable.UnsafeHandle		var	_header
+struct	ShaderGraph._HashTable.UnsafeHandle		var	_buckets
+class	ShaderGraph.MaterialXDataType	ShaderGraph.DataType		
+class	ShaderGraph.MaterialXDataType	ShaderGraph.DataType	let	kind
+class	ShaderGraph.MaterialXDataType	ShaderGraph.DataType	let	name
+enum	ShaderGraph.MaterialXDataType.Kind			
+enum	ShaderGraph.MaterialXDataType.Kind		case	set
+enum	ShaderGraph.MaterialXDataType.Kind		case	named
+struct	ShaderGraph.MaterialXDataType.usd			
+struct	ShaderGraph.MaterialXDataType.realitykit			
+struct	ShaderGraph.MetalDataType.MaterialX			
+enum	ShaderGraph.XMLElementErrors			
+enum	ShaderGraph.XMLElementErrors		case	missingRequiredAttribute
+enum	ShaderGraph.MaterialXDataType.Kind.CodingKeys			
+enum	ShaderGraph.MaterialXDataType.Kind.CodingKeys		case	named
+enum	ShaderGraph.MaterialXDataType.Kind.CodingKeys		case	set
+enum	ShaderGraph.MaterialXDataType.Kind.NamedCodingKeys			
+enum	ShaderGraph.MaterialXDataType.Kind.SetCodingKeys			
+enum	ShaderGraph.MaterialXDataType.Kind.SetCodingKeys		case	_0
+class	ShaderGraph.SGTypeDescription	NSObject		
+class	ShaderGraph.SGTypeDescription	NSObject	let	type
+class	ShaderGraph.SGTypeDescription	NSObject	let	properties
+class	ShaderGraph.SGTypeDescription	NSObject	var	offset
+class	ShaderGraph.SGPropertyDescription	NSObject		
+class	ShaderGraph.SGPropertyDescription	NSObject	let	name
+class	ShaderGraph.SGPropertyDescription	NSObject	let	type
+class	ShaderGraph.SGPropertyDescription	NSObject	let	visible
+enum	ShaderGraph.Signposts			
+enum	ShaderGraph.Signposts.Category			
+enum	ShaderGraph.Signposts.API			
+enum	ShaderGraph.Signposts.Compiler			
+enum	ShaderGraph.Signposts.GraphTransform			
+enum	ShaderGraph.Signposts.Events			
+struct	ShaderGraph.OrderedSet._UnstableInternals<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedSet._UnstableInternals<A	Swift.Hashable>	var	base
+enum	ShaderGraph.GraphCompilerErrors			
+enum	ShaderGraph.GraphCompilerErrors		case	invalidSamplerInput
+enum	ShaderGraph.GraphCompilerErrors		case	graphStructualError
+enum	ShaderGraph.GraphCompilerErrors		case	invalidType
+enum	ShaderGraph.GraphCompilerErrors		case	invalidTerminalNodesPresent
+enum	ShaderGraph.GraphCompilerErrors		case	couldNotCreateColorspace
+enum	ShaderGraph.GraphCompilerErrors		case	unsupportedPlatform
+struct	ShaderGraph.GPUSpecificCacheKey			
+struct	ShaderGraph.GPUSpecificCacheKey		let	deviceID
+struct	ShaderGraph.GPUSpecificCacheKey		let	key
+struct	ShaderGraph.GraphCompiler			
+struct	ShaderGraph.GraphCompiler		let	material
+struct	ShaderGraph.GraphCompiler		let	signposter
+enum	ShaderGraph.MetalLibrary			
+enum	ShaderGraph.MetalLibrary		case	source
+enum	ShaderGraph.MetalLibrary		case	library
+enum	ShaderGraph.MaterialXHardcodedNames			
+struct	ShaderGraph.UserGraphError			
+struct	ShaderGraph.UserGraphError		let	type
+struct	ShaderGraph.UserGraphError		let	details
+enum	ShaderGraph.UserGraphError.ErrorType			
+enum	ShaderGraph.UserGraphError.ErrorType		case	cannotFindBundle
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingFile
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingResultNode
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingSurfaceNode
+enum	ShaderGraph.UserGraphError.ErrorType		case	graphMissingName
+enum	ShaderGraph.UserGraphError.ErrorType		case	nodeMissingName
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingNodeDefName
+enum	ShaderGraph.UserGraphError.ErrorType		case	inputHasNoType
+enum	ShaderGraph.UserGraphError.ErrorType		case	outputHasNoType
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingNode
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingConstantNodeFeedingInput
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingNodeInput
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingGraphInput
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingInputForNodeDef
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingNodeOutput
+enum	ShaderGraph.UserGraphError.ErrorType		case	missingGraphOutput
+enum	ShaderGraph.UserGraphError.ErrorType		case	geomPropDefMissingAttribute
+enum	ShaderGraph.UserGraphError.ErrorType		case	defaultGeomPropHasNoParamGetter
+enum	ShaderGraph.UserGraphError.ErrorType		case	invalidGeomPropDef
+enum	ShaderGraph.UserGraphError.ErrorType		case	couldNotParseTypeSpecification
+enum	ShaderGraph.UserGraphError.ErrorType		case	materialNotFound
+enum	ShaderGraph.UserGraphError.ErrorType		case	cannotParseStringFromData
+enum	ShaderGraph.UserGraphError.ErrorType		case	xmlDocumentError
+enum	ShaderGraph.UserGraphError.ErrorType		case	encodingError
+enum	ShaderGraph.UserGraphError.ErrorType		case	decodingError
+enum	ShaderGraph.UserGraphError.ErrorType		case	invalidConstantValue
+enum	ShaderGraph.UserGraphError.ErrorType		case	pinError
+enum	ShaderGraph.UserGraphError.ErrorType		case	cannotMapNodeToNodedef
+enum	ShaderGraph.UserGraphError.ErrorType		case	nodeDefUndefined
+enum	ShaderGraph.UserGraphError.ErrorType		case	unsupportedNodeDef
+enum	ShaderGraph.UserGraphError.ErrorType		case	undefinedGeomProp
+enum	ShaderGraph.UserGraphError.ErrorType		case	invalidTypeForGeomProp
+enum	ShaderGraph.UserGraphError.ErrorType		case	couldNotCreateFunctionNode
+enum	ShaderGraph.UserGraphError.ErrorType		case	functionNodeNotFoundForInput
+enum	ShaderGraph.UserGraphError.ErrorType		case	functionNodeNotFoundForOutput
+enum	ShaderGraph.UserGraphError.ErrorType		case	couldNotResolveTypes
+enum	ShaderGraph.UserGraphError.ErrorType		case	couldNotCreateMetalTypeForInput
+enum	ShaderGraph.UserGraphError.ErrorType		case	couldNotCreateMetalTypeForOutput
+enum	ShaderGraph.UserGraphError.ErrorType		case	couldNotConvertToMetalType
+enum	ShaderGraph.UserGraphError.ErrorType		case	wrongNumberOfInputs
+enum	ShaderGraph.UserGraphError.ErrorType		case	wrongNumberOfOutputs
+enum	ShaderGraph.UserGraphError.ErrorType		case	incorrectNodeType
+enum	ShaderGraph.UserGraphError.ErrorType		case	unsupportedInputType
+enum	ShaderGraph.UserGraphError.ErrorType		case	unsupportedOutputType
+enum	ShaderGraph.UserGraphError.ErrorType		case	malformedGraph
+enum	ShaderGraph.UserGraphError.ErrorType		case	typeError
+enum	ShaderGraph.UserGraphError.ErrorType		case	notImplemented
+enum	ShaderGraph.UserGraphError.ErrorType		case	other
+enum	ShaderGraph.UserGraphError.ErrorType		case	unsupportedCGColor
+class	ShaderGraph.MaterialXTarget			
+class	ShaderGraph.MaterialXTarget		let	name
+class	ShaderGraph.MaterialXTarget		let	parent
+enum	ShaderGraph.MaterialXAvailability			
+enum	ShaderGraph.MaterialXAvailability		case	deprecated
+enum	ShaderGraph.MaterialXAvailability		case	supported
+enum	ShaderGraph.MaterialXAvailability		case	unsupported
+enum	ShaderGraph.MaterialXAvailability		case	prerelease
+struct	ShaderGraph.NodeDef			
+struct	ShaderGraph.NodeDef		let	name
+struct	ShaderGraph.NodeDef		let	nodeName
+struct	ShaderGraph.NodeDef		let	inherit
+struct	ShaderGraph.NodeDef		let	nodegroup
+struct	ShaderGraph.NodeDef		let	version
+struct	ShaderGraph.NodeDef		let	isdefaultversion
+struct	ShaderGraph.NodeDef		let	targets
+struct	ShaderGraph.NodeDef		let	uiName
+struct	ShaderGraph.NodeDef		let	available
+struct	ShaderGraph.NodeDef		let	inputs
+struct	ShaderGraph.NodeDef		let	outputs
+struct	ShaderGraph.NodeDef		let	availability
+struct	ShaderGraph.NodeDef.IOSpec			
+struct	ShaderGraph.NodeDef.IOSpec		let	name
+struct	ShaderGraph.NodeDef.IOSpec		let	type
+struct	ShaderGraph.NodeDef.IOSpec		let	defaultValue
+struct	ShaderGraph.NodeDef.IOSpec		let	defaultGeomProp
+struct	ShaderGraph.NodeDef.IOSpec		let	isUniform
+struct	ShaderGraph.NodeDef.Implementation			
+struct	ShaderGraph.NodeDef.Implementation		let	name
+struct	ShaderGraph.NodeDef.Implementation		let	kind
+struct	ShaderGraph.NodeDef.Implementation		let	targets
+enum	ShaderGraph.NodeDef.Implementation.Kind			
+enum	ShaderGraph.NodeDef.Implementation.Kind		case	nodegraph
+enum	ShaderGraph.NodeDef.Implementation.Kind		case	externalSource
+enum	ShaderGraph.NodeDef.Implementation.Kind		case	inlineSource
+enum	ShaderGraph.NodeDef.Implementation.Kind		case	libraryFunction
+class	ShaderGraph.SGError	NSError		
+enum	ShaderGraph.APIError			
+enum	ShaderGraph.APIError		case	unknownNodeDef
+enum	ShaderGraph.APIError		case	nilArgument
+enum	ShaderGraph.APIError		case	invalidScalarType
+enum	ShaderGraph.APIError		case	invalidVectorType
+enum	ShaderGraph.APIError		case	invalidStringType
+enum	ShaderGraph.APIError		case	invalidInputAndOutput
+enum	ShaderGraph.APIError		case	invalidOutput
+enum	ShaderGraph.APIError		case	invalidInput
+enum	ShaderGraph.APIError		case	unableToFindNodes
+enum	ShaderGraph.APIError		case	nodeNameAlreadyExists
+enum	ShaderGraph.APIError		case	unsupportedSurfaceType
+enum	ShaderGraph.APIError		case	invalidDataType
+enum	ShaderGraph.APIError		case	unsupportedArchiveVersion
+enum	ShaderGraph.APIError		case	unsupportedColor
+enum	ShaderGraph.APIError		case	invalidArchiveFormat
+enum	ShaderGraph.APIError		case	stringArgumentInvalid
+enum	ShaderGraph.APIError		case	stringArgumentEmpty
+enum	ShaderGraph.APIError		case	stringArgumentLengthExcessive
+enum	ShaderGraph.APIError		case	duplicateMaterialNodeSurfaceInputs
+enum	ShaderGraph.APIError		case	invalidConnectionToConstantInput
+enum	ShaderGraph.APIError		case	textureError
+enum	ShaderGraph.APIError		case	invalidGraph
+enum	ShaderGraph.APIError		case	unsupportedFunctionConstantType
+enum	ShaderGraph.APIError		case	unknownFunctionConstant
+enum	ShaderGraph.APIError		case	inputAlreadyConnected
+enum	ShaderGraph.APIError		case	emptyGraphName
+enum	ShaderGraph.APIError		case	emptyNodeName
+enum	ShaderGraph.APIError		case	missingSurfaceEdge
+enum	ShaderGraph.APIError		case	missingSurfaceNode
+enum	ShaderGraph.APIError		case	missingOpacitySurfaceInput
+enum	ShaderGraph.APIError		case	cycleInGraph
+enum	ShaderGraph.APIError		case	unsupportedGeometryModifier
+enum	ShaderGraph.APIError		case	internal
+struct	ShaderGraph.SGInternalError			
+struct	ShaderGraph.SGInternalError		let	type
+struct	ShaderGraph.SGInternalError		let	details
+enum	ShaderGraph.SGInternalError.ErrorType			
+enum	ShaderGraph.SGInternalError.ErrorType		case	userGraphError
+enum	ShaderGraph.SGInternalError.ErrorType		case	metalFunctionGraphError
+enum	ShaderGraph.SGInternalError.ErrorType		case	cannotPerformCast
+enum	ShaderGraph.SGInternalError.ErrorType		case	incorrectArrayLength
+enum	ShaderGraph.SGInternalError.ErrorType		case	other
+enum	ShaderGraph.SGInternalError.ErrorType		case	missingBuiltInDefinition
+enum	ShaderGraph.SGInternalError.ErrorType		case	unknownArchiveNodeData
+enum	ShaderGraph.SGInternalError.ErrorType		case	cannotParseVector
+enum	ShaderGraph.SGInternalError.ErrorType		case	unableToConstructStringFromArchiveData
+enum	ShaderGraph.SGInternalError.ErrorType		case	functionStitchingFailure
+enum	ShaderGraph.SGInternalError.ErrorType		case	nodeNotContainedInGraph
+struct	ShaderGraph.Input			
+struct	ShaderGraph.Input		var	nodeid
+struct	ShaderGraph.Input		let	type
+struct	ShaderGraph.Input		let	label
+struct	ShaderGraph.Input		var	graphid
+struct	ShaderGraph.Input		let	index
+struct	ShaderGraph.Output			
+struct	ShaderGraph.Output		var	nodeid
+struct	ShaderGraph.Output		let	type
+struct	ShaderGraph.Output		let	label
+struct	ShaderGraph.Output		var	graphid
+struct	ShaderGraph.Output		let	index
+struct	ShaderGraph.Edge			
+struct	ShaderGraph.Edge		let	from
+struct	ShaderGraph.Edge		let	to
+struct	ShaderGraph.ShaderGraphNode			
+struct	ShaderGraph.ShaderGraphNode		var	shaderGraphData
+struct	ShaderGraph.ShaderGraphNode		var	inputs
+struct	ShaderGraph.ShaderGraphNode		var	outputs
+struct	ShaderGraph.ShaderGraphNode		var	id
+struct	ShaderGraph.ShaderGraphNode		var	graphid
+struct	ShaderGraph.ShaderGraphNode.ID			
+struct	ShaderGraph.ShaderGraphNode.ID		let	value
+struct	ShaderGraph.UserGraph			
+struct	ShaderGraph.UserGraph		var	adjacency
+struct	ShaderGraph.UserGraph		let	label
+struct	ShaderGraph.UserGraph		let	id
+struct	ShaderGraph.UserGraph		let	inputs
+struct	ShaderGraph.UserGraph		let	outputs
+struct	ShaderGraph.UserGraph		var	_nodes
+struct	ShaderGraph.UserGraph		var	graphIDCounter
+struct	ShaderGraph.UserGraph		let	argumentsNode
+struct	ShaderGraph.UserGraph		let	resultNode
+struct	ShaderGraph.UserGraph.Iterator			
+struct	ShaderGraph.UserGraph.Iterator		var	index
+struct	ShaderGraph.UserGraph.Iterator		let	elements
+struct	ShaderGraph.UserGraph.Iterator		let	isLiving
+struct	ShaderGraph.UserGraph.DepthFirstEdgeIterator			
+struct	ShaderGraph.UserGraph.DepthFirstEdgeIterator		let	adjacency
+struct	ShaderGraph.UserGraph.DepthFirstEdgeIterator		var	stack
+struct	ShaderGraph.UserGraph.DepthFirstEdgeIterator		var	visited
+struct	ShaderGraph.UserGraph.BreathFirstEdgeIterator			
+struct	ShaderGraph.UserGraph.BreathFirstEdgeIterator		let	adjacency
+struct	ShaderGraph.UserGraph.BreathFirstEdgeIterator		var	queue
+struct	ShaderGraph.UserGraph.BreathFirstEdgeIterator		var	visited
+struct	ShaderGraph.UserGraph.BreathFirstEdgeIterator		var	_nodes
+struct	ShaderGraph.UserGraph.ID			
+struct	ShaderGraph.UserGraph.ID		let	value
+struct	ShaderGraph.UserGraph.Adjacent			
+struct	ShaderGraph.UserGraph.Adjacent		var	outgoing
+struct	ShaderGraph.UserGraph.Adjacent		var	incoming
+class	ShaderGraph.SGMaterialConfiguration	NSObject		
+class	ShaderGraph.SGMaterialConfiguration	NSObject	var	customGeometryProperties
+class	ShaderGraph.SGMaterialConfiguration	NSObject	var	functionConstantInputs
+enum	ShaderGraph.SGMaterialConfiguration.CodingKeys			
+enum	ShaderGraph.SGMaterialConfiguration.CodingKeys		case	customGeometryProperties
+enum	ShaderGraph.SGMaterialConfiguration.CodingKeys		case	functionConstantInputs
+enum	ShaderGraph.DotError			
+enum	ShaderGraph.DotError		case	broken
+struct	ShaderGraph.OrderedDictionary.Iterator<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedDictionary.Iterator<A	Swift.Hashable>	let	_base
+struct	ShaderGraph.OrderedDictionary.Iterator<A	Swift.Hashable>	var	_position
+struct	ShaderGraph.Key			
+struct	ShaderGraph.Key		let	value
+struct	ShaderGraph.Key		let	valueType
+class	ShaderGraph.FileLogger			
+struct	ShaderGraph.NodeDef.Availability			
+struct	ShaderGraph.NodeDef.Availability		let	platform
+struct	ShaderGraph.NodeDef.Availability		let	kind
+struct	ShaderGraph.NodeDef.Availability		let	renamed
+struct	ShaderGraph.NodeDef.Availability		let	message
+struct	ShaderGraph.NodeDef.Availability.PlatformVersion			
+struct	ShaderGraph.NodeDef.Availability.PlatformVersion		let	major
+struct	ShaderGraph.NodeDef.Availability.PlatformVersion		let	minor
+struct	ShaderGraph.NodeDef.Availability.PlatformVersion		let	patch
+enum	ShaderGraph.NodeDef.Availability.Platform			
+enum	ShaderGraph.NodeDef.Availability.Platform		case	iOS
+enum	ShaderGraph.NodeDef.Availability.Platform		case	macOS
+enum	ShaderGraph.NodeDef.Availability.Platform		case	watchOS
+enum	ShaderGraph.NodeDef.Availability.Platform		case	tvOS
+enum	ShaderGraph.NodeDef.Availability.Platform		case	visionOS
+enum	ShaderGraph.NodeDef.Availability.Platform		case	realityKit
+enum	ShaderGraph.NodeDef.Availability.AvailabilityKind			
+enum	ShaderGraph.NodeDef.Availability.AvailabilityKind		case	available
+enum	ShaderGraph.NodeDef.Availability.AvailabilityKind		case	unavailable
+struct	ShaderGraph.NodeDef.Availability.MaterialXAttributeParser			
+struct	ShaderGraph.OrderedSet.UnorderedView<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedSet.UnorderedView<A	Swift.Hashable>	var	_base
+class	ShaderGraph.RESurfaceShaderFunctionNode			
+class	ShaderGraph.RESurfaceShaderFunctionNode		let	functionName
+class	ShaderGraph.RESurfaceShaderFunctionNode		let	paramsInput
+class	ShaderGraph.RESurfaceShaderFunctionNode		let	uniformsInput
+class	ShaderGraph.RESurfaceShaderFunctionNode		let	resultType
+class	ShaderGraph.RESurfaceShaderFunctionNode		var	id
+class	ShaderGraph.RESurfaceShaderFunctionNode		var	inputs
+class	ShaderGraph.RESurfaceShaderFunctionNode		let	debugLabel
+struct	ShaderGraph.MetalDataType.re			
+struct	ShaderGraph.MetalDataType.re.surface			
+struct	ShaderGraph.MetalDataType.re.geometry_modifier			
+struct	ShaderGraph.MetalDataType.re.texture			
+struct	ShaderGraph.MetalDataType.re.material			
+struct	ShaderGraph.MetalDataType.re.surface_private			
+struct	ShaderGraph.MetalDataType.re.geometry_modifier_private			
+enum	ShaderGraph.REInternalStrings			
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path			
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path		let	edges
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path		let	destination
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path		let	source
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path		let	rootGraph
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path.PathEdge			
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path.PathEdge		let	edge
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path.PathEdge		let	fromElement
+struct	ShaderGraph.SGDataTypeGraph.TopologicalSort.Path.PathEdge		let	toElement
+class	ShaderGraph.SGGraph	NSObject		
+class	ShaderGraph.SGGraph	NSObject	let	name
+class	ShaderGraph.SGGraph	NSObject	let	argumentsNode
+class	ShaderGraph.SGGraph	NSObject	let	resultsNode
+class	ShaderGraph.SGGraph	NSObject	var	nodes
+class	ShaderGraph.SGGraph	NSObject	var	nodeMap
+class	ShaderGraph.SGGraph	NSObject	var	edges
+class	ShaderGraph.SGGraph	NSObject	var	inputs
+class	ShaderGraph.SGGraph	NSObject	var	outputs
+enum	ShaderGraph.SGGraph.CodingKeys			
+enum	ShaderGraph.SGGraph.CodingKeys		case	nodes
+enum	ShaderGraph.SGGraph.CodingKeys		case	edges
+enum	ShaderGraph.SGGraph.CodingKeys		case	inputs
+enum	ShaderGraph.SGGraph.CodingKeys		case	outputs
+enum	ShaderGraph.SGGraph.CodingKeys		case	name
+struct	ShaderGraph.TopologicalSort			
+struct	ShaderGraph.TopologicalSort		let	elements
+struct	ShaderGraph.TopologicalSort		let	rootElement
+struct	ShaderGraph.TopologicalSort.Element			
+struct	ShaderGraph.TopologicalSort.Element		let	node
+struct	ShaderGraph.TopologicalSort.Element		let	graph
+struct	ShaderGraph.TopologicalSort.Element		let	nodeGraphCallNode
+struct	ShaderGraph.TopologicalSort.Element		var	nodeGraphCallElementIndex
+struct	ShaderGraph.SGGraph.Context			
+struct	ShaderGraph.SGGraph.Context		var	stack
+struct	ShaderGraph.SGGraph.Context		var	discovered
+struct	ShaderGraph.SGGraph.Context		var	visitedGraphNodes
+struct	ShaderGraph.SGGraph.Context		var	inputMap
+struct	ShaderGraph.GraphIndex			
+struct	ShaderGraph.GraphIndex		let	nodeIndex
+struct	ShaderGraph.GraphIndex		let	portIndex
+struct	ShaderGraph.Graph<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph<A	ShaderGraph.GraphElement>	var	storage
+struct	ShaderGraph.Graph.Node<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.Node<A	ShaderGraph.GraphElement>	let	storageIndex
+struct	ShaderGraph.Graph.Node<A	ShaderGraph.GraphElement>	let	element
+struct	ShaderGraph.Graph.Edge<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.Edge<A	ShaderGraph.GraphElement>	let	from
+struct	ShaderGraph.Graph.Edge<A	ShaderGraph.GraphElement>	let	to
+struct	ShaderGraph.Graph.Input<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.Input<A	ShaderGraph.GraphElement>	let	index
+struct	ShaderGraph.Graph.Input<A	ShaderGraph.GraphElement>	let	value
+struct	ShaderGraph.Graph.Output<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.Output<A	ShaderGraph.GraphElement>	let	index
+struct	ShaderGraph.Graph.Output<A	ShaderGraph.GraphElement>	let	value
+struct	ShaderGraph.Graph.Adjacent<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.Adjacent<A	ShaderGraph.GraphElement>	var	outgoing
+struct	ShaderGraph.Graph.Adjacent<A	ShaderGraph.GraphElement>	var	incoming
+struct	ShaderGraph.Graph.DepthFirstEdgeIterator<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.DepthFirstEdgeIterator<A	ShaderGraph.GraphElement>	var	stack
+struct	ShaderGraph.Graph.DepthFirstEdgeIterator<A	ShaderGraph.GraphElement>	var	visited
+struct	ShaderGraph.Graph.DepthFirstEdgeIterator<A	ShaderGraph.GraphElement>	var	graph
+struct	ShaderGraph.ShallowDepthFirstNodeIterator<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.ShallowDepthFirstNodeIterator<A	ShaderGraph.GraphElement>	let	graph
+struct	ShaderGraph.ShallowDepthFirstNodeIterator<A	ShaderGraph.GraphElement>	var	context
+struct	ShaderGraph.ShallowDepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.ShallowDepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	stack
+struct	ShaderGraph.ShallowDepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	discovered
+struct	ShaderGraph.ShallowDepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	visitedGraphNodes
+struct	ShaderGraph.ShallowDepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	inputMap
+struct	ShaderGraph.DepthFirstNodeIterator<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.DepthFirstNodeIterator<A	ShaderGraph.GraphElement>	let	graph
+struct	ShaderGraph.DepthFirstNodeIterator<A	ShaderGraph.GraphElement>	let	extractGraph
+struct	ShaderGraph.DepthFirstNodeIterator<A	ShaderGraph.GraphElement>	let	extractInitialNodes
+struct	ShaderGraph.DepthFirstNodeIterator<A	ShaderGraph.GraphElement>	var	contextStack
+struct	ShaderGraph.DepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.DepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	stack
+struct	ShaderGraph.DepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	discovered
+struct	ShaderGraph.DepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	visitedGraphNodes
+struct	ShaderGraph.DepthFirstNodeIterator.Context<A	ShaderGraph.GraphElement>	var	inputMap
+struct	ShaderGraph.Graph.NodeEntry<A	ShaderGraph.GraphElement>		
+struct	ShaderGraph.Graph.NodeEntry<A	ShaderGraph.GraphElement>	var	node
+struct	ShaderGraph.Graph.NodeEntry<A	ShaderGraph.GraphElement>	var	adjacent
+struct	ShaderGraph.OrderedDictionary<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedDictionary<A	Swift.Hashable>	var	_keys
+struct	ShaderGraph.OrderedDictionary<A	Swift.Hashable>	var	_values
+enum	ShaderGraph.SGDataTypeStorage			
+enum	ShaderGraph.SGDataTypeStorage		case	bool
+enum	ShaderGraph.SGDataTypeStorage		case	uchar
+enum	ShaderGraph.SGDataTypeStorage		case	int
+enum	ShaderGraph.SGDataTypeStorage		case	uint
+enum	ShaderGraph.SGDataTypeStorage		case	half
+enum	ShaderGraph.SGDataTypeStorage		case	float
+enum	ShaderGraph.SGDataTypeStorage		case	string
+enum	ShaderGraph.SGDataTypeStorage		case	vector2f
+enum	ShaderGraph.SGDataTypeStorage		case	vector3f
+enum	ShaderGraph.SGDataTypeStorage		case	vector4f
+enum	ShaderGraph.SGDataTypeStorage		case	vector2h
+enum	ShaderGraph.SGDataTypeStorage		case	vector3h
+enum	ShaderGraph.SGDataTypeStorage		case	vector4h
+enum	ShaderGraph.SGDataTypeStorage		case	vector2i
+enum	ShaderGraph.SGDataTypeStorage		case	vector3i
+enum	ShaderGraph.SGDataTypeStorage		case	vector4i
+enum	ShaderGraph.SGDataTypeStorage		case	matrix2f
+enum	ShaderGraph.SGDataTypeStorage		case	matrix3f
+enum	ShaderGraph.SGDataTypeStorage		case	matrix4f
+enum	ShaderGraph.SGDataTypeStorage		case	matrix2h
+enum	ShaderGraph.SGDataTypeStorage		case	matrix3h
+enum	ShaderGraph.SGDataTypeStorage		case	matrix4h
+enum	ShaderGraph.SGDataTypeStorage		case	cgColor3
+enum	ShaderGraph.SGDataTypeStorage		case	cgColor4
+enum	ShaderGraph.SGDataTypeStorage.CodingKeys			
+enum	ShaderGraph.SGDataTypeStorage.CodingKeys		case	type
+enum	ShaderGraph.SGDataTypeStorage.CodingKeys		case	value
+enum	ShaderGraph.ShaderType			
+enum	ShaderGraph.ShaderType		case	surface
+enum	ShaderGraph.ShaderType		case	geometryModifier
+enum	ShaderGraph.Surface			
+enum	ShaderGraph.Surface		case	realityKitPBR
+enum	ShaderGraph.Surface		case	realityKitUnlit
+enum	ShaderGraph.Surface		case	usdPreviewSurface
+enum	ShaderGraph.Surface		case	realityKitGeometryModifier
+enum	ShaderGraph.Surface		case	materialXUnlit
+struct	ShaderGraph.CGColorCodingContainer			
+struct	ShaderGraph.CGColorCodingContainer		let	components
+struct	ShaderGraph.CGColorCodingContainer		let	colorspaceName
+enum	ShaderGraph.CGColorCodingContainer.CodingKeys			
+enum	ShaderGraph.CGColorCodingContainer.CodingKeys		case	components
+enum	ShaderGraph.CGColorCodingContainer.CodingKeys		case	colorspaceName
+struct	ShaderGraph.InputSpec			
+struct	ShaderGraph.InputSpec		var	label
+struct	ShaderGraph.InputSpec		var	type
+struct	ShaderGraph.OutputSpec			
+struct	ShaderGraph.OutputSpec		var	label
+struct	ShaderGraph.OutputSpec		var	type
+struct	ShaderGraph.FunctionNodeID			
+struct	ShaderGraph.FunctionNodeID		let	value
+class	ShaderGraph.SGGeometryPropertyDefinition	NSObject		
+class	ShaderGraph.SGGeometryPropertyDefinition	NSObject	let	name
+class	ShaderGraph.SGGeometryPropertyDefinition	NSObject	let	referencedGeomPropName
+enum	ShaderGraph.SGGeometryPropertyDefinition.CodingKey			
+enum	ShaderGraph.SGGeometryPropertyDefinition.CodingKey		case	name
+enum	ShaderGraph.SGGeometryPropertyDefinition.CodingKey		case	referencedGeomPropName
+class	ShaderGraph.SGNode	NSObject		
+class	ShaderGraph.SGNode	NSObject	let	name
+class	ShaderGraph.SGNode	NSObject	let	inputs
+class	ShaderGraph.SGNode	NSObject	let	outputs
+class	ShaderGraph.SGNode	NSObject	let	data
+class	ShaderGraph.SGNode	NSObject	var	graph
+enum	ShaderGraph.SGNode.CodingKeys			
+enum	ShaderGraph.SGNode.CodingKeys		case	name
+enum	ShaderGraph.SGNode.CodingKeys		case	inputs
+enum	ShaderGraph.SGNode.CodingKeys		case	outputs
+enum	ShaderGraph.SGNode.CodingKeys		case	data
+struct	ShaderGraph._HashTable			
+struct	ShaderGraph._HashTable		var	_storage
+class	ShaderGraph._HashTable.Storage	Swift.ManagedBuffer ShaderGraph._HashTable.Header Swift.UInt64		
+class	ShaderGraph.MetalFunctionNodeBase			
+class	ShaderGraph.MetalFunctionNodeBase		var	id
+class	ShaderGraph.MetalFunctionNodeBase		let	metalFunctionTemplate
+class	ShaderGraph.MetalFunctionNodeBase		var	inputs
+class	ShaderGraph.MetalFunctionNodeBase		var	debugLabel
+class	ShaderGraph.MetalFunctionNodeBase		var	resultType
+class	ShaderGraph.MetalLiteralValueNode			
+class	ShaderGraph.MetalLiteralValueNode		var	id
+class	ShaderGraph.MetalLiteralValueNode		var	inputs
+class	ShaderGraph.MetalLiteralValueNode		var	resultType
+class	ShaderGraph.MetalLiteralValueNode		var	value
+class	ShaderGraph.MetalLiteralValueNode		var	isConstExpr
+class	ShaderGraph.MetalFunctionCallNode			
+class	ShaderGraph.MetalFunctionCallNode		var	id
+class	ShaderGraph.MetalFunctionCallNode		var	inputs
+class	ShaderGraph.MetalFunctionCallNode		var	resultType
+class	ShaderGraph.MetalFunctionCallNode		let	functionName
+class	ShaderGraph.MetalFunctionCallNode		var	isConstExpr
+class	ShaderGraph.MetalFunctionParameterNode			
+class	ShaderGraph.MetalFunctionParameterNode		var	id
+class	ShaderGraph.MetalFunctionParameterNode		var	inputs
+class	ShaderGraph.MetalFunctionParameterNode		let	resultType
+class	ShaderGraph.MetalFunctionParameterNode		var	name
+class	ShaderGraph.MetalFunctionDefinitionNode			
+class	ShaderGraph.MetalFunctionDefinitionNode		var	id
+class	ShaderGraph.MetalFunctionDefinitionNode		var	inputs
+class	ShaderGraph.MetalFunctionDefinitionNode		var	resultType
+class	ShaderGraph.MetalFunctionDefinitionNode		let	functionName
+class	ShaderGraph.MetalFunctionDefinitionNode		var	specifier
+class	ShaderGraph.MetalFunctionDefinitionNode		var	argumentTypes
+class	ShaderGraph.MetalStructGetterOffsetNode			
+class	ShaderGraph.MetalStructGetterOffsetNode		var	id
+class	ShaderGraph.MetalStructGetterOffsetNode		var	inputs
+class	ShaderGraph.MetalStructGetterOffsetNode		var	inputType
+class	ShaderGraph.MetalStructGetterOffsetNode		var	resultType
+class	ShaderGraph.MetalStructGetterOffsetNode		let	offset
+class	ShaderGraph.MetalStructGetterNode			
+class	ShaderGraph.MetalStructGetterNode		var	id
+class	ShaderGraph.MetalStructGetterNode		var	inputs
+class	ShaderGraph.MetalStructGetterNode		var	inputType
+class	ShaderGraph.MetalStructGetterNode		var	resultType
+class	ShaderGraph.MetalStructGetterNode		let	fieldName
+class	ShaderGraph.MetalPassthroughNode			
+class	ShaderGraph.MetalPassthroughNode		var	id
+class	ShaderGraph.MetalPassthroughNode		let	resultType
+class	ShaderGraph.MetalPassthroughNode		var	inputs
+class	ShaderGraph.MetalPassthroughNode		var	isConstExpr
+class	ShaderGraph.MetalShaderProgram			
+class	ShaderGraph.MetalShaderProgram		var	nodes
+class	ShaderGraph.MetalShaderProgram		var	nodeMap
+class	ShaderGraph.MetalShaderProgram		var	customFragmentShaderConstants
+class	ShaderGraph.MetalShaderProgram		var	customMetalContent
+class	ShaderGraph.MetalShaderProgram		var	idCounter
+struct	ShaderGraph._HashTable.Header			
+struct	ShaderGraph._HashTable.Header		var	_scaleAndSeed
+struct	ShaderGraph._HashTable.Header		var	_reservedScaleAndBias
+enum	ShaderGraph.MaterialXError			
+enum	ShaderGraph.MaterialXError		case	couldNotParseVersionString
+enum	ShaderGraph.MaterialXError		case	unclosedStringInAvailabilityAttribute
+enum	ShaderGraph.MaterialXError		case	unrecognizedPlatformName
+enum	ShaderGraph.MaterialXError		case	conflictingAvailabilitySpecifiers
+enum	ShaderGraph.MaterialXError		case	missingPlatformName
+enum	ShaderGraph.MaterialXError		case	missingImplementationName
+struct	ShaderGraph.NodeDefinitionStore			
+struct	ShaderGraph.NodeDefinitionStore		let	nodes
+struct	ShaderGraph.NodeDefinitionStore		let	geomProps
+struct	ShaderGraph.NodeDefinitionStore		let	nodesLookupId
+struct	ShaderGraph.NodeDefinitionStore		let	geomPropsLookupId
+struct	ShaderGraph.NodeDefinitionStore		let	nodesLookupName
+struct	ShaderGraph.NodeDefinitionStore.MaterialXDataType			
+struct	ShaderGraph.NodeDefinitionStore.MaterialXDataType		let	kind
+struct	ShaderGraph.NodeDefinitionStore.MaterialXDataType		let	name
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind			
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind		case	set
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind		case	named
+struct	ShaderGraph.NodeDefinitionStore.Output			
+struct	ShaderGraph.NodeDefinitionStore.Output		let	name
+struct	ShaderGraph.NodeDefinitionStore.Output		let	type
+struct	ShaderGraph.NodeDefinitionStore.Output		let	defaultValue
+struct	ShaderGraph.NodeDefinitionStore.Output		let	defaultGeomProp
+struct	ShaderGraph.NodeDefinitionStore.Output		let	isUniform
+struct	ShaderGraph.NodeDefinitionStore.Input			
+struct	ShaderGraph.NodeDefinitionStore.Input		let	name
+struct	ShaderGraph.NodeDefinitionStore.Input		let	type
+struct	ShaderGraph.NodeDefinitionStore.Input		let	defaultValue
+struct	ShaderGraph.NodeDefinitionStore.Input		let	defaultGeomProp
+struct	ShaderGraph.NodeDefinitionStore.Input		let	isUniform
+struct	ShaderGraph.NodeDefinitionStore.Node			
+struct	ShaderGraph.NodeDefinitionStore.Node		let	name
+struct	ShaderGraph.NodeDefinitionStore.Node		let	nodeName
+struct	ShaderGraph.NodeDefinitionStore.Node		let	inherit
+struct	ShaderGraph.NodeDefinitionStore.Node		let	nodeGroup
+struct	ShaderGraph.NodeDefinitionStore.Node		let	version
+struct	ShaderGraph.NodeDefinitionStore.Node		let	isDefaultVersion
+struct	ShaderGraph.NodeDefinitionStore.Node		let	targets
+struct	ShaderGraph.NodeDefinitionStore.Node		let	uiName
+struct	ShaderGraph.NodeDefinitionStore.Node		let	inputs
+struct	ShaderGraph.NodeDefinitionStore.Node		let	outputs
+struct	ShaderGraph.NodeDefinitionStore.Node		let	availability
+struct	ShaderGraph.NodeDefinitionStore.Node		let	availabilityMessage
+enum	ShaderGraph.NodeDefinitionStore.GeomPropValue			
+enum	ShaderGraph.NodeDefinitionStore.GeomPropValue		case	builtin
+enum	ShaderGraph.NodeDefinitionStore.GeomPropValue		case	unknown
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp			
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp		case	position
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp		case	normal
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp		case	tangent
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp		case	bitangent
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp		case	texcoord
+enum	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp		case	geomcolor
+enum	ShaderGraph.NodeDefinitionStore.Space			
+enum	ShaderGraph.NodeDefinitionStore.Space		case	model
+enum	ShaderGraph.NodeDefinitionStore.Space		case	object
+enum	ShaderGraph.NodeDefinitionStore.Space		case	world
+struct	ShaderGraph.NodeDefinitionStore.GeomProp			
+struct	ShaderGraph.NodeDefinitionStore.GeomProp		let	name
+struct	ShaderGraph.NodeDefinitionStore.GeomProp		let	type
+struct	ShaderGraph.NodeDefinitionStore.GeomProp		let	value
+struct	ShaderGraph.NodeDefinitionStore.GeomProp		let	space
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage			
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	bool
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	uchar
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	int
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	uint
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	half
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	float
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	string
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector2f
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector3f
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector4f
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector2h
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector3h
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector4h
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector2i
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector3i
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	vector4i
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	matrix2f
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	matrix3f
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	matrix4f
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	matrix2h
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	matrix3h
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	matrix4h
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	cgColor3
+enum	ShaderGraph.NodeDefinitionStore.TypeStorage		case	cgColor4
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind.CodingKeys			
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind.CodingKeys		case	named
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind.CodingKeys		case	set
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind.NamedCodingKeys			
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind.SetCodingKeys			
+enum	ShaderGraph.NodeDefinitionStore.MaterialXDataType.Kind.SetCodingKeys		case	_0
+class	ShaderGraph.SGREMaterial	NSObject		
+class	ShaderGraph.SGREMaterial	NSObject	let	surfaceShaderFunctionName
+class	ShaderGraph.SGREMaterial	NSObject	let	geometryModifierFunctionName
+class	ShaderGraph.SGREMaterial	NSObject	let	uniforms
+class	ShaderGraph.SGREMaterial	NSObject	var	functionConstantInputs
+class	ShaderGraph.SGREMaterial	NSObject	var	textures
+class	ShaderGraph.SGREMaterial	NSObject	let	lightingModel
+class	ShaderGraph.SGREMaterial	NSObject	let	blending
+class	ShaderGraph.SGREMaterial	NSObject	let	hasPremultipliedAlpha
+class	ShaderGraph.SGREMaterial	NSObject	let	matchUnlitColor
+class	ShaderGraph.SGREMaterial	NSObject	let	warnings
+class	ShaderGraph.SGREMaterial	NSObject	let	hasSurfaceShaderUniforms
+class	ShaderGraph.SGREMaterial	NSObject	let	hasGeometryModifierUniforms
+class	ShaderGraph.SGREMaterial	NSObject	let	hasConnectedLightSpillNodes
+class	ShaderGraph.SGREMaterial	NSObject	let	hasConnectedLightSpillNodesWithRoughness
+class	ShaderGraph.SGREMaterial	NSObject	let	hasBackgroundBlur
+class	ShaderGraph.SGREMaterial	NSObject	let	hasGeometryModifierOffset
+class	ShaderGraph.SGREMaterial	NSObject	let	hasTimeVaryingFeatures
+class	ShaderGraph.SGREMaterial	NSObject	let	hasInstanceID
+class	ShaderGraph.SGREMaterial	NSObject	let	graph
+class	ShaderGraph.SGREMaterial	NSObject	let	internalGraph
+class	ShaderGraph.SGREMaterial	NSObject	let	config
+class	ShaderGraph.SGREMaterial	NSObject	let	textureAssignments
+class	ShaderGraph.SGREMaterial	NSObject	let	customUniformsType
+class	ShaderGraph.SGREMaterial	NSObject	let	functionConstantValues
+class	ShaderGraph.SGREMaterial	NSObject	let	edgeDigest
+class	ShaderGraph.SGREMaterial	NSObject	let	sourceHash
+class	ShaderGraph.SGREMaterial	NSObject	let	operationalHash
+class	ShaderGraph.SGREMaterial	NSObject	var	operationalHashString
+struct	ShaderGraph.BuiltInDefinition			
+struct	ShaderGraph.BuiltInDefinition		let	name
+struct	ShaderGraph.BuiltInDefinition		let	inputs
+struct	ShaderGraph.BuiltInDefinition		let	outputs
+struct	ShaderGraph.BuiltInDefinition		let	availability
+struct	ShaderGraph.BuiltInDefinition.InputSpec			
+struct	ShaderGraph.BuiltInDefinition.InputSpec		let	name
+struct	ShaderGraph.BuiltInDefinition.InputSpec		let	type
+struct	ShaderGraph.BuiltInDefinition.InputSpec		let	isConstant
+struct	ShaderGraph.BuiltInDefinition.OutputSpec			
+struct	ShaderGraph.BuiltInDefinition.OutputSpec		let	name
+struct	ShaderGraph.BuiltInDefinition.OutputSpec		let	type
+enum	ShaderGraph.BuiltInDefinition.ReservedNames			
+enum	ShaderGraph.BuiltInDefinition.ReservedNames		case	__arguments
+enum	ShaderGraph.BuiltInDefinition.ReservedNames		case	__results
+class	ShaderGraph.BuiltInDefinitionStore			
+class	ShaderGraph.BuiltInDefinitionStore		let	nodeDefStore
+class	ShaderGraph.BuiltInDefinitionStore		let	definitions
+enum	ShaderGraph.MetalStitchingBackendErrors			
+enum	ShaderGraph.MetalStitchingBackendErrors		case	missingNode
+enum	ShaderGraph.MetalStitchingBackendErrors		case	unsupportedNodeInGraph
+enum	ShaderGraph.MetalStitchingBackendErrors		case	missingStitchingFunction
+enum	ShaderGraph.MetalStitchingBackendErrors		case	unsupportedConstant
+enum	ShaderGraph.MetalStitchingBackendErrors		case	unsupportedStructMemberType
+enum	ShaderGraph.MetalStitchingBackendErrors		case	nodeDependencyMissing
+enum	ShaderGraph.MetalStitchingBackendErrors		case	graphMustHaveDefinedArguments
+enum	ShaderGraph.MetalStitchingBackendErrors		case	missingStitchingInputNode
+enum	ShaderGraph.MetalStitchingBackendErrors		case	additionalLibraryMissing
+enum	ShaderGraph.MetalStitchingBackendErrors		case	graphNodeCountMismatch
+enum	ShaderGraph.MetalStitchingBackendErrors		case	unsupportedMetalTextureType
+struct	ShaderGraph.MetalStitchingBackend			
+struct	ShaderGraph.MetalStitchingBackend		let	materialName
+struct	ShaderGraph.MetalStitchingBackend		let	programHash
+struct	ShaderGraph.MetalStitchingBackend		let	signposter
+struct	ShaderGraph.MetalStitchingBackend		let	signpostID
+struct	ShaderGraph.MetalStitchingBackend.ConstantKey			
+struct	ShaderGraph.MetalStitchingBackend.ConstantKey		let	value
+struct	ShaderGraph.MetalStitchingBackend.ConstantKey		let	type
+struct	ShaderGraph.OrderedSet.SubSequence<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedSet.SubSequence<A	Swift.Hashable>	var	_base
+struct	ShaderGraph.OrderedSet.SubSequence<A	Swift.Hashable>	var	_bounds
+struct	ShaderGraph.MetalFunctionGraphError			
+struct	ShaderGraph.MetalFunctionGraphError		let	type
+struct	ShaderGraph.MetalFunctionGraphError		let	details
+struct	ShaderGraph.MetalFunctionGraphError		let	underlyingErrors
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType			
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	missingProperty
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	couldNotParseTypeSpecification
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	unsupportedDecodableType
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	unknownProperty
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	cycleInGraph
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	missingNode
+enum	ShaderGraph.MetalFunctionGraphError.ErrorType		case	other
+class	ShaderGraph.MetalShaderCompiler			
+class	ShaderGraph.MetalShaderCompiler		let	program
+class	ShaderGraph.MetalShaderCompiler		var	currentScope
+class	ShaderGraph.MetalShaderCompiler.Scope			
+class	ShaderGraph.MetalShaderCompiler.Scope		var	nodesToResultVariableNameMap
+class	ShaderGraph.MetalShaderCompiler.Scope		var	lastResultVariableIndex
+class	ShaderGraph.MetalShaderCompiler.Scope		var	enclosingScope
+class	ShaderGraph.MetalShaderCompiler.Scope		var	childScopes
+class	ShaderGraph.MetalShaderCompiler.Scope		var	definedTypes
+class	ShaderGraph.MetalShaderCompiler.Scope		var	includePaths
+class	ShaderGraph.MetalShaderCompiler.Scope		var	globalDeclarations
+class	ShaderGraph.MetalShaderCompiler.Scope		var	topGlobalDeclarations
+class	ShaderGraph.MetalShaderCompiler.Scope		var	metalSourceSegments
+class	ShaderGraph.DataType			
+class	ShaderGraph.DataType		var	properties
+struct	ShaderGraph.DataTypeProperty			
+struct	ShaderGraph.DataTypeProperty		var	label
+struct	ShaderGraph.DataTypeProperty		var	type
+struct	ShaderGraph.DataTypeProperty		var	attributes
+struct	ShaderGraph.DataTypeProperty		var	visible
+struct	ShaderGraph.DataTypeProperty		var	index
+struct	ShaderGraph.NodeDefStore			
+struct	ShaderGraph.NodeDefStore		var	nodeDefs
+struct	ShaderGraph.NodeDefStore		var	geomPropDefs
+struct	ShaderGraph.NodeDefStore		var	implementations
+enum	ShaderGraph.NodeDefStore.Errors			
+enum	ShaderGraph.NodeDefStore.Errors		case	missingResourceURL
+struct	ShaderGraph.OrderedSet<A	Swift.Hashable>		
+struct	ShaderGraph.OrderedSet<A	Swift.Hashable>	var	__storage
+struct	ShaderGraph.OrderedSet<A	Swift.Hashable>	var	_elements
+class	ShaderGraph.UserGraphCompiler			
+class	ShaderGraph.UserGraphCompiler		var	context
+struct	ShaderGraph.UserGraphCompiler.CompileContext			
+struct	ShaderGraph.UserGraphCompiler.CompileContext		let	sourceProgram
+struct	ShaderGraph.UserGraphCompiler.CompileContext		var	sourceNodesToCompiledObjectIDs
+struct	ShaderGraph.UserGraphCompiler.CompileContext		var	inputsToCompiledObjectIDs
+struct	ShaderGraph.UserGraphCompiler.CompileContext		var	outputsToCompiledObjectIDs
+enum	ShaderGraph.NodeData			
+enum	ShaderGraph.NodeData		case	builtIn
+enum	ShaderGraph.NodeData		case	graph
+enum	ShaderGraph.NodeData		case	constant
+enum	ShaderGraph.NodeData.CodingKeys			
+enum	ShaderGraph.NodeData.CodingKeys		case	caseName
+enum	ShaderGraph.NodeData.CodingKeys		case	value
+enum	ShaderGraph.NodeData.CodingKeys		case	type
+protocol	ShaderGraph.XMLNode			
+protocol	ShaderGraph.XMLElement			
+protocol	XMLNodePrivate			
+protocol	XMLElementPrivate			
+protocol	ShaderGraph.GraphCompilerBackend			
+protocol	ShaderGraph.DotLabel			
+protocol	ShaderGraph.GenericDotGraph	NodeType, InputType, OutputType		
+protocol	ShaderGraph.GraphElement	InputType, OutputType		
+protocol	ShaderGraph.WrappedGraph	T		
+protocol	ShaderGraph.HasDebugLabel			
+protocol	ShaderGraph.MetalFunctionNode			
+protocol	ShaderGraph.MetalConstExprFunctionNode			
+protocol	ShaderGraph.HasMetalInvocation			
+protocol	ShaderGraph.MetalSourceGenerator			
+protocol	ShaderGraph.FunctionGraphInsertable			
+protocol	conformance NodePersonality.ShaderType	Swift.Equatable		
+protocol	conformance NodePersonality.ShaderType	Swift.Hashable		
+protocol	conformance NodePersonality.ShaderType	Swift.RawRepresentable		
+protocol	conformance ShaderGraph.NodePersonality	Swift.Hashable		
+protocol	conformance ShaderGraph.NodePersonality	Swift.Equatable		
+protocol	conformance ShaderGraph.NodePersonalityType	Swift.Equatable		
+protocol	conformance ShaderGraph.NodePersonalityType	Swift.Hashable		
+protocol	conformance ShaderGraph.NodePersonalityType	Swift.RawRepresentable		
+protocol	conformance ShaderGraph.NodePersonality	ShaderGraph.FunctionGraphInsertable		
+protocol	conformance __C.SGDataType	Swift.Hashable: ShaderGraph		
+protocol	conformance __C.SGDataType	Swift.Equatable: ShaderGraph		
+protocol	conformance __C.SGDataType	Swift.RawRepresentable: ShaderGraph		
+protocol	conformance __C.CGColor	Swift.Equatable: CoreGraphics		
+protocol	conformance __C.CGColor	Swift.Hashable: CoreGraphics		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.CGColor	CoreFoundation._CFObject: CoreGraphics		
+protocol	conformance ShaderGraph.OrderedSet	Swift.CustomReflectable		
+protocol	conformance ShaderGraph.NestedError	Swift.Error		
+protocol	conformance ShaderGraph.NestedError	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.NestedError	Swift.Sequence		
+protocol	conformance ShaderGraph.TextureSource	Swift.Hashable		
+protocol	conformance ShaderGraph.TextureSource	Swift.Equatable		
+protocol	conformance ShaderGraph.TypedTexture	Swift.Hashable		
+protocol	conformance ShaderGraph.TypedTexture	Swift.Equatable		
+protocol	conformance ShaderGraph.TextureAssignment	Swift.Equatable		
+protocol	conformance _HashTable.Bucket	Swift.Equatable		
+protocol	conformance SGDataTypeGraph.PersonalityKind	Swift.Hashable		
+protocol	conformance SGDataTypeGraph.PersonalityKind	Swift.Equatable		
+protocol	conformance SGDataTypeGraph.Personality	Swift.Hashable		
+protocol	conformance SGDataTypeGraph.Personality	Swift.Equatable		
+protocol	conformance SGDataTypeGraph.NodeID	Swift.Hashable		
+protocol	conformance SGDataTypeGraph.NodeID	Swift.Equatable		
+protocol	conformance ShaderGraph.SGDataTypeGraph	Swift.Hashable		
+protocol	conformance ShaderGraph.SGDataTypeGraph	Swift.Equatable		
+protocol	conformance SGDataTypeGraph.Personality	Swift.CustomDebugStringConvertible		
+protocol	conformance SGDataTypeGraph.Personality	Swift.CustomStringConvertible		
+protocol	conformance TopologicalSort.Element	Swift.Equatable		
+protocol	conformance TopologicalSort.GraphNodeIndex	Swift.Hashable		
+protocol	conformance TopologicalSort.GraphNodeIndex	Swift.Equatable		
+protocol	conformance SGDataTypeGraph.Personality	ShaderGraph.GraphElement		
+protocol	conformance ShaderGraph.OrderedSet	Swift.Hashable		
+protocol	conformance XMLDocument.Options	Swift.OptionSet		
+protocol	conformance XMLDocument.Options	Swift.SetAlgebra		
+protocol	conformance XMLDocument.Options	Swift.RawRepresentable		
+protocol	conformance XMLDocument.Options	Swift.Equatable		
+protocol	conformance XMLDocument.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance XMLParserDelegate.Element	ShaderGraph.XMLElementPrivate		
+protocol	conformance XMLParserDelegate.Element	ShaderGraph.XMLElement		
+protocol	conformance XMLParserDelegate.Element	ShaderGraph.XMLNodePrivate		
+protocol	conformance XMLParserDelegate.Element	ShaderGraph.XMLNode		
+protocol	conformance XMLParserDelegate.StringNode	ShaderGraph.XMLNodePrivate		
+protocol	conformance XMLParserDelegate.StringNode	ShaderGraph.XMLNode		
+protocol	conformance _UnsafeBitset.Iterator	Swift.IteratorProtocol		
+protocol	conformance ShaderGraph._UnsafeBitset	Swift.Sequence		
+protocol	conformance _UnsafeBitset.Word	Swift.Sequence		
+protocol	conformance _UnsafeBitset.Word	Swift.IteratorProtocol		
+protocol	conformance ShaderGraph.LightSpillNodeFeatures	Swift.Equatable		
+protocol	conformance ShaderGraph.LightSpillNodeFeatures	Swift.Hashable		
+protocol	conformance ShaderGraph.MaterialCodingContainer	Swift.Decodable		
+protocol	conformance ShaderGraph.MaterialCodingContainer	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SGEdge.CodingKeys	Swift.Equatable		
+protocol	conformance SGEdge.CodingKeys	Swift.Hashable		
+protocol	conformance SGEdge.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SGEdge.CodingKeys	Swift.CodingKey		
+protocol	conformance SGEdge.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGEdge.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGEdge	Swift.Decodable		
+protocol	conformance ShaderGraph.SGEdge	Swift.Encodable		
+protocol	conformance ShaderGraph.IOAttachment	Swift.Equatable		
+protocol	conformance SGInput.CodingKeys	Swift.Equatable		
+protocol	conformance SGInput.CodingKeys	Swift.Hashable		
+protocol	conformance SGInput.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SGInput.CodingKeys	Swift.CodingKey		
+protocol	conformance SGInput.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGInput.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGInput	Swift.Decodable		
+protocol	conformance ShaderGraph.SGInput	Swift.Encodable		
+protocol	conformance ShaderGraph.WeakBox	Swift.Equatable		
+protocol	conformance ShaderGraph.WeakBox	Swift.Hashable		
+protocol	conformance SGOutput.CodingKeys	Swift.Equatable		
+protocol	conformance SGOutput.CodingKeys	Swift.Hashable		
+protocol	conformance SGOutput.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SGOutput.CodingKeys	Swift.CodingKey		
+protocol	conformance SGOutput.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGOutput.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGOutput	Swift.Decodable		
+protocol	conformance ShaderGraph.SGOutput	Swift.Encodable		
+protocol	conformance OrderedDictionary.Values	Swift.Sequence		
+protocol	conformance OrderedDictionary.Values	Swift.RandomAccessCollection		
+protocol	conformance OrderedDictionary.Values	Swift.BidirectionalCollection		
+protocol	conformance OrderedDictionary.Values	Swift.Collection		
+protocol	conformance OrderedDictionary.Values	Swift.MutableCollection		
+protocol	conformance OrderedDictionary.Values	Swift.Equatable		
+protocol	conformance OrderedDictionary.Values	Swift.Hashable		
+protocol	conformance DynamicArrayLookupByString.MemberLookupError	Swift.Error		
+protocol	conformance DebugConfig.Group	Swift.Equatable		
+protocol	conformance DebugConfig.Group	Swift.Hashable		
+protocol	conformance DebugConfig.Group	Swift.RawRepresentable		
+protocol	conformance ShaderGraph.FunctionConstantValue	Swift.Decodable		
+protocol	conformance ShaderGraph.FunctionConstantValue	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SubSequence.Iterator	Swift.IteratorProtocol		
+protocol	conformance Elements.SubSequence	Swift.Sequence		
+protocol	conformance Elements.SubSequence	Swift.RandomAccessCollection		
+protocol	conformance Elements.SubSequence	Swift.BidirectionalCollection		
+protocol	conformance Elements.SubSequence	Swift.Collection		
+protocol	conformance ShaderGraph.MetalDataType	Swift.CustomDebugStringConvertible		
+protocol	conformance MetalDataType.AddressSpace	Swift.Equatable		
+protocol	conformance MetalDataType.AddressSpace	Swift.Hashable		
+protocol	conformance MetalDataType.AddressSpace	Swift.RawRepresentable		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.CustomReflectable		
+protocol	conformance OrderedDictionary.Elements	Swift.Sequence		
+protocol	conformance OrderedDictionary.Elements	Swift.RandomAccessCollection		
+protocol	conformance OrderedDictionary.Elements	Swift.BidirectionalCollection		
+protocol	conformance OrderedDictionary.Elements	Swift.Collection		
+protocol	conformance OrderedDictionary.Elements	Swift.CustomStringConvertible		
+protocol	conformance OrderedDictionary.Elements	Swift.CustomDebugStringConvertible		
+protocol	conformance OrderedDictionary.Elements	Swift.CustomReflectable		
+protocol	conformance OrderedDictionary.Elements	Swift.Equatable		
+protocol	conformance OrderedDictionary.Elements	Swift.Hashable		
+protocol	conformance GeomPropDef.Space	Swift.Equatable		
+protocol	conformance GeomPropDef.Space	Swift.Hashable		
+protocol	conformance GeomPropDef.Space	Swift.RawRepresentable		
+protocol	conformance GeomPropDef.BuiltinGeomProp	Swift.Equatable		
+protocol	conformance GeomPropDef.BuiltinGeomProp	Swift.RawRepresentable		
+protocol	conformance GeomPropDef.BuiltinGeomProp	Swift.Hashable		
+protocol	conformance GeomPropDef.BuiltinGeomProp	Swift.CaseIterable		
+protocol	conformance ShaderGraph._HashTable.Header	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph._HashTable.UnsafeHandle	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph._HashTable	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph._HashTable.Storage	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.OrderedSet	Swift.Sequence		
+protocol	conformance ShaderGraph.OrderedSet	Swift.RandomAccessCollection		
+protocol	conformance ShaderGraph.OrderedSet	Swift.BidirectionalCollection		
+protocol	conformance ShaderGraph.OrderedSet	Swift.Collection		
+protocol	conformance MaterialXDataType.Kind	Swift.Decodable		
+protocol	conformance MaterialXDataType.Kind	Swift.Encodable		
+protocol	conformance MaterialXDataType.Kind	Swift.Equatable		
+protocol	conformance ShaderGraph.XMLElementErrors	Swift.Error		
+protocol	conformance SetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SetCodingKeys	Swift.Hashable		
+protocol	conformance SetCodingKeys	Swift.Equatable		
+protocol	conformance NamedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NamedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NamedCodingKeys	Swift.CodingKey		
+protocol	conformance SetCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance ShaderGraph.GraphCompilerErrors	Swift.Error		
+protocol	conformance ShaderGraph.GPUSpecificCacheKey	Swift.Hashable		
+protocol	conformance ShaderGraph.GPUSpecificCacheKey	Swift.Equatable		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.OrderedSet	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph._HashTable.Bucket	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph._HashTable.BucketIterator	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.NodeDefinitionStore.MaterialXDataType	Swift.Equatable		
+protocol	conformance ShaderGraph.MaterialXAvailability	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.OrderedSet	Swift.ExpressibleByArrayLiteral		
+protocol	conformance UserGraphError.ErrorType	Swift.Equatable		
+protocol	conformance UserGraphError.ErrorType	Swift.Hashable		
+protocol	conformance ShaderGraph.UserGraphError	Swift.Error		
+protocol	conformance ShaderGraph.UserGraphError	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.MaterialXTarget	Swift.Hashable		
+protocol	conformance ShaderGraph.MaterialXTarget	Swift.Equatable		
+protocol	conformance ShaderGraph.MaterialXAvailability	Swift.Hashable		
+protocol	conformance ShaderGraph.MaterialXAvailability	Swift.Equatable		
+protocol	conformance NodeDef.IOSpec	Swift.Hashable		
+protocol	conformance NodeDef.IOSpec	Swift.Equatable		
+protocol	conformance ShaderGraph.NodeDef	Swift.Hashable		
+protocol	conformance ShaderGraph.NodeDef	Swift.Equatable		
+protocol	conformance NodeDef.Implementation	Swift.Hashable		
+protocol	conformance NodeDef.Implementation	Swift.Equatable		
+protocol	conformance Implementation.Kind	Swift.Hashable		
+protocol	conformance Implementation.Kind	Swift.Equatable		
+protocol	conformance ShaderGraph.APIError	Swift.Error		
+protocol	conformance ShaderGraph.SGInternalError	Swift.Error		
+protocol	conformance ShaderGraph.APIError	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.Input	Swift.Hashable		
+protocol	conformance ShaderGraph.Input	Swift.Equatable		
+protocol	conformance ShaderGraph.Output	Swift.Hashable		
+protocol	conformance ShaderGraph.Output	Swift.Equatable		
+protocol	conformance ShaderGraph.Edge	Swift.Hashable		
+protocol	conformance ShaderGraph.Edge	Swift.Equatable		
+protocol	conformance ShaderGraphNode.ID	Swift.Hashable		
+protocol	conformance ShaderGraphNode.ID	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraphNode.ID	Swift.Equatable		
+protocol	conformance ShaderGraph.ShaderGraphNode	Swift.Hashable		
+protocol	conformance ShaderGraph.ShaderGraphNode	Swift.Equatable		
+protocol	conformance UserGraph.Iterator	Swift.Sequence		
+protocol	conformance UserGraph.Iterator	Swift.IteratorProtocol		
+protocol	conformance UserGraph.DepthFirstEdgeIterator	Swift.Sequence		
+protocol	conformance UserGraph.DepthFirstEdgeIterator	Swift.IteratorProtocol		
+protocol	conformance UserGraph.BreathFirstEdgeIterator	Swift.Sequence		
+protocol	conformance UserGraph.BreathFirstEdgeIterator	Swift.IteratorProtocol		
+protocol	conformance UserGraph.ID	Swift.Hashable		
+protocol	conformance UserGraph.ID	Swift.Equatable		
+protocol	conformance UserGraph.Adjacent	Swift.Hashable		
+protocol	conformance UserGraph.Adjacent	Swift.Equatable		
+protocol	conformance ShaderGraph.UserGraph	Swift.Hashable		
+protocol	conformance ShaderGraph.UserGraph	Swift.Equatable		
+protocol	conformance ShaderGraph.Edge	Swift.CustomDebugStringConvertible		
+protocol	conformance SGMaterialConfiguration.CodingKeys	Swift.Equatable		
+protocol	conformance SGMaterialConfiguration.CodingKeys	Swift.Hashable		
+protocol	conformance SGMaterialConfiguration.CodingKeys	Swift.CodingKey		
+protocol	conformance SGMaterialConfiguration.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGMaterialConfiguration.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGMaterialConfiguration	Swift.Decodable		
+protocol	conformance ShaderGraph.SGMaterialConfiguration	Swift.Encodable		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.Encodable		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.Decodable		
+protocol	conformance ShaderGraph.DotError	Swift.Equatable		
+protocol	conformance ShaderGraph.DotError	Swift.Hashable		
+protocol	conformance ShaderGraph.DotError	Swift.Error		
+protocol	conformance ShaderGraph.NodePersonality	ShaderGraph.DotLabel		
+protocol	conformance __C.SGDataType	ShaderGraph.DotLabel		
+protocol	conformance ShaderGraph.DataType	ShaderGraph.DotLabel		
+protocol	conformance ShaderGraph.SGDataTypeGraph.Personality	ShaderGraph.DotLabel		
+protocol	conformance ShaderGraph.BuiltInDefinition.InputSpec	ShaderGraph.DotLabel		
+protocol	conformance ShaderGraph.BuiltInDefinition.OutputSpec	ShaderGraph.DotLabel		
+protocol	conformance ShaderGraph.SGDataTypeGraph	ShaderGraph.GenericDotGraph		
+protocol	conformance OrderedDictionary.Iterator	Swift.IteratorProtocol		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.Sequence		
+protocol	conformance ShaderGraph.OrderedSet	Swift.Equatable		
+protocol	conformance Key	Swift.Equatable		
+protocol	conformance Key	Swift.Hashable		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.CustomDebugStringConvertible		
+protocol	conformance Availability.PlatformVersion	Swift.Hashable		
+protocol	conformance Availability.PlatformVersion	Swift.ExpressibleByStringLiteral		
+protocol	conformance Availability.PlatformVersion	Swift.Equatable		
+protocol	conformance Availability.PlatformVersion	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance Availability.PlatformVersion	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance Availability.Platform	Swift.Equatable		
+protocol	conformance Availability.Platform	Swift.Hashable		
+protocol	conformance Availability.Platform	Swift.RawRepresentable		
+protocol	conformance Availability.AvailabilityKind	Swift.Hashable		
+protocol	conformance Availability.AvailabilityKind	Swift.Equatable		
+protocol	conformance NodeDef.Availability	Swift.Hashable		
+protocol	conformance NodeDef.Availability	Swift.Equatable		
+protocol	conformance Availability.PlatformVersion	Swift.Comparable		
+protocol	conformance NodeDef.Availability	Swift.CustomStringConvertible		
+protocol	conformance Availability.PlatformVersion	Swift.CustomStringConvertible		
+protocol	conformance OrderedSet.UnorderedView	Swift.CustomStringConvertible		
+protocol	conformance OrderedSet.UnorderedView	Swift.CustomDebugStringConvertible		
+protocol	conformance OrderedSet.UnorderedView	Swift.CustomReflectable		
+protocol	conformance OrderedSet.UnorderedView	Swift.Equatable		
+protocol	conformance OrderedSet.UnorderedView	Swift.Hashable		
+protocol	conformance OrderedSet.UnorderedView	Swift.ExpressibleByArrayLiteral		
+protocol	conformance OrderedSet.UnorderedView	Swift.SetAlgebra		
+protocol	conformance ShaderGraph.RESurfaceShaderFunctionNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.RESurfaceShaderFunctionNode	ShaderGraph.MetalSourceGenerator		
+protocol	conformance ShaderGraph.RESurfaceShaderFunctionNode	ShaderGraph.HasDebugLabel		
+protocol	conformance SGGraph.CodingKeys	Swift.Equatable		
+protocol	conformance SGGraph.CodingKeys	Swift.Hashable		
+protocol	conformance SGGraph.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SGGraph.CodingKeys	Swift.CodingKey		
+protocol	conformance SGGraph.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGGraph.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGGraph	Swift.Decodable		
+protocol	conformance ShaderGraph.SGGraph	Swift.Encodable		
+protocol	conformance TopologicalSort.Element	Swift.Equatable		
+protocol	conformance ShaderGraph.GraphIndex	Swift.Hashable		
+protocol	conformance ShaderGraph.GraphIndex	Swift.Equatable		
+protocol	conformance Graph.Node	Swift.Hashable		
+protocol	conformance Graph.Node	Swift.Equatable		
+protocol	conformance Graph.Edge	Swift.Hashable		
+protocol	conformance Graph.Edge	Swift.Equatable		
+protocol	conformance Graph.Input	Swift.Hashable		
+protocol	conformance Graph.Input	Swift.Equatable		
+protocol	conformance Graph.Output	Swift.Hashable		
+protocol	conformance Graph.Output	Swift.Equatable		
+protocol	conformance Graph.Adjacent	Swift.Hashable		
+protocol	conformance Graph.Adjacent	Swift.Equatable		
+protocol	conformance ShaderGraph.Graph	Swift.Hashable		
+protocol	conformance ShaderGraph.Graph	Swift.Equatable		
+protocol	conformance Graph.DepthFirstEdgeIterator	Swift.Sequence		
+protocol	conformance Graph.DepthFirstEdgeIterator	Swift.IteratorProtocol		
+protocol	conformance ShaderGraph.ShallowDepthFirstNodeIterator	Swift.Sequence		
+protocol	conformance ShaderGraph.ShallowDepthFirstNodeIterator	Swift.IteratorProtocol		
+protocol	conformance ShaderGraph.DepthFirstNodeIterator	Swift.Sequence		
+protocol	conformance ShaderGraph.DepthFirstNodeIterator	Swift.IteratorProtocol		
+protocol	conformance NodeEntry	Swift.Hashable		
+protocol	conformance NodeEntry	Swift.Equatable		
+protocol	conformance SGDataTypeStorage.CodingKeys	Swift.Equatable		
+protocol	conformance SGDataTypeStorage.CodingKeys	Swift.Hashable		
+protocol	conformance SGDataTypeStorage.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SGDataTypeStorage.CodingKeys	Swift.CodingKey		
+protocol	conformance SGDataTypeStorage.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGDataTypeStorage.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGDataTypeStorage	Swift.Decodable		
+protocol	conformance ShaderGraph.SGDataTypeStorage	Swift.Encodable		
+protocol	conformance ShaderGraph.SGDataTypeStorage	Swift.Hashable		
+protocol	conformance ShaderGraph.SGDataTypeStorage	Swift.Equatable		
+protocol	conformance __C.SGDataType	Swift.Decodable		
+protocol	conformance __C.SGDataType	Swift.Encodable		
+protocol	conformance ShaderGraph.ShaderType	Swift.Equatable		
+protocol	conformance ShaderGraph.ShaderType	Swift.Hashable		
+protocol	conformance ShaderGraph.Surface	Swift.Equatable		
+protocol	conformance ShaderGraph.Surface	Swift.Hashable		
+protocol	conformance CGColorCodingContainer	Swift.Decodable		
+protocol	conformance CGColorCodingContainer	Swift.Encodable		
+protocol	conformance CGColorCodingContainer.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CGColorCodingContainer.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CGColorCodingContainer.CodingKeys	Swift.Hashable		
+protocol	conformance CGColorCodingContainer.CodingKeys	Swift.Equatable		
+protocol	conformance CGColorCodingContainer.CodingKeys	Swift.CodingKey		
+protocol	conformance ShaderGraph.InputSpec	Swift.Hashable		
+protocol	conformance ShaderGraph.InputSpec	Swift.Equatable		
+protocol	conformance ShaderGraph.OutputSpec	Swift.Hashable		
+protocol	conformance ShaderGraph.OutputSpec	Swift.Equatable		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.Hashable		
+protocol	conformance ShaderGraph.FunctionNodeID	Swift.Hashable		
+protocol	conformance ShaderGraph.FunctionNodeID	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.FunctionNodeID	Swift.Equatable		
+protocol	conformance SGGeometryPropertyDefinition.CodingKey	Swift.Equatable		
+protocol	conformance SGGeometryPropertyDefinition.CodingKey	Swift.Hashable		
+protocol	conformance SGGeometryPropertyDefinition.CodingKey	Swift.CodingKey		
+protocol	conformance SGGeometryPropertyDefinition.CodingKey	Swift.CustomStringConvertible		
+protocol	conformance SGGeometryPropertyDefinition.CodingKey	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGGeometryPropertyDefinition	Swift.Decodable		
+protocol	conformance ShaderGraph.SGGeometryPropertyDefinition	Swift.Encodable		
+protocol	conformance ShaderGraph.OrderedSet	Swift.CustomDebugStringConvertible		
+protocol	conformance SGNode.CodingKeys	Swift.Equatable		
+protocol	conformance SGNode.CodingKeys	Swift.Hashable		
+protocol	conformance SGNode.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SGNode.CodingKeys	Swift.CodingKey		
+protocol	conformance SGNode.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SGNode.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.SGNode	Swift.Decodable		
+protocol	conformance ShaderGraph.SGNode	Swift.Encodable		
+protocol	conformance ShaderGraph.MetalFunctionNodeBase	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalFunctionNodeBase	ShaderGraph.MetalSourceGenerator		
+protocol	conformance ShaderGraph.MetalFunctionNodeBase	ShaderGraph.HasMetalInvocation		
+protocol	conformance ShaderGraph.MetalFunctionNodeBase	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalLiteralValueNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalLiteralValueNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalLiteralValueNode	ShaderGraph.MetalConstExprFunctionNode		
+protocol	conformance ShaderGraph.MetalFunctionCallNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalFunctionCallNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalFunctionCallNode	ShaderGraph.HasMetalInvocation		
+protocol	conformance ShaderGraph.MetalFunctionCallNode	ShaderGraph.MetalConstExprFunctionNode		
+protocol	conformance ShaderGraph.MetalFunctionParameterNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalFunctionParameterNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalFunctionParameterNode	ShaderGraph.HasMetalInvocation		
+protocol	conformance ShaderGraph.MetalFunctionDefinitionNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalFunctionDefinitionNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalFunctionDefinitionNode	ShaderGraph.MetalSourceGenerator		
+protocol	conformance ShaderGraph.MetalStructGetterOffsetNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalStructGetterOffsetNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalStructGetterOffsetNode	ShaderGraph.HasMetalInvocation		
+protocol	conformance ShaderGraph.MetalStructGetterNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalStructGetterNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalStructGetterNode	ShaderGraph.HasMetalInvocation		
+protocol	conformance ShaderGraph.MetalPassthroughNode	ShaderGraph.MetalFunctionNode		
+protocol	conformance ShaderGraph.MetalPassthroughNode	ShaderGraph.HasDebugLabel		
+protocol	conformance ShaderGraph.MetalPassthroughNode	ShaderGraph.MetalConstExprFunctionNode		
+protocol	conformance ShaderGraph.MetalShaderProgram	ShaderGraph.MetalSourceGenerator		
+protocol	conformance ShaderGraph.OrderedDictionary	Swift.Equatable		
+protocol	conformance ShaderGraph.MaterialXError	Swift.Error		
+protocol	conformance ShaderGraph.MaterialXError	Swift.CustomStringConvertible		
+protocol	conformance MaterialXDataType.Kind	Swift.Decodable		
+protocol	conformance MaterialXDataType.Kind	Swift.Encodable		
+protocol	conformance MaterialXDataType.Kind	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.Output	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.Input	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.Node	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.GeomPropValue	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.BuiltinGeomProp	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.BuiltinGeomProp	Swift.RawRepresentable		
+protocol	conformance NodeDefinitionStore.BuiltinGeomProp	Swift.Hashable		
+protocol	conformance NodeDefinitionStore.Space	Swift.Equatable		
+protocol	conformance NodeDefinitionStore.Space	Swift.Hashable		
+protocol	conformance NodeDefinitionStore.Space	Swift.RawRepresentable		
+protocol	conformance NodeDefinitionStore.TypeStorage	Swift.Equatable		
+protocol	conformance SetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SetCodingKeys	Swift.Hashable		
+protocol	conformance SetCodingKeys	Swift.Equatable		
+protocol	conformance NamedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NamedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NamedCodingKeys	Swift.CodingKey		
+protocol	conformance SetCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance BuiltInDefinition.InputSpec	Swift.Hashable		
+protocol	conformance BuiltInDefinition.InputSpec	Swift.Equatable		
+protocol	conformance BuiltInDefinition.OutputSpec	Swift.Hashable		
+protocol	conformance BuiltInDefinition.OutputSpec	Swift.Equatable		
+protocol	conformance BuiltInDefinition.ReservedNames	Swift.Equatable		
+protocol	conformance BuiltInDefinition.ReservedNames	Swift.Hashable		
+protocol	conformance BuiltInDefinition.ReservedNames	Swift.RawRepresentable		
+protocol	conformance BuiltInDefinition.ReservedNames	Swift.CaseIterable		
+protocol	conformance ShaderGraph.BuiltInDefinition	Swift.Hashable		
+protocol	conformance ShaderGraph.BuiltInDefinition	Swift.Equatable		
+protocol	conformance ShaderGraph.MetalStitchingBackendErrors	Swift.Error		
+protocol	conformance ShaderGraph.MetalStitchingBackend	ShaderGraph.GraphCompilerBackend		
+protocol	conformance ConstantKey	Swift.Equatable		
+protocol	conformance ConstantKey	Swift.Hashable		
+protocol	conformance OrderedSet.SubSequence	Swift.Sequence		
+protocol	conformance OrderedSet.SubSequence	Swift.RandomAccessCollection		
+protocol	conformance OrderedSet.SubSequence	Swift.BidirectionalCollection		
+protocol	conformance OrderedSet.SubSequence	Swift.Collection		
+protocol	conformance OrderedSet.SubSequence	Swift.Equatable		
+protocol	conformance OrderedSet.SubSequence	Swift.Hashable		
+protocol	conformance ShaderGraph.MetalFunctionGraphError	Swift.Error		
+protocol	conformance ShaderGraph.MetalFunctionGraphError	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.MetalLiteralValueNode	ShaderGraph.HasMetalInvocation		
+protocol	conformance ShaderGraph.DataType	Swift.Hashable		
+protocol	conformance ShaderGraph.DataType	Swift.CustomStringConvertible		
+protocol	conformance ShaderGraph.DataType	Swift.Equatable		
+protocol	conformance ShaderGraph.DataTypeProperty	Swift.Hashable		
+protocol	conformance ShaderGraph.DataTypeProperty	Swift.Equatable		
+protocol	conformance NodeDefStore.Errors	Swift.Equatable		
+protocol	conformance NodeDefStore.Errors	Swift.Hashable		
+protocol	conformance NodeDefStore.Errors	Swift.Error		
+protocol	conformance ShaderGraph.NodeData	Swift.Equatable		
+protocol	conformance NodeData.CodingKeys	Swift.Equatable		
+protocol	conformance NodeData.CodingKeys	Swift.Hashable		
+protocol	conformance NodeData.CodingKeys	Swift.RawRepresentable		
+protocol	conformance NodeData.CodingKeys	Swift.CodingKey		
+protocol	conformance NodeData.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NodeData.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShaderGraph.NodeData	Swift.Decodable		
+protocol	conformance ShaderGraph.NodeData	Swift.Encodable		
+protocol	conformance ShaderGraph.OrderedSet	Swift.Encodable		
+protocol	conformance ShaderGraph.OrderedSet	Swift.Decodable		
+extension	ShaderGraph.NodePersonality.ShaderType	RawRepresentable		
+extension	ShaderGraph.NodePersonalityType	RawRepresentable		
+extension	ShaderGraph.NestedError	Sequence		
+extension	ShaderGraph.SGDataTypeGraph.Personality	GraphElement		
+extension	ShaderGraph.XMLDocument.Options	OptionSet		
+extension	ShaderGraph.XMLDocument.Options	SetAlgebra		
+extension	ShaderGraph.XMLDocument.Options	RawRepresentable		
+extension	ShaderGraph.XMLDocument.Options	ExpressibleByArrayLiteral		
+extension	ShaderGraph._UnsafeBitset.Iterator	IteratorProtocol		
+extension	ShaderGraph._UnsafeBitset	Sequence		
+extension	ShaderGraph._UnsafeBitset.Word	Sequence		
+extension	ShaderGraph._UnsafeBitset.Word	IteratorProtocol		
+extension	ShaderGraph.SGEdge.CodingKeys	RawRepresentable		
+extension	ShaderGraph.SGInput.CodingKeys	RawRepresentable		
+extension	ShaderGraph.SGOutput.CodingKeys	RawRepresentable		
+extension	ShaderGraph.OrderedDictionary.Values	Sequence		
+extension	ShaderGraph.OrderedDictionary.Values	RandomAccessCollection		
+extension	ShaderGraph.OrderedDictionary.Values	BidirectionalCollection		
+extension	ShaderGraph.OrderedDictionary.Values	Collection		
+extension	ShaderGraph.OrderedDictionary.Values	MutableCollection		
+extension	ShaderGraph.DebugConfig.Group	RawRepresentable		
+extension	ShaderGraph.OrderedDictionary.Elements.SubSequence.Iterator	IteratorProtocol		
+extension	ShaderGraph.OrderedDictionary.Elements.SubSequence	Sequence		
+extension	ShaderGraph.OrderedDictionary.Elements.SubSequence	RandomAccessCollection		
+extension	ShaderGraph.OrderedDictionary.Elements.SubSequence	BidirectionalCollection		
+extension	ShaderGraph.OrderedDictionary.Elements.SubSequence	Collection		
+extension	ShaderGraph.MetalDataType.AddressSpace	RawRepresentable		
+extension	ShaderGraph.OrderedDictionary.Elements	Sequence		
+extension	ShaderGraph.OrderedDictionary.Elements	RandomAccessCollection		
+extension	ShaderGraph.OrderedDictionary.Elements	BidirectionalCollection		
+extension	ShaderGraph.OrderedDictionary.Elements	Collection		
+extension	ShaderGraph.GeomPropDef.Space	RawRepresentable		
+extension	ShaderGraph.GeomPropDef.BuiltinGeomProp	RawRepresentable		
+extension	ShaderGraph.GeomPropDef.BuiltinGeomProp	CaseIterable		
+extension	ShaderGraph.OrderedSet	Sequence		
+extension	ShaderGraph.OrderedSet	RandomAccessCollection		
+extension	ShaderGraph.OrderedSet	BidirectionalCollection		
+extension	ShaderGraph.OrderedSet	Collection		
+extension	ShaderGraph.OrderedDictionary	ExpressibleByDictionaryLiteral		
+extension	ShaderGraph.OrderedSet	ExpressibleByArrayLiteral		
+extension	ShaderGraph.UserGraph.Iterator	Sequence		
+extension	ShaderGraph.UserGraph.Iterator	IteratorProtocol		
+extension	ShaderGraph.UserGraph.DepthFirstEdgeIterator	Sequence		
+extension	ShaderGraph.UserGraph.DepthFirstEdgeIterator	IteratorProtocol		
+extension	ShaderGraph.UserGraph.BreathFirstEdgeIterator	Sequence		
+extension	ShaderGraph.UserGraph.BreathFirstEdgeIterator	IteratorProtocol		
+extension	ShaderGraph.SGDataTypeGraph	GenericDotGraph		
+extension	ShaderGraph.OrderedDictionary.Iterator	IteratorProtocol		
+extension	ShaderGraph.OrderedDictionary	Sequence		
+extension	ShaderGraph.NodeDef.Availability.PlatformVersion	ExpressibleByStringLiteral		
+extension	ShaderGraph.NodeDef.Availability.PlatformVersion	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	ShaderGraph.NodeDef.Availability.PlatformVersion	ExpressibleByUnicodeScalarLiteral		
+extension	ShaderGraph.NodeDef.Availability.Platform	RawRepresentable		
+extension	ShaderGraph.OrderedSet.UnorderedView	ExpressibleByArrayLiteral		
+extension	ShaderGraph.OrderedSet.UnorderedView	SetAlgebra		
+extension	ShaderGraph.SGGraph.CodingKeys	RawRepresentable		
+extension	ShaderGraph.Graph.DepthFirstEdgeIterator	Sequence		
+extension	ShaderGraph.Graph.DepthFirstEdgeIterator	IteratorProtocol		
+extension	ShaderGraph.ShallowDepthFirstNodeIterator	Sequence		
+extension	ShaderGraph.ShallowDepthFirstNodeIterator	IteratorProtocol		
+extension	ShaderGraph.DepthFirstNodeIterator	Sequence		
+extension	ShaderGraph.DepthFirstNodeIterator	IteratorProtocol		
+extension	ShaderGraph.SGDataTypeStorage.CodingKeys	RawRepresentable		
+extension	ShaderGraph.SGNode.CodingKeys	RawRepresentable		
+extension	ShaderGraph.NodeDefinitionStore.BuiltinGeomProp	RawRepresentable		
+extension	ShaderGraph.NodeDefinitionStore.Space	RawRepresentable		
+extension	ShaderGraph.BuiltInDefinition.ReservedNames	RawRepresentable		
+extension	ShaderGraph.BuiltInDefinition.ReservedNames	CaseIterable		
+extension	ShaderGraph.OrderedSet.SubSequence	Sequence		
+extension	ShaderGraph.OrderedSet.SubSequence	RandomAccessCollection		
+extension	ShaderGraph.OrderedSet.SubSequence	BidirectionalCollection		
+extension	ShaderGraph.OrderedSet.SubSequence	Collection		
+extension	ShaderGraph.NodeData.CodingKeys	RawRepresentable		

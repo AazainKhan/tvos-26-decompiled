@@ -1,0 +1,94 @@
+kind	type	conformance	member_kind	member
+enum	mis.MISDBManagerError			
+enum	mis.MISDBManagerError		case	profilesError
+enum	mis.MISDBManagerError		case	userTrustError
+enum	mis.LaunchWarningMarkError			
+enum	mis.LaunchWarningMarkError		case	invalidVersion
+enum	mis.LaunchWarningMarkError		case	tooSmall
+class	mis.LaunchWarningMark			
+class	mis.LaunchWarningMark		let	version
+class	mis.LaunchWarningMark		let	warningID
+struct	mis.LegacyTrustedTeamIdEntry			
+struct	mis.LegacyTrustedTeamIdEntry		var	teamId
+struct	mis.LegacyTrustedTeamIdEntry		var	signature
+struct	mis.LegacyUserTrustedProfileEntry			
+struct	mis.LegacyUserTrustedProfileEntry		var	uuid
+struct	mis.LegacyUserTrustedProfileEntry		var	trustedTeamIdEntry
+class	mis.LegacyUserTrustDB	SQLDB		
+enum	mis.MISAgentClientError			
+enum	mis.MISAgentClientError		case	xpcError
+enum	mis.MISAgentClientError		case	misError
+enum	mis.LaunchWarningReason			
+enum	mis.LaunchWarningReason		case	None
+enum	mis.LaunchWarningReason		case	Malware
+enum	mis.LaunchWarningReason		case	BlockedByTelephony
+struct	mis.LaunchWarningFlags			
+struct	mis.LaunchWarningFlags		let	rawValue
+struct	mis.LaunchWarningDetails			
+struct	mis.LaunchWarningDetails		var	cdhashType
+struct	mis.LaunchWarningDetails		var	cdhash
+struct	mis.LaunchWarningDetails		var	date
+struct	mis.LaunchWarningDetails		var	reason
+struct	mis.LaunchWarningDetails		var	flags
+struct	mis.LaunchWarningDetails		var	kbURL
+class	mis.XPCConnection			
+class	mis.XPCConnection		var	connection
+class	mis.LaunchWarningDB	SQLDB		
+enum	mis.LaunchWarningDBError			
+enum	mis.LaunchWarningDBError		case	unexpectedDataState
+struct	mis.LaunchWarningDB.LaunchWarningEntry			
+struct	mis.LaunchWarningDB.LaunchWarningEntry		var	id
+struct	mis.LaunchWarningDB.LaunchWarningEntry		var	details
+struct	mis.LaunchWarningDB.LaunchWarningEntry		var	user_override
+enum	mis.CodeSignatureError			
+enum	mis.CodeSignatureError		case	OSStatusError
+enum	mis.CodeSignatureError		case	invalidSigningInfo
+enum	mis.CodeSignatureError		case	noSupportedCDHash
+struct	mis.CDHashInfo			
+struct	mis.CDHashInfo		let	type
+struct	mis.CDHashInfo		let	data
+enum	mis.UtilitiesError			
+enum	mis.UtilitiesError		case	unknownErrno
+enum	mis.LaunchWarningClientOperationError			
+enum	mis.LaunchWarningClientOperationError		case	unexpected
+enum	mis.LaunchWarningClientOperationError		case	unentitledCaller
+enum	mis.LaunchWarningClientOperationError		case	invalidBundle
+class	mis.LaunchWarningClientOperations	NSObject		
+enum	mis.DBError			
+enum	mis.DBError		case	sqliteError
+enum	mis.DBError		case	invalidData
+class	mis.SQLStatement			
+class	mis.SQLStatement		var	raw
+class	mis.LegacyUserTrustOperations	NSObject		
+class	mis.LegacyUserTrustOperations	NSObject	let	utdb
+protocol	conformance mis.MISDBManagerError	Swift.Error		
+protocol	conformance mis.LaunchWarningMarkError	Swift.Equatable		
+protocol	conformance mis.LaunchWarningMarkError	Swift.Hashable		
+protocol	conformance mis.LaunchWarningMarkError	Swift.Error		
+protocol	conformance mis.MISAgentClientError	Swift.Error		
+protocol	conformance mis.LaunchWarningReason	Swift.Equatable		
+protocol	conformance mis.LaunchWarningReason	Swift.Hashable		
+protocol	conformance mis.LaunchWarningReason	Swift.RawRepresentable		
+protocol	conformance mis.LaunchWarningFlags	Swift.OptionSet		
+protocol	conformance mis.LaunchWarningFlags	Swift.SetAlgebra		
+protocol	conformance mis.LaunchWarningFlags	Swift.RawRepresentable		
+protocol	conformance mis.LaunchWarningFlags	Swift.Equatable		
+protocol	conformance mis.LaunchWarningFlags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance mis.LaunchWarningDBError	Swift.Equatable		
+protocol	conformance mis.LaunchWarningDBError	Swift.Hashable		
+protocol	conformance mis.LaunchWarningDBError	Swift.Error		
+protocol	conformance mis.CodeSignatureError	Swift.Error		
+protocol	conformance mis.UtilitiesError	Swift.Error		
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance mis.LaunchWarningClientOperationError	Swift.Error		
+protocol	conformance mis.DBError	Swift.Error		
+extension	mis.LaunchWarningReason	RawRepresentable		
+extension	mis.LaunchWarningFlags	OptionSet		
+extension	mis.LaunchWarningFlags	SetAlgebra		
+extension	mis.LaunchWarningFlags	RawRepresentable		
+extension	mis.LaunchWarningFlags	ExpressibleByArrayLiteral		

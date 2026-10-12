@@ -1,0 +1,28 @@
+kind	name	superclass	protocols
+category	NSObject(SCRLogging)		
+interface	SCRActivity	NSObject	NSCopying,BSDescriptionProviding,SCRSchedulable
+interface	SCRActivityScheduler	NSObject	BSDescriptionProviding
+interface	SCRApprovalCoordinator	NSObject	
+interface	SCRCompositeGovernor	NSObject	SCRGovernor
+interface	SCRDASActivityMetadata	NSObject	
+interface	SCRDASActivityScheduler	SCRActivityScheduler	
+interface	SCRIsolatedActivityScheduler	SCRActivityScheduler	
+interface	SCRMutableSchedulingConfiguration	SCRSchedulingConfiguration	
+interface	SCRSchedulingConfiguration	NSObject	NSMutableCopying,BSDescriptionProviding
+interface	SCRStateMachine	NSObject	
+interface	SCRStateTransitionContext	NSObject	
+interface	SCRTask	NSObject	BSDescriptionProviding,NSCopying,SCRSchedulable
+interface	SCRTaskAdministrator	NSObject	SCRTaskSchedulerDelegate
+interface	SCRTaskHandler	NSObject	NSCopying
+interface	SCRTaskIdentifier	NSObject	NSCopying
+interface	SCRTaskScheduler	NSObject	
+interface	SCRTaskSession	NSObject	SCRStateTransitionable,SCRSchedulable
+interface	SCRTaskTargetConfiguration	NSObject	NSCopying,BSDescriptionProviding
+interface	SCRTokenBucketBudget	NSObject	SCRGovernor
+protocol	BSDescriptionProviding		NSObject
+protocol	OS_dispatch_queue		
+protocol	SCRAsyncTargetContextProvider		
+protocol	SCRGovernor		NSObject
+protocol	SCRSchedulable		NSObject
+protocol	SCRStateTransitionable		NSObject
+protocol	SCRTaskSchedulerDelegate		NSObject

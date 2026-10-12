@@ -1,0 +1,26 @@
+owner	kind	declaration
+IMCorePipelineHelloWorldClass	-	- (id)init;
+IMCorePipelineHelloWorldClass	-	- (void)printGreeting;
+IMCorePipelineHelloWorldClass_Impl	-	- (id)init;
+IMCorePipelineHelloWorldClass_Impl	-	- (void)printGreeting;
+IMPipelineComponent	+	+ (id)pipelineFromComponents:(id)components;
+IMPipelineComponent	-	- (id)bindTo:(id)to;
+IMPipelineComponent	-	- (id)runIndividuallyWithInput:(id)input;
+IMPipelineComponent	-	- (id)runWithInput:(id)input;
+IMPipelineComponent	property	@property (retain, nonatomic) id <IMPipelineComponent> nextComponent;
+IMPromise	+	+ (id)all:(id)all;
+IMPromise	-	- (_Bool)completed;
+IMPromise	-	- (id)initWithError:(id)error;
+IMPromise	-	- (id)initWithValue:(id)value;
+IMPromise	-	- (id)then:(id /* block */)then;
+IMPromise	-	- (void)failWithError:(id)error;
+IMPromise	-	- (void)fullfillWithValue:(id)value;
+IMPromise	-	- (void)registerCompletionBlock:(id /* block */)block;
+IMResult	-	- (id)initWithError:(id)error;
+IMResult	-	- (id)initWithState:(long long)state value:(id)value error:(id)error;
+IMResult	-	- (id)initWithSuccess:(id)success;
+IMResult	property	@property (readonly, nonatomic) NSError *error;
+IMResult	property	@property (readonly, nonatomic) id value;
+IMResult	property	@property (readonly, nonatomic) long long state;
+IMResult	property	@property (retain, nonatomic) NSError *inError;
+IMResult	property	@property (retain, nonatomic) id inValue;

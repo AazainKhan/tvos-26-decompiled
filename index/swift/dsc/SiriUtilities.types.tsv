@@ -1,0 +1,682 @@
+kind	type	conformance	member_kind	member
+enum	SiriUtilities.InputOrigin			
+enum	SiriUtilities.InputOrigin		case	assistantSpeechButton
+enum	SiriUtilities.InputOrigin		case	assistantTextInput
+enum	SiriUtilities.InputOrigin		case	backgroundRefresh
+enum	SiriUtilities.InputOrigin		case	bluetoothDoubleTap
+enum	SiriUtilities.InputOrigin		case	bluetoothVoiceTrigger
+enum	SiriUtilities.InputOrigin		case	clientGenerated
+enum	SiriUtilities.InputOrigin		case	dialogButtonTap
+enum	SiriUtilities.InputOrigin		case	homeButton
+enum	SiriUtilities.InputOrigin		case	magusFollowup
+enum	SiriUtilities.InputOrigin		case	motionGesture
+enum	SiriUtilities.InputOrigin		case	priorRequest
+enum	SiriUtilities.InputOrigin		case	raiseToSpeak
+enum	SiriUtilities.InputOrigin		case	remoteAppButton
+enum	SiriUtilities.InputOrigin		case	remoteButton
+enum	SiriUtilities.InputOrigin		case	serverGenerated
+enum	SiriUtilities.InputOrigin		case	tapToRefresh
+enum	SiriUtilities.InputOrigin		case	triggerlessFollowup
+enum	SiriUtilities.InputOrigin		case	voiceTrigger
+enum	SiriUtilities.PluginBundleError			
+enum	SiriUtilities.PluginBundleError		case	loadFailed
+enum	SiriUtilities.PluginBundleError		case	noPrincipalClass
+enum	SiriUtilities.PluginBundleError		case	wrongType
+struct	SiriUtilities.DeviceRestrictions			
+struct	SiriUtilities.DeviceRestrictions		let	rawValue
+struct	SiriUtilities.ExecutionLocation			
+struct	SiriUtilities.ExecutionLocation		let	rawValue
+struct	SiriUtilities.TransformationChain			
+struct	SiriUtilities.TransformationChain		let	steps
+enum	SiriUtilities.TransformationChainError			
+enum	SiriUtilities.TransformationChainError		case	badStep
+class	SiriUtilities.SiriEnvironmentStorage			
+class	SiriUtilities.SiriEnvironmentStorage		var	storage
+enum	SiriUtilities.SiriEnvironmentStorage.StorageError			
+enum	SiriUtilities.SiriEnvironmentStorage.StorageError		case	decodingError
+enum	SiriUtilities.SiriEnvironmentStorage.StorageError		case	unknown
+enum	SiriUtilities.SiriEnvironmentStorage.StorageError		case	dataMissing
+class	SiriUtilities.Builder<A	SiriUtilities.Buildable>		
+class	SiriUtilities.Builder<A	SiriUtilities.Buildable>	var	mutations
+class	SiriUtilities.NetworkAvailability			
+class	SiriUtilities.NetworkAvailability		var	mock
+class	SiriUtilities.NetworkAvailability		var	_status
+class	SiriUtilities.NetworkAvailability		var	_isAvailable
+class	SiriUtilities.NetworkAvailability		var	_isExpensive
+class	SiriUtilities.NetworkAvailability		var	_isConstrained
+class	SiriUtilities.NetworkAvailability		var	_isInAirplaneMode
+class	SiriUtilities.NetworkAvailability		let	networkReachability
+class	SiriUtilities.NetworkAvailability		let	monitor
+class	SiriUtilities.NetworkAvailability		let	pathUpdateHandler
+class	SiriUtilities.NetworkAvailability		var	lock
+enum	SiriUtilities.NetworkAvailability.Status			
+enum	SiriUtilities.NetworkAvailability.Status		case	unknown
+enum	SiriUtilities.NetworkAvailability.Status		case	unavailable
+enum	SiriUtilities.NetworkAvailability.Status		case	available
+class	SiriUtilities.NetworkAvailability.PathUpdateHandler	SiriUtilities.SafeCallback SiriUtilities.NetworkAvailability		
+enum	SiriUtilities.StandardGroups			
+enum	SiriUtilities.StandardGroups		case	aceConnection
+enum	SiriUtilities.StandardGroups		case	asr
+enum	SiriUtilities.StandardGroups		case	cdm
+enum	SiriUtilities.StandardGroups		case	conversation
+enum	SiriUtilities.StandardGroups		case	coreSpeech
+enum	SiriUtilities.StandardGroups		case	crashes
+enum	SiriUtilities.StandardGroups		case	database
+enum	SiriUtilities.StandardGroups		case	dialogEngine
+enum	SiriUtilities.StandardGroups		case	exclaves
+enum	SiriUtilities.StandardGroups		case	fullPlanner
+enum	SiriUtilities.StandardGroups		case	gmsPlanner
+enum	SiriUtilities.StandardGroups		case	ieExecutor
+enum	SiriUtilities.StandardGroups		case	ifBridge
+enum	SiriUtilities.StandardGroups		case	intelligenceFlow
+enum	SiriUtilities.StandardGroups		case	jetsam
+enum	SiriUtilities.StandardGroups		case	jointResolver
+enum	SiriUtilities.StandardGroups		case	maf
+enum	SiriUtilities.StandardGroups		case	mediaRemote
+enum	SiriUtilities.StandardGroups		case	messageBus
+enum	SiriUtilities.StandardGroups		case	myriad
+enum	SiriUtilities.StandardGroups		case	network
+enum	SiriUtilities.StandardGroups		case	nl
+enum	SiriUtilities.StandardGroups		case	nlRouterBridge
+enum	SiriUtilities.StandardGroups		case	nlRouterService
+enum	SiriUtilities.StandardGroups		case	omniSearch
+enum	SiriUtilities.StandardGroups		case	pcc
+enum	SiriUtilities.StandardGroups		case	pommes
+enum	SiriUtilities.StandardGroups		case	responseGeneration
+enum	SiriUtilities.StandardGroups		case	rts
+enum	SiriUtilities.StandardGroups		case	searchAgent
+enum	SiriUtilities.StandardGroups		case	security
+enum	SiriUtilities.StandardGroups		case	shortcuts
+enum	SiriUtilities.StandardGroups		case	siri
+enum	SiriUtilities.StandardGroups		case	siriAudio
+enum	SiriUtilities.StandardGroups		case	siriKitExecutor
+enum	SiriUtilities.StandardGroups		case	siriNetwork
+enum	SiriUtilities.StandardGroups		case	siriPlaybackControls
+enum	SiriUtilities.StandardGroups		case	siriSuggestions
+enum	SiriUtilities.StandardGroups		case	skimmer
+enum	SiriUtilities.StandardGroups		case	spotlight
+enum	SiriUtilities.StandardGroups		case	system
+enum	SiriUtilities.StandardGroups		case	toolKit
+enum	SiriUtilities.StandardGroups		case	tts
+enum	SiriUtilities.StandardGroups		case	ui
+enum	SiriUtilities.EventDetailTab			
+enum	SiriUtilities.EventDetailTab		case	summary
+enum	SiriUtilities.EventDetailTab		case	client
+enum	SiriUtilities.EventDetailTab		case	networking
+enum	SiriUtilities.EventDetailTab		case	corespeech
+enum	SiriUtilities.EventDetailTab		case	nl
+enum	SiriUtilities.EventDetailTab		case	cdm
+enum	SiriUtilities.EventDetailTab		case	flow
+enum	SiriUtilities.EventDetailTab		case	platform
+enum	SiriUtilities.EventDetailTab		case	orchestrator
+enum	SiriUtilities.EventDetailTab		case	asr
+enum	SiriUtilities.EventDetailTab		case	tts
+enum	SiriUtilities.EventDetailTab		case	ie
+struct	SiriUtilities.InsightsLogger			
+struct	SiriUtilities.InsightsLogger		let	log
+struct	SiriUtilities.InsightsLogger		let	category
+struct	SiriUtilities.InsightsLogger		let	subsystem
+struct	SiriUtilities.InsightsLogger		let	annotationText
+struct	SiriUtilities.InsightsLogger		let	emoji1Text
+struct	SiriUtilities.InsightsLogger		let	emoji2Text
+struct	SiriUtilities.InsightsEventLogger			
+struct	SiriUtilities.InsightsEventLogger		let	log
+struct	SiriUtilities.InsightsEventLogger		let	tab
+struct	SiriUtilities.InsightsEventLogger		let	panelText
+struct	SiriUtilities.TimelineEvent			
+struct	SiriUtilities.TimelineEvent		let	message
+struct	SiriUtilities.TimelineEvent		let	emoji1
+struct	SiriUtilities.TimelineEvent		let	emoji2
+struct	SiriUtilities.TimelineEvent		let	additionalData
+struct	SiriUtilities.TimelineEvent		let	group
+struct	SiriUtilities.TimelineEvent		let	rawLog
+struct	SiriUtilities.TimelineEvent		let	version
+struct	SiriUtilities.EventDetail			
+struct	SiriUtilities.EventDetail		let	message
+struct	SiriUtilities.EventDetail		let	tab
+struct	SiriUtilities.EventDetail		let	panel
+struct	SiriUtilities.EventDetail		let	rawLog
+struct	SiriUtilities.EventDetail		let	version
+enum	SiriUtilities.EventDetail.CodingKeys			
+enum	SiriUtilities.EventDetail.CodingKeys		case	message
+enum	SiriUtilities.EventDetail.CodingKeys		case	tab
+enum	SiriUtilities.EventDetail.CodingKeys		case	panel
+enum	SiriUtilities.EventDetail.CodingKeys		case	rawLog
+enum	SiriUtilities.EventDetail.CodingKeys		case	version
+enum	SiriUtilities.TimelineEvent.CodingKeys			
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	message
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	emoji1
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	emoji2
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	additionalData
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	group
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	rawLog
+enum	SiriUtilities.TimelineEvent.CodingKeys		case	version
+enum	SiriUtilities.TimeoutError			
+enum	SiriUtilities.TimeoutError		case	timedOut
+enum	SiriUtilities.CooperativeTimeoutResult			
+enum	SiriUtilities.CooperativeTimeoutResult		case	operationTimedOut
+enum	SiriUtilities.CooperativeTimeoutResult		case	operationCompleted
+enum	SiriUtilities.CoopTimeoutError			
+enum	SiriUtilities.CoopTimeoutError		case	timedOut
+class	SiriUtilities.ObjectAssociation			
+class	SiriUtilities.ObjectAssociation		var	cache
+class	SiriUtilities.ObjectAssociation		let	lock
+struct	SiriUtilities.ObjectEntry			
+struct	SiriUtilities.ObjectEntry		var	key
+struct	SiriUtilities.ObjectEntry		let	value
+struct	SiriUtilities.CoreTelephonyAPIBridge			
+struct	SiriUtilities.CoreTelephonyAPIBridge		var	createAndLaunchConnection
+struct	SiriUtilities.CoreTelephonyAPIBridge		var	createOnTargetQueue
+struct	SiriUtilities.CoreTelephonyAPIBridge		var	registerBlockForNotification
+struct	SiriUtilities.CoreTelephonyAPIBridge		var	unregisterForAllNotifications
+struct	SiriUtilities.TransformationCapability			
+struct	SiriUtilities.TransformationCapability		let	type
+struct	SiriUtilities.TransformationCapability		let	descriptor
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType			
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType		case	named
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType		case	typed
+enum	SiriUtilities.TransformationCapability.CodingKeys			
+enum	SiriUtilities.TransformationCapability.CodingKeys		case	type
+enum	SiriUtilities.TransformationCapability.CodingKeys		case	descriptor
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType.CodingKeys			
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType.CodingKeys		case	named
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType.CodingKeys		case	typed
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType.NamedCodingKeys			
+enum	SiriUtilities.TransformationCapability.TransformationCapabilityType.TypedCodingKeys			
+enum	SiriUtilities.LoadableTransformationError			
+enum	SiriUtilities.LoadableTransformationError		case	noTransformation
+struct	SiriUtilities.NullCacheDataSource			
+class	SiriUtilities.Cacheable<A	Swift.Decodable, A: Swift.Encodable>		
+class	SiriUtilities.Cacheable<A	Swift.Decodable, A: Swift.Encodable>	var	cache
+class	SiriUtilities.Cacheable<A	Swift.Decodable, A: Swift.Encodable>	var	_value
+enum	SiriUtilities.CacheDataError			
+enum	SiriUtilities.CacheDataError		case	badEncoding
+enum	SiriUtilities.CacheDataError		case	noFile
+struct	SiriUtilities.MergedPluginFinder			
+struct	SiriUtilities.MergedPluginFinder		let	finders
+struct	SiriUtilities.FallbackPluginFinder			
+struct	SiriUtilities.FallbackPluginFinder		let	finders
+class	SiriUtilities.TransformationRegistry			
+class	SiriUtilities.TransformationRegistry		var	transformationsByInputType
+class	SiriUtilities.TransformationRegistry		var	transformationsByIdentifier
+class	SiriUtilities.TransformationRegistry		var	fallback
+struct	SiriUtilities.TransformationRegistry.GenericTransformer			
+struct	SiriUtilities.TransformationRegistry.GenericTransformer		let	inputType
+struct	SiriUtilities.TransformationRegistry.GenericTransformer		let	outputType
+struct	SiriUtilities.TransformationRegistry.GenericTransformer		let	transform
+class	SiriUtilities.CurrentDevice			
+class	SiriUtilities.CurrentDevice		var	mock
+class	SiriUtilities.CurrentDevice		var	_identifiedUserMeCard
+class	SiriUtilities.CurrentDevice		var	_deviceIdiom
+class	SiriUtilities.CurrentDevice		var	_isTextToSpeechEnabled
+class	SiriUtilities.CurrentDevice		var	_isLockedWithPasscode
+class	SiriUtilities.CurrentDevice		var	_siriVoiceGender
+class	SiriUtilities.CurrentDevice		var	_preferencesLanguageCode
+class	SiriUtilities.CurrentDevice		var	_siriLocale
+class	SiriUtilities.CurrentDevice		var	_isVoiceTriggerEnabled
+class	SiriUtilities.CurrentDevice		var	_personalDomainsAuthenticationMode
+class	SiriUtilities.CurrentDevice		var	_restrictedCommands
+class	SiriUtilities.CurrentDevice		var	_deviceRegionCode
+class	SiriUtilities.CurrentDevice		var	_deviceClass
+class	SiriUtilities.DispatchSemaphoreLock			
+class	SiriUtilities.DispatchSemaphoreLock		var	semaphore
+class	SiriUtilities.DeadlockDetectingLock			
+class	SiriUtilities.DeadlockDetectingLock		let	name
+class	SiriUtilities.DeadlockDetectingLock		let	deadlockDetectorKey
+class	SiriUtilities.DeadlockDetectingLock		let	deadlockAction
+class	SiriUtilities.DeadlockDetectingLock		var	lock
+enum	SiriUtilities.DeadlockDetectingLock.DeadlockError			
+enum	SiriUtilities.DeadlockDetectingLock.DeadlockError		case	deadlockDetected
+struct	SiriUtilities.BargeInMode			
+struct	SiriUtilities.BargeInMode		let	rawValue
+struct	SiriUtilities.BargeInContext			
+struct	SiriUtilities.BargeInContext		let	mode
+struct	SiriUtilities.BargeInContext		let	approximatePreviousTTSInterval
+class	SiriUtilities.SiriEnvironment			
+class	SiriUtilities.SiriEnvironment		let	lock
+class	SiriUtilities.SiriEnvironment		let	parent
+class	SiriUtilities.SiriEnvironment		let	scope
+class	SiriUtilities.SiriEnvironment		var	cycleDetector
+class	SiriUtilities.SiriEnvironment		var	providers
+struct	SiriUtilities.SiriEnvironment.Scope			
+struct	SiriUtilities.SiriEnvironment.Scope		let	rawValue
+struct	SiriUtilities.SiriEnvironment.InitializingProvider			
+struct	SiriUtilities.SiriEnvironment.InitializingProvider		let	id
+struct	SiriUtilities.SiriEnvironment.InitializingProvider		let	name
+enum	SiriUtilities.SiriEnvironment.Scope.CodingKeys			
+enum	SiriUtilities.SiriEnvironment.Scope.CodingKeys		case	rawValue
+enum	SiriUtilities.DeviceIdiom			
+enum	SiriUtilities.DeviceIdiom		case	car
+enum	SiriUtilities.DeviceIdiom		case	homepod
+enum	SiriUtilities.DeviceIdiom		case	mac
+enum	SiriUtilities.DeviceIdiom		case	pad
+enum	SiriUtilities.DeviceIdiom		case	pod
+enum	SiriUtilities.DeviceIdiom		case	phone
+enum	SiriUtilities.DeviceIdiom		case	watch
+enum	SiriUtilities.DeviceIdiom		case	tv
+enum	SiriUtilities.DeviceIdiom		case	reality
+enum	SiriUtilities.DeviceIdiom		case	unknown
+struct	SiriUtilities.TransformationIdentifier			
+struct	SiriUtilities.TransformationIdentifier		let	name
+struct	SiriUtilities.TransformationIdentifier		let	version
+struct	SiriUtilities.TransformationDescriptor			
+struct	SiriUtilities.TransformationDescriptor		let	id
+struct	SiriUtilities.TransformationDescriptor		let	inputType
+struct	SiriUtilities.TransformationDescriptor		let	outputType
+enum	SiriUtilities.TransformationDescriptor.CodingKeys			
+enum	SiriUtilities.TransformationDescriptor.CodingKeys		case	name
+enum	SiriUtilities.TransformationDescriptor.CodingKeys		case	version
+enum	SiriUtilities.TransformationDescriptor.CodingKeys		case	inputType
+enum	SiriUtilities.TransformationDescriptor.CodingKeys		case	outputType
+enum	SiriUtilities.TransformationIdentifier.CodingKeys			
+enum	SiriUtilities.TransformationIdentifier.CodingKeys		case	name
+enum	SiriUtilities.TransformationIdentifier.CodingKeys		case	version
+class	SiriUtilities.CurrentProcess	NSObject		
+class	SiriUtilities.CurrentProcess	NSObject	var	mock
+class	SiriUtilities.CurrentProcess	NSObject	var	_idleTracker
+enum	SiriUtilities.Transformation			
+struct	SiriUtilities.AudioSource			
+struct	SiriUtilities.AudioSource		let	aceValue
+enum	SiriUtilities.Logger			
+enum	SiriUtilities.Logger.Subsystem			
+enum	SiriUtilities.Logger.Subsystem		case	sirikit
+enum	SiriUtilities.Logger.Category			
+enum	SiriUtilities.Logger.Category		case	utilities
+enum	SiriUtilities.Logger.Category		case	pluginLoader
+enum	SiriUtilities.Logger.Category		case	environment
+enum	SiriUtilities.SiriUtilitiesSignpost			
+enum	SiriUtilities.SiriUtilitiesCrashHelper			
+struct	SiriUtilities.ResponseMode			
+struct	SiriUtilities.ResponseMode		let	aceValue
+enum	SiriUtilities.NamedTransformerLoggingIdentity			
+enum	SiriUtilities.NamedTransformerLoggingIdentity		case	unknown
+enum	SiriUtilities.NamedTransformerLoggingIdentity		case	timerToAlarmParseTransformer
+class	SiriUtilities.PThreadMutex			
+class	SiriUtilities.PThreadMutex		var	_pthreadMutex
+class	SiriUtilities.PThreadMutex		var	_threadHandle
+class	SiriUtilities.PThreadMutex		var	_lockCount
+class	SiriUtilities.PThreadMutex		let	_name
+class	SiriUtilities.PThreadMutex		let	_abortOnFail
+class	SiriUtilities.ManagedContinuation			
+class	SiriUtilities.ManagedContinuation		var	_continuation
+class	SiriUtilities.ManagedContinuation		var	_resumeResult
+class	SiriUtilities.ManagedContinuation		var	lock
+class	SiriUtilities.IdleTracker	NSObject		
+class	SiriUtilities.IdleTracker	NSObject	let	name
+class	SiriUtilities.IdleTracker	NSObject	let	queue
+class	SiriUtilities.IdleTracker	NSObject	let	timeout
+class	SiriUtilities.IdleTracker	NSObject	let	timeoutAction
+class	SiriUtilities.IdleTracker	NSObject	var	timer
+class	SiriUtilities.IdleTracker	NSObject	var	refs
+class	SiriUtilities.IdleTracker	NSObject	var	lock
+class	SiriUtilities.IdleTrackerActivity	NSObject		
+class	SiriUtilities.IdleTrackerActivity	NSObject	let	cancellable
+enum	SiriUtilities.TailSpinManager			
+class	SiriUtilities.PluginCatalog			
+class	SiriUtilities.PluginCatalog		var	packageCache
+class	SiriUtilities.PluginCapabilityCatalog	SiriUtilities.PluginCatalog<A: SiriUtilities.PluginCapabilityExposing, A: SiriUtilities.PluginPackage>		
+class	SiriUtilities.PluginCapabilityCatalog	SiriUtilities.PluginCatalog<A: SiriUtilities.PluginCapabilityExposing, A: SiriUtilities.PluginPackage>	var	capabilityCache
+enum	SiriUtilities.PluginCapabilityCatalog.CodingKeys<A	SiriUtilities.PluginCapabilityExposing, A: SiriUtilities.PluginPackage>		
+enum	SiriUtilities.PluginCapabilityCatalog.CodingKeys<A	SiriUtilities.PluginCapabilityExposing, A: SiriUtilities.PluginPackage>	case	osVersion
+enum	SiriUtilities.PluginCapabilityCatalog.CodingKeys<A	SiriUtilities.PluginCapabilityExposing, A: SiriUtilities.PluginPackage>	case	capabilities
+enum	SiriUtilities.PluginCapabilityCatalog.CodingKeys<A	SiriUtilities.PluginCapabilityExposing, A: SiriUtilities.PluginPackage>	case	packages
+enum	SiriUtilities.PluginCatalogError			
+enum	SiriUtilities.PluginCatalogError		case	wrongOSVersion
+enum	SiriUtilities.PluginCatalogError		case	noPackageInflator
+struct	SiriUtilities.SiriEnvironmentKeyValuePairs			
+struct	SiriUtilities.SiriEnvironmentKeyValuePairs		var	addedValues
+struct	SiriUtilities.SiriEnvironmentKeyValuePairs		var	removedValues
+enum	SiriUtilities.SiriEnvironmentKeyValuePairs.CodingKeys			
+enum	SiriUtilities.SiriEnvironmentKeyValuePairs.CodingKeys		case	addedValues
+enum	SiriUtilities.SiriEnvironmentKeyValuePairs.CodingKeys		case	removedValues
+class	SiriUtilities.AutoBugCaptureManager			
+class	SiriUtilities.AutoBugCaptureManager		let	domain
+class	SiriUtilities.AutoBugCaptureManager		let	sessionDuration
+class	SiriUtilities.AutoBugCaptureManager		var	processName
+class	SiriUtilities.AutoBugCaptureManager		var	diagnosticReporter
+class	SiriUtilities.EnvironmentProviderMockHelper<A	SiriUtilities.SiriEnvironmentProvider>		
+class	SiriUtilities.EnvironmentProviderMockHelper<A	SiriUtilities.SiriEnvironmentProvider>	var	overrides
+class	SiriUtilities.MockablePublished			
+class	SiriUtilities.MockablePublished		var	value
+class	SiriUtilities.MockablePublished		var	projectedValue
+struct	SiriUtilities.MockablePublished.Publisher			
+struct	SiriUtilities.MockablePublished.Publisher		let	subject
+struct	SiriUtilities.TypeIdentifier			
+struct	SiriUtilities.TypeIdentifier		let	encoding
+class	SiriUtilities.EnvironmentProviderDidChangePublisher			
+class	SiriUtilities.EnvironmentProviderDidChangePublisher		let	subject
+class	SiriUtilities.EnvironmentProviderDidChangePublisher		let	tickle
+class	SiriUtilities._EnvironmentProviderTable.Key			
+class	SiriUtilities._EnvironmentProviderTable.Key		let	id
+class	SiriUtilities._EnvironmentProviderTable.Key		var	object
+enum	SiriUtilities._EnvironmentProviderTable			
+struct	SiriUtilities.Reducer			
+struct	SiriUtilities.Reducer		let	reduce
+enum	SiriUtilities.ReducerBuilder			
+struct	SiriUtilities.HomeInfo			
+struct	SiriUtilities.HomeInfo		var	homeIdentifier
+struct	SiriUtilities.Transformer			
+struct	SiriUtilities.Transformer		let	transform
+struct	SiriUtilities.Transformer		let	reverseTransform
+enum	SiriUtilities.TransformationError			
+enum	SiriUtilities.TransformationError		case	cannotTransform
+enum	SiriUtilities.TransformationError		case	badInput
+enum	SiriUtilities.TransformationError		case	notImplemented
+struct	SiriUtilities.TypeInformation			
+struct	SiriUtilities.TypeInformation		let	isOptional
+struct	SiriUtilities.TypeInformation		let	isArray
+struct	SiriUtilities.TypeInformation		let	baseType
+struct	SiriUtilities.TypeInformation		let	originalType
+struct	SiriUtilities.TypeInformation		let	encoding
+class	SiriUtilities.SafeCallback			
+class	SiriUtilities.SafeCallback		var	maybeObj
+enum	SiriUtilities.InteractionType			
+enum	SiriUtilities.InteractionType		case	displayDriven
+enum	SiriUtilities.InteractionType		case	dialogDriven
+struct	SiriUtilities.AudioDestination			
+struct	SiriUtilities.AudioDestination		let	aceValue
+class	SiriUtilities.LoadableCapability<A	SiriUtilities.PluginCapabilityExposing>		
+class	SiriUtilities.LoadableCapability<A	SiriUtilities.PluginCapabilityExposing>	let	container
+class	SiriUtilities.LoadableCapability<A	SiriUtilities.PluginCapabilityExposing>	let	capability
+class	SiriUtilities.LoadableCapability<A	SiriUtilities.PluginCapabilityExposing>	var	_handler
+class	SiriUtilities.TransformationPluginLoader			
+class	SiriUtilities.TransformationPluginLoader		var	systemPluginCatalog
+class	SiriUtilities.TransformationPluginLoader		var	overridePluginCatalog
+class	SiriUtilities.TransformationPluginLoader		let	transformations
+struct	SiriUtilities.Restrictions			
+struct	SiriUtilities.Restrictions		let	restrictedCommands
+struct	SiriUtilities.Restrictions		let	deviceRestrictions
+class	SiriUtilities.SiriEnvironmentValue			
+class	SiriUtilities.SiriEnvironmentValue		let	extractor
+class	SiriUtilities.CoreTelephonyService			
+class	SiriUtilities.CoreTelephonyService		var	mock
+class	SiriUtilities.CoreTelephonyService		var	coreTelephonyAPIBridge
+class	SiriUtilities.CoreTelephonyService		let	lock
+class	SiriUtilities.CoreTelephonyService		var	ctServerConnectionRef
+class	SiriUtilities.CoreTelephonyService		var	ctLaunchableServerConnectionRef
+class	SiriUtilities.CoreTelephonyService		let	ctServerConnectionQueue
+class	SiriUtilities.CoreTelephonyService		let	ctLaunchableServerconnectionQueue
+enum	SiriUtilities.SiriVoiceGender			
+enum	SiriUtilities.SiriVoiceGender		case	male
+enum	SiriUtilities.SiriVoiceGender		case	female
+enum	SiriUtilities.SiriVoiceGender		case	unknown
+enum	SiriUtilities.DeviceClass			
+enum	SiriUtilities.DeviceClass		case	iPhone
+enum	SiriUtilities.DeviceClass		case	iPad
+enum	SiriUtilities.DeviceClass		case	homePod
+enum	SiriUtilities.DeviceClass		case	appleTV
+enum	SiriUtilities.DeviceClass		case	mac
+enum	SiriUtilities.DeviceClass		case	watch
+enum	SiriUtilities.DeviceClass		case	reality
+struct	SiriUtilities.MobileGestaltDeviceClassProvider			
+enum	SiriUtilities.PersonalDomainsAuthenticationMode			
+enum	SiriUtilities.PersonalDomainsAuthenticationMode		case	always
+enum	SiriUtilities.PersonalDomainsAuthenticationMode		case	never
+enum	SiriUtilities.PersonalDomainsAuthenticationMode		case	secureRequests
+protocol	SiriUtilities.PluginPackage			
+protocol	SiriUtilities.Buildable			
+protocol	SiriUtilities.InsightsGroup			
+protocol	SiriUtilities.LoggableInsightsEvent			
+protocol	SiriUtilities.TransformationPluginPackage			
+protocol	SiriUtilities.CacheDataSource			
+protocol	SiriUtilities.CacheDataSink			
+protocol	SiriUtilities.PluginFinder			
+protocol	SiriUtilities.SimpleLock			
+protocol	SiriUtilities.TransformationPlugin			
+protocol	SiriUtilities.Plugin			
+protocol	SiriUtilities.PluginCapabilityExposing	PluginCapability		
+protocol	SiriUtilities.PluginCapabilityExclusiveRegistration			
+protocol	SiriUtilities.MockableEnvironmentProvider	Provider		
+protocol	SiriUtilities.SiriEnvironmentProvider			
+protocol	SiriUtilities.SiriEnvironmentLocating			
+protocol	SiriUtilities.DeviceClassProvider			
+protocol	SiriUtilities.Transforming			
+protocol	conformance SiriUtilities.InputOrigin	Swift.Equatable		
+protocol	conformance SiriUtilities.InputOrigin	Swift.Hashable		
+protocol	conformance SiriUtilities.InputOrigin	Swift.RawRepresentable		
+protocol	conformance NSBundle	SiriUtilities.PluginPackage		
+protocol	conformance SiriUtilities.PluginBundleError	Swift.Equatable		
+protocol	conformance SiriUtilities.PluginBundleError	Swift.Hashable		
+protocol	conformance SiriUtilities.PluginBundleError	Swift.Error		
+protocol	conformance SiriUtilities.DeviceRestrictions	Swift.OptionSet		
+protocol	conformance SiriUtilities.DeviceRestrictions	Swift.SetAlgebra		
+protocol	conformance SiriUtilities.DeviceRestrictions	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.DeviceRestrictions	Swift.Equatable		
+protocol	conformance SiriUtilities.DeviceRestrictions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance SiriUtilities.ExecutionLocation	Swift.Hashable		
+protocol	conformance SiriUtilities.ExecutionLocation	Swift.Decodable		
+protocol	conformance SiriUtilities.ExecutionLocation	Swift.Encodable		
+protocol	conformance SiriUtilities.ExecutionLocation	Swift.CustomStringConvertible		
+protocol	conformance SiriUtilities.ExecutionLocation	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriUtilities.ExecutionLocation	Swift.Equatable		
+protocol	conformance SiriUtilities.TransformationChain	SiriUtilities.Transforming		
+protocol	conformance SiriUtilities.TransformationChainError	Swift.Error		
+protocol	conformance SiriEnvironmentStorage.StorageError	Swift.Error		
+protocol	conformance NetworkAvailability.Status	Swift.Equatable		
+protocol	conformance NetworkAvailability.Status	Swift.Hashable		
+protocol	conformance NetworkAvailability.Status	Swift.CustomStringConvertible		
+protocol	conformance SiriUtilities.NetworkAvailability	SiriUtilities.MockableEnvironmentProvider		
+protocol	conformance SiriUtilities.NetworkAvailability	SiriUtilities.SiriEnvironmentProvider		
+protocol	conformance SiriUtilities.NetworkAvailability	Combine.ObservableObject		
+protocol	conformance SiriUtilities.StandardGroups	Swift.Equatable		
+protocol	conformance SiriUtilities.StandardGroups	Swift.Hashable		
+protocol	conformance SiriUtilities.StandardGroups	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.StandardGroups	SiriUtilities.InsightsGroup		
+protocol	conformance SiriUtilities.EventDetailTab	Swift.Equatable		
+protocol	conformance SiriUtilities.EventDetailTab	Swift.Hashable		
+protocol	conformance SiriUtilities.EventDetailTab	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.TimelineEvent	SiriUtilities.LoggableInsightsEvent		
+protocol	conformance SiriUtilities.TimelineEvent	Swift.Decodable		
+protocol	conformance SiriUtilities.TimelineEvent	Swift.Encodable		
+protocol	conformance SiriUtilities.EventDetail	SiriUtilities.LoggableInsightsEvent		
+protocol	conformance SiriUtilities.EventDetail	Swift.Decodable		
+protocol	conformance SiriUtilities.EventDetail	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriUtilities.TimeoutError	Swift.Equatable		
+protocol	conformance SiriUtilities.TimeoutError	Swift.Hashable		
+protocol	conformance SiriUtilities.TimeoutError	Swift.Error		
+protocol	conformance CoopTimeoutError	Swift.Hashable		
+protocol	conformance CoopTimeoutError	Swift.Equatable		
+protocol	conformance CoopTimeoutError	Swift.Error		
+protocol	conformance TransformationCapability.TransformationCapabilityType	Swift.Equatable		
+protocol	conformance TransformationCapability.TransformationCapabilityType	Swift.Hashable		
+protocol	conformance TransformationCapability.TransformationCapabilityType	Swift.Decodable		
+protocol	conformance TransformationCapability.TransformationCapabilityType	Swift.Encodable		
+protocol	conformance SiriUtilities.TransformationCapability	Swift.Hashable		
+protocol	conformance SiriUtilities.TransformationCapability	Swift.Decodable		
+protocol	conformance SiriUtilities.TransformationCapability	Swift.Encodable		
+protocol	conformance SiriUtilities.TransformationCapability	Swift.Equatable		
+protocol	conformance NSBundle	SiriUtilities.TransformationPluginPackage		
+protocol	conformance NSBundle	SiriUtilities.PluginCapabilityExposing		
+protocol	conformance TypedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TypedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NamedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NamedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NamedCodingKeys	Swift.CodingKey		
+protocol	conformance TypedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriUtilities.LoadableTransformation	SiriUtilities.Transforming		
+protocol	conformance SiriUtilities.LoadableTransformationError	Swift.Equatable		
+protocol	conformance SiriUtilities.LoadableTransformationError	Swift.Hashable		
+protocol	conformance SiriUtilities.LoadableTransformationError	Swift.Error		
+protocol	conformance SiriUtilities.NullCacheDataSource	SiriUtilities.CacheDataSource		
+protocol	conformance Foundation.URL	SiriUtilities.CacheDataSource		
+protocol	conformance Foundation.URL	SiriUtilities.CacheDataSink		
+protocol	conformance SiriUtilities.CacheDataError	Swift.Equatable		
+protocol	conformance SiriUtilities.CacheDataError	Swift.Hashable		
+protocol	conformance SiriUtilities.CacheDataError	Swift.Error		
+protocol	conformance SiriUtilities.MergedPluginFinder	SiriUtilities.PluginFinder		
+protocol	conformance SiriUtilities.FallbackPluginFinder	SiriUtilities.PluginFinder		
+protocol	conformance Foundation.URL	SiriUtilities.PluginFinder		
+protocol	conformance Swift.Array	SiriUtilities.PluginFinder		
+protocol	conformance GenericTransformer	SiriUtilities.Transforming		
+protocol	conformance SiriUtilities.CurrentDevice	SiriUtilities.MockableEnvironmentProvider		
+protocol	conformance SiriUtilities.CurrentDevice	SiriUtilities.SiriEnvironmentProvider		
+protocol	conformance SiriUtilities.CurrentDevice	Combine.ObservableObject		
+protocol	conformance SiriUtilities.DispatchSemaphoreLock	SiriUtilities.SimpleLock		
+protocol	conformance SiriUtilities.DeadlockDetectingLock	SiriUtilities.SimpleLock		
+protocol	conformance DeadlockError	Swift.Hashable		
+protocol	conformance DeadlockError	Swift.Equatable		
+protocol	conformance DeadlockError	Swift.Error		
+protocol	conformance SiriUtilities.BargeInMode	Swift.OptionSet		
+protocol	conformance SiriUtilities.BargeInMode	Swift.SetAlgebra		
+protocol	conformance SiriUtilities.BargeInMode	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.BargeInMode	Swift.Equatable		
+protocol	conformance SiriUtilities.BargeInMode	Swift.ExpressibleByArrayLiteral		
+protocol	conformance SiriEnvironment.Scope	Swift.Hashable		
+protocol	conformance SiriEnvironment.Scope	Swift.Decodable		
+protocol	conformance SiriEnvironment.Scope	Swift.Encodable		
+protocol	conformance SiriEnvironment.Scope	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InitializingProvider	Swift.Equatable		
+protocol	conformance InitializingProvider	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriUtilities.DeviceIdiom	Swift.Equatable		
+protocol	conformance SiriUtilities.DeviceIdiom	Swift.Hashable		
+protocol	conformance SiriUtilities.DeviceIdiom	Swift.CaseIterable		
+protocol	conformance SiriUtilities.TransformationIdentifier	Swift.Equatable		
+protocol	conformance SiriUtilities.TransformationIdentifier	Swift.Hashable		
+protocol	conformance SiriUtilities.TransformationIdentifier	Swift.Decodable		
+protocol	conformance SiriUtilities.TransformationIdentifier	Swift.Encodable		
+protocol	conformance TransformationDescriptor.CodingKeys	Swift.Equatable		
+protocol	conformance TransformationDescriptor.CodingKeys	Swift.Hashable		
+protocol	conformance TransformationDescriptor.CodingKeys	Swift.RawRepresentable		
+protocol	conformance TransformationDescriptor.CodingKeys	Swift.CodingKey		
+protocol	conformance TransformationDescriptor.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TransformationDescriptor.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriUtilities.TransformationDescriptor	Swift.Hashable		
+protocol	conformance SiriUtilities.TransformationDescriptor	Swift.Decodable		
+protocol	conformance SiriUtilities.TransformationDescriptor	Swift.Encodable		
+protocol	conformance SiriUtilities.TransformationDescriptor	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriUtilities.CurrentProcess	SiriUtilities.MockableEnvironmentProvider		
+protocol	conformance SiriUtilities.CurrentProcess	SiriUtilities.SiriEnvironmentProvider		
+protocol	conformance SiriUtilities.CurrentProcess	Combine.ObservableObject		
+protocol	conformance SiriUtilities.AudioSource	Swift.Equatable		
+protocol	conformance SiriUtilities.AudioSource	Swift.Hashable		
+protocol	conformance SiriUtilities.AudioSource	Swift.Decodable		
+protocol	conformance SiriUtilities.AudioSource	Swift.Encodable		
+protocol	conformance Logger.Subsystem	Swift.Equatable		
+protocol	conformance Logger.Subsystem	Swift.Hashable		
+protocol	conformance Logger.Subsystem	Swift.RawRepresentable		
+protocol	conformance Logger.Category	Swift.Equatable		
+protocol	conformance Logger.Category	Swift.Hashable		
+protocol	conformance Logger.Category	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.ResponseMode	Swift.Equatable		
+protocol	conformance SiriUtilities.ResponseMode	Swift.Hashable		
+protocol	conformance SiriUtilities.ResponseMode	Swift.Decodable		
+protocol	conformance SiriUtilities.ResponseMode	Swift.Encodable		
+protocol	conformance SiriUtilities.NamedTransformerLoggingIdentity	Swift.Equatable		
+protocol	conformance SiriUtilities.NamedTransformerLoggingIdentity	Swift.Hashable		
+protocol	conformance SiriUtilities.NamedTransformerLoggingIdentity	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.NamedTransformerLoggingIdentity	Swift.Decodable		
+protocol	conformance SiriUtilities.NamedTransformerLoggingIdentity	Swift.Encodable		
+protocol	conformance PluginCapabilityCatalog.CodingKeys	Swift.Equatable		
+protocol	conformance PluginCapabilityCatalog.CodingKeys	Swift.Hashable		
+protocol	conformance PluginCapabilityCatalog.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PluginCapabilityCatalog.CodingKeys	Swift.CodingKey		
+protocol	conformance PluginCapabilityCatalog.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PluginCapabilityCatalog.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriUtilities.PluginCapabilityCatalog	SiriUtilities.PluginCapabilityExposing		
+protocol	conformance SiriUtilities.PluginCapabilityCatalog	Swift.Decodable		
+protocol	conformance SiriUtilities.PluginCapabilityCatalog	Swift.Encodable		
+protocol	conformance SiriUtilities.PluginCatalogError	Swift.Error		
+protocol	conformance SiriUtilities.SiriEnvironmentKeyValuePairs	Swift.Decodable		
+protocol	conformance SiriUtilities.SiriEnvironmentKeyValuePairs	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MockablePublished.Publisher	Combine.Publisher		
+protocol	conformance SiriUtilities.TypeIdentifier	Swift.Decodable		
+protocol	conformance SiriUtilities.TypeIdentifier	Swift.Encodable		
+protocol	conformance SiriUtilities.TypeIdentifier	Swift.Hashable		
+protocol	conformance SiriUtilities.TypeIdentifier	Swift.CustomStringConvertible		
+protocol	conformance SiriUtilities.TypeIdentifier	Swift.Equatable		
+protocol	conformance SiriUtilities.EnvironmentProviderDidChangePublisher	Combine.Publisher		
+protocol	conformance _EnvironmentProviderTable.Key	Swift.Equatable		
+protocol	conformance _EnvironmentProviderTable.Key	Swift.Hashable		
+protocol	conformance SiriUtilities.TransformationError	Swift.Error		
+protocol	conformance SiriUtilities.TypeInformation	Swift.CustomStringConvertible		
+protocol	conformance SiriUtilities.InteractionType	Swift.Equatable		
+protocol	conformance SiriUtilities.InteractionType	Swift.Hashable		
+protocol	conformance SiriUtilities.InteractionType	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.AudioDestination	Swift.Equatable		
+protocol	conformance SiriUtilities.AudioDestination	Swift.Hashable		
+protocol	conformance SiriUtilities.AudioDestination	Swift.Decodable		
+protocol	conformance SiriUtilities.AudioDestination	Swift.Encodable		
+protocol	conformance SiriUtilities.Restrictions	Swift.Decodable		
+protocol	conformance SiriUtilities.Restrictions	Swift.Encodable		
+protocol	conformance SiriUtilities.CoreTelephonyService	SiriUtilities.MockableEnvironmentProvider		
+protocol	conformance SiriUtilities.CoreTelephonyService	SiriUtilities.SiriEnvironmentProvider		
+protocol	conformance SiriUtilities.CoreTelephonyService	Combine.ObservableObject		
+protocol	conformance SiriUtilities.SiriVoiceGender	Swift.Equatable		
+protocol	conformance SiriUtilities.SiriVoiceGender	Swift.Hashable		
+protocol	conformance SiriUtilities.SiriVoiceGender	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.DeviceClass	Swift.Equatable		
+protocol	conformance SiriUtilities.DeviceClass	Swift.Hashable		
+protocol	conformance SiriUtilities.MobileGestaltDeviceClassProvider	SiriUtilities.DeviceClassProvider		
+protocol	conformance SiriUtilities.PersonalDomainsAuthenticationMode	Swift.Equatable		
+protocol	conformance SiriUtilities.PersonalDomainsAuthenticationMode	Swift.Hashable		
+protocol	conformance SiriUtilities.PersonalDomainsAuthenticationMode	Swift.RawRepresentable		
+protocol	conformance SiriUtilities.Transformer	SiriUtilities.Transforming		
+extension	SiriUtilities.InputOrigin	RawRepresentable		
+extension	SiriUtilities.DeviceRestrictions	OptionSet		
+extension	SiriUtilities.DeviceRestrictions	SetAlgebra		
+extension	SiriUtilities.DeviceRestrictions	RawRepresentable		
+extension	SiriUtilities.DeviceRestrictions	ExpressibleByArrayLiteral		
+extension	SiriUtilities.NetworkAvailability	MockableEnvironmentProvider		
+extension	SiriUtilities.NetworkAvailability	ObservableObject		
+extension	SiriUtilities.StandardGroups	RawRepresentable		
+extension	SiriUtilities.EventDetailTab	RawRepresentable		
+extension	SiriUtilities.TimelineEvent.CodingKeys	RawRepresentable		
+extension	NSBundle	PluginCapabilityExposing		
+extension	SiriUtilities.CurrentDevice	MockableEnvironmentProvider		
+extension	SiriUtilities.CurrentDevice	ObservableObject		
+extension	SiriUtilities.BargeInMode	OptionSet		
+extension	SiriUtilities.BargeInMode	SetAlgebra		
+extension	SiriUtilities.BargeInMode	RawRepresentable		
+extension	SiriUtilities.BargeInMode	ExpressibleByArrayLiteral		
+extension	SiriUtilities.DeviceIdiom	CaseIterable		
+extension	SiriUtilities.TransformationDescriptor.CodingKeys	RawRepresentable		
+extension	SiriUtilities.CurrentProcess	MockableEnvironmentProvider		
+extension	SiriUtilities.CurrentProcess	ObservableObject		
+extension	SiriUtilities.Logger.Subsystem	RawRepresentable		
+extension	SiriUtilities.Logger.Category	RawRepresentable		
+extension	SiriUtilities.NamedTransformerLoggingIdentity	RawRepresentable		
+extension	SiriUtilities.PluginCapabilityCatalog.CodingKeys	RawRepresentable		
+extension	SiriUtilities.PluginCapabilityCatalog	PluginCapabilityExposing		
+extension	SiriUtilities.MockablePublished.Publisher	Publisher		
+extension	SiriUtilities.EnvironmentProviderDidChangePublisher	Publisher		
+extension	SiriUtilities.InteractionType	RawRepresentable		
+extension	SiriUtilities.CoreTelephonyService	MockableEnvironmentProvider		
+extension	SiriUtilities.CoreTelephonyService	ObservableObject		
+extension	SiriUtilities.SiriVoiceGender	RawRepresentable		
+extension	SiriUtilities.PersonalDomainsAuthenticationMode	RawRepresentable		

@@ -1,0 +1,18 @@
+owner	kind	declaration
+ULGAddLogEntry	-	- (id)serialize;
+ULGAddLogEntry	property	@property (nonatomic) unsigned long long observedTimestamp;
+ULGAddLogEntry	property	@property (nonatomic) unsigned long long timestamp;
+ULGAddLogEntry	property	@property (nonatomic, copy) NSData *logPayload;
+ULGAddLogEntry	property	@property (nonatomic, copy) NSUUID *sessionId;
+ULGLogEntry	-	- (id)serialize;
+ULGLogEntry	property	@property (nonatomic) unsigned long long observedTimestamp;
+ULGLogEntry	property	@property (nonatomic) unsigned long long timestamp;
+ULGLogEntry	property	@property (nonatomic, copy) NSData *payload;
+ULGSchemaType	-	- (id)serialize;
+ULGSession	-	- (id)serialize;
+ULGSession	property	@property (nonatomic) unsigned long long createdTimestamp;
+ULGSession	property	@property (nonatomic, copy) NSArray *events;
+ULGSession	property	@property (nonatomic, copy) NSUUID *idField;
+ULGStagingEvent	-	- (id)init;
+ULGStagingEvent	-	- (id)serialize;
+ULGStagingEvent	property	@property (nonatomic, retain) ULGAddLogEntry *logEntry;

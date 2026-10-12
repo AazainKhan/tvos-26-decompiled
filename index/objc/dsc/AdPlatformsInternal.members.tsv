@@ -1,0 +1,25 @@
+owner	kind	declaration
+ADAttributionRequester	-	- (_Bool)_isAppTrackingAuthorized;
+ADAttributionRequester	-	- (id)initWithConnection:(id)connection bundleID:(id)id transactionID:(id)id;
+ADAttributionRequester	-	- (void)beginAttributionRequest:(id)request reason:(id)reason completionHandler:(id /* block */)handler;
+ADAttributionRequester	-	- (void)requestAttributionDetails:(id /* block */)details;
+ADAttributionRequester	-	- (void)requestAttributionDetailsWithBlock:(id /* block */)block;
+ADAttributionRequester	-	- (void)setServerToTest:(long long)test;
+ADAttributionRequester	-	- (void)setStocksAdEnabled:(_Bool)enabled;
+ADAttributionRequester	property	@property (retain, nonatomic) NSNumber *transactionToken;
+ADAttributionRequester	property	@property (retain, nonatomic) NSString *bundleID;
+ADAttributionRequester	property	@property (retain, nonatomic) NSXPCConnection *connection;
+ADAttributionService	+	+ (id)sharedInstance;
+ADAttributionService	-	- (_Bool)listener:(id)listener shouldAcceptNewConnection:(id)connection;
+ADAttributionService	-	- (id)init;
+ADAttributionService	-	- (void)removeClientForToken:(id)token;
+ADAttributionService	property	@property (readonly) Class superclass;
+ADAttributionService	property	@property (readonly) unsigned long long hash;
+ADAttributionService	property	@property (readonly, copy) NSString *debugDescription;
+ADAttributionService	property	@property (readonly, copy) NSString *description;
+ADAttributionService	property	@property (retain) NSXPCListener *listener;
+ADAttributionService	property	@property (retain, nonatomic) NSMutableDictionary *clients;
+ADAttributionService	property	@property (retain, nonatomic) NSNumber *transactionID;
+ADAttribution_XPC	-	- (void)requestAttributionDetailsWithBlock:(id /* block */)block;
+ADAttribution_XPC	-	- (void)setServerToTest:(long long)test;
+ADAttribution_XPC	-	- (void)setStocksAdEnabled:(_Bool)enabled;

@@ -1,0 +1,2257 @@
+kind	type	conformance	member_kind	member
+enum	Anvil.SignInFailure			
+enum	Anvil.SignInFailure		case	failedToParseURL
+enum	Anvil.SignInFailure		case	failedToFetchCredentials
+enum	Anvil.SignInFailure		case	failedToFetchUserInfo
+enum	Anvil.SignInFailure		case	failedToStoreCredentials
+enum	Anvil.RefreshBillingPlanFailure			
+enum	Anvil.RefreshBillingPlanFailure		case	failedToAccessKeychain
+enum	Anvil.RefreshBillingPlanFailure		case	notSignedIn
+enum	Anvil.RefreshBillingPlanFailure		case	failedToFetchBillingPlan
+enum	Anvil.SignOutFailure			
+enum	Anvil.SignOutFailure		case	failedToAccessKeychain
+enum	Anvil.TransferTokenFailure			
+enum	Anvil.TransferTokenFailure		case	sourceTokenInvalid
+enum	Anvil.TransferTokenFailure		case	sourceNotSignedIn
+struct	Anvil.Credentials			
+struct	Anvil.Credentials		var	userName
+struct	Anvil.Credentials		var	email
+struct	Anvil.Credentials		var	billingPlan
+struct	Anvil.Credentials		var	expirationDate
+struct	Anvil.RateLimitBudgets			
+struct	Anvil.RateLimitBudgets		let	throttled
+struct	Anvil.RateLimitBudgets		var	codeInterpreterCalls
+struct	Anvil.RateLimitBudgets		var	fileUploads
+struct	Anvil.RateLimitBudgets		var	imageGeneratorCalls
+struct	Anvil.RateLimitBudgets		var	responses
+struct	Anvil.RateLimitBudgets.Limits			
+struct	Anvil.RateLimitBudgets.Limits		var	usage
+struct	Anvil.RateLimitBudgets.Limits		var	limit
+struct	Anvil.RateLimitBudgets.Limits		var	resetsAt
+struct	Anvil.RateLimitBudgets.Limits		var	isReached
+struct	Anvil.RateLimitBudgets.Limits		var	isRestricted
+struct	Anvil.BillingPlan			
+struct	Anvil.BillingPlan		let	category
+struct	Anvil.BillingPlan		let	planName
+struct	Anvil.BillingPlan		let	workspaceID
+enum	Anvil.BillingPlan.Category			
+enum	Anvil.BillingPlan.Category		case	free
+enum	Anvil.BillingPlan.Category		case	paid
+struct	Anvil.UserInfo			
+struct	Anvil.UserInfo		let	name
+struct	Anvil.UserInfo		let	email
+struct	Anvil.UserInfo		let	accountStatus
+enum	Anvil.UserInfo.AccountStatus			
+enum	Anvil.UserInfo.AccountStatus		case	suspended
+struct	Anvil.UserBillingPlan			
+struct	Anvil.UserBillingPlan		let	category
+struct	Anvil.UserBillingPlan		let	planName
+struct	Anvil.UserBillingPlan		let	workspaceID
+struct	Anvil.UserTokens			
+struct	Anvil.UserTokens		let	accessToken
+struct	Anvil.UserTokens		let	refreshToken
+struct	Anvil.UserTokens		let	expirationDate
+struct	Anvil.UserTokens		let	ttl
+struct	Anvil.UserTokens		let	deviceSecret
+struct	Anvil.UserTokens		let	idToken
+struct	Anvil.UserCredentials			
+struct	Anvil.UserCredentials		var	userName
+struct	Anvil.UserCredentials		var	email
+struct	Anvil.UserCredentials		var	accessToken
+struct	Anvil.UserCredentials		var	refreshToken
+struct	Anvil.UserCredentials		var	expirationDate
+struct	Anvil.UserCredentials		var	ttl
+struct	Anvil.UserCredentials		var	deviceSecret
+struct	Anvil.UserCredentials		var	idToken
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest			
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest		var	grantType
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest		var	code
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest		var	codeVerifier
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest		var	clientID
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest		var	clientSecret
+struct	Anvil.ExchangeCodeForAuthorizationTokensRequest		var	redirectURI
+struct	Anvil.AuthorizationTokensResponse			
+struct	Anvil.AuthorizationTokensResponse		var	accessToken
+struct	Anvil.AuthorizationTokensResponse		var	refreshToken
+struct	Anvil.AuthorizationTokensResponse		var	idToken
+struct	Anvil.AuthorizationTokensResponse		var	scope
+struct	Anvil.AuthorizationTokensResponse		var	expiresIn
+struct	Anvil.AuthorizationTokensResponse		var	tokenType
+struct	Anvil.AuthorizationTokensResponse		var	deviceSecret
+struct	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest			
+struct	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest		var	grantType
+struct	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest		var	clientID
+struct	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest		var	clientSecret
+struct	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest		var	refreshToken
+struct	Anvil.RevokeAuthorizationTokensResponse			
+struct	Anvil.RevokeAuthorizationTokensResponse		var	tokenTypeHint
+struct	Anvil.RevokeAuthorizationTokensResponse		var	token
+struct	Anvil.RevokeAuthorizationTokensResponse		var	message
+struct	Anvil.RevokeAuthorizationTokensRequest			
+struct	Anvil.RevokeAuthorizationTokensRequest		var	tokenTypeHint
+struct	Anvil.RevokeAuthorizationTokensRequest		var	token
+struct	Anvil.RevokeAuthorizationTokensRequest		var	clientID
+struct	Anvil.RevokeAuthorizationTokensRequest		var	clientSecret
+struct	Anvil.WorkspaceResponse			
+struct	Anvil.WorkspaceResponse		var	id
+struct	Anvil.WorkspaceResponse		var	billingPlanCategory
+struct	Anvil.WorkspaceResponse		var	billingPlanName
+struct	Anvil.UserInfoResponse			
+struct	Anvil.UserInfoResponse		var	id
+struct	Anvil.UserInfoResponse		var	name
+struct	Anvil.UserInfoResponse		var	email
+struct	Anvil.UserInfoResponse		var	accountStatus
+enum	Anvil.UserCredentials.CodingKeys			
+enum	Anvil.UserCredentials.CodingKeys		case	userName
+enum	Anvil.UserCredentials.CodingKeys		case	email
+enum	Anvil.UserCredentials.CodingKeys		case	accessToken
+enum	Anvil.UserCredentials.CodingKeys		case	refreshToken
+enum	Anvil.UserCredentials.CodingKeys		case	expirationDate
+enum	Anvil.UserCredentials.CodingKeys		case	ttl
+enum	Anvil.UserCredentials.CodingKeys		case	deviceSecret
+enum	Anvil.UserCredentials.CodingKeys		case	idToken
+enum	Anvil.UserTokens.CodingKeys			
+enum	Anvil.UserTokens.CodingKeys		case	accessToken
+enum	Anvil.UserTokens.CodingKeys		case	refreshToken
+enum	Anvil.UserTokens.CodingKeys		case	expirationDate
+enum	Anvil.UserTokens.CodingKeys		case	ttl
+enum	Anvil.UserTokens.CodingKeys		case	deviceSecret
+enum	Anvil.UserTokens.CodingKeys		case	idToken
+enum	Anvil.UserBillingPlan.CodingKeys			
+enum	Anvil.UserBillingPlan.CodingKeys		case	category
+enum	Anvil.UserBillingPlan.CodingKeys		case	planName
+enum	Anvil.UserBillingPlan.CodingKeys		case	workspaceID
+enum	Anvil.UserBillingPlan.Category			
+enum	Anvil.UserBillingPlan.Category		case	free
+enum	Anvil.UserBillingPlan.Category		case	paid
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys			
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys		case	grantType
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys		case	code
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys		case	codeVerifier
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys		case	clientID
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys		case	clientSecret
+enum	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys		case	redirectURI
+enum	Anvil.AuthorizationTokensResponse.CodingKeys			
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	accessToken
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	refreshToken
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	idToken
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	scope
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	expiresIn
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	tokenType
+enum	Anvil.AuthorizationTokensResponse.CodingKeys		case	deviceSecret
+enum	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest.CodingKeys			
+enum	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest.CodingKeys		case	grantType
+enum	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest.CodingKeys		case	clientID
+enum	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest.CodingKeys		case	clientSecret
+enum	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest.CodingKeys		case	refreshToken
+enum	Anvil.RevokeAuthorizationTokensResponse.CodingKeys			
+enum	Anvil.RevokeAuthorizationTokensResponse.CodingKeys		case	tokenTypeHint
+enum	Anvil.RevokeAuthorizationTokensResponse.CodingKeys		case	token
+enum	Anvil.RevokeAuthorizationTokensResponse.CodingKeys		case	message
+enum	Anvil.RevokeAuthorizationTokensRequest.CodingKeys			
+enum	Anvil.RevokeAuthorizationTokensRequest.CodingKeys		case	tokenTypeHint
+enum	Anvil.RevokeAuthorizationTokensRequest.CodingKeys		case	token
+enum	Anvil.RevokeAuthorizationTokensRequest.CodingKeys		case	clientID
+enum	Anvil.RevokeAuthorizationTokensRequest.CodingKeys		case	clientSecret
+enum	Anvil.WorkspaceResponse.CodingKeys			
+enum	Anvil.WorkspaceResponse.CodingKeys		case	id
+enum	Anvil.WorkspaceResponse.CodingKeys		case	billingPlanCategory
+enum	Anvil.WorkspaceResponse.CodingKeys		case	billingPlanName
+enum	Anvil.UserInfoResponse.CodingKeys			
+enum	Anvil.UserInfoResponse.CodingKeys		case	id
+enum	Anvil.UserInfoResponse.CodingKeys		case	name
+enum	Anvil.UserInfoResponse.CodingKeys		case	email
+enum	Anvil.UserInfoResponse.CodingKeys		case	accountStatus
+enum	Anvil.UserInfoResponse.AccountStatus			
+enum	Anvil.UserInfoResponse.AccountStatus		case	suspended
+struct	Anvil.ChatGPTProvider			
+struct	Anvil.ChatGPTProvider		let	bundle
+struct	Anvil.ChatGPTProvider		let	twoPhaseUploadThreshold
+struct	Anvil.ChatGPTProvider		let	overrides
+struct	Anvil.ChatGPTProvider		let	fraudTicketingEnabled
+class	Anvil.Serializer			
+class	Anvil.Serializer		var	isRunning
+class	Anvil.Serializer		var	continuations
+struct	Anvil.CredentialStorage			
+struct	Anvil.CredentialStorage		let	userCredentials
+struct	Anvil.CredentialStorage		let	userBillingPlan
+struct	Anvil.CredentialStorage		let	userIsRateLimited
+struct	Anvil.CredentialStorage		let	userRateLimits
+struct	Anvil.CredentialStorage		let	auditID
+struct	Anvil.DocumentRegistrationState			
+struct	Anvil.DocumentRegistrationState		var	session
+struct	Anvil.DocumentRegistrationState		var	uploadDetails
+class	Anvil.DocumentRegistrationURLSessionDelegate	NSObject		
+class	Anvil.DocumentRegistrationURLSessionDelegate	NSObject	let	update
+class	Anvil.DocumentRegistrationURLSessionDelegate	NSObject	let	completion
+class	Anvil.DocumentRegistrationURLSessionDelegate	NSObject	let	fileDescriptor
+class	Anvil.DocumentRegistrationURLSessionDelegate	NSObject	var	data
+class	Anvil.DocumentRegistrationURLSessionDelegate	NSObject	var	fileSize
+struct	Anvil.EnvironmentValue			
+struct	Anvil.EnvironmentValue		let	developmentValue
+struct	Anvil.EnvironmentValue		let	qaValue
+struct	Anvil.EnvironmentValue		let	carryValue
+struct	Anvil.EnvironmentValue		let	productionValue
+struct	Anvil.EnvironmentValue		let	isInternalInstall
+enum	Anvil.ExternalLanguageModelBundle			
+enum	Anvil.ExternalLanguageModelBundle		case	chatGPT
+class	Anvil.ExternalLanguageModel			
+class	Anvil.ExternalLanguageModel		let	client
+class	Anvil.ExternalLanguageModel		let	provider
+class	Anvil.ExternalLanguageModel		let	expiredSessions
+class	Anvil.ExternalLanguageModel		let	registry
+class	Anvil.ExternalLanguageModel		let	makeAuthenticator
+class	Anvil.ExpiredSessions			
+class	Anvil.ExpiredSessions		var	expiredIDs
+struct	Anvil.ExternalPartnerAuthenticator.AuthenticationSession			
+struct	Anvil.ExternalPartnerAuthenticator.AuthenticationSession		let	codeVerifier
+struct	Anvil.ExternalPartnerAuthenticator.AuthenticationSession		let	authService
+struct	Anvil.ExternalPartnerAuthenticator.AuthenticationSession		let	handleCredentials
+struct	Anvil.ExternalPartnerAuthenticator			
+struct	Anvil.ExternalPartnerAuthenticator		let	storage
+struct	Anvil.ExternalPartnerAuthenticator		let	authService
+struct	Anvil.ExternalPartnerModel			
+struct	Anvil.ExternalPartnerModel		var	category
+struct	Anvil.ExternalPartnerModel		var	description
+struct	Anvil.ExternalPartnerModel		var	displayName
+struct	Anvil.ExternalPartnerModel		var	modelName
+struct	Anvil.ExternalPartnerModel		var	metadata
+enum	Anvil.ExternalPartnerModel.Category			
+enum	Anvil.ExternalPartnerModel.Category		case	reasoning
+enum	Anvil.ExternalPartnerModel.Category		case	nonReasoning
+enum	Anvil.ExternalPartnerModel.ReleaseLabel			
+enum	Anvil.ExternalPartnerModel.ReleaseLabel		case	stable
+enum	Anvil.ExternalPartnerModel.ReleaseLabel		case	beta
+enum	Anvil.ExternalPartnerModel.ReleaseLabel		case	experimental
+struct	Anvil.ExternalPartnerModel.ReasoningLevel			
+struct	Anvil.ExternalPartnerModel.ReasoningLevel		var	name
+struct	Anvil.ExternalPartnerModel.ReasoningLevel		var	isDefault
+struct	Anvil.ExternalPartnerModel.Metadata			
+struct	Anvil.ExternalPartnerModel.Metadata		var	contextWindowLength
+struct	Anvil.ExternalPartnerModel.Metadata		var	maxOutputTokens
+struct	Anvil.ExternalPartnerModel.Metadata		var	isFlagship
+struct	Anvil.ExternalPartnerModel.Metadata		var	isUserSelectable
+struct	Anvil.ExternalPartnerModel.Metadata		var	releaseLabel
+struct	Anvil.ExternalPartnerModel.Metadata		var	reasoningLevels
+class	Anvil.FileDescriptorInputStream	NSInputStream		
+class	Anvil.FileDescriptorInputStream	NSInputStream	let	fileHandle
+class	Anvil.FileDescriptorInputStream	NSInputStream	var	status
+class	Anvil.FileDescriptorInputStream	NSInputStream	var	eof
+class	Anvil.FileDescriptorInputStream	NSInputStream	var	err
+class	Anvil.FileDescriptorInputStream	NSInputStream	var	_delegate
+enum	Anvil.TicketingType			
+enum	Anvil.TicketingType		case	sessionResponse
+enum	Anvil.TicketingType		case	imageGenerator
+enum	Anvil.TicketingType		case	codeInterpreter
+enum	Anvil.TicketingType		case	fileUpload
+enum	Anvil.TicketingSubType			
+enum	Anvil.TicketingSubType		case	authorization
+enum	Anvil.TicketingSubType		case	downgrade
+enum	Anvil.TicketingSubType		case	refund
+enum	Anvil.FraudTicketing.FraudTicketingError			
+enum	Anvil.FraudTicketing.FraudTicketingError		case	ticketGenerationFailed
+enum	Anvil.FraudTicketing.FraudTicketingError		case	emptyChallengeData
+enum	Anvil.FraudTicketing.FraudTicketingError		case	emptyTokenResponse
+enum	Anvil.FraudTicketing.FetchRLTTaskGroupResult			
+enum	Anvil.FraudTicketing.FetchRLTTaskGroupResult		case	success
+enum	Anvil.FraudTicketing.FetchRLTTaskGroupResult		case	failure
+enum	Anvil.FraudTicketing.TicketIssuerType			
+enum	Anvil.FraudTicketing.TicketIssuerType		case	base
+enum	Anvil.FraudTicketing.TicketIssuerType		case	fallback
+enum	Anvil.FraudTicketing.TicketIssuerType		case	default
+struct	Anvil.FraudTicketing			
+struct	Anvil.FraudTicketing		var	issuerFetcher
+struct	Anvil.FraudTicketing		let	onRateLimited
+enum	Anvil.FraudTicketing.FetchRLTResult			
+enum	Anvil.FraudTicketing.FetchRLTResult		case	success
+enum	Anvil.FraudTicketing.FetchRLTResult		case	failed
+struct	Anvil.FraudTicketing.TaskGroupFailure			
+struct	Anvil.FraudTicketing.TaskGroupFailure		let	ticketType
+struct	Anvil.FraudTicketing.TaskGroupFailure		let	subType
+struct	Anvil.FraudTicketing.TaskGroupFailure		let	header
+struct	Anvil.FraudTicketing.TaskGroupFailure		let	fetchTokenRequestId
+struct	Anvil.FraudTicketing.TaskGroupSuccess			
+struct	Anvil.FraudTicketing.TaskGroupSuccess		let	ticketType
+struct	Anvil.FraudTicketing.TaskGroupSuccess		let	subType
+struct	Anvil.FraudTicketing.TaskGroupSuccess		let	header
+struct	Anvil.FraudTicketing.TaskGroupSuccess		let	data
+struct	Anvil.FraudTicketing.TaskGroupSuccess		let	fetcher
+struct	Anvil.FraudTicketing.FetchRLTFailure			
+struct	Anvil.FraudTicketing.FetchRLTFailure		let	ticketType
+struct	Anvil.FraudTicketing.FetchRLTFailure		let	subType
+struct	Anvil.FraudTicketing.FetchRLTFailure		let	fetchTokenRequestId
+struct	Anvil.FraudTicketing.FetchRLTSuccess			
+struct	Anvil.FraudTicketing.FetchRLTSuccess		let	ticketType
+struct	Anvil.FraudTicketing.FetchRLTSuccess		let	subType
+struct	Anvil.FraudTicketing.FetchRLTSuccess		let	token
+enum	Anvil.FraudTicketing.TicketingSubType			
+enum	Anvil.FraudTicketing.TicketingSubType		case	authorization
+enum	Anvil.FraudTicketing.TicketingSubType		case	refund
+enum	Anvil.FraudTicketing.TicketingSubType		case	downgrade
+struct	Anvil.CodeVerifier			
+struct	Anvil.CodeVerifier		let	state
+struct	Anvil.CodeVerifier		let	challenge
+struct	Anvil.CodeVerifier		let	verifier
+struct	Anvil.HTTPClient			
+struct	Anvil.HTTPClient		let	encoder
+struct	Anvil.HTTPClient		let	decoder
+struct	Anvil.HTTPClient		let	session
+struct	Anvil.HTTPClient		let	enableOHTTP
+struct	Anvil.HTTPClient.ErrorResponse.Error			
+struct	Anvil.HTTPClient.ErrorResponse.Error		var	message
+struct	Anvil.HTTPClient.ErrorResponse.Error		var	type
+struct	Anvil.HTTPClient.ErrorResponse.Error		var	code
+struct	Anvil.HTTPClient.ErrorResponse.Error		var	privacyPassRedemptionResponse
+struct	Anvil.HTTPClient.ErrorResponse.Error		var	userFacingLocalizedErrorMessage
+struct	Anvil.HTTPClient.ErrorResponse			
+struct	Anvil.HTTPClient.ErrorResponse		let	error
+struct	Anvil.HTTPClient.PrivacyPassRedemptionResponse			
+struct	Anvil.HTTPClient.PrivacyPassRedemptionResponse		var	refundTokens
+struct	Anvil.HTTPClient.PrivacyPassRedemptionResponse		var	signalToken
+enum	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys			
+enum	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys		case	message
+enum	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys		case	type
+enum	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys		case	code
+enum	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys		case	privacyPassRedemptionResponse
+enum	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys		case	userFacingLocalizedErrorMessage
+enum	Anvil.HTTPClient.ErrorResponse.CodingKeys			
+enum	Anvil.HTTPClient.ErrorResponse.CodingKeys		case	error
+enum	Anvil.HTTPClient.PrivacyPassRedemptionResponse.CodingKeys			
+enum	Anvil.HTTPClient.PrivacyPassRedemptionResponse.CodingKeys		case	refundTokens
+enum	Anvil.HTTPClient.PrivacyPassRedemptionResponse.CodingKeys		case	signalToken
+struct	Anvil.HTTPClient.PrivacyPassRedemptionTokens			
+struct	Anvil.HTTPClient.PrivacyPassRedemptionTokens		var	type
+struct	Anvil.HTTPClient.PrivacyPassRedemptionTokens		var	value
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTokens.CodingKeys			
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTokens.CodingKeys		case	type
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTokens.CodingKeys		case	value
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTypes			
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTypes		case	sessionResponse
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTypes		case	imageRefund
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTypes		case	codeRefund
+enum	Anvil.HTTPClient.PrivacyPassRedemptionTypes		case	fileRefund
+class	Anvil.ImmutableFileHandle			
+class	Anvil.ImmutableFileHandle		let	fileDescriptor
+class	Anvil.ImmutableFileHandle		let	url
+class	Anvil.ImmutableFileHandle		let	metadata
+class	Anvil.BlackPowderInferenceProvider			
+class	Anvil.BlackPowderInferenceProvider		let	wrapped
+class	Anvil.BlackPowderInferenceProvider		var	lazy
+class	Anvil.InferenceProvider			
+class	Anvil.InferenceProvider		var	model
+struct	Anvil.Instrumentation			
+struct	Anvil.Instrumentation		let	requestID
+struct	Anvil.Instrumentation		let	eventReporter
+class	Anvil.JSONSchema			
+class	Anvil.JSONSchema		var	description
+class	Anvil.JSONSchema		var	type
+class	Anvil.JSONSchema		var	properties
+class	Anvil.JSONSchema		var	order
+class	Anvil.JSONSchema		var	required
+class	Anvil.JSONSchema		var	enum
+class	Anvil.JSONSchema		var	items
+class	Anvil.JSONSchema		var	additionalProperties
+class	Anvil.JSONSchema		var	anyOf
+class	Anvil.JSONSchema		var	const
+enum	Anvil.JSONSchema.Type			
+enum	Anvil.JSONSchema.Type		case	union
+enum	Anvil.JSONSchema.Type		case	null
+enum	Anvil.JSONSchema.Type		case	boolean
+enum	Anvil.JSONSchema.Type		case	integer
+enum	Anvil.JSONSchema.Type		case	number
+enum	Anvil.JSONSchema.Type		case	string
+enum	Anvil.JSONSchema.Type		case	array
+enum	Anvil.JSONSchema.Type		case	object
+enum	Anvil.JSONSchema.Type		case	anyOf
+struct	Anvil.JSONSchema.Property			
+struct	Anvil.JSONSchema.Property		let	name
+struct	Anvil.JSONSchema.Property		let	description
+struct	Anvil.JSONSchema.Property		let	schema
+struct	Anvil.JSONSchema.Property		let	optional
+enum	Anvil.JSONSchema.CodingKeys			
+enum	Anvil.JSONSchema.CodingKeys		case	description
+enum	Anvil.JSONSchema.CodingKeys		case	type
+enum	Anvil.JSONSchema.CodingKeys		case	properties
+enum	Anvil.JSONSchema.CodingKeys		case	order
+enum	Anvil.JSONSchema.CodingKeys		case	required
+enum	Anvil.JSONSchema.CodingKeys		case	enum
+enum	Anvil.JSONSchema.CodingKeys		case	items
+enum	Anvil.JSONSchema.CodingKeys		case	additionalProperties
+enum	Anvil.JSONSchema.CodingKeys		case	anyOf
+enum	Anvil.JSONSchema.CodingKeys		case	const
+struct	Anvil.OpenAIAuthenticator			
+struct	Anvil.OpenAIAuthenticator		let	impl
+enum	Anvil.OpenAIAuthenticator.SignInFailure			
+enum	Anvil.OpenAIAuthenticator.SignInFailure		case	failedToParseURL
+enum	Anvil.OpenAIAuthenticator.SignInFailure		case	failedToFetchCredentials
+enum	Anvil.OpenAIAuthenticator.SignInFailure		case	failedToFetchUserInfo
+enum	Anvil.OpenAIAuthenticator.SignInFailure		case	failedToStoreCredentials
+enum	Anvil.OpenAIAuthenticator.RefreshBillingPlanFailure			
+enum	Anvil.OpenAIAuthenticator.RefreshBillingPlanFailure		case	failedToAccessKeychain
+enum	Anvil.OpenAIAuthenticator.RefreshBillingPlanFailure		case	notSignedIn
+enum	Anvil.OpenAIAuthenticator.RefreshBillingPlanFailure		case	failedToFetchBillingPlan
+enum	Anvil.OpenAIAuthenticator.SignOutFailure			
+enum	Anvil.OpenAIAuthenticator.SignOutFailure		case	failedToAccessKeychain
+struct	Anvil.OpenAIAuthenticator.Credentials			
+struct	Anvil.OpenAIAuthenticator.Credentials		var	userName
+struct	Anvil.OpenAIAuthenticator.Credentials		var	email
+struct	Anvil.OpenAIAuthenticator.Credentials		var	billingPlan
+struct	Anvil.OpenAIAuthenticator.Credentials		var	expirationDate
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets			
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets		let	throttled
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets		var	codeInterpreterCalls
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets		var	fileUploads
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets		var	imageGeneratorCalls
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets		var	responses
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets.Limits			
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets.Limits		var	usage
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets.Limits		var	limit
+struct	Anvil.OpenAIAuthenticator.RateLimitBudgets.Limits		var	resetsAt
+struct	Anvil.OpenAIAuthenticator.BillingPlan			
+struct	Anvil.OpenAIAuthenticator.BillingPlan		let	category
+struct	Anvil.OpenAIAuthenticator.BillingPlan		let	planName
+struct	Anvil.OpenAIAuthenticator.BillingPlan		let	workspaceID
+enum	Anvil.OpenAIAuthenticator.BillingPlan.Category			
+enum	Anvil.OpenAIAuthenticator.BillingPlan.Category		case	free
+enum	Anvil.OpenAIAuthenticator.BillingPlan.Category		case	paid
+struct	Anvil.OpenAIAuthenticator.Session			
+struct	Anvil.OpenAIAuthenticator.Session		let	sessionImpl
+struct	Anvil.OpenAIAuthenticator.Session		let	authorizationURL
+struct	Anvil.OpenAIAuthenticator.Session		let	openAIBundleID
+struct	Anvil.OpenAIAuthenticator.Session		let	openAITeamID
+struct	Anvil.Metric			
+struct	Anvil.Metric		var	firstTokenTimeInSeconds
+struct	Anvil.Metric		var	lastTokenTimeInSeconds
+struct	Anvil.Metric		var	totalLatencyInSeconds
+struct	Anvil.Metric		var	tokensPerSecond
+struct	Anvil.Metric		var	tokenCount
+struct	Anvil.Metric		var	userAccountType
+struct	Anvil.OpenAIAuthenticationService			
+struct	Anvil.OpenAIAuthenticationService		let	overrides
+struct	Anvil.OpenAIAuthenticationService		let	provider
+struct	Anvil.OpenAIAuthenticationService		let	httpClient
+struct	Anvil.OpenAIAuthenticationService		let	partnerBundleID
+struct	Anvil.OpenAIAuthenticationService		let	partnerTeamID
+struct	Anvil.OpenAIAuthenticationService		let	rateLimitingEnabled
+struct	Anvil.OpenAIAuthenticationService		let	redirectURI
+struct	Anvil.OpenAIAuthenticationService		let	anonymousRateLimitTokenType
+struct	Anvil.Overrides.ChatGPTXcode			
+struct	Anvil.Overrides.ChatGPTXcode		let	storeName
+struct	Anvil.Overrides.ChatGPTXcode		let	defaultEnvironmentAppIDs
+struct	Anvil.Overrides.ChatGPTXcode		let	runtimeOverridingValues
+struct	Anvil.Overrides.BlackPowder			
+struct	Anvil.Overrides.BlackPowder		let	storeName
+struct	Anvil.Overrides.BlackPowder		let	defaultEnvironmentAppIDs
+class	Anvil.Session			
+class	Anvil.Session		let	groupID
+class	Anvil.Session		let	localID
+class	Anvil.Session		let	userID
+class	Anvil.Session		let	clientID
+class	Anvil.Session		let	provider
+class	Anvil.Session		var	authenticator
+class	Anvil.Session		let	client
+class	Anvil.Session		let	registry
+class	Anvil.Session		let	sessionExpired
+class	Anvil.Session.ResponseInfo			
+class	Anvil.Session.ResponseInfo		var	id
+class	Anvil.Session.ResponseInfo		var	candidateIndexToID
+class	Anvil.Session.ResponseInfo		var	toolIndexToID
+class	Anvil.Session.ResponseInfo		var	toolIndexToFunction
+class	Anvil.Session.ResponseInfo		var	signposter
+class	Anvil.Session.ResponseInfo		var	signposts
+class	Anvil.SessionRegistry			
+class	Anvil.SessionRegistry		let	container
+class	Anvil.SessionRegistry		let	context
+class	Anvil.Entry			
+class	Anvil.Entry		var	_groupID
+class	Anvil.Entry		var	_localID
+class	Anvil.Entry		var	_userID
+class	Anvil.Entry		var	_remoteID
+class	Anvil.Entry		var	_credentialsID
+class	Anvil.Entry		var	_auditID
+class	Anvil.Entry		var	_previousCandidateID
+class	Anvil.Entry		var	_attachedDocuments
+class	Anvil.Entry		var	_timeToLive
+class	Anvil.Entry		var	_createdDate
+class	Anvil.Entry		var	_updatedDate
+class	Anvil.Entry		var	_
+class	Anvil.Entry		let	_
+struct	Anvil.Entry._SwiftDataNoType			
+struct	Anvil.SessionRegistry.SessionInfo			
+struct	Anvil.SessionRegistry.SessionInfo		var	localID
+struct	Anvil.SessionRegistry.SessionInfo		var	remoteID
+struct	Anvil.SessionRegistry.SessionInfo		var	userID
+struct	Anvil.SessionRegistry.SessionInfo		var	credentialsID
+struct	Anvil.SessionRegistry.SessionInfo		var	auditID
+struct	Anvil.SessionRegistry.SessionInfo		var	expirationDate
+struct	Anvil.Entry.AttachedDocument			
+struct	Anvil.Entry.AttachedDocument		var	id
+struct	Anvil.Entry.AttachedDocument		var	url
+enum	Anvil.Entry.AttachedDocument.CodingKeys			
+enum	Anvil.Entry.AttachedDocument.CodingKeys		case	id
+enum	Anvil.Entry.AttachedDocument.CodingKeys		case	url
+struct	Anvil.Telemetry			
+enum	Anvil.Telemetry.TypeName			
+enum	Anvil.Telemetry.TypeName		case	metaData
+struct	Anvil.Telemetry.HTTPStatusEvent			
+struct	Anvil.Telemetry.HTTPStatusEvent		let	partnerIdentifier
+struct	Anvil.Telemetry.HTTPStatusEvent		let	useCaseIdentifier
+struct	Anvil.Telemetry.HTTPStatusEvent		let	statusCode
+struct	Anvil.Telemetry.HTTPStatusEvent		let	errorCode
+struct	Anvil.Telemetry.HTTPStatusEvent		let	eventName
+struct	Anvil.Telemetry.MetaData			
+struct	Anvil.Telemetry.MetaData		let	partnerIdentifier
+struct	Anvil.Telemetry.MetaData		let	useCaseIdentifier
+enum	Anvil.Telemetry.MetaData.CodingKeys			
+enum	Anvil.Telemetry.MetaData.CodingKeys		case	partnerIdentifier
+enum	Anvil.Telemetry.MetaData.CodingKeys		case	useCaseIdentifier
+struct	Anvil.TransformUtils			
+class	Anvil.Vault.Value<A	Swift.Equatable>		
+class	Anvil.Vault.Value<A	Swift.Equatable>	let	key
+class	Anvil.Vault.Value<A	Swift.Equatable>	let	accessGroup
+class	Anvil.Vault.Value<A	Swift.Equatable>	let	store
+class	Anvil.Vault.Value<A	Swift.Equatable>	let	encode
+class	Anvil.Vault.Value<A	Swift.Equatable>	let	decode
+class	Anvil.Vault.Value<A	Swift.Equatable>	let	log
+class	Anvil.InsecureInMemoryStore			
+class	Anvil.InsecureInMemoryStore		var	values
+struct	Anvil.InsecureInMemoryStore.QualifiedKey			
+struct	Anvil.InsecureInMemoryStore.QualifiedKey		var	accessGroup
+struct	Anvil.InsecureInMemoryStore.QualifiedKey		var	key
+enum	Anvil.Vault.SecurityLevel			
+enum	Anvil.Vault.SecurityLevel		case	classBValueAvailableAfterFirstUnlock
+enum	Anvil.Vault.SecurityLevel		case	classBValueAvailableAfterFirstUnlockThisDeviceOnly
+enum	Anvil.Vault.SecurityLevel		case	classAValueAvailableWhenUnlocked
+enum	Anvil.Vault.SecurityLevel		case	classAValueAvailableWhenUnlockedThisDeviceOnly
+struct	Anvil.UserDefaultsValueStore			
+struct	Anvil.UserDefaultsValueStore		let	suite
+struct	Anvil.UserDefaultsValueStore		let	log
+struct	Anvil.ManagedKeychainValueStore			
+struct	Anvil.ManagedKeychainValueStore		let	client
+struct	Anvil.ManagedKeychainValueStore		let	accessGroup
+struct	Anvil.ManagedKeychainValueStore		let	securityLevel
+struct	Anvil.ManagedKeychainValueStore		let	auditID
+struct	Anvil.Vault			
+struct	Anvil.Vault		let	accessGroup
+struct	Anvil.Vault		let	store
+struct	Anvil.Vault		let	log
+struct	Anvil.ChatChunk.RateLimits.Limits			
+struct	Anvil.ChatChunk.RateLimits.Limits		var	limit
+struct	Anvil.ChatChunk.RateLimits.Limits		var	resetsAt
+struct	Anvil.ChatChunk.RateLimits.Limits		var	usage
+enum	Anvil.ChatChunk			
+enum	Anvil.ChatChunk		case	sessionCreated
+enum	Anvil.ChatChunk		case	sessionFileUploadCompleted
+enum	Anvil.ChatChunk		case	sessionResponseCreated
+enum	Anvil.ChatChunk		case	sessionResponseNoticesUpdated
+enum	Anvil.ChatChunk		case	sessionResponseDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesAdded
+enum	Anvil.ChatChunk		case	sessionResponseChoicesInProgress
+enum	Anvil.ChatChunk		case	sessionResponseChoicesCompleted
+enum	Anvil.ChatChunk		case	sessionResponseChoicesIncomplete
+enum	Anvil.ChatChunk		case	sessionResponseChoicesDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsAdded
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsMessageContentAdded
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsMessageContentDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsMessageContentTextValueDelta
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsMessageContentTextValueDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsMessageContentTextAnnotationsAdded
+enum	Anvil.ChatChunk		case	sessionResponseChiocesItemsMessageContentRefusalDelta
+enum	Anvil.ChatChunk		case	sessionResponseChiocesItemsMessageContentRefusalDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFunctionCallArgumentsDelta
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFunctionCallArgumentsDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsImageGeneratorCallInProgress
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsImageGeneratorCallPromptDelta
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsImageGeneratorCallPromptDone
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsImageGeneratorCallGenerating
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsImageGeneratorCallImageAdded
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsImageGeneratorCallCompleted
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileGeneratorCallInProgress
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileGeneratorCallGenerating
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileGeneratorCallFileAdded
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileGeneratorCallCompleted
+enum	Anvil.ChatChunk		case	sessionResponsChoicesItemsBrowserCallInProgress
+enum	Anvil.ChatChunk		case	sessionRateLimitsUpdated
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileSearchCallInProgress
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileSearchCallCompleted
+enum	Anvil.ChatChunk		case	sessionResponseChoicesItemsFileSearchCallFailed
+enum	Anvil.ChatChunk		case	sessionResponsChoicesItemsBrowserCallStepsAdded
+enum	Anvil.ChatChunk		case	sessionResponsChoicesItemsBrowserCallStepSearchInProgress
+enum	Anvil.ChatChunk		case	sessionResponsChoicesItemsBrowserCallStepSearchSearching
+struct	Anvil.ChatChunk.FileGeneratorCallFileAdded			
+struct	Anvil.ChatChunk.FileGeneratorCallFileAdded		var	choiceIndex
+struct	Anvil.ChatChunk.FileGeneratorCallFileAdded		var	itemIndex
+struct	Anvil.ChatChunk.FileGeneratorCallFileAdded		var	index
+struct	Anvil.ChatChunk.FileGeneratorCallFileAdded		var	file
+struct	Anvil.FileGeneratorCall.File			
+struct	Anvil.FileGeneratorCall.File		var	url
+struct	Anvil.ChatChunk.ImageGeneratorCallImageAdded			
+struct	Anvil.ChatChunk.ImageGeneratorCallImageAdded		var	choiceIndex
+struct	Anvil.ChatChunk.ImageGeneratorCallImageAdded		var	itemIndex
+struct	Anvil.ChatChunk.ImageGeneratorCallImageAdded		var	index
+struct	Anvil.ChatChunk.ImageGeneratorCallImageAdded		var	image
+struct	Anvil.ImageGeneratorCall.Image			
+struct	Anvil.ImageGeneratorCall.Image		var	url
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDone			
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDone		var	choiceIndex
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDone		var	itemIndex
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDone		var	prompt
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDelta			
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDelta		var	choiceIndex
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDelta		var	itemIndex
+struct	Anvil.ChatChunk.ImageGeneratorCallPromptDelta		var	delta
+struct	Anvil.ChatChunk.ChoiceItemChange			
+struct	Anvil.ChatChunk.ChoiceItemChange		var	choiceIndex
+struct	Anvil.ChatChunk.ChoiceItemChange		var	itemIndex
+struct	Anvil.ChatChunk.ChoiceItemChange		var	item
+struct	Anvil.ChatChunk.FunctionCallDone			
+struct	Anvil.ChatChunk.FunctionCallDone		var	choiceIndex
+struct	Anvil.ChatChunk.FunctionCallDone		var	itemIndex
+struct	Anvil.ChatChunk.FunctionCallDone		var	arguments
+struct	Anvil.ChatChunk.FunctionCallDelta			
+struct	Anvil.ChatChunk.FunctionCallDelta		var	choiceIndex
+struct	Anvil.ChatChunk.FunctionCallDelta		var	itemIndex
+struct	Anvil.ChatChunk.FunctionCallDelta		var	delta
+struct	Anvil.ChatChunk.RefusalValueDone			
+struct	Anvil.ChatChunk.RefusalValueDone		var	choiceIndex
+struct	Anvil.ChatChunk.RefusalValueDone		var	itemIndex
+struct	Anvil.ChatChunk.RefusalValueDone		var	contentIndex
+struct	Anvil.ChatChunk.RefusalValueDone		var	refusal
+struct	Anvil.ChatChunk.TextValueAnnotation			
+struct	Anvil.ChatChunk.TextValueAnnotation		var	choiceIndex
+struct	Anvil.ChatChunk.TextValueAnnotation		var	itemIndex
+struct	Anvil.ChatChunk.TextValueAnnotation		var	contentIndex
+struct	Anvil.ChatChunk.TextValueAnnotation		var	index
+struct	Anvil.ChatChunk.TextValueAnnotation		var	annotation
+struct	Anvil.TextAnnotation			
+struct	Anvil.TextAnnotation		var	type
+enum	Anvil.TextAnnotation.Type			
+enum	Anvil.TextAnnotation.Type		case	urlCitation
+enum	Anvil.TextAnnotation.Type		case	fileCitation
+struct	Anvil.TextAnnotation.FileCitation			
+struct	Anvil.TextAnnotation.FileCitation		var	fileID
+struct	Anvil.TextAnnotation.FileCitation		var	index
+struct	Anvil.TextAnnotation.URLCitation			
+struct	Anvil.TextAnnotation.URLCitation		var	url
+struct	Anvil.TextAnnotation.URLCitation		var	title
+struct	Anvil.TextAnnotation.URLCitation		var	index
+struct	Anvil.ChatChunk.TextValueDone			
+struct	Anvil.ChatChunk.TextValueDone		var	choiceIndex
+struct	Anvil.ChatChunk.TextValueDone		var	itemIndex
+struct	Anvil.ChatChunk.TextValueDone		var	contentIndex
+struct	Anvil.ChatChunk.TextValueDone		var	value
+struct	Anvil.ChatChunk.TextValueDelta			
+struct	Anvil.ChatChunk.TextValueDelta		var	choiceIndex
+struct	Anvil.ChatChunk.TextValueDelta		var	itemIndex
+struct	Anvil.ChatChunk.TextValueDelta		var	contentIndex
+struct	Anvil.ChatChunk.TextValueDelta		var	delta
+struct	Anvil.ChatChunk.ChoiceItemMessageContent			
+struct	Anvil.ChatChunk.ChoiceItemMessageContent		var	choiceIndex
+struct	Anvil.ChatChunk.ChoiceItemMessageContent		var	itemIndex
+struct	Anvil.ChatChunk.ChoiceItemMessageContent		var	index
+struct	Anvil.ChatChunk.ChoiceItemMessageContent		var	content
+enum	Anvil.MessageContent			
+enum	Anvil.MessageContent		case	text
+enum	Anvil.MessageContent		case	imageURL
+enum	Anvil.MessageContent		case	imageGeneratorImage
+enum	Anvil.MessageContent		case	fileGeneratorFile
+enum	Anvil.MessageContent		case	refusal
+struct	Anvil.FileGeneratorFile			
+struct	Anvil.FileGeneratorFile		var	url
+struct	Anvil.FileGeneratorFile		var	name
+struct	Anvil.FileGeneratorFile		var	mimeType
+struct	Anvil.FileGeneratorFile		var	size
+struct	Anvil.ImageGeneratorImage			
+struct	Anvil.ImageGeneratorImage		var	prompt
+struct	Anvil.ImageGeneratorImage		var	height
+struct	Anvil.ImageGeneratorImage		var	width
+struct	Anvil.ImageGeneratorImage		var	url
+struct	Anvil.ImageURLItem			
+struct	Anvil.ImageURLItem		var	url
+struct	Anvil.ChatChunk.ChoiceItem			
+struct	Anvil.ChatChunk.ChoiceItem		var	choiceIndex
+struct	Anvil.ChatChunk.ChoiceItem		var	index
+struct	Anvil.ChatChunk.ChoiceItem		var	item
+struct	Anvil.ChatChunk.ChoiceResource			
+struct	Anvil.ChatChunk.ChoiceResource		var	index
+struct	Anvil.ChatChunk.ChoiceResource		var	choice
+struct	Anvil.ChatChunk.Choice			
+struct	Anvil.ChatChunk.Choice		var	id
+struct	Anvil.ChatChunk.Choice		var	status
+struct	Anvil.ChatChunk.Choice		var	output
+struct	Anvil.ChatChunk.Choice		var	incompleteDetails
+struct	Anvil.ChatChunk.Choice		var	continueURL
+struct	Anvil.ChatChunk.IncompleteDetail			
+struct	Anvil.ChatChunk.IncompleteDetail		let	reason
+struct	Anvil.ChatChunk.IncompleteDetail		let	userFacingLocalizedErrorMessage
+enum	Anvil.InputItem			
+enum	Anvil.InputItem		case	message
+enum	Anvil.InputItem		case	functionCall
+enum	Anvil.InputItem		case	imageGeneratorCall
+enum	Anvil.InputItem		case	fileGeneratorCall
+enum	Anvil.InputItem		case	browserCall
+enum	Anvil.InputItem		case	fileSearchCall
+enum	Anvil.ChatChunk.Choice.Status			
+enum	Anvil.ChatChunk.Choice.Status		case	completed
+enum	Anvil.ChatChunk.Choice.Status		case	incomplete
+enum	Anvil.ChatChunk.Choice.Status		case	inprogress
+struct	Anvil.ChatChunk.Notice			
+struct	Anvil.ChatChunk.Notice		var	id
+struct	Anvil.ChatChunk.Notice		var	message
+struct	Anvil.ChatChunk.ResponseResource			
+struct	Anvil.ChatChunk.ResponseResource		var	id
+struct	Anvil.ChatChunk.ResponseResource		var	sessionID
+struct	Anvil.ChatChunk.ResponseResource		var	responseConfigurationID
+struct	Anvil.ChatChunk.ResponseResource		var	model
+struct	Anvil.ChatChunk.ResponseResource		var	instructions
+struct	Anvil.ChatChunk.ResponseResource		var	choices
+struct	Anvil.ChatChunk.ResponseResource		var	notices
+struct	Anvil.ChatChunk.ResponseResource		var	privacyPassRedemptionResponse
+struct	Anvil.ChatChunk.FileUploadResponse			
+struct	Anvil.ChatChunk.FileUploadResponse		var	id
+struct	Anvil.ChatChunk.FileUploadResponse		var	createdAt
+struct	Anvil.ChatChunk.FileUploadResponse		var	completedAt
+struct	Anvil.ChatChunk.FileUploadResponse		var	status
+struct	Anvil.ChatChunk.FileUploadResponse		var	mimeType
+struct	Anvil.ChatChunk.FileUploadResponse		var	name
+struct	Anvil.ChatChunk.FileUploadResponse		var	size
+enum	Anvil.ChatChunk.FileUploadResponse.Status			
+enum	Anvil.ChatChunk.FileUploadResponse.Status		case	completed
+enum	Anvil.ChatChunk.FileUploadResponse.Status		case	processing
+struct	Anvil.CreateSessionResponse			
+struct	Anvil.CreateSessionResponse		var	id
+struct	Anvil.CreateSessionResponse		var	createdAt
+struct	Anvil.CreateSessionResponse		var	lastActiveAt
+struct	Anvil.CreateSessionResponse		var	expiresAt
+struct	Anvil.CreateSessionResponse		var	expiresAfter
+enum	Anvil.SessionExpirationOption			
+enum	Anvil.SessionExpirationOption		case	expiration
+enum	Anvil.SessionExpirationOption		case	never
+struct	Anvil.ChatChunk.RateLimits			
+struct	Anvil.ChatChunk.RateLimits		var	codeInterpreterCalls
+struct	Anvil.ChatChunk.RateLimits		var	fileUploads
+struct	Anvil.ChatChunk.RateLimits		var	imageGeneratorCalls
+struct	Anvil.ChatChunk.RateLimits		var	responses
+struct	Anvil.ExternalModelResource			
+struct	Anvil.ExternalModelResource		let	id
+struct	Anvil.ExternalModelResource		let	object
+struct	Anvil.ExternalModelResource		let	name
+struct	Anvil.ExternalModelResource		let	displayName
+struct	Anvil.ExternalModelResource		let	version
+struct	Anvil.ExternalModelResource		let	description
+struct	Anvil.ExternalModelResource		let	contextWindow
+struct	Anvil.ExternalModelResource		let	maxOutputTokens
+struct	Anvil.ExternalModelResource		let	category
+struct	Anvil.ExternalModelResource		let	isFlagship
+struct	Anvil.ExternalModelResource		let	isUserSelectable
+struct	Anvil.ExternalModelResource		let	reasoningLevels
+struct	Anvil.ExternalModelResource		let	releaseLabel
+struct	Anvil.ListModelsResponse			
+struct	Anvil.ListModelsResponse		let	object
+struct	Anvil.ListModelsResponse		let	data
+struct	Anvil.ListModelsResponse		let	firstId
+struct	Anvil.ListModelsResponse		let	lastId
+struct	Anvil.ListModelsResponse		let	hasMore
+struct	Anvil.SourceRequest			
+struct	Anvil.SourceRequest		var	source
+enum	Anvil.SourceInfo			
+enum	Anvil.SourceInfo		case	website
+enum	Anvil.SourceInfo		case	file
+struct	Anvil.TwoPhaseUploadDocumentRequest			
+struct	Anvil.TwoPhaseUploadDocumentRequest		var	name
+struct	Anvil.TwoPhaseUploadDocumentRequest		var	size
+struct	Anvil.TwoPhaseUploadDocumentRequest		var	mimeType
+struct	Anvil.TwoPhaseUploadDocumentRequest		var	source
+struct	Anvil.TwoPhaseUploadDocumentResponse			
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	id
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	object
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	createdAt
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	status
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	name
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	size
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	mimeType
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	uploadURL
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	sessionID
+struct	Anvil.TwoPhaseUploadDocumentResponse		var	session
+struct	Anvil.UploadDocumentResponse			
+struct	Anvil.UploadDocumentResponse		var	id
+struct	Anvil.UploadDocumentResponse		var	sessionID
+struct	Anvil.UploadDocumentResponse		var	session
+struct	Anvil.DeleteDocumentResponse			
+struct	Anvil.PromptConfigurationGroup.VariableBinding			
+struct	Anvil.PromptConfigurationGroup.VariableBinding		var	name
+struct	Anvil.PromptConfigurationGroup.VariableBinding		var	value
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride			
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	name
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	type
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	optionsOverrides
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	allowsMultipleBoundValues
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	required
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	defaultValue
+struct	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride		var	allowOverrides
+enum	Anvil.PromptConfigurationGroup.Value			
+enum	Anvil.PromptConfigurationGroup.Value		case	bool
+enum	Anvil.PromptConfigurationGroup.Value		case	integer
+enum	Anvil.PromptConfigurationGroup.Value		case	string
+enum	Anvil.PromptConfigurationGroup.Value		case	strings
+struct	Anvil.FunctionCallOutput			
+struct	Anvil.FunctionCallOutput		var	id
+struct	Anvil.FunctionCallOutput		var	output
+enum	Anvil.ToolingDescription			
+enum	Anvil.ToolingDescription		case	function
+enum	Anvil.ToolingDescription		case	imageGenerationTool
+enum	Anvil.ToolingDescription		case	browser
+enum	Anvil.ToolingDescription		case	fileSearch
+enum	Anvil.ToolingDescription		case	imageGenerator
+enum	Anvil.ToolingDescription		case	fileGenerationTool
+enum	Anvil.InputHint			
+enum	Anvil.InputHint		case	knowledge
+enum	Anvil.InputHint		case	imagePlayground
+enum	Anvil.InputHint		case	shortcutsAskLLM
+struct	Anvil.PromptConfigurationGroup			
+struct	Anvil.PromptConfigurationGroup		var	responseConfigurationGroupID
+struct	Anvil.PromptConfigurationGroup		var	query
+struct	Anvil.PromptConfigurationGroup		var	templateVariables
+struct	Anvil.PromptConfigurationGroup		var	templateVariableOverrides
+struct	Anvil.ResponseFormat			
+struct	Anvil.ResponseFormat		var	type
+struct	Anvil.ResponseFormat		var	jsonSchema
+enum	Anvil.ChatToolChoice			
+enum	Anvil.ChatToolChoice		case	function
+enum	Anvil.ChatToolChoice		case	none
+enum	Anvil.ChatToolChoice		case	auto
+enum	Anvil.ChatToolChoice		case	required
+struct	Anvil.ChatRequest			
+struct	Anvil.ChatRequest		var	previousChoiceID
+struct	Anvil.ChatRequest		var	configuration
+struct	Anvil.ChatRequest		var	model
+struct	Anvil.ChatRequest		var	instructions
+struct	Anvil.ChatRequest		var	input
+struct	Anvil.ChatRequest		var	inputHint
+struct	Anvil.ChatRequest		var	clientTools
+struct	Anvil.ChatRequest		var	serverTools
+struct	Anvil.ChatRequest		var	toolChoice
+struct	Anvil.ChatRequest		var	toolCallOutputs
+struct	Anvil.ChatRequest		var	temperature
+struct	Anvil.ChatRequest		var	prediction
+struct	Anvil.ChatRequest		var	responseFormat
+struct	Anvil.ChatRequest		var	stream
+struct	Anvil.ChatRequest		var	include
+struct	Anvil.ChatRequest		var	reasoning
+enum	Anvil.ChatChunk.RateLimits.CodingKeys			
+enum	Anvil.ChatChunk.RateLimits.CodingKeys		case	codeInterpreterCalls
+enum	Anvil.ChatChunk.RateLimits.CodingKeys		case	fileUploads
+enum	Anvil.ChatChunk.RateLimits.CodingKeys		case	imageGeneratorCalls
+enum	Anvil.ChatChunk.RateLimits.CodingKeys		case	responses
+enum	Anvil.CreateSessionResponse.CodingKeys			
+enum	Anvil.CreateSessionResponse.CodingKeys		case	id
+enum	Anvil.CreateSessionResponse.CodingKeys		case	createdAt
+enum	Anvil.CreateSessionResponse.CodingKeys		case	lastActiveAt
+enum	Anvil.CreateSessionResponse.CodingKeys		case	expiresAt
+enum	Anvil.CreateSessionResponse.CodingKeys		case	expiresAfter
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys			
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	id
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	createdAt
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	completedAt
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	status
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	mimeType
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	name
+enum	Anvil.ChatChunk.FileUploadResponse.CodingKeys		case	size
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys			
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	id
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	sessionID
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	responseConfigurationID
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	model
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	choices
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	notices
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	privacyPassRedemptionResponse
+enum	Anvil.ChatChunk.ResponseResource.CodingKeys		case	instructions
+enum	Anvil.ChatChunk.Notice.CodingKeys			
+enum	Anvil.ChatChunk.Notice.CodingKeys		case	id
+enum	Anvil.ChatChunk.Notice.CodingKeys		case	message
+enum	Anvil.ChatChunk.IncompleteDetail.CodingKeys			
+enum	Anvil.ChatChunk.IncompleteDetail.CodingKeys		case	reason
+enum	Anvil.ChatChunk.IncompleteDetail.CodingKeys		case	userFacingLocalizedErrorMessage
+enum	Anvil.ChatChunk.Choice.CodingKeys			
+enum	Anvil.ChatChunk.Choice.CodingKeys		case	id
+enum	Anvil.ChatChunk.Choice.CodingKeys		case	status
+enum	Anvil.ChatChunk.Choice.CodingKeys		case	output
+enum	Anvil.ChatChunk.Choice.CodingKeys		case	incompleteDetails
+enum	Anvil.ChatChunk.Choice.CodingKeys		case	continueURL
+enum	Anvil.ChatChunk.ChoiceResource.CodingKeys			
+enum	Anvil.ChatChunk.ChoiceResource.CodingKeys		case	index
+enum	Anvil.ChatChunk.ChoiceResource.CodingKeys		case	choice
+enum	Anvil.ChatChunk.ChoiceItem.CodingKeys			
+enum	Anvil.ChatChunk.ChoiceItem.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.ChoiceItem.CodingKeys		case	index
+enum	Anvil.ChatChunk.ChoiceItem.CodingKeys		case	item
+enum	Anvil.ImageURLItem.CodingKeys			
+enum	Anvil.ImageURLItem.CodingKeys		case	url
+enum	Anvil.ImageGeneratorImage.CodingKeys			
+enum	Anvil.ImageGeneratorImage.CodingKeys		case	prompt
+enum	Anvil.ImageGeneratorImage.CodingKeys		case	height
+enum	Anvil.ImageGeneratorImage.CodingKeys		case	width
+enum	Anvil.ImageGeneratorImage.CodingKeys		case	url
+enum	Anvil.FileGeneratorFile.CodingKeys			
+enum	Anvil.FileGeneratorFile.CodingKeys		case	url
+enum	Anvil.FileGeneratorFile.CodingKeys		case	name
+enum	Anvil.FileGeneratorFile.CodingKeys		case	mimeType
+enum	Anvil.FileGeneratorFile.CodingKeys		case	size
+struct	Anvil.TextItem			
+struct	Anvil.TextItem		var	value
+struct	Anvil.TextItem		var	annotations
+enum	Anvil.ChatChunk.ChoiceItemMessageContent.CodingKeys			
+enum	Anvil.ChatChunk.ChoiceItemMessageContent.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.ChoiceItemMessageContent.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.ChoiceItemMessageContent.CodingKeys		case	index
+enum	Anvil.ChatChunk.ChoiceItemMessageContent.CodingKeys		case	content
+enum	Anvil.ChatChunk.TextValueDelta.CodingKeys			
+enum	Anvil.ChatChunk.TextValueDelta.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.TextValueDelta.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.TextValueDelta.CodingKeys		case	contentIndex
+enum	Anvil.ChatChunk.TextValueDelta.CodingKeys		case	delta
+enum	Anvil.ChatChunk.TextValueDone.CodingKeys			
+enum	Anvil.ChatChunk.TextValueDone.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.TextValueDone.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.TextValueDone.CodingKeys		case	contentIndex
+enum	Anvil.ChatChunk.TextValueDone.CodingKeys		case	value
+enum	Anvil.TextAnnotation.URLCitation.CodingKeys			
+enum	Anvil.TextAnnotation.URLCitation.CodingKeys		case	url
+enum	Anvil.TextAnnotation.URLCitation.CodingKeys		case	title
+enum	Anvil.TextAnnotation.URLCitation.CodingKeys		case	index
+enum	Anvil.TextAnnotation.FileCitation.CodingKeys			
+enum	Anvil.TextAnnotation.FileCitation.CodingKeys		case	fileID
+enum	Anvil.TextAnnotation.FileCitation.CodingKeys		case	index
+enum	Anvil.TextAnnotation.Type.CodingKeys			
+enum	Anvil.TextAnnotation.Type.CodingKeys		case	urlCitation
+enum	Anvil.TextAnnotation.Type.CodingKeys		case	fileCitation
+enum	Anvil.TextAnnotation.Type.UrlCitationCodingKeys			
+enum	Anvil.TextAnnotation.Type.UrlCitationCodingKeys		case	_0
+enum	Anvil.TextAnnotation.Type.FileCitationCodingKeys			
+enum	Anvil.TextAnnotation.Type.FileCitationCodingKeys		case	_0
+enum	Anvil.TextAnnotation.FieldKeys			
+enum	Anvil.TextAnnotation.FieldKeys		case	type
+enum	Anvil.TextAnnotation.FieldKeys		case	urlCitation
+enum	Anvil.TextAnnotation.FieldKeys		case	fileCitation
+enum	Anvil.ChatChunk.TextValueAnnotation.CodingKeys			
+enum	Anvil.ChatChunk.TextValueAnnotation.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.TextValueAnnotation.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.TextValueAnnotation.CodingKeys		case	contentIndex
+enum	Anvil.ChatChunk.TextValueAnnotation.CodingKeys		case	index
+enum	Anvil.ChatChunk.TextValueAnnotation.CodingKeys		case	annotation
+enum	Anvil.ChatChunk.RefusalValueDone.CodingKeys			
+enum	Anvil.ChatChunk.RefusalValueDone.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.RefusalValueDone.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.RefusalValueDone.CodingKeys		case	contentIndex
+enum	Anvil.ChatChunk.RefusalValueDone.CodingKeys		case	refusal
+enum	Anvil.ChatChunk.FunctionCallDelta.CodingKeys			
+enum	Anvil.ChatChunk.FunctionCallDelta.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.FunctionCallDelta.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.FunctionCallDelta.CodingKeys		case	delta
+enum	Anvil.ChatChunk.FunctionCallDone.CodingKeys			
+enum	Anvil.ChatChunk.FunctionCallDone.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.FunctionCallDone.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.FunctionCallDone.CodingKeys		case	arguments
+enum	Anvil.ChatChunk.ChoiceItemChange.CodingKeys			
+enum	Anvil.ChatChunk.ChoiceItemChange.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.ChoiceItemChange.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.ChoiceItemChange.CodingKeys		case	item
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDelta.CodingKeys			
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDelta.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDelta.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDelta.CodingKeys		case	delta
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDone.CodingKeys			
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDone.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDone.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.ImageGeneratorCallPromptDone.CodingKeys		case	prompt
+enum	Anvil.ImageGeneratorCall.Image.CodingKeys			
+enum	Anvil.ImageGeneratorCall.Image.CodingKeys		case	url
+enum	Anvil.ChatChunk.ImageGeneratorCallImageAdded.CodingKeys			
+enum	Anvil.ChatChunk.ImageGeneratorCallImageAdded.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.ImageGeneratorCallImageAdded.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.ImageGeneratorCallImageAdded.CodingKeys		case	index
+enum	Anvil.ChatChunk.ImageGeneratorCallImageAdded.CodingKeys		case	image
+enum	Anvil.FileGeneratorCall.File.CodingKeys			
+enum	Anvil.FileGeneratorCall.File.CodingKeys		case	url
+enum	Anvil.ChatChunk.FileGeneratorCallFileAdded.CodingKeys			
+enum	Anvil.ChatChunk.FileGeneratorCallFileAdded.CodingKeys		case	choiceIndex
+enum	Anvil.ChatChunk.FileGeneratorCallFileAdded.CodingKeys		case	itemIndex
+enum	Anvil.ChatChunk.FileGeneratorCallFileAdded.CodingKeys		case	index
+enum	Anvil.ChatChunk.FileGeneratorCallFileAdded.CodingKeys		case	file
+struct	Anvil.DiscriminatorKey			
+struct	Anvil.DiscriminatorKey		var	stringValue
+struct	Anvil.DiscriminatorKey		var	intValue
+enum	Anvil.ChatChunk.RateLimits.Limits.CodingKeys			
+enum	Anvil.ChatChunk.RateLimits.Limits.CodingKeys		case	limit
+enum	Anvil.ChatChunk.RateLimits.Limits.CodingKeys		case	resetsAt
+enum	Anvil.ChatChunk.RateLimits.Limits.CodingKeys		case	usage
+struct	Anvil.BrowserCallStepUpdate			
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason			
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason		case	unknown
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason		case	moderation
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason		case	other
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason		case	contentFilter
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason		case	fileGeneratorSystemError
+enum	Anvil.ChatChunk.IncompleteDetail.IncompleteReason		case	imageGeneratorSystemError
+struct	Anvil.FileSearchCall			
+struct	Anvil.BrowserCall			
+struct	Anvil.FunctionCall			
+struct	Anvil.FunctionCall		var	id
+struct	Anvil.FunctionCall		var	name
+struct	Anvil.FunctionCall		var	arguments
+struct	Anvil.Message			
+struct	Anvil.Message		var	role
+struct	Anvil.Message		var	content
+struct	Anvil.SessionExpirationOption.Policy			
+struct	Anvil.SessionExpirationOption.Policy		var	anchor
+struct	Anvil.SessionExpirationOption.Policy		var	seconds
+struct	Anvil.ImageGeneratorCall			
+struct	Anvil.ImageGeneratorCall		var	status
+struct	Anvil.ImageGeneratorCall		var	prompt
+struct	Anvil.ImageGeneratorCall		var	images
+struct	Anvil.FileGeneratorCall			
+struct	Anvil.FileGeneratorCall		var	status
+struct	Anvil.FileGeneratorCall		var	files
+enum	Anvil.BrowserCallStepUpdate.CodingKeys			
+struct	Anvil.ChatToolChoice.ToolChoice			
+struct	Anvil.ChatToolChoice.ToolChoice		var	type
+struct	Anvil.ChatToolChoice.ToolChoice		var	function
+enum	Anvil.ResponseFormat.CodingKeys			
+enum	Anvil.ResponseFormat.CodingKeys		case	type
+enum	Anvil.ResponseFormat.CodingKeys		case	jsonSchema
+enum	Anvil.PromptConfigurationGroup.CodingKeys			
+enum	Anvil.PromptConfigurationGroup.CodingKeys		case	responseConfigurationGroupID
+enum	Anvil.PromptConfigurationGroup.CodingKeys		case	query
+enum	Anvil.PromptConfigurationGroup.CodingKeys		case	templateVariables
+enum	Anvil.PromptConfigurationGroup.CodingKeys		case	templateVariableOverrides
+enum	Anvil.ToolingDescription.Keys			
+enum	Anvil.ToolingDescription.Keys		case	type
+enum	Anvil.ToolingDescription.Keys		case	function
+enum	Anvil.ToolingDescription.Keys		case	imageGenerationTool
+enum	Anvil.ToolingDescription.Keys		case	fileGenerationTool
+enum	Anvil.FunctionCallOutput.CodingKeys			
+enum	Anvil.FunctionCallOutput.CodingKeys		case	id
+enum	Anvil.FunctionCallOutput.CodingKeys		case	output
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys			
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	name
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	type
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	optionsOverrides
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	allowsMultipleBoundValues
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	required
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	defaultValue
+enum	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys		case	allowOverrides
+enum	Anvil.PromptConfigurationGroup.VariableBinding.CodingKeys			
+enum	Anvil.PromptConfigurationGroup.VariableBinding.CodingKeys		case	name
+enum	Anvil.PromptConfigurationGroup.VariableBinding.CodingKeys		case	value
+enum	Anvil.ExternalModelResource.CodingKeys			
+enum	Anvil.ExternalModelResource.CodingKeys		case	id
+enum	Anvil.ExternalModelResource.CodingKeys		case	object
+enum	Anvil.ExternalModelResource.CodingKeys		case	name
+enum	Anvil.ExternalModelResource.CodingKeys		case	displayName
+enum	Anvil.ExternalModelResource.CodingKeys		case	version
+enum	Anvil.ExternalModelResource.CodingKeys		case	description
+enum	Anvil.ExternalModelResource.CodingKeys		case	contextWindow
+enum	Anvil.ExternalModelResource.CodingKeys		case	maxOutputTokens
+enum	Anvil.ExternalModelResource.CodingKeys		case	category
+enum	Anvil.ExternalModelResource.CodingKeys		case	isFlagship
+enum	Anvil.ExternalModelResource.CodingKeys		case	isUserSelectable
+enum	Anvil.ExternalModelResource.CodingKeys		case	reasoningLevels
+enum	Anvil.ExternalModelResource.CodingKeys		case	releaseLabel
+enum	Anvil.ListModelsResponse.CodingKeys			
+enum	Anvil.ListModelsResponse.CodingKeys		case	data
+enum	Anvil.ListModelsResponse.CodingKeys		case	object
+enum	Anvil.ListModelsResponse.CodingKeys		case	firstId
+enum	Anvil.ListModelsResponse.CodingKeys		case	lastId
+enum	Anvil.ListModelsResponse.CodingKeys		case	hasMore
+enum	Anvil.SourceRequest.CodingKeys			
+enum	Anvil.SourceRequest.CodingKeys		case	source
+enum	Anvil.UploadDocumentResponse.CodingKeys			
+enum	Anvil.UploadDocumentResponse.CodingKeys		case	id
+enum	Anvil.UploadDocumentResponse.CodingKeys		case	sessionID
+enum	Anvil.UploadDocumentResponse.CodingKeys		case	session
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys			
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	id
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	object
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	createdAt
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	status
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	name
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	size
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	mimeType
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	uploadURL
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	sessionID
+enum	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys		case	session
+enum	Anvil.TwoPhaseUploadDocumentRequest.CodingKeys			
+enum	Anvil.TwoPhaseUploadDocumentRequest.CodingKeys		case	name
+enum	Anvil.TwoPhaseUploadDocumentRequest.CodingKeys		case	size
+enum	Anvil.TwoPhaseUploadDocumentRequest.CodingKeys		case	mimeType
+enum	Anvil.ChatRequest.CodingKeys			
+enum	Anvil.ChatRequest.CodingKeys		case	previousChoiceID
+enum	Anvil.ChatRequest.CodingKeys		case	configuration
+enum	Anvil.ChatRequest.CodingKeys		case	model
+enum	Anvil.ChatRequest.CodingKeys		case	instructions
+enum	Anvil.ChatRequest.CodingKeys		case	input
+enum	Anvil.ChatRequest.CodingKeys		case	inputHint
+enum	Anvil.ChatRequest.CodingKeys		case	clientTools
+enum	Anvil.ChatRequest.CodingKeys		case	serverTools
+enum	Anvil.ChatRequest.CodingKeys		case	toolChoice
+enum	Anvil.ChatRequest.CodingKeys		case	toolCallOutputs
+enum	Anvil.ChatRequest.CodingKeys		case	temperature
+enum	Anvil.ChatRequest.CodingKeys		case	prediction
+enum	Anvil.ChatRequest.CodingKeys		case	responseFormat
+enum	Anvil.ChatRequest.CodingKeys		case	stream
+enum	Anvil.ChatRequest.CodingKeys		case	include
+enum	Anvil.ChatRequest.CodingKeys		case	reasoning
+enum	Anvil.SessionExpirationOption.Policy.CodingKeys			
+enum	Anvil.SessionExpirationOption.Policy.CodingKeys		case	anchor
+enum	Anvil.SessionExpirationOption.Policy.CodingKeys		case	seconds
+enum	Anvil.BrowserCall.CodingKeys			
+enum	Anvil.FileSearchCall.CodingKeys			
+enum	Anvil.Message.CodingKeys			
+enum	Anvil.Message.CodingKeys		case	role
+enum	Anvil.Message.CodingKeys		case	content
+enum	Anvil.FunctionCall.CodingKeys			
+enum	Anvil.FunctionCall.CodingKeys		case	id
+enum	Anvil.FunctionCall.CodingKeys		case	name
+enum	Anvil.FunctionCall.CodingKeys		case	arguments
+enum	Anvil.ImageGeneratorCall.CodingKeys			
+enum	Anvil.ImageGeneratorCall.CodingKeys		case	status
+enum	Anvil.ImageGeneratorCall.CodingKeys		case	prompt
+enum	Anvil.ImageGeneratorCall.CodingKeys		case	images
+enum	Anvil.FileGeneratorCall.CodingKeys			
+enum	Anvil.FileGeneratorCall.CodingKeys		case	status
+enum	Anvil.FileGeneratorCall.CodingKeys		case	files
+enum	Anvil.TextItem.CodingKeys			
+enum	Anvil.TextItem.CodingKeys		case	value
+enum	Anvil.TextItem.CodingKeys		case	annotations
+enum	Anvil.ExternalModelResource.ReleaseLabel			
+enum	Anvil.ExternalModelResource.ReleaseLabel		case	beta
+enum	Anvil.ExternalModelResource.ReleaseLabel		case	stable
+enum	Anvil.ExternalModelResource.ReleaseLabel		case	experimental
+struct	Anvil.ExternalModelResource.ReasoningLevel			
+struct	Anvil.ExternalModelResource.ReasoningLevel		let	name
+struct	Anvil.ExternalModelResource.ReasoningLevel		let	default
+enum	Anvil.ExternalModelResource.ModelCategory			
+enum	Anvil.ExternalModelResource.ModelCategory		case	nonreasoning
+enum	Anvil.ExternalModelResource.ModelCategory		case	reasoning
+struct	Anvil.SourceInfo.File			
+struct	Anvil.SourceInfo.File		var	type
+struct	Anvil.SourceInfo.File		var	file
+struct	Anvil.SourceInfo.Website			
+struct	Anvil.SourceInfo.Website		var	type
+struct	Anvil.SourceInfo.Website		var	website
+struct	Anvil.FileGenerationParameters			
+struct	Anvil.ImageGenerationParameters			
+struct	Anvil.ImageGenerationParameters		let	size
+struct	Anvil.ImageGenerationParameters		let	shape
+struct	Anvil.ImageGenerationParameters		let	detail
+struct	Anvil.ImageGenerationParameters		let	count
+struct	Anvil.ImageGenerationParameters		let	modelName
+struct	Anvil.FunctionDescription			
+struct	Anvil.FunctionDescription		var	name
+struct	Anvil.FunctionDescription		var	description
+struct	Anvil.FunctionDescription		var	parameters
+struct	Anvil.FunctionDescription		var	strict
+struct	Anvil.ResponseFormat.Details			
+struct	Anvil.ResponseFormat.Details		var	name
+struct	Anvil.ResponseFormat.Details		var	schema
+struct	Anvil.ResponseFormat.Details		var	contentProperty
+struct	Anvil.ResponseFormat.Details		var	strict
+struct	Anvil.Prediction			
+struct	Anvil.Prediction		var	type
+struct	Anvil.Prediction		var	content
+enum	Anvil.Message.Content			
+enum	Anvil.Message.Content		case	string
+enum	Anvil.Message.Content		case	items
+enum	Anvil.Role			
+enum	Anvil.Role		case	system
+enum	Anvil.Role		case	assistant
+enum	Anvil.Role		case	user
+enum	Anvil.SessionExpirationOption.Policy.Anchor			
+enum	Anvil.SessionExpirationOption.Policy.Anchor		case	createdAt
+enum	Anvil.SessionExpirationOption.Policy.Anchor		case	lastActiveAt
+enum	Anvil.FileGenerationParameters.CodingKeys			
+enum	Anvil.ChatToolChoice.ToolChoice.CodingKeys			
+enum	Anvil.ChatToolChoice.ToolChoice.CodingKeys		case	type
+enum	Anvil.ChatToolChoice.ToolChoice.CodingKeys		case	function
+enum	Anvil.ResponseFormat.Details.CodingKeys			
+enum	Anvil.ResponseFormat.Details.CodingKeys		case	name
+enum	Anvil.ResponseFormat.Details.CodingKeys		case	schema
+enum	Anvil.ResponseFormat.Details.CodingKeys		case	contentProperty
+enum	Anvil.ResponseFormat.Details.CodingKeys		case	strict
+enum	Anvil.ImageGenerationParameters.CodingKeys			
+enum	Anvil.ImageGenerationParameters.CodingKeys		case	shape
+enum	Anvil.ImageGenerationParameters.CodingKeys		case	count
+enum	Anvil.ImageGenerationParameters.CodingKeys		case	modelName
+enum	Anvil.ImageGenerationParameters.CodingKeys		case	detail
+enum	Anvil.FunctionDescription.CodingKeys			
+enum	Anvil.FunctionDescription.CodingKeys		case	name
+enum	Anvil.FunctionDescription.CodingKeys		case	description
+enum	Anvil.FunctionDescription.CodingKeys		case	parameters
+enum	Anvil.FunctionDescription.CodingKeys		case	strict
+enum	Anvil.SourceInfo.Website.CodingKeys			
+enum	Anvil.SourceInfo.Website.CodingKeys		case	type
+enum	Anvil.SourceInfo.Website.CodingKeys		case	website
+enum	Anvil.SourceInfo.File.CodingKeys			
+enum	Anvil.SourceInfo.File.CodingKeys		case	type
+enum	Anvil.SourceInfo.File.CodingKeys		case	file
+enum	Anvil.ExternalModelResource.ReasoningLevel.CodingKeys			
+enum	Anvil.ExternalModelResource.ReasoningLevel.CodingKeys		case	name
+enum	Anvil.ExternalModelResource.ReasoningLevel.CodingKeys		case	default
+enum	Anvil.Prediction.CodingKeys			
+enum	Anvil.Prediction.CodingKeys		case	type
+enum	Anvil.Prediction.CodingKeys		case	content
+struct	Anvil.ChatToolChoice.FunctionChoice			
+struct	Anvil.ChatToolChoice.FunctionChoice		var	name
+struct	Anvil.SourceInfo.FileInfo			
+struct	Anvil.SourceInfo.FileInfo		var	name
+struct	Anvil.SourceInfo.FileInfo		var	mimeType
+struct	Anvil.SourceInfo.WebsiteInfo			
+struct	Anvil.SourceInfo.WebsiteInfo		var	url
+enum	Anvil.ImageGenerationParameters.Count			
+enum	Anvil.ImageGenerationParameters.Count		case	count
+enum	Anvil.ImageGenerationParameters.Count		case	infer
+enum	Anvil.ImageGenerationParameters.Detail			
+enum	Anvil.ImageGenerationParameters.Detail		case	low
+enum	Anvil.ImageGenerationParameters.Detail		case	medium
+enum	Anvil.ImageGenerationParameters.Detail		case	high
+enum	Anvil.ImageGenerationParameters.Detail		case	inferred
+enum	Anvil.ImageGenerationParameters.Shape			
+enum	Anvil.ImageGenerationParameters.Shape		case	inferred
+enum	Anvil.ImageGenerationParameters.Shape		case	square
+enum	Anvil.ImageGenerationParameters.Shape		case	tall
+enum	Anvil.ImageGenerationParameters.Shape		case	wide
+enum	Anvil.ImageGenerationParameters.Size			
+enum	Anvil.ImageGenerationParameters.Size		case	inferred
+enum	Anvil.ImageGenerationParameters.Size		case	small
+enum	Anvil.ImageGenerationParameters.Size		case	medium
+enum	Anvil.ImageGenerationParameters.Size		case	large
+enum	Anvil.ImageGenerationParameters.Size		case	extraLarge
+enum	Anvil.ImageGenerationParameters.Count.CodingKeys			
+enum	Anvil.ImageGenerationParameters.Count.CodingKeys		case	infer
+enum	Anvil.ImageGenerationParameters.Count.CodingKeys		case	count
+enum	Anvil.ImageGenerationParameters.Count.InferCodingKeys			
+enum	Anvil.ImageGenerationParameters.Count.CountCodingKeys			
+enum	Anvil.ImageGenerationParameters.Count.CountCodingKeys		case	_0
+enum	Anvil.ChatToolChoice.FunctionChoice.CodingKeys			
+enum	Anvil.ChatToolChoice.FunctionChoice.CodingKeys		case	name
+enum	Anvil.SourceInfo.WebsiteInfo.CodingKeys			
+enum	Anvil.SourceInfo.WebsiteInfo.CodingKeys		case	url
+enum	Anvil.SourceInfo.FileInfo.CodingKeys			
+enum	Anvil.SourceInfo.FileInfo.CodingKeys		case	name
+enum	Anvil.SourceInfo.FileInfo.CodingKeys		case	mimeType
+protocol	Anvil.ExternalLanguageModelProviding			
+protocol	Anvil.AnvilURLSession			
+protocol	Anvil.OAuthAuthenticating			
+protocol	Anvil.ExternalLanguageModelOverrides			
+protocol	Telemetry.TelemetryEvent			
+protocol	ValueStore			
+protocol	conformance Anvil.SignInFailure	Swift.Equatable		
+protocol	conformance Anvil.SignInFailure	Swift.Hashable		
+protocol	conformance Anvil.SignInFailure	Swift.Error		
+protocol	conformance Anvil.RefreshBillingPlanFailure	Swift.Equatable		
+protocol	conformance Anvil.RefreshBillingPlanFailure	Swift.Hashable		
+protocol	conformance Anvil.RefreshBillingPlanFailure	Swift.Error		
+protocol	conformance Anvil.SignOutFailure	Swift.Equatable		
+protocol	conformance Anvil.SignOutFailure	Swift.Hashable		
+protocol	conformance Anvil.SignOutFailure	Swift.Error		
+protocol	conformance Anvil.TransferTokenFailure	Swift.Equatable		
+protocol	conformance Anvil.TransferTokenFailure	Swift.Hashable		
+protocol	conformance Anvil.TransferTokenFailure	Swift.Error		
+protocol	conformance Anvil.Credentials	Swift.Hashable		
+protocol	conformance Anvil.Credentials	Swift.Equatable		
+protocol	conformance RateLimitBudgets.Limits	Swift.Hashable		
+protocol	conformance RateLimitBudgets.Limits	Swift.Equatable		
+protocol	conformance Anvil.RateLimitBudgets	Swift.Hashable		
+protocol	conformance Anvil.RateLimitBudgets	Swift.Equatable		
+protocol	conformance BillingPlan.Category	Swift.Equatable		
+protocol	conformance BillingPlan.Category	Swift.Hashable		
+protocol	conformance Anvil.BillingPlan	Swift.Hashable		
+protocol	conformance Anvil.BillingPlan	Swift.Equatable		
+protocol	conformance UserInfo.AccountStatus	Swift.Equatable		
+protocol	conformance UserInfo.AccountStatus	Swift.Hashable		
+protocol	conformance UserInfo.AccountStatus	Swift.RawRepresentable		
+protocol	conformance Anvil.UserInfo	Swift.Hashable		
+protocol	conformance Anvil.UserInfo	Swift.Equatable		
+protocol	conformance Anvil.UserCredentials	Swift.Equatable		
+protocol	conformance Anvil.UserCredentials	Swift.Hashable		
+protocol	conformance Anvil.UserCredentials	Swift.Encodable		
+protocol	conformance Anvil.UserCredentials	Swift.Decodable		
+protocol	conformance Anvil.UserTokens	Swift.Equatable		
+protocol	conformance Anvil.UserTokens	Swift.Hashable		
+protocol	conformance Anvil.UserTokens	Swift.Encodable		
+protocol	conformance Anvil.UserTokens	Swift.Decodable		
+protocol	conformance Anvil.UserBillingPlan	Swift.Equatable		
+protocol	conformance Anvil.UserBillingPlan	Swift.Hashable		
+protocol	conformance Anvil.UserBillingPlan	Swift.Encodable		
+protocol	conformance Anvil.UserBillingPlan	Swift.Decodable		
+protocol	conformance __C.Status	Swift.Equatable: Foundation		
+protocol	conformance __C.Status	Swift.RawRepresentable: Foundation		
+protocol	conformance UserBillingPlan.Category	Swift.Hashable		
+protocol	conformance UserBillingPlan.Category	Swift.RawRepresentable		
+protocol	conformance UserBillingPlan.Category	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Anvil.UserInfoResponse	Swift.Equatable		
+protocol	conformance Anvil.UserInfoResponse	Swift.Hashable		
+protocol	conformance Anvil.UserInfoResponse	Swift.Encodable		
+protocol	conformance Anvil.WorkspaceResponse	Swift.Equatable		
+protocol	conformance Anvil.WorkspaceResponse	Swift.Hashable		
+protocol	conformance Anvil.WorkspaceResponse	Swift.Encodable		
+protocol	conformance Anvil.RevokeAuthorizationTokensRequest	Swift.Equatable		
+protocol	conformance Anvil.RevokeAuthorizationTokensRequest	Swift.Hashable		
+protocol	conformance Anvil.RevokeAuthorizationTokensRequest	Swift.Decodable		
+protocol	conformance Anvil.RevokeAuthorizationTokensResponse	Swift.Equatable		
+protocol	conformance Anvil.RevokeAuthorizationTokensResponse	Swift.Hashable		
+protocol	conformance Anvil.RevokeAuthorizationTokensResponse	Swift.Encodable		
+protocol	conformance Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest	Swift.Equatable		
+protocol	conformance Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest	Swift.Hashable		
+protocol	conformance Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest	Swift.Decodable		
+protocol	conformance Anvil.AuthorizationTokensResponse	Swift.Equatable		
+protocol	conformance Anvil.AuthorizationTokensResponse	Swift.Hashable		
+protocol	conformance Anvil.AuthorizationTokensResponse	Swift.Encodable		
+protocol	conformance Anvil.ExchangeCodeForAuthorizationTokensRequest	Swift.Equatable		
+protocol	conformance Anvil.ExchangeCodeForAuthorizationTokensRequest	Swift.Hashable		
+protocol	conformance Anvil.ExchangeCodeForAuthorizationTokensRequest	Swift.Decodable		
+protocol	conformance Anvil.ExchangeCodeForAuthorizationTokensRequest	Swift.Encodable		
+protocol	conformance Anvil.AuthorizationTokensResponse	Swift.Decodable		
+protocol	conformance Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest	Swift.Encodable		
+protocol	conformance Anvil.RevokeAuthorizationTokensResponse	Swift.Decodable		
+protocol	conformance Anvil.RevokeAuthorizationTokensRequest	Swift.Encodable		
+protocol	conformance Anvil.WorkspaceResponse	Swift.Decodable		
+protocol	conformance Anvil.UserInfoResponse	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UserBillingPlan.Category	Swift.Encodable		
+protocol	conformance UserBillingPlan.Category	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UserInfoResponse.AccountStatus	Swift.RawRepresentable		
+protocol	conformance UserInfoResponse.AccountStatus	Swift.Hashable		
+protocol	conformance UserInfoResponse.AccountStatus	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UserInfoResponse.AccountStatus	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UserInfoResponse.AccountStatus	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.ChatGPTProvider	Anvil.ExternalLanguageModelProviding		
+protocol	conformance Anvil.Serializer	Swift.Actor		
+protocol	conformance Anvil.ExternalLanguageModelBundle	Swift.RawRepresentable		
+protocol	conformance Anvil.ExternalLanguageModelBundle	Swift.Hashable		
+protocol	conformance Anvil.ExternalLanguageModelBundle	Swift.Equatable		
+protocol	conformance Anvil.ExpiredSessions	Swift.Actor		
+protocol	conformance ExternalPartnerModel.Category	Swift.Equatable		
+protocol	conformance ExternalPartnerModel.Category	Swift.Hashable		
+protocol	conformance ExternalPartnerModel.ReleaseLabel	Swift.Equatable		
+protocol	conformance ExternalPartnerModel.ReleaseLabel	Swift.Hashable		
+protocol	conformance Anvil.TicketingType	Swift.Equatable		
+protocol	conformance Anvil.TicketingType	Swift.Hashable		
+protocol	conformance Anvil.TicketingSubType	Swift.Equatable		
+protocol	conformance Anvil.TicketingSubType	Swift.Hashable		
+protocol	conformance FraudTicketing.TicketIssuerType	Swift.Hashable		
+protocol	conformance FraudTicketing.TicketIssuerType	Swift.Equatable		
+protocol	conformance FraudTicketing.FraudTicketingError	Swift.Error		
+protocol	conformance NSURLSession	Anvil.AnvilURLSession		
+protocol	conformance HTTPClient.PrivacyPassRedemptionResponse	Swift.Equatable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionResponse	Swift.Hashable		
+protocol	conformance ErrorResponse.Error	Swift.Decodable		
+protocol	conformance ErrorResponse.Error	Swift.Error		
+protocol	conformance HTTPClient.ErrorResponse	Swift.Decodable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionResponse	Swift.Decodable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTokens	Swift.Equatable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTokens	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTokens	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTypes	Swift.Hashable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTypes	Swift.RawRepresentable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTypes	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance HTTPClient.PrivacyPassRedemptionTypes	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.BlackPowderInferenceProvider	ModelManagerServices.InferenceProvider		
+protocol	conformance JSONSchema.Type	Swift.Equatable		
+protocol	conformance JSONSchema.Type	Swift.Hashable		
+protocol	conformance JSONSchema.Type	Swift.Encodable		
+protocol	conformance JSONSchema.Type	Swift.Decodable		
+protocol	conformance Anvil.JSONSchema	Swift.Equatable		
+protocol	conformance Anvil.JSONSchema	Swift.Hashable		
+protocol	conformance Anvil.JSONSchema	Swift.Encodable		
+protocol	conformance Anvil.JSONSchema	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance OpenAIAuthenticator.SignInFailure	Swift.Equatable		
+protocol	conformance OpenAIAuthenticator.SignInFailure	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.SignInFailure	Swift.Error		
+protocol	conformance OpenAIAuthenticator.RefreshBillingPlanFailure	Swift.Equatable		
+protocol	conformance OpenAIAuthenticator.RefreshBillingPlanFailure	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.RefreshBillingPlanFailure	Swift.Error		
+protocol	conformance OpenAIAuthenticator.SignOutFailure	Swift.Equatable		
+protocol	conformance OpenAIAuthenticator.SignOutFailure	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.SignOutFailure	Swift.Error		
+protocol	conformance OpenAIAuthenticator.Credentials	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.Credentials	Swift.Equatable		
+protocol	conformance RateLimitBudgets.Limits	Swift.Hashable		
+protocol	conformance RateLimitBudgets.Limits	Swift.Equatable		
+protocol	conformance OpenAIAuthenticator.RateLimitBudgets	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.RateLimitBudgets	Swift.Equatable		
+protocol	conformance BillingPlan.Category	Swift.Equatable		
+protocol	conformance BillingPlan.Category	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.BillingPlan	Swift.Hashable		
+protocol	conformance OpenAIAuthenticator.BillingPlan	Swift.Equatable		
+protocol	conformance Anvil.OpenAIAuthenticationService	Anvil.OAuthAuthenticating		
+protocol	conformance Overrides.ChatGPTXcode	Anvil.ExternalLanguageModelOverrides		
+protocol	conformance Overrides.BlackPowder	Anvil.ExternalLanguageModelOverrides		
+protocol	conformance ResponseInfo	Swift.Actor		
+protocol	conformance Anvil.Session	Swift.Actor		
+protocol	conformance Entry	Observation.Observable		
+protocol	conformance Entry	Swift.Equatable		
+protocol	conformance Entry	Swift.Identifiable		
+protocol	conformance Entry	Swift.Hashable		
+protocol	conformance Entry	SwiftData.PersistentModel		
+protocol	conformance Entry.AttachedDocument	Swift.Equatable		
+protocol	conformance Entry.AttachedDocument	Swift.Hashable		
+protocol	conformance Entry.AttachedDocument	Swift.Decodable		
+protocol	conformance Entry.AttachedDocument	Swift.Encodable		
+protocol	conformance AttachedDocument.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttachedDocument.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttachedDocument.CodingKeys	Swift.Hashable		
+protocol	conformance AttachedDocument.CodingKeys	Swift.Equatable		
+protocol	conformance AttachedDocument.CodingKeys	Swift.CodingKey		
+protocol	conformance Telemetry.HTTPStatusEvent	Anvil.Telemetry.TelemetryEvent		
+protocol	conformance Telemetry.TypeName	Swift.CaseIterable		
+protocol	conformance Telemetry.TypeName	Swift.RawRepresentable		
+protocol	conformance Telemetry.TypeName	Swift.Hashable		
+protocol	conformance Telemetry.TypeName	Swift.Equatable		
+protocol	conformance Telemetry.MetaData	Swift.Decodable		
+protocol	conformance Telemetry.MetaData	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance InsecureInMemoryStore.QualifiedKey	Swift.Equatable		
+protocol	conformance InsecureInMemoryStore.QualifiedKey	Swift.Hashable		
+protocol	conformance InsecureInMemoryStore	Anvil.ValueStore		
+protocol	conformance Vault.Value	Swift.CustomStringConvertible		
+protocol	conformance Anvil.Vault	Swift.CustomStringConvertible		
+protocol	conformance Vault.SecurityLevel	Swift.Hashable		
+protocol	conformance Vault.SecurityLevel	Swift.Equatable		
+protocol	conformance UserDefaultsValueStore	Anvil.ValueStore		
+protocol	conformance ManagedKeychainValueStore	Anvil.ValueStore		
+protocol	conformance ChatChunk.RateLimits	Swift.Equatable		
+protocol	conformance ChatChunk.RateLimits	Swift.Hashable		
+protocol	conformance ChatChunk.RateLimits	Swift.Encodable		
+protocol	conformance ChatChunk.RateLimits	Swift.Decodable		
+protocol	conformance Anvil.SessionExpirationOption	Swift.Equatable		
+protocol	conformance Anvil.SessionExpirationOption	Swift.Hashable		
+protocol	conformance Anvil.SessionExpirationOption	Swift.Encodable		
+protocol	conformance Anvil.SessionExpirationOption	Swift.Decodable		
+protocol	conformance Anvil.CreateSessionResponse	Swift.Equatable		
+protocol	conformance Anvil.CreateSessionResponse	Swift.Hashable		
+protocol	conformance Anvil.CreateSessionResponse	Swift.Encodable		
+protocol	conformance Anvil.CreateSessionResponse	Swift.Decodable		
+protocol	conformance FileUploadResponse.Status	Swift.Hashable		
+protocol	conformance FileUploadResponse.Status	Swift.Decodable		
+protocol	conformance FileUploadResponse.Status	Swift.RawRepresentable		
+protocol	conformance FileUploadResponse.Status	Swift.Equatable		
+protocol	conformance ChatChunk.FileUploadResponse	Swift.Equatable		
+protocol	conformance ChatChunk.FileUploadResponse	Swift.Hashable		
+protocol	conformance ChatChunk.FileUploadResponse	Swift.Decodable		
+protocol	conformance ChatChunk.ResponseResource	Swift.Equatable		
+protocol	conformance ChatChunk.ResponseResource	Swift.Hashable		
+protocol	conformance ChatChunk.ResponseResource	Swift.Decodable		
+protocol	conformance ChatChunk.Notice	Swift.Equatable		
+protocol	conformance ChatChunk.Notice	Swift.Hashable		
+protocol	conformance ChatChunk.Notice	Swift.Decodable		
+protocol	conformance Choice.Status	Swift.Hashable		
+protocol	conformance Choice.Status	Swift.Decodable		
+protocol	conformance Choice.Status	Swift.RawRepresentable		
+protocol	conformance Choice.Status	Swift.Equatable		
+protocol	conformance Anvil.InputItem	Swift.Equatable		
+protocol	conformance Anvil.InputItem	Swift.Hashable		
+protocol	conformance Anvil.InputItem	Swift.Encodable		
+protocol	conformance Anvil.InputItem	Swift.Decodable		
+protocol	conformance ChatChunk.IncompleteDetail	Swift.Equatable		
+protocol	conformance ChatChunk.IncompleteDetail	Swift.Hashable		
+protocol	conformance ChatChunk.IncompleteDetail	Swift.Decodable		
+protocol	conformance ChatChunk.Choice	Swift.Equatable		
+protocol	conformance ChatChunk.Choice	Swift.Hashable		
+protocol	conformance ChatChunk.Choice	Swift.Decodable		
+protocol	conformance ChatChunk.ChoiceResource	Swift.Equatable		
+protocol	conformance ChatChunk.ChoiceResource	Swift.Hashable		
+protocol	conformance ChatChunk.ChoiceResource	Swift.Decodable		
+protocol	conformance ChatChunk.ChoiceItem	Swift.Equatable		
+protocol	conformance ChatChunk.ChoiceItem	Swift.Hashable		
+protocol	conformance ChatChunk.ChoiceItem	Swift.Decodable		
+protocol	conformance Anvil.ImageURLItem	Swift.Equatable		
+protocol	conformance Anvil.ImageURLItem	Swift.Hashable		
+protocol	conformance Anvil.ImageURLItem	Swift.Encodable		
+protocol	conformance Anvil.ImageURLItem	Swift.Decodable		
+protocol	conformance Anvil.ImageGeneratorImage	Swift.Equatable		
+protocol	conformance Anvil.ImageGeneratorImage	Swift.Hashable		
+protocol	conformance Anvil.ImageGeneratorImage	Swift.Encodable		
+protocol	conformance Anvil.ImageGeneratorImage	Swift.Decodable		
+protocol	conformance Anvil.FileGeneratorFile	Swift.Equatable		
+protocol	conformance Anvil.FileGeneratorFile	Swift.Hashable		
+protocol	conformance Anvil.FileGeneratorFile	Swift.Encodable		
+protocol	conformance Anvil.FileGeneratorFile	Swift.Decodable		
+protocol	conformance Anvil.MessageContent	Swift.Equatable		
+protocol	conformance Anvil.MessageContent	Swift.Hashable		
+protocol	conformance Anvil.MessageContent	Swift.Encodable		
+protocol	conformance Anvil.MessageContent	Swift.Decodable		
+protocol	conformance ChatChunk.ChoiceItemMessageContent	Swift.Equatable		
+protocol	conformance ChatChunk.ChoiceItemMessageContent	Swift.Hashable		
+protocol	conformance ChatChunk.ChoiceItemMessageContent	Swift.Decodable		
+protocol	conformance ChatChunk.TextValueDelta	Swift.Equatable		
+protocol	conformance ChatChunk.TextValueDelta	Swift.Hashable		
+protocol	conformance ChatChunk.TextValueDelta	Swift.Decodable		
+protocol	conformance ChatChunk.TextValueDone	Swift.Equatable		
+protocol	conformance ChatChunk.TextValueDone	Swift.Hashable		
+protocol	conformance ChatChunk.TextValueDone	Swift.Decodable		
+protocol	conformance TextAnnotation.URLCitation	Swift.Equatable		
+protocol	conformance TextAnnotation.URLCitation	Swift.Hashable		
+protocol	conformance TextAnnotation.URLCitation	Swift.Encodable		
+protocol	conformance TextAnnotation.URLCitation	Swift.Decodable		
+protocol	conformance TextAnnotation.FileCitation	Swift.Equatable		
+protocol	conformance TextAnnotation.FileCitation	Swift.Hashable		
+protocol	conformance TextAnnotation.FileCitation	Swift.Encodable		
+protocol	conformance TextAnnotation.FileCitation	Swift.Decodable		
+protocol	conformance TextAnnotation.Type	Swift.Equatable		
+protocol	conformance TextAnnotation.Type	Swift.Hashable		
+protocol	conformance TextAnnotation.Type	Swift.Encodable		
+protocol	conformance TextAnnotation.Type	Swift.Decodable		
+protocol	conformance Anvil.TextAnnotation	Swift.Equatable		
+protocol	conformance Anvil.TextAnnotation	Swift.Hashable		
+protocol	conformance Anvil.TextAnnotation	Swift.Encodable		
+protocol	conformance Anvil.TextAnnotation	Swift.Decodable		
+protocol	conformance ChatChunk.TextValueAnnotation	Swift.Equatable		
+protocol	conformance ChatChunk.TextValueAnnotation	Swift.Hashable		
+protocol	conformance ChatChunk.TextValueAnnotation	Swift.Decodable		
+protocol	conformance ChatChunk.RefusalValueDone	Swift.Equatable		
+protocol	conformance ChatChunk.RefusalValueDone	Swift.Hashable		
+protocol	conformance ChatChunk.RefusalValueDone	Swift.Decodable		
+protocol	conformance ChatChunk.FunctionCallDelta	Swift.Equatable		
+protocol	conformance ChatChunk.FunctionCallDelta	Swift.Hashable		
+protocol	conformance ChatChunk.FunctionCallDelta	Swift.Decodable		
+protocol	conformance ChatChunk.FunctionCallDone	Swift.Equatable		
+protocol	conformance ChatChunk.FunctionCallDone	Swift.Hashable		
+protocol	conformance ChatChunk.FunctionCallDone	Swift.Decodable		
+protocol	conformance ChatChunk.ChoiceItemChange	Swift.Equatable		
+protocol	conformance ChatChunk.ChoiceItemChange	Swift.Hashable		
+protocol	conformance ChatChunk.ChoiceItemChange	Swift.Decodable		
+protocol	conformance ChatChunk.ImageGeneratorCallPromptDelta	Swift.Equatable		
+protocol	conformance ChatChunk.ImageGeneratorCallPromptDelta	Swift.Hashable		
+protocol	conformance ChatChunk.ImageGeneratorCallPromptDelta	Swift.Decodable		
+protocol	conformance ChatChunk.ImageGeneratorCallPromptDone	Swift.Equatable		
+protocol	conformance ChatChunk.ImageGeneratorCallPromptDone	Swift.Hashable		
+protocol	conformance ChatChunk.ImageGeneratorCallPromptDone	Swift.Decodable		
+protocol	conformance ImageGeneratorCall.Image	Swift.Equatable		
+protocol	conformance ImageGeneratorCall.Image	Swift.Hashable		
+protocol	conformance ImageGeneratorCall.Image	Swift.Encodable		
+protocol	conformance ImageGeneratorCall.Image	Swift.Decodable		
+protocol	conformance ChatChunk.ImageGeneratorCallImageAdded	Swift.Equatable		
+protocol	conformance ChatChunk.ImageGeneratorCallImageAdded	Swift.Hashable		
+protocol	conformance ChatChunk.ImageGeneratorCallImageAdded	Swift.Decodable		
+protocol	conformance FileGeneratorCall.File	Swift.Equatable		
+protocol	conformance FileGeneratorCall.File	Swift.Hashable		
+protocol	conformance FileGeneratorCall.File	Swift.Encodable		
+protocol	conformance FileGeneratorCall.File	Swift.Decodable		
+protocol	conformance ChatChunk.FileGeneratorCallFileAdded	Swift.Equatable		
+protocol	conformance ChatChunk.FileGeneratorCallFileAdded	Swift.Hashable		
+protocol	conformance ChatChunk.FileGeneratorCallFileAdded	Swift.Decodable		
+protocol	conformance Anvil.ChatChunk	Swift.Equatable		
+protocol	conformance Anvil.ChatChunk	Swift.Hashable		
+protocol	conformance Anvil.ChatChunk	Swift.Decodable		
+protocol	conformance RateLimits.Limits	Swift.Equatable		
+protocol	conformance RateLimits.Limits	Swift.Hashable		
+protocol	conformance RateLimits.Limits	Swift.Encodable		
+protocol	conformance RateLimits.Limits	Swift.Decodable		
+protocol	conformance Anvil.FileGeneratorCall	Swift.Equatable		
+protocol	conformance Anvil.FileGeneratorCall	Swift.Hashable		
+protocol	conformance Anvil.ImageGeneratorCall	Swift.Equatable		
+protocol	conformance Anvil.ImageGeneratorCall	Swift.Hashable		
+protocol	conformance SessionExpirationOption.Policy	Swift.Equatable		
+protocol	conformance SessionExpirationOption.Policy	Swift.Hashable		
+protocol	conformance Anvil.Message	Swift.Equatable		
+protocol	conformance Anvil.Message	Swift.Hashable		
+protocol	conformance Anvil.FunctionCall	Swift.Equatable		
+protocol	conformance Anvil.FunctionCall	Swift.Hashable		
+protocol	conformance Anvil.BrowserCall	Swift.Equatable		
+protocol	conformance Anvil.BrowserCall	Swift.Hashable		
+protocol	conformance Anvil.FileSearchCall	Swift.Equatable		
+protocol	conformance Anvil.FileSearchCall	Swift.Hashable		
+protocol	conformance IncompleteDetail.IncompleteReason	Swift.Equatable		
+protocol	conformance IncompleteDetail.IncompleteReason	Swift.RawRepresentable		
+protocol	conformance IncompleteDetail.IncompleteReason	Swift.Hashable		
+protocol	conformance Anvil.BrowserCallStepUpdate	Swift.Equatable		
+protocol	conformance Anvil.BrowserCallStepUpdate	Swift.Hashable		
+protocol	conformance Anvil.BrowserCallStepUpdate	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DiscriminatorKey	Swift.CustomDebugStringConvertible		
+protocol	conformance DiscriminatorKey	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FieldKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FieldKeys	Swift.CustomStringConvertible		
+protocol	conformance FieldKeys	Swift.RawRepresentable		
+protocol	conformance FieldKeys	Swift.Hashable		
+protocol	conformance FieldKeys	Swift.Equatable		
+protocol	conformance FileCitationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FileCitationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FileCitationCodingKeys	Swift.Hashable		
+protocol	conformance FileCitationCodingKeys	Swift.Equatable		
+protocol	conformance UrlCitationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UrlCitationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UrlCitationCodingKeys	Swift.Hashable		
+protocol	conformance UrlCitationCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Anvil.TextItem	Swift.Equatable		
+protocol	conformance Anvil.TextItem	Swift.Hashable		
+protocol	conformance FileGeneratorFile.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FileGeneratorFile.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FileGeneratorFile.CodingKeys	Swift.RawRepresentable		
+protocol	conformance FileGeneratorFile.CodingKeys	Swift.Hashable		
+protocol	conformance FileGeneratorFile.CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Anvil.ChatRequest	Swift.Equatable		
+protocol	conformance Anvil.ChatRequest	Swift.Hashable		
+protocol	conformance Anvil.ChatToolChoice	Swift.Equatable		
+protocol	conformance Anvil.ChatToolChoice	Swift.Hashable		
+protocol	conformance Anvil.ChatToolChoice	Swift.Encodable		
+protocol	conformance Anvil.ResponseFormat	Swift.Equatable		
+protocol	conformance Anvil.ResponseFormat	Swift.Hashable		
+protocol	conformance Anvil.ResponseFormat	Swift.Encodable		
+protocol	conformance Anvil.ResponseFormat	Swift.Decodable		
+protocol	conformance Anvil.PromptConfigurationGroup	Swift.Equatable		
+protocol	conformance Anvil.PromptConfigurationGroup	Swift.Hashable		
+protocol	conformance Anvil.PromptConfigurationGroup	Swift.Encodable		
+protocol	conformance Anvil.InputHint	Swift.Encodable		
+protocol	conformance Anvil.InputHint	Swift.Decodable		
+protocol	conformance Anvil.InputHint	Swift.RawRepresentable		
+protocol	conformance Anvil.InputHint	Swift.Hashable		
+protocol	conformance Anvil.InputHint	Swift.Equatable		
+protocol	conformance Anvil.ToolingDescription	Swift.Equatable		
+protocol	conformance Anvil.ToolingDescription	Swift.Hashable		
+protocol	conformance Anvil.ToolingDescription	Swift.Encodable		
+protocol	conformance Anvil.FunctionCallOutput	Swift.Equatable		
+protocol	conformance Anvil.FunctionCallOutput	Swift.Hashable		
+protocol	conformance Anvil.FunctionCallOutput	Swift.Encodable		
+protocol	conformance Anvil.FunctionCallOutput	Swift.Decodable		
+protocol	conformance PromptConfigurationGroup.Value	Swift.Equatable		
+protocol	conformance PromptConfigurationGroup.Value	Swift.Hashable		
+protocol	conformance PromptConfigurationGroup.Value	Swift.Encodable		
+protocol	conformance PromptConfigurationGroup.VariableBindingDefinitionOverride	Swift.Equatable		
+protocol	conformance PromptConfigurationGroup.VariableBindingDefinitionOverride	Swift.Hashable		
+protocol	conformance PromptConfigurationGroup.VariableBindingDefinitionOverride	Swift.Encodable		
+protocol	conformance PromptConfigurationGroup.VariableBinding	Swift.Equatable		
+protocol	conformance PromptConfigurationGroup.VariableBinding	Swift.Hashable		
+protocol	conformance PromptConfigurationGroup.VariableBinding	Swift.Encodable		
+protocol	conformance Anvil.DeleteDocumentResponse	Swift.Equatable		
+protocol	conformance Anvil.DeleteDocumentResponse	Swift.Hashable		
+protocol	conformance Anvil.UploadDocumentResponse	Swift.Equatable		
+protocol	conformance Anvil.UploadDocumentResponse	Swift.Hashable		
+protocol	conformance Anvil.TwoPhaseUploadDocumentResponse	Swift.Equatable		
+protocol	conformance Anvil.TwoPhaseUploadDocumentResponse	Swift.Hashable		
+protocol	conformance Anvil.TwoPhaseUploadDocumentRequest	Swift.Equatable		
+protocol	conformance Anvil.TwoPhaseUploadDocumentRequest	Swift.Hashable		
+protocol	conformance Anvil.SourceInfo	Swift.Equatable		
+protocol	conformance Anvil.SourceInfo	Swift.Hashable		
+protocol	conformance Anvil.SourceInfo	Swift.Encodable		
+protocol	conformance Anvil.SourceInfo	Swift.Decodable		
+protocol	conformance Anvil.SourceRequest	Swift.Equatable		
+protocol	conformance Anvil.SourceRequest	Swift.Hashable		
+protocol	conformance Anvil.ExternalModelResource	Swift.Decodable		
+protocol	conformance Anvil.ListModelsResponse	Swift.Decodable		
+protocol	conformance Anvil.SourceRequest	Swift.Encodable		
+protocol	conformance Anvil.UploadDocumentResponse	Swift.Decodable		
+protocol	conformance Anvil.TwoPhaseUploadDocumentResponse	Swift.Decodable		
+protocol	conformance Anvil.TwoPhaseUploadDocumentRequest	Swift.Encodable		
+protocol	conformance Anvil.DeleteDocumentResponse	Swift.Decodable		
+protocol	conformance Anvil.ChatRequest	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SessionExpirationOption.Policy	Swift.Encodable		
+protocol	conformance SessionExpirationOption.Policy	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.Message	Swift.Encodable		
+protocol	conformance Anvil.FunctionCall	Swift.Encodable		
+protocol	conformance Anvil.BrowserCall	Swift.Encodable		
+protocol	conformance Anvil.FileSearchCall	Swift.Encodable		
+protocol	conformance Anvil.ImageGeneratorCall	Swift.Encodable		
+protocol	conformance Anvil.FileGeneratorCall	Swift.Encodable		
+protocol	conformance Anvil.Message	Swift.Decodable		
+protocol	conformance Anvil.FunctionCall	Swift.Decodable		
+protocol	conformance Anvil.BrowserCall	Swift.Decodable		
+protocol	conformance Anvil.ImageGeneratorCall	Swift.Decodable		
+protocol	conformance Anvil.FileGeneratorCall	Swift.Decodable		
+protocol	conformance IncompleteDetail.IncompleteReason	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FileGeneratorFile.CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.TextItem	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UrlCitationCodingKeys	Swift.CodingKey		
+protocol	conformance FileCitationCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FieldKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.FileSearchCall	Swift.Decodable		
+protocol	conformance Anvil.BrowserCallStepUpdate	Swift.Decodable		
+protocol	conformance DiscriminatorKey	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Policy.Anchor	Swift.Hashable		
+protocol	conformance Policy.Anchor	Swift.RawRepresentable		
+protocol	conformance Policy.Anchor	Swift.Equatable		
+protocol	conformance Anvil.Role	Swift.RawRepresentable		
+protocol	conformance Anvil.Role	Swift.Hashable		
+protocol	conformance Anvil.Role	Swift.Equatable		
+protocol	conformance Message.Content	Swift.Equatable		
+protocol	conformance Message.Content	Swift.Hashable		
+protocol	conformance Anvil.Prediction	Swift.Equatable		
+protocol	conformance Anvil.Prediction	Swift.Hashable		
+protocol	conformance Anvil.Prediction	Swift.Decodable		
+protocol	conformance ResponseFormat.Details	Swift.Equatable		
+protocol	conformance ResponseFormat.Details	Swift.Hashable		
+protocol	conformance Anvil.FunctionDescription	Swift.Equatable		
+protocol	conformance Anvil.FunctionDescription	Swift.Hashable		
+protocol	conformance Anvil.FunctionDescription	Swift.Decodable		
+protocol	conformance Anvil.ImageGenerationParameters	Swift.Equatable		
+protocol	conformance Anvil.ImageGenerationParameters	Swift.Hashable		
+protocol	conformance Anvil.FileGenerationParameters	Swift.Equatable		
+protocol	conformance Anvil.FileGenerationParameters	Swift.Hashable		
+protocol	conformance Anvil.FileGenerationParameters	Swift.Encodable		
+protocol	conformance SourceInfo.Website	Swift.Equatable		
+protocol	conformance SourceInfo.Website	Swift.Hashable		
+protocol	conformance SourceInfo.File	Swift.Equatable		
+protocol	conformance SourceInfo.File	Swift.Hashable		
+protocol	conformance ExternalModelResource.ModelCategory	Swift.RawRepresentable		
+protocol	conformance ExternalModelResource.ModelCategory	Swift.Hashable		
+protocol	conformance ExternalModelResource.ModelCategory	Swift.Equatable		
+protocol	conformance ExternalModelResource.ReleaseLabel	Swift.RawRepresentable		
+protocol	conformance ExternalModelResource.ReleaseLabel	Swift.Hashable		
+protocol	conformance ExternalModelResource.ReleaseLabel	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Keys	Swift.CustomDebugStringConvertible		
+protocol	conformance Keys	Swift.CustomStringConvertible		
+protocol	conformance Keys	Swift.RawRepresentable		
+protocol	conformance Keys	Swift.Hashable		
+protocol	conformance Keys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ToolChoice	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ToolChoice	Swift.Encodable		
+protocol	conformance ResponseFormat.Details	Swift.Encodable		
+protocol	conformance ResponseFormat.Details	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.ImageGenerationParameters	Swift.Encodable		
+protocol	conformance Anvil.FunctionDescription	Swift.Encodable		
+protocol	conformance Keys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SourceInfo.Website	Swift.Encodable		
+protocol	conformance SourceInfo.File	Swift.Encodable		
+protocol	conformance SourceInfo.Website	Swift.Decodable		
+protocol	conformance SourceInfo.File	Swift.Decodable		
+protocol	conformance ExternalModelResource.ReleaseLabel	Swift.Decodable		
+protocol	conformance ExternalModelResource.ReasoningLevel	Swift.Decodable		
+protocol	conformance ExternalModelResource.ModelCategory	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Anvil.Prediction	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Policy.Anchor	Swift.Encodable		
+protocol	conformance Policy.Anchor	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Message.Content	Swift.Encodable		
+protocol	conformance Anvil.Role	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Message.Content	Swift.Decodable		
+protocol	conformance Anvil.Role	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImageGenerationParameters.Size	Swift.Encodable		
+protocol	conformance ImageGenerationParameters.Size	Swift.RawRepresentable		
+protocol	conformance ImageGenerationParameters.Size	Swift.Hashable		
+protocol	conformance ImageGenerationParameters.Size	Swift.Equatable		
+protocol	conformance ImageGenerationParameters.Shape	Swift.RawRepresentable		
+protocol	conformance ImageGenerationParameters.Shape	Swift.Hashable		
+protocol	conformance ImageGenerationParameters.Shape	Swift.Equatable		
+protocol	conformance ImageGenerationParameters.Detail	Swift.RawRepresentable		
+protocol	conformance ImageGenerationParameters.Detail	Swift.Hashable		
+protocol	conformance ImageGenerationParameters.Detail	Swift.Equatable		
+protocol	conformance ImageGenerationParameters.Count	Swift.Equatable		
+protocol	conformance ImageGenerationParameters.Count	Swift.Hashable		
+protocol	conformance ImageGenerationParameters.Count	Swift.Decodable		
+protocol	conformance SourceInfo.WebsiteInfo	Swift.Equatable		
+protocol	conformance SourceInfo.WebsiteInfo	Swift.Hashable		
+protocol	conformance SourceInfo.FileInfo	Swift.Equatable		
+protocol	conformance SourceInfo.FileInfo	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ImageGenerationParameters.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ImageGenerationParameters.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ImageGenerationParameters.CodingKeys	Swift.RawRepresentable		
+protocol	conformance ImageGenerationParameters.CodingKeys	Swift.Hashable		
+protocol	conformance ImageGenerationParameters.CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ToolChoice.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ToolChoice.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ToolChoice.CodingKeys	Swift.Hashable		
+protocol	conformance ToolChoice.CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FunctionChoice	Swift.Decodable		
+protocol	conformance FunctionChoice	Swift.Encodable		
+protocol	conformance ToolChoice.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImageGenerationParameters.Detail	Swift.Encodable		
+protocol	conformance ImageGenerationParameters.Count	Swift.Encodable		
+protocol	conformance ImageGenerationParameters.Shape	Swift.Encodable		
+protocol	conformance ImageGenerationParameters.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SourceInfo.WebsiteInfo	Swift.Encodable		
+protocol	conformance SourceInfo.FileInfo	Swift.Encodable		
+protocol	conformance SourceInfo.WebsiteInfo	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SourceInfo.FileInfo	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FunctionChoice.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FunctionChoice.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FunctionChoice.CodingKeys	Swift.Hashable		
+protocol	conformance FunctionChoice.CodingKeys	Swift.Equatable		
+protocol	conformance CountCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountCodingKeys	Swift.Hashable		
+protocol	conformance CountCodingKeys	Swift.Equatable		
+protocol	conformance InferCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InferCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InferCodingKeys	Swift.CodingKey		
+protocol	conformance CountCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FunctionChoice.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	Anvil.UserInfo.AccountStatus	RawRepresentable		
+extension	Anvil.UserBillingPlan.Category	RawRepresentable		
+extension	Anvil.UserInfoResponse.AccountStatus	RawRepresentable		
+extension	Anvil.UserInfoResponse.CodingKeys	RawRepresentable		
+extension	Anvil.WorkspaceResponse.CodingKeys	RawRepresentable		
+extension	Anvil.RevokeAuthorizationTokensRequest.CodingKeys	RawRepresentable		
+extension	Anvil.RevokeAuthorizationTokensResponse.CodingKeys	RawRepresentable		
+extension	Anvil.ExchangeRefreshTokenForAuthorizationTokensRequest.CodingKeys	RawRepresentable		
+extension	Anvil.AuthorizationTokensResponse.CodingKeys	RawRepresentable		
+extension	Anvil.ExchangeCodeForAuthorizationTokensRequest.CodingKeys	RawRepresentable		
+extension	Anvil.ExternalLanguageModelBundle	RawRepresentable		
+extension	Anvil.HTTPClient.PrivacyPassRedemptionResponse.CodingKeys	RawRepresentable		
+extension	Anvil.HTTPClient.ErrorResponse.Error.CodingKeys	RawRepresentable		
+extension	Anvil.HTTPClient.PrivacyPassRedemptionTypes	RawRepresentable		
+extension	Anvil.JSONSchema.CodingKeys	RawRepresentable		
+extension	Anvil.Entry	Identifiable		
+extension	Anvil.Entry	PersistentModel		
+extension	Anvil.Telemetry.TypeName	CaseIterable		
+extension	Anvil.Telemetry.TypeName	RawRepresentable		
+extension	Anvil.ChatChunk.FileUploadResponse.Status	RawRepresentable		
+extension	Anvil.ChatChunk.Choice.Status	RawRepresentable		
+extension	Anvil.ChatChunk.IncompleteDetail.IncompleteReason	RawRepresentable		
+extension	Anvil.ChatChunk.RateLimits.Limits.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.FileGeneratorCallFileAdded.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ImageGeneratorCallImageAdded.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ImageGeneratorCallPromptDone.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ImageGeneratorCallPromptDelta.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ChoiceItemChange.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.FunctionCallDone.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.FunctionCallDelta.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.RefusalValueDone.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.TextValueAnnotation.CodingKeys	RawRepresentable		
+extension	Anvil.TextAnnotation.FieldKeys	RawRepresentable		
+extension	Anvil.TextAnnotation.FileCitation.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.TextValueDone.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.TextValueDelta.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ChoiceItemMessageContent.CodingKeys	RawRepresentable		
+extension	Anvil.FileGeneratorFile.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ChoiceItem.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.Choice.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.IncompleteDetail.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.ResponseResource.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.FileUploadResponse.CodingKeys	RawRepresentable		
+extension	Anvil.CreateSessionResponse.CodingKeys	RawRepresentable		
+extension	Anvil.ChatChunk.RateLimits.CodingKeys	RawRepresentable		
+extension	Anvil.InputHint	RawRepresentable		
+extension	Anvil.SessionExpirationOption.Policy.Anchor	RawRepresentable		
+extension	Anvil.Role	RawRepresentable		
+extension	Anvil.ExternalModelResource.ModelCategory	RawRepresentable		
+extension	Anvil.ExternalModelResource.ReleaseLabel	RawRepresentable		
+extension	Anvil.Message.CodingKeys	RawRepresentable		
+extension	Anvil.ChatRequest.CodingKeys	RawRepresentable		
+extension	Anvil.TwoPhaseUploadDocumentRequest.CodingKeys	RawRepresentable		
+extension	Anvil.TwoPhaseUploadDocumentResponse.CodingKeys	RawRepresentable		
+extension	Anvil.UploadDocumentResponse.CodingKeys	RawRepresentable		
+extension	Anvil.ListModelsResponse.CodingKeys	RawRepresentable		
+extension	Anvil.ExternalModelResource.CodingKeys	RawRepresentable		
+extension	Anvil.PromptConfigurationGroup.VariableBindingDefinitionOverride.CodingKeys	RawRepresentable		
+extension	Anvil.ToolingDescription.Keys	RawRepresentable		
+extension	Anvil.PromptConfigurationGroup.CodingKeys	RawRepresentable		
+extension	Anvil.ResponseFormat.CodingKeys	RawRepresentable		
+extension	Anvil.ImageGenerationParameters.Size	RawRepresentable		
+extension	Anvil.ImageGenerationParameters.Shape	RawRepresentable		
+extension	Anvil.ImageGenerationParameters.Detail	RawRepresentable		
+extension	Anvil.ImageGenerationParameters.CodingKeys	RawRepresentable		
+extension	Anvil.ResponseFormat.Details.CodingKeys	RawRepresentable		
+extension	Anvil.SourceInfo.FileInfo.CodingKeys	RawRepresentable		

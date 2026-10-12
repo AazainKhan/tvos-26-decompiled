@@ -1,0 +1,117 @@
+kind	type	conformance	member_kind	member
+class	CallsXPC.XPCHostConnection<A	CallsXPC.XPCInterface>		
+class	CallsXPC.XPCHostConnection<A	CallsXPC.XPCInterface>	let	id
+class	CallsXPC.XPCHostConnection<A	CallsXPC.XPCInterface>	let	bundleIdentifier
+class	CallsXPC.XPCHostConnection<A	CallsXPC.XPCInterface>	let	session
+struct	CallsXPC.TypedPayloadDecoder<A	Swift.Decodable, A: Swift.Encodable>		
+class	CallsXPC.XPCHost<A	CallsXPC.XPCInterface>		
+class	CallsXPC.XPCHost<A	CallsXPC.XPCInterface>	var	listener
+class	CallsXPC.XPCHost<A	CallsXPC.XPCInterface>	let	connections
+class	CallsXPC.XPCHost<A	CallsXPC.XPCInterface>	let	cancellationHandler
+class	CallsXPC.XPCHost<A	CallsXPC.XPCInterface>	let	messageHandlers
+struct	CallsXPC.XPCHost.ConnectionRequest<A	CallsXPC.XPCInterface>		
+struct	CallsXPC.XPCHost.ConnectionRequest<A	CallsXPC.XPCInterface>	let	sessionRequest
+struct	CallsXPC.ReceivedMessage<A	CallsXPC.XPCMessage>		
+struct	CallsXPC.ReceivedMessage<A	CallsXPC.XPCMessage>	let	content
+struct	CallsXPC.ReceivedMessage<A	CallsXPC.XPCMessage>	let	auditToken
+enum	CallsXPC.XPCHost.MessageReply<A	CallsXPC.XPCInterface>		
+enum	CallsXPC.XPCHost.MessageReply<A	CallsXPC.XPCInterface>	case	handledSync
+enum	CallsXPC.XPCHost.MessageReply<A	CallsXPC.XPCInterface>	case	unhandled
+enum	CallsXPC.XPCHost.MessageReply<A	CallsXPC.XPCInterface>	case	handledWithoutReply
+enum	CallsXPC.XPCHost.MessageReply<A	CallsXPC.XPCInterface>	case	handledAsync
+struct	CallsXPC.XPCHost.Handler<A	CallsXPC.XPCInterface>		
+struct	CallsXPC.XPCHost.Handler<A	CallsXPC.XPCInterface>	let	messageHandler
+struct	CallsXPC.XPCHost.Handler<A	CallsXPC.XPCInterface>	let	cancellationHandler
+class	CallsXPC.XPCClient<A	CallsXPC.XPCInterface>		
+class	CallsXPC.XPCClient<A	CallsXPC.XPCInterface>	var	session
+class	CallsXPC.XPCClient<A	CallsXPC.XPCInterface>	let	messageHandlers
+class	CallsXPC.XPCClient<A	CallsXPC.XPCInterface>	let	cancellationHandler
+struct	CallsXPC.TypedPayloadBox<A	CallsXPC.XPCMessagesProtocol>		
+struct	CallsXPC.TypedPayloadBox<A	CallsXPC.XPCMessagesProtocol>	let	value
+struct	CallsXPC.TypedPayloadBox<A	CallsXPC.XPCMessagesProtocol>	let	name
+enum	CallsXPC.TypedPayloadBox.CodingKeys<A	CallsXPC.XPCMessagesProtocol>		
+enum	CallsXPC.TypedPayloadBox.CodingKeys<A	CallsXPC.XPCMessagesProtocol>	case	name
+enum	CallsXPC.TypedPayloadBox.CodingKeys<A	CallsXPC.XPCMessagesProtocol>	case	value
+struct	CallsXPC.CodableVoid			
+struct	CallsXPC.XPCResultError			
+struct	CallsXPC.XPCResultError		let	localizedDescription
+struct	CallsXPC.XPCResultError		let	description
+struct	CallsXPC.XPCResultError		let	debugDescription
+enum	CallsXPC.XPCResultError.CodingKeys			
+enum	CallsXPC.XPCResultError.CodingKeys		case	localizedDescription
+enum	CallsXPC.XPCResultError.CodingKeys		case	description
+enum	CallsXPC.XPCResultError.CodingKeys		case	debugDescription
+enum	CallsXPC.CodableVoid.CodingKeys			
+enum	CallsXPC.XPCResult<A	Swift.Decodable, A: Swift.Encodable>		
+enum	CallsXPC.XPCResult<A	Swift.Decodable, A: Swift.Encodable>	case	success
+enum	CallsXPC.XPCResult<A	Swift.Decodable, A: Swift.Encodable>	case	failure
+enum	CallsXPC.XPCResult.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	CallsXPC.XPCResult.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	success
+enum	CallsXPC.XPCResult.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	failure
+enum	CallsXPC.XPCResult.SuccessCodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	CallsXPC.XPCResult.SuccessCodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	_0
+enum	CallsXPC.XPCResult.FailureCodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	CallsXPC.XPCResult.FailureCodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	_0
+class	CallsXPC.LockedResettable			
+class	CallsXPC.LockedResettable		let	value
+class	CallsXPC.LockedResettable		var	valueInitializer
+class	CallsXPC.LockedResettable		var	onReset
+enum	CallsXPC.XPCIdentity			
+enum	CallsXPC.XPCIdentity		case	machService
+enum	CallsXPC.OneToMany			
+enum	CallsXPC.OneToOne			
+struct	CallsXPC.XPCMessages<A	CallsXPC.XPCMessage>		
+protocol	CallsXPC._TypedPayloadDecoding			
+protocol	CallsXPC.XPCMessage	Reply, Failure		
+protocol	CallsXPC.XPCInterface	ClientMessages, HostMessages, Kind		
+protocol	CallsXPC.XPCInterfaceKind			
+protocol	CallsXPC.XPCMessagesProtocol			
+protocol	conformance CallsXPC.XPCHostConnection	Swift.Identifiable		
+protocol	conformance CallsXPC.TypedPayloadDecoder	CallsXPC._TypedPayloadDecoding		
+protocol	conformance Handler	XPC.XPCPeerHandler		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.Equatable		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.Hashable		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.RawRepresentable		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.CodingKey		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CallsXPC.TypedPayloadBox	Swift.Decodable		
+protocol	conformance CallsXPC.TypedPayloadBox	Swift.Encodable		
+protocol	conformance CallsXPC.CodableVoid	Swift.Decodable		
+protocol	conformance CallsXPC.CodableVoid	Swift.Encodable		
+protocol	conformance CallsXPC.XPCResultError	Swift.Error		
+protocol	conformance CallsXPC.XPCResultError	Swift.Decodable		
+protocol	conformance CallsXPC.XPCResultError	Swift.Encodable		
+protocol	conformance CallsXPC.XPCResultError	Swift.CustomStringConvertible		
+protocol	conformance CallsXPC.XPCResultError	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CallsXPC.XPCResult	Swift.Encodable		
+protocol	conformance CallsXPC.XPCResult	Swift.Decodable		
+protocol	conformance FailureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailureCodingKeys	Swift.Hashable		
+protocol	conformance FailureCodingKeys	Swift.Equatable		
+protocol	conformance SuccessCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SuccessCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SuccessCodingKeys	Swift.Hashable		
+protocol	conformance SuccessCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SuccessCodingKeys	Swift.CodingKey		
+protocol	conformance FailureCodingKeys	Swift.CodingKey		
+protocol	conformance CallsXPC.OneToMany	CallsXPC.XPCInterfaceKind		
+protocol	conformance CallsXPC.OneToOne	CallsXPC.XPCInterfaceKind		
+protocol	conformance CallsXPC.XPCMessages	CallsXPC.XPCMessagesProtocol		
+extension	CallsXPC.XPCHostConnection	Identifiable		
+extension	CallsXPC.XPCHost.Handler	XPCPeerHandler		
+extension	CallsXPC.TypedPayloadBox.CodingKeys	RawRepresentable		

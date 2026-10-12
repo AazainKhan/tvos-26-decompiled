@@ -1,0 +1,330 @@
+kind	type	conformance	member_kind	member
+class	passd.PendingProvisioningSetupAssistantPrecondition			
+class	passd.PendingProvisioningSetupAssistantPrecondition		let	monitor
+class	passd.PendingProvisioningSetupAssistantPrecondition		var	identifier
+class	passd.ProvisioningJPKISupportDataHandler	NSObject		
+class	passd.ProvisioningJPKISupportDataHandler	NSObject	let	keychainQueue
+class	passd.ProvisioningJPKISupportDataHandler	NSObject	let	relevantPass
+enum	passd.ProvisioningJPKISupportDataHandler.Error			
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	unknownKeychainFailure
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	unsupportedDataType
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	unsupportedPass
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	incompleteDataSet
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	internalClientError
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	terminalPassState
+enum	passd.ProvisioningJPKISupportDataHandler.Error		case	credentialsNotAvailable
+class	passd.ProvisioningSupportDataManager	NSObject		
+enum	passd.ProvisioningSupportDataManager.Error			
+enum	passd.ProvisioningSupportDataManager.Error		case	genericOperationFailure
+class	passd.PDFPANCardManager	NSObject		
+class	passd.PDFPANCardManager	NSObject	let	queue
+class	passd.PDFPANCardManager	NSObject	let	keychain
+class	passd.PDFPANCardManager	NSObject	let	webServiceCoordinator
+class	passd.PDFPANCardManager	NSObject	let	paymentCommunicationManager
+class	passd.PDFPANCardManager	NSObject	let	databaseManager
+class	passd.PDFPANCardManager	NSObject	var	_isCheckingEligibility
+class	passd.PDFPANCardManager	NSObject	var	eligibilityHandlers
+class	passd.PDFPANCardManager	NSObject	let	eligibilityCheckLock
+class	passd.PDFPANCardManager.KeychainManager			
+enum	passd.PDFPANCardManager.KeychainManager.KeychainError			
+enum	passd.PDFPANCardManager.KeychainManager.KeychainError		case	unhandledError
+enum	passd.PDFPANCardManager.KeychainManager.KeychainError		case	noEntries
+enum	passd.PDFPANCardManager.KeychainManager.KeychainError		case	noPassword
+class	passd.PendingProvisioningManager	NSObject		
+class	passd.PendingProvisioningManager	NSObject	let	databaseManager
+class	passd.PendingProvisioningManager	NSObject	let	webServiceCoordinator
+class	passd.PendingProvisioningManager	NSObject	let	peerPaymentWebServiceCoordinator
+class	passd.PendingProvisioningManager	NSObject	let	notificationStreamManager
+class	passd.PendingProvisioningManager	NSObject	let	cloudStoreCoordinator
+class	passd.PendingProvisioningManager	NSObject	let	sharingChannelManager
+class	passd.PendingProvisioningManager	NSObject	let	tapToRadarDelegate
+class	passd.PendingProvisioningManager	NSObject	var	pendingProvisioningMessageManager
+class	passd.PendingProvisioningManager	NSObject	var	delegate
+class	passd.PendingProvisioningManager	NSObject	let	taskLock
+class	passd.PendingProvisioningManager	NSObject	var	taskState
+class	passd.PendingProvisioningManager	NSObject	var	passPersonalizationTimer
+struct	passd.PendingProvisioningManager.TaskState			
+struct	passd.PendingProvisioningManager.TaskState		var	active
+struct	passd.PendingProvisioningManager.TaskState		var	queued
+struct	passd.PendingProvisioningManager.TaskState		var	preconditions
+struct	passd.PendingProvisioningManager.TaskState		var	isWaitingOnPassPersonalization
+enum	passd.PendingProvisioningManager.PreconditionCheckResult			
+enum	passd.PendingProvisioningManager.PreconditionCheckResult		case	unknown
+enum	passd.PendingProvisioningManager.PreconditionCheckResult		case	metSynchronously
+enum	passd.PendingProvisioningManager.PreconditionCheckResult		case	waitingToBeMet
+class	passd.PDExistingCardAuthorizationPaymentSourceProvider			
+class	passd.PDExistingCardAuthorizationPaymentSourceProvider		let	databaseManager
+class	passd.PDExistingCardAuthorizationCarKeySourceProvider			
+class	passd.PDExistingCardAuthorizationCarKeySourceProvider		let	databaseManager
+class	passd.PDExistingCardAuthorizationCarKeySourceProvider		let	webService
+class	passd.PDARRUnifiedAccessDecryptionProvider	NSObject		
+class	passd.PDARRUnifiedAccessDecryptionProvider	NSObject	let	subcredentialManager
+class	passd.UserLegalAgreementManager	NSObject		
+class	passd.UserLegalAgreementManager	NSObject	let	databaseManager
+class	passd.UserLegalAgreementManager	NSObject	let	dynamicStateManager
+class	passd.PendingProvisioningDeviceUnlockPrecondition	NSObject		
+class	passd.PendingProvisioningDeviceUnlockPrecondition	NSObject	let	monitor
+class	passd.PendingProvisioningDeviceUnlockPrecondition	NSObject	var	identifier
+class	passd.PDARRISO18013CredentialProvider	NSObject		
+class	passd.PDARRISO18013CredentialProvider	NSObject	let	iso18013Manager
+class	passd.PDExistingCardAuthorizationContinuityHostService			
+class	passd.PDExistingCardAuthorizationContinuityHostService		let	handle
+class	passd.PDExistingCardAuthorizationContinuityHostService		let	databaseManager
+class	passd.PDExistingCardAuthorizationContinuityHostService		let	webService
+class	passd.PDExistingCardAuthorizationContinuityHostService		var	invitation
+class	passd.PDExistingCardAuthorizationContinuityHostService		var	managedProviders
+struct	passd.PDExistingCardAuthorizationContinuityHostService.ManagedProvider			
+struct	passd.PDExistingCardAuthorizationContinuityHostService.ManagedProvider		let	sessionId
+struct	passd.PDExistingCardAuthorizationContinuityHostService.ManagedProvider		let	provider
+struct	passd.PDExistingCardAuthorizationContinuityHostService.ManagedProvider		let	passUniqueIdentifiers
+class	passd.PDCarContinuityHostService			
+class	passd.PDCarContinuityHostService		let	handle
+class	passd.PDCarContinuityHostService		let	databaseManager
+class	passd.PDCarContinuityHostService		let	webService
+class	passd.PDCarContinuityHostService		var	requestedPassUniqueID
+class	passd.BiometricBindingMonitor	NSObject		
+class	passd.BiometricBindingMonitor	NSObject	let	notificationStreamManager
+class	passd.BiometricBindingMonitor	NSObject	let	iso18013Manager
+class	passd.BiometricBindingMonitor	NSObject	let	databaseManager
+class	passd.PendingProvisioningConnectivityPrecondition			
+class	passd.PendingProvisioningConnectivityPrecondition		let	evaluator
+class	passd.PendingProvisioningConnectivityPrecondition		let	lock
+class	passd.PendingProvisioningConnectivityPrecondition		var	hasConnectivity
+class	passd.PendingProvisioningConnectivityPrecondition		var	completion
+class	passd.PendingProvisioningConnectivityPrecondition		var	identifier
+class	passd.PDARRFidoSignatureProvider	NSObject		
+struct	passd.PDARRFidoSignatureProvider.KeyGenerationConfiguration			
+struct	passd.PDARRFidoSignatureProvider.KeyGenerationConfiguration		let	profile
+struct	passd.PDARRFidoSignatureProvider.KeyGenerationConfiguration		let	challenge
+struct	passd.PDARRFidoSignatureProvider.KeyGenerationConfiguration		let	externalizedAuth
+class	passd.PDARRAliroSignatureProvider	NSObject		
+class	passd.PDARRAliroSignatureProvider	NSObject	let	subcredentialManager
+struct	passd.PDARRAliroSignatureProvider.IdentifierPair			
+struct	passd.PDARRAliroSignatureProvider.IdentifierPair		let	applicationIdentifier
+struct	passd.PDARRAliroSignatureProvider.IdentifierPair		let	subcredentialIdentifier
+class	passd.ProvisioningRequirementsChecker	NSObject		
+class	passd.ProvisioningRequirementsChecker	NSObject	let	webService
+class	passd.ProvisioningRequirementsChecker	NSObject	let	cloudStoreCoordinator
+class	passd.PendingProvisioningManager.PendingProvisioningMessageManager	NSObject		
+class	passd.PendingProvisioningManager.PendingProvisioningMessageManager	NSObject	let	dataSource
+class	passd.PendingProvisioningManager.PendingProvisioningMessageManager	NSObject	let	carKeyRequirementsChecker
+class	passd.PendingProvisioningManager.PendingProvisioningMessageManager	NSObject	let	notificationManager
+class	passd.PendingProvisioningManager.PendingProvisioningMessageManager	NSObject	let	applicationMessageManager
+class	passd.PendingProvisioningManager.PendingProvisioningMessageManager	NSObject	var	applicationMessageSink
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject		
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject	let	transportIdentifier
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject	let	sharingChannelManager
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject	let	lock
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject	var	hasConnectivity
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject	var	completion
+class	passd.PendingProvisioningSharingMessagePrecondition	NSObject	let	identifier
+class	passd.PDARRUnifiedAccessSignatureProvider	NSObject		
+class	passd.PDARRUnifiedAccessSignatureProvider	NSObject	let	subcredentialManager
+struct	passd.PDARRUnifiedAccessSignatureProvider.IdentifierPair			
+struct	passd.PDARRUnifiedAccessSignatureProvider.IdentifierPair		let	applicationIdentifier
+struct	passd.PDARRUnifiedAccessSignatureProvider.IdentifierPair		let	subcredentialIdentifier
+class	passd.PDARRCoreIDCredAccountKeyProvider	NSObject		
+class	passd.PDARRCoreIDCredAccountKeyProvider	NSObject	let	iso18013Manager
+class	passd.PendingProvisioningManager.ProvisionTask			
+class	passd.PendingProvisioningManager.ProvisionTask		var	pending
+class	passd.SpotlightFinanceKitWrapper	NSObject		
+class	passd.ApplePayDemoActivitySignalManager	NSObject		
+class	passd.ApplePayDemoActivitySignalManager	NSObject	let	databaseManager
+class	passd.PendingProvisioningPrivacyKeyAvailablePrecondition			
+class	passd.PendingProvisioningPrivacyKeyAvailablePrecondition		let	groupIdentifier
+class	passd.PendingProvisioningPrivacyKeyAvailablePrecondition		let	monitor
+class	passd.PendingProvisioningPrivacyKeyAvailablePrecondition		let	identifier
+class	passd.PDIdentityProvisioningRequirementsChecker	NSObject		
+class	passd.PDIdentityProvisioningRequirementsChecker	NSObject	var	databaseManager
+class	passd.PDARRISO18013KeySigningKeyProvider	NSObject		
+class	passd.PDARRISO18013KeySigningKeyProvider	NSObject	let	iso18013Manager
+class	passd.PDARRDPANOwnershipSignatureProvider	NSObject		
+class	passd.DeviceLockStateMonitor	NSObject		
+class	passd.DeviceLockStateMonitor	NSObject	let	notificationStreamManager
+class	passd.DeviceLockStateMonitor	NSObject	let	lock
+class	passd.DeviceLockStateMonitor	NSObject	var	currentLockState
+class	passd.DeviceLockStateMonitor	NSObject	var	completions
+enum	passd.DeviceLockStateMonitor.LockState			
+enum	passd.DeviceLockStateMonitor.LockState		case	locked
+enum	passd.DeviceLockStateMonitor.LockState		case	unlocked
+class	passd.PDFPANCardManager.FPANCardKeychainEntry			
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	version
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	identifier
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	nickname
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	cardholderName
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	fpan
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	displayableLastFour
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	expirationDate
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	expirationDateString
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	securityCode
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	credentialType
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	lastUsed
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	billingAddress
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	shortDescription
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	primaryAccountIdentifier
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	passUniqueIdentifier
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	fpanHash
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	savePromptState
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		var	elgibilityState
+class	passd.PDFPANCardManager.FPANCardKeychainEntry		let	expirationDateFormatter
+struct	passd.PDFPANCardManager.CardEligibilityState			
+struct	passd.PDFPANCardManager.CardEligibilityState		var	cardState
+struct	passd.PDFPANCardManager.CardSavePromptState			
+struct	passd.PDFPANCardManager.CardSavePromptState		var	primaryAccountNumber
+struct	passd.PDFPANCardManager.CardSavePromptState		var	expiration
+struct	passd.PDFPANCardManager.CardSavePromptState		var	securityCode
+enum	passd.PDFPANCardManager.FPANCardKeychainEntry.CompatibilityVersion			
+enum	passd.PDFPANCardManager.FPANCardKeychainEntry.CompatibilityVersion		case	one
+enum	passd.PDFPANCardManager.CardEligibilityState.State			
+enum	passd.PDFPANCardManager.CardEligibilityState.State		case	notChecked
+enum	passd.PDFPANCardManager.CardEligibilityState.State		case	eligible
+enum	passd.PDFPANCardManager.CardEligibilityState.State		case	ineligible
+enum	passd.PDFPANCardManager.CardEligibilityState.State		case	inWallet
+enum	passd.PDFPANCardManager.CardSavePromptState.State			
+enum	passd.PDFPANCardManager.CardSavePromptState.State		case	notPrompted
+enum	passd.PDFPANCardManager.CardSavePromptState.State		case	rejected
+class	passd.PDBaseContinuityHostManager	NSObject		
+class	passd.PDBaseContinuityHostManager	NSObject	let	handle
+class	passd.PDBaseContinuityHostManager	NSObject	let	remoteInterfacePresenter
+class	passd.PDBaseContinuityHostManager	NSObject	let	userNotificationManager
+class	passd.PDBaseContinuityHostManager	NSObject	let	service
+class	passd.PDBaseContinuityHostManager	NSObject	var	isValid
+class	passd.PDBaseContinuityHostManager	NSObject	var	promptNotification
+class	passd.PDBaseContinuityHostManager	NSObject	var	invalidationHandler
+class	passd.PDNWProximityVerifierListener			
+class	passd.PDNWProximityVerifierListener		var	serviceName
+class	passd.PDNWProximityVerifierListener		var	serviceType
+class	passd.PDNWProximityVerifierListener		let	passcode
+class	passd.PDNWProximityVerifierListener		var	allowMultipleConnections
+class	passd.PDNWProximityVerifierListener		let	lock
+class	passd.PDNWProximityVerifierListener		var	isRunning
+class	passd.PDNWProximityVerifierListener		var	isValid
+class	passd.PDNWProximityVerifierListener		var	listener
+class	passd.PDNWProximityVerifierListener		var	completion
+class	passd.PDNWProximityVerifierBrowser			
+class	passd.PDNWProximityVerifierBrowser		let	serviceName
+class	passd.PDNWProximityVerifierBrowser		let	serviceType
+class	passd.PDNWProximityVerifierBrowser		let	passcode
+class	passd.PDNWProximityVerifierBrowser		let	lock
+class	passd.PDNWProximityVerifierBrowser		var	isRunning
+class	passd.PDNWProximityVerifierBrowser		var	isValid
+class	passd.PDNWProximityVerifierBrowser		var	browser
+class	passd.PDNWProximityVerifierBrowser		var	completion
+class	passd.PDNWProximityVerifierConnection			
+class	passd.PDNWProximityVerifierConnection		let	initiatedConnection
+class	passd.PDNWProximityVerifierConnection		let	serviceName
+class	passd.PDNWProximityVerifierConnection		let	lock
+class	passd.PDNWProximityVerifierConnection		var	isRunning
+class	passd.PDNWProximityVerifierConnection		var	isValid
+class	passd.PDNWProximityVerifierConnection		var	connection
+class	passd.PDNWProximityVerifier	NSObject		
+class	passd.PDNWProximityVerifier	NSObject	let	mode
+class	passd.PDNWProximityVerifier	NSObject	let	serviceName
+class	passd.PDNWProximityVerifier	NSObject	let	passcode
+class	passd.PDNWProximityVerifier	NSObject	let	timeout
+class	passd.PDNWProximityVerifier	NSObject	let	allowMultipleConnections
+class	passd.PDNWProximityVerifier	NSObject	let	lock
+class	passd.PDNWProximityVerifier	NSObject	var	isRunning
+class	passd.PDNWProximityVerifier	NSObject	var	isValid
+class	passd.PDNWProximityVerifier	NSObject	var	listener
+class	passd.PDNWProximityVerifier	NSObject	var	browser
+class	passd.PDNWProximityVerifier	NSObject	var	connections
+class	passd.PDNWProximityVerifier	NSObject	var	completion
+class	passd.PDNWProximityVerifier	NSObject	var	timeoutTimer
+enum	passd.PDNWProximityVerifierMode			
+class	passd.PDARRISO18013BiometricBindingACLProvider	NSObject		
+class	passd.PDARRISO18013BiometricBindingACLProvider	NSObject	let	iso18013Manager
+enum	passd.PDRateLimitedOperation			
+enum	passd.PDRateLimitedOperationState			
+class	passd.PDRateLimiter	NSObject		
+class	passd.PDRateLimiter	NSObject	let	databaseManager
+class	passd.PDRateLimiter	NSObject	let	lock
+class	passd.PDRateLimitConfiguration	NSObject		
+class	passd.PDRateLimitConfiguration	NSObject	let	maxTokenCount
+class	passd.PDRateLimitConfiguration	NSObject	let	tokenRefillRate
+class	passd.PDRateLimitTokens	NSObject		
+class	passd.PDRateLimitTokens	NSObject	let	bundleIdentifier
+class	passd.PDRateLimitTokens	NSObject	let	operation
+class	passd.PDRateLimitTokens	NSObject	var	tokenCount
+class	passd.PDRateLimitTokens	NSObject	var	lastRefillDate
+class	passd.PDRateLimitTokens_Prototype	NSObject		
+class	passd.PDRateLimitTokens_Prototype	NSObject	var	bundleIdentifier
+class	passd.PDRateLimitTokens_Prototype	NSObject	var	operation
+class	passd.PDRateLimitTokens_Prototype	NSObject	var	tokenCount
+class	passd.PDRateLimitTokens_Prototype	NSObject	var	lastRefillDate
+protocol	passd.ProvisioningSupportDataHandler			
+protocol	passd.PendingProvisioningPrecondition			
+protocol	passd.PendingProvisioningMessageManagerDataSource			
+protocol	passd.PDContinuityHostServiceProvider			
+protocol	conformance __C.PKAutoFillCredentialType	protocol descriptor for Equatable		
+protocol	conformance __C.PKAutoFillCredentialType	protocol descriptor for RawRepresentable		
+protocol	conformance passd.PendingProvisioningSetupAssistantPrecondition	passd.PendingProvisioningPrecondition		
+protocol	conformance __C.PKAnalyticsKey	protocol descriptor for _HasCustomAnyHashableRepresentation		
+protocol	conformance __C.PKAnalyticsKey	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKAnalyticsKey	protocol descriptor for _SwiftNewtypeWrapper		
+protocol	conformance __C.PKAnalyticsKey	protocol descriptor for Equatable		
+protocol	conformance __C.PKAnalyticsKey	protocol descriptor for _ObjectiveCBridgeable		
+protocol	conformance __C.PKTriState	protocol descriptor for Equatable		
+protocol	conformance __C.PKTriState	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKPaymentCredentialType	protocol descriptor for Equatable		
+protocol	conformance __C.PKPaymentCredentialType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKUserLegalAgreementType	protocol descriptor for Hashable		
+protocol	conformance __C.PKUserLegalAgreementType	protocol descriptor for Equatable		
+protocol	conformance __C.PKUserLegalAgreementType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKPendingProvisioningReceiptType	protocol descriptor for Hashable		
+protocol	conformance __C.PKPendingProvisioningReceiptType	protocol descriptor for Equatable		
+protocol	conformance __C.PKPendingProvisioningReceiptType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKAutoFillCardCredentialRequestedFields	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance __C.PKAutoFillCardCredentialRequestedFields	protocol descriptor for Equatable		
+protocol	conformance __C.PKAutoFillCardCredentialRequestedFields	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKAutoFillCardCredentialRequestedFields	protocol descriptor for SetAlgebra		
+protocol	conformance __C.PKAutoFillCardCredentialRequestedFields	protocol descriptor for OptionSet		
+protocol	conformance __C.PKProvisioningSupportDataType	protocol descriptor for Hashable		
+protocol	conformance __C.PKProvisioningSupportDataType	protocol descriptor for Equatable		
+protocol	conformance __C.PKProvisioningSupportDataType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.PKAnalyticsKey	protocol descriptor for Hashable		
+protocol	conformance ProvisioningJPKISupportDataHandler.Error	protocol descriptor for Equatable		
+protocol	conformance ProvisioningJPKISupportDataHandler.Error	protocol descriptor for Hashable		
+protocol	conformance ProvisioningJPKISupportDataHandler.Error	protocol descriptor for Error		
+protocol	conformance passd.ProvisioningJPKISupportDataHandler	passd.ProvisioningSupportDataHandler		
+protocol	conformance ProvisioningSupportDataManager.Error	protocol descriptor for Equatable		
+protocol	conformance ProvisioningSupportDataManager.Error	protocol descriptor for Hashable		
+protocol	conformance ProvisioningSupportDataManager.Error	protocol descriptor for Error		
+protocol	conformance KeychainManager.KeychainError	protocol descriptor for Error		
+protocol	conformance passd.PendingProvisioningManager	passd.PendingProvisioningMessageManagerDataSource		
+protocol	conformance PreconditionCheckResult	protocol descriptor for Hashable		
+protocol	conformance PreconditionCheckResult	protocol descriptor for Equatable		
+protocol	conformance passd.PDExistingCardAuthorizationPaymentSourceProvider	protocol descriptor for ProvisioningExistingCardAuthorizationSourceProviding		
+protocol	conformance passd.PDExistingCardAuthorizationCarKeySourceProvider	protocol descriptor for ProvisioningExistingCardAuthorizationSourceProviding		
+protocol	conformance passd.PendingProvisioningDeviceUnlockPrecondition	passd.PendingProvisioningPrecondition		
+protocol	conformance passd.PDExistingCardAuthorizationContinuityHostService	passd.PDContinuityHostServiceProvider		
+protocol	conformance passd.PDCarContinuityHostService	passd.PDContinuityHostServiceProvider		
+protocol	conformance passd.PendingProvisioningConnectivityPrecondition	passd.PendingProvisioningPrecondition		
+protocol	conformance IdentifierPair	protocol descriptor for Equatable		
+protocol	conformance IdentifierPair	protocol descriptor for Hashable		
+protocol	conformance passd.PendingProvisioningSharingMessagePrecondition	passd.PendingProvisioningPrecondition		
+protocol	conformance IdentifierPair	protocol descriptor for Equatable		
+protocol	conformance IdentifierPair	protocol descriptor for Hashable		
+protocol	conformance passd.PendingProvisioningPrivacyKeyAvailablePrecondition	passd.PendingProvisioningPrecondition		
+protocol	conformance DeviceLockStateMonitor.LockState	protocol descriptor for Equatable		
+protocol	conformance DeviceLockStateMonitor.LockState	protocol descriptor for Hashable		
+protocol	conformance FPANCardKeychainEntry.CompatibilityVersion	protocol descriptor for RawRepresentable		
+protocol	conformance FPANCardKeychainEntry.CompatibilityVersion	protocol descriptor for Hashable		
+protocol	conformance FPANCardKeychainEntry.CompatibilityVersion	protocol descriptor for Equatable		
+protocol	conformance CardSavePromptState.State	protocol descriptor for Hashable		
+protocol	conformance CardSavePromptState.State	protocol descriptor for Equatable		
+protocol	conformance CardEligibilityState.State	protocol descriptor for Hashable		
+protocol	conformance CardEligibilityState.State	protocol descriptor for Equatable		
+protocol	conformance passd.PDNWProximityVerifierMode	protocol descriptor for RawRepresentable		
+protocol	conformance passd.PDNWProximityVerifierMode	protocol descriptor for Hashable		
+protocol	conformance passd.PDNWProximityVerifierMode	protocol descriptor for Equatable		
+protocol	conformance passd.PDRateLimitedOperation	protocol descriptor for Equatable		
+protocol	conformance passd.PDRateLimitedOperation	protocol descriptor for Hashable		
+protocol	conformance passd.PDRateLimitedOperation	protocol descriptor for RawRepresentable		
+protocol	conformance passd.PDRateLimitedOperationState	protocol descriptor for Equatable		
+protocol	conformance passd.PDRateLimitedOperationState	protocol descriptor for Hashable		
+protocol	conformance passd.PDRateLimitedOperationState	protocol descriptor for RawRepresentable		
+extension	passd.PDFPANCardManager.FPANCardKeychainEntry.CompatibilityVersion	RawRepresentable		
+extension	passd.PDNWProximityVerifierMode	RawRepresentable		
+extension	passd.PDRateLimitedOperation	RawRepresentable		
+extension	passd.PDRateLimitedOperationState	RawRepresentable		

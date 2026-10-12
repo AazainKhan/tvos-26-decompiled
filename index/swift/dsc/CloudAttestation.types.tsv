@@ -1,0 +1,1790 @@
+kind	type	conformance	member_kind	member
+enum	CloudAttestation.AttestedTLS			
+struct	CloudAttestation.AttestedTLS.Certificate.AttestationExtension			
+struct	CloudAttestation.AttestedTLS.Certificate.AttestationExtension		let	bundle
+struct	CloudAttestation.AttestedTLS.Certificate			
+struct	CloudAttestation.AttestedTLS.Certificate		let	certificate
+struct	CloudAttestation.AttestedTLS.Certificate		let	publicKey
+struct	CloudAttestation.AttestedTLS.Certificate		let	attestationExtension
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>		
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>	let	logger
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>	let	attestor
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>	let	keyType
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>	let	lifetime
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>	let	storage
+struct	CloudAttestation.AttestedTLS.Configurator<A	CloudAttestation.Attestor>	var	errorHandler
+enum	CloudAttestation.AttestedTLS.Error			
+enum	CloudAttestation.AttestedTLS.Error		case	missingPublicKey
+enum	CloudAttestation.AttestedTLS.Error		case	certificateGenerationFailure
+enum	CloudAttestation.AttestedTLS.Error		case	privateKeyGenerationFailure
+enum	CloudAttestation.AttestedTLS.Error		case	identityGenerationFailure
+enum	CloudAttestation.AttestedTLS.Error		case	missingAttestationExtension
+enum	CloudAttestation.AttestedTLS.Error		case	invalidAttestationExtension
+enum	CloudAttestation.AttestedTLS.Error		case	missingCertificateNotAfterDate
+enum	CloudAttestation.AttestedTLS.Error		case	mismatchingExpirationDate
+enum	CloudAttestation.AttestedTLS.Error		case	mismatchingPublicKey
+enum	CloudAttestation.AttestedTLS.Error		case	attestationExpired
+enum	CloudAttestation.AttestedTLS.KeyType			
+enum	CloudAttestation.AttestedTLS.KeyType		case	custom
+enum	CloudAttestation.AttestedTLS.KeyType		case	p256
+enum	CloudAttestation.AttestedTLS.KeyType		case	p384
+enum	CloudAttestation.AttestedTLS.KeyType		case	p384PKA
+enum	CloudAttestation.AttestedTLS.KeyType		case	curve25519
+struct	CloudAttestation.AttestedTLS.OptionsFactory<A	CloudAttestation.Attestor, B: CloudAttestation.Validator>		
+struct	CloudAttestation.AttestedTLS.OptionsFactory<A	CloudAttestation.Attestor, B: CloudAttestation.Validator>	let	logger
+struct	CloudAttestation.AttestedTLS.OptionsFactory<A	CloudAttestation.Attestor, B: CloudAttestation.Validator>	let	attestor
+struct	CloudAttestation.AttestedTLS.OptionsFactory<A	CloudAttestation.Attestor, B: CloudAttestation.Validator>	let	validator
+class	CloudAttestation.AttestedTLS.IdentityStorage			
+class	CloudAttestation.AttestedTLS.IdentityStorage		var	identity
+struct	CloudAttestation.CeremonyAttestor			
+struct	CloudAttestation.CeremonyAttestor		var	inner
+struct	CloudAttestation.CeremonyAttestor.AssetProvider			
+struct	CloudAttestation.CeremonyValidator			
+struct	CloudAttestation.CeremonyValidator		var	inner
+class	CloudAttestation.AsyncTemporalCache<A	Swift.Hashable>		
+class	CloudAttestation.AsyncTemporalCache<A	Swift.Hashable>	var	temporalCache
+struct	CloudAttestation.TemporalCache<A	Swift.Hashable>		
+struct	CloudAttestation.TemporalCache<A	Swift.Hashable>	var	elements
+struct	CloudAttestation.TemporalCache<A	Swift.Hashable>	let	capacity
+struct	CloudAttestation.TemporalCache.Element<A	Swift.Hashable>		
+struct	CloudAttestation.TemporalCache.Element<A	Swift.Hashable>	let	value
+struct	CloudAttestation.TemporalCache.Element<A	Swift.Hashable>	let	expiration
+class	CloudAttestation.IORegistryEntry			
+class	CloudAttestation.IORegistryEntry		let	rootEntry
+enum	CloudAttestation.Environment			
+enum	CloudAttestation.Environment		case	dev
+enum	CloudAttestation.Environment		case	ephemeral
+enum	CloudAttestation.Environment		case	perf
+enum	CloudAttestation.Environment		case	quarantine
+enum	CloudAttestation.Environment		case	qa
+enum	CloudAttestation.Environment		case	staging
+enum	CloudAttestation.Environment		case	uat
+enum	CloudAttestation.Environment		case	carry
+enum	CloudAttestation.Environment		case	liveon
+enum	CloudAttestation.Environment		case	production
+enum	CloudAttestation.Environment		case	qa2Primary
+enum	CloudAttestation.Environment		case	qa2Internal
+struct	CloudAttestation.DeviceIdentifiers			
+struct	CloudAttestation.DeviceIdentifiers		var	chipID
+struct	CloudAttestation.DeviceIdentifiers		var	boardID
+enum	CloudAttestation.DeviceIdentifiers.Error			
+enum	CloudAttestation.DeviceIdentifiers.Error		case	missingChipID
+enum	CloudAttestation.DeviceIdentifiers.Error		case	missingBoardID
+struct	CloudAttestation.EnsembleAttestor			
+struct	CloudAttestation.EnsembleAttestor		var	attestor
+struct	CloudAttestation.EnsembleValidator			
+struct	CloudAttestation.EnsembleValidator		var	release
+struct	CloudAttestation.EnsembleValidator		var	deviceIdentifiers
+struct	CloudAttestation.EnsembleValidator		var	restrictedExecution
+struct	CloudAttestation.EnsembleValidator		var	ephemeralData
+struct	CloudAttestation.EnsembleValidator		var	developer
+struct	CloudAttestation.EnsembleValidator		var	cryptexLockdown
+struct	CloudAttestation.EnsembleValidator		var	securityPolicy
+struct	CloudAttestation.EnsembleValidator		var	deviceFilter
+struct	CloudAttestation.EnsembleValidator		var	assetProvider
+struct	CloudAttestation.EnsembleValidator		var	udid
+struct	CloudAttestation.EnsembleValidator		var	fingerprints
+struct	CloudAttestation.EnsembleValidator		var	requireProdTrustAnchors
+struct	CloudAttestation.EnsembleValidator		var	checkRevocation
+struct	CloudAttestation.EnsembleValidator		var	strictCertificateValidation
+struct	CloudAttestation.EnsembleValidator		var	roots
+struct	CloudAttestation.EnsembleValidator		var	clock
+enum	CloudAttestation.EnsembleValidator.Error			
+enum	CloudAttestation.EnsembleValidator.Error		case	introspectionError
+enum	CloudAttestation.EnsembleValidator.Error		case	missingDCIK
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError			
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	attestationError
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingIODeviceTreeChosen
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingSecurityDomain
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingSecurityMode
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingProductionStatus
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingBoardID
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingChipID
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingECID
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingAPTicket
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingSealedHashEntries
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingCryptexSlot
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingDarwinInit
+enum	CloudAttestation.EnsembleValidator.Error.IntrospectionError		case	missingDeviceMode
+struct	CloudAttestation.GenericAttestor			
+struct	CloudAttestation.GenericAttestor		var	sepProtocol
+struct	CloudAttestation.GenericAttestor		var	assetProvider
+struct	CloudAttestation.GenericAttestor		var	defaultKeyDuration
+struct	CloudAttestation.GenericAttestor		var	enforcementOptions
+struct	CloudAttestation.GenericAttestor		var	sealedHashes
+struct	CloudAttestation.GenericAttestor		var	_attestingKey
+struct	CloudAttestation.GenericAttestor.AssetProvider			
+enum	CloudAttestation.GenericAttestor.Error			
+enum	CloudAttestation.GenericAttestor.Error		case	dakCreationFailure
+enum	CloudAttestation.GenericAttestor.Error		case	dcrtIssuanceFailure
+struct	CloudAttestation.GenericValidator<A	CloudAttestation.AttestationPolicy>		
+struct	CloudAttestation.GenericValidator<A	CloudAttestation.AttestationPolicy>	let	_policy
+struct	CloudAttestation.Image4Manifest			
+struct	CloudAttestation.Image4Manifest		let	data
+struct	CloudAttestation.Image4Manifest		let	kind
+enum	CloudAttestation.Image4Manifest.Kind			
+enum	CloudAttestation.Image4Manifest.Kind		case	ap
+enum	CloudAttestation.Image4Manifest.Kind		case	cryptex
+enum	CloudAttestation.Image4Manifest.Kind		case	pdi
+enum	CloudAttestation.Image4Manifest.Kind		case	pdiOrCryptex
+enum	CloudAttestation.Image4Manifest.Error			
+enum	CloudAttestation.Image4Manifest.Error		case	trustEvaluationFailure
+enum	CloudAttestation.Image4Manifest.Error		case	invalidManifest
+enum	CloudAttestation.Image4Manifest.Error		case	empty
+enum	CloudAttestation.Image4Manifest.Error		case	environmentCreationFailure
+enum	CloudAttestation.Image4Manifest.Error		case	trustCreationFailure
+enum	CloudAttestation.Image4Manifest.Error		case	trustEvaluationExecutionFailure
+struct	CloudAttestation.Image4Manifest.Manifest			
+struct	CloudAttestation.Image4Manifest.Manifest		let	tag
+struct	CloudAttestation.Image4Manifest.Manifest		let	version
+struct	CloudAttestation.Image4Manifest.Manifest		let	properties
+struct	CloudAttestation.Image4Manifest.Property			
+struct	CloudAttestation.Image4Manifest.Property		let	tag
+struct	CloudAttestation.Image4Manifest.Property		let	value
+enum	CloudAttestation.Image4Manifest.Property.Value			
+enum	CloudAttestation.Image4Manifest.Property.Value		case	bool
+enum	CloudAttestation.Image4Manifest.Property.Value		case	integer
+enum	CloudAttestation.Image4Manifest.Property.Value		case	octetString
+enum	CloudAttestation.Image4Manifest.Property.Value		case	properties
+enum	CloudAttestation.Image4Manifest.Property.Value		case	null
+struct	CloudAttestation.MuxValidator			
+struct	CloudAttestation.MuxValidator		var	selector
+struct	CloudAttestation.MuxValidator		var	strictCertificateValidation
+struct	CloudAttestation.MuxValidator		var	requireProdTrustAnchors
+enum	CloudAttestation.MuxValidator.Error			
+enum	CloudAttestation.MuxValidator.Error		case	missingValidAttestation
+enum	CloudAttestation.MuxValidator.Error		case	missingNonce
+enum	CloudAttestation.MuxValidator.Error		case	untrustedAppData
+struct	CloudAttestation.EnvironmentPolicy			
+struct	CloudAttestation.EnvironmentPolicy		let	expected
+enum	CloudAttestation.EnvironmentPolicy.Error			
+enum	CloudAttestation.EnvironmentPolicy.Error		case	mismatch
+enum	CloudAttestation.EnvironmentPolicy.Error		case	missingDarwinInit
+enum	CloudAttestation.EnvironmentPolicy.Error		case	missingEnvironment
+struct	CloudAttestation.ProxiedReleasePolicy			
+struct	CloudAttestation.ProxiedReleasePolicy		let	proxiedReleases
+enum	CloudAttestation.ProxiedReleasePolicy.Error			
+enum	CloudAttestation.ProxiedReleasePolicy.Error		case	notCovered
+struct	CloudAttestation.ProxiedReleaseTransparencyPolicy			
+struct	CloudAttestation.ProxiedReleaseTransparencyPolicy		let	verifier
+struct	CloudAttestation.ProxiedReleaseTransparencyPolicy		let	validateProofs
+struct	CloudAttestation.ProxiedReleaseTransparencyPolicy		let	fullReleaseSetVerification
+struct	CloudAttestation.X509FingerprintPolicy<A	CryptoKit.HashFunction>		
+struct	CloudAttestation.X509FingerprintPolicy<A	CryptoKit.HashFunction>	let	logger
+struct	CloudAttestation.X509FingerprintPolicy<A	CryptoKit.HashFunction>	let	fingerprints
+enum	CloudAttestation.X509FingerprintPolicy.Error<A	CryptoKit.HashFunction>		
+enum	CloudAttestation.X509FingerprintPolicy.Error<A	CryptoKit.HashFunction>	case	missingProvisioningCertificate
+enum	CloudAttestation.X509FingerprintPolicy.Error<A	CryptoKit.HashFunction>	case	fingerprintMismatch
+struct	CloudAttestation.X509Policy			
+struct	CloudAttestation.X509Policy		var	required
+struct	CloudAttestation.X509Policy		var	_roots
+struct	CloudAttestation.X509Policy		var	clock
+struct	CloudAttestation.X509Policy		var	revocation
+struct	CloudAttestation.X509Policy		var	body
+struct	CloudAttestation.X509Policy.RevocationPolicy			
+struct	CloudAttestation.X509Policy.RevocationPolicy		let	rawValue
+enum	CloudAttestation.X509Policy.Error			
+enum	CloudAttestation.X509Policy.Error		case	untrusted
+enum	CloudAttestation.X509Policy.Error		case	internalSecError
+enum	CloudAttestation.X509Policy.Error		case	emptyCertificateChain
+enum	CloudAttestation.X509Policy.Error		case	malformedCertificateChain
+enum	CloudAttestation.X509Policy.Error		case	unsupportedPublicKey
+enum	CloudAttestation.X509Policy.Error		case	invalidRevocationPolicy
+enum	CloudAttestation.X509Policy.Error		case	policyCreationFailure
+struct	CloudAttestation.APTicketPolicy			
+enum	CloudAttestation.APTicketPolicy.Error			
+enum	CloudAttestation.APTicketPolicy.Error		case	missingDigest
+enum	CloudAttestation.APTicketPolicy.Error		case	missingAttestation
+enum	CloudAttestation.APTicketPolicy.Error		case	untrusted
+struct	CloudAttestation.AttestationPolicyContext			
+struct	CloudAttestation.AttestationPolicyContext		var	context
+struct	CloudAttestation.AttestationPolicyContext.Key			
+struct	CloudAttestation.AttestationPolicyContext.Key		let	domain
+struct	CloudAttestation.AttestationPolicyContext.Key		let	key
+struct	CloudAttestation.CryptexPolicy			
+struct	CloudAttestation.CryptexPolicy		let	sealedHashesLoader
+struct	CloudAttestation.CryptexPolicy		let	requireLocked
+enum	CloudAttestation.CryptexPolicy.Error			
+enum	CloudAttestation.CryptexPolicy.Error		case	missingCryptexLedger
+enum	CloudAttestation.CryptexPolicy.Error		case	inconsistentLockState
+enum	CloudAttestation.CryptexPolicy.Error		case	unlocked
+enum	CloudAttestation.CryptexPolicy.Error		case	replayMismatch
+enum	CloudAttestation.CryptexPolicy.Error		case	replayFailure
+enum	CloudAttestation.CryptexPolicy.Error		case	missingCryptexSealedHash
+enum	CloudAttestation.CryptexPolicy.Error		case	missingCryptexMeasurementFlag
+enum	CloudAttestation.CryptexPolicy.SealedHashesLoader			
+enum	CloudAttestation.CryptexPolicy.SealedHashesLoader		case	immediate
+enum	CloudAttestation.CryptexPolicy.SealedHashesLoader		case	lazy
+struct	CloudAttestation.DarwinInitPolicy			
+struct	CloudAttestation.DarwinInitPolicy		let	allowedSecurityPolicies
+struct	CloudAttestation.DarwinInitPolicy		let	restrictedSecurityPolicies
+enum	CloudAttestation.DarwinInitPolicy.Error			
+enum	CloudAttestation.DarwinInitPolicy.Error		case	untrusted
+enum	CloudAttestation.DarwinInitPolicy.Error		case	restricted
+enum	CloudAttestation.DarwinInitPolicy.Error		case	missingSecureConfigs
+enum	CloudAttestation.DarwinInitPolicy.Error		case	missingDarwinInit
+enum	CloudAttestation.DarwinInitPolicy.Error		case	tooManyDarwinInit
+struct	CloudAttestation.DeviceModePolicy			
+struct	CloudAttestation.DeviceModePolicy		let	rem
+struct	CloudAttestation.DeviceModePolicy		let	ephdm
+struct	CloudAttestation.DeviceModePolicy		let	developer
+struct	CloudAttestation.DeviceModePolicy		let	modeLoader
+enum	CloudAttestation.DeviceModePolicy.Constraint			
+enum	CloudAttestation.DeviceModePolicy.Constraint		case	any
+enum	CloudAttestation.DeviceModePolicy.Constraint		case	off
+enum	CloudAttestation.DeviceModePolicy.Constraint		case	on
+enum	CloudAttestation.DeviceModePolicy.ModeLoader			
+enum	CloudAttestation.DeviceModePolicy.ModeLoader		case	immediate
+enum	CloudAttestation.DeviceModePolicy.ModeLoader		case	lazy
+enum	CloudAttestation.DeviceModePolicy.Error			
+enum	CloudAttestation.DeviceModePolicy.Error		case	restrictedExecutionModeMismatch
+enum	CloudAttestation.DeviceModePolicy.Error		case	ephemeralDataModeMismatch
+enum	CloudAttestation.DeviceModePolicy.Error		case	developerModeMismatch
+struct	CloudAttestation.EnsembleMembersPolicy			
+struct	CloudAttestation.EnsembleMembersPolicy		let	required
+struct	CloudAttestation.EnsembleMembersPolicy		var	darwinInit
+enum	CloudAttestation.EnsembleMembersPolicy.Error			
+enum	CloudAttestation.EnsembleMembersPolicy.Error		case	missingDarwinInit
+enum	CloudAttestation.EnsembleMembersPolicy.Error		case	missingEnsembleMemberFingerprints
+struct	CloudAttestation.FusingPolicy			
+struct	CloudAttestation.FusingPolicy		let	constraints
+struct	CloudAttestation.FusingPolicy		let	fusingLoader
+struct	CloudAttestation.FusingPolicy.Constraints			
+struct	CloudAttestation.FusingPolicy.Constraints		let	productionStatus
+struct	CloudAttestation.FusingPolicy.Constraints		let	securityMode
+struct	CloudAttestation.FusingPolicy.Constraints		let	securityDomain
+enum	CloudAttestation.FusingPolicy.Constraint<A	Swift.Equatable>		
+enum	CloudAttestation.FusingPolicy.Constraint<A	Swift.Equatable>	case	equals
+enum	CloudAttestation.FusingPolicy.Constraint<A	Swift.Equatable>	case	any
+enum	CloudAttestation.FusingPolicy.Error			
+enum	CloudAttestation.FusingPolicy.Error		case	untrusted
+enum	CloudAttestation.FusingPolicy.Error		case	missingFusingState
+enum	CloudAttestation.FusingPolicy.FusingLoader			
+enum	CloudAttestation.FusingPolicy.FusingLoader		case	immediate
+enum	CloudAttestation.FusingPolicy.FusingLoader		case	lazy
+struct	CloudAttestation.HardwareIdentifiersPolicy			
+struct	CloudAttestation.HardwareIdentifiersPolicy		let	expectedIdentifiers
+struct	CloudAttestation.HardwareIdentifiersPolicy		let	identifiersLoader
+enum	CloudAttestation.HardwareIdentifiersPolicy.IdentifiersLoader			
+enum	CloudAttestation.HardwareIdentifiersPolicy.IdentifiersLoader		case	immediate
+enum	CloudAttestation.HardwareIdentifiersPolicy.IdentifiersLoader		case	lazy
+enum	CloudAttestation.HardwareIdentifiersPolicy.Error			
+enum	CloudAttestation.HardwareIdentifiersPolicy.Error		case	untrusted
+enum	CloudAttestation.HardwareIdentifiersPolicy.Error		case	missingIdentifiers
+struct	CloudAttestation.KeyOptionsPolicy			
+struct	CloudAttestation.KeyOptionsPolicy		let	assertion
+struct	CloudAttestation.KeyOptionsPolicy		let	optionsLoader
+enum	CloudAttestation.KeyOptionsPolicy.Error			
+enum	CloudAttestation.KeyOptionsPolicy.Error		case	untrusted
+enum	CloudAttestation.KeyOptionsPolicy.Error		case	untrusted
+enum	CloudAttestation.KeyOptionsPolicy.Error		case	missingKeyOptions
+enum	CloudAttestation.KeyOptionsPolicy.OptionsLoader			
+enum	CloudAttestation.KeyOptionsPolicy.OptionsLoader		case	immediate
+enum	CloudAttestation.KeyOptionsPolicy.OptionsLoader		case	lazy
+enum	CloudAttestation.KeyOptionsPolicy.Assertion			
+enum	CloudAttestation.KeyOptionsPolicy.Assertion		case	mustContain
+enum	CloudAttestation.KeyOptionsPolicy.Assertion		case	mustEqual
+struct	CloudAttestation.LocalBootPolicy			
+enum	CloudAttestation.LocalBootPolicy.Error			
+enum	CloudAttestation.LocalBootPolicy.Error		case	missingDigest
+enum	CloudAttestation.LocalBootPolicy.Error		case	missingAttestation
+enum	CloudAttestation.LocalBootPolicy.Error		case	untrusted
+struct	CloudAttestation.PolicyBuilder			
+struct	CloudAttestation.PolicyBuilder.TuplePolicy<A	CloudAttestation.AttestationPolicy>		
+struct	CloudAttestation.PolicyBuilder.TuplePolicy<A	CloudAttestation.AttestationPolicy>	let	policies
+struct	CloudAttestation.PolicyBuilder.EmptyPolicy			
+struct	CloudAttestation.PolicyBuilder.BooleanPolicy			
+struct	CloudAttestation.PolicyBuilder.BooleanPolicy		let	result
+struct	CloudAttestation.PolicyBuilder.PredicatePolicy			
+struct	CloudAttestation.PolicyBuilder.PredicatePolicy		let	predicate
+struct	CloudAttestation.PolicyBuilder.OptionalPolicy<A	CloudAttestation.AttestationPolicy>		
+struct	CloudAttestation.PolicyBuilder.OptionalPolicy<A	CloudAttestation.AttestationPolicy>	let	policy
+enum	CloudAttestation.PolicyBuilder.ConditionalPolicy<A	CloudAttestation.AttestationPolicy, B: CloudAttestation.AttestationPolicy>		
+enum	CloudAttestation.PolicyBuilder.ConditionalPolicy<A	CloudAttestation.AttestationPolicy, B: CloudAttestation.AttestationPolicy>	case	truePolicy
+enum	CloudAttestation.PolicyBuilder.ConditionalPolicy<A	CloudAttestation.AttestationPolicy, B: CloudAttestation.AttestationPolicy>	case	falsePolicy
+enum	CloudAttestation.PolicyBuilder.Error			
+enum	CloudAttestation.PolicyBuilder.Error		case	predicateExpressionFailure
+enum	CloudAttestation.PolicyBuilder.Error		case	booleanExpressionFailure
+struct	CloudAttestation.RoutingHintPolicy			
+struct	CloudAttestation.RoutingHintPolicy		let	darwinInitLoader
+struct	CloudAttestation.RoutingHintPolicy		let	required
+struct	CloudAttestation.RoutingHintPolicy		let	fallback
+enum	CloudAttestation.RoutingHintPolicy.Error			
+enum	CloudAttestation.RoutingHintPolicy.Error		case	missingDarwinInit
+enum	CloudAttestation.RoutingHintPolicy.Error		case	missingRoutingHint
+enum	CloudAttestation.RoutingHintPolicy.DarwinInitLoader			
+enum	CloudAttestation.RoutingHintPolicy.DarwinInitLoader		case	immediate
+enum	CloudAttestation.RoutingHintPolicy.DarwinInitLoader		case	lazy
+struct	CloudAttestation.SecureConfigPolicy			
+struct	CloudAttestation.SecureConfigPolicy		var	sealedHashLoader
+enum	CloudAttestation.SecureConfigPolicy.Error			
+enum	CloudAttestation.SecureConfigPolicy.Error		case	untrusted
+enum	CloudAttestation.SecureConfigPolicy.Error		case	replayMismatch
+enum	CloudAttestation.SecureConfigPolicy.Error		case	replayFailure
+enum	CloudAttestation.SecureConfigPolicy.Error		case	missingSecureConfig
+enum	CloudAttestation.SecureConfigPolicy.Error		case	missingSealedHash
+enum	CloudAttestation.SecureConfigPolicy.SealedHashLoader			
+enum	CloudAttestation.SecureConfigPolicy.SealedHashLoader		case	immediate
+enum	CloudAttestation.SecureConfigPolicy.SealedHashLoader		case	lazy
+struct	CloudAttestation.SEPAttestationPolicy			
+struct	CloudAttestation.SEPAttestationPolicy		let	signerLoader
+struct	CloudAttestation.SEPAttestationPolicy		var	body
+enum	CloudAttestation.SEPAttestationPolicy.Error			
+enum	CloudAttestation.SEPAttestationPolicy.Error		case	unknown
+enum	CloudAttestation.SEPAttestationPolicy.Error		case	untrusted
+enum	CloudAttestation.SEPAttestationPolicy.Error		case	missingSigningKey
+enum	CloudAttestation.SEPAttestationPolicy.Error		case	invalidIdentity
+enum	CloudAttestation.SEPAttestationPolicy.SignerLoader			
+enum	CloudAttestation.SEPAttestationPolicy.SignerLoader		case	immediate
+enum	CloudAttestation.SEPAttestationPolicy.SignerLoader		case	lazy
+enum	CloudAttestation.SEPAttestationPolicy.SignerLoader		case	insecure
+struct	CloudAttestation.SEPImagePolicy			
+enum	CloudAttestation.SEPImagePolicy.Error			
+enum	CloudAttestation.SEPImagePolicy.Error		case	missingAttestation
+enum	CloudAttestation.SEPImagePolicy.Error		case	missingAPTicket
+enum	CloudAttestation.SEPImagePolicy.Error		case	missingImage4SEPImageDigest
+enum	CloudAttestation.SEPImagePolicy.Error		case	missingAttestationSealedData
+enum	CloudAttestation.SEPImagePolicy.Error		case	untrusted
+struct	CloudAttestation.SoftwareReleasePolicy			
+struct	CloudAttestation.SoftwareReleasePolicy		var	release
+enum	CloudAttestation.SoftwareReleasePolicy.Error			
+enum	CloudAttestation.SoftwareReleasePolicy.Error		case	mismatch
+struct	CloudAttestation.TransparencyPolicy			
+struct	CloudAttestation.TransparencyPolicy		let	verifier
+struct	CloudAttestation.TransparencyPolicy		let	validateProofs
+enum	CloudAttestation.TransparencyPolicy.Error			
+enum	CloudAttestation.TransparencyPolicy.Error		case	malformedRelease
+enum	CloudAttestation.TransparencyPolicy.Error		case	unknown
+enum	CloudAttestation.TransparencyPolicy.Error		case	missingProofs
+enum	CloudAttestation.TransparencyPolicy.Error		case	notIncluded
+enum	CloudAttestation.TransparencyPolicy.Error		case	expired
+enum	CloudAttestation.PCC			
+struct	CloudAttestation.PCC.AssetProvider			
+enum	CloudAttestation.PCC.AttestationType			
+enum	CloudAttestation.PCC.AttestationType		case	computeNode
+enum	CloudAttestation.PCC.AttestationType		case	proxyNode
+enum	CloudAttestation.PCC.AttestationType.ComputeNodeVersion			
+enum	CloudAttestation.PCC.AttestationType.ComputeNodeVersion		case	v0
+enum	CloudAttestation.PCC.AttestationType.ComputeNodeVersion		case	v1
+enum	CloudAttestation.PCC.AttestationType.ProxyNodeVersion			
+enum	CloudAttestation.PCC.AttestationType.ProxyNodeVersion		case	v1
+enum	CloudAttestation.PCC.AutoValidatorError			
+enum	CloudAttestation.PCC.AutoValidatorError		case	unknownAppData
+struct	CloudAttestation.PCC.ComputeNodeValidator			
+struct	CloudAttestation.PCC.ComputeNodeValidator		var	inner
+struct	CloudAttestation.PCC.ComputeNodeValidator		var	transitiveReleaseTransparency
+struct	CloudAttestation.PCC.ComputeNodeValidator		let	proxyingAttestation
+struct	CloudAttestation.PCC.ComputeNodeValidator		let	proxyEnvironment
+struct	CloudAttestation.PCC.ComputeNodeValidator		var	enforceEnvironment
+struct	CloudAttestation.PCC.ProxyNodeAttestor			
+struct	CloudAttestation.PCC.ProxyNodeAttestor		let	proxiedReleases
+struct	CloudAttestation.PCC.ProxyNodeAttestor		var	inner
+struct	CloudAttestation.PCC.ProxyNodeAttestor		var	transparencyProver
+struct	CloudAttestation.PCC.ProxyNodeAttestor		var	certificateTransparency
+struct	CloudAttestation.PCC.ProxyNodeAttestor		var	certificateTransparencyFetchFailClosed
+struct	CloudAttestation.PCC.ProxyNodeAttestor		var	certificateTransparencyShouldRecycleProxyAttestation
+struct	CloudAttestation.PCC.ProxyNodeAttestor		var	transitiveReleaseTransparency
+struct	CloudAttestation.PCC.ProxyNodeAttestor.ProxyNodeCertificateTransparencyPopulator			
+struct	CloudAttestation.PCC.ProxyNodeAttestor.ProxyNodeCertificateTransparencyPopulator		let	certificateTransparency
+struct	CloudAttestation.PCC.ProxyNodeAttestor.ProxyNodeCertificateTransparencyPopulator		let	certificateTransparencyFetchFailClosed
+struct	CloudAttestation.PCC.ProxyNodeAttestor.ProxyNodeCertificateTransparencyPopulator		let	transparencyProver
+struct	CloudAttestation.PCC.ProxyNodeValidator			
+struct	CloudAttestation.PCC.ProxyNodeValidator		var	inner
+struct	CloudAttestation.PCC.ProxyNodeValidator		var	_validateProxiedReleaseProofs
+struct	CloudAttestation.PCC.ProxyNodeValidator		var	fullReleaseSetVerification
+struct	CloudAttestation.PCC.ProxyNodeValidator		var	enforceEnvironment
+struct	CloudAttestation.PCC.ProxyNodeValidator		let	environment
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType			
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	unknown
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	release
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	keybundleTgt
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	keybundleOtt
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	keybundleOhttp
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	serverNode
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType		case	testMarker
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType			
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType		case	production
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType		case	seed
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	version
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	application
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	type
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	expiryMs
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	data
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	unhashedMetadata
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	insertData
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	releaseType
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse		var	status
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	version
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	application
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	dataHash
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	releaseType
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	dataHashes
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	treeID
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	revision
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	coveringAll
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	preferOldest
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse		var	status
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse		var	dataHash
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse		var	expiryMs
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse		var	_proofs
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse		var	status
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse		var	responses
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs		var	_inclusionProof
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs		var	_milestoneConsistency
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency		var	_storage
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData		var	data
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData		var	metadata
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData		var	type
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData		var	permittedEnvironments
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData		var	associatedAssets
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset		var	identifier
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset		var	details
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest		var	version
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest		var	application
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest		var	type
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest		var	releaseType
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse		var	status
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse		var	leaves
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	nodeType
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	nodeBytes
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	nodePosition
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	rawData
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	metadata
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	expiryMs
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest		var	version
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest		var	requests
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest		var	treeID
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest		var	requestUuid
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest		var	startRevision
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest		var	endRevision
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse			
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse		var	status
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse		var	responses
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse		var	logType
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse		var	application
+struct	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse		var	unknownFields
+class	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency._StorageClass			
+class	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency._StorageClass		var	_startSlh
+class	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency._StorageClass		var	_endSlh
+class	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency._StorageClass		var	_proofHashes
+class	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency._StorageClass		var	_patInclusionProof
+class	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency._StorageClass		var	_tltInclusionProof
+enum	CloudAttestation.Proto_HashAlg			
+enum	CloudAttestation.Proto_HashAlg		case	UNRECOGNIZED
+enum	CloudAttestation.Proto_HashAlg		case	unknown
+enum	CloudAttestation.Proto_HashAlg		case	sha256
+enum	CloudAttestation.Proto_HashAlg		case	sha384
+struct	CloudAttestation.Proto_AttestationBundle			
+struct	CloudAttestation.Proto_AttestationBundle		var	unknownFields
+struct	CloudAttestation.Proto_AttestationBundle		var	_storage
+struct	CloudAttestation.Proto_AppData			
+struct	CloudAttestation.Proto_AppData		var	version
+struct	CloudAttestation.Proto_AppData		var	domain
+struct	CloudAttestation.Proto_AppData		var	name
+struct	CloudAttestation.Proto_AppData		var	unknownFields
+struct	CloudAttestation.Proto_AppData		var	_metadata
+struct	CloudAttestation.Proto_LocalPolicy			
+struct	CloudAttestation.Proto_LocalPolicy		var	policy
+struct	CloudAttestation.Proto_LocalPolicy		var	implementation
+struct	CloudAttestation.Proto_LocalPolicy		var	unknownFields
+enum	CloudAttestation.Proto_LocalPolicy.Implementation			
+enum	CloudAttestation.Proto_LocalPolicy.Implementation		case	UNRECOGNIZED
+enum	CloudAttestation.Proto_LocalPolicy.Implementation		case	unknown
+enum	CloudAttestation.Proto_LocalPolicy.Implementation		case	ec384Sha384
+struct	CloudAttestation.Proto_SealedHashLedger			
+struct	CloudAttestation.Proto_SealedHashLedger		var	slots
+struct	CloudAttestation.Proto_SealedHashLedger		var	unknownFields
+struct	CloudAttestation.Proto_SealedHash			
+struct	CloudAttestation.Proto_SealedHash		var	hashAlg
+struct	CloudAttestation.Proto_SealedHash		var	entries
+struct	CloudAttestation.Proto_SealedHash		var	unknownFields
+struct	CloudAttestation.Proto_SealedHash.Entry			
+struct	CloudAttestation.Proto_SealedHash.Entry		var	flags
+struct	CloudAttestation.Proto_SealedHash.Entry		var	digest
+struct	CloudAttestation.Proto_SealedHash.Entry		var	info
+struct	CloudAttestation.Proto_SealedHash.Entry		var	metadata
+struct	CloudAttestation.Proto_SealedHash.Entry		var	unknownFields
+enum	CloudAttestation.Proto_SealedHash.Entry.OneOf_Info			
+enum	CloudAttestation.Proto_SealedHash.Entry.OneOf_Info		case	generic
+enum	CloudAttestation.Proto_SealedHash.Entry.OneOf_Info		case	cryptex
+enum	CloudAttestation.Proto_SealedHash.Entry.OneOf_Info		case	cryptexSalt
+enum	CloudAttestation.Proto_SealedHash.Entry.OneOf_Info		case	secureConfig
+enum	CloudAttestation.Proto_SealedHash.Entry.Flags			
+enum	CloudAttestation.Proto_SealedHash.Entry.Flags		case	UNRECOGNIZED
+enum	CloudAttestation.Proto_SealedHash.Entry.Flags		case	flagNone
+enum	CloudAttestation.Proto_SealedHash.Entry.Flags		case	flagRatchet
+enum	CloudAttestation.Proto_SealedHash.Entry.Flags		case	flagRatchetLock
+struct	CloudAttestation.Proto_Cryptex			
+struct	CloudAttestation.Proto_Cryptex		var	image4Manifest
+struct	CloudAttestation.Proto_Cryptex		var	unknownFields
+struct	CloudAttestation.Proto_Cryptex.Salt			
+struct	CloudAttestation.Proto_Cryptex.Salt		var	unknownFields
+struct	CloudAttestation.Proto_SecureConfig			
+struct	CloudAttestation.Proto_SecureConfig		var	entry
+struct	CloudAttestation.Proto_SecureConfig		var	metadata
+struct	CloudAttestation.Proto_SecureConfig		var	data
+struct	CloudAttestation.Proto_SecureConfig		var	unknownFields
+struct	CloudAttestation.Proto_TransparencyProofs			
+struct	CloudAttestation.Proto_TransparencyProofs		var	unknownFields
+struct	CloudAttestation.Proto_TransparencyProofs		var	_proofs
+class	CloudAttestation.Proto_AttestationBundle._StorageClass			
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_sepAttestation
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_apTicket
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_sealedHashes
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_provisioningCertificateChain
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_appData
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_keyExpiration
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_certificateTransparencyProofs
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_transparencyProofs
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_localPolicy
+class	CloudAttestation.Proto_AttestationBundle._StorageClass		var	_sfrManifest
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys			
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys		case	startSLH
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys		case	endSLH
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys		case	proofHashes
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys		case	patInclusionProof
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys		case	tltInclusionProof
+enum	CloudAttestation.Signature.CodingKeys			
+enum	CloudAttestation.Signature.CodingKeys		case	signature
+enum	CloudAttestation.Signature.CodingKeys		case	signingKeySPKIHash
+enum	CloudAttestation.Signature.CodingKeys		case	algorithm
+enum	CloudAttestation.SignedObject.CodingKeys			
+enum	CloudAttestation.SignedObject.CodingKeys		case	object
+enum	CloudAttestation.SignedObject.CodingKeys		case	signature
+enum	CloudAttestation.LogEntry.CodingKeys			
+enum	CloudAttestation.LogEntry.CodingKeys		case	logType
+enum	CloudAttestation.LogEntry.CodingKeys		case	slh
+enum	CloudAttestation.LogEntry.CodingKeys		case	hashesOfPeersInPathToRoot
+enum	CloudAttestation.LogEntry.CodingKeys		case	nodeBytes
+enum	CloudAttestation.LogEntry.CodingKeys		case	nodePosition
+enum	CloudAttestation.LogEntry.CodingKeys		case	nodeType
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys			
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys		case	inclusionProof
+enum	CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys		case	milestoneConsistency
+enum	CloudAttestation.Proto_TransparencyProofs.CodingKeys			
+enum	CloudAttestation.Proto_TransparencyProofs.CodingKeys		case	proofs
+enum	CloudAttestation.Proto_SecureConfig.CodingKeys			
+enum	CloudAttestation.Proto_SecureConfig.CodingKeys		case	entry
+enum	CloudAttestation.Proto_SecureConfig.CodingKeys		case	metadata
+enum	CloudAttestation.Proto_SecureConfig.CodingKeys		case	data
+enum	CloudAttestation.Proto_Cryptex.Salt.CodingKeys			
+enum	CloudAttestation.Proto_Cryptex.CodingKeys			
+enum	CloudAttestation.Proto_Cryptex.CodingKeys		case	image4Manifest
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys			
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys		case	digest
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys		case	flags
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys		case	cryptex
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys		case	cryptexSalt
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys		case	secureConfig
+enum	CloudAttestation.Proto_SealedHash.Entry.CodingKeys		case	metadata
+enum	CloudAttestation.Proto_SealedHash.CodingKeys			
+enum	CloudAttestation.Proto_SealedHash.CodingKeys		case	hashAlg
+enum	CloudAttestation.Proto_SealedHash.CodingKeys		case	entries
+enum	CloudAttestation.Proto_SealedHashLedger.CodingKeys			
+enum	CloudAttestation.Proto_SealedHashLedger.CodingKeys		case	slots
+enum	CloudAttestation.Proto_LocalPolicy.CodingKeys			
+enum	CloudAttestation.Proto_LocalPolicy.CodingKeys		case	policy
+enum	CloudAttestation.Proto_LocalPolicy.CodingKeys		case	implementation
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys			
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	provisioningCertificateChain
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	sepAttestation
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	apTicket
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	sealedHashes
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	appData
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	keyExpiration
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	transparencyProofs
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	localPolicy
+enum	CloudAttestation.Proto_AttestationBundle.CodingKeys		case	sfrManifest
+enum	CloudAttestation.Proto_LocalPolicy.Error			
+enum	CloudAttestation.Proto_LocalPolicy.Error		case	decodeFailed
+enum	CloudAttestation.Proto_LocalPolicy.Error		case	trustEvaluationFailed
+enum	CloudAttestation.Proto_LocalPolicy.Error		case	tbpmDigestCalculationFailed
+enum	CloudAttestation.Proto_LocalPolicy.Error		case	missingLocalPolicy
+enum	CloudAttestation.Proto_LocalPolicy.Error		case	unsupportedImplementation
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata			
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	schemaVersion
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	releaseDigest
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	assets
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	requirements
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	buildVersion
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	_releaseCreation
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	_darwinInit
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata		var	_application
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.SchemaVersion			
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.SchemaVersion		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.SchemaVersion		case	unspecified
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.SchemaVersion		case	v1
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType			
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	unspecified
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	os
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	pcs
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	model
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	hostTools
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	debugShell
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.AssetType		case	cryptex
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.FileType			
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.FileType		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.FileType		case	unspecified
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.FileType		case	ipsw
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.FileType		case	diskimage
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.FileType		case	applearchive
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.DigestAlg			
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.DigestAlg		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.DigestAlg		case	unspecified
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.DigestAlg		case	sha256
+enum	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.DigestAlg		case	sha384
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Digest			
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Digest		var	digestAlg
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Digest		var	value
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Digest		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset			
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	type
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	url
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	variant
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	fileType
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	_digest
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Asset		var	_ticket
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.ToolRequirement			
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.ToolRequirement		var	feature
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.ToolRequirement		var	availability
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.ToolRequirement		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Application			
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Application		var	name
+struct	CloudAttestation.PrivateCloudCompute_ReleaseMetadata.Application		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata			
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata		var	proxiedRelease
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease			
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease		var	digest
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease		var	unknownFields
+struct	CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease		var	_transparencyProofs
+enum	CloudAttestation.PrivateCloudCompute_Environment			
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	UNRECOGNIZED
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	unspecified
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	production
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	carry
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	staging
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	qa
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	perf
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	ephemeral
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	dev
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	liveon
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	quarantine
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	qa1Primary
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	qa1Internal
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	qa2Primary
+enum	CloudAttestation.PrivateCloudCompute_Environment		case	qa2Internal
+enum	CloudAttestation.ProtocolVersion			
+enum	CloudAttestation.ProtocolVersion		case	UNRECOGNIZED
+enum	CloudAttestation.ProtocolVersion		case	unknownVersion
+enum	CloudAttestation.ProtocolVersion		case	v1
+enum	CloudAttestation.ProtocolVersion		case	v2
+enum	CloudAttestation.ProtocolVersion		case	v3
+enum	CloudAttestation.ProtocolVersion		case	future
+enum	CloudAttestation.Application			
+enum	CloudAttestation.Application		case	UNRECOGNIZED
+enum	CloudAttestation.Application		case	unknownApplication
+enum	CloudAttestation.Application		case	idsMessaging
+enum	CloudAttestation.Application		case	cloudkit
+enum	CloudAttestation.Application		case	idsMultiplexIcloud
+enum	CloudAttestation.Application		case	idsFacetime
+enum	CloudAttestation.Application		case	privateCloudCompute
+enum	CloudAttestation.Application		case	privateCloudComputeInternal
+enum	CloudAttestation.Status			
+enum	CloudAttestation.Status		case	UNRECOGNIZED
+enum	CloudAttestation.Status		case	unknownStatus
+enum	CloudAttestation.Status		case	ok
+enum	CloudAttestation.Status		case	mutationPending
+enum	CloudAttestation.Status		case	alreadyExists
+enum	CloudAttestation.Status		case	internalError
+enum	CloudAttestation.Status		case	invalidRequest
+enum	CloudAttestation.Status		case	notFound
+enum	CloudAttestation.VRFType			
+enum	CloudAttestation.VRFType		case	UNRECOGNIZED
+enum	CloudAttestation.VRFType		case	unknownVrf
+enum	CloudAttestation.VRFType		case	ecvrfEd25519Sha512Elligator2
+enum	CloudAttestation.LogType			
+enum	CloudAttestation.LogType		case	UNRECOGNIZED
+enum	CloudAttestation.LogType		case	unknownLog
+enum	CloudAttestation.LogType		case	perApplicationChangeLog
+enum	CloudAttestation.LogType		case	perApplicationTree
+enum	CloudAttestation.LogType		case	topLevelTree
+enum	CloudAttestation.LogType		case	ctLog
+enum	CloudAttestation.LogType		case	atLog
+enum	CloudAttestation.MapType			
+enum	CloudAttestation.MapType		case	UNRECOGNIZED
+enum	CloudAttestation.MapType		case	unknownMap
+enum	CloudAttestation.MapType		case	perAppObjectMap
+enum	CloudAttestation.NodeType			
+enum	CloudAttestation.NodeType		case	UNRECOGNIZED
+enum	CloudAttestation.NodeType		case	paclNode
+enum	CloudAttestation.NodeType		case	patNode
+enum	CloudAttestation.NodeType		case	patConfigNode
+enum	CloudAttestation.NodeType		case	tltNode
+enum	CloudAttestation.NodeType		case	tltConfigNode
+enum	CloudAttestation.NodeType		case	logClosedNode
+enum	CloudAttestation.NodeType		case	ctNode
+enum	CloudAttestation.NodeType		case	atlNode
+struct	CloudAttestation.VRFWitness			
+struct	CloudAttestation.VRFWitness		var	type
+struct	CloudAttestation.VRFWitness		var	output
+struct	CloudAttestation.VRFWitness		var	proof
+struct	CloudAttestation.VRFWitness		var	unknownFields
+struct	CloudAttestation.VRFPublicKey			
+struct	CloudAttestation.VRFPublicKey		var	vrfKey
+struct	CloudAttestation.VRFPublicKey		var	type
+struct	CloudAttestation.VRFPublicKey		var	unknownFields
+struct	CloudAttestation.Signature			
+struct	CloudAttestation.Signature		var	signature
+struct	CloudAttestation.Signature		var	signingKeySpkihash
+struct	CloudAttestation.Signature		var	algorithm
+struct	CloudAttestation.Signature		var	unknownFields
+enum	CloudAttestation.Signature.SignatureAlgorithm			
+enum	CloudAttestation.Signature.SignatureAlgorithm		case	UNRECOGNIZED
+enum	CloudAttestation.Signature.SignatureAlgorithm		case	unknown
+enum	CloudAttestation.Signature.SignatureAlgorithm		case	ecdsaSha256
+struct	CloudAttestation.SignedObject			
+struct	CloudAttestation.SignedObject		var	object
+struct	CloudAttestation.SignedObject		var	unknownFields
+struct	CloudAttestation.SignedObject		var	_signature
+struct	CloudAttestation.LogHead			
+struct	CloudAttestation.LogHead		var	logBeginningMs
+struct	CloudAttestation.LogHead		var	logSize
+struct	CloudAttestation.LogHead		var	logHeadHash
+struct	CloudAttestation.LogHead		var	revision
+struct	CloudAttestation.LogHead		var	logType
+struct	CloudAttestation.LogHead		var	application
+struct	CloudAttestation.LogHead		var	treeID
+struct	CloudAttestation.LogHead		var	timestampMs
+struct	CloudAttestation.LogHead		var	unknownFields
+struct	CloudAttestation.LogEntry			
+struct	CloudAttestation.LogEntry		var	logType
+struct	CloudAttestation.LogEntry		var	hashesOfPeersInPathToRoot
+struct	CloudAttestation.LogEntry		var	nodeBytes
+struct	CloudAttestation.LogEntry		var	nodePosition
+struct	CloudAttestation.LogEntry		var	nodeType
+struct	CloudAttestation.LogEntry		var	unknownFields
+struct	CloudAttestation.LogEntry		var	_slh
+struct	CloudAttestation.MapHead			
+struct	CloudAttestation.MapHead		var	logBeginningMs
+struct	CloudAttestation.MapHead		var	mapHeadHash
+struct	CloudAttestation.MapHead		var	application
+struct	CloudAttestation.MapHead		var	revision
+struct	CloudAttestation.MapHead		var	mapType
+struct	CloudAttestation.MapHead		var	treeID
+struct	CloudAttestation.MapHead		var	timestampMs
+struct	CloudAttestation.MapHead		var	populating
+struct	CloudAttestation.MapHead		var	unknownFields
+struct	CloudAttestation.MapHead		var	_changeLogHead
+struct	CloudAttestation.MapEntry			
+struct	CloudAttestation.MapEntry		var	hashesOfPeersInPathToRoot
+struct	CloudAttestation.MapEntry		var	mapLeaf
+struct	CloudAttestation.MapEntry		var	unknownFields
+struct	CloudAttestation.MapEntry		var	_smh
+struct	CloudAttestation.InclusionProof			
+struct	CloudAttestation.InclusionProof		var	unknownFields
+struct	CloudAttestation.InclusionProof		var	_storage
+struct	CloudAttestation.PatInclusionProof			
+struct	CloudAttestation.PatInclusionProof		var	unknownFields
+struct	CloudAttestation.PatInclusionProof		var	_storage
+struct	CloudAttestation.ChangeLogNodeV2			
+struct	CloudAttestation.ChangeLogNodeV2		var	mutation
+struct	CloudAttestation.ChangeLogNodeV2		var	unknownFields
+struct	CloudAttestation.PerApplicationTreeNode			
+struct	CloudAttestation.PerApplicationTreeNode		var	unknownFields
+struct	CloudAttestation.PerApplicationTreeNode		var	_objectMapHead
+struct	CloudAttestation.TopLevelTreeNode			
+struct	CloudAttestation.TopLevelTreeNode		var	unknownFields
+struct	CloudAttestation.TopLevelTreeNode		var	_patHead
+struct	CloudAttestation.PerApplicationTreeConfigNode			
+struct	CloudAttestation.PerApplicationTreeConfigNode		var	publicKeyBytes
+struct	CloudAttestation.PerApplicationTreeConfigNode		var	earliestVersion
+struct	CloudAttestation.PerApplicationTreeConfigNode		var	unknownFields
+struct	CloudAttestation.PerApplicationTreeConfigNode		var	_vrfPublicKey
+struct	CloudAttestation.TopLevelTreeConfigNode			
+struct	CloudAttestation.TopLevelTreeConfigNode		var	publicKeyBytes
+struct	CloudAttestation.TopLevelTreeConfigNode		var	earliestVersion
+struct	CloudAttestation.TopLevelTreeConfigNode		var	unknownFields
+struct	CloudAttestation.LogClosedNode			
+struct	CloudAttestation.LogClosedNode		var	timestampMs
+struct	CloudAttestation.LogClosedNode		var	earliestVersionForNextTree
+struct	CloudAttestation.LogClosedNode		var	unknownFields
+class	CloudAttestation.InclusionProof._StorageClass			
+class	CloudAttestation.InclusionProof._StorageClass		var	_mapEntry
+class	CloudAttestation.InclusionProof._StorageClass		var	_index
+class	CloudAttestation.InclusionProof._StorageClass		var	_perApplicationTreeEntry
+class	CloudAttestation.InclusionProof._StorageClass		var	_topLevelTreeEntry
+class	CloudAttestation.PatInclusionProof._StorageClass			
+class	CloudAttestation.PatInclusionProof._StorageClass		var	_perApplicationTreeEntry
+class	CloudAttestation.PatInclusionProof._StorageClass		var	_topLevelTreeEntry
+struct	CloudAttestation.ProvisioningCertificate			
+struct	CloudAttestation.ProvisioningCertificate		let	certificate
+struct	CloudAttestation.ProvisioningCertificate		let	_publicKey
+struct	CloudAttestation.ProvisioningCertificate		let	chassisID
+struct	CloudAttestation.ProvisioningCertificate		let	deviceIdentity
+struct	CloudAttestation.ProvisioningCertificate.ChassisID			
+struct	CloudAttestation.ProvisioningCertificate.ChassisID		let	string
+struct	CloudAttestation.ProvisioningCertificate.DeviceIdentity			
+struct	CloudAttestation.ProvisioningCertificate.DeviceIdentity		let	identity
+struct	CloudAttestation.ProvisioningCertificate.DeviceIdentity.Definition			
+struct	CloudAttestation.ProvisioningCertificate.DeviceIdentity.Definition		var	properties
+enum	CloudAttestation.ProvisioningCertificate.Error			
+enum	CloudAttestation.ProvisioningCertificate.Error		case	extensionError
+enum	CloudAttestation.ProvisioningCertificate.Error		case	unknown
+enum	CloudAttestation.ProvisioningCertificate.Error		case	invalidCertificate
+enum	CloudAttestation.ProvisioningCertificate.Error		case	missingExtension
+enum	CloudAttestation.ProvisioningCertificate.Error		case	missingPublicKey
+enum	CloudAttestation.SEP			
+struct	CloudAttestation.SEP.Attestation			
+struct	CloudAttestation.SEP.Attestation		let	data
+struct	CloudAttestation.SEP.Attestation		let	contextData
+enum	CloudAttestation.SEP.Attestation.Error			
+enum	CloudAttestation.SEP.Attestation.Error		case	invalidBlob
+enum	CloudAttestation.SEP.Attestation.Error		case	invalidField
+enum	CloudAttestation.SEP.Attestation.Error		case	invalidSelfKey
+enum	CloudAttestation.SEP.Attestation.Error		case	invalidSignature
+enum	CloudAttestation.SEP.Attestation.OSType			
+enum	CloudAttestation.SEP.Attestation.OSType		case	none
+enum	CloudAttestation.SEP.Attestation.OSType		case	iOS
+enum	CloudAttestation.SEP.Attestation.OSType		case	watchOS
+enum	CloudAttestation.SEP.Attestation.OSType		case	macOS
+enum	CloudAttestation.SEP.Attestation.OSType		case	bridgeOS
+enum	CloudAttestation.SEP.Attestation.OSType		case	tvOS
+enum	CloudAttestation.SEP.Attestation.OSType		case	visionOS
+enum	CloudAttestation.SEP.Attestation.OSType		case	rtKit
+struct	CloudAttestation.SEP.Identity			
+struct	CloudAttestation.SEP.Identity		let	chipID
+struct	CloudAttestation.SEP.Identity		let	ecid
+struct	CloudAttestation.SEP.Identity		let	archBits
+struct	CloudAttestation.SEP.Identity		let	swSeed
+struct	CloudAttestation.SEP.Identity.ArchBits			
+struct	CloudAttestation.SEP.Identity.ArchBits		let	productionStatus
+struct	CloudAttestation.SEP.Identity.ArchBits		let	securityMode
+struct	CloudAttestation.SEP.Identity.ArchBits		let	securityDomain
+enum	CloudAttestation.SEP.Identity.ArchBits.SecurityDomain			
+enum	CloudAttestation.SEP.Identity.ArchBits.SecurityDomain		case	zero
+enum	CloudAttestation.SEP.Identity.ArchBits.SecurityDomain		case	one
+enum	CloudAttestation.SEP.Identity.ArchBits.SecurityDomain		case	two
+enum	CloudAttestation.SEP.Identity.ArchBits.SecurityDomain		case	three
+struct	CloudAttestation.SEP.PhysicalDevice			
+enum	CloudAttestation.SEP.SealData			
+enum	CloudAttestation.SEP.SealData		case	unknown
+enum	CloudAttestation.SEP.SealData		case	v4
+struct	CloudAttestation.SEP.SealedHash			
+struct	CloudAttestation.SEP.SealedHash		var	flags
+struct	CloudAttestation.SEP.SealedHash		var	value
+struct	CloudAttestation.SEP.SealedHash.Flags			
+struct	CloudAttestation.SEP.SealedHash.Flags		let	rawValue
+enum	CloudAttestation.SEP.SealedHash.Value			
+enum	CloudAttestation.SEP.SealedHash.Value		case	ratchet
+enum	CloudAttestation.SEP.SealedHash.Value		case	single
+enum	CloudAttestation.SEP.SealedHash.Value		case	readOnly
+struct	CloudAttestation.SEP.SealedHash.Entry			
+struct	CloudAttestation.SEP.SealedHash.Entry		let	digest
+struct	CloudAttestation.SEP.SealedHash.Entry		let	data
+struct	CloudAttestation.SEP.SealedHash.Entry		var	flags
+struct	CloudAttestation.SEP.SealedHash.Entry		let	algorithm
+struct	CloudAttestation.SEP.SealedHash.Entry		var	metadata
+struct	CloudAttestation.SEP.SealedHash.Entry		var	type
+enum	CloudAttestation.SEP.SealedHash.Error			
+enum	CloudAttestation.SEP.SealedHash.Error		case	keystoreError
+enum	CloudAttestation.SEP.SealedHash.Error		case	readOnly
+enum	CloudAttestation.SEP.SealedHash.Error		case	invalidDigestLength
+enum	CloudAttestation.SEP.SealedHash.Error		case	emptySequence
+struct	CloudAttestation.CertificateTransparencyPolicy			
+struct	CloudAttestation.CertificateTransparencyPolicy		let	strict
+struct	CloudAttestation.CertificateTransparencyPolicy		let	verifier
+enum	CloudAttestation.CertificateTransparencyPolicy.Error			
+enum	CloudAttestation.CertificateTransparencyPolicy.Error		case	missingCertificate
+enum	CloudAttestation.CertificateTransparencyPolicy.Error		case	missingCertificateTransparencyProofs
+struct	CloudAttestation.SWTransparencyLog			
+struct	CloudAttestation.SWTransparencyLog		let	environment
+struct	CloudAttestation.SWTransparencyLog		let	verifier
+struct	CloudAttestation.SWTransparencyLogConnection			
+struct	CloudAttestation.SWTransparencyLogConnection		let	url
+struct	CloudAttestation.SWTransparencyLogConnection		let	urlSession
+struct	CloudAttestation.SWTransparencyLogConnection		let	urlSessionDelegate
+class	CloudAttestation.SWTransparencyLogConnection.Delegate	NSObject		
+class	CloudAttestation.SWTransparencyLogConnection.Delegate	NSObject	let	credential
+enum	CloudAttestation.SWTransparencyLogConnection.Error			
+enum	CloudAttestation.SWTransparencyLogConnection.Error		case	narrativeUnsupported
+enum	CloudAttestation.SWTransparencyLogConnection.Error		case	noAvailableNarrativeIdentities
+struct	CloudAttestation.SWTransparencyVerifier			
+struct	CloudAttestation.SWTransparencyVerifier		let	softwareTransparency
+enum	CloudAttestation.SWTransparencyVerifier.Error			
+enum	CloudAttestation.SWTransparencyVerifier.Error		case	notAvailable
+struct	CloudAttestation.SerializationVersion			
+struct	CloudAttestation.SerializationVersion		var	rawValue
+struct	CloudAttestation.ATLeafType			
+struct	CloudAttestation.ATLeafType		var	rawValue
+struct	CloudAttestation.TransparencyExtensionType			
+struct	CloudAttestation.TransparencyExtensionType		var	rawValue
+struct	CloudAttestation.ATLeafData			
+struct	CloudAttestation.ATLeafData		var	version
+struct	CloudAttestation.ATLeafData		var	type
+struct	CloudAttestation.ATLeafData		var	ATDescription
+struct	CloudAttestation.ATLeafData		var	dataHash
+struct	CloudAttestation.ATLeafData		var	expiryMs
+struct	CloudAttestation.ATLeafData		var	extensions
+enum	CloudAttestation.TransparencyExtension			
+enum	CloudAttestation.TransparencyExtension		case	releaseType
+enum	CloudAttestation.TransparencyExtension		case	insertionTimeMs
+enum	CloudAttestation.TransparencyExtension		case	unknownExtension
+enum	CloudAttestation.TransparencyTLSError			
+enum	CloudAttestation.TransparencyTLSError		case	excessBytes
+enum	CloudAttestation.TransparencyTLSError		case	truncatedMessage
+struct	CloudAttestation.TransparencyByteBuffer			
+struct	CloudAttestation.TransparencyByteBuffer		var	backingData
+struct	CloudAttestation.TransparencyByteBuffer		var	readerIndex
+struct	CloudAttestation.NopTransparencyLog			
+struct	CloudAttestation.NopTransparencyLog		let	nonEmptyProofs
+struct	CloudAttestation.Release			
+struct	CloudAttestation.Release		let	apTicket
+struct	CloudAttestation.Release		let	cryptexTickets
+struct	CloudAttestation.Release		let	unknownFields
+enum	CloudAttestation.Release.Error			
+enum	CloudAttestation.Release.Error		case	missingAPTicket
+struct	CloudAttestation.EncodableRelease			
+struct	CloudAttestation.EncodableRelease		var	version
+struct	CloudAttestation.EncodableRelease		let	apTicket
+struct	CloudAttestation.EncodableRelease		let	cryptexTickets
+enum	CloudAttestation.EncodableRelease.CodingKeys			
+enum	CloudAttestation.EncodableRelease.CodingKeys		case	version
+enum	CloudAttestation.EncodableRelease.CodingKeys		case	apTicket
+enum	CloudAttestation.EncodableRelease.CodingKeys		case	cryptexTickets
+struct	CloudAttestation.TransitiveTransparencyVerifier			
+struct	CloudAttestation.TransitiveTransparencyVerifier		let	proxyingBundle
+struct	CloudAttestation.TransitiveTransparencyVerifier		let	transparencyLog
+struct	CloudAttestation.TransitiveTransparencyVerifier		var	transparencyCache
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error			
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error		case	missingProofs
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error		case	mismatchingTreeHeads
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error		case	invalidInclusionProof
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error		case	invalidConsistencyProof
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error		case	mismatchingLeafTypes
+enum	CloudAttestation.TransitiveTransparencyVerifier.Error		case	mismatchingDigests
+class	CloudAttestation.CoalescingCache<A	Swift.Hashable>		
+class	CloudAttestation.CoalescingCache<A	Swift.Hashable>	var	inFlight
+struct	CloudAttestation.TransitiveTransparencyVerifier.InclusionKey			
+struct	CloudAttestation.TransitiveTransparencyVerifier.InclusionKey		let	digest
+struct	CloudAttestation.TransitiveTransparencyVerifier.InclusionKey		let	revision
+struct	CloudAttestation.TransitiveTransparencyVerifier.ConsistencyKey			
+struct	CloudAttestation.TransitiveTransparencyVerifier.ConsistencyKey		let	from
+struct	CloudAttestation.TransitiveTransparencyVerifier.ConsistencyKey		let	to
+struct	CloudAttestation.TransparencyLogProofs			
+struct	CloudAttestation.TransparencyLogProofs		var	proofs
+struct	CloudAttestation.TransparencyLogProofs		var	expiration
+struct	CloudAttestation.TransparencyLogProofs		var	digest
+enum	CloudAttestation.TransparencyLogError			
+enum	CloudAttestation.TransparencyLogError		case	httpError
+enum	CloudAttestation.TransparencyLogError		case	unrecognized
+enum	CloudAttestation.TransparencyLogError		case	unknown
+enum	CloudAttestation.TransparencyLogError		case	clientError
+enum	CloudAttestation.TransparencyLogError		case	pendingExpiration
+enum	CloudAttestation.TransparencyLogError		case	requestLimitExceeded
+enum	CloudAttestation.TransparencyLogError		case	internalError
+enum	CloudAttestation.TransparencyLogError		case	mutationPending
+enum	CloudAttestation.TransparencyLogError		case	invalidRequest
+enum	CloudAttestation.TransparencyLogError		case	notFound
+enum	CloudAttestation.TransparencyLogError		case	invalidProof
+enum	CloudAttestation.TransparencyLogError		case	unknownStatus
+enum	CloudAttestation.TransparencyLogError		case	insertFailed
+enum	CloudAttestation.TransparencyLogError		case	expired
+struct	CloudAttestation.TransparencyLogRevision			
+struct	CloudAttestation.TransparencyLogRevision		let	revision
+struct	CloudAttestation.TransparencyLogRevision		let	treeID
+struct	CloudAttestation.TransparencyLogRevision		let	createdAt
+enum	CloudAttestation.AttestationAssetProviderError			
+enum	CloudAttestation.AttestationAssetProviderError		case	invalidHashFunction
+enum	CloudAttestation.AttestationAssetProviderError		case	missingAPTicket
+enum	CloudAttestation.AttestationAssetProviderError		case	missingSFRManifest
+enum	CloudAttestation.AttestationAssetProviderError		case	noSecureConfigDB
+enum	CloudAttestation.AttestationAssetProviderError		case	missingProvisioningCertificate
+enum	CloudAttestation.AttestationAssetProviderError		case	invalidProvisioningCertificate
+enum	CloudAttestation.AttestationAssetProviderError		case	missingLocalBootPolicy
+struct	CloudAttestation.EnforcementOptions			
+struct	CloudAttestation.EnforcementOptions		var	requireCertificateChain
+struct	CloudAttestation.EnforcementOptions		var	requireAllAssets
+enum	CloudAttestation.SealedHashSelector			
+enum	CloudAttestation.SealedHashSelector		case	some
+enum	CloudAttestation.SealedHashSelector		case	all
+struct	CloudAttestation.AttestationBundle			
+struct	CloudAttestation.AttestationBundle		var	proto
+enum	CloudAttestation.Unvalidated			
+struct	CloudAttestation.Unvalidated.AttestationBundle			
+struct	CloudAttestation.Unvalidated.AttestationBundle		let	bundle
+enum	CloudAttestation.Validated			
+struct	CloudAttestation.Validated.AttestationBundle			
+struct	CloudAttestation.Validated.AttestationBundle		let	context
+struct	CloudAttestation.Validated.AttestationBundle		let	bundle
+struct	CloudAttestation.Validated.AttestationBundle		let	_udid
+struct	CloudAttestation.Validated.AttestationBundle		let	routingHint
+struct	CloudAttestation.Validated.AttestationBundle		let	releaseDigest
+struct	CloudAttestation.Validated.AttestationBundle		let	appIdentifiers
+struct	CloudAttestation.Validated.AttestationBundle		let	ensembleUDIDs
+enum	CloudAttestation.PublicKeyData			
+enum	CloudAttestation.PublicKeyData		case	x963
+enum	CloudAttestation.PublicKeyData		case	curve25519
+enum	CloudAttestation.CloudAttestationError			
+enum	CloudAttestation.CloudAttestationError		case	unexpected
+enum	CloudAttestation.CloudAttestationError		case	attestError
+enum	CloudAttestation.CloudAttestationError		case	validateError
+enum	CloudAttestation.CloudAttestationError		case	expired
+enum	CloudAttestation.CloudAttestationError		case	missingSealedHash
+enum	CloudAttestation.CloudAttestationError		case	invalidNonce
+enum	CloudAttestation.CloudAttestationError		case	emptyCertificateChain
+enum	CloudAttestation.CloudAttestationError		case	malformedSecureConfig
+enum	CloudAttestation.CloudAttestationError		case	missingAttestingKey
+enum	CloudAttestation.CloudAttestationError		case	untrustedAppData
+struct	CloudAttestation.Cryptex			
+struct	CloudAttestation.Cryptex		let	image4Manifest
+enum	CloudAttestation.Cryptexes			
+enum	CloudAttestation.Cryptexes		case	unlocked
+enum	CloudAttestation.Cryptexes		case	locked
+struct	CloudAttestation.DarwinInit			
+struct	CloudAttestation.DarwinInit		let	parameters
+struct	CloudAttestation.DarwinInit		let	securityPolicy
+enum	CloudAttestation.DarwinInit.SecureConfigSecurityPolicy			
+enum	CloudAttestation.DarwinInit.SecureConfigSecurityPolicy		case	none
+enum	CloudAttestation.DarwinInit.SecureConfigSecurityPolicy		case	carry
+enum	CloudAttestation.DarwinInit.SecureConfigSecurityPolicy		case	customer
+enum	CloudAttestation.DarwinInit.SecureConfigSecurityPolicy		case	customerProxy
+enum	CloudAttestation.DarwinInit.Error			
+enum	CloudAttestation.DarwinInit.Error		case	missingParameter
+enum	CloudAttestation.DarwinInit.Error		case	invalidParameterValue
+enum	CloudAttestation.DarwinInit.Error		case	wrongEntryName
+enum	CloudAttestation.DarwinInit.Error		case	wrongMimeType
+enum	CloudAttestation.DarwinInit.Error		case	noSecureConfigDB
+enum	CloudAttestation.DarwinInit.Error		case	malformedSecureConfig
+enum	CloudAttestation.DarwinInit.Error		case	missingDarwinInit
+enum	CloudAttestation.DarwinInit.Error		case	tooManyDarwinInit
+struct	CloudAttestation.DeviceMode			
+struct	CloudAttestation.DeviceMode		var	restrictedExecution
+struct	CloudAttestation.DeviceMode		var	ephemeralData
+struct	CloudAttestation.DeviceMode		var	developer
+enum	CloudAttestation.PrivateCloudComputeFeatures			
+enum	CloudAttestation.PrivateCloudComputeFeatures		case	enforceEnvironment
+struct	CloudAttestation.NodeAttestor			
+struct	CloudAttestation.NodeAttestor		let	environment
+struct	CloudAttestation.NodeAttestor		var	defaultKeyDuration
+struct	CloudAttestation.NodeAttestor		var	assetProvider
+struct	CloudAttestation.NodeAttestor		var	sepProtocol
+struct	CloudAttestation.NodeAttestor		var	transparencyProver
+struct	CloudAttestation.NodeAttestor		var	requireCertificateChain
+struct	CloudAttestation.NodeAttestor		var	requireSealedHashes
+struct	CloudAttestation.NodeAttestor		var	requireCryptex1
+struct	CloudAttestation.NodeAttestor		var	populateSecureConfigMetadata
+struct	CloudAttestation.NodeAttestor		var	preserveSecureConfigs
+struct	CloudAttestation.NodeAttestor		var	certificateTransparency
+struct	CloudAttestation.NodeAttestor		var	certificateTransparencyFetchFailClosed
+enum	CloudAttestation.NodeAttestor.Error			
+enum	CloudAttestation.NodeAttestor.Error		case	pendingTransparencyExpiry
+enum	CloudAttestation.NodeAttestor.Error		case	dcikCreationFailure
+enum	CloudAttestation.NodeAttestor.Error		case	malformedSecureConfig
+enum	CloudAttestation.NodeAttestor.Error		case	emptyCertificateChain
+enum	CloudAttestation.NodeAttestor.Error		case	missingCryptexes
+enum	CloudAttestation.NodeAttestor.Error		case	missingSecureConfig
+enum	CloudAttestation.NodeAttestor.Error		case	unexpectedCryptexPDI
+enum	CloudAttestation.NodeAttestor.Error		case	nonceProvided
+struct	CloudAttestation.NodeAttestor.NodeCertificateTransparencyPopulator			
+struct	CloudAttestation.NodeAttestor.NodeCertificateTransparencyPopulator		let	certificateTransparency
+struct	CloudAttestation.NodeAttestor.NodeCertificateTransparencyPopulator		let	certificateTransparencyFetchFailClosed
+struct	CloudAttestation.NodeAttestor.NodeCertificateTransparencyPopulator		let	transparencyProver
+struct	CloudAttestation.NodeValidator			
+struct	CloudAttestation.NodeValidator		let	environment
+struct	CloudAttestation.NodeValidator		var	transparencyVerifier
+struct	CloudAttestation.NodeValidator		var	validity
+struct	CloudAttestation.NodeValidator		var	roots
+struct	CloudAttestation.NodeValidator		var	clock
+struct	CloudAttestation.NodeValidator		var	transparencyProofValidation
+struct	CloudAttestation.NodeValidator		var	strictCertificateValidation
+struct	CloudAttestation.NodeValidator		var	requireProdTrustAnchors
+struct	CloudAttestation.NodeValidator		var	requireRestrictedExecutionMode
+struct	CloudAttestation.NodeValidator		var	requireEphemeralDataMode
+struct	CloudAttestation.NodeValidator		var	restrictDeveloperMode
+struct	CloudAttestation.NodeValidator		var	requireProdFusing
+struct	CloudAttestation.NodeValidator		var	requireLockedCryptexes
+struct	CloudAttestation.NodeValidator		var	ensembleTopologyValidation
+struct	CloudAttestation.NodeValidator		var	allowExpired
+struct	CloudAttestation.NodeValidator		var	customerSecurityPolicy
+struct	CloudAttestation.NodeValidator		var	restrictSecurityPolicies
+struct	CloudAttestation.NodeValidator		var	certificateTransparency
+struct	CloudAttestation.NodeValidator		var	certificateTransparencyVerifyFailClosed
+struct	CloudAttestation.NodeValidator		var	pinnedSigner
+struct	CloudAttestation.SecureConfig			
+struct	CloudAttestation.SecureConfig		let	entry
+struct	CloudAttestation.SecureConfig		let	metadata
+struct	CloudAttestation.SecureConfig		let	serializedData
+protocol	CloudAttestation.AttestationPolicy			
+protocol	CloudAttestation.SecureConfigDBProtocol	SCSlot		
+protocol	CloudAttestation.SCSlotProtocol	SCEntry		
+protocol	CloudAttestation.SCEntryProtocol			
+protocol	SEP.AttestationProtocol			
+protocol	CloudAttestation.CertificateTransparencyPopulator			
+protocol	CloudAttestation.TransparencyCache			
+protocol	CloudAttestation.TransparencyProver			
+protocol	CloudAttestation.TransparencyVerifier			
+protocol	CloudAttestation.TransparencyConsistencyProver			
+protocol	CloudAttestation.AttestationAssetProvider			
+protocol	CloudAttestation.Attestor			
+protocol	CloudAttestation.Validator	DefaultPolicy, Policy		
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance AttestedTLS.Error	Swift.Equatable		
+protocol	conformance AttestedTLS.Error	Swift.Hashable		
+protocol	conformance AttestedTLS.Error	Swift.Error		
+protocol	conformance AttestedTLS.IdentityStorage	Swift.Actor		
+protocol	conformance CloudAttestation.CeremonyAttestor	CloudAttestation.Attestor		
+protocol	conformance CeremonyAttestor.AssetProvider	CloudAttestation.AttestationAssetProvider		
+protocol	conformance CloudAttestation.CeremonyValidator	CloudAttestation.Validator		
+protocol	conformance CloudAttestation.AsyncTemporalCache	Swift.Actor		
+protocol	conformance CloudAttestation.Environment	Swift.Equatable		
+protocol	conformance CloudAttestation.Environment	Swift.Hashable		
+protocol	conformance CloudAttestation.Environment	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.Environment	Swift.Decodable		
+protocol	conformance CloudAttestation.Environment	Swift.Encodable		
+protocol	conformance CloudAttestation.Environment	Swift.CustomStringConvertible		
+protocol	conformance CloudAttestation.Environment	Swift.Comparable		
+protocol	conformance CloudAttestation.DeviceIdentifiers	Swift.Hashable		
+protocol	conformance CloudAttestation.DeviceIdentifiers	Swift.Equatable		
+protocol	conformance DeviceIdentifiers.Error	Swift.Hashable		
+protocol	conformance DeviceIdentifiers.Error	Swift.Equatable		
+protocol	conformance DeviceIdentifiers.Error	Swift.Error		
+protocol	conformance CloudAttestation.EnsembleAttestor	CloudAttestation.Attestor		
+protocol	conformance CloudAttestation.EnsembleValidator	CloudAttestation.Validator		
+protocol	conformance EnsembleValidator.Error	Swift.Error		
+protocol	conformance Error.IntrospectionError	Swift.Error		
+protocol	conformance CloudAttestation.GenericAttestor	CloudAttestation.Attestor		
+protocol	conformance GenericAttestor.AssetProvider	CloudAttestation.AttestationAssetProvider		
+protocol	conformance GenericAttestor.Error	Swift.Hashable		
+protocol	conformance GenericAttestor.Error	Swift.Equatable		
+protocol	conformance GenericAttestor.Error	Swift.Error		
+protocol	conformance CloudAttestation.GenericValidator	CloudAttestation.Validator		
+protocol	conformance Image4Manifest.Kind	Swift.Equatable		
+protocol	conformance Image4Manifest.Kind	Swift.Hashable		
+protocol	conformance CloudAttestation.Image4Manifest	Swift.Equatable		
+protocol	conformance Image4Manifest.Error	Swift.Error		
+protocol	conformance Image4Manifest.Error	Swift.Hashable		
+protocol	conformance Image4Manifest.Error	Swift.Equatable		
+protocol	conformance CloudAttestation.Image4Manifest	Swift.CustomStringConvertible		
+protocol	conformance CloudAttestation.Image4Manifest	Swift.CustomDebugStringConvertible		
+protocol	conformance Image4Manifest.Manifest	SwiftASN1Internal.DERParseable		
+protocol	conformance Image4Manifest.Property	SwiftASN1Internal.DERParseable		
+protocol	conformance Property.Value	SwiftASN1Internal.DERParseable		
+protocol	conformance CloudAttestation.MuxValidator	CloudAttestation.Validator		
+protocol	conformance MuxValidator.Error	Foundation.CustomNSError		
+protocol	conformance MuxValidator.Error	Swift.Hashable		
+protocol	conformance MuxValidator.Error	Swift.Equatable		
+protocol	conformance MuxValidator.Error	Swift.Error		
+protocol	conformance CloudAttestation.EnvironmentPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance EnvironmentPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.ProxiedReleasePolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance ProxiedReleasePolicy.Error	Swift.Equatable		
+protocol	conformance ProxiedReleasePolicy.Error	Swift.Hashable		
+protocol	conformance ProxiedReleasePolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.ProxiedReleaseTransparencyPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance CloudAttestation.X509FingerprintPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance X509FingerprintPolicy.Error	Swift.Equatable		
+protocol	conformance X509FingerprintPolicy.Error	Swift.Hashable		
+protocol	conformance X509FingerprintPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.X509Policy	CloudAttestation.AttestationPolicy		
+protocol	conformance X509Policy.RevocationPolicy	Swift.OptionSet		
+protocol	conformance X509Policy.RevocationPolicy	Swift.SetAlgebra		
+protocol	conformance X509Policy.RevocationPolicy	Swift.RawRepresentable		
+protocol	conformance X509Policy.RevocationPolicy	Swift.Equatable		
+protocol	conformance X509Policy.RevocationPolicy	Swift.ExpressibleByArrayLiteral		
+protocol	conformance X509Policy.Error	Swift.Error		
+protocol	conformance CloudAttestation.APTicketPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance APTicketPolicy.Error	Swift.Equatable		
+protocol	conformance APTicketPolicy.Error	Swift.Hashable		
+protocol	conformance APTicketPolicy.Error	Swift.Error		
+protocol	conformance AttestationPolicyContext.Key	Swift.Hashable		
+protocol	conformance AttestationPolicyContext.Key	Swift.Equatable		
+protocol	conformance CloudAttestation.CryptexPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance CryptexPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.DarwinInitPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance DarwinInitPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.DeviceModePolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance DeviceModePolicy.Constraint	Swift.Equatable		
+protocol	conformance DeviceModePolicy.Constraint	Swift.Hashable		
+protocol	conformance DeviceModePolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.EnsembleMembersPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance EnsembleMembersPolicy.Error	Swift.Hashable		
+protocol	conformance EnsembleMembersPolicy.Error	Swift.Equatable		
+protocol	conformance EnsembleMembersPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.FusingPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance FusingPolicy.Constraint	Swift.ExpressibleByBooleanLiteral		
+protocol	conformance FusingPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.HardwareIdentifiersPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance HardwareIdentifiersPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.KeyOptionsPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance KeyOptionsPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.LocalBootPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance LocalBootPolicy.Error	Swift.Equatable		
+protocol	conformance LocalBootPolicy.Error	Swift.Hashable		
+protocol	conformance LocalBootPolicy.Error	Swift.Error		
+protocol	conformance PolicyBuilder.TuplePolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance PolicyBuilder.EmptyPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance PolicyBuilder.BooleanPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance PolicyBuilder.PredicatePolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance PolicyBuilder.OptionalPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance PolicyBuilder.ConditionalPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance PolicyBuilder.Error	Swift.Error		
+protocol	conformance PolicyBuilder.Error	Swift.Equatable		
+protocol	conformance CloudAttestation.RoutingHintPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance RoutingHintPolicy.Error	Swift.Equatable		
+protocol	conformance RoutingHintPolicy.Error	Swift.Hashable		
+protocol	conformance RoutingHintPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.SecureConfigPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance SecureConfigPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.SEPAttestationPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance SEPAttestationPolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.SEPImagePolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance SEPImagePolicy.Error	Swift.Hashable		
+protocol	conformance SEPImagePolicy.Error	Swift.Equatable		
+protocol	conformance SEPImagePolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.SoftwareReleasePolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance SoftwareReleasePolicy.Error	Swift.Equatable		
+protocol	conformance SoftwareReleasePolicy.Error	Swift.Hashable		
+protocol	conformance SoftwareReleasePolicy.Error	Swift.Error		
+protocol	conformance CloudAttestation.TransparencyPolicy	CloudAttestation.AttestationPolicy		
+protocol	conformance TransparencyPolicy.Error	Swift.Error		
+protocol	conformance TransparencyPolicy.Error	Foundation.CustomNSError		
+protocol	conformance PCC.AssetProvider	CloudAttestation.AttestationAssetProvider		
+protocol	conformance AttestationType.ComputeNodeVersion	Swift.Equatable		
+protocol	conformance AttestationType.ComputeNodeVersion	Swift.RawRepresentable		
+protocol	conformance AttestationType.ComputeNodeVersion	Swift.Hashable		
+protocol	conformance AttestationType.ProxyNodeVersion	Swift.Equatable		
+protocol	conformance AttestationType.ProxyNodeVersion	Swift.RawRepresentable		
+protocol	conformance AttestationType.ProxyNodeVersion	Swift.Hashable		
+protocol	conformance PCC.AttestationType	Swift.Hashable		
+protocol	conformance PCC.AttestationType	Swift.Equatable		
+protocol	conformance PCC.AutoValidatorError	Foundation.CustomNSError		
+protocol	conformance PCC.AutoValidatorError	Swift.Error		
+protocol	conformance PCC.ComputeNodeValidator	CloudAttestation.Validator		
+protocol	conformance PCC.ProxyNodeAttestor	CloudAttestation.Attestor		
+protocol	conformance ProxyNodeAttestor.ProxyNodeCertificateTransparencyPopulator	CloudAttestation.CertificateTransparencyPopulator		
+protocol	conformance PCC.ProxyNodeValidator	CloudAttestation.Validator		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType	Swift.CaseIterable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType	Swift.CaseIterable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogDataType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATReleaseType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertRequest	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogInsertResponse	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofRequest	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofResponse	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofBatchResponse	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATInsertData	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_AssociatedAsset	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsRequest	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATActiveRecordsResponse.Leaf	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofRequest.LogConsistencyRequest	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogConsistencyProofResponse	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_HashAlg	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.Proto_HashAlg	Swift.CaseIterable		
+protocol	conformance CloudAttestation.Proto_HashAlg	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.Proto_HashAlg	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_HashAlg	Swift.Equatable		
+protocol	conformance Proto_LocalPolicy.Implementation	InternalSwiftProtobuf.Enum		
+protocol	conformance Proto_LocalPolicy.Implementation	Swift.CaseIterable		
+protocol	conformance Proto_LocalPolicy.Implementation	Swift.RawRepresentable		
+protocol	conformance Proto_LocalPolicy.Implementation	Swift.Hashable		
+protocol	conformance Proto_LocalPolicy.Implementation	Swift.Equatable		
+protocol	conformance Entry.OneOf_Info	Swift.Equatable		
+protocol	conformance Entry.Flags	InternalSwiftProtobuf.Enum		
+protocol	conformance Entry.Flags	Swift.CaseIterable		
+protocol	conformance Entry.Flags	Swift.RawRepresentable		
+protocol	conformance Entry.Flags	Swift.Hashable		
+protocol	conformance Entry.Flags	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_HashAlg	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_AppData	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_AppData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_AppData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_AppData	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_AppData	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_AppData	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	Swift.Equatable		
+protocol	conformance Proto_LocalPolicy.Implementation	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_SealedHash	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_SealedHash	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_SealedHash	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_SealedHash	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_SealedHash	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_SealedHash	Swift.Equatable		
+protocol	conformance Proto_SealedHash.Entry	InternalSwiftProtobuf.Message		
+protocol	conformance Proto_SealedHash.Entry	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance Proto_SealedHash.Entry	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance Proto_SealedHash.Entry	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_SealedHash.Entry	Swift.Hashable		
+protocol	conformance Proto_SealedHash.Entry	Swift.Equatable		
+protocol	conformance Entry.Flags	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_Cryptex	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_Cryptex	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_Cryptex	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_Cryptex	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_Cryptex	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_Cryptex	Swift.Equatable		
+protocol	conformance Proto_Cryptex.Salt	InternalSwiftProtobuf.Message		
+protocol	conformance Proto_Cryptex.Salt	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance Proto_Cryptex.Salt	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance Proto_Cryptex.Salt	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_Cryptex.Salt	Swift.Hashable		
+protocol	conformance Proto_Cryptex.Salt	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_SecureConfig	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_SecureConfig	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_SecureConfig	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_SecureConfig	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_SecureConfig	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_SecureConfig	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	Swift.Hashable		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	Swift.Equatable		
+protocol	conformance CloudAttestation.Proto_AttestationBundle	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_LocalPolicy	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_LocalPolicy.Implementation	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_SealedHashLedger	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_SealedHash	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_SealedHash.Entry	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_Cryptex	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_Cryptex.Salt	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_SecureConfig	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_HashAlg	Swift.Encodable		
+protocol	conformance CloudAttestation.Proto_TransparencyProofs	Swift.Encodable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_ATLogProofs	Swift.Encodable		
+protocol	conformance CloudAttestation.LogEntry	Swift.Encodable		
+protocol	conformance CloudAttestation.LogType	Swift.Encodable		
+protocol	conformance CloudAttestation.SignedObject	Swift.Encodable		
+protocol	conformance CloudAttestation.Signature	Swift.Encodable		
+protocol	conformance CloudAttestation.Signature.SignatureAlgorithm	Swift.Encodable		
+protocol	conformance CloudAttestation.NodeType	Swift.Encodable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_TransparencyLog_LogConsistency	Swift.Encodable		
+protocol	conformance Proto_AttestationBundle.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_AttestationBundle.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_AttestationBundle.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_AttestationBundle.CodingKeys	Swift.Equatable		
+protocol	conformance Proto_LocalPolicy.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_LocalPolicy.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_LocalPolicy.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_LocalPolicy.CodingKeys	Swift.Equatable		
+protocol	conformance Proto_SealedHashLedger.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_SealedHashLedger.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_SealedHashLedger.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_SealedHashLedger.CodingKeys	Swift.Equatable		
+protocol	conformance Proto_SealedHash.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_SealedHash.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_SealedHash.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_SealedHash.CodingKeys	Swift.Equatable		
+protocol	conformance Entry.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Entry.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Entry.CodingKeys	Swift.Hashable		
+protocol	conformance Entry.CodingKeys	Swift.Equatable		
+protocol	conformance Proto_Cryptex.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_Cryptex.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_Cryptex.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_Cryptex.CodingKeys	Swift.Equatable		
+protocol	conformance Salt.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Salt.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_SecureConfig.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_SecureConfig.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_SecureConfig.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_SecureConfig.CodingKeys	Swift.Equatable		
+protocol	conformance Proto_TransparencyProofs.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Proto_TransparencyProofs.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Proto_TransparencyProofs.CodingKeys	Swift.Hashable		
+protocol	conformance Proto_TransparencyProofs.CodingKeys	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys	Swift.Equatable		
+protocol	conformance LogEntry.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LogEntry.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LogEntry.CodingKeys	Swift.Hashable		
+protocol	conformance LogEntry.CodingKeys	Swift.Equatable		
+protocol	conformance SignedObject.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SignedObject.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SignedObject.CodingKeys	Swift.Hashable		
+protocol	conformance SignedObject.CodingKeys	Swift.Equatable		
+protocol	conformance Signature.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Signature.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Signature.CodingKeys	Swift.Hashable		
+protocol	conformance Signature.CodingKeys	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_TransparencyLog_LogConsistency.CodingKeys	Swift.CodingKey		
+protocol	conformance Signature.CodingKeys	Swift.CodingKey		
+protocol	conformance SignedObject.CodingKeys	Swift.CodingKey		
+protocol	conformance LogEntry.CodingKeys	Swift.CodingKey		
+protocol	conformance PrivateCloudCompute_TransparencyLog_ATLogProofs.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_TransparencyProofs.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_SecureConfig.CodingKeys	Swift.CodingKey		
+protocol	conformance Salt.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_Cryptex.CodingKeys	Swift.CodingKey		
+protocol	conformance Entry.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_SealedHash.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_SealedHashLedger.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_LocalPolicy.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_AttestationBundle.CodingKeys	Swift.CodingKey		
+protocol	conformance Proto_LocalPolicy.Error	Swift.Error		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.SchemaVersion	InternalSwiftProtobuf.Enum		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.SchemaVersion	Swift.CaseIterable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.SchemaVersion	Swift.RawRepresentable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.SchemaVersion	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.SchemaVersion	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.AssetType	InternalSwiftProtobuf.Enum		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.AssetType	Swift.CaseIterable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.AssetType	Swift.RawRepresentable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.AssetType	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.AssetType	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.FileType	InternalSwiftProtobuf.Enum		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.FileType	Swift.CaseIterable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.FileType	Swift.RawRepresentable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.FileType	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.FileType	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.DigestAlg	InternalSwiftProtobuf.Enum		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.DigestAlg	Swift.CaseIterable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.DigestAlg	Swift.RawRepresentable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.DigestAlg	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.DigestAlg	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ReleaseMetadata	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ReleaseMetadata	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ReleaseMetadata	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ReleaseMetadata	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ReleaseMetadata	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ReleaseMetadata	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.SchemaVersion	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.AssetType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.FileType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.DigestAlg	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Digest	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Digest	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Digest	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Digest	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Digest	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Digest	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Asset	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Asset	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Asset	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Asset	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Asset	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Asset	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.ToolRequirement	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.ToolRequirement	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.ToolRequirement	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.ToolRequirement	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.ToolRequirement	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.ToolRequirement	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Application	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Application	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Application	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Application	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Application	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ReleaseMetadata.Application	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_ProxyNodeMetadata	Swift.Equatable		
+protocol	conformance PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease	InternalSwiftProtobuf.Message		
+protocol	conformance PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease	Swift.CustomDebugStringConvertible		
+protocol	conformance PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease	Swift.Hashable		
+protocol	conformance PrivateCloudCompute_ProxyNodeMetadata.ProxiedRelease	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_Environment	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.PrivateCloudCompute_Environment	Swift.CaseIterable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_Environment	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_Environment	Swift.Hashable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_Environment	Swift.Equatable		
+protocol	conformance CloudAttestation.PrivateCloudCompute_Environment	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.ProtocolVersion	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.ProtocolVersion	Swift.CaseIterable		
+protocol	conformance CloudAttestation.ProtocolVersion	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.ProtocolVersion	Swift.Hashable		
+protocol	conformance CloudAttestation.ProtocolVersion	Swift.Equatable		
+protocol	conformance CloudAttestation.Application	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.Application	Swift.CaseIterable		
+protocol	conformance CloudAttestation.Application	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.Application	Swift.Hashable		
+protocol	conformance CloudAttestation.Application	Swift.Equatable		
+protocol	conformance CloudAttestation.Status	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.Status	Swift.CaseIterable		
+protocol	conformance CloudAttestation.Status	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.Status	Swift.Hashable		
+protocol	conformance CloudAttestation.Status	Swift.Equatable		
+protocol	conformance CloudAttestation.VRFType	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.VRFType	Swift.CaseIterable		
+protocol	conformance CloudAttestation.VRFType	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.VRFType	Swift.Hashable		
+protocol	conformance CloudAttestation.VRFType	Swift.Equatable		
+protocol	conformance CloudAttestation.LogType	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.LogType	Swift.CaseIterable		
+protocol	conformance CloudAttestation.LogType	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.LogType	Swift.Hashable		
+protocol	conformance CloudAttestation.LogType	Swift.Equatable		
+protocol	conformance CloudAttestation.MapType	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.MapType	Swift.CaseIterable		
+protocol	conformance CloudAttestation.MapType	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.MapType	Swift.Hashable		
+protocol	conformance CloudAttestation.MapType	Swift.Equatable		
+protocol	conformance CloudAttestation.NodeType	InternalSwiftProtobuf.Enum		
+protocol	conformance CloudAttestation.NodeType	Swift.CaseIterable		
+protocol	conformance CloudAttestation.NodeType	Swift.RawRepresentable		
+protocol	conformance CloudAttestation.NodeType	Swift.Hashable		
+protocol	conformance CloudAttestation.NodeType	Swift.Equatable		
+protocol	conformance Signature.SignatureAlgorithm	InternalSwiftProtobuf.Enum		
+protocol	conformance Signature.SignatureAlgorithm	Swift.CaseIterable		
+protocol	conformance Signature.SignatureAlgorithm	Swift.RawRepresentable		
+protocol	conformance Signature.SignatureAlgorithm	Swift.Hashable		
+protocol	conformance Signature.SignatureAlgorithm	Swift.Equatable		
+protocol	conformance CloudAttestation.ProtocolVersion	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Application	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Status	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.VRFType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.LogType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.MapType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.NodeType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.VRFWitness	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.VRFWitness	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.VRFWitness	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.VRFWitness	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.VRFWitness	Swift.Hashable		
+protocol	conformance CloudAttestation.VRFWitness	Swift.Equatable		
+protocol	conformance CloudAttestation.VRFPublicKey	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.VRFPublicKey	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.VRFPublicKey	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.VRFPublicKey	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.VRFPublicKey	Swift.Hashable		
+protocol	conformance CloudAttestation.VRFPublicKey	Swift.Equatable		
+protocol	conformance CloudAttestation.Signature	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.Signature	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.Signature	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.Signature	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.Signature	Swift.Hashable		
+protocol	conformance CloudAttestation.Signature	Swift.Equatable		
+protocol	conformance Signature.SignatureAlgorithm	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.SignedObject	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.SignedObject	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.SignedObject	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.SignedObject	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.SignedObject	Swift.Hashable		
+protocol	conformance CloudAttestation.SignedObject	Swift.Equatable		
+protocol	conformance CloudAttestation.LogHead	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.LogHead	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.LogHead	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.LogHead	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.LogHead	Swift.Hashable		
+protocol	conformance CloudAttestation.LogHead	Swift.Equatable		
+protocol	conformance CloudAttestation.LogEntry	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.LogEntry	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.LogEntry	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.LogEntry	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.LogEntry	Swift.Hashable		
+protocol	conformance CloudAttestation.LogEntry	Swift.Equatable		
+protocol	conformance CloudAttestation.MapHead	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.MapHead	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.MapHead	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.MapHead	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.MapHead	Swift.Hashable		
+protocol	conformance CloudAttestation.MapHead	Swift.Equatable		
+protocol	conformance CloudAttestation.MapEntry	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.MapEntry	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.MapEntry	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.MapEntry	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.MapEntry	Swift.Hashable		
+protocol	conformance CloudAttestation.MapEntry	Swift.Equatable		
+protocol	conformance CloudAttestation.InclusionProof	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.InclusionProof	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.InclusionProof	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.InclusionProof	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.InclusionProof	Swift.Hashable		
+protocol	conformance CloudAttestation.InclusionProof	Swift.Equatable		
+protocol	conformance CloudAttestation.PatInclusionProof	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PatInclusionProof	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PatInclusionProof	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PatInclusionProof	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PatInclusionProof	Swift.Hashable		
+protocol	conformance CloudAttestation.PatInclusionProof	Swift.Equatable		
+protocol	conformance CloudAttestation.ChangeLogNodeV2	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.ChangeLogNodeV2	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.ChangeLogNodeV2	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.ChangeLogNodeV2	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.ChangeLogNodeV2	Swift.Hashable		
+protocol	conformance CloudAttestation.ChangeLogNodeV2	Swift.Equatable		
+protocol	conformance CloudAttestation.PerApplicationTreeNode	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PerApplicationTreeNode	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PerApplicationTreeNode	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PerApplicationTreeNode	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PerApplicationTreeNode	Swift.Hashable		
+protocol	conformance CloudAttestation.PerApplicationTreeNode	Swift.Equatable		
+protocol	conformance CloudAttestation.TopLevelTreeNode	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.TopLevelTreeNode	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.TopLevelTreeNode	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.TopLevelTreeNode	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.TopLevelTreeNode	Swift.Hashable		
+protocol	conformance CloudAttestation.TopLevelTreeNode	Swift.Equatable		
+protocol	conformance CloudAttestation.PerApplicationTreeConfigNode	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.PerApplicationTreeConfigNode	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.PerApplicationTreeConfigNode	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.PerApplicationTreeConfigNode	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.PerApplicationTreeConfigNode	Swift.Hashable		
+protocol	conformance CloudAttestation.PerApplicationTreeConfigNode	Swift.Equatable		
+protocol	conformance CloudAttestation.TopLevelTreeConfigNode	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.TopLevelTreeConfigNode	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.TopLevelTreeConfigNode	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.TopLevelTreeConfigNode	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.TopLevelTreeConfigNode	Swift.Hashable		
+protocol	conformance CloudAttestation.TopLevelTreeConfigNode	Swift.Equatable		
+protocol	conformance CloudAttestation.LogClosedNode	InternalSwiftProtobuf.Message		
+protocol	conformance CloudAttestation.LogClosedNode	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance CloudAttestation.LogClosedNode	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance CloudAttestation.LogClosedNode	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAttestation.LogClosedNode	Swift.Hashable		
+protocol	conformance CloudAttestation.LogClosedNode	Swift.Equatable		
+protocol	conformance ProvisioningCertificate.ChassisID	Swift.Hashable		
+protocol	conformance ProvisioningCertificate.ChassisID	Swift.Equatable		
+protocol	conformance DeviceIdentity.Definition	SwiftASN1Internal.DERParseable		
+protocol	conformance ProvisioningCertificate.Error	Swift.Error		

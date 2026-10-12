@@ -1,0 +1,700 @@
+kind	type	conformance	member_kind	member
+class	CloudTelemetryTools.SubmitEventsActivity			
+class	CloudTelemetryTools.SubmitEventsActivity		let	diskCache
+class	CloudTelemetryTools.SubmitEventsActivity		let	sessionCoord
+class	CloudTelemetryTools.SubmitEventsActivity		let	submissionCoord
+enum	CloudTelemetryTools.SubmitEventsActivity.Error			
+enum	CloudTelemetryTools.SubmitEventsActivity.Error		case	noBackendAvailable
+struct	CloudTelemetryTools.StorebagSectionBackendHTTP			
+struct	CloudTelemetryTools.StorebagSectionBackendHTTP		let	name
+struct	CloudTelemetryTools.StorebagSectionBackendHTTP		let	event_types
+enum	CloudTelemetryTools.StorebagSectionBackendHTTP.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionBackendHTTP.CodingKeys		case	event_types
+struct	CloudTelemetryTools.StorebagSectionBackendScriptGroup			
+struct	CloudTelemetryTools.StorebagSectionBackendScriptGroup		let	script_groups
+enum	CloudTelemetryTools.StorebagSectionBackendScriptGroup.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionBackendScriptGroup.CodingKeys		case	script_groups
+enum	CloudTelemetryTools.StorebagSectionBackend			
+enum	CloudTelemetryTools.StorebagSectionBackend		case	http
+enum	CloudTelemetryTools.StorebagSectionBackend		case	local
+enum	CloudTelemetryTools.StorebagSectionBackend		case	other
+class	CloudTelemetryTools.TransparencyLog			
+class	CloudTelemetryTools.TransparencyLog		var	rootLogsURL
+class	CloudTelemetryTools.TransparencyLog		var	writeInternalEvents
+class	CloudTelemetryTools.TransparencyLog		var	activeFile
+class	CloudTelemetryTools.TransparencyLog		var	fileDeletionSource
+enum	CloudTelemetryTools.TransparencyLog.WriteError			
+enum	CloudTelemetryTools.TransparencyLog.WriteError		case	encodeFailed
+struct	CloudTelemetryTools.TransparencyLog.JustEvents			
+struct	CloudTelemetryTools.TransparencyLog.JustEvents		let	events
+enum	CloudTelemetryTools.TransparencyLog.JustEvents.CodingKeys			
+enum	CloudTelemetryTools.TransparencyLog.JustEvents.CodingKeys		case	events
+struct	CloudTelemetryTools.Event			
+struct	CloudTelemetryTools.Event		let	sessionID
+struct	CloudTelemetryTools.Event		var	payload
+struct	CloudTelemetryTools.CachedEvent			
+struct	CloudTelemetryTools.CachedEvent		let	rowID
+struct	CloudTelemetryTools.CachedEvent		let	event
+enum	CloudTelemetryTools.ServiceEventValue			
+enum	CloudTelemetryTools.ServiceEventValue		case	string
+enum	CloudTelemetryTools.ServiceEventValue		case	int
+enum	CloudTelemetryTools.ServiceEventValue		case	uint
+enum	CloudTelemetryTools.ServiceEventValue		case	double
+enum	CloudTelemetryTools.ServiceEventValue		case	bool
+enum	CloudTelemetryTools.ServiceEventValue		case	uuid
+enum	CloudTelemetryTools.ServiceEventValue		case	array
+enum	CloudTelemetryTools.ServiceEventValue		case	dictionary
+struct	CloudTelemetryTools.ServiceEventValue.CodingKeys			
+struct	CloudTelemetryTools.ServiceEventValue.CodingKeys		var	stringValue
+struct	CloudTelemetryTools.BadCachedEvent			
+enum	CloudTelemetryTools.DiskCacheError			
+enum	CloudTelemetryTools.DiskCacheError		case	invalidEvent
+enum	CloudTelemetryTools.DiskCacheError		case	recreateDB
+class	CloudTelemetryTools.DiskCache			
+class	CloudTelemetryTools.DiskCache		let	database
+class	CloudTelemetryTools.PostInstallActivity			
+enum	CloudTelemetryTools.StorebagSectionMaybeShared<A	Swift.Decodable>		
+enum	CloudTelemetryTools.StorebagSectionMaybeShared<A	Swift.Decodable>	case	direct
+enum	CloudTelemetryTools.StorebagSectionMaybeShared<A	Swift.Decodable>	case	shared
+struct	CloudTelemetryTools.StorebagSectionFilter			
+struct	CloudTelemetryTools.StorebagSectionFilter		let	keys
+struct	CloudTelemetryTools.StorebagSectionFilter		let	values
+struct	CloudTelemetryTools.StorebagSectionFilter		let	action
+struct	CloudTelemetryTools.StorebagSectionFilter		let	condition
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys		case	keys
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys		case	key
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys		case	values
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys		case	value
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys		case	action
+enum	CloudTelemetryTools.StorebagSectionFilter.CodingKeys		case	condition
+struct	CloudTelemetryTools.StorebagSectionCondition			
+struct	CloudTelemetryTools.StorebagSectionCondition		let	action
+struct	CloudTelemetryTools.StorebagSectionCondition		let	keys
+struct	CloudTelemetryTools.StorebagSectionCondition		let	values
+struct	CloudTelemetryTools.StorebagSectionCondition		let	conditions
+enum	CloudTelemetryTools.StorebagSectionCondition.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionCondition.CodingKeys		case	action
+enum	CloudTelemetryTools.StorebagSectionCondition.CodingKeys		case	keys
+enum	CloudTelemetryTools.StorebagSectionCondition.CodingKeys		case	values
+enum	CloudTelemetryTools.StorebagSectionCondition.CodingKeys		case	conditions
+struct	CloudTelemetryTools.SessionConfiguration			
+struct	CloudTelemetryTools.SessionConfiguration		let	backends
+struct	CloudTelemetryTools.SessionConfiguration		let	immediateBackends
+struct	CloudTelemetryTools.SessionConfiguration		var	deferred
+struct	CloudTelemetryTools.SessionConfiguration		var	version
+enum	CloudTelemetryTools.SessionConfiguration.Availability			
+enum	CloudTelemetryTools.SessionConfiguration.Availability		case	none
+enum	CloudTelemetryTools.SessionConfiguration.Availability		case	expensive
+enum	CloudTelemetryTools.SessionConfiguration.Availability		case	deferred
+enum	CloudTelemetryTools.SessionConfiguration.Availability		case	immediate
+enum	CloudTelemetryTools.SessionConfiguration.Backend			
+enum	CloudTelemetryTools.SessionConfiguration.Backend		case	http
+enum	CloudTelemetryTools.SessionConfiguration.Backend		case	local
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP			
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	name
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	samplingThreshold
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	samplingKeys
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	postURL
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	filters
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	includeSessionID
+struct	CloudTelemetryTools.SessionConfiguration.BackendHTTP		let	skipLogging
+struct	CloudTelemetryTools.SessionConfiguration.BackendLocal			
+struct	CloudTelemetryTools.SessionConfiguration.BackendLocal		let	samplingThreshold
+struct	CloudTelemetryTools.SessionConfiguration.BackendLocal		let	filters
+struct	CloudTelemetryTools.SessionConfiguration.BackendLocal		let	scripts
+struct	CloudTelemetryTools.SQLError			
+struct	CloudTelemetryTools.SQLError		var	code
+struct	CloudTelemetryTools.SQLError		var	desc
+enum	CloudTelemetryTools.DBError			
+enum	CloudTelemetryTools.DBError		case	noRows
+enum	CloudTelemetryTools.DBError		case	tooManyRows
+enum	CloudTelemetryTools.DBError		case	wrongColumns
+enum	CloudTelemetryTools.DBError		case	closed
+class	CloudTelemetryTools.SQLiteDB			
+class	CloudTelemetryTools.SQLiteDB		let	handle
+enum	CloudTelemetryTools.SQLiteDB.Location			
+enum	CloudTelemetryTools.SQLiteDB.Location		case	url
+enum	CloudTelemetryTools.SQLiteDB.Location		case	memory
+class	CloudTelemetryTools.SQLiteDB.DBHandle			
+class	CloudTelemetryTools.SQLiteDB.DBHandle		let	rawHandle
+class	CloudTelemetryTools.SQLiteDB.DBHandle		var	closed
+class	CloudTelemetryTools.SQLiteDB.Statement			
+class	CloudTelemetryTools.SQLiteDB.Statement		let	handle
+class	CloudTelemetryTools.SQLiteDB.Statement		var	finished
+struct	CloudTelemetryTools.SQLiteDB.Row			
+struct	CloudTelemetryTools.SQLiteDB.Row		let	statement
+class	CloudTelemetryTools.SQLiteDB.Transaction			
+class	CloudTelemetryTools.SQLiteDB.Transaction		let	db
+class	CloudTelemetryTools.SQLiteDB.Transaction		var	finalized
+enum	CloudTelemetryTools.StorebagEnvironment			
+enum	CloudTelemetryTools.StorebagEnvironment		case	development
+enum	CloudTelemetryTools.StorebagEnvironment		case	internal
+enum	CloudTelemetryTools.StorebagEnvironment		case	seed
+enum	CloudTelemetryTools.StorebagEnvironment		case	release
+struct	CloudTelemetryTools.Storebag			
+struct	CloudTelemetryTools.Storebag		let	backends
+struct	CloudTelemetryTools.Storebag		let	ttl
+struct	CloudTelemetryTools.Storebag		let	version
+struct	CloudTelemetryTools.Storebag		let	sharedValues
+enum	CloudTelemetryTools.Storebag.Error			
+enum	CloudTelemetryTools.Storebag.Error		case	failedParse
+enum	CloudTelemetryTools.Storebag.Error		case	failedVerify
+enum	CloudTelemetryTools.Storebag.Error		case	storebagMissing
+struct	CloudTelemetryTools.Storebag._StorebagRoot			
+struct	CloudTelemetryTools.Storebag._StorebagRoot		let	version
+struct	CloudTelemetryTools.Storebag._StorebagRoot		let	refreshCycle
+struct	CloudTelemetryTools.Storebag._StorebagRoot		let	sharedValues
+struct	CloudTelemetryTools.Storebag._StorebagRoot		let	environments
+enum	CloudTelemetryTools.Storebag._StorebagRoot.CodingKeys			
+enum	CloudTelemetryTools.Storebag._StorebagRoot.CodingKeys		case	environment
+enum	CloudTelemetryTools.Storebag._StorebagRoot.CodingKeys		case	version
+enum	CloudTelemetryTools.Storebag._StorebagRoot.CodingKeys		case	refreshCycle
+enum	CloudTelemetryTools.Storebag._StorebagRoot.CodingKeys		case	sharedValues
+class	CloudTelemetryTools.BackendHTTP			
+class	CloudTelemetryTools.BackendHTTP		let	coord
+class	CloudTelemetryTools.BackendHTTP		let	transparencyLog
+class	CloudTelemetryTools.BackendHTTP		let	url
+class	CloudTelemetryTools.BackendHTTP		let	options
+class	CloudTelemetryTools.BackendHTTP		let	clientID
+class	CloudTelemetryTools.BackendHTTP		let	extraHeaders
+class	CloudTelemetryTools.BackendHTTP		let	filters
+class	CloudTelemetryTools.BackendHTTP		let	name
+class	CloudTelemetryTools.BackendHTTP		let	skipLogging
+enum	CloudTelemetryTools.ZLibError			
+enum	CloudTelemetryTools.ZLibError		case	initFailed
+struct	CloudTelemetryTools.BackendHTTP.POSTData			
+struct	CloudTelemetryTools.BackendHTTP.POSTData		let	postTime
+struct	CloudTelemetryTools.BackendHTTP.POSTData		let	clientId
+struct	CloudTelemetryTools.BackendHTTP.POSTData		let	events
+enum	CloudTelemetryTools.BackendHTTP.POSTData.CodingKeys			
+enum	CloudTelemetryTools.BackendHTTP.POSTData.CodingKeys		case	postTime
+enum	CloudTelemetryTools.BackendHTTP.POSTData.CodingKeys		case	clientId
+enum	CloudTelemetryTools.BackendHTTP.POSTData.CodingKeys		case	events
+enum	CloudTelemetryTools.SessionUser			
+enum	CloudTelemetryTools.SessionUser		case	uid
+enum	CloudTelemetryTools.SessionUser		case	unknown
+struct	CloudTelemetryTools.CachedSession			
+struct	CloudTelemetryTools.CachedSession		var	identity
+struct	CloudTelemetryTools.CachedSession		var	id
+struct	CloudTelemetryTools.CachedSession		var	samplingFactor
+struct	CloudTelemetryTools.CachedSession		var	creation
+struct	CloudTelemetryTools.CachedSession		let	user
+struct	CloudTelemetryTools.CachedSession		var	eventPayload
+class	CloudTelemetryTools.Session			
+class	CloudTelemetryTools.BackendLocal			
+class	CloudTelemetryTools.BackendLocal		let	sender
+class	CloudTelemetryTools.BackendLocal		let	scripts
+class	CloudTelemetryTools.BackendLocal		let	filters
+class	CloudTelemetryTools.BackendLocal		let	frameworkObj
+class	CloudTelemetryTools.Throttle			
+class	CloudTelemetryTools.Throttle		let	location
+class	CloudTelemetryTools.Throttle		var	state
+enum	CloudTelemetryTools.StorebagBool			
+enum	CloudTelemetryTools.StorebagBool		case	true
+enum	CloudTelemetryTools.StorebagBool		case	false
+struct	CloudTelemetryTools.StorebagSectionClientHTTP			
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	eventType
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	samplingKeys
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	postURL
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	samplingThreshold
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	clientIDMaxAge
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	customClientID
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	deviceDenylist
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	deviceAllowlist
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	enabledSince
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	eventDenylist
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	eventAllowlist
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	eventThreshold
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	extrasOnInternal
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	filters
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	hashedClient
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	hierarchy
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	includeSessionID
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	localeAllowlist
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	overrideDNU
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	isRealtime
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	overrideSampling
+struct	CloudTelemetryTools.StorebagSectionClientHTTP		let	perCountrySamplingThresholds
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	eventType
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	postURL
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	samplingKeys
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	samplingThreshold
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	clientIDMaxAge
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	customClientID
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	deviceDenylist
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	deviceAllowlist
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	enabledSince
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	eventDenylist
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	eventAllowlist
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	eventThreshold
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	extrasOnInternal
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	filters
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	hashedClient
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	hierarchy
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	includeSessionID
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	localeAllowlist
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	overrideDNU
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	isRealtime
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	overrideSampling
+enum	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys		case	perCountrySamplingThresholds
+struct	CloudTelemetryTools.StorebagSectionPerCountrySampling			
+struct	CloudTelemetryTools.StorebagSectionPerCountrySampling		let	country
+struct	CloudTelemetryTools.StorebagSectionPerCountrySampling		let	threshold
+struct	CloudTelemetryTools.StorebagSectionClientScriptGroup			
+struct	CloudTelemetryTools.StorebagSectionClientScriptGroup		let	eventTypes
+struct	CloudTelemetryTools.StorebagSectionClientScriptGroup		let	samplingThreshold
+struct	CloudTelemetryTools.StorebagSectionClientScriptGroup		let	filters
+struct	CloudTelemetryTools.StorebagSectionClientScriptGroup		let	scripts
+enum	CloudTelemetryTools.StorebagSectionClientScriptGroup.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionClientScriptGroup.CodingKeys		case	eventTypes
+enum	CloudTelemetryTools.StorebagSectionClientScriptGroup.CodingKeys		case	samplingThreshold
+enum	CloudTelemetryTools.StorebagSectionClientScriptGroup.CodingKeys		case	filters
+enum	CloudTelemetryTools.StorebagSectionClientScriptGroup.CodingKeys		case	scripts
+enum	CloudTelemetryTools.StorebagSectionPerCountrySampling.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionPerCountrySampling.CodingKeys		case	country
+enum	CloudTelemetryTools.StorebagSectionPerCountrySampling.CodingKeys		case	threshold
+class	CloudTelemetryTools.SubmissionCoordinator			
+class	CloudTelemetryTools.SubmissionCoordinator		let	sessionCoord
+class	CloudTelemetryTools.SubmissionCoordinator		let	diskCache
+class	CloudTelemetryTools.SubmissionCoordinator		let	transparencyLog
+struct	CloudTelemetryTools.StorebagSigningConfiguration			
+struct	CloudTelemetryTools.StorebagSigningConfiguration		let	throttleCacheURL
+struct	CloudTelemetryTools.StorebagSigningConfiguration		let	configurationsCacheURL
+enum	CloudTelemetryTools.StorebagSigningConfiguration.Error			
+enum	CloudTelemetryTools.StorebagSigningConfiguration.Error		case	failedParse
+enum	CloudTelemetryTools.StorebagSigningConfiguration.Error		case	internalError
+enum	CloudTelemetryTools.StorebagSigningConfiguration.Error		case	downloadFailed
+enum	CloudTelemetryTools.StorebagSigningConfiguration.Error		case	throttled
+class	CloudTelemetryTools.BackendGroup			
+class	CloudTelemetryTools.BackendGroup		var	backends
+enum	CloudTelemetryTools.BackendGroup.Error			
+enum	CloudTelemetryTools.BackendGroup.Error		case	noRemainingBackends
+struct	CloudTelemetryTools.RawStorebag			
+struct	CloudTelemetryTools.RawStorebag		let	bag
+struct	CloudTelemetryTools.RawStorebag		let	signature
+struct	CloudTelemetryTools.RawStorebag._EncodedRawStorebag			
+struct	CloudTelemetryTools.RawStorebag._EncodedRawStorebag		let	bag
+struct	CloudTelemetryTools.RawStorebag._EncodedRawStorebag		let	signature
+enum	CloudTelemetryTools.RawStorebag._EncodedRawStorebag.CodingKeys			
+enum	CloudTelemetryTools.RawStorebag._EncodedRawStorebag.CodingKeys		case	bag
+enum	CloudTelemetryTools.RawStorebag._EncodedRawStorebag.CodingKeys		case	signature
+class	CloudTelemetryTools.StorebagSource			
+class	CloudTelemetryTools.StorebagSource		let	throttleCacheURL
+class	CloudTelemetryTools.StorebagSource		let	storebagSigningConfiguration
+class	CloudTelemetryTools.StorebagSource		var	throttlesByName
+enum	CloudTelemetryTools.StorebagSource.Error			
+enum	CloudTelemetryTools.StorebagSource.Error		case	failedParse
+enum	CloudTelemetryTools.StorebagSource.Error		case	downloadFailed
+enum	CloudTelemetryTools.StorebagSource.Error		case	internalError
+struct	CloudTelemetryTools.StorebagSource.StorebagResponse			
+struct	CloudTelemetryTools.StorebagSource.StorebagResponse		var	json
+struct	CloudTelemetryTools.StorebagSource.StorebagResponse		var	signature
+enum	CloudTelemetryTools.StorebagSource.StorebagResponse.CodingKeys			
+enum	CloudTelemetryTools.StorebagSource.StorebagResponse.CodingKeys		case	json
+enum	CloudTelemetryTools.StorebagSource.StorebagResponse.CodingKeys		case	signature
+enum	CloudTelemetryTools.Mode			
+enum	CloudTelemetryTools.Mode		case	inProcess
+enum	CloudTelemetryTools.Mode		case	xpcService
+enum	CloudTelemetryTools.Mode		case	machService
+struct	CloudTelemetryTools.Daemon			
+struct	CloudTelemetryTools.Daemon		var	mode
+struct	CloudTelemetryTools.Daemon		var	clientBundleID
+struct	CloudTelemetryTools.Daemon		var	diskCache
+struct	CloudTelemetryTools.Daemon		var	sessionCoord
+struct	CloudTelemetryTools.Daemon		var	submissionCoord
+struct	CloudTelemetryTools.Daemon		var	transparencyLog
+struct	CloudTelemetryTools.Daemon		var	disabled
+struct	CloudTelemetryTools.HTTPHeaderFieldProvider			
+struct	CloudTelemetryTools.HTTPHeaderFieldProvider		let	internalType
+struct	CloudTelemetryTools.HTTPHeaderFieldProvider		let	id
+struct	CloudTelemetryTools.HTTPHeaderFieldProvider		let	includeSessionID
+struct	CloudTelemetryTools.HTTPHeaderFieldProvider		let	sessionID
+struct	CloudTelemetryTools.AllEventFieldProvider			
+struct	CloudTelemetryTools.AllEventFieldProvider		let	internalType
+struct	CloudTelemetryTools.AllEventFieldProvider		let	tzOffset
+struct	CloudTelemetryTools.AllEventFieldProvider		let	sessionID
+struct	CloudTelemetryTools.AllEventFieldProvider		let	clientID
+struct	CloudTelemetryTools.AllEventFieldProvider		let	identity
+struct	CloudTelemetryTools.AllEventFieldProvider		let	allowedEventFields
+struct	CloudTelemetryTools.AllEventFieldProvider		let	automatedDeviceGroupProvider
+struct	CloudTelemetryTools.StartEventFieldProvider			
+struct	CloudTelemetryTools.StartEventFieldProvider		let	currentLocaleCode
+struct	CloudTelemetryTools.EndEventFieldProvider			
+struct	CloudTelemetryTools.EndEventFieldProvider		let	graceful
+struct	CloudTelemetryTools.EndEventFieldProvider		let	storebagVersion
+struct	CloudTelemetryTools.AllEventFieldProvider.OSASystemConfigurationFields			
+struct	CloudTelemetryTools.AllEventFieldProvider.OSASystemConfigurationFields		let	automatedDeviceGroup
+struct	CloudTelemetryTools.EventFilterMatcher			
+struct	CloudTelemetryTools.EventFilterMatcher		let	keys
+struct	CloudTelemetryTools.EventFilterMatcher		let	values
+struct	CloudTelemetryTools.EventAllowFilter			
+struct	CloudTelemetryTools.EventAllowFilter		let	matcher
+struct	CloudTelemetryTools.EventAllowFilter		let	allAllowedKeys
+struct	CloudTelemetryTools.EventRemoveFilter			
+struct	CloudTelemetryTools.EventRemoveFilter		let	matcher
+struct	CloudTelemetryTools.EventSHA256KeyFilter			
+struct	CloudTelemetryTools.EventSHA256KeyFilter		let	matcher
+struct	CloudTelemetryTools.EventAllowValuesFilter			
+struct	CloudTelemetryTools.EventAllowValuesFilter		let	matcher
+struct	CloudTelemetryTools.EventDenyValuesFilter			
+struct	CloudTelemetryTools.EventDenyValuesFilter		let	matcher
+struct	CloudTelemetryTools.EventInsertStringKeyFilter			
+struct	CloudTelemetryTools.EventInsertStringKeyFilter		let	matcher
+struct	CloudTelemetryTools.EventAppendToKeyFilter			
+struct	CloudTelemetryTools.EventAppendToKeyFilter		let	matcher
+struct	CloudTelemetryTools.EventPrependToKeyFilter			
+struct	CloudTelemetryTools.EventPrependToKeyFilter		let	matcher
+struct	CloudTelemetryTools.StorebagSectionScript			
+struct	CloudTelemetryTools.StorebagSectionScript		let	script
+struct	CloudTelemetryTools.StorebagSectionScript		let	version
+struct	CloudTelemetryTools.StorebagSectionScript		let	jsCode
+struct	CloudTelemetryTools.StorebagSectionScript		let	requiredLibraries
+enum	CloudTelemetryTools.StorebagSectionScript.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionScript.CodingKeys		case	script
+enum	CloudTelemetryTools.StorebagSectionScript.CodingKeys		case	version
+enum	CloudTelemetryTools.StorebagSectionScript.CodingKeys		case	jsCode
+enum	CloudTelemetryTools.StorebagSectionScript.CodingKeys		case	requiredLibraries
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries			
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries		let	library
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries		let	varName
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries		let	tapToRadarDecisionServerURL
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries		let	tapToRadarRadarComponentID
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries		let	tapToRadarRadarKeywordIDs
+struct	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries		let	tapToRadarRadarTitle
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys			
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys		case	library
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys		case	varName
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarDecisionServerURL
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarRadarComponentID
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarRadarKeywordIDs
+enum	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys		case	tapToRadarRadarTitle
+enum	CloudTelemetryTools.StorebagSharedValue			
+enum	CloudTelemetryTools.StorebagSharedValue		case	filters
+enum	CloudTelemetryTools.StorebagSharedValue		case	scripts
+enum	CloudTelemetryTools.StorebagSharedValue		case	stringList
+enum	CloudTelemetryTools.StorebagSharedValue.Error			
+enum	CloudTelemetryTools.StorebagSharedValue.Error		case	invalid
+class	CloudTelemetryTools.Listener			
+class	CloudTelemetryTools.Listener		let	connectionQueue
+class	CloudTelemetryTools.Listener		var	clients
+class	CloudTelemetryTools.Listener		var	daemon
+class	CloudTelemetryTools.Listener		var	conn
+enum	CloudTelemetryTools.ServiceSamplingOutcome			
+enum	CloudTelemetryTools.ServiceSamplingOutcome		case	deterministic
+enum	CloudTelemetryTools.ServiceSamplingOutcome		case	nondeterministic
+enum	CloudTelemetryTools.ServiceSamplingOutcome		case	disallowed
+enum	CloudTelemetryTools.ServiceSamplingOutcome		case	storebagUnavailable
+enum	CloudTelemetryTools.ServiceSamplingOutcome		case	eventNotFound
+enum	CloudTelemetryTools.ServiceSamplingOutcome		case	unknown
+struct	CloudTelemetryTools.ServiceTransportConfiguration			
+struct	CloudTelemetryTools.ServiceTransportConfiguration		let	allowCellularAccess
+struct	CloudTelemetryTools.ServiceTransportConfiguration		let	allowExpensiveAccess
+struct	CloudTelemetryTools.ServiceTransportConfiguration		let	bundleID
+struct	CloudTelemetryTools.ClientIdentity			
+struct	CloudTelemetryTools.ClientIdentity		var	clientType
+struct	CloudTelemetryTools.ClientIdentity		var	eventType
+struct	CloudTelemetryTools.ClientIdentity		var	transportConfiguration
+class	CloudTelemetryTools.Client			
+class	CloudTelemetryTools.Client		var	connection
+class	CloudTelemetryTools.Client		let	queue
+class	CloudTelemetryTools.Client		let	remoteName
+class	CloudTelemetryTools.Client		let	diskCache
+class	CloudTelemetryTools.Client		let	sessionCoord
+class	CloudTelemetryTools.Client		let	submissionCoord
+class	CloudTelemetryTools.Client		let	transparencyLog
+class	CloudTelemetryTools.Client		let	listener
+struct	CloudTelemetryTools.CachedStorebag			
+struct	CloudTelemetryTools.CachedStorebag		let	storebag
+struct	CloudTelemetryTools.CachedStorebag		let	expiration
+enum	CloudTelemetryTools.CacheError			
+enum	CloudTelemetryTools.CacheError		case	cacheOutOfDiskSpace
+enum	CloudTelemetryTools.CacheError		case	unableToAccessSBCache
+enum	CloudTelemetryTools.CacheError		case	unknownSBCacheFileError
+enum	CloudTelemetryTools.CacheError		case	unknownSBCacheError
+enum	CloudTelemetryTools.CacheError		case	mockError
+class	CloudTelemetryTools.StorebagCache			
+class	CloudTelemetryTools.StorebagCache		var	cache
+class	CloudTelemetryTools.StorebagCache		var	activeLoadingTask
+class	CloudTelemetryTools.StorebagCache		var	activeLoadingTransaction
+class	CloudTelemetryTools.StorebagCache		let	storebagCacheURL
+class	CloudTelemetryTools.StorebagCache		let	storebagSource
+struct	CloudTelemetryTools.SessionHierarchyItem			
+struct	CloudTelemetryTools.SessionHierarchyItem		var	level
+struct	CloudTelemetryTools.SessionHierarchyItem		var	id
+class	CloudTelemetryTools.SessionCoordinator			
+class	CloudTelemetryTools.SessionCoordinator		let	storebagCoordinator
+class	CloudTelemetryTools.SessionCoordinator		var	diskCache
+class	CloudTelemetryTools.SessionCoordinator		var	sessionsPerClientType
+class	CloudTelemetryTools.SessionCoordinator		var	evictingClientTypes
+class	CloudTelemetryTools.SessionCoordinator		var	sessionHierarchy
+class	CloudTelemetryTools.StorebagCoordinator			
+class	CloudTelemetryTools.StorebagCoordinator		let	pathMonitor
+class	CloudTelemetryTools.StorebagCoordinator		let	pathMonitorQueue
+class	CloudTelemetryTools.StorebagCoordinator		let	storebagCache
+class	CloudTelemetryTools.StorebagCoordinator		let	rootCacheURL
+class	CloudTelemetryTools.CacheCleanupActivity			
+class	CloudTelemetryTools.CacheCleanupActivity		let	diskCache
+class	CloudTelemetryTools.RequestOptions			
+class	CloudTelemetryTools.RequestOptions		var	networkingDelegate
+protocol	CloudTelemetryTools.SessionConfigurationProviding			
+protocol	CloudTelemetryTools.SQLType			
+protocol	CloudTelemetryTools.SQLNullableType			
+protocol	CloudTelemetryTools.SQLBindable			
+protocol	CloudTelemetryTools.SessionConfigurable			
+protocol	CloudTelemetryTools.Backend			
+protocol	CloudTelemetryTools.FieldProviding			
+protocol	CloudTelemetryTools.AutomatedDeviceGroupProvider			
+protocol	CloudTelemetryTools.EventFilter			
+protocol	conformance SubmitEventsActivity.Error	Swift.Equatable		
+protocol	conformance SubmitEventsActivity.Error	Swift.Hashable		
+protocol	conformance SubmitEventsActivity.Error	Foundation.LocalizedError		
+protocol	conformance SubmitEventsActivity.Error	Swift.Error		
+protocol	conformance CloudTelemetryTools.SubmitEventsActivity	Swift.Actor		
+protocol	conformance CloudTelemetryTools.SubmitEventsActivity	CloudTelemetryShared.XPCActivityHandler		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionBackendHTTP	Swift.Decodable		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionBackendScriptGroup.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionBackendScriptGroup	Swift.Decodable		
+protocol	conformance CloudTelemetryTools.StorebagSectionBackend	Swift.Decodable		
+protocol	conformance TransparencyLog.WriteError	Swift.Equatable		
+protocol	conformance TransparencyLog.WriteError	Swift.Hashable		
+protocol	conformance TransparencyLog.WriteError	Foundation.LocalizedError		
+protocol	conformance TransparencyLog.WriteError	Swift.CustomStringConvertible		
+protocol	conformance TransparencyLog.WriteError	Swift.Error		
+protocol	conformance CloudTelemetryTools.TransparencyLog	Swift.Actor		
+protocol	conformance JustEvents	Swift.Encodable		
+protocol	conformance JustEvents.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance JustEvents.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance JustEvents.CodingKeys	Swift.Hashable		
+protocol	conformance JustEvents.CodingKeys	Swift.Equatable		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance JustEvents.CodingKeys	Swift.CodingKey		
+protocol	conformance CloudTelemetryTools.ServiceEventValue	Swift.Equatable		
+protocol	conformance ServiceEventValue.CodingKeys	Swift.CodingKey		
+protocol	conformance ServiceEventValue.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ServiceEventValue.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.ServiceEventValue	Swift.Encodable		
+protocol	conformance CloudTelemetryTools.BadCachedEvent	Foundation.LocalizedError		
+protocol	conformance CloudTelemetryTools.BadCachedEvent	Swift.CustomStringConvertible		
+protocol	conformance CloudTelemetryTools.BadCachedEvent	Swift.Error		
+protocol	conformance CloudTelemetryTools.DiskCacheError	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.DiskCacheError	Swift.Hashable		
+protocol	conformance CloudTelemetryTools.DiskCacheError	Swift.Error		
+protocol	conformance CloudTelemetryTools.DiskCache	Swift.Actor		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudTelemetryTools.PostInstallActivity	Swift.Actor		
+protocol	conformance CloudTelemetryTools.PostInstallActivity	CloudTelemetryShared.XPCActivityHandler		
+protocol	conformance CloudTelemetryTools.StorebagSectionMaybeShared	Swift.Decodable		
+protocol	conformance StorebagSectionFilter.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionFilter.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionFilter.CodingKeys	Swift.RawRepresentable		
+protocol	conformance StorebagSectionFilter.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionFilter.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionFilter.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionFilter	Swift.Decodable		
+protocol	conformance CloudTelemetryTools.StorebagSectionCondition	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SessionConfiguration.Availability	Swift.Equatable		
+protocol	conformance SessionConfiguration.Availability	Swift.Hashable		
+protocol	conformance CloudTelemetryTools.SQLError	Foundation.LocalizedError		
+protocol	conformance CloudTelemetryTools.SQLError	Swift.CustomStringConvertible		
+protocol	conformance CloudTelemetryTools.SQLError	Swift.Error		
+protocol	conformance CloudTelemetryTools.DBError	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.DBError	Swift.Hashable		
+protocol	conformance CloudTelemetryTools.DBError	Foundation.LocalizedError		
+protocol	conformance CloudTelemetryTools.DBError	Swift.CustomStringConvertible		
+protocol	conformance CloudTelemetryTools.DBError	Swift.Error		
+protocol	conformance CloudTelemetryTools.SQLiteDB	Swift.Actor		
+protocol	conformance Swift.Bool	CloudTelemetryTools.SQLType		
+protocol	conformance Swift.Bool	CloudTelemetryTools.SQLBindable		
+protocol	conformance Swift.Int	CloudTelemetryTools.SQLType		
+protocol	conformance Swift.Int	CloudTelemetryTools.SQLBindable		
+protocol	conformance Swift.Int64	CloudTelemetryTools.SQLType		
+protocol	conformance Swift.Int64	CloudTelemetryTools.SQLBindable		
+protocol	conformance Swift.Double	CloudTelemetryTools.SQLType		
+protocol	conformance Swift.Double	CloudTelemetryTools.SQLBindable		
+protocol	conformance Swift.String	CloudTelemetryTools.SQLNullableType		
+protocol	conformance Swift.String	CloudTelemetryTools.SQLBindable		
+protocol	conformance CloudTelemetryTools.StorebagEnvironment	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.StorebagEnvironment	Swift.Hashable		
+protocol	conformance CloudTelemetryTools.StorebagEnvironment	Swift.RawRepresentable		
+protocol	conformance CloudTelemetryTools.StorebagEnvironment	Swift.CaseIterable		
+protocol	conformance Storebag.Error	Swift.Equatable		
+protocol	conformance Storebag.Error	Swift.Hashable		
+protocol	conformance Storebag.Error	Foundation.LocalizedError		
+protocol	conformance Storebag.Error	Swift.Error		
+protocol	conformance _StorebagRoot	Swift.Decodable		
+protocol	conformance _StorebagRoot.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance _StorebagRoot.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance _StorebagRoot.CodingKeys	Swift.CodingKey		
+protocol	conformance CloudTelemetryTools.BackendHTTP	Swift.Actor		
+protocol	conformance CloudTelemetryTools.BackendHTTP	CloudTelemetryTools.Backend		
+protocol	conformance CloudTelemetryTools.BackendHTTP	Swift.CustomStringConvertible		
+protocol	conformance ZLibError	Swift.Error		
+protocol	conformance POSTData	Swift.Encodable		
+protocol	conformance POSTData.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance POSTData.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance POSTData.CodingKeys	Swift.Hashable		
+protocol	conformance POSTData.CodingKeys	Swift.Equatable		
+protocol	conformance POSTData.CodingKeys	Swift.CodingKey		
+protocol	conformance CloudTelemetryTools.CachedSession	CloudTelemetryTools.SessionConfigurable		
+protocol	conformance CloudTelemetryTools.Session	Swift.Actor		
+protocol	conformance CloudTelemetryTools.BackendLocal	Swift.Actor		
+protocol	conformance CloudTelemetryTools.BackendLocal	CloudTelemetryTools.Backend		
+protocol	conformance CloudTelemetryTools.BackendLocal	Swift.CustomStringConvertible		
+protocol	conformance CloudTelemetryTools.Throttle	Swift.Actor		
+protocol	conformance CloudTelemetryTools.StorebagBool	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.StorebagBool	Swift.Hashable		
+protocol	conformance CloudTelemetryTools.StorebagBool	Swift.Decodable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	Swift.RawRepresentable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionClientHTTP	Swift.Decodable		
+protocol	conformance CloudTelemetryTools.StorebagSectionPerCountrySampling	Swift.Decodable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	Swift.RawRepresentable		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionClientScriptGroup.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionClientScriptGroup	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CloudTelemetryTools.SubmissionCoordinator	Swift.Actor		
+protocol	conformance StorebagSigningConfiguration.Error	Foundation.LocalizedError		
+protocol	conformance StorebagSigningConfiguration.Error	Swift.Error		
+protocol	conformance __C.SecKey	Swift.Equatable		
+protocol	conformance __C.SecKey	Swift.Hashable		
+protocol	conformance __C.SecKey	CoreFoundation._CFObject		
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance BackendGroup.Error	Swift.Equatable		
+protocol	conformance BackendGroup.Error	Swift.Hashable		
+protocol	conformance BackendGroup.Error	Swift.Error		
+protocol	conformance CloudTelemetryTools.BackendGroup	Swift.Actor		
+protocol	conformance CloudTelemetryTools.BackendGroup	CloudTelemetryTools.Backend		
+protocol	conformance _EncodedRawStorebag	Swift.Decodable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance _EncodedRawStorebag.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance _EncodedRawStorebag.CodingKeys	Swift.Hashable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	Swift.Equatable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSource.Error	Foundation.LocalizedError		
+protocol	conformance StorebagSource.Error	Swift.Error		
+protocol	conformance StorebagSource.StorebagResponse	Swift.Decodable		
+protocol	conformance StorebagSource.StorebagResponse	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CloudTelemetryTools.Mode	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.Mode	Swift.Hashable		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudTelemetryTools.HTTPHeaderFieldProvider	CloudTelemetryTools.FieldProviding		
+protocol	conformance CloudTelemetryTools.AllEventFieldProvider	CloudTelemetryTools.FieldProviding		
+protocol	conformance CloudTelemetryTools.StartEventFieldProvider	CloudTelemetryTools.FieldProviding		
+protocol	conformance CloudTelemetryTools.EndEventFieldProvider	CloudTelemetryTools.FieldProviding		
+protocol	conformance OSASystemConfigurationFields	CloudTelemetryTools.AutomatedDeviceGroupProvider		
+protocol	conformance CloudTelemetryTools.EventAllowFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventRemoveFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventSHA256KeyFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventAllowValuesFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventDenyValuesFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventInsertStringKeyFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventAppendToKeyFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance CloudTelemetryTools.EventPrependToKeyFilter	CloudTelemetryTools.EventFilter		
+protocol	conformance StorebagSectionScript.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionScript.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionScript.CodingKeys	Swift.RawRepresentable		
+protocol	conformance StorebagSectionScript.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionScript.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionScript.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionScript	Swift.Decodable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	Swift.Equatable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	Swift.Hashable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	Swift.RawRepresentable		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	Swift.CodingKey		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorebagSectionScriptRequiredLibraries.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudTelemetryTools.StorebagSectionScriptRequiredLibraries	Swift.Decodable		
+protocol	conformance StorebagSharedValue.Error	Swift.Equatable		
+protocol	conformance StorebagSharedValue.Error	Swift.Hashable		
+protocol	conformance StorebagSharedValue.Error	Foundation.LocalizedError		
+protocol	conformance StorebagSharedValue.Error	Swift.Error		
+protocol	conformance CloudTelemetryTools.StorebagSharedValue	Swift.Decodable		
+protocol	conformance CloudTelemetryTools.Listener	CloudTelemetryShared.XPCConnectionDelegate		
+protocol	conformance CloudTelemetryTools.ServiceSamplingOutcome	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.ServiceSamplingOutcome	Swift.RawRepresentable		
+protocol	conformance CloudTelemetryTools.ServiceSamplingOutcome	Swift.Comparable		
+protocol	conformance CloudTelemetryTools.ClientIdentity	Swift.CustomStringConvertible		
+protocol	conformance CloudTelemetryTools.Client	Swift.Actor		
+protocol	conformance CloudTelemetryTools.Client	Swift.Identifiable		
+protocol	conformance CloudTelemetryTools.Client	Swift.Hashable		
+protocol	conformance CloudTelemetryTools.Client	CloudTelemetryShared.XPCConnectionDelegate		
+protocol	conformance CloudTelemetryTools.Client	Swift.Equatable		
+protocol	conformance CloudTelemetryTools.CacheError	Foundation.LocalizedError		
+protocol	conformance CloudTelemetryTools.CacheError	Swift.Error		
+protocol	conformance CloudTelemetryTools.StorebagCache	Swift.Actor		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance CloudTelemetryTools.SessionCoordinator	Swift.Actor		
+protocol	conformance CloudTelemetryTools.StorebagCoordinator	Swift.Actor		
+protocol	conformance CloudTelemetryTools.StorebagCoordinator	CloudTelemetryTools.SessionConfigurationProviding		
+protocol	conformance CloudTelemetryTools.CacheCleanupActivity	Swift.Actor		
+protocol	conformance CloudTelemetryTools.CacheCleanupActivity	CloudTelemetryShared.XPCActivityHandler		
+extension	CloudTelemetryTools.StorebagSectionFilter.CodingKeys	RawRepresentable		
+extension	CloudTelemetryTools.StorebagEnvironment	RawRepresentable		
+extension	CloudTelemetryTools.StorebagEnvironment	CaseIterable		
+extension	CloudTelemetryTools.StorebagSectionClientHTTP.CodingKeys	RawRepresentable		
+extension	CloudTelemetryTools.StorebagSectionClientScriptGroup.CodingKeys	RawRepresentable		
+extension	CloudTelemetryTools.StorebagSectionScript.CodingKeys	RawRepresentable		
+extension	CloudTelemetryTools.StorebagSectionScriptRequiredLibraries.CodingKeys	RawRepresentable		
+extension	CloudTelemetryTools.ServiceSamplingOutcome	RawRepresentable		
+extension	CloudTelemetryTools.Client	Identifiable		

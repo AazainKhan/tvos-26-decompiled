@@ -1,0 +1,545 @@
+kind	type	conformance	member_kind	member
+class	PreviewsInjection.MainPreviewEntryPoint			
+enum	PreviewsInjection.JITLinkWaiter.State			
+enum	PreviewsInjection.JITLinkWaiter.State		case	scheduledLinkWork
+enum	PreviewsInjection.JITLinkWaiter.State		case	waiting
+enum	PreviewsInjection.JITLinkWaiter.State		case	done
+struct	PreviewsInjection.NoopEntryPoint			
+struct	PreviewsInjection.PreviewModifiers			
+struct	PreviewsInjection.PreviewModifiers		var	viewModifier
+class	PreviewsInjection.ModifierContextCache			
+class	PreviewsInjection.ModifierContextCache		var	contextTasks
+class	PreviewsInjection.ModifierContextCache		var	toCancelOnInvalidation
+struct	PreviewsInjection.CompoundViewModifier<A	SwiftUI.ViewModifier, B: SwiftUI.ViewModifier>		
+struct	PreviewsInjection.CompoundViewModifier<A	SwiftUI.ViewModifier, B: SwiftUI.ViewModifier>	let	modifier1
+struct	PreviewsInjection.CompoundViewModifier<A	SwiftUI.ViewModifier, B: SwiftUI.ViewModifier>	let	modifier2
+struct	PreviewsInjection.CompoundWrapper<A	PreviewsInjection.ModifierWrapper, B: PreviewsInjection.ModifierWrapper>		
+struct	PreviewsInjection.CompoundWrapper<A	PreviewsInjection.ModifierWrapper, B: PreviewsInjection.ModifierWrapper>	let	wrapper1
+struct	PreviewsInjection.CompoundWrapper<A	PreviewsInjection.ModifierWrapper, B: PreviewsInjection.ModifierWrapper>	let	wrapper2
+struct	PreviewsInjection.SingleWrapper<A	SwiftUI.PreviewModifier>		
+struct	PreviewsInjection.SingleWrapper<A	SwiftUI.PreviewModifier>	let	previewModifier
+struct	PreviewsInjection.EmptyWrapper			
+enum	PreviewsInjection.LocatedPreview			
+enum	PreviewsInjection.LocatedPreview		case	provider
+enum	PreviewsInjection.LocatedPreview		case	registry
+struct	PreviewsInjection.PreviewLocator			
+struct	PreviewsInjection.PreviewLocator		var	registryLocator
+struct	PreviewsInjection.PreviewAgentServices			
+struct	PreviewsInjection.PreviewAgentServices		var	productLoader
+struct	PreviewsInjection.PreviewAgentServices		var	entryPointIndex
+struct	PreviewsInjection.PreviewAgentServices		var	modifierCache
+struct	PreviewsInjection.PreviewAgentServices		var	registryLocator
+struct	PreviewsInjection.PreviewAgentServices		var	previewLocator
+class	PreviewsInjection.RegistryHostProvider.Host			
+class	PreviewsInjection.RegistryHostProvider.Host		var	preview
+class	PreviewsInjection.RegistryHostProvider.Host		var	modifiers
+class	PreviewsInjection.RegistryHostProvider.Host		var	_seed
+struct	PreviewsInjection.UIKitPreviewWrapperView			
+struct	PreviewsInjection.UIKitPreviewWrapperView		let	viewController
+struct	PreviewsInjection.RegistryHostProvider			
+struct	PreviewsInjection.RegistryHostProvider		let	preview
+struct	PreviewsInjection.RegistryHostProvider		let	structure
+struct	PreviewsInjection.RegistryHostProvider		let	modifiers
+struct	PreviewsInjection.RegistryHostProvider.Host.HostView			
+struct	PreviewsInjection.RegistryHostProvider.Host.HostView		var	_host
+struct	PreviewsInjection.EntryPointTypeRegistry			
+struct	PreviewsInjection.EntryPointTypeRegistry		var	nonUITypes
+struct	PreviewsInjection.EntryPointTypeRegistry		var	sceneTypes
+enum	PreviewsInjection.LoadError			
+enum	PreviewsInjection.LoadError		case	couldNotFindBundle
+enum	PreviewsInjection.LoadError		case	couldNotLoadBundle
+class	PreviewsInjection.ShellMessagePipeAgent			
+class	PreviewsInjection.ShellMessagePipeAgent		let	messagePipe
+enum	PreviewsInjection.JITExecutorWaiter.State			
+enum	PreviewsInjection.JITExecutorWaiter.State		case	submittedExecutor
+enum	PreviewsInjection.JITExecutorWaiter.State		case	waiting
+enum	PreviewsInjection.JITExecutorWaiter.State		case	done
+class	PreviewsInjection.PreviewSceneAgent			
+class	PreviewsInjection.PreviewSceneAgent		let	sceneServices
+class	PreviewsInjection.PreviewSceneAgent		let	sceneBehavior
+class	PreviewsInjection.PreviewSceneAgent		let	sceneMessenger
+class	PreviewsInjection.PreviewSceneAgent		let	services
+class	PreviewsInjection.PreviewSceneAgent		var	currentUpdateResult
+enum	PreviewsInjection.PreviewSceneAgent.SceneBehavior			
+enum	PreviewsInjection.PreviewSceneAgent.SceneBehavior		case	displaysUI
+enum	PreviewsInjection.PreviewSceneAgent.SceneBehavior		case	inert
+struct	PreviewsInjection.PreviewSceneAgent.UnhandledAction			
+struct	PreviewsInjection.PreviewSceneAgent.NoCurrentUpdateError			
+class	PreviewsInjection.AnyNonUIEntryPoint			
+class	PreviewsInjection.AnyNonUIEntryPoint		let	entryPoint
+class	PreviewsInjection.AnySceneEntryPoint			
+class	PreviewsInjection.AnySceneEntryPoint		let	entryPoint
+struct	PreviewsInjection.UpdatePayloadError<A	PreviewsInjection.EntryPoint>		
+struct	PreviewsInjection.UpdatePayloadError<A	PreviewsInjection.EntryPoint>	var	payload
+class	PreviewsInjection.HostMessagePipeAgent			
+class	PreviewsInjection.HostMessagePipeAgent		let	messagePipe
+class	PreviewsInjection.AgentCache			
+class	PreviewsInjection.AgentCache		var	agents
+struct	PreviewsInjection.AgentCache.CreateAgentError			
+struct	PreviewsInjection.AgentCache.CreateAgentError		let	spec
+struct	PreviewsInjection.AgentCache.CreateAgentError		let	reason
+enum	PreviewsInjection.AgentCache.CreateAgentError.Reason			
+enum	PreviewsInjection.AgentCache.CreateAgentError.Reason		case	couldNotLoadBundle
+enum	PreviewsInjection.AgentCache.CreateAgentError.Reason		case	classLookupFailed
+enum	PreviewsInjection.AgentCache.CreateAgentError.Reason		case	nonConformingClass
+class	PreviewsInjection.DynamicProductLoader			
+class	PreviewsInjection.DynamicProductLoader		var	hasToldSwiftUIPreviewThunksHaveFinishedLoading
+class	PreviewsInjection.DynamicProductLoader		var	loadedDynamicProducts
+class	PreviewsInjection.DynamicProductLoader		var	incrementalValues
+enum	PreviewsInjection.DynamicProductLoader.LoadingError			
+enum	PreviewsInjection.DynamicProductLoader.LoadingError		case	failedToGetBundle
+enum	PreviewsInjection.DynamicProductLoader.LoadingError		case	failedToDLOpen
+struct	PreviewsInjection.ProviderPreview			
+struct	PreviewsInjection.ProviderPreview		let	mangledPreviewProviderName
+struct	PreviewsInjection.ProviderPreview		let	indexInProvider
+struct	PreviewsInjection.ProviderPreview		let	previewHost
+struct	PreviewsInjection.ProviderPreview		let	providerType
+struct	PreviewsInjection.ProviderPreview.ID			
+struct	PreviewsInjection.ProviderPreview.ID		let	mangledPreviewProviderName
+struct	PreviewsInjection.ProviderPreview.ID		let	indexInProvider
+struct	PreviewsInjection.ProviderError			
+struct	PreviewsInjection.ProviderError		let	name
+struct	PreviewsInjection.ProviderError		let	problem
+enum	PreviewsInjection.ProviderError.Problem			
+enum	PreviewsInjection.ProviderError.Problem		case	indexOutOfBounds
+enum	PreviewsInjection.ProviderError.Problem		case	unknownProvider
+enum	PreviewsInjection.ProviderError.Problem		case	notAPreviewProvider
+enum	PreviewsInjection.ProviderError.Problem		case	noPreviewHost
+struct	PreviewsInjection.MetricsView			
+struct	PreviewsInjection.BorderedSizeView			
+struct	PreviewsInjection.BorderedSizeView		let	color
+struct	PreviewsInjection.BorderedSizeView		let	insetsOnly
+struct	PreviewsInjection.BorderedSizeView		let	verticalLabelAlignment
+struct	PreviewsInjection.BorderedSizeView		let	horizontalLabelAlignment
+struct	PreviewsInjection.EnvironmentView			
+struct	PreviewsInjection.EnvironmentView		var	_colorScheme
+class	PreviewsInjection.UVJITAgent			
+class	PreviewsInjection.UVJITAgent		let	entryPointConfigBox
+struct	PreviewsInjection.UVJITAgent.DebugDylibEntryPointConfig			
+struct	PreviewsInjection.UVJITAgent.DebugDylibEntryPointConfig		var	argc
+struct	PreviewsInjection.UVJITAgent.DebugDylibEntryPointConfig		var	argv
+struct	PreviewsInjection.UVJITAgent.DebugDylibEntryPointConfig		var	previewsDylibPath
+struct	PreviewsInjection.UVJITAgent.DebugDylibEntryPointConfig		var	previewsDylibEntryPointName
+struct	PreviewsInjection.StderrOutputStream			
+struct	PreviewsInjection.PreviewDisplayContext			
+struct	PreviewsInjection.PreviewDisplayContext		var	contentHostProvider
+struct	PreviewsInjection.PreviewDisplayContext		var	configuration
+struct	PreviewsInjection.PreviewDisplayContext		var	orientation
+struct	PreviewsInjection.PreviewDisplayContext		var	displayName
+struct	PreviewsInjection.PreviewDisplayContext.Configuration			
+struct	PreviewsInjection.PreviewDisplayContext.Configuration		var	layout
+struct	PreviewsInjection.PreviewDisplayContext.Configuration		var	allowAnimations
+struct	PreviewsInjection.PreviewDisplayContext.Configuration		var	renderEffects
+struct	PreviewsInjection.PreviewDisplayContext.Configuration		var	showDebugMetrics
+struct	PreviewsInjection.PreviewDisplayContext.Configuration		var	safeAreaPolicy
+enum	PreviewsInjection.PreviewDisplayContext.SafeAreaPolicy			
+enum	PreviewsInjection.PreviewDisplayContext.SafeAreaPolicy		case	trust
+enum	PreviewsInjection.PreviewDisplayContext.SafeAreaPolicy		case	override
+class	PreviewsInjection.PreviewEntryPoint			
+struct	PreviewsInjection.PreviewEntryPoint.UpdateInputs			
+struct	PreviewsInjection.PreviewEntryPoint.UpdateInputs		let	locatedPreview
+struct	PreviewsInjection.PreviewEntryPoint.UpdateInputs		let	renderEffects
+struct	PreviewsInjection.PreviewEntryPoint.UpdateInputs		let	previewModifiers
+struct	PreviewsInjection.PreviewEntryPoint.UpdateInputs		let	requestedGroupIndex
+class	PreviewsInjection.SceneServices			
+class	PreviewsInjection.SceneServices		var	scene
+class	PreviewsInjection.SceneServices		var	hostControllers
+struct	PreviewsInjection.SceneUpdateResult			
+struct	PreviewsInjection.SceneUpdateResult		var	viewController
+struct	PreviewsInjection.SceneUpdateResult		var	preferences
+struct	PreviewsInjection.SceneUpdateResult		var	hostedOutput
+struct	PreviewsInjection.SceneUpdateResult		var	makeStaticOutput
+struct	PreviewsInjection.Unimplemented			
+struct	PreviewsInjection.PreviewPreflightEntryPoint			
+class	PreviewsInjection.UVBSEndpointMonitor	NSObject		
+class	PreviewsInjection.UVBSEndpointMonitor	NSObject	let	controlAgentMonitor
+class	PreviewsInjection.UVBSEndpointMonitor	NSObject	let	controlAgent
+class	PreviewsInjection.UVBSEndpointMonitor	NSObject	let	jitBootstrapAgentMonitor
+class	PreviewsInjection.UVBSEndpointMonitor	NSObject	let	jitBootstrapAgent
+class	PreviewsInjection.ControlAgent			
+class	PreviewsInjection.ControlAgent		let	connection
+class	PreviewsInjection.ControlAgent		let	nonUIAgent
+class	PreviewsInjection.ControlAgent		let	hostMessagePipeAgent
+class	PreviewsInjection.ControlAgent		let	shellMessagePipeAgent
+class	PreviewsInjection.ControlAgent		let	services
+class	PreviewsInjection.ControlAgent		var	activeSecurityScopedURLs
+class	PreviewsInjection.JITBootstrapAgent			
+class	PreviewsInjection.JITBootstrapAgent		let	connection
+struct	PreviewsInjection.ControlAgent.FailedToCopyURLError			
+struct	PreviewsInjection.ControlAgent.FailedToCopyURLError		let	sourceURL
+struct	PreviewsInjection.ControlAgent.FailedToCopyURLError		let	destinationURL
+struct	PreviewsInjection.ControlAgent.FailedToAccessSecurityScopedResourceError			
+struct	PreviewsInjection.ControlAgent.FailedToAccessSecurityScopedResourceError		let	url
+struct	PreviewsInjection.Unimplemented			
+class	PreviewsInjection.RunningAppEntryPoint			
+struct	PreviewsInjection.PreviewNonUIAgent			
+struct	PreviewsInjection.PreviewNonUIAgent		let	services
+struct	PreviewsInjection.CFunctionEntryPoint			
+struct	PreviewsInjection.CFunctionEntryPoint		let	updateState
+enum	PreviewsInjection.CFunctionEntryPoint.LoadError			
+enum	PreviewsInjection.CFunctionEntryPoint.LoadError		case	noLinkedBundle
+enum	PreviewsInjection.CFunctionEntryPoint.LoadError		case	couldNotLoadBundle
+enum	PreviewsInjection.CFunctionEntryPoint.LoadError		case	noExecutablePath
+enum	PreviewsInjection.CFunctionEntryPoint.LoadError		case	noExecutableHandle
+enum	PreviewsInjection.CFunctionEntryPoint.LoadError		case	noSymbol
+enum	PreviewsInjection.CFunctionEntryPoint.UpdateState.Phase			
+enum	PreviewsInjection.CFunctionEntryPoint.UpdateState.Phase		case	updating
+enum	PreviewsInjection.CFunctionEntryPoint.UpdateState.Phase		case	buffering
+enum	PreviewsInjection.CFunctionEntryPoint.UpdateState.Phase		case	streaming
+enum	PreviewsInjection.CFunctionEntryPoint.UpdateState.Phase		case	idle
+struct	PreviewsInjection.CFunctionEntryPoint.UpdateState			
+struct	PreviewsInjection.CFunctionEntryPoint.UpdateState		var	phase
+struct	PreviewsInjection.CFunctionEntryPoint.UpdateState		var	currentSeed
+struct	PreviewsInjection.RenderEffects			
+struct	PreviewsInjection.RenderEffects		let	effects
+struct	PreviewsInjection.RenderEffects		let	orientation
+struct	PreviewsInjection.RenderEffects		let	viewModifier
+struct	PreviewsInjection.RenderEffectRegistry			
+struct	PreviewsInjection.RenderEffectRegistry		var	effectTransforms
+struct	PreviewsInjection.UnsupportedRenderEffectError			
+struct	PreviewsInjection.UnsupportedRenderEffectError		var	effect
+struct	PreviewsInjection.AssistiveAccessTransform			
+struct	PreviewsInjection.Transform			
+struct	PreviewsInjection.Transform		var	colorScheme
+struct	PreviewsInjection.Transform			
+struct	PreviewsInjection.Transform		var	dynamicTypeSize
+struct	PreviewsInjection.Transform			
+struct	PreviewsInjection.Transform		var	orientationOverride
+struct	PreviewsInjection.PlaygroundRegistryEntry			
+struct	PreviewsInjection.PlaygroundRegistryEntry		let	type
+class	PreviewsInjection.PreviewHostController<A	PreviewsInjection.HostingParadigm>		
+class	PreviewsInjection.PreviewHostController<A	PreviewsInjection.HostingParadigm>	let	hostingViewable
+class	PreviewsInjection.PreviewHostController<A	PreviewsInjection.HostingParadigm>	let	previewDisplayHost
+class	PreviewsInjection.PreviewHostController<A	PreviewsInjection.HostingParadigm>	let	debugOverlay
+class	PreviewsInjection.PreviewHostController<A	PreviewsInjection.HostingParadigm>	var	rootViewController
+class	PreviewsInjection.PreviewDisplayHost<A	PreviewsInjection.HostingParadigm>		
+class	PreviewsInjection.PreviewDisplayHost<A	PreviewsInjection.HostingParadigm>	var	_configuration
+class	PreviewsInjection.PreviewDisplayHost<A	PreviewsInjection.HostingParadigm>	var	_contentHost
+struct	PreviewsInjection.PreviewDisplayHost.HostView<A	PreviewsInjection.HostingParadigm>		
+struct	PreviewsInjection.PreviewDisplayHost.HostView<A	PreviewsInjection.HostingParadigm>	var	_host
+struct	PreviewsInjection.PreviewDisplayHost.EmptyContentHost<A	PreviewsInjection.HostingParadigm>		
+struct	PreviewsInjection.AllowAnimationsModifier			
+struct	PreviewsInjection.AllowAnimationsModifier		var	allow
+class	PreviewsInjection.RenderingHostManager<A	PreviewsInjection.HostingParadigm>		
+class	PreviewsInjection.RenderingHostManager<A	PreviewsInjection.HostingParadigm>	let	hostController
+class	PreviewsInjection.RegistryEntryPoint			
+class	PreviewsInjection.RegistryEntryPoint		var	currentUpdateContext
+struct	PreviewsInjection.UpdateContext			
+struct	PreviewsInjection.UpdateContext		let	registryID
+struct	PreviewsInjection.UpdateContext		let	invalidationHandle
+struct	PreviewsInjection.UpdateContext		let	executable
+struct	PreviewsInjection.UpdateContext		var	streamPlaceholders
+struct	PreviewsInjection.StreamPlaceholder			
+struct	PreviewsInjection.StreamPlaceholder		let	state
+enum	PreviewsInjection.StreamPlaceholder.State			
+enum	PreviewsInjection.StreamPlaceholder.State		case	buffering
+enum	PreviewsInjection.StreamPlaceholder.State		case	sending
+enum	PreviewsInjection.StreamPlaceholder.State		case	invalidated
+struct	PreviewsInjection.MeasurementsView			
+struct	PreviewsInjection.MeasurementsView		let	color
+struct	PreviewsInjection.MeasurementsView		let	horizontalAlignment
+struct	PreviewsInjection.MeasurementsView		let	verticalAlignment
+struct	PreviewsInjection.MeasurementsView		let	favorBottom
+struct	PreviewsInjection.ArrowView			
+struct	PreviewsInjection.ArrowView		let	color
+struct	PreviewsInjection.ArrowView		let	direction
+struct	PreviewsInjection.ArrowView		let	doubleArrow
+struct	PreviewsInjection.ArrowView		let	labelFavorBottom
+struct	PreviewsInjection.ArrowView		let	horizontalAlignment
+struct	PreviewsInjection.ArrowView		let	verticalAlignment
+struct	PreviewsInjection.Arrow			
+struct	PreviewsInjection.Arrow		let	direction
+struct	PreviewsInjection.Arrow		let	doubleArrow
+class	PreviewsInjection.EntryPointIndex			
+class	PreviewsInjection.EntryPointIndex		var	pendingShellResources
+class	PreviewsInjection.EntryPointIndex		var	updateStates
+class	PreviewsInjection.EntryPointIndex		var	nonUIEntryPoints
+class	PreviewsInjection.EntryPointIndex		var	sceneEntryPoints
+class	PreviewsInjection.EntryPointIndex		var	entryPointTypeRegistry
+class	PreviewsInjection.EntryPointIndex		var	renderEffectRegistry
+class	PreviewsInjection.EntryPointIndex		var	loadedFrameworkPaths
+struct	PreviewsInjection.EntryPointIndex.UpdateState			
+struct	PreviewsInjection.EntryPointIndex.UpdateState		var	updateSeed
+struct	PreviewsInjection.EntryPointIndex.UpdateState		var	messageStreams
+enum	PreviewsInjection.EntryPointIndex.PendingShellResource			
+enum	PreviewsInjection.EntryPointIndex.PendingShellResource		case	messageStream
+enum	PreviewsInjection.EntryPointIndex.PendingShellResource		case	endpoint
+enum	PreviewsInjection.LegacyEntryPointLoader.LoaderError			
+enum	PreviewsInjection.LegacyEntryPointLoader.LoaderError		case	unknownType
+enum	PreviewsInjection.LegacyEntryPointLoader.LoaderError		case	notNonUIFactory
+enum	PreviewsInjection.LegacyEntryPointLoader.LoaderError		case	notSceneFactory
+struct	PreviewsInjection.EntryPointIndex.NoEntryPoint			
+struct	PreviewsInjection.EntryPointIndex.NoEntryPoint		let	kind
+struct	PreviewsInjection.EntryPointIndex.NoEntryPoint		let	category
+struct	PreviewsInjection.EntryPointIndex.NoEntryPoint		let	loadedPaths
+struct	PreviewsInjection.RegistryPreflightEntryPoint			
+struct	PreviewsInjection.IOSHostingParadigm			
+struct	PreviewsInjection.PreviewProviderEntryPoint			
+class	PreviewsInjection.PreviewProviderHostProvider.Host			
+class	PreviewsInjection.PreviewProviderHostProvider.Host		let	previewHost
+class	PreviewsInjection.PreviewProviderHostProvider.Host		let	providerType
+class	PreviewsInjection.PreviewProviderHostProvider.Host		var	_previewIndex
+struct	PreviewsInjection.EnvironmentWrapper			
+struct	PreviewsInjection.EnvironmentWrapper		let	values
+struct	PreviewsInjection.SwiftUIAppHostProvider			
+struct	PreviewsInjection.PreviewProviderHostProvider.Host.HostView			
+struct	PreviewsInjection.PreviewProviderHostProvider.Host.HostView		var	_environmentWrapper
+struct	PreviewsInjection.PreviewProviderHostProvider.Host.HostView		let	host
+struct	PreviewsInjection.PreviewProviderHostProvider			
+struct	PreviewsInjection.PreviewProviderHostProvider		let	host
+struct	PreviewsInjection.PreviewProviderHostProvider.Host.InnerHostView			
+struct	PreviewsInjection.PreviewProviderHostProvider.Host.InnerHostView		var	_contentHost
+struct	PreviewsInjection.PreviewProviderHostProvider.Host.InnerHostView		var	_previewHost
+class	PreviewsInjection.RegistryLocator			
+class	PreviewsInjection.RegistryLocator		var	previewCache
+class	PreviewsInjection.RegistryLocator		var	typeErasedCaches
+class	PreviewsInjection.RegistryLocator		var	entryTypes
+struct	PreviewsInjection.PreviewRegistryEntry			
+struct	PreviewsInjection.PreviewRegistryEntry		let	type
+struct	PreviewsInjection.Cache<A	PreviewsServices.MinimalRegistryEntry>		
+struct	PreviewsInjection.Cache<A	PreviewsServices.MinimalRegistryEntry>	var	cachedEntries
+struct	PreviewsInjection.UnknownRegistryType			
+struct	PreviewsInjection.UnknownRegistryType		let	registryType
+struct	PreviewsInjection.RegistryPreview			
+struct	PreviewsInjection.RegistryPreview		let	preview
+struct	PreviewsInjection.RegistryPreview		let	stableID
+struct	PreviewsInjection.RegistryPreview.UnknownPreviewSource			
+struct	PreviewsInjection.RegistryPreview.UnknownPreviewSource		let	type
+struct	PreviewsInjection.RegistryPreview.UnknownPreviewSource		let	contentCategory
+protocol	Cancelable			
+protocol	ModifierWrapper	_ViewModifier, Context		
+protocol	PreviewsInjection.PreviewLocating			
+protocol	PreviewsInjection.PreviewDataProvider			
+protocol	PreviewsInjection.SupportedPreviewBodyType			
+protocol	PreviewsInjection.SupportedDefaultPreviewSource	Body		
+protocol	PreviewsInjection.EntryPointProvider			
+protocol	PreviewsInjection.EntryPoint	UpdatePayload, StaticOutput		
+protocol	PreviewsInjection.NonUIEntryPointFactory			
+protocol	PreviewsInjection.SceneEntryPointFactory			
+protocol	PreviewsInjection.PreviewContentHost	Content		
+protocol	PreviewsInjection.PreviewContentHostProvider	Host		
+protocol	PreviewsInjection.SceneEntryPoint	HostedOutput, UpdateInputs		
+protocol	PreviewsInjection.NonUIEntryPoint			
+protocol	PreviewsInjection.RenderEffectTransform			
+protocol	PreviewsInjection.SelectableRegionProvider			
+protocol	PreviewsInjection.HostingParadigm	ViewController, HostingViewable, HostModifier		
+protocol	PreviewsInjection._HostingViewable			
+protocol	PreviewsInjection.UIKitHostingParadigm			
+protocol	PreviewsInjection.RegistryLocating			
+protocol	RegistryCache	Entry		
+protocol	AnyDefaultPreviewSource			
+protocol	conformance PreviewsInjection.MainPreviewEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.MainPreviewEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.MainPreviewEntryPoint	PreviewsInjection.SceneEntryPoint		
+protocol	conformance PreviewsInjection.NoopEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.NoopEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.NoopEntryPoint	PreviewsInjection.NonUIEntryPoint		
+protocol	conformance PreviewsFoundationOS.TaskRef	PreviewsInjection.Cancelable		
+protocol	conformance CompoundViewModifier	SwiftUI.ViewModifier		
+protocol	conformance CompoundWrapper	PreviewsInjection.ModifierWrapper		
+protocol	conformance SingleWrapper	PreviewsInjection.ModifierWrapper		
+protocol	conformance EmptyWrapper	PreviewsInjection.ModifierWrapper		
+protocol	conformance PreviewsInjection.PreviewLocator	PreviewsInjection.PreviewLocating		
+protocol	conformance DeveloperToolsSupport.DefaultPreviewSource	PreviewsInjection.SupportedDefaultPreviewSource		
+protocol	conformance PreviewsOSSupportUI.PreviewViewShim	PreviewsInjection.SupportedPreviewBodyType		
+protocol	conformance SwiftUI.ViewPreviewBody	PreviewsInjection.SupportedPreviewBodyType		
+protocol	conformance UIView	PreviewsInjection.SupportedPreviewBodyType		
+protocol	conformance UIViewController	PreviewsInjection.SupportedPreviewBodyType		
+protocol	conformance RegistryHostProvider.Host	Combine.ObservableObject		
+protocol	conformance RegistryHostProvider.Host	PreviewsInjection.PreviewContentHost		
+protocol	conformance HostView	SwiftUI.View		
+protocol	conformance UIKitPreviewWrapperView	SwiftUI.UIViewControllerRepresentable		
+protocol	conformance UIKitPreviewWrapperView	SwiftUI.View		
+protocol	conformance PreviewsInjection.RegistryHostProvider	PreviewsInjection.PreviewContentHostProvider		
+protocol	conformance LoadError	Swift.CustomStringConvertible		
+protocol	conformance LoadError	Foundation.LocalizedError		
+protocol	conformance LoadError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance LoadError	Swift.Error		
+protocol	conformance NoCurrentUpdateError	Swift.CustomStringConvertible		
+protocol	conformance NoCurrentUpdateError	Foundation.LocalizedError		
+protocol	conformance NoCurrentUpdateError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance UnhandledAction	Swift.Error		
+protocol	conformance NoCurrentUpdateError	Swift.Error		
+protocol	conformance PreviewsInjection.UpdatePayloadError	Swift.Error		
+protocol	conformance PreviewsInjection.UpdatePayloadError	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.UpdatePayloadError	Foundation.LocalizedError		
+protocol	conformance PreviewsInjection.UpdatePayloadError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance CreateAgentError.Reason	Swift.Hashable		
+protocol	conformance CreateAgentError.Reason	Swift.Equatable		
+protocol	conformance AgentCache.CreateAgentError	Swift.CustomStringConvertible		
+protocol	conformance AgentCache.CreateAgentError	Foundation.LocalizedError		
+protocol	conformance AgentCache.CreateAgentError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance AgentCache.CreateAgentError	Swift.Error		
+protocol	conformance LoadingError	Swift.CustomStringConvertible		
+protocol	conformance LoadingError	PreviewsMessagingOS.AgentError		
+protocol	conformance LoadingError	Swift.Error		
+protocol	conformance ProviderPreview.ID	Swift.Hashable		
+protocol	conformance ProviderPreview.ID	Swift.Equatable		
+protocol	conformance PreviewsInjection.ProviderPreview	PreviewsInjection.PreviewDataProvider		
+protocol	conformance ProviderError	Swift.CustomStringConvertible		
+protocol	conformance ProviderError	Foundation.LocalizedError		
+protocol	conformance ProviderError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance ProviderError	Swift.Error		
+protocol	conformance PreviewsInjection.MetricsView	SwiftUI.View		
+protocol	conformance PreviewsInjection.EnvironmentView	SwiftUI.View		
+protocol	conformance PreviewsInjection.BorderedSizeView	SwiftUI.View		
+protocol	conformance StderrOutputStream	Swift.TextOutputStream		
+protocol	conformance PreviewDisplayContext.Configuration	Swift.Equatable		
+protocol	conformance PreviewDisplayContext.SafeAreaPolicy	Swift.Equatable		
+protocol	conformance PreviewDisplayContext.SafeAreaPolicy	Swift.Hashable		
+protocol	conformance PreviewsInjection.PreviewDisplayContext	Swift.CustomStringConvertible		
+protocol	conformance SwiftUI.PreviewLayout	Swift.Equatable: PreviewsInjection		
+protocol	conformance PreviewsInjection.PreviewEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.PreviewEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.PreviewEntryPoint	PreviewsInjection.SceneEntryPoint		
+protocol	conformance Unimplemented	Swift.Error		
+protocol	conformance PreviewsInjection.PreviewPreflightEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.PreviewPreflightEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.PreviewPreflightEntryPoint	PreviewsInjection.NonUIEntryPoint		
+protocol	conformance JITBootstrapAgent	Swift.Actor		
+protocol	conformance ControlAgent	Swift.Actor		
+protocol	conformance ControlAgent.FailedToAccessSecurityScopedResourceError	Swift.CustomStringConvertible		
+protocol	conformance ControlAgent.FailedToAccessSecurityScopedResourceError	Foundation.LocalizedError		
+protocol	conformance ControlAgent.FailedToAccessSecurityScopedResourceError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance ControlAgent.FailedToCopyURLError	Swift.Error		
+protocol	conformance ControlAgent.FailedToCopyURLError	Swift.CustomStringConvertible		
+protocol	conformance ControlAgent.FailedToCopyURLError	Foundation.LocalizedError		
+protocol	conformance ControlAgent.FailedToCopyURLError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance ControlAgent.FailedToAccessSecurityScopedResourceError	Swift.Error		
+protocol	conformance Unimplemented	Swift.Error		
+protocol	conformance PreviewsInjection.RunningAppEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.RunningAppEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.RunningAppEntryPoint	PreviewsInjection.SceneEntryPoint		
+protocol	conformance PreviewsInjection.CFunctionEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.CFunctionEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.CFunctionEntryPoint	PreviewsInjection.NonUIEntryPoint		
+protocol	conformance LoadError	Swift.CustomStringConvertible		
+protocol	conformance LoadError	Foundation.LocalizedError		
+protocol	conformance LoadError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance LoadError	Swift.Error		
+protocol	conformance PreviewsInjection.RenderEffects	Swift.Equatable		
+protocol	conformance PreviewsInjection.RenderEffects	Swift.CustomStringConvertible		
+protocol	conformance Transform	Swift.Equatable		
+protocol	conformance Transform	SwiftUI.ViewModifier		
+protocol	conformance Transform	Swift.Equatable		
+protocol	conformance Transform	SwiftUI.ViewModifier		
+protocol	conformance Transform	Swift.Equatable		
+protocol	conformance Transform	SwiftUI.ViewModifier		
+protocol	conformance AssistiveAccessTransform	Swift.Equatable		
+protocol	conformance AssistiveAccessTransform	SwiftUI.ViewModifier		
+protocol	conformance UnsupportedRenderEffectError	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedRenderEffectError	Foundation.LocalizedError		
+protocol	conformance UnsupportedRenderEffectError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance UnsupportedRenderEffectError	Swift.Error		
+protocol	conformance Transform	PreviewsInjection.RenderEffectTransform		
+protocol	conformance Transform	PreviewsInjection.RenderEffectTransform		
+protocol	conformance Transform	PreviewsInjection.RenderEffectTransform		
+protocol	conformance AssistiveAccessTransform	PreviewsInjection.RenderEffectTransform		
+protocol	conformance PreviewsInjection.PlaygroundRegistryEntry	PreviewsServices.RegistryEntry		
+protocol	conformance PreviewsInjection.PlaygroundRegistryEntry	PreviewsServices.MinimalRegistryEntry		
+protocol	conformance DeveloperToolsSupport._Playground	PreviewsServices.RegistryExecutable: PreviewsInjection		
+protocol	conformance PreviewsInjection.PreviewHostController	PreviewsInjection.SelectableRegionProvider		
+protocol	conformance PreviewsInjection.PreviewDisplayHost	Combine.ObservableObject		
+protocol	conformance HostView	SwiftUI.View		
+protocol	conformance EmptyContentHost	PreviewsInjection.PreviewContentHost		
+protocol	conformance AllowAnimationsModifier	SwiftUI.ViewModifier		
+protocol	conformance UpdateContext	PreviewsFoundationOS.AnyInvalidatable		
+protocol	conformance UpdateContext	PreviewsFoundationOS.IsolatedInvalidatable		
+protocol	conformance PreviewsInjection.RegistryEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.RegistryEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.RegistryEntryPoint	PreviewsInjection.NonUIEntryPoint		
+protocol	conformance PreviewsInjection.RegistryEntryPoint	Swift.Actor		
+protocol	conformance PreviewsInjection.MeasurementsView	SwiftUI.View		
+protocol	conformance PreviewsInjection.ArrowView	SwiftUI.View		
+protocol	conformance PreviewsInjection.Arrow	SwiftUI.View		
+protocol	conformance PreviewsInjection.Arrow	SwiftUI.Animatable		
+protocol	conformance PreviewsInjection.Arrow	SwiftUI.Shape		
+protocol	conformance PreviewsInjection.EntryPointIndex	Swift.Actor		
+protocol	conformance NoEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance NoEntryPoint	Foundation.LocalizedError		
+protocol	conformance NoEntryPoint	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance LegacyEntryPointLoader.LoaderError	Swift.CustomStringConvertible		
+protocol	conformance LegacyEntryPointLoader.LoaderError	Foundation.LocalizedError		
+protocol	conformance LegacyEntryPointLoader.LoaderError	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance LegacyEntryPointLoader.LoaderError	Swift.Error		
+protocol	conformance NoEntryPoint	Swift.Error		
+protocol	conformance PreviewsInjection.RegistryPreflightEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.RegistryPreflightEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.RegistryPreflightEntryPoint	PreviewsInjection.NonUIEntryPoint		
+protocol	conformance SwiftUI.UIHostingController	PreviewsInjection._HostingViewable		
+protocol	conformance PreviewsInjection.IOSHostingParadigm	PreviewsInjection.UIKitHostingParadigm		
+protocol	conformance PreviewsInjection.IOSHostingParadigm	PreviewsInjection.HostingParadigm		
+protocol	conformance PreviewsInjection.PreviewProviderEntryPoint	Swift.CustomStringConvertible		
+protocol	conformance PreviewsInjection.PreviewProviderEntryPoint	PreviewsInjection.EntryPoint		
+protocol	conformance PreviewsInjection.PreviewProviderEntryPoint	PreviewsInjection.NonUIEntryPoint		
+protocol	conformance SwiftUI.AppPreviewHost	PreviewsInjection.PreviewContentHost		
+protocol	conformance PreviewProviderHostProvider.Host	Combine.ObservableObject		
+protocol	conformance PreviewProviderHostProvider.Host	PreviewsInjection.PreviewContentHost		
+protocol	conformance HostView	SwiftUI.View		
+protocol	conformance PreviewsInjection.PreviewProviderHostProvider	PreviewsInjection.PreviewContentHostProvider		
+protocol	conformance PreviewsInjection.SwiftUIAppHostProvider	PreviewsInjection.PreviewContentHostProvider		
+protocol	conformance InnerHostView	SwiftUI.View		
+protocol	conformance PreviewsInjection.PreviewRegistryEntry	PreviewsServices.MinimalRegistryEntry		
+protocol	conformance Cache	PreviewsInjection.RegistryCache		
+protocol	conformance PreviewsInjection.RegistryLocator	Swift.Actor		
+protocol	conformance PreviewsInjection.RegistryLocator	PreviewsInjection.RegistryLocating		
+protocol	conformance UnknownRegistryType	Swift.CustomStringConvertible		
+protocol	conformance UnknownRegistryType	Foundation.LocalizedError		
+protocol	conformance UnknownRegistryType	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance UnknownRegistryType	Swift.Error		
+protocol	conformance PreviewsInjection.RegistryPreview	PreviewsInjection.PreviewDataProvider		
+protocol	conformance DeveloperToolsSupport.DefaultPreviewSource	PreviewsInjection.AnyDefaultPreviewSource		
+protocol	conformance UnknownPreviewSource	Swift.CustomStringConvertible		
+protocol	conformance UnknownPreviewSource	Foundation.LocalizedError		
+protocol	conformance UnknownPreviewSource	PreviewsFoundationOS.HumanReadableError		
+protocol	conformance UnknownPreviewSource	Swift.Error		
+extension	PreviewsInjection.MainPreviewEntryPoint	EntryPoint		
+extension	PreviewsInjection.MainPreviewEntryPoint	SceneEntryPoint		
+extension	PreviewsInjection.NoopEntryPoint	EntryPoint		
+extension	PreviewsInjection.CompoundViewModifier	ViewModifier		
+extension	PreviewsInjection.CompoundWrapper	ModifierWrapper		
+extension	PreviewsInjection.SingleWrapper	ModifierWrapper		
+extension	PreviewsInjection.EmptyWrapper	ModifierWrapper		
+extension	DeveloperToolsSupport.DefaultPreviewSource	SupportedDefaultPreviewSource		
+extension	PreviewsInjection.RegistryHostProvider.Host	ObservableObject		
+extension	PreviewsInjection.RegistryHostProvider.Host	PreviewContentHost		
+extension	PreviewsInjection.RegistryHostProvider.Host.HostView	View		
+extension	PreviewsInjection.UIKitPreviewWrapperView	UIViewControllerRepresentable		
+extension	PreviewsInjection.UIKitPreviewWrapperView	View		
+extension	PreviewsInjection.RegistryHostProvider	PreviewContentHostProvider		
+extension	PreviewsInjection.MetricsView	View		
+extension	PreviewsInjection.EnvironmentView	View		
+extension	PreviewsInjection.BorderedSizeView	View		
+extension	PreviewsInjection.PreviewEntryPoint	EntryPoint		
+extension	PreviewsInjection.PreviewEntryPoint	SceneEntryPoint		
+extension	PreviewsInjection.PreviewPreflightEntryPoint	EntryPoint		
+extension	PreviewsInjection.RunningAppEntryPoint	EntryPoint		
+extension	PreviewsInjection.RunningAppEntryPoint	SceneEntryPoint		
+extension	PreviewsInjection.CFunctionEntryPoint	EntryPoint		
+extension	PreviewsInjection.Transform	ViewModifier		
+extension	PreviewsInjection.Transform	ViewModifier		
+extension	PreviewsInjection.Transform	ViewModifier		
+extension	PreviewsInjection.AssistiveAccessTransform	ViewModifier		
+extension	PreviewsInjection.PlaygroundRegistryEntry	MinimalRegistryEntry		
+extension	DeveloperToolsSupport._Playground	RegistryExecutable		
+extension	PreviewsInjection.PreviewDisplayHost	ObservableObject		
+extension	PreviewsInjection.PreviewDisplayHost.HostView	View		
+extension	PreviewsInjection.PreviewDisplayHost.EmptyContentHost	PreviewContentHost		
+extension	PreviewsInjection.AllowAnimationsModifier	ViewModifier		
+extension	PreviewsInjection.RegistryEntryPoint	EntryPoint		
+extension	PreviewsInjection.MeasurementsView	View		
+extension	PreviewsInjection.ArrowView	View		
+extension	PreviewsInjection.Arrow	View		
+extension	PreviewsInjection.Arrow	Animatable		
+extension	PreviewsInjection.RegistryPreflightEntryPoint	EntryPoint		
+extension	PreviewsInjection.IOSHostingParadigm	HostingParadigm		
+extension	PreviewsInjection.PreviewProviderEntryPoint	EntryPoint		
+extension	SwiftUI.AppPreviewHost	PreviewContentHost		
+extension	PreviewsInjection.PreviewProviderHostProvider.Host	ObservableObject		
+extension	PreviewsInjection.PreviewProviderHostProvider.Host	PreviewContentHost		
+extension	PreviewsInjection.PreviewProviderHostProvider.Host.HostView	View		
+extension	PreviewsInjection.PreviewProviderHostProvider	PreviewContentHostProvider		
+extension	PreviewsInjection.SwiftUIAppHostProvider	PreviewContentHostProvider		
+extension	PreviewsInjection.PreviewProviderHostProvider.Host.InnerHostView	View		
+extension	PreviewsInjection.PreviewRegistryEntry	MinimalRegistryEntry		
+extension	PreviewsInjection.Cache	RegistryCache		

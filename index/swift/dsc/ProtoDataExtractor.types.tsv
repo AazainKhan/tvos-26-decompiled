@@ -1,0 +1,222 @@
+kind	type	conformance	member_kind	member
+struct	ProtoDataExtractor.AllDemands			
+struct	ProtoDataExtractor.AllDemands		let	demands
+struct	ProtoDataExtractor.AnyDemand			
+struct	ProtoDataExtractor.AnyDemand		let	demands
+struct	ProtoDataExtractor.CollectionPolicy			
+struct	ProtoDataExtractor.CollectionPolicy		let	demands
+enum	ProtoDataExtractor.MessageFilteringPolicy			
+enum	ProtoDataExtractor.MessageFilteringPolicy		case	allowlist
+enum	ProtoDataExtractor.MessageFilteringPolicy		case	denylist
+enum	ProtoDataExtractor.MessageFilteringPolicy		case	unchanged
+class	ProtoDataExtractor.RequireDiagnosticsAndUsageOptIn			
+class	ProtoDataExtractor.RequireInternalBuild			
+struct	ProtoDataExtractor.DataExtractor<A	ProtoDataExtractor.IngestConfig>		
+struct	ProtoDataExtractor.DataExtractor<A	ProtoDataExtractor.IngestConfig>	let	ingestConfig
+struct	ProtoDataExtractor.RequestLinkConfig			
+struct	ProtoDataExtractor.RequestLinkConfig		let	sourceComponentName
+struct	ProtoDataExtractor.RequestLinkConfig		let	sourceIdTagPath
+struct	ProtoDataExtractor.RequestLinkConfig		let	targetComponentName
+struct	ProtoDataExtractor.RequestLinkConfig		let	targetIdTagPath
+struct	ProtoDataExtractor.RequestLinkConfig		let	exclusive
+enum	ProtoDataExtractor.RequestLinkConfig.Direction			
+enum	ProtoDataExtractor.RequestLinkConfig.Direction		case	sourceComponent
+enum	ProtoDataExtractor.RequestLinkConfig.Direction		case	targetComponent
+struct	ProtoDataExtractor.DillSession			
+struct	ProtoDataExtractor.DillSession		var	sessionID
+struct	ProtoDataExtractor.DillSession		var	events
+struct	ProtoDataExtractor.DillSession		var	unknownFields
+struct	ProtoDataExtractor.DillSessionEvent			
+struct	ProtoDataExtractor.DillSessionEvent		var	timestamp
+struct	ProtoDataExtractor.DillSessionEvent		var	inner
+struct	ProtoDataExtractor.DillSessionEvent		var	unknownFields
+enum	ProtoDataExtractor.DillInner			
+enum	ProtoDataExtractor.DillInner		case	transcript
+struct	ProtoDataExtractor.AsyncIngestConfig			
+struct	ProtoDataExtractor.AsyncIngestConfig		let	streamId
+struct	ProtoDataExtractor.AsyncIngestConfig		let	dataVersion
+struct	ProtoDataExtractor.AsyncIngestConfig		let	monotonicTimestampPath
+struct	ProtoDataExtractor.AsyncIngestConfig		let	eventMapping
+struct	ProtoDataExtractor.AsyncIngestConfig		let	collectionPolicy
+struct	ProtoDataExtractor.AsyncIngestConfig		let	filteringPolicy
+struct	ProtoDataExtractor.AsyncIngestConfig		let	completeInnerTypeBuilder
+struct	ProtoDataExtractor.AsyncIngestConfig		let	maxCount
+struct	ProtoDataExtractor.AsyncIngestConfig		let	lastN
+struct	ProtoDataExtractor.AsyncPFAUploader			
+struct	ProtoDataExtractor.AsyncPFAUploader		let	bundleId
+struct	ProtoDataExtractor.AsyncPFAUploader		let	config
+struct	ProtoDataExtractor.AsyncPFAUploader		let	feedbackLogger
+struct	ProtoDataExtractor.AsyncPFAUploader		let	dataExtractor
+struct	ProtoDataExtractor.BiomeAsyncIngestProcessor<A	ProtoDataExtractor.AsyncEventIngestor>		
+struct	ProtoDataExtractor.BiomeAsyncIngestProcessor<A	ProtoDataExtractor.AsyncEventIngestor>	let	userDefaults
+struct	ProtoDataExtractor.BiomeAsyncIngestProcessor<A	ProtoDataExtractor.AsyncEventIngestor>	var	eventIngestor
+struct	ProtoDataExtractor.BiomeAsyncIngestProcessor<A	ProtoDataExtractor.AsyncEventIngestor>	let	config
+struct	ProtoDataExtractor.BiomeAsyncIngestProcessor<A	ProtoDataExtractor.AsyncEventIngestor>	let	biomeUseCase
+struct	ProtoDataExtractor.BiomeAsyncIngestProcessor<A	ProtoDataExtractor.AsyncEventIngestor>	var	telemetry
+enum	ProtoDataExtractor.AsyncIngestError			
+enum	ProtoDataExtractor.AsyncIngestError		case	processingError
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncIterator			
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncIterator		let	subscriber
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncIterator		var	finished
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber	NSObject		
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber	NSObject	var	subscriptionStatus
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber	NSObject	var	asyncContinuation
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber	NSObject	var	buffer
+class	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber	NSObject	let	logger
+enum	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber.SubscriptionState<A	class>		
+enum	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber.SubscriptionState<A	class>	case	subscribed
+enum	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber.SubscriptionState<A	class>	case	awaitingSubscription
+enum	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncSubscriber.SubscriptionState<A	class>	case	terminated
+struct	ProtoDataExtractor.BiomeAsyncSequence<A	class>		
+struct	ProtoDataExtractor.BiomeAsyncSequence<A	class>	var	inner
+enum	ProtoDataExtractor.BiomeAsyncSequenceError			
+enum	ProtoDataExtractor.BiomeAsyncSequenceError		case	unknownError
+enum	ProtoDataExtractor.BiomeAsyncSequenceError		case	unknownCompletion
+class	ProtoDataExtractor.BiomeEventIngestProcessor<A	ProtoDataExtractor.EventIngestor, B: ProtoDataExtractor.IngestConfig>		
+class	ProtoDataExtractor.BiomeEventIngestProcessor<A	ProtoDataExtractor.EventIngestor, B: ProtoDataExtractor.IngestConfig>	let	userDefaults
+class	ProtoDataExtractor.BiomeEventIngestProcessor<A	ProtoDataExtractor.EventIngestor, B: ProtoDataExtractor.IngestConfig>	var	eventIngestor
+class	ProtoDataExtractor.BiomeEventIngestProcessor<A	ProtoDataExtractor.EventIngestor, B: ProtoDataExtractor.IngestConfig>	let	config
+class	ProtoDataExtractor.BiomeEventIngestProcessor<A	ProtoDataExtractor.EventIngestor, B: ProtoDataExtractor.IngestConfig>	let	biomeUseCase
+class	ProtoDataExtractor.BiomeEventIngestProcessor<A	ProtoDataExtractor.EventIngestor, B: ProtoDataExtractor.IngestConfig>	var	telemetry
+enum	ProtoDataExtractor.BiomeEventIngestError			
+enum	ProtoDataExtractor.BiomeEventIngestError		case	collectionPolicyDenied
+enum	ProtoDataExtractor.BiomeEventIngestError		case	feedbackLoggerError
+enum	ProtoDataExtractor.BiomeEventIngestError		case	sessionSerializationError
+struct	ProtoDataExtractor.BiomeProvisionalSELFIngestor<A	ProtoDataExtractor.IngestConfig>		
+struct	ProtoDataExtractor.BiomeProvisionalSELFIngestor<A	ProtoDataExtractor.IngestConfig>	let	dataPool
+struct	ProtoDataExtractor.BiomeProvisionalSELFIngestor<A	ProtoDataExtractor.IngestConfig>	let	config
+struct	ProtoDataExtractor.BiomeProvisionalSELFIngestor<A	ProtoDataExtractor.IngestConfig>	let	extractor
+struct	ProtoDataExtractor.BiomeSELFEventIngestor<A	ProtoDataExtractor.IngestConfig, A: ProtoDataExtractor.IngestConfigRequestLink, ProtoDataExtractor.IngestConfig.InnerType ==: SISchemaTopLevelUnionType, B>		
+struct	ProtoDataExtractor.BiomeSELFEventIngestor<A	ProtoDataExtractor.IngestConfig, A: ProtoDataExtractor.IngestConfigRequestLink, ProtoDataExtractor.IngestConfig.InnerType ==: SISchemaTopLevelUnionType, B>	let	dataPool
+struct	ProtoDataExtractor.BiomeSELFEventIngestor<A	ProtoDataExtractor.IngestConfig, A: ProtoDataExtractor.IngestConfigRequestLink, ProtoDataExtractor.IngestConfig.InnerType ==: SISchemaTopLevelUnionType, B>	let	config
+struct	ProtoDataExtractor.BiomeSELFEventIngestor<A	ProtoDataExtractor.IngestConfig, A: ProtoDataExtractor.IngestConfigRequestLink, ProtoDataExtractor.IngestConfig.InnerType ==: SISchemaTopLevelUnionType, B>	let	extractor
+struct	ProtoDataExtractor.BiomeUploadProcessor			
+struct	ProtoDataExtractor.BiomeUploadProcessor		let	userDefaults
+struct	ProtoDataExtractor.BiomeUploadProcessor		let	messagesService
+struct	ProtoDataExtractor.BiomeUploadProcessor		let	feedbackLogger
+struct	ProtoDataExtractor.BiomeUploadProcessor		let	biomeUseCase
+struct	ProtoDataExtractor.BiomeUploadProcessor		let	collectionPolicy
+enum	ProtoDataExtractor.BiomeUploadProcessorError			
+enum	ProtoDataExtractor.BiomeUploadProcessorError		case	collectionPolicyDenied
+enum	ProtoDataExtractor.BiomeUploadProcessorError		case	feedbackLoggerError
+enum	ProtoDataExtractor.BiomeUploadProcessorError		case	invalidConfig
+enum	ProtoDataExtractor.BiomeUploadProcessorError		case	sessionSerializationError
+class	ProtoDataExtractor.DataBiomeEvent	NSObject		
+class	ProtoDataExtractor.DataBiomeEvent	NSObject	var	dataVersion
+class	ProtoDataExtractor.DataBiomeEvent	NSObject	var	data
+class	ProtoDataExtractor.DillSiriInstrumentationWrapper	SISchemaTopLevelUnionType		
+class	ProtoDataExtractor.DillSiriInstrumentationWrapper	SISchemaTopLevelUnionType	let	dillData
+class	ProtoDataExtractor.DillSiriInstrumentationWrapper	SISchemaTopLevelUnionType	let	anyEventType
+class	ProtoDataExtractor.DillProvisional	SISchemaTopLevelUnionType		
+class	ProtoDataExtractor.DillProvisional	SISchemaTopLevelUnionType	let	dillData
+class	ProtoDataExtractor.DillProvisional	SISchemaTopLevelUnionType	let	eventId
+class	ProtoDataExtractor.DillProvisional	SISchemaTopLevelUnionType	let	version
+enum	ProtoDataExtractor.IngestStreamId			
+enum	ProtoDataExtractor.IngestStreamId		case	swift
+enum	ProtoDataExtractor.IngestStreamId		case	objc
+enum	ProtoDataExtractor.IngestStreamId		case	rawStream
+enum	ProtoDataExtractor.EventPath			
+enum	ProtoDataExtractor.EventPath		case	nested
+enum	ProtoDataExtractor.EventPath		case	oneOf
+enum	ProtoDataExtractor.EventPath		case	root
+enum	ProtoDataExtractor.IngestError			
+enum	ProtoDataExtractor.IngestError		case	streamNotFound
+enum	ProtoDataExtractor.PFAEventMapping			
+enum	ProtoDataExtractor.PFAEventMapping		case	root
+enum	ProtoDataExtractor.PFAEventMapping		case	single
+enum	ProtoDataExtractor.PFAEventMapping		case	oneOf
+struct	ProtoDataExtractor.PFAIngestConfig			
+struct	ProtoDataExtractor.PFAIngestConfig		let	streamId
+struct	ProtoDataExtractor.PFAIngestConfig		let	dataVersion
+struct	ProtoDataExtractor.PFAIngestConfig		let	monotonicTimestampPath
+struct	ProtoDataExtractor.PFAIngestConfig		let	eventMapping
+struct	ProtoDataExtractor.PFAIngestConfig		let	collectionPolicy
+struct	ProtoDataExtractor.PFAIngestConfig		let	filteringPolicy
+struct	ProtoDataExtractor.PFAIngestConfig		let	innerTypeBuilder
+struct	ProtoDataExtractor.PFAUploader			
+struct	ProtoDataExtractor.PFAUploader		let	bundleId
+struct	ProtoDataExtractor.PFAUploader		let	config
+struct	ProtoDataExtractor.PFAUploader		let	feedbackLogger
+struct	ProtoDataExtractor.PFAUploader		var	events
+struct	ProtoDataExtractor.PFAUploader		let	dataExtractor
+struct	ProtoDataExtractor.PFAUploader		let	innerTransformer
+struct	ProtoDataExtractor.SELFIngestConfig			
+struct	ProtoDataExtractor.SELFIngestConfig		let	streamId
+struct	ProtoDataExtractor.SELFIngestConfig		let	dataVersion
+struct	ProtoDataExtractor.SELFIngestConfig		let	monotonicTimestampPath
+struct	ProtoDataExtractor.SELFIngestConfig		let	eventPath
+struct	ProtoDataExtractor.SELFIngestConfig		let	collectionPolicy
+struct	ProtoDataExtractor.SELFIngestConfig		let	filteringPolicy
+struct	ProtoDataExtractor.SELFIngestConfig		let	innerTypeBuilder
+struct	ProtoDataExtractor.SELFIngestConfig		let	requestLinks
+protocol	ProtoDataExtractor.PolicyDemand			
+protocol	ProtoDataExtractor.FilteredMessageType			
+protocol	ProtoDataExtractor.EventIngestor			
+protocol	ProtoDataExtractor.AsyncEventIngestor			
+protocol	ProtoDataExtractor.IngestConfig	InnerType		
+protocol	ProtoDataExtractor.FullIngestConfig			
+protocol	ProtoDataExtractor.PFADataSerializable			
+protocol	ProtoDataExtractor.IngestConfigRequestLink			
+protocol	conformance ProtoDataExtractor.AllDemands	ProtoDataExtractor.PolicyDemand		
+protocol	conformance __C.BMStreamIdentifier	Swift._HasCustomAnyHashableRepresentation: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.RawRepresentable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift._SwiftNewtypeWrapper: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.Equatable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.Hashable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift._ObjectiveCBridgeable: BiomeStreams		
+protocol	conformance ProtoDataExtractor.AnyDemand	ProtoDataExtractor.PolicyDemand		
+protocol	conformance BMFeedbackLearningUserInteraction	ProtoDataExtractor.FilteredMessageType		
+protocol	conformance BMIntelligenceFlowTranscriptDatastreamEvent	ProtoDataExtractor.FilteredMessageType		
+protocol	conformance ProtoDataExtractor.RequireDiagnosticsAndUsageOptIn	ProtoDataExtractor.PolicyDemand		
+protocol	conformance ProtoDataExtractor.RequireInternalBuild	ProtoDataExtractor.PolicyDemand		
+protocol	conformance RequestLinkConfig.Direction	Swift.Equatable		
+protocol	conformance RequestLinkConfig.Direction	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.DillSessionEvent	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.DillSessionEvent	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.DillSessionEvent	Swift.CustomDebugStringConvertible		
+protocol	conformance ProtoDataExtractor.DillSessionEvent	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance ProtoDataExtractor.DillSessionEvent	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance ProtoDataExtractor.DillSessionEvent	InternalSwiftProtobuf.Message		
+protocol	conformance ProtoDataExtractor.DillSession	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.DillSession	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.DillSession	Swift.CustomDebugStringConvertible		
+protocol	conformance ProtoDataExtractor.DillSession	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance ProtoDataExtractor.DillSession	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance ProtoDataExtractor.DillSession	InternalSwiftProtobuf.Message		
+protocol	conformance ProtoDataExtractor.DillInner	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.AsyncIngestConfig	ProtoDataExtractor.FullIngestConfig		
+protocol	conformance ProtoDataExtractor.AsyncIngestConfig	ProtoDataExtractor.IngestConfig		
+protocol	conformance ProtoDataExtractor.AsyncPFAUploader	ProtoDataExtractor.AsyncEventIngestor		
+protocol	conformance ProtoDataExtractor.AsyncIngestError	Swift.Error		
+protocol	conformance ProtoDataExtractor.BiomeAsyncSequence	Swift.AsyncSequence		
+protocol	conformance BiomeAsyncSequence.BiomeAsyncIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ProtoDataExtractor.BiomeAsyncSequenceError	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.BiomeAsyncSequenceError	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.BiomeAsyncSequenceError	Swift.Error		
+protocol	conformance ProtoDataExtractor.BiomeEventIngestError	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.BiomeEventIngestError	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.BiomeEventIngestError	Swift.RawRepresentable		
+protocol	conformance ProtoDataExtractor.BiomeEventIngestError	Swift.Error		
+protocol	conformance ProtoDataExtractor.BiomeProvisionalSELFIngestor	ProtoDataExtractor.EventIngestor		
+protocol	conformance ProtoDataExtractor.BiomeProvisionalUploader	ProtoDataExtractor.EventIngestor		
+protocol	conformance ProtoDataExtractor.BiomeSELFEventIngestor	ProtoDataExtractor.EventIngestor		
+protocol	conformance ProtoDataExtractor.BiomeUploadProcessorError	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.BiomeUploadProcessorError	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.BiomeUploadProcessorError	Swift.RawRepresentable		
+protocol	conformance ProtoDataExtractor.BiomeUploadProcessorError	LighthouseBackground.MLHostError		
+protocol	conformance ProtoDataExtractor.BiomeUploadProcessorError	Swift.Error		
+protocol	conformance ProtoDataExtractor.IngestError	Swift.Hashable		
+protocol	conformance ProtoDataExtractor.IngestError	Swift.Equatable		
+protocol	conformance ProtoDataExtractor.IngestError	Swift.Error		
+protocol	conformance ProtoDataExtractor.PFAIngestConfig	ProtoDataExtractor.IngestConfig		
+protocol	conformance ProtoDataExtractor.PFAUploader	ProtoDataExtractor.EventIngestor		
+protocol	conformance PBCodable	ProtoDataExtractor.PFADataSerializable		
+protocol	conformance ProtoDataExtractor.SELFIngestConfig	ProtoDataExtractor.IngestConfig		
+protocol	conformance ProtoDataExtractor.SELFIngestConfig	ProtoDataExtractor.IngestConfigRequestLink		
+extension	ProtoDataExtractor.AsyncIngestConfig	IngestConfig		
+extension	ProtoDataExtractor.BiomeAsyncSequence	AsyncSequence		
+extension	ProtoDataExtractor.BiomeAsyncSequence.BiomeAsyncIterator	AsyncIteratorProtocol		
+extension	ProtoDataExtractor.BiomeEventIngestError	RawRepresentable		
+extension	ProtoDataExtractor.BiomeUploadProcessorError	RawRepresentable		
+extension	ProtoDataExtractor.PFAIngestConfig	IngestConfig		
+extension	ProtoDataExtractor.SELFIngestConfig	IngestConfig		

@@ -1,0 +1,91 @@
+kind	type	conformance	member_kind	member
+enum	FlowFrameKit.Understandable			
+enum	FlowFrameKit.Understandable		case	yes
+enum	FlowFrameKit.Understandable		case	no
+class	FlowFrameKit.AnyFrame			
+class	FlowFrameKit.AnyFrame		let	namespace
+class	FlowFrameKit.AnyFrame		let	wrappedOnInput
+class	FlowFrameKit.AnyFrame		let	wrappedExecute
+class	FlowFrameKit.AnyFrame		let	wrappedAction
+class	FlowFrameKit.AnyFrame		let	wrappedExit
+class	FlowFrameKit.AnyFrame		let	frameTypeName
+class	FlowFrameKit.AnyFrame		let	underlyingFrame
+struct	FlowFrameKit.IllegalStateError			
+struct	FlowFrameKit.IllegalStateError		let	message
+struct	FlowFrameKit.NonUnderstanding			
+struct	FlowFrameKit.NonUnderstanding		let	message
+struct	FlowFrameKit.NonUnderstanding		let	input
+struct	FlowFrameKit.TimedOutError			
+struct	FlowFrameKit.TimedOutError		let	message
+struct	FlowFrameKit.CancelledError			
+struct	FlowFrameKit.CancelledError		let	message
+class	FlowFrameKit.AnyFlowFrameFactory			
+class	FlowFrameKit.AnyFlowFrameFactory		let	namespace
+class	FlowFrameKit.AnyFlowFrameFactory		let	wrappedHasFrameAbleToHandle
+class	FlowFrameKit.AnyFlowFrameFactory		let	wrappedMakeFrameAbleToHandle
+class	FlowFrameKit.AnyFlowFrameFactory		let	anyController
+class	FlowFrameKit.AnyFlowFrameFactory		let	anyRenderer
+enum	FlowFrameKit.FrameOperationType			
+enum	FlowFrameKit.FrameOperationType		case	ongoing
+enum	FlowFrameKit.FrameOperationType		case	complete
+enum	FlowFrameKit.FrameOperationType		case	replan
+struct	FlowFrameKit.FrameOperation			
+struct	FlowFrameKit.FrameOperation		let	type
+struct	FlowFrameKit.FrameOperation		let	next
+struct	FlowFrameKit.FrameOperation		let	requireInput
+struct	FlowFrameKit.FrameOperation		let	onChildFrameCompletion
+class	FlowFrameKit.AnyChildCompletion			
+class	FlowFrameKit.AnyChildCompletion		let	completion
+class	FlowFrameKit.MegaFrame			
+class	FlowFrameKit.MegaFrame		let	frame
+class	FlowFrameKit.MegaFrame		let	frameCompletion
+class	FlowFrameKit.MegaFrame		let	timeout
+class	FlowFrameKit.MegaFrame		var	isCancelled
+class	FlowFrameKit.MegaFrame		let	semaphoreExecute
+class	FlowFrameKit.MegaFrame		let	semaphoreOnInput
+class	FlowFrameKit.MegaFrame		let	semaphoreAction
+class	FlowFrameKit.CancellableStack	FlowFrameKit.OrderedForest FlowFrameKit.MegaFrame _$sxG ->		
+class	FlowFrameKit.CancellableStack	FlowFrameKit.OrderedForest FlowFrameKit.MegaFrame _$sxG ->	var	isCancelled
+class	FlowFrameKit.InstrumentedCancellableStack	FlowFrameKit.CancellableStack A		
+class	FlowFrameKit.InstrumentedCancellableStack	FlowFrameKit.CancellableStack A	var	trackedFrames
+struct	FlowFrameKit.RuntimeConfiguration			
+struct	FlowFrameKit.RuntimeConfiguration		let	perFrameOperationTimeout
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame			
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame		let	id
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame		let	parentId
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame		let	namespace
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame		let	typeName
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame		let	depth
+struct	FlowFrameKit.InstrumentedCancellableStack.TrackedFrame		let	signpostId
+class	FlowFrameKit.Node			
+class	FlowFrameKit.Node		let	value
+class	FlowFrameKit.Node		var	parent
+class	FlowFrameKit.Node		var	children
+class	FlowFrameKit.Node		var	prev
+class	FlowFrameKit.Node		var	next
+class	FlowFrameKit.OrderedForest			
+class	FlowFrameKit.OrderedForest		var	head
+class	FlowFrameKit.OrderedForest		var	tail
+class	FlowFrameKit.OrderedForest		var	count
+struct	FlowFrameKit.NodeIterator			
+struct	FlowFrameKit.NodeIterator		var	currentNode
+protocol	FlowFrameKit.FlowFrameProtocol	Input, Controller, ResponseRenderer, ActionArguments, ExitValue		
+protocol	FlowFrameKit.FlowFrameFactoryProtocol	Input, Controller, ResponseRenderer		
+protocol	FlowFrameKit.FlowFrameFactoryLoaderProtocol	Input		
+protocol	conformance FlowFrameKit.Understandable	Swift.Equatable		
+protocol	conformance FlowFrameKit.Understandable	Swift.Hashable		
+protocol	conformance FlowFrameKit.AnyFrame	Swift.CustomDebugStringConvertible		
+protocol	conformance FlowFrameKit.IllegalStateError	Swift.Error		
+protocol	conformance FlowFrameKit.NonUnderstanding	Swift.Error		
+protocol	conformance FlowFrameKit.TimedOutError	Swift.Error		
+protocol	conformance FlowFrameKit.CancelledError	Swift.Error		
+protocol	conformance FlowFrameKit.FrameOperationType	Swift.Equatable		
+protocol	conformance FlowFrameKit.FrameOperationType	Swift.Hashable		
+protocol	conformance FlowFrameKit.FlowFrameRuntime	Swift.CustomDebugStringConvertible		
+protocol	conformance InstrumentedCancellableStack.TrackedFrame	Swift.Equatable		
+protocol	conformance InstrumentedCancellableStack.TrackedFrame	Swift.Hashable		
+protocol	conformance FlowFrameKit.MegaFrame	Swift.CustomDebugStringConvertible		
+protocol	conformance FlowFrameKit.OrderedForest	Swift.Sequence		
+protocol	conformance FlowFrameKit.NodeIterator	Swift.IteratorProtocol		
+extension	FlowFrameKit.OrderedForest	Sequence		
+extension	FlowFrameKit.NodeIterator	IteratorProtocol		

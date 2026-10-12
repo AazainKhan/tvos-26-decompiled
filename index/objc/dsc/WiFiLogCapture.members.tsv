@@ -1,0 +1,9 @@
+owner	kind	declaration
+WiFiLogDumpTaker	-	- (id)XPCConnection:(const char *)xpcconnection;
+WiFiLogDumpTaker	-	- (id)init;
+WiFiLogDumpTaker	-	- (void)handleConnection:(id)connection;
+WiFiLogDumpTaker	-	- (void)takeWiFiCoreCaptureDumpWithReason:(const char *)reason callback:(id /* block */)callback;
+WiFiLogDumpTaker	-	- (void)takeWiFiDiagnosticsDumpWithPath:(const char *)path reason:(const char *)reason callback:(id /* block */)callback;
+WiFiLogDumpTaker	-	- (void)takeWiFiDiagnosticsDumpWithPath:(const char *)path reason:(const char *)reason shouldTryFallback:(_Bool)fallback callback:(id /* block */)callback;
+WiFiLogDumpTaker	-	- (void)takeWiFiDiagnosticsDumpWithPathAndReason:(id /* block */)reason;
+WiFiLogDumpTaker	property	@property (readonly, nonatomic) _Bool didLastCaptureFallback;

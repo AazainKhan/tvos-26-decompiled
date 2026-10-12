@@ -1,0 +1,12 @@
+owner	kind	declaration
+PSSSSubscriptionManager	-	- (id)init;
+PSSSSubscriptionManager	-	- (void)registerSubscriptionWithInfo:(id)info expirationDate:(id)date;
+PSSSSubscriptionManager	-	- (void)unregisterAllSubscriptions;
+PSSSSubscriptionManager	-	- (void)unregisterSubscriptionWithInfo:(id)info;
+PSSSSubscriptionManager	property	@property (retain, nonatomic) VSSubscriptionRegistrationCenter *registrationCenter;
+PSSSSubscriptionManagerInternal	-	- (id)init;
+PSSSSubscriptionManagerInternal	-	- (void)getActiveSubscriptionServicesMatchingBundleIdentifiers:(id)identifiers domainIdentifiers:(id)identifiers maximumExpirationLimit:(double)limit completionHandler:(id /* block */)handler;
+PSSSSubscriptionManagerInternal	-	- (void)registerSubscriptionServiceForURL:(id)url withSubscriptionInfo:(id)info expirationDate:(id)date;
+PSSSSubscriptionManagerInternal	-	- (void)removeSubscriptionServiceForURL:(id)url;
+PSSSSubscriptionManagerInternal	-	- (void)removeWebSubscriptionServicesCreatedAfterDate:(id)date;
+PSSSSubscriptionManagerInternal	property	@property (retain, nonatomic) VSSubscriptionRegistrationCenter *registrationCenter;

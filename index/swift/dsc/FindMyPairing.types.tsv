@@ -1,0 +1,426 @@
+kind	type	conformance	member_kind	member
+enum	FindMyPairing.ReevaluationReason			
+enum	FindMyPairing.ReevaluationReason		case	accessoryChanged
+enum	FindMyPairing.ReevaluationReason		case	productInfoFetched
+enum	FindMyPairing.ReevaluationReason		case	fwVersionAvailable
+enum	FindMyPairing.PairingValidatorError			
+enum	FindMyPairing.PairingValidatorError		case	pairingLockFailure
+enum	FindMyPairing.PairingValidatorError		case	invalidRequestType
+enum	FindMyPairing.PairingValidatorError		case	invalidAckRequestType
+enum	FindMyPairing.PairingValidatorError		case	pairedToAnotherAccount
+enum	FindMyPairing.PairingPolicyVerifierError			
+enum	FindMyPairing.PairingPolicyVerifierError		case	unsupportedType
+class	FindMyPairing.PairingObserver			
+class	FindMyPairing.PairingObserver		let	workItemQueue
+class	FindMyPairing.PairingObserver		let	stream
+class	FindMyPairing.PairingObserver		let	identifier
+class	FindMyPairing.PairingObserver		var	handleObservationFinish
+class	FindMyPairing.PairingObserver		var	handleNewState
+class	FindMyPairing.PairingObserver		var	customObservationHandlers
+enum	FindMyPairing.PairingObserver.Error			
+enum	FindMyPairing.PairingObserver.Error		case	alreadyScheduled
+struct	FindMyPairing.CustomObservation			
+struct	FindMyPairing.CustomObservation		let	from
+struct	FindMyPairing.CustomObservation		let	to
+struct	FindMyPairing.CustomObservation		let	handler
+enum	FindMyPairing.PairingConfiguration			
+enum	FindMyPairing.PairingConfiguration		case	single
+enum	FindMyPairing.PairingConfiguration		case	multiple
+enum	FindMyPairing.DependenciesIdentifier			
+enum	FindMyPairing.DependenciesIdentifier		case	single
+enum	FindMyPairing.DependenciesIdentifier		case	multiple
+enum	FindMyPairing.DependenciesIdentifier		case	multipart
+struct	FindMyPairing.ObservationStreams			
+struct	FindMyPairing.ObservationStreams		let	pairingStream
+struct	FindMyPairing.ObservationStreams		let	analyticsStream
+class	FindMyPairing.PairingService			
+class	FindMyPairing.PairingService		let	workItemQueue
+class	FindMyPairing.PairingService		var	_pairingDependencies
+class	FindMyPairing.PairingService		let	proxy
+enum	FindMyPairing.PairingService.Error			
+enum	FindMyPairing.PairingService.Error		case	alreadyPairing
+enum	FindMyPairing.PairingService.Error		case	invalidDependencies
+enum	FindMyPairing.PairingService.Error		case	threadingError
+enum	FindMyPairing.PairingService.Error		case	deallocated
+enum	FindMyPairing.PairingService.Error		case	invalidDetections
+enum	FindMyPairing.PairingService.Error		case	invalidCoordinatorType
+enum	FindMyPairing.PairingService.Error		case	invalidCoordinators
+enum	FindMyPairing.PairingService.Error		case	invalidConfiguration
+enum	FindMyPairing.PairingService.Error		case	unsupported
+enum	FindMyPairing.PairingService.Error		case	missingCoordinator
+class	FindMyPairing.ExecutionDirector			
+class	FindMyPairing.ExecutionDirector		var	commands
+class	FindMyPairing.ExecutionDirector		var	commandPointer
+class	FindMyPairing.ExecutionDirector		var	currentTask
+class	FindMyPairing.ExecutionDirector		var	executionInProgress
+enum	FindMyPairing.ExecutionDirector.Error			
+enum	FindMyPairing.ExecutionDirector.Error		case	noMoreCommands
+enum	FindMyPairing.ExecutionDirector.ExecutionResult			
+enum	FindMyPairing.ExecutionDirector.ExecutionResult		case	success
+enum	FindMyPairing.ExecutionDirector.ExecutionResult		case	interrupt
+enum	FindMyPairing.ExecutionDirector.ExecutionResult		case	interruptAndAwaitRetry
+enum	FindMyPairing.ExecutionDirective			
+enum	FindMyPairing.ExecutionDirective		case	serial
+enum	FindMyPairing.ExecutionDirective		case	parallel
+enum	FindMyPairing.ExecutionDirective		case	parallelDirectives
+enum	FindMyPairing.ExecutionDirective		case	conditional
+enum	FindMyPairing.ExecutionDirective		case	waitForInput
+enum	FindMyPairing.PairingPeripheralProviderError			
+enum	FindMyPairing.PairingPeripheralProviderError		case	unsupportedTransportType
+enum	FindMyPairing.PairingPeripheralProviderError		case	unsupportedPeripheralType
+enum	FindMyPairing.PairingPeripheralProviderError		case	unsupportedServiceType
+enum	FindMyPairing.AccessoryMetadataProviderError			
+enum	FindMyPairing.AccessoryMetadataProviderError		case	unsupportedPeripheralType
+enum	FindMyPairing.AccessoryMetadataProviderError		case	unsupportedMetadataType
+enum	FindMyPairing.AccessoryMetadataProviderError		case	unsupportedDeviceType
+class	FindMyPairing.PairingCoordinatorsManager			
+class	FindMyPairing.PairingCoordinatorsManager		let	dependenciesIdentifier
+class	FindMyPairing.PairingCoordinatorsManager		var	state
+class	FindMyPairing.PairingCoordinatorsManager		let	initialCoordinators
+class	FindMyPairing.PairingCoordinatorsManager		let	pairingStreamProvider
+class	FindMyPairing.PairingCoordinatorsManager		let	analyticsStreamProvider
+class	FindMyPairing.PairingCoordinatorsManager		var	expectedPartsCount
+class	FindMyPairing.PairingCoordinatorsManager		var	pairingDependencies
+class	FindMyPairing.PairingCoordinatorsManager		var	stateHistory
+class	FindMyPairing.PairingCoordinatorsManager		var	pairingResultListeners
+class	FindMyPairing.PairingCoordinatorsManager		var	pairingResults
+class	FindMyPairing.PairingCoordinatorsManager		var	newPartsDetectedHandler
+enum	FindMyPairing.PairingCoordinatorsManager.Error			
+enum	FindMyPairing.PairingCoordinatorsManager.Error		case	unsupportedDetection
+enum	FindMyPairing.PairingOperation			
+enum	FindMyPairing.PairingOperation		case	overallPairing
+enum	FindMyPairing.PairingOperation		case	peripheralRetrieval
+enum	FindMyPairing.PairingOperation		case	metadataRead
+enum	FindMyPairing.PairingOperation		case	productInfoFetch
+enum	FindMyPairing.PairingOperation		case	pairingStart
+enum	FindMyPairing.PairingCoordinatorError			
+enum	FindMyPairing.PairingCoordinatorError		case	invalidState
+enum	FindMyPairing.PairingCoordinatorError		case	invalidPeripheral
+enum	FindMyPairing.PairingCoordinatorError		case	noAvailablePairingExecutors
+enum	FindMyPairing.PairingCoordinatorError		case	pairedToAnotherAccount
+enum	FindMyPairing.PairingCoordinatorError		case	pairingFailed
+enum	FindMyPairing.PairingCoordinatorError		case	timeout
+enum	FindMyPairing.PairingCoordinatorError		case	invalidMetadata
+enum	FindMyPairing.PairingCoordinatorError		case	notSerialized
+enum	FindMyPairing.PairingCoordinatorError		case	mustNotBeSerialized
+enum	FindMyPairing.PairingCoordinatorError		case	missingUIConfiguration
+enum	FindMyPairing.PairingCoordinatorError		case	noAccessoriesDetected
+enum	FindMyPairing.PairingCoordinatorError		case	notAllowedForMultiDetection
+enum	FindMyPairing.PairingCoordinatorError		case	noAccessoryScannerObject
+enum	FindMyPairing.PairingCoordinatorError		case	wrongAccessoryIdentifier
+enum	FindMyPairing.PairingCoordinatorError		case	missingPairingEligibilityVerifier
+enum	FindMyPairing.PairingCoordinatorError		case	missingPeripheralProvider
+enum	FindMyPairing.PairingCoordinatorError		case	missingPairingExecutorFactory
+enum	FindMyPairing.PairingCoordinatorError		case	missingPairingExecutor
+enum	FindMyPairing.PairingCoordinatorError		case	missingBeaconID
+enum	FindMyPairing.PairingCoordinatorError		case	invalidDetection
+enum	FindMyPairing.PairingCoordinatorError		case	missingPairingUIManager
+enum	FindMyPairing.PairingCoordinatorError		case	missingPairingConfiguration
+enum	FindMyPairing.PairingCoordinatorError		case	invalidDependencies
+struct	FindMyPairing.PairingSuccessResult			
+struct	FindMyPairing.PairingSuccessResult		let	location
+struct	FindMyPairing.PairingSuccessResult		let	beaconIds
+enum	FindMyPairing.PairingFlowStep			
+enum	FindMyPairing.PairingFlowStep		case	pairingAlreadyStarted
+enum	FindMyPairing.PairingFlowStep		case	error
+enum	FindMyPairing.PairingFlowStep		case	waitForUserInputOrPrePairingFinish
+enum	FindMyPairing.PairingFlowStep		case	proceedWithPairing
+enum	FindMyPairing.PairingUIState			
+enum	FindMyPairing.PairingUIState		case	displayed
+enum	FindMyPairing.PairingUIState		case	idle
+enum	FindMyPairing.PairingUIState		case	alertPreparation
+enum	FindMyPairing.PairingUIState		case	finished
+enum	FindMyPairing.PairingUIState.Displayed			
+enum	FindMyPairing.PairingUIState.Displayed		case	frozen
+enum	FindMyPairing.PairingUIState.Displayed		case	delayedFinish
+enum	FindMyPairing.PairingUIState.Displayed		case	unfrozen
+enum	FindMyPairing.CommandCondition			
+enum	FindMyPairing.CommandCondition		case	checkUserPairAction
+enum	FindMyPairing.CommandCondition		case	checkPrePairingAndUserTapAction
+enum	FindMyPairing.CommandCondition		case	checkUserInput
+enum	FindMyPairing.CommandCondition		case	finalizePairingDone
+enum	FindMyPairing.CommandCondition		case	dismissedUI
+enum	FindMyPairing.PairingCommand			
+enum	FindMyPairing.PairingCommand		case	proxCard
+enum	FindMyPairing.PairingCommand		case	multiDetectionScannerStart
+enum	FindMyPairing.PairingCommand		case	multiDetectionScannerStop
+enum	FindMyPairing.PairingCommand		case	peripheralFetch
+enum	FindMyPairing.PairingCommand		case	metadataRead
+enum	FindMyPairing.PairingCommand		case	productInfo
+enum	FindMyPairing.PairingCommand		case	productInfoBased_DependenciesReevaluation
+enum	FindMyPairing.PairingCommand		case	metadataBased_DependenciesReevaluation
+enum	FindMyPairing.PairingCommand		case	pairingEligibilityCheck
+enum	FindMyPairing.PairingCommand		case	prePairingFinished
+enum	FindMyPairing.PairingCommand		case	initializePairing
+enum	FindMyPairing.PairingCommand		case	finalizePairing
+enum	FindMyPairing.PairingCommand		case	pairingAcknowledgment
+enum	FindMyPairing.PairingCommand		case	forwardPairingResults
+enum	FindMyPairing.PairingCommand		case	finish
+enum	FindMyPairing.PairingBeaconStoreError			
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidPairingKeysType
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidAccessoryInfoType
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidBeaconRecordType
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidPairingConfigurationType
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidCompletionType
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidProductInfo
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidMacAddress
+enum	FindMyPairing.PairingBeaconStoreError		case	invalidClassicMacAddress
+enum	FindMyPairing.PairingCoordinatorState			
+enum	FindMyPairing.PairingCoordinatorState		case	dependenciesReevaluation
+enum	FindMyPairing.PairingCoordinatorState		case	failed
+enum	FindMyPairing.PairingCoordinatorState		case	idle
+enum	FindMyPairing.PairingCoordinatorState		case	triggered
+enum	FindMyPairing.PairingCoordinatorState		case	proxCard
+enum	FindMyPairing.PairingCoordinatorState		case	userPairAction
+enum	FindMyPairing.PairingCoordinatorState		case	metadataRead
+enum	FindMyPairing.PairingCoordinatorState		case	productInfoRequest
+enum	FindMyPairing.PairingCoordinatorState		case	verifyIfPairingEligibility
+enum	FindMyPairing.PairingCoordinatorState		case	prePairingFinished
+enum	FindMyPairing.PairingCoordinatorState		case	executorPairing
+enum	FindMyPairing.PairingCoordinatorState		case	accessoryConfiguration
+enum	FindMyPairing.PairingCoordinatorState		case	initiatePairingFinished
+enum	FindMyPairing.PairingCoordinatorState		case	pairingAck
+enum	FindMyPairing.PairingCoordinatorState		case	successfullyPaired
+enum	FindMyPairing.PairingCoordinatorState		case	forwardedResultsToUI
+enum	FindMyPairing.PairingCoordinatorState		case	interrupted
+enum	FindMyPairing.PairingCoordinatorState		case	finished
+class	FindMyPairing.PairingCoordinatorStateManager			
+class	FindMyPairing.PairingCoordinatorStateManager		var	unsupportedTransitions
+class	FindMyPairing.PairingCoordinatorStateManager		var	stateHistory
+class	FindMyPairing.PairingCoordinatorStateManager		var	state
+class	FindMyPairing.PairingCoordinatorStateManager		var	onStateUpdated
+enum	FindMyPairing.Logger			
+struct	FindMyPairing.AccessoryDependencies			
+struct	FindMyPairing.AccessoryDependencies		let	observer
+struct	FindMyPairing.AccessoryDependencies		let	pairingStart
+struct	FindMyPairing.AccessoryDependencies		let	coordinator
+struct	FindMyPairing.MultipartAccessoryDependencies			
+struct	FindMyPairing.MultipartAccessoryDependencies		let	observer
+struct	FindMyPairing.MultipartAccessoryDependencies		let	pairingStart
+struct	FindMyPairing.MultipartAccessoryDependencies		let	manager
+enum	FindMyPairing.StateManagerError			
+enum	FindMyPairing.StateManagerError		case	unsupportedTransition
+enum	FindMyPairing.PairingExecutorState			
+enum	FindMyPairing.PairingExecutorState		case	getBeaconGroup
+enum	FindMyPairing.PairingExecutorState		case	newAccessoryPartsDetected
+enum	FindMyPairing.PairingExecutorState		case	initiatePairing
+enum	FindMyPairing.PairingExecutorState		case	pairingLockCheck
+enum	FindMyPairing.PairingExecutorState		case	beaconRecordCreation
+enum	FindMyPairing.PairingExecutorState		case	pairingComplete
+enum	FindMyPairing.PairingExecutorState		case	pairingAck
+enum	FindMyPairing.PairingExecutorState		case	failed
+enum	FindMyPairing.PairingExecutorState		case	idle
+enum	FindMyPairing.PairingExecutorState		case	initiatePairingFinished
+enum	FindMyPairing.PairingExecutorState		case	finalizePairingCompleted
+enum	FindMyPairing.PairingExecutorState		case	successfullyPaired
+enum	FindMyPairing.PairingExecutorState		case	interrupted
+enum	FindMyPairing.PairingExecutorState.InitiatePairing			
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	result
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	commandStart
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	commandFinish
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	generateE1Start
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	generateE1Finish
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	generateFMNIDStart
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	generateFMNIDFinish
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	generateCollaborativeKeyStart
+enum	FindMyPairing.PairingExecutorState.InitiatePairing		case	generateCollaborativeKeyFinish
+enum	FindMyPairing.PairingExecutorState.CommandState			
+enum	FindMyPairing.PairingExecutorState.CommandState		case	commandStart
+enum	FindMyPairing.PairingExecutorState.CommandState		case	commandFinish
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck			
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	requestStart
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	requestFinish
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	signatureVerificationStart
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	signatureVerificationFinish
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	finalizeCommandStart
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	finalizeCommandFinish
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	generatePairingDataStart
+enum	FindMyPairing.PairingExecutorState.PairingLockCheck		case	generatePairingDataFinish
+enum	FindMyPairing.PairingExecutorState.PairingComplete			
+enum	FindMyPairing.PairingExecutorState.PairingComplete		case	commandStart
+enum	FindMyPairing.PairingExecutorState.PairingComplete		case	commandFinish
+enum	FindMyPairing.PairingExecutorState.PairingComplete		case	peripheralUnpair
+enum	FindMyPairing.PairingExecutorState.RecordCreation			
+enum	FindMyPairing.PairingExecutorState.RecordCreation		case	commandFinish
+enum	FindMyPairing.PairingExecutorState.RecordCreation		case	commandStart
+enum	FindMyPairing.PairingExecutorError			
+enum	FindMyPairing.PairingExecutorError		case	interrupted
+enum	FindMyPairing.PairingExecutorError		case	pairedToAnotherAccount
+enum	FindMyPairing.PairingExecutorError		case	invalidPeripheralType
+struct	FindMyPairing.AccessoryDetails			
+struct	FindMyPairing.AccessoryDetails		let	executorIdentifier
+struct	FindMyPairing.AccessoryDetails		let	systemVersion
+struct	FindMyPairing.AccessoryDetails		let	serialNumber
+struct	FindMyPairing.AccessoryDetails		let	productID
+struct	FindMyPairing.PairingLatencyReport			
+struct	FindMyPairing.PairingLatencyReport		let	overallPairing
+struct	FindMyPairing.PairingLatencyReport		let	initializePairing
+struct	FindMyPairing.PairingLatencyReport		let	pairingLock
+struct	FindMyPairing.PairingLatencyReport		let	finalizePairing
+struct	FindMyPairing.PairingLatencyReport		let	beaconCreation
+enum	FindMyPairing.AnalyticsEvent			
+enum	FindMyPairing.AnalyticsEvent		case	userPairingDecision
+enum	FindMyPairing.AnalyticsEvent		case	initiatePairingFinished
+enum	FindMyPairing.AnalyticsEvent		case	pairingLockStart
+enum	FindMyPairing.AnalyticsEvent		case	pairingLockFinish
+enum	FindMyPairing.AnalyticsEvent		case	finalizePairingStart
+enum	FindMyPairing.AnalyticsEvent		case	finalizePairingFinish
+enum	FindMyPairing.AnalyticsEvent		case	beaconRecordCreated
+enum	FindMyPairing.AnalyticsEvent		case	pairingAckStart
+enum	FindMyPairing.AnalyticsEvent		case	pairingAckFinish
+enum	FindMyPairing.AnalyticsEvent		case	successfullyPaired
+enum	FindMyPairing.AnalyticsEvent		case	failed
+enum	FindMyPairing.AnalyticsEvent		case	interrupted
+enum	FindMyPairing.PairingExecutorFactoryError			
+enum	FindMyPairing.PairingExecutorFactoryError		case	unsupportedPairingInfoType
+enum	FindMyPairing.PairingInfoStoreError			
+enum	FindMyPairing.PairingInfoStoreError		case	unsupportedType
+enum	FindMyPairing.Detection			
+enum	FindMyPairing.Detection		case	single
+enum	FindMyPairing.Detection		case	uncertain
+enum	FindMyPairing.Detection		case	none
+enum	FindMyPairing.UserSessionState			
+enum	FindMyPairing.UserSessionState		case	pairingStarted
+enum	FindMyPairing.UserSessionState		case	accessoryConfigured
+enum	FindMyPairing.UserSessionState		case	idle
+protocol	FindMyPairing.PairingServiceProxy			
+protocol	FindMyPairing.PairingRequest			
+protocol	FindMyPairing.PairingResponse			
+protocol	FindMyPairing.PairingAckRequest			
+protocol	FindMyPairing.PairingAckResponse			
+protocol	FindMyPairing.PairingValidator	Request, Response, AckRequest, AckResponse		
+protocol	FindMyPairing.PairingPolicyVerifier	PairingInfo		
+protocol	FindMyPairing.Accessory			
+protocol	FindMyPairing.PairingServiceType			
+protocol	FindMyPairing.ExecutionCondition			
+protocol	FindMyPairing.ExecutionCommand			
+protocol	FindMyPairing.PeripheralType			
+protocol	FindMyPairing.PeripheralTransport			
+protocol	FindMyPairing.PairingPeripheralProvider	Peripheral, Transport, PeripheralService		
+protocol	FindMyPairing.FWVersionNumber			
+protocol	FindMyPairing.MetadataType			
+protocol	FindMyPairing.AccessoryProductInfoType			
+protocol	FindMyPairing.AccessoryMetadataProvider	Peripheral, Metadata, Device		
+protocol	FindMyPairing.PairingLocation			
+protocol	FindMyPairing.BasePairingCoordinator			
+protocol	FindMyPairing.PairingCoordinator			
+protocol	FindMyPairing.PairingUIInfoType			
+protocol	FindMyPairing.PairingUIManager			
+protocol	FindMyPairing.AccessoryScanner			
+protocol	FindMyPairing.BeaconRecordType			
+protocol	FindMyPairing.BeaconGroupType			
+protocol	FindMyPairing.PairingBeaconStore			
+protocol	FindMyPairing.CoordinatorDependencies			
+protocol	FindMyPairing.AdaptiveCoordinatorDependencies			
+protocol	FindMyPairing.BaseAccessoryDependencies			
+protocol	FindMyPairing.StateManager	State, Input		
+protocol	FindMyPairing.StateModifiable	State		
+protocol	FindMyPairing.PairingKeysInfo			
+protocol	FindMyPairing.AccessoryInfo			
+protocol	FindMyPairing.BeaconCreationInfo	Keys, Accessory		
+protocol	FindMyPairing.PairingExecutor	Info, Peripheral		
+protocol	FindMyPairing.PairingExecutorFactory	PairingInfo		
+protocol	FindMyPairing.AdaptivePairingCoordinator			
+protocol	FindMyPairing.PairingEligibilityInfo			
+protocol	FindMyPairing.ProductID			
+protocol	FindMyPairing.AccessoryPairingInfoType			
+protocol	FindMyPairing.PairingInfoStore			
+protocol	FindMyPairing.TypedPairingInfoStore	Peripheral, Metadata, ProductInfo, AccessoryConfiguration, Product, VerificationInfo		
+protocol	FindMyPairing.PairingConfigurationType			
+protocol	FindMyPairing.PairingResult			
+protocol	FindMyPairing.UserSessionListener			
+protocol	FindMyPairing.PairingResultListener			
+protocol	conformance FindMyPairing.ReevaluationReason	Swift.Hashable		
+protocol	conformance FindMyPairing.ReevaluationReason	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingValidatorError	Swift.Error		
+protocol	conformance FindMyPairing.PairingValidatorError	Swift.CustomStringConvertible		
+protocol	conformance FindMyPairing.PairingPolicyVerifierError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingPolicyVerifierError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingPolicyVerifierError	Swift.Error		
+protocol	conformance PairingObserver.Error	Swift.Equatable		
+protocol	conformance PairingObserver.Error	Swift.Hashable		
+protocol	conformance PairingObserver.Error	Swift.Error		
+protocol	conformance FindMyPairing.PairingObserver	Swift.Actor		
+protocol	conformance FindMyPairing.DependenciesIdentifier	Swift.Hashable		
+protocol	conformance FindMyPairing.DependenciesIdentifier	Swift.CustomStringConvertible		
+protocol	conformance FindMyPairing.DependenciesIdentifier	Swift.Equatable		
+protocol	conformance PairingService.Error	Swift.Equatable		
+protocol	conformance PairingService.Error	Swift.Hashable		
+protocol	conformance PairingService.Error	Swift.Error		
+protocol	conformance FindMyPairing.PairingService	Swift.Actor		
+protocol	conformance FindMyPairing.PairingService	FindMyPairing.PairingServiceType		
+protocol	conformance ExecutionDirector.Error	Swift.Equatable		
+protocol	conformance ExecutionDirector.Error	Swift.Hashable		
+protocol	conformance ExecutionDirector.Error	Swift.Error		
+protocol	conformance ExecutionDirector.ExecutionResult	Swift.Equatable		
+protocol	conformance ExecutionDirector.ExecutionResult	Swift.Hashable		
+protocol	conformance FindMyPairing.ExecutionDirector	Swift.Actor		
+protocol	conformance FindMyPairing.ExecutionDirective	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingPeripheralProviderError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingPeripheralProviderError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingPeripheralProviderError	Swift.Error		
+protocol	conformance FindMyPairing.AccessoryMetadataProviderError	Swift.Equatable		
+protocol	conformance FindMyPairing.AccessoryMetadataProviderError	Swift.Hashable		
+protocol	conformance FindMyPairing.AccessoryMetadataProviderError	Swift.Error		
+protocol	conformance PairingCoordinatorsManager.Error	Swift.Equatable		
+protocol	conformance PairingCoordinatorsManager.Error	Swift.Hashable		
+protocol	conformance PairingCoordinatorsManager.Error	Swift.Error		
+protocol	conformance FindMyPairing.PairingCoordinatorsManager	Swift.Actor		
+protocol	conformance FindMyPairing.PairingCoordinatorsManager	FindMyPairing.PairingResultListener		
+protocol	conformance FindMyPairing.PairingOperation	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingOperation	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingOperation	Swift.RawRepresentable		
+protocol	conformance FindMyPairing.PairingOperation	Swift.CaseIterable		
+protocol	conformance FindMyPairing.PairingCoordinatorError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingCoordinatorError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingCoordinatorError	Swift.Error		
+protocol	conformance FindMyPairing.PairingSuccessResult	FindMyPairing.PairingResult		
+protocol	conformance FindMyPairing.PairingFlowStep	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingFlowStep	Swift.Hashable		
+protocol	conformance PairingUIState.Displayed	Swift.Hashable		
+protocol	conformance PairingUIState.Displayed	Swift.RawRepresentable		
+protocol	conformance PairingUIState.Displayed	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingUIState	Swift.CustomStringConvertible		
+protocol	conformance FindMyPairing.PairingUIState	Swift.Equatable		
+protocol	conformance FindMyPairing.CommandCondition	Swift.Equatable		
+protocol	conformance FindMyPairing.CommandCondition	Swift.Hashable		
+protocol	conformance FindMyPairing.CommandCondition	FindMyPairing.ExecutionCondition		
+protocol	conformance FindMyPairing.PairingCommand	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingCommand	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingCommand	FindMyPairing.ExecutionCommand		
+protocol	conformance FindMyPairing.PairingBeaconStoreError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingBeaconStoreError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingBeaconStoreError	Swift.Error		
+protocol	conformance FindMyPairing.PairingCoordinatorState	Swift.CustomStringConvertible		
+protocol	conformance FindMyPairing.PairingCoordinatorState	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingCoordinatorStateManager	Swift.Actor		
+protocol	conformance FindMyPairing.PairingCoordinatorStateManager	FindMyPairing.StateManager		
+protocol	conformance FindMyPairing.AccessoryDependencies	FindMyPairing.BaseAccessoryDependencies		
+protocol	conformance FindMyPairing.MultipartAccessoryDependencies	FindMyPairing.BaseAccessoryDependencies		
+protocol	conformance FindMyPairing.StateManagerError	Swift.Error		
+protocol	conformance PairingExecutorState.InitiatePairing	Swift.Equatable		
+protocol	conformance PairingExecutorState.CommandState	Swift.Hashable		
+protocol	conformance PairingExecutorState.CommandState	Swift.Equatable		
+protocol	conformance PairingExecutorState.PairingLockCheck	Swift.Hashable		
+protocol	conformance PairingExecutorState.PairingLockCheck	Swift.Equatable		
+protocol	conformance PairingExecutorState.PairingComplete	Swift.Hashable		
+protocol	conformance PairingExecutorState.PairingComplete	Swift.Equatable		
+protocol	conformance PairingExecutorState.RecordCreation	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingExecutorState	Swift.CustomStringConvertible		
+protocol	conformance FindMyPairing.PairingExecutorState	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingExecutorError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingExecutorError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingExecutorError	Swift.Error		
+protocol	conformance FindMyPairing.AnalyticsEvent	Swift.CustomStringConvertible		
+protocol	conformance FindMyPairing.PairingExecutorFactoryError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingExecutorFactoryError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingExecutorFactoryError	Swift.Error		
+protocol	conformance FindMyPairing.PairingInfoStoreError	Swift.Equatable		
+protocol	conformance FindMyPairing.PairingInfoStoreError	Swift.Hashable		
+protocol	conformance FindMyPairing.PairingInfoStoreError	Swift.Error		
+protocol	conformance FindMyPairing.Detection	Swift.Equatable		
+protocol	conformance FindMyPairing.Detection	Swift.Hashable		
+extension	FindMyPairing.PairingOperation	RawRepresentable		
+extension	FindMyPairing.PairingOperation	CaseIterable		
+extension	FindMyPairing.PairingUIState.Displayed	RawRepresentable		
+extension	FindMyPairing.PairingCoordinatorStateManager	StateManager		

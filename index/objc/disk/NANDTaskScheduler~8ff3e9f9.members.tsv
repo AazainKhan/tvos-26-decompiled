@@ -1,0 +1,13 @@
+owner	kind	declaration
+SideBarFileDispatcherAPI	+	+ (id)sharedDispatcher;
+SideBarFileDispatcherAPI	-	- (id)connection;
+SideBarFileDispatcherAPI	-	- (id)init;
+SideBarFileDispatcherAPI	-	- (void)invalidate;
+SideBarFileDispatcherAPI	-	- (void)matchPurgeablePositionsToday:(id)today yesterdayF:(id)f reply:(id /* block */)reply;
+SideBarFileDispatcherAPI	-	- (void)printPurgeableFileEntries:(id)entries reply:(id /* block */)reply;
+SideBarFileDispatcherAPI	-	- (void)sortAndDeduplicatePurgeableFile:(id)file reply:(id /* block */)reply;
+SideBarFileDispatcherAPI	property	@property (retain, nonatomic) NSObject<OS_dispatch_queue> *connectionQueue;
+SideBarFileDispatcherAPI	property	@property (retain, nonatomic) NSXPCConnection *connectionToService;
+SidebarFileDispatcherServiceProtocol	-	- (void)matchPurgeablePositionsToday:(id)today yesterdayF:(id)f reply:(id /* block */)reply;
+SidebarFileDispatcherServiceProtocol	-	- (void)printPurgeableFileEntries:(id)entries reply:(id /* block */)reply;
+SidebarFileDispatcherServiceProtocol	-	- (void)sortAndDeduplicatePurgeableFile:(id)file reply:(id /* block */)reply;

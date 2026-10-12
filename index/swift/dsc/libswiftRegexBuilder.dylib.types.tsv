@@ -1,0 +1,91 @@
+kind	type	conformance	member_kind	member
+struct	RegexBuilder.Anchor			
+struct	RegexBuilder.Anchor		var	kind
+struct	RegexBuilder.Anchor		var	isInverted
+struct	RegexBuilder.Lookahead			
+struct	RegexBuilder.Lookahead		var	regex
+struct	RegexBuilder.NegativeLookahead			
+struct	RegexBuilder.NegativeLookahead		var	regex
+enum	RegexBuilder.RegexComponentBuilder			
+struct	RegexBuilder.CharacterClass			
+struct	RegexBuilder.CharacterClass		var	ccc
+struct	RegexBuilder.CharacterClass		var	builtin
+struct	RegexBuilder.One			
+struct	RegexBuilder.One		var	regex
+struct	RegexBuilder.OneOrMore			
+struct	RegexBuilder.OneOrMore		var	regex
+struct	RegexBuilder.ZeroOrMore			
+struct	RegexBuilder.ZeroOrMore		var	regex
+struct	RegexBuilder.Optionally			
+struct	RegexBuilder.Optionally		var	regex
+struct	RegexBuilder.Repeat			
+struct	RegexBuilder.Repeat		var	regex
+struct	RegexBuilder.AlternationBuilder			
+struct	RegexBuilder.ChoiceOf			
+struct	RegexBuilder.ChoiceOf		var	regex
+struct	RegexBuilder.Capture			
+struct	RegexBuilder.Capture		var	regex
+struct	RegexBuilder.TryCapture			
+struct	RegexBuilder.TryCapture		var	regex
+struct	RegexBuilder.Local			
+struct	RegexBuilder.Local		var	regex
+struct	RegexBuilder.Reference			
+struct	RegexBuilder.Reference		let	id
+enum	RegexBuilder.Anchor.Kind			
+enum	RegexBuilder.Anchor.Kind		case	startOfSubject
+enum	RegexBuilder.Anchor.Kind		case	endOfSubjectBeforeNewline
+enum	RegexBuilder.Anchor.Kind		case	endOfSubject
+enum	RegexBuilder.Anchor.Kind		case	firstMatchingPositionInSubject
+enum	RegexBuilder.Anchor.Kind		case	textSegmentBoundary
+enum	RegexBuilder.Anchor.Kind		case	startOfLine
+enum	RegexBuilder.Anchor.Kind		case	endOfLine
+enum	RegexBuilder.Anchor.Kind		case	wordBoundary
+protocol	RegexBuilder._BuiltinRegexComponent			
+protocol	conformance RegexBuilder.Anchor	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.Lookahead	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.Lookahead	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.NegativeLookahead	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.NegativeLookahead	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.CharacterClass	_StringProcessing.RegexComponent		
+protocol	conformance Swift.String	_StringProcessing.RegexComponent: RegexBuilder		
+protocol	conformance Swift.Substring	_StringProcessing.RegexComponent: RegexBuilder		
+protocol	conformance Swift.Character	_StringProcessing.RegexComponent: RegexBuilder		
+protocol	conformance Swift.Unicode.Scalar	_StringProcessing.RegexComponent: RegexBuilder		
+protocol	conformance RegexBuilder.One	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.OneOrMore	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.OneOrMore	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.ZeroOrMore	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.ZeroOrMore	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.Optionally	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.Optionally	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.Repeat	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.Repeat	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.ChoiceOf	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.ChoiceOf	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.Capture	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.Capture	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.TryCapture	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.TryCapture	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.Local	RegexBuilder._BuiltinRegexComponent		
+protocol	conformance RegexBuilder.Local	_StringProcessing.RegexComponent		
+protocol	conformance RegexBuilder.Reference	_StringProcessing.RegexComponent		
+protocol	conformance Anchor.Kind	Swift.Hashable		
+protocol	conformance Anchor.Kind	Swift.Equatable		
+extension	RegexBuilder.Anchor	RegexComponent		
+extension	RegexBuilder.Lookahead	RegexComponent		
+extension	RegexBuilder.NegativeLookahead	RegexComponent		
+extension	RegexBuilder.CharacterClass	RegexComponent		
+extension	String	RegexComponent		
+extension	Substring	RegexComponent		
+extension	Character	RegexComponent		
+extension	Swift.Unicode.Scalar	RegexComponent		
+extension	RegexBuilder.One	RegexComponent		
+extension	RegexBuilder.OneOrMore	RegexComponent		
+extension	RegexBuilder.ZeroOrMore	RegexComponent		
+extension	RegexBuilder.Optionally	RegexComponent		
+extension	RegexBuilder.Repeat	RegexComponent		
+extension	RegexBuilder.ChoiceOf	RegexComponent		
+extension	RegexBuilder.Capture	RegexComponent		
+extension	RegexBuilder.TryCapture	RegexComponent		
+extension	RegexBuilder.Local	RegexComponent		
+extension	RegexBuilder.Reference	RegexComponent		

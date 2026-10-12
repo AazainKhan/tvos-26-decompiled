@@ -1,0 +1,27 @@
+owner	kind	declaration
+RPAuthenticatable	-	- (void)startPairingServerWithCompletion:(id /* block */)completion;
+RPAuthenticatable	-	- (void)stopPairingServer;
+RPAuthenticatable	-	- (void)tryPassword:(id)password;
+RPAuthenticatable	property	@property (copy, nonatomic) NSData *pairingInfo;
+RPAuthenticatable	property	@property (copy, nonatomic) NSString *password;
+RPAuthenticatable	property	@property (copy, nonatomic) id /* block */ authCompletionHandler;
+RPAuthenticatable	property	@property (copy, nonatomic) id /* block */ hidePasswordHandler;
+RPAuthenticatable	property	@property (copy, nonatomic) id /* block */ promptForPasswordHandler;
+RPAuthenticatable	property	@property (copy, nonatomic) id /* block */ showPasswordHandler;
+RPAuthenticatable	property	@property (nonatomic) int passwordType;
+RPAuthenticatable	property	@property (nonatomic) unsigned int pairSetupFlags;
+RPAuthenticatable	property	@property (nonatomic) unsigned int pairVerifyFlags;
+RPAuthenticatable	property	@property (readonly, nonatomic) OS_dispatch_queue *dispatchQueue;
+RPAuthenticatable	property	@property (readonly, nonatomic) int passwordTypeActual;
+RPAuthenticatable	property	@property (retain, nonatomic) NSArray *allowedMACAddresses;
+RPAuthenticatable	property	@property (retain, nonatomic) NSArray *pairSetupACL;
+RPMessageable	-	- (void)deregisterEventID:(id)id;
+RPMessageable	-	- (void)deregisterRequestID:(id)id;
+RPMessageable	-	- (void)registerEventID:(id)id options:(id)options handler:(id /* block */)handler;
+RPMessageable	-	- (void)registerRequestID:(id)id options:(id)options handler:(id /* block */)handler;
+RPMessageable	-	- (void)sendEventID:(id)id event:(id)event destinationID:(id)id options:(id)options completion:(id /* block */)completion;
+RPMessageable	-	- (void)sendEventID:(id)id event:(id)event options:(id)options completion:(id /* block */)completion;
+RPMessageable	-	- (void)sendRequestID:(id)id request:(id)request destinationID:(id)id options:(id)options responseHandler:(id /* block */)handler;
+RPMessageable	-	- (void)sendRequestID:(id)id request:(id)request options:(id)options responseHandler:(id /* block */)handler;
+RPMessageable	property	@property (readonly, nonatomic) OS_dispatch_queue *dispatchQueue;
+RPMessageable	property	@property (retain, nonatomic) NSString *serviceType;

@@ -1,0 +1,391 @@
+kind	type	conformance	member_kind	member
+class	VectorSearch.AssetStore			
+class	VectorSearch.AttributeStore			
+class	VectorSearch.AttributeStore		let	filterableAttributes
+class	VectorSearch.AttributeStore		let	dropAttributesSQL
+class	VectorSearch.AttributeStore		let	searchPartialSQL
+class	VectorSearch.AttributeStore		let	deleteAttributesSQL
+class	VectorSearch.AttributeStore		let	deleteAllAttributesSQL
+class	VectorSearch.DeltaManager			
+class	VectorSearch.DeltaManager		let	databasePool
+enum	VectorSearch.VectorSearchSimilarityMetric			
+enum	VectorSearch.VectorSearchSimilarityMetric		case	cosine
+enum	VectorSearch.VectorSearchSimilarityMetric		case	euclidean
+enum	VectorSearch.VectorSearchSimilarityMetric		case	dot
+enum	VectorSearch.SimilarityOrder			
+enum	VectorSearch.SimilarityOrder		case	higher
+enum	VectorSearch.SimilarityOrder		case	lower
+class	VectorSearch.Index			
+class	VectorSearch.Index		let	store
+class	VectorSearch.Index		let	scanner
+class	VectorSearch.Index		var	quantizer
+class	VectorSearch.Index		var	metadata
+class	VectorSearch.Index		let	pretokenizationEnabled
+class	VectorSearch.Index		let	logger
+class	VectorSearch.Index		let	signposter
+struct	VectorSearch.IndexMetadata			
+struct	VectorSearch.IndexMetadata		var	dataType
+struct	VectorSearch.IndexMetadata		var	dimension
+struct	VectorSearch.IndexMetadata		var	similarityMetric
+struct	VectorSearch.Index.SearchResult			
+struct	VectorSearch.Index.SearchResult		let	assetIdentifier
+struct	VectorSearch.Index.SearchResult		let	similarity
+struct	VectorSearch.Index.SearchResult		let	attributes
+enum	VectorSearch.IndexableDataTypeError			
+enum	VectorSearch.IndexableDataTypeError		case	weightedAverageFailure
+enum	VectorSearch.IndexError			
+enum	VectorSearch.IndexError		case	failedToOpenIndexStore
+enum	VectorSearch.IndexError		case	failedToPrepareStatement
+enum	VectorSearch.IndexError		case	failedToExecute
+enum	VectorSearch.IndexError		case	invalidDimension
+enum	VectorSearch.IndexError		case	invalidIndexStore
+enum	VectorSearch.IndexError		case	invalidEmbeddingSize
+enum	VectorSearch.IndexError		case	notSnapshotIsolated
+enum	VectorSearch.IndexError		case	closestPartitionNotFound
+struct	VectorSearch.IndexObservation			
+struct	VectorSearch.IndexObservation		let	identifier
+struct	VectorSearch.IndexObservation		let	embedding
+struct	VectorSearch.IndexObservation		let	partition
+struct	VectorSearch.IndexQuantizer			
+struct	VectorSearch.IndexQuantizer		let	signposter
+struct	VectorSearch.IndexQuantizer		let	averagePartitionSize
+struct	VectorSearch.IndexQuantizer		var	centroids
+struct	VectorSearch.IndexQuantizer		var	sequenceNumber
+struct	VectorSearch.IndexQuantizer		let	logger
+struct	VectorSearch.IndexScanner			
+struct	VectorSearch.IndexScanner		let	logger
+struct	VectorSearch.IndexScanner		let	signposter
+struct	VectorSearch.IndexStore			
+struct	VectorSearch.IndexStore		let	logger
+struct	VectorSearch.IndexStore		let	signposter
+class	VectorSearch.LRUCacheNode<A	Swift.Hashable>		
+class	VectorSearch.LRUCacheNode<A	Swift.Hashable>	var	key
+class	VectorSearch.LRUCacheNode<A	Swift.Hashable>	var	value
+class	VectorSearch.LRUCacheNode<A	Swift.Hashable>	var	previous
+class	VectorSearch.LRUCacheNode<A	Swift.Hashable>	var	next
+class	VectorSearch.LRUCache<A	Swift.Hashable>		
+class	VectorSearch.LRUCache<A	Swift.Hashable>	let	capacity
+class	VectorSearch.LRUCache<A	Swift.Hashable>	let	logger
+class	VectorSearch.LRUCache<A	Swift.Hashable>	var	nodeMap
+class	VectorSearch.LRUCache<A	Swift.Hashable>	let	sentinel
+enum	VectorSearch.ColumnType			
+enum	VectorSearch.ColumnType		case	integer
+enum	VectorSearch.ColumnType		case	double
+enum	VectorSearch.ColumnType		case	string
+class	VectorSearch.VSKColumnTypeWrapper	NSObject		
+class	VectorSearch.VSKColumnTypeWrapper	NSObject	let	wrappedValue
+enum	VectorSearch.DatabaseValue			
+enum	VectorSearch.DatabaseValue		case	integerValue
+enum	VectorSearch.DatabaseValue		case	doubleValue
+enum	VectorSearch.DatabaseValue		case	stringValue
+enum	VectorSearch.DatabaseValue		case	dataValue
+enum	VectorSearch.DatabaseValue		case	tokenizedStringValues
+enum	VectorSearch.DatabaseValue		case	nullValue
+class	VectorSearch.VSKDatabaseValueWrapper	NSObject		
+class	VectorSearch.VSKDatabaseValueWrapper	NSObject	let	wrappedValue
+class	VectorSearch.SQLExpressionEvaluator			
+class	VectorSearch.SQLExpressionEvaluator		let	databasePointer
+class	VectorSearch.SQLExpressionEvaluator		var	registry
+class	VectorSearch.SQLExpressionEvaluator		let	logger
+class	VectorSearch.SQLExpressionEvaluator		var	unicode61WrapperTokenizerDataReference
+enum	VectorSearch.ColumnType.CodingKeys			
+enum	VectorSearch.ColumnType.CodingKeys		case	integer
+enum	VectorSearch.ColumnType.CodingKeys		case	double
+enum	VectorSearch.ColumnType.CodingKeys		case	string
+enum	VectorSearch.ColumnType.IntegerCodingKeys			
+enum	VectorSearch.ColumnType.IntegerCodingKeys		case	defaultValue
+enum	VectorSearch.ColumnType.DoubleCodingKeys			
+enum	VectorSearch.ColumnType.DoubleCodingKeys		case	defaultValue
+enum	VectorSearch.ColumnType.StringCodingKeys			
+enum	VectorSearch.ColumnType.StringCodingKeys		case	defaultValue
+class	VectorSearch.SQLDatabasePointer			
+class	VectorSearch.SQLDatabasePointer		let	logger
+class	VectorSearch.SQLDatabasePointer		let	databaseFilePath
+class	VectorSearch.SQLDatabasePointer		let	rawPointer
+class	VectorSearch.SQLPreparedStatement			
+class	VectorSearch.SQLPreparedStatement		let	databasePointer
+class	VectorSearch.SQLPreparedStatement		let	rawPointer
+class	VectorSearch.SQLPreparedStatement		let	logger
+class	VectorSearch.Unicode61WrapperTokenizerDataReference			
+class	VectorSearch.Unicode61WrapperTokenizerDataReference		let	tokenizerDataPointer
+class	VectorSearch.UnicodeWrapperTokenizer			
+class	VectorSearch.UnicodeWrapperTokenizer		let	wrappedTokenizer
+struct	VectorSearch.Unicode61WrapperTokenizerDataReference.TokenizerData			
+struct	VectorSearch.Unicode61WrapperTokenizerDataReference.TokenizerData		let	baseInstance
+struct	VectorSearch.Unicode61WrapperTokenizerDataReference.TokenizerData		let	baseTokenizer
+enum	VectorSearch.Unicode61Error			
+enum	VectorSearch.Unicode61Error		case	couldNotFindBaseTokenizer
+enum	VectorSearch.Unicode61Error		case	couldNotCreateTokenizerInstance
+enum	VectorSearch.Unicode61Error		case	couldNotCreateUnicode61Wrapper
+class	VectorSearch.VDBVectorDatabase			
+class	VectorSearch.VDBVectorDatabase		let	index
+class	VectorSearch.VDBVectorDatabase		let	dimension
+class	VectorSearch.VDBVectorDatabase		let	metric
+class	VectorSearch.Vector<A	VectorSearch.IndexableDataType>		
+class	VectorSearch.Vector<A	VectorSearch.IndexableDataType>	var	workspace
+enum	VectorSearch.AnyVector			
+enum	VectorSearch.AnyVector		case	float16
+enum	VectorSearch.AnyVector		case	float32
+class	VectorSearch.VectorDatabaseClient			
+class	VectorSearch.VectorDatabaseClient		let	config
+class	VectorSearch.VectorDatabaseClient		let	databasePool
+class	VectorSearch.VectorDatabaseClient		var	isInitialized
+class	VectorSearch.VectorDatabaseClient		let	signposter
+class	VectorSearch.VectorDatabasePool			
+class	VectorSearch.VectorDatabasePool		let	logger
+class	VectorSearch.VectorDatabasePool		let	config
+class	VectorSearch.VectorDatabasePool		var	cachedWriteEvaluator
+class	VectorSearch.VectorDatabasePool		var	cachedReadEvaluators
+class	VectorSearch.VectorDatabasePool		var	cachedStableStore
+class	VectorSearch.VectorDatabasePool		var	cachedAssetStore
+class	VectorSearch.VectorDatabasePool		var	cachedAttributeStore
+class	VectorSearch.VectorQueryProcessor			
+class	VectorSearch.VectorQueryProcessor		let	databasePool
+class	VectorSearch.VectorQueryProcessor		let	signposter
+class	VectorSearch.VSKSwiftClientWrapper	NSObject		
+class	VectorSearch.VSKSwiftClientWrapper	NSObject	let	wrappedClient
+struct	VectorSearch.VectorDatabaseConfig			
+struct	VectorSearch.VectorDatabaseConfig		let	baseDirectory
+struct	VectorSearch.VectorDatabaseConfig		let	distanceMetric
+struct	VectorSearch.VectorDatabaseConfig		let	filterableAttributes
+struct	VectorSearch.VectorDatabaseConfig		let	dimension
+struct	VectorSearch.VectorDatabaseConfig		let	includePayload
+struct	VectorSearch.VectorDatabaseConfig		let	numberOfProbes
+struct	VectorSearch.VectorDatabaseConfig		let	averagePartitionSize
+struct	VectorSearch.VectorDatabaseConfig		let	batchSize
+struct	VectorSearch.VectorDatabaseConfig		let	batchFactor
+struct	VectorSearch.VectorDatabaseConfig		let	tradeOffParameterBetweenClusteringAndBalance
+struct	VectorSearch.VectorDatabaseConfig		let	dataType
+struct	VectorSearch.VectorDatabaseConfig		let	enableFTS
+struct	VectorSearch.VectorDatabaseConfig		let	maxIndexConstructionBatches
+struct	VectorSearch.VectorDatabaseConfig		let	readOnly
+struct	VectorSearch.VectorDatabaseConfig		let	pretokenizationEnabled
+struct	VectorSearch.VectorDatabaseConfig		let	prefixIndices
+struct	VectorSearch.VectorDatabaseConfig		let	attributeIndices
+struct	VectorSearch.VectorDatabaseConfig		let	clientVersion
+struct	VectorSearch.VectorDatabaseConfig		let	perConnectionPeakMemory
+struct	VectorSearch.VectorDatabaseConfig		let	usingDeprecatedInitializer
+struct	VectorSearch.VectorDatabaseConfig		let	indexURL
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices			
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices		let	indices
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex			
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex		let	properties
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.AttributeIndexProperties			
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.AttributeIndexProperties		let	name
+struct	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.AttributeIndexProperties		let	isAscending
+class	VectorSearch.VSKConfigWrapper	NSObject		
+class	VectorSearch.VSKConfigWrapper	NSObject	let	wrappedConfig
+struct	VectorSearch.VectorDatabaseAttribute			
+struct	VectorSearch.VectorDatabaseAttribute		let	name
+struct	VectorSearch.VectorDatabaseAttribute		let	columnType
+class	VectorSearch.VSKAttributeWrapper	NSObject		
+class	VectorSearch.VSKAttributeWrapper	NSObject	let	wrappedAttribute
+enum	VectorSearch.VectorDatabaseAttribute.CodingKeys			
+enum	VectorSearch.VectorDatabaseAttribute.CodingKeys		case	name
+enum	VectorSearch.VectorDatabaseAttribute.CodingKeys		case	columnType
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.CodingKeys			
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.CodingKeys		case	indices
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.CodingKeys			
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.CodingKeys		case	properties
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.AttributeIndexProperties.CodingKeys			
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.AttributeIndexProperties.CodingKeys		case	name
+enum	VectorSearch.VectorDatabaseConfig.AttributeIndices.AttributeIndex.AttributeIndexProperties.CodingKeys		case	isAscending
+struct	VectorSearch.VectorDatabaseFilter			
+struct	VectorSearch.VectorDatabaseFilter		let	attribute
+struct	VectorSearch.VectorDatabaseFilter		let	disjunctiveFilters
+class	VectorSearch.VSKFilterWrapper	NSObject		
+class	VectorSearch.VSKFilterWrapper	NSObject	let	wrappedFilter
+enum	VectorSearch.VectorDatabaseOperator			
+enum	VectorSearch.VectorDatabaseOperator		case	lessThan
+enum	VectorSearch.VectorDatabaseOperator		case	lessThanOrEqualTo
+enum	VectorSearch.VectorDatabaseOperator		case	equalTo
+enum	VectorSearch.VectorDatabaseOperator		case	notEqualTo
+enum	VectorSearch.VectorDatabaseOperator		case	greaterThan
+enum	VectorSearch.VectorDatabaseOperator		case	greaterThanOrEqualTo
+enum	VectorSearch.VectorDatabaseOperator		case	like
+enum	VectorSearch.VectorDatabaseOperator		case	isNull
+enum	VectorSearch.VectorDatabaseOperator		case	isNotNull
+enum	VectorSearch.VectorDatabaseOperator		case	match
+struct	VectorSearch.Asset			
+struct	VectorSearch.Asset		let	assetIdentifier
+struct	VectorSearch.Asset		let	vectors
+struct	VectorSearch.Asset		let	attributes
+struct	VectorSearch.Asset		let	payload
+struct	VectorSearch.Asset		let	perVectorAttribute
+class	VectorSearch.VSKAssetWrapper	NSObject		
+class	VectorSearch.VSKAssetWrapper	NSObject	let	wrappedAsset
+struct	VectorSearch.VectorDatabaseResult			
+struct	VectorSearch.VectorDatabaseResult		let	stringIdentifier
+struct	VectorSearch.VectorDatabaseResult		let	payload
+struct	VectorSearch.VectorDatabaseResult		let	metricValue
+struct	VectorSearch.VectorDatabaseResult		let	value
+struct	VectorSearch.VectorDatabaseResult		let	metric
+struct	VectorSearch.VectorDatabaseResult		let	attributes
+enum	VectorSearch.VectorDatabaseError			
+enum	VectorSearch.VectorDatabaseError		case	searchFailed
+enum	VectorSearch.VectorDatabaseError		case	insertionFailed
+enum	VectorSearch.VectorDatabaseError		case	deletionFailed
+enum	VectorSearch.VectorDatabaseError		case	clientFailure
+enum	VectorSearch.VectorDatabaseError		case	nameNotFound
+enum	VectorSearch.VectorDatabaseError		case	rebuildFailure
+enum	VectorSearch.VectorDatabaseError		case	malformedInput
+enum	VectorSearch.VectorDatabaseError		case	uninitializedDatabase
+enum	VectorSearch.VectorDatabaseError		case	identifierRetrievalFailure
+enum	VectorSearch.VectorDatabaseError		case	readOnlyModeFailure
+enum	VectorSearch.VectorDatabaseError		case	readConfigFailure
+enum	VectorSearch.VectorDatabaseError		case	invalidDimension
+enum	VectorSearch.VectorDatabaseError		case	invalidAveragePartitionSize
+enum	VectorSearch.VectorDatabaseError		case	ftsDisabled
+enum	VectorSearch.VectorDatabaseError		case	unrecoverableError
+enum	VectorSearch.VectorDatabaseError		case	readOnlyConnectionCannotCreateDatabase
+enum	VectorSearch.VectorDatabaseMetric			
+enum	VectorSearch.VectorDatabaseMetric		case	cosine
+enum	VectorSearch.VectorDatabaseMetric		case	L2
+enum	VectorSearch.VectorDatabaseMetric		case	dot
+enum	VectorSearch.VectorDatabaseDataType			
+enum	VectorSearch.VectorDatabaseDataType		case	float16
+enum	VectorSearch.VectorDatabaseDataType		case	float32
+enum	VectorSearch.VectorDatabaseDataType.CodingKeys			
+enum	VectorSearch.VectorDatabaseDataType.CodingKeys		case	float16
+enum	VectorSearch.VectorDatabaseDataType.CodingKeys		case	float32
+enum	VectorSearch.VectorDatabaseDataType.Float16CodingKeys			
+enum	VectorSearch.VectorDatabaseDataType.Float32CodingKeys			
+struct	VectorSearch.StoredVector			
+struct	VectorSearch.StoredVector		let	assetIdentifier
+struct	VectorSearch.StoredVector		let	vector
+struct	VectorSearch.VectorDatabaseStatistics			
+struct	VectorSearch.VectorDatabaseStatistics		let	deltaStoreCount
+struct	VectorSearch.VectorDatabaseStatistics		let	storeCount
+struct	VectorSearch.VectorDatabaseStatistics		let	proposedAveragePartitionSize
+struct	VectorSearch.VectorDatabaseStatistics		let	averagePartitionSize
+struct	VectorSearch.VectorDatabaseStatistics		let	minimumPartitionSize
+struct	VectorSearch.VectorDatabaseStatistics		let	maximumPartitionSize
+protocol	VectorSearch.MigrationEnabled			
+protocol	VectorSearch.IndexableDataType			
+protocol	VectorSearch.VectorProtocol			
+protocol	VectorSearch.SearchableVectorDatabase			
+protocol	VectorSearch.RebuildableVectorDatabase			
+protocol	VectorSearch.RebuildCompatiblePool			
+protocol	conformance VectorSearch.AssetStore	VectorSearch.MigrationEnabled		
+protocol	conformance VectorSearch.AttributeStore	VectorSearch.MigrationEnabled		
+protocol	conformance Swift.Float16	VectorSearch.IndexableDataType		
+protocol	conformance Swift.Float	VectorSearch.IndexableDataType		
+protocol	conformance VectorSearch.VectorSearchSimilarityMetric	Swift.Equatable		
+protocol	conformance VectorSearch.VectorSearchSimilarityMetric	Swift.Hashable		
+protocol	conformance VectorSearch.VectorSearchSimilarityMetric	Swift.RawRepresentable		
+protocol	conformance VectorSearch.VectorSearchSimilarityMetric	Swift.Decodable		
+protocol	conformance VectorSearch.VectorSearchSimilarityMetric	Swift.Encodable		
+protocol	conformance VectorSearch.SimilarityOrder	Swift.Equatable		
+protocol	conformance VectorSearch.SimilarityOrder	Swift.Hashable		
+protocol	conformance VectorSearch.Index	VectorSearch.MigrationEnabled		
+protocol	conformance Index.SearchResult	Swift.Equatable		
+protocol	conformance Index.SearchResult	Swift.Comparable		
+protocol	conformance VectorSearch.IndexableDataTypeError	Swift.Error		
+protocol	conformance VectorSearch.IndexError	Swift.Error		
+protocol	conformance VectorSearch.IndexError	Foundation.LocalizedError		
+protocol	conformance VectorSearch.IndexStore	VectorSearch.MigrationEnabled		
+protocol	conformance VectorSearch.ColumnType	Swift.Hashable		
+protocol	conformance VectorSearch.ColumnType	Swift.Decodable		
+protocol	conformance VectorSearch.ColumnType	Swift.Encodable		
+protocol	conformance VectorSearch.ColumnType	Swift.Equatable		
+protocol	conformance VectorSearch.DatabaseValue	Swift.Hashable		
+protocol	conformance VectorSearch.DatabaseValue	Swift.Equatable		
+protocol	conformance StringCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StringCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StringCodingKeys	Swift.Hashable		
+protocol	conformance StringCodingKeys	Swift.Equatable		
+protocol	conformance DoubleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DoubleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DoubleCodingKeys	Swift.Hashable		
+protocol	conformance DoubleCodingKeys	Swift.Equatable		
+protocol	conformance IntegerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntegerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntegerCodingKeys	Swift.Hashable		
+protocol	conformance IntegerCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance IntegerCodingKeys	Swift.CodingKey		
+protocol	conformance DoubleCodingKeys	Swift.CodingKey		
+protocol	conformance StringCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VectorSearch.UnicodeWrapperTokenizer	GRDBInternal.FTS5Tokenizer		
+protocol	conformance VectorSearch.UnicodeWrapperTokenizer	GRDBInternal.FTS5CustomTokenizer		
+protocol	conformance VectorSearch.UnicodeWrapperTokenizer	GRDBInternal.FTS5WrapperTokenizer		
+protocol	conformance VectorSearch.Unicode61Error	Foundation.LocalizedError		
+protocol	conformance VectorSearch.Unicode61Error	Swift.Error		
+protocol	conformance VectorSearch.VDBVectorDatabase	VectorSearch.MigrationEnabled		
+protocol	conformance VectorSearch.VDBVectorDatabase	VectorSearch.RebuildableVectorDatabase		
+protocol	conformance VectorSearch.VDBVectorDatabase	VectorSearch.SearchableVectorDatabase		
+protocol	conformance VectorSearch.Vector	VectorSearch.VectorProtocol		
+protocol	conformance VectorSearch.AnyVector	VectorSearch.VectorProtocol		
+protocol	conformance VectorSearch.VectorDatabasePool	VectorSearch.RebuildCompatiblePool		
+protocol	conformance AttributeIndex.AttributeIndexProperties	Swift.Equatable		
+protocol	conformance AttributeIndex.AttributeIndexProperties	Swift.Decodable		
+protocol	conformance AttributeIndex.AttributeIndexProperties	Swift.Encodable		
+protocol	conformance AttributeIndices.AttributeIndex	Swift.Equatable		
+protocol	conformance AttributeIndices.AttributeIndex	Swift.Decodable		
+protocol	conformance AttributeIndices.AttributeIndex	Swift.Encodable		
+protocol	conformance VectorDatabaseConfig.AttributeIndices	Swift.Equatable		
+protocol	conformance VectorDatabaseConfig.AttributeIndices	Swift.Decodable		
+protocol	conformance VectorDatabaseConfig.AttributeIndices	Swift.Encodable		
+protocol	conformance VectorSearch.VectorDatabaseConfig	VectorSearch.MigrationEnabled		
+protocol	conformance VectorSearch.VectorDatabaseConfig	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseAttribute	Swift.Hashable		
+protocol	conformance VectorSearch.VectorDatabaseAttribute	Swift.Decodable		
+protocol	conformance VectorSearch.VectorDatabaseAttribute	Swift.Encodable		
+protocol	conformance VectorSearch.VectorDatabaseAttribute	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VectorSearch.VectorDatabaseFilter	Swift.Hashable		
+protocol	conformance VectorSearch.VectorDatabaseFilter	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseOperator	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseOperator	Swift.Hashable		
+protocol	conformance VectorSearch.Asset	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseResult	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseError	Foundation.LocalizedError		
+protocol	conformance VectorSearch.VectorDatabaseError	Swift.CustomStringConvertible		
+protocol	conformance VectorSearch.VectorDatabaseError	Swift.Error		
+protocol	conformance VectorSearch.VectorDatabaseMetric	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseMetric	Swift.Hashable		
+protocol	conformance VectorSearch.VectorDatabaseMetric	Swift.RawRepresentable		
+protocol	conformance VectorSearch.VectorDatabaseMetric	Swift.Decodable		
+protocol	conformance VectorSearch.VectorDatabaseMetric	Swift.Encodable		
+protocol	conformance VectorSearch.VectorDatabaseDataType	Swift.Equatable		
+protocol	conformance VectorSearch.VectorDatabaseDataType	Swift.Hashable		
+protocol	conformance VectorSearch.VectorDatabaseDataType	Swift.Decodable		
+protocol	conformance VectorSearch.VectorDatabaseDataType	Swift.Encodable		
+protocol	conformance Float32CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Float32CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Float16CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Float16CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Float16CodingKeys	Swift.CodingKey		
+protocol	conformance Float32CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance VectorSearch.StoredVector	Swift.Hashable		
+protocol	conformance VectorSearch.StoredVector	Swift.Equatable		
+extension	VectorSearch.VectorSearchSimilarityMetric	RawRepresentable		
+extension	VectorSearch.VectorDatabaseMetric	RawRepresentable		

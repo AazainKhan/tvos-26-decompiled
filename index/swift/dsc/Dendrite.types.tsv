@@ -1,0 +1,577 @@
+kind	type	conformance	member_kind	member
+class	Dendrite.EmptyPromise			
+class	Dendrite.EmptyPromise		var	streamContinuation
+class	Dendrite.EmptyPromise		var	lazy
+class	Dendrite.FileLock			
+class	Dendrite.FileLock		let	fileURL
+class	Dendrite.FileLock		var	handle
+class	Dendrite.FileLock		let	fm
+enum	Dendrite.FileLockError			
+enum	Dendrite.FileLockError		case	unableToAcquireLock
+enum	Dendrite.FileLockError		case	unableToAcquireHandle
+class	Dendrite.GlobalFileLockRegistration			
+class	Dendrite.GlobalFileLockRegistration		let	lockedURL
+class	Dendrite.DarwinNotificationObserver			
+class	Dendrite.DarwinNotificationObserver		let	name
+class	Dendrite.DarwinNotificationObserver		let	onNotify
+class	Dendrite.DarwinNotificationObserver		var	token
+class	Dendrite.DarwinNotificationObserver		var	canceled
+class	Dendrite.DarwinNotificationPublisher			
+struct	Dendrite.Device			
+class	Dendrite.DeviceLockStateNotificationObserver	Dendrite.DarwinNotificationObserver		
+class	Dendrite.FirstUnlockObserver			
+class	Dendrite.FirstUnlockObserver		let	queue
+class	Dendrite.FirstUnlockObserver		var	continuations
+class	Dendrite.FirstUnlockObserver		var	firstUnlockNotificationObserver
+class	Dendrite.FirstUnlockObserver		var	deviceLockStateObserver
+class	Dendrite.FirstUnlockObserver		var	firstUnlockSeen
+class	Dendrite.OSActivity			
+class	Dendrite.OSActivity		let	internalActivity
+class	Dendrite.OSActivity		var	activityState
+class	Dendrite.OSTransaction			
+class	Dendrite.OSTransaction		let	name
+class	Dendrite.OSTransaction		let	internalTransaction
+class	Dendrite.OSTransaction		let	activity
+class	Dendrite.JsonSchemaEncoder			
+class	Dendrite.JsonSchemaEncoder		var	dict
+class	Dendrite.JsonSchemaEncoder		var	currentTagPath
+class	Dendrite.JsonSchemaEncoder		var	humanReadableSchema
+enum	Dendrite.JsonSchemaEncoder.EncodingError			
+enum	Dendrite.JsonSchemaEncoder.EncodingError		case	notSupported
+enum	Dendrite.ProtoTagTreeOperationError			
+enum	Dendrite.ProtoTagTreeOperationError		case	unsupportedTagType
+enum	Dendrite.ProtoTagTreeOperationError		case	readError
+enum	Dendrite.ProtoCodableError			
+enum	Dendrite.ProtoCodableError		case	general
+enum	Dendrite.ProtoCodableError		case	readError
+class	Dendrite.BlockShimForPBCodable	PBCodable		
+class	Dendrite.BlockShimForPBCodable	PBCodable	let	block
+class	Dendrite.BlockShimForPBCodable	PBCodable	var	error
+class	Dendrite.ProtoDecodingSequence			
+class	Dendrite.ProtoDecodingSequence		let	decoder
+class	Dendrite.ProtoDecodingSequence		let	schema
+class	Dendrite.ProtoDecodingSequence.Element			
+class	Dendrite.ProtoDecodingSequence.Element		let	tag
+class	Dendrite.ProtoDecodingSequence.Element		var	continuation
+class	Dendrite.ProtoDecodingSequence.Element		let	wireType
+class	Dendrite.ProtoDecodingSequence.Element		let	decoder
+enum	Dendrite.ProtoLibraries			
+enum	Dendrite.ProtoLibraries		case	internalPB
+struct	Dendrite.ProtoTagPath			
+struct	Dendrite.ProtoTagPath		var	tags
+enum	Dendrite.ProtoTagPath.FormatError			
+enum	Dendrite.ProtoTagPath.FormatError		case	invalidTagPath
+enum	Dendrite.ProtoTagPath.FormatError		case	emptyTagPath
+struct	Dendrite.ProtoTagPathStem			
+struct	Dendrite.ProtoTagPathStem		var	root
+struct	Dendrite.ProtoTagPathStem		var	path
+enum	Dendrite.ProtoTagPathStem.StemRoot			
+enum	Dendrite.ProtoTagPathStem.StemRoot		case	typeContext
+enum	Dendrite.ProtoTagPathStem.StemRoot		case	all
+enum	Dendrite.ProtoTagPathStem.FormatError			
+enum	Dendrite.ProtoTagPathStem.FormatError		case	invalidFormat
+enum	Dendrite.ProtoTagPathStem.FormatError		case	invalidTypeId
+enum	Dendrite.ProtoTagTreeOperation			
+enum	Dendrite.ProtoTagTreeOperation		case	difference
+enum	Dendrite.ProtoTagTreeOperation		case	intersection
+class	Dendrite.TrieNode<A	Swift.Hashable>		
+class	Dendrite.TrieNode<A	Swift.Hashable>	var	children
+class	Dendrite.TrieNode<A	Swift.Hashable>	var	isTerminal
+enum	Dendrite.WireValue			
+enum	Dendrite.WireValue		case	varInt
+enum	Dendrite.WireValue		case	fixed32
+enum	Dendrite.WireValue		case	fixed64
+enum	Dendrite.WireValue		case	lengthDelimited
+enum	Dendrite.WireValue		case	subGroup
+enum	Dendrite.WireValue		case	none
+struct	Dendrite.MessageFieldBinder<A	Dendrite.DynamicProtoMessage>		
+struct	Dendrite.OptionalMessageFieldBinder<A	Dendrite.DynamicProtoMessage>		
+struct	Dendrite.OptionalMessageFieldBinder<A	Dendrite.DynamicProtoMessage>	let	scalarType
+struct	Dendrite.OptionalRepeatedMessageFieldBinder<A	Dendrite.DynamicProtoMessage>		
+struct	Dendrite.OptionalRepeatedScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>		
+struct	Dendrite.OptionalRepeatedScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>	let	scalarType
+struct	Dendrite.OptionalScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>		
+struct	Dendrite.OptionalScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>	let	scalarType
+struct	Dendrite.RepeatedMessageFieldBinder<A	Dendrite.DynamicProtoMessage>		
+struct	Dendrite.RepeatedScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>		
+struct	Dendrite.RepeatedScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>	let	scalarType
+struct	Dendrite.ScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>		
+struct	Dendrite.ScalarFieldBinder<A	Dendrite.SchemaScalarRepresentable>	let	scalarType
+class	Dendrite.DynamicDecodingContext			
+class	Dendrite.DynamicDecodingContext		let	ontology
+class	Dendrite.DynamicDecodingContext		var	typeContexts
+class	Dendrite.DynamicDecodingContext		var	depth
+class	Dendrite.ProtoScopedMessage			
+class	Dendrite.ProtoScopedMessage		var	valueMap
+class	Dendrite.ProtoScopedMessage		var	anyMessageContext
+class	Dendrite.ProtoScopedMessage		var	anyMessageChildren
+struct	Dendrite.ProtoScopedMessage.AnyMessageContext			
+struct	Dendrite.ProtoScopedMessage.AnyMessageContext		let	typeIdTag
+struct	Dendrite.ProtoScopedMessage.AnyMessageContext		let	payloadTag
+class	Dendrite.OneOfCase			
+class	Dendrite.OneOfCase		var	wrappedValue
+class	Dendrite.OneOfCase		var	tag
+class	Dendrite.OneOfCase		var	wrapAsUnionType
+class	Dendrite.OneOfCase		var	unwrap
+class	Dendrite.OneOfCase		var	binder
+class	Dendrite.OneOfField<A	Dendrite.OneOfCaseUnion>		
+class	Dendrite.OneOfField<A	Dendrite.OneOfCaseUnion>	var	wrappedValue
+class	Dendrite.OneOfField<A	Dendrite.OneOfCaseUnion>	var	cachedFieldSpecs
+class	Dendrite.OneOfField<A	Dendrite.OneOfCaseUnion>	var	lazy
+class	Dendrite.MessageTransformation			
+class	Dendrite.MessageTransformation		let	transformations
+class	Dendrite.MirrorCopyEncoder			
+class	Dendrite.MirrorCopyEncoder		var	currentTagPath
+class	Dendrite.MirrorCopyEncoder		var	workingCopy
+struct	Dendrite.WorkingCopyForTransformations			
+struct	Dendrite.WorkingCopyForTransformations		var	mirror
+struct	Dendrite.AnyMessageTypeSpec			
+struct	Dendrite.AnyMessageTypeSpec		let	typeIdentifierField
+struct	Dendrite.AnyMessageTypeSpec.TypeIdentifierField			
+struct	Dendrite.AnyMessageTypeSpec.TypeIdentifierField		let	tag
+struct	Dendrite.AnyMessageTypeSpec.TypeIdentifierField		let	scalarType
+struct	Dendrite.DecodeFieldContinuation			
+struct	Dendrite.DecodeFieldContinuation		let	decoder
+struct	Dendrite.DecodeFieldContinuation		let	continuationType
+struct	Dendrite.DecodeFieldContinuation		let	tag
+struct	Dendrite.DecodeFieldContinuation		var	consumed
+struct	Dendrite.EncodeFieldContinuation			
+struct	Dendrite.EncodeFieldContinuation		var	encoder
+struct	Dendrite.EncodeFieldContinuation		let	continuationType
+struct	Dendrite.EncodeFieldContinuation		let	tag
+enum	Dendrite.FieldValidationStrategy			
+enum	Dendrite.FieldValidationStrategy		case	validating
+enum	Dendrite.FieldValidationStrategy		case	nonValidating
+struct	Dendrite.HumanReadableSchema			
+struct	Dendrite.HumanReadableSchema		let	schema
+struct	Dendrite.HumanReadableSchema		let	humanReadableFields
+enum	Dendrite.HumanReadableSchema.NameMap			
+enum	Dendrite.HumanReadableSchema.NameMap		case	leaf
+enum	Dendrite.HumanReadableSchema.NameMap		case	schema
+enum	Dendrite.HumanReadableSchema.MemberLookupResult			
+enum	Dendrite.HumanReadableSchema.MemberLookupResult		case	leaf
+enum	Dendrite.HumanReadableSchema.MemberLookupResult		case	schema
+enum	Dendrite.ProtoFieldValue<A	Swift.Equatable>		
+enum	Dendrite.ProtoFieldValue<A	Swift.Equatable>	case	discrete
+enum	Dendrite.ProtoFieldValue<A	Swift.Equatable>	case	repeated
+enum	Dendrite.ProtoFieldValue.ProtoDiscreteValue<A	Swift.Equatable>		
+enum	Dendrite.ProtoFieldValue.ProtoDiscreteValue<A	Swift.Equatable>	case	scalar
+enum	Dendrite.ProtoFieldValue.ProtoDiscreteValue<A	Swift.Equatable>	case	message
+enum	Dendrite.ProtoFieldValueExpectation<A	Swift.Equatable>		
+enum	Dendrite.ProtoFieldValueExpectation<A	Swift.Equatable>	case	scalar
+enum	Dendrite.ProtoFieldValueExpectation<A	Swift.Equatable>	case	message
+enum	Dendrite.ProtoFieldValueExpectation.ExpectationFailure<A	Swift.Equatable>		
+enum	Dendrite.ProtoFieldValueExpectation.ExpectationFailure<A	Swift.Equatable>	case	unexpectedType
+class	Dendrite.SchemaField			
+class	Dendrite.SchemaField		var	wrappedValue
+class	Dendrite.SchemaField		var	tag
+class	Dendrite.SchemaField		var	binder
+enum	Dendrite.SchemaScalarType			
+enum	Dendrite.SchemaScalarType		case	double
+enum	Dendrite.SchemaScalarType		case	float
+enum	Dendrite.SchemaScalarType		case	int32
+enum	Dendrite.SchemaScalarType		case	int64
+enum	Dendrite.SchemaScalarType		case	uint32
+enum	Dendrite.SchemaScalarType		case	uint64
+enum	Dendrite.SchemaScalarType		case	sint32
+enum	Dendrite.SchemaScalarType		case	sint64
+enum	Dendrite.SchemaScalarType		case	fixed32
+enum	Dendrite.SchemaScalarType		case	fixed64
+enum	Dendrite.SchemaScalarType		case	sfixed32
+enum	Dendrite.SchemaScalarType		case	sfixed64
+enum	Dendrite.SchemaScalarType		case	bool
+enum	Dendrite.SchemaScalarType		case	string
+enum	Dendrite.SchemaScalarType		case	bytes
+enum	Dendrite.SchemaScalarValue			
+enum	Dendrite.SchemaScalarValue		case	double
+enum	Dendrite.SchemaScalarValue		case	float
+enum	Dendrite.SchemaScalarValue		case	int32
+enum	Dendrite.SchemaScalarValue		case	int64
+enum	Dendrite.SchemaScalarValue		case	uint32
+enum	Dendrite.SchemaScalarValue		case	uint64
+enum	Dendrite.SchemaScalarValue		case	sint32
+enum	Dendrite.SchemaScalarValue		case	sint64
+enum	Dendrite.SchemaScalarValue		case	fixed32
+enum	Dendrite.SchemaScalarValue		case	fixed64
+enum	Dendrite.SchemaScalarValue		case	sfixed32
+enum	Dendrite.SchemaScalarValue		case	sfixed64
+enum	Dendrite.SchemaScalarValue		case	bool
+enum	Dendrite.SchemaScalarValue		case	string
+enum	Dendrite.SchemaScalarValue		case	bytes
+struct	Dendrite.SchemaSpec			
+struct	Dendrite.SchemaSpec		let	fields
+enum	Dendrite.SchemaSpec.FieldType			
+enum	Dendrite.SchemaSpec.FieldType		case	scalar
+enum	Dendrite.SchemaSpec.FieldType		case	message
+enum	Dendrite.SchemaSpec.FieldType		case	anyMessage
+struct	Dendrite.SchemaSpec.FieldSpec			
+struct	Dendrite.SchemaSpec.FieldSpec		let	fieldType
+struct	Dendrite.SchemaSpec.FieldSpec		let	repeated
+enum	Dendrite.SchemaWireType			
+enum	Dendrite.SchemaWireType		case	varInt
+enum	Dendrite.SchemaWireType		case	fixed64
+enum	Dendrite.SchemaWireType		case	lengthDelimited
+enum	Dendrite.SchemaWireType		case	startGroup
+enum	Dendrite.SchemaWireType		case	endGroup
+enum	Dendrite.SchemaWireType		case	fixed32
+struct	Dendrite.SegmentLayout			
+struct	Dendrite.SegmentLayout		let	maximumLength
+enum	Dendrite.SegmentLayoutError			
+enum	Dendrite.SegmentLayoutError		case	insufficientSegmentSize
+enum	Dendrite.SegmentLayoutError		case	segmentSizeTooLarge
+struct	Dendrite.AnnotatedMessage<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>		
+struct	Dendrite.AnnotatedMessage<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>	let	annotation
+struct	Dendrite.AnnotatedMessage<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>	let	payload
+struct	Dendrite.AnnotatedMessage.AnnotationOnly<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>		
+struct	Dendrite.AnnotatedMessage.AnnotationOnly<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>	let	annotation
+enum	Dendrite.AnnotatedMessage.Fields<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>		
+enum	Dendrite.AnnotatedMessage.Fields<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>	case	annotation
+enum	Dendrite.AnnotatedMessage.Fields<A	Dendrite.ProtoCodable, B: Dendrite.ProtoCodable>	case	payload
+struct	Dendrite.CreatedAnnotation			
+struct	Dendrite.CreatedAnnotation		let	createdOn
+class	Dendrite.DataFrameReader			
+class	Dendrite.DataFrameReader		let	frameHeaderAddress
+class	Dendrite.DataFrameReader		let	frameDataAddress
+class	Dendrite.DataFrameReader		let	frameHeader
+class	Dendrite.DataFrameReader		let	storageLayout
+enum	Dendrite.DataFrameConsistencyError			
+enum	Dendrite.DataFrameConsistencyError		case	frameCorrupted
+enum	Dendrite.DataFrameConsistencyError		case	failedToAcquireWrite
+enum	Dendrite.DataFrameStreamConfigurationError			
+enum	Dendrite.DataFrameStreamConfigurationError		case	unableToPersist
+enum	Dendrite.DataFrameStreamConfigurationError		case	storageUnavailable
+struct	Dendrite.DataFrameStreamConfiguration			
+struct	Dendrite.DataFrameStreamConfiguration		var	segmentSize
+enum	Dendrite.DataFrameStreamConfiguration.CodingKeys			
+enum	Dendrite.DataFrameStreamConfiguration.CodingKeys		case	segmentSize
+struct	Dendrite.DataFrameStreamContainer			
+struct	Dendrite.DataFrameStreamContainer		let	fm
+struct	Dendrite.DataFrameStreamContainer		let	storageContainer
+struct	Dendrite.DataFrameStreamContainer		var	configurationState
+enum	Dendrite.DataFrameStreamContainer.ConfigurationState			
+enum	Dendrite.DataFrameStreamContainer.ConfigurationState		case	committed
+enum	Dendrite.DataFrameStreamContainer.ConfigurationState		case	awaitingStorage
+class	Dendrite.DataFrameStreamPruner	Dendrite.DataFrameStreamTypedIterator A<A: Dendrite.DataRepresentable>		
+class	Dendrite.DataFrameStreamPruner	Dendrite.DataFrameStreamTypedIterator A<A: Dendrite.DataRepresentable>	var	prunedCount
+enum	Dendrite.DataFrameMutationResult			
+enum	Dendrite.DataFrameMutationResult		case	supercession
+enum	Dendrite.DataFrameMutationResult		case	failed
+enum	Dendrite.DataFrameMutationResult		case	succeededInPlace
+enum	Dendrite.SegmentState			
+enum	Dendrite.SegmentState		case	ok
+enum	Dendrite.SegmentState		case	unknown
+enum	Dendrite.SegmentState		case	headerCorrupted
+enum	Dendrite.SegmentState		case	unrecoverable
+struct	Dendrite.DataFrameStreamSegment			
+struct	Dendrite.DataFrameStreamSegment		let	name
+struct	Dendrite.DataFrameStreamSegment		let	mappedRegion
+struct	Dendrite.DataFrameStreamSegment		let	streamHeader
+struct	Dendrite.DataFrameStreamSegment		let	offsetTable
+struct	Dendrite.DataFrameStreamSegment		let	layout
+enum	Dendrite.DataFrameStreamSegmentError.headerCorruptionType			
+enum	Dendrite.DataFrameStreamSegmentError.headerCorruptionType		case	writtenFrameCount
+enum	Dendrite.DataFrameStreamSegmentError.headerCorruptionType		case	deletedFrameCount
+enum	Dendrite.DataFrameStreamSegmentError			
+enum	Dendrite.DataFrameStreamSegmentError		case	corruptedHeader
+enum	Dendrite.DataFrameStreamSegmentError		case	segmentFull
+enum	Dendrite.DataFrameStreamSegmentError		case	frameAddFailed
+enum	Dendrite.DataFrameStreamSegmentError		case	internalConsistency
+enum	Dendrite.DataFrameStreamSegmentError		case	frameWillNeverFit
+enum	Dendrite.DataFrameStreamSegmentError		case	unrecoverable
+class	Dendrite.DataFrameStreamSegment.Iterator			
+class	Dendrite.DataFrameStreamSegment.Iterator		let	reversed
+class	Dendrite.DataFrameStreamSegment.Iterator		let	identifierSeedCached
+class	Dendrite.DataFrameStreamSegment.Iterator		var	segment
+class	Dendrite.DataFrameStreamSegment.Iterator		var	segmentIndex
+struct	Dendrite.DataFrameStreamSegment.Iterator.Element			
+struct	Dendrite.DataFrameStreamSegment.Iterator.Element		let	segmentIndex
+struct	Dendrite.DataFrameStreamSegment.Iterator.Element		let	identifier
+struct	Dendrite.DataFrameStreamSegment.Iterator.Element		let	data
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>		
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>	var	stream
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>	let	reversed
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>	var	segmentIterator
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>	var	lastSegmentName
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>	var	framesIterated
+class	Dendrite.DataFrameStreamTypedIterator<A	Dendrite.DataRepresentable>	let	ignoreConversionErrors
+struct	Dendrite.DataFrameStreamTypedIterator.Element<A	Dendrite.DataRepresentable>		
+struct	Dendrite.DataFrameStreamTypedIterator.Element<A	Dendrite.DataRepresentable>	let	index
+struct	Dendrite.DataFrameStreamTypedIterator.Element<A	Dendrite.DataRepresentable>	let	identifier
+struct	Dendrite.DataFrameStreamTypedIterator.Element<A	Dendrite.DataRepresentable>	let	element
+struct	Dendrite.FrameStorageLayout			
+struct	Dendrite.FrameStorageLayout		let	headPosition
+struct	Dendrite.MultiStreamContainer			
+struct	Dendrite.MultiStreamContainer		let	storageContainer
+class	Dendrite.RollingStreamContainer			
+class	Dendrite.RollingStreamContainer		let	storageContainer
+class	Dendrite.RollingStreamContainer		let	notificationName
+class	Dendrite.RollingStreamContainer		var	streamOfIdentifiers
+class	Dendrite.RollingStreamContainer		var	containerRolledObserver
+class	Dendrite.RollingStreamContainer		var	lazy
+class	Dendrite.RollingStreamContainer		var	nextRollContinuations
+class	Dendrite.RollingStreamContainer		var	_currentContainerId
+struct	Dendrite.SegmentedDataRegion			
+struct	Dendrite.SegmentedDataRegion		let	segments
+class	Dendrite.SegmentOffsetTable			
+class	Dendrite.SegmentOffsetTable		let	mappedRegion
+class	Dendrite.TypedStream<A	Dendrite.DataRepresentable>		
+class	Dendrite.TypedStream<A	Dendrite.DataRepresentable>	var	container
+class	Dendrite.TypedStream<A	Dendrite.DataRepresentable>	let	guardedState
+class	Dendrite.TypedStream<A	Dendrite.DataRepresentable>	let	guardedPendingWrites
+struct	Dendrite.DataFrameStreamSegments			
+struct	Dendrite.DataFrameStreamSegments		var	segmentNames
+struct	Dendrite.DataFrameStreamSegments		var	segmentMap
+struct	Dendrite.DataFrameStreamPendingWrites<A	Dendrite.DataRepresentable>		
+struct	Dendrite.DataFrameStreamPendingWrites<A	Dendrite.DataRepresentable>	var	transaction
+struct	Dendrite.DataFrameStreamPendingWrites<A	Dendrite.DataRepresentable>	var	pendingWrites
+struct	Dendrite.DataFrameStreamPendingWrites<A	Dendrite.DataRepresentable>	var	continuations
+enum	Dendrite.DataFrameStreamError			
+enum	Dendrite.DataFrameStreamError		case	inconsistentAppend
+enum	Dendrite.DataFrameStreamError		case	storageUnavailable
+struct	Dendrite.DataFrameStreamQuota			
+struct	Dendrite.DataFrameStreamQuota		let	maxStreamSizeInBytes
+struct	Dendrite.DataFrameStreamQuota		let	maxSegmentAge
+class	Dendrite.AtomicRegion			
+class	Dendrite.AtomicRegion		let	startAddress
+enum	Dendrite.MemoryAlignment			
+enum	Dendrite.MemoryAlignment		case	none
+enum	Dendrite.MemoryAlignment		case	fourByte
+enum	Dendrite.MemoryAlignment		case	eightByte
+enum	Dendrite.MemoryOffsetConversionError			
+enum	Dendrite.MemoryOffsetConversionError		case	overflow
+enum	Dendrite.MemoryOffsetConversionError		case	outOfRange
+enum	Dendrite.MemoryMappingError			
+enum	Dendrite.MemoryMappingError		case	unableToMap
+enum	Dendrite.MemoryMappingError		case	unableToOpenFile
+enum	Dendrite.MemoryMappingError		case	fileTooSmall
+enum	Dendrite.MemoryMappingError		case	unableToUnmap
+class	Dendrite.MemoryMappedRegion			
+class	Dendrite.MemoryMappedRegion		var	mappedAddress
+class	Dendrite.MemoryMappedRegion		let	mappedRange
+struct	Dendrite.StorageContainer			
+struct	Dendrite.StorageContainer		let	url
+struct	Dendrite.StorageContainer		let	protection
+enum	Dendrite.MemoryAccess			
+enum	Dendrite.MemoryAccess		case	readOnly
+enum	Dendrite.MemoryAccess		case	readWrite
+enum	Dendrite.MemoryAccess		case	writeOnly
+struct	Dendrite.Storage			
+enum	Dendrite.Storage.EnsureExistsResult			
+enum	Dendrite.Storage.EnsureExistsResult		case	didNotExist
+enum	Dendrite.Storage.EnsureExistsResult		case	existed
+enum	Dendrite.StorageError			
+enum	Dendrite.StorageError		case	storageUnavailable
+enum	Dendrite.StorageError		case	generic
+enum	Dendrite.StorageError		case	unableToOpenFile
+enum	Dendrite.DataRepresentableError			
+enum	Dendrite.DataRepresentableError		case	serializationFailure
+struct	Dendrite.InternalLogger			
+struct	Dendrite.InternalLogger		let	logger
+protocol	Dendrite.DeviceLockState			
+protocol	Dendrite.JsonRepresentable			
+protocol	Dendrite.ProtoCodable			
+protocol	Dendrite.ProtoDecodingProvider			
+protocol	Dendrite.ProtoEncodingProvider			
+protocol	Dendrite.ProtoLibraryProvider			
+protocol	Dendrite.ProtoMessageReader			
+protocol	Dendrite.ProtoMessageWriter			
+protocol	Dendrite.DynamicBinder	T		
+protocol	Dendrite.OneOfCaseBuilder	UnionType		
+protocol	Dendrite.OneOfCaseProperty	UnionType		
+protocol	Dendrite.OneOfCaseUnion	Builder		
+protocol	Dendrite.DynamicProtoMessage			
+protocol	Dendrite.FailableStringRepresentable			
+protocol	Dendrite.InferredSchemaVending			
+protocol	Dendrite.ProtoMessage	ProtoFields		
+protocol	Dendrite.SchemaBoundProperty			
+protocol	Dendrite.SchemaScalarRepresentable			
+protocol	Dendrite.SchemaSpecOntology	TypeIdentifier		
+protocol	Dendrite.ContainingCreateDate			
+protocol	Dendrite.AnnotatedWithCreateDate	AnnotationOnly		
+protocol	Dendrite.DataFrameStreamStorage			
+protocol	Dendrite.DataRepresentable			
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.WireTypes	Swift.RawRepresentable		
+protocol	conformance __C.WireTypes	Swift.Equatable		
+protocol	conformance __C.FileProtectionType	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Equatable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Hashable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance Dendrite.FileLockError	Swift.Error		
+protocol	conformance Dendrite.FirstUnlockObserver	Swift.Actor		
+protocol	conformance Foundation.UUID	Dendrite.JsonRepresentable		
+protocol	conformance Foundation.Data	Dendrite.JsonRepresentable		
+protocol	conformance JsonSchemaEncoder.EncodingError	Swift.Error		
+protocol	conformance Dendrite.JsonSchemaEncoder	Dendrite.ProtoEncodingProvider		
+protocol	conformance __C.WireTypes	Swift.CustomStringConvertible: Dendrite		
+protocol	conformance Dendrite.ProtoTagTreeOperationError	Swift.Error		
+protocol	conformance Dendrite.ProtoCodableError	Swift.Error		
+protocol	conformance PBDataReader	Dendrite.ProtoDecodingProvider		
+protocol	conformance PBDataWriter	Dendrite.ProtoEncodingProvider		
+protocol	conformance Dendrite.ProtoLibraries	Swift.Equatable		
+protocol	conformance Dendrite.ProtoLibraries	Swift.Hashable		
+protocol	conformance Dendrite.ProtoLibraries	Dendrite.ProtoLibraryProvider		
+protocol	conformance ProtoTagPath.FormatError	Swift.Equatable		
+protocol	conformance ProtoTagPath.FormatError	Swift.Hashable		
+protocol	conformance ProtoTagPath.FormatError	Swift.Error		
+protocol	conformance Dendrite.ProtoTagPath	Swift.Hashable		
+protocol	conformance Dendrite.ProtoTagPath	Swift.CustomStringConvertible		
+protocol	conformance Dendrite.ProtoTagPath	Swift.Comparable		
+protocol	conformance Dendrite.ProtoTagPath	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Dendrite.ProtoTagPath	Swift.Equatable		
+protocol	conformance ProtoTagPathStem.StemRoot	Swift.Equatable		
+protocol	conformance ProtoTagPathStem.StemRoot	Swift.Hashable		
+protocol	conformance ProtoTagPathStem.FormatError	Swift.Equatable		
+protocol	conformance ProtoTagPathStem.FormatError	Swift.Hashable		
+protocol	conformance ProtoTagPathStem.FormatError	Swift.Error		
+protocol	conformance Dendrite.ProtoTagPathStem	Swift.Equatable		
+protocol	conformance Dendrite.ProtoTagPathStem	Swift.Hashable		
+protocol	conformance Dendrite.ProtoTagPathStem	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Dendrite.ProtoTagTreeOperation	Swift.Equatable		
+protocol	conformance Dendrite.ProtoTagTreeOperation	Swift.Hashable		
+protocol	conformance Dendrite.MessageFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.OptionalMessageFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.OptionalRawRepresentableFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.OptionalRepeatedMessageFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.OptionalRepeatedScalarFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.OptionalScalarFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.RawRepresentableFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.RepeatedMessageFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.RepeatedScalarFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.ScalarFieldBinder	Dendrite.DynamicBinder		
+protocol	conformance Dendrite.ProtoScopedMessage	Dendrite.ProtoMessageWriter		
+protocol	conformance Dendrite.ProtoScopedMessage	Swift.Equatable		
+protocol	conformance Dendrite.OneOfCase	Dendrite.OneOfCaseProperty		
+protocol	conformance Dendrite.OneOfCase	Dendrite.SchemaBoundProperty		
+protocol	conformance Dendrite.OneOfField	Dendrite.SchemaBoundProperty		
+protocol	conformance Dendrite.MirrorCopyEncoder	Dendrite.ProtoEncodingProvider		
+protocol	conformance AnyMessageTypeSpec.TypeIdentifierField	Swift.Equatable		
+protocol	conformance Dendrite.AnyMessageTypeSpec	Swift.Equatable		
+protocol	conformance Swift.Int32	Dendrite.FailableStringRepresentable		
+protocol	conformance Swift.String	Dendrite.FailableStringRepresentable		
+protocol	conformance Dendrite.ProtoScopedMessage	Dendrite.InferredSchemaVending		
+protocol	conformance ProtoFieldValue.ProtoDiscreteValue	Swift.Equatable		
+protocol	conformance Dendrite.ProtoFieldValue	Swift.Equatable		
+protocol	conformance ProtoFieldValueExpectation.ExpectationFailure	Swift.Error		
+protocol	conformance Dendrite.SchemaField	Dendrite.SchemaBoundProperty		
+protocol	conformance Dendrite.SchemaScalarType	Swift.Equatable		
+protocol	conformance Dendrite.SchemaScalarType	Swift.Hashable		
+protocol	conformance Dendrite.SchemaScalarValue	Swift.Equatable		
+protocol	conformance Dendrite.SchemaScalarValue	Swift.Hashable		
+protocol	conformance Swift.Double	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.Float	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.Int32	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.Int64	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.UInt32	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.UInt64	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.Bool	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Swift.String	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Foundation.Data	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Foundation.UUID	Dendrite.SchemaScalarRepresentable		
+protocol	conformance Foundation.Date	Dendrite.SchemaScalarRepresentable		
+protocol	conformance SchemaSpec.FieldType	Swift.Equatable		
+protocol	conformance SchemaSpec.FieldSpec	Swift.Equatable		
+protocol	conformance Dendrite.SchemaSpec	Swift.Equatable		
+protocol	conformance Dendrite.SchemaWireType	Swift.Equatable		
+protocol	conformance Dendrite.SchemaWireType	Swift.Hashable		
+protocol	conformance Dendrite.SchemaWireType	Swift.RawRepresentable		
+protocol	conformance Dendrite.SchemaWireType	Swift.CaseIterable		
+protocol	conformance Dendrite.SegmentLayoutError	Swift.Hashable		
+protocol	conformance Dendrite.SegmentLayoutError	Swift.Equatable		
+protocol	conformance Dendrite.SegmentLayoutError	Swift.Error		
+protocol	conformance AnnotatedMessage.AnnotationOnly	Dendrite.ProtoCodable		
+protocol	conformance AnnotatedMessage.AnnotationOnly	Dendrite.DataRepresentable		
+protocol	conformance Dendrite.AnnotatedMessage	Dendrite.ProtoCodable		
+protocol	conformance Dendrite.AnnotatedMessage	Dendrite.DataRepresentable		
+protocol	conformance AnnotatedMessage.Fields	Swift.Hashable		
+protocol	conformance AnnotatedMessage.Fields	Swift.Equatable		
+protocol	conformance AnnotatedMessage.Fields	Swift.RawRepresentable		
+protocol	conformance Dendrite.AnnotatedMessage	Dendrite.AnnotatedWithCreateDate		
+protocol	conformance Dendrite.AnnotatedMessage.AnnotationOnly	Dendrite.ContainingCreateDate		
+protocol	conformance Dendrite.CreatedAnnotation	Dendrite.ProtoCodable		
+protocol	conformance Dendrite.CreatedAnnotation	Dendrite.ContainingCreateDate		
+protocol	conformance Dendrite.CreatedAnnotation	Dendrite.DataRepresentable		
+protocol	conformance Dendrite.DataFrameConsistencyError	Swift.Hashable		
+protocol	conformance Dendrite.DataFrameConsistencyError	Swift.Equatable		
+protocol	conformance Dendrite.DataFrameConsistencyError	Swift.Error		
+protocol	conformance Dendrite.DataFrameStreamConfiguration	Dendrite.DataRepresentable		
+protocol	conformance Dendrite.DataFrameStreamConfigurationError	Swift.Hashable		
+protocol	conformance Dendrite.DataFrameStreamConfigurationError	Swift.Equatable		
+protocol	conformance Dendrite.DataFrameStreamConfigurationError	Swift.Error		
+protocol	conformance Dendrite.DataFrameStreamConfiguration	Swift.Encodable		
+protocol	conformance Dendrite.DataFrameStreamConfiguration	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Dendrite.SegmentState	Swift.Equatable		
+protocol	conformance Dendrite.SegmentState	Swift.Hashable		
+protocol	conformance Dendrite.SegmentState	Swift.RawRepresentable		
+protocol	conformance Dendrite.DataFrameStreamSegmentError	Swift.Error		
+protocol	conformance DataFrameStreamSegment.Iterator	Swift.Sequence		
+protocol	conformance DataFrameStreamSegment.Iterator	Swift.IteratorProtocol		
+protocol	conformance Dendrite.DataFrameStreamSegment	Swift.Sequence		
+protocol	conformance Dendrite.DataFrameStreamTypedIterator	Swift.Sequence		
+protocol	conformance Dendrite.DataFrameStreamTypedIterator	Swift.IteratorProtocol		
+protocol	conformance Dendrite.RollingStreamContainer	Swift.Actor		
+protocol	conformance Dendrite.SegmentedDataRegion	Dendrite.DataRepresentable		
+protocol	conformance Dendrite.TypedStream	Dendrite.DataFrameStreamStorage		
+protocol	conformance Dendrite.DataFrameStreamError	Swift.Hashable		
+protocol	conformance Dendrite.DataFrameStreamError	Swift.Equatable		
+protocol	conformance Dendrite.DataFrameStreamError	Swift.Error		
+protocol	conformance Dendrite.TypedStream	Swift.Sequence		
+protocol	conformance Dendrite.MemoryAlignment	Swift.Equatable		
+protocol	conformance Dendrite.MemoryAlignment	Swift.Hashable		
+protocol	conformance Dendrite.MemoryAlignment	Swift.RawRepresentable		
+protocol	conformance Dendrite.MemoryOffsetConversionError	Swift.Hashable		
+protocol	conformance Dendrite.MemoryOffsetConversionError	Swift.Equatable		
+protocol	conformance Dendrite.MemoryOffsetConversionError	Swift.Error		
+protocol	conformance Dendrite.MemoryMappingError	Swift.Error		
+protocol	conformance Dendrite.MemoryAccess	Swift.Equatable		
+protocol	conformance Dendrite.MemoryAccess	Swift.Hashable		
+protocol	conformance Dendrite.StorageError	Swift.Error		
+protocol	conformance Dendrite.DataRepresentableError	Swift.Equatable		
+protocol	conformance Dendrite.DataRepresentableError	Swift.Hashable		
+protocol	conformance Dendrite.DataRepresentableError	Swift.Error		
+protocol	conformance Foundation.UUID	Dendrite.DataRepresentable		
+protocol	conformance Swift.String	Dendrite.DataRepresentable		
+protocol	conformance Foundation.Data	Dendrite.DataRepresentable		
+extension	Dendrite.ProtoTagPath	ExpressibleByArrayLiteral		
+extension	Dendrite.ProtoTagPathStem	ExpressibleByArrayLiteral		
+extension	Dendrite.MessageFieldBinder	DynamicBinder		
+extension	Dendrite.OptionalMessageFieldBinder	DynamicBinder		
+extension	Dendrite.OptionalRawRepresentableFieldBinder	DynamicBinder		
+extension	Dendrite.OptionalRepeatedMessageFieldBinder	DynamicBinder		
+extension	Dendrite.OptionalRepeatedScalarFieldBinder	DynamicBinder		
+extension	Dendrite.OptionalScalarFieldBinder	DynamicBinder		
+extension	Dendrite.RawRepresentableFieldBinder	DynamicBinder		
+extension	Dendrite.RepeatedMessageFieldBinder	DynamicBinder		
+extension	Dendrite.RepeatedScalarFieldBinder	DynamicBinder		
+extension	Dendrite.ScalarFieldBinder	DynamicBinder		
+extension	Dendrite.OneOfCase	OneOfCaseProperty		
+extension	Dendrite.SchemaWireType	RawRepresentable		
+extension	Dendrite.SchemaWireType	CaseIterable		
+extension	Dendrite.AnnotatedMessage.Fields	RawRepresentable		
+extension	Dendrite.AnnotatedMessage	AnnotatedWithCreateDate		
+extension	Dendrite.SegmentState	RawRepresentable		
+extension	Dendrite.DataFrameStreamSegment.Iterator	Sequence		
+extension	Dendrite.DataFrameStreamSegment.Iterator	IteratorProtocol		
+extension	Dendrite.DataFrameStreamSegment	Sequence		
+extension	Dendrite.DataFrameStreamTypedIterator	Sequence		
+extension	Dendrite.DataFrameStreamTypedIterator	IteratorProtocol		
+extension	Dendrite.TypedStream	Sequence		
+extension	Dendrite.MemoryAlignment	RawRepresentable		

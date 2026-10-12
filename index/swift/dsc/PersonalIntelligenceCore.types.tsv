@@ -1,0 +1,117 @@
+kind	type	conformance	member_kind	member
+class	PersonalIntelligenceCore.AppLaunchCounter			
+class	PersonalIntelligenceCore.AppLaunchCounter		var	lazy
+enum	PersonalIntelligenceCore.MetricsError			
+enum	PersonalIntelligenceCore.MetricsError		case	codabilityError
+enum	PersonalIntelligenceCore.MetricsError		case	backendUndefinedError
+class	PersonalIntelligenceCore.MetricMessage	NSObject		
+class	PersonalIntelligenceCore.MetricMessage	NSObject	let	backend
+class	PersonalIntelligenceCore.MetricMessage	NSObject	let	messageIdentifier
+class	PersonalIntelligenceCore.MetricMessage	NSObject	let	messageContents
+class	PersonalIntelligenceCore.MetricMessage	NSObject	let	dataVersion
+class	PersonalIntelligenceCore.MetricMessage	NSObject	var	lazy
+struct	PersonalIntelligenceCore.CodableField			
+struct	PersonalIntelligenceCore.CodableField		let	key
+struct	PersonalIntelligenceCore.CodableField		let	doubleValue
+struct	PersonalIntelligenceCore.CodableField		let	stringValue
+struct	PersonalIntelligenceCore.StorableMessage			
+struct	PersonalIntelligenceCore.StorableMessage		let	backend
+struct	PersonalIntelligenceCore.StorableMessage		let	messageIdentifier
+struct	PersonalIntelligenceCore.StorableMessage		let	fields
+struct	PersonalIntelligenceCore.StorableMessage		let	dataVersion
+enum	PersonalIntelligenceCore.CodableField.CodingKeys			
+enum	PersonalIntelligenceCore.CodableField.CodingKeys		case	key
+enum	PersonalIntelligenceCore.CodableField.CodingKeys		case	doubleValue
+enum	PersonalIntelligenceCore.CodableField.CodingKeys		case	stringValue
+enum	PersonalIntelligenceCore.StorableMessage.CodingKeys			
+enum	PersonalIntelligenceCore.StorableMessage.CodingKeys		case	backend
+enum	PersonalIntelligenceCore.StorableMessage.CodingKeys		case	messageIdentifier
+enum	PersonalIntelligenceCore.StorableMessage.CodingKeys		case	fields
+enum	PersonalIntelligenceCore.StorableMessage.CodingKeys		case	dataVersion
+struct	PersonalIntelligenceCore.UserDefault			
+struct	PersonalIntelligenceCore.UserDefault		let	defaultValue
+struct	PersonalIntelligenceCore.UserDefault		let	key
+struct	PersonalIntelligenceCore.UserDefault		var	container
+enum	PersonalIntelligenceCore.FeatureFlagDomains			
+enum	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding			
+enum	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding		case	realtimeAPI
+enum	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding		case	spotlightInstantReceiver
+enum	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding		case	portrait
+enum	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding		case	userActivitiesAndInteractions
+enum	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding		case	foundInAppsURLs
+enum	PersonalIntelligenceCore.FeatureFlagDomains.Spotlight			
+enum	PersonalIntelligenceCore.FeatureFlagDomains.Spotlight		case	spotlightKnowledgeTextUnderstanding
+enum	PersonalIntelligenceCore.FeatureFlagDomains.CoreSuggestionsInternals			
+enum	PersonalIntelligenceCore.FeatureFlagDomains.CoreSuggestionsInternals		case	spotlightknowledgedTUV2
+struct	PersonalIntelligenceCore.MetricConfiguration			
+struct	PersonalIntelligenceCore.MetricConfiguration		let	metricIdentifiers
+enum	PersonalIntelligenceCore.MetricConfiguration.CodingKeys			
+enum	PersonalIntelligenceCore.MetricConfiguration.CodingKeys		case	metricIdentifiers
+struct	PersonalIntelligenceCore.CoreAnalyticsDispatcher			
+enum	PersonalIntelligenceCore.BundleId			
+enum	PersonalIntelligenceCore.BundleId		case	macOSMail
+enum	PersonalIntelligenceCore.BundleId		case	iOSMail
+enum	PersonalIntelligenceCore.BundleId		case	mail
+enum	PersonalIntelligenceCore.BundleId		case	messages
+enum	PersonalIntelligenceCore.MetricError			
+enum	PersonalIntelligenceCore.MetricError		case	noDeviceId
+enum	PersonalIntelligenceCore.MetricError		case	noCalendar
+enum	PersonalIntelligenceCore.MetricError		case	noDateFile
+class	PersonalIntelligenceCore.MetricStorage	NSObject		
+class	PersonalIntelligenceCore.MetricStorage	NSObject	let	stream
+class	PersonalIntelligenceCore.MetricStore	NSObject		
+class	PersonalIntelligenceCore.MetricStore	NSObject	let	storageLock
+class	PersonalIntelligenceCore.MetricStore	NSObject	var	windowStartDate
+class	PersonalIntelligenceCore.MetricStore	NSObject	let	configuration
+class	PersonalIntelligenceCore.MetricStore	NSObject	var	enrichmentProviders
+class	PersonalIntelligenceCore.MetricStore	NSObject	var	messageListeners
+class	PersonalIntelligenceCore.MetricStore	NSObject	let	sendInterval
+protocol	PersonalIntelligenceCore.CheckableFeatureFlag			
+protocol	conformance PersonalIntelligenceCore.MetricsError	Swift.Equatable		
+protocol	conformance PersonalIntelligenceCore.MetricsError	Swift.Hashable		
+protocol	conformance PersonalIntelligenceCore.MetricsError	Swift.Error		
+protocol	conformance CodableField	Swift.Encodable		
+protocol	conformance CodableField	Swift.Decodable		
+protocol	conformance StorableMessage	Swift.Encodable		
+protocol	conformance StorableMessage	Swift.Decodable		
+protocol	conformance StorableMessage.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StorableMessage.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StorableMessage.CodingKeys	Swift.Hashable		
+protocol	conformance StorableMessage.CodingKeys	Swift.Equatable		
+protocol	conformance CodableField.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableField.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableField.CodingKeys	Swift.Hashable		
+protocol	conformance CodableField.CodingKeys	Swift.Equatable		
+protocol	conformance CodableField.CodingKeys	Swift.CodingKey		
+protocol	conformance StorableMessage.CodingKeys	Swift.CodingKey		
+protocol	conformance FeatureFlagDomains.TextUnderstanding	Swift.Equatable		
+protocol	conformance FeatureFlagDomains.TextUnderstanding	Swift.Hashable		
+protocol	conformance FeatureFlagDomains.TextUnderstanding	PersonalIntelligenceCore.CheckableFeatureFlag		
+protocol	conformance FeatureFlagDomains.TextUnderstanding	Swift.CaseIterable		
+protocol	conformance FeatureFlagDomains.TextUnderstanding	FeatureFlags.FeatureFlagsKey		
+protocol	conformance FeatureFlagDomains.Spotlight	Swift.Equatable		
+protocol	conformance FeatureFlagDomains.Spotlight	Swift.Hashable		
+protocol	conformance FeatureFlagDomains.Spotlight	PersonalIntelligenceCore.CheckableFeatureFlag		
+protocol	conformance FeatureFlagDomains.Spotlight	Swift.CaseIterable		
+protocol	conformance FeatureFlagDomains.Spotlight	FeatureFlags.FeatureFlagsKey		
+protocol	conformance FeatureFlagDomains.CoreSuggestionsInternals	Swift.Equatable		
+protocol	conformance FeatureFlagDomains.CoreSuggestionsInternals	Swift.Hashable		
+protocol	conformance FeatureFlagDomains.CoreSuggestionsInternals	PersonalIntelligenceCore.CheckableFeatureFlag		
+protocol	conformance FeatureFlagDomains.CoreSuggestionsInternals	Swift.CaseIterable		
+protocol	conformance FeatureFlagDomains.CoreSuggestionsInternals	FeatureFlags.FeatureFlagsKey		
+protocol	conformance PersonalIntelligenceCore.MetricConfiguration	Swift.Decodable		
+protocol	conformance PersonalIntelligenceCore.MetricConfiguration	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PersonalIntelligenceCore.BundleId	Swift.Hashable		
+protocol	conformance PersonalIntelligenceCore.BundleId	Swift.Equatable		
+protocol	conformance PersonalIntelligenceCore.BundleId	Swift.CustomStringConvertible		
+protocol	conformance PersonalIntelligenceCore.MetricError	Swift.Equatable		
+protocol	conformance PersonalIntelligenceCore.MetricError	Swift.Hashable		
+protocol	conformance PersonalIntelligenceCore.MetricError	Swift.Error		
+extension	PersonalIntelligenceCore.FeatureFlagDomains.TextUnderstanding	CaseIterable		
+extension	PersonalIntelligenceCore.FeatureFlagDomains.Spotlight	CaseIterable		
+extension	PersonalIntelligenceCore.FeatureFlagDomains.CoreSuggestionsInternals	CaseIterable		

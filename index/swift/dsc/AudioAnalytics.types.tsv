@@ -1,0 +1,79 @@
+kind	type	conformance	member_kind	member
+class	AudioAnalytics.AudioAnalyticsTestReporter	AudioAnalyticsReporter		
+enum	AudioAnalytics.AudioAnalytics			
+enum	AudioAnalytics.AudioAnalytics		case	simulateCustomer
+class	AudioAnalytics.PerfCheck			
+class	AudioAnalytics.PerfCheck		var	pcSessions
+class	AudioAnalytics.PerfCheck		var	pids
+class	AudioAnalytics.PerfCheck		var	appName
+class	AudioAnalytics.PerfCheck		var	state
+class	AudioAnalytics.PerfCheck		var	serviceType
+class	AudioAnalytics.PerfCheck		let	logger
+class	AudioAnalytics.PCSession			
+class	AudioAnalytics.PCSession		let	session
+class	AudioAnalytics.PCSession		var	state
+enum	AudioAnalytics.PCSession.State			
+enum	AudioAnalytics.PCSession.State		case	ready
+enum	AudioAnalytics.PCSession.State		case	started
+enum	AudioAnalytics.PCSession.State		case	finished
+enum	AudioAnalytics.PerfCheck.State			
+enum	AudioAnalytics.PerfCheck.State		case	started
+enum	AudioAnalytics.PerfCheck.State		case	stopped
+enum	AudioAnalytics.PerfCheck.State		case	abandoned
+class	AudioAnalytics.RateLimiter			
+class	AudioAnalytics.RateLimiter		let	tokenBucket
+class	AudioAnalytics.TokenBucket			
+class	AudioAnalytics.TokenBucket		let	maxRateHz
+class	AudioAnalytics.TokenBucket		let	maxBurst
+class	AudioAnalytics.TokenBucket		var	tokens
+class	AudioAnalytics.TokenBucket		var	lastFill
+class	AudioAnalytics.ServerClient	NSObject		
+class	AudioAnalytics.ServerClient	NSObject	let	logger
+class	AudioAnalytics.ServerClient	NSObject	var	serverProxy
+class	AudioAnalytics.ServerClient	NSObject	let	halIOCategory
+class	AudioAnalytics.ServerClient	NSObject	let	serialQueue
+class	AudioAnalytics.ServerClient	NSObject	let	xpcConnection
+class	AudioAnalytics.ServerClient	NSObject	let	idGenerator
+class	AudioAnalytics.ServerClient	NSObject	let	injectedServerProtocol
+class	AudioAnalytics.ServerClient	NSObject	let	messageRateLimiter
+class	AudioAnalytics.ServerClient	NSObject	var	clientReporterStates
+class	AudioAnalytics.ServerClient	NSObject	var	hwtraceHandle
+class	AudioAnalytics.ServerClient	NSObject	var	lastHWTraceHandleQuery
+class	AudioAnalytics.ReporterIDGenerator			
+class	AudioAnalytics.ReporterIDGenerator		var	reporterIDCount
+class	AudioAnalytics.ReporterData			
+class	AudioAnalytics.ReporterData		let	reporterID
+class	AudioAnalytics.ReporterData		var	serviceType
+class	AudioAnalytics.ReporterData		var	configuration
+class	AudioAnalytics.ReporterData		var	perfCheck
+enum	AudioAnalytics.ReporterState			
+enum	AudioAnalytics.ReporterState		case	disconnected
+enum	AudioAnalytics.ReporterState		case	connected
+enum	AudioAnalytics.ActiveReporterState			
+enum	AudioAnalytics.ActiveReporterState		case	started
+enum	AudioAnalytics.ActiveReporterState		case	stopped
+struct	AudioAnalytics.StartedReporterData			
+struct	AudioAnalytics.StartedReporterData		let	startDate
+struct	AudioAnalytics.StartedReporterData		let	numRateLimitDrops
+class	AudioAnalytics.ServerProxy			
+class	AudioAnalytics.ServerProxy		let	logger
+class	AudioAnalytics.ServerProxy		let	xpcConnection
+class	AudioAnalytics.ServerProxy		var	lazy
+class	AudioAnalytics.ServerProxy		var	lazy
+class	AudioAnalytics.ServerProxy		var	lazy
+protocol	conformance __C.AudioServiceType	Swift.Equatable: AudioAnalytics		
+protocol	conformance __C.AudioServiceType	Swift.RawRepresentable: AudioAnalytics		
+protocol	conformance __C.AudioEventCategory	Swift.Equatable: AudioAnalytics		
+protocol	conformance __C.AudioEventCategory	Swift.RawRepresentable: AudioAnalytics		
+protocol	conformance __C.AudioEventType	Swift.Equatable: AudioAnalytics		
+protocol	conformance __C.AudioEventType	Swift.RawRepresentable: AudioAnalytics		
+protocol	conformance __C.AudioEventType	Swift.CustomStringConvertible		
+protocol	conformance __C.AudioServiceType	Swift.CustomStringConvertible		
+protocol	conformance __C.AudioEventCategory	Swift.CustomStringConvertible		
+protocol	conformance AudioAnalytics	Swift.Hashable		
+protocol	conformance AudioAnalytics	Swift.Equatable		
+protocol	conformance AudioAnalytics	FeatureFlags.FeatureFlagsKey		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance PCSession.State	Swift.Hashable		
+protocol	conformance PCSession.State	Swift.Equatable		

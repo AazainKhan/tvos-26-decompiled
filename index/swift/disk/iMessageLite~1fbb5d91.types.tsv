@@ -1,0 +1,300 @@
+kind	type	conformance	member_kind	member
+enum	iMessageLite.LiteMessageReceiveError			
+enum	iMessageLite.LiteMessageReceiveError		case	unableToJoinChat
+enum	iMessageLite.LiteMessageReceiveError		case	mismatchedSegmentCount
+enum	iMessageLite.LiteMessageReceiveError		case	noSegmentsForConsolidation
+enum	iMessageLite.LiteMessageReceiveError		case	noSenderURI
+enum	iMessageLite.LiteMessageReceiveError		case	noRecipientURI
+struct	iMessageLite.State			
+struct	iMessageLite.State		var	offGridMessenger
+struct	iMessageLite.State		var	segmentStore
+struct	iMessageLite.State		var	republishRateLimiter
+struct	iMessageLite.State		var	lastSatelliteStateChange
+struct	iMessageLite.State		var	minimumRecoveryCooldown
+struct	iMessageLite.State		var	emergencyContactsNotificationToken
+struct	iMessageLite.State		var	familyContactsNotificationToken
+struct	iMessageLite.State		var	pendingSMSMessages
+struct	iMessageLite.PendingSMSMessage			
+struct	iMessageLite.PendingSMSMessage		let	guid
+struct	iMessageLite.PendingSMSMessage		let	fallbackHash
+enum	iMessageLite.ConsolidationIdentifierError			
+enum	iMessageLite.ConsolidationIdentifierError		case	missingSenderKeyID
+enum	iMessageLite.OutgoingSatelliteMessageError			
+enum	iMessageLite.OutgoingSatelliteMessageError		case	invalidChatStyle
+enum	iMessageLite.OutgoingSatelliteMessageError		case	encodingFailed
+enum	iMessageLite.OutgoingSatelliteMessageError		case	compressionFailed
+enum	iMessageLite.OutgoingSatelliteMessageError		case	invalidMessageUUID
+enum	iMessageLite.LiteMessageEffect			
+enum	iMessageLite.LiteMessageEffect		case	balloons
+enum	iMessageLite.LiteMessageEffect		case	confetti
+enum	iMessageLite.LiteMessageEffect		case	lasers
+enum	iMessageLite.LiteMessageEffect		case	fireworks
+enum	iMessageLite.LiteMessageEffect		case	shootingStar
+enum	iMessageLite.LiteMessageEffect		case	celebration
+enum	iMessageLite.LiteMessageEffect		case	love
+enum	iMessageLite.LiteMessageEffect		case	echo
+enum	iMessageLite.LiteMessageEffect		case	spotlight
+enum	iMessageLite.LiteMessageEffect		case	slamImpact
+enum	iMessageLite.LiteMessageEffect		case	loudImpact
+enum	iMessageLite.LiteMessageEffect		case	gentleImpact
+enum	iMessageLite.LiteMessageEffect		case	invisibleInk
+struct	iMessageLite.LiteMessageHeader			
+struct	iMessageLite.LiteMessageHeader		let	messageType
+struct	iMessageLite.LiteMessageHeader		let	backwardsCompatibilityText
+enum	iMessageLite.LiteMessageSegmentStoreError			
+enum	iMessageLite.LiteMessageSegmentStoreError		case	notAvailable
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToEncodeSegment
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToSaveSegment
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToFetchSegments
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToDecodeSegment
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToDeleteSegments
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToCountSegments
+enum	iMessageLite.LiteMessageSegmentStoreError		case	failedToCountExistingSegmentForEncryptedMessage
+enum	iMessageLite.LiteMessageSegmentStoreError		case	alreadyHasSegment
+class	iMessageLite.LiteMessageSegmentStore			
+class	iMessageLite.LiteMessageSegmentStore		var	_context
+struct	iMessageLite.LiteMessage			
+struct	iMessageLite.LiteMessage		let	header
+struct	iMessageLite.LiteMessage		let	content
+enum	iMessageLite.LiteMessageReachabilityError			
+enum	iMessageLite.LiteMessageReachabilityError		case	invalidDestinationURI
+enum	iMessageLite.LiteMessageReachabilityError		case	invalidSenderURI
+enum	iMessageLite.LiteMessageReachabilityError		case	idsUnknownError
+enum	iMessageLite.LiteMessageReachabilityError		case	noOffGridResults
+enum	iMessageLite.LiteMessageReachabilityError		case	noChatIdentifier
+enum	iMessageLite.LiteMessageReachabilityError		case	noTimeInterval
+enum	iMessageLite.LiteMessageReachabilityError		case	notIndividualChat
+enum	iMessageLite.LiteMessageExchangeStatus			
+enum	iMessageLite.LiteMessageExchangeStatus		case	lastMessageWithinLimit
+enum	iMessageLite.LiteMessageExchangeStatus		case	lastMessageBeyondLimit
+enum	iMessageLite.LiteMessageExchangeStatus		case	serviceMismatch
+enum	iMessageLite.LiteMessageExchangeStatus		case	noMessages
+struct	iMessageLite.LiteMessageContext			
+struct	iMessageLite.LiteMessageContext		let	identifier
+struct	iMessageLite.LiteMessageContext		let	unencryptedIdentifier
+struct	iMessageLite.LiteMessageContext		let	senderID
+struct	iMessageLite.LiteMessageContext		let	recipientID
+struct	iMessageLite.LiteMessageContext		let	isFromMe
+struct	iMessageLite.LiteMessageContext		let	date
+struct	iMessageLite.LiteMessageContext		let	sentOrReceivedOnSatellite
+struct	iMessageLite.LiteMessageContext		let	preferredService
+struct	iMessageLite.LiteMessageContext		let	command
+enum	iMessageLite.LiteMessageAcknowledgement			
+enum	iMessageLite.LiteMessageAcknowledgement		case	heart
+enum	iMessageLite.LiteMessageAcknowledgement		case	thumbsUp
+enum	iMessageLite.LiteMessageAcknowledgement		case	thumbsDown
+enum	iMessageLite.LiteMessageAcknowledgement		case	ha
+enum	iMessageLite.LiteMessageAcknowledgement		case	exclamation
+enum	iMessageLite.LiteMessageAcknowledgement		case	questionMark
+enum	iMessageLite.LiteMessageAcknowledgement		case	emoji
+enum	iMessageLite.LiteMessageAcknowledgement		case	heartRemoved
+enum	iMessageLite.LiteMessageAcknowledgement		case	thumbsUpRemoved
+enum	iMessageLite.LiteMessageAcknowledgement		case	thumbsDownRemoved
+enum	iMessageLite.LiteMessageAcknowledgement		case	haRemoved
+enum	iMessageLite.LiteMessageAcknowledgement		case	exclamationRemoved
+enum	iMessageLite.LiteMessageAcknowledgement		case	questionMarkRemoved
+enum	iMessageLite.LiteMessageAcknowledgement		case	emojiRemoved
+enum	iMessageLite.LiteMessageEncodingError			
+enum	iMessageLite.LiteMessageEncodingError		case	invalidThreadOriginator
+enum	iMessageLite.LiteMessageEncodingError		case	invalidAssociatedMessageGUID
+enum	iMessageLite.LiteMessageEncodingError		case	unsupportedMessageType
+enum	iMessageLite.LiteMessageEncodingError		case	invalidAssociatedMessageType
+enum	iMessageLite.LiteRelayEncodingError			
+enum	iMessageLite.LiteRelayEncodingError		case	invalidRecipientURI
+struct	iMessageLite.LiteRelayMessage			
+struct	iMessageLite.LiteRelayMessage		let	header
+struct	iMessageLite.LiteRelayMessage		let	content
+enum	iMessageLite.LiteRelayEncodingError			
+enum	iMessageLite.LiteRelayEncodingError		case	invalidRecipientURI
+struct	iMessageLite.LiteRelayTextMessageContent			
+struct	iMessageLite.LiteRelayTextMessageContent		let	text
+struct	iMessageLite.LiteRelayTextMessageContent		let	chatIdentifier
+struct	iMessageLite.LiteRelayAcknowledgmentMessageContent			
+struct	iMessageLite.LiteRelayAcknowledgmentMessageContent		let	associatedMessageType
+struct	iMessageLite.LiteRelayAcknowledgmentMessageContent		let	associatedMessageGUID
+struct	iMessageLite.LiteRelayAcknowledgmentMessageContent		let	emoji
+struct	iMessageLite.LiteRelayAcknowledgmentMessageContent		let	chatIdentifier
+struct	iMessageLite.LiteRelayMessageHeader			
+struct	iMessageLite.LiteRelayMessageHeader		let	messageType
+struct	iMessageLite.LiteRelayMessageHeader		let	chatIdentifier
+struct	iMessageLite.LiteRelayMessageHeader		let	backwardsCompatibilityText
+enum	iMessageLite.LiteRelayMessageType			
+enum	iMessageLite.LiteRelayMessageType		case	text
+enum	iMessageLite.LiteRelayMessageType		case	acknowledgment
+enum	iMessageLite.LiteMessageContentError			
+enum	iMessageLite.LiteMessageContentError		case	missingEmojiForEmojiTapback
+struct	iMessageLite.LiteTextMessageContent			
+struct	iMessageLite.LiteTextMessageContent		let	text
+struct	iMessageLite.LiteTextMessageContent		let	effect
+struct	iMessageLite.LiteReplyMessageContent			
+struct	iMessageLite.LiteReplyMessageContent		let	text
+struct	iMessageLite.LiteReplyMessageContent		let	threadOriginatorGUID
+struct	iMessageLite.LiteReplyMessageContent		let	effect
+struct	iMessageLite.LiteAcknowledgmentMessageContent			
+struct	iMessageLite.LiteAcknowledgmentMessageContent		let	associatedMessageType
+struct	iMessageLite.LiteAcknowledgmentMessageContent		let	associatedMessageGUID
+struct	iMessageLite.LiteAcknowledgmentMessageContent		let	emoji
+struct	iMessageLite.LiteMultipackMessageContent			
+struct	iMessageLite.LiteMultipackMessageContent		let	messages
+struct	iMessageLite.SendMetrics			
+struct	iMessageLite.SendMetrics		var	compressionResults
+struct	iMessageLite.SendMetrics		var	finalPayloadSize
+enum	iMessageLite.LiteTopic			
+enum	iMessageLite.LiteTopic		case	iMessageLite
+enum	iMessageLite.LiteTopic		case	smsLiteRelay
+enum	iMessageLite.LiteMessageSegmentStoreSchemaV1			
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment			
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment		var	_consolidationIdentifier
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment		var	_segmentNumber
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment		var	_dateReceived
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment		var	_data
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment		var	_
+class	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment		let	_
+struct	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment._SwiftDataNoType			
+enum	iMessageLite.LiteMessageType			
+enum	iMessageLite.LiteMessageType		case	text
+enum	iMessageLite.LiteMessageType		case	reply
+enum	iMessageLite.LiteMessageType		case	acknowledgment
+enum	iMessageLite.LiteMessageType		case	edit
+enum	iMessageLite.LiteRelayError			
+enum	iMessageLite.LiteRelayError		case	missingSMSService
+enum	iMessageLite.LiteRelayError		case	invalidChatStyle
+enum	iMessageLite.LiteRelayError		case	missingChatIdentifier
+enum	iMessageLite.LiteRelayError		case	blockedParticipant
+enum	iMessageLite.LiteRelayError		case	missingOriginatingRelayAccount
+enum	iMessageLite.LiteRelayError		case	missingFallbackHash
+struct	iMessageLite.LiteOutgoingMessageContext			
+struct	iMessageLite.LiteOutgoingMessageContext		let	topic
+struct	iMessageLite.LiteOutgoingMessageContext		let	transportType
+struct	iMessageLite.LiteOutgoingMessageContext		let	command
+enum	iMessageLite.LiteMessageSegmentStoreMigrationPlan			
+enum	iMessageLite.IMMessageItemContentType			
+enum	iMessageLite.IMMessageItemContentType		case	unknown
+enum	iMessageLite.IMMessageItemContentType		case	text
+enum	iMessageLite.IMMessageItemContentType		case	audio
+enum	iMessageLite.IMMessageItemContentType		case	image
+enum	iMessageLite.IMMessageItemContentType		case	contact
+enum	iMessageLite.IMMessageItemContentType		case	calendar
+enum	iMessageLite.IMMessageItemContentType		case	location
+enum	iMessageLite.IMMessageItemContentType		case	movie
+enum	iMessageLite.IMMessageItemContentType		case	passbook
+enum	iMessageLite.IMMessageItemContentType		case	customBalloon
+enum	iMessageLite.IMMessageItemContentType		case	walletOrder
+enum	iMessageLite.LiteMessageSendError			
+enum	iMessageLite.LiteMessageSendError		case	missingChat
+enum	iMessageLite.LiteMessageSendError		case	invalidOffGridIdentifier
+enum	iMessageLite.LiteMessageSendError		case	invalidMessageID
+enum	iMessageLite.LiteMessageSendError		case	missingRecipientURI
+enum	iMessageLite.LiteMessageSendError		case	missingSenderURI
+enum	iMessageLite.LiteMessageSendError		case	unsupportedChatStyle
+enum	iMessageLite.LiteMessageSendError		case	unsupportedItem
+enum	iMessageLite.LiteMessageSendError		case	encryptionFailure
+enum	iMessageLite.LiteMessageSendError		case	noEncryptedMessagePartsToSend
+enum	iMessageLite.LiteMessageSendError		case	unsupported
+enum	iMessageLite.LiteMessageSendError		case	cannotCopyMessageItem
+struct	iMessageLiteCore.BitCollection			
+struct	iMessageLiteCore.BitCollection		var	bytes
+struct	iMessageLiteCore.BitCollection		var	bitsUsedInLastByte
+enum	iMessageLiteCore.BitCollectionMessageContentError			
+enum	iMessageLiteCore.BitCollectionMessageContentError		case	expectedUUID
+enum	iMessageLiteCore.BitCollectionMessageContentError		case	expected16BytesAsUUID
+enum	iMessageLiteCore.BitCollectionMessageContentError		case	invalidUTF8Data
+struct	iMessageLiteCore.BitMessage			
+struct	iMessageLiteCore.BitMessage		var	bits
+struct	iMessageLiteCore.BitMessage		var	compressionResults
+struct	iMessageLiteCore.BitMessage.CompressionResults			
+struct	iMessageLiteCore.BitMessage.CompressionResults		var	codecID
+struct	iMessageLiteCore.BitMessage.CompressionResults		var	inputByteCount
+struct	iMessageLiteCore.BitMessage.CompressionResults		var	compressedByteCount
+protocol	iMessageLite.LiteRelayMessageContent			
+protocol	iMessageLite.LiteMessageContent			
+protocol	iMessageLiteCore.BitMessagePackable			
+protocol	conformance iMessageLite.LiteMessageReceiveError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageReceiveError	protocol descriptor for LocalizedError		
+protocol	conformance PendingSMSMessage	protocol descriptor for Hashable		
+protocol	conformance PendingSMSMessage	protocol descriptor for Equatable		
+protocol	conformance __C.IDSOffGridModePublishStatus	protocol descriptor for Equatable: IDSFoundation		
+protocol	conformance __C.IDSOffGridModePublishStatus	protocol descriptor for RawRepresentable: IDSFoundation		
+protocol	conformance iMessageLite.ConsolidationIdentifierError	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.ConsolidationIdentifierError	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.ConsolidationIdentifierError	protocol descriptor for Error		
+protocol	conformance OutgoingSatelliteMessageError	protocol descriptor for Equatable		
+protocol	conformance OutgoingSatelliteMessageError	protocol descriptor for Hashable		
+protocol	conformance OutgoingSatelliteMessageError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageEffect	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteMessageEffect	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteMessageEffect	protocol descriptor for RawRepresentable		
+protocol	conformance iMessageLite.LiteMessageHeader	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteMessageSegmentStoreError	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteMessageSegmentStoreError	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteMessageSegmentStoreError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageSegmentStore	protocol descriptor for Actor		
+protocol	conformance iMessageLite.LiteMessage	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteMessageReachabilityError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageReachabilityError	protocol descriptor for LocalizedError		
+protocol	conformance iMessageLite.LiteMessageAcknowledgement	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteMessageAcknowledgement	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteMessageAcknowledgement	protocol descriptor for RawRepresentable		
+protocol	conformance iMessageLite.LiteMessageEncodingError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageEncodingError	protocol descriptor for LocalizedError		
+protocol	conformance LiteRelayEncodingError	protocol descriptor for Equatable		
+protocol	conformance LiteRelayEncodingError	protocol descriptor for Hashable		
+protocol	conformance LiteRelayEncodingError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteRelayMessage	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteRelayEncodingError	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteRelayEncodingError	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteRelayEncodingError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteRelayTextMessageContent	iMessageLite.LiteRelayMessageContent		
+protocol	conformance iMessageLite.LiteRelayTextMessageContent	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteRelayAcknowledgmentMessageContent	iMessageLite.LiteRelayMessageContent		
+protocol	conformance iMessageLite.LiteRelayAcknowledgmentMessageContent	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteRelayMessageHeader	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteRelayMessageType	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteRelayMessageType	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteRelayMessageType	protocol descriptor for RawRepresentable		
+protocol	conformance iMessageLite.LiteMessageContentError	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteMessageContentError	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteMessageContentError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteTextMessageContent	iMessageLite.LiteMessageContent		
+protocol	conformance iMessageLite.LiteTextMessageContent	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteReplyMessageContent	iMessageLite.LiteMessageContent		
+protocol	conformance iMessageLite.LiteReplyMessageContent	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteAcknowledgmentMessageContent	iMessageLite.LiteMessageContent		
+protocol	conformance iMessageLite.LiteAcknowledgmentMessageContent	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteMultipackMessageContent	iMessageLite.LiteMessageContent		
+protocol	conformance iMessageLite.LiteMultipackMessageContent	iMessageLiteCore.BitMessagePackable		
+protocol	conformance iMessageLite.LiteTopic	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteTopic	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteTopic	protocol descriptor for RawRepresentable		
+protocol	conformance iMessageLite.LiteMessageSegmentStoreSchemaV1	protocol descriptor for VersionedSchema		
+protocol	conformance LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	protocol descriptor for PersistentModel		
+protocol	conformance LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	protocol descriptor for Hashable		
+protocol	conformance LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	protocol descriptor for Identifiable		
+protocol	conformance LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	protocol descriptor for Equatable		
+protocol	conformance LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	protocol descriptor for Observable		
+protocol	conformance iMessageLite.LiteMessageType	protocol descriptor for Equatable		
+protocol	conformance iMessageLite.LiteMessageType	protocol descriptor for Hashable		
+protocol	conformance iMessageLite.LiteMessageType	protocol descriptor for RawRepresentable		
+protocol	conformance LiteRelayError	protocol descriptor for Equatable		
+protocol	conformance LiteRelayError	protocol descriptor for Hashable		
+protocol	conformance LiteRelayError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageSegmentStoreMigrationPlan	protocol descriptor for SchemaMigrationPlan		
+protocol	conformance IMMessageItemContentType	protocol descriptor for Equatable		
+protocol	conformance IMMessageItemContentType	protocol descriptor for Hashable		
+protocol	conformance IMMessageItemContentType	protocol descriptor for RawRepresentable		
+protocol	conformance iMessageLite.LiteMessageSendError	protocol descriptor for Error		
+protocol	conformance iMessageLite.LiteMessageSendError	protocol descriptor for LocalizedError		
+protocol	conformance iMessageLiteCore.BitCollection	protocol descriptor for Collection		
+protocol	conformance iMessageLiteCore.BitCollection	protocol descriptor for Sequence		
+protocol	conformance iMessageLiteCore.BitCollectionMessageContentError	protocol descriptor for Error		
+protocol	conformance iMessageLiteCore.BitCollectionMessageContentError	protocol descriptor for LocalizedError		
+extension	iMessageLite.LiteMessageEffect	RawRepresentable		
+extension	iMessageLite.LiteMessageAcknowledgement	RawRepresentable		
+extension	iMessageLite.LiteRelayMessageType	RawRepresentable		
+extension	iMessageLite.LiteTopic	RawRepresentable		
+extension	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	PersistentModel		
+extension	iMessageLite.LiteMessageSegmentStoreSchemaV1.LiteMessageSegment	Identifiable		
+extension	iMessageLite.LiteMessageType	RawRepresentable		
+extension	iMessageLite.IMMessageItemContentType	RawRepresentable		
+extension	iMessageLiteCore.BitCollection	Collection		
+extension	iMessageLiteCore.BitCollection	Sequence		

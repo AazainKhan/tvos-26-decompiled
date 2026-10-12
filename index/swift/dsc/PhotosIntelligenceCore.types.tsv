@@ -1,0 +1,421 @@
+kind	type	conformance	member_kind	member
+class	PhotosIntelligenceCore.LocalizedString	NSString		
+class	PhotosIntelligenceCore.SceneConfiguration			
+class	PhotosIntelligenceCore.SceneConfiguration		let	sceneIdentifier
+class	PhotosIntelligenceCore.SceneConfiguration		let	configurationType
+class	PhotosIntelligenceCore.SceneConfiguration		let	threshold
+class	PhotosIntelligenceCore.SceneConfiguration		let	boundingBoxSizeType
+class	PhotosIntelligenceCore.SceneConfiguration		let	detectorSceneIdentifiers
+enum	PhotosIntelligenceCore.BoundingBoxSizeType			
+enum	PhotosIntelligenceCore.BoundingBoxSizeType		case	none
+enum	PhotosIntelligenceCore.BoundingBoxSizeType		case	small
+enum	PhotosIntelligenceCore.BoundingBoxSizeType		case	medium
+enum	PhotosIntelligenceCore.BoundingBoxSizeType		case	large
+enum	PhotosIntelligenceCore.BoundingBoxSizeType		case	xlarge
+enum	PhotosIntelligenceCore.ThresholdType			
+enum	PhotosIntelligenceCore.ThresholdType		case	highPrecisionOperatingPoint
+enum	PhotosIntelligenceCore.ThresholdType		case	highRecallOperatingPoint
+enum	PhotosIntelligenceCore.ThresholdType		case	operatingPoint
+enum	PhotosIntelligenceCore.ConfigurationType			
+enum	PhotosIntelligenceCore.ConfigurationType		case	Utility
+enum	PhotosIntelligenceCore.PartOfDay			
+enum	PhotosIntelligenceCore.PartOfDay		case	morning
+enum	PhotosIntelligenceCore.PartOfDay		case	noon
+enum	PhotosIntelligenceCore.PartOfDay		case	afternoon
+enum	PhotosIntelligenceCore.PartOfDay		case	evening
+enum	PhotosIntelligenceCore.PartOfDay		case	night
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>		
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	let	sortingClosure
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	var	adaptiveElectionMinimumNumberOfItemsByCluster
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	var	adaptiveElectionMaximumNumberOfItemsByCluster
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	var	enableAdaptiveElectionSmoother
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	var	enableAdaptiveElectionSmootherAutomaticLimit
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	var	adaptiveElectionSmootherMaximumLimit
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	var	adaptiveElectionSmootherMinimumLimit
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	let	logger
+class	PhotosIntelligenceCore.SummarizationPlanner<A	PhotosIntelligenceCore.SummarizationCluster>	let	signposter
+class	PhotosIntelligenceCore.Summarizer<A	PhotosIntelligenceCore.SummarizationCluster>		
+class	PhotosIntelligenceCore.Summarizer<A	PhotosIntelligenceCore.SummarizationCluster>	let	clusterer
+class	PhotosIntelligenceCore.Summarizer<A	PhotosIntelligenceCore.SummarizationCluster>	let	planner
+class	PhotosIntelligenceCore.Summarizer<A	PhotosIntelligenceCore.SummarizationCluster>	let	elector
+class	PhotosIntelligenceCore.Summarizer<A	PhotosIntelligenceCore.SummarizationCluster>	let	logger
+class	PhotosIntelligenceCore.Summarizer<A	PhotosIntelligenceCore.SummarizationCluster>	let	signposter
+class	PhotosIntelligenceCore.SummarizationDensityClusterer<A	PhotosIntelligenceCore.SummarizationCluster>		
+class	PhotosIntelligenceCore.SummarizationDensityClusterer<A	PhotosIntelligenceCore.SummarizationCluster>	let	logger
+class	PhotosIntelligenceCore.SummarizationDensityClusterer<A	PhotosIntelligenceCore.SummarizationCluster>	let	signposter
+class	PhotosIntelligenceCore.ProgressReporter.Session			
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	kind
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	logger
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	uuid
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	name
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	fullname
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	_isCancelled
+class	PhotosIntelligenceCore.ProgressReporter.Session		let	lastProgress
+enum	PhotosIntelligenceCore.ProgressReporter.Session.Kind			
+enum	PhotosIntelligenceCore.ProgressReporter.Session.Kind		case	main
+enum	PhotosIntelligenceCore.ProgressReporter.Session.Kind		case	sub
+struct	PhotosIntelligenceCore.ProgressReporter.Session.LastProgress			
+struct	PhotosIntelligenceCore.ProgressReporter.Session.LastProgress		let	progress
+struct	PhotosIntelligenceCore.ProgressReporter.Session.LastProgress		let	reportDate
+enum	PhotosIntelligenceCore.ProgressReporter.State			
+enum	PhotosIntelligenceCore.ProgressReporter.State		case	serial
+enum	PhotosIntelligenceCore.ProgressReporter.State		case	notStarted
+enum	PhotosIntelligenceCore.ProgressReporter.State		case	completed
+enum	PhotosIntelligenceCore.ProgressReporter.State		case	cancelled
+enum	PhotosIntelligenceCore.ProgressReporter.Session.CallbackType			
+enum	PhotosIntelligenceCore.ProgressReporter.Session.CallbackType		case	throwing
+enum	PhotosIntelligenceCore.ProgressReporter.Session.CallbackType		case	nonThrowing
+enum	PhotosIntelligenceCore.SummaryItemRequirementEvaluationResult			
+enum	PhotosIntelligenceCore.SummaryItemRequirementEvaluationResult		case	acceptItem
+enum	PhotosIntelligenceCore.SummaryItemRequirementEvaluationResult		case	deferItem
+enum	PhotosIntelligenceCore.SummaryItemRequirementEvaluationResult		case	discardItem
+struct	PhotosIntelligenceCore.SummaryItemRequirementCollection<A	PhotosIntelligenceCore.SummarizationItem>		
+struct	PhotosIntelligenceCore.SummaryItemRequirementCollection<A	PhotosIntelligenceCore.SummarizationItem>	let	necessaryRequirements
+struct	PhotosIntelligenceCore.SummaryItemRequirementCollection<A	PhotosIntelligenceCore.SummarizationItem>	let	optionalRequirements
+struct	PhotosIntelligenceCore.SummaryItemRequirementEvaluationCollection<A	PhotosIntelligenceCore.SummarizationItem>		
+struct	PhotosIntelligenceCore.SummaryItemRequirementEvaluationCollection<A	PhotosIntelligenceCore.SummarizationItem>	var	necessaryRequirementEvaluations
+struct	PhotosIntelligenceCore.SummaryItemRequirementEvaluationCollection<A	PhotosIntelligenceCore.SummarizationItem>	var	optionalRequirementEvaluations
+enum	PhotosIntelligenceCore.SummaryItemRequirementCollection.CodingKeys<A	PhotosIntelligenceCore.SummarizationItem>		
+enum	PhotosIntelligenceCore.SummaryItemRequirementCollection.CodingKeys<A	PhotosIntelligenceCore.SummarizationItem>	case	necessaryRequirements
+enum	PhotosIntelligenceCore.SummaryItemRequirementCollection.CodingKeys<A	PhotosIntelligenceCore.SummarizationItem>	case	optionalRequirements
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer			
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	referenceDate
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	colorForTag
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	eventIntervals
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	stageNames
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	height
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	fullDuration
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	maxSublevelByColor
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	thermalStateByX
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		var	cpuLoadByX
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	width
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	xMargin
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	yHeader
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	yThermalHigh
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	yCPULoadHigh
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	ySpacing
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	blockHeight
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	legendLineHeight
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	legendNumberOfNamesPerRow
+class	PhotosIntelligenceCore.EventRecorderDiagramRenderer		let	yStride
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color			
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color		case	blue
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color		case	green
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color		case	orange
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color		case	pink
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color		case	gray
+enum	PhotosIntelligenceCore.EventRecorderDiagramRenderer.Color		case	red
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval			
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval		let	rect
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval		let	color
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval		let	sublevel
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval		let	readinessIndex
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval		let	preparationTimeInterval
+struct	PhotosIntelligenceCore.EventRecorderDiagramRenderer.EventInterval		let	title
+class	PhotosIntelligenceCore.UtilitySceneConfiguration	PhotosIntelligenceCore.SceneConfiguration		
+class	PhotosIntelligenceCore.UtilityTypeConfiguration			
+enum	PhotosIntelligenceCore.PartOfWeek			
+enum	PhotosIntelligenceCore.PartOfWeek		case	weekday
+enum	PhotosIntelligenceCore.PartOfWeek		case	weekend
+enum	PhotosIntelligenceCore.GenericLocationType			
+enum	PhotosIntelligenceCore.GenericLocationType		case	location
+enum	PhotosIntelligenceCore.GenericLocationType		case	business
+enum	PhotosIntelligenceCore.SummarizationFeatureHandlingType			
+enum	PhotosIntelligenceCore.SummarizationFeatureHandlingType		case	required
+enum	PhotosIntelligenceCore.SummarizationFeatureHandlingType		case	prioritized
+enum	PhotosIntelligenceCore.SummarizationFeatureHandlingType		case	tiebreaker
+enum	PhotosIntelligenceCore.Season			
+enum	PhotosIntelligenceCore.Season		case	spring
+enum	PhotosIntelligenceCore.Season		case	summer
+enum	PhotosIntelligenceCore.Season		case	autumn
+enum	PhotosIntelligenceCore.Season		case	winter
+class	PhotosIntelligenceCore.RootEventRecorder			
+class	PhotosIntelligenceCore.RootEventRecorder		let	generateSignposts
+class	PhotosIntelligenceCore.RootEventRecorder		let	printEvents
+class	PhotosIntelligenceCore.RootEventRecorder		let	recordEvents
+class	PhotosIntelligenceCore.RootEventRecorder		let	lockedEvents
+class	PhotosIntelligenceCore.RootEventRecorder		let	lockedEventDebugStateByPath
+class	PhotosIntelligenceCore.RootEventRecorder		let	logger
+class	PhotosIntelligenceCore.RootEventRecorder		let	signposter
+class	PhotosIntelligenceCore.RootEventRecorder		let	referenceDate
+class	PhotosIntelligenceCore.RootEventRecorder		let	eventSessionIdentifier
+class	PhotosIntelligenceCore.RootEventRecorder		let	path
+class	PhotosIntelligenceCore.RootEventRecorder		let	processInfo
+class	PhotosIntelligenceCore.RootEventRecorder		let	previousCPULoadInfo
+class	PhotosIntelligenceCore.RootEventRecorder		let	defaultTag
+class	PhotosIntelligenceCore.RootEventRecorder		let	warningLimit
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState			
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState		let	uuid
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState		let	label
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState		let	tag
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState		let	path
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState		let	beginTimestamp
+struct	PhotosIntelligenceCore.RootEventRecorder.EventState		let	signpostState
+struct	PhotosIntelligenceCore.RootEventRecorder.Options			
+struct	PhotosIntelligenceCore.RootEventRecorder.Options		let	rawValue
+struct	PhotosIntelligenceCore.RootEventRecorder.Path			
+struct	PhotosIntelligenceCore.RootEventRecorder.Path		let	components
+struct	PhotosIntelligenceCore.RootEventRecorder.Path		let	concurrentIndices
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType			
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType		case	beginning
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType		case	end
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType		case	cancel
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType		case	error
+struct	PhotosIntelligenceCore.RootEventRecorder.Event			
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	uuid
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	label
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	type
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	tag
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	timestamp
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	path
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	thermalLevel
+struct	PhotosIntelligenceCore.RootEventRecorder.Event		let	cpuLoad
+struct	PhotosIntelligenceCore.RootEventRecorder.IgnoreEventRecorder			
+struct	PhotosIntelligenceCore.RootEventRecorder.IgnoreEventRecorder		let	dummyEventState
+struct	PhotosIntelligenceCore.RootEventRecorder.ChildRecorder			
+struct	PhotosIntelligenceCore.RootEventRecorder.ChildRecorder		let	path
+struct	PhotosIntelligenceCore.RootEventRecorder.ChildRecorder		let	rootEventRecorder
+enum	PhotosIntelligenceCore.RootEventRecorder.EventDebugState			
+enum	PhotosIntelligenceCore.RootEventRecorder.EventDebugState		case	rootOpen
+enum	PhotosIntelligenceCore.RootEventRecorder.EventDebugState		case	rootClosed
+enum	PhotosIntelligenceCore.RootEventRecorder.EventDebugState		case	nonRootOpen
+enum	PhotosIntelligenceCore.RootEventRecorder.EventDebugState		case	nonRootClosed
+enum	PhotosIntelligenceCore.RootEventRecorder.Error			
+enum	PhotosIntelligenceCore.RootEventRecorder.Error		case	notRecordingEvents
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	uuid
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	label
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	type
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	tag
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	timestamp
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	path
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	thermalLevel
+enum	PhotosIntelligenceCore.RootEventRecorder.Event.CodingKeys		case	cpuLoad
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.CodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.CodingKeys		case	beginning
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.CodingKeys		case	end
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.CodingKeys		case	cancel
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.CodingKeys		case	error
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.BeginningCodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.EndCodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.CancelCodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.EventType.ErrorCodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.Path.CodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.Path.CodingKeys		case	components
+enum	PhotosIntelligenceCore.RootEventRecorder.Path.CodingKeys		case	concurrentIndices
+struct	PhotosIntelligenceCore.RootEventRecorder.CPULoad			
+struct	PhotosIntelligenceCore.RootEventRecorder.CPULoad		let	user
+struct	PhotosIntelligenceCore.RootEventRecorder.CPULoad		let	system
+struct	PhotosIntelligenceCore.RootEventRecorder.CPULoad		let	idle
+struct	PhotosIntelligenceCore.RootEventRecorder.CPULoad		let	nice
+enum	PhotosIntelligenceCore.RootEventRecorder.CPULoad.CodingKeys			
+enum	PhotosIntelligenceCore.RootEventRecorder.CPULoad.CodingKeys		case	user
+enum	PhotosIntelligenceCore.RootEventRecorder.CPULoad.CodingKeys		case	system
+enum	PhotosIntelligenceCore.RootEventRecorder.CPULoad.CodingKeys		case	idle
+enum	PhotosIntelligenceCore.RootEventRecorder.CPULoad.CodingKeys		case	nice
+struct	PhotosIntelligenceCore.EventTag			
+struct	PhotosIntelligenceCore.EventTag		let	string
+enum	PhotosIntelligenceCore.EventTag.CodingKeys			
+enum	PhotosIntelligenceCore.EventTag.CodingKeys		case	string
+struct	PhotosIntelligenceCore.RoundRobinCluster<A	PhotosIntelligenceCore.SummarizationItem, B: PhotosIntelligenceCore.SummarizationFeature>		
+struct	PhotosIntelligenceCore.RoundRobinCluster<A	PhotosIntelligenceCore.SummarizationItem, B: PhotosIntelligenceCore.SummarizationFeature>	let	id
+struct	PhotosIntelligenceCore.RoundRobinCluster<A	PhotosIntelligenceCore.SummarizationItem, B: PhotosIntelligenceCore.SummarizationFeature>	let	items
+struct	PhotosIntelligenceCore.RoundRobinCluster<A	PhotosIntelligenceCore.SummarizationItem, B: PhotosIntelligenceCore.SummarizationFeature>	let	targetNumberOfItems
+struct	PhotosIntelligenceCore.RoundRobinCluster<A	PhotosIntelligenceCore.SummarizationItem, B: PhotosIntelligenceCore.SummarizationFeature>	let	itemsByFeature
+enum	PhotosIntelligenceCore.PersonalEvent			
+enum	PhotosIntelligenceCore.PersonalEvent		case	anniversary
+enum	PhotosIntelligenceCore.PersonalEvent		case	birthday
+enum	PhotosIntelligenceCore.PersonalEvent		case	wedding
+enum	PhotosIntelligenceCore.PersonalEvent		case	unnamed
+enum	PhotosIntelligenceCore.CommonEvent			
+enum	PhotosIntelligenceCore.CommonEvent		case	breakfast
+enum	PhotosIntelligenceCore.CommonEvent		case	lunch
+enum	PhotosIntelligenceCore.CommonEvent		case	dinner
+enum	PhotosIntelligenceCore.PublicEvent			
+enum	PhotosIntelligenceCore.PublicEvent		case	concert
+enum	PhotosIntelligenceCore.PublicEvent		case	holidayEvent
+enum	PhotosIntelligenceCore.PublicEvent		case	sportEvent
+class	PhotosIntelligenceCore.AnalyticUtilities			
+struct	PhotosIntelligenceCore.ProgressReporter			
+struct	PhotosIntelligenceCore.ProgressReporter		let	logger
+struct	PhotosIntelligenceCore.ProgressReporter		let	uuid
+struct	PhotosIntelligenceCore.ProgressReporter		let	session
+struct	PhotosIntelligenceCore.ProgressReporter		let	startValue
+struct	PhotosIntelligenceCore.ProgressReporter		let	endValue
+struct	PhotosIntelligenceCore.ProgressReporter		var	state
+protocol	PhotosIntelligenceCore.BridgeableError			
+protocol	PhotosIntelligenceCore.SummarizationElector	Cluster		
+protocol	PhotosIntelligenceCore.SingleClusterSummarizationElector			
+protocol	PhotosIntelligenceCore.SummarizationItem			
+protocol	PhotosIntelligenceCore.SummarizationCluster	Item		
+protocol	PhotosIntelligenceCore.SummarizationClusterer	Cluster		
+protocol	PhotosIntelligenceCore.SummaryItemRequirement	Item, Evaluation		
+protocol	PhotosIntelligenceCore.SummaryItemRequirementEvaluation	Item, Requirement		
+protocol	PhotosIntelligenceCore.SummarizationFeature	Type		
+protocol	PhotosIntelligenceCore.EventRecorder			
+protocol	PhotosIntelligenceCore.RoundRobinClusterElectionState	Item, Feature		
+protocol	PhotosIntelligenceCore.RoundRobinElectionHelper	Item, Feature, ClusterState		
+protocol	conformance __C.ThermalState	Swift.RawRepresentable: Foundation		
+protocol	conformance PhotosIntelligenceCore.ConfigurationType	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.ConfigurationType	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.ConfigurationType	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.ThresholdType	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.ThresholdType	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.ThresholdType	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.BoundingBoxSizeType	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.BoundingBoxSizeType	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.BoundingBoxSizeType	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.PartOfDay	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.PartOfDay	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.PartOfDay	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.PartOfDay	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.PartOfDay	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.PartOfDay	Swift.CaseIterable		
+protocol	conformance PhotosIntelligenceCore.SummarizationDensityClusterer	PhotosIntelligenceCore.SummarizationClusterer		
+protocol	conformance PhotosIntelligenceCore.SummaryItemRequirementEvaluationResult	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.SummaryItemRequirementEvaluationResult	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.SummaryItemRequirementCollection	Swift.Encodable		
+protocol	conformance SummaryItemRequirementCollection.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SummaryItemRequirementCollection.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SummaryItemRequirementCollection.CodingKeys	Swift.Hashable		
+protocol	conformance SummaryItemRequirementCollection.CodingKeys	Swift.Equatable		
+protocol	conformance SummaryItemRequirementCollection.CodingKeys	Swift.CodingKey		
+protocol	conformance EventRecorderDiagramRenderer.Color	Swift.Equatable		
+protocol	conformance EventRecorderDiagramRenderer.Color	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.PartOfWeek	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.PartOfWeek	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.PartOfWeek	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.PartOfWeek	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.PartOfWeek	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.PartOfWeek	Swift.CaseIterable		
+protocol	conformance PhotosIntelligenceCore.GenericLocationType	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.GenericLocationType	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.GenericLocationType	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.GenericLocationType	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.GenericLocationType	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.GenericLocationType	Swift.CaseIterable		
+protocol	conformance PhotosIntelligenceCore.SummarizationFeatureHandlingType	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.SummarizationFeatureHandlingType	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.SummarizationFeatureHandlingType	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.SummarizationFeatureHandlingType	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.SummarizationFeatureHandlingType	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.SummarizationFeatureHandlingType	Swift.Comparable		
+protocol	conformance PhotosIntelligenceCore.Season	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.Season	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.Season	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.Season	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.Season	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.Season	Swift.CaseIterable		
+protocol	conformance RootEventRecorder.Options	Swift.OptionSet		
+protocol	conformance RootEventRecorder.Options	Swift.SetAlgebra		
+protocol	conformance RootEventRecorder.Options	Swift.RawRepresentable		
+protocol	conformance RootEventRecorder.Options	Swift.Equatable		
+protocol	conformance RootEventRecorder.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance RootEventRecorder.Path	Swift.Decodable		
+protocol	conformance RootEventRecorder.Path	Swift.Encodable		
+protocol	conformance RootEventRecorder.Path	Swift.Hashable		
+protocol	conformance RootEventRecorder.Path	Swift.Equatable		
+protocol	conformance RootEventRecorder.EventType	Swift.Equatable		
+protocol	conformance RootEventRecorder.EventType	Swift.Hashable		
+protocol	conformance RootEventRecorder.EventType	Swift.Decodable		
+protocol	conformance RootEventRecorder.EventType	Swift.Encodable		
+protocol	conformance RootEventRecorder.Event	Swift.Decodable		
+protocol	conformance RootEventRecorder.Event	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.RootEventRecorder	PhotosIntelligenceCore.EventRecorder		
+protocol	conformance __C.ThermalState	Swift.Decodable: PhotosIntelligenceCore		
+protocol	conformance __C.ThermalState	Swift.Encodable: PhotosIntelligenceCore		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CancelCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CancelCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EndCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EndCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BeginningCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BeginningCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RootEventRecorder.Error	Swift.Hashable		
+protocol	conformance RootEventRecorder.Error	Swift.Equatable		
+protocol	conformance RootEventRecorder.IgnoreEventRecorder	PhotosIntelligenceCore.EventRecorder		
+protocol	conformance RootEventRecorder.ChildRecorder	PhotosIntelligenceCore.EventRecorder		
+protocol	conformance RootEventRecorder.Error	Swift.Error		
+protocol	conformance RootEventRecorder.CPULoad	Swift.Decodable		
+protocol	conformance RootEventRecorder.CPULoad	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance BeginningCodingKeys	Swift.CodingKey		
+protocol	conformance EndCodingKeys	Swift.CodingKey		
+protocol	conformance CancelCodingKeys	Swift.CodingKey		
+protocol	conformance ErrorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.ExpressibleByStringLiteral		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance PhotosIntelligenceCore.EventTag	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PhotosIntelligenceCore.PersonalEvent	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.PersonalEvent	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.PersonalEvent	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.PersonalEvent	Swift.CaseIterable		
+protocol	conformance PhotosIntelligenceCore.PersonalEvent	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.PersonalEvent	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.CommonEvent	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.CommonEvent	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.CommonEvent	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.CommonEvent	Swift.CaseIterable		
+protocol	conformance PhotosIntelligenceCore.CommonEvent	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.CommonEvent	Swift.Hashable		
+protocol	conformance PhotosIntelligenceCore.PublicEvent	Swift.RawRepresentable		
+protocol	conformance PhotosIntelligenceCore.PublicEvent	Swift.Decodable		
+protocol	conformance PhotosIntelligenceCore.PublicEvent	Swift.Encodable		
+protocol	conformance PhotosIntelligenceCore.PublicEvent	Swift.CaseIterable		
+protocol	conformance PhotosIntelligenceCore.PublicEvent	Swift.Equatable		
+protocol	conformance PhotosIntelligenceCore.PublicEvent	Swift.Hashable		
+extension	PhotosIntelligenceCore.ConfigurationType	RawRepresentable		
+extension	PhotosIntelligenceCore.ThresholdType	RawRepresentable		
+extension	PhotosIntelligenceCore.BoundingBoxSizeType	RawRepresentable		
+extension	PhotosIntelligenceCore.PartOfDay	RawRepresentable		
+extension	PhotosIntelligenceCore.PartOfDay	CaseIterable		
+extension	PhotosIntelligenceCore.SummarizationDensityClusterer	SummarizationClusterer		
+extension	PhotosIntelligenceCore.PartOfWeek	RawRepresentable		
+extension	PhotosIntelligenceCore.PartOfWeek	CaseIterable		
+extension	PhotosIntelligenceCore.GenericLocationType	RawRepresentable		
+extension	PhotosIntelligenceCore.GenericLocationType	CaseIterable		
+extension	PhotosIntelligenceCore.SummarizationFeatureHandlingType	RawRepresentable		
+extension	PhotosIntelligenceCore.Season	RawRepresentable		
+extension	PhotosIntelligenceCore.Season	CaseIterable		
+extension	PhotosIntelligenceCore.RootEventRecorder.Options	OptionSet		
+extension	PhotosIntelligenceCore.RootEventRecorder.Options	SetAlgebra		
+extension	PhotosIntelligenceCore.RootEventRecorder.Options	RawRepresentable		
+extension	PhotosIntelligenceCore.RootEventRecorder.Options	ExpressibleByArrayLiteral		
+extension	PhotosIntelligenceCore.EventTag	ExpressibleByStringLiteral		
+extension	PhotosIntelligenceCore.EventTag	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	PhotosIntelligenceCore.EventTag	ExpressibleByUnicodeScalarLiteral		
+extension	PhotosIntelligenceCore.PersonalEvent	RawRepresentable		
+extension	PhotosIntelligenceCore.PersonalEvent	CaseIterable		
+extension	PhotosIntelligenceCore.CommonEvent	RawRepresentable		
+extension	PhotosIntelligenceCore.CommonEvent	CaseIterable		
+extension	PhotosIntelligenceCore.PublicEvent	RawRepresentable		
+extension	PhotosIntelligenceCore.PublicEvent	CaseIterable		

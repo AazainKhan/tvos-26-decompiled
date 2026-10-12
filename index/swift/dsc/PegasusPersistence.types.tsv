@@ -1,0 +1,78 @@
+kind	type	conformance	member_kind	member
+class	PegasusPersistence.DataStore			
+class	PegasusPersistence.DataStore		var	connectionPointer
+enum	PegasusPersistence.DataStore.Error			
+enum	PegasusPersistence.DataStore.Error		case	internalError
+enum	PegasusPersistence.DataStore.Error		case	connectionInvalid
+enum	PegasusPersistence.DataStore.Error		case	statementInvalid
+enum	PegasusPersistence.DataStore.Error		case	noResultFound
+enum	PegasusPersistence.DataStore.Error		case	outOfRangeResult
+enum	PegasusPersistence.DataStoreValue			
+enum	PegasusPersistence.DataStoreValue		case	int32
+enum	PegasusPersistence.DataStoreValue		case	int64
+enum	PegasusPersistence.DataStoreValue		case	string
+enum	PegasusPersistence.DataStoreValue		case	data
+enum	PegasusPersistence.DataStoreValue		case	double
+class	PegasusPersistence.PegasusFilePersistence			
+class	PegasusPersistence.PegasusFilePersistence		let	baseFolder
+class	PegasusPersistence.Logging			
+struct	PegasusPersistence.PegasusPersistenceContext			
+struct	PegasusPersistence.PegasusPersistenceContext		let	location
+struct	PegasusPersistence.PegasusPersistenceContext		let	fileManager
+enum	PegasusPersistence.PegasusKeyValueStoreError			
+enum	PegasusPersistence.PegasusKeyValueStoreError		case	cannotFindStore
+enum	PegasusPersistence.PegasusKeyValueStoreError		case	invalidKey
+enum	PegasusPersistence.PegasusKeyValueStoreError		case	closed
+enum	PegasusPersistence.PegasusKeyValueStoreError		case	encodingFailure
+struct	PegasusPersistence.LockedState			
+struct	PegasusPersistence.LockedState		let	lock
+struct	PegasusPersistence.PegasusKeyValueStoreFactory			
+class	PegasusPersistence.KeyValueStore			
+class	PegasusPersistence.KeyValueStore		let	state
+enum	PegasusPersistence.KeyValueStore.State			
+enum	PegasusPersistence.KeyValueStore.State		case	open
+enum	PegasusPersistence.KeyValueStore.State		case	closed
+enum	PegasusPersistence.PegasusPersistenceControllerError			
+enum	PegasusPersistence.PegasusPersistenceControllerError		case	fileNotFound
+enum	PegasusPersistence.PegasusPersistenceControllerError		case	containerNotFound
+enum	PegasusPersistence.PegasusPersistenceControllerError		case	writeFailed
+enum	PegasusPersistence.PegasusPersistenceControllerError		case	formatError
+struct	PegasusPersistence.PegasusPersistenceControllerFactory			
+protocol	PegasusPersistence.DataStoreProtocol			
+protocol	PegasusPersistence.PegasusPersistenceReader			
+protocol	PegasusPersistence.CustomDecoder			
+protocol	PegasusPersistence.PegasusKeyValueElement			
+protocol	PegasusPersistence.PegasusKeyValueStore			
+protocol	PegasusPersistence.PegasusKeyValueStoreFullAccess			
+protocol	PegasusPersistence.KeyValueStoreProtocol			
+protocol	PegasusPersistence.PegasusPersistenceController			
+protocol	PegasusPersistence.PegasusPersistenceWriter			
+protocol	PegasusPersistence.CustomEncoder			
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance PegasusPersistence.DataStore	PegasusPersistence.DataStoreProtocol		
+protocol	conformance DataStore.Error	Swift.Error		
+protocol	conformance Foundation.JSONDecoder	PegasusPersistence.CustomDecoder		
+protocol	conformance Swift.Int	PegasusPersistence.PegasusKeyValueElement		
+protocol	conformance Swift.Double	PegasusPersistence.PegasusKeyValueElement		
+protocol	conformance Foundation.Date	PegasusPersistence.PegasusKeyValueElement		
+protocol	conformance Swift.Bool	PegasusPersistence.PegasusKeyValueElement		
+protocol	conformance Foundation.Data	PegasusPersistence.PegasusKeyValueElement		
+protocol	conformance Swift.String	PegasusPersistence.PegasusKeyValueElement		
+protocol	conformance PegasusPersistence.PegasusFilePersistence	PegasusPersistence.PegasusPersistenceWriter		
+protocol	conformance PegasusPersistence.PegasusFilePersistence	PegasusPersistence.PegasusPersistenceReader		
+protocol	conformance PegasusPersistence.PegasusFilePersistence	PegasusPersistence.PegasusPersistenceController		
+protocol	conformance PegasusPersistence.PegasusKeyValueStoreError	Swift.Equatable		
+protocol	conformance PegasusPersistence.PegasusKeyValueStoreError	Swift.Hashable		
+protocol	conformance PegasusPersistence.PegasusKeyValueStoreError	Swift.Error		
+protocol	conformance KeyValueStore	PegasusPersistence.PegasusKeyValueStoreFullAccess		
+protocol	conformance KeyValueStore	PegasusPersistence.KeyValueStoreProtocol		
+protocol	conformance KeyValueStore	PegasusPersistence.PegasusKeyValueStore		
+protocol	conformance PegasusPersistence.PegasusPersistenceControllerError	Swift.Equatable		
+protocol	conformance PegasusPersistence.PegasusPersistenceControllerError	Swift.Hashable		
+protocol	conformance PegasusPersistence.PegasusPersistenceControllerError	Swift.Error		
+protocol	conformance Foundation.JSONEncoder	PegasusPersistence.CustomEncoder		

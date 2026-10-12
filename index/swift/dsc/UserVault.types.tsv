@@ -1,0 +1,523 @@
+kind	type	conformance	member_kind	member
+class	UserVault.UVVolumeClient			
+class	UserVault.UVVolumeClient		let	_environment
+class	UserVault.UVVolumeClient		let	_xpcClient
+enum	UserVault.UVVolumeClient.Event			
+enum	UserVault.UVVolumeClient.Event		case	lockingSoon
+enum	UserVault.UVVolumeClient.Event		case	notLockingSoon
+struct	UserVault.UVVolumeConfiguration			
+struct	UserVault.UVVolumeConfiguration		let	aksIdentifier
+struct	UserVault.UVVolumeConfiguration		let	passcodeData
+struct	UserVault.UVVolumeConfiguration		let	personaID
+struct	UserVault.UVVolumeConfiguration		let	userID
+struct	UserVault.UVVolumeInfo			
+struct	UserVault.UVVolumeInfo		let	configuration
+struct	UserVault.UVVolumeInfo		let	id
+struct	UserVault.UVVolumeInfo		let	state
+struct	UserVault.UVVolumeInfo		let	url
+enum	UserVault.UVVolumeState			
+enum	UserVault.UVVolumeState		case	locked
+enum	UserVault.UVVolumeState		case	lockingSoon
+enum	UserVault.UVVolumeState		case	unlocked
+struct	UserVault.UVVolumeUnlockConfiguration			
+struct	UserVault.UVVolumeUnlockConfiguration		let	id
+struct	UserVault.UVVolumeUnlockConfiguration		let	passcodeData
+enum	UserVault.UVVolumeUnlockConfiguration.CodingKeys			
+enum	UserVault.UVVolumeUnlockConfiguration.CodingKeys		case	id
+enum	UserVault.UVVolumeUnlockConfiguration.CodingKeys		case	passcodeData
+enum	UserVault.UVVolumeInfo.CodingKeys			
+enum	UserVault.UVVolumeInfo.CodingKeys		case	configuration
+enum	UserVault.UVVolumeInfo.CodingKeys		case	id
+enum	UserVault.UVVolumeInfo.CodingKeys		case	state
+enum	UserVault.UVVolumeInfo.CodingKeys		case	url
+enum	UserVault.UVVolumeConfiguration.CodingKeys			
+enum	UserVault.UVVolumeConfiguration.CodingKeys		case	aksIdentifier
+enum	UserVault.UVVolumeConfiguration.CodingKeys		case	passcodeData
+enum	UserVault.UVVolumeConfiguration.CodingKeys		case	personaID
+enum	UserVault.UVVolumeConfiguration.CodingKeys		case	userID
+enum	UserVault.UVVolumeClient.Event.CodingKeys			
+enum	UserVault.UVVolumeClient.Event.CodingKeys		case	lockingSoon
+enum	UserVault.UVVolumeClient.Event.CodingKeys		case	notLockingSoon
+enum	UserVault.UVVolumeClient.Event.LockingSoonCodingKeys			
+enum	UserVault.UVVolumeClient.Event.LockingSoonCodingKeys		case	_0
+enum	UserVault.UVVolumeClient.Event.LockingSoonCodingKeys		case	_1
+enum	UserVault.UVVolumeClient.Event.NotLockingSoonCodingKeys			
+enum	UserVault.UVVolumeClient.Event.NotLockingSoonCodingKeys		case	_0
+enum	UserVault.UVVolumeClient.Event.NotLockingSoonCodingKeys		case	_1
+struct	UserVault.UVXPCCoder			
+struct	UserVault.UVXPCCoder		let	_encoder
+struct	UserVault.UVXPCCoder		let	_decoder
+enum	UserVault.UVXPCClientRequest			
+enum	UserVault.UVXPCClientRequest		case	diagnostic
+enum	UserVault.UVXPCClientRequest		case	session
+enum	UserVault.UVXPCClientRequest		case	volume
+enum	UserVault.UVXPCServerRequest			
+enum	UserVault.UVXPCServerRequest		case	sessionEvent
+enum	UserVault.UVXPCDiagnosticRequest			
+enum	UserVault.UVXPCDiagnosticRequest		case	show
+enum	UserVault.UVXPCSessionRequest			
+enum	UserVault.UVXPCSessionRequest		case	start
+enum	UserVault.UVXPCSessionRequest		case	cancel
+enum	UserVault.UVXPCVolumeRequest			
+enum	UserVault.UVXPCVolumeRequest		case	createVolume
+enum	UserVault.UVXPCVolumeRequest		case	deleteVolume
+enum	UserVault.UVXPCVolumeRequest		case	lockVolume
+enum	UserVault.UVXPCVolumeRequest		case	unlockVolume
+enum	UserVault.UVXPCVolumeRequest		case	unlockVolumeFinished
+enum	UserVault.UVXPCVolumeRequest		case	reportEvent
+enum	UserVault.UVXPCVolumeRequest		case	transactionStart
+enum	UserVault.UVXPCVolumeRequest		case	listVolumes
+enum	UserVault.UVXPCVolumeRequest		case	reloadVolumes
+struct	UserVault.UVXPCVolumeTransactionConfiguration			
+struct	UserVault.UVXPCVolumeTransactionConfiguration		let	personaIdentifier
+struct	UserVault.UVXPCVolumeTransactionConfiguration		let	resource
+struct	UserVault.UVXPCEmptyReply			
+struct	UserVault.UVXPCShowReply			
+struct	UserVault.UVXPCShowReply		let	output
+struct	UserVault.UVXPCSessionStartReply			
+struct	UserVault.UVXPCSessionStartReply		let	initialEvents
+struct	UserVault.UVXPCTransactionStartReply			
+struct	UserVault.UVXPCTransactionStartReply		let	url
+struct	UserVault.UVXPCTransactionStartReply		let	sandboxToken
+struct	UserVault.UVXPCCreateVolumeReply			
+struct	UserVault.UVXPCCreateVolumeReply		let	volumeIdentifier
+struct	UserVault.UVXPCListVolumesReply			
+struct	UserVault.UVXPCListVolumesReply		let	volumes
+struct	UserVault.UVXPCUnlockVolumeReply			
+struct	UserVault.UVXPCUnlockVolumeReply		let	volumeInfo
+enum	UserVault.UVXPCUnlockVolumeReply.CodingKeys			
+enum	UserVault.UVXPCUnlockVolumeReply.CodingKeys		case	volumeInfo
+enum	UserVault.UVXPCListVolumesReply.CodingKeys			
+enum	UserVault.UVXPCListVolumesReply.CodingKeys		case	volumes
+enum	UserVault.UVXPCCreateVolumeReply.CodingKeys			
+enum	UserVault.UVXPCCreateVolumeReply.CodingKeys		case	volumeIdentifier
+enum	UserVault.UVXPCTransactionStartReply.CodingKeys			
+enum	UserVault.UVXPCTransactionStartReply.CodingKeys		case	url
+enum	UserVault.UVXPCTransactionStartReply.CodingKeys		case	sandboxToken
+enum	UserVault.UVXPCSessionStartReply.CodingKeys			
+enum	UserVault.UVXPCSessionStartReply.CodingKeys		case	initialEvents
+enum	UserVault.UVXPCShowReply.CodingKeys			
+enum	UserVault.UVXPCShowReply.CodingKeys		case	output
+enum	UserVault.UVXPCEmptyReply.CodingKeys			
+enum	UserVault.UVXPCVolumeTransactionConfiguration.CodingKeys			
+enum	UserVault.UVXPCVolumeTransactionConfiguration.CodingKeys		case	personaIdentifier
+enum	UserVault.UVXPCVolumeTransactionConfiguration.CodingKeys		case	resource
+enum	UserVault.UVXPCVolumeRequest.CodingKeys			
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	createVolume
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	deleteVolume
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	listVolumes
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	lockVolume
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	unlockVolume
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	unlockVolumeFinished
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	reloadVolumes
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	reportEvent
+enum	UserVault.UVXPCVolumeRequest.CodingKeys		case	transactionStart
+enum	UserVault.UVXPCVolumeRequest.CreateVolumeCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.CreateVolumeCodingKeys		case	_0
+enum	UserVault.UVXPCVolumeRequest.DeleteVolumeCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.DeleteVolumeCodingKeys		case	_0
+enum	UserVault.UVXPCVolumeRequest.ListVolumesCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.LockVolumeCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.LockVolumeCodingKeys		case	_0
+enum	UserVault.UVXPCVolumeRequest.UnlockVolumeCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.UnlockVolumeCodingKeys		case	_0
+enum	UserVault.UVXPCVolumeRequest.UnlockVolumeFinishedCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.UnlockVolumeFinishedCodingKeys		case	_0
+enum	UserVault.UVXPCVolumeRequest.ReloadVolumesCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.ReportEventCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.ReportEventCodingKeys		case	_0
+enum	UserVault.UVXPCVolumeRequest.TransactionStartCodingKeys			
+enum	UserVault.UVXPCVolumeRequest.TransactionStartCodingKeys		case	_0
+enum	UserVault.UVXPCSessionRequest.CodingKeys			
+enum	UserVault.UVXPCSessionRequest.CodingKeys		case	start
+enum	UserVault.UVXPCSessionRequest.CodingKeys		case	cancel
+enum	UserVault.UVXPCSessionRequest.StartCodingKeys			
+enum	UserVault.UVXPCSessionRequest.StartCodingKeys		case	_0
+enum	UserVault.UVXPCSessionRequest.CancelCodingKeys			
+enum	UserVault.UVXPCDiagnosticRequest.CodingKeys			
+enum	UserVault.UVXPCDiagnosticRequest.CodingKeys		case	show
+enum	UserVault.UVXPCDiagnosticRequest.ShowCodingKeys			
+enum	UserVault.UVXPCServerRequest.CodingKeys			
+enum	UserVault.UVXPCServerRequest.CodingKeys		case	sessionEvent
+enum	UserVault.UVXPCServerRequest.SessionEventCodingKeys			
+enum	UserVault.UVXPCServerRequest.SessionEventCodingKeys		case	_0
+enum	UserVault.UVXPCClientRequest.CodingKeys			
+enum	UserVault.UVXPCClientRequest.CodingKeys		case	diagnostic
+enum	UserVault.UVXPCClientRequest.CodingKeys		case	session
+enum	UserVault.UVXPCClientRequest.CodingKeys		case	volume
+enum	UserVault.UVXPCClientRequest.DiagnosticCodingKeys			
+enum	UserVault.UVXPCClientRequest.DiagnosticCodingKeys		case	_0
+enum	UserVault.UVXPCClientRequest.SessionCodingKeys			
+enum	UserVault.UVXPCClientRequest.SessionCodingKeys		case	_0
+enum	UserVault.UVXPCClientRequest.VolumeCodingKeys			
+enum	UserVault.UVXPCClientRequest.VolumeCodingKeys		case	_0
+struct	UserVault.XPCLocalCUEnvironmentKey			
+struct	UserVault.UserDefaultsDomainCUEnvironmentKey			
+struct	UserVault.PersonalDeviceVolumesPathCUEnvironmentKey			
+struct	UserVault.MockResourceParentURLCUEnvironmentKey			
+struct	UserVault.MockVolumeIdentifierCUEnvironmentKey			
+class	UserVault.UVXPCClient			
+class	UserVault.UVXPCClient		let	_environment
+class	UserVault.UVXPCClient		var	_invalidateCalled
+class	UserVault.UVXPCClient		let	_xpcCoder
+class	UserVault.UVXPCClient		var	_xpcConnection
+class	UserVault.UVXPCClient		let	_xpcEndpoint
+class	UserVault.UVXPCClient		var	_eventContinuations
+enum	UserVault.UVXPCClient.Event			
+enum	UserVault.UVXPCClient.Event		case	sessionEvent
+enum	UserVault.UVXPCClient.Event		case	interrupted
+class	UserVault.UVSession			
+class	UserVault.UVSession		var	_cancelCalled
+class	UserVault.UVSession		let	_configuration
+class	UserVault.UVSession		let	_environment
+class	UserVault.UVSession		var	_xpcEventTask
+class	UserVault.UVSession		let	_xpcClient
+class	UserVault.UVSession		var	_eventContinuations
+enum	UserVault.UVSession.Configuration			
+enum	UserVault.UVSession.Configuration		case	resource
+enum	UserVault.UVSession.Event			
+enum	UserVault.UVSession.Event		case	error
+enum	UserVault.UVSession.Event		case	resourceAvailable
+enum	UserVault.UVSession.Event		case	resourceUnavailableSoon
+enum	UserVault.UVSession.Event		case	resourceUnavailable
+enum	UserVault.UVSession.Event		case	interrupted
+struct	UserVault.UVSession.ResourceInfo			
+struct	UserVault.UVSession.ResourceInfo		let	personaIdentifier
+struct	UserVault.UVSession.ResourceInfo		let	resource
+struct	UserVault.UVSession.ResourceInfo		let	volumeIdentifier
+struct	UserVault.UVSession.TransactionInfo			
+struct	UserVault.UVSession.TransactionInfo		let	url
+enum	UserVault.UVSession.ResourceInfo.CodingKeys			
+enum	UserVault.UVSession.ResourceInfo.CodingKeys		case	personaIdentifier
+enum	UserVault.UVSession.ResourceInfo.CodingKeys		case	resource
+enum	UserVault.UVSession.ResourceInfo.CodingKeys		case	volumeIdentifier
+enum	UserVault.UVSession.Event.CodingKeys			
+enum	UserVault.UVSession.Event.CodingKeys		case	error
+enum	UserVault.UVSession.Event.CodingKeys		case	interrupted
+enum	UserVault.UVSession.Event.CodingKeys		case	resourceAvailable
+enum	UserVault.UVSession.Event.CodingKeys		case	resourceUnavailableSoon
+enum	UserVault.UVSession.Event.CodingKeys		case	resourceUnavailable
+enum	UserVault.UVSession.Event.ErrorCodingKeys			
+enum	UserVault.UVSession.Event.ErrorCodingKeys		case	_0
+enum	UserVault.UVSession.Event.InterruptedCodingKeys			
+enum	UserVault.UVSession.Event.ResourceAvailableCodingKeys			
+enum	UserVault.UVSession.Event.ResourceAvailableCodingKeys		case	_0
+enum	UserVault.UVSession.Event.ResourceUnavailableSoonCodingKeys			
+enum	UserVault.UVSession.Event.ResourceUnavailableSoonCodingKeys		case	_0
+enum	UserVault.UVSession.Event.ResourceUnavailableCodingKeys			
+enum	UserVault.UVSession.Event.ResourceUnavailableCodingKeys		case	_0
+enum	UserVault.UVSession.Configuration.CodingKeys			
+enum	UserVault.UVSession.Configuration.CodingKeys		case	resource
+enum	UserVault.UVSession.Configuration.ResourceCodingKeys			
+enum	UserVault.UVSession.Configuration.ResourceCodingKeys		case	_0
+enum	UserVault.UVConstants			
+enum	UserVault.UVUserDefaultKey			
+enum	UserVault.UVUserDefaultKey		case	aksIdentifier
+enum	UserVault.UVUserDefaultKey		case	enforceAllowList
+enum	UserVault.UVUserDefaultKey		case	legacyVolumes
+enum	UserVault.UVUserDefaultKey		case	personaID
+enum	UserVault.UVUserDefaultKey		case	volumeMap
+enum	UserVault.UVUserDefaultKey		case	userID
+enum	UserVault.UVXPCEventKeys			
+enum	UserVault.UVXPCEventKeys		case	bundleID
+enum	UserVault.UVXPCEventKeys		case	resources
+protocol	conformance UVVolumeClient.Event	Swift.Decodable		
+protocol	conformance UVVolumeClient.Event	Swift.Encodable		
+protocol	conformance UVVolumeClient.Event	Swift.CustomStringConvertible		
+protocol	conformance UVVolumeClient.Event	Swift.Equatable		
+protocol	conformance UserVault.UVVolumeClient	Swift.Actor		
+protocol	conformance UserVault.UVVolumeConfiguration	Swift.Decodable		
+protocol	conformance UserVault.UVVolumeConfiguration	Swift.Encodable		
+protocol	conformance UserVault.UVVolumeConfiguration	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVVolumeConfiguration	Swift.Equatable		
+protocol	conformance UserVault.UVVolumeInfo	Swift.Decodable		
+protocol	conformance UserVault.UVVolumeInfo	Swift.Encodable		
+protocol	conformance UserVault.UVVolumeInfo	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVVolumeState	Swift.Equatable		
+protocol	conformance UserVault.UVVolumeState	Swift.Hashable		
+protocol	conformance UserVault.UVVolumeState	Swift.RawRepresentable		
+protocol	conformance UserVault.UVVolumeState	Swift.Decodable		
+protocol	conformance UserVault.UVVolumeState	Swift.Encodable		
+protocol	conformance UserVault.UVVolumeState	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVVolumeUnlockConfiguration	Swift.Decodable		
+protocol	conformance UserVault.UVVolumeUnlockConfiguration	Swift.Encodable		
+protocol	conformance UserVault.UVVolumeUnlockConfiguration	Swift.CustomStringConvertible		
+protocol	conformance NotLockingSoonCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotLockingSoonCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotLockingSoonCodingKeys	Swift.Hashable		
+protocol	conformance NotLockingSoonCodingKeys	Swift.Equatable		
+protocol	conformance LockingSoonCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LockingSoonCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LockingSoonCodingKeys	Swift.Hashable		
+protocol	conformance LockingSoonCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LockingSoonCodingKeys	Swift.CodingKey		
+protocol	conformance NotLockingSoonCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UserVault.UVXPCClientRequest	Swift.Decodable		
+protocol	conformance UserVault.UVXPCClientRequest	Swift.Encodable		
+protocol	conformance UserVault.UVXPCClientRequest	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVXPCServerRequest	Swift.Decodable		
+protocol	conformance UserVault.UVXPCServerRequest	Swift.Encodable		
+protocol	conformance UserVault.UVXPCServerRequest	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVXPCDiagnosticRequest	Swift.Equatable		
+protocol	conformance UserVault.UVXPCDiagnosticRequest	Swift.Hashable		
+protocol	conformance UserVault.UVXPCDiagnosticRequest	Swift.Decodable		
+protocol	conformance UserVault.UVXPCDiagnosticRequest	Swift.Encodable		
+protocol	conformance UserVault.UVXPCDiagnosticRequest	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVXPCSessionRequest	Swift.Decodable		
+protocol	conformance UserVault.UVXPCSessionRequest	Swift.Encodable		
+protocol	conformance UserVault.UVXPCSessionRequest	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVXPCVolumeRequest	Swift.Decodable		
+protocol	conformance UserVault.UVXPCVolumeRequest	Swift.Encodable		
+protocol	conformance UserVault.UVXPCVolumeRequest	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVXPCVolumeTransactionConfiguration	Swift.Decodable		
+protocol	conformance UserVault.UVXPCVolumeTransactionConfiguration	Swift.Encodable		
+protocol	conformance UserVault.UVXPCVolumeTransactionConfiguration	Swift.CustomStringConvertible		
+protocol	conformance UserVault.UVXPCEmptyReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCEmptyReply	Swift.Encodable		
+protocol	conformance UserVault.UVXPCShowReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCShowReply	Swift.Encodable		
+protocol	conformance UserVault.UVXPCSessionStartReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCSessionStartReply	Swift.Encodable		
+protocol	conformance UserVault.UVXPCTransactionStartReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCTransactionStartReply	Swift.Encodable		
+protocol	conformance UserVault.UVXPCCreateVolumeReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCCreateVolumeReply	Swift.Encodable		
+protocol	conformance UserVault.UVXPCListVolumesReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCListVolumesReply	Swift.Encodable		
+protocol	conformance UserVault.UVXPCUnlockVolumeReply	Swift.Decodable		
+protocol	conformance UserVault.UVXPCUnlockVolumeReply	Swift.Encodable		
+protocol	conformance VolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance VolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance VolumeCodingKeys	Swift.Hashable		
+protocol	conformance VolumeCodingKeys	Swift.Equatable		
+protocol	conformance SessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.Hashable		
+protocol	conformance SessionCodingKeys	Swift.Equatable		
+protocol	conformance DiagnosticCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DiagnosticCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DiagnosticCodingKeys	Swift.Hashable		
+protocol	conformance DiagnosticCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SessionEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionEventCodingKeys	Swift.Hashable		
+protocol	conformance SessionEventCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ShowCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShowCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CancelCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CancelCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StartCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StartCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StartCodingKeys	Swift.Hashable		
+protocol	conformance StartCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TransactionStartCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TransactionStartCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TransactionStartCodingKeys	Swift.Hashable		
+protocol	conformance TransactionStartCodingKeys	Swift.Equatable		
+protocol	conformance ReportEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReportEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReportEventCodingKeys	Swift.Hashable		
+protocol	conformance ReportEventCodingKeys	Swift.Equatable		
+protocol	conformance ReloadVolumesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReloadVolumesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnlockVolumeFinishedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnlockVolumeFinishedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnlockVolumeFinishedCodingKeys	Swift.Hashable		
+protocol	conformance UnlockVolumeFinishedCodingKeys	Swift.Equatable		
+protocol	conformance UnlockVolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnlockVolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnlockVolumeCodingKeys	Swift.Hashable		
+protocol	conformance UnlockVolumeCodingKeys	Swift.Equatable		
+protocol	conformance LockVolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LockVolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LockVolumeCodingKeys	Swift.Hashable		
+protocol	conformance LockVolumeCodingKeys	Swift.Equatable		
+protocol	conformance ListVolumesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ListVolumesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeleteVolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeleteVolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeleteVolumeCodingKeys	Swift.Hashable		
+protocol	conformance DeleteVolumeCodingKeys	Swift.Equatable		
+protocol	conformance CreateVolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CreateVolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CreateVolumeCodingKeys	Swift.Hashable		
+protocol	conformance CreateVolumeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CreateVolumeCodingKeys	Swift.CodingKey		
+protocol	conformance DeleteVolumeCodingKeys	Swift.CodingKey		
+protocol	conformance ListVolumesCodingKeys	Swift.CodingKey		
+protocol	conformance LockVolumeCodingKeys	Swift.CodingKey		
+protocol	conformance UnlockVolumeCodingKeys	Swift.CodingKey		
+protocol	conformance UnlockVolumeFinishedCodingKeys	Swift.CodingKey		
+protocol	conformance ReloadVolumesCodingKeys	Swift.CodingKey		
+protocol	conformance ReportEventCodingKeys	Swift.CodingKey		
+protocol	conformance TransactionStartCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance StartCodingKeys	Swift.CodingKey		
+protocol	conformance CancelCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ShowCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SessionEventCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DiagnosticCodingKeys	Swift.CodingKey		
+protocol	conformance SessionCodingKeys	Swift.CodingKey		
+protocol	conformance VolumeCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance XPCLocalCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance UserDefaultsDomainCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance PersonalDeviceVolumesPathCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance MockResourceParentURLCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance MockVolumeIdentifierCUEnvironmentKey	CoreUtilsSwift.CUEnvironmentKey		
+protocol	conformance UVXPCClient.Event	Swift.CustomStringConvertible		
+protocol	conformance UVXPCClient.Event	Swift.Equatable		
+protocol	conformance UserVault.UVXPCClient	Swift.Actor		
+protocol	conformance UVSession.Configuration	Swift.Decodable		
+protocol	conformance UVSession.Configuration	Swift.Encodable		
+protocol	conformance UVSession.Configuration	Swift.CustomStringConvertible		
+protocol	conformance UVSession.Event	Swift.Decodable		
+protocol	conformance UVSession.Event	Swift.Encodable		
+protocol	conformance UVSession.Event	Swift.CustomStringConvertible		
+protocol	conformance UVSession.Event	Swift.Equatable		
+protocol	conformance UVSession.ResourceInfo	Swift.Decodable		
+protocol	conformance UVSession.ResourceInfo	Swift.Encodable		
+protocol	conformance UVSession.ResourceInfo	Swift.CustomStringConvertible		
+protocol	conformance UVSession.ResourceInfo	Swift.Equatable		
+protocol	conformance UVSession.TransactionInfo	Swift.Equatable		
+protocol	conformance UserVault.UVSession	Swift.Actor		
+protocol	conformance ResourceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceCodingKeys	Swift.Hashable		
+protocol	conformance ResourceCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ResourceUnavailableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUnavailableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUnavailableCodingKeys	Swift.Hashable		
+protocol	conformance ResourceUnavailableCodingKeys	Swift.Equatable		
+protocol	conformance ResourceUnavailableSoonCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceUnavailableSoonCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceUnavailableSoonCodingKeys	Swift.Hashable		
+protocol	conformance ResourceUnavailableSoonCodingKeys	Swift.Equatable		
+protocol	conformance ResourceAvailableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResourceAvailableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResourceAvailableCodingKeys	Swift.Hashable		
+protocol	conformance ResourceAvailableCodingKeys	Swift.Equatable		
+protocol	conformance InterruptedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InterruptedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.Hashable		
+protocol	conformance ErrorCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ErrorCodingKeys	Swift.CodingKey		
+protocol	conformance InterruptedCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceAvailableCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUnavailableSoonCodingKeys	Swift.CodingKey		
+protocol	conformance ResourceUnavailableCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ResourceCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UserVault.UVUserDefaultKey	Swift.Equatable		
+protocol	conformance UserVault.UVUserDefaultKey	Swift.Hashable		
+protocol	conformance UserVault.UVUserDefaultKey	Swift.RawRepresentable		
+protocol	conformance UserVault.UVUserDefaultKey	Swift.CaseIterable		
+protocol	conformance UserVault.UVXPCEventKeys	Swift.Equatable		
+protocol	conformance UserVault.UVXPCEventKeys	Swift.Hashable		
+protocol	conformance UserVault.UVXPCEventKeys	Swift.RawRepresentable		
+extension	UserVault.UVVolumeState	RawRepresentable		
+extension	UserVault.XPCLocalCUEnvironmentKey	CUEnvironmentKey		
+extension	UserVault.UserDefaultsDomainCUEnvironmentKey	CUEnvironmentKey		
+extension	UserVault.PersonalDeviceVolumesPathCUEnvironmentKey	CUEnvironmentKey		
+extension	UserVault.MockResourceParentURLCUEnvironmentKey	CUEnvironmentKey		
+extension	UserVault.MockVolumeIdentifierCUEnvironmentKey	CUEnvironmentKey		
+extension	UserVault.UVUserDefaultKey	RawRepresentable		
+extension	UserVault.UVUserDefaultKey	CaseIterable		
+extension	UserVault.UVXPCEventKeys	RawRepresentable		

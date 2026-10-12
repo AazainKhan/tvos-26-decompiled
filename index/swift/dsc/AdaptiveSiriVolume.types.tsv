@@ -1,0 +1,275 @@
+kind	type	conformance	member_kind	member
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult		
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult	let	activityThreshold
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult	let	activityThresholdCount
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult	let	historicalSampleCount
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult	var	outputSpeechStartPlayingStartPosition
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult	var	lastAudioChunkStartPosition
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult	var	lastOutputSpeechPlayingState
+struct	AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult			
+struct	AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult		var	avgMeanRMSValue
+struct	AdaptiveSiriVolume.ASVBackgroundNoiseEstimationResult		var	activityLevel
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType			
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType		case	ASVBackgroundNoiseActivityLevelUnknownType
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType		case	ASVBackgroundNoiseActivityLevelLowType
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType		case	ASVBackgroundNoiseActivityLevelHighType
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorProvider			
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType			
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType		case	ASVBackgroundNoiseExclaveActivityLevelUnknownType
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType		case	ASVBackgroundNoiseExclaveActivityLevelLowType
+enum	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType		case	ASVBackgroundNoiseExclaveActivityLevelHighType
+struct	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveEstimationResult			
+struct	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveEstimationResult		var	avgMeanRMSValue
+struct	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveEstimationResult		var	activityLevel
+class	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveEstimator			
+class	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveEstimator		let	backgroundNoiseEstimator
+class	AdaptiveSiriVolume.ClassificationResult	NSObject		
+class	AdaptiveSiriVolume.ClassificationResult	NSObject	let	confidenceThreshold
+class	AdaptiveSiriVolume.ClassificationResult	NSObject	var	delegate
+class	AdaptiveSiriVolume.ASVDistanceEstimator			
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	speechDistanceAudioFmt
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	speechDistanceStreamAnalyzer
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	classifySoundRequest
+class	AdaptiveSiriVolume.ASVDistanceEstimator		let	observer
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	recentDistanceEstimation
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	distanceChannelCount
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	distanceInputBufferDurationSeconds
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	sampleRate
+class	AdaptiveSiriVolume.ASVDistanceEstimator		var	audioFramePosition
+struct	AdaptiveSiriVolume.ASVDistanceEstimationResult			
+struct	AdaptiveSiriVolume.ASVDistanceEstimationResult		var	speakerDistance
+struct	AdaptiveSiriVolume.ASVDistanceEstimationResult		var	timeStamp
+enum	AdaptiveSiriVolume.ASVUserDistanceType			
+enum	AdaptiveSiriVolume.ASVUserDistanceType		case	ASVUserDistanceDidNotCompleteType
+enum	AdaptiveSiriVolume.ASVUserDistanceType		case	ASVUserDistanceNearType
+enum	AdaptiveSiriVolume.ASVUserDistanceType		case	ASVUserDistanceMidType
+enum	AdaptiveSiriVolume.ASVUserDistanceType		case	ASVUserDistanceFarType
+class	AdaptiveSiriVolume.ASVEstimator<A	AdaptiveSiriVolume.BufferElement>		
+class	AdaptiveSiriVolume.ASVEstimator<A	AdaptiveSiriVolume.BufferElement>	var	buffer
+class	AdaptiveSiriVolume.ASVEstimator<A	AdaptiveSiriVolume.BufferElement>	var	estimatorType
+enum	AdaptiveSiriVolume.ASVEstimatorType			
+enum	AdaptiveSiriVolume.ASVEstimatorType		case	ASVEstimatorDistanceType
+enum	AdaptiveSiriVolume.ASVEstimatorType		case	ASVEstimatorSpeechType
+enum	AdaptiveSiriVolume.ASVEstimatorType		case	ASVEstimatorBackgroundNoiseType
+enum	AdaptiveSiriVolume.ASVEstimatorType		case	ASVEstimatorMusicType
+class	AdaptiveSiriVolume.ASVMusicLoudnessEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->		
+class	AdaptiveSiriVolume.ASVMusicLoudnessEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->	let	lookBackOffset
+class	AdaptiveSiriVolume.ASVMusicLoudnessEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->	let	weight
+class	AdaptiveSiriVolume.ASVMusicLoudnessEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->	let	defaultStrength
+class	AdaptiveSiriVolume.ASVMusicLoudnessEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->	let	lookBackTime
+class	AdaptiveSiriVolume.ASVSpeechLevelEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->		
+class	AdaptiveSiriVolume.ASVSpeechLevelEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->	let	weight
+class	AdaptiveSiriVolume.ASVSpeechLevelEstimator	AdaptiveSiriVolume.ASVEstimator AdaptiveSiriVolume.ASVRMSInfo Float ->	let	defaultStrength
+class	AdaptiveSiriVolume.ASVAdaptiveSiriVolumeFeatureEnabledMonitor	AdaptiveSiriVolume.ASVEventMonitor		
+class	AdaptiveSiriVolume.ASVAdaptiveSiriVolumeFeatureEnabledMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	isAdaptiveSiriVolumeFeatureEnabled
+class	AdaptiveSiriVolume.ASVAdaptiveSiriVolumeFeatureEnabledMonitor	AdaptiveSiriVolume.ASVEventMonitor	let	queue
+class	AdaptiveSiriVolume.ASVAdaptiveSiriVolumeFeatureEnabledMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	userDefaults
+class	AdaptiveSiriVolume.ASVEventMonitor	NSObject		
+class	AdaptiveSiriVolume.ASVEventMonitor	NSObject	var	observers
+class	AdaptiveSiriVolume.ASVEventMonitor	NSObject	let	queue
+class	AdaptiveSiriVolume.ASVMediaPlayingMonitor	AdaptiveSiriVolume.ASVEventMonitor		
+class	AdaptiveSiriVolume.ASVMediaPlayingMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	mediaPlayingState
+class	AdaptiveSiriVolume.ASVMediaPlayingMonitor	AdaptiveSiriVolume.ASVEventMonitor	let	queue
+class	AdaptiveSiriVolume.ASVMediaPlayingMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	cancellable
+enum	AdaptiveSiriVolume.ASVMediaPlayingState			
+enum	AdaptiveSiriVolume.ASVMediaPlayingState		case	ASVMediaPlayingStateUnknown
+enum	AdaptiveSiriVolume.ASVMediaPlayingState		case	ASVMediaIsPlaying
+enum	AdaptiveSiriVolume.ASVMediaPlayingState		case	ASVMediaIsNotPlaying
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor		
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor	let	queue
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	siriObserver
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	isActiveSession
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	isActiveRequest
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	isListening
+class	AdaptiveSiriVolume.ASVSiriStateMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	isSpeaking
+class	AdaptiveSiriVolume.ASVSystemMediaVolumeMonitor	AdaptiveSiriVolume.ASVEventMonitor		
+class	AdaptiveSiriVolume.ASVSystemMediaVolumeMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	systemMediaVolume
+class	AdaptiveSiriVolume.ASVSystemMediaVolumeMonitor	AdaptiveSiriVolume.ASVEventMonitor	let	queue
+class	AdaptiveSiriVolume.ASVSystemMediaVolumeMonitor	AdaptiveSiriVolume.ASVEventMonitor	var	cancellable
+class	AdaptiveSiriVolume.ASVAudioChunk<A	Swift.Numeric>		
+class	AdaptiveSiriVolume.ASVAudioChunk<A	Swift.Numeric>	var	samples
+class	AdaptiveSiriVolume.ASVAudioChunk<A	Swift.Numeric>	var	numSamples
+class	AdaptiveSiriVolume.ASVAudioChunk<A	Swift.Numeric>	var	numChannels
+class	AdaptiveSiriVolume.ASVAudioChunk<A	Swift.Numeric>	var	startPosition
+class	AdaptiveSiriVolume.ASVAudioChunk<A	Swift.Numeric>	var	isInterleaved
+enum	AdaptiveSiriVolume.ASVStartPositionType			
+class	AdaptiveSiriVolume.ASVFloatAudioChunkWrapper	NSObject		
+class	AdaptiveSiriVolume.ASVFloatAudioChunkWrapper	NSObject	var	floatAudioChunk
+class	AdaptiveSiriVolume.ASVIntegerAudioChunkWrapper	NSObject		
+class	AdaptiveSiriVolume.ASVIntegerAudioChunkWrapper	NSObject	var	intAudioChunk
+class	AdaptiveSiriVolume.ASVCircularQueue			
+class	AdaptiveSiriVolume.ASVCircularQueue		var	bufferCapacity
+class	AdaptiveSiriVolume.ASVCircularQueue		var	circularQueue
+class	AdaptiveSiriVolume.ASVDefaultDeviceConfig	AdaptiveSiriVolume.ASVDeviceConfig		
+class	AdaptiveSiriVolume.ASVDeviceConfig	NSObject		
+class	AdaptiveSiriVolume.ASVPreferences			
+class	AdaptiveSiriVolume.ASVPreferences		let	defaults
+enum	AdaptiveSiriVolume.StartPositionType			
+enum	AdaptiveSiriVolume.StartPositionType		case	sampleCount
+enum	AdaptiveSiriVolume.StartPositionType		case	hostTime
+struct	AdaptiveSiriVolume.ASVRMSInfo			
+struct	AdaptiveSiriVolume.ASVRMSInfo		var	startPosition
+struct	AdaptiveSiriVolume.ASVRMSInfo		var	rmsValue
+class	AdaptiveSiriVolume.ASVSiriAnalytics			
+class	AdaptiveSiriVolume.ASVSiriAnalytics		let	queue
+class	AdaptiveSiriVolume.ASVSiriAnalytics		let	stream
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo			
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	outputVolume
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	speechLevelEstimation
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	musicLoudnessEstimation
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	backgroundNoiseEstimation
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	backgroundNoiseActivityLevel
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	speakerDistance
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	invocationType
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	mediaIsPlaying
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	permanentOffsetIsEnabled
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	permanentOffsetFactor
+struct	AdaptiveSiriVolume.OutputVolumeQueriedInfo		let	sessionId
+enum	AdaptiveSiriVolume.ASVAnalyticsError			
+enum	AdaptiveSiriVolume.ASVAnalyticsError		case	schemaCreationFailed
+enum	AdaptiveSiriVolume.ASVAnalyticsError		case	clientEventCreationFailed
+enum	AdaptiveSiriVolume.ASVAnalyticsError		case	invalidSessionId
+enum	AdaptiveSiriVolume.ASVAnalyticsError		case	clientEventMetadataCreationFailed
+struct	AdaptiveSiriVolume.UserIntentDetectedInfo			
+struct	AdaptiveSiriVolume.UserIntentDetectedInfo		let	userIntentType
+struct	AdaptiveSiriVolume.UserIntentDetectedInfo		let	userIntentVolume
+struct	AdaptiveSiriVolume.UserIntentDetectedInfo		let	permanentOffsetIsEnabled
+struct	AdaptiveSiriVolume.UserIntentDetectedInfo		let	permanentOffsetFactor
+struct	AdaptiveSiriVolume.UserIntentDetectedInfo		let	sessionId
+struct	AdaptiveSiriVolume.ASVTTSVolumeInfo			
+struct	AdaptiveSiriVolume.ASVTTSVolumeInfo		var	timeStamp
+struct	AdaptiveSiriVolume.ASVTTSVolumeInfo		var	ttsVolume
+class	AdaptiveSiriVolume.ASVUtils			
+enum	AdaptiveSiriVolume.Log			
+struct	AdaptiveSiriVolume.Log.LogType			
+struct	AdaptiveSiriVolume.Log.LogType		let	rawValue
+enum	AdaptiveSiriVolume.ASVOutputVolumeType			
+enum	AdaptiveSiriVolume.ASVSoundType			
+enum	AdaptiveSiriVolume.ASVInvocationType			
+class	AdaptiveSiriVolume.ASVOutputVolumeResult	NSObject		
+class	AdaptiveSiriVolume.ASVOutputVolumeResult	NSObject	let	volume
+class	AdaptiveSiriVolume.ASVOutputVolumeResult	NSObject	let	sessionId
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject		
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	distanceEstimator
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	speechLevelEstimator
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	musicLoudnessEstimator
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	backgroundNoiseEstimator
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	userIntent
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	mediaPlayerMonitor
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	isMediaPlaybackOn
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	systemMediaVolumeMonitor
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	systemMediaVolume
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	adaptiveSiriVolumeFeatureEnabledMonitor
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	isAdaptiveSiriVolumeFeatureEnabled
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	siriStateMonitor
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	let	deviceConfig
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	let	mainQueue
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	let	distanceQueue
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	let	isExclaveDevice
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	let	analytics
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	userSpeechInfo
+class	AdaptiveSiriVolume.AdaptiveSiriVolume	NSObject	var	ttsVolumeQueue
+struct	AdaptiveSiriVolume.AdaptiveSiriVolume.UserSpeechInfo			
+struct	AdaptiveSiriVolume.AdaptiveSiriVolume.UserSpeechInfo		var	startPosition
+struct	AdaptiveSiriVolume.AdaptiveSiriVolume.UserSpeechInfo		var	endPosition
+struct	AdaptiveSiriVolume.AdaptiveSiriVolume.UserSpeechInfo		var	fireTimestamp
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorExclaveClient			
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorExclaveClient		let	asvServicesClient
+class	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorExclaveClient		var	backgroundNoiseEstimationResult
+class	AdaptiveSiriVolume.ASVUserIntent			
+class	AdaptiveSiriVolume.ASVUserIntent		var	userIntentVolume
+class	AdaptiveSiriVolume.ASVUserIntent		var	userIntentTime
+class	AdaptiveSiriVolume.ASVUserIntent		var	userIntentLatestTTSVolume
+class	AdaptiveSiriVolume.ASVUserIntent		var	userIntentLatestTTSVolumeTime
+class	AdaptiveSiriVolume.ASVUserIntent		var	permanentOffsetIsEnabled
+class	AdaptiveSiriVolume.ASVUserIntent		var	permanentOffsetFactor
+class	AdaptiveSiriVolume.ASVUserIntent		var	userIntentType
+class	AdaptiveSiriVolume.ASVUserIntent		var	userIntentValidForSeconds
+class	AdaptiveSiriVolume.ASVUserIntent		var	volumeDecreaseFactor
+class	AdaptiveSiriVolume.ASVUserIntent		var	volumeIncreaseFactor
+class	AdaptiveSiriVolume.ASVUserIntent		var	permanentOffsetFactorDelta
+class	AdaptiveSiriVolume.ASVUserIntent		var	permanentOffsetFactorLowerBound
+class	AdaptiveSiriVolume.ASVUserIntent		var	permanentOffsetFactorUpperBound
+class	AdaptiveSiriVolume.ASVUserIntent		var	minTTSVolume
+class	AdaptiveSiriVolume.ASVUserIntent		var	maxTTSVolume
+enum	AdaptiveSiriVolume.ASVUserIntentType			
+enum	AdaptiveSiriVolume.ASVUserIntentType		case	ASVUserIntentDefaultType
+enum	AdaptiveSiriVolume.ASVUserIntentType		case	ASVUserIntentSetSiriVolumeType
+enum	AdaptiveSiriVolume.ASVUserIntentType		case	ASVUserIntentIncreaseSiriVolumeType
+enum	AdaptiveSiriVolume.ASVUserIntentType		case	ASVUserIntentDecreaseSiriVolumeType
+protocol	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorProtocol			
+protocol	AdaptiveSiriVolume.ClassificationResultDelegate			
+protocol	AdaptiveSiriVolume.BufferElement	ValueType		
+protocol	AdaptiveSiriVolume.ASVEstimatorProtocol	T, EstimationResult		
+protocol	AdaptiveSiriVolume.ASVAdaptiveSiriVolumeFeatureEnabledMonitorDelegate			
+protocol	AdaptiveSiriVolume.ASVEventMonitorDelegate			
+protocol	AdaptiveSiriVolume.ASVMediaPlayingMonitorDelegate			
+protocol	AdaptiveSiriVolume.ASVSiriStateMonitorDelegate			
+protocol	AdaptiveSiriVolume.ASVSystemMediaVolumeMonitorDelegate			
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseEstimator	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorProtocol		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType	Swift.Equatable		
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.NSKeyValueChangeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.NSKeyValueChangeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.NSKeyValueChangeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.NSKeyValueChangeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.NSKeyValueChangeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.NSKeyValueChangeKey	Swift.Hashable: Foundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVDistanceEstimator	AdaptiveSiriVolume.ClassificationResultDelegate		
+protocol	conformance AdaptiveSiriVolume.ASVUserDistanceType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVUserDistanceType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVEstimatorType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVEstimatorType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVEstimator	AdaptiveSiriVolume.ASVEstimatorProtocol		
+protocol	conformance AdaptiveSiriVolume.ASVMediaPlayingState	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVMediaPlayingState	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVMediaPlayingState	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVStartPositionType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVStartPositionType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVStartPositionType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVRMSInfo	AdaptiveSiriVolume.BufferElement		
+protocol	conformance AdaptiveSiriVolume.ASVAnalyticsError	Swift.Error		
+protocol	conformance Log.LogType	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Log.LogType	Swift.Equatable		
+protocol	conformance Log.LogType	Swift.RawRepresentable		
+protocol	conformance Log.LogType	Swift.SetAlgebra		
+protocol	conformance Log.LogType	Swift.Hashable		
+protocol	conformance Log.LogType	Swift.OptionSet		
+protocol	conformance AdaptiveSiriVolume.ASVOutputVolumeType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVOutputVolumeType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVOutputVolumeType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVSoundType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVSoundType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVSoundType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVInvocationType	Swift.Equatable		
+protocol	conformance AdaptiveSiriVolume.ASVInvocationType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVInvocationType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.AdaptiveSiriVolume	AdaptiveSiriVolume.ASVAdaptiveSiriVolumeFeatureEnabledMonitorDelegate		
+protocol	conformance AdaptiveSiriVolume.AdaptiveSiriVolume	AdaptiveSiriVolume.ASVMediaPlayingMonitorDelegate		
+protocol	conformance AdaptiveSiriVolume.AdaptiveSiriVolume	AdaptiveSiriVolume.ASVSystemMediaVolumeMonitorDelegate		
+protocol	conformance AdaptiveSiriVolume.AdaptiveSiriVolume	AdaptiveSiriVolume.ASVSiriStateMonitorDelegate		
+protocol	conformance AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorExclaveClient	AdaptiveSiriVolume.ASVBackgroundNoiseEstimatorProtocol		
+protocol	conformance AdaptiveSiriVolume.ASVUserIntentType	Swift.RawRepresentable		
+protocol	conformance AdaptiveSiriVolume.ASVUserIntentType	Swift.Hashable		
+protocol	conformance AdaptiveSiriVolume.ASVUserIntentType	Swift.Equatable		
+extension	AdaptiveSiriVolume.ASVBackgroundNoiseActivityLevelType	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVBackgroundNoiseExclaveActivityLevelType	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVEstimator	ASVEstimatorProtocol		
+extension	AdaptiveSiriVolume.ASVMediaPlayingState	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVStartPositionType	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVRMSInfo	BufferElement		
+extension	AdaptiveSiriVolume.Log.LogType	ExpressibleByArrayLiteral		
+extension	AdaptiveSiriVolume.Log.LogType	RawRepresentable		
+extension	AdaptiveSiriVolume.Log.LogType	SetAlgebra		
+extension	AdaptiveSiriVolume.Log.LogType	OptionSet		
+extension	AdaptiveSiriVolume.ASVOutputVolumeType	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVSoundType	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVInvocationType	RawRepresentable		
+extension	AdaptiveSiriVolume.ASVUserIntentType	RawRepresentable		

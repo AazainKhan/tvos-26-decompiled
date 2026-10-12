@@ -1,0 +1,702 @@
+kind	type	conformance	member_kind	member
+struct	HomeKitMetrics.DictionaryCounterSetPersistenceProvider<A	HomeKitMetrics.Countable>		
+struct	HomeKitMetrics.DictionaryCounterSetPersistenceProvider<A	HomeKitMetrics.Countable>	let	groupSpecifier
+struct	HomeKitMetrics.DictionaryCounterSetPersistenceProvider<A	HomeKitMetrics.Countable>	let	date
+struct	HomeKitMetrics.DictionaryCounterSetPersistenceProvider<A	HomeKitMetrics.Countable>	let	counters
+class	HomeKitMetrics.DictionaryCounterStorage			
+class	HomeKitMetrics.DictionaryCounterStorage		let	groupSpecifier
+class	HomeKitMetrics.DictionaryCounterStorage		let	date
+class	HomeKitMetrics.DictionaryCounterStorage		let	counters
+class	HomeKitMetrics.DictionaryCounterStorage		let	durations
+class	HomeKitMetrics.DictionaryCounterStorage		let	distributions
+class	HomeKitMetrics.DictionaryCounterStorage		let	suggestFullDayLoad
+enum	HomeKitMetrics.DataEncodingType			
+enum	HomeKitMetrics.DataEncodingType		case	raw
+enum	HomeKitMetrics.DataEncodingType		case	json
+enum	HomeKitMetrics.DataStreamError			
+enum	HomeKitMetrics.DataStreamError		case	invalidDataLength
+enum	HomeKitMetrics.DataStreamError		case	invalidCodingType
+enum	HomeKitMetrics.DataStreamError		case	endOfData
+class	HomeKitMetrics.FlatFileCounterSetPersistenceProvider<A	HomeKitMetrics.Countable, B: HomeKitMetrics.FlatFileManagerProtocol>		
+class	HomeKitMetrics.FlatFileCounterSetPersistenceProvider<A	HomeKitMetrics.Countable, B: HomeKitMetrics.FlatFileManagerProtocol>	let	counterStore
+class	HomeKitMetrics.FlatFileCounterSetPersistenceProvider<A	HomeKitMetrics.Countable, B: HomeKitMetrics.FlatFileManagerProtocol>	let	counterSetType
+enum	HomeKitMetrics.FlatFileCounterSetType			
+enum	HomeKitMetrics.FlatFileCounterSetType		case	accumulator
+enum	HomeKitMetrics.FlatFileCounterSetType		case	duration
+enum	HomeKitMetrics.FlatFileCounterSetType		case	distribution
+class	HomeKitMetrics.FlatFileCounterStore<A	HomeKitMetrics.FlatFileManagerProtocol>		
+class	HomeKitMetrics.FlatFileCounterStore<A	HomeKitMetrics.FlatFileManagerProtocol>	let	fileManager
+class	HomeKitMetrics.FlatFileCounterStore<A	HomeKitMetrics.FlatFileManagerProtocol>	let	dateProvider
+class	HomeKitMetrics.FlatFileCounterStore<A	HomeKitMetrics.FlatFileManagerProtocol>	let	mutex
+struct	HomeKitMetrics.FlatFileCounterStore.State<A	HomeKitMetrics.FlatFileManagerProtocol>		
+struct	HomeKitMetrics.FlatFileCounterStore.State<A	HomeKitMetrics.FlatFileManagerProtocol>	var	isOpen
+struct	HomeKitMetrics.FlatFileCounterStore.State<A	HomeKitMetrics.FlatFileManagerProtocol>	var	loadedPartitions
+struct	HomeKitMetrics.FlatFileCounterStore.State<A	HomeKitMetrics.FlatFileManagerProtocol>	var	changedDates
+class	HomeKitMetrics.FlatFileGroupPersistenceProvider<A	HomeKitMetrics.FlatFileManagerProtocol>		
+class	HomeKitMetrics.FlatFileGroupPersistenceProvider<A	HomeKitMetrics.FlatFileManagerProtocol>	let	counterStore
+class	HomeKitMetrics.FlatFileManager			
+class	HomeKitMetrics.FlatFileManager		let	directoryURL
+class	HomeKitMetrics.InputDataStream			
+class	HomeKitMetrics.InputDataStream		var	underlyingData
+class	HomeKitMetrics.InputDataStream		var	currentIndex
+class	HomeKitMetrics.OutputDataStream			
+class	HomeKitMetrics.OutputDataStream		var	underlyingData
+class	HomeKitMetrics.PersistentFlatFileCounterStorage			
+class	HomeKitMetrics.PersistentFlatFileCounterStorage		let	fileManager
+class	HomeKitMetrics.PersistentFlatFileCounterStorage		let	dateProvider
+class	HomeKitMetrics.PersistentFlatFileCounterStorage		let	mutex
+class	HomeKitMetrics.PersistentFlatFileCounterStorage		let	suggestFullDayLoad
+struct	HomeKitMetrics.PersistentFlatFileCounterStorage.State			
+struct	HomeKitMetrics.PersistentFlatFileCounterStorage.State		var	store
+struct	HomeKitMetrics.PersistentFlatFileCounterStorage.State		var	retainCount
+struct	HomeKitMetrics.RemoteCounterDataSource			
+struct	HomeKitMetrics.RemoteCounterDataSource		let	deviceProvider
+struct	HomeKitMetrics.RemoteCounterDataSource		let	requestHandler
+struct	HomeKitMetrics.RemoteCounterDataSource		let	messageHandler
+enum	HomeKitMetrics.RemoteCounterDeviceType			
+enum	HomeKitMetrics.RemoteCounterDeviceType		case	specific
+enum	HomeKitMetrics.RemoteCounterDeviceType		case	resident
+enum	HomeKitMetrics.RemoteCounterDeviceType		case	nonResident
+enum	HomeKitMetrics.RemoteCounterDeviceType		case	all
+enum	HomeKitMetrics.RemoteCounterSummarization			
+enum	HomeKitMetrics.RemoteCounterSummarization		case	aggregate
+enum	HomeKitMetrics.RemoteCounterSummarization		case	aggregateRange
+enum	HomeKitMetrics.RemoteCounterSummarization		case	byDevice
+enum	HomeKitMetrics.RemoteCounterSummarization		case	byDeviceRange
+enum	HomeKitMetrics.RemoteCounterNames			
+enum	HomeKitMetrics.RemoteCounterNames		case	specific
+enum	HomeKitMetrics.RemoteCounterNames		case	none
+enum	HomeKitMetrics.RemoteCounterNames		case	all
+class	HomeKitMetrics.RemoteCounterRequest			
+class	HomeKitMetrics.RemoteCounterRequest		let	state
+struct	HomeKitMetrics.RemoteCounterRequest.State			
+struct	HomeKitMetrics.RemoteCounterRequest.State		var	groupRequests
+struct	HomeKitMetrics.RemoteGroupRequest			
+struct	HomeKitMetrics.RemoteGroupRequest		let	specifier
+struct	HomeKitMetrics.RemoteGroupRequest		let	deviceType
+struct	HomeKitMetrics.RemoteGroupRequest		let	startDate
+struct	HomeKitMetrics.RemoteGroupRequest		let	endDate
+struct	HomeKitMetrics.RemoteGroupRequest		let	counters
+struct	HomeKitMetrics.RemoteGroupRequest		let	durations
+struct	HomeKitMetrics.RemoteGroupRequest		let	distributions
+class	HomeKitMetrics.RemoteCounterRequestHandler			
+class	HomeKitMetrics.RemoteCounterRequestHandler		let	manager
+class	HomeKitMetrics.RemoteCounterRequestHandler		let	deviceProvider
+struct	HomeKitMetrics.RemoteCounterResponse			
+struct	HomeKitMetrics.RemoteCounterResponse		let	aggregatedGroups
+struct	HomeKitMetrics.RemoteCounterResponse		let	deviceGroups
+class	HomeKitMetrics.RemoteCounterTransaction			
+class	HomeKitMetrics.RemoteCounterTransaction		let	clients
+class	HomeKitMetrics.RemoteCounterTransaction		let	dataSource
+class	HomeKitMetrics.AccessoryGroupSpecifier	HomeKitMetrics.HomeGroupSpecifier		
+class	HomeKitMetrics.AccessoryGroupSpecifier	HomeKitMetrics.HomeGroupSpecifier	let	accessoryUUID
+enum	HomeKitMetrics.AccessoryGroupSpecifier.CodingKeys			
+enum	HomeKitMetrics.AccessoryGroupSpecifier.CodingKeys		case	accessoryUUID
+struct	HomeKitMetrics.AccumulatorCounter			
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>		
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>	let	groupSpecifier
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>	let	dataSource
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>	var	loadedDate
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>	var	dateCounterSets
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>	var	ephemeralCounterSets
+class	HomeKitMetrics.CounterContainer<A	HomeKitMetrics.Countable>	var	observers
+struct	HomeKitMetrics.CounterDistribution			
+struct	HomeKitMetrics.CounterDistribution		let	minValue
+struct	HomeKitMetrics.CounterDistribution		let	maxValue
+struct	HomeKitMetrics.CounterDistribution		let	valueCount
+struct	HomeKitMetrics.CounterDistribution		let	sumOfValues
+struct	HomeKitMetrics.CounterDistribution		let	sumOfSquares
+enum	HomeKitMetrics.CounterDistribution.CodingKeys			
+enum	HomeKitMetrics.CounterDistribution.CodingKeys		case	minValue
+enum	HomeKitMetrics.CounterDistribution.CodingKeys		case	maxValue
+enum	HomeKitMetrics.CounterDistribution.CodingKeys		case	valueCount
+enum	HomeKitMetrics.CounterDistribution.CodingKeys		case	sumOfValues
+enum	HomeKitMetrics.CounterDistribution.CodingKeys		case	sumOfSquares
+struct	HomeKitMetrics.CounterFilter			
+struct	HomeKitMetrics.CounterFilter		let	groupName
+struct	HomeKitMetrics.CounterFilter		let	homeUUIDString
+struct	HomeKitMetrics.CounterFilter		let	accessoryUUIDString
+struct	HomeKitMetrics.CounterFilter		let	counterName
+struct	HomeKitMetrics.CounterFilter		let	durationName
+struct	HomeKitMetrics.CounterFilter		let	distributionName
+struct	HomeKitMetrics.CounterFilter		let	singleDatePartition
+struct	HomeKitMetrics.CounterFilter		let	ephemeralContainerName
+enum	HomeKitMetrics.CounterFormatter			
+struct	HomeKitMetrics.IntCounterObserver			
+struct	HomeKitMetrics.IntCounterObserver		let	observer
+struct	HomeKitMetrics.MaxValueObserver			
+struct	HomeKitMetrics.MaxValueObserver		let	observer
+class	HomeKitMetrics.CounterGroup	HomeKitMetrics.ReadableCounterGroup		
+class	HomeKitMetrics.CounterGroupContainer<A	HomeKitMetrics.ReadableCounterGroup, B>		
+struct	HomeKitMetrics.CounterGroupDataSource			
+struct	HomeKitMetrics.CounterGroupDataSource		let	counterStorage
+struct	HomeKitMetrics.CounterGroupDataSource		let	dateProvider
+struct	HomeKitMetrics.CounterGroupDataSource		let	uptimeProvider
+enum	HomeKitMetrics.CounterPartitionType			
+enum	HomeKitMetrics.CounterPartitionType		case	hourlyWithRetention
+enum	HomeKitMetrics.CounterPartitionType		case	dailyWithRetention
+enum	HomeKitMetrics.CounterPartitionType		case	weeklyWithRetention
+enum	HomeKitMetrics.CounterPartitionType		case	monthlyWithRetention
+enum	HomeKitMetrics.CounterPartitionType.CodingKeys			
+enum	HomeKitMetrics.CounterPartitionType.CodingKeys		case	hourlyWithRetention
+enum	HomeKitMetrics.CounterPartitionType.CodingKeys		case	dailyWithRetention
+enum	HomeKitMetrics.CounterPartitionType.CodingKeys		case	weeklyWithRetention
+enum	HomeKitMetrics.CounterPartitionType.CodingKeys		case	monthlyWithRetention
+enum	HomeKitMetrics.CounterPartitionType.HourlyWithRetentionCodingKeys			
+enum	HomeKitMetrics.CounterPartitionType.HourlyWithRetentionCodingKeys		case	_0
+enum	HomeKitMetrics.CounterPartitionType.DailyWithRetentionCodingKeys			
+enum	HomeKitMetrics.CounterPartitionType.DailyWithRetentionCodingKeys		case	_0
+enum	HomeKitMetrics.CounterPartitionType.WeeklyWithRetentionCodingKeys			
+enum	HomeKitMetrics.CounterPartitionType.WeeklyWithRetentionCodingKeys		case	_0
+enum	HomeKitMetrics.CounterPartitionType.MonthlyWithRetentionCodingKeys			
+enum	HomeKitMetrics.CounterPartitionType.MonthlyWithRetentionCodingKeys		case	_0
+enum	HomeKitMetrics.CountersError			
+enum	HomeKitMetrics.CountersError		case	objectModelLoadFailure
+struct	HomeKitMetrics.CounterSet<A	HomeKitMetrics.Accumulatable, A: Swift.Decodable, A: Swift.Encodable>		
+struct	HomeKitMetrics.CounterSet<A	HomeKitMetrics.Accumulatable, A: Swift.Decodable, A: Swift.Encodable>	var	needsMerge
+struct	HomeKitMetrics.CounterSet<A	HomeKitMetrics.Accumulatable, A: Swift.Decodable, A: Swift.Encodable>	var	counters
+enum	HomeKitMetrics.CounterSet.CodingKeys<A	HomeKitMetrics.Accumulatable, A: Swift.Decodable, A: Swift.Encodable>		
+enum	HomeKitMetrics.CounterSet.CodingKeys<A	HomeKitMetrics.Accumulatable, A: Swift.Decodable, A: Swift.Encodable>	case	counters
+class	HomeKitMetrics.CountersManager	HomeKitMetrics.CounterGroupContainer HomeKitMetrics.CounterGroup		
+class	HomeKitMetrics.CountersManager	HomeKitMetrics.CounterGroupContainer HomeKitMetrics.CounterGroup	let	dataSource
+class	HomeKitMetrics.CountersManager	HomeKitMetrics.CounterGroupContainer HomeKitMetrics.CounterGroup	let	state
+struct	HomeKitMetrics.CountersManager.State			
+struct	HomeKitMetrics.CountersManager.State		var	groups
+struct	HomeKitMetrics.CountersManager.State		var	ephemeralContainers
+struct	HomeKitMetrics.DistributionCounter			
+struct	HomeKitMetrics.DurationCounter			
+class	HomeKitMetrics.EmptyCounterStorage			
+class	HomeKitMetrics.EmptyCounterStorage		let	suggestFullDayLoad
+class	HomeKitMetrics.EphemeralContainerState	NSObject		
+class	HomeKitMetrics.EphemeralContainerState	NSObject	let	lock
+class	HomeKitMetrics.EphemeralContainerState	NSObject	let	uptimeProvider
+class	HomeKitMetrics.EphemeralContainerState	NSObject	var	_startTime
+class	HomeKitMetrics.EphemeralContainerState	NSObject	var	_isActive
+class	HomeKitMetrics.EphemeralContainerState	NSObject	var	_activeDuration
+struct	HomeKitMetrics.EphemeralCounterSet<A	HomeKitMetrics.Accumulatable>		
+struct	HomeKitMetrics.EphemeralCounterSet<A	HomeKitMetrics.Accumulatable>	var	isActive
+struct	HomeKitMetrics.EphemeralCounterSet<A	HomeKitMetrics.Accumulatable>	var	counters
+enum	HomeKitMetrics.GroupDescriptorKey			
+enum	HomeKitMetrics.GroupDescriptorKey		case	groupName
+enum	HomeKitMetrics.GroupDescriptorKey		case	homeUUID
+enum	HomeKitMetrics.GroupDescriptorKey		case	accessoryUUID
+enum	HomeKitMetrics.GroupDescriptorKey		case	partitionType
+class	HomeKitMetrics.HomeGroupSpecifier	HomeKitMetrics.NamedGroupSpecifier		
+class	HomeKitMetrics.HomeGroupSpecifier	HomeKitMetrics.NamedGroupSpecifier	let	homeUUID
+enum	HomeKitMetrics.HomeGroupSpecifier.CodingKeys			
+enum	HomeKitMetrics.HomeGroupSpecifier.CodingKeys		case	homeUUID
+class	HomeKitMetrics.NamedGroupSpecifier			
+class	HomeKitMetrics.NamedGroupSpecifier		let	groupName
+class	HomeKitMetrics.NamedGroupSpecifier		let	partitionType
+enum	HomeKitMetrics.NamedGroupSpecifier.CodingKeys			
+enum	HomeKitMetrics.NamedGroupSpecifier.CodingKeys		case	groupName
+enum	HomeKitMetrics.NamedGroupSpecifier.CodingKeys		case	partitionType
+class	HomeKitMetrics.ReadableCounterGroup			
+class	HomeKitMetrics.ReadableCounterGroup		let	dataSource
+class	HomeKitMetrics.ReadableCounterGroup		let	groupSpecifier
+class	HomeKitMetrics.ReadableCounterGroup		let	state
+struct	HomeKitMetrics.ReadableCounterGroup.State			
+struct	HomeKitMetrics.ReadableCounterGroup.State		var	group
+struct	HomeKitMetrics.ReadableCounterGroup.State		var	runningDurationCounters
+class	HomeKitMetrics.ReadableCounterGroupContainer	HomeKitMetrics.CounterGroupContainer HomeKitMetrics.ReadableCounterGroup		
+class	HomeKitMetrics.ReadableCounterGroupContainer	HomeKitMetrics.CounterGroupContainer HomeKitMetrics.ReadableCounterGroup	let	groups
+struct	HomeKitMetrics.AlignedDate			
+struct	HomeKitMetrics.AlignedDate		let	date
+class	HomeKitMetrics.MetricsDateProvider			
+class	HomeKitMetrics.MetricsDateProvider		let	localCalendar
+class	HomeKitMetrics.MetricsDateProvider		let	hourCache
+class	HomeKitMetrics.MetricsDateProvider		let	dayCache
+class	HomeKitMetrics.MetricsDateProvider		let	weekCache
+class	HomeKitMetrics.MetricsDateProvider		let	monthCache
+class	HomeKitMetrics.MetricsDateProvider.MetricsDateProviderBridge	HomeKitMetrics.MetricsDateProvider		
+class	HomeKitMetrics.MetricsDateProvider.MetricsDateProviderBridge	HomeKitMetrics.MetricsDateProvider	let	legacyDateProvider
+struct	HomeKitMetrics.HourlyAlignedDateFactory			
+struct	HomeKitMetrics.DailyAlignedDateFactory			
+struct	HomeKitMetrics.WeeklyAlignedDateFactory			
+struct	HomeKitMetrics.MonthlyAlignedDateFactory			
+struct	HomeKitMetrics.DateCache<A	HomeKitMetrics.AlignedDateFactory>		
+struct	HomeKitMetrics.DateCache<A	HomeKitMetrics.AlignedDateFactory>	let	alignedDateFactory
+struct	HomeKitMetrics.DateCache<A	HomeKitMetrics.AlignedDateFactory>	var	startTime
+struct	HomeKitMetrics.DateCache<A	HomeKitMetrics.AlignedDateFactory>	var	endTime
+struct	HomeKitMetrics.DateCache<A	HomeKitMetrics.AlignedDateFactory>	var	currentDate
+struct	HomeKitMetrics.DateCache<A	HomeKitMetrics.AlignedDateFactory>	var	previousDate
+class	HomeKitMetrics.MemoryUtilizationTracker			
+class	HomeKitMetrics.MemoryUtilizationTracker		let	dataSource
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent		
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	coreAnalyticsEventName
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	processName
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	launchReason
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	exitStatusDomain
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	exitStatusCode
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	exitStatusErrorReason
+class	HomeKitMetrics.ProcessExitInfoLogEvent	HMMLogEvent	let	coreAnalyticsEventOptions
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason			
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	unknown
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	other
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	deviceBoot
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	voluntary
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	watchdog
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	jetsamHighwater
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	jetsamProcessLimit
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	jetsamIdleExit
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	jetsamOther
+enum	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason		case	crash
+class	HomeKitMetrics.ProcessLaunchAnalyzer	NSObject		
+class	HomeKitMetrics.ProcessLaunchAnalyzer	NSObject	let	dataSource
+class	HomeKitMetrics.ProcessLaunchAnalyzer	NSObject	let	counterGroup
+class	HomeKitMetrics.ProcessLaunchAnalyzer	NSObject	let	lastExitContextBlock
+class	HomeKitMetrics.ProcessLaunchLogEvent	HMMDatedLogEvent		
+class	HomeKitMetrics.ProcessLaunchLogEvent	HMMDatedLogEvent	let	isFirstLaunchAfterBoot
+class	HomeKitMetrics.ProcessLaunchSummaryLogEvent	HMMLogEvent		
+class	HomeKitMetrics.ProcessLaunchSummaryLogEvent	HMMLogEvent	let	coreAnalyticsEventName
+class	HomeKitMetrics.ProcessLaunchSummaryLogEvent	HMMLogEvent	let	processName
+class	HomeKitMetrics.ProcessLaunchSummaryLogEvent	HMMLogEvent	let	counts
+class	HomeKitMetrics.ProcessLaunchSummaryLogEvent	HMMLogEvent	let	coreAnalyticsEventOptions
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts			
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	launchCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	abnormalExitCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	voluntaryExitCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	jetsamTotalCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	jetsamHighwaterCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	jetsamProcessLimitCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	jetsamIdleExitCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	crashCount
+struct	HomeKitMetrics.ProcessLaunchSummaryLogEvent.Counts		var	watchdogCount
+struct	HomeKitMetrics.ProcessMemoryEventAnalyzerOptions			
+struct	HomeKitMetrics.ProcessMemoryEventAnalyzerOptions		let	rawValue
+class	HomeKitMetrics.ProcessMemoryEventAnalyzer	NSObject		
+class	HomeKitMetrics.ProcessMemoryEventAnalyzer	NSObject	let	counterGroup
+class	HomeKitMetrics.ProcessMemoryEventAnalyzer	NSObject	let	dataSource
+class	HomeKitMetrics.ProcessMemoryEventAnalyzer	NSObject	let	memoryTracker
+class	HomeKitMetrics.ProcessMemoryEventAnalyzer	NSObject	let	memoryEventMonitor
+class	HomeKitMetrics.ProcessMemoryEventAnalyzer	NSObject	let	options
+class	HomeKitMetrics.ProcessMemorySampleCoreAnalyticsLogEvent	HomeKitMetrics.ProcessMemorySampleLogEvent		
+class	HomeKitMetrics.ProcessMemorySampleCoreAnalyticsLogEvent	HomeKitMetrics.ProcessMemorySampleLogEvent	let	coreAnalyticsEventName
+class	HomeKitMetrics.ProcessMemorySampleCoreAnalyticsLogEvent	HomeKitMetrics.ProcessMemorySampleLogEvent	let	processName
+class	HomeKitMetrics.ProcessMemorySampleCoreAnalyticsLogEvent	HomeKitMetrics.ProcessMemorySampleLogEvent	let	coreAnalyticsEventOptions
+class	HomeKitMetrics.ProcessMemorySampleLogEvent	HMMLogEvent		
+class	HomeKitMetrics.ProcessMemorySampleLogEvent	HMMLogEvent	var	currentMemoryUsage
+class	HomeKitMetrics.ProcessMemorySampleLogEvent	HMMLogEvent	var	intervalMaxMemoryUsage
+class	HomeKitMetrics.ProcessMemorySummaryLogEvent	HMMDatedLogEvent		
+class	HomeKitMetrics.ProcessMemorySummaryLogEvent	HMMDatedLogEvent	let	coreAnalyticsEventName
+class	HomeKitMetrics.ProcessMemorySummaryLogEvent	HMMDatedLogEvent	let	processName
+class	HomeKitMetrics.ProcessMemorySummaryLogEvent	HMMDatedLogEvent	let	counts
+class	HomeKitMetrics.ProcessMemorySummaryLogEvent	HMMDatedLogEvent	let	coreAnalyticsEventOptions
+struct	HomeKitMetrics.ProcessMemorySummaryLogEvent.Counts			
+struct	HomeKitMetrics.ProcessMemorySummaryLogEvent.Counts		var	processMemoryPressureStateWarningCount
+struct	HomeKitMetrics.ProcessMemorySummaryLogEvent.Counts		var	processMemoryPressureStateCriticalCount
+struct	HomeKitMetrics.ProcessMemorySummaryLogEvent.Counts		var	sampledAverageProcessMemoryUsageKB
+struct	HomeKitMetrics.ProcessMemorySummaryLogEvent.Counts		var	sampledPeakProcessMemoryUsageKB
+enum	HomeKitMetrics.AccumulatorThresholdTTRTriggerProvider			
+class	HomeKitMetrics.FixedThresholdDelegate			
+class	HomeKitMetrics.FixedThresholdDelegate		let	activeThreshold
+class	HomeKitMetrics.VariableThresholdDelegate			
+class	HomeKitMetrics.VariableThresholdDelegate		let	thresholds
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>		
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	category
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	displayReason
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	radarTitle
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	component
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	initiator
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	isEnabledBlock
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	draftCustomizerBlock
+class	HomeKitMetrics.AccumulatorThresholdTTRTrigger<A	HomeKitMetrics.ThresholdDelegate>	let	thresholdDelegate
+struct	HomeKitMetrics.VariableThresholdDelegate.State			
+struct	HomeKitMetrics.VariableThresholdDelegate.State		var	activeThreshold
+struct	HomeKitMetrics.VariableThresholdDelegate.State		var	targetThreshold
+struct	HomeKitMetrics.CategoryRadarFilter			
+struct	HomeKitMetrics.CategoryRadarFilter		let	category
+struct	HomeKitMetrics.CategoryRadarFilter		let	result
+class	HomeKitMetrics.MappedDisplayReasonRadarRequestFilter	NSObject		
+class	HomeKitMetrics.MappedDisplayReasonRadarRequestFilter	NSObject	var	filtersByDisplayReason
+class	HomeKitMetrics.MappedDisplayReasonRadarRequestFilter	NSObject	let	defaultRequestFilter
+struct	HomeKitMetrics.MinimumIntervalRadarFilter			
+struct	HomeKitMetrics.MinimumIntervalRadarFilter		let	category
+struct	HomeKitMetrics.MinimumIntervalRadarFilter		let	minimumInterval
+struct	HomeKitMetrics.MinimumIntervalRadarFilter		let	lastRequestStorage
+struct	HomeKitMetrics.MinimumIntervalRadarFilter		let	dateProvider
+class	HomeKitMetrics.MinimumTimeIntervalRadarRequestFilter	NSObject		
+class	HomeKitMetrics.MinimumTimeIntervalRadarRequestFilter	NSObject	let	minimumRequestInterval
+class	HomeKitMetrics.MinimumTimeIntervalRadarRequestFilter	NSObject	var	filterStorage
+class	HomeKitMetrics.MinimumTimeIntervalRadarRequestFilter	NSObject	let	dateFactory
+class	HomeKitMetrics.PassThroughRadarRequestFilter	NSObject		
+struct	HomeKitMetrics.TapToRadarComponent			
+struct	HomeKitMetrics.TapToRadarComponent		var	name
+struct	HomeKitMetrics.TapToRadarComponent		var	version
+struct	HomeKitMetrics.TapToRadarComponent		var	identifier
+struct	HomeKitMetrics.TapToRadarDraft			
+struct	HomeKitMetrics.TapToRadarDraft		var	category
+struct	HomeKitMetrics.TapToRadarDraft		var	privateDisplayReason
+struct	HomeKitMetrics.TapToRadarDraft		var	privateTitle
+struct	HomeKitMetrics.TapToRadarDraft		var	problemDescription
+struct	HomeKitMetrics.TapToRadarDraft		var	component
+struct	HomeKitMetrics.TapToRadarDraft		var	bundleID
+struct	HomeKitMetrics.TapToRadarDraft		var	classification
+struct	HomeKitMetrics.TapToRadarDraft		var	reproducibility
+struct	HomeKitMetrics.TapToRadarDraft		var	isUserInitiated
+struct	HomeKitMetrics.TapToRadarDraft		var	attachments
+struct	HomeKitMetrics.TapToRadarDraft		var	diagnosticExtensionIDs
+struct	HomeKitMetrics.TapToRadarDraft		var	diagnosticExtensionParameters
+struct	HomeKitMetrics.TapToRadarDraft		var	keywords
+struct	HomeKitMetrics.TapToRadarDraft		var	deviceIDs
+struct	HomeKitMetrics.TapToRadarDraft		var	deviceModels
+struct	HomeKitMetrics.TapToRadarDraft		var	autoDiagnostics
+struct	HomeKitMetrics.TapToRadarDraft		var	remoteDeviceClasses
+struct	HomeKitMetrics.TapToRadarDraft		var	remoteDeviceSelections
+struct	HomeKitMetrics.TapToRadarDraft		var	timeOfIssue
+struct	HomeKitMetrics.TapToRadarDraft		var	omitPrefixFromTitle
+struct	HomeKitMetrics.TapToRadarDraft		var	deleteOnAttach
+struct	HomeKitMetrics.TapToRadarDraft		var	shouldCaptureScreenshot
+struct	HomeKitMetrics.TapToRadarDraft		var	screenshotCaptureDelay
+struct	HomeKitMetrics.TapToRadarDraft		var	shouldCaptureDumpDisplay
+struct	HomeKitMetrics.TapToRadarDraft		var	shouldCapturePerformanceTrace
+struct	HomeKitMetrics.TapToRadarDraft		var	collaborationContactHandles
+struct	HomeKitMetrics.TapToRadarDraft		var	collaborationGroupChatID
+struct	HomeKitMetrics.TapToRadarDraft		var	crashLog
+struct	HomeKitMetrics.TapToRadarDraft		var	callbackIdentifier
+struct	HomeKitMetrics.TapToRadarDraft		var	shouldCaptureForegroundApp
+enum	HomeKitMetrics.TapToRadarDraft.Classification			
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	none
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	security
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	crashHangDataLoss
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	power
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	performance
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	uiUsability
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	seriousBug
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	otherBug
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	featureNew
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	enhancement
+enum	HomeKitMetrics.TapToRadarDraft.Classification		case	task
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility			
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	none
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	always
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	sometimes
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	rarely
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	unable
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	didntTry
+enum	HomeKitMetrics.TapToRadarDraft.Reproducibility		case	notApplicable
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics			
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	all
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	sysdiagnoseOnly
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	skipsCompanionDevice
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	skipsSysdiagnose
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	remoteDiagnosticsOnly
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	logArchiveOnly
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	fullLogArchive
+enum	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics		case	skipsLocalSysdiagnoseOnly
+struct	HomeKitMetrics.TapToRadarDraft.RemoteDeviceClasses			
+struct	HomeKitMetrics.TapToRadarDraft.RemoteDeviceClasses		let	rawValue
+struct	HomeKitMetrics.TapToRadarDraft.RemoteDeviceSelections			
+struct	HomeKitMetrics.TapToRadarDraft.RemoteDeviceSelections		let	rawValue
+enum	HomeKitMetrics.TapToRadarFilterResult			
+enum	HomeKitMetrics.TapToRadarFilterResult		case	allow
+enum	HomeKitMetrics.TapToRadarFilterResult		case	deny
+enum	HomeKitMetrics.TapToRadarFilterResult		case	noDecision
+class	HomeKitMetrics.TapToRadarLastRequestMemoryStorage			
+class	HomeKitMetrics.TapToRadarLastRequestMemoryStorage		let	state
+struct	HomeKitMetrics.TapToRadarLastRequestMemoryStorage.State			
+struct	HomeKitMetrics.TapToRadarLastRequestMemoryStorage.State		var	lastRequestDate
+class	HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage			
+class	HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage		let	lastRequestDateKey
+class	HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage		let	userDefaults
+class	HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage		let	state
+struct	HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage.State			
+struct	HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage.State		var	lastRequestDate
+enum	HomeKitMetrics.TapToRadarManagerProvider			
+class	HomeKitMetrics.TapToRadarManager			
+class	HomeKitMetrics.TapToRadarManager		let	tapToRadarShim
+class	HomeKitMetrics.TapToRadarManager		let	processName
+class	HomeKitMetrics.TapToRadarManager		let	draftCreationBlock
+class	HomeKitMetrics.TapToRadarManager		let	queue
+class	HomeKitMetrics.TapToRadarManager		let	filters
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent		
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	coreAnalyticsEventName
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	processName
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	blockName
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	publicBlockName
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	secondsSinceLastRun
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	isDailyBlock
+class	HomeKitMetrics.BlockSchedulerLogEvent	HMMLogEvent	let	coreAnalyticsEventOptions
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider			
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider		let	clock
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider		let	priority
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider		let	processName
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider		let	logEventSubmitter
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider		let	startInstant
+struct	HomeKitMetrics.CoalescingRepeatingSchedulerProvider		let	mutex
+struct	HomeKitMetrics.DailySchedulerProvider			
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>		
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	dailyBlockPeriodicity
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	minimumIntervalSinceDayChange
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	dailyBlockName
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	state
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	dailyBlockRunDateDelegate
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	dateProvider
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	processName
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	logEventSubmitter
+class	HomeKitMetrics.DailyScheduler<A	HomeKitMetrics.RunDateDelegate>	let	repeatingScheduler
+struct	HomeKitMetrics.DailyScheduler.State<A	HomeKitMetrics.RunDateDelegate>		
+struct	HomeKitMetrics.DailyScheduler.State<A	HomeKitMetrics.RunDateDelegate>	var	dailyBlocks
+struct	HomeKitMetrics.DailyScheduler.State<A	HomeKitMetrics.RunDateDelegate>	var	bookends
+struct	HomeKitMetrics.DailyScheduler.Bookend<A	HomeKitMetrics.RunDateDelegate>		
+struct	HomeKitMetrics.DailyScheduler.Bookend<A	HomeKitMetrics.RunDateDelegate>	let	blockName
+struct	HomeKitMetrics.DailyScheduler.Bookend<A	HomeKitMetrics.RunDateDelegate>	let	setupBlock
+struct	HomeKitMetrics.DailyScheduler.Bookend<A	HomeKitMetrics.RunDateDelegate>	let	cleanupBlock
+struct	HomeKitMetrics.DailyScheduler.DailyBlock<A	HomeKitMetrics.RunDateDelegate>		
+struct	HomeKitMetrics.DailyScheduler.DailyBlock<A	HomeKitMetrics.RunDateDelegate>	let	blockName
+struct	HomeKitMetrics.DailyScheduler.DailyBlock<A	HomeKitMetrics.RunDateDelegate>	let	publicSafeName
+struct	HomeKitMetrics.DailyScheduler.DailyBlock<A	HomeKitMetrics.RunDateDelegate>	let	block
+class	HomeKitMetrics.DailySchedulerDelegate	NSObject		
+class	HomeKitMetrics.DailySchedulerDelegate	NSObject	let	dailyScheduler
+struct	HomeKitMetrics.DailySchedulerDelegate.SendableWeakWrapper			
+struct	HomeKitMetrics.DailySchedulerDelegate.SendableWeakWrapper		var	taskRunner
+class	HomeKitMetrics.RunDatePreferencesStorage			
+class	HomeKitMetrics.RunDatePreferencesStorage		let	preferenceName
+class	HomeKitMetrics.RunDatePreferencesStorage		let	mutex
+struct	HomeKitMetrics.RunDatePreferencesStorage.State			
+struct	HomeKitMetrics.RunDatePreferencesStorage.State		var	lastRunDate
+struct	HomeKitMetrics.BaseAnalyzerDataSource			
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	processName
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	dateProvider
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	uptimeProvider
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	logEventSubmitter
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	logEventDispatcher
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	repeatingScheduler
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	dailyScheduler
+struct	HomeKitMetrics.BaseAnalyzerDataSource		let	countersManager
+class	HomeKitMetrics.BaseMetricsManager			
+class	HomeKitMetrics.BaseMetricsManager		let	analyzerDataSource
+class	HomeKitMetrics.BaseMetricsManager		let	mutex
+struct	HomeKitMetrics.BaseMetricsManager.State			
+struct	HomeKitMetrics.BaseMetricsManager.State		var	analyzers
+protocol	HomeKitMetrics.DictionaryCountable	CounterT		
+protocol	HomeKitMetrics.FlatFileCountable	CounterT		
+protocol	HomeKitMetrics.FlatFileManagerProtocol			
+protocol	HomeKitMetrics.RemoteCounterClient			
+protocol	HomeKitMetrics.RemoteCounterDeviceProvider			
+protocol	HomeKitMetrics.RemoteCounterMessaging			
+protocol	HomeKitMetrics.Accumulatable	InputT		
+protocol	HomeKitMetrics.Countable	MemoryT		
+protocol	HomeKitMetrics.CounterObserver	MemoryT		
+protocol	HomeKitMetrics.CounterSetPersistenceProvider	CounterT		
+protocol	HomeKitMetrics.CounterStorage			
+protocol	HomeKitMetrics.GroupPersistenceProvider			
+protocol	AlignedDateFactory			
+protocol	HomeKitMetrics.ProcessExitStatus			
+protocol	HomeKitMetrics.ProcessExitContext	StatusT		
+protocol	HomeKitMetrics.ThresholdDelegate			
+protocol	HomeKitMetrics.TapToRadarFilter			
+protocol	HomeKitMetrics.TapToRadarLastRequestStorage			
+protocol	HomeKitMetrics.TapToRadarInitiator			
+protocol	HomeKitMetrics.RepeatingScheduler			
+protocol	HomeKitMetrics.DailySchedulerProtocol			
+protocol	HomeKitMetrics.RunDateDelegate			
+protocol	conformance __C.HMMCoreAnalyticsEventOptions	Swift.ExpressibleByArrayLiteral: HomeKitMetrics		
+protocol	conformance __C.HMMCoreAnalyticsEventOptions	Swift.Equatable: HomeKitMetrics		
+protocol	conformance __C.HMMCoreAnalyticsEventOptions	Swift.RawRepresentable: HomeKitMetrics		
+protocol	conformance __C.HMMCoreAnalyticsEventOptions	Swift.SetAlgebra: HomeKitMetrics		
+protocol	conformance __C.HMMCoreAnalyticsEventOptions	Swift.OptionSet: HomeKitMetrics		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance HomeKitMetrics.DistributionCounter	HomeKitMetrics.DictionaryCountable		
+protocol	conformance HomeKitMetrics.DurationCounter	HomeKitMetrics.DictionaryCountable		
+protocol	conformance HomeKitMetrics.AccumulatorCounter	HomeKitMetrics.DictionaryCountable		
+protocol	conformance HomeKitMetrics.DictionaryCounterSetPersistenceProvider	HomeKitMetrics.CounterSetPersistenceProvider		
+protocol	conformance HomeKitMetrics.DictionaryCounterStorage	HomeKitMetrics.GroupPersistenceProvider		
+protocol	conformance HomeKitMetrics.DictionaryCounterStorage	HomeKitMetrics.CounterStorage		
+protocol	conformance HomeKitMetrics.DataEncodingType	Swift.RawRepresentable		
+protocol	conformance HomeKitMetrics.DataEncodingType	Swift.Hashable		
+protocol	conformance HomeKitMetrics.DataEncodingType	Swift.Equatable		
+protocol	conformance HomeKitMetrics.DataStreamError	Swift.Error		
+protocol	conformance HomeKitMetrics.DistributionCounter	HomeKitMetrics.FlatFileCountable		
+protocol	conformance HomeKitMetrics.DurationCounter	HomeKitMetrics.FlatFileCountable		
+protocol	conformance HomeKitMetrics.AccumulatorCounter	HomeKitMetrics.FlatFileCountable		
+protocol	conformance HomeKitMetrics.FlatFileCounterSetPersistenceProvider	HomeKitMetrics.CounterSetPersistenceProvider		
+protocol	conformance HomeKitMetrics.FlatFileCounterSetType	Swift.RawRepresentable		
+protocol	conformance HomeKitMetrics.FlatFileCounterSetType	Swift.Hashable		
+protocol	conformance HomeKitMetrics.FlatFileCounterSetType	Swift.Equatable		
+protocol	conformance HomeKitMetrics.FlatFileGroupPersistenceProvider	HomeKitMetrics.GroupPersistenceProvider		
+protocol	conformance HomeKitMetrics.FlatFileManager	HomeKitMetrics.FlatFileManagerProtocol		
+protocol	conformance HomeKitMetrics.PersistentFlatFileCounterStorage	HomeKitMetrics.CounterStorage		
+protocol	conformance HomeKitMetrics.RemoteCounterDeviceType	Swift.Hashable		
+protocol	conformance HomeKitMetrics.RemoteCounterDeviceType	Swift.Equatable		
+protocol	conformance HomeKitMetrics.RemoteCounterNames	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Swift.Int	HomeKitMetrics.Accumulatable		
+protocol	conformance Swift.Double	HomeKitMetrics.Accumulatable		
+protocol	conformance HomeKitMetrics.AccumulatorCounter	HomeKitMetrics.Countable		
+protocol	conformance HomeKitMetrics.CounterDistribution	HomeKitMetrics.Accumulatable		
+protocol	conformance HomeKitMetrics.CounterDistribution	Swift.Equatable		
+protocol	conformance HomeKitMetrics.CounterDistribution	Swift.Decodable		
+protocol	conformance HomeKitMetrics.CounterDistribution	Swift.Encodable		
+protocol	conformance HomeKitMetrics.CounterDistribution	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitMetrics.IntCounterObserver	HomeKitMetrics.CounterObserver		
+protocol	conformance HomeKitMetrics.MaxValueObserver	HomeKitMetrics.CounterObserver		
+protocol	conformance HomeKitMetrics.CounterPartitionType	Swift.Hashable		
+protocol	conformance HomeKitMetrics.CounterPartitionType	Swift.Decodable		
+protocol	conformance HomeKitMetrics.CounterPartitionType	Swift.Encodable		
+protocol	conformance HomeKitMetrics.CounterPartitionType	Swift.CustomStringConvertible		
+protocol	conformance HomeKitMetrics.CounterPartitionType	Swift.Equatable		
+protocol	conformance MonthlyWithRetentionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MonthlyWithRetentionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MonthlyWithRetentionCodingKeys	Swift.Hashable		
+protocol	conformance MonthlyWithRetentionCodingKeys	Swift.Equatable		
+protocol	conformance WeeklyWithRetentionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WeeklyWithRetentionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WeeklyWithRetentionCodingKeys	Swift.Hashable		
+protocol	conformance WeeklyWithRetentionCodingKeys	Swift.Equatable		
+protocol	conformance DailyWithRetentionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DailyWithRetentionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DailyWithRetentionCodingKeys	Swift.Hashable		
+protocol	conformance DailyWithRetentionCodingKeys	Swift.Equatable		
+protocol	conformance HourlyWithRetentionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HourlyWithRetentionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HourlyWithRetentionCodingKeys	Swift.Hashable		
+protocol	conformance HourlyWithRetentionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance HourlyWithRetentionCodingKeys	Swift.CodingKey		
+protocol	conformance DailyWithRetentionCodingKeys	Swift.CodingKey		
+protocol	conformance WeeklyWithRetentionCodingKeys	Swift.CodingKey		
+protocol	conformance MonthlyWithRetentionCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitMetrics.CountersError	Swift.Equatable		
+protocol	conformance HomeKitMetrics.CountersError	Swift.Hashable		
+protocol	conformance HomeKitMetrics.CountersError	Swift.Error		
+protocol	conformance HomeKitMetrics.CounterSet	Swift.Encodable		
+protocol	conformance HomeKitMetrics.CounterSet	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitMetrics.DistributionCounter	HomeKitMetrics.Countable		
+protocol	conformance HomeKitMetrics.DurationCounter	HomeKitMetrics.Countable		
+protocol	conformance HomeKitMetrics.EmptyCounterStorage	HomeKitMetrics.CounterStorage		
+protocol	conformance HomeKitMetrics.GroupDescriptorKey	Swift.Equatable		
+protocol	conformance HomeKitMetrics.GroupDescriptorKey	Swift.Hashable		
+protocol	conformance HomeKitMetrics.GroupDescriptorKey	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitMetrics.NamedGroupSpecifier	Swift.Equatable		
+protocol	conformance HomeKitMetrics.NamedGroupSpecifier	Swift.CustomStringConvertible		
+protocol	conformance HomeKitMetrics.NamedGroupSpecifier	Swift.Hashable		
+protocol	conformance HomeKitMetrics.NamedGroupSpecifier	Swift.Encodable		
+protocol	conformance HomeKitMetrics.NamedGroupSpecifier	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HomeKitMetrics.AlignedDate	Swift.Hashable		
+protocol	conformance HomeKitMetrics.AlignedDate	Swift.Comparable		
+protocol	conformance HomeKitMetrics.AlignedDate	Swift.CustomStringConvertible		
+protocol	conformance HomeKitMetrics.AlignedDate	Swift.Equatable		
+protocol	conformance MonthlyAlignedDateFactory	HomeKitMetrics.AlignedDateFactory		
+protocol	conformance WeeklyAlignedDateFactory	HomeKitMetrics.AlignedDateFactory		
+protocol	conformance DailyAlignedDateFactory	HomeKitMetrics.AlignedDateFactory		
+protocol	conformance HourlyAlignedDateFactory	HomeKitMetrics.AlignedDateFactory		
+protocol	conformance ProcessExitInfoLogEvent.LaunchReason	Swift.Equatable		
+protocol	conformance ProcessExitInfoLogEvent.LaunchReason	Swift.Hashable		
+protocol	conformance ProcessExitInfoLogEvent.LaunchReason	Swift.RawRepresentable		
+protocol	conformance RBSProcessExitStatus	HomeKitMetrics.ProcessExitStatus		
+protocol	conformance RBSProcessExitContext	HomeKitMetrics.ProcessExitContext		
+protocol	conformance HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	Swift.OptionSet		
+protocol	conformance HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	Swift.SetAlgebra		
+protocol	conformance HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	Swift.RawRepresentable		
+protocol	conformance HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	Swift.Equatable		
+protocol	conformance HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance HomeKitMetrics.FixedThresholdDelegate	HomeKitMetrics.ThresholdDelegate		
+protocol	conformance HomeKitMetrics.VariableThresholdDelegate	HomeKitMetrics.ThresholdDelegate		
+protocol	conformance HomeKitMetrics.AccumulatorThresholdTTRTrigger	HomeKitMetrics.CounterObserver		
+protocol	conformance HomeKitMetrics.CategoryRadarFilter	HomeKitMetrics.TapToRadarFilter		
+protocol	conformance HomeKitMetrics.MinimumIntervalRadarFilter	HomeKitMetrics.TapToRadarFilter		
+protocol	conformance HomeKitMetrics.TapToRadarComponent	Swift.Equatable		
+protocol	conformance TapToRadarDraft.Classification	Swift.Equatable		
+protocol	conformance TapToRadarDraft.Classification	Swift.Hashable		
+protocol	conformance TapToRadarDraft.Classification	Swift.RawRepresentable		
+protocol	conformance TapToRadarDraft.Reproducibility	Swift.Equatable		
+protocol	conformance TapToRadarDraft.Reproducibility	Swift.Hashable		
+protocol	conformance TapToRadarDraft.Reproducibility	Swift.RawRepresentable		
+protocol	conformance TapToRadarDraft.AutoDiagnostics	Swift.Equatable		
+protocol	conformance TapToRadarDraft.AutoDiagnostics	Swift.Hashable		
+protocol	conformance TapToRadarDraft.AutoDiagnostics	Swift.RawRepresentable		
+protocol	conformance TapToRadarDraft.RemoteDeviceClasses	Swift.OptionSet		
+protocol	conformance TapToRadarDraft.RemoteDeviceClasses	Swift.SetAlgebra		
+protocol	conformance TapToRadarDraft.RemoteDeviceClasses	Swift.RawRepresentable		
+protocol	conformance TapToRadarDraft.RemoteDeviceClasses	Swift.Equatable		
+protocol	conformance TapToRadarDraft.RemoteDeviceClasses	Swift.ExpressibleByArrayLiteral		
+protocol	conformance TapToRadarDraft.RemoteDeviceSelections	Swift.OptionSet		
+protocol	conformance TapToRadarDraft.RemoteDeviceSelections	Swift.SetAlgebra		
+protocol	conformance TapToRadarDraft.RemoteDeviceSelections	Swift.RawRepresentable		
+protocol	conformance TapToRadarDraft.RemoteDeviceSelections	Swift.Equatable		
+protocol	conformance TapToRadarDraft.RemoteDeviceSelections	Swift.ExpressibleByArrayLiteral		
+protocol	conformance HomeKitMetrics.TapToRadarFilterResult	Swift.Equatable		
+protocol	conformance HomeKitMetrics.TapToRadarFilterResult	Swift.Hashable		
+protocol	conformance HomeKitMetrics.TapToRadarLastRequestMemoryStorage	HomeKitMetrics.TapToRadarLastRequestStorage		
+protocol	conformance HomeKitMetrics.TapToRadarLastRequestUserDefaultsStorage	HomeKitMetrics.TapToRadarLastRequestStorage		
+protocol	conformance HomeKitMetrics.TapToRadarManager	HomeKitMetrics.TapToRadarInitiator		
+protocol	conformance HomeKitMetrics.CoalescingRepeatingScheduler	HomeKitMetrics.RepeatingScheduler		
+protocol	conformance HomeKitMetrics.DailyScheduler	HomeKitMetrics.DailySchedulerProtocol		
+protocol	conformance HomeKitMetrics.RunDatePreferencesStorage	HomeKitMetrics.RunDateDelegate		
+extension	HomeKitMetrics.DistributionCounter	DictionaryCountable		
+extension	HomeKitMetrics.DurationCounter	DictionaryCountable		
+extension	HomeKitMetrics.AccumulatorCounter	DictionaryCountable		
+extension	HomeKitMetrics.DictionaryCounterSetPersistenceProvider	CounterSetPersistenceProvider		
+extension	HomeKitMetrics.DataEncodingType	RawRepresentable		
+extension	HomeKitMetrics.DistributionCounter	FlatFileCountable		
+extension	HomeKitMetrics.DurationCounter	FlatFileCountable		
+extension	HomeKitMetrics.AccumulatorCounter	FlatFileCountable		
+extension	HomeKitMetrics.FlatFileCounterSetPersistenceProvider	CounterSetPersistenceProvider		
+extension	HomeKitMetrics.FlatFileCounterSetType	RawRepresentable		
+extension	HomeKitMetrics.AccessoryGroupSpecifier.CodingKeys	RawRepresentable		
+extension	Int	Accumulatable		
+extension	Double	Accumulatable		
+extension	HomeKitMetrics.AccumulatorCounter	Countable		
+extension	HomeKitMetrics.CounterDistribution	Accumulatable		
+extension	HomeKitMetrics.IntCounterObserver	CounterObserver		
+extension	HomeKitMetrics.MaxValueObserver	CounterObserver		
+extension	HomeKitMetrics.CounterSet.CodingKeys	RawRepresentable		
+extension	HomeKitMetrics.DistributionCounter	Countable		
+extension	HomeKitMetrics.DurationCounter	Countable		
+extension	HomeKitMetrics.GroupDescriptorKey	RawRepresentable		
+extension	HomeKitMetrics.HomeGroupSpecifier.CodingKeys	RawRepresentable		
+extension	HomeKitMetrics.ProcessExitInfoLogEvent.LaunchReason	RawRepresentable		
+extension	RBSProcessExitContext	ProcessExitContext		
+extension	HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	OptionSet		
+extension	HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	SetAlgebra		
+extension	HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	RawRepresentable		
+extension	HomeKitMetrics.ProcessMemoryEventAnalyzerOptions	ExpressibleByArrayLiteral		
+extension	HomeKitMetrics.AccumulatorThresholdTTRTrigger	CounterObserver		
+extension	HomeKitMetrics.TapToRadarDraft.Classification	RawRepresentable		
+extension	HomeKitMetrics.TapToRadarDraft.Reproducibility	RawRepresentable		
+extension	HomeKitMetrics.TapToRadarDraft.AutoDiagnostics	RawRepresentable		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceClasses	OptionSet		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceClasses	SetAlgebra		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceClasses	RawRepresentable		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceClasses	ExpressibleByArrayLiteral		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceSelections	OptionSet		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceSelections	SetAlgebra		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceSelections	RawRepresentable		
+extension	HomeKitMetrics.TapToRadarDraft.RemoteDeviceSelections	ExpressibleByArrayLiteral		

@@ -1,0 +1,17 @@
+owner	kind	declaration
+OS_cryptex_actor	-	- (void)dealloc;
+UpgradeInterfaceLock	+	+ (id)getSharedInstance;
+UpgradeInterfaceLock	-	- (_Bool)_isLockedOnQueue;
+UpgradeInterfaceLock	-	- (_Bool)isLocked;
+UpgradeInterfaceLock	-	- (id)_acquireLockOnQueue;
+UpgradeInterfaceLock	-	- (id)_createXPCRequest;
+UpgradeInterfaceLock	-	- (id)acquireLock;
+UpgradeInterfaceLock	-	- (id)init;
+UpgradeInterfaceLock	-	- (int)releaseLock;
+UpgradeInterfaceLock	-	- (void)_handleXPCMessage:(id)xpcmessage;
+UpgradeInterfaceLock	-	- (void)_onNextLockRelease:(id /* block */)release;
+UpgradeInterfaceLock	-	- (void)dealloc;
+UpgradeInterfaceLock	property	@property (readonly, nonatomic) NSMutableArray *onNextLockReleaseCallbacks;
+UpgradeInterfaceLock	property	@property (retain, nonatomic) NSObject<OS_dispatch_queue> *queue;
+UpgradeInterfaceLock	property	@property (retain, nonatomic) NSObject<OS_os_log> *log;
+UpgradeInterfaceLock	property	@property (retain, nonatomic) NSObject<OS_xpc_object> *lockConn;

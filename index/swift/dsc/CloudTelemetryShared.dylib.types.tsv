@@ -1,0 +1,63 @@
+kind	type	conformance	member_kind	member
+struct	CloudTelemetryShared.SubmitEventsActivityConfig			
+enum	CloudTelemetryShared.XPCObject			
+enum	CloudTelemetryShared.XPCObject		case	connection
+enum	CloudTelemetryShared.XPCObject		case	endpoint
+enum	CloudTelemetryShared.XPCObject		case	bool
+enum	CloudTelemetryShared.XPCObject		case	int64
+enum	CloudTelemetryShared.XPCObject		case	uint64
+enum	CloudTelemetryShared.XPCObject		case	double
+enum	CloudTelemetryShared.XPCObject		case	date
+enum	CloudTelemetryShared.XPCObject		case	data
+enum	CloudTelemetryShared.XPCObject		case	string
+enum	CloudTelemetryShared.XPCObject		case	uuid
+enum	CloudTelemetryShared.XPCObject		case	shmem
+enum	CloudTelemetryShared.XPCObject		case	array
+enum	CloudTelemetryShared.XPCObject		case	dictionary
+enum	CloudTelemetryShared.XPCObject		case	null
+struct	CloudTelemetryShared.XPCDictionary			
+struct	CloudTelemetryShared.XPCDictionary		let	dict
+class	CloudTelemetryShared.XPCActivityHandle			
+class	CloudTelemetryShared.XPCActivityHandle		let	handle
+class	CloudTelemetryShared.XPCActivity			
+class	CloudTelemetryShared.XPCActivity		let	handlerType
+class	CloudTelemetryShared.XPCActivity		var	currentTask
+class	CloudTelemetryShared.XPCActivity		var	disabled
+enum	CloudTelemetryShared.MessageKeys			
+struct	CloudTelemetryShared.XPCError			
+struct	CloudTelemetryShared.XPCError		let	raw
+struct	CloudTelemetryShared.XPCIncomingConnection			
+struct	CloudTelemetryShared.XPCIncomingConnection		let	conn
+class	CloudTelemetryShared.XPCConnection			
+class	CloudTelemetryShared.XPCConnection		var	conn
+class	CloudTelemetryShared.XPCConnection		var	delegate
+class	CloudTelemetryShared.XPCConnection		let	targetQ
+struct	CloudTelemetryShared.PostInstallActivityConfig			
+struct	CloudTelemetryShared.CacheCleanupActivityConfig			
+struct	CloudTelemetryShared.XPCMessage			
+struct	CloudTelemetryShared.XPCMessage		let	dict
+struct	CloudTelemetryShared.XPCMessage		let	ty
+enum	CloudTelemetryShared.XPCMessage.MessageType			
+enum	CloudTelemetryShared.XPCMessage.MessageType		case	SendOneMessage
+enum	CloudTelemetryShared.XPCMessage.MessageType		case	SubmitEventsActivity
+enum	CloudTelemetryShared.XPCMessage.MessageType		case	PostInstallActivity
+enum	CloudTelemetryShared.XPCMessage.MessageType		case	CacheCleanupActivity
+enum	CloudTelemetryShared.XPCMessage.MessageType		case	CheckSamplingResult
+protocol	CloudTelemetryShared.XPCActivityConfig			
+protocol	CloudTelemetryShared.XPCActivityHandler			
+protocol	CloudTelemetryShared.XPCConnectionDelegate			
+protocol	conformance CloudTelemetryShared.SubmitEventsActivityConfig	CloudTelemetryShared.XPCActivityConfig		
+protocol	conformance CloudTelemetryShared.XPCObject	Swift.Equatable		
+protocol	conformance CloudTelemetryShared.XPCDictionary	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance CloudTelemetryShared.XPCActivity	Swift.Actor		
+protocol	conformance CloudTelemetryShared.XPCError	Foundation.LocalizedError		
+protocol	conformance CloudTelemetryShared.XPCError	Swift.CustomStringConvertible		
+protocol	conformance CloudTelemetryShared.XPCError	Swift.Error		
+protocol	conformance CloudTelemetryShared.PostInstallActivityConfig	CloudTelemetryShared.XPCActivityConfig		
+protocol	conformance CloudTelemetryShared.CacheCleanupActivityConfig	CloudTelemetryShared.XPCActivityConfig		
+protocol	conformance XPCMessage.MessageType	Swift.Equatable		
+protocol	conformance XPCMessage.MessageType	Swift.Hashable		
+protocol	conformance XPCMessage.MessageType	Swift.RawRepresentable		
+protocol	conformance CloudTelemetryShared.XPCMessage	Swift.CustomStringConvertible		
+extension	CloudTelemetryShared.XPCDictionary	ExpressibleByDictionaryLiteral		
+extension	CloudTelemetryShared.XPCMessage.MessageType	RawRepresentable		

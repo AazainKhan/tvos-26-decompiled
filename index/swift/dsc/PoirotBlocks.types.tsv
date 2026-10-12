@@ -1,0 +1,1451 @@
+kind	type	conformance	member_kind	member
+struct	PoirotBlocks.BiomeTableConfig			
+struct	PoirotBlocks.BiomeTableConfig		let	tableFactory
+class	PoirotBlocks.DefaultFinalPublisherSchemaProvider	PoirotUDFs.UDFSchemaProvider<A: PoirotUDFs.FinalColumnsMappedMessage>		
+class	PoirotBlocks.DefaultPublisherSchemaProvider	PoirotUDFs.UDFSchemaProvider<A: PoirotUDFs.ColumnsMappedMessage>		
+class	PoirotBlocks.FlexiblePublisherSchemaProvider	PoirotUDFs.UDFSchemaProvider<A: PoirotUDFs.ColumnsMappedMessage>		
+enum	PoirotBlocks.PublisherFactory			
+enum	PoirotBlocks.PublisherFactory		case	doesNotAcceptSQLConstraints
+enum	PoirotBlocks.PublisherFactory		case	acceptsSQLConstraints
+class	PoirotBlocks.BiomePublishers.TableFactory			
+class	PoirotBlocks.BiomePublishers.TableFactory		let	tableName
+class	PoirotBlocks.BiomePublishers.TableFactory		let	_schemaProvider
+class	PoirotBlocks.BiomePublishers.TableFactory		let	description
+class	PoirotBlocks.BiomePublishers.TableFactory		var	_schema
+class	PoirotBlocks.BiomePublishers.TableFactory		let	publisherFactory
+class	PoirotBlocks.RawPayload	BMEventBase		
+class	PoirotBlocks.RawPayload	BMEventBase	let	dataVersion
+class	PoirotBlocks.RawPayload	BMEventBase	let	data
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory			
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		let	tableName
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		let	identifier
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		let	storeConfig
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		let	useCase
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		let	publisherFactory
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		let	_schemaProvider
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		var	_schema
+class	PoirotBlocks.BiomeStreams.PrivateTableFactory		var	_stream
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory			
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory		let	useCase
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory		let	tableName
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory		let	stream
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory		let	publisherFactory
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory		let	_schemaProvider
+class	PoirotBlocks.BiomeStreams.SchematizedTableFactory		var	_schema
+class	PoirotBlocks.BiomeStreams.TableFactory			
+class	PoirotBlocks.BiomeStreams.TableFactory		let	useCase
+class	PoirotBlocks.BiomeStreams.TableFactory		let	publisherFactory
+class	PoirotBlocks.BiomeStreams.TableFactory		let	stream
+class	PoirotBlocks.BiomeStreams.TableFactory		let	schemaProvider
+struct	PoirotBlocks.CustomStreamTableConfig			
+struct	PoirotBlocks.CustomStreamTableConfig		let	tableName
+struct	PoirotBlocks.CustomStreamTableConfig		let	provider
+struct	PoirotBlocks.AttachedDatabaseConfig			
+struct	PoirotBlocks.AttachedDatabaseConfig		let	alias
+struct	PoirotBlocks.AttachedDatabaseConfig		let	url
+struct	PoirotBlocks.AttachedDatabaseConfig		let	config
+struct	PoirotBlocks.DatabaseConfig			
+struct	PoirotBlocks.DatabaseConfig		let	cacheBudgedInMb
+struct	PoirotBlocks.DatabaseConfig		let	manifest
+enum	PoirotBlocks.DatabaseConfig.CodingKeys			
+enum	PoirotBlocks.DatabaseConfig.CodingKeys		case	cacheBudgedInMb
+enum	PoirotBlocks.DatabaseConfig.CodingKeys		case	manifest
+struct	PoirotBlocks.DataSource			
+struct	PoirotBlocks.DataSource		let	container
+enum	PoirotBlocks.DataSource.Container			
+enum	PoirotBlocks.DataSource.Container		case	biomeVirtualTable
+enum	PoirotBlocks.DataSource.Container		case	biomeTableConfig
+enum	PoirotBlocks.DataSource.Container		case	attachedDatabase
+enum	PoirotBlocks.DataSource.Container		case	customStreamTable
+enum	PoirotBlocks.DataSource.Container		case	tempTable
+class	PoirotBlocks.DefaultHostController			
+class	PoirotBlocks.DefaultHostController		let	dataSources
+class	PoirotBlocks.DefaultHostController		let	mainDatabaseConfig
+class	PoirotBlocks.DefaultHostController		let	tempDatabaseConfig
+class	PoirotBlocks.DefaultHostController		let	timeWindowConfig
+class	PoirotBlocks.DefaultHostController		let	queryParametersConfig
+class	PoirotBlocks.DefaultHostController		let	userBlockFactory
+class	PoirotBlocks.DefaultHostController		let	recipeURL
+class	PoirotBlocks.DefaultHostController		let	loggingType
+enum	PoirotBlocks.DefaultHostError			
+enum	PoirotBlocks.DefaultHostError		case	notConfiguredWithNamedQueryParameters
+enum	PoirotBlocks.DefaultHostError		case	notConfiguredWithQueryParameters
+enum	PoirotBlocks.DefaultHostError		case	notConfiguredWithBlockFactory
+enum	PoirotBlocks.AggregationBlockError			
+enum	PoirotBlocks.AggregationBlockError		case	initializationError
+enum	PoirotBlocks.AggregationBlockError		case	processingError
+class	PoirotBlocks.AggregationBlock	PoirotBlocks.QueryBlock		
+enum	PoirotBlocks.QueryInfoError			
+enum	PoirotBlocks.QueryInfoError		case	blockNotFound
+class	PoirotBlocks.PoirotTesting			
+enum	PoirotBlocks.ProcessingError			
+enum	PoirotBlocks.ProcessingError		case	nonFileSystemURL
+enum	PoirotBlocks.ProcessingError		case	notSupported
+class	PoirotBlocks.BaseBlock			
+class	PoirotBlocks.BaseBlock		var	done
+class	PoirotBlocks.BaseBlock		let	database
+class	PoirotBlocks.BaseBlock		let	name
+class	PoirotBlocks.BaseBlock		let	blockID
+class	PoirotBlocks.ConsumptionBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.ConsumptionBlock	PoirotBlocks.BaseBlock	let	config
+class	PoirotBlocks.ExtractionBlock	PoirotBlocks.QueryBlock		
+class	PoirotBlocks.ExtractionBlock	PoirotBlocks.QueryBlock	var	statement
+class	PoirotBlocks.ExtractionBlock	PoirotBlocks.QueryBlock	var	initialized
+enum	PoirotBlocks.JoinBlockError			
+enum	PoirotBlocks.JoinBlockError		case	insufficientSourcesNumber
+enum	PoirotBlocks.JoinBlockError		case	insufficientPivotsNumber
+enum	PoirotBlocks.JoinBlockError		case	joinSourceIsMissing
+enum	PoirotBlocks.JoinBlockError		case	mismatchedPivot
+enum	PoirotBlocks.JoinBlockError		case	conflictingValues
+enum	PoirotBlocks.JoinBlockError		case	validationError
+enum	PoirotBlocks.JoinBlockError		case	processingError
+class	PoirotBlocks.JoinBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.JoinBlock	PoirotBlocks.BaseBlock	let	joinDatasetNames
+class	PoirotBlocks.JoinBlock	PoirotBlocks.BaseBlock	let	onPivots
+class	PoirotBlocks.JoinBlock	PoirotBlocks.BaseBlock	var	outputInterface
+class	PoirotBlocks.MaterializedViewBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.MaterializedViewBlock	PoirotBlocks.BaseBlock	let	query
+class	PoirotBlocks.MaterializedViewBlock	PoirotBlocks.BaseBlock	let	queryParamsDataset
+enum	PoirotBlocks.QueryBlockError			
+enum	PoirotBlocks.QueryBlockError		case	inputParametersAreMissing
+enum	PoirotBlocks.QueryBlockError		case	moreThanOneInputParameter
+class	PoirotBlocks.QueryBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.QueryBlock	PoirotBlocks.BaseBlock	let	query
+class	PoirotBlocks.QueryBlock	PoirotBlocks.BaseBlock	let	outputDescription
+class	PoirotBlocks.QueryBlock	PoirotBlocks.BaseBlock	let	queryParamsDataset
+class	PoirotBlocks.QueryBlock	PoirotBlocks.BaseBlock	let	shouldIgnoreSQLFailure
+class	PoirotBlocks.QueryBlock	PoirotBlocks.BaseBlock	let	columnPolicy
+class	PoirotBlocks.QueryParametersBlock			
+class	PoirotBlocks.QueryParametersBlock		var	done
+class	PoirotBlocks.QueryParametersBlock		var	name
+class	PoirotBlocks.QueryParametersBlock		let	outputDescription
+class	PoirotBlocks.QueryParametersBlock		let	blockID
+class	PoirotBlocks.QueryParametersBlock		let	environment
+enum	PoirotBlocks.ParametersBlockError			
+enum	PoirotBlocks.ParametersBlockError		case	blockAlreadyExists
+enum	PoirotBlocks.ParametersBlockError		case	parametersNameUnsupportedByHost
+enum	PoirotBlocks.ParametersBlockError		case	invalidConfiguration
+class	PoirotBlocks.SentinelBlock			
+class	PoirotBlocks.SentinelBlock		var	done
+class	PoirotBlocks.SentinelBlock		let	name
+class	PoirotBlocks.SentinelBlock		var	blockID
+class	PoirotBlocks.SentinelBlock		let	concludeClause
+enum	PoirotBlocks.TemplateBlockError			
+enum	PoirotBlocks.TemplateBlockError		case	invalidConfiguration
+class	PoirotBlocks.TemplateBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.TemplateBlock	PoirotBlocks.BaseBlock	let	templateBlockConfig
+class	PoirotBlocks.TemplateBlock	PoirotBlocks.BaseBlock	let	macros
+class	PoirotBlocks.TemplateBlock	PoirotBlocks.BaseBlock	let	query
+class	PoirotBlocks.TemplateBlock	PoirotBlocks.BaseBlock	var	blocks
+class	PoirotBlocks.TemplateBlock	PoirotBlocks.BaseBlock	var	currentBlockIndex
+class	PoirotBlocks.TemplateBlockLegacy	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.TemplateBlockLegacy	PoirotBlocks.BaseBlock	let	templateBlockConfig
+class	PoirotBlocks.TemplateBlockLegacy	PoirotBlocks.BaseBlock	let	macros
+class	PoirotBlocks.TemplateBlockLegacy	PoirotBlocks.BaseBlock	let	query
+class	PoirotBlocks.TemplateBlockLegacy	PoirotBlocks.BaseBlock	var	blocks
+class	PoirotBlocks.TemplateBlockLegacy	PoirotBlocks.BaseBlock	var	currentBlockIndex
+class	PoirotBlocks.TimeWindowBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.TimeWindowBlock	PoirotBlocks.BaseBlock	let	environment
+class	PoirotBlocks.TimeWindowBlock	PoirotBlocks.BaseBlock	let	config
+class	PoirotBlocks.TimeWindowBlock	PoirotBlocks.BaseBlock	var	currentInterval
+enum	PoirotBlocks.TimeWindowBlockError			
+enum	PoirotBlocks.TimeWindowBlockError		case	invalidConfiguration
+enum	PoirotBlocks.UserDefinedBlockError			
+enum	PoirotBlocks.UserDefinedBlockError		case	genericError
+enum	PoirotBlocks.UserDefinedBlockError		case	inputDatasetsAreMissing
+class	PoirotBlocks.UserDefinedBlock	PoirotBlocks.BaseBlock		
+class	PoirotBlocks.UserDefinedBlock	PoirotBlocks.BaseBlock	let	inputDatasets
+class	PoirotBlocks.UserDefinedBlock	PoirotBlocks.BaseBlock	let	outputDescription
+class	PoirotBlocks.UserDefinedBlock	PoirotBlocks.BaseBlock	let	blockImplConfig
+class	PoirotBlocks.UserDefinedBlock	PoirotBlocks.BaseBlock	let	blockImpl
+enum	PoirotBlocks.DataSourceType			
+enum	PoirotBlocks.DataSourceType		case	biomeStream
+enum	PoirotBlocks.DataSourceType		case	biomePublisher
+enum	PoirotBlocks.DataSourceType		case	hostCustomStream
+enum	PoirotBlocks.DataSourceType		case	hostCustomTable
+enum	PoirotBlocks.DataSourceType		case	databaseTable
+struct	PoirotBlocks.DataSourceModel			
+struct	PoirotBlocks.DataSourceModel		let	name
+struct	PoirotBlocks.DataSourceModel		let	descriptionText
+struct	PoirotBlocks.DataSourceModel		let	type
+struct	PoirotBlocks.DataSourceModel		let	columns
+struct	PoirotBlocks.DataSourceModel		let	manifest
+enum	PoirotBlocks.DataSourceModel.CodingKeys			
+enum	PoirotBlocks.DataSourceModel.CodingKeys		case	name
+enum	PoirotBlocks.DataSourceModel.CodingKeys		case	descriptionText
+enum	PoirotBlocks.DataSourceModel.CodingKeys		case	type
+enum	PoirotBlocks.DataSourceModel.CodingKeys		case	columns
+enum	PoirotBlocks.DataSourceModel.CodingKeys		case	manifest
+struct	PoirotBlocks.HostInfo			
+struct	PoirotBlocks.HostInfo		let	bundleID
+struct	PoirotBlocks.HostInfo		let	versionString
+struct	PoirotBlocks.HostInfo		let	processName
+struct	PoirotBlocks.HostInfo		let	dataSources
+struct	PoirotBlocks.HostInfo		let	udfSyntax
+struct	PoirotBlocks.HostInfo		let	mainDatabaseConfig
+struct	PoirotBlocks.HostInfo		let	tempDatabaseConfig
+struct	PoirotBlocks.HostInfo		let	_supportsTimeWindow
+struct	PoirotBlocks.HostInfo		let	_supportedQueryParameters
+enum	PoirotBlocks.HostInfo.CodingKeys			
+enum	PoirotBlocks.HostInfo.CodingKeys		case	bundleID
+enum	PoirotBlocks.HostInfo.CodingKeys		case	versionString
+enum	PoirotBlocks.HostInfo.CodingKeys		case	processName
+enum	PoirotBlocks.HostInfo.CodingKeys		case	dataSources
+enum	PoirotBlocks.HostInfo.CodingKeys		case	udfSyntax
+enum	PoirotBlocks.HostInfo.CodingKeys		case	mainDatabaseConfig
+enum	PoirotBlocks.HostInfo.CodingKeys		case	tempDatabaseConfig
+enum	PoirotBlocks.HostInfo.CodingKeys		case	_supportsTimeWindow
+enum	PoirotBlocks.HostInfo.CodingKeys		case	_supportedQueryParameters
+class	PoirotBlocks.BiomeUDFContext	PoirotUDFs.UDFContext		
+class	PoirotBlocks.BiomeUDFContext	PoirotUDFs.UDFContext	var	_biomeDatabase
+struct	PoirotBlocks.BlockProcessorHelper			
+struct	PoirotBlocks.BlockProcessorHelper		let	blocks
+struct	PoirotBlocks.BlockProcessorHelper		let	activityMonitor
+struct	PoirotBlocks.BlockProcessorHelper		let	recipe
+struct	PoirotBlocks.BlockProcessorHelper		let	logHandler
+struct	PoirotBlocks.BlockProcessorHelper		var	datasetCache
+struct	PoirotBlocks.BlockProcessorHelper		var	currentIndex
+struct	PoirotBlocks.BlockProcessorHelper		var	sequenceId
+class	PoirotBlocks.BlocksController			
+class	PoirotBlocks.BlocksController		let	fileManager
+class	PoirotBlocks.BlocksController		let	activityMonitor
+class	PoirotBlocks.BlocksController		let	database
+class	PoirotBlocks.BlocksController		let	userBlockFactory
+class	PoirotBlocks.BlocksController		let	udfContext
+struct	PoirotBlocks.DefaultTableProducerFactory			
+enum	PoirotBlocks.RecipeError			
+enum	PoirotBlocks.RecipeError		case	nonFileSystemURL
+enum	PoirotBlocks.RecipeError		case	loadRecipeError
+enum	PoirotBlocks.RecipeError		case	processingError
+enum	PoirotBlocks.RecipeError		case	queryIsNotFound
+enum	PoirotBlocks.RecipeError		case	moreThanOneRecipeIdentifier
+class	PoirotBlocks.RecipeProcessor			
+class	PoirotBlocks.RecipeProcessor		let	logHandler
+class	PoirotBlocks.RecipeProcessor		let	fileManager
+class	PoirotBlocks.RecipeProcessor		var	_activityMonitor
+class	PoirotBlocks.RecipeProcessor		let	userBlockFactory
+class	PoirotBlocks.RecipeProcessor		let	environment
+class	PoirotBlocks.RecipeProcessor		let	concludeClause
+class	PoirotBlocks.RecipeProcessor		let	database
+class	PoirotBlocks.RecipeProcessor		let	recipe
+class	PoirotBlocks.RecipeProcessor		var	unclaimedQueries
+class	PoirotBlocks.SyncAsyncBridge			
+class	PoirotBlocks.SyncAsyncBridge		let	state
+class	PoirotBlocks.SyncAsyncBridge.Inner			
+class	PoirotBlocks.SyncAsyncBridge.Inner		var	work
+class	PoirotBlocks.SyncAsyncBridge.Inner		var	task
+class	PoirotBlocks.SyncAsyncBridge.Inner		var	result
+struct	PoirotBlocks.SyntaxError			
+struct	PoirotBlocks.SyntaxError		let	underlayingError
+struct	PoirotBlocks.SyntaxError		let	queryURL
+struct	PoirotBlocks.SyntaxError		let	queryName
+struct	PoirotBlocks.SyntaxError		let	queryType
+enum	PoirotBlocks.SyntaxError.QueryType			
+enum	PoirotBlocks.SyntaxError.QueryType		case	view
+enum	PoirotBlocks.SyntaxError.QueryType		case	block
+class	PoirotBlocks.TableProducer			
+class	PoirotBlocks.TableProducer		let	processor
+class	PoirotBlocks.TableProducer		var	done
+enum	PoirotBlocks.TableProducer.Processor			
+enum	PoirotBlocks.TableProducer.Processor		case	single
+enum	PoirotBlocks.TableProducer.Processor		case	series
+struct	PoirotBlocks.PoirotDefaultTaskParameters			
+struct	PoirotBlocks.PoirotDefaultTaskParameters		let	executionMode
+struct	PoirotBlocks.PoirotDefaultTaskParameters		let	recipeFolderPath
+struct	PoirotBlocks.PoirotDefaultTaskParameters		let	loggingPath
+struct	PoirotBlocks.PoirotDefaultTaskParameters		let	executionId
+struct	PoirotBlocks.PoirotDefaultTaskParameters		let	runtimeParameters
+enum	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys			
+enum	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys		case	executionMode
+enum	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys		case	recipeFolderPath
+enum	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys		case	loggingPath
+enum	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys		case	executionId
+enum	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys		case	runtimeParameters
+class	PoirotBlocks.AdHocHostEnvironment			
+class	PoirotBlocks.AdHocHostEnvironment		let	recipeURL
+class	PoirotBlocks.AdHocHostEnvironment		let	loggingType
+class	PoirotBlocks.AdHocHostEnvironment		var	nextStartTime
+class	PoirotBlocks.AdHocHostEnvironment		let	cutoffTime
+class	PoirotBlocks.AdHocHostEnvironment		let	ignoreMaximumLookbackTime
+class	PoirotBlocks.AdHocHostEnvironment		var	queryParameters
+class	PoirotBlocks.AdHocHostEnvironment		var	activityMonitor
+class	PoirotBlocks.BaseHostEnvironment			
+class	PoirotBlocks.BaseHostEnvironment		let	recipeURL
+class	PoirotBlocks.BaseHostEnvironment		let	loggingType
+class	PoirotBlocks.DefaultHostEnvironment	PoirotBlocks.BaseHostEnvironment		
+class	PoirotBlocks.DefaultHostEnvironment	PoirotBlocks.BaseHostEnvironment	let	timeWindowConfig
+class	PoirotBlocks.DefaultHostEnvironment	PoirotBlocks.BaseHostEnvironment	let	queryParametersConfig
+class	PoirotBlocks.NamedQueryParameters			
+class	PoirotBlocks.NamedQueryParameters		let	parameters
+enum	PoirotBlocks.NamedQueryParameters.CodingKeys			
+enum	PoirotBlocks.NamedQueryParameters.CodingKeys		case	parameters
+class	PoirotBlocks.UserDefaultsTimeBookmark			
+class	PoirotBlocks.UserDefaultsTimeBookmark		let	bookmarkKey
+class	PoirotBlocks.UserDefaultsTimeBookmark		let	userDefaults
+class	PoirotBlocks.UserDefaultsTimeBookmark		let	cutoffTime
+class	PoirotBlocks.UserDefaultsTimeBookmark		let	ignoreMaximumLookbackTime
+enum	PoirotBlocks.EntitlementError			
+enum	PoirotBlocks.EntitlementError		case	failedToReadEntitlements
+enum	PoirotBlocks.EntitlementError		case	invalidEntitlementType
+enum	PoirotBlocks.EntitlementError		case	failedToResolveTask
+struct	PoirotBlocks.AggregationBlockConfig			
+struct	PoirotBlocks.AggregationBlockConfig		let	name
+struct	PoirotBlocks.AggregationBlockConfig		let	outputDescription
+struct	PoirotBlocks.AggregationBlockConfig		let	ignoreSQLFailure
+struct	PoirotBlocks.AggregationBlockConfig		let	columnPolicy
+struct	PoirotBlocks.AggregationBlockConfig		let	queryParamsDataset
+enum	PoirotBlocks.AggregationBlockConfig.CodingKeys			
+enum	PoirotBlocks.AggregationBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.AggregationBlockConfig.CodingKeys		case	outputDescription
+enum	PoirotBlocks.AggregationBlockConfig.CodingKeys		case	ignoreSQLFailure
+enum	PoirotBlocks.AggregationBlockConfig.CodingKeys		case	columnPolicy
+enum	PoirotBlocks.AggregationBlockConfig.CodingKeys		case	queryParamsDataset
+struct	PoirotBlocks.ConsumptionConstants			
+enum	PoirotBlocks.ConsumptionType			
+enum	PoirotBlocks.ConsumptionType		case	biome
+enum	PoirotBlocks.ConsumptionType		case	upload
+struct	PoirotBlocks.ConsumptionBlockConfig			
+struct	PoirotBlocks.ConsumptionBlockConfig		let	name
+struct	PoirotBlocks.ConsumptionBlockConfig		let	protobufMessageName
+struct	PoirotBlocks.ConsumptionBlockConfig		let	consumptionType
+struct	PoirotBlocks.ConsumptionBlockConfig		let	consumptionEndpoint
+struct	PoirotBlocks.ConsumptionBlockConfig		let	sendToCoreAnalytics
+enum	PoirotBlocks.ConsumptionBlockConfig.CodingKeys			
+enum	PoirotBlocks.ConsumptionBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.ConsumptionBlockConfig.CodingKeys		case	protobufMessageName
+enum	PoirotBlocks.ConsumptionBlockConfig.CodingKeys		case	consumptionType
+enum	PoirotBlocks.ConsumptionBlockConfig.CodingKeys		case	consumptionEndpoint
+enum	PoirotBlocks.ConsumptionBlockConfig.CodingKeys		case	sendToCoreAnalytics
+struct	PoirotBlocks.ExtractionBlockConfig			
+struct	PoirotBlocks.ExtractionBlockConfig		let	name
+struct	PoirotBlocks.ExtractionBlockConfig		let	ignoreSQLFailure
+struct	PoirotBlocks.ExtractionBlockConfig		let	columnPolicy
+struct	PoirotBlocks.ExtractionBlockConfig		let	outputDescription
+struct	PoirotBlocks.ExtractionBlockConfig		let	queryParamsDataset
+enum	PoirotBlocks.ExtractionBlockConfig.CodingKeys			
+enum	PoirotBlocks.ExtractionBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.ExtractionBlockConfig.CodingKeys		case	outputDescription
+enum	PoirotBlocks.ExtractionBlockConfig.CodingKeys		case	ignoreSQLFailure
+enum	PoirotBlocks.ExtractionBlockConfig.CodingKeys		case	columnPolicy
+enum	PoirotBlocks.ExtractionBlockConfig.CodingKeys		case	queryParamsDataset
+struct	PoirotBlocks.JoinBlockConfig			
+struct	PoirotBlocks.JoinBlockConfig		let	name
+struct	PoirotBlocks.JoinBlockConfig		let	joinDatasetNames
+struct	PoirotBlocks.JoinBlockConfig		let	onPivots
+enum	PoirotBlocks.JoinBlockConfig.CodingKeys			
+enum	PoirotBlocks.JoinBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.JoinBlockConfig.CodingKeys		case	joinDatasetNames
+enum	PoirotBlocks.JoinBlockConfig.CodingKeys		case	onPivots
+struct	PoirotBlocks.MaterializedViewBlockConfig			
+struct	PoirotBlocks.MaterializedViewBlockConfig		let	name
+struct	PoirotBlocks.MaterializedViewBlockConfig		let	queryParamsDataset
+enum	PoirotBlocks.MaterializedViewBlockConfig.CodingKeys			
+enum	PoirotBlocks.MaterializedViewBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.MaterializedViewBlockConfig.CodingKeys		case	queryParamsDataset
+enum	PoirotBlocks.ColumnPolicy			
+enum	PoirotBlocks.ColumnPolicy		case	none
+enum	PoirotBlocks.ColumnPolicy		case	fetchDescribedOnlyMatchingTypes
+enum	PoirotBlocks.ColumnPolicy		case	fetchAllRespectingDescribedTypes
+struct	PoirotBlocks.QueryParametersBlockConfig			
+struct	PoirotBlocks.QueryParametersBlockConfig		let	name
+struct	PoirotBlocks.QueryParametersBlockConfig		let	outputDescription
+enum	PoirotBlocks.QueryParametersBlockConfig.CodingKeys			
+enum	PoirotBlocks.QueryParametersBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.QueryParametersBlockConfig.CodingKeys		case	outputDescription
+struct	PoirotBlocks.SentinelBlockConfig			
+struct	PoirotBlocks.SentinelBlockConfig		let	name
+struct	PoirotBlocks.SentinelBlockConfig.Constants			
+enum	PoirotBlocks.SentinelBlockConfig.CodingKeys			
+enum	PoirotBlocks.SentinelBlockConfig.CodingKeys		case	name
+struct	PoirotBlocks.TemplateBlockConfig			
+struct	PoirotBlocks.TemplateBlockConfig		let	name
+struct	PoirotBlocks.TemplateBlockConfig		let	templateBlock
+struct	PoirotBlocks.TemplateBlockConfig		let	macros
+struct	PoirotBlocks.TemplateBlockConfig		let	queryName
+enum	PoirotBlocks.TemplateConfig			
+enum	PoirotBlocks.TemplateConfig		case	aggregation
+enum	PoirotBlocks.TemplateConfigError			
+enum	PoirotBlocks.TemplateConfigError		case	invalidConfiguration
+enum	PoirotBlocks.TemplateBlockConfig.CodingKeys			
+enum	PoirotBlocks.TemplateBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.TemplateBlockConfig.CodingKeys		case	templateBlock
+enum	PoirotBlocks.TemplateBlockConfig.CodingKeys		case	macros
+enum	PoirotBlocks.TemplateBlockConfig.CodingKeys		case	queryName
+enum	PoirotBlocks.Interval			
+enum	PoirotBlocks.Interval		case	day
+enum	PoirotBlocks.Interval		case	week
+struct	PoirotBlocks.TimeWindowConstants			
+struct	PoirotBlocks.TimeWindowBlockConfig			
+struct	PoirotBlocks.TimeWindowBlockConfig		let	name
+struct	PoirotBlocks.TimeWindowBlockConfig		let	interval
+struct	PoirotBlocks.TimeWindowBlockConfig		let	maximumLookbackInDays
+struct	PoirotBlocks.TimeWindowBlockConfig		let	chooseRandomDayOfWeek
+enum	PoirotBlocks.TimeWindowBlockConfig.CodingKeys			
+enum	PoirotBlocks.TimeWindowBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.TimeWindowBlockConfig.CodingKeys		case	interval
+enum	PoirotBlocks.TimeWindowBlockConfig.CodingKeys		case	maximumLookbackInDays
+enum	PoirotBlocks.TimeWindowBlockConfig.CodingKeys		case	chooseRandomDayOfWeek
+enum	PoirotBlocks.BlockConfig			
+enum	PoirotBlocks.BlockConfig		case	aggregation
+enum	PoirotBlocks.BlockConfig		case	extraction
+enum	PoirotBlocks.BlockConfig		case	templateLegacy
+enum	PoirotBlocks.BlockConfig		case	template
+enum	PoirotBlocks.BlockConfig		case	join
+enum	PoirotBlocks.BlockConfig		case	materializedView
+enum	PoirotBlocks.BlockConfig		case	userDefined
+enum	PoirotBlocks.BlockConfig		case	timeWindow
+enum	PoirotBlocks.BlockConfig		case	sentinel
+enum	PoirotBlocks.BlockConfig		case	parameters
+enum	PoirotBlocks.BlockConfig		case	consumption
+enum	PoirotBlocks.BlockConfig.CodingKeys			
+enum	PoirotBlocks.BlockConfig.CodingKeys		case	type
+enum	PoirotBlocks.BlockConfig.CodingKeys		case	userConfig
+class	PoirotBlocks.CodingContext			
+class	PoirotBlocks.CodingContext		let	userBlockFactory
+class	PoirotBlocks.CodingContext		var	currentBlockName
+struct	PoirotBlocks.RecipeModel			
+struct	PoirotBlocks.RecipeModel		let	metadata
+struct	PoirotBlocks.RecipeModel		var	queryCollections
+struct	PoirotBlocks.RecipeModel		var	script
+struct	PoirotBlocks.RecipeModel.Strings			
+enum	PoirotBlocks.RecipeModel.CodingKeys			
+enum	PoirotBlocks.RecipeModel.CodingKeys		case	recipeIdentifier
+enum	PoirotBlocks.RecipeModel.CodingKeys		case	recipeVersion
+enum	PoirotBlocks.RecipeModel.CodingKeys		case	queryCollections
+enum	PoirotBlocks.RecipeModel.CodingKeys		case	script
+class	PoirotBlocks.CommandHandler<A	PoirotBlocks.HostControlling>		
+class	PoirotBlocks.CommandHandler<A	PoirotBlocks.HostControlling>	let	commandURI
+class	PoirotBlocks.CommandHandler<A	PoirotBlocks.HostControlling>	let	task
+class	PoirotBlocks.CommandHandler<A	PoirotBlocks.HostControlling>	let	taskParams
+enum	PoirotBlocks.Command			
+enum	PoirotBlocks.Command		case	hostInfo
+struct	PoirotBlocks.CommandURI			
+struct	PoirotBlocks.CommandURI		let	host
+struct	PoirotBlocks.CommandURI		let	command
+struct	PoirotBlocks.CommandURI		let	query
+struct	PoirotBlocks.HostInspectionCommandHandler			
+enum	PoirotBlocks.HostInspectionError			
+enum	PoirotBlocks.HostInspectionError		case	taskParametersAreMandatory
+enum	PoirotBlocks.AnyCodable			
+enum	PoirotBlocks.AnyCodable		case	dictionary
+enum	PoirotBlocks.AnyCodable		case	array
+enum	PoirotBlocks.AnyCodable		case	string
+enum	PoirotBlocks.AnyCodable		case	int
+enum	PoirotBlocks.AnyCodable		case	uint
+enum	PoirotBlocks.AnyCodable		case	double
+enum	PoirotBlocks.AnyCodable		case	bool
+struct	PoirotBlocks.Archiver			
+enum	PoirotBlocks.Archiver.Error			
+enum	PoirotBlocks.Archiver.Error		case	failedToArchive
+enum	PoirotBlocks.Archiver.Error		case	failedToUnarchive
+enum	PoirotBlocks.QueryCollectionError			
+enum	PoirotBlocks.QueryCollectionError		case	runtimeError
+enum	PoirotBlocks.QueryCollectionError		case	duplicateQuery
+struct	PoirotBlocks.UserDefinedBlockConfig			
+struct	PoirotBlocks.UserDefinedBlockConfig		var	name
+struct	PoirotBlocks.UserDefinedBlockConfig		var	inputDatasets
+struct	PoirotBlocks.UserDefinedBlockConfig		var	outputDescription
+struct	PoirotBlocks.UserDefinedBlockConfig		var	implConfig
+enum	PoirotBlocks.UserDefinedBlockConfig.CodingKeys			
+enum	PoirotBlocks.UserDefinedBlockConfig.CodingKeys		case	name
+enum	PoirotBlocks.UserDefinedBlockConfig.CodingKeys		case	inputDatasets
+enum	PoirotBlocks.UserDefinedBlockConfig.CodingKeys		case	outputDescription
+enum	PoirotBlocks.UserDefinedBlockConfig.CodingKeys		case	userConfig
+struct	PoirotBlocks.DatasetColumnDescription			
+struct	PoirotBlocks.DatasetColumnDescription		var	name
+struct	PoirotBlocks.DatasetColumnDescription		var	nullable
+struct	PoirotBlocks.DatasetColumnDescription		let	type
+struct	PoirotBlocks.DatasetColumnDescription		var	pivot
+enum	PoirotBlocks.DatasetColumnDescription.CodingKeys			
+enum	PoirotBlocks.DatasetColumnDescription.CodingKeys		case	name
+enum	PoirotBlocks.DatasetColumnDescription.CodingKeys		case	nullable
+enum	PoirotBlocks.DatasetColumnDescription.CodingKeys		case	pivot
+enum	PoirotBlocks.DatasetColumnDescription.CodingKeys		case	type
+struct	PoirotBlocks.DatasetColumnLayout			
+struct	PoirotBlocks.DatasetColumnLayout		let	name
+struct	PoirotBlocks.DatasetColumnLayout		let	columnDescriptions
+enum	PoirotBlocks.DatasetColumnLayout.CodingKeys			
+enum	PoirotBlocks.DatasetColumnLayout.CodingKeys		case	name
+enum	PoirotBlocks.DatasetColumnLayout.CodingKeys		case	columns
+struct	PoirotBlocks.DatasetColumnType			
+struct	PoirotBlocks.DatasetColumnType		let	sqlType
+struct	PoirotBlocks.DatasetDescription			
+struct	PoirotBlocks.DatasetDescription		var	layouts
+struct	PoirotBlocks.AnyDatasetValue			
+struct	PoirotBlocks.AnyDatasetValue		let	sqlValue
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys			
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	int32
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	uint32
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	int64
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	uint64
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	float
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	double
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	bool
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	string
+enum	PoirotBlocks.AnyDatasetValue.CodingKeys		case	data
+struct	PoirotBlocks.Dataset			
+struct	PoirotBlocks.Dataset		var	rows
+struct	PoirotBlocks.LogEntryCell			
+struct	PoirotBlocks.LogEntryCell		let	value
+struct	PoirotBlocks.DatasetCatalog			
+struct	PoirotBlocks.DatasetCatalog		let	dataset
+struct	PoirotBlocks.DatasetRow			
+struct	PoirotBlocks.DatasetRow		let	name
+struct	PoirotBlocks.DatasetRow		var	sqlCells
+struct	PoirotBlocks.DatasetTable			
+struct	PoirotBlocks.DatasetTable		let	name
+struct	PoirotBlocks.DatasetTable		var	dataset
+struct	PoirotBlocks.DatasetTableIterator			
+struct	PoirotBlocks.DatasetTableIterator		var	rowIterator
+struct	PoirotBlocks.DatasetTable.ColumnSort			
+struct	PoirotBlocks.DatasetTable.ColumnSort		let	name
+struct	PoirotBlocks.DatasetTable.ColumnSort		let	ascending
+struct	PoirotBlocks.AnyQueryParameters			
+struct	PoirotBlocks.AnyQueryParameters		var	values
+enum	PoirotBlocks.ExecutionMode			
+enum	PoirotBlocks.ExecutionMode		case	inspect
+enum	PoirotBlocks.ExecutionMode		case	test
+enum	PoirotBlocks.ExecutionMode		case	execute
+enum	PoirotBlocks.ExecutionMode		case	upload
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>		
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	executionMode
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	recipeFolderPath
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	loggingPath
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	executionId
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	runtimeParameters
+struct	PoirotBlocks.PoirotUserTaskParameters<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	let	userDefined
+enum	PoirotBlocks.PoirotUserTaskParameters.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>		
+enum	PoirotBlocks.PoirotUserTaskParameters.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Equatable>	case	userDefined
+struct	PoirotBlocks.PoirotToolTaskParameters			
+struct	PoirotBlocks.PoirotToolTaskParameters		var	executionMode
+struct	PoirotBlocks.PoirotToolTaskParameters		var	recipeFolderPath
+struct	PoirotBlocks.PoirotToolTaskParameters		var	loggingPath
+struct	PoirotBlocks.PoirotToolTaskParameters		var	executionId
+struct	PoirotBlocks.PoirotToolTaskParameters		let	runtimeParameters
+struct	PoirotBlocks.PoirotToolTaskParameters		let	userDefined
+enum	PoirotBlocks.PoirotToolTaskParameters.CodingKeys			
+enum	PoirotBlocks.PoirotToolTaskParameters.CodingKeys		case	userDefined
+struct	PoirotBlocks.RuntimeParameters			
+struct	PoirotBlocks.RuntimeParameters		let	startTime
+struct	PoirotBlocks.RuntimeParameters		let	endTime
+struct	PoirotBlocks.RuntimeParameters		let	ignoreMaximumLookbackTime
+struct	PoirotBlocks.RuntimeParameters		let	queryParameters
+enum	PoirotBlocks.RuntimeParameters.CodingKeys			
+enum	PoirotBlocks.RuntimeParameters.CodingKeys		case	startTime
+enum	PoirotBlocks.RuntimeParameters.CodingKeys		case	endTime
+enum	PoirotBlocks.RuntimeParameters.CodingKeys		case	ignoreMaximumLookbackTime
+enum	PoirotBlocks.RuntimeParameters.CodingKeys		case	queryParameters
+enum	PoirotBlocks.AdHocExecutionError			
+enum	PoirotBlocks.AdHocExecutionError		case	queryParametersAreMissingForBlockWithName
+enum	PoirotBlocks.AdHocExecutionError		case	recipeRequiresQueryParameters
+enum	PoirotBlocks.AdHocExecutionError.CodingKeys			
+enum	PoirotBlocks.AdHocExecutionError.CodingKeys		case	recipeRequiresQueryParameters
+enum	PoirotBlocks.AdHocExecutionError.CodingKeys		case	queryParametersAreMissingForBlockWithName
+enum	PoirotBlocks.AdHocExecutionError.RecipeRequiresQueryParametersCodingKeys			
+enum	PoirotBlocks.AdHocExecutionError.QueryParametersAreMissingForBlockWithNameCodingKeys			
+enum	PoirotBlocks.AdHocExecutionError.QueryParametersAreMissingForBlockWithNameCodingKeys		case	_0
+struct	PoirotBlocks.BlockMetadata			
+struct	PoirotBlocks.BlockMetadata		var	name
+struct	PoirotBlocks.BlockMetadata		var	type
+struct	PoirotBlocks.BlockMetadata		var	identifier
+struct	PoirotBlocks.BlockMetadata		var	telemetryEventName
+struct	PoirotBlocks.BlockMetadata		var	recipe
+enum	PoirotBlocks.DatasetError			
+enum	PoirotBlocks.DatasetError		case	columnNotFound
+enum	PoirotBlocks.DatasetError		case	itemNotFound
+enum	PoirotBlocks.DatasetError		case	tableNotFound
+enum	PoirotBlocks.DatasetError		case	expectedSingleRow
+enum	PoirotBlocks.DatasetError		case	valueConflict
+enum	PoirotBlocks.DatasetError		case	unsupportedInterface
+enum	PoirotBlocks.DatasetError		case	unsupportedValueType
+enum	PoirotBlocks.DatasetError		case	unexpectedType
+enum	PoirotBlocks.DatasetError		case	timeWindowError
+class	PoirotBlocks.Query			
+class	PoirotBlocks.Query		let	name
+class	PoirotBlocks.Query		let	sql
+class	PoirotBlocks.Query		let	fileURL
+class	PoirotBlocks.Query		var	usageState
+enum	PoirotBlocks.Query.UsageState			
+enum	PoirotBlocks.Query.UsageState		case	notUsed
+enum	PoirotBlocks.Query.UsageState		case	materializedView
+enum	PoirotBlocks.Query.UsageState		case	view
+enum	PoirotBlocks.BlockType			
+enum	PoirotBlocks.BlockType		case	materializedView
+enum	PoirotBlocks.BlockType		case	aggregation
+enum	PoirotBlocks.BlockType		case	extraction
+enum	PoirotBlocks.BlockType		case	template
+enum	PoirotBlocks.BlockType		case	templateLegacy
+enum	PoirotBlocks.BlockType		case	join
+enum	PoirotBlocks.BlockType		case	userDefined
+enum	PoirotBlocks.BlockType		case	timeWindow
+enum	PoirotBlocks.BlockType		case	sentinel
+enum	PoirotBlocks.BlockType		case	parameters
+enum	PoirotBlocks.BlockType		case	consumption
+struct	PoirotBlocks.RecipeMetadata			
+struct	PoirotBlocks.RecipeMetadata		var	name
+struct	PoirotBlocks.RecipeMetadata		var	version
+struct	PoirotBlocks.RecipeMetadata		var	endToEndTelemetryEventName
+enum	PoirotBlocks.RecipeMetadata.CodingKeys			
+enum	PoirotBlocks.RecipeMetadata.CodingKeys		case	name
+enum	PoirotBlocks.RecipeMetadata.CodingKeys		case	version
+enum	PoirotBlocks.RecipeMetadata.CodingKeys		case	endToEndTelemetryEventName
+enum	PoirotBlocks.EntitlementKey			
+enum	PoirotBlocks.AccessMode			
+struct	PoirotBlocks.Entitlements			
+struct	PoirotBlocks.Entitlements		let	dictionary
+enum	PoirotBlocks.EntitlementsError			
+enum	PoirotBlocks.EntitlementsError		case	readFailed
+enum	PoirotBlocks.EntitlementsError		case	parseFailed
+enum	PoirotBlocks.EntitlementsError		case	invalidFormat
+enum	PoirotBlocks.PoirotTaskError			
+enum	PoirotBlocks.PoirotTaskError		case	invalidConfiguration
+class	PoirotBlocks.PoirotTask<A	PoirotBlocks.HostControlling>		
+class	PoirotBlocks.PoirotTask<A	PoirotBlocks.HostControlling>	let	hostController
+class	PoirotBlocks.PoirotTask<A	PoirotBlocks.HostControlling>	var	blocksController
+class	PoirotBlocks.ConsoleLogHandler			
+class	PoirotBlocks.ConsoleLogHandler		var	standardOut
+class	PoirotBlocks.ConsoleLogHandler		var	standardErr
+class	PoirotBlocks.DebugLogHandler			
+class	PoirotBlocks.DebugLogHandler		var	records
+class	PoirotBlocks.DebugLogHandler		let	allowedBlockNames
+class	PoirotBlocks.DebugLogHandler		let	legacyForward
+struct	PoirotBlocks.DebugLogHandler.Record			
+struct	PoirotBlocks.DebugLogHandler.Record		let	metadata
+struct	PoirotBlocks.DebugLogHandler.Record		let	collector
+class	PoirotBlocks.FileLogHandler			
+class	PoirotBlocks.FileLogHandler		var	directory
+struct	PoirotBlocks.LogSupport			
+class	PoirotBlocks.StructLogHandler			
+class	PoirotBlocks.StructLogHandler		var	directoryURL
+struct	PoirotBlocks.VoidLogHandler			
+struct	PoirotBlocks.BlockExecutionLog			
+struct	PoirotBlocks.BlockExecutionLog		let	metadata
+struct	PoirotBlocks.BlockExecutionLog		let	content
+struct	PoirotBlocks.BlockExecutionLog		let	extraContent
+enum	PoirotBlocks.BlockExecutionLog.Error			
+enum	PoirotBlocks.BlockExecutionLog.Error		case	initFailure
+enum	PoirotBlocks.BlockExecutionLog.Error		case	encodingFailure
+enum	PoirotBlocks.BlockExecutionLog.LogContent			
+enum	PoirotBlocks.BlockExecutionLog.LogContent		case	json
+enum	PoirotBlocks.BlockExecutionLog.LogContent		case	csv
+enum	PoirotBlocks.BlockExecutionLog.LogContent		case	binary
+enum	PoirotBlocks.BlockExecutionLog.LogContent		case	message
+enum	PoirotBlocks.BlockExecutionLog.LogContent		case	error
+enum	PoirotBlocks.BlockExecutionLog.CodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.CodingKeys		case	metadata
+enum	PoirotBlocks.BlockExecutionLog.CodingKeys		case	content
+enum	PoirotBlocks.BlockExecutionLog.CodingKeys		case	extraContent
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CodingKeys		case	json
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CodingKeys		case	csv
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CodingKeys		case	binary
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CodingKeys		case	message
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CodingKeys		case	error
+enum	PoirotBlocks.BlockExecutionLog.LogContent.JsonCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.LogContent.JsonCodingKeys		case	data
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CsvCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CsvCodingKeys		case	data
+enum	PoirotBlocks.BlockExecutionLog.LogContent.CsvCodingKeys		case	columnLayout
+enum	PoirotBlocks.BlockExecutionLog.LogContent.BinaryCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.LogContent.BinaryCodingKeys		case	data
+enum	PoirotBlocks.BlockExecutionLog.LogContent.MessageCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.LogContent.MessageCodingKeys		case	_0
+enum	PoirotBlocks.BlockExecutionLog.LogContent.ErrorCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.LogContent.ErrorCodingKeys		case	_0
+enum	PoirotBlocks.BlockExecutionLog.Error.CodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.Error.CodingKeys		case	initFailure
+enum	PoirotBlocks.BlockExecutionLog.Error.CodingKeys		case	encodingFailure
+enum	PoirotBlocks.BlockExecutionLog.Error.InitFailureCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.Error.InitFailureCodingKeys		case	message
+enum	PoirotBlocks.BlockExecutionLog.Error.EncodingFailureCodingKeys			
+enum	PoirotBlocks.BlockExecutionLog.Error.EncodingFailureCodingKeys		case	message
+struct	PoirotBlocks.ReadableLogEntry			
+struct	PoirotBlocks.ReadableLogEntry		let	name
+struct	PoirotBlocks.ReadableLogEntry		let	type
+struct	PoirotBlocks.ReadableLogEntry		let	content
+enum	PoirotBlocks.ReadableLogEntry.CodingKeys			
+enum	PoirotBlocks.ReadableLogEntry.CodingKeys		case	name
+enum	PoirotBlocks.ReadableLogEntry.CodingKeys		case	type
+enum	PoirotBlocks.ReadableLogEntry.CodingKeys		case	content
+struct	PoirotBlocks.BlockLog			
+struct	PoirotBlocks.BlockLog		let	metadata
+struct	PoirotBlocks.BlockLog		let	entries
+struct	PoirotBlocks.BlockLogMetadata			
+struct	PoirotBlocks.BlockLogMetadata		let	sequenceId
+struct	PoirotBlocks.BlockLogMetadata		let	blockType
+struct	PoirotBlocks.BlockLogMetadata		let	blockName
+enum	PoirotBlocks.BlockLogMetadata.CodingKeys			
+enum	PoirotBlocks.BlockLogMetadata.CodingKeys		case	sequenceId
+enum	PoirotBlocks.BlockLogMetadata.CodingKeys		case	blockType
+enum	PoirotBlocks.BlockLogMetadata.CodingKeys		case	blockName
+struct	PoirotBlocks.LogEntry			
+struct	PoirotBlocks.LogEntry		let	name
+struct	PoirotBlocks.LogEntry		let	type
+struct	PoirotBlocks.LogEntry		let	data
+enum	PoirotBlocks.LogEntry.EntryType			
+enum	PoirotBlocks.LogEntry.EntryType		case	json
+enum	PoirotBlocks.LogEntry.EntryType		case	csv
+enum	PoirotBlocks.LogEntry.EntryType		case	binary
+enum	PoirotBlocks.LogEntry.EntryType		case	error
+enum	PoirotBlocks.LogEntry.CodingKeys			
+enum	PoirotBlocks.LogEntry.CodingKeys		case	name
+enum	PoirotBlocks.LogEntry.CodingKeys		case	type
+enum	PoirotBlocks.LogEntry.CodingKeys		case	data
+enum	PoirotBlocks.BlockActivityType			
+enum	PoirotBlocks.BlockActivityType		case	initialization
+enum	PoirotBlocks.BlockActivityType		case	validation
+enum	PoirotBlocks.BlockActivityType		case	processing
+enum	PoirotBlocks.EngineActivityType			
+enum	PoirotBlocks.EngineActivityType		case	e2e
+enum	PoirotBlocks.EngineActivityType		case	initialization
+enum	PoirotBlocks.EngineActivityType		case	validation
+enum	PoirotBlocks.EngineActivityType		case	processing
+class	PoirotBlocks.HostDiagnosingActivityMonitor			
+class	PoirotBlocks.HostDiagnosingActivityMonitor		var	signposterCache
+struct	PoirotBlocks.MeasurmentState			
+struct	PoirotBlocks.MeasurmentState		let	startTime
+struct	PoirotBlocks.MeasurmentState		let	signpostState
+class	PoirotBlocks.TelemetryReportingActivityMonitor	PoirotBlocks.HostDiagnosingActivityMonitor		
+class	PoirotBlocks.LogEntryCollector			
+class	PoirotBlocks.LogEntryCollector		var	entryBuilders
+class	PoirotBlocks.LogEntryCollector		var	loggedDataset
+struct	PoirotBlocks.RecipeExecutionLog			
+struct	PoirotBlocks.RecipeExecutionLog		let	metadata
+struct	PoirotBlocks.RecipeExecutionLog		let	errorString
+enum	PoirotBlocks.RecipeExecutionLog.CodingKeys			
+enum	PoirotBlocks.RecipeExecutionLog.CodingKeys		case	metadata
+enum	PoirotBlocks.RecipeExecutionLog.CodingKeys		case	errorString
+class	PoirotBlocks.AutomaticDSCFileProtobufFactory	PoirotBlocks.AutomaticProtobufFactory		
+class	PoirotBlocks.AutomaticDSCFileProtobufFactory	PoirotBlocks.AutomaticProtobufFactory	let	dscUrl
+class	PoirotBlocks.AutomaticDSCFileProtobufFactory	PoirotBlocks.AutomaticProtobufFactory	let	updateFileAutomatically
+class	PoirotBlocks.AutomaticProtobufFactory			
+class	PoirotBlocks.AutomaticProtobufFactory		let	factory
+class	PoirotBlocks.AutomaticProtobufFactory		var	manifestUpdated
+class	PoirotBlocks.AutomaticProtobufFactory		let	drivenBy
+enum	PoirotBlocks.AutomaticProtobufFactory.DrivenBy			
+enum	PoirotBlocks.AutomaticProtobufFactory.DrivenBy		case	columnValues
+enum	PoirotBlocks.AutomaticProtobufFactory.DrivenBy		case	columnLayouts
+class	PoirotBlocks.ProtobufFactory			
+class	PoirotBlocks.ProtobufFactory		var	manifest
+class	PoirotBlocks.ProtobufFactory		let	messageNameMap
+class	PoirotBlocks.ProtobufFactory		var	store
+struct	PoirotBlocks.InferredProtobufType			
+struct	PoirotBlocks.InferredProtobufType		let	typeManifest
+struct	PoirotBlocks.InferredProtobufType		let	typeName
+struct	PoirotBlocks.RecipeLog			
+struct	PoirotBlocks.RecipeLog		let	metadata
+struct	PoirotBlocks.RecipeLog		let	entries
+struct	PoirotBlocks.OutputStreamToStdErr			
+struct	PoirotBlocks.OutputStreamToStdOut			
+enum	PoirotBlocks.LoggingType			
+enum	PoirotBlocks.LoggingType		case	file
+enum	PoirotBlocks.LoggingType		case	debug
+enum	PoirotBlocks.LoggingType		case	void
+enum	PoirotBlocks.LoggingType		case	console
+struct	PoirotBlocks.ExecutionInputPayload			
+struct	PoirotBlocks.ExecutionInputPayload		let	hostTaskIdentifier
+struct	PoirotBlocks.ExecutionInputPayload		let	parameters
+struct	PoirotBlocks.ExecutionInputPayload		let	processNames
+struct	PoirotBlocks.ExecutionInputPayload		let	recipeName
+struct	PoirotBlocks.ExecutionInputPayload		let	archivedRecipe
+enum	PoirotBlocks.ExecutionInputPayload.CodingKeys			
+enum	PoirotBlocks.ExecutionInputPayload.CodingKeys		case	hostTaskIdentifier
+enum	PoirotBlocks.ExecutionInputPayload.CodingKeys		case	parameters
+enum	PoirotBlocks.ExecutionInputPayload.CodingKeys		case	processNames
+enum	PoirotBlocks.ExecutionInputPayload.CodingKeys		case	recipeName
+enum	PoirotBlocks.ExecutionInputPayload.CodingKeys		case	archivedRecipe
+struct	PoirotBlocks.ExecutionLog			
+struct	PoirotBlocks.ExecutionLog		let	recipeLog
+struct	PoirotBlocks.ExecutionLog		let	blockLogs
+enum	PoirotBlocks.ExecutionLog.CodingKeys			
+enum	PoirotBlocks.ExecutionLog.CodingKeys		case	recipeLog
+enum	PoirotBlocks.ExecutionLog.CodingKeys		case	blockLogs
+struct	PoirotBlocks.ExecutionOutputPayload			
+struct	PoirotBlocks.ExecutionOutputPayload		let	timestamp
+struct	PoirotBlocks.ExecutionOutputPayload		let	command
+struct	PoirotBlocks.ExecutionOutputPayload		let	mlExtensionDictionary
+struct	PoirotBlocks.ExecutionOutputPayload		let	executionParameters
+struct	PoirotBlocks.ExecutionOutputPayload		let	logs
+enum	PoirotBlocks.ExecutionOutputPayload.CodingKeys			
+enum	PoirotBlocks.ExecutionOutputPayload.CodingKeys		case	timestamp
+enum	PoirotBlocks.ExecutionOutputPayload.CodingKeys		case	command
+enum	PoirotBlocks.ExecutionOutputPayload.CodingKeys		case	mlExtensionDictionary
+enum	PoirotBlocks.ExecutionOutputPayload.CodingKeys		case	executionParameters
+enum	PoirotBlocks.ExecutionOutputPayload.CodingKeys		case	logs
+protocol	PoirotBlocks.BiomeSchemaProviding			
+protocol	PoirotBlocks.BiomeTableCreating			
+protocol	PoirotBlocks.BiomePublisherSchemaProviding			
+protocol	PoirotBlocks.MessageManifestProviding	Message		
+protocol	PoirotBlocks.MessageToColumnMapping	Message		
+protocol	PoirotBlocks.ProtobufMessageSchemaProviding			
+protocol	PoirotBlocks.DatasetProcessing			
+protocol	PoirotBlocks.SyntaxCheckingProcessor			
+protocol	PoirotBlocks.ConfigurableProcessor			
+protocol	PoirotBlocks.BlockImplementing			
+protocol	PoirotBlocks.ReplicableBlock			
+protocol	PoirotBlocks.ViewProvidingBlock			
+protocol	PoirotBlocks.QueryBlockInfoProviding			
+protocol	PoirotBlocks.TableProducing			
+protocol	PoirotBlocks.TableSeriesProducing			
+protocol	PoirotBlocks.RecipeProcessing			
+protocol	PoirotBlocks.TableProducerFactory			
+protocol	PoirotBlocks.UserBlockFactory			
+protocol	PoirotBlocks.HostConfiguring			
+protocol	PoirotBlocks.HostControlling	HostEnvironment, TaskParams		
+protocol	PoirotBlocks.QueryParametersConfiguring			
+protocol	PoirotBlocks.TelemetryReportableError			
+protocol	PoirotBlocks.BlockConfiguring			
+protocol	PoirotBlocks.QueryBlockConfiguring			
+protocol	PoirotBlocks.UserBlockDecoding			
+protocol	PoirotBlocks.UserBlockImplConfiguring			
+protocol	PoirotBlocks.TaskConfiguring			
+protocol	PoirotBlocks.TimeWindowConfiguring			
+protocol	PoirotBlocks.CoersingTaskParameters	TaskParams		
+protocol	PoirotBlocks.SupportingHostInfo			
+protocol	PoirotBlocks.ActivityMonitoring			
+protocol	PoirotBlocks.RecipeOutcomeConvertable			
+protocol	PoirotBlocks.ProtobufCreating			
+protocol	PoirotBlocks.BlockLogHandling			
+protocol	PoirotBlocks.LogEntryCollecting			
+protocol	PoirotBlocks.EntryBuilding			
+protocol	PoirotBlocks.LogHandling			
+protocol	PoirotBlocks.RecipeLogHandling			
+protocol	conformance __C.BMStreamIdentifier	Swift._HasCustomAnyHashableRepresentation: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.RawRepresentable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift._SwiftNewtypeWrapper: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.Equatable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift.Hashable: BiomeStreams		
+protocol	conformance __C.BMStreamIdentifier	Swift._ObjectiveCBridgeable: BiomeStreams		
+protocol	conformance __C.BMUseCaseIdentifier	Swift._HasCustomAnyHashableRepresentation: BiomeFoundation		
+protocol	conformance __C.BMUseCaseIdentifier	Swift.RawRepresentable: BiomeFoundation		
+protocol	conformance __C.BMUseCaseIdentifier	Swift._SwiftNewtypeWrapper: BiomeFoundation		
+protocol	conformance __C.BMUseCaseIdentifier	Swift.Equatable: BiomeFoundation		
+protocol	conformance __C.BMUseCaseIdentifier	Swift.Hashable: BiomeFoundation		
+protocol	conformance __C.BMUseCaseIdentifier	Swift._ObjectiveCBridgeable: BiomeFoundation		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance PoirotBlocks.DefaultPublisherSchemaProvider	PoirotBlocks.MessageManifestProviding		
+protocol	conformance PoirotBlocks.DefaultPublisherSchemaProvider	PoirotBlocks.MessageToColumnMapping		
+protocol	conformance PoirotBlocks.DefaultPublisherSchemaProvider	PoirotBlocks.BiomePublisherSchemaProviding		
+protocol	conformance PoirotBlocks.DefaultFinalPublisherSchemaProvider	PoirotBlocks.MessageManifestProviding		
+protocol	conformance PoirotBlocks.DefaultFinalPublisherSchemaProvider	PoirotBlocks.MessageToColumnMapping		
+protocol	conformance PoirotBlocks.DefaultFinalPublisherSchemaProvider	PoirotBlocks.BiomePublisherSchemaProviding		
+protocol	conformance PoirotBlocks.DefaultFinalPublisherSchemaProvider	PoirotBlocks.BiomeSchemaProviding		
+protocol	conformance PoirotBlocks.DefaultPublisherSchemaProvider	PoirotBlocks.BiomeSchemaProviding		
+protocol	conformance PoirotBlocks.FlexiblePublisherSchemaProvider	PoirotBlocks.MessageManifestProviding		
+protocol	conformance PoirotBlocks.FlexiblePublisherSchemaProvider	PoirotBlocks.MessageToColumnMapping		
+protocol	conformance PoirotBlocks.FlexiblePublisherSchemaProvider	PoirotBlocks.BiomeSchemaProviding		
+protocol	conformance PoirotBlocks.FlexiblePublisherSchemaProvider	PoirotBlocks.BiomePublisherSchemaProviding		
+protocol	conformance BiomePublishers.TableFactory	PoirotBlocks.BiomeTableCreating		
+protocol	conformance PoirotUDFs.BaseStreamSchemaProvider	PoirotBlocks.ProtobufMessageSchemaProviding		
+protocol	conformance PoirotUDFs.BaseStreamSchemaProvider	PoirotBlocks.BiomeSchemaProviding		
+protocol	conformance BiomeStreams.PrivateTableFactory	PoirotBlocks.BiomeTableCreating		
+protocol	conformance BiomeStreams.SchematizedTableFactory	PoirotBlocks.BiomeTableCreating		
+protocol	conformance BiomeStreams.TableFactory	PoirotBlocks.BiomeTableCreating		
+protocol	conformance PoirotBlocks.DatabaseConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatabaseConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.DatabaseConfig	Swift.Equatable		
+protocol	conformance DatabaseConfig.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DatabaseConfig.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DatabaseConfig.CodingKeys	Swift.Hashable		
+protocol	conformance DatabaseConfig.CodingKeys	Swift.Equatable		
+protocol	conformance DatabaseConfig.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.DefaultHostController	PoirotBlocks.HostControlling		
+protocol	conformance PoirotBlocks.DefaultHostController	PoirotBlocks.UserBlockFactory		
+protocol	conformance PoirotBlocks.DefaultHostController	PoirotBlocks.UserBlockDecoding		
+protocol	conformance PoirotBlocks.DefaultHostError	Swift.Error		
+protocol	conformance PoirotBlocks.AggregationBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.AggregationBlock	PoirotBlocks.ReplicableBlock		
+protocol	conformance PoirotBlocks.QueryInfoError	Swift.Error		
+protocol	conformance PoirotBlocks.ProcessingError	Swift.Error		
+protocol	conformance PoirotBlocks.BaseBlock	PoirotBlocks.ConfigurableProcessor		
+protocol	conformance PoirotBlocks.BaseBlock	PoirotBlocks.SyntaxCheckingProcessor		
+protocol	conformance PoirotBlocks.BaseBlock	PoirotBlocks.DatasetProcessing		
+protocol	conformance PoirotBlocks.BaseBlock	PoirotBlocks.BlockImplementing		
+protocol	conformance PoirotBlocks.JoinBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.MaterializedViewBlock	PoirotBlocks.ViewProvidingBlock		
+protocol	conformance PoirotBlocks.QueryBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.QueryBlock	PoirotBlocks.QueryBlockInfoProviding		
+protocol	conformance PoirotBlocks.QueryParametersBlock	PoirotBlocks.ConfigurableProcessor		
+protocol	conformance PoirotBlocks.QueryParametersBlock	PoirotBlocks.SyntaxCheckingProcessor		
+protocol	conformance PoirotBlocks.QueryParametersBlock	PoirotBlocks.DatasetProcessing		
+protocol	conformance PoirotBlocks.QueryParametersBlock	PoirotBlocks.BlockImplementing		
+protocol	conformance PoirotBlocks.ParametersBlockError	Swift.Equatable		
+protocol	conformance PoirotBlocks.ParametersBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.SentinelBlock	PoirotBlocks.ConfigurableProcessor		
+protocol	conformance PoirotBlocks.SentinelBlock	PoirotBlocks.SyntaxCheckingProcessor		
+protocol	conformance PoirotBlocks.SentinelBlock	PoirotBlocks.DatasetProcessing		
+protocol	conformance PoirotBlocks.SentinelBlock	PoirotBlocks.BlockImplementing		
+protocol	conformance PoirotBlocks.TemplateBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.TimeWindowBlockError	Swift.Equatable		
+protocol	conformance PoirotBlocks.TimeWindowBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.UserDefinedBlockError	Swift.Error		
+protocol	conformance PoirotBlocks.DataSourceType	Swift.Hashable		
+protocol	conformance PoirotBlocks.DataSourceType	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.DataSourceType	Swift.Decodable		
+protocol	conformance PoirotBlocks.DataSourceType	Swift.Encodable		
+protocol	conformance PoirotBlocks.DataSourceType	Swift.Equatable		
+protocol	conformance PoirotBlocks.DataSourceModel	Swift.Decodable		
+protocol	conformance PoirotBlocks.DataSourceModel	Swift.Encodable		
+protocol	conformance PoirotBlocks.DataSourceModel	Swift.Equatable		
+protocol	conformance PoirotBlocks.DataSourceModel	Swift.Identifiable		
+protocol	conformance PoirotBlocks.DataSourceModel	Swift.Hashable		
+protocol	conformance PoirotBlocks.DataSourceModel	Swift.Comparable		
+protocol	conformance DataSourceModel.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DataSourceModel.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DataSourceModel.CodingKeys	Swift.Hashable		
+protocol	conformance DataSourceModel.CodingKeys	Swift.Equatable		
+protocol	conformance DataSourceModel.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.HostInfo	Swift.Decodable		
+protocol	conformance PoirotBlocks.HostInfo	Swift.Encodable		
+protocol	conformance PoirotBlocks.HostInfo	Swift.Equatable		
+protocol	conformance PoirotBlocks.HostInfo	Swift.Identifiable		
+protocol	conformance PoirotBlocks.HostInfo	Swift.Hashable		
+protocol	conformance PoirotBlocks.HostInfo	Swift.Comparable		
+protocol	conformance HostInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HostInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HostInfo.CodingKeys	Swift.RawRepresentable		
+protocol	conformance HostInfo.CodingKeys	Swift.Hashable		
+protocol	conformance HostInfo.CodingKeys	Swift.Equatable		
+protocol	conformance HostInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.DefaultTableProducerFactory	PoirotBlocks.TableProducerFactory		
+protocol	conformance PoirotBlocks.DefaultTableProducerFactory	PoirotBlocks.UserBlockFactory		
+protocol	conformance PoirotBlocks.DefaultTableProducerFactory	PoirotBlocks.UserBlockDecoding		
+protocol	conformance PoirotBlocks.RecipeError	Swift.Error		
+protocol	conformance PoirotBlocks.RecipeProcessor	PoirotBlocks.RecipeProcessing		
+protocol	conformance SyntaxError.QueryType	Swift.Equatable		
+protocol	conformance SyntaxError.QueryType	Swift.Hashable		
+protocol	conformance SyntaxError.QueryType	Swift.CustomStringConvertible		
+protocol	conformance PoirotBlocks.SyntaxError	Swift.Error		
+protocol	conformance PoirotBlocks.SyntaxError	Swift.CustomStringConvertible		
+protocol	conformance PoirotBlocks.SyntaxError	Foundation.LocalizedError		
+protocol	conformance PoirotBlocks.TableProducer	PoirotBlocks.DatasetProcessing		
+protocol	conformance PoirotBlocks.PoirotDefaultTaskParameters	PoirotBlocks.TaskConfiguring		
+protocol	conformance PoirotBlocks.PoirotDefaultTaskParameters	Swift.Decodable		
+protocol	conformance PoirotBlocks.PoirotDefaultTaskParameters	Swift.Encodable		
+protocol	conformance PoirotBlocks.PoirotDefaultTaskParameters	Swift.Equatable		
+protocol	conformance PoirotDefaultTaskParameters.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PoirotDefaultTaskParameters.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PoirotDefaultTaskParameters.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PoirotDefaultTaskParameters.CodingKeys	Swift.Hashable		
+protocol	conformance PoirotDefaultTaskParameters.CodingKeys	Swift.Equatable		
+protocol	conformance PoirotDefaultTaskParameters.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.AdHocHostEnvironment	PoirotBlocks.QueryParametersConfiguring		
+protocol	conformance PoirotBlocks.AdHocHostEnvironment	PoirotBlocks.TimeWindowConfiguring		
+protocol	conformance PoirotBlocks.AdHocHostEnvironment	PoirotBlocks.HostConfiguring		
+protocol	conformance PoirotBlocks.BaseHostEnvironment	PoirotBlocks.HostConfiguring		
+protocol	conformance PoirotBlocks.DefaultHostEnvironment	PoirotBlocks.TimeWindowConfiguring		
+protocol	conformance PoirotBlocks.DefaultHostEnvironment	PoirotBlocks.QueryParametersConfiguring		
+protocol	conformance PoirotBlocks.NamedQueryParameters	PoirotBlocks.QueryParametersConfiguring		
+protocol	conformance PoirotBlocks.NamedQueryParameters	Swift.Equatable		
+protocol	conformance PoirotBlocks.NamedQueryParameters	Swift.Decodable		
+protocol	conformance PoirotBlocks.NamedQueryParameters	Swift.Encodable		
+protocol	conformance PoirotBlocks.NamedQueryParameters	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.UserDefaultsTimeBookmark	PoirotBlocks.TimeWindowConfiguring		
+protocol	conformance PoirotBlocks.EntitlementError	Swift.Error		
+protocol	conformance PoirotBlocks.AggregationBlockConfig	PoirotBlocks.QueryBlockConfiguring		
+protocol	conformance PoirotBlocks.AggregationBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.AggregationBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.AggregationBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.AggregationBlockConfig	Swift.Equatable		
+protocol	conformance AggregationBlockConfig.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AggregationBlockConfig.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AggregationBlockConfig.CodingKeys	Swift.Hashable		
+protocol	conformance AggregationBlockConfig.CodingKeys	Swift.Equatable		
+protocol	conformance AggregationBlockConfig.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.Equatable		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.Hashable		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.Decodable		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.Encodable		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.CaseIterable		
+protocol	conformance PoirotBlocks.ConsumptionType	Swift.Identifiable		
+protocol	conformance PoirotBlocks.ConsumptionBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.ConsumptionBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.ConsumptionBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.ConsumptionBlockConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.ExtractionBlockConfig	PoirotBlocks.QueryBlockConfiguring		
+protocol	conformance PoirotBlocks.ExtractionBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.ExtractionBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.ExtractionBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.ExtractionBlockConfig	Swift.Equatable		
+protocol	conformance ExtractionBlockConfig.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ExtractionBlockConfig.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ExtractionBlockConfig.CodingKeys	Swift.Hashable		
+protocol	conformance ExtractionBlockConfig.CodingKeys	Swift.Equatable		
+protocol	conformance ExtractionBlockConfig.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.JoinBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.JoinBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.JoinBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.JoinBlockConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.MaterializedViewBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.MaterializedViewBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.MaterializedViewBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.MaterializedViewBlockConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.ColumnPolicy	Swift.Hashable		
+protocol	conformance PoirotBlocks.ColumnPolicy	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.ColumnPolicy	Swift.Decodable		
+protocol	conformance PoirotBlocks.ColumnPolicy	Swift.Encodable		
+protocol	conformance PoirotBlocks.ColumnPolicy	Swift.Equatable		
+protocol	conformance PoirotBlocks.QueryParametersBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.QueryParametersBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.QueryParametersBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.QueryParametersBlockConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.SentinelBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.SentinelBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.SentinelBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.SentinelBlockConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.TemplateBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.TemplateBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.TemplateBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.TemplateBlockConfig	Swift.Equatable		
+protocol	conformance PoirotBlocks.TemplateConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.TemplateConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.TemplateConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PoirotBlocks.TemplateConfigError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.Interval	Swift.Equatable		
+protocol	conformance PoirotBlocks.Interval	Swift.Hashable		
+protocol	conformance PoirotBlocks.Interval	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.Interval	Swift.Decodable		
+protocol	conformance PoirotBlocks.Interval	Swift.Encodable		
+protocol	conformance PoirotBlocks.TimeWindowBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.TimeWindowBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.TimeWindowBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.TimeWindowBlockConfig	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.AnyCodable	PoirotBlocks.UserBlockImplConfiguring		
+protocol	conformance PoirotBlocks.BlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.BlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.BlockConfig	Swift.Equatable		
+protocol	conformance BlockConfig.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BlockConfig.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BlockConfig.CodingKeys	Swift.RawRepresentable		
+protocol	conformance BlockConfig.CodingKeys	Swift.Hashable		
+protocol	conformance BlockConfig.CodingKeys	Swift.Equatable		
+protocol	conformance BlockConfig.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.RecipeModel	Swift.Decodable		
+protocol	conformance PoirotBlocks.RecipeModel	Swift.Encodable		
+protocol	conformance RecipeModel.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RecipeModel.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RecipeModel.CodingKeys	Swift.Hashable		
+protocol	conformance RecipeModel.CodingKeys	Swift.Equatable		
+protocol	conformance RecipeModel.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.Command	Swift.Equatable		
+protocol	conformance PoirotBlocks.Command	Swift.Hashable		
+protocol	conformance PoirotBlocks.Command	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.HostInspectionError	Swift.Hashable		
+protocol	conformance PoirotBlocks.HostInspectionError	Swift.Equatable		
+protocol	conformance PoirotBlocks.HostInspectionError	Swift.Error		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.Decodable		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.Encodable		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.Equatable		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByArrayLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByFloatLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByStringLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByBooleanLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByStringInterpolation		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance PoirotBlocks.AnyCodable	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance Archiver.Error	Swift.Error		
+protocol	conformance PoirotBlocks.QueryCollectionError	Swift.Error		
+protocol	conformance PoirotBlocks.UserDefinedBlockConfig	PoirotBlocks.BlockConfiguring		
+protocol	conformance PoirotBlocks.UserDefinedBlockConfig	Swift.Decodable		
+protocol	conformance PoirotBlocks.UserDefinedBlockConfig	Swift.Encodable		
+protocol	conformance PoirotBlocks.UserDefinedBlockConfig	Swift.Equatable		
+protocol	conformance UserDefinedBlockConfig.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UserDefinedBlockConfig.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UserDefinedBlockConfig.CodingKeys	Swift.Hashable		
+protocol	conformance UserDefinedBlockConfig.CodingKeys	Swift.Equatable		
+protocol	conformance UserDefinedBlockConfig.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.DatasetColumnDescription	PoirotSQLite.SQLiteColumnDescribing		
+protocol	conformance PoirotBlocks.DatasetColumnDescription	Swift.Equatable		
+protocol	conformance PoirotBlocks.DatasetColumnDescription	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance PoirotBlocks.DatasetColumnDescription	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatasetColumnDescription	Swift.Encodable		
+protocol	conformance DatasetColumnDescription.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DatasetColumnDescription.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DatasetColumnDescription.CodingKeys	Swift.RawRepresentable		
+protocol	conformance DatasetColumnDescription.CodingKeys	Swift.Hashable		
+protocol	conformance DatasetColumnDescription.CodingKeys	Swift.Equatable		
+protocol	conformance DatasetColumnDescription.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.DatasetColumnLayout	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatasetColumnLayout	Swift.Encodable		
+protocol	conformance PoirotBlocks.DatasetColumnLayout	Swift.Equatable		
+protocol	conformance PoirotBlocks.DatasetColumnLayout	PoirotSQLite.SQLiteSchemaDescribing		
+protocol	conformance PoirotBlocks.DatasetColumnLayout	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance DatasetColumnLayout.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DatasetColumnLayout.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DatasetColumnLayout.CodingKeys	Swift.Hashable		
+protocol	conformance DatasetColumnLayout.CodingKeys	Swift.Equatable		
+protocol	conformance DatasetColumnLayout.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotSQLite.SQLiteColumnType	Swift.Decodable: PoirotBlocks		
+protocol	conformance PoirotSQLite.SQLiteColumnType	Swift.Encodable: PoirotBlocks		
+protocol	conformance PoirotBlocks.DatasetColumnType	Swift.Hashable		
+protocol	conformance PoirotBlocks.DatasetColumnType	Swift.CaseIterable		
+protocol	conformance PoirotBlocks.DatasetColumnType	Swift.CustomStringConvertible		
+protocol	conformance PoirotBlocks.DatasetColumnType	Swift.Equatable		
+protocol	conformance PoirotBlocks.DatasetColumnType	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatasetColumnType	Swift.Encodable		
+protocol	conformance PoirotBlocks.DatasetDescription	Swift.Equatable		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.Decodable		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.Encodable		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.Equatable		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.ExpressibleByFloatLiteral		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.ExpressibleByStringLiteral		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.ExpressibleByBooleanLiteral		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance AnyDatasetValue.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AnyDatasetValue.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AnyDatasetValue.CodingKeys	Swift.Hashable		
+protocol	conformance AnyDatasetValue.CodingKeys	Swift.Equatable		
+protocol	conformance AnyDatasetValue.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.AnyDatasetValue	Foundation.DecodableWithConfiguration		
+protocol	conformance PoirotBlocks.Dataset	Swift.Equatable		
+protocol	conformance PoirotBlocks.Dataset	Swift.Sequence		
+protocol	conformance PoirotBlocks.LogEntryCell	Swift.Equatable		
+protocol	conformance PoirotBlocks.LogEntryCell	Swift.CustomStringConvertible		
+protocol	conformance PoirotBlocks.LogEntryCell	Swift.Comparable		
+protocol	conformance PoirotBlocks.DatasetCatalog	Swift.Equatable		
+protocol	conformance PoirotBlocks.DatasetCatalog	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatasetCatalog	Swift.Encodable		
+protocol	conformance PoirotBlocks.DatasetRow	Swift.Hashable		
+protocol	conformance PoirotBlocks.DatasetRow	Swift.Equatable		
+protocol	conformance PoirotBlocks.DatasetRow	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatasetRow	Swift.Encodable		
+protocol	conformance PoirotBlocks.DatasetRow	Foundation.DecodableWithConfiguration		
+protocol	conformance PoirotBlocks.DatasetTable	Swift.Sequence		
+protocol	conformance PoirotBlocks.DatasetTable	Swift.Equatable		
+protocol	conformance PoirotBlocks.DatasetTableIterator	Swift.IteratorProtocol		
+protocol	conformance PoirotBlocks.DatasetTable	Swift.Decodable		
+protocol	conformance PoirotBlocks.DatasetTable	Swift.Encodable		
+protocol	conformance DatasetTable.ColumnSort	Swift.ExpressibleByStringLiteral		
+protocol	conformance DatasetTable.ColumnSort	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance DatasetTable.ColumnSort	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance PoirotBlocks.DatasetTable	Foundation.DecodableWithConfiguration		
+protocol	conformance PoirotBlocks.AnyQueryParameters	Swift.Decodable		
+protocol	conformance PoirotBlocks.AnyQueryParameters	Swift.Encodable		
+protocol	conformance PoirotBlocks.AnyQueryParameters	Swift.Equatable		
+protocol	conformance PoirotBlocks.AnyQueryParameters	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance PoirotBlocks.ExecutionMode	Swift.Equatable		
+protocol	conformance PoirotBlocks.ExecutionMode	Swift.Hashable		
+protocol	conformance PoirotBlocks.ExecutionMode	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.ExecutionMode	Swift.Decodable		
+protocol	conformance PoirotBlocks.ExecutionMode	Swift.Encodable		
+protocol	conformance PoirotBlocks.PoirotUserTaskParameters	PoirotBlocks.TaskConfiguring		
+protocol	conformance PoirotBlocks.PoirotUserTaskParameters	Swift.Equatable		
+protocol	conformance PoirotBlocks.PoirotUserTaskParameters	Swift.Decodable		
+protocol	conformance PoirotBlocks.PoirotUserTaskParameters	Swift.Encodable		
+protocol	conformance PoirotUserTaskParameters.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PoirotUserTaskParameters.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PoirotUserTaskParameters.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PoirotUserTaskParameters.CodingKeys	Swift.Hashable		
+protocol	conformance PoirotUserTaskParameters.CodingKeys	Swift.Equatable		
+protocol	conformance PoirotUserTaskParameters.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.PoirotToolTaskParameters	PoirotBlocks.TaskConfiguring		
+protocol	conformance PoirotBlocks.PoirotToolTaskParameters	Swift.Equatable		
+protocol	conformance PoirotBlocks.PoirotToolTaskParameters	Swift.Decodable		
+protocol	conformance PoirotBlocks.PoirotToolTaskParameters	Swift.Encodable		
+protocol	conformance PoirotToolTaskParameters.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PoirotToolTaskParameters.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PoirotToolTaskParameters.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PoirotToolTaskParameters.CodingKeys	Swift.Hashable		
+protocol	conformance PoirotToolTaskParameters.CodingKeys	Swift.Equatable		
+protocol	conformance PoirotToolTaskParameters.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.RuntimeParameters	Swift.Decodable		
+protocol	conformance PoirotBlocks.RuntimeParameters	Swift.Encodable		
+protocol	conformance PoirotBlocks.RuntimeParameters	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.AdHocExecutionError	Swift.Error		
+protocol	conformance PoirotBlocks.AdHocExecutionError	Swift.Decodable		
+protocol	conformance PoirotBlocks.AdHocExecutionError	Swift.Encodable		
+protocol	conformance PoirotBlocks.AdHocExecutionError	Swift.Equatable		
+protocol	conformance QueryParametersAreMissingForBlockWithNameCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance QueryParametersAreMissingForBlockWithNameCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance QueryParametersAreMissingForBlockWithNameCodingKeys	Swift.Hashable		
+protocol	conformance QueryParametersAreMissingForBlockWithNameCodingKeys	Swift.Equatable		
+protocol	conformance RecipeRequiresQueryParametersCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RecipeRequiresQueryParametersCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RecipeRequiresQueryParametersCodingKeys	Swift.CodingKey		
+protocol	conformance QueryParametersAreMissingForBlockWithNameCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.DatasetError	Swift.Error		
+protocol	conformance PoirotBlocks.DatasetError	Swift.Equatable		
+protocol	conformance Query.UsageState	Swift.Hashable		
+protocol	conformance Query.UsageState	Swift.Equatable		
+protocol	conformance PoirotBlocks.BlockType	Swift.Equatable		
+protocol	conformance PoirotBlocks.BlockType	Swift.Hashable		
+protocol	conformance PoirotBlocks.BlockType	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.BlockType	Swift.Decodable		
+protocol	conformance PoirotBlocks.BlockType	Swift.Encodable		
+protocol	conformance PoirotBlocks.RecipeMetadata	Swift.Decodable		
+protocol	conformance PoirotBlocks.RecipeMetadata	Swift.Encodable		
+protocol	conformance RecipeMetadata.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RecipeMetadata.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RecipeMetadata.CodingKeys	Swift.RawRepresentable		
+protocol	conformance RecipeMetadata.CodingKeys	Swift.Hashable		
+protocol	conformance RecipeMetadata.CodingKeys	Swift.Equatable		
+protocol	conformance RecipeMetadata.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.EntitlementsError	Swift.Error		
+protocol	conformance PoirotBlocks.EntitlementsError	Foundation.LocalizedError		
+protocol	conformance PoirotBlocks.PoirotTaskError	Swift.Error		
+protocol	conformance PoirotBlocks.PoirotTaskError	Swift.Equatable		
+protocol	conformance PoirotBlocks.PoirotTask	PoirotBlocks.CoersingTaskParameters		
+protocol	conformance PoirotBlocks.PoirotTask	PoirotBlocks.SupportingHostInfo		
+protocol	conformance PoirotBlocks.ConsoleLogHandler	PoirotBlocks.RecipeLogHandling		
+protocol	conformance PoirotBlocks.ConsoleLogHandler	PoirotBlocks.BlockLogHandling		
+protocol	conformance PoirotBlocks.ConsoleLogHandler	PoirotBlocks.LogHandling		
+protocol	conformance PoirotBlocks.DebugLogHandler	PoirotBlocks.LogHandling		
+protocol	conformance PoirotBlocks.DebugLogHandler	PoirotBlocks.BlockLogHandling		
+protocol	conformance PoirotBlocks.DebugLogHandler	PoirotBlocks.RecipeLogHandling		
+protocol	conformance PoirotBlocks.FileLogHandler	PoirotBlocks.RecipeLogHandling		
+protocol	conformance PoirotBlocks.FileLogHandler	PoirotBlocks.BlockLogHandling		
+protocol	conformance PoirotBlocks.FileLogHandler	PoirotBlocks.LogHandling		
+protocol	conformance PoirotBlocks.StructLogHandler	PoirotBlocks.RecipeLogHandling		
+protocol	conformance PoirotBlocks.StructLogHandler	PoirotBlocks.BlockLogHandling		
+protocol	conformance PoirotBlocks.StructLogHandler	PoirotBlocks.LogHandling		
+protocol	conformance PoirotBlocks.VoidLogHandler	PoirotBlocks.RecipeLogHandling		
+protocol	conformance PoirotBlocks.VoidLogHandler	PoirotBlocks.BlockLogHandling		
+protocol	conformance PoirotBlocks.VoidLogHandler	PoirotBlocks.LogHandling		
+protocol	conformance BlockExecutionLog.Error	Foundation.LocalizedError		
+protocol	conformance BlockExecutionLog.Error	Swift.Decodable		
+protocol	conformance BlockExecutionLog.Error	Swift.Encodable		
+protocol	conformance BlockExecutionLog.Error	Swift.Error		
+protocol	conformance BlockExecutionLog.LogContent	Swift.Decodable		
+protocol	conformance BlockExecutionLog.LogContent	Swift.Encodable		
+protocol	conformance PoirotBlocks.BlockExecutionLog	Swift.Decodable		
+protocol	conformance PoirotBlocks.BlockExecutionLog	Swift.Encodable		
+protocol	conformance EncodingFailureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EncodingFailureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EncodingFailureCodingKeys	Swift.Hashable		
+protocol	conformance EncodingFailureCodingKeys	Swift.Equatable		
+protocol	conformance InitFailureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InitFailureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InitFailureCodingKeys	Swift.Hashable		
+protocol	conformance InitFailureCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.Hashable		
+protocol	conformance ErrorCodingKeys	Swift.Equatable		
+protocol	conformance MessageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MessageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MessageCodingKeys	Swift.Hashable		
+protocol	conformance MessageCodingKeys	Swift.Equatable		
+protocol	conformance BinaryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BinaryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BinaryCodingKeys	Swift.Hashable		
+protocol	conformance BinaryCodingKeys	Swift.Equatable		
+protocol	conformance CsvCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CsvCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CsvCodingKeys	Swift.Hashable		
+protocol	conformance CsvCodingKeys	Swift.Equatable		
+protocol	conformance JsonCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance JsonCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance JsonCodingKeys	Swift.Hashable		
+protocol	conformance JsonCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance JsonCodingKeys	Swift.CodingKey		
+protocol	conformance CsvCodingKeys	Swift.CodingKey		
+protocol	conformance BinaryCodingKeys	Swift.CodingKey		
+protocol	conformance MessageCodingKeys	Swift.CodingKey		
+protocol	conformance ErrorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance InitFailureCodingKeys	Swift.CodingKey		
+protocol	conformance EncodingFailureCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.ReadableLogEntry	Swift.Decodable		
+protocol	conformance PoirotBlocks.ReadableLogEntry	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.BlockLogMetadata	Swift.Decodable		
+protocol	conformance PoirotBlocks.BlockLogMetadata	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LogEntry.EntryType	Swift.Equatable		
+protocol	conformance LogEntry.EntryType	Swift.Hashable		
+protocol	conformance LogEntry.EntryType	Swift.RawRepresentable		
+protocol	conformance LogEntry.EntryType	Swift.Encodable		
+protocol	conformance PoirotBlocks.LogEntry	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.BlockActivityType	Swift.Equatable		
+protocol	conformance PoirotBlocks.BlockActivityType	Swift.Hashable		
+protocol	conformance PoirotBlocks.BlockActivityType	Swift.RawRepresentable		
+protocol	conformance PoirotBlocks.EngineActivityType	Swift.Equatable		
+protocol	conformance PoirotBlocks.EngineActivityType	Swift.Hashable		
+protocol	conformance PoirotBlocks.EngineActivityType	Swift.RawRepresentable		
+protocol	conformance Swift.CancellationError	PoirotBlocks.RecipeOutcomeConvertable		
+protocol	conformance Swift.CancellationError	PoirotBlocks.TelemetryReportableError		
+protocol	conformance PoirotBlocks.HostDiagnosingActivityMonitor	PoirotBlocks.ActivityMonitoring		
+protocol	conformance PoirotSchematizer.SchematizerError	PoirotBlocks.RecipeOutcomeConvertable		
+protocol	conformance PoirotSchematizer.SchematizerError	PoirotBlocks.TelemetryReportableError		
+protocol	conformance PoirotSQLite.SQLiteError	PoirotBlocks.RecipeOutcomeConvertable		
+protocol	conformance PoirotSQLite.SQLiteError	PoirotBlocks.TelemetryReportableError		
+protocol	conformance PoirotBlocks.LogEntryCollector	PoirotBlocks.LogEntryCollecting		
+protocol	conformance PoirotBlocks.LogEntryCollector	PoirotBlocks.EntryBuilding		
+protocol	conformance PoirotBlocks.RecipeExecutionLog	Swift.Decodable		
+protocol	conformance PoirotBlocks.RecipeExecutionLog	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.AutomaticProtobufFactory	PoirotBlocks.ProtobufCreating		
+protocol	conformance PoirotBlocks.ProtobufFactory	PoirotBlocks.ProtobufCreating		
+protocol	conformance PoirotBlocks.InferredProtobufType	Swift.CustomStringConvertible		
+protocol	conformance PoirotBlocks.InferredProtobufType	Swift.Equatable		
+protocol	conformance PoirotBlocks.OutputStreamToStdOut	Swift.TextOutputStream		
+protocol	conformance PoirotBlocks.OutputStreamToStdErr	Swift.TextOutputStream		
+protocol	conformance PoirotBlocks.LoggingType	Swift.Equatable		
+protocol	conformance PoirotBlocks.ExecutionInputPayload	Swift.Decodable		
+protocol	conformance PoirotBlocks.ExecutionInputPayload	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.ExecutionLog	Swift.Decodable		
+protocol	conformance PoirotBlocks.ExecutionLog	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotBlocks.ExecutionOutputPayload	Swift.Decodable		
+protocol	conformance PoirotBlocks.ExecutionOutputPayload	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	PoirotBlocks.DefaultPublisherSchemaProvider	MessageManifestProviding		
+extension	PoirotBlocks.DefaultPublisherSchemaProvider	MessageToColumnMapping		
+extension	PoirotBlocks.DefaultFinalPublisherSchemaProvider	MessageManifestProviding		
+extension	PoirotBlocks.DefaultFinalPublisherSchemaProvider	MessageToColumnMapping		
+extension	PoirotBlocks.FlexiblePublisherSchemaProvider	MessageManifestProviding		
+extension	PoirotBlocks.FlexiblePublisherSchemaProvider	MessageToColumnMapping		
+extension	PoirotBlocks.DefaultHostController	HostControlling		
+extension	PoirotBlocks.DataSourceType	RawRepresentable		
+extension	PoirotBlocks.DataSourceModel	Identifiable		
+extension	PoirotBlocks.HostInfo	Identifiable		
+extension	PoirotBlocks.HostInfo.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.PoirotDefaultTaskParameters.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.NamedQueryParameters	ExpressibleByDictionaryLiteral		
+extension	PoirotBlocks.ConsumptionType	RawRepresentable		
+extension	PoirotBlocks.ConsumptionType	CaseIterable		
+extension	PoirotBlocks.ConsumptionType	Identifiable		
+extension	PoirotBlocks.ColumnPolicy	RawRepresentable		
+extension	PoirotBlocks.Interval	RawRepresentable		
+extension	PoirotBlocks.BlockConfig.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.Command	RawRepresentable		
+extension	PoirotBlocks.AnyCodable	ExpressibleByDictionaryLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByArrayLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByFloatLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByStringLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByBooleanLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByIntegerLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByStringInterpolation		
+extension	PoirotBlocks.AnyCodable	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	PoirotBlocks.AnyCodable	ExpressibleByUnicodeScalarLiteral		
+extension	PoirotBlocks.DatasetColumnDescription.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.DatasetColumnType	CaseIterable		
+extension	PoirotBlocks.AnyDatasetValue	ExpressibleByFloatLiteral		
+extension	PoirotBlocks.AnyDatasetValue	ExpressibleByStringLiteral		
+extension	PoirotBlocks.AnyDatasetValue	ExpressibleByBooleanLiteral		
+extension	PoirotBlocks.AnyDatasetValue	ExpressibleByIntegerLiteral		
+extension	PoirotBlocks.AnyDatasetValue	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	PoirotBlocks.AnyDatasetValue	ExpressibleByUnicodeScalarLiteral		
+extension	PoirotBlocks.AnyDatasetValue	DecodableWithConfiguration		
+extension	PoirotBlocks.Dataset	Sequence		
+extension	PoirotBlocks.DatasetRow	DecodableWithConfiguration		
+extension	PoirotBlocks.DatasetTable	Sequence		
+extension	PoirotBlocks.DatasetTableIterator	IteratorProtocol		
+extension	PoirotBlocks.DatasetTable.ColumnSort	ExpressibleByStringLiteral		
+extension	PoirotBlocks.DatasetTable.ColumnSort	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	PoirotBlocks.DatasetTable.ColumnSort	ExpressibleByUnicodeScalarLiteral		
+extension	PoirotBlocks.DatasetTable	DecodableWithConfiguration		
+extension	PoirotBlocks.AnyQueryParameters	ExpressibleByDictionaryLiteral		
+extension	PoirotBlocks.ExecutionMode	RawRepresentable		
+extension	PoirotBlocks.PoirotUserTaskParameters.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.PoirotToolTaskParameters.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.BlockType	RawRepresentable		
+extension	PoirotBlocks.RecipeMetadata.CodingKeys	RawRepresentable		
+extension	PoirotBlocks.PoirotTask	CoersingTaskParameters		
+extension	PoirotBlocks.LogEntry.EntryType	RawRepresentable		
+extension	PoirotBlocks.BlockActivityType	RawRepresentable		
+extension	PoirotBlocks.EngineActivityType	RawRepresentable		

@@ -1,0 +1,1426 @@
+kind	type	conformance	member_kind	member
+class	MediaContinuityKit.ControlConnectionMigrationManager			
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	state
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	migrationController
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	preferredInterfaceType
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	currentInterface
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	availableInterfacesMonitor
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	interruptionHandler
+class	MediaContinuityKit.ControlConnectionMigrationManager		var	isWiredInterfaceAvailable
+enum	MediaContinuityKit.ControlConnectionMigrationManager.State			
+enum	MediaContinuityKit.ControlConnectionMigrationManager.State		case	inactive
+enum	MediaContinuityKit.ControlConnectionMigrationManager.State		case	activating
+enum	MediaContinuityKit.ControlConnectionMigrationManager.State		case	activated
+enum	MediaContinuityKit.ControlConnectionMigrationManager.State		case	invalidated
+enum	MediaContinuityKit.ControlConnectionMigrationManager.State		case	interrupted
+enum	MediaContinuityKit.ControlConnectionMigrationManager.Errors			
+enum	MediaContinuityKit.ControlConnectionMigrationManager.Errors		case	invalidState
+enum	MediaContinuityKit.ControlConnectionMigrationManager.Errors		case	missingLocalInterface
+enum	MediaContinuityKit.ControlConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.ControlConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	incomingMessage
+enum	MediaContinuityKit.ControlConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	migrated
+enum	MediaContinuityKit.ControlConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	peeledConnection
+enum	MediaContinuityKit.MediaStreamAVCEvent			
+enum	MediaContinuityKit.MediaStreamAVCEvent		case	keepAliveTimedOut
+enum	MediaContinuityKit.MediaStreamAVCEvent		case	keepAliveRecovered
+enum	MediaContinuityKit.NetworkInterfaceReportingType			
+enum	MediaContinuityKit.NetworkInterfaceReportingType		case	other
+enum	MediaContinuityKit.NetworkInterfaceReportingType		case	usb
+enum	MediaContinuityKit.NetworkInterfaceReportingType		case	wifiLowLatency
+enum	MediaContinuityKit.NetworkInterfaceReportingType		case	wifiInfrastructure
+enum	MediaContinuityKit.NetworkInterfaceReportingType		case	wifiAWDL
+enum	MediaContinuityKit.NetworkInterfaceReportingType		case	loopback
+enum	MediaContinuityKit.NetworkInterfaceType			
+enum	MediaContinuityKit.NetworkInterfaceType		case	wired
+enum	MediaContinuityKit.NetworkInterfaceType		case	wifi
+enum	MediaContinuityKit.NetworkInterfaceType		case	loopback
+enum	MediaContinuityKit.NetworkInterfaceType		case	other
+enum	MediaContinuityKit.RemoteVideoClientEvent			
+enum	MediaContinuityKit.RemoteVideoClientEvent		case	remoteVideoAttributesChanged
+enum	MediaContinuityKit.RemoteVideoClientEvent		case	remoteScreenAttributesChanged
+enum	MediaContinuityKit.RemoteVideoClientEvent		case	receivedFirstFrame
+enum	MediaContinuityKit.RemoteVideoClientEvent		case	receivedLastFrame
+class	MediaContinuityKit.MediaContinuityUsageSecureCodingWrapper	NSObject		
+class	MediaContinuityKit.MediaContinuityUsageSecureCodingWrapper	NSObject	let	wrappedValue
+enum	MediaContinuityKit.MediaContinuityUsageSecureCodingWrapper.Errors			
+enum	MediaContinuityKit.MediaContinuityUsageSecureCodingWrapper.Errors		case	invalidCaseType
+enum	MediaContinuityKit.MediaContinuityUsageSecureCodingWrapper.Errors		case	invalidAssociatedValueType
+enum	MediaContinuityKit.MediaContinuityKitFeatureFlags			
+enum	MediaContinuityKit.MediaContinuityKitFeatureFlags		case	migrationController
+enum	MediaContinuityKit.MediaContinuityKitFeatureFlags		case	preferWiredInterfaceForConnectionSetup
+struct	MediaContinuityKit.ActivationRequestInfo			
+struct	MediaContinuityKit.ActivationRequestInfo		let	osVersion
+struct	MediaContinuityKit.ActivationRequestInfo		let	modelID
+struct	MediaContinuityKit.ActivationRequestInfo		let	sessionID
+struct	MediaContinuityKit.ActivationRequestInfo		let	protocolVersion
+struct	MediaContinuityKit.ActivationRequestInfo		let	controlConnectionInfo
+struct	MediaContinuityKit.ActivationResponseInfo			
+struct	MediaContinuityKit.ActivationResponseInfo		let	osVersion
+struct	MediaContinuityKit.ActivationResponseInfo		let	modelID
+struct	MediaContinuityKit.ActivationResponseInfo		let	protocolVersion
+struct	MediaContinuityKit.Answer			
+struct	MediaContinuityKit.Answer		let	mediaBlob
+struct	MediaContinuityKit.Answer		let	mediaConnectionInfo
+class	MediaContinuityKit.MediaContinuityCoexSession			
+class	MediaContinuityKit.MediaContinuityCoexSession		let	config
+class	MediaContinuityKit.MediaContinuityCoexSession		var	delegate
+class	MediaContinuityKit.MediaContinuityCoexSession		var	state
+class	MediaContinuityKit.MediaContinuityCoexSession		var	xpcConnection
+class	MediaContinuityKit.MediaContinuityCoexSession		var	xpcProxyObject
+class	MediaContinuityKit.MediaContinuityCoexSession		let	uuid
+class	MediaContinuityKit.MediaContinuityCoexSession		var	startContinuation
+class	MediaContinuityKit.MediaContinuityCoexSession		var	internalEventMonitorTask
+class	MediaContinuityKit.MediaContinuityCoexSession		let	internalEventStream
+class	MediaContinuityKit.MediaContinuityCoexSession		let	internalEventStreamContinuation
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors			
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	alreadyStarted
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	startFailure
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	stopFailure
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	remoteObjectInvalid
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	notStarted
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	reconnectFailed
+enum	MediaContinuityKit.MediaContinuityCoexSession.Errors		case	invalidated
+enum	MediaContinuityKit.MediaContinuityCoexSession.Interface			
+enum	MediaContinuityKit.MediaContinuityCoexSession.Interface		case	wired
+enum	MediaContinuityKit.MediaContinuityCoexSession.Interface		case	wireless
+enum	MediaContinuityKit.MediaContinuityCoexSession.State			
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	stopped
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	starting
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	started
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	stopping
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	suspending
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	suspended
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	resuming
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	restart
+enum	MediaContinuityKit.MediaContinuityCoexSession.State		case	interrupted
+enum	MediaContinuityKit.MediaContinuityCoexSession.Events			
+enum	MediaContinuityKit.MediaContinuityCoexSession.Events		case	suspendSession
+enum	MediaContinuityKit.MediaContinuityCoexSession.Events		case	resumeSession
+enum	MediaContinuityKit.MediaContinuityCoexSession.Events		case	reconnectXPCConnection
+class	MediaContinuityKit.MediaContinuityCoexSession.Configuration	NSObject		
+class	MediaContinuityKit.MediaContinuityCoexSession.Configuration	NSObject	let	usage
+class	MediaContinuityKit.MediaContinuityCoexSession.Configuration	NSObject	let	remoteDeviceID
+class	MediaContinuityKit.MediaContinuityCoexSession.Configuration	NSObject	let	interface
+enum	MediaContinuityKit.MediaContinuityCoexSession.Configuration.Errors			
+enum	MediaContinuityKit.MediaContinuityCoexSession.Configuration.Errors		case	invalidRemoteDeviceID
+enum	MediaContinuityKit.MediaContinuityCoexSession.Configuration.Errors		case	invalidInterfaceString
+enum	MediaContinuityKit.MediaContinuityCoexSession.Configuration.Errors		case	invalidInterface
+enum	MediaContinuityKit.MediaContinuityCoexSession.Configuration.Errors		case	invalidUsageType
+enum	MediaContinuityKit.AudioStreamConfiguration			
+enum	MediaContinuityKit.AudioStreamConfiguration		case	send
+enum	MediaContinuityKit.AudioStreamConfiguration		case	receive
+struct	MediaContinuityKit.AudioStreamReceiveConfiguration			
+struct	MediaContinuityKit.AudioStreamReceiveConfiguration		let	identifier
+struct	MediaContinuityKit.AudioStreamSendConfiguration			
+struct	MediaContinuityKit.AudioStreamSendConfiguration		let	identifier
+struct	MediaContinuityKit.AudioStreamSendConfiguration		let	systemAudioCaptureIncludedAuditTokens
+enum	MediaContinuityKit.VideoStreamConfiguration			
+enum	MediaContinuityKit.VideoStreamConfiguration		case	send
+enum	MediaContinuityKit.VideoStreamConfiguration		case	receive
+struct	MediaContinuityKit.VideoStreamReceiveConfiguration			
+struct	MediaContinuityKit.VideoStreamReceiveConfiguration		let	identifier
+struct	MediaContinuityKit.VideoStreamReceiveConfiguration		let	layer
+struct	MediaContinuityKit.VideoStreamReceiveConfiguration		let	figEndpointID
+struct	MediaContinuityKit.VideoStreamSendConfiguration			
+struct	MediaContinuityKit.VideoStreamSendConfiguration		let	identifier
+struct	MediaContinuityKit.VideoStreamSendConfiguration		let	resolution
+struct	MediaContinuityKit.VideoStreamSendConfiguration		let	displayID
+struct	MediaContinuityKit.MediaContinuityEndpoint			
+struct	MediaContinuityKit.MediaContinuityEndpoint		let	serverProtocolVersion
+struct	MediaContinuityKit.MediaContinuityEndpoint		let	type
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType			
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType		case	applicationService
+enum	MediaContinuityKit.MediaContinuityEndpoint.CaseType			
+enum	MediaContinuityKit.MediaContinuityEndpoint.CaseType		case	applicationService
+enum	MediaContinuityKit.MediaContinuityEndpoint.CodingKeys			
+enum	MediaContinuityKit.MediaContinuityEndpoint.CodingKeys		case	serverProtocolVersion
+enum	MediaContinuityKit.MediaContinuityEndpoint.CodingKeys		case	endpointType
+enum	MediaContinuityKit.MediaContinuityEndpoint.CodingKeys		case	applicationServiceName
+enum	MediaContinuityKit.MediaContinuityEndpoint.CodingKeys		case	deviceID
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType.CodingKeys			
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType.CodingKeys		case	applicationService
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType.ApplicationServiceCodingKeys			
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType.ApplicationServiceCodingKeys		case	name
+enum	MediaContinuityKit.MediaContinuityEndpoint.EndpointType.ApplicationServiceCodingKeys		case	deviceID
+enum	MediaContinuityKit.MediaStreamErrors			
+enum	MediaContinuityKit.MediaStreamErrors		case	unexpectedState
+enum	MediaContinuityKit.MediaStreamErrors		case	unexpectedStreamIdentifier
+enum	MediaContinuityKit.MediaStreamErrors		case	alreadyActivated
+enum	MediaContinuityKit.MediaStreamErrors		case	invalidConfiguration
+enum	MediaContinuityKit.MediaStreamErrors		case	invalidated
+enum	MediaContinuityKit.MediaStreamErrors		case	interrupted
+enum	MediaContinuityKit.MediaStreamErrors		case	remoteInterrupted
+enum	MediaContinuityKit.MediaStreamErrors		case	remoteInvalidated
+enum	MediaContinuityKit.MediaStreamErrors		case	missingStream
+enum	MediaContinuityKit.MediaStreamErrors		case	missingConnectionID
+enum	MediaContinuityKit.MediaStreamErrors		case	missingMediaConnectionPrerequisites
+enum	MediaContinuityKit.MediaStreamErrors		case	missingRemoteMacAddress
+enum	MediaContinuityKit.MediaStreamErrors		case	missingLocalInterfaceName
+enum	MediaContinuityKit.MediaStreamErrors		case	missingRemoteIPAddress
+enum	MediaContinuityKit.MediaStreamErrors		case	missingCurrentPath
+enum	MediaContinuityKit.MediaStreamErrors		case	trafficRegistrationInterrupted
+enum	MediaContinuityKit.MediaStreamErrors		case	answererCannotSendOffer
+enum	MediaContinuityKit.MediaStreamErrors		case	missingRemoteOffer
+enum	MediaContinuityKit.MediaStreamErrors		case	answererCannotReceiveAnswer
+enum	MediaContinuityKit.MediaStreamErrors		case	unexpectedMessage
+enum	MediaContinuityKit.MediaStreamErrors		case	unexpectedResponse
+class	MediaContinuityKit.MediaContinuityServer			
+class	MediaContinuityKit.MediaContinuityServer		let	usage
+class	MediaContinuityKit.MediaContinuityServer		let	shouldAdvertise
+class	MediaContinuityKit.MediaContinuityServer		let	listener
+class	MediaContinuityKit.MediaContinuityServer		var	state
+class	MediaContinuityKit.MediaContinuityServer		let	sessionEventStream
+class	MediaContinuityKit.MediaContinuityServer		let	sessionEventsContinuation
+class	MediaContinuityKit.MediaContinuityServer		var	connectionEventTask
+enum	MediaContinuityKit.MediaContinuityServer.Errors			
+enum	MediaContinuityKit.MediaContinuityServer.Errors		case	invalidated
+enum	MediaContinuityKit.MediaContinuityServer.Errors		case	invalidEndpoint
+enum	MediaContinuityKit.MediaContinuityServer.Errors		case	unexpectedEndpoint
+enum	MediaContinuityKit.MediaContinuityServer.ActivationResult			
+enum	MediaContinuityKit.MediaContinuityServer.ActivationResult		case	advertising
+enum	MediaContinuityKit.MediaContinuityServer.ActivationResult		case	bootstrapped
+enum	MediaContinuityKit.MediaContinuityServer.State			
+enum	MediaContinuityKit.MediaContinuityServer.State		case	inactive
+enum	MediaContinuityKit.MediaContinuityServer.State		case	activating
+enum	MediaContinuityKit.MediaContinuityServer.State		case	activated
+enum	MediaContinuityKit.MediaContinuityServer.State		case	invalidated
+enum	MediaContinuityKit.MediaContinuityServer.State		case	interrupted
+class	MediaContinuityKit.MediaContinuitySession			
+class	MediaContinuityKit.MediaContinuitySession		let	id
+class	MediaContinuityKit.MediaContinuitySession		let	usage
+class	MediaContinuityKit.MediaContinuitySession		var	state
+class	MediaContinuityKit.MediaContinuitySession		var	endpoint
+class	MediaContinuityKit.MediaContinuitySession		var	connection
+class	MediaContinuityKit.MediaContinuitySession		let	connectionVendor
+class	MediaContinuityKit.MediaContinuitySession		let	mediaStreamVendor
+class	MediaContinuityKit.MediaContinuitySession		let	timeSynchronizerVendor
+class	MediaContinuityKit.MediaContinuitySession		var	timeSynchronizer
+class	MediaContinuityKit.MediaContinuitySession		var	timeSynchronizerVendingTask
+class	MediaContinuityKit.MediaContinuitySession		let	timeSyncHeartbeatVendor
+class	MediaContinuityKit.MediaContinuitySession		let	userDefaultsProvider
+class	MediaContinuityKit.MediaContinuitySession		var	timeSyncHeartbeat
+class	MediaContinuityKit.MediaContinuitySession		let	videoStreamManager
+class	MediaContinuityKit.MediaContinuitySession		let	audioStreamManager
+class	MediaContinuityKit.MediaContinuitySession		let	eventStream
+class	MediaContinuityKit.MediaContinuitySession		let	eventStreamContinuation
+class	MediaContinuityKit.MediaContinuitySession		var	controlConnectionEventStream
+class	MediaContinuityKit.MediaContinuitySession		var	controlConnectionEventMonitor
+class	MediaContinuityKit.MediaContinuitySession		var	remoteActivationContinuation
+class	MediaContinuityKit.MediaContinuitySession		let	telemetryProvider
+class	MediaContinuityKit.MediaContinuitySession		let	coexSessionVendor
+class	MediaContinuityKit.MediaContinuitySession		var	coexSession
+class	MediaContinuityKit.MediaContinuitySession		let	clientSessionID
+class	MediaContinuityKit.MediaContinuitySession		let	controlConnectionMigrationManager
+class	MediaContinuityKit.MediaContinuitySession		let	timeProvider
+class	MediaContinuityKit.MediaContinuitySession		let	networkPathVendor
+class	MediaContinuityKit.MediaContinuitySession		var	controlConnectionPath
+class	MediaContinuityKit.MediaContinuitySession		var	activatedEventInfo
+enum	MediaContinuityKit.MediaContinuitySession.Event			
+enum	MediaContinuityKit.MediaContinuitySession.Event		case	incomingVideoStream
+enum	MediaContinuityKit.MediaContinuitySession.Event		case	incomingAudioStream
+enum	MediaContinuityKit.MediaContinuitySession.Event		case	interruption
+enum	MediaContinuityKit.MediaContinuitySession.Errors			
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	notActivated
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	alreadyActivated
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	invalidated
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	interrupted
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	remoteInterrupted
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	remoteInvalidated
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingEndpoint
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingConnectionVendor
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingConnection
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingConnectionPath
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingConnectionEventStream
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingLocalInterface
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingMediaStreamConfiguration
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingRemoteDeviceID
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingInterfaceType
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	incompatibleStreamDirection
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	unexpectedMessage
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	remoteInfoUnavailable
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	missingActivatedEventInfo
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	invalidRemoteControlConnectionInfo
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	serverVersionTooOld
+enum	MediaContinuityKit.MediaContinuitySession.Errors		case	clientVersionTooOld
+enum	MediaContinuityKit.MediaContinuitySession.State			
+enum	MediaContinuityKit.MediaContinuitySession.State		case	inactive
+enum	MediaContinuityKit.MediaContinuitySession.State		case	activating
+enum	MediaContinuityKit.MediaContinuitySession.State		case	activated
+enum	MediaContinuityKit.MediaContinuitySession.State		case	invalidated
+enum	MediaContinuityKit.MediaContinuitySession.State		case	interrupted
+enum	MediaContinuityKit.AudioStreamEvent			
+enum	MediaContinuityKit.VideoStreamEvent			
+enum	MediaContinuityKit.VideoStreamEvent		case	receivedFirstFrame
+enum	MediaContinuityKit.AudioStreamIdentifier			
+enum	MediaContinuityKit.AudioStreamIdentifier		case	appAudio
+enum	MediaContinuityKit.VideoStreamIdentifier			
+enum	MediaContinuityKit.VideoStreamIdentifier		case	stereoContent
+enum	MediaContinuityKit.MediaContinuityUsage			
+enum	MediaContinuityKit.MediaContinuityUsage		case	compositorServices
+enum	MediaContinuityKit.MediaContinuityUsage		case	macVirtualDisplay
+enum	MediaContinuityKit.MediaContinuityUsage		case	airplay
+enum	MediaContinuityKit.MediaContinuityUsage		case	sidecar
+enum	MediaContinuityKit.MediaContinuityUsage		case	continuityCamera
+enum	MediaContinuityKit.MediaContinuityUsage		case	iPhoneMirroring
+struct	MediaContinuityKit.AudioStreamOffer			
+struct	MediaContinuityKit.AudioStreamOffer		let	streamIdentifier
+struct	MediaContinuityKit.AudioStreamOffer		let	direction
+struct	MediaContinuityKit.AudioStreamOffer		let	mediaBlob
+struct	MediaContinuityKit.AudioStreamOffer		let	mediaConnectionInfo
+struct	MediaContinuityKit.AudioStreamOffer		let	controlConnectionInfo
+struct	MediaContinuityKit.ControlConnectionInfo			
+struct	MediaContinuityKit.ControlConnectionInfo		let	localIPAddress
+struct	MediaContinuityKit.ControlConnectionInfo		let	remoteIPAddress
+struct	MediaContinuityKit.MediaConnectionInfo			
+struct	MediaContinuityKit.MediaConnectionInfo		let	localPort
+struct	MediaContinuityKit.MediaConnectionInfo		let	localIPAddress
+struct	MediaContinuityKit.MediaConnectionInfo		let	localMacAddress
+struct	MediaContinuityKit.MigrationRequest			
+struct	MediaContinuityKit.MigrationRequest		let	controlConnectionInfo
+struct	MediaContinuityKit.MigrationRequest		let	mediaConnectionInfo
+enum	MediaContinuityKit.SessionMessage			
+enum	MediaContinuityKit.SessionMessage		case	activationRequest
+enum	MediaContinuityKit.SessionMessage		case	activationResponse
+enum	MediaContinuityKit.SessionMessage		case	controlConnectionPathUpdate
+enum	MediaContinuityKit.SessionMessage		case	ended
+enum	MediaContinuityKit.SessionMessage.MessageType			
+enum	MediaContinuityKit.SessionMessage.MessageType		case	sessionActivationRequest
+enum	MediaContinuityKit.SessionMessage.MessageType		case	sessionActivationResponse
+enum	MediaContinuityKit.SessionMessage.MessageType		case	sessionControlConnectionPathUpdate
+enum	MediaContinuityKit.SessionMessage.MessageType		case	sessionEnded
+enum	MediaContinuityKit.SessionMessage.CodingKeys			
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	type
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	modelID
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	sessionID
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	osVersion
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	protocolVersion
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	controlConnectionLocalIPAddress
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	controlConnectionRemoteIPAddress
+enum	MediaContinuityKit.SessionMessage.CodingKeys		case	reason
+enum	MediaContinuityKit.StreamMessage			
+enum	MediaContinuityKit.StreamMessage		case	ended
+enum	MediaContinuityKit.StreamMessage		case	videoStreamOffer
+enum	MediaContinuityKit.StreamMessage		case	videoStreamAnswer
+enum	MediaContinuityKit.StreamMessage		case	audioStreamOffer
+enum	MediaContinuityKit.StreamMessage		case	audioStreamAnswer
+enum	MediaContinuityKit.StreamMessage		case	migrationRequest
+enum	MediaContinuityKit.StreamMessage		case	migrationResponse
+enum	MediaContinuityKit.StreamMessage.Errors			
+enum	MediaContinuityKit.StreamMessage.Errors		case	invalidDirection
+enum	MediaContinuityKit.StreamMessage.Errors		case	invalidStreamIdentifier
+enum	MediaContinuityKit.StreamMessage.MessageType			
+enum	MediaContinuityKit.StreamMessage.MessageType		case	streamEnded
+enum	MediaContinuityKit.StreamMessage.MessageType		case	videoStreamOffer
+enum	MediaContinuityKit.StreamMessage.MessageType		case	videoStreamAnswer
+enum	MediaContinuityKit.StreamMessage.MessageType		case	audioStreamOffer
+enum	MediaContinuityKit.StreamMessage.MessageType		case	audioStreamAnswer
+enum	MediaContinuityKit.StreamMessage.MessageType		case	streamMigrationRequest
+enum	MediaContinuityKit.StreamMessage.MessageType		case	streamMigrationResponse
+enum	MediaContinuityKit.StreamMessage.CodingKeys			
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	type
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	streamIdentifier
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	direction
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	mediaBlob
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	mediaConnectionLocalPort
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	mediaConnectionLocalIPAddress
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	mediaConnectionLocalMacAddress
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	controlConnectionLocalIPAddress
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	controlConnectionRemoteIPAddress
+enum	MediaContinuityKit.StreamMessage.CodingKeys		case	reason
+struct	MediaContinuityKit.VideoStreamOffer			
+struct	MediaContinuityKit.VideoStreamOffer		let	streamIdentifier
+struct	MediaContinuityKit.VideoStreamOffer		let	direction
+struct	MediaContinuityKit.VideoStreamOffer		let	mediaBlob
+struct	MediaContinuityKit.VideoStreamOffer		let	mediaConnectionInfo
+struct	MediaContinuityKit.VideoStreamOffer		let	controlConnectionInfo
+struct	MediaContinuityKit.MediaConnectionPrerequisites			
+struct	MediaContinuityKit.MediaConnectionPrerequisites		let	connectionID
+struct	MediaContinuityKit.MediaConnectionPrerequisites		let	requiresTrafficRegistration
+struct	MediaContinuityKit.MediaConnectionPrerequisites		let	remoteMacAddress
+struct	MediaContinuityKit.Version			
+struct	MediaContinuityKit.Version		var	major
+struct	MediaContinuityKit.Version		var	minor
+struct	MediaContinuityKit.Version		var	update
+enum	MediaContinuityKit.Version.Errors			
+enum	MediaContinuityKit.Version.Errors		case	tooManyComponents
+enum	MediaContinuityKit.Version.Errors		case	invalidComponentType
+struct	MediaContinuityKit.Histogram			
+struct	MediaContinuityKit.Histogram		let	buckets
+struct	MediaContinuityKit.Histogram		var	values
+struct	MediaContinuityKit.Histogram		var	bucketCounts
+struct	MediaContinuityKit.Histogram		var	minValue
+struct	MediaContinuityKit.Histogram		var	maxValue
+struct	MediaContinuityKit.Histogram		var	totalCount
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>		
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_configuration
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_prepare
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_migrate
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_activate
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_invalidate
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_pause
+class	MediaContinuityKit.AnyMediaStreamInternal<A	MediaContinuityKit.MediaStreamConfiguration>	let	_resume
+enum	MediaContinuityKit.Parameters1Errors			
+enum	MediaContinuityKit.Parameters1Errors		case	systemUUIDInitFailed
+struct	MediaContinuityKit.VideoStreamInternalInitParameters			
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	usage
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	configuration
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	controlConnection
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	remoteOffer
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	sessionID
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	shouldPerformTrafficRegistration
+struct	MediaContinuityKit.VideoStreamInternalInitParameters		let	telemetryProvider
+class	MediaContinuityKit.TimeSyncHeartbeatVendor			
+enum	MediaContinuityKit.TaskTimeoutError			
+enum	MediaContinuityKit.TaskTimeoutError		case	timedOut
+enum	MediaContinuityKit.TaskTimeoutError		case	cancelled
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject		
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	let	audioStream
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	internalEventStream
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	let	internalEventStreamContinuation
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	internalEventMonitorTask
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	eventStream
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	eventStreamContinuation
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	transitionContinuation
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	stopTransitionContinuation
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	let	streamToken
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	let	logger
+class	MediaContinuityKit.AVConferenceBackedAudioStream	SwiftNativeNSObject	var	cachedStreamDirection
+class	MediaContinuityKit.AVConferenceBackedDelegatedPIDProvider			
+enum	MediaContinuityKit.AVConferenceBackedDelegatedPIDProvider.Errors			
+enum	MediaContinuityKit.AVConferenceBackedDelegatedPIDProvider.Errors		case	processInfoInvalid
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamEvent			
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamEvent		case	transitionFailed
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamEvent		case	keepAliveTimedOut
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamEvent		case	keepAliveRecovered
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamEvent		case	stopped
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamEvent		case	transitionSucceeded
+enum	MediaContinuityKit.MediaStreamAVCErrors			
+enum	MediaContinuityKit.MediaStreamAVCErrors		case	invalidTransition
+enum	MediaContinuityKit.MediaStreamAVCErrors		case	interrupted
+enum	MediaContinuityKit.MediaStreamAVCErrors		case	serverDied
+class	MediaContinuityKit.AVConferenceBackedMediaStreamAVCVendor			
+class	MediaContinuityKit.CoexServerXPCListener	NSObject		
+class	MediaContinuityKit.CoexServerXPCListener	NSObject	let	coexListener
+class	MediaContinuityKit.CoexServerXPCListener	NSObject	let	coexManager
+class	MediaContinuityKit.CoexSession			
+class	MediaContinuityKit.CoexSession		let	uuid
+class	MediaContinuityKit.CoexSession		let	config
+class	MediaContinuityKit.CoexSession		let	pid
+class	MediaContinuityKit.CoexSession		var	delegate
+class	MediaContinuityKit.CoexSession		var	state
+enum	MediaContinuityKit.CoexSession.State			
+enum	MediaContinuityKit.CoexSession.State		case	stopped
+enum	MediaContinuityKit.CoexSession.State		case	started
+enum	MediaContinuityKit.CoexSession.State		case	suspended
+class	MediaContinuityKit.CoexSessionManager			
+class	MediaContinuityKit.CoexSessionManager		let	eventStreamContinuation
+class	MediaContinuityKit.CoexSessionManager		let	eventStream
+class	MediaContinuityKit.CoexSessionManager		var	eventHandler
+class	MediaContinuityKit.CoexSessionManager		var	coexSessions
+class	MediaContinuityKit.CoexSessionManager		var	state
+enum	MediaContinuityKit.CoexSessionManager.State			
+enum	MediaContinuityKit.CoexSessionManager.State		case	initialized
+enum	MediaContinuityKit.CoexSessionManager.State		case	activated
+enum	MediaContinuityKit.CoexSessionManager.State		case	invalidated
+enum	MediaContinuityKit.CoexSessionManager.Events			
+enum	MediaContinuityKit.CoexSessionManager.Events		case	start
+enum	MediaContinuityKit.CoexSessionManager.Events		case	startSuspended
+enum	MediaContinuityKit.CoexSessionManager.Events		case	stop
+enum	MediaContinuityKit.CoexSessionManager.Events		case	invalidate
+enum	MediaContinuityKit.CoexSessionManager.Errors			
+enum	MediaContinuityKit.CoexSessionManager.Errors		case	sessionAlreadyRegistered
+enum	MediaContinuityKit.CoexSessionManager.Errors		case	sessionNotFound
+enum	MediaContinuityKit.CoexSessionManager.Errors		case	sessionAlreadyStarted
+enum	MediaContinuityKit.CoexSessionManager.Errors		case	sessionStartDenied
+class	MediaContinuityKit.CoexSessionXPCServerProxy	NSObject		
+class	MediaContinuityKit.CoexSessionXPCServerProxy	NSObject	let	processIdentifier
+class	MediaContinuityKit.CoexSessionXPCServerProxy	NSObject	let	coexManager
+class	MediaContinuityKit.CoexSessionXPCServerProxy	NSObject	let	delegate
+class	MediaContinuityKit.CoexSessionXPCServerProxy	NSObject	let	daemonTransaction
+class	MediaContinuityKit.CoexSessionXPCServerProxy	NSObject	var	coexSession
+enum	MediaContinuityKit.CoexSessionXPCServerProxy.Errors			
+enum	MediaContinuityKit.CoexSessionXPCServerProxy.Errors		case	sessionNotFound
+class	MediaContinuityKit.AVConferenceBackedMediaStreamInputVendor			
+class	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator			
+class	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator		let	negotiator
+class	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator		let	isOfferer
+class	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator		let	offer
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator.Errors			
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator.Errors		case	notSupported
+enum	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator.Errors		case	unexpectedRemoteAnswer
+class	MediaContinuityKit.AVConferenceBackedMediaStreamNegotiatorVendor			
+class	MediaContinuityKit.DateBackedTimeProvider			
+class	MediaContinuityKit.AVConferenceBackedRemoteVideoClient	NSObject		
+class	MediaContinuityKit.AVConferenceBackedRemoteVideoClient	NSObject	var	remoteVideoClient
+class	MediaContinuityKit.AVConferenceBackedRemoteVideoClient	NSObject	var	isValid
+class	MediaContinuityKit.AVConferenceBackedRemoteVideoClient	NSObject	let	eventStream
+class	MediaContinuityKit.AVConferenceBackedRemoteVideoClient	NSObject	let	eventStreamContinuation
+enum	MediaContinuityKit.AVConferenceBackedRemoteVideoClient.Errors			
+enum	MediaContinuityKit.AVConferenceBackedRemoteVideoClient.Errors		case	serverDied
+enum	MediaContinuityKit.AVConferenceBackedRemoteVideoClient.Errors		case	invalidated
+enum	MediaContinuityKit.AVConferenceBackedRemoteVideoClient.Errors		case	allocationFailed
+class	MediaContinuityKit.AVConferenceBackedRemoteVideoClientVendor			
+class	MediaContinuityKit.AVConferenceBackedStreamInput	NSObject		
+class	MediaContinuityKit.AVConferenceBackedStreamInput	NSObject	var	streamInput
+class	MediaContinuityKit.AVConferenceBackedStreamInput	NSObject	var	isStarted
+enum	MediaContinuityKit.AVConferenceBackedStreamInput.Errors			
+enum	MediaContinuityKit.AVConferenceBackedStreamInput.Errors		case	invalidInput
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject		
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	let	videoStream
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	internalEventStream
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	let	internalEventStreamContinuation
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	internalEventMonitorTask
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	eventStream
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	eventStreamContinuation
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	transitionContinuation
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	stopTransitionContinuation
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	let	streamToken
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	let	logger
+class	MediaContinuityKit.AVConferenceBackedVideoStream	SwiftNativeNSObject	var	cachedStreamDirection
+class	MediaContinuityKit.CoexSessionVendor			
+struct	MediaContinuityKit.ControlConnectionInfoBackedNetworkPath			
+struct	MediaContinuityKit.ControlConnectionInfoBackedNetworkPath		let	localInterface
+struct	MediaContinuityKit.ControlConnectionInfoBackedNetworkPath		let	localAddress
+struct	MediaContinuityKit.ControlConnectionInfoBackedNetworkPath		let	remoteAddress
+struct	MediaContinuityKit.ControlConnectionInfoBackedNetworkPath		let	isSatisfied
+class	MediaContinuityKit.CoreOSBackedDaemonTransaction			
+class	MediaContinuityKit.CoreOSBackedDaemonTransaction		var	transaction
+class	MediaContinuityKit.FoundationBackedUserDefaultsProvider			
+class	MediaContinuityKit.FoundationBackedUserDefaultsProvider		let	userDefaults
+class	MediaContinuityKit.FoundationBackedUserDefaultsProvider		let	domain
+class	MediaContinuityKit.KTraceBackedSignpostReporter			
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	state
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	keepAliveInterval
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	connectionGroup
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	networkPathInfoProvider
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	connection
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	isConnectionPrepared
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	eventStream
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	eventStreamContinuation
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	backingConnectionEventStream
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	backingConnectionEventStreamContinuation
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	backingConnectionEventMonitor
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	messageReceiver
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	peeledConnectionListener
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	connectionReadyContinuation
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	firstIncomingPeeledConnection
+class	MediaContinuityKit.NetworkBackedControlConnection<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	cachedNetworkPath
+enum	MediaContinuityKit.NetworkBackedControlConnection.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.NetworkBackedControlConnection.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	inactive
+enum	MediaContinuityKit.NetworkBackedControlConnection.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	activating
+enum	MediaContinuityKit.NetworkBackedControlConnection.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	activated
+enum	MediaContinuityKit.NetworkBackedControlConnection.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	invalidated
+enum	MediaContinuityKit.NetworkBackedControlConnection.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	interrupted
+enum	MediaContinuityKit.NetworkBackedControlConnection.BackingConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.NetworkBackedControlConnection.BackingConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	connectionFailed
+enum	MediaContinuityKit.NetworkBackedControlConnection.BackingConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	pathUpdate
+enum	MediaContinuityKit.NetworkBackedControlConnection.BackingConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	newPeeledConnection
+enum	MediaContinuityKit.NetworkBackedControlConnection.BackingConnectionEvent<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	connectionReady
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	alreadyActivated
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	unexpectedState
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	invalidated
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	notActivated
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	missingConnection
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	missingConnectionGroup
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	connectionCreationFailed
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	listenerCreationFailed
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	notAllowed
+enum	MediaContinuityKit.NetworkBackedControlConnection.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	unexpectedConnectionType
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	shouldAdvertise
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	serviceName
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	connectionStream
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	connectionStreamContinuation
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	listener
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	listenerReadyContinuation
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	connectionMonitor
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	eventMonitor
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	eventStream
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	let	eventStreamContinuation
+class	MediaContinuityKit.NetworkBackedControlConnectionListener<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	var	state
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	inactive
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	activating
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	activated
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	invalidated
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.State<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	interrupted
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Event<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Event<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	listenerFailed
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Event<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	listenerReady
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	invalidated
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	alreadyActivated
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	missingBundleID
+enum	MediaContinuityKit.NetworkBackedControlConnectionListener.Errors<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	missingDeviceID
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController			
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController		var	state
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController		var	migrationController
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController		let	dispatchQueue
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController		let	availableInterfacesStream
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController		let	avaiableIntefacesStreamContinuation
+class	MediaContinuityKit.NetworkBackedControlConnectionMigrationController		var	startContinuation
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.State			
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.State		case	inactive
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.State		case	activating
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.State		case	activated
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.State		case	invalidated
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.State		case	interrupted
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors			
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	unexpectedConnectionType
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	unexpectedInterfaceType
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	missingNWConnection
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	missingMigrationController
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	systemUUIDInitFailed
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	invalidated
+enum	MediaContinuityKit.NetworkBackedControlConnectionMigrationController.Errors		case	invalidState
+class	MediaContinuityKit.NetworkBackedControlConnectionVendor			
+enum	MediaContinuityKit.NetworkBackedControlConnectionVendor.Errors			
+enum	MediaContinuityKit.NetworkBackedControlConnectionVendor.Errors		case	unknownEndpointType
+enum	MediaContinuityKit.NetworkBackedControlConnectionVendor.Errors		case	noEndpointInBrowseResult
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider			
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	listener
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	remoteAddress
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	connectionId
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	pathEvaluator
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	state
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		let	listenerQueue
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	listenerStarted
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	delegatedPID
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	localEndpoint
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	localMACAddress
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	localIPv6Address
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider		var	useLLW0Interface
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.State			
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.State		case	created
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.State		case	generateLocalInfo
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.State		case	localInfoGenerated
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.State		case	interrupted
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors			
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	localNetworkInfoAlreadyVended
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	localNetworkInfoNotVended
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidState
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidLocalPort
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidLocalEndpoint
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidLocalAddress
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidRemoteAddress
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	remoteNetworkInfoAlreadySet
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidDelegatedPID
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	listenerCancellation
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	missingListener
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidLocalMACAddress
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	missingRemoteAddress
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	missingRemoteMACAddress
+enum	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider.Errors		case	invalidRemoteMACAddress
+class	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProviderVendor			
+struct	MediaContinuityKit.NetworkBackedNetworkAddress			
+struct	MediaContinuityKit.NetworkBackedNetworkAddress		let	data
+struct	MediaContinuityKit.NetworkBackedNetworkAddress		let	string
+struct	MediaContinuityKit.NetworkBackedNetworkInterface			
+struct	MediaContinuityKit.NetworkBackedNetworkInterface		let	interface
+struct	MediaContinuityKit.NetworkBackedNetworkPath			
+struct	MediaContinuityKit.NetworkBackedNetworkPath		let	path
+struct	MediaContinuityKit.NetworkBackedNetworkPath		let	localInterface
+struct	MediaContinuityKit.NetworkBackedNetworkPath		let	localAddress
+struct	MediaContinuityKit.NetworkBackedNetworkPath		let	remoteAddress
+struct	MediaContinuityKit.NetworkBackedNetworkPath		let	isSatisfied
+struct	MediaContinuityKit.SessionEndReport			
+struct	MediaContinuityKit.SessionEndReport		let	globalSessionID
+struct	MediaContinuityKit.SessionEndReport		let	remoteOSVersion
+struct	MediaContinuityKit.SessionEndReport		let	remoteModelID
+struct	MediaContinuityKit.SessionEndReport		let	isServer
+struct	MediaContinuityKit.SessionEndReport		let	applicationBundleID
+struct	MediaContinuityKit.SessionEndReport		let	sessionDurationSeconds
+struct	MediaContinuityKit.SessionEndReport		let	activationTimeMilliSeconds
+struct	MediaContinuityKit.SessionEndReport		let	startInterface
+struct	MediaContinuityKit.SessionEndReport		let	endReason
+struct	MediaContinuityKit.SessionEndReport		let	migrationCount
+struct	MediaContinuityKit.SessionEndReport		let	migrationTimeHistogramMilliSeconds
+struct	MediaContinuityKit.SessionEndReport		let	durationOnInterfaceHistogramSeconds
+struct	MediaContinuityKit.SessionEndReport		let	streamEndReports
+struct	MediaContinuityKit.StreamEndReport			
+struct	MediaContinuityKit.StreamEndReport		let	streamIdentifier
+struct	MediaContinuityKit.StreamEndReport		let	direction
+struct	MediaContinuityKit.StreamEndReport		let	durationHistogramSeconds
+struct	MediaContinuityKit.StreamEndReport		let	endReasons
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatingInfo			
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatingInfo		let	isServer
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatingInfo		let	eventTime
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatedInfo			
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatedInfo		let	remoteOSVersion
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatedInfo		let	remoteModelID
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatedInfo		let	remoteSessionID
+struct	MediaContinuityKit.TelemetryEvent.SessionActivatedInfo		let	startInterface
+enum	MediaContinuityKit.TelemetryEvent			
+enum	MediaContinuityKit.TelemetryEvent		case	sessionActivating
+enum	MediaContinuityKit.TelemetryEvent		case	sessionActivated
+enum	MediaContinuityKit.TelemetryEvent		case	sessionInterrupted
+enum	MediaContinuityKit.TelemetryEvent		case	migrationStarted
+enum	MediaContinuityKit.TelemetryEvent		case	streamPreparing
+enum	MediaContinuityKit.TelemetryEvent		case	streamActivated
+enum	MediaContinuityKit.TelemetryEvent		case	streamInvalidated
+enum	MediaContinuityKit.TelemetryEvent		case	streamInterrupted
+enum	MediaContinuityKit.TelemetryEvent		case	sessionInvalidated
+enum	MediaContinuityKit.TelemetryEvent		case	migrationCompleted
+class	MediaContinuityKit.NullTelemetryServer			
+class	MediaContinuityKit.RTCBackedTelemetryServer			
+class	MediaContinuityKit.RTCBackedTelemetryServer		let	reportingAgent
+class	MediaContinuityKit.RTCBackedTelemetryServer		var	state
+class	MediaContinuityKit.RTCBackedTelemetryServer		let	serviceName
+class	MediaContinuityKit.RTCBackedTelemetryServer		let	frameworksToCheck
+enum	MediaContinuityKit.RTCBackedTelemetryServer.State			
+enum	MediaContinuityKit.RTCBackedTelemetryServer.State		case	inactive
+enum	MediaContinuityKit.RTCBackedTelemetryServer.State		case	active
+enum	MediaContinuityKit.RTCBackedTelemetryServer.State		case	invalidated
+enum	MediaContinuityKit.RTCBackedTelemetryServer.State		case	interrupted
+enum	MediaContinuityKit.RTCBackedTelemetryServer.Errors			
+enum	MediaContinuityKit.RTCBackedTelemetryServer.Errors		case	notActive
+enum	MediaContinuityKit.RTCBackedTelemetryServer.Errors		case	alreadyActivated
+enum	MediaContinuityKit.RTCBackedTelemetryServer.Errors		case	invalidated
+enum	MediaContinuityKit.RTCBackedTelemetryServer.Errors		case	interrupted
+class	MediaContinuityKit.SessionEndReporter			
+class	MediaContinuityKit.SessionEndReporter		let	usage
+class	MediaContinuityKit.SessionEndReporter		let	reportStream
+class	MediaContinuityKit.SessionEndReporter		let	reportStreamContinuation
+class	MediaContinuityKit.SessionEndReporter		var	state
+class	MediaContinuityKit.SessionEndReporter		let	logger
+class	MediaContinuityKit.SessionEndReporter		let	timeProvider
+class	MediaContinuityKit.SessionEndReporter		var	activationCompleteTime
+class	MediaContinuityKit.SessionEndReporter		var	activationTimeMilliSeconds
+class	MediaContinuityKit.SessionEndReporter		var	migrationCount
+class	MediaContinuityKit.SessionEndReporter		var	migrationStartTime
+class	MediaContinuityKit.SessionEndReporter		var	migrationTimeHistogram
+class	MediaContinuityKit.SessionEndReporter		var	currentInterfaceType
+class	MediaContinuityKit.SessionEndReporter		var	durationOnInterfaceStartTime
+class	MediaContinuityKit.SessionEndReporter		var	durationOnInterfaceHistogram
+class	MediaContinuityKit.SessionEndReporter		var	sessionDurationSeconds
+class	MediaContinuityKit.SessionEndReporter		var	activatedInfo
+class	MediaContinuityKit.SessionEndReporter		var	activatingInfo
+class	MediaContinuityKit.SessionEndReporter		var	endReason
+class	MediaContinuityKit.SessionEndReporter		var	streamEndReporters
+enum	MediaContinuityKit.SessionEndReporter.State			
+enum	MediaContinuityKit.SessionEndReporter.State		case	inactive
+enum	MediaContinuityKit.SessionEndReporter.State		case	active
+enum	MediaContinuityKit.SessionEndReporter.State		case	invalidated
+enum	MediaContinuityKit.SessionEndReporter.Errors			
+enum	MediaContinuityKit.SessionEndReporter.Errors		case	alreadyActivated
+enum	MediaContinuityKit.SessionEndReporter.Errors		case	invalidated
+enum	MediaContinuityKit.SessionEndReporter.Errors		case	missingInfo
+enum	MediaContinuityKit.SessionEndReporter.Errors		case	histogramCreationFailed
+class	MediaContinuityKit.StreamEndReporter			
+class	MediaContinuityKit.StreamEndReporter		let	streamIdentifier
+class	MediaContinuityKit.StreamEndReporter		let	streamDirection
+class	MediaContinuityKit.StreamEndReporter		let	timeProvider
+class	MediaContinuityKit.StreamEndReporter		var	activatedStartTimeInSeconds
+class	MediaContinuityKit.StreamEndReporter		var	endReasons
+class	MediaContinuityKit.StreamEndReporter		var	totalDurations
+class	MediaContinuityKit.StreamEndReporter		var	durationsHistogram
+enum	MediaContinuityKit.StreamEndReporter.Errors			
+enum	MediaContinuityKit.StreamEndReporter.Errors		case	histogramCreationFailed
+class	MediaContinuityKit.TelemetryProvider			
+class	MediaContinuityKit.TelemetryProvider		let	reporterContexts
+class	MediaContinuityKit.TelemetryProvider		let	servers
+class	MediaContinuityKit.TelemetryProvider		var	eventTask
+class	MediaContinuityKit.TelemetryProvider		let	eventStream
+class	MediaContinuityKit.TelemetryProvider		let	eventStreamContinuation
+class	MediaContinuityKit.TelemetryProvider		var	state
+class	MediaContinuityKit.TelemetryProvider.ReporterContext			
+class	MediaContinuityKit.TelemetryProvider.ReporterContext		let	reporter
+class	MediaContinuityKit.TelemetryProvider.ReporterContext		var	monitorTask
+enum	MediaContinuityKit.TelemetryProvider.State			
+enum	MediaContinuityKit.TelemetryProvider.State		case	inactive
+enum	MediaContinuityKit.TelemetryProvider.State		case	activating
+enum	MediaContinuityKit.TelemetryProvider.State		case	active
+enum	MediaContinuityKit.TelemetryProvider.State		case	invalidated
+enum	MediaContinuityKit.TelemetryProvider.State		case	interrupted
+enum	MediaContinuityKit.TelemetryProvider.Errors			
+enum	MediaContinuityKit.TelemetryProvider.Errors		case	alreadyActivated
+enum	MediaContinuityKit.TelemetryProvider.Errors		case	invalidated
+enum	MediaContinuityKit.TelemetryProvider.Errors		case	interrupted
+class	MediaContinuityKit.TelemetryProviderVendor			
+struct	MediaContinuityKit.NetworkBackedNetworkPathVendor			
+class	MediaContinuityKit.TimeSyncBackedSynchronizedClock			
+class	MediaContinuityKit.TimeSyncBackedSynchronizedClock		let	gPTPClock
+class	MediaContinuityKit.TimeSyncBackedTimeSynchronizer			
+class	MediaContinuityKit.TimeSyncBackedTimeSynchronizer		let	clockManager
+class	MediaContinuityKit.TimeSyncBackedTimeSynchronizer		let	gPTPClock
+class	MediaContinuityKit.TimeSyncBackedTimeSynchronizer		var	currentAddressInterface
+enum	MediaContinuityKit.TimeSyncBackedTimeSynchronizer.Errors			
+enum	MediaContinuityKit.TimeSyncBackedTimeSynchronizer.Errors		case	invalidAddress
+enum	MediaContinuityKit.TimeSyncBackedTimeSynchronizer.Errors		case	clockCreationFailed
+enum	MediaContinuityKit.TimeSyncBackedTimeSynchronizer.Errors		case	invalidClockType
+class	MediaContinuityKit.TimeSyncBackedTimeSynchronizerVendor			
+class	MediaContinuityKit.TrafficRegistrationVendor			
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration			
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration		var	state
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration		let	usage
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration		let	remoteMacAddress
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration		let	logger
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration		let	awdlServiceDiscoveryManager
+class	MediaContinuityKit.WiFiP2PBackedTrafficRegistration		var	interruptionHandler
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.State			
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.State		case	inactive
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.State		case	activated
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.State		case	invalidated
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.State		case	interrupted
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.Errors			
+enum	MediaContinuityKit.WiFiP2PBackedTrafficRegistration.Errors		case	invalidState
+enum	MediaContinuityKit.MediaStreamInternalEvent			
+enum	MediaContinuityKit.MediaStreamInternalEvent		case	keepAliveTimedOut
+enum	MediaContinuityKit.MediaStreamInternalEvent		case	invalidated
+enum	MediaContinuityKit.MediaStreamInternalEvent		case	interrupted
+enum	MediaContinuityKit.IPAddressErrors			
+enum	MediaContinuityKit.IPAddressErrors		case	invalidAddress
+enum	MediaContinuityKit.Signpost			
+enum	MediaContinuityKit.Signpost		case	timeSyncHeartbeat
+enum	MediaContinuityKit.Signpost		case	videoStreamSendSampleBuffer
+class	MediaContinuityKit.VideoStreamAVConference			
+class	MediaContinuityKit.VideoStreamAVConference		let	configuration
+class	MediaContinuityKit.VideoStreamAVConference		let	mediaStreamInputVendor
+class	MediaContinuityKit.VideoStreamAVConference		let	remoteVideoClientVendor
+class	MediaContinuityKit.VideoStreamAVConference		var	remoteVideoClientEventMonitor
+class	MediaContinuityKit.VideoStreamAVConference		var	streamInput
+class	MediaContinuityKit.VideoStreamAVConference		var	remoteVideoClient
+class	MediaContinuityKit.VideoStreamAVConference		let	queue
+class	MediaContinuityKit.VideoStreamAVConference		var	state
+class	MediaContinuityKit.VideoStreamAVConference		let	usage
+class	MediaContinuityKit.VideoStreamAVConference		let	sessionID
+class	MediaContinuityKit.VideoStreamAVConference		let	controlConnection
+class	MediaContinuityKit.VideoStreamAVConference		let	remoteVideoOffer
+class	MediaContinuityKit.VideoStreamAVConference		let	mediaConnectionPrerequisitesProviderVendor
+class	MediaContinuityKit.VideoStreamAVConference		let	mediaStreamNegotiator
+class	MediaContinuityKit.VideoStreamAVConference		let	mediaStreamVendor
+class	MediaContinuityKit.VideoStreamAVConference		let	delegatedPIDProvider
+class	MediaContinuityKit.VideoStreamAVConference		let	eventStream
+class	MediaContinuityKit.VideoStreamAVConference		let	eventStreamContinuation
+class	MediaContinuityKit.VideoStreamAVConference		let	internalEventStream
+class	MediaContinuityKit.VideoStreamAVConference		let	internalEventStreamContinuation
+class	MediaContinuityKit.VideoStreamAVConference		let	logger
+class	MediaContinuityKit.VideoStreamAVConference		var	isPaused
+class	MediaContinuityKit.VideoStreamAVConference		var	mediaConnectionPrerequisitesProvider
+class	MediaContinuityKit.VideoStreamAVConference		var	controlConnectionEventMonitor
+class	MediaContinuityKit.VideoStreamAVConference		var	streamEventMonitor
+class	MediaContinuityKit.VideoStreamAVConference		var	waitForResponseContinuation
+class	MediaContinuityKit.VideoStreamAVConference		var	mediaStream
+class	MediaContinuityKit.VideoStreamAVConference		var	connectionPrerequisites
+class	MediaContinuityKit.VideoStreamAVConference		let	userDefaultsProvider
+class	MediaContinuityKit.VideoStreamAVConference		let	shouldPerformTrafficRegistration
+class	MediaContinuityKit.VideoStreamAVConference		var	trafficRegistrationVendor
+class	MediaContinuityKit.VideoStreamAVConference		var	trafficRegistration
+class	MediaContinuityKit.VideoStreamAVConference		let	telemetryProvider
+class	MediaContinuityKit.VideoStreamAVConference		let	signpostReporter
+class	MediaContinuityKit.VideoStreamAVConference		var	activatingContinuation
+enum	MediaContinuityKit.VideoStreamAVConference.Errors			
+enum	MediaContinuityKit.VideoStreamAVConference.Errors		case	missingStreamInput
+enum	MediaContinuityKit.VideoStreamAVConference.Errors		case	missingFormatDescription
+enum	MediaContinuityKit.VideoStreamAVConference.Errors		case	unexpectedResolution
+enum	MediaContinuityKit.VideoStreamAVConference.Errors		case	formatDescriptionCreationFailed
+enum	MediaContinuityKit.ReportingEndReason			
+enum	MediaContinuityKit.ReportingEndReason		case	noError
+enum	MediaContinuityKit.ReportingEndReason		case	other
+enum	MediaContinuityKit.ReportingEndReason		case	internalInconsistency
+enum	MediaContinuityKit.ReportingEndReason		case	protocolViolation
+enum	MediaContinuityKit.ReportingEndReason		case	invalidState
+enum	MediaContinuityKit.ReportingEndReason		case	invalidParameter
+enum	MediaContinuityKit.ReportingEndReason		case	remoteInterrupted
+enum	MediaContinuityKit.ReportingEndReason		case	trafficRegistrationFailed
+enum	MediaContinuityKit.ReportingEndReason		case	invalidMediaStreamConfiguration
+enum	MediaContinuityKit.ReportingEndReason		case	startDeniedDueToCoex
+enum	MediaContinuityKit.ReportingEndReason		case	daemonDied
+enum	MediaContinuityKit.ReportingEndReason		case	timedOut
+enum	MediaContinuityKit.ReportingEndReason		case	serverVersionTooOld
+enum	MediaContinuityKit.ReportingEndReason		case	clientVersionTooOld
+enum	MediaContinuityKit.ReportingEndReason		case	avcServerDied
+enum	MediaContinuityKit.ReportingEndReason		case	avcAllocationFailed
+enum	MediaContinuityKit.ReportingEndReason		case	avcInvalidParameter
+enum	MediaContinuityKit.ReportingEndReason		case	avcOther
+enum	MediaContinuityKit.ReportingEndReason		case	avcUnableToConnect
+enum	MediaContinuityKit.ReportingEndReason		case	nwAllocationFailed
+enum	MediaContinuityKit.ReportingEndReason		case	nwUnexpectedType
+enum	MediaContinuityKit.ReportingEndReason		case	nwBrowseFailed
+enum	MediaContinuityKit.ReportingEndReason		case	nwInvalidLocalEndpoint
+enum	MediaContinuityKit.ReportingEndReason		case	nwInvalidRemoteEndpoint
+enum	MediaContinuityKit.ReportingEndReason		case	nwInvalidCurrentPath
+enum	MediaContinuityKit.ReportingEndReason		case	nwOther
+enum	MediaContinuityKit.ReportingEndReason		case	nwNetworkIsDown
+enum	MediaContinuityKit.ReportingEndReason		case	nwInvalidArgument
+enum	MediaContinuityKit.ReportingEndReason		case	nwOperationTimedOut
+enum	MediaContinuityKit.ReportingEndReason		case	nwSocketNotConnected
+enum	MediaContinuityKit.ReportingEndReason		case	nwConnectionResetByPeer
+enum	MediaContinuityKit.ReportingEndReason		case	dnsRefused
+enum	MediaContinuityKit.ReportingEndReason		case	dnsOther
+enum	MediaContinuityKit.ReportingEndReason		case	idsMissingDeviceID
+enum	MediaContinuityKit.ReportingEndReason		case	nsMissingBundleID
+enum	MediaContinuityKit.ReportingEndReason		case	nsOther
+enum	MediaContinuityKit.ReportingEndReason		case	tsClockAllocationFailed
+enum	MediaContinuityKit.ReportingEndReason		case	cmFormatDescriptionAllocationFailed
+enum	MediaContinuityKit.ReportingEndReason		case	wifiP2PInsufficientResources
+enum	MediaContinuityKit.ReportingEndReason		case	wifiP2POther
+class	MediaContinuityKit.TimeSyncHeartbeat			
+class	MediaContinuityKit.TimeSyncHeartbeat		let	clock
+class	MediaContinuityKit.TimeSyncHeartbeat		let	interval
+class	MediaContinuityKit.TimeSyncHeartbeat		let	signpostReporter
+class	MediaContinuityKit.TimeSyncHeartbeat		var	heartbeatTask
+enum	MediaContinuityKit.MediaStreamDirection			
+enum	MediaContinuityKit.MediaStreamDirection		case	send
+enum	MediaContinuityKit.MediaStreamDirection		case	receive
+enum	MediaContinuityKit.SynchronizedClockLockState			
+enum	MediaContinuityKit.SynchronizedClockLockState		case	notLocking
+enum	MediaContinuityKit.SynchronizedClockLockState		case	locking
+enum	MediaContinuityKit.SynchronizedClockLockState		case	locked
+class	MediaContinuityKit.MediaStreamManager<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>		
+class	MediaContinuityKit.MediaStreamManager<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	var	mediaStreams
+class	MediaContinuityKit.MediaStreamManager<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	var	mediaStreamStateMonitorTasks
+class	MediaContinuityKit.MediaStreamManager<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	var	incomingMediaStreamConfigurations
+class	MediaContinuityKit.MediaStreamManager<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	var	mediaStreamKeepAliveTimedOutHandler
+class	MediaContinuityKit.MediaStreamManager<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	var	isValid
+enum	MediaContinuityKit.MediaStreamManager.Errors<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>		
+enum	MediaContinuityKit.MediaStreamManager.Errors<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	case	invalidated
+enum	MediaContinuityKit.MediaStreamManager.Errors<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	case	mediaStreamAlreadyExists
+enum	MediaContinuityKit.MediaStreamManager.Errors<A	MediaContinuityKit.MediaStream, A: MediaContinuityKit.Migratable, A: MediaContinuityKit.Preparable>	case	nonUniqueStreamConfigurations
+class	MediaContinuityKit.MediaStreamVendorAVConference			
+struct	MediaContinuityKit.AudioStreamInternalInitParameters			
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	usage
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	configuration
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	controlConnection
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	remoteOffer
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	sessionID
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	shouldPerformTrafficRegistration
+struct	MediaContinuityKit.AudioStreamInternalInitParameters		let	telemetryProvider
+enum	MediaContinuityKit.SystemInfo			
+class	MediaContinuityKit.AudioStreamAVConference			
+class	MediaContinuityKit.AudioStreamAVConference		let	configuration
+class	MediaContinuityKit.AudioStreamAVConference		var	state
+class	MediaContinuityKit.AudioStreamAVConference		let	usage
+class	MediaContinuityKit.AudioStreamAVConference		let	sessionID
+class	MediaContinuityKit.AudioStreamAVConference		let	controlConnection
+class	MediaContinuityKit.AudioStreamAVConference		let	remoteAudioOffer
+class	MediaContinuityKit.AudioStreamAVConference		let	mediaConnectionPrerequisitesProviderVendor
+class	MediaContinuityKit.AudioStreamAVConference		let	mediaStreamNegotiator
+class	MediaContinuityKit.AudioStreamAVConference		let	mediaStreamVendor
+class	MediaContinuityKit.AudioStreamAVConference		let	delegatedPIDProvider
+class	MediaContinuityKit.AudioStreamAVConference		let	eventStream
+class	MediaContinuityKit.AudioStreamAVConference		let	eventStreamContinuation
+class	MediaContinuityKit.AudioStreamAVConference		let	internalEventStream
+class	MediaContinuityKit.AudioStreamAVConference		let	internalEventStreamContinuation
+class	MediaContinuityKit.AudioStreamAVConference		let	logger
+class	MediaContinuityKit.AudioStreamAVConference		var	isPaused
+class	MediaContinuityKit.AudioStreamAVConference		var	mediaConnectionPrerequisitesProvider
+class	MediaContinuityKit.AudioStreamAVConference		var	controlConnectionEventMonitor
+class	MediaContinuityKit.AudioStreamAVConference		var	streamEventMonitor
+class	MediaContinuityKit.AudioStreamAVConference		var	waitForResponseContinuation
+class	MediaContinuityKit.AudioStreamAVConference		var	mediaStream
+class	MediaContinuityKit.AudioStreamAVConference		var	connectionPrerequisites
+class	MediaContinuityKit.AudioStreamAVConference		let	userDefaultsProvider
+class	MediaContinuityKit.AudioStreamAVConference		let	shouldPerformTrafficRegistration
+class	MediaContinuityKit.AudioStreamAVConference		var	trafficRegistrationVendor
+class	MediaContinuityKit.AudioStreamAVConference		var	trafficRegistration
+class	MediaContinuityKit.AudioStreamAVConference		let	telemetryProvider
+class	MediaContinuityKit.AudioStreamAVConference		var	activatingContinuation
+enum	MediaContinuityKit.MediaStreamState			
+enum	MediaContinuityKit.MediaStreamState		case	inactive
+enum	MediaContinuityKit.MediaStreamState		case	prepared
+enum	MediaContinuityKit.MediaStreamState		case	activating
+enum	MediaContinuityKit.MediaStreamState		case	migrating
+enum	MediaContinuityKit.MediaStreamState		case	running
+enum	MediaContinuityKit.MediaStreamState		case	invalidated
+enum	MediaContinuityKit.MediaStreamState		case	interrupted
+protocol	MediaContinuityKit.AsyncThrowingStartable			
+protocol	MediaContinuityKit.CoexSessionManaging			
+protocol	MediaContinuityKit.CoexSessionVending			
+protocol	MediaContinuityKit.ControlConnection	Message, PeeledConnectionMessage		
+protocol	MediaContinuityKit.ControlConnectionListener	Message, PeeledConnectionMessage		
+protocol	MediaContinuityKit.ControlConnectionMigrationControlling			
+protocol	MediaContinuityKit.ControlConnectionMigrationManaging			
+protocol	MediaContinuityKit.ControlConnectionVendor			
+protocol	MediaContinuityKit.DaemonTransaction			
+protocol	MediaContinuityKit.MediaConnectionPrerequisitesProviding			
+protocol	MediaContinuityKit.MediaContinuityError			
+protocol	MediaContinuityKit.MediaStreamAVC			
+protocol	MediaContinuityKit.MediaStreamAVCVendor			
+protocol	MediaContinuityKit.MediaStreamDelegatedPIDProviding			
+protocol	MediaContinuityKit.MediaStreamIdentifier			
+protocol	MediaContinuityKit.MediaStreamInput			
+protocol	MediaContinuityKit.MediaStreamInputVendor			
+protocol	MediaContinuityKit.MediaStreamNegotiatorAVC			
+protocol	MediaContinuityKit.MediaStreamNegotiatorVendorAVC			
+protocol	MediaContinuityKit.MediaStreamOffer			
+protocol	MediaContinuityKit.MediaStreamVendor			
+protocol	MediaContinuityKit.Migratable			
+protocol	MediaContinuityKit.NetworkAddress			
+protocol	MediaContinuityKit.NetworkInterface			
+protocol	MediaContinuityKit.NetworkPath			
+protocol	MediaContinuityKit.NetworkPathVending			
+protocol	MediaContinuityKit.Preparable			
+protocol	MediaContinuityKit.RemoteVideoClient			
+protocol	MediaContinuityKit.RemoteVideoClientVendor			
+protocol	MediaContinuityKit.SignpostReporting			
+protocol	MediaContinuityKit.Startable			
+protocol	MediaContinuityKit.SynchronizedClock			
+protocol	MediaContinuityKit.TimeSyncHeartbeatVending			
+protocol	MediaContinuityKit.TimeSynchronizer			
+protocol	MediaContinuityKit.TimeSynchronizerVendor			
+protocol	MediaContinuityKit.TrafficRegistration			
+protocol	MediaContinuityKit.TrafficRegistrationVending			
+protocol	MediaContinuityKit.UserDefaultsProviding			
+protocol	MediaContinuityKit.Vending	VendedType		
+protocol	MediaContinuityKit.MediaContinuityCoexSessionDelegate			
+protocol	MediaContinuityKit.MediaStreamConfiguration	Identifier		
+protocol	MediaContinuityKit.AudioStream			
+protocol	MediaContinuityKit.MediaStream	Configuration, Event		
+protocol	MediaContinuityKit.VideoStream			
+protocol	MediaContinuityKit.AVConferenceBackedMediaStream			
+protocol	MediaContinuityKit.RTCReportingReport			
+protocol	MediaContinuityKit.TelemetryProviderVending			
+protocol	MediaContinuityKit.TelemetryProviding			
+protocol	MediaContinuityKit.TelemetryReport			
+protocol	MediaContinuityKit.TelemetryReporting			
+protocol	MediaContinuityKit.TelemetryServing			
+protocol	MediaContinuityKit.TimeProviding			
+protocol	MediaContinuityKit.MediaStreamAVConference			
+protocol	conformance ControlConnectionMigrationManager.State	Swift.Comparable		
+protocol	conformance ControlConnectionMigrationManager.State	Swift.Hashable		
+protocol	conformance ControlConnectionMigrationManager.State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.ControlConnectionMigrationManager	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.ControlConnectionMigrationManager	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.ControlConnectionMigrationManager	Swift.Actor		
+protocol	conformance MediaContinuityKit.ControlConnectionMigrationManager	MediaContinuityKit.ControlConnectionMigrationManaging		
+protocol	conformance ControlConnectionMigrationManager.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance ControlConnectionMigrationManager.Errors	Swift.Hashable		
+protocol	conformance ControlConnectionMigrationManager.Errors	Swift.Equatable		
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance ControlConnectionMigrationManager.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaStreamAVCEvent	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaStreamAVCEvent	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceType	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceType	Swift.Hashable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceType	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceReportingType	Swift.CaseIterable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceReportingType	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceReportingType	Swift.Hashable		
+protocol	conformance MediaContinuityKit.NetworkInterfaceReportingType	Swift.Equatable		
+protocol	conformance MediaContinuityUsageSecureCodingWrapper.Errors	Swift.Hashable		
+protocol	conformance MediaContinuityUsageSecureCodingWrapper.Errors	Swift.Equatable		
+protocol	conformance MediaContinuityUsageSecureCodingWrapper.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaContinuityKitFeatureFlags	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaContinuityKitFeatureFlags	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaContinuityKitFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance MediaContinuityKit.ActivationRequestInfo	Swift.Equatable		
+protocol	conformance MediaContinuityKit.ActivationResponseInfo	Swift.Equatable		
+protocol	conformance MediaContinuityCoexSession.Errors	Swift.Equatable		
+protocol	conformance MediaContinuityCoexSession.Errors	Swift.Hashable		
+protocol	conformance MediaContinuityCoexSession.Errors	Swift.Error		
+protocol	conformance MediaContinuityCoexSession.Interface	Swift.Equatable		
+protocol	conformance MediaContinuityCoexSession.Interface	Swift.Hashable		
+protocol	conformance MediaContinuityCoexSession.Interface	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.MediaContinuityCoexSession	Swift.Actor		
+protocol	conformance MediaContinuityKit.MediaContinuityCoexSession	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaContinuityCoexSession	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaContinuityCoexSession	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.MediaContinuityCoexSession	MediaContinuityKit.AsyncThrowingStartable		
+protocol	conformance MediaContinuityCoexSession.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance Events	Swift.CustomStringConvertible		
+protocol	conformance State	Swift.CustomStringConvertible		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance Configuration.Errors	Swift.Equatable		
+protocol	conformance Configuration.Errors	Swift.Hashable		
+protocol	conformance Configuration.Errors	Swift.Error		
+protocol	conformance Configuration.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuityKit.AudioStreamConfiguration	MediaContinuityKit.MediaStreamConfiguration		
+protocol	conformance MediaContinuityKit.VideoStreamConfiguration	MediaContinuityKit.MediaStreamConfiguration		
+protocol	conformance MediaContinuityKit.MediaContinuityEndpoint	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaContinuityEndpoint	Swift.Decodable		
+protocol	conformance MediaContinuityKit.MediaContinuityEndpoint	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CaseType	Swift.RawRepresentable		
+protocol	conformance CaseType	Swift.Hashable		
+protocol	conformance CaseType	Swift.Equatable		
+protocol	conformance MediaContinuityEndpoint.EndpointType	Swift.Equatable		
+protocol	conformance MediaContinuityEndpoint.EndpointType	Swift.Encodable		
+protocol	conformance MediaContinuityEndpoint.EndpointType	Swift.Decodable		
+protocol	conformance CaseType	Swift.Encodable		
+protocol	conformance CaseType	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ApplicationServiceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ApplicationServiceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ApplicationServiceCodingKeys	Swift.Hashable		
+protocol	conformance ApplicationServiceCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ApplicationServiceCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaContinuityKit.MediaStreamErrors	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaStreamErrors	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaStreamErrors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaStreamErrors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuityServer.Errors	Swift.Equatable		
+protocol	conformance MediaContinuityServer.Errors	Swift.Hashable		
+protocol	conformance MediaContinuityServer.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaContinuityServer	Swift.Actor		
+protocol	conformance MediaContinuityKit.MediaContinuityServer	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.MediaContinuityServer	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityServer.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuitySession.Errors	Swift.Equatable		
+protocol	conformance MediaContinuitySession.Errors	Swift.Hashable		
+protocol	conformance MediaContinuitySession.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaContinuitySession	Swift.Actor		
+protocol	conformance MediaContinuityKit.MediaContinuitySession	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.MediaContinuitySession	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.MediaContinuitySession	MediaContinuityKit.MediaContinuityCoexSessionDelegate		
+protocol	conformance MediaContinuitySession.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuitySession.State	Swift.Comparable		
+protocol	conformance MediaContinuitySession.State	Swift.Hashable		
+protocol	conformance MediaContinuitySession.State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.VideoStreamEvent	Swift.Equatable		
+protocol	conformance MediaContinuityKit.VideoStreamEvent	Swift.Hashable		
+protocol	conformance MediaContinuityKit.AudioStreamIdentifier	Swift.Equatable		
+protocol	conformance MediaContinuityKit.AudioStreamIdentifier	Swift.Hashable		
+protocol	conformance MediaContinuityKit.AudioStreamIdentifier	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.AudioStreamIdentifier	MediaContinuityKit.MediaStreamIdentifier		
+protocol	conformance MediaContinuityKit.AudioStreamIdentifier	Swift.CaseIterable		
+protocol	conformance MediaContinuityKit.AudioStreamIdentifier	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.VideoStreamIdentifier	Swift.Equatable		
+protocol	conformance MediaContinuityKit.VideoStreamIdentifier	Swift.Hashable		
+protocol	conformance MediaContinuityKit.VideoStreamIdentifier	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.VideoStreamIdentifier	MediaContinuityKit.MediaStreamIdentifier		
+protocol	conformance MediaContinuityKit.VideoStreamIdentifier	Swift.CaseIterable		
+protocol	conformance MediaContinuityKit.VideoStreamIdentifier	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.MediaContinuityUsage	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.MediaContinuityUsage	Swift.Equatable		
+protocol	conformance MediaContinuityKit.AudioStreamOffer	MediaContinuityKit.MediaStreamOffer		
+protocol	conformance MediaContinuityKit.ControlConnectionInfo	Swift.Equatable		
+protocol	conformance MediaContinuityKit.ControlConnectionInfo	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.MediaConnectionInfo	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.MediaConnectionInfo	Swift.Equatable		
+protocol	conformance MediaContinuityKit.SessionMessage	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.SessionMessage	Swift.Decodable		
+protocol	conformance MediaContinuityKit.SessionMessage	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MessageType	Swift.RawRepresentable		
+protocol	conformance MessageType	Swift.Hashable		
+protocol	conformance MessageType	Swift.Equatable		
+protocol	conformance MessageType	Swift.Decodable		
+protocol	conformance MessageType	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaContinuityKit.StreamMessage	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.StreamMessage	Swift.Decodable		
+protocol	conformance MediaContinuityKit.StreamMessage	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MessageType	Swift.RawRepresentable		
+protocol	conformance MessageType	Swift.Hashable		
+protocol	conformance MessageType	Swift.Equatable		
+protocol	conformance StreamMessage.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance StreamMessage.Errors	Swift.Hashable		
+protocol	conformance StreamMessage.Errors	Swift.Equatable		
+protocol	conformance StreamMessage.Errors	Swift.Error		
+protocol	conformance MessageType	Swift.Decodable		
+protocol	conformance MessageType	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaContinuityKit.VideoStreamOffer	MediaContinuityKit.MediaStreamOffer		
+protocol	conformance MediaContinuityKit.Version	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.Version	Swift.Equatable		
+protocol	conformance MediaContinuityKit.Version	Swift.Comparable		
+protocol	conformance Version.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance Version.Errors	Swift.Hashable		
+protocol	conformance Version.Errors	Swift.Equatable		
+protocol	conformance Version.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.Histogram	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.Histogram	Swift.Equatable		
+protocol	conformance MediaContinuityKit.AnyMediaStreamInternal	MediaContinuityKit.MediaStream		
+protocol	conformance MediaContinuityKit.AnyMediaStreamInternal	MediaContinuityKit.Migratable		
+protocol	conformance MediaContinuityKit.AnyMediaStreamInternal	MediaContinuityKit.Preparable		
+protocol	conformance MediaContinuityKit.AnyMediaStreamInternal	Swift.Actor		
+protocol	conformance MediaContinuityKit.Parameters1Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuityKit.Parameters1Errors	Swift.Hashable		
+protocol	conformance MediaContinuityKit.Parameters1Errors	Swift.Equatable		
+protocol	conformance MediaContinuityKit.Parameters1Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.TimeSyncHeartbeatVendor	MediaContinuityKit.TimeSyncHeartbeatVending		
+protocol	conformance MediaContinuityKit.TaskTimeoutError	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuityKit.TaskTimeoutError	Swift.Hashable		
+protocol	conformance MediaContinuityKit.TaskTimeoutError	Swift.Equatable		
+protocol	conformance MediaContinuityKit.TaskTimeoutError	Swift.Error		
+protocol	conformance MediaContinuityKit.AVConferenceBackedAudioStream	MediaContinuityKit.MediaStreamAVC		
+protocol	conformance MediaContinuityKit.AVConferenceBackedAudioStream	MediaContinuityKit.AVConferenceBackedMediaStream		
+protocol	conformance MediaContinuityKit.AVConferenceBackedAudioStream	Swift.Actor		
+protocol	conformance MediaContinuityKit.AVConferenceBackedDelegatedPIDProvider	MediaContinuityKit.MediaStreamDelegatedPIDProviding		
+protocol	conformance AVConferenceBackedDelegatedPIDProvider.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance AVConferenceBackedDelegatedPIDProvider.Errors	Swift.Hashable		
+protocol	conformance AVConferenceBackedDelegatedPIDProvider.Errors	Swift.Equatable		
+protocol	conformance AVConferenceBackedDelegatedPIDProvider.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaStreamAVCErrors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuityKit.MediaStreamAVCErrors	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaStreamAVCErrors	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaStreamAVCErrors	Swift.Error		
+protocol	conformance MediaContinuityKit.AVConferenceBackedMediaStreamAVCVendor	MediaContinuityKit.MediaStreamAVCVendor		
+protocol	conformance CoexSession.State	Swift.RawRepresentable		
+protocol	conformance CoexSession.State	Swift.Hashable		
+protocol	conformance CoexSession.State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.CoexSession	Swift.Equatable		
+protocol	conformance MediaContinuityKit.CoexSession	Swift.Hashable		
+protocol	conformance MediaContinuityKit.CoexSession	Swift.CustomStringConvertible		
+protocol	conformance State	Swift.RawRepresentable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.CoexSessionManager	MediaContinuityKit.CoexSessionManaging		
+protocol	conformance MediaContinuityKit.CoexSessionManager	Swift.Actor		
+protocol	conformance CoexSessionManager.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance CoexSessionManager.Errors	Swift.Hashable		
+protocol	conformance CoexSessionManager.Errors	Swift.Equatable		
+protocol	conformance CoexSessionManager.Errors	Swift.Error		
+protocol	conformance CoexSessionXPCServerProxy.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance CoexSessionXPCServerProxy.Errors	Swift.Hashable		
+protocol	conformance CoexSessionXPCServerProxy.Errors	Swift.Equatable		
+protocol	conformance CoexSessionXPCServerProxy.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.AVConferenceBackedMediaStreamInputVendor	MediaContinuityKit.MediaStreamInputVendor		
+protocol	conformance MediaContinuityKit.AVConferenceBackedMediaStreamNegotiator	MediaContinuityKit.MediaStreamNegotiatorAVC		
+protocol	conformance AVConferenceBackedMediaStreamNegotiator.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance AVConferenceBackedMediaStreamNegotiator.Errors	Swift.Hashable		
+protocol	conformance AVConferenceBackedMediaStreamNegotiator.Errors	Swift.Equatable		
+protocol	conformance AVConferenceBackedMediaStreamNegotiator.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.AVConferenceBackedMediaStreamNegotiatorVendor	MediaContinuityKit.MediaStreamNegotiatorVendorAVC		
+protocol	conformance MediaContinuityKit.DateBackedTimeProvider	MediaContinuityKit.TimeProviding		
+protocol	conformance MediaContinuityKit.AVConferenceBackedRemoteVideoClient	MediaContinuityKit.RemoteVideoClient		
+protocol	conformance AVConferenceBackedRemoteVideoClient.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance AVConferenceBackedRemoteVideoClient.Errors	Swift.Hashable		
+protocol	conformance AVConferenceBackedRemoteVideoClient.Errors	Swift.Equatable		
+protocol	conformance AVConferenceBackedRemoteVideoClient.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.AVConferenceBackedRemoteVideoClientVendor	MediaContinuityKit.RemoteVideoClientVendor		
+protocol	conformance MediaContinuityKit.AVConferenceBackedStreamInput	MediaContinuityKit.MediaStreamInput		
+protocol	conformance AVConferenceBackedStreamInput.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance AVConferenceBackedStreamInput.Errors	Swift.Hashable		
+protocol	conformance AVConferenceBackedStreamInput.Errors	Swift.Equatable		
+protocol	conformance AVConferenceBackedStreamInput.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.AVConferenceBackedVideoStream	MediaContinuityKit.MediaStreamAVC		
+protocol	conformance MediaContinuityKit.AVConferenceBackedVideoStream	MediaContinuityKit.AVConferenceBackedMediaStream		
+protocol	conformance MediaContinuityKit.AVConferenceBackedVideoStream	Swift.Actor		
+protocol	conformance MediaContinuityKit.CoexSessionVendor	MediaContinuityKit.CoexSessionVending		
+protocol	conformance MediaContinuityKit.ControlConnectionInfoBackedNetworkPath	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.ControlConnectionInfoBackedNetworkPath	MediaContinuityKit.NetworkPath		
+protocol	conformance MediaContinuityKit.CoreOSBackedDaemonTransaction	MediaContinuityKit.DaemonTransaction		
+protocol	conformance MediaContinuityKit.FoundationBackedUserDefaultsProvider	MediaContinuityKit.UserDefaultsProviding		
+protocol	conformance MediaContinuityKit.KTraceBackedSignpostReporter	MediaContinuityKit.SignpostReporting		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnection	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnection	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnection	MediaContinuityKit.ControlConnection		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnection	Swift.Actor		
+protocol	conformance NetworkBackedControlConnection.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance NetworkBackedControlConnection.Errors	Swift.Hashable		
+protocol	conformance NetworkBackedControlConnection.Errors	Swift.Equatable		
+protocol	conformance NetworkBackedControlConnection.Errors	Swift.Error		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionListener	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionListener	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionListener	MediaContinuityKit.ControlConnectionListener		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionListener	Swift.Actor		
+protocol	conformance NetworkBackedControlConnectionListener.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance NetworkBackedControlConnectionListener.Errors	Swift.Hashable		
+protocol	conformance NetworkBackedControlConnectionListener.Errors	Swift.Equatable		
+protocol	conformance NetworkBackedControlConnectionListener.Errors	Swift.Error		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionMigrationController	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionMigrationController	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionMigrationController	MediaContinuityKit.ControlConnectionMigrationControlling		
+protocol	conformance NetworkBackedControlConnectionMigrationController.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance NetworkBackedControlConnectionMigrationController.Errors	Swift.Hashable		
+protocol	conformance NetworkBackedControlConnectionMigrationController.Errors	Swift.Equatable		
+protocol	conformance NetworkBackedControlConnectionMigrationController.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.NetworkBackedControlConnectionVendor	MediaContinuityKit.ControlConnectionVendor		
+protocol	conformance NetworkBackedControlConnectionVendor.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance NetworkBackedControlConnectionVendor.Errors	Swift.Hashable		
+protocol	conformance NetworkBackedControlConnectionVendor.Errors	Swift.Equatable		
+protocol	conformance NetworkBackedControlConnectionVendor.Errors	Swift.Error		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.State	Swift.Comparable		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.State	Swift.Hashable		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider	MediaContinuityKit.MediaConnectionPrerequisitesProviding		
+protocol	conformance MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider	Swift.Identifiable		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.Errors	Swift.Hashable		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.Errors	Swift.Equatable		
+protocol	conformance NetworkBackedMediaConnectionPrerequisitesProvider.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProviderVendor	MediaContinuityKit.Vending		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkAddress	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkAddress	Swift.Equatable		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkAddress	MediaContinuityKit.NetworkAddress		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkInterface	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkInterface	MediaContinuityKit.NetworkInterface		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkPath	MediaContinuityKit.NetworkPath		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkPath	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkPath	Swift.Equatable		
+protocol	conformance MediaContinuityKit.SessionEndReport	MediaContinuityKit.TelemetryReport		
+protocol	conformance MediaContinuityKit.NullTelemetryServer	MediaContinuityKit.TelemetryServing		
+protocol	conformance MediaContinuityKit.NullTelemetryServer	Swift.Actor		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.RTCBackedTelemetryServer	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.RTCBackedTelemetryServer	MediaContinuityKit.TelemetryServing		
+protocol	conformance MediaContinuityKit.RTCBackedTelemetryServer	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.RTCBackedTelemetryServer	Swift.Actor		
+protocol	conformance RTCBackedTelemetryServer.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance RTCBackedTelemetryServer.Errors	Swift.Hashable		
+protocol	conformance RTCBackedTelemetryServer.Errors	Swift.Equatable		
+protocol	conformance RTCBackedTelemetryServer.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.SessionEndReport	MediaContinuityKit.RTCReportingReport		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.SessionEndReporter	MediaContinuityKit.TelemetryReporting		
+protocol	conformance MediaContinuityKit.SessionEndReporter	Swift.Actor		
+protocol	conformance SessionEndReporter.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance SessionEndReporter.Errors	Swift.Hashable		
+protocol	conformance SessionEndReporter.Errors	Swift.Equatable		
+protocol	conformance SessionEndReporter.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.StreamEndReporter	Swift.Actor		
+protocol	conformance StreamEndReporter.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance StreamEndReporter.Errors	Swift.Hashable		
+protocol	conformance StreamEndReporter.Errors	Swift.Equatable		
+protocol	conformance StreamEndReporter.Errors	Swift.Error		
+protocol	conformance TelemetryProvider.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance TelemetryProvider.Errors	Swift.Hashable		
+protocol	conformance TelemetryProvider.Errors	Swift.Equatable		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.TelemetryProvider	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.TelemetryProvider	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.TelemetryProvider	Swift.Actor		
+protocol	conformance MediaContinuityKit.TelemetryProvider	MediaContinuityKit.TelemetryProviding		
+protocol	conformance TelemetryProvider.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.TelemetryProviderVendor	MediaContinuityKit.TelemetryProviderVending		
+protocol	conformance MediaContinuityKit.NetworkBackedNetworkPathVendor	MediaContinuityKit.NetworkPathVending		
+protocol	conformance MediaContinuityKit.TimeSyncBackedSynchronizedClock	MediaContinuityKit.SynchronizedClock		
+protocol	conformance MediaContinuityKit.TimeSyncBackedTimeSynchronizer	MediaContinuityKit.TimeSynchronizer		
+protocol	conformance TimeSyncBackedTimeSynchronizer.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance TimeSyncBackedTimeSynchronizer.Errors	Swift.Hashable		
+protocol	conformance TimeSyncBackedTimeSynchronizer.Errors	Swift.Equatable		
+protocol	conformance TimeSyncBackedTimeSynchronizer.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.TimeSyncBackedTimeSynchronizerVendor	MediaContinuityKit.TimeSynchronizerVendor		
+protocol	conformance MediaContinuityKit.TrafficRegistrationVendor	MediaContinuityKit.TrafficRegistrationVending		
+protocol	conformance State	Swift.Comparable		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaContinuityKit.WiFiP2PBackedTrafficRegistration	MediaContinuityKit.TrafficRegistration		
+protocol	conformance MediaContinuityKit.WiFiP2PBackedTrafficRegistration	Swift.Actor		
+protocol	conformance WiFiP2PBackedTrafficRegistration.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance WiFiP2PBackedTrafficRegistration.Errors	Swift.Hashable		
+protocol	conformance WiFiP2PBackedTrafficRegistration.Errors	Swift.Equatable		
+protocol	conformance WiFiP2PBackedTrafficRegistration.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.MediaStreamInternalEvent	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaStreamInternalEvent	Swift.Equatable		
+protocol	conformance IPAddressErrors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance IPAddressErrors	Swift.Hashable		
+protocol	conformance IPAddressErrors	Swift.Equatable		
+protocol	conformance IPAddressErrors	Swift.Error		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	MediaContinuityKit.Migratable		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	MediaContinuityKit.Preparable		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	MediaContinuityKit.MediaStreamAVConference		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	MediaContinuityKit.MediaStream		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	MediaContinuityKit.VideoStream		
+protocol	conformance MediaContinuityKit.VideoStreamAVConference	Swift.Actor		
+protocol	conformance VideoStreamAVConference.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance VideoStreamAVConference.Errors	Swift.Hashable		
+protocol	conformance VideoStreamAVConference.Errors	Swift.Equatable		
+protocol	conformance VideoStreamAVConference.Errors	Swift.Error		
+protocol	conformance MediaContinuityKit.ReportingEndReason	Swift.Encodable		
+protocol	conformance MediaContinuityKit.ReportingEndReason	Swift.Decodable		
+protocol	conformance MediaContinuityKit.ReportingEndReason	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.ReportingEndReason	Swift.Hashable		
+protocol	conformance MediaContinuityKit.ReportingEndReason	Swift.Equatable		
+protocol	conformance MediaContinuityKit.TimeSyncHeartbeat	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.TimeSyncHeartbeat	MediaContinuityKit.Startable		
+protocol	conformance MediaContinuityKit.TimeSyncHeartbeat	Swift.Identifiable		
+protocol	conformance MediaContinuityKit.MediaStreamDirection	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaStreamDirection	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaStreamDirection	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.MediaStreamDirection	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.SynchronizedClockLockState	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.SynchronizedClockLockState	Swift.RawRepresentable		
+protocol	conformance MediaContinuityKit.SynchronizedClockLockState	Swift.Hashable		
+protocol	conformance MediaContinuityKit.SynchronizedClockLockState	Swift.Equatable		
+protocol	conformance MediaContinuityKit.MediaStreamManager	Swift.Actor		
+protocol	conformance MediaStreamManager.Errors	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaStreamManager.Errors	Swift.Hashable		
+protocol	conformance MediaStreamManager.Errors	Swift.Equatable		
+protocol	conformance MediaStreamManager.Errors	Swift.Error		
+protocol	conformance NSError	MediaContinuityKit.MediaContinuityError		
+protocol	conformance Network.NWError	MediaContinuityKit.MediaContinuityError		
+protocol	conformance MediaContinuityKit.MediaStreamVendorAVConference	MediaContinuityKit.MediaStreamVendor		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	Swift.CustomStringConvertible		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	MediaContinuityKit.Migratable		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	MediaContinuityKit.Preparable		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	MediaContinuityKit.MediaStreamAVConference		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	MediaContinuityKit.MediaStream		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	MediaContinuityKit.AudioStream		
+protocol	conformance MediaContinuityKit.AudioStreamAVConference	Swift.Actor		
+protocol	conformance MediaContinuityKit.MediaStreamState	Swift.Comparable		
+protocol	conformance MediaContinuityKit.MediaStreamState	Swift.Hashable		
+protocol	conformance MediaContinuityKit.MediaStreamState	Swift.Equatable		
+extension	MediaContinuityKit.ControlConnectionMigrationManager	Identifiable		
+extension	MediaContinuityKit.NetworkInterfaceType	RawRepresentable		
+extension	MediaContinuityKit.NetworkInterfaceReportingType	CaseIterable		
+extension	MediaContinuityKit.NetworkInterfaceReportingType	RawRepresentable		
+extension	MediaContinuityKit.MediaContinuityCoexSession.Interface	RawRepresentable		
+extension	MediaContinuityKit.AudioStreamConfiguration	MediaStreamConfiguration		
+extension	MediaContinuityKit.VideoStreamConfiguration	MediaStreamConfiguration		
+extension	MediaContinuityKit.MediaContinuityEndpoint.CodingKeys	RawRepresentable		
+extension	MediaContinuityKit.MediaContinuityEndpoint.CaseType	RawRepresentable		
+extension	MediaContinuityKit.MediaContinuityServer	Identifiable		
+extension	MediaContinuityKit.MediaContinuitySession	Identifiable		
+extension	MediaContinuityKit.AudioStreamIdentifier	RawRepresentable		
+extension	MediaContinuityKit.AudioStreamIdentifier	CaseIterable		
+extension	MediaContinuityKit.VideoStreamIdentifier	RawRepresentable		
+extension	MediaContinuityKit.VideoStreamIdentifier	CaseIterable		
+extension	MediaContinuityKit.SessionMessage.CodingKeys	RawRepresentable		
+extension	MediaContinuityKit.SessionMessage.MessageType	RawRepresentable		
+extension	MediaContinuityKit.StreamMessage.CodingKeys	RawRepresentable		
+extension	MediaContinuityKit.StreamMessage.MessageType	RawRepresentable		
+extension	MediaContinuityKit.AnyMediaStreamInternal	MediaStream		
+extension	MediaContinuityKit.CoexSession.State	RawRepresentable		
+extension	MediaContinuityKit.CoexSessionManager.State	RawRepresentable		
+extension	MediaContinuityKit.NetworkBackedControlConnection	Identifiable		
+extension	MediaContinuityKit.NetworkBackedControlConnection	ControlConnection		
+extension	MediaContinuityKit.NetworkBackedControlConnectionListener	Identifiable		
+extension	MediaContinuityKit.NetworkBackedControlConnectionListener	ControlConnectionListener		
+extension	MediaContinuityKit.NetworkBackedControlConnectionMigrationController	Identifiable		
+extension	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProvider	Identifiable		
+extension	MediaContinuityKit.NetworkBackedMediaConnectionPrerequisitesProviderVendor	Vending		
+extension	MediaContinuityKit.RTCBackedTelemetryServer	Identifiable		
+extension	MediaContinuityKit.TelemetryProvider	Identifiable		
+extension	MediaContinuityKit.VideoStreamAVConference	MediaStream		
+extension	MediaContinuityKit.ReportingEndReason	RawRepresentable		
+extension	MediaContinuityKit.TimeSyncHeartbeat	Identifiable		
+extension	MediaContinuityKit.MediaStreamDirection	RawRepresentable		
+extension	MediaContinuityKit.SynchronizedClockLockState	RawRepresentable		
+extension	MediaContinuityKit.AudioStreamAVConference	MediaStream		

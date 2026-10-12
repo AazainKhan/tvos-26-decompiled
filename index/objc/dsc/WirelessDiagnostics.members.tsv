@@ -1,0 +1,24 @@
+owner	kind	declaration
+AWDMetricContainer	property	@property (readonly, nonatomic) unsigned int metricId;
+AWDMetricContainer	property	@property (retain, nonatomic) PBCodable *metric;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id boolValue:(_Bool)value;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id integerValue:(long long)value;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id numberValue:(id)value;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id object:(id)object;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id stringValue:(id)value;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id unsignedIntegerValue:(unsigned long long)value;
+AWDMetricManager	+	+ (void)postMetricWithId:(unsigned long long)id;
+AWDObserver	-	- (id)init;
+AWDObserver	-	- (void)setConfiguration:(id)configuration callback:(id /* block */)callback;
+AWDObserver	-	- (void)setDelegate:(id)delegate queue:(struct dispatch_queue_s *)queue;
+AWDServerConnection	-	- (_Bool)registerConfigChangeCallback:(id /* block */)callback;
+AWDServerConnection	-	- (_Bool)registerQueriableMetric:(unsigned int)metric callback:(id /* block */)callback;
+AWDServerConnection	-	- (_Bool)registerQueriableMetricCallback:(id /* block */)callback forIdentifier:(unsigned int)identifier;
+AWDServerConnection	-	- (_Bool)submitMetric:(id)metric;
+AWDServerConnection	-	- (id)getComponentConfigurationParameters;
+AWDServerConnection	-	- (id)initWithComponentId:(unsigned int)id andBlockOnConfiguration:(_Bool)configuration;
+AWDServerConnection	-	- (id)initWithComponentId:(unsigned int)id;
+AWDServerConnection	-	- (id)newMetricContainerWithIdentifier:(unsigned int)identifier;
+AWDServerConnection	-	- (unsigned long long)getAWDTimestamp;
+AWDServerConnection	-	- (void)flushToQueue:(struct dispatch_queue_s *)queue block:(id /* block */)block;
+AWDServerConnection	-	- (void)registerComponentParametersChangeCallback:(id /* block */)callback;

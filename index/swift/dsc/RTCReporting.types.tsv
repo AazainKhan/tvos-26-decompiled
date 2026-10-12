@@ -1,0 +1,162 @@
+kind	type	conformance	member_kind	member
+enum	RTCReporting.EventValue			
+enum	RTCReporting.EventValue		case	string
+enum	RTCReporting.EventValue		case	int
+enum	RTCReporting.EventValue		case	uint
+enum	RTCReporting.EventValue		case	double
+enum	RTCReporting.EventValue		case	bool
+enum	RTCReporting.EventValue		case	uuid
+enum	RTCReporting.EventValue		case	array
+enum	RTCReporting.EventValue		case	dictionary
+struct	RTCReporting.Event			
+struct	RTCReporting.Event		var	dict
+struct	RTCReporting.Event		var	isRealtime
+enum	RTCReporting.Event.Keys			
+class	RTCReporting.Session			
+class	RTCReporting.Session		let	clientName
+class	RTCReporting.Session		let	serviceName
+class	RTCReporting.Session		let	clientType
+class	RTCReporting.Session		let	allowedCategories
+class	RTCReporting.Session		let	deniedCategories
+class	RTCReporting.Session		var	generatedSessionID
+class	RTCReporting.Session		let	connection
+class	RTCReporting.Session		let	addingExtraFields
+class	RTCReporting.Session		var	legacyConfig
+class	RTCReporting.Session		let	queue
+class	RTCReporting.Session		var	state
+class	RTCReporting.Session		var	quiesceHandler
+class	RTCReporting.Session		var	activeSends
+class	RTCReporting.Session		let	baseTime
+class	RTCReporting.Session		let	obfuscatedBaseTime
+enum	RTCReporting.Session.State			
+enum	RTCReporting.Session.State		case	disabled
+enum	RTCReporting.Session.State		case	active
+enum	RTCReporting.Session.State		case	ended
+struct	RTCReporting.LegacyConfig			
+struct	RTCReporting.LegacyConfig		var	clientVersion
+struct	RTCReporting.LegacyConfig		var	clientSessionID
+struct	RTCReporting.LegacyConfig		var	hierarchyToken
+struct	RTCReporting.LegacyConfig		var	bundleID
+struct	RTCReporting.LegacyConfig		var	ephemeralSessionID
+struct	RTCReporting.LegacyConfig		var	samplingUUID
+struct	RTCReporting.LegacyConfig		var	containsRealtime
+struct	RTCReporting.LegacyConfig		var	isEager
+struct	RTCReporting.LegacyConfig		var	overrideSampling
+enum	RTCReporting.Session.SessionError			
+enum	RTCReporting.Session.SessionError		case	creationError
+enum	RTCReporting.Session.SessionError		case	invalidReply
+enum	RTCReporting.Session.SessionError		case	unauthorized
+struct	RTCReporting.LegacyHierarchyToken			
+struct	RTCReporting.LegacyHierarchyToken		var	level
+struct	RTCReporting.LegacyHierarchyToken		var	token
+class	RTCReporting.ConnectionManager			
+class	RTCReporting.ConnectionManager		let	connectionQueue
+class	RTCReporting.ConnectionManager		var	_rtcdConnection
+class	RTCReporting.ConnectionManager		var	_connectionLock
+class	RTCReporting.ConnectionManager		var	lazy
+class	RTCReporting._RTCReportingS	NSObject		
+class	RTCReporting._RTCReportingS	NSObject	var	messageLoggingBlock
+class	RTCReporting._RTCReportingS	NSObject	var	messageSentDelegate
+class	RTCReporting._RTCReportingS	NSObject	let	lock
+class	RTCReporting._RTCReportingS	NSObject	var	session
+class	RTCReporting._RTCReportingS	NSObject	var	configured
+class	RTCReporting._RTCReportingS	NSObject	let	connectionManager
+class	RTCReporting._RTCReportingS	NSObject	var	generatedSessionID
+class	RTCReporting._RTCReportingS	NSObject	let	sessionInfo
+class	RTCReporting._RTCReportingS	NSObject	var	userInfo
+class	RTCReporting._RTCReportingS	NSObject	var	deprecatedPeriodic
+class	RTCReporting._RTCReportingS	NSObject	var	legacyAVCSupport
+class	RTCReporting._RTCReportingS	NSObject	var	earlyCachedEvents
+class	RTCReporting._RTCReportingS	NSObject	var	completelyDisabled
+class	RTCReporting._RTCReportingS	NSObject	var	extraFields
+class	RTCReporting._RTCReportingS	NSObject	var	terminated
+class	RTCReporting._RTCReportingS	NSObject	var	sentEventCount
+class	RTCReporting._RTCReportingS	NSObject	var	activeTasks
+enum	RTCReporting._RTCReportingS.Error			
+enum	RTCReporting._RTCReportingS.Error		case	noSession
+enum	RTCReporting._RTCReportingS.Error		case	invalidParameter
+enum	RTCReporting.LegacyClientError			
+enum	RTCReporting.LegacyClientError		case	invalidPayload
+class	RTCUtility.Queue			
+class	RTCUtility.Queue		let	_streamContinuation
+class	RTCUtility.Queue		let	_task
+enum	RTCUtility.XPCObject			
+enum	RTCUtility.XPCObject		case	connection
+enum	RTCUtility.XPCObject		case	endpoint
+enum	RTCUtility.XPCObject		case	bool
+enum	RTCUtility.XPCObject		case	int64
+enum	RTCUtility.XPCObject		case	uint64
+enum	RTCUtility.XPCObject		case	double
+enum	RTCUtility.XPCObject		case	date
+enum	RTCUtility.XPCObject		case	data
+enum	RTCUtility.XPCObject		case	string
+enum	RTCUtility.XPCObject		case	uuid
+enum	RTCUtility.XPCObject		case	shmem
+enum	RTCUtility.XPCObject		case	array
+enum	RTCUtility.XPCObject		case	dictionary
+enum	RTCUtility.XPCObject		case	null
+struct	RTCUtility.RTCXPCDictionary			
+struct	RTCUtility.RTCXPCDictionary		let	dict
+enum	RTCUtility.MessageKeys			
+struct	RTCUtility.XPCError			
+struct	RTCUtility.XPCError		let	raw
+struct	RTCUtility.XPCIncomingConnection			
+struct	RTCUtility.XPCIncomingConnection		let	conn
+class	RTCUtility.XPCConnection			
+class	RTCUtility.XPCConnection		let	conn
+class	RTCUtility.XPCConnection		var	delegate
+class	RTCUtility.XPCConnection		let	targetQ
+struct	RTCUtility.XPCMessage			
+struct	RTCUtility.XPCMessage		let	dict
+struct	RTCUtility.XPCMessage		let	ty
+enum	RTCUtility.XPCMessage.MessageType			
+enum	RTCUtility.XPCMessage.MessageType		case	CreateSession
+enum	RTCUtility.XPCMessage.MessageType		case	EndSession
+enum	RTCUtility.XPCMessage.MessageType		case	SendEvent
+enum	RTCUtility.XPCMessage.MessageType		case	RegenerateDNUIdentifier
+enum	RTCUtility.XPCMessage.MessageType		case	SetDigestKey
+protocol	RTCUtility.XPCConnectionDelegate			
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByFloatLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByStringLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByBooleanLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByArrayLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance RTCReporting.EventValue	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance RTCReporting.Event	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance RTCReporting.Session	Swift.Actor		
+protocol	conformance Session.State	Swift.Hashable		
+protocol	conformance Session.State	Swift.Equatable		
+protocol	conformance SessionError	Swift.CustomStringConvertible		
+protocol	conformance SessionError	Swift.Error		
+protocol	conformance RTCReporting.ConnectionManager	RTCUtility.XPCConnectionDelegate		
+protocol	conformance _RTCReportingS.Error	Foundation.CustomNSError		
+protocol	conformance _RTCReportingS.Error	Swift.RawRepresentable		
+protocol	conformance _RTCReportingS.Error	Swift.Hashable		
+protocol	conformance _RTCReportingS.Error	Swift.Equatable		
+protocol	conformance _RTCReportingS.Error	Swift.Error		
+protocol	conformance RTCReporting.LegacyClientError	Foundation.LocalizedError		
+protocol	conformance RTCReporting.LegacyClientError	Swift.Error		
+protocol	conformance RTCUtility.Queue	Swift.Actor		
+protocol	conformance RTCUtility.XPCObject	Swift.Equatable		
+protocol	conformance RTCUtility.RTCXPCDictionary	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance RTCUtility.XPCError	Foundation.LocalizedError		
+protocol	conformance RTCUtility.XPCError	Swift.CustomStringConvertible		
+protocol	conformance RTCUtility.XPCError	Swift.Error		
+protocol	conformance XPCMessage.MessageType	Swift.Equatable		
+protocol	conformance XPCMessage.MessageType	Swift.Hashable		
+protocol	conformance XPCMessage.MessageType	Swift.RawRepresentable		
+protocol	conformance RTCUtility.XPCMessage	Swift.CustomStringConvertible		
+extension	RTCReporting.EventValue	ExpressibleByFloatLiteral		
+extension	RTCReporting.EventValue	ExpressibleByStringLiteral		
+extension	RTCReporting.EventValue	ExpressibleByBooleanLiteral		
+extension	RTCReporting.EventValue	ExpressibleByIntegerLiteral		
+extension	RTCReporting.EventValue	ExpressibleByArrayLiteral		
+extension	RTCReporting.EventValue	ExpressibleByDictionaryLiteral		
+extension	RTCReporting.EventValue	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	RTCReporting.EventValue	ExpressibleByUnicodeScalarLiteral		
+extension	RTCReporting.Event	ExpressibleByDictionaryLiteral		
+extension	RTCReporting._RTCReportingS.Error	RawRepresentable		
+extension	RTCUtility.RTCXPCDictionary	ExpressibleByDictionaryLiteral		
+extension	RTCUtility.XPCMessage.MessageType	RawRepresentable		

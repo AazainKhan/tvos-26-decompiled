@@ -1,0 +1,52 @@
+kind	type	conformance	member_kind	member
+class	contactsd.RemoteFavoritesStore			
+class	contactsd.RemoteFavoritesStore		let	remoteKeyValueStore
+class	contactsd.RemoteFavoritesStore		let	snapshotVersionKey
+class	contactsd.RemoteFavoritesStore		let	entriesKey
+class	contactsd.RemoteFavoritesStore		var	isAvailable
+class	contactsd.FavoritesPersistenceService	NSObject		
+class	contactsd.FavoritesPersistenceService	NSObject	let	queue
+class	contactsd.FavoritesPersistenceService	NSObject	let	localStore
+class	contactsd.FavoritesPersistenceService	NSObject	let	remoteStore
+class	contactsd.FavoritesPersistenceService	NSObject	let	storesSyncer
+class	contactsd.FavoritesPersistenceService	NSObject	var	cancellables
+class	contactsd.FavoritesStoresSyncer			
+class	contactsd.FavoritesStoresSyncer		let	queue
+class	contactsd.FavoritesStoresSyncer		let	localStore
+class	contactsd.FavoritesStoresSyncer		let	remoteStore
+class	contactsd.FavoritesStoresSyncer		var	remoteStoreIsAvailable
+class	contactsd.FavoritesStoresSyncer		var	cancellables
+class	contactsd.FavoritesStoresSyncer		let	contactStore
+class	contactsd.FavoritesPersistenceServiceWrapper	NSObject		
+class	contactsd.FavoritesPersistenceServiceWrapper	NSObject	let	lock
+class	contactsd.FavoritesPersistenceServiceWrapper	NSObject	var	_serviceImpl
+class	contactsd.CommLimitsAskToController	NSObject		
+enum	contactsd.CommLimitsAskToController.Error			
+enum	contactsd.CommLimitsAskToController.Error		case	askToUnavailable
+enum	contactsd.CommLimitsAskToController.Error		case	missingAskToSymbols
+enum	contactsd.CommLimitsAskToController.Error		case	emptyHandles
+class	contactsd.LocalFavoritesStore			
+class	contactsd.LocalFavoritesStore		let	file
+class	contactsd.LocalFavoritesStore		let	lock
+class	contactsd.LocalFavoritesStore		let	snapshotVersionKey
+class	contactsd.LocalFavoritesStore		let	entriesKey
+class	contactsd.LocalFavoritesStore		var	needsSave
+class	contactsd.LocalFavoritesStore		var	_ignoreForSyncCount
+class	contactsd.LocalFavoritesStore		var	_snapshotVersion
+class	contactsd.LocalFavoritesStore		var	_entries
+enum	contactsd.LocalFavoritesStore.Errors			
+enum	contactsd.LocalFavoritesStore.Errors		case	invalidFavoritesFile
+enum	contactsd.LocalFavoritesStore.Errors		case	invalidEntries
+protocol	FavoritesStoresSyncer.Store			
+protocol	conformance contactsd.RemoteFavoritesStore	protocol descriptor for ObservableObject		
+protocol	conformance contactsd.RemoteFavoritesStore	contactsd.FavoritesStoresSyncer.Store		
+protocol	conformance CommLimitsAskToController.Error	protocol descriptor for Hashable		
+protocol	conformance CommLimitsAskToController.Error	protocol descriptor for Equatable		
+protocol	conformance CommLimitsAskToController.Error	protocol descriptor for Error		
+protocol	conformance contactsd.LocalFavoritesStore	contactsd.FavoritesStoresSyncer.Store		
+protocol	conformance contactsd.LocalFavoritesStore	protocol descriptor for ObservableObject		
+protocol	conformance LocalFavoritesStore.Errors	protocol descriptor for Hashable		
+protocol	conformance LocalFavoritesStore.Errors	protocol descriptor for Equatable		
+protocol	conformance LocalFavoritesStore.Errors	protocol descriptor for Error		
+extension	contactsd.RemoteFavoritesStore	ObservableObject		
+extension	contactsd.LocalFavoritesStore	ObservableObject		

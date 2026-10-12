@@ -1,0 +1,433 @@
+kind	type	conformance	member_kind	member
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration			
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	ndfEnabled
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_discoveryIsAllowed
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_browseDuration
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_bonjourProbeTimeout
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_cloudKitTimerInterval
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_discoveryTimerIntervalMinimum
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_discoveryTimerIntervalMaximum
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_pollingIsAllowed
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_misconfigurationDetectionIsAllowed
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_durationBetweenSuccessivePolls
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_primaryResidentChangeDebounceInterval
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_telemetrySubmissionTimeInterval
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_deviceTypeToDiscover
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_scheduleCleanupTask
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_staleRecordCleanupThreshold
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_selfRecordUpdateThreshold
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_cleanupActivityInterval
+class	SymptomNetworkDiagnosticsCore.NDFConfiguration		var	_cleanupActivityDelay
+class	SymptomNetworkDiagnosticsCore.NDFAdminController			
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	clientController
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	actorManager
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	deviceManager
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	detectionManager
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	eventController
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	distributionController
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		var	persistenceController
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		var	lazy
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFAdminController		let	ndfEnabled
+class	SymptomNetworkDiagnosticsCore.NDFClientController			
+class	SymptomNetworkDiagnosticsCore.NDFClientController		var	activeSubscriptions
+class	SymptomNetworkDiagnosticsCore.NDFCorePersistenceController			
+class	SymptomNetworkDiagnosticsCore.NDFCorePersistenceController		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFCorePersistenceController		let	storeCoordinator
+class	SymptomNetworkDiagnosticsCore.NDFCorePersistenceController		var	lazy
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController			
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		var	lazy
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		var	periodicTimer
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		var	lazy
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		var	cloudKitTimer
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		var	cloudKitDeviceUpdates
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		let	cloudKitOperationRequestsQueueContinuation
+class	SymptomNetworkDiagnosticsCore.NDFDistributionController		let	cloudKitOperationRequestsTask
+class	SymptomNetworkDiagnosticsCore.NDFEventController			
+class	SymptomNetworkDiagnosticsCore.NDFEventController		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFEventController		var	knownEvents
+class	SymptomNetworkDiagnosticsCore.NDFEventController		let	telemetryController
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController			
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController		var	telemetryTimer
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController		let	timerQueue
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController		let	telemetryInterval
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController		var	lastTelemetrySubmissionTime
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController		var	isCollectingTelemetry
+class	SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController		var	eventMetrics
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType			
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	none
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	radioLinkCongestion
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	dnsServerOutage
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	dhcpAcquisitionFailure
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	internetOutage
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	wifiDisassociation
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	networkMisconfigGeneric
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	networkMisconfigDoubleNAT
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	networkMisconfigP2PBlocked
+enum	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType		case	any
+struct	SymptomNetworkDiagnosticsCore.NDFMetricsPayload			
+struct	SymptomNetworkDiagnosticsCore.NDFMetricsPayload		var	startTime
+struct	SymptomNetworkDiagnosticsCore.NDFMetricsPayload		var	activeDuration
+struct	SymptomNetworkDiagnosticsCore.NDFMetricsPayload		var	activeCount
+enum	SymptomNetworkDiagnosticsCore.NDFAnalyticsKeys			
+class	SymptomNetworkDiagnosticsCore.NDFDetectionManager			
+class	SymptomNetworkDiagnosticsCore.NDFDetectionManager		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFDetectionManager		let	bonjourProbe
+struct	SymptomNetworkDiagnosticsCore.NDFDevice			
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		let	deviceID
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	lastUpdated
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	deviceModel
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	groupUUID
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	netSignatureV4
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	netSignatureV6
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	ssidObscured
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	isPrimaryResident
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	canReachPrimaryResident
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	dnsServers
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	natCountV4
+struct	SymptomNetworkDiagnosticsCore.NDFDevice		var	multicastTrafficBlocked
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	deviceID
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	lastUpdated
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	deviceModel
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	groupUUID
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	netSignatureV4
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	netSignatureV6
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	ssidObscured
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	isPrimaryResident
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	canReachPrimaryResident
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	dnsServers
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	natCountV4
+enum	SymptomNetworkDiagnosticsCore.NDFDevice.CodingKeys		case	multicastTrafficBlocked
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager			
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		var	devices
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		var	groupIDToPrimaryResidentIDMap
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		var	interfacesOfInterest
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		let	dnsServerRequestsQueueContinuation
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		let	dnsServerRequestsTask
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		let	deviceUpdateRequestsQueueContinuation
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		let	deviceUpdateRequestsTask
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		var	primaryResidentLastUpdated
+class	SymptomNetworkDiagnosticsCore.NDFDeviceManager		var	hasTelemetryCollectionStarted
+struct	SymptomNetworkDiagnosticsCore.NDFActorVersion			
+struct	SymptomNetworkDiagnosticsCore.NDFActorCapability			
+struct	SymptomNetworkDiagnosticsCore.NDFActorCapability		let	actorVersion
+class	SymptomNetworkDiagnosticsCore.NDFActor			
+class	SymptomNetworkDiagnosticsCore.NDFActor		let	id
+class	SymptomNetworkDiagnosticsCore.NDFActor		let	actorSystem
+class	SymptomNetworkDiagnosticsCore.NDFActor		let	logger
+enum	SymptomNetworkDiagnosticsCore.NDFActorCapability.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorCapability.CodingKeys		case	actorVersion
+enum	SymptomNetworkDiagnosticsCore.NDFActorError			
+enum	SymptomNetworkDiagnosticsCore.NDFActorError		case	unknownRequestType
+enum	SymptomNetworkDiagnosticsCore.NDFActorError		case	invalidEndpoint
+enum	SymptomNetworkDiagnosticsCore.NDFActorError		case	missingIDSDeviceID
+class	SymptomNetworkDiagnosticsCore.NDFActorManager			
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		var	ndfActor
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		var	deviceDiscoveryManager
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		let	actorSystem
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		var	pollingInProgress
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		var	discoveryTimer
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		var	pollingTask
+class	SymptomNetworkDiagnosticsCore.NDFActorManager		var	currentDiscoveryInterval
+struct	SymptomNetworkDiagnosticsCore.NDFActorRequest			
+struct	SymptomNetworkDiagnosticsCore.NDFActorRequest		let	deviceID
+struct	SymptomNetworkDiagnosticsCore.NDFActorRequest		let	capability
+struct	SymptomNetworkDiagnosticsCore.NDFActorRequest		let	requestType
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	message
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	deviceUpdate
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	noteEvent
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	ping
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	pollActiveEvents
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	queryDeviceState
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType		case	queryDeviceStateAndActiveEvents
+struct	SymptomNetworkDiagnosticsCore.NDFActorResponse<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>		
+struct	SymptomNetworkDiagnosticsCore.NDFActorResponse<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>	let	deviceID
+struct	SymptomNetworkDiagnosticsCore.NDFActorResponse<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>	let	capability
+struct	SymptomNetworkDiagnosticsCore.NDFActorResponse<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>	let	responseData
+struct	SymptomNetworkDiagnosticsCore.NDFEvent			
+struct	SymptomNetworkDiagnosticsCore.NDFEvent		var	eventType
+struct	SymptomNetworkDiagnosticsCore.NDFEvent		var	eventContext
+struct	SymptomNetworkDiagnosticsCore.NDFEvent		var	timestamp
+struct	SymptomNetworkDiagnosticsCore.NDFEvent		let	deviceID
+struct	SymptomNetworkDiagnosticsCore.NDFEvent		let	groupUUID
+struct	SymptomNetworkDiagnosticsCore.NDFEvent		let	eventUUID
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType		case	networkMisconfiguration
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType		case	dnsServerOutage
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType		case	radioLinkCongestion
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType		case	dhcpAcquisitionFailure
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType		case	internetOutage
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType		case	wifiDisassociation
+struct	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadDNSOutage			
+struct	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadDNSOutage		var	unresponsiveServers
+struct	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration			
+struct	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration		var	sameNetwork
+struct	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration		var	doubleNAT
+struct	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration		var	p2pTrafficBlocked
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventContext			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventContext		case	invalid
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventContext		case	started
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventContext		case	inProgress
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventContext		case	ended
+struct	SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse			
+struct	SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse		var	timestamp
+struct	SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo			
+struct	SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo		let	device
+struct	SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo		let	activeEvents
+enum	SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo.CodingKeys		case	device
+enum	SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo.CodingKeys		case	activeEvents
+enum	SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse.CodingKeys		case	timestamp
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys		case	eventType
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys		case	eventContext
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys		case	timestamp
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys		case	deviceID
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys		case	groupUUID
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.CodingKeys		case	eventUUID
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys		case	radioLinkCongestion
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys		case	networkMisconfiguration
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys		case	dnsServerOutage
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys		case	dhcpAcquisitionFailure
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys		case	internetOutage
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.CodingKeys		case	wifiDisassociation
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.RadioLinkCongestionCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NetworkMisconfigurationCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NetworkMisconfigurationCodingKeys		case	_0
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.DnsServerOutageCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.DnsServerOutageCodingKeys		case	_0
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.DhcpAcquisitionFailureCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.InternetOutageCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.WifiDisassociationCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration.CodingKeys		case	sameNetwork
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration.CodingKeys		case	doubleNAT
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadNetworkMisconfiguration.CodingKeys		case	p2pTrafficBlocked
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadDNSOutage.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventType.NDFEventPayloadDNSOutage.CodingKeys		case	unresponsiveServers
+enum	SymptomNetworkDiagnosticsCore.NDFActorResponse.CodingKeys<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>		
+enum	SymptomNetworkDiagnosticsCore.NDFActorResponse.CodingKeys<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>	case	deviceID
+enum	SymptomNetworkDiagnosticsCore.NDFActorResponse.CodingKeys<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>	case	capability
+enum	SymptomNetworkDiagnosticsCore.NDFActorResponse.CodingKeys<A	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol>	case	responseData
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	ping
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	message
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	deviceUpdate
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	noteEvent
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	pollActiveEvents
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	queryDeviceState
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.CodingKeys		case	queryDeviceStateAndActiveEvents
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.PingCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.MessageCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.MessageCodingKeys		case	_0
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.DeviceUpdateCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.DeviceUpdateCodingKeys		case	_0
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.NoteEventCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.NoteEventCodingKeys		case	_0
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.PollActiveEventsCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.QueryDeviceStateCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequestType.QueryDeviceStateAndActiveEventsCodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequest.CodingKeys			
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequest.CodingKeys		case	deviceID
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequest.CodingKeys		case	capability
+enum	SymptomNetworkDiagnosticsCore.NDFActorRequest.CodingKeys		case	requestType
+class	SymptomNetworkDiagnosticsCore.NDFDeviceDiscoveryManager			
+class	SymptomNetworkDiagnosticsCore.NDFDeviceDiscoveryManager		let	logger
+class	SymptomNetworkDiagnosticsCore.NDFDeviceDiscoveryManager		var	discoveredEndpoints
+class	SymptomNetworkDiagnosticsCore.NDFBonjourProbe			
+class	SymptomNetworkDiagnosticsCore.NDFBonjourProbe		let	serviceType
+class	SymptomNetworkDiagnosticsCore.NDFBonjourProbe		let	domain
+class	SymptomNetworkDiagnosticsCore.NDFBonjourProbe		var	bonjourBrowser
+class	SymptomNetworkDiagnosticsCore.NDFBonjourProbe		let	browserQueue
+enum	SymptomNetworkDiagnosticsCore.NDFConstants			
+enum	SymptomNetworkDiagnosticsCore.NDFConstants.HomeNetworking			
+enum	SymptomNetworkDiagnosticsCore.NDFConstants.DeviceRecord			
+enum	SymptomNetworkDiagnosticsCore.SymptomsFeatures			
+enum	SymptomNetworkDiagnosticsCore.SymptomsFeatures		case	NDF
+protocol	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol			
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFAdminController	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFClientController	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFCorePersistenceController	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFCorePersistenceController	SymptomNetworkDiagnosticsCommon.NDFXPCActivityDelegate		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDistributionController	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFEventController	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFPeriodicTelemetryController	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	Swift.Equatable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	Swift.Hashable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	Swift.RawRepresentable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	Swift.CustomStringConvertible		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	Swift.CaseIterable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDetectionManager	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDevice	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDevice	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDeviceManager	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorCapability	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorCapability	Swift.Encodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorCapability	Swift.CustomStringConvertible		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Distributed.DistributedActor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Network.NWSingletonPublishedActor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Swift.Hashable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Swift.Identifiable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Swift.Equatable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Swift.Encodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActor	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorError	Swift.Error		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorManager	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorRequest	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorRequest	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorRequest	Swift.Encodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorRequestType	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorRequestType	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorRequestType	Swift.Encodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorResponse	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorResponse	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorResponse	Swift.Encodable		
+protocol	conformance NDFEventType.NDFEventPayloadDNSOutage	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance NDFEventType.NDFEventPayloadDNSOutage	Swift.Decodable		
+protocol	conformance NDFEventType.NDFEventPayloadDNSOutage	Swift.Encodable		
+protocol	conformance NDFEventType.NDFEventPayloadNetworkMisconfiguration	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance NDFEventType.NDFEventPayloadNetworkMisconfiguration	Swift.Decodable		
+protocol	conformance NDFEventType.NDFEventPayloadNetworkMisconfiguration	Swift.Encodable		
+protocol	conformance NDFEvent.NDFEventType	Swift.Equatable		
+protocol	conformance NDFEvent.NDFEventType	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance NDFEvent.NDFEventType	Swift.Decodable		
+protocol	conformance NDFEvent.NDFEventType	Swift.Encodable		
+protocol	conformance NDFEvent.NDFEventContext	Swift.Equatable		
+protocol	conformance NDFEvent.NDFEventContext	Swift.Hashable		
+protocol	conformance NDFEvent.NDFEventContext	Swift.RawRepresentable		
+protocol	conformance NDFEvent.NDFEventContext	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance NDFEvent.NDFEventContext	Swift.Decodable		
+protocol	conformance NDFEvent.NDFEventContext	Swift.Encodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFEvent	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFEvent	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFEvent	Swift.Encodable		
+protocol	conformance Swift.String	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance Swift.Array	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDevice	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFActorGeneralResponse	Swift.Encodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo	SymptomNetworkDiagnosticsCore.NDFActorRequestResponseProtocol		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo	Swift.Decodable		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDeviceEventInfo	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance QueryDeviceStateAndActiveEventsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance QueryDeviceStateAndActiveEventsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance QueryDeviceStateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance QueryDeviceStateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PollActiveEventsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PollActiveEventsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoteEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoteEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoteEventCodingKeys	Swift.Hashable		
+protocol	conformance NoteEventCodingKeys	Swift.Equatable		
+protocol	conformance DeviceUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceUpdateCodingKeys	Swift.Hashable		
+protocol	conformance DeviceUpdateCodingKeys	Swift.Equatable		
+protocol	conformance MessageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MessageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MessageCodingKeys	Swift.Hashable		
+protocol	conformance MessageCodingKeys	Swift.Equatable		
+protocol	conformance PingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance WifiDisassociationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WifiDisassociationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InternetOutageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InternetOutageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DhcpAcquisitionFailureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DhcpAcquisitionFailureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DnsServerOutageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DnsServerOutageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DnsServerOutageCodingKeys	Swift.Hashable		
+protocol	conformance DnsServerOutageCodingKeys	Swift.Equatable		
+protocol	conformance NetworkMisconfigurationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NetworkMisconfigurationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NetworkMisconfigurationCodingKeys	Swift.Hashable		
+protocol	conformance NetworkMisconfigurationCodingKeys	Swift.Equatable		
+protocol	conformance RadioLinkCongestionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RadioLinkCongestionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RadioLinkCongestionCodingKeys	Swift.CodingKey		
+protocol	conformance NetworkMisconfigurationCodingKeys	Swift.CodingKey		
+protocol	conformance DnsServerOutageCodingKeys	Swift.CodingKey		
+protocol	conformance DhcpAcquisitionFailureCodingKeys	Swift.CodingKey		
+protocol	conformance InternetOutageCodingKeys	Swift.CodingKey		
+protocol	conformance WifiDisassociationCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PingCodingKeys	Swift.CodingKey		
+protocol	conformance MessageCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance NoteEventCodingKeys	Swift.CodingKey		
+protocol	conformance PollActiveEventsCodingKeys	Swift.CodingKey		
+protocol	conformance QueryDeviceStateCodingKeys	Swift.CodingKey		
+protocol	conformance QueryDeviceStateAndActiveEventsCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFDeviceDiscoveryManager	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.NDFBonjourProbe	Swift.Actor		
+protocol	conformance SymptomNetworkDiagnosticsCore.SymptomsFeatures	Swift.Equatable		
+protocol	conformance SymptomNetworkDiagnosticsCore.SymptomsFeatures	Swift.Hashable		
+protocol	conformance SymptomNetworkDiagnosticsCore.SymptomsFeatures	FeatureFlags.FeatureFlagsKey		
+extension	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	RawRepresentable		
+extension	SymptomNetworkDiagnosticsCore.NDFTelemetryEventType	CaseIterable		
+extension	SymptomNetworkDiagnosticsCore.NDFActor	DistributedActor		
+extension	SymptomNetworkDiagnosticsCore.NDFActor	Identifiable		
+extension	SymptomNetworkDiagnosticsCore.NDFEvent.NDFEventContext	RawRepresentable		

@@ -1,0 +1,580 @@
+kind	type	conformance	member_kind	member
+class	_StringProcessing.Compiler			
+class	_StringProcessing.Compiler		let	tree
+class	_StringProcessing.Compiler		var	options
+class	_StringProcessing.Compiler		var	compileOptions
+struct	_StringProcessing._CompileOptions			
+struct	_StringProcessing._CompileOptions		let	rawValue
+struct	_StringProcessing.AnyRegexOutput			
+struct	_StringProcessing.AnyRegexOutput		let	input
+struct	_StringProcessing.AnyRegexOutput		var	_elements
+struct	_StringProcessing.AnyRegexOutput.Element			
+struct	_StringProcessing.AnyRegexOutput.Element		let	representation
+struct	_StringProcessing.AnyRegexOutput.Element		let	input
+struct	_StringProcessing.Regex			
+struct	_StringProcessing.Regex		let	program
+class	_StringProcessing.Regex.Program			
+class	_StringProcessing.Regex.Program		var	_loweredProgramStorage
+class	_StringProcessing.Regex.Program		let	tree
+class	_StringProcessing.Regex.Program		var	compileOptions
+class	_StringProcessing.Regex.Program.ProgramBox			
+class	_StringProcessing.Regex.Program.ProgramBox		let	value
+enum	_StringProcessing.Regex._RegexInternalAction			
+enum	_StringProcessing.Regex._RegexInternalAction		case	addOptions
+enum	_StringProcessing.Regex._RegexInternalAction		case	recompile
+struct	_StringProcessing.DSLTree			
+struct	_StringProcessing.DSLTree		var	root
+struct	_StringProcessing.DSLTree.CustomCharacterClass			
+struct	_StringProcessing.DSLTree.CustomCharacterClass		var	members
+struct	_StringProcessing.DSLTree.CustomCharacterClass		var	isInverted
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member			
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	atom
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	range
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	custom
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	quotedLiteral
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	trivia
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	intersection
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	subtraction
+enum	_StringProcessing.DSLTree.CustomCharacterClass.Member		case	symmetricDifference
+enum	_StringProcessing.DSLTree.Atom			
+enum	_StringProcessing.DSLTree.Atom		case	char
+enum	_StringProcessing.DSLTree.Atom		case	scalar
+enum	_StringProcessing.DSLTree.Atom		case	characterClass
+enum	_StringProcessing.DSLTree.Atom		case	assertion
+enum	_StringProcessing.DSLTree.Atom		case	backreference
+enum	_StringProcessing.DSLTree.Atom		case	symbolicReference
+enum	_StringProcessing.DSLTree.Atom		case	changeMatchingOptions
+enum	_StringProcessing.DSLTree.Atom		case	unconverted
+enum	_StringProcessing.DSLTree.Atom		case	any
+enum	_StringProcessing.DSLTree.Atom		case	anyNonNewline
+enum	_StringProcessing.DSLTree.Atom		case	dot
+enum	_StringProcessing.DSLTree.Atom.Assertion			
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	startOfSubject
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	endOfSubjectBeforeNewline
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	endOfSubject
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	resetStartOfMatch
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	firstMatchingPositionInSubject
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	textSegment
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	notTextSegment
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	startOfLine
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	endOfLine
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	caretAnchor
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	dollarAnchor
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	wordBoundary
+enum	_StringProcessing.DSLTree.Atom.Assertion		case	notWordBoundary
+enum	_StringProcessing.DSLTree.Atom.CharacterClass			
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	digit
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	notDigit
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	horizontalWhitespace
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	notHorizontalWhitespace
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	newlineSequence
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	notNewline
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	whitespace
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	notWhitespace
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	verticalWhitespace
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	notVerticalWhitespace
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	word
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	notWord
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	anyGrapheme
+enum	_StringProcessing.DSLTree.Atom.CharacterClass		case	anyUnicodeScalar
+struct	_StringProcessing.ReferenceID			
+struct	_StringProcessing.ReferenceID		var	base
+enum	_StringProcessing.DSLTree._AST			
+struct	_StringProcessing.DSLTree._AST.GroupKind			
+struct	_StringProcessing.DSLTree._AST.GroupKind		var	ast
+struct	_StringProcessing.DSLTree._AST.ConditionKind			
+struct	_StringProcessing.DSLTree._AST.ConditionKind		var	ast
+struct	_StringProcessing.DSLTree._AST.QuantificationKind			
+struct	_StringProcessing.DSLTree._AST.QuantificationKind		var	ast
+struct	_StringProcessing.DSLTree._AST.QuantificationAmount			
+struct	_StringProcessing.DSLTree._AST.QuantificationAmount		var	ast
+struct	_StringProcessing.DSLTree._AST.ASTNode			
+struct	_StringProcessing.DSLTree._AST.ASTNode		var	ast
+struct	_StringProcessing.DSLTree._AST.AbsentFunction			
+struct	_StringProcessing.DSLTree._AST.AbsentFunction		var	ast
+struct	_StringProcessing.DSLTree._AST.Reference			
+struct	_StringProcessing.DSLTree._AST.Reference		var	ast
+struct	_StringProcessing.DSLTree._AST.MatchingOptionSequence			
+struct	_StringProcessing.DSLTree._AST.MatchingOptionSequence		var	ast
+struct	_StringProcessing.DSLTree._AST.Atom			
+struct	_StringProcessing.DSLTree._AST.Atom		var	ast
+struct	_StringProcessing.Regex.Match			
+struct	_StringProcessing.Regex.Match		let	anyRegexOutput
+struct	_StringProcessing.Regex.Match		let	range
+struct	_StringProcessing.RegexSemanticLevel			
+struct	_StringProcessing.RegexSemanticLevel		var	base
+struct	_StringProcessing.RegexWordBoundaryKind			
+struct	_StringProcessing.RegexWordBoundaryKind		var	base
+struct	_StringProcessing.RegexRepetitionBehavior			
+struct	_StringProcessing.RegexRepetitionBehavior		var	kind
+struct	_StringProcessing._RegexFactory			
+enum	_StringProcessing.RegexRepetitionBehavior.Kind			
+enum	_StringProcessing.RegexRepetitionBehavior.Kind		case	eager
+enum	_StringProcessing.RegexRepetitionBehavior.Kind		case	reluctant
+enum	_StringProcessing.RegexRepetitionBehavior.Kind		case	possessive
+enum	_StringProcessing.RegexWordBoundaryKind.Representation			
+enum	_StringProcessing.RegexWordBoundaryKind.Representation		case	unicodeLevel1
+enum	_StringProcessing.RegexWordBoundaryKind.Representation		case	unicodeLevel2
+enum	_StringProcessing.RegexSemanticLevel.Representation			
+enum	_StringProcessing.RegexSemanticLevel.Representation		case	graphemeCluster
+enum	_StringProcessing.RegexSemanticLevel.Representation		case	unicodeScalar
+struct	_StringProcessing.MatchingOptions			
+struct	_StringProcessing.MatchingOptions		var	stack
+struct	_StringProcessing.DefaultSearcherState<A	Swift.Collection>		
+struct	_StringProcessing.DefaultSearcherState<A	Swift.Collection>	var	position
+struct	_StringProcessing.DefaultSearcherState<A	Swift.Collection>	let	end
+enum	_StringProcessing.DefaultSearcherState.Position<A	Swift.Collection>		
+enum	_StringProcessing.DefaultSearcherState.Position<A	Swift.Collection>	case	index
+enum	_StringProcessing.DefaultSearcherState.Position<A	Swift.Collection>	case	done
+enum	_StringProcessing.DSLTree.Node			
+enum	_StringProcessing.DSLTree.Node		case	orderedChoice
+enum	_StringProcessing.DSLTree.Node		case	concatenation
+enum	_StringProcessing.DSLTree.Node		case	capture
+enum	_StringProcessing.DSLTree.Node		case	nonCapturingGroup
+enum	_StringProcessing.DSLTree.Node		case	ignoreCapturesInTypedOutput
+enum	_StringProcessing.DSLTree.Node		case	conditional
+enum	_StringProcessing.DSLTree.Node		case	quantification
+enum	_StringProcessing.DSLTree.Node		case	customCharacterClass
+enum	_StringProcessing.DSLTree.Node		case	atom
+enum	_StringProcessing.DSLTree.Node		case	trivia
+enum	_StringProcessing.DSLTree.Node		case	quotedLiteral
+enum	_StringProcessing.DSLTree.Node		case	absentFunction
+enum	_StringProcessing.DSLTree.Node		case	convertedRegexLiteral
+enum	_StringProcessing.DSLTree.Node		case	consumer
+enum	_StringProcessing.DSLTree.Node		case	matcher
+enum	_StringProcessing.DSLTree.Node		case	characterPredicate
+enum	_StringProcessing.DSLTree.Node		case	empty
+enum	_StringProcessing.DSLTree.QuantificationKind			
+enum	_StringProcessing.DSLTree.QuantificationKind		case	explicit
+enum	_StringProcessing.DSLTree.QuantificationKind		case	syntax
+enum	_StringProcessing.DSLTree.QuantificationKind		case	default
+enum	_StringProcessing.RegexCompilationError			
+enum	_StringProcessing.RegexCompilationError		case	incorrectOutputType
+enum	_StringProcessing.RegexCompilationError		case	invalidCharacterClassRangeOperand
+enum	_StringProcessing.RegexCompilationError		case	uncapturedReference
+struct	_StringProcessing.AnyRegexOutput.ElementRepresentation			
+struct	_StringProcessing.AnyRegexOutput.ElementRepresentation		let	optionalDepth
+struct	_StringProcessing.AnyRegexOutput.ElementRepresentation		let	content
+struct	_StringProcessing.AnyRegexOutput.ElementRepresentation		var	name
+struct	_StringProcessing.AnyRegexOutput.ElementRepresentation		var	referenceID
+struct	_StringProcessing.AnyRegexOutput.ElementRepresentation		var	visibleInTypedOutput
+struct	_StringProcessing.Executor.Matches.Iterator			
+struct	_StringProcessing.Executor.Matches.Iterator		var	program
+struct	_StringProcessing.Executor.Matches.Iterator		var	processor
+struct	_StringProcessing.Executor.Matches.Iterator		var	finished
+struct	_StringProcessing.Executor.Matches			
+struct	_StringProcessing.Executor.Matches		var	program
+struct	_StringProcessing.Executor.Matches		var	input
+struct	_StringProcessing.Executor.Matches		var	subjectBounds
+struct	_StringProcessing.Executor.Matches		var	searchBounds
+struct	_StringProcessing.SplitSequence<A	_StringProcessing.CollectionSearcher>		
+struct	_StringProcessing.SplitSequence<A	_StringProcessing.CollectionSearcher>	let	ranges
+struct	_StringProcessing.SplitSequence<A	_StringProcessing.CollectionSearcher>	var	maxSplits
+struct	_StringProcessing.SplitSequence<A	_StringProcessing.CollectionSearcher>	var	omittingEmptySubsequences
+struct	_StringProcessing.RegexRangesSequence			
+struct	_StringProcessing.RegexRangesSequence		let	base
+struct	_StringProcessing.SubstringSearcher			
+struct	_StringProcessing.SubstringSearcher		let	text
+struct	_StringProcessing.SubstringSearcher		let	pattern
+struct	_StringProcessing.SubstringSearcher		var	state
+struct	_StringProcessing.RangesSequence<A	_StringProcessing.CollectionSearcher>		
+struct	_StringProcessing.RangesSequence<A	_StringProcessing.CollectionSearcher>	let	input
+struct	_StringProcessing.RangesSequence<A	_StringProcessing.CollectionSearcher>	let	searcher
+struct	_StringProcessing.ZSearcher<A	Swift.Collection>		
+struct	_StringProcessing.ZSearcher<A	Swift.Collection>	let	pattern
+struct	_StringProcessing.ZSearcher<A	Swift.Collection>	let	z
+struct	_StringProcessing.ZSearcher<A	Swift.Collection>	let	areEquivalent
+struct	_StringProcessing.MEProgram			
+struct	_StringProcessing.MEProgram		var	instructions
+struct	_StringProcessing.MEProgram		var	wholeMatchValueRegister
+struct	_StringProcessing.MEProgram		var	enableTracing
+struct	_StringProcessing.MEProgram		var	enableMetrics
+struct	_StringProcessing.MEProgram		let	captureList
+struct	_StringProcessing.MEProgram		let	referencedCaptureOffsets
+struct	_StringProcessing.MEProgram		var	initialOptions
+struct	_StringProcessing.MEProgram		var	canOnlyMatchAtStart
+struct	_StringProcessing.MEProgram		var	registers
+struct	_StringProcessing.MEProgram		var	storedCaptures
+struct	Swift.Range<A	Swift.Comparable>		
+struct	Swift.Range<A	Swift.Comparable>	let	lowerBound
+struct	Swift.Range<A	Swift.Comparable>	let	upperBound
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	Swift.PartialRangeFrom<A	Swift.Comparable>		
+struct	Swift.PartialRangeFrom<A	Swift.Comparable>	let	lowerBound
+struct	Swift.PartialRangeUpTo<A	Swift.Comparable>		
+struct	Swift.PartialRangeUpTo<A	Swift.Comparable>	let	upperBound
+struct	Swift.Range<A	Swift.Comparable>		
+struct	Swift.Range<A	Swift.Comparable>	let	lowerBound
+struct	Swift.Range<A	Swift.Comparable>	let	upperBound
+enum	_StringProcessing.PatternSegment			
+enum	_StringProcessing.PatternSegment		case	converted
+enum	_StringProcessing.PatternSegment		case	inconvertible
+enum	_StringProcessing.NodeToPrint			
+enum	_StringProcessing.NodeToPrint		case	dslNode
+enum	_StringProcessing.NodeToPrint		case	stringLiteral
+struct	_StringProcessing.DSLTree._Tree			
+struct	_StringProcessing.DSLTree._Tree		var	node
+enum	_StringProcessing._UTF8Register			
+enum	_StringProcessing._ElementRegister			
+struct	_StringProcessing.DSLTree.CustomCharacterClass.AsciiBitset			
+struct	_StringProcessing.DSLTree.CustomCharacterClass.AsciiBitset		let	isInverted
+struct	_StringProcessing.DSLTree.CustomCharacterClass.AsciiBitset		var	a
+struct	_StringProcessing.DSLTree.CustomCharacterClass.AsciiBitset		var	b
+struct	_StringProcessing.MEProgram.Builder.AddressFixup			
+struct	_StringProcessing.MEProgram.Builder.AddressFixup		var	first
+struct	_StringProcessing.MEProgram.Builder.AddressFixup		var	second
+struct	_StringProcessing.SentinelValue			
+struct	_StringProcessing.MEProgram.Builder			
+struct	_StringProcessing.MEProgram.Builder		var	instructions
+struct	_StringProcessing.MEProgram.Builder		var	enableTracing
+struct	_StringProcessing.MEProgram.Builder		var	enableMetrics
+struct	_StringProcessing.MEProgram.Builder		var	elements
+struct	_StringProcessing.MEProgram.Builder		var	utf8Contents
+struct	_StringProcessing.MEProgram.Builder		var	asciiBitsets
+struct	_StringProcessing.MEProgram.Builder		var	consumeFunctions
+struct	_StringProcessing.MEProgram.Builder		var	transformFunctions
+struct	_StringProcessing.MEProgram.Builder		var	matcherFunctions
+struct	_StringProcessing.MEProgram.Builder		var	addressTokens
+struct	_StringProcessing.MEProgram.Builder		var	addressFixups
+struct	_StringProcessing.MEProgram.Builder		var	nextIntRegister
+struct	_StringProcessing.MEProgram.Builder		var	nextValueRegister
+struct	_StringProcessing.MEProgram.Builder		var	nextPositionRegister
+struct	_StringProcessing.MEProgram.Builder		var	wholeMatchValue
+struct	_StringProcessing.MEProgram.Builder		var	nextCaptureRegister
+struct	_StringProcessing.MEProgram.Builder		var	failAddressToken
+struct	_StringProcessing.MEProgram.Builder		var	captureList
+struct	_StringProcessing.MEProgram.Builder		var	initialOptions
+struct	_StringProcessing.MEProgram.Builder		var	canOnlyMatchAtStart
+struct	_StringProcessing.MEProgram.Builder		var	unresolvedReferences
+struct	_StringProcessing.MEProgram.Builder		var	referencedCaptureOffsets
+struct	_StringProcessing.Compiler.ByteCodeGen			
+struct	_StringProcessing.Compiler.ByteCodeGen		var	options
+struct	_StringProcessing.Compiler.ByteCodeGen		var	builder
+struct	_StringProcessing.Compiler.ByteCodeGen		var	hasEmittedFirstMatchableAtom
+struct	_StringProcessing.Compiler.ByteCodeGen		let	compileOptions
+enum	_StringProcessing._Distance			
+struct	_StringProcessing.AssertionPayload			
+struct	_StringProcessing.AssertionPayload		let	rawValue
+enum	_StringProcessing.QuantifyPayload.PayloadType			
+enum	_StringProcessing.QuantifyPayload.PayloadType		case	asciiBitset
+enum	_StringProcessing.QuantifyPayload.PayloadType		case	asciiChar
+enum	_StringProcessing.QuantifyPayload.PayloadType		case	any
+enum	_StringProcessing.QuantifyPayload.PayloadType		case	builtinCC
+enum	_StringProcessing.Instruction.OpCode			
+enum	_StringProcessing.Instruction.OpCode		case	invalid
+enum	_StringProcessing.Instruction.OpCode		case	moveImmediate
+enum	_StringProcessing.Instruction.OpCode		case	moveCurrentPosition
+enum	_StringProcessing.Instruction.OpCode		case	restorePosition
+enum	_StringProcessing.Instruction.OpCode		case	branch
+enum	_StringProcessing.Instruction.OpCode		case	condBranchZeroElseDecrement
+enum	_StringProcessing.Instruction.OpCode		case	condBranchSamePosition
+enum	_StringProcessing.Instruction.OpCode		case	advance
+enum	_StringProcessing.Instruction.OpCode		case	match
+enum	_StringProcessing.Instruction.OpCode		case	matchScalar
+enum	_StringProcessing.Instruction.OpCode		case	matchUTF8
+enum	_StringProcessing.Instruction.OpCode		case	matchBitset
+enum	_StringProcessing.Instruction.OpCode		case	matchBuiltin
+enum	_StringProcessing.Instruction.OpCode		case	matchAnyNonNewline
+enum	_StringProcessing.Instruction.OpCode		case	consumeBy
+enum	_StringProcessing.Instruction.OpCode		case	assertBy
+enum	_StringProcessing.Instruction.OpCode		case	matchBy
+enum	_StringProcessing.Instruction.OpCode		case	save
+enum	_StringProcessing.Instruction.OpCode		case	saveAddress
+enum	_StringProcessing.Instruction.OpCode		case	clear
+enum	_StringProcessing.Instruction.OpCode		case	clearThrough
+enum	_StringProcessing.Instruction.OpCode		case	splitSaving
+enum	_StringProcessing.Instruction.OpCode		case	quantify
+enum	_StringProcessing.Instruction.OpCode		case	beginCapture
+enum	_StringProcessing.Instruction.OpCode		case	endCapture
+enum	_StringProcessing.Instruction.OpCode		case	transformCapture
+enum	_StringProcessing.Instruction.OpCode		case	captureValue
+enum	_StringProcessing.Instruction.OpCode		case	backreference
+enum	_StringProcessing.Instruction.OpCode		case	accept
+enum	_StringProcessing.Instruction.OpCode		case	fail
+struct	_StringProcessing.RangesSequence.Iterator<A	_StringProcessing.CollectionSearcher>		
+struct	_StringProcessing.RangesSequence.Iterator<A	_StringProcessing.CollectionSearcher>	let	base
+struct	_StringProcessing.RangesSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	state
+struct	_StringProcessing.RegexRangesSequence.Iterator			
+struct	_StringProcessing.RegexRangesSequence.Iterator		var	matchesBase
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>		
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	ranges
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	index
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	maxSplits
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	splitCounter
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	omittingEmptySubsequences
+struct	_StringProcessing.SplitSequence.Iterator<A	_StringProcessing.CollectionSearcher>	var	isDone
+struct	_StringProcessing.Processor.SavePoint			
+struct	_StringProcessing.Processor.SavePoint		var	pc
+struct	_StringProcessing.Processor.SavePoint		var	pos
+struct	_StringProcessing.Processor.SavePoint		var	quantifiedRange
+struct	_StringProcessing.Processor.SavePoint		var	isScalarSemantics
+struct	_StringProcessing.Processor.SavePoint		var	captureEnds
+struct	_StringProcessing.Processor.SavePoint		var	intRegisters
+struct	_StringProcessing.Processor.SavePoint		var	posRegisters
+struct	_StringProcessing.StringLiteralBuilder			
+struct	_StringProcessing.StringLiteralBuilder		var	contents
+enum	_StringProcessing._CharacterClassModel.Representation			
+enum	_StringProcessing._CharacterClassModel.Representation		case	any
+enum	_StringProcessing._CharacterClassModel.Representation		case	anyGrapheme
+enum	_StringProcessing._CharacterClassModel.Representation		case	digit
+enum	_StringProcessing._CharacterClassModel.Representation		case	horizontalWhitespace
+enum	_StringProcessing._CharacterClassModel.Representation		case	newlineSequence
+enum	_StringProcessing._CharacterClassModel.Representation		case	verticalWhitespace
+enum	_StringProcessing._CharacterClassModel.Representation		case	whitespace
+enum	_StringProcessing._CharacterClassModel.Representation		case	word
+struct	_StringProcessing._CharacterClassModel			
+struct	_StringProcessing._CharacterClassModel		let	cc
+struct	_StringProcessing._CharacterClassModel		let	matchLevel
+struct	_StringProcessing._CharacterClassModel		let	isStrictASCII
+struct	_StringProcessing._CharacterClassModel		let	isInverted
+struct	_StringProcessing.CaptureTransform			
+struct	_StringProcessing.CaptureTransform		let	argumentType
+struct	_StringProcessing.CaptureTransform		let	resultType
+struct	_StringProcessing.CaptureTransform		let	closure
+enum	_StringProcessing.CaptureTransform.Closure			
+enum	_StringProcessing.CaptureTransform.Closure		case	failable
+enum	_StringProcessing.CaptureTransform.Closure		case	substringFailable
+enum	_StringProcessing.CaptureTransform.Closure		case	nonfailable
+enum	_StringProcessing.CaptureTransform.Closure		case	substringNonfailable
+struct	_StringProcessing.MatchingOptions.Representation			
+struct	_StringProcessing.MatchingOptions.Representation		var	rawValue
+struct	_StringProcessing.AnyHashableType			
+struct	_StringProcessing.AnyHashableType		var	ty
+enum	_StringProcessing.Executor			
+struct	_StringProcessing.SubstringSearcher.State			
+struct	_StringProcessing.SubstringSearcher.State		let	badCharacterOffsets
+struct	_StringProcessing.SubstringSearcher.State		let	patternCount
+struct	_StringProcessing.SubstringSearcher.State		var	endOfNextPotentialMatch
+struct	_StringProcessing.Processor._StoredCapture			
+struct	_StringProcessing.Processor._StoredCapture		var	range
+struct	_StringProcessing.Processor._StoredCapture		var	value
+struct	_StringProcessing.Processor._StoredCapture		var	currentCaptureBegin
+struct	_StringProcessing.Processor			
+struct	_StringProcessing.Processor		let	input
+struct	_StringProcessing.Processor		let	subjectBounds
+struct	_StringProcessing.Processor		let	matchMode
+struct	_StringProcessing.Processor		let	instructions
+struct	_StringProcessing.Processor		var	wordIndexCache
+struct	_StringProcessing.Processor		var	wordIndexMaxIndex
+struct	_StringProcessing.Processor		var	searchBounds
+struct	_StringProcessing.Processor		var	currentPosition
+struct	_StringProcessing.Processor		var	controller
+struct	_StringProcessing.Processor		var	registers
+struct	_StringProcessing.Processor		var	savePoints
+struct	_StringProcessing.Processor		var	storedCaptures
+struct	_StringProcessing.Processor		var	state
+struct	_StringProcessing.Processor		var	failureReason
+struct	_StringProcessing.Processor		var	metrics
+struct	_StringProcessing.Processor.Registers			
+struct	_StringProcessing.Processor.Registers		var	elements
+struct	_StringProcessing.Processor.Registers		var	utf8Contents
+struct	_StringProcessing.Processor.Registers		var	bitsets
+struct	_StringProcessing.Processor.Registers		var	consumeFunctions
+struct	_StringProcessing.Processor.Registers		var	transformFunctions
+struct	_StringProcessing.Processor.Registers		var	matcherFunctions
+struct	_StringProcessing.Processor.Registers		var	isDirty
+struct	_StringProcessing.Processor.Registers		var	ints
+struct	_StringProcessing.Processor.Registers		var	values
+struct	_StringProcessing.Processor.Registers		var	positions
+enum	_StringProcessing._ValueRegister			
+struct	_StringProcessing.TypedInt			
+struct	_StringProcessing.TypedInt		var	rawValue
+enum	_StringProcessing._InstructionAddress			
+struct	_StringProcessing.Instruction			
+struct	_StringProcessing.Instruction		var	rawValue
+struct	Swift.LazyMapSequence<A	Swift.Sequence>		
+struct	Swift.LazyMapSequence<A	Swift.Sequence>	var	_base
+struct	Swift.LazyMapSequence<A	Swift.Sequence>	let	_transform
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	_StringProcessing.Processor.ProcessorMetrics			
+enum	_StringProcessing.State			
+enum	_StringProcessing.State		case	inProgress
+enum	_StringProcessing.State		case	fail
+enum	_StringProcessing.State		case	accept
+struct	_StringProcessing.Controller			
+struct	_StringProcessing.Controller		var	pc
+enum	_StringProcessing.MatchMode			
+enum	_StringProcessing.MatchMode		case	wholeString
+enum	_StringProcessing.MatchMode		case	partialFromFront
+enum	_StringProcessing.MEProgram.Builder._AddressToken			
+enum	_StringProcessing._CaptureRegister			
+enum	_StringProcessing._PositionRegister			
+enum	_StringProcessing._IntRegister			
+struct	_StringProcessing.TypedSetVector<A	Swift.Hashable>		
+struct	_StringProcessing.TypedSetVector<A	Swift.Hashable>	var	lookup
+struct	_StringProcessing.TypedSetVector<A	Swift.Hashable>	var	stored
+enum	_StringProcessing.MatchingOptions.SemanticLevel			
+enum	_StringProcessing.MatchingOptions.SemanticLevel		case	graphemeCluster
+enum	_StringProcessing.MatchingOptions.SemanticLevel		case	unicodeScalar
+protocol	_StringProcessing.CollectionConsumer	Consumed		
+protocol	_StringProcessing.MatchingCollectionSearcher	Match		
+protocol	_StringProcessing.CollectionSearcher	Searched, State		
+protocol	_StringProcessing.StatelessCollectionSearcher			
+protocol	_StringProcessing.RegexComponent	RegexOutput		
+protocol	_StringProcessing.CustomConsumingRegexComponent			
+protocol	_StringProcessing.InstructionProtocol			
+protocol	_StringProcessing.ProcessorProtocol	Input, Instruction, SavePoint, Registers		
+protocol	_StringProcessing.Traced			
+protocol	_StringProcessing.TracedProcessor			
+protocol	_StringProcessing.TypedIntProtocol	👻		
+protocol	conformance _StringProcessing._CompileOptions	Swift.OptionSet		
+protocol	conformance _StringProcessing._CompileOptions	Swift.SetAlgebra		
+protocol	conformance _StringProcessing._CompileOptions	Swift.RawRepresentable		
+protocol	conformance _StringProcessing._CompileOptions	Swift.Equatable		
+protocol	conformance _StringProcessing._CompileOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance _StringProcessing.AnyRegexOutput	Swift.RandomAccessCollection		
+protocol	conformance _StringProcessing.AnyRegexOutput	Swift.BidirectionalCollection		
+protocol	conformance _StringProcessing.AnyRegexOutput	Swift.Collection		
+protocol	conformance _StringProcessing.AnyRegexOutput	Swift.Sequence		
+protocol	conformance _StringProcessing.Regex	_StringProcessing.RegexComponent		
+protocol	conformance Atom.Assertion	Swift.Equatable		
+protocol	conformance Atom.Assertion	Swift.RawRepresentable		
+protocol	conformance Atom.Assertion	Swift.Hashable		
+protocol	conformance Atom.CharacterClass	Swift.Equatable		
+protocol	conformance Atom.CharacterClass	Swift.Hashable		
+protocol	conformance _StringProcessing.ReferenceID	Swift.Hashable		
+protocol	conformance _StringProcessing.ReferenceID	Swift.Equatable		
+protocol	conformance _StringProcessing.RegexSemanticLevel	Swift.Hashable		
+protocol	conformance _StringProcessing.RegexSemanticLevel	Swift.Equatable		
+protocol	conformance _StringProcessing.RegexWordBoundaryKind	Swift.Hashable		
+protocol	conformance _StringProcessing.RegexWordBoundaryKind	Swift.Equatable		
+protocol	conformance _StringProcessing.RegexRepetitionBehavior	Swift.Hashable		
+protocol	conformance _StringProcessing.RegexRepetitionBehavior	Swift.Equatable		
+protocol	conformance _StringProcessing.SubstringSearcher	Swift.IteratorProtocol		
+protocol	conformance _StringProcessing.SubstringSearcher	Swift.Sequence		
+protocol	conformance Executor.Matches	Swift.Sequence		
+protocol	conformance Matches.Iterator	Swift.IteratorProtocol		
+protocol	conformance _StringProcessing.RegexCompilationError	Swift.Equatable		
+protocol	conformance _StringProcessing.RegexCompilationError	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.RegexCompilationError	Swift.Hashable		
+protocol	conformance RegexSemanticLevel.Representation	Swift.Hashable		
+protocol	conformance RegexSemanticLevel.Representation	Swift.Equatable		
+protocol	conformance RegexWordBoundaryKind.Representation	Swift.Hashable		
+protocol	conformance RegexWordBoundaryKind.Representation	Swift.Equatable		
+protocol	conformance RegexRepetitionBehavior.Kind	Swift.Hashable		
+protocol	conformance RegexRepetitionBehavior.Kind	Swift.Equatable		
+protocol	conformance _StringProcessing._CharacterClassModel	Swift.CustomStringConvertible		
+protocol	conformance _CharacterClassModel.Representation	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.TypedInt	_StringProcessing.TypedIntProtocol		
+protocol	conformance _StringProcessing.TypedInt	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance _StringProcessing.TypedInt	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.TypedInt	Swift.Comparable		
+protocol	conformance _StringProcessing.TypedInt	Swift.Equatable		
+protocol	conformance _StringProcessing.TypedIndex	Swift.ExpressibleByArrayLiteral		
+protocol	conformance _StringProcessing.TypedIndex	Swift.BidirectionalCollection		
+protocol	conformance _StringProcessing.TypedIndex	Swift.MutableCollection		
+protocol	conformance _StringProcessing.TypedIndex	Swift.RandomAccessCollection		
+protocol	conformance _StringProcessing.TypedIndex	Swift.Sequence		
+protocol	conformance _StringProcessing.TypedIndex	Swift.Collection		
+protocol	conformance StringLiteralBuilder	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.Instruction	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.Processor	_StringProcessing.Traced		
+protocol	conformance _StringProcessing.Processor	_StringProcessing.ProcessorProtocol		
+protocol	conformance _StringProcessing.Processor	_StringProcessing.TracedProcessor		
+protocol	conformance Processor.Registers	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.MEProgram	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.Instruction	_StringProcessing.InstructionProtocol		
+protocol	conformance _StringProcessing.ZSearcher	_StringProcessing.StatelessCollectionSearcher		
+protocol	conformance _StringProcessing.SubstringSearcher	_StringProcessing.CollectionSearcher		
+protocol	conformance _StringProcessing.RegexCompilationError	Swift.Error		
+protocol	conformance _StringProcessing.FixedPatternConsumer	_StringProcessing.CollectionConsumer		
+protocol	conformance _StringProcessing.SplitSequence	Swift.Sequence		
+protocol	conformance SplitSequence.Iterator	Swift.IteratorProtocol		
+protocol	conformance _StringProcessing.RegexRangesSequence	Swift.Sequence		
+protocol	conformance RegexRangesSequence.Iterator	Swift.IteratorProtocol		
+protocol	conformance _StringProcessing.RangesSequence	Swift.Sequence		
+protocol	conformance RangesSequence.Iterator	Swift.IteratorProtocol		
+protocol	conformance _StringProcessing.ZSearcher	_StringProcessing.CollectionSearcher		
+protocol	conformance _StringProcessing.TypedIndex	Swift.RawRepresentable		
+protocol	conformance _StringProcessing.Instruction	Swift.Equatable		
+protocol	conformance _StringProcessing.Instruction	Swift.Hashable		
+protocol	conformance _StringProcessing.Instruction	Swift.RawRepresentable		
+protocol	conformance _StringProcessing.TypedInt	Swift.Hashable		
+protocol	conformance _StringProcessing.AnyHashableType	Swift.Equatable		
+protocol	conformance _StringProcessing.AnyHashableType	Swift.Hashable		
+protocol	conformance _StringProcessing.AnyHashableType	Swift.CustomStringConvertible		
+protocol	conformance Representation	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Representation	Swift.Equatable		
+protocol	conformance Representation	Swift.SetAlgebra		
+protocol	conformance Representation	Swift.RawRepresentable		
+protocol	conformance Representation	Swift.OptionSet		
+protocol	conformance _StringProcessing.CaptureTransform	Swift.Equatable		
+protocol	conformance _StringProcessing.CaptureTransform	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.CaptureTransform	Swift.Hashable		
+protocol	conformance _StringProcessing._CharacterClassModel	Swift.Equatable		
+protocol	conformance _StringProcessing._CharacterClassModel	Swift.Hashable		
+protocol	conformance _CharacterClassModel.Representation	Swift.Hashable		
+protocol	conformance _CharacterClassModel.Representation	Swift.RawRepresentable		
+protocol	conformance _CharacterClassModel.Representation	Swift.Equatable		
+protocol	conformance Instruction.OpCode	Swift.RawRepresentable		
+protocol	conformance Instruction.OpCode	Swift.Hashable		
+protocol	conformance Instruction.OpCode	Swift.Equatable		
+protocol	conformance QuantifyPayload.PayloadType	Swift.RawRepresentable		
+protocol	conformance QuantifyPayload.PayloadType	Swift.Hashable		
+protocol	conformance QuantifyPayload.PayloadType	Swift.Equatable		
+protocol	conformance _StringProcessing.AssertionPayload	Swift.RawRepresentable		
+protocol	conformance _StringProcessing.SentinelValue	Swift.Equatable		
+protocol	conformance _StringProcessing.SentinelValue	Swift.CustomStringConvertible		
+protocol	conformance _StringProcessing.SentinelValue	Swift.Hashable		
+protocol	conformance DSLTree._Tree	_RegexParser._TreeNode		
+protocol	conformance _StringProcessing.TypedInt	Swift.RawRepresentable		
+protocol	conformance MatchingOptions.SemanticLevel	Swift.Hashable		
+protocol	conformance MatchingOptions.SemanticLevel	Swift.Equatable		
+protocol	conformance _StringProcessing.MatchMode	Swift.Hashable		
+protocol	conformance _StringProcessing.MatchMode	Swift.Equatable		
+protocol	conformance _StringProcessing.Controller	Swift.Equatable		
+protocol	conformance _StringProcessing.State	Swift.Hashable		
+protocol	conformance _StringProcessing.State	Swift.Equatable		
+extension	_StringProcessing._CompileOptions	OptionSet		
+extension	_StringProcessing._CompileOptions	SetAlgebra		
+extension	_StringProcessing._CompileOptions	RawRepresentable		
+extension	_StringProcessing._CompileOptions	ExpressibleByArrayLiteral		
+extension	_StringProcessing.AnyRegexOutput	RandomAccessCollection		
+extension	_StringProcessing.AnyRegexOutput	BidirectionalCollection		
+extension	_StringProcessing.AnyRegexOutput	Collection		
+extension	_StringProcessing.AnyRegexOutput	Sequence		
+extension	_StringProcessing.Regex	RegexComponent		
+extension	_StringProcessing.DSLTree.Atom.Assertion	RawRepresentable		
+extension	_StringProcessing.SubstringSearcher	IteratorProtocol		
+extension	_StringProcessing.SubstringSearcher	Sequence		
+extension	_StringProcessing.Executor.Matches	Sequence		
+extension	_StringProcessing.Executor.Matches.Iterator	IteratorProtocol		
+extension	_StringProcessing.TypedInt	TypedIntProtocol		
+extension	_StringProcessing.TypedInt	ExpressibleByIntegerLiteral		
+extension	_StringProcessing.TypedIndex	ExpressibleByArrayLiteral		
+extension	_StringProcessing.TypedIndex	BidirectionalCollection		
+extension	_StringProcessing.TypedIndex	MutableCollection		
+extension	_StringProcessing.TypedIndex	RandomAccessCollection		
+extension	_StringProcessing.TypedIndex	Sequence		
+extension	_StringProcessing.TypedIndex	Collection		
+extension	_StringProcessing.Processor	ProcessorProtocol		
+extension	_StringProcessing.SubstringSearcher	CollectionSearcher		
+extension	_StringProcessing.FixedPatternConsumer	CollectionConsumer		
+extension	_StringProcessing.SplitSequence	Sequence		
+extension	_StringProcessing.SplitSequence.Iterator	IteratorProtocol		
+extension	_StringProcessing.RegexRangesSequence	Sequence		
+extension	_StringProcessing.RegexRangesSequence.Iterator	IteratorProtocol		
+extension	_StringProcessing.RangesSequence	Sequence		
+extension	_StringProcessing.RangesSequence.Iterator	IteratorProtocol		
+extension	_StringProcessing.ZSearcher	CollectionSearcher		
+extension	_StringProcessing.TypedIndex	RawRepresentable		
+extension	_StringProcessing.Instruction	RawRepresentable		
+extension	_StringProcessing.MatchingOptions.Representation	ExpressibleByArrayLiteral		
+extension	_StringProcessing.MatchingOptions.Representation	SetAlgebra		
+extension	_StringProcessing.MatchingOptions.Representation	RawRepresentable		
+extension	_StringProcessing.MatchingOptions.Representation	OptionSet		
+extension	_StringProcessing._CharacterClassModel.Representation	RawRepresentable		
+extension	_StringProcessing.Instruction.OpCode	RawRepresentable		
+extension	_StringProcessing.QuantifyPayload.PayloadType	RawRepresentable		
+extension	_StringProcessing.AssertionPayload	RawRepresentable		
+extension	_StringProcessing.TypedInt	RawRepresentable		

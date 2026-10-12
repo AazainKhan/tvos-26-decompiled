@@ -1,0 +1,237 @@
+kind	name	superclass	protocols
+category	INIntent(MTAlarmIntent)		
+category	INInteraction(MTUtilities)		
+category	NAFuture(MTUtilities)		
+category	NAScheduler(MTUtilities)		
+category	NSCalendar(MTUtilities)		
+category	NSCoder(MTSerializer)		MTSerializer
+category	NSDate(MTUtilities)		
+category	NSDateComponents(MTUtilities)		
+category	NSDateFormatter(MTUtilities)		
+category	NSDateInterval(MTUtilities)		
+category	NSLocale(MTUtilities)		
+category	NSNotificationCenter(MTNotifiying)		
+category	NSNumberFormatter(MTUtilities)		
+category	NSString(Notification)		
+category	NSURL(MTUtilities)		
+category	NSUserActivity(MTUtilities)		
+category	UNNotificationSound(MTSound_Notifications)		
+interface	AKCDAlarm	NSManagedObject	
+interface	AKCDAttributes	NSManagedObject	
+interface	AKCDAuthorization	NSManagedObject	
+interface	Alarm	NSObject	
+interface	ClockManager	NSObject	
+interface	ClocksIntent	INIntent	
+interface	ClocksIntentResponse	INIntentResponse	
+interface	ClocksSingleIntent	INIntent	
+interface	ClocksSingleIntentResponse	INIntentResponse	
+interface	DistributedNotificationPoster	NSObject	
+interface	MTAgent	NSObject	MTAgentDiagnosticDelegate,MTSystemStateDelegate
+interface	MTAgentDiagnosticListener	NSObject	MTAgentNotificationListener
+interface	MTAgentNotification	NSObject	
+interface	MTAgentNotificationManager	NSObject	
+interface	MTAlarm	NSObject	MTDictionarySerializable,MTScheduleable,MTSerializable,BSDescriptionProviding,NAEquatable,NSSecureCoding,NSCopying,NSMutableCopying
+interface	MTAlarmCache	NSObject	
+interface	MTAlarmDataSource	NSObject	
+interface	MTAlarmIntentDonor	NSObject	MTAlarmObserver
+interface	MTAlarmIntentHandler	NSObject	
+interface	MTAlarmManager	NSObject	
+interface	MTAlarmManagerExportedObject	NSObject	MTAlarmClient
+interface	MTAlarmMigrator	NSObject	
+interface	MTAlarmOperationResolutionResult	INEnumResolutionResult	
+interface	MTAlarmScheduler	NSObject	MTAlarmObserver,MTScheduledListDelegate,MTAgentDiagnosticDelegate,MTAgentNotificationListener
+interface	MTAlarmServer	NSObject	MTAlarmServer,MTAlarmObserver,MTAgentDiagnosticDelegate,MTRegistersAnalytics
+interface	MTAlarmSnapshot	MTSnapshotScheduler	MTAlarmObserver
+interface	MTAlarmStateResolutionResult	INEnumResolutionResult	
+interface	MTAlarmStorage	NSObject	MTAlarmScheduleDelegate,_TtP11MobileTimer21MTCDDataStoreObserver_,MTAlarmStorage
+interface	MTAnalytics	NSObject	
+interface	MTCDAlarm	NSManagedObject	
+interface	MTCDSound	NSManagedObject	
+interface	MTCDTimer	NSManagedObject	
+interface	MTCDTimerDuration	NSManagedObject	
+interface	MTCFUserNotification	NSObject	
+interface	MTCFUserNotificationPoster	NSObject	
+interface	MTChange	NSObject	
+interface	MTChangeSet	NSObject	
+interface	MTCity	INObject	
+interface	MTCityResolutionResult	INObjectResolutionResult	
+interface	MTCoreDuetMonitor	NSObject	MTAlarmObserver
+interface	MTCreateAlarmIntent	INIntent	
+interface	MTCreateAlarmIntentHandler	MTAlarmIntentHandler	MTCreateAlarmIntentHandling
+interface	MTCreateAlarmIntentResponse	INIntentResponse	
+interface	MTCreateTimerIntentHandler	MTTimerIntentHandler	INCreateTimerIntentHandling
+interface	MTDateFormatting	NSObject	
+interface	MTDeleteTimerIntentHandler	MTTimerIntentHandler	INDeleteTimerIntentHandling
+interface	MTDeviceListener	NSObject	MTAgentDiagnosticDelegate,MTAgentNotificationListener
+interface	MTDictionaryDeserializer	MTStorageReader	
+interface	MTDictionarySerializer	MTStorageWriter	
+interface	MTDisableAlarmIntent	INIntent	
+interface	MTDisableAlarmIntentResponse	INIntentResponse	
+interface	MTDistributedNotificationPoster	NSObject	MTNotificationCenter
+interface	MTEnableAlarmIntent	INIntent	
+interface	MTEnableAlarmIntentResponse	INIntentResponse	
+interface	MTExpiringFuture	NAFuture	
+interface	MTExponentialBackOffTimer	NSObject	
+interface	MTFeatures	NSObject	
+interface	MTGCDTaskScheduler	NSObject	MTTaskScheduler
+interface	MTGCDTimer	NSObject	
+interface	MTGetAlarmsIntent	INIntent	
+interface	MTGetAlarmsIntentHandler	MTAlarmIntentHandler	MTGetAlarmsIntentHandling
+interface	MTGetAlarmsIntentResponse	INIntentResponse	
+interface	MTInMemoryDefaults	NSObject	MTPersistence
+interface	MTIntentAlarm	INObject	
+interface	MTIntentAlarmResolutionResult	INObjectResolutionResult	
+interface	MTIntentRepeatDay	INObject	
+interface	MTIntentRepeatDayResolutionResult	INObjectResolutionResult	
+interface	MTLanguageChangeListener	NSObject	MTAgentNotificationListener
+interface	MTLegacyManager	NSObject	
+interface	MTMetrics	NSObject	
+interface	MTMutableAlarm	MTAlarm	
+interface	MTMutableTimer	MTTimer	
+interface	MTNextAlarm	NSObject	
+interface	MTNextAlarmManager	NSObject	
+interface	MTOSTransaction	NSObject	
+interface	MTObserverStore	NSObject	
+interface	MTPBAlarm	PBCodable	NSCopying
+interface	MTPBAlarmAdd	PBCodable	NSCopying
+interface	MTPBAlarmDelete	PBCodable	NSCopying
+interface	MTPBAlarmProperties	PBCodable	NSCopying
+interface	MTPBAlarmState	PBCodable	NSCopying
+interface	MTPBAlarmUpdate	PBCodable	NSCopying
+interface	MTPBDismissAction	PBCodable	NSCopying
+interface	MTPBSnoozeAction	PBCodable	NSCopying
+interface	MTPBSound	PBCodable	NSCopying
+interface	MTPBSyncMessage	PBCodable	NSCopying
+interface	MTPauseResumeTimerIntentHandler	MTUpdateTimerIntentHandler	INPauseTimerIntentHandling,INResumeTimerIntentHandling
+interface	MTPowerAssertion	NSObject	
+interface	MTResetTimerIntentHandler	MTUpdateTimerIntentHandler	INResetTimerIntentHandling
+interface	MTScheduledList	NSObject	
+interface	MTScheduledObject	NSObject	NAEquatable,NSCopying
+interface	MTScheduler	NSObject	
+interface	MTSearchTimerIntentHandler	MTTimerIntentHandler	INSearchForTimersIntentHandling
+interface	MTSensitiveUIMonitor	NSObject	
+interface	MTSetTimerAttributeIntentHandler	MTUpdateTimerIntentHandler	INSetTimerAttributeIntentHandling
+interface	MTSnapshotScheduler	NSObject	
+interface	MTSound	NSObject	MTDictionarySerializable,NAEquatable,NSCopying,NSSecureCoding
+interface	MTSpringboardStartMonitor	NSObject	
+interface	MTStateMachine	NSObject	MTStateMachineEventHandler
+interface	MTStateMachineState	NSObject	MTStateMachineEventHandler
+interface	MTStorageReader	NSCoder	MTSerializer
+interface	MTStorageReaderV1	NSKeyedUnarchiver	MTSerializer
+interface	MTStorageWriter	NSCoder	MTSerializer
+interface	MTSystemStateListener	NSObject	MTSpringboardStartMonitorObserver,MTAgentNotificationListener,MTAgentDiagnosticDelegate
+interface	MTTask	NSObject	
+interface	MTTaskGroup	NSObject	
+interface	MTTimeListener	NSObject	MTAgentNotificationListener
+interface	MTTimer	NSObject	MTTimerIntentSupport,MTDictionarySerializable,MTScheduleable,MTSerializable,NAEquatable,NSCopying,NSMutableCopying,NSSecureCoding
+interface	MTTimerCache	NSObject	
+interface	MTTimerDataSource	NSObject	
+interface	MTTimerDate	NSObject	MTDictionarySerializable,MTTimerTime
+interface	MTTimerDuration	NSObject	NAEquatable,NSCopying,NSSecureCoding
+interface	MTTimerDurationManager	NSObject	MTTimerObserver
+interface	MTTimerIntentDonor	NSObject	MTTimerObserver
+interface	MTTimerIntentHandler	NSObject	
+interface	MTTimerManager	NSObject	MTTimerManagerProviding,MTTimerManagerIntentSupport,MTUserDefaultNotificationObserver
+interface	MTTimerManagerExportedObject	NSObject	MTTimerClient
+interface	MTTimerMigrator	NSObject	
+interface	MTTimerScheduler	NSObject	MTTimerObserver,MTScheduledListDelegate,MTAgentDiagnosticDelegate,MTAgentNotificationListener
+interface	MTTimerServer	NSObject	MTTimerObserver,MTTimerServer,MTDurationUpdateDelegate,MTAgentDiagnosticDelegate
+interface	MTTimerSnapshot	MTSnapshotScheduler	MTTimerObserver
+interface	MTTimerStorage	NSObject	MTTimerSchedulerDelegate,_TtP11MobileTimer21MTCDDataStoreObserver_,MTAgentDiagnosticDelegate,MTTimerStorage
+interface	MTTimerTimeInterval	NSObject	MTDictionarySerializable,MTTimerTime
+interface	MTToggleAlarmIntent	INIntent	
+interface	MTToggleAlarmIntentHandler	MTAlarmIntentHandler	MTEnableAlarmIntentHandling,MTDisableAlarmIntentHandling,MTToggleAlarmIntentHandling
+interface	MTToggleAlarmIntentResponse	INIntentResponse	
+interface	MTTrigger	NSObject	BSDescriptionProviding,NAEquatable,NSCopying,NSSecureCoding
+interface	MTUpdateAlarmIntent	INIntent	
+interface	MTUpdateAlarmIntentHandler	MTAlarmIntentHandler	MTUpdateAlarmIntentHandling
+interface	MTUpdateAlarmIntentResponse	INIntentResponse	
+interface	MTUpdateTimerIntentHandler	MTTimerIntentHandler	
+interface	MTUserDefaults	NSObject	
+interface	MTUserNotificationActionDispatcher	NSObject	UNUserNotificationCenterDelegate
+interface	MTUserNotificationAppDelegate	NSObject	UNUserNotificationCenterDelegate
+interface	MTUserNotificationCenter	NSObject	MTNotificationCenter
+interface	MTUtilities	NSObject	
+interface	MTWorldClock	INObject	
+interface	MTWorldClockResolutionResult	INObjectResolutionResult	
+interface	MTXPCClientInfo	NSObject	MTSource
+interface	MTXPCConnectionInfo	NSObject	
+interface	MTXPCConnectionListenerProvider	NSObject	NSXPCListenerDelegate
+interface	MTXPCConnectionProvider	NSObject	
+interface	MTXPCScheduler	NSObject	MTSchedulingDelegate
+interface	NotificationRelay	NSObject	
+interface	WorldClockCity	NSObject	
+interface	WorldClockManager	NSObject	
+interface	WorldClockPreferences	NSObject	
+interface	_MTSerialQueueScheduler	NSObject	MTScheduler
+interface	_TtC11MobileTimer10BugCapture	NSObject	
+interface	_TtC11MobileTimer11ChannelCore	NSObject	
+interface	_TtC11MobileTimer12ChannelEvent	NSObject	
+interface	_TtC11MobileTimer13MTCDDataStore	NSObject	
+interface	_TtC11MobileTimer13MTCDUtilities	_TtCs12_SwiftObject	
+interface	_TtC11MobileTimer13VoidConductor	NSObject	
+interface	_TtC11MobileTimer15StringConductor	NSObject	
+interface	_TtC11MobileTimer16MockAlarmStorage	NSObject	
+interface	_TtC11MobileTimer18CoreDataStoreActor	_TtCs12_SwiftObject	
+interface	_TtC11MobileTimerP33_11DD200D293CC9F5FDAB771F4826812915CallbackWrapper	_TtCs12_SwiftObject	
+protocol	AlarmDelegate		
+protocol	BSDescriptionProviding		NSObject
+protocol	INCreateTimerIntentHandling		NSObject
+protocol	INDeleteTimerIntentHandling		NSObject
+protocol	INPauseTimerIntentHandling		NSObject
+protocol	INResetTimerIntentHandling		NSObject
+protocol	INResumeTimerIntentHandling		NSObject
+protocol	INSearchForTimersIntentHandling		NSObject
+protocol	INSetTimerAttributeIntentHandling		NSObject
+protocol	MTAgentDiagnosticDelegate		NSObject
+protocol	MTAgentNotificationListener		NSObject
+protocol	MTAlarmClient		NSObject
+protocol	MTAlarmObserver		NSObject
+protocol	MTAlarmScheduleDelegate		NSObject
+protocol	MTAlarmServer		MTXPCServer
+protocol	MTAlarmStorage		NSObject
+protocol	MTCreateAlarmIntentHandling		NSObject
+protocol	MTDictionarySerializable		NSObject,NSCoding,NSCopying
+protocol	MTDisableAlarmIntentHandling		NSObject
+protocol	MTDurationUpdateDelegate		
+protocol	MTEnableAlarmIntentHandling		NSObject
+protocol	MTEventReporting		
+protocol	MTGetAlarmsIntentHandling		NSObject
+protocol	MTNotificationCenter		NSObject,MTRegistersAnalytics
+protocol	MTPersistence		NSObject
+protocol	MTRegistersAnalytics		
+protocol	MTScheduleable		NAEquatable,NSCopying
+protocol	MTScheduledListDelegate		NSObject
+protocol	MTScheduler		NAScheduler
+protocol	MTSchedulingDelegate		
+protocol	MTSerializable		NSObject,NSSecureCoding
+protocol	MTSerializer		
+protocol	MTSessionClient		NSObject
+protocol	MTSessionServer		MTXPCServer
+protocol	MTSource		NSObject
+protocol	MTSpringboardStartMonitorObserver		NSObject
+protocol	MTStateMachineDelegate		
+protocol	MTStateMachineEventHandler		NSObject
+protocol	MTSystemStateDelegate		NSObject
+protocol	MTTaskScheduler		NSObject
+protocol	MTTimerClient		NSObject
+protocol	MTTimerIntentSupport		NSObject
+protocol	MTTimerManagerIntentSupport		NSObject
+protocol	MTTimerManagerProviding		NSObject
+protocol	MTTimerObserver		NSObject
+protocol	MTTimerSchedulerDelegate		NSObject
+protocol	MTTimerServer		MTXPCServer
+protocol	MTTimerStorage		NSObject
+protocol	MTTimerTime		NSObject,NSCopying,NSSecureCoding
+protocol	MTToggleAlarmIntentHandling		NSObject
+protocol	MTUpdateAlarmIntentHandling		NSObject
+protocol	MTUserDefaultNotificationObserver		NSObject
+protocol	MTXPCServer		NSObject
+protocol	NAEquatable		NAHashable
+protocol	NAHashable		NSObject
+protocol	NAScheduler		NSObject
+protocol	OS_dispatch_queue		
+protocol	OS_dispatch_source		
+protocol	UNUserNotificationCenterDelegate		NSObject
+protocol	_TtP11MobileTimer21MTCDDataStoreObserver_		
+protocol	v		

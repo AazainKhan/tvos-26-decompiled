@@ -16,13 +16,14 @@ Built for coding agents (Claude Code, Codex, Cursor…) and people building Appl
 |---|---|---|
 | `index/apps.tsv` | Every app: bundle id, executable, min OS, URL schemes, size | 62 |
 | `index/frameworks.tsv` | Every framework: bundle id, whether it ships `Assets.car` / `.ca` motion packages, whether its binary is on disk or in the dyld cache | 1,832 |
-| `index/objc/<image>.classes.tsv` | ObjC classes, protocols, categories with superclass and protocols | 2,663 types |
-| `index/objc/<image>.members.tsv` | ObjC method and property declarations (signatures only) | 28,912 |
-| `index/swift/PineBoard.types.tsv` | Swift types in the home-screen app and their fields | 106 types |
-| `index/animations.tsv` | Every animation in every `.ca` package: keyPath, duration, beginTime, spring mass/stiffness/damping, timing functions, keyframes | 3,655 (1,674 springs) |
+| `index/objc/{dsc,apps,disk}/<image>.classes.tsv` | ObjC classes, protocols, categories with superclass and protocols, for every dyld-cache image (`dsc`), app (`apps`) and other on-disk executable (`disk`) | 198,577 types |
+| `index/objc/{dsc,apps,disk}/<image>.members.tsv` | ObjC method and property declarations (signatures only) | 2,228,265 |
+| `index/swift/{dsc,apps,disk}/<image>.types.tsv` | Swift types and their fields | 661,287 types |
+| `index/disk-images.tsv` | Maps each `disk/` name (`<binary>~<hash>`) to its full path | 1,224 |
+| `index/animations.tsv` | Every animation in every `.ca` and `.caar` package: keyPath, duration, beginTime, spring mass/stiffness/damping, timing functions, keyframes | 7,713 (3,027 springs) |
 | `index/ca-packages.txt` | Every `.ca` / `.caar` package path | 145 |
 
-Images indexed in `objc/`: `PineBoard` (home screen), `TVSystemUIService` (overlays, banners), `TVSystemUI`, `TVSystemMenuUI` (Control Center), `TVSettings`, `TVSettingsFoundation`, `FocusEngine`, `TVUIKit`, `PineBoardServices`, `PineBoardUIServices`, `CoreMaterial`.
+Every dyld-cache image is in `objc/dsc/` and `swift/dsc/`, every app in `objc/apps/` and `swift/apps/`, and every other executable in `objc/disk/` and `swift/disk/` (names resolve through `index/disk-images.tsv`). Images with the same name in two places carry their parent folder, for example `AVKit~AVKit.framework` and `AVKit~AVKit.axbundle`.
 
 ## Where things live in tvOS 26
 
@@ -40,50 +41,46 @@ Framework binaries are not on disk in tvOS 26; they live in the dyld shared cach
 
 ## Coverage
 
-What has been decompiled and indexed so far, measured against tvOS 26.6.
+What has been decompiled and indexed, measured against tvOS 26.6.
 
 | Area | Done | Coverage |
 |---|---|---|
 | App inventory (bundle ids, executables, URL schemes) | 62 of 62 apps | **100%** |
 | Framework inventory (bundle ids, assets, binary location) | 1,832 of 1,832 frameworks | **100%** |
-| CoreAnimation XML packages (`.ca`) parsed | 102 of 102 (84 contain animations) | **100%** |
-| CoreAnimation binary archives (`.caar`) parsed | 0 of 43 | 0% (binary format, not yet decoded) |
-| Target UI images class-dumped (home screen, system UI, Control Center, focus, settings, materials) | 11 of 11 | **100%** |
-| All apps class-dumped | 3 of 62 | 5% |
-| All frameworks class-dumped | 8 of 1,832 | 0.4% |
+| dyld shared cache images dumped (ObjC + Swift) | 2,392 of 2,392 | **100%** |
+| App executables dumped | 61 of 61 (one app, `ShortcutsActions`, has no executable) | **100%** |
+| Other on-disk executables dumped (daemons, plugins, extensions, XPC services) | 1,224 of 1,224 Mach-O files | **100%** |
+| CoreAnimation packages parsed (`.ca` XML and `.caar` binary) | 145 of 145 (113 contain animations) | **100%** |
+| Function bodies (pseudo-code from machine code) | not attempted | 0% |
+| Kernel, iBoot, SEP firmware | not attempted | 0% |
+
+"Dumped" means the Objective-C runtime metadata and Swift type metadata were read from every binary. That gives every class, protocol, method, property and Swift type with its fields. It does not turn machine code back into source.
+
+### Interfaces
+
+| Scope | Images | With ObjC types | ObjC types | ObjC members | With Swift | Swift types | Swift fields |
+|---|---|---|---|---|---|---|---|
+| dyld shared cache | 2,392 | 1,870 | 165,185 | 1,872,870 | 969 | 598,050 | 448,291 |
+| Apps | 61 | 58 | 5,822 | 67,846 | 33 | 6,551 | 6,976 |
+| Other executables | 1,224 | 815 | 27,570 | 287,549 | 336 | 56,686 | 58,332 |
+| **Total** | **3,677** | **2,743** | **198,577** | **2,228,265** | **1,338** | **661,287** | **513,599** |
+
+Key UI images: `apps/PineBoard` (home screen, 967 types), `apps/TVSystemUIService` (513), `apps/TVSettings` (407), `dsc/PineBoardServices` (227), `dsc/TVSystemUI` (180), `dsc/TVUIKit` (96), `dsc/FocusEngine` (90), `dsc/TVSystemMenuUI` (Control Center, 48), `dsc/CoreMaterial` (35).
+
+Headers and Swift dumps were generated locally and are not published; only type and member names with signatures are.
 
 ### Animations
 
 | Type | Count |
 |---|---|
-| `CASpringAnimation` | 1,674 |
-| `CAKeyframeAnimation` | 1,528 |
-| `CABasicAnimation` | 201 |
+| `CAKeyframeAnimation` | 3,547 |
+| `CASpringAnimation` | 3,027 |
+| `CABasicAnimation` | 887 |
 | `CAAnimationGroup` | 180 |
 | `LKStateAddAnimation` | 72 |
-| **Total** | **3,655** |
+| **Total** | **7,713** |
 
-Most common springs: mass 1 / stiffness 435 / damping 25 (`transform.scale.xy`, 378 uses) and mass 2 / stiffness 300 / damping 50 (opacity, scale and position, 506 uses).
-
-### Interfaces (structure)
-
-| Image | Kind | Headers | Types | Members |
-|---|---|---|---|---|
-| `PineBoard` (home screen) | app | 942 | 967 | 10,941 |
-| `TVSystemUIService` | app | 496 | 513 | 5,431 |
-| `TVSettings` | app | 403 | 407 | 4,475 |
-| `PineBoardServices` | framework | 223 | 227 | 2,669 |
-| `TVSystemUI` | framework | 169 | 180 | 1,706 |
-| `TVUIKit` | framework | 94 | 96 | 1,360 |
-| `FocusEngine` | framework | 88 | 90 | 1,137 |
-| `CoreMaterial` | framework | 36 | 35 | 403 |
-| `PineBoardUIServices` | framework | 81 | 84 | 398 |
-| `TVSystemMenuUI` (Control Center) | framework | 48 | 48 | 364 |
-| `TVSettingsFoundation` | framework | 17 | 16 | 28 |
-| **Total ObjC** | | **2,597** | **2,663** | **28,912** |
-| `PineBoard` Swift | app | | 106 types | 106 fields |
-
-Headers were generated locally and are not published; only the type and member names are.
+From 84 XML packages and 29 binary packages. Most common springs (mass / stiffness / damping): 2 / 300 / 50 (1,719 uses), 1 / 435 / 25 (378), 3 / 500 / 1000 (128), 2 / 300 / 30 (85). Colors and vector paths inside the packages are artwork and are left out on purpose.
 
 ## Use cases
 
@@ -92,11 +89,11 @@ For agents building an Apple TV–style launcher or app:
 1. **Match tvOS motion.** Look up the real spring and keyframe parameters before tuning an animation.
    `grep CASpringAnimation index/animations.tsv | cut -f4,9-11 | sort | uniq -c | sort -rn | head`
 2. **Find how a surface is built.** Which classes make up Control Center, and what do they expose?
-   `cut -f2,3 index/objc/TVSystemMenuUI.classes.tsv`
+   `cut -f2,3 index/objc/dsc/TVSystemMenuUI.classes.tsv`
 3. **Reproduce focus behaviour.** Read FocusEngine's interface (focus movement, scroll groups, parallax) to design an equivalent on Android TV / Compose.
-   `grep -i -E "parallax|scroll|velocity" index/objc/FocusEngine.members.tsv`
+   `grep -i -E "parallax|scroll|velocity" index/objc/dsc/FocusEngine.members.tsv`
 4. **Name things the way Apple does.** Map a feature ("sleep timer", "profile picker", "top shelf") to its owning app and classes before designing your own.
-   `grep -i -h "profilepicker" index/objc/*.classes.tsv`
+   `grep -ril "profilepicker" index/objc/ | head`
 5. **Plan deep links and integrations.** Which apps declare URL schemes, and which services exist for a given feature.
    `awk -F'\t' '$5!=""' index/apps.tsv`
 6. **Diff tvOS releases.** Re-run the scripts on a newer IPSW and `git diff index/` to see added or removed classes, members and animations.
@@ -110,7 +107,7 @@ Needs macOS (`aea`, `hdiutil`), Python 3 and [`ipsw`](https://github.com/blackto
 scripts/reproduce.sh "/path/to/AppleTV5,3_26.6_23L773_Restore.ipsw"
 ```
 
-It extracts the OS image, unwraps its key through Apple's public key service (`ipsw fw aea --key`), decrypts with `aea`, mounts read-only, dumps the interfaces into `.work/` (git-ignored) and rewrites `index/`. Roughly 10 minutes and 15 GB of scratch space.
+It extracts the OS image, unwraps its key through Apple's public key service (`ipsw fw aea --key`), decrypts with `aea`, mounts read-only, dumps the interfaces into `.work/` (git-ignored) and rewrites `index/`. Roughly 1-2 hours and 15 GB of scratch space. Note: the published indexes were produced step by step from the same IPSW; the script collects those steps but has not yet been run end to end in one pass.
 
 | Script | Does |
 |---|---|

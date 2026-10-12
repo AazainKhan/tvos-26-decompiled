@@ -1,0 +1,511 @@
+kind	type	conformance	member_kind	member
+class	XPCDistributed.XPCSystem.Session.LocalSessionState			
+class	XPCDistributed.XPCSystem.Session.LocalSessionState		let	label
+class	XPCDistributed.XPCSystem.Session.LocalSessionState		var	peerSession
+class	XPCDistributed.XPCSystem.Session.LocalSessionState		let	cancellationFuse
+class	XPCDistributed.XPCSystem.InProcessService			
+class	XPCDistributed.XPCSystem.InProcessService		let	debugName
+class	XPCDistributed.XPCSystem.InProcessService		let	receiverAttachedEvent
+class	XPCDistributed.XPCSystem.ServiceRegistry			
+class	XPCDistributed.XPCSystem.ServiceRegistry		var	services
+struct	XPCDistributed.XPCSystem.ServiceRegistry.RegisteredService			
+struct	XPCDistributed.XPCSystem.ServiceRegistry.RegisteredService		var	receiver
+struct	XPCDistributed.XPCSystem.ServiceRegistry.RegisteredService		let	actorSystem
+struct	XPCDistributed.XPCSystem.ServiceRegistry.RegisteredService		let	targetQueue
+class	XPCDistributed.XPCSystem.Transport.InProcessRawTransport			
+class	XPCDistributed.XPCSystem.Transport.InProcessRawTransport		var	parentTransport
+class	XPCDistributed.XPCSystem.Transport.InProcessRawTransport		var	cancellationCompleted
+class	XPCDistributed.XPCSystem.Transport.InProcessRawTransport		let	locked
+struct	XPCDistributed.XPCSystem.Transport.InProcessRawTransport.Locked			
+struct	XPCDistributed.XPCSystem.Transport.InProcessRawTransport.Locked		var	remoteEnd
+struct	XPCDistributed.XPCSystem.Service			
+struct	XPCDistributed.XPCSystem.Service		let	isMach
+struct	XPCDistributed.XPCSystem.Service		let	name
+struct	XPCDistributed.XPCSystem.EphemeralService			
+struct	XPCDistributed.XPCSystem.EphemeralService		let	debugName
+struct	XPCDistributed.XPCSystem.EphemeralService		let	endpoint
+struct	XPCDistributed.XPCSystem.EphemeralService.ListeningToken			
+struct	XPCDistributed.XPCSystem.EphemeralService.ListeningToken		let	id
+class	XPCDistributed.XPCSystem.EphemeralService.Receiver			
+class	XPCDistributed.XPCSystem.EphemeralService.Receiver		let	id
+class	XPCDistributed.XPCSystem.EphemeralService.Receiver		let	service
+class	XPCDistributed.XPCSystem.EphemeralService.Receiver		let	actorSystem
+class	XPCDistributed.XPCSystem.EphemeralService.Receiver		let	listener
+struct	XPCDistributed.XPCSystem.EphemeralServiceWithListeningTask			
+struct	XPCDistributed.XPCSystem.EphemeralServiceWithListeningTask		let	service
+struct	XPCDistributed.XPCSystem.EphemeralServiceWithListeningTask		let	listeningTask
+enum	XPCDistributed.XPCSystem.EphemeralService.CodingKeys			
+enum	XPCDistributed.XPCSystem.EphemeralService.CodingKeys		case	debugName
+enum	XPCDistributed.XPCSystem.EphemeralService.CodingKeys		case	endpoint
+enum	XPCDistributed.XPCSystem.EphemeralService.ListeningToken.CodingKeys			
+enum	XPCDistributed.XPCSystem.EphemeralService.ListeningToken.CodingKeys		case	id
+class	XPCDistributed.XPCSystem.Transport.XPCRawTransport			
+class	XPCDistributed.XPCSystem.Transport.XPCRawTransport		var	parentTransport
+class	XPCDistributed.XPCSystem.Transport.XPCRawTransport		let	session
+class	XPCDistributed.XPCSystem.Transport			
+class	XPCDistributed.XPCSystem.Transport		var	inboundSession
+class	XPCDistributed.XPCSystem.Transport		let	isCancelledFuse
+class	XPCDistributed.XPCSystem.Transport		let	debugName
+class	XPCDistributed.XPCSystem.Transport		let	queue
+class	XPCDistributed.XPCSystem.Transport		let	rawTransport
+class	XPCDistributed.XPCSystem.Transport		let	requestManager
+class	XPCDistributed.XPCSystem.Transport		let	idGenerator
+class	XPCDistributed.XPCSystem.Transport		var	backpressureManager
+enum	XPCDistributed.XPCSystem.Transport.EscalationHandledBy			
+enum	XPCDistributed.XPCSystem.Transport.EscalationHandledBy		case	escalationHandler
+enum	XPCDistributed.XPCSystem.Transport.EscalationHandledBy		case	senderTask
+enum	XPCDistributed.XPCSystem.Transport.TransportError			
+enum	XPCDistributed.XPCSystem.Transport.TransportError		case	transportCancelled
+enum	XPCDistributed.XPCSystem.Transport.TransportError		case	taskCancelled
+struct	XPCDistributed.XPCSystem.Transport.Packet			
+struct	XPCDistributed.XPCSystem.Transport.Packet		let	header
+struct	XPCDistributed.XPCSystem.Transport.Packet		let	payload
+struct	XPCDistributed.XPCSystem.Transport.Packet.Payload			
+struct	XPCDistributed.XPCSystem.Transport.Packet.Payload		var	dictionary
+enum	XPCDistributed.XPCSystem.Transport.RawTransportError			
+enum	XPCDistributed.XPCSystem.Transport.RawTransportError		case	rawTransportCancelled
+enum	XPCDistributed.XPCSystem.Transport.Packet.Header			
+enum	XPCDistributed.XPCSystem.Transport.Packet.Header		case	request
+enum	XPCDistributed.XPCSystem.Transport.Packet.Header		case	response
+enum	XPCDistributed.XPCSystem.Transport.Packet.Header		case	notification
+class	XPCDistributed.XPCSystem.TransportReceiver			
+class	XPCDistributed.XPCSystem.TransportReceiver		let	isCancelledFuse
+class	XPCDistributed.XPCSystem.TransportReceiver		let	actorSystem
+class	XPCDistributed.XPCSystem.TransportReceiver		let	peerHandler
+class	XPCDistributed.XPCSystem.TransportReceiver		var	cancellationHandler
+class	XPCDistributed.XPCSystem.TransportReceiver		var	peerHandlingTasks
+struct	XPCDistributed.Ack			
+enum	XPCDistributed.Ack.CodingKeys			
+enum	XPCDistributed.Ack.CodingKeys		let	id
+enum	XPCDistributed.Ack.CodingKeys		let	actor
+struct	XPCDistributed.UnownedAwaitableEvent			
+struct	XPCDistributed.UnownedAwaitableEvent		let	future
+struct	XPCDistributed.UnownedAwaitableEvent		let	promise
+enum	XPCDistributed.Either			
+enum	XPCDistributed.Either		case	a
+enum	XPCDistributed.Either		case	b
+enum	XPCDistributed.Case<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>		
+enum	XPCDistributed.Case<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	a
+enum	XPCDistributed.Case<A	Swift.Decodable, A: Swift.Encodable, B: Swift.Decodable, B: Swift.Encodable>	case	b
+struct	XPCDistributed.ID64			
+struct	XPCDistributed.ID64		let	value
+enum	XPCDistributed.Internal			
+class	XPCDistributed.RequestManager<A	Swift.Hashable>		
+class	XPCDistributed.RequestManager<A	Swift.Hashable>	let	queue
+class	XPCDistributed.RequestManager<A	Swift.Hashable>	var	activeRequests
+class	XPCDistributed.RequestManager.Request<A	Swift.Hashable>		
+class	XPCDistributed.RequestManager.Request<A	Swift.Hashable>	let	id
+class	XPCDistributed.RequestManager.Request<A	Swift.Hashable>	var	state
+class	XPCDistributed.RequestManager.Request<A	Swift.Hashable>	let	queue
+enum	XPCDistributed.RequestManager.Request.State<A	Swift.Hashable>		
+enum	XPCDistributed.RequestManager.Request.State<A	Swift.Hashable>	case	cancelled
+enum	XPCDistributed.RequestManager.Request.State<A	Swift.Hashable>	case	active
+enum	XPCDistributed.RequestManager.Request.State<A	Swift.Hashable>	case	initial
+enum	XPCDistributed.RequestManager.Request.State<A	Swift.Hashable>	case	completed
+struct	XPCDistributed.SwiftType			
+struct	XPCDistributed.SwiftType		let	mangledTypeName
+class	XPCDistributed.Synchronized			
+class	XPCDistributed.Synchronized		let	lock
+class	XPCDistributed.Synchronized		var	state
+struct	XPCDistributed.TestHook			
+struct	XPCDistributed.WeakActorRef			
+struct	XPCDistributed.WeakActorRef		var	ref
+struct	XPCDistributed.XPCSystem.ActorID			
+struct	XPCDistributed.XPCSystem.ActorID		let	rawActorID
+enum	XPCDistributed.XPCSystem.RawActorID			
+enum	XPCDistributed.XPCSystem.RawActorID		case	local
+enum	XPCDistributed.XPCSystem.RawActorID		case	remote
+struct	XPCDistributed.XPCSystem.RawActorID.Local			
+struct	XPCDistributed.XPCSystem.RawActorID.Local		let	actorSystemID
+struct	XPCDistributed.XPCSystem.RawActorID.Local		let	instanceID
+struct	XPCDistributed.XPCSystem.RawActorID.Remote			
+struct	XPCDistributed.XPCSystem.RawActorID.Remote		let	session
+struct	XPCDistributed.XPCSystem.RawActorID.Remote		let	key
+enum	XPCDistributed.XPCSystem.SharedActorKey			
+enum	XPCDistributed.XPCSystem.SharedActorKey		case	exported
+enum	XPCDistributed.XPCSystem.SharedActorKey		case	exportedRawValue
+enum	XPCDistributed.XPCSystem.SharedActorKey		case	dynamic
+enum	XPCDistributed.XPCSystem.SharedActorKey.WireCode			
+enum	XPCDistributed.XPCSystem.SharedActorKey.WireCode		case	exported
+enum	XPCDistributed.XPCSystem.SharedActorKey.WireCode		case	exportedRawValue
+enum	XPCDistributed.XPCSystem.SharedActorKey.WireCode		case	dynamic
+class	XPCDistributed.BackpressureManager<A	Swift.Hashable>		
+class	XPCDistributed.BackpressureManager<A	Swift.Hashable>	let	queue
+class	XPCDistributed.BackpressureManager<A	Swift.Hashable>	let	N
+class	XPCDistributed.BackpressureManager<A	Swift.Hashable>	var	inflightCountByPrio
+class	XPCDistributed.BackpressureManager<A	Swift.Hashable>	var	pendingRequestsByPrio
+class	XPCDistributed.BackpressureManager<A	Swift.Hashable>	var	activeRequests
+struct	XPCDistributed.BackpressureManager.PendingRequest<A	Swift.Hashable>		
+struct	XPCDistributed.BackpressureManager.PendingRequest<A	Swift.Hashable>	let	id
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>		
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>	case	UI
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>	case	IN
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>	case	DEF
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>	case	UT
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>	case	BG
+enum	XPCDistributed.BackpressureManager.PriorityBucket<A	Swift.Hashable>	case	BUCKET_COUNT
+struct	XPCDistributed.BackpressureManager.SendToken<A	Swift.Hashable>		
+struct	XPCDistributed.BackpressureManager.SendToken<A	Swift.Hashable>	let	fromBucket
+enum	XPCDistributed.BackpressureManager.Decision<A	Swift.Hashable>		
+enum	XPCDistributed.BackpressureManager.Decision<A	Swift.Hashable>	case	admitted
+enum	XPCDistributed.BackpressureManager.Decision<A	Swift.Hashable>	case	stale
+enum	XPCDistributed.BackpressureManager.Decision<A	Swift.Hashable>	case	enqueuedAsPending
+struct	XPCDistributed.Environment			
+struct	XPCDistributed.XPCSystem.RemoteInvocationCancellationError			
+struct	XPCDistributed.XPCSystem.RemoteInvocationCancellationError		let	_reason
+struct	XPCDistributed.XPCSystem.RemoteInvocationCancellationError		let	_message
+enum	XPCDistributed.XPCSystem.RemoteInvocationCancellationError.Reason			
+enum	XPCDistributed.XPCSystem.RemoteInvocationCancellationError.Reason		case	underlyingSessionCancelled
+enum	XPCDistributed.XPCSystem.RemoteInvocationCancellationError.Reason		case	callingTaskCancelled
+enum	XPCDistributed.XPCSystem.RemoteInvocationCancellationError.Reason		case	executionFailed
+enum	XPCDistributed.XPCSystem.RemoteInvocationCancellationError.Reason		case	resultPropagationFailed
+struct	XPCDistributed.XPCSystem.SetupError			
+struct	XPCDistributed.XPCSystem.SetupError		let	message
+struct	XPCDistributed.XPCSystem.InvocationEncoder			
+struct	XPCDistributed.XPCSystem.InvocationEncoder		var	protocolStub
+struct	XPCDistributed.XPCSystem.InvocationEncoder		var	genericSubsitutions
+struct	XPCDistributed.XPCSystem.InvocationEncoder		var	arguments
+struct	XPCDistributed.XPCSystem.InvocationEncoder		var	errorType
+struct	XPCDistributed.XPCSystem.InvocationEncoder		var	returnType
+struct	XPCDistributed.XPCSystem.EncodedInvocationDecoder			
+struct	XPCDistributed.XPCSystem.EncodedInvocationDecoder		let	container
+struct	XPCDistributed.XPCSystem.EncodedInvocationDecoder		var	argumentDecoder
+struct	XPCDistributed.XPCSystem.EncodedInvocationDecoder		let	errorType
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder			
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder		let	protocolStub
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder		let	genericSubstitutions
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder		let	arguments
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder		var	currentArgumentIndex
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder		let	errorType
+struct	XPCDistributed.XPCSystem.DirectInvocationDecoder		let	returnType
+struct	XPCDistributed.XPCSystem.InvocationDecoder			
+struct	XPCDistributed.XPCSystem.InvocationDecoder		var	mode
+enum	XPCDistributed.XPCSystem.InvocationDecoder.Mode			
+enum	XPCDistributed.XPCSystem.InvocationDecoder.Mode		case	encoded
+enum	XPCDistributed.XPCSystem.InvocationDecoder.Mode		case	direct
+enum	XPCDistributed.XPCSystem.InvocationCodingKeys			
+enum	XPCDistributed.XPCSystem.InvocationCodingKeys		case	protocolStub
+enum	XPCDistributed.XPCSystem.InvocationCodingKeys		case	genericSubsitutions
+enum	XPCDistributed.XPCSystem.InvocationCodingKeys		case	arguments
+enum	XPCDistributed.XPCSystem.InvocationCodingKeys		case	errorType
+enum	XPCDistributed.XPCSystem.InvocationCodingKeys		case	returnType
+class	XPCDistributed.XPCSystem.EncodedResultHandler			
+class	XPCDistributed.XPCSystem.EncodedResultHandler		var	reply
+class	XPCDistributed.XPCSystem.EncodedResultHandler		let	replyHandler
+class	XPCDistributed.XPCSystem.EncodedResultHandler		let	canThrow
+class	XPCDistributed.XPCSystem.DirectResultHandler			
+class	XPCDistributed.XPCSystem.DirectResultHandler		var	capturedResult
+class	XPCDistributed.XPCSystem.ResultHandler			
+class	XPCDistributed.XPCSystem.ResultHandler		let	mode
+enum	XPCDistributed.XPCSystem.ResultHandler.Mode			
+enum	XPCDistributed.XPCSystem.ResultHandler.Mode		case	encoded
+enum	XPCDistributed.XPCSystem.ResultHandler.Mode		case	direct
+class	XPCDistributed.XPCSystem.Session			
+class	XPCDistributed.XPCSystem.Session		let	actorSystem
+class	XPCDistributed.XPCSystem.Session		let	id
+class	XPCDistributed.XPCSystem.Session		let	idGenerator
+class	XPCDistributed.XPCSystem.Session		let	kind
+class	XPCDistributed.XPCSystem.Session		let	sharedActors
+class	XPCDistributed.XPCSystem.Session		let	cancellationEvent
+class	XPCDistributed.XPCSystem.Session		let	unownedLocalInterfaceActivationEvent
+class	XPCDistributed.XPCSystem.Session		let	isBidirectional
+class	XPCDistributed.XPCSystem.Session		var	ownedLocalInterfaceActivationEvent
+class	XPCDistributed.XPCSystem.Session		let	activationFuse
+class	XPCDistributed.XPCSystem.Session		var	pendingInvocationExecutionTasks
+enum	XPCDistributed.XPCSystem.Session.Kind			
+enum	XPCDistributed.XPCSystem.Session.Kind		case	xpc
+enum	XPCDistributed.XPCSystem.Session.Kind		case	local
+struct	XPCDistributed.XPCSystem.Session.InitializationOptions			
+struct	XPCDistributed.XPCSystem.Session.InitializationOptions		let	rawValue
+struct	XPCDistributed.XPCSystem.Session.ServiceConnectArguments			
+struct	XPCDistributed.XPCSystem.Session.ServiceConnectArguments		let	peerRequirement
+struct	XPCDistributed.XPCSystem.Session.ServiceConnectArguments		let	options
+struct	XPCDistributed.XPCSystem.Session.RemoteInterface			
+struct	XPCDistributed.XPCSystem.Session.RemoteInterface		let	session
+struct	XPCDistributed.XPCSystem.Session.LocalInterface.ActivationToken			
+struct	XPCDistributed.XPCSystem.Session.LocalInterface.ActivationToken		let	id
+struct	XPCDistributed.XPCSystem.Session.LocalInterface.UncheckedHandoff			
+struct	XPCDistributed.XPCSystem.Session.LocalInterface.UncheckedHandoff		let	wrappedInterface
+enum	XPCDistributed.XPCSystem.Session.LocalInterface.ActivationToken.CodingKeys			
+enum	XPCDistributed.XPCSystem.Session.LocalInterface.ActivationToken.CodingKeys		case	id
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest			
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest		let	id
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest		let	basePriority
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest		let	targetedSharedActor
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest		let	remoteCallIdentifier
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest		let	contents
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse<A	Swift.Decodable, A: Swift.Encodable>		
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse<A	Swift.Decodable, A: Swift.Encodable>	let	_value
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification			
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification		case	invocationCancelled
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification		case	invocationEscalated
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification		case	responseEscalated
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.CodingKeys			
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.CodingKeys		case	invocationCancelled
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.CodingKeys		case	invocationEscalated
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.CodingKeys		case	responseEscalated
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.InvocationCancelledCodingKeys			
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.InvocationCancelledCodingKeys		case	id
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.InvocationEscalatedCodingKeys			
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.InvocationEscalatedCodingKeys		case	id
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.InvocationEscalatedCodingKeys		case	priority
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.ResponseEscalatedCodingKeys			
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.ResponseEscalatedCodingKeys		case	id
+enum	XPCDistributed.XPCSystem.Session.RemoteNotification.ResponseEscalatedCodingKeys		case	priority
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure<A	Swift.Decodable, A: Swift.Encodable>		
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure<A	Swift.Decodable, A: Swift.Encodable>	case	resultPropagationFailed
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure<A	Swift.Decodable, A: Swift.Encodable>	case	executionFailed
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.CodingKeys			
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.CodingKeys		case	id
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.CodingKeys		case	basePriority
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.CodingKeys		case	targetedSharedActor
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.CodingKeys		case	remoteCallIdentifier
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.CodingKeys		case	contents
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.InvocationContents			
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.InvocationContents		case	send
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationRequest.InvocationContents		case	recv
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	resultPropagationFailed
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	executionFailed
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.ResultPropagationFailedCodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.ResultPropagationFailedCodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	_0
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.ExecutionFailedCodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	XPCDistributed.XPCSystem.Session.RemoteInvocationResponse.RemoteInvocationFailure.ExecutionFailedCodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	_0
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationReplyEncoder			
+struct	XPCDistributed.XPCSystem.Session.RemoteInvocationReplyEncoder		let	userInfo
+class	XPCDistributed.XPCSystem			
+class	XPCDistributed.XPCSystem		let	debugName
+class	XPCDistributed.XPCSystem		let	id
+class	XPCDistributed.XPCSystem		let	peerRequirement
+class	XPCDistributed.XPCSystem		let	preserveSelfIPC
+class	XPCDistributed.XPCSystem		let	actorTable
+struct	XPCDistributed.XPCSystem.BackpressurePolicy			
+struct	XPCDistributed.XPCSystem.BackpressurePolicy		let	enabled
+struct	XPCDistributed.XPCSystem.BackpressurePolicy		let	maxConcurrentRequests
+struct	XPCDistributed.OwnedAwaitableEvent			
+struct	XPCDistributed.OwnedAwaitableEvent		let	unownedAwaitableEvent
+struct	XPCDistributed.OwnedAwaitableEvent		let	owningTask
+struct	XPCDistributed.OwnedAwaitableEvent		let	posted
+struct	XPCDistributed.ID64.Generator			
+struct	XPCDistributed.ID64.Generator		let	atomic
+struct	XPCDistributed.Fuse			
+struct	XPCDistributed.Fuse		let	value
+struct	XPCDistributed.XPCSystem.Session.LocalInterface			
+struct	XPCDistributed.XPCSystem.Session.LocalInterface		let	session
+protocol	ServiceRegistry.Key			
+protocol	XPCSystem.ConnectableService			
+protocol	Transport.RawTransportProtocol			
+protocol	Internal.Identifiable	ID		
+protocol	XPCDistributed.ActorBackedByDispatchSerialQueue			
+protocol	EncodedResultHandler.ReplyHandler			
+protocol	XPCSystem.InboundSessionProtocol			
+protocol	XPCSystem.OutboundSessionProtocol			
+protocol	XPCSystem.RestrictedAccessDistributedActor			
+protocol	conformance XPCSystem.ServiceRegistry	Swift.Actor		
+protocol	conformance Transport.InProcessRawTransport	XPCDistributed.XPCSystem.Transport.RawTransportProtocol		
+protocol	conformance XPCSystem.Service	Swift.Hashable		
+protocol	conformance XPCSystem.Service	Swift.Equatable		
+protocol	conformance XPCSystem.Service	XPCDistributed.XPCSystem.ServiceRegistry.Key		
+protocol	conformance EphemeralService.ListeningToken	Swift.Decodable		
+protocol	conformance EphemeralService.ListeningToken	Swift.Encodable		
+protocol	conformance EphemeralService.ListeningToken	Swift.Hashable		
+protocol	conformance EphemeralService.ListeningToken	Swift.Equatable		
+protocol	conformance XPCSystem.EphemeralService	Swift.Decodable		
+protocol	conformance XPCSystem.EphemeralService	Swift.Encodable		
+protocol	conformance XPCSystem.EphemeralService	Swift.Hashable		
+protocol	conformance XPCSystem.EphemeralService	Swift.Equatable		
+protocol	conformance XPCSystem.EphemeralService	XPCDistributed.XPCSystem.ServiceRegistry.Key		
+protocol	conformance XPCSystem.Service	XPCDistributed.XPCSystem.ConnectableService		
+protocol	conformance XPCSystem.EphemeralService	XPCDistributed.XPCSystem.ConnectableService		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Transport.XPCRawTransport	XPCDistributed.XPCSystem.Transport.RawTransportProtocol		
+protocol	conformance Transport.TransportError	Swift.Error		
+protocol	conformance Transport.Packet	Swift.RawRepresentable		
+protocol	conformance Transport.Packet	Swift.CustomStringConvertible		
+protocol	conformance Transport.RawTransportError	Swift.Error		
+protocol	conformance XPCDistributed.Ack	Swift.Decodable		
+protocol	conformance XPCDistributed.Ack	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance XPCSystem.ActorReference	Swift.Decodable		
+protocol	conformance XPCSystem.ActorReference	Swift.Encodable		
+protocol	conformance XPCDistributed.Either	Swift.Decodable		
+protocol	conformance XPCDistributed.Either	Swift.Encodable		
+protocol	conformance XPCDistributed.Either	Swift.Equatable		
+protocol	conformance XPCDistributed.Either	Swift.Hashable		
+protocol	conformance Case	Swift.RawRepresentable		
+protocol	conformance Case	Swift.Hashable		
+protocol	conformance Case	Swift.Equatable		
+protocol	conformance Case	Swift.Decodable		
+protocol	conformance Case	Swift.Encodable		
+protocol	conformance XPCDistributed.ID64	Swift.Decodable		
+protocol	conformance XPCDistributed.ID64	Swift.Encodable		
+protocol	conformance XPCDistributed.ID64	Swift.Hashable		
+protocol	conformance XPCDistributed.ID64	Swift.CustomDebugStringConvertible		
+protocol	conformance XPCDistributed.ID64	Swift.Equatable		
+protocol	conformance RequestManager.Request	Swift.Actor		
+protocol	conformance RequestManager.Request	XPCDistributed.ActorBackedByDispatchSerialQueue		
+protocol	conformance XPCDistributed.RequestManager	Swift.Actor		
+protocol	conformance XPCDistributed.RequestManager	XPCDistributed.ActorBackedByDispatchSerialQueue		
+protocol	conformance XPCDistributed.SwiftType	Swift.Decodable		
+protocol	conformance XPCDistributed.SwiftType	Swift.Encodable		
+protocol	conformance XPCDistributed.SwiftType	Swift.Hashable		
+protocol	conformance XPCDistributed.SwiftType	Swift.CustomDebugStringConvertible		
+protocol	conformance XPCDistributed.SwiftType	Swift.Equatable		
+protocol	conformance XPCSystem.ActorID	Swift.Hashable		
+protocol	conformance XPCSystem.ActorID	Swift.CustomDebugStringConvertible		
+protocol	conformance XPCSystem.ActorID	Swift.Equatable		
+protocol	conformance RawActorID.Local	Swift.Hashable		
+protocol	conformance RawActorID.Local	Swift.Equatable		
+protocol	conformance RawActorID.Remote	Swift.Hashable		
+protocol	conformance RawActorID.Remote	Swift.Equatable		
+protocol	conformance XPCSystem.RawActorID	Swift.Hashable		
+protocol	conformance XPCSystem.RawActorID	Swift.Equatable		
+protocol	conformance XPCSystem.SharedActorKey	Swift.Hashable		
+protocol	conformance XPCSystem.SharedActorKey	Swift.Equatable		
+protocol	conformance SharedActorKey.WireCode	Swift.Equatable		
+protocol	conformance SharedActorKey.WireCode	Swift.Hashable		
+protocol	conformance SharedActorKey.WireCode	Swift.RawRepresentable		
+protocol	conformance SharedActorKey.WireCode	Swift.Decodable		
+protocol	conformance SharedActorKey.WireCode	Swift.Encodable		
+protocol	conformance XPCSystem.SharedActorKey	Swift.Decodable		
+protocol	conformance XPCSystem.SharedActorKey	Swift.Encodable		
+protocol	conformance XPCSystem.ActorID	Swift.Decodable		
+protocol	conformance XPCSystem.ActorID	Swift.Encodable		
+protocol	conformance XPCSystem.RawActorID	Swift.CustomDebugStringConvertible		
+protocol	conformance RawActorID.Local	Swift.CustomDebugStringConvertible		
+protocol	conformance RawActorID.Remote	Swift.CustomDebugStringConvertible		
+protocol	conformance XPCSystem.SharedActorKey	Swift.CustomDebugStringConvertible		
+protocol	conformance BackpressureManager.PriorityBucket	Swift.Equatable		
+protocol	conformance BackpressureManager.PriorityBucket	Swift.Hashable		
+protocol	conformance BackpressureManager.PriorityBucket	Swift.RawRepresentable		
+protocol	conformance XPCDistributed.BackpressureManager	Swift.Actor		
+protocol	conformance XPCDistributed.BackpressureManager	XPCDistributed.ActorBackedByDispatchSerialQueue		
+protocol	conformance Decision	Swift.Hashable		
+protocol	conformance Decision	Swift.Equatable		
+protocol	conformance RemoteInvocationCancellationError.Reason	Swift.Equatable		
+protocol	conformance RemoteInvocationCancellationError.Reason	Swift.Hashable		
+protocol	conformance XPCSystem.RemoteInvocationCancellationError	Distributed.DistributedActorSystemError		
+protocol	conformance XPCSystem.RemoteInvocationCancellationError	Swift.CustomStringConvertible		
+protocol	conformance XPCSystem.RemoteInvocationCancellationError	Foundation.LocalizedError		
+protocol	conformance XPCSystem.RemoteInvocationCancellationError	Swift.Error		
+protocol	conformance XPCSystem.SetupError	Distributed.DistributedActorSystemError		
+protocol	conformance XPCSystem.SetupError	Swift.CustomDebugStringConvertible		
+protocol	conformance XPCSystem.SetupError	Foundation.LocalizedError		
+protocol	conformance XPCSystem.SetupError	Swift.Error		
+protocol	conformance XPCSystem.InvocationEncoder	Distributed.DistributedTargetInvocationEncoder		
+protocol	conformance XPCSystem.EncodedInvocationDecoder	Distributed.DistributedTargetInvocationDecoder		
+protocol	conformance XPCSystem.DirectInvocationDecoder	Distributed.DistributedTargetInvocationDecoder		
+protocol	conformance XPCSystem.InvocationDecoder	Distributed.DistributedTargetInvocationDecoder		
+protocol	conformance InvocationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvocationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvocationCodingKeys	Swift.Hashable		
+protocol	conformance InvocationCodingKeys	Swift.Equatable		
+protocol	conformance InvocationCodingKeys	Swift.CodingKey		
+protocol	conformance XPCSystem.EncodedResultHandler	Distributed.DistributedTargetInvocationResultHandler		
+protocol	conformance XPCSystem.DirectResultHandler	Distributed.DistributedTargetInvocationResultHandler		
+protocol	conformance XPCSystem.ResultHandler	Distributed.DistributedTargetInvocationResultHandler		
+protocol	conformance Session.InitializationOptions	Swift.OptionSet		
+protocol	conformance Session.InitializationOptions	Swift.SetAlgebra		
+protocol	conformance Session.InitializationOptions	Swift.RawRepresentable		
+protocol	conformance Session.InitializationOptions	Swift.Equatable		
+protocol	conformance Session.InitializationOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance LocalInterface.ActivationToken	Swift.Decodable		
+protocol	conformance LocalInterface.ActivationToken	Swift.Encodable		
+protocol	conformance LocalInterface.ActivationToken	Swift.Hashable		
+protocol	conformance LocalInterface.ActivationToken	Swift.Equatable		
+protocol	conformance XPCSystem.Session	XPCDistributed.Internal.Identifiable		
+protocol	conformance XPCSystem.Session	Swift.Hashable		
+protocol	conformance XPCSystem.Session	Swift.Equatable		
+protocol	conformance XPCSystem.Session	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Session.RemoteInvocationRequest	Swift.Decodable		
+protocol	conformance Session.RemoteInvocationRequest	Swift.Encodable		
+protocol	conformance Session.RemoteInvocationResponse	Swift.Decodable		
+protocol	conformance Session.RemoteInvocationResponse	Swift.Encodable		
+protocol	conformance Session.RemoteNotification	Swift.Decodable		
+protocol	conformance Session.RemoteNotification	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RemoteInvocationFailure	Swift.Error		
+protocol	conformance ResponseEscalatedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResponseEscalatedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ResponseEscalatedCodingKeys	Swift.Hashable		
+protocol	conformance ResponseEscalatedCodingKeys	Swift.Equatable		
+protocol	conformance InvocationEscalatedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvocationEscalatedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvocationEscalatedCodingKeys	Swift.Hashable		
+protocol	conformance InvocationEscalatedCodingKeys	Swift.Equatable		
+protocol	conformance InvocationCancelledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvocationCancelledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvocationCancelledCodingKeys	Swift.Hashable		
+protocol	conformance InvocationCancelledCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InvocationCancelledCodingKeys	Swift.CodingKey		
+protocol	conformance InvocationEscalatedCodingKeys	Swift.CodingKey		
+protocol	conformance ResponseEscalatedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RemoteInvocationFailure	Swift.Encodable		
+protocol	conformance RemoteInvocationFailure	Swift.Decodable		
+protocol	conformance InvocationContents	Swift.Decodable		
+protocol	conformance InvocationContents	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RemoteInvocationFailure.ExecutionFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoteInvocationFailure.ExecutionFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemoteInvocationFailure.ExecutionFailedCodingKeys	Swift.Hashable		
+protocol	conformance RemoteInvocationFailure.ExecutionFailedCodingKeys	Swift.Equatable		
+protocol	conformance RemoteInvocationFailure.ResultPropagationFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoteInvocationFailure.ResultPropagationFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemoteInvocationFailure.ResultPropagationFailedCodingKeys	Swift.Hashable		
+protocol	conformance RemoteInvocationFailure.ResultPropagationFailedCodingKeys	Swift.Equatable		
+protocol	conformance RemoteInvocationFailure.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoteInvocationFailure.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemoteInvocationFailure.CodingKeys	Swift.Hashable		
+protocol	conformance RemoteInvocationFailure.CodingKeys	Swift.Equatable		
+protocol	conformance RemoteInvocationFailure.CodingKeys	Swift.CodingKey		
+protocol	conformance RemoteInvocationFailure.ResultPropagationFailedCodingKeys	Swift.CodingKey		
+protocol	conformance RemoteInvocationFailure.ExecutionFailedCodingKeys	Swift.CodingKey		
+protocol	conformance XPCDistributed.XPCSystem.Session	XPCDistributed.XPCSystem.InboundSessionProtocol		
+protocol	conformance RemoteInvocationReplyEncoder	XPCDistributed.XPCSystem.EncodedResultHandler.ReplyHandler		
+protocol	conformance XPCDistributed.XPCSystem.Session	XPCDistributed.XPCSystem.OutboundSessionProtocol		
+protocol	conformance XPCDistributed.XPCSystem	XPCDistributed.Internal.Identifiable		
+protocol	conformance XPCDistributed.XPCSystem	Distributed.DistributedActorSystem		
+protocol	conformance XPCSystem.BackpressurePolicy	Swift.Hashable		
+protocol	conformance XPCSystem.BackpressurePolicy	Swift.Equatable		
+extension	XPCDistributed.XPCSystem.Transport.Packet	RawRepresentable		
+extension	XPCDistributed.Case	RawRepresentable		
+extension	XPCDistributed.XPCSystem.SharedActorKey.WireCode	RawRepresentable		
+extension	XPCDistributed.BackpressureManager.PriorityBucket	RawRepresentable		
+extension	XPCDistributed.XPCSystem.InvocationEncoder	DistributedTargetInvocationEncoder		
+extension	XPCDistributed.XPCSystem.EncodedInvocationDecoder	DistributedTargetInvocationDecoder		
+extension	XPCDistributed.XPCSystem.DirectInvocationDecoder	DistributedTargetInvocationDecoder		
+extension	XPCDistributed.XPCSystem.InvocationDecoder	DistributedTargetInvocationDecoder		
+extension	XPCDistributed.XPCSystem.EncodedResultHandler	DistributedTargetInvocationResultHandler		
+extension	XPCDistributed.XPCSystem.DirectResultHandler	DistributedTargetInvocationResultHandler		
+extension	XPCDistributed.XPCSystem.ResultHandler	DistributedTargetInvocationResultHandler		
+extension	XPCDistributed.XPCSystem.Session.InitializationOptions	OptionSet		
+extension	XPCDistributed.XPCSystem.Session.InitializationOptions	SetAlgebra		
+extension	XPCDistributed.XPCSystem.Session.InitializationOptions	RawRepresentable		
+extension	XPCDistributed.XPCSystem.Session.InitializationOptions	ExpressibleByArrayLiteral		
+extension	XPCDistributed.XPCSystem.Session	Internal.Identifiable		
+extension	XPCDistributed.XPCSystem	Internal.Identifiable		
+extension	XPCDistributed.XPCSystem	DistributedActorSystem		

@@ -1,0 +1,304 @@
+kind	type	conformance	member_kind	member
+enum	online_auth_agent.DBError			
+enum	online_auth_agent.DBError		case	sqliteError
+enum	online_auth_agent.DBError		case	invalidData
+class	online_auth_agent.SQLStatement			
+class	online_auth_agent.SQLStatement		var	raw
+enum	online_auth_agent.AppManagerError			
+enum	online_auth_agent.AppManagerError		case	missingBundleID
+enum	online_auth_agent.AppManagerError		case	missingInstallationID
+enum	online_auth_agent.AppManagerError		case	unsupportedPlatform
+enum	online_auth_agent.AppManagerError		case	unexpectedAPIFailure
+struct	online_auth_agent.AppRecord			
+struct	online_auth_agent.AppRecord		let	url
+struct	online_auth_agent.AppRecord		let	bundleID
+struct	online_auth_agent.AppRecord		let	teamID
+struct	online_auth_agent.AppRecord		let	versionID
+struct	online_auth_agent.AppRecord		let	uniqueInstallationID
+struct	online_auth_agent.AppRecord		let	cdhash
+class	online_auth_agent.AppManager			
+class	online_auth_agent.LaunchWarningDB	SQLDB		
+enum	online_auth_agent.UtilitiesError			
+enum	online_auth_agent.UtilitiesError		case	unknownErrno
+struct	online_auth_agent.BloomFilterUpdate			
+struct	online_auth_agent.BloomFilterUpdate		let	bitsToSet
+class	online_auth_agent.BloomFilterAlgorithm			
+class	online_auth_agent.BloomFilterAlgorithm		let	name
+class	online_auth_agent.BloomFilterAlgorithm		let	hashFn
+enum	online_auth_agent.BloomFilterAlgorithm.CodingKeys			
+enum	online_auth_agent.BloomFilterAlgorithm.CodingKeys		case	name
+struct	online_auth_agent.HashAlgorithmRegistry			
+enum	online_auth_agent.LaunchWarningReason			
+enum	online_auth_agent.LaunchWarningReason		case	None
+enum	online_auth_agent.LaunchWarningReason		case	Malware
+enum	online_auth_agent.LaunchWarningReason		case	BlockedByTelephony
+struct	online_auth_agent.LaunchWarningFlags			
+struct	online_auth_agent.LaunchWarningFlags		let	rawValue
+struct	online_auth_agent.LaunchWarningDetails			
+struct	online_auth_agent.LaunchWarningDetails		var	cdhashType
+struct	online_auth_agent.LaunchWarningDetails		var	cdhash
+struct	online_auth_agent.LaunchWarningDetails		var	date
+struct	online_auth_agent.LaunchWarningDetails		var	reason
+struct	online_auth_agent.LaunchWarningDetails		var	flags
+struct	online_auth_agent.LaunchWarningDetails		var	kbURL
+enum	online_auth_agent.CodeSignatureError			
+enum	online_auth_agent.CodeSignatureError		case	OSStatusError
+enum	online_auth_agent.CodeSignatureError		case	invalidSigningInfo
+enum	online_auth_agent.CodeSignatureError		case	noSupportedCDHash
+struct	online_auth_agent.CDHashInfo			
+struct	online_auth_agent.CDHashInfo		let	type
+struct	online_auth_agent.CDHashInfo		let	data
+enum	online_auth_agent.SignatureStatus			
+enum	online_auth_agent.SignatureStatus		case	valid
+enum	online_auth_agent.SignatureStatus		case	invalid
+class	online_auth_agent.DataValidator			
+enum	online_auth_agent.SignatureStatus.CodingKeys			
+enum	online_auth_agent.SignatureStatus.CodingKeys		case	valid
+enum	online_auth_agent.SignatureStatus.CodingKeys		case	invalid
+enum	online_auth_agent.SignatureStatus.ValidCodingKeys			
+enum	online_auth_agent.SignatureStatus.InvalidCodingKeys			
+class	online_auth_agent.BloomFilterDiskStorage			
+class	online_auth_agent.BloomFilterDiskStorage		let	url
+class	online_auth_agent.BloomFilterDiskStorage		let	size
+class	online_auth_agent.BloomFilterDiskStorage		let	fh
+enum	online_auth_agent.BloomFilterDiskStorage.CodingKeys			
+enum	online_auth_agent.BloomFilterDiskStorage.CodingKeys		case	url
+enum	online_auth_agent.BloomFilterDiskStorage.CodingKeys		case	size
+enum	online_auth_agent.LaunchWarningMarkError			
+enum	online_auth_agent.LaunchWarningMarkError		case	invalidVersion
+enum	online_auth_agent.LaunchWarningMarkError		case	tooSmall
+class	online_auth_agent.LaunchWarningMark			
+class	online_auth_agent.LaunchWarningMark		let	version
+class	online_auth_agent.LaunchWarningMark		let	warningID
+enum	online_auth_agent.BloomFilterError			
+enum	online_auth_agent.BloomFilterError		case	unexpected
+enum	online_auth_agent.BloomFilterError		case	invalidPosition
+enum	online_auth_agent.BloomFilterError		case	invalidFilesize
+enum	online_auth_agent.BloomFilterError		case	invalidAlgorithm
+enum	online_auth_agent.BloomFilterError		case	invalidBitsPerEntry
+enum	online_auth_agent.BloomFilterError		case	invalidUpdateSize
+enum	online_auth_agent.BloomFilterResult			
+enum	online_auth_agent.BloomFilterResult		case	probablyPresent
+enum	online_auth_agent.BloomFilterResult		case	notPresent
+class	online_auth_agent.BloomFilter			
+class	online_auth_agent.BloomFilter		let	id
+class	online_auth_agent.BloomFilter		let	size
+class	online_auth_agent.BloomFilter		let	storage
+class	online_auth_agent.BloomFilter		let	algorithm
+class	online_auth_agent.BloomFilter		let	bitsPerEntry
+class	online_auth_agent.BloomFilter		let	salt
+enum	online_auth_agent.BloomFilter.CodingKeys			
+enum	online_auth_agent.BloomFilter.CodingKeys		case	size
+enum	online_auth_agent.BloomFilter.CodingKeys		case	storage
+enum	online_auth_agent.BloomFilter.CodingKeys		case	algorithm
+enum	online_auth_agent.BloomFilter.CodingKeys		case	bitsPerEntry
+enum	online_auth_agent.BloomFilter.CodingKeys		case	salt
+enum	online_auth_agent.BloomFilter.CodingKeys		case	id
+struct	online_auth_agent.CloudKitConfiguration			
+struct	online_auth_agent.CloudKitConfiguration		let	containerIdentifier
+struct	online_auth_agent.CloudKitConfiguration		let	containerEnvironment
+struct	online_auth_agent.CloudKitConfiguration		let	baseZoneName
+struct	online_auth_agent.CloudKitConfiguration		var	detailsZoneName
+struct	online_auth_agent.CloudKitConfiguration		var	updateZoneName
+struct	online_auth_agent.CloudKitRuntime			
+struct	online_auth_agent.CloudKitRuntime		let	baseContainer
+struct	online_auth_agent.CloudKitRuntime		let	baseDB
+struct	online_auth_agent.CloudKitRuntime		let	baseZone
+struct	online_auth_agent.CloudKitRuntime		var	updateZone
+struct	online_auth_agent.CloudKitRuntime		var	detailsZone
+enum	online_auth_agent.LaunchWarningDBError			
+enum	online_auth_agent.LaunchWarningDBError		case	unexpectedDataState
+struct	online_auth_agent.LaunchWarningDB.LaunchWarningEntry			
+struct	online_auth_agent.LaunchWarningDB.LaunchWarningEntry		var	id
+struct	online_auth_agent.LaunchWarningDB.LaunchWarningEntry		var	details
+struct	online_auth_agent.LaunchWarningDB.LaunchWarningEntry		var	user_override
+enum	online_auth_agent.LaunchWarningOperationsError			
+enum	online_auth_agent.LaunchWarningOperationsError		case	noController
+class	online_auth_agent.LaunchWarningOperations	NSObject		
+class	online_auth_agent.LaunchWarningOperations	NSObject	let	db
+class	online_auth_agent.LaunchWarningOperations	NSObject	let	launchWarningController
+class	online_auth_agent.LaunchWarningOperations	NSObject	let	metrics
+class	online_auth_agent.LaunchWarningOperations	NSObject	let	syncQueue
+enum	online_auth_agent.CloudKitError			
+enum	online_auth_agent.CloudKitError		case	resultBlockSkipped
+enum	online_auth_agent.CloudKitError		case	noDetailsZone
+enum	online_auth_agent.CloudKitError		case	invalidUpdateRecord
+enum	online_auth_agent.CloudKitError		case	noUpdateZone
+enum	online_auth_agent.CloudKitError		case	recordSignatureMissing
+enum	online_auth_agent.CloudKitError		case	recordSignatureInvalid
+class	online_auth_agent.CloudKitOperations			
+class	online_auth_agent.CloudKitOperations		var	runtime
+class	online_auth_agent.CloudKitOperations		var	metrics
+class	online_auth_agent.CloudKitOperations		var	ignoreSignatures
+struct	__C_Synthesized.CKErrorCode			
+struct	__C_Synthesized.CKErrorCode		let	_nsError
+enum	online_auth_agent.LaunchWarningControllerError			
+enum	online_auth_agent.LaunchWarningControllerError		case	baseAssetInvalidSize
+enum	online_auth_agent.LaunchWarningControllerError		case	invalidCompressionType
+enum	online_auth_agent.LaunchWarningControllerError		case	invalidCompressedData
+class	online_auth_agent.LaunchWarningController			
+class	online_auth_agent.LaunchWarningController		var	baseURL
+class	online_auth_agent.LaunchWarningController		var	db
+class	online_auth_agent.LaunchWarningController		var	filter
+class	online_auth_agent.LaunchWarningController		var	cloudkit
+class	online_auth_agent.LaunchWarningController		var	appManager
+class	online_auth_agent.LaunchWarningController		var	metrics
+struct	online_auth_agent.LaunchWarningController.SyncResult			
+struct	online_auth_agent.LaunchWarningController.SyncResult		let	newFilter
+struct	online_auth_agent.LaunchWarningController.SyncResult		let	newDocumentChecker
+struct	online_auth_agent.LaunchWarningController.SyncResult		let	filterUpdateCount
+struct	online_auth_agent.LaunchWarningController.SyncResult		let	expiredBaseToken
+struct	online_auth_agent.LaunchWarningController.SyncResult		let	expiredUpdateToken
+struct	online_auth_agent.LaunchWarningController.NewLaunchWarning			
+struct	online_auth_agent.LaunchWarningController.NewLaunchWarning		let	app
+struct	online_auth_agent.LaunchWarningController.NewLaunchWarning		let	details
+enum	online_auth_agent.WarningLocation			
+enum	online_auth_agent.WarningLocation		case	backgroundSync
+enum	online_auth_agent.WarningLocation		case	installation
+enum	online_auth_agent.CloudKitValidationError			
+enum	online_auth_agent.CloudKitValidationError		case	recordSignatureMissing
+enum	online_auth_agent.CloudKitValidationError		case	recordSignatureInvalid
+class	online_auth_agent.MetricReporter			
+struct	online_auth_agent.BloomFilterRecord			
+struct	online_auth_agent.BloomFilterRecord		var	payload
+struct	online_auth_agent.BloomFilterRecord		var	salt
+struct	online_auth_agent.BloomFilterRecord		var	size
+struct	online_auth_agent.BloomFilterRecord		var	detailZone
+struct	online_auth_agent.BloomFilterRecord		var	updateZone
+struct	online_auth_agent.BloomFilterRecord		var	id
+struct	online_auth_agent.BloomFilterRecord		var	algorithmName
+struct	online_auth_agent.BloomFilterRecord		var	bitsPerEntry
+struct	online_auth_agent.BloomFilterRecord		var	compressionType
+struct	online_auth_agent.DocumentCheckerRecord			
+struct	online_auth_agent.DocumentCheckerRecord		var	payload
+struct	online_auth_agent.BloomFilterUpdateRecord			
+struct	online_auth_agent.BloomFilterUpdateRecord		var	updateNumber
+struct	online_auth_agent.BloomFilterUpdateRecord		var	data
+struct	online_auth_agent.BloomFilterUpdateRecord		var	entryCount
+struct	online_auth_agent.BloomFilterUpdateRecord		var	baseID
+struct	online_auth_agent.BloomFilterUpdateRecord		var	compressionType
+struct	online_auth_agent.BaseZoneSyncResult			
+struct	online_auth_agent.BaseZoneSyncResult		let	newFilter
+struct	online_auth_agent.BaseZoneSyncResult		let	newDocumentChecker
+struct	online_auth_agent.BaseZoneSyncResult		let	currentToken
+struct	online_auth_agent.UpdateZoneSyncResult			
+struct	online_auth_agent.UpdateZoneSyncResult		let	updated
+struct	online_auth_agent.UpdateZoneSyncResult		let	currentToken
+enum	online_auth_agent.CloudKitOperationsError			
+enum	online_auth_agent.CloudKitOperationsError		case	expiredToken
+protocol	online_auth_agent.AppManagerProtocol			
+protocol	online_auth_agent.MetricReporterProtocol			
+protocol	online_auth_agent.CloudKitOperationsProtocol			
+protocol	conformance online_auth_agent.DBError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.AppManagerError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.AppManager	online_auth_agent.AppManagerProtocol		
+protocol	conformance online_auth_agent.UtilitiesError	protocol descriptor for Error		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance BloomFilterAlgorithm.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance BloomFilterAlgorithm.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance BloomFilterAlgorithm.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance BloomFilterAlgorithm.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance BloomFilterAlgorithm.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance BloomFilterAlgorithm.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance online_auth_agent.BloomFilterAlgorithm	protocol descriptor for Decodable		
+protocol	conformance online_auth_agent.BloomFilterAlgorithm	protocol descriptor for Encodable		
+protocol	conformance online_auth_agent.LaunchWarningReason	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.LaunchWarningReason	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.LaunchWarningReason	protocol descriptor for RawRepresentable		
+protocol	conformance online_auth_agent.LaunchWarningFlags	protocol descriptor for OptionSet		
+protocol	conformance online_auth_agent.LaunchWarningFlags	protocol descriptor for SetAlgebra		
+protocol	conformance online_auth_agent.LaunchWarningFlags	protocol descriptor for RawRepresentable		
+protocol	conformance online_auth_agent.LaunchWarningFlags	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.LaunchWarningFlags	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance online_auth_agent.CodeSignatureError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.SignatureStatus	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.SignatureStatus	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.SignatureStatus	protocol descriptor for Decodable		
+protocol	conformance online_auth_agent.SignatureStatus	protocol descriptor for Encodable		
+protocol	conformance online_auth_agent.SignatureStatus	protocol descriptor for CustomStringConvertible		
+protocol	conformance InvalidCodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance InvalidCodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance ValidCodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance ValidCodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance ValidCodingKeys	protocol descriptor for CodingKey		
+protocol	conformance InvalidCodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance BloomFilterDiskStorage.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance BloomFilterDiskStorage.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance BloomFilterDiskStorage.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance BloomFilterDiskStorage.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance BloomFilterDiskStorage.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance BloomFilterDiskStorage.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance online_auth_agent.BloomFilterDiskStorage	protocol descriptor for Decodable		
+protocol	conformance online_auth_agent.BloomFilterDiskStorage	protocol descriptor for Encodable		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance online_auth_agent.LaunchWarningMarkError	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.LaunchWarningMarkError	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.LaunchWarningMarkError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.BloomFilterError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.BloomFilterResult	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.BloomFilterResult	protocol descriptor for Hashable		
+protocol	conformance BloomFilter.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance BloomFilter.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance BloomFilter.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance BloomFilter.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance BloomFilter.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance BloomFilter.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance online_auth_agent.BloomFilter	protocol descriptor for Decodable		
+protocol	conformance online_auth_agent.BloomFilter	protocol descriptor for Encodable		
+protocol	conformance online_auth_agent.LaunchWarningDBError	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.LaunchWarningDBError	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.LaunchWarningDBError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.LaunchWarningOperationsError	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.LaunchWarningOperationsError	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.LaunchWarningOperationsError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.CloudKitError	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.CloudKitError	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.CloudKitError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.CloudKitOperations	online_auth_agent.CloudKitOperationsProtocol		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for Equatable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for Error: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for Hashable: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for _ObjectiveCBridgeableError: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for CustomNSError: CloudKit		
+protocol	conformance __C_Synthesized.CKError	protocol descriptor for _BridgedStoredNSError: CloudKit		
+protocol	conformance __C.Code	protocol descriptor for RawRepresentable: CloudKit		
+protocol	conformance __C.Code	protocol descriptor for _ErrorCodeProtocol: CloudKit		
+protocol	conformance __C.Code	protocol descriptor for Equatable: CloudKit		
+protocol	conformance online_auth_agent.LaunchWarningControllerError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.WarningLocation	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.WarningLocation	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.WarningLocation	protocol descriptor for RawRepresentable		
+protocol	conformance online_auth_agent.CloudKitValidationError	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.CloudKitValidationError	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.CloudKitValidationError	protocol descriptor for RawRepresentable		
+protocol	conformance online_auth_agent.CloudKitValidationError	protocol descriptor for Error		
+protocol	conformance online_auth_agent.MetricReporter	online_auth_agent.MetricReporterProtocol		
+protocol	conformance online_auth_agent.CloudKitOperationsError	protocol descriptor for Equatable		
+protocol	conformance online_auth_agent.CloudKitOperationsError	protocol descriptor for Hashable		
+protocol	conformance online_auth_agent.CloudKitOperationsError	protocol descriptor for Error		
+extension	online_auth_agent.BloomFilterAlgorithm.CodingKeys	RawRepresentable		
+extension	online_auth_agent.LaunchWarningReason	RawRepresentable		
+extension	online_auth_agent.LaunchWarningFlags	OptionSet		
+extension	online_auth_agent.LaunchWarningFlags	SetAlgebra		
+extension	online_auth_agent.LaunchWarningFlags	RawRepresentable		
+extension	online_auth_agent.LaunchWarningFlags	ExpressibleByArrayLiteral		
+extension	online_auth_agent.BloomFilterDiskStorage.CodingKeys	RawRepresentable		
+extension	online_auth_agent.BloomFilter.CodingKeys	RawRepresentable		
+extension	__C_Synthesized.CKError	_BridgedStoredNSError		
+extension	online_auth_agent.WarningLocation	RawRepresentable		
+extension	online_auth_agent.CloudKitValidationError	RawRepresentable		

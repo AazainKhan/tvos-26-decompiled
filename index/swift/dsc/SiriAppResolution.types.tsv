@@ -1,0 +1,121 @@
+kind	type	conformance	member_kind	member
+class	SiriAppResolution.App			
+class	SiriAppResolution.App		let	appIdentifier
+class	SiriAppResolution.App		let	pluginIdentifier
+class	SiriAppResolution.App		let	systemExtensionBundleId
+class	SiriAppResolution.App		let	systemUIExtensionBundleId
+struct	SiriAppResolution.AppDisplayInfo			
+struct	SiriAppResolution.AppDisplayInfo		let	displayName
+struct	SiriAppResolution.AppDisplayInfo		let	isFirstParty
+enum	SiriAppResolution.AppFinder			
+class	SiriAppResolution.AppPolicyHandler			
+class	SiriAppResolution.AppPolicyHandler		var	appPolicyMonitor
+class	SiriAppResolution.AppPolicyHandler		let	appQueue
+class	SiriAppResolution.AppPolicyHandler		var	unsafeApps
+class	SiriAppResolution.AppResolutionEventSending			
+class	SiriAppResolution.AppResolutionEventSending		var	eventHandler
+class	SiriAppResolution.AppResolutionService<A	INIntent, B>		
+class	SiriAppResolution.AppResolutionService<A	INIntent, B>	let	appPolicyHandler
+enum	SiriAppResolution.AppResolutionConfirmation			
+enum	SiriAppResolution.AppResolutionConfirmation		case	cancelled
+enum	SiriAppResolution.AppResolutionConfirmation		case	confirmed
+enum	SiriAppResolution.AppResolutionConfirmation		case	rejected
+struct	SiriAppResolution.AppResolutionStateProvider			
+struct	SiriAppResolution.AppResolutionStateProvider		let	requestedApp
+struct	SiriAppResolution.AppResolutionStateProvider		let	suggestedApp
+struct	SiriAppResolution.AppResolutionStateProvider		let	confirmationResponse
+struct	SiriAppResolution.AppResolutionStateProvider		let	correctionResponse
+struct	SiriAppResolution.AppResolutionStateProvider		let	aceAppSelectionState
+enum	SiriAppResolution.AppSelectionResponse			
+enum	SiriAppResolution.AppSelectionResponse		case	unset
+enum	SiriAppResolution.AppSelectionResponse		case	rejectedAppConfirmation
+enum	SiriAppResolution.AppSelectionResponse		case	confirmedAppConfirmation
+enum	SiriAppResolution.AppSelectionResponse		case	requestedAppCorrection
+enum	SiriAppResolution.AppResolutionResult			
+enum	SiriAppResolution.AppResolutionResult		case	needsConfirmation
+enum	SiriAppResolution.AppResolutionResult		case	needsDisambiguation
+enum	SiriAppResolution.AppResolutionResult		case	selected
+enum	SiriAppResolution.AppResolutionResult		case	unsuccessful
+enum	SiriAppResolution.AppResolutionResult.AppResolutionResultError			
+enum	SiriAppResolution.AppResolutionResult.AppResolutionResultError		case	appNotSupported
+enum	SiriAppResolution.AppResolutionResult.AppResolutionResultError		case	screenTimeEnabled
+enum	SiriAppResolution.AppResolutionResult.AppResolutionResultError		case	noAppFound
+enum	SiriAppResolution.AppSelectionFailure			
+enum	SiriAppResolution.AppSelectionFailure		case	noAppSelected
+class	SiriAppResolution.AppSelectionService	SiriAppResolution.AppResolutionService A<A: INIntent, B>		
+class	SiriAppResolution.AppSelectionService	SiriAppResolution.AppResolutionService A<A: INIntent, B>	let	appFinder
+class	SiriAppResolution.AppSelectionService	SiriAppResolution.AppResolutionService A<A: INIntent, B>	let	appResolvers
+class	SiriAppResolution.AppSelectionService	SiriAppResolution.AppResolutionService A<A: INIntent, B>	let	sendEvent
+class	SiriAppResolution.AppSelectionService.EligibleAppFinder<A	INIntent, B>		
+class	SiriAppResolution.AppSupportService			
+class	SiriAppResolution.AppSupportService		let	dataSource
+struct	SiriAppResolution.AppSupportQuery			
+struct	SiriAppResolution.AppSupportQuery		var	intentID
+struct	SiriAppResolution.AppSupportQuery		var	allowedSiriAuthorizationStatus
+struct	SiriAppResolution.AppSupportQuery		var	allowedExtensionPointIdentifiers
+enum	SiriAppResolution.AppSupportQuery.AllowedSiriAuthorizationStatuses			
+enum	SiriAppResolution.AppSupportQuery.AllowedSiriAuthorizationStatuses		case	only
+enum	SiriAppResolution.AppSupportQuery.AllowedSiriAuthorizationStatuses		case	all
+enum	SiriAppResolution.AppSupportQuery.AllowedExtensionPointIdentifiers			
+enum	SiriAppResolution.AppSupportQuery.AllowedExtensionPointIdentifiers		case	only
+enum	SiriAppResolution.AppSupportQuery.AllowedExtensionPointIdentifiers		case	all
+struct	SiriAppResolution.AppSupportService.DataSource			
+struct	SiriAppResolution.AppSupportService.DataSource		var	apps
+struct	SiriAppResolution.AppSupportService.DataSource		var	plugins
+struct	SiriAppResolution.AppSupportService.SystemAppRecordData			
+struct	SiriAppResolution.AppSupportService.SystemAppRecordData		var	intentID
+struct	SiriAppResolution.AppSupportService.SystemAppRecordData.Iterator			
+struct	SiriAppResolution.AppSupportService.SystemAppRecordData.Iterator		var	enumerator
+class	SiriAppResolution.DefaultAppSelector			
+class	SiriAppResolution.DefaultAppSelector		let	defaultApps
+class	SiriAppResolution.InstrumentedAppResolutionService	SiriAppResolution.AppResolutionService A<A: INIntent, B>		
+class	SiriAppResolution.InstrumentedAppResolutionService	SiriAppResolution.AppResolutionService A<A: INIntent, B>	let	sendEvent
+protocol	SiriAppResolution.AppFinding			
+protocol	SiriAppResolution.AppPolicyHandling			
+protocol	SiriAppResolution.AppResolutionStateProviding			
+protocol	SiriAppResolution.AppResolving	IntentType		
+protocol	SiriAppResolution.AppSelecting			
+protocol	SiriAppResolution.InstrumentedAppSelecting			
+protocol	SiriAppResolution.PluginRecordProtocol			
+protocol	SiriAppResolution.AppRecordProtocol			
+protocol	conformance SiriAppResolution.App	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriAppResolution.App	Swift.CustomStringConvertible		
+protocol	conformance SiriAppResolution.App	Swift.Equatable		
+protocol	conformance SiriAppResolution.App	Swift.Hashable		
+protocol	conformance __C.INSiriAuthorizationStatus	Swift.Hashable: Intents		
+protocol	conformance __C.INSiriAuthorizationStatus	Swift.Equatable: Intents		
+protocol	conformance __C.INSiriAuthorizationStatus	Swift.RawRepresentable: Intents		
+protocol	conformance __C.DMFPolicy	Swift.Equatable		
+protocol	conformance __C.DMFPolicy	Swift.RawRepresentable		
+protocol	conformance __C.DMFPolicy	Swift.CustomDebugStringConvertible: SiriAppResolution		
+protocol	conformance SiriAppResolution.AppPolicyHandler	SiriAppResolution.AppPolicyHandling		
+protocol	conformance SiriAppResolution.AppResolutionService	SiriAppResolution.AppResolving		
+protocol	conformance SiriAppResolution.AppResolutionConfirmation	Swift.Equatable		
+protocol	conformance SiriAppResolution.AppResolutionConfirmation	Swift.Hashable		
+protocol	conformance SiriAppResolution.AppResolutionConfirmation	Swift.RawRepresentable		
+protocol	conformance SiriAppResolution.AppResolutionStateProvider	SiriAppResolution.AppResolutionStateProviding		
+protocol	conformance SiriAppResolution.AppResolutionStateProvider	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriAppResolution.AppSelectionResponse	Swift.Equatable		
+protocol	conformance SiriAppResolution.AppSelectionResponse	Swift.Hashable		
+protocol	conformance SiriAppResolution.AppSelectionResponse	Swift.CustomStringConvertible		
+protocol	conformance SiriAppResolution.DefaultAppSelector	SiriAppResolution.InstrumentedAppSelecting		
+protocol	conformance SiriAppResolution.AppResolutionResult.AppResolutionResultError	Swift.Error		
+protocol	conformance SiriAppResolution.AppResolutionResult.AppResolutionResultError	Swift.CustomDebugStringConvertible		
+protocol	conformance AppResolutionResult.AppResolutionResultError	Swift.Hashable		
+protocol	conformance AppResolutionResult.AppResolutionResultError	Swift.Equatable		
+protocol	conformance SiriAppResolution.AppResolutionResult	Swift.Hashable		
+protocol	conformance SiriAppResolution.AppResolutionResult	Swift.Equatable		
+protocol	conformance SiriAppResolution.AppSelectionFailure	Swift.Equatable		
+protocol	conformance SiriAppResolution.AppSelectionFailure	Swift.Hashable		
+protocol	conformance SiriAppResolution.AppSelectionFailure	Swift.Error		
+protocol	conformance AppSelectionService.EligibleAppFinder	SiriAppResolution.AppFinding		
+protocol	conformance LSApplicationRecord	SiriAppResolution.AppRecordProtocol		
+protocol	conformance LSPlugInKitProxy	SiriAppResolution.PluginRecordProtocol		
+protocol	conformance SystemAppRecordData	Swift.Sequence		
+protocol	conformance SystemAppRecordData.Iterator	Swift.IteratorProtocol		
+protocol	conformance SiriAppResolution.DefaultAppSelector	SiriAppResolution.AppSelecting		
+protocol	conformance SiriAppResolution.AppResolutionResult	Swift.CustomStringConvertible		
+extension	SiriAppResolution.AppResolutionService	AppResolving		
+extension	SiriAppResolution.AppResolutionConfirmation	RawRepresentable		
+extension	SiriAppResolution.AppSupportService.SystemAppRecordData	Sequence		
+extension	SiriAppResolution.AppSupportService.SystemAppRecordData.Iterator	IteratorProtocol		

@@ -1,0 +1,104 @@
+kind	type	conformance	member_kind	member
+class	CloudTelemetry.PostInstallActivity			
+class	CloudTelemetry.PostInstallActivity		let	connectionManager
+struct	CloudTelemetry.LegacyConfig			
+struct	CloudTelemetry.LegacyConfig		var	clientVersion
+struct	CloudTelemetry.LegacyConfig		var	clientSessionID
+struct	CloudTelemetry.LegacyConfig		var	bundleID
+struct	CloudTelemetry.LegacyConfig		var	ephemeralSessionID
+struct	CloudTelemetry.LegacyConfig		var	samplingUUID
+struct	CloudTelemetry.LegacyConfig		var	isEager
+struct	CloudTelemetry.LegacyConfig		var	overrideSampling
+enum	CloudTelemetry.EventValue			
+enum	CloudTelemetry.EventValue		case	string
+enum	CloudTelemetry.EventValue		case	int
+enum	CloudTelemetry.EventValue		case	uint
+enum	CloudTelemetry.EventValue		case	double
+enum	CloudTelemetry.EventValue		case	bool
+enum	CloudTelemetry.EventValue		case	uuid
+struct	CloudTelemetry.Event			
+struct	CloudTelemetry.Event		var	dict
+enum	CloudTelemetry.Event.Keys			
+class	CloudTelemetry.SubmitEventsActivity			
+class	CloudTelemetry.SubmitEventsActivity		let	connectionManager
+class	CloudTelemetry.ConnectionManager			
+class	CloudTelemetry.ConnectionManager		let	connectionQueue
+class	CloudTelemetry.ConnectionManager		let	mode
+class	CloudTelemetry.ConnectionManager		var	inProcessListener
+class	CloudTelemetry.ConnectionManager		var	connection
+class	CloudTelemetry.CacheCleanupActivity			
+class	CloudTelemetry.CacheCleanupActivity		let	connectionManager
+enum	CloudTelemetry.LegacyClientError			
+enum	CloudTelemetry.LegacyClientError		case	invalidPayload
+enum	CloudTelemetry.Mode			
+enum	CloudTelemetry.Mode		case	inProcess
+enum	CloudTelemetry.Mode		case	xpcService
+struct	CloudTelemetry.TransportConfiguration			
+struct	CloudTelemetry.TransportConfiguration		var	allowCellularAccess
+struct	CloudTelemetry.TransportConfiguration		var	allowExpensiveAccess
+struct	CloudTelemetry.TransportConfiguration		var	bundleID
+class	CloudTelemetry.CloudTelemetry	NSObject		
+class	CloudTelemetry.Reporter	NSObject		
+class	CloudTelemetry.Reporter	NSObject	let	connectionManager
+class	CloudTelemetry.Reporter	NSObject	let	activeSendOneMessageCount
+class	CloudTelemetry.Reporter	NSObject	let	activeSendOneMessageLimit
+class	CloudTelemetry.Reporter	NSObject	let	xpcServiceXpcActivityStarted
+enum	CloudTelemetry.Reporter.CloudTelemetryFeatureFlags			
+enum	CloudTelemetry.Reporter.CloudTelemetryFeatureFlags		case	cloudTelemetryInProcess
+enum	CloudTelemetry.Reporter.Error			
+enum	CloudTelemetry.Reporter.Error		case	noSession
+enum	CloudTelemetry.Reporter.Error		case	invalidParameter
+enum	CloudTelemetry.SamplingOutcome			
+enum	CloudTelemetry.SamplingOutcome		case	deterministic
+enum	CloudTelemetry.SamplingOutcome		case	nondeterministic
+enum	CloudTelemetry.SamplingOutcome		case	disallowed
+enum	CloudTelemetry.SamplingOutcome		case	storebagUnavailable
+enum	CloudTelemetry.SamplingOutcome		case	eventNotFound
+enum	CloudTelemetry.SamplingOutcome		case	unknown
+enum	CloudTelemetry.SamplingOutcome		case	throttled
+protocol	conformance CloudTelemetry.PostInstallActivity	Swift.Actor		
+protocol	conformance CloudTelemetry.PostInstallActivity	CloudTelemetryShared.XPCActivityHandler		
+protocol	conformance CloudTelemetry.EventValue	Swift.Hashable		
+protocol	conformance CloudTelemetry.EventValue	Swift.ExpressibleByFloatLiteral		
+protocol	conformance CloudTelemetry.EventValue	Swift.ExpressibleByStringLiteral		
+protocol	conformance CloudTelemetry.EventValue	Swift.ExpressibleByBooleanLiteral		
+protocol	conformance CloudTelemetry.EventValue	Swift.ExpressibleByIntegerLiteral		
+protocol	conformance CloudTelemetry.EventValue	Swift.Equatable		
+protocol	conformance CloudTelemetry.EventValue	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance CloudTelemetry.EventValue	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance CloudTelemetry.Event	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance CloudTelemetry.SubmitEventsActivity	Swift.Actor		
+protocol	conformance CloudTelemetry.SubmitEventsActivity	CloudTelemetryShared.XPCActivityHandler		
+protocol	conformance CloudTelemetry.ConnectionManager	CloudTelemetryShared.XPCConnectionDelegate		
+protocol	conformance CloudTelemetry.CacheCleanupActivity	Swift.Actor		
+protocol	conformance CloudTelemetry.CacheCleanupActivity	CloudTelemetryShared.XPCActivityHandler		
+protocol	conformance CloudTelemetry.LegacyClientError	Foundation.LocalizedError		
+protocol	conformance CloudTelemetry.LegacyClientError	Swift.Error		
+protocol	conformance CloudTelemetry.Mode	Swift.Equatable		
+protocol	conformance CloudTelemetry.Mode	Swift.Hashable		
+protocol	conformance Reporter.CloudTelemetryFeatureFlags	Swift.Equatable		
+protocol	conformance Reporter.CloudTelemetryFeatureFlags	Swift.Hashable		
+protocol	conformance Reporter.CloudTelemetryFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance Reporter.Error	Swift.Equatable		
+protocol	conformance Reporter.Error	Swift.Hashable		
+protocol	conformance Reporter.Error	Swift.RawRepresentable		
+protocol	conformance Reporter.Error	Foundation.CustomNSError		
+protocol	conformance Reporter.Error	Swift.Error		
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance CloudTelemetry.SamplingOutcome	Swift.Equatable		
+protocol	conformance CloudTelemetry.SamplingOutcome	Swift.Hashable		
+protocol	conformance CloudTelemetry.SamplingOutcome	Swift.RawRepresentable		
+extension	CloudTelemetry.EventValue	ExpressibleByFloatLiteral		
+extension	CloudTelemetry.EventValue	ExpressibleByStringLiteral		
+extension	CloudTelemetry.EventValue	ExpressibleByBooleanLiteral		
+extension	CloudTelemetry.EventValue	ExpressibleByIntegerLiteral		
+extension	CloudTelemetry.EventValue	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	CloudTelemetry.EventValue	ExpressibleByUnicodeScalarLiteral		
+extension	CloudTelemetry.Event	ExpressibleByDictionaryLiteral		
+extension	CloudTelemetry.Reporter.Error	RawRepresentable		
+extension	CloudTelemetry.SamplingOutcome	RawRepresentable		

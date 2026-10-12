@@ -1,0 +1,199 @@
+kind	type	conformance	member_kind	member
+class	SiriUserSegments.SegmentStore			
+struct	SiriUserSegments.SegmentStoreError			
+struct	SiriUserSegments.SegmentStoreError		let	message
+enum	SiriUserSegments.SiriUserSegmentsFeatureFlag			
+enum	SiriUserSegments.SiriUserSegmentsFeatureFlag		case	segmentationTask
+enum	SiriUserSegments.SiriFirstEnablementStatus			
+enum	SiriUserSegments.SiriFirstEnablementStatus		case	recentlyEnabled
+enum	SiriUserSegments.SiriFirstEnablementStatus		case	unknown
+enum	SiriUserSegments.SiriFirstEnablementStatus		case	neverEnabled
+enum	SiriUserSegments.SiriFirstEnablementStatus		case	longTermEnabled
+enum	SiriUserSegments.SiriFirstEnablementStatus.CodingKeys			
+enum	SiriUserSegments.SiriFirstEnablementStatus.CodingKeys		case	unknown
+enum	SiriUserSegments.SiriFirstEnablementStatus.CodingKeys		case	neverEnabled
+enum	SiriUserSegments.SiriFirstEnablementStatus.CodingKeys		case	recentlyEnabled
+enum	SiriUserSegments.SiriFirstEnablementStatus.CodingKeys		case	longTermEnabled
+enum	SiriUserSegments.SiriFirstEnablementStatus.UnknownCodingKeys			
+enum	SiriUserSegments.SiriFirstEnablementStatus.NeverEnabledCodingKeys			
+enum	SiriUserSegments.SiriFirstEnablementStatus.RecentlyEnabledCodingKeys			
+enum	SiriUserSegments.SiriFirstEnablementStatus.RecentlyEnabledCodingKeys		case	asOf
+enum	SiriUserSegments.SiriFirstEnablementStatus.LongTermEnabledCodingKeys			
+struct	SiriUserSegments.ITunesCloudMusicSubscriptionStatusController			
+struct	SiriUserSegments.SiriUsageMetrics			
+struct	SiriUserSegments.SiriUsageMetrics		let	timeInterval
+struct	SiriUserSegments.SiriUsageMetrics		let	productId
+struct	SiriUserSegments.SiriUsageMetrics		let	validTurnCount
+enum	SiriUserSegments.ProductId			
+enum	SiriUserSegments.ProductId		case	unknown
+enum	SiriUserSegments.ProductId		case	assistant
+enum	SiriUserSegments.ProductId		case	dictation
+class	SiriUserSegments.ActivitySegmentCalculator			
+class	SiriUserSegments.ActivitySegmentCalculator		let	siriEnablementState
+struct	SiriUserSegments.ActivitySegmentMetricsError			
+struct	SiriUserSegments.ActivitySegmentMetricsError		let	message
+struct	SiriUserSegments.NewCustomerSegment.Result			
+struct	SiriUserSegments.NewCustomerSegment.Result		let	segment
+struct	SiriUserSegments.NewCustomerSegment.Result		let	enablementStatus
+class	SiriUserSegments.SegmentationTask			
+enum	SiriUserSegments.SegmentationTaskResult			
+enum	SiriUserSegments.SegmentationTaskResult		case	failure
+enum	SiriUserSegments.SegmentationTaskResult		case	success
+enum	SiriUserSegments.SegmentationTaskResult		case	skipped
+struct	SiriUserSegments.SegmentationTaskError			
+struct	SiriUserSegments.SegmentationTaskError		let	message
+class	SiriUserSegments.ValidTurnFeatureExtractor			
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	isValidAssistantTurn
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	productIsDictation
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	completedDictation
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	isValidDictationTurn
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	asrCancelled
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	ueiFailedRequest
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	hasUufr
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	orchEnded
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	interactiveSnippet
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	isAnnounce
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	isPunchOut
+class	SiriUserSegments.ValidTurnFeatureExtractor		var	orchRequestCancelledMitigated
+enum	SiriUserSegments.SegmentFlags			
+enum	SiriUserSegments.SegmentFlags		case	newCustomer
+enum	SiriUserSegments.SegmentFlags		case	dictation
+enum	SiriUserSegments.SegmentFlags		case	car
+enum	SiriUserSegments.SegmentFlags		case	musicSubscription
+enum	SiriUserSegments.SegmentFlags		case	airPods
+enum	SiriUserSegments.SegmentFlags		case	commsDominant
+enum	SiriUserSegments.SegmentFlags		case	cannedWebAmbiguousDominant
+enum	SiriUserSegments.ActivitySegment			
+enum	SiriUserSegments.ActivitySegment		case	unknown
+enum	SiriUserSegments.ActivitySegment		case	disabled
+enum	SiriUserSegments.ActivitySegment		case	dictationOnly
+enum	SiriUserSegments.ActivitySegment		case	active6MonthsOrMoreAgo
+enum	SiriUserSegments.ActivitySegment		case	active28DaysTo6MonthsAgo
+enum	SiriUserSegments.ActivitySegment		case	active14To27DaysAgo
+enum	SiriUserSegments.ActivitySegment		case	active7To13DaysAgo
+enum	SiriUserSegments.ActivitySegment		case	activeWithin7Days1Turn
+enum	SiriUserSegments.ActivitySegment		case	activeWithin7Days2To3Turns
+enum	SiriUserSegments.ActivitySegment		case	activeWithin7Days4PlusTurns
+enum	SiriUserSegments.ActivitySegment		case	activeWithin7Days2x3
+struct	SiriUserSegments.SiriEnablementState			
+struct	SiriUserSegments.SiriEnablementState		let	isAssistantEnabled
+struct	SiriUserSegments.SiriEnablementState		let	isDictationEnabled
+struct	SiriUserSegments.ConversationTurn			
+struct	SiriUserSegments.ConversationTurn		let	asrEvents
+struct	SiriUserSegments.ConversationTurn		let	ueiEvents
+struct	SiriUserSegments.ConversationTurn		let	orchEvents
+struct	SiriUserSegments.ConversationTurn		let	turnID
+struct	SiriUserSegments.SegmentFlagLastSeenResult			
+struct	SiriUserSegments.SegmentFlagLastSeenResult		let	segment
+struct	SiriUserSegments.SegmentFlagLastSeenResult		let	lastSeen
+struct	SiriUserSegments.AIMLInstrumentationStreamSource			
+class	SiriUserSegments.SiriUsageMetricsTurnSink			
+class	SiriUserSegments.SiriUsageMetricsTurnSink		var	validAssistantTurnCount
+class	SiriUserSegments.SiriUsageMetricsTurnSink		var	validDictationTurnCount
+class	SiriUserSegments.SiriUsageMetricsTurnSink		let	validTurnFeatureExtractor
+struct	SiriUserSegments.ConcurrencyError			
+struct	SiriUserSegments.ConcurrencyError		let	message
+class	SiriUserSegments.Reference			
+class	SiriUserSegments.Reference		var	value
+struct	SiriUserSegments.CalendarDateError			
+struct	SiriUserSegments.CalendarDateError		let	description
+struct	SiriUserSegments.SegmentsSummary			
+struct	SiriUserSegments.SegmentsSummary		let	activitySegment
+struct	SiriUserSegments.SegmentsSummary		let	segmentFlags
+struct	SiriUserSegments.SegmentsSummary		let	membershipCheckedAt
+struct	SiriUserSegments.SegmentsSummary		let	assistantLastActive
+struct	SiriUserSegments.SegmentsSummary		let	carSegmentLastActive
+struct	SiriUserSegments.SegmentsSummary		let	airPodsLastActive
+struct	SiriUserSegments.SegmentsSummary		let	dictationLastActive
+struct	SiriUserSegments.SegmentsSummary		let	assistantFirstEnabled
+enum	SiriUserSegments.SegmentsSummary.CodingKeys			
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	activitySegment
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	segmentFlags
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	membershipCheckedAt
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	assistantLastActive
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	carSegmentLastActive
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	airPodsLastActive
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	dictationLastActive
+enum	SiriUserSegments.SegmentsSummary.CodingKeys		case	assistantFirstEnabled
+protocol	SiriUserSegments.MusicSubscriptionStatusController			
+protocol	SiriUserSegments.ConversationTurnSink			
+protocol	SiriUserSegments.ConversationTurnSource			
+protocol	conformance SiriUserSegments.SegmentStoreError	Swift.Error		
+protocol	conformance __C.SISchemaUEIRequestStatus	Swift.Equatable: SiriInstrumentation		
+protocol	conformance __C.SISchemaUEIRequestStatus	Swift.RawRepresentable: SiriInstrumentation		
+protocol	conformance __C.ORCHSchemaORCHRequestCancellationReason	Swift.Equatable: SiriInstrumentation		
+protocol	conformance __C.ORCHSchemaORCHRequestCancellationReason	Swift.RawRepresentable: SiriInstrumentation		
+protocol	conformance __C.SISchemaInvocationSource	Swift.Equatable: SiriInstrumentation		
+protocol	conformance __C.SISchemaInvocationSource	Swift.RawRepresentable: SiriInstrumentation		
+protocol	conformance SiriUserSegments.SiriUserSegmentsFeatureFlag	Swift.Equatable		
+protocol	conformance SiriUserSegments.SiriUserSegmentsFeatureFlag	Swift.Hashable		
+protocol	conformance SiriUserSegments.SiriUserSegmentsFeatureFlag	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriUserSegments.SiriUserSegmentsFeatureFlag	Swift.CaseIterable		
+protocol	conformance SiriUserSegments.SiriFirstEnablementStatus	Swift.Equatable		
+protocol	conformance SiriUserSegments.SiriFirstEnablementStatus	Swift.CustomStringConvertible		
+protocol	conformance SiriUserSegments.SiriFirstEnablementStatus	Swift.Decodable		
+protocol	conformance SiriUserSegments.SiriFirstEnablementStatus	Swift.Encodable		
+protocol	conformance LongTermEnabledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LongTermEnabledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RecentlyEnabledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RecentlyEnabledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RecentlyEnabledCodingKeys	Swift.Hashable		
+protocol	conformance RecentlyEnabledCodingKeys	Swift.Equatable		
+protocol	conformance NeverEnabledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NeverEnabledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnknownCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnknownCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UnknownCodingKeys	Swift.CodingKey		
+protocol	conformance NeverEnabledCodingKeys	Swift.CodingKey		
+protocol	conformance RecentlyEnabledCodingKeys	Swift.CodingKey		
+protocol	conformance LongTermEnabledCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriUserSegments.ITunesCloudMusicSubscriptionStatusController	SiriUserSegments.MusicSubscriptionStatusController		
+protocol	conformance SiriUserSegments.ProductId	Swift.CustomStringConvertible		
+protocol	conformance SiriUserSegments.ProductId	Swift.RawRepresentable		
+protocol	conformance SiriUserSegments.ProductId	Swift.Hashable		
+protocol	conformance SiriUserSegments.ProductId	Swift.Equatable		
+protocol	conformance SiriUserSegments.SiriUsageMetrics	Swift.Equatable		
+protocol	conformance SiriUserSegments.ActivitySegmentMetricsError	Swift.Error		
+protocol	conformance NewCustomerSegment.Result	Swift.Equatable		
+protocol	conformance NewCustomerSegment.Result	Swift.CustomStringConvertible		
+protocol	conformance SiriUserSegments.SegmentationTaskResult	Swift.Equatable		
+protocol	conformance SiriUserSegments.SegmentationTaskResult	Swift.CustomStringConvertible		
+protocol	conformance SiriUserSegments.SegmentationTaskError	Swift.Error		
+protocol	conformance SiriUserSegments.SegmentFlags	Swift.Equatable		
+protocol	conformance SiriUserSegments.SegmentFlags	Swift.Hashable		
+protocol	conformance SiriUserSegments.SegmentFlags	Swift.RawRepresentable		
+protocol	conformance SiriUserSegments.SegmentFlags	Swift.Decodable		
+protocol	conformance SiriUserSegments.SegmentFlags	Swift.Encodable		
+protocol	conformance SiriUserSegments.SegmentFlags	Swift.CaseIterable		
+protocol	conformance SiriUserSegments.ActivitySegment	Swift.Equatable		
+protocol	conformance SiriUserSegments.ActivitySegment	Swift.Hashable		
+protocol	conformance SiriUserSegments.ActivitySegment	Swift.RawRepresentable		
+protocol	conformance SiriUserSegments.ActivitySegment	Swift.Decodable		
+protocol	conformance SiriUserSegments.ActivitySegment	Swift.Encodable		
+protocol	conformance SiriUserSegments.ActivitySegment	Swift.CaseIterable		
+protocol	conformance SiriUserSegments.SegmentFlagLastSeenResult	Swift.CustomStringConvertible		
+protocol	conformance SiriUserSegments.AIMLInstrumentationStreamSource	SiriUserSegments.ConversationTurnSource		
+protocol	conformance SiriUserSegments.SiriUsageMetricsTurnSink	SiriUserSegments.ConversationTurnSink		
+protocol	conformance SiriUserSegments.ConcurrencyError	Swift.Error		
+protocol	conformance CalendarDateError	Swift.CustomStringConvertible		
+protocol	conformance CalendarDateError	Swift.Error		
+protocol	conformance SiriUserSegments.SegmentsSummary	Swift.Decodable		
+protocol	conformance SiriUserSegments.SegmentsSummary	Swift.Encodable		
+protocol	conformance SiriUserSegments.SegmentsSummary	Swift.Equatable		
+protocol	conformance SiriUserSegments.SegmentsSummary	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	SiriUserSegments.SiriUserSegmentsFeatureFlag	CaseIterable		
+extension	SiriUserSegments.ProductId	RawRepresentable		
+extension	SiriUserSegments.SegmentFlags	RawRepresentable		
+extension	SiriUserSegments.SegmentFlags	CaseIterable		
+extension	SiriUserSegments.ActivitySegment	RawRepresentable		
+extension	SiriUserSegments.ActivitySegment	CaseIterable		

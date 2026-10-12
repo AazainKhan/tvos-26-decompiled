@@ -1,0 +1,22 @@
+owner	kind	declaration
+TYATypologyAccessClient	-	- (_Bool)removeAllTypologyFilesWithError:(id *)error;
+TYATypologyAccessClient	-	- (_Bool)removeTypologyFileWithURLHandle:(id)urlhandle error:(id *)error;
+TYATypologyAccessClient	-	- (_Bool)writeData:(id)data toTypologyFileWithName:(id)name error:(id *)error;
+TYATypologyAccessClient	-	- (id)init;
+TYATypologyAccessClient	-	- (id)initWithAccessMode:(unsigned long long)mode;
+TYATypologyAccessClient	-	- (void)_disconnect;
+TYATypologyAccessClient	-	- (void)_initializeConnection;
+TYATypologyAccessClient	-	- (void)_setTypologyAccessMode:(unsigned long long)mode;
+TYATypologyAccessClient	-	- (void)dealloc;
+TYATypologyAccessClient	-	- (void)enumerateTypologyLogs:(id /* block */)logs;
+TYATypologyAccessClient	property	@property (retain, nonatomic) NSXPCConnection *connection;
+TYATypologyAccessProtocol	-	- (void)nextTypologyURL:(id /* block */)url;
+TYATypologyAccessProtocol	-	- (void)removeTypologyFileWithName:(id)name completion:(id /* block */)completion;
+TYATypologyAccessProtocol	-	- (void)setTypologyAccessMode:(unsigned long long)mode;
+TYATypologyAccessProtocol	-	- (void)startEnumeration;
+TYATypologyAccessProtocol_WithTestSupport	-	- (void)writeData:(id)data toTypologyFileWithName:(id)name completion:(id /* block */)completion;
+TYATypologyURLHandle	-	- (id)initWithURL:(id)url sandboxExtensionToken:(id)token;
+TYATypologyURLHandle	-	- (void)dealloc;
+TYATypologyURLHandle	property	@property (readonly, nonatomic) NSString *filename;
+TYATypologyURLHandle	property	@property (readonly, nonatomic) NSURL *url;
+TYATypologyURLHandle	property	@property (readonly, nonatomic) _Bool valid;

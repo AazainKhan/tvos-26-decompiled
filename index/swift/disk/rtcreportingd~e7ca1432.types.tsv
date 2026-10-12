@@ -1,0 +1,640 @@
+kind	type	conformance	member_kind	member
+class	rtcreportingd.SQLiteDB			
+class	rtcreportingd.SQLiteDB		let	handle
+class	rtcreportingd.SQLiteDB.DBHandle			
+class	rtcreportingd.SQLiteDB.DBHandle		let	rawHandle
+class	rtcreportingd.SQLiteDB.DBHandle		var	closed
+class	rtcreportingd.SQLiteDB.Statement			
+class	rtcreportingd.SQLiteDB.Statement		let	handle
+class	rtcreportingd.SQLiteDB.Statement		var	finished
+class	rtcreportingd.SQLiteDB.Transaction			
+class	rtcreportingd.SQLiteDB.Transaction		let	db
+class	rtcreportingd.SQLiteDB.Transaction		var	finalized
+enum	rtcreportingd.SQLiteDB.Location			
+enum	rtcreportingd.SQLiteDB.Location		case	url
+enum	rtcreportingd.SQLiteDB.Location		case	memory
+enum	rtcreportingd.DBError			
+enum	rtcreportingd.DBError		case	noRows
+enum	rtcreportingd.DBError		case	tooManyRows
+enum	rtcreportingd.DBError		case	wrongColumns
+enum	rtcreportingd.DBError		case	closed
+struct	rtcreportingd.SQLError			
+struct	rtcreportingd.SQLError		var	code
+struct	rtcreportingd.SQLError		var	desc
+struct	rtcreportingd.AllEventFieldProvider			
+struct	rtcreportingd.AllEventFieldProvider		let	internalType
+struct	rtcreportingd.AllEventFieldProvider		let	tzOffset
+struct	rtcreportingd.AllEventFieldProvider		let	sessionID
+struct	rtcreportingd.AllEventFieldProvider		let	clientID
+struct	rtcreportingd.AllEventFieldProvider		let	identity
+struct	rtcreportingd.HTTPHeaderFieldProvider			
+struct	rtcreportingd.HTTPHeaderFieldProvider		let	internalType
+struct	rtcreportingd.HTTPHeaderFieldProvider		let	id
+struct	rtcreportingd.HTTPHeaderFieldProvider		let	includeSessionID
+struct	rtcreportingd.HTTPHeaderFieldProvider		let	sessionID
+struct	rtcreportingd.Storebag			
+struct	rtcreportingd.Storebag		let	backends
+struct	rtcreportingd.Storebag		let	ttl
+struct	rtcreportingd.Storebag		let	version
+struct	rtcreportingd.Storebag		let	sharedValues
+struct	rtcreportingd.Storebag._StorebagRoot			
+struct	rtcreportingd.Storebag._StorebagRoot		let	version
+struct	rtcreportingd.Storebag._StorebagRoot		let	refreshCycle
+struct	rtcreportingd.Storebag._StorebagRoot		let	sharedValues
+struct	rtcreportingd.Storebag._StorebagRoot		let	environments
+struct	rtcreportingd.StorebagKeyInfoPlistProvider			
+enum	rtcreportingd.StorebagEnvironment			
+enum	rtcreportingd.StorebagEnvironment		case	development
+enum	rtcreportingd.StorebagEnvironment		case	internal
+enum	rtcreportingd.StorebagEnvironment		case	seed
+enum	rtcreportingd.StorebagEnvironment		case	release
+struct	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRoot			
+struct	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRoot		let	rtcreporting
+enum	rtcreportingd.Storebag.Error			
+enum	rtcreportingd.Storebag.Error		case	downloadFailed
+enum	rtcreportingd.Storebag.Error		case	failedParse
+enum	rtcreportingd.Storebag.Error		case	failedVerify
+enum	rtcreportingd.StorebagExpedite			
+enum	rtcreportingd.StorebagExpedite		case	expedited
+enum	rtcreportingd.StorebagExpedite		case	nonExpedited
+enum	rtcreportingd.StorebagExpedite		case	default
+enum	rtcreportingd.Storebag._StorebagRoot.CodingKeys			
+enum	rtcreportingd.Storebag._StorebagRoot.CodingKeys		case	environment
+enum	rtcreportingd.Storebag._StorebagRoot.CodingKeys		case	version
+enum	rtcreportingd.Storebag._StorebagRoot.CodingKeys		case	refreshCycle
+enum	rtcreportingd.Storebag._StorebagRoot.CodingKeys		case	sharedValues
+enum	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRoot.CodingKeys			
+enum	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRoot.CodingKeys		case	rtcreporting
+struct	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRTCReporting			
+struct	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRTCReporting		let	storebagPublicKey
+enum	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRTCReporting.CodingKeys			
+enum	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRTCReporting.CodingKeys		case	storebagPublicKey
+class	rtcreportingd.TransparencyLog			
+class	rtcreportingd.TransparencyLog		var	writeInternalEvents
+class	rtcreportingd.TransparencyLog		var	activeFile
+class	rtcreportingd.TransparencyLog		var	fileDeletionSource
+struct	rtcreportingd.TransparencyLog.JustEvents			
+struct	rtcreportingd.TransparencyLog.JustEvents		let	events
+enum	rtcreportingd.TransparencyLog.WriteError			
+enum	rtcreportingd.TransparencyLog.WriteError		case	encodeFailed
+enum	rtcreportingd.TransparencyLog.JustEvents.CodingKeys			
+enum	rtcreportingd.TransparencyLog.JustEvents.CodingKeys		case	events
+class	rtcreportingd.Client			
+class	rtcreportingd.Client		var	connection
+class	rtcreportingd.Client		let	queue
+class	rtcreportingd.Client		let	remoteName
+class	rtcreportingd.Client		let	listener
+class	rtcreportingd.Client		var	sessions
+struct	rtcreportingd.ClientIdentity			
+struct	rtcreportingd.ClientIdentity		var	clientType
+struct	rtcreportingd.ClientIdentity		var	clientName
+struct	rtcreportingd.ClientIdentity		var	serviceName
+class	rtcreportingd.StorebagCoordinator			
+class	rtcreportingd.StorebagCoordinator		let	pathMonitor
+class	rtcreportingd.StorebagCoordinator		let	pathMonitorQueue
+class	rtcreportingd.StorebagCoordinator		let	storebagCache
+class	rtcreportingd.MockHTTPSending			
+class	rtcreportingd.MockHTTPSending		let	file
+class	rtcreportingd.BackendHTTP			
+class	rtcreportingd.BackendHTTP		let	coord
+class	rtcreportingd.BackendHTTP		let	url
+class	rtcreportingd.BackendHTTP		let	target
+class	rtcreportingd.BackendHTTP		let	clientID
+class	rtcreportingd.BackendHTTP		let	extraHeaders
+class	rtcreportingd.BackendHTTP		let	filters
+class	rtcreportingd.BackendHTTP		let	name
+class	rtcreportingd.BackendHTTP		let	allowedCategories
+class	rtcreportingd.BackendHTTP		let	deniedCategories
+class	rtcreportingd.BackendHTTP		let	skipLogging
+class	rtcreportingd.BackendHTTP		let	samplingThreshold
+enum	rtcreportingd.ZLibError			
+enum	rtcreportingd.ZLibError		case	initFailed
+struct	rtcreportingd.BackendHTTP.POSTData			
+struct	rtcreportingd.BackendHTTP.POSTData		let	postTime
+struct	rtcreportingd.BackendHTTP.POSTData		let	clientId
+struct	rtcreportingd.BackendHTTP.POSTData		let	_sampleRate
+struct	rtcreportingd.BackendHTTP.POSTData		let	events
+enum	rtcreportingd.BackendHTTP.POSTData.CodingKeys			
+enum	rtcreportingd.BackendHTTP.POSTData.CodingKeys		case	postTime
+enum	rtcreportingd.BackendHTTP.POSTData.CodingKeys		case	clientId
+enum	rtcreportingd.BackendHTTP.POSTData.CodingKeys		case	_sampleRate
+enum	rtcreportingd.BackendHTTP.POSTData.CodingKeys		case	events
+enum	rtcreportingd.StorebagSectionBackend			
+enum	rtcreportingd.StorebagSectionBackend		case	http
+enum	rtcreportingd.StorebagSectionBackend		case	other
+enum	rtcreportingd.StorebagSectionBackendHTTP.CodingKeys			
+enum	rtcreportingd.StorebagSectionBackendHTTP.CodingKeys		case	clients
+struct	rtcreportingd.StorebagSectionBackendHTTP			
+struct	rtcreportingd.StorebagSectionBackendHTTP		let	name
+struct	rtcreportingd.StorebagSectionBackendHTTP		let	clients
+class	rtcreportingd.SessionCoordinator			
+class	rtcreportingd.SessionCoordinator		let	storebagCoordinator
+class	rtcreportingd.SessionCoordinator		var	sessionsPerClientType
+class	rtcreportingd.SessionCoordinator		var	totalActiveSessions
+class	rtcreportingd.SessionCoordinator		var	evictingClientTypes
+class	rtcreportingd.SessionCoordinator		var	sessionHierarchy
+class	rtcreportingd.SessionCoordinator		var	activeEagerSessions
+class	rtcreportingd.SessionCoordinator		let	eagerActivity
+class	rtcreportingd.SessionCoordinator		var	abandonedSessions
+struct	rtcreportingd.SessionHierarchyItem			
+struct	rtcreportingd.SessionHierarchyItem		var	level
+struct	rtcreportingd.SessionHierarchyItem		var	id
+class	rtcreportingd.RefreshStorebagsActivity			
+class	rtcreportingd.BackendGroup			
+class	rtcreportingd.BackendGroup		var	backends
+enum	rtcreportingd.BackendGroup.Error			
+enum	rtcreportingd.BackendGroup.Error		case	noRemainingBackends
+class	rtcreportingd.DiskCache			
+class	rtcreportingd.DiskCache		let	database
+enum	rtcreportingd.DiskCacheError			
+enum	rtcreportingd.DiskCacheError		case	invalidEvent
+enum	rtcreportingd.DiskCacheError		case	recreateDB
+class	rtcreportingd.SubmitEagerEventsActivity			
+class	rtcreportingd.SubmissionCoordinator			
+class	rtcreportingd.SubmissionCoordinator		let	normalSession
+class	rtcreportingd.SubmissionCoordinator		let	realtimeSession
+enum	rtcreportingd.SessionType			
+enum	rtcreportingd.SessionType		case	default
+enum	rtcreportingd.SessionType		case	realtime
+enum	rtcreportingd.SessionType		case	eager
+struct	rtcreportingd.EventValue.CodingKeys			
+struct	rtcreportingd.EventValue.CodingKeys		var	stringValue
+struct	rtcreportingd.CachedEvent			
+struct	rtcreportingd.CachedEvent		let	rowID
+struct	rtcreportingd.CachedEvent		let	event
+struct	rtcreportingd.BadCachedEvent			
+struct	rtcreportingd.Event			
+struct	rtcreportingd.Event		let	sessionID
+struct	rtcreportingd.Event		var	payload
+enum	rtcreportingd.EventValue			
+enum	rtcreportingd.EventValue		case	string
+enum	rtcreportingd.EventValue		case	int
+enum	rtcreportingd.EventValue		case	uint
+enum	rtcreportingd.EventValue		case	double
+enum	rtcreportingd.EventValue		case	bool
+enum	rtcreportingd.EventValue		case	uuid
+enum	rtcreportingd.EventValue		case	array
+enum	rtcreportingd.EventValue		case	dictionary
+struct	rtcreportingd.StorebagSectionClientHTTP			
+struct	rtcreportingd.StorebagSectionClientHTTP		let	clientName
+struct	rtcreportingd.StorebagSectionClientHTTP		let	serviceName
+struct	rtcreportingd.StorebagSectionClientHTTP		let	postURL
+struct	rtcreportingd.StorebagSectionClientHTTP		let	samplingThreshold
+struct	rtcreportingd.StorebagSectionClientHTTP		let	realtimePostURL
+struct	rtcreportingd.StorebagSectionClientHTTP		let	clientIDMaxAge
+struct	rtcreportingd.StorebagSectionClientHTTP		let	customClientID
+struct	rtcreportingd.StorebagSectionClientHTTP		let	deviceDenylist
+struct	rtcreportingd.StorebagSectionClientHTTP		let	deviceAllowlist
+struct	rtcreportingd.StorebagSectionClientHTTP		let	enabledSince
+struct	rtcreportingd.StorebagSectionClientHTTP		let	eventDenylist
+struct	rtcreportingd.StorebagSectionClientHTTP		let	eventAllowlist
+struct	rtcreportingd.StorebagSectionClientHTTP		let	eventThreshold
+struct	rtcreportingd.StorebagSectionClientHTTP		let	expedite
+struct	rtcreportingd.StorebagSectionClientHTTP		let	extrasOnInternal
+struct	rtcreportingd.StorebagSectionClientHTTP		let	filters
+struct	rtcreportingd.StorebagSectionClientHTTP		let	hashedClient
+struct	rtcreportingd.StorebagSectionClientHTTP		let	hierarchy
+struct	rtcreportingd.StorebagSectionClientHTTP		let	includeSessionID
+struct	rtcreportingd.StorebagSectionClientHTTP		let	localeAllowlist
+struct	rtcreportingd.StorebagSectionClientHTTP		let	overrideDNU
+struct	rtcreportingd.StorebagSectionClientHTTP		let	overrideSampling
+struct	rtcreportingd.StorebagSectionClientHTTP		let	perCountrySamplingThresholds
+struct	rtcreportingd.StorebagSectionClientHTTP		let	disablePE
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys			
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	clientName
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	serviceName
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	postURL
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	samplingThreshold
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	realtimePostURL
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	clientIDMaxAge
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	customClientID
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	deviceDenylist
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	deviceAllowlist
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	enabledSince
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	eventDenylist
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	eventAllowlist
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	eventThreshold
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	expedite
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	extrasOnInternal
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	filters
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	hashedClient
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	hierarchy
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	includeSessionID
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	localeAllowlist
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	overrideDNU
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	overrideSampling
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	perCountrySamplingThresholds
+enum	rtcreportingd.StorebagSectionClientHTTP.CodingKeys		case	disablePE
+struct	rtcreportingd.StorebagSectionPerCountrySampling			
+struct	rtcreportingd.StorebagSectionPerCountrySampling		let	country
+struct	rtcreportingd.StorebagSectionPerCountrySampling		let	threshold
+enum	rtcreportingd.StorebagBool			
+enum	rtcreportingd.StorebagBool		case	true
+enum	rtcreportingd.StorebagBool		case	false
+enum	rtcreportingd.StorebagSectionPerCountrySampling.CodingKeys			
+enum	rtcreportingd.StorebagSectionPerCountrySampling.CodingKeys		case	country
+enum	rtcreportingd.StorebagSectionPerCountrySampling.CodingKeys		case	threshold
+class	rtcreportingd.CacheCleanupActivity			
+enum	rtcreportingd.StorebagSharedValue			
+enum	rtcreportingd.StorebagSharedValue		case	filters
+enum	rtcreportingd.StorebagSharedValue		case	rules
+enum	rtcreportingd.StorebagSharedValue		case	stringList
+class	rtcreportingd.PostInstallActivity			
+class	rtcreportingd.XPCActivityHandle			
+class	rtcreportingd.XPCActivityHandle		let	handle
+class	rtcreportingd.XPCActivity			
+class	rtcreportingd.XPCActivity		let	handlerType
+class	rtcreportingd.XPCActivity		var	currentTask
+class	rtcreportingd.XPCActivity		var	disabled
+struct	rtcreportingd.EventAllowFilter			
+struct	rtcreportingd.EventAllowFilter		let	matcher
+struct	rtcreportingd.EventAllowFilter		let	allAllowedKeys
+struct	rtcreportingd.EventRemoveFilter			
+struct	rtcreportingd.EventRemoveFilter		let	matcher
+struct	rtcreportingd.EventSHA256KeyFilter			
+struct	rtcreportingd.EventSHA256KeyFilter		let	matcher
+struct	rtcreportingd.EventAllowValuesFilter			
+struct	rtcreportingd.EventAllowValuesFilter		let	matcher
+struct	rtcreportingd.EventDenyValuesFilter			
+struct	rtcreportingd.EventDenyValuesFilter		let	matcher
+struct	rtcreportingd.EventInsertStringKeyFilter			
+struct	rtcreportingd.EventInsertStringKeyFilter		let	matcher
+struct	rtcreportingd.EventAppendToKeyFilter			
+struct	rtcreportingd.EventAppendToKeyFilter		let	matcher
+struct	rtcreportingd.EventPrependToKeyFilter			
+struct	rtcreportingd.EventPrependToKeyFilter		let	matcher
+struct	rtcreportingd.EventFilterMatcher			
+struct	rtcreportingd.EventFilterMatcher		let	keys
+struct	rtcreportingd.EventFilterMatcher		let	values
+struct	rtcreportingd.EventFilterMatcher		let	categories
+struct	rtcreportingd.EventFilterMatcher		let	types
+struct	rtcreportingd.SessionConfiguration			
+struct	rtcreportingd.SessionConfiguration		let	backends
+struct	rtcreportingd.SessionConfiguration		let	immediateBackends
+struct	rtcreportingd.SessionConfiguration		var	deferred
+struct	rtcreportingd.SessionConfiguration		var	version
+struct	rtcreportingd.SessionConfiguration		var	expediteEvents
+enum	rtcreportingd.SessionConfiguration.Availability			
+enum	rtcreportingd.SessionConfiguration.Availability		case	none
+enum	rtcreportingd.SessionConfiguration.Availability		case	expensive
+enum	rtcreportingd.SessionConfiguration.Availability		case	deferred
+enum	rtcreportingd.SessionConfiguration.Availability		case	immediate
+struct	rtcreportingd.SessionConfiguration.BackendHTTP			
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	name
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	samplingThreshold
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	postURL
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	filters
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	includeSessionID
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	allowedCategories
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	deniedCategories
+struct	rtcreportingd.SessionConfiguration.BackendHTTP		let	skipLogging
+enum	rtcreportingd.SessionConfiguration.Backend			
+enum	rtcreportingd.SessionConfiguration.Backend		case	http
+class	rtcreportingd.SubmitEventsActivity			
+enum	rtcreportingd.SubmissionError			
+enum	rtcreportingd.SubmissionError		case	submission
+enum	rtcreportingd.SubmissionError		case	noBackend
+enum	rtcreportingd.SubmissionError		case	cancelled
+class	rtcreportingd.Session			
+class	rtcreportingd.Session		let	id
+class	rtcreportingd.Session		let	samplingFactor
+class	rtcreportingd.Session		var	config
+class	rtcreportingd.Session		let	coord
+class	rtcreportingd.Session		let	identity
+class	rtcreportingd.Session		let	sessionType
+class	rtcreportingd.Session		let	creation
+class	rtcreportingd.Session		var	sentEvents
+class	rtcreportingd.Session		var	realtimeBackend
+class	rtcreportingd.Session		var	immediateBackend
+class	rtcreportingd.Session		var	haveNonRealtimeEvents
+class	rtcreportingd.Session		var	sendingNonRealtimeEvents
+class	rtcreportingd.Session		let	eventExtraFieldProvider
+class	rtcreportingd.Session		var	receivedEnd
+class	rtcreportingd.Session		let	parentSessionID
+class	rtcreportingd.Session		let	hierarchySessionID
+class	rtcreportingd.Session		let	user
+enum	rtcreportingd.SessionUser			
+enum	rtcreportingd.SessionUser		case	uid
+enum	rtcreportingd.SessionUser		case	unknown
+struct	rtcreportingd.CachedSession			
+struct	rtcreportingd.CachedSession		var	identity
+struct	rtcreportingd.CachedSession		var	id
+struct	rtcreportingd.CachedSession		var	samplingFactor
+struct	rtcreportingd.CachedSession		var	sessionType
+struct	rtcreportingd.CachedSession		var	creation
+struct	rtcreportingd.CachedSession		let	user
+enum	rtcreportingd.SessionError			
+enum	rtcreportingd.SessionError		case	invalidSamplingUUID
+enum	rtcreportingd.SessionError		case	noRealtimeBackend
+class	rtcreportingd.Listener			
+class	rtcreportingd.Listener		let	connectionQueue
+class	rtcreportingd.Listener		var	conn
+class	rtcreportingd.Listener		let	clientsLock
+class	rtcreportingd.Listener		var	clients
+class	rtcreportingd.Listener		let	disabled
+struct	rtcreportingd.RawStorebag._EncodedRawStorebag			
+struct	rtcreportingd.RawStorebag._EncodedRawStorebag		let	bag
+struct	rtcreportingd.RawStorebag._EncodedRawStorebag		let	signature
+struct	rtcreportingd.RawStorebag			
+struct	rtcreportingd.RawStorebag		let	bag
+struct	rtcreportingd.RawStorebag		let	signature
+enum	rtcreportingd.RawStorebag._EncodedRawStorebag.CodingKeys			
+enum	rtcreportingd.RawStorebag._EncodedRawStorebag.CodingKeys		case	bag
+enum	rtcreportingd.RawStorebag._EncodedRawStorebag.CodingKeys		case	signature
+struct	rtcreportingd.StorebagSectionFilter			
+struct	rtcreportingd.StorebagSectionFilter		let	keys
+struct	rtcreportingd.StorebagSectionFilter		let	values
+struct	rtcreportingd.StorebagSectionFilter		let	categories
+struct	rtcreportingd.StorebagSectionFilter		let	types
+struct	rtcreportingd.StorebagSectionFilter		let	action
+struct	rtcreportingd.StorebagSectionFilter		let	condition
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys			
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	keys
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	key
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	values
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	value
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	categories
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	category
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	types
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	type
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	action
+enum	rtcreportingd.StorebagSectionFilter.CodingKeys		case	condition
+struct	rtcreportingd.StorebagSectionCondition			
+struct	rtcreportingd.StorebagSectionCondition		let	action
+struct	rtcreportingd.StorebagSectionCondition		let	keys
+struct	rtcreportingd.StorebagSectionCondition		let	values
+struct	rtcreportingd.StorebagSectionCondition		let	conditions
+enum	rtcreportingd.StorebagSectionMaybeShared<A	protocol descriptor for Decodable>		
+enum	rtcreportingd.StorebagSectionMaybeShared<A	protocol descriptor for Decodable>	case	direct
+enum	rtcreportingd.StorebagSectionMaybeShared<A	protocol descriptor for Decodable>	case	shared
+enum	rtcreportingd.StorebagSectionCondition.CodingKeys			
+enum	rtcreportingd.StorebagSectionCondition.CodingKeys		case	action
+enum	rtcreportingd.StorebagSectionCondition.CodingKeys		case	keys
+enum	rtcreportingd.StorebagSectionCondition.CodingKeys		case	values
+enum	rtcreportingd.StorebagSectionCondition.CodingKeys		case	conditions
+class	rtcreportingd.StorebagCache			
+class	rtcreportingd.StorebagCache		let	location
+class	rtcreportingd.StorebagCache		var	cache
+class	rtcreportingd.StorebagCache		var	activeLoadingTask
+class	rtcreportingd.StorebagCache		var	activeLoadingTransaction
+struct	rtcreportingd.CachedStorebag			
+struct	rtcreportingd.CachedStorebag		let	storebag
+struct	rtcreportingd.CachedStorebag		let	expiration
+enum	rtcreportingd.StorebagCache.Location			
+enum	rtcreportingd.StorebagCache.Location		case	other
+enum	rtcreportingd.StorebagCache.Location		case	userCache
+enum	RTCUtility.XPCObject			
+enum	RTCUtility.XPCObject		case	connection
+enum	RTCUtility.XPCObject		case	endpoint
+enum	RTCUtility.XPCObject		case	bool
+enum	RTCUtility.XPCObject		case	int64
+enum	RTCUtility.XPCObject		case	uint64
+enum	RTCUtility.XPCObject		case	double
+enum	RTCUtility.XPCObject		case	date
+enum	RTCUtility.XPCObject		case	data
+enum	RTCUtility.XPCObject		case	string
+enum	RTCUtility.XPCObject		case	uuid
+enum	RTCUtility.XPCObject		case	shmem
+enum	RTCUtility.XPCObject		case	array
+enum	RTCUtility.XPCObject		case	dictionary
+enum	RTCUtility.XPCObject		case	null
+struct	RTCUtility.RTCXPCDictionary			
+struct	RTCUtility.RTCXPCDictionary		let	dict
+enum	RTCUtility.MessageKeys			
+struct	RTCUtility.XPCError			
+struct	RTCUtility.XPCError		let	raw
+struct	RTCUtility.XPCIncomingConnection			
+struct	RTCUtility.XPCIncomingConnection		let	conn
+class	RTCUtility.XPCConnection			
+class	RTCUtility.XPCConnection		let	conn
+class	RTCUtility.XPCConnection		var	delegate
+class	RTCUtility.XPCConnection		let	targetQ
+struct	RTCUtility.XPCMessage			
+struct	RTCUtility.XPCMessage		let	dict
+struct	RTCUtility.XPCMessage		let	ty
+enum	RTCUtility.XPCMessage.MessageType			
+enum	RTCUtility.XPCMessage.MessageType		case	CreateSession
+enum	RTCUtility.XPCMessage.MessageType		case	EndSession
+enum	RTCUtility.XPCMessage.MessageType		case	SendEvent
+enum	RTCUtility.XPCMessage.MessageType		case	RegenerateDNUIdentifier
+enum	RTCUtility.XPCMessage.MessageType		case	SetDigestKey
+protocol	rtcreportingd.SQLType			
+protocol	rtcreportingd.SQLNullableType			
+protocol	rtcreportingd.SQLBindable			
+protocol	rtcreportingd.FieldProviding			
+protocol	rtcreportingd.StorebagKeyProviding			
+protocol	rtcreportingd.HTTPSending			
+protocol	rtcreportingd.Backend			
+protocol	rtcreportingd.XPCActivityHandler			
+protocol	rtcreportingd.EventFilter			
+protocol	rtcreportingd.SessionConfigurationProviding			
+protocol	rtcreportingd.SessionConfigurable			
+protocol	RTCUtility.XPCConnectionDelegate			
+protocol	conformance nominal type descriptor for Int	rtcreportingd.SQLType		
+protocol	conformance nominal type descriptor for Int	rtcreportingd.SQLBindable		
+protocol	conformance nominal type descriptor for Int64	rtcreportingd.SQLType		
+protocol	conformance nominal type descriptor for Int64	rtcreportingd.SQLBindable		
+protocol	conformance nominal type descriptor for Double	rtcreportingd.SQLType		
+protocol	conformance nominal type descriptor for Double	rtcreportingd.SQLBindable		
+protocol	conformance nominal type descriptor for String	rtcreportingd.SQLNullableType		
+protocol	conformance nominal type descriptor for String	rtcreportingd.SQLBindable		
+protocol	conformance rtcreportingd.SQLiteDB	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.SQLError	protocol descriptor for CustomStringConvertible		
+protocol	conformance rtcreportingd.SQLError	protocol descriptor for LocalizedError		
+protocol	conformance rtcreportingd.DBError	protocol descriptor for CustomStringConvertible		
+protocol	conformance rtcreportingd.DBError	protocol descriptor for LocalizedError		
+protocol	conformance rtcreportingd.DBError	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.DBError	protocol descriptor for Equatable		
+protocol	conformance __C.CFString	protocol descriptor for Equatable: CoreFoundation		
+protocol	conformance __C.CFString	protocol descriptor for _CFObject: CoreFoundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.CFString	protocol descriptor for Hashable: CoreFoundation		
+protocol	conformance rtcreportingd.DBError	protocol descriptor for Error		
+protocol	conformance rtcreportingd.SQLError	protocol descriptor for Error		
+protocol	conformance rtcreportingd.HTTPHeaderFieldProvider	rtcreportingd.FieldProviding		
+protocol	conformance rtcreportingd.AllEventFieldProvider	rtcreportingd.FieldProviding		
+protocol	conformance rtcreportingd.StorebagExpedite	protocol descriptor for CaseIterable		
+protocol	conformance rtcreportingd.StorebagExpedite	protocol descriptor for RawRepresentable		
+protocol	conformance rtcreportingd.StorebagExpedite	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.StorebagExpedite	protocol descriptor for Equatable		
+protocol	conformance Storebag.Error	protocol descriptor for LocalizedError		
+protocol	conformance rtcreportingd.StorebagEnvironment	protocol descriptor for CaseIterable		
+protocol	conformance rtcreportingd.StorebagEnvironment	protocol descriptor for RawRepresentable		
+protocol	conformance rtcreportingd.StorebagEnvironment	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.StorebagEnvironment	protocol descriptor for Equatable		
+protocol	conformance _StorebagRoot	protocol descriptor for Decodable		
+protocol	conformance rtcreportingd.StorebagKeyInfoPlistProvider	rtcreportingd.StorebagKeyProviding		
+protocol	conformance _InfoPlistRoot	protocol descriptor for Decodable		
+protocol	conformance Storebag.Error	protocol descriptor for Error		
+protocol	conformance _InfoPlistRoot.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance _InfoPlistRoot.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance _InfoPlistRoot.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance _InfoPlistRoot.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance _InfoPlistRoot.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance _StorebagRoot.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance _StorebagRoot.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance _StorebagRoot.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance _InfoPlistRTCReporting	protocol descriptor for Decodable		
+protocol	conformance _InfoPlistRoot.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance _InfoPlistRTCReporting.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance _InfoPlistRTCReporting.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance _InfoPlistRTCReporting.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance _InfoPlistRTCReporting.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance _InfoPlistRTCReporting.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance _InfoPlistRTCReporting.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.TransparencyLog	protocol descriptor for Actor		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for CustomStringConvertible		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for LocalizedError		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for Hashable		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for Equatable		
+protocol	conformance JustEvents	protocol descriptor for Encodable		
+protocol	conformance TransparencyLog.WriteError	protocol descriptor for Error		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance JustEvents.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.Client	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.Client	RTCUtility.XPCConnectionDelegate		
+protocol	conformance rtcreportingd.Client	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.Client	protocol descriptor for Identifiable		
+protocol	conformance rtcreportingd.Client	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.ClientIdentity	protocol descriptor for CustomStringConvertible		
+protocol	conformance rtcreportingd.StorebagCoordinator	rtcreportingd.SessionConfigurationProviding		
+protocol	conformance rtcreportingd.StorebagCoordinator	protocol descriptor for Actor		
+protocol	conformance NSURLSession	rtcreportingd.HTTPSending		
+protocol	conformance rtcreportingd.BackendHTTP	protocol descriptor for CustomStringConvertible		
+protocol	conformance rtcreportingd.BackendHTTP	rtcreportingd.Backend		
+protocol	conformance rtcreportingd.BackendHTTP	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.MockHTTPSending	rtcreportingd.HTTPSending		
+protocol	conformance ZLibError	protocol descriptor for Error		
+protocol	conformance POSTData	protocol descriptor for Encodable		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance POSTData.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.StorebagSectionBackend	protocol descriptor for Decodable		
+protocol	conformance rtcreportingd.StorebagSectionBackendHTTP	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionBackendHTTP.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.SessionCoordinator	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.RefreshStorebagsActivity	rtcreportingd.XPCActivityHandler		
+protocol	conformance rtcreportingd.RefreshStorebagsActivity	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.BackendGroup	rtcreportingd.Backend		
+protocol	conformance rtcreportingd.BackendGroup	protocol descriptor for Actor		
+protocol	conformance BackendGroup.Error	protocol descriptor for Hashable		
+protocol	conformance BackendGroup.Error	protocol descriptor for Equatable		
+protocol	conformance BackendGroup.Error	protocol descriptor for Error		
+protocol	conformance rtcreportingd.DiskCache	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.DiskCacheError	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.DiskCacheError	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.DiskCacheError	protocol descriptor for Error		
+protocol	conformance rtcreportingd.SubmitEagerEventsActivity	rtcreportingd.XPCActivityHandler		
+protocol	conformance rtcreportingd.SubmitEagerEventsActivity	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.SubmissionCoordinator	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.SessionType	protocol descriptor for RawRepresentable		
+protocol	conformance rtcreportingd.SessionType	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.SessionType	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.EventValue	protocol descriptor for Encodable		
+protocol	conformance rtcreportingd.EventValue	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.BadCachedEvent	protocol descriptor for CustomStringConvertible		
+protocol	conformance rtcreportingd.BadCachedEvent	protocol descriptor for LocalizedError		
+protocol	conformance EventValue.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance EventValue.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance EventValue.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.BadCachedEvent	protocol descriptor for Error		
+protocol	conformance rtcreportingd.StorebagSectionClientHTTP	protocol descriptor for Decodable		
+protocol	conformance rtcreportingd.StorebagBool	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.StorebagBool	protocol descriptor for Equatable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.StorebagSectionPerCountrySampling	protocol descriptor for Decodable		
+protocol	conformance rtcreportingd.StorebagBool	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionClientHTTP.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.CacheCleanupActivity	rtcreportingd.XPCActivityHandler		
+protocol	conformance rtcreportingd.CacheCleanupActivity	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.StorebagSharedValue	protocol descriptor for Decodable		
+protocol	conformance rtcreportingd.PostInstallActivity	rtcreportingd.XPCActivityHandler		
+protocol	conformance rtcreportingd.PostInstallActivity	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.XPCActivity	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.EventAllowFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventRemoveFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventSHA256KeyFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventAllowValuesFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventDenyValuesFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventInsertStringKeyFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventAppendToKeyFilter	rtcreportingd.EventFilter		
+protocol	conformance rtcreportingd.EventPrependToKeyFilter	rtcreportingd.EventFilter		
+protocol	conformance SessionConfiguration.Availability	protocol descriptor for Hashable		
+protocol	conformance SessionConfiguration.Availability	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.SubmitEventsActivity	rtcreportingd.XPCActivityHandler		
+protocol	conformance rtcreportingd.SubmitEventsActivity	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.SubmissionError	protocol descriptor for Error		
+protocol	conformance rtcreportingd.CachedSession	rtcreportingd.SessionConfigurable		
+protocol	conformance rtcreportingd.Session	rtcreportingd.SessionConfigurable		
+protocol	conformance rtcreportingd.Session	protocol descriptor for Actor		
+protocol	conformance rtcreportingd.SessionError	protocol descriptor for CustomStringConvertible		
+protocol	conformance rtcreportingd.SessionError	protocol descriptor for LocalizedError		
+protocol	conformance rtcreportingd.SessionError	protocol descriptor for Hashable		
+protocol	conformance rtcreportingd.SessionError	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.SessionError	protocol descriptor for Error		
+protocol	conformance rtcreportingd.Listener	RTCUtility.XPCConnectionDelegate		
+protocol	conformance _EncodedRawStorebag	protocol descriptor for Decodable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance _EncodedRawStorebag.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.StorebagSectionFilter	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance rtcreportingd.StorebagSectionMaybeShared	protocol descriptor for Decodable		
+protocol	conformance rtcreportingd.StorebagSectionCondition	protocol descriptor for Decodable		
+protocol	conformance StorebagSectionFilter.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance rtcreportingd.StorebagCache	protocol descriptor for Actor		
+protocol	conformance RTCUtility.XPCObject	protocol descriptor for Equatable		
+protocol	conformance RTCUtility.RTCXPCDictionary	protocol descriptor for ExpressibleByDictionaryLiteral		
+protocol	conformance RTCUtility.XPCError	protocol descriptor for LocalizedError		
+protocol	conformance RTCUtility.XPCError	protocol descriptor for CustomStringConvertible		
+protocol	conformance RTCUtility.XPCError	protocol descriptor for Error		
+protocol	conformance XPCMessage.MessageType	protocol descriptor for Equatable		
+protocol	conformance XPCMessage.MessageType	protocol descriptor for Hashable		
+protocol	conformance XPCMessage.MessageType	protocol descriptor for RawRepresentable		
+protocol	conformance RTCUtility.XPCMessage	protocol descriptor for CustomStringConvertible		
+extension	rtcreportingd.StorebagExpedite	CaseIterable		
+extension	rtcreportingd.StorebagExpedite	RawRepresentable		
+extension	rtcreportingd.StorebagEnvironment	CaseIterable		
+extension	rtcreportingd.StorebagEnvironment	RawRepresentable		
+extension	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRoot.CodingKeys	RawRepresentable		
+extension	rtcreportingd.StorebagKeyInfoPlistProvider._InfoPlistRTCReporting.CodingKeys	RawRepresentable		
+extension	rtcreportingd.Client	Identifiable		
+extension	rtcreportingd.SessionType	RawRepresentable		
+extension	rtcreportingd.StorebagSectionClientHTTP.CodingKeys	RawRepresentable		
+extension	rtcreportingd.StorebagSectionFilter.CodingKeys	RawRepresentable		
+extension	RTCUtility.RTCXPCDictionary	ExpressibleByDictionaryLiteral		
+extension	RTCUtility.XPCMessage.MessageType	RawRepresentable		

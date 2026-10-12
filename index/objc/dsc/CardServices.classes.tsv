@@ -1,0 +1,18 @@
+kind	name	superclass	protocols
+interface	CRSCardRequest	CRSRequest	CRSCardRequesting
+interface	CRSCardResponse	CRSResponse	
+interface	CRSIdentifiedServiceRegistry	NSObject	
+interface	CRSRequest	NSObject	
+interface	CRSResponse	NSObject	
+interface	_CRSCardServiceBundle	_CRSServiceBundle	CRSCardServing
+interface	_CRSCardServiceBundleManager	_CRSServiceBundleManager	
+interface	_CRSPassthroughService	NSObject	CRSCardServing,CRSIdentifiedServing
+interface	_CRSServiceBundle	NSBundle	CRSIdentifiedServing
+interface	_CRSServiceBundleManager	CRBundleManager	
+protocol	CRCard		NSObject,NSSecureCoding,NSCopying,CRContent
+protocol	CRContent		NSObject
+protocol	CRSCardRequesting		NSObject
+protocol	CRSCardServing		CRSServing
+protocol	CRSIdentifiedServing		CRSServing
+protocol	CRSServing		NSObject
+protocol	OS_dispatch_queue		

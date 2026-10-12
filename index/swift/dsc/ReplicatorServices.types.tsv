@@ -1,0 +1,1575 @@
+kind	type	conformance	member_kind	member
+enum	ReplicatorServices.ZoneReplicationPriority			
+enum	ReplicatorServices.ZoneReplicationPriority		case	high
+enum	ReplicatorServices.ZoneReplicationPriority		case	medium
+enum	ReplicatorServices.ZoneReplicationPriority		case	low
+struct	ReplicatorServices.ReplicatorProtocolVersion			
+struct	ReplicatorServices.ReplicatorProtocolVersion		let	current
+struct	ReplicatorServices.ReplicatorProtocolVersion		let	minimum
+enum	ReplicatorServices.ReplicatorProtocolVersion.CodingKeys			
+enum	ReplicatorServices.ReplicatorProtocolVersion.CodingKeys		case	current
+enum	ReplicatorServices.ReplicatorProtocolVersion.CodingKeys		case	minimum
+class	ReplicatorServices.ReplicatorCoder			
+class	ReplicatorServices.Database.RecordDataStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableRecordDataStore	ReplicatorServices.Database.RecordMetadataStore		
+class	ReplicatorServices.Database.PairingRelationshipStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutablePairingRelationshipStore	ReplicatorServices.Database.PairingRelationshipStore		
+class	ReplicatorServices.Database.RecordMetadataStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableRecordMetadataStore	ReplicatorServices.Database.RecordMetadataStore		
+enum	ReplicatorServices.Database.RecordMetadataStore.RecordMetadataStoreError			
+enum	ReplicatorServices.Database.RecordMetadataStore.RecordMetadataStoreError		case	invalidInput
+class	ReplicatorServices.Database.ClientSettingsStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableClientSettingsStore	ReplicatorServices.Database.ClientSettingsStore		
+class	ReplicatorServices.Database.ZoneVersionStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableZoneVersionStore	ReplicatorServices.Database.ZoneVersionStore		
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject		
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	lazy
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	let	_recordChangePublisher
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	lazy
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	let	_messagePublisher
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	lazy
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	let	_devicePublisher
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	lazy
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	let	_pairedDevicePublisher
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	connection
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	serverStartupToken
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	let	queue
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_clientDescriptors
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_zoneChangeTokens
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_messageTokens
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_deviceToken
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_devices
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_localDeviceID
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_recordVersionStore
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_hasFetchedDevices
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_hasFetchedRecordVersions
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_recordFetchPending
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_messageFetchPending
+class	ReplicatorServices.ReplicatorClientSingleton	NSObject	var	queue_deviceFetchPending
+class	ReplicatorServices.Database.ClientDescriptorStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableClientDescriptorStore	ReplicatorServices.Database.ClientDescriptorStore		
+class	ReplicatorServices.Database.DeviceMetadataStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableDeviceMetadataStore	ReplicatorServices.Database.DeviceMetadataStore		
+struct	ReplicatorServices.ReplicatorRecordVersion			
+struct	ReplicatorServices.ReplicatorRecordVersion		var	id
+struct	ReplicatorServices.ReplicatorRecordVersion		var	version
+enum	ReplicatorServices.ReplicatorRecordVersion.CodingKeys			
+enum	ReplicatorServices.ReplicatorRecordVersion.CodingKeys		case	id
+enum	ReplicatorServices.ReplicatorRecordVersion.CodingKeys		case	version
+struct	ReplicatorServices.XPCInterfaceDomain			
+struct	ReplicatorServices.XPCInterfaceDomain		var	domain
+struct	ReplicatorServices.XPCInterfaceDomain		var	machName
+enum	ReplicatorServices.ReplicatorSchedule			
+enum	ReplicatorServices.ReplicatorSchedule		case	immediate
+enum	ReplicatorServices.ReplicatorSchedule		case	opportunistic
+class	ReplicatorServices.Database.DataMigrationStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableDataMigrationStore	ReplicatorServices.Database.DataMigrationStore		
+struct	ReplicatorServices.ClientSettings			
+struct	ReplicatorServices.ClientSettings		var	clientID
+struct	ReplicatorServices.ClientSettings		var	enabled
+struct	ReplicatorServices.ClientSettings		var	registered
+struct	ReplicatorServices.ZoneDescriptor			
+struct	ReplicatorServices.ZoneDescriptor		var	id
+struct	ReplicatorServices.ZoneDescriptor		var	publicationMethod
+struct	ReplicatorServices.ZoneDescriptor		var	replicationPriority
+struct	ReplicatorServices.ZoneDescriptor		let	protocolVersion
+struct	ReplicatorServices.ZoneDescriptor		var	compressFiles
+struct	ReplicatorServices.ZoneDescriptor		var	maximumLocalRecordCount
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys			
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys		case	id
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys		case	publicationMethod
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys		case	replicationPriority
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys		case	protocolVersion
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys		case	compressFiles
+enum	ReplicatorServices.ZoneDescriptor.CodingKeys		case	maximumLocalRecordCount
+class	ReplicatorServices.ReplicatorControlClientObjcBridge	NSObject		
+class	ReplicatorServices.ReplicatorControlClientObjcBridge	NSObject	let	controlClient
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>		
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	replicator
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	zoneDescriptor
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	coder
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	recordIDProvider
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	recordVersionProvider
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	recordValueProvider
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	let	lock
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	var	lock_entriesByID
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	var	lock_entryIDsByRecordID
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	var	lock_entryChangeObservers
+class	ReplicatorServices.ReplicatorStore<A	ReplicatorServices.Replicatable>	var	calloutQueue
+enum	ReplicatorServices.ReplicatorStore.Change<A	ReplicatorServices.Replicatable>		
+enum	ReplicatorServices.ReplicatorStore.Change<A	ReplicatorServices.Replicatable>	case	delete
+enum	ReplicatorServices.ReplicatorStore.Change<A	ReplicatorServices.Replicatable>	case	update
+struct	ReplicatorServices.ReplicatorStore.Entry<A	ReplicatorServices.Replicatable>		
+struct	ReplicatorServices.ReplicatorStore.Entry<A	ReplicatorServices.Replicatable>	var	value
+struct	ReplicatorServices.ReplicatorStore.Entry<A	ReplicatorServices.Replicatable>	var	record
+class	ReplicatorServices.ReplicatorClient			
+class	ReplicatorServices.ReplicatorClient		let	replicatorProtocolVersion
+class	ReplicatorServices.ReplicatorClient		let	innerClient
+class	ReplicatorServices.ReplicatorClient		var	calloutQueue
+enum	ReplicatorServices.ReplicatorClient.InvalidRecordResolution			
+enum	ReplicatorServices.ReplicatorClient.InvalidRecordResolution		case	skip
+enum	ReplicatorServices.ReplicatorClient.InvalidRecordResolution		case	fail
+struct	ReplicatorServices.ReplicatorMessage			
+struct	ReplicatorServices.ReplicatorMessage		var	id
+struct	ReplicatorServices.ReplicatorMessage		var	clientID
+struct	ReplicatorServices.ReplicatorMessage		var	pairingRelationshipID
+struct	ReplicatorServices.ReplicatorMessage		var	messageType
+struct	ReplicatorServices.ReplicatorMessage		var	protocolVersion
+struct	ReplicatorServices.ReplicatorMessage		var	data
+struct	ReplicatorServices.ReplicatorMessage		var	responseToID
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys			
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	id
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	pairingRelationshipID
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	messageType
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	protocolVersion
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	data
+enum	ReplicatorServices.ReplicatorMessage.CodingKeys		case	responseToID
+struct	ReplicatorServices.ReplicatorControlServiceDefinition			
+struct	ReplicatorServices.ReplicatorControlServiceError			
+struct	ReplicatorServices.ReplicatorControlServiceError		var	code
+struct	ReplicatorServices.ReplicatorControlServiceError		var	underlyingError
+enum	ReplicatorServices.ReplicatorControlServiceError.Code			
+enum	ReplicatorServices.ReplicatorControlServiceError.Code		case	invalidInput
+enum	ReplicatorServices.ReplicatorControlServiceError.Code		case	notAllowed
+enum	ReplicatorServices.ReplicatorControlServiceError.Code		case	configuration
+enum	ReplicatorServices.ReplicatorControlServiceError.Code		case	connection
+enum	ReplicatorServices.ReplicatorControlServiceError.Code		case	unknown
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.Pair			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.Pair		var	relationshipID
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.Unpair			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.Unpair		var	relationshipID
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.Unavailable			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.Unavailable		var	relationshipID
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.SetEnabled			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.SetEnabled		var	enabled
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListEnabled			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListEnabled		var	allowListEnabled
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListID			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListID		var	allowListID
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowList			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowList		var	allowList
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPushToken			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPushToken		var	relationshipID
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPDRPairingID			
+struct	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPDRPairingID		var	relationshipID
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetEnabled			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetEnabled		let	enabled
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetDevices			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetDevices		let	devices
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetLocalDevice			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetLocalDevice		let	localDevice
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowListEnabled			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowListEnabled		let	allowListEnabled
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowList			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowList		let	allowList
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPushToken			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPushToken		let	pushToken
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPDRPairingID			
+struct	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPDRPairingID		let	pdrPairingID
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPDRPairingID.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPDRPairingID.CodingKeys		case	pdrPairingID
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPushToken.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPushToken.CodingKeys		case	pushToken
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowList.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowList.CodingKeys		case	allowList
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowListEnabled.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowListEnabled.CodingKeys		case	allowListEnabled
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetLocalDevice.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetLocalDevice.CodingKeys		case	localDevice
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetDevices.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetDevices.CodingKeys		case	devices
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetEnabled.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerResponse.GetEnabled.CodingKeys		case	enabled
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPDRPairingID.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPDRPairingID.CodingKeys		case	relationshipID
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPushToken.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPushToken.CodingKeys		case	relationshipID
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowList.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowList.CodingKeys		case	allowList
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListID.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListID.CodingKeys		case	allowListID
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListEnabled.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListEnabled.CodingKeys		case	allowListEnabled
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.SetEnabled.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.SetEnabled.CodingKeys		case	enabled
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.Unavailable.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.Unavailable.CodingKeys		case	relationshipID
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.Unpair.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.Unpair.CodingKeys		case	relationshipID
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.Pair.CodingKeys			
+enum	ReplicatorServices.ReplicatorControlXPCServerParameters.Pair.CodingKeys		case	relationshipID
+enum	ReplicatorServices.Notifications			
+struct	ReplicatorServices.ReplicationServiceDefinition			
+struct	ReplicatorServices.ReplicationServiceError			
+struct	ReplicatorServices.ReplicationServiceError		var	code
+struct	ReplicatorServices.ReplicationServiceError		var	underlyingError
+enum	ReplicatorServices.ReplicationServiceError.Code			
+enum	ReplicatorServices.ReplicationServiceError.Code		case	invalidInput
+enum	ReplicatorServices.ReplicationServiceError.Code		case	notAllowed
+enum	ReplicatorServices.ReplicationServiceError.Code		case	configuration
+enum	ReplicatorServices.ReplicationServiceError.Code		case	connection
+enum	ReplicatorServices.ReplicationServiceError.Code		case	unknown
+class	ReplicatorServices.ReplicationXPCServerParametersRecord	NSObject		
+class	ReplicatorServices.ReplicationXPCServerParametersRecord	NSObject	var	id
+class	ReplicatorServices.ReplicationXPCServerParametersRecord	NSObject	var	version
+class	ReplicatorServices.ReplicationXPCServerParametersRecord	NSObject	var	values
+class	ReplicatorServices.ReplicationXPCServerParametersRecord	NSObject	var	expiration
+class	ReplicatorServices.ReplicationXPCServerParametersRecord	NSObject	var	options
+class	ReplicatorServices.ReplicationXPCServerParametersExtendedAttribute	NSObject		
+class	ReplicatorServices.ReplicationXPCServerParametersExtendedAttribute	NSObject	var	name
+class	ReplicatorServices.ReplicationXPCServerParametersExtendedAttribute	NSObject	var	data
+class	ReplicatorServices.ReplicationXPCServerParametersRecordValue	NSObject		
+class	ReplicatorServices.ReplicationXPCServerParametersRecordValue	NSObject	var	version
+class	ReplicatorServices.ReplicationXPCServerParametersRecordValue	NSObject	var	data
+class	ReplicatorServices.ReplicationXPCServerParametersRecordValue	NSObject	var	fileHandle
+class	ReplicatorServices.ReplicationXPCServerParametersRecordValue	NSObject	var	extendedAttributes
+class	ReplicatorServices.ReplicationXPCServerParametersAddRecords	NSObject		
+class	ReplicatorServices.ReplicationXPCServerParametersAddRecords	NSObject	let	records
+class	ReplicatorServices.ReplicationXPCServerParametersAddRecords	NSObject	let	parameters
+enum	ReplicatorServices.ReplicationXPCServerParameters			
+struct	ReplicatorServices.ReplicationXPCServerParameters.RegisterClient			
+struct	ReplicatorServices.ReplicationXPCServerParameters.RegisterClient		var	clientDescriptor
+struct	ReplicatorServices.ReplicationXPCServerParameters.UnregisterClient			
+struct	ReplicatorServices.ReplicationXPCServerParameters.UnregisterClient		var	clientID
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetClientEnabled			
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetClientEnabled		var	clientID
+struct	ReplicatorServices.ReplicationXPCServerParameters.EnableClient			
+struct	ReplicatorServices.ReplicationXPCServerParameters.EnableClient		var	clientID
+struct	ReplicatorServices.ReplicationXPCServerParameters.DisableClient			
+struct	ReplicatorServices.ReplicationXPCServerParameters.DisableClient		var	clientID
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetClientDescriptor			
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetClientDescriptor		var	clientID
+struct	ReplicatorServices.ReplicationXPCServerParameters.AddRecords			
+struct	ReplicatorServices.ReplicationXPCServerParameters.AddRecords		var	destination
+struct	ReplicatorServices.ReplicationXPCServerParameters.AddRecords		var	schedule
+struct	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords			
+struct	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords		var	recordIDs
+struct	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords		var	schedule
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecords			
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecords		var	recordIDs
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecords		var	fetchData
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecords		var	fetchFiles
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecords		var	protocolVersion
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecordVersions			
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetRecordVersions		var	clientDescriptors
+struct	ReplicatorServices.ReplicationXPCServerParameters.SendMessage			
+struct	ReplicatorServices.ReplicationXPCServerParameters.SendMessage		var	message
+struct	ReplicatorServices.ReplicationXPCServerParameters.SendMessage		var	timeout
+struct	ReplicatorServices.ReplicationXPCServerParameters.SendMessage		var	retries
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetMessages			
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetMessages		var	clientIDs
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetClientDefinedRecordIDs			
+struct	ReplicatorServices.ReplicationXPCServerParameters.GetClientDefinedRecordIDs		var	recordIDs
+enum	ReplicatorServices.ReplicationXPCServerResponse			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsVersions			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsVersions		var	recordVersions
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetDevices			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetDevices		var	devices
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientDescriptor			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientDescriptor		var	clientDescriptor
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs		var	internalIDs
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs		var	clientDefinedIDs
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs		var	failedRecordIDs
+struct	ReplicatorServices.ReplicationXPCServerResponse.ReceiveMessage			
+struct	ReplicatorServices.ReplicationXPCServerResponse.ReceiveMessage		var	message
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetMessages			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetMessages		var	messages
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetLocalDeviceID			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetLocalDeviceID		var	localDeviceID
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsFailedRecordIDs			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsFailedRecordIDs		var	failedRecordIDs
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientEnabled			
+struct	ReplicatorServices.ReplicationXPCServerResponse.GetClientEnabled		var	enabled
+class	ReplicatorServices.ReplicationXPCServerResponseGetRecords	NSObject		
+class	ReplicatorServices.ReplicationXPCServerResponseGetRecords	NSObject	let	records
+class	ReplicatorServices.ReplicationXPCServerResponseGetRecords	NSObject	let	failedRecordIDs
+enum	ReplicatorServices.ReplicationXPCClientParameters			
+struct	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges			
+struct	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges		var	updated
+struct	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges		var	deleted
+enum	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges.CodingKeys		case	updated
+enum	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges.CodingKeys		case	deleted
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientEnabled.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientEnabled.CodingKeys		case	enabled
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsFailedRecordIDs.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsFailedRecordIDs.CodingKeys		case	failedRecordIDs
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetLocalDeviceID.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetLocalDeviceID.CodingKeys		case	localDeviceID
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetMessages.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetMessages.CodingKeys		case	messages
+enum	ReplicatorServices.ReplicationXPCServerResponse.ReceiveMessage.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.ReceiveMessage.CodingKeys		case	message
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs.CodingKeys		case	internalIDs
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs.CodingKeys		case	clientDefinedIDs
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs.CodingKeys		case	failedRecordIDs
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientDescriptor.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetClientDescriptor.CodingKeys		case	clientDescriptor
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetDevices.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetDevices.CodingKeys		case	devices
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsVersions.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsVersions.CodingKeys		case	recordVersions
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetClientDefinedRecordIDs.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetClientDefinedRecordIDs.CodingKeys		case	recordIDs
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetMessages.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetMessages.CodingKeys		case	clientIDs
+enum	ReplicatorServices.ReplicationXPCServerParameters.SendMessage.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.SendMessage.CodingKeys		case	message
+enum	ReplicatorServices.ReplicationXPCServerParameters.SendMessage.CodingKeys		case	timeout
+enum	ReplicatorServices.ReplicationXPCServerParameters.SendMessage.CodingKeys		case	retries
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecordVersions.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecordVersions.CodingKeys		case	clientDescriptors
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecords.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecords.CodingKeys		case	recordIDs
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecords.CodingKeys		case	fetchData
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecords.CodingKeys		case	fetchFiles
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetRecords.CodingKeys		case	protocolVersion
+enum	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords.CodingKeys		case	recordIDs
+enum	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords.CodingKeys		case	schedule
+enum	ReplicatorServices.ReplicationXPCServerParameters.AddRecords.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.AddRecords.CodingKeys		case	destination
+enum	ReplicatorServices.ReplicationXPCServerParameters.AddRecords.CodingKeys		case	schedule
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetClientDescriptor.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetClientDescriptor.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicationXPCServerParameters.DisableClient.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.DisableClient.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicationXPCServerParameters.EnableClient.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.EnableClient.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetClientEnabled.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.GetClientEnabled.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicationXPCServerParameters.UnregisterClient.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.UnregisterClient.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicationXPCServerParameters.RegisterClient.CodingKeys			
+enum	ReplicatorServices.ReplicationXPCServerParameters.RegisterClient.CodingKeys		case	clientDescriptor
+struct	ReplicatorServices.ReplicatorDevice			
+struct	ReplicatorServices.ReplicatorDevice		var	id
+struct	ReplicatorServices.ReplicatorDevice		var	relationshipID
+struct	ReplicatorServices.ReplicatorDevice		var	name
+struct	ReplicatorServices.ReplicatorDevice		var	protocolVersion
+struct	ReplicatorServices.ReplicatorDevice		var	deviceType
+struct	ReplicatorServices.ReplicatorDevice		var	screen
+struct	ReplicatorServices.ReplicatorDevice		var	zones
+struct	ReplicatorServices.ReplicatorDevice		var	messageTypes
+struct	ReplicatorServices.ReplicatorDevice		var	relationshipState
+struct	ReplicatorServices.ReplicatorDevice		var	initialPairingDate
+struct	ReplicatorServices.ReplicatorDevice		var	isBlocked
+struct	ReplicatorServices.ReplicatorDevice		var	marketingName
+struct	ReplicatorServices.ReplicatorDevice		var	productType
+struct	ReplicatorServices.ReplicatorDevice		var	personaID
+enum	ReplicatorServices.ReplicatorDevice.DeviceType			
+enum	ReplicatorServices.ReplicatorDevice.DeviceType		case	unknown
+enum	ReplicatorServices.ReplicatorDevice.DeviceType		case	mac
+enum	ReplicatorServices.ReplicatorDevice.DeviceType		case	phone
+enum	ReplicatorServices.ReplicatorDevice.DeviceType		case	pad
+enum	ReplicatorServices.ReplicatorDevice.DeviceType		case	watch
+enum	ReplicatorServices.ReplicatorDevice.DeviceType		case	tv
+struct	ReplicatorServices.ReplicatorDevice.Screen			
+struct	ReplicatorServices.ReplicatorDevice.Screen		var	size
+struct	ReplicatorServices.ReplicatorDevice.Screen		var	scale
+struct	ReplicatorServices.ReplicatorDevice.Screen		var	cornerRadius
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState			
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState		case	migrating
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState		case	introduced
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState		case	pairing
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState		case	paired
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState		case	unknown
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	id
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	relationshipID
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	name
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	protocolVersion
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	deviceType
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	screen
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	zones
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	messageTypes
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	relationshipState
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	initialPairingDate
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	isBlocked
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	marketingName
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	productType
+enum	ReplicatorServices.ReplicatorDevice.CodingKeys		case	personaID
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.CodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.CodingKeys		case	introduced
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.CodingKeys		case	pairing
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.CodingKeys		case	paired
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.CodingKeys		case	migrating
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.CodingKeys		case	unknown
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.IntroducedCodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.PairingCodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.PairedCodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.MigratingCodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.MigratingCodingKeys		case	from
+enum	ReplicatorServices.ReplicatorDevice.RelationshipState.UnknownCodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.Screen.CodingKeys			
+enum	ReplicatorServices.ReplicatorDevice.Screen.CodingKeys		case	size
+enum	ReplicatorServices.ReplicatorDevice.Screen.CodingKeys		case	scale
+enum	ReplicatorServices.ReplicatorDevice.Screen.CodingKeys		case	cornerRadius
+class	ReplicatorServices.ReplicatorControlClient			
+class	ReplicatorServices.ReplicatorControlClient		var	lazy
+class	ReplicatorServices.ReplicatorControlClient		var	lazy
+class	ReplicatorServices.ReplicatorControlClient		var	subscriptions
+class	ReplicatorServices.ReplicatorControlClient		let	singleton
+class	ReplicatorServices.ReplicatorControlClient		var	calloutQueue
+class	ReplicatorServices.ReplicatorControlClient		var	lock
+class	ReplicatorServices.ReplicatorControlClient		var	lock_deviceObservers
+class	ReplicatorServices.ReplicatorControlClient		var	lock_pairedDeviceObservers
+class	ReplicatorServices.ReplicatorControlClient		var	lock_enabledStateObservers
+class	ReplicatorServices.Singleton	NSObject		
+class	ReplicatorServices.Singleton	NSObject	var	lazy
+class	ReplicatorServices.Singleton	NSObject	let	_devicePublisher
+class	ReplicatorServices.Singleton	NSObject	var	lazy
+class	ReplicatorServices.Singleton	NSObject	let	_pairedDevicePublisher
+class	ReplicatorServices.Singleton	NSObject	var	lazy
+class	ReplicatorServices.Singleton	NSObject	let	_enabledStatePublisher
+class	ReplicatorServices.Singleton	NSObject	var	connection
+class	ReplicatorServices.Singleton	NSObject	var	serverStartupToken
+class	ReplicatorServices.Singleton	NSObject	let	queue
+class	ReplicatorServices.Singleton	NSObject	var	queue_deviceToken
+class	ReplicatorServices.Singleton	NSObject	var	queue_enabledStateToken
+class	ReplicatorServices.Singleton	NSObject	var	queue_devices
+class	ReplicatorServices.Singleton	NSObject	var	queue_isEnabled
+class	ReplicatorServices.Singleton	NSObject	var	queue_deviceFetchPending
+class	ReplicatorServices.Singleton	NSObject	var	queue_fetchedData
+struct	ReplicatorServices.Singleton.DataTypes			
+struct	ReplicatorServices.Singleton.DataTypes		let	rawValue
+class	ReplicatorServices.ReplicatorClientWithPersistence			
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	cacheURL
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	innerClient
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	database
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	recordDataStore
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	metadataStore
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	runOnceStore
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	calloutQueue
+class	ReplicatorServices.ReplicatorClientWithPersistence		let	syncQueue
+class	ReplicatorServices.ReplicatorClientWithPersistence		var	lock
+class	ReplicatorServices.ReplicatorClientWithPersistence		var	lock_recordObservers
+class	ReplicatorServices.ReplicatorClientWithPersistence		var	lock_scheduledDatabaseSyncSchedule
+class	ReplicatorServices.ReplicatorClientWithPersistence		var	lock_localMetadata
+class	ReplicatorServices.Database			
+class	ReplicatorServices.Database		let	deviceMetadataStore
+class	ReplicatorServices.Database		let	recordMetadataStore
+class	ReplicatorServices.Database		let	recordDataStore
+class	ReplicatorServices.Database		let	pairingRelationshipStore
+class	ReplicatorServices.Database		let	clientDescriptorStore
+class	ReplicatorServices.Database		let	clientSettingsStore
+class	ReplicatorServices.Database		let	zoneVersionStore
+class	ReplicatorServices.Database		let	dataMigrationStore
+class	ReplicatorServices.Database		let	runOnceStore
+class	ReplicatorServices.Database		let	db
+class	ReplicatorServices.Database		let	_writer_lock
+struct	ReplicatorServices.Database.LocalDeviceMetadata			
+struct	ReplicatorServices.Database.LocalDeviceMetadata		var	deviceID
+struct	ReplicatorServices.Database.LocalDeviceMetadata		var	hasMigratedFromChronod
+struct	ReplicatorServices.Database.LocalDeviceMetadata		var	isEnabled
+struct	ReplicatorServices.Database.LocalDeviceMetadata		var	allowListEnabled
+struct	ReplicatorServices.Database.LocalDeviceMetadata		var	allowList
+struct	ReplicatorServices.Database.LocalDeviceMetadata		var	lastAuthKitReconciliationDate
+enum	ReplicatorServices.Database.DatabaseError			
+enum	ReplicatorServices.Database.DatabaseError		case	malformedData
+class	ReplicatorServices.Database.MutableStore			
+class	ReplicatorServices.Database.MutableStore		let	deviceMetadataStore
+class	ReplicatorServices.Database.MutableStore		let	recordMetadataStore
+class	ReplicatorServices.Database.MutableStore		let	recordDataStore
+class	ReplicatorServices.Database.MutableStore		let	pairingRelationshipStore
+class	ReplicatorServices.Database.MutableStore		let	clientDescriptorStore
+class	ReplicatorServices.Database.MutableStore		let	clientSettingsStore
+class	ReplicatorServices.Database.MutableStore		let	zoneVersionStore
+class	ReplicatorServices.Database.MutableStore		let	dataMigrationStore
+class	ReplicatorServices.Database.MutableStore		let	runOnceStore
+class	ReplicatorServices.Database.DatabaseAccessor			
+class	ReplicatorServices.Database.DatabaseAccessor		var	_db
+enum	ReplicatorServices.Database.DestinationType			
+enum	ReplicatorServices.Database.DestinationType		case	all
+enum	ReplicatorServices.Database.DestinationType		case	array
+enum	ReplicatorServices.Database.RelationshipState			
+enum	ReplicatorServices.Database.RelationshipState		case	introduced
+enum	ReplicatorServices.Database.RelationshipState		case	pairing
+enum	ReplicatorServices.Database.RelationshipState		case	paired
+enum	ReplicatorServices.Database.RelationshipState		case	migrating
+enum	ReplicatorServices.Database.RelationshipState		case	inactive
+class	ReplicatorServices.MigrationServer	NSObject		
+class	ReplicatorServices.MigrationServer	NSObject	var	lock
+class	ReplicatorServices.MigrationServer	NSObject	var	lock_clients
+class	ReplicatorServices.MigrationServer	NSObject	let	queue
+class	ReplicatorServices.MigrationServer	NSObject	var	localDeviceIDProvider
+class	ReplicatorServices.MigrationServer	NSObject	var	recordProvider
+class	ReplicatorServices.MigrationServer	NSObject	var	deviceProvider
+class	ReplicatorServices.MigrationServer	NSObject	var	clientDescriptorProvider
+class	ReplicatorServices.MigrationServer	NSObject	var	eraseHandler
+class	ReplicatorServices.MigrationServer	NSObject	var	listener
+class	ReplicatorServices.Client	NSObject		
+class	ReplicatorServices.Client	NSObject	let	pid
+class	ReplicatorServices.Client	NSObject	let	connection
+class	ReplicatorServices.Client	NSObject	let	lock
+class	ReplicatorServices.Client	NSObject	var	delegate
+class	ReplicatorServices.LogHelper			
+enum	ReplicatorServices.ReplicatorRecordDestination			
+enum	ReplicatorServices.ReplicatorRecordDestination		case	collection
+enum	ReplicatorServices.ReplicatorRecordDestination		case	all
+enum	ReplicatorServices.ReplicatorRecordDestination.CodingKeys			
+enum	ReplicatorServices.ReplicatorRecordDestination.CodingKeys		case	collection
+enum	ReplicatorServices.ReplicatorRecordDestination.CodingKeys		case	all
+enum	ReplicatorServices.ReplicatorRecordDestination.CollectionCodingKeys			
+enum	ReplicatorServices.ReplicatorRecordDestination.CollectionCodingKeys		case	_0
+enum	ReplicatorServices.ReplicatorRecordDestination.AllCodingKeys			
+struct	ReplicatorServices.OrphanedFileRemover			
+class	ReplicatorServices.OrphanedFileRemover.Session			
+class	ReplicatorServices.OrphanedFileRemover.Session		var	started
+class	ReplicatorServices.OrphanedFileRemover.Session		var	skipped
+class	ReplicatorServices.OrphanedFileRemover.Session		var	deleted
+class	ReplicatorServices.OrphanedFileRemover.Session		var	protected
+class	ReplicatorServices.OrphanedFileRemover.Session		var	failed
+enum	ReplicatorServices.SQLValue			
+enum	ReplicatorServices.SQLValue		case	int
+enum	ReplicatorServices.SQLValue		case	real
+enum	ReplicatorServices.SQLValue		case	text
+enum	ReplicatorServices.SQLValue		case	blob
+enum	ReplicatorServices.SQLValue		case	null
+enum	ReplicatorServices.SQLiteError			
+enum	ReplicatorServices.SQLiteError		case	Success
+enum	ReplicatorServices.SQLiteError		case	Failure
+enum	ReplicatorServices.SQLiteError		case	OpenFailed
+enum	ReplicatorServices.SQLiteError		case	InvalidSyntax
+enum	ReplicatorServices.SQLiteError		case	ResultMismatch
+class	ReplicatorServices.SQLDatabase			
+class	ReplicatorServices.SQLDatabase		let	defaultCacheSize
+class	ReplicatorServices.SQLDatabase		let	lock
+class	ReplicatorServices.SQLDatabase		let	database
+class	ReplicatorServices.SQLDatabase		var	databaseOpenedSuccessfully
+class	ReplicatorServices.SQLDatabase		let	corruptionHandler
+class	ReplicatorServices.SQLDatabase		var	locked_transactionCount
+class	ReplicatorServices.SQLDatabase		var	locked_attemptingTransactionCount
+class	ReplicatorServices.SQLDatabase		var	locked_largeCacheAssertionCount
+enum	ReplicatorServices.SQLDatabase.Storage			
+enum	ReplicatorServices.SQLDatabase.Storage		case	file
+enum	ReplicatorServices.SQLDatabase.Storage		case	memory
+struct	ReplicatorServices.SQLSchemaBuilder			
+struct	ReplicatorServices.SQLSchemaBuilder		let	majorVersion
+struct	ReplicatorServices.SQLSchemaBuilder		let	schemaRevisions
+struct	ReplicatorServices.SQLResult			
+struct	ReplicatorServices.SQLResult		let	resultArray
+struct	ReplicatorServices.SQLResultError			
+struct	ReplicatorServices.SQLResultError		let	code
+struct	ReplicatorServices.SQLResultError		let	localizedDescription
+enum	ReplicatorServices.SQLResultError.Code			
+enum	ReplicatorServices.SQLResultError.Code		case	TypeMismatch
+struct	ReplicatorServices.SQLStatement			
+struct	ReplicatorServices.SQLStatement		let	bindings
+struct	ReplicatorServices.SQLStatement		let	parameterizedStatement
+struct	ReplicatorServices.SQLStatement.StringInterpolation			
+struct	ReplicatorServices.SQLStatement.StringInterpolation		var	value
+struct	ReplicatorServices.SQLStatement.StringInterpolation		var	bindings
+struct	ReplicatorServices.ReplicatorMessageType			
+struct	ReplicatorServices.ReplicatorMessageType		var	identifier
+struct	ReplicatorServices.ReplicatorMessageType		var	clientIdentifier
+struct	ReplicatorServices.ReplicatorMessageType		var	protocolVersion
+enum	ReplicatorServices.ReplicatorMessageType.CodingKeys			
+enum	ReplicatorServices.ReplicatorMessageType.CodingKeys		case	identifier
+enum	ReplicatorServices.ReplicatorMessageType.CodingKeys		case	clientIdentifier
+enum	ReplicatorServices.ReplicatorMessageType.CodingKeys		case	protocolVersion
+class	ReplicatorServices.ClientDescriptorPersistentStore			
+class	ReplicatorServices.ClientDescriptorPersistentStore		let	database
+class	ReplicatorServices.ClientDescriptorPersistentStore		let	lock
+class	ReplicatorServices.ClientDescriptorPersistentStore		var	lock_clientDescriptors
+class	ReplicatorServices.RunOncePersistentStore			
+class	ReplicatorServices.RunOncePersistentStore		let	database
+class	ReplicatorServices.ZoneVersionPersistentStore			
+class	ReplicatorServices.ZoneVersionPersistentStore		let	database
+class	ReplicatorServices.ZoneVersionPersistentStore		let	lock
+class	ReplicatorServices.ZoneVersionPersistentStore		var	lock_zoneVersions
+class	ReplicatorServices.MetadataPersistentStore			
+class	ReplicatorServices.MetadataPersistentStore		let	database
+class	ReplicatorServices.MultipleDatabaseManager			
+class	ReplicatorServices.MultipleDatabaseManager		let	lock
+class	ReplicatorServices.MultipleDatabaseManager		var	lock_databases
+class	ReplicatorServices.MultipleDatabaseManager		var	lock_refcounts
+class	ReplicatorServices.MultipleDatabaseManager		var	lock_managedDatabases
+struct	ReplicatorServices.MultipleDatabaseManager.ManagedDatabase			
+struct	ReplicatorServices.MultipleDatabaseManager.ManagedDatabase		var	id
+struct	ReplicatorServices.MultipleDatabaseManager.ManagedDatabase		var	database
+struct	ReplicatorServices.MultipleDatabaseManager.ManagedDatabase		var	url
+struct	ReplicatorServices.MultipleDatabaseManager.ManagedDatabase		var	corruptionHandler
+enum	ReplicatorServices.MultipleDatabaseManager.MultipleDatabaseManagerError			
+enum	ReplicatorServices.MultipleDatabaseManager.MultipleDatabaseManagerError		case	unexpectedRefcount
+class	ReplicatorServices.RecordDataPersistentStore			
+class	ReplicatorServices.RecordDataPersistentStore		let	database
+class	ReplicatorServices.ClientSettingsPersistentStore			
+class	ReplicatorServices.ClientSettingsPersistentStore		let	database
+class	ReplicatorServices.ClientSettingsPersistentStore		let	lock
+class	ReplicatorServices.ClientSettingsPersistentStore		var	lock_clientSettings
+class	ReplicatorServices.ClientSettingsPersistentStore		var	lazy
+class	ReplicatorServices.ClientSettingsPersistentStore		let	_settingsChangedPublisher
+enum	ReplicatorServices.ZonePublicationMethod			
+enum	ReplicatorServices.ZonePublicationMethod		case	handshake
+enum	ReplicatorServices.ZonePublicationMethod		case	advertise
+class	ReplicatorServices.Database.RunOnceStore	ReplicatorServices.Database.DatabaseAccessor		
+class	ReplicatorServices.Database.MutableRunOnceStore	ReplicatorServices.Database.RunOnceStore		
+struct	ReplicatorServices.ReplicatorRecord			
+struct	ReplicatorServices.ReplicatorRecord		var	id
+struct	ReplicatorServices.ReplicatorRecord		var	version
+struct	ReplicatorServices.ReplicatorRecord		let	values
+struct	ReplicatorServices.ReplicatorRecord		var	expiration
+struct	ReplicatorServices.ReplicatorRecord		var	options
+struct	ReplicatorServices.ReplicatorRecord.Options			
+struct	ReplicatorServices.ReplicatorRecord.Options		let	rawValue
+struct	ReplicatorServices.ReplicatorRecord.ID			
+struct	ReplicatorServices.ReplicatorRecord.ID		var	id
+struct	ReplicatorServices.ReplicatorRecord.ID		var	zone
+struct	ReplicatorServices.ReplicatorRecord.ID		var	clientID
+struct	ReplicatorServices.ReplicatorRecord.ID		var	ownership
+struct	ReplicatorServices.ReplicatorRecord.ID		let	logIdentifier
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership			
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership		case	remote
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership		case	local
+struct	ReplicatorServices.ReplicatorRecord.Value			
+struct	ReplicatorServices.ReplicatorRecord.Value		var	data
+struct	ReplicatorServices.ReplicatorRecord.Value		var	url
+enum	ReplicatorServices.ReplicatorRecord.ID.CodingKeys			
+enum	ReplicatorServices.ReplicatorRecord.ID.CodingKeys		case	id
+enum	ReplicatorServices.ReplicatorRecord.ID.CodingKeys		case	zone
+enum	ReplicatorServices.ReplicatorRecord.ID.CodingKeys		case	clientID
+enum	ReplicatorServices.ReplicatorRecord.ID.CodingKeys		case	ownership
+enum	ReplicatorServices.ReplicatorRecord.ID.CodingKeys		case	logIdentifier
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership.CodingKeys			
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership.CodingKeys		case	local
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership.CodingKeys		case	remote
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership.LocalCodingKeys			
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership.RemoteCodingKeys			
+enum	ReplicatorServices.ReplicatorRecord.ID.Ownership.RemoteCodingKeys		case	_0
+class	ReplicatorServices.ReplicatorClientWithoutPersistence			
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		let	id
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		let	replicatorProtocolVersion
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		let	singleton
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	registered
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	calloutQueue
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_registrationObservers
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_recordObservers
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_deviceObservers
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_pairedDeviceObservers
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_messageObservers
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_recordVersions
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_descriptor
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_enabled
+class	ReplicatorServices.ReplicatorClientWithoutPersistence		var	lock_subscriptions
+struct	ReplicatorServices.MigrationServiceDefinition			
+struct	ReplicatorServices.MigrationServiceError			
+struct	ReplicatorServices.MigrationServiceError		var	code
+struct	ReplicatorServices.MigrationServiceError		var	underlyingError
+enum	ReplicatorServices.MigrationServiceError.Code			
+enum	ReplicatorServices.MigrationServiceError.Code		case	alreadyMigrated
+enum	ReplicatorServices.MigrationServiceError.Code		case	connection
+enum	ReplicatorServices.MigrationServiceError.Code		case	configuration
+enum	ReplicatorServices.MigrationXPCServerResponse			
+struct	ReplicatorServices.MigrationXPCServerResponse.GetLocalDeviceID			
+struct	ReplicatorServices.MigrationXPCServerResponse.GetLocalDeviceID		let	localDeviceID
+struct	ReplicatorServices.MigrationXPCServerResponse.GetDevices			
+struct	ReplicatorServices.MigrationXPCServerResponse.GetDevices		let	devices
+struct	ReplicatorServices.MigrationXPCServerResponse.GetClientDescriptors			
+struct	ReplicatorServices.MigrationXPCServerResponse.GetClientDescriptors		let	clientDescriptors
+struct	ReplicatorServices.MigrationXPCServerResponse.GetRecordDestinations			
+struct	ReplicatorServices.MigrationXPCServerResponse.GetRecordDestinations		let	destinations
+class	ReplicatorServices.MigrationXPCServerResponseGetRecords	NSObject		
+class	ReplicatorServices.MigrationXPCServerResponseGetRecords	NSObject	let	records
+enum	ReplicatorServices.MigrationXPCServerResponse.GetRecordDestinations.CodingKeys			
+enum	ReplicatorServices.MigrationXPCServerResponse.GetRecordDestinations.CodingKeys		case	destinations
+enum	ReplicatorServices.MigrationXPCServerResponse.GetClientDescriptors.CodingKeys			
+enum	ReplicatorServices.MigrationXPCServerResponse.GetClientDescriptors.CodingKeys		case	clientDescriptors
+enum	ReplicatorServices.MigrationXPCServerResponse.GetDevices.CodingKeys			
+enum	ReplicatorServices.MigrationXPCServerResponse.GetDevices.CodingKeys		case	devices
+enum	ReplicatorServices.MigrationXPCServerResponse.GetLocalDeviceID.CodingKeys			
+enum	ReplicatorServices.MigrationXPCServerResponse.GetLocalDeviceID.CodingKeys		case	localDeviceID
+struct	ReplicatorServices.StateCaptureServiceDefinition			
+struct	ReplicatorServices.StateCaptureServiceError			
+struct	ReplicatorServices.StateCaptureServiceError		var	code
+struct	ReplicatorServices.StateCaptureServiceError		var	underlyingError
+enum	ReplicatorServices.StateCaptureServiceError.Code			
+enum	ReplicatorServices.StateCaptureServiceError.Code		case	notAllowed
+enum	ReplicatorServices.StateCaptureServiceError.Code		case	connection
+enum	ReplicatorServices.StateCaptureServiceError.Code		case	unknown
+enum	ReplicatorServices.ExtendedAttributeError			
+enum	ReplicatorServices.ExtendedAttributeError		case	attributeNameNotFound
+enum	ReplicatorServices.ExtendedAttributeError		case	posixFailure
+struct	ReplicatorServices.ReplicatorZone			
+struct	ReplicatorServices.ReplicatorZone		var	identifier
+struct	ReplicatorServices.ReplicatorZone		var	clientIdentifier
+struct	ReplicatorServices.ReplicatorZone		var	protocolVersion
+enum	ReplicatorServices.ReplicatorZone.CodingKeys			
+enum	ReplicatorServices.ReplicatorZone.CodingKeys		case	identifier
+enum	ReplicatorServices.ReplicatorZone.CodingKeys		case	clientIdentifier
+enum	ReplicatorServices.ReplicatorZone.CodingKeys		case	protocolVersion
+enum	ReplicatorServices.ReplicatorRecordChange			
+enum	ReplicatorServices.ReplicatorRecordChange		case	update
+enum	ReplicatorServices.ReplicatorRecordChange		case	delete
+struct	ReplicatorServices.ReplicatorHasher			
+struct	ReplicatorServices.ReplicatorHasher		var	hasher
+class	ReplicatorServices.RecordVersionStore			
+class	ReplicatorServices.RecordVersionStore		var	recordVersions
+class	ReplicatorServices.RecordVersionStore		var	clientDefinedIDVersions
+class	ReplicatorServices.RecordVersionStore		var	internalRecordIDToClientDefinedID
+struct	ReplicatorServices.MessageDescriptor			
+struct	ReplicatorServices.MessageDescriptor		var	messageType
+struct	ReplicatorServices.MessageDescriptor		let	protocolVersion
+enum	ReplicatorServices.MessageDescriptor.CodingKeys			
+enum	ReplicatorServices.MessageDescriptor.CodingKeys		case	messageType
+enum	ReplicatorServices.MessageDescriptor.CodingKeys		case	protocolVersion
+class	ReplicatorServices.StateCaptureClient	NSObject		
+class	ReplicatorServices.StateCaptureClient	NSObject	var	connection
+class	ReplicatorServices.StateCaptureClient	NSObject	let	queue
+struct	ReplicatorServices.ClientDescriptor			
+struct	ReplicatorServices.ClientDescriptor		var	id
+struct	ReplicatorServices.ClientDescriptor		var	entitlement
+struct	ReplicatorServices.ClientDescriptor		var	messageNotificationName
+struct	ReplicatorServices.ClientDescriptor		var	recordNotificationName
+struct	ReplicatorServices.ClientDescriptor		var	zoneDescriptors
+struct	ReplicatorServices.ClientDescriptor		var	messageDescriptors
+enum	ReplicatorServices.ClientDescriptor.CodingKeys			
+enum	ReplicatorServices.ClientDescriptor.CodingKeys		case	id
+enum	ReplicatorServices.ClientDescriptor.CodingKeys		case	entitlement
+enum	ReplicatorServices.ClientDescriptor.CodingKeys		case	messageNotificationName
+enum	ReplicatorServices.ClientDescriptor.CodingKeys		case	recordNotificationName
+enum	ReplicatorServices.ClientDescriptor.CodingKeys		case	zoneDescriptors
+enum	ReplicatorServices.ClientDescriptor.CodingKeys		case	messageDescriptors
+protocol	ReplicatorServices.XPCInterfaceDefinition	ServerInterface, ClientInterface		
+protocol	ReplicatorServices.ReplicatorClientRegistering			
+protocol	ReplicatorServices.ReplicatorClientEnabling			
+protocol	ClientDelegate			
+protocol	ReplicatorServices.ClientSettingsPersisting			
+protocol	ReplicatorServices.ClientDescriptorPersisting			
+protocol	ReplicatorServices.RecordDataPersisting			
+protocol	ReplicatorServices.ReplicatorLocalDeviceProviding			
+protocol	ReplicatorServices.ReplicatorRemoteDeviceProviding			
+protocol	ReplicatorServices.ReplicatorRemoteDeviceUpdateProviding			
+protocol	ReplicatorServices.ReplicatorDeviceProviding			
+protocol	ReplicatorServices.RunOncePersisting			
+protocol	ReplicatorServices.SQLPrimitive			
+protocol	ReplicatorServices.ReplicatorRecordVersionStoring			
+protocol	ReplicatorServices.OpaqueObjectiveCBridgable			
+protocol	ReplicatorServices.ReplicatorDeviceReading			
+protocol	ReplicatorServices.ReplicatorMessageProviding			
+protocol	ReplicatorServices.ReplicatorRecordProviding			
+protocol	ReplicatorServices.ReplicatorRecordSyncing			
+protocol	ReplicatorServices.ReplicatorClientDescribing			
+protocol	ReplicatorServices.ReplicatorDecoding			
+protocol	ReplicatorServices.ReplicatorEncoding			
+protocol	ReplicatorServices.ReplicatorMessageEncoding			
+protocol	ReplicatorServices.ReplicatorRecordEncoding			
+protocol	ReplicatorServices.ReplicatorCoding			
+protocol	ReplicatorServices.ReplicatorMessageCoding			
+protocol	ReplicatorServices.ReplicatorRecordCoding			
+protocol	ReplicatorServices.Replicatable			
+protocol	ReplicatorRecordReading	StoredType		
+protocol	ReplicatorRecordWriting	StoredType		
+protocol	ReplicatorRecordStoring			
+protocol	ReplicatorServices.ReplicatorControlling			
+protocol	conformance ReplicatorServices.ZoneReplicationPriority	Swift.Hashable		
+protocol	conformance ReplicatorServices.ZoneReplicationPriority	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.ZoneReplicationPriority	Swift.Decodable		
+protocol	conformance ReplicatorServices.ZoneReplicationPriority	Swift.Encodable		
+protocol	conformance ReplicatorServices.ZoneReplicationPriority	Swift.Equatable		
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Equatable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift.Hashable: Foundation		
+protocol	conformance __C.FileProtectionType	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance ReplicatorServices.ReplicatorProtocolVersion	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorProtocolVersion	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorProtocolVersion	Swift.Hashable		
+protocol	conformance ReplicatorServices.ReplicatorProtocolVersion	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorProtocolVersion	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RecordMetadataStore.RecordMetadataStoreError	Swift.Hashable		
+protocol	conformance RecordMetadataStore.RecordMetadataStoreError	Swift.Equatable		
+protocol	conformance RecordMetadataStore.RecordMetadataStoreError	Swift.Error		
+protocol	conformance ReplicatorServices.ReplicatorRecordVersion	Swift.Identifiable		
+protocol	conformance ReplicatorServices.ReplicatorRecordVersion	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorRecordVersion	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ReplicatorSchedule	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorSchedule	Swift.Hashable		
+protocol	conformance ReplicatorServices.ReplicatorSchedule	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.ReplicatorSchedule	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorSchedule	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorSchedule	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorServices.ClientSettings	Swift.Equatable		
+protocol	conformance ReplicatorServices.ZoneDescriptor	Swift.Identifiable		
+protocol	conformance ReplicatorServices.ZoneDescriptor	Swift.Equatable		
+protocol	conformance ReplicatorServices.ZoneDescriptor	Swift.Hashable		
+protocol	conformance ZoneDescriptor.CodingKeys	Swift.Equatable		
+protocol	conformance ZoneDescriptor.CodingKeys	Swift.Hashable		
+protocol	conformance ZoneDescriptor.CodingKeys	Swift.RawRepresentable		
+protocol	conformance ZoneDescriptor.CodingKeys	Swift.CodingKey		
+protocol	conformance ZoneDescriptor.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ZoneDescriptor.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplicatorServices.ZoneDescriptor	Swift.Decodable		
+protocol	conformance ReplicatorServices.ZoneDescriptor	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorClientDescribing		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorMessageProviding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorLocalDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorRemoteDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorRemoteDeviceUpdateProviding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorClientEnabling		
+protocol	conformance ReplicatorClient.InvalidRecordResolution	Swift.Equatable		
+protocol	conformance ReplicatorClient.InvalidRecordResolution	Swift.Hashable		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorRecordProviding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorRecordSyncing		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorClientRegistering		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorMessageCoding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorMessageEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorDecoding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorRecordCoding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorRecordEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorCoding		
+protocol	conformance ReplicatorServices.ReplicatorClient	ReplicatorServices.ReplicatorEncoding		
+protocol	conformance ReplicatorServices.ReplicatorMessage	Swift.Identifiable		
+protocol	conformance ReplicatorServices.ReplicatorMessage	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorMessage	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ReplicatorControlServiceDefinition	ReplicatorServices.XPCInterfaceDefinition		
+protocol	conformance ReplicatorControlServiceError.Code	Swift.Equatable		
+protocol	conformance ReplicatorControlServiceError.Code	Swift.Hashable		
+protocol	conformance ReplicatorControlServiceError.Code	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.ReplicatorControlServiceError	Foundation.CustomNSError		
+protocol	conformance ReplicatorServices.ReplicatorControlServiceError	Swift.Error		
+protocol	conformance ReplicatorControlXPCServerParameters.Pair	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.Pair	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.Pair	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.Pair	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unpair	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unpair	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unpair	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unpair	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unavailable	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unavailable	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unavailable	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.Unavailable	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.SetEnabled	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.SetEnabled	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.SetEnabled	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.SetEnabled	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListEnabled	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListEnabled	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListEnabled	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListEnabled	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListID	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListID	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListID	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowListID	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowList	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowList	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowList	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.AllowList	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPushToken	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPushToken	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPushToken	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPushToken	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPDRPairingID	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPDRPairingID	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPDRPairingID	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerParameters.GetPDRPairingID	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetEnabled	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetEnabled	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetEnabled	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetEnabled	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetDevices	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetDevices	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetDevices	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetDevices	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetLocalDevice	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetLocalDevice	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetLocalDevice	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetLocalDevice	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowListEnabled	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowListEnabled	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowListEnabled	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowListEnabled	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowList	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowList	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowList	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetAllowList	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPushToken	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPushToken	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPushToken	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPushToken	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPDRPairingID	Swift.Decodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPDRPairingID	Swift.Encodable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPDRPairingID	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicatorControlXPCServerResponse.GetPDRPairingID	Swift._ObjectiveCBridgeable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ReplicationServiceDefinition	ReplicatorServices.XPCInterfaceDefinition		
+protocol	conformance ReplicationServiceError.Code	Swift.Equatable		
+protocol	conformance ReplicationServiceError.Code	Swift.Hashable		
+protocol	conformance ReplicationServiceError.Code	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.ReplicationServiceError	Foundation.CustomNSError		
+protocol	conformance ReplicatorServices.ReplicationServiceError	Swift.Error		
+protocol	conformance ReplicatorServices.ReplicationXPCServerParametersRecord	Swift.Identifiable		
+protocol	conformance ReplicationXPCServerParameters.RegisterClient	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.RegisterClient	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.RegisterClient	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.RegisterClient	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.UnregisterClient	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.UnregisterClient	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.UnregisterClient	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.UnregisterClient	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.GetClientEnabled	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.GetClientEnabled	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.GetClientEnabled	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.GetClientEnabled	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.EnableClient	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.EnableClient	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.EnableClient	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.EnableClient	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.DisableClient	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.DisableClient	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.DisableClient	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.DisableClient	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDescriptor	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDescriptor	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDescriptor	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDescriptor	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.AddRecords	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.AddRecords	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.AddRecords	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.AddRecords	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.RemoveRecords	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.RemoveRecords	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.RemoveRecords	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.RemoveRecords	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.GetRecords	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.GetRecords	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.GetRecords	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.GetRecords	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.GetRecordVersions	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.GetRecordVersions	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.GetRecordVersions	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.GetRecordVersions	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.SendMessage	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.SendMessage	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.SendMessage	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.SendMessage	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.GetMessages	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.GetMessages	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.GetMessages	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.GetMessages	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDefinedRecordIDs	Swift.Decodable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDefinedRecordIDs	Swift.Encodable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDefinedRecordIDs	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerParameters.GetClientDefinedRecordIDs	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsVersions	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsVersions	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsVersions	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsVersions	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetDevices	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetDevices	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetDevices	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetDevices	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDescriptor	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDescriptor	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDescriptor	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDescriptor	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDefinedRecordIDs	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDefinedRecordIDs	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDefinedRecordIDs	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetClientDefinedRecordIDs	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.ReceiveMessage	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.ReceiveMessage	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.ReceiveMessage	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.ReceiveMessage	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetMessages	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetMessages	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetMessages	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetMessages	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetLocalDeviceID	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetLocalDeviceID	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetLocalDeviceID	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetLocalDeviceID	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsFailedRecordIDs	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsFailedRecordIDs	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsFailedRecordIDs	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetRecordsFailedRecordIDs	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCServerResponse.GetClientEnabled	Swift.Decodable		
+protocol	conformance ReplicationXPCServerResponse.GetClientEnabled	Swift.Encodable		
+protocol	conformance ReplicationXPCServerResponse.GetClientEnabled	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCServerResponse.GetClientEnabled	Swift._ObjectiveCBridgeable		
+protocol	conformance ReplicationXPCClientParameters.RecordChanges	Swift.Decodable		
+protocol	conformance ReplicationXPCClientParameters.RecordChanges	Swift.Encodable		
+protocol	conformance ReplicationXPCClientParameters.RecordChanges	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance ReplicationXPCClientParameters.RecordChanges	Swift._ObjectiveCBridgeable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorDevice.DeviceType	Swift.RawRepresentable		
+protocol	conformance ReplicatorDevice.DeviceType	Swift.Decodable		
+protocol	conformance ReplicatorDevice.DeviceType	Swift.Encodable		
+protocol	conformance ReplicatorDevice.DeviceType	Swift.Equatable		
+protocol	conformance ReplicatorDevice.DeviceType	Swift.Hashable		
+protocol	conformance ReplicatorDevice.Screen	Swift.Equatable		
+protocol	conformance ReplicatorDevice.Screen	Swift.Hashable		
+protocol	conformance ReplicatorDevice.Screen	Swift.Decodable		
+protocol	conformance ReplicatorDevice.Screen	Swift.Encodable		
+protocol	conformance ReplicatorDevice.RelationshipState	Swift.Decodable		
+protocol	conformance ReplicatorDevice.RelationshipState	Swift.Encodable		
+protocol	conformance ReplicatorDevice.RelationshipState	Swift.Equatable		
+protocol	conformance ReplicatorDevice.RelationshipState	Swift.Hashable		
+protocol	conformance ReplicatorServices.ReplicatorDevice	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorDevice	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorDevice	Swift.Identifiable		
+protocol	conformance ReplicatorServices.ReplicatorDevice	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorDevice	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UnknownCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnknownCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MigratingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MigratingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MigratingCodingKeys	Swift.Hashable		
+protocol	conformance MigratingCodingKeys	Swift.Equatable		
+protocol	conformance PairedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PairedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PairingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PairingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IntroducedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IntroducedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IntroducedCodingKeys	Swift.CodingKey		
+protocol	conformance PairingCodingKeys	Swift.CodingKey		
+protocol	conformance PairedCodingKeys	Swift.CodingKey		
+protocol	conformance MigratingCodingKeys	Swift.CodingKey		
+protocol	conformance UnknownCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ReplicatorControlClient	ReplicatorServices.ReplicatorControlling		
+protocol	conformance Singleton.DataTypes	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Singleton.DataTypes	Swift.Equatable		
+protocol	conformance Singleton.DataTypes	Swift.RawRepresentable		
+protocol	conformance Singleton.DataTypes	Swift.SetAlgebra		
+protocol	conformance Singleton.DataTypes	Swift.OptionSet		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorRecordEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorDecoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorMessageEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorRemoteDeviceUpdateProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorRemoteDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorLocalDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorRecordSyncing		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorRecordProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorRecordCoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorMessageProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorMessageCoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorCoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorClientRegistering		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorClientEnabling		
+protocol	conformance ReplicatorServices.ReplicatorClientWithPersistence	ReplicatorServices.ReplicatorClientDescribing		
+protocol	conformance Database.LocalDeviceMetadata	Swift.Equatable		
+protocol	conformance Database.DatabaseError	Swift.Equatable		
+protocol	conformance Database.DatabaseError	Swift.Hashable		
+protocol	conformance Database.DatabaseError	Swift.Error		
+protocol	conformance Database.RelationshipState	Swift.RawRepresentable		
+protocol	conformance Database.RelationshipState	Swift.Hashable		
+protocol	conformance Database.RelationshipState	Swift.Equatable		
+protocol	conformance Database.DestinationType	Swift.RawRepresentable		
+protocol	conformance Database.DestinationType	Swift.Hashable		
+protocol	conformance Database.DestinationType	Swift.Equatable		
+protocol	conformance ReplicatorServices.MigrationServer	ReplicatorServices.ClientDelegate		
+protocol	conformance ReplicatorServices.LogHelper	Swift.Actor		
+protocol	conformance ReplicatorServices.ReplicatorRecordDestination	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorRecordDestination	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorRecordDestination	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorRecordDestination	Swift.Hashable		
+protocol	conformance AllCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AllCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CollectionCodingKeys	Swift.Hashable		
+protocol	conformance CollectionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CollectionCodingKeys	Swift.CodingKey		
+protocol	conformance AllCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Session	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorServices.SQLValue	Swift.Equatable		
+protocol	conformance NSNull	ReplicatorServices.SQLPrimitive		
+protocol	conformance Swift.Int64	ReplicatorServices.SQLPrimitive		
+protocol	conformance Swift.Double	ReplicatorServices.SQLPrimitive		
+protocol	conformance Swift.String	ReplicatorServices.SQLPrimitive		
+protocol	conformance Foundation.Data	ReplicatorServices.SQLPrimitive		
+protocol	conformance ReplicatorServices.SQLiteError	Swift.Equatable		
+protocol	conformance ReplicatorServices.SQLiteError	Swift.Hashable		
+protocol	conformance ReplicatorServices.SQLiteError	Swift.Error		
+protocol	conformance ReplicatorServices.SQLResult	Swift.Collection		
+protocol	conformance ReplicatorServices.SQLResult	Swift.Sequence		
+protocol	conformance SQLResultError	Swift.Error		
+protocol	conformance SQLResultError.Code	Swift.Hashable		
+protocol	conformance SQLResultError.Code	Swift.Equatable		
+protocol	conformance SQLStatement.StringInterpolation	Swift.StringInterpolationProtocol		
+protocol	conformance ReplicatorServices.SQLStatement	Swift.ExpressibleByStringInterpolation		
+protocol	conformance ReplicatorServices.SQLStatement	Swift.ExpressibleByStringLiteral		
+protocol	conformance ReplicatorServices.SQLStatement	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance ReplicatorServices.SQLStatement	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance ReplicatorServices.ReplicatorMessageType	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorMessageType	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorMessageType	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorMessageType	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ClientDescriptorPersistentStore	ReplicatorServices.ClientDescriptorPersisting		
+protocol	conformance ReplicatorServices.RunOncePersistentStore	ReplicatorServices.RunOncePersisting		
+protocol	conformance ReplicatorServices.ZoneVersionPersistentStore	ReplicatorEngine.ZoneVersionStoring		
+protocol	conformance ReplicatorServices.MetadataPersistentStore	ReplicatorEngine.MetadataStoring		
+protocol	conformance ReplicatorServices.MetadataPersistentStore	ReplicatorEngine.MetadataPersisting		
+protocol	conformance ReplicatorServices.MetadataPersistentStore	ReplicatorEngine.MutableMetadataPersisting		
+protocol	conformance MultipleDatabaseManager.ManagedDatabase	Swift.Identifiable		
+protocol	conformance MultipleDatabaseManager.MultipleDatabaseManagerError	Swift.Hashable		
+protocol	conformance MultipleDatabaseManager.MultipleDatabaseManagerError	Swift.Equatable		
+protocol	conformance MultipleDatabaseManager.MultipleDatabaseManagerError	Swift.Error		
+protocol	conformance ReplicatorServices.RecordDataPersistentStore	ReplicatorServices.RecordDataPersisting		
+protocol	conformance ReplicatorServices.ClientSettingsPersistentStore	ReplicatorServices.ClientSettingsPersisting		
+protocol	conformance ReplicatorServices.ZonePublicationMethod	Swift.Hashable		
+protocol	conformance ReplicatorServices.ZonePublicationMethod	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.ZonePublicationMethod	Swift.Decodable		
+protocol	conformance ReplicatorServices.ZonePublicationMethod	Swift.Encodable		
+protocol	conformance ReplicatorServices.ZonePublicationMethod	Swift.Equatable		
+protocol	conformance ReplicatorRecord.Options	Swift.OptionSet		
+protocol	conformance ReplicatorRecord.Options	Swift.SetAlgebra		
+protocol	conformance ReplicatorRecord.Options	Swift.RawRepresentable		
+protocol	conformance ReplicatorRecord.Options	Swift.Equatable		
+protocol	conformance ReplicatorRecord.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance ID.Ownership	Swift.Decodable		
+protocol	conformance ID.Ownership	Swift.Encodable		
+protocol	conformance ID.Ownership	Swift.Hashable		
+protocol	conformance ID.Ownership	Swift.Equatable		
+protocol	conformance ReplicatorRecord.ID	Swift.Decodable		
+protocol	conformance ReplicatorRecord.ID	Swift.Encodable		
+protocol	conformance ReplicatorRecord.ID	Swift.Hashable		
+protocol	conformance ReplicatorRecord.ID	Swift.CustomStringConvertible		
+protocol	conformance ReplicatorRecord.ID	Swift.Equatable		
+protocol	conformance ReplicatorRecord.Value	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorRecord	Swift.Identifiable		
+protocol	conformance ReplicatorServices.ReplicatorRecord	Swift.CustomStringConvertible		
+protocol	conformance RemoteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemoteCodingKeys	Swift.Hashable		
+protocol	conformance RemoteCodingKeys	Swift.Equatable		
+protocol	conformance LocalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LocalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LocalCodingKeys	Swift.CodingKey		
+protocol	conformance RemoteCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorRecordEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorDecoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorMessageEncoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorRemoteDeviceUpdateProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorRemoteDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorLocalDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorRecordSyncing		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorRecordProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorRecordCoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorMessageProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorMessageCoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorDeviceProviding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorCoding		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorClientRegistering		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorClientEnabling		
+protocol	conformance ReplicatorServices.ReplicatorClientWithoutPersistence	ReplicatorServices.ReplicatorClientDescribing		
+protocol	conformance ReplicatorServices.MigrationServiceDefinition	ReplicatorServices.XPCInterfaceDefinition		
+protocol	conformance MigrationServiceError.Code	Swift.Equatable		
+protocol	conformance MigrationServiceError.Code	Swift.Hashable		
+protocol	conformance MigrationServiceError.Code	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.MigrationServiceError	Foundation.CustomNSError		
+protocol	conformance ReplicatorServices.MigrationServiceError	Swift.Error		
+protocol	conformance MigrationXPCServerResponse.GetLocalDeviceID	Swift.Decodable		
+protocol	conformance MigrationXPCServerResponse.GetLocalDeviceID	Swift.Encodable		
+protocol	conformance MigrationXPCServerResponse.GetLocalDeviceID	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance MigrationXPCServerResponse.GetLocalDeviceID	Swift._ObjectiveCBridgeable		
+protocol	conformance MigrationXPCServerResponse.GetDevices	Swift.Decodable		
+protocol	conformance MigrationXPCServerResponse.GetDevices	Swift.Encodable		
+protocol	conformance MigrationXPCServerResponse.GetDevices	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance MigrationXPCServerResponse.GetDevices	Swift._ObjectiveCBridgeable		
+protocol	conformance MigrationXPCServerResponse.GetClientDescriptors	Swift.Decodable		
+protocol	conformance MigrationXPCServerResponse.GetClientDescriptors	Swift.Encodable		
+protocol	conformance MigrationXPCServerResponse.GetClientDescriptors	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance MigrationXPCServerResponse.GetClientDescriptors	Swift._ObjectiveCBridgeable		
+protocol	conformance MigrationXPCServerResponse.GetRecordDestinations	Swift.Decodable		
+protocol	conformance MigrationXPCServerResponse.GetRecordDestinations	Swift.Encodable		
+protocol	conformance MigrationXPCServerResponse.GetRecordDestinations	ReplicatorServices.OpaqueObjectiveCBridgable		
+protocol	conformance MigrationXPCServerResponse.GetRecordDestinations	Swift._ObjectiveCBridgeable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.StateCaptureServiceDefinition	ReplicatorServices.XPCInterfaceDefinition		
+protocol	conformance StateCaptureServiceError.Code	Swift.Equatable		
+protocol	conformance StateCaptureServiceError.Code	Swift.Hashable		
+protocol	conformance StateCaptureServiceError.Code	Swift.RawRepresentable		
+protocol	conformance ReplicatorServices.StateCaptureServiceError	Foundation.CustomNSError		
+protocol	conformance ReplicatorServices.StateCaptureServiceError	Swift.Error		
+protocol	conformance ExtendedAttributeError	Swift.Error		
+protocol	conformance ReplicatorServices.ReplicatorZone	Swift.Decodable		
+protocol	conformance ReplicatorServices.ReplicatorZone	Swift.Encodable		
+protocol	conformance ReplicatorServices.ReplicatorZone	Swift.Equatable		
+protocol	conformance ReplicatorServices.ReplicatorZone	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.MessageDescriptor	Swift.Decodable		
+protocol	conformance ReplicatorServices.MessageDescriptor	Swift.Encodable		
+protocol	conformance ReplicatorServices.MessageDescriptor	Swift.Equatable		
+protocol	conformance ReplicatorServices.MessageDescriptor	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorServices.ClientDescriptor	Swift.Identifiable		
+protocol	conformance ReplicatorServices.ClientDescriptor	Swift.Decodable		
+protocol	conformance ReplicatorServices.ClientDescriptor	Swift.Encodable		
+protocol	conformance ReplicatorServices.ClientDescriptor	Swift.Hashable		
+protocol	conformance ReplicatorServices.ClientDescriptor	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	ReplicatorServices.ZoneReplicationPriority	RawRepresentable		
+extension	ReplicatorServices.ReplicatorRecordVersion	Identifiable		
+extension	ReplicatorServices.ReplicatorSchedule	RawRepresentable		
+extension	ReplicatorServices.ZoneDescriptor	Identifiable		
+extension	ReplicatorServices.ZoneDescriptor.CodingKeys	RawRepresentable		
+extension	ReplicatorServices.ReplicatorMessage	Identifiable		
+extension	ReplicatorServices.ReplicatorControlServiceDefinition	XPCInterfaceDefinition		
+extension	ReplicatorServices.ReplicatorControlServiceError.Code	RawRepresentable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.Pair	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.Unpair	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.Unavailable	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.SetEnabled	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListEnabled	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowListID	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.AllowList	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPushToken	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerParameters.GetPDRPairingID	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetEnabled	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetDevices	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetLocalDevice	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowListEnabled	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetAllowList	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPushToken	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorControlXPCServerResponse.GetPDRPairingID	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationServiceDefinition	XPCInterfaceDefinition		
+extension	ReplicatorServices.ReplicationServiceError.Code	RawRepresentable		
+extension	ReplicatorServices.ReplicationXPCServerParametersRecord	Identifiable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.RegisterClient	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.UnregisterClient	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.GetClientEnabled	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.EnableClient	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.DisableClient	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.GetClientDescriptor	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.AddRecords	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.RemoveRecords	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.GetRecords	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.GetRecordVersions	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.SendMessage	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.GetMessages	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerParameters.GetClientDefinedRecordIDs	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsVersions	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetDevices	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetClientDescriptor	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetClientDefinedRecordIDs	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.ReceiveMessage	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetMessages	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetLocalDeviceID	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetRecordsFailedRecordIDs	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCServerResponse.GetClientEnabled	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicationXPCClientParameters.RecordChanges	_ObjectiveCBridgeable		
+extension	ReplicatorServices.ReplicatorDevice.DeviceType	RawRepresentable		
+extension	ReplicatorServices.ReplicatorDevice	Identifiable		
+extension	ReplicatorServices.Singleton.DataTypes	ExpressibleByArrayLiteral		
+extension	ReplicatorServices.Singleton.DataTypes	RawRepresentable		
+extension	ReplicatorServices.Singleton.DataTypes	SetAlgebra		
+extension	ReplicatorServices.Singleton.DataTypes	OptionSet		
+extension	ReplicatorServices.Database.RelationshipState	RawRepresentable		
+extension	ReplicatorServices.Database.DestinationType	RawRepresentable		
+extension	ReplicatorServices.SQLResult	Collection		
+extension	ReplicatorServices.SQLResult	Sequence		
+extension	ReplicatorServices.SQLStatement.StringInterpolation	StringInterpolationProtocol		
+extension	ReplicatorServices.SQLStatement	ExpressibleByStringInterpolation		
+extension	ReplicatorServices.SQLStatement	ExpressibleByStringLiteral		
+extension	ReplicatorServices.SQLStatement	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	ReplicatorServices.SQLStatement	ExpressibleByUnicodeScalarLiteral		
+extension	ReplicatorServices.MultipleDatabaseManager.ManagedDatabase	Identifiable		
+extension	ReplicatorServices.ZonePublicationMethod	RawRepresentable		
+extension	ReplicatorServices.ReplicatorRecord.Options	OptionSet		
+extension	ReplicatorServices.ReplicatorRecord.Options	SetAlgebra		
+extension	ReplicatorServices.ReplicatorRecord.Options	RawRepresentable		
+extension	ReplicatorServices.ReplicatorRecord.Options	ExpressibleByArrayLiteral		
+extension	ReplicatorServices.ReplicatorRecord	Identifiable		
+extension	ReplicatorServices.MigrationServiceDefinition	XPCInterfaceDefinition		
+extension	ReplicatorServices.MigrationServiceError.Code	RawRepresentable		
+extension	ReplicatorServices.MigrationXPCServerResponse.GetLocalDeviceID	_ObjectiveCBridgeable		
+extension	ReplicatorServices.MigrationXPCServerResponse.GetDevices	_ObjectiveCBridgeable		
+extension	ReplicatorServices.MigrationXPCServerResponse.GetClientDescriptors	_ObjectiveCBridgeable		
+extension	ReplicatorServices.MigrationXPCServerResponse.GetRecordDestinations	_ObjectiveCBridgeable		
+extension	ReplicatorServices.StateCaptureServiceDefinition	XPCInterfaceDefinition		
+extension	ReplicatorServices.StateCaptureServiceError.Code	RawRepresentable		
+extension	ReplicatorServices.ClientDescriptor	Identifiable		

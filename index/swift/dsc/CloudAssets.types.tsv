@@ -1,0 +1,84 @@
+kind	type	conformance	member_kind	member
+class	CloudAssets.AssetExportSession	AVAssetExportSession		
+class	CloudAssets.AssetExportSession	AVAssetExportSession	let	delegate
+struct	CloudAssets.AssetStreamHandle			
+struct	CloudAssets.AssetStreamHandle		let	asset
+struct	CloudAssets.AssetStreamHandle		let	credential
+struct	CloudAssets.AssetStreamHandle		let	assetType
+struct	CloudAssets.AssetStreamHandle		let	applicationID
+struct	CloudAssets.AssetStreamHandle		let	rangeReadersCache
+enum	CloudAssets.AssetStreamHandle.Error			
+enum	CloudAssets.AssetStreamHandle.Error		case	missingEntitlement
+enum	CloudAssets.AssetStreamHandle.Error		case	invalidArguments
+enum	CloudAssets.AssetStreamHandle.Error		case	internalError
+enum	CloudAssets.AssetStreamHandle.CodingKeys			
+enum	CloudAssets.AssetStreamHandle.CodingKeys		case	asset
+enum	CloudAssets.AssetStreamHandle.CodingKeys		case	credential
+enum	CloudAssets.AssetStreamHandle.CodingKeys		case	assetType
+enum	CloudAssets.AssetStreamHandle.CodingKeys		case	applicationID
+class	CloudAssets.AssetStreamHandle.RangeReader			
+class	CloudAssets.AssetStreamHandle.RangeReader		let	asset
+class	CloudAssets.AssetStreamHandle.RangeReader		let	range
+class	CloudAssets.AssetStreamHandle.RangeReader		let	credential
+class	CloudAssets.AssetStreamHandle.RangeReader		let	applicationID
+class	CloudAssets.AssetStreamHandle.RangeReader		let	cachedDataURL
+class	CloudAssets.AssetStreamHandle.RangeReader		var	cacheState
+class	CloudAssets.AssetStreamHandle.RangeReadersCache			
+class	CloudAssets.AssetStreamHandle.RangeReadersCache		var	readers
+enum	CloudAssets.AssetStreamHandle.RangeReader.CacheState			
+enum	CloudAssets.AssetStreamHandle.RangeReader.CacheState		case	inProgress
+enum	CloudAssets.AssetStreamHandle.RangeReader.CacheState		case	empty
+enum	CloudAssets.AssetStreamHandle.RangeReader.CacheState		case	ready
+class	CloudAssets.LoadingRequestHandler	NSObject		
+class	CloudAssets.LoadingRequestHandler	NSObject	let	assetStreamHandle
+class	CloudAssets.LoadingRequestHandler	NSObject	let	type
+class	CloudAssets.LoadingRequestHandler	NSObject	let	protectedTaskMapping
+class	CloudAssets.LoadingRequestHandler	NSObject	let	protectedActivity
+class	CloudAssets.PlayerItem	AVPlayerItem		
+class	CloudAssets.PlayerItem	AVPlayerItem	let	id
+class	CloudAssets.PlayerItem	AVPlayerItem	let	resourceLoaderDelegate
+class	CloudAssets.PlayerItem.UnsafeSendablePlayerItemBox			
+class	CloudAssets.PlayerItem.UnsafeSendablePlayerItemBox		var	playerItem
+class	CloudAssets.AssetDownloadCoordinator			
+class	CloudAssets.AssetDownloadCoordinator		let	coordinator
+class	CloudAssets.AssetManager			
+class	CloudAssets.AssetManager		let	messageSender
+enum	CloudAssets.AssetManager.AssetError			
+enum	CloudAssets.AssetManager.AssetError		case	internalError
+class	CloudAssets.AssetsDownloadCoordinator			
+class	CloudAssets.AssetsDownloadCoordinator		let	_results
+class	CloudAssets.AssetsDownloadCoordinator		let	_signals
+class	CloudAssets.AssetsDownloadCoordinator		let	continutation
+class	CloudAssets.AssetsUploadCoordinator			
+class	CloudAssets.AssetsUploadCoordinator		let	skeletons
+class	CloudAssets.AssetsUploadCoordinator		let	_signals
+class	CloudAssets.AssetsUploadCoordinator		let	_results
+class	CloudAssets.AssetUploadCoordinator			
+class	CloudAssets.AssetUploadCoordinator		let	coordinator
+enum	CloudAssets.APFS			
+enum	CloudAssets.TestConfigurations			
+enum	CloudAssets.TestConfigurations		case	noTest
+enum	CloudAssets.TestConfigurations		case	mockTest
+enum	CloudAssets.TestConfigurations		case	liveTest
+protocol	CloudAssets.StreamHandle			
+protocol	conformance AssetStreamHandle.Error	Foundation.LocalizedError		
+protocol	conformance AssetStreamHandle.Error	Swift.Error		
+protocol	conformance AssetStreamHandle.CodingKeys	Swift.Equatable		
+protocol	conformance AssetStreamHandle.CodingKeys	Swift.Hashable		
+protocol	conformance AssetStreamHandle.CodingKeys	Swift.CodingKey		
+protocol	conformance AssetStreamHandle.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AssetStreamHandle.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CloudAssets.AssetStreamHandle	Swift.Decodable		
+protocol	conformance CloudAssets.AssetStreamHandle	Swift.Encodable		
+protocol	conformance CloudAssets.AssetStreamHandle	CloudAssets.StreamHandle		
+protocol	conformance RangeReadersCache	Swift.Actor		
+protocol	conformance RangeReader	Swift.Actor		
+protocol	conformance CloudAssets.AssetDownloadCoordinator	Swift.Actor		
+protocol	conformance AssetManager.AssetError	Swift.Equatable		
+protocol	conformance AssetManager.AssetError	Swift.Hashable		
+protocol	conformance AssetManager.AssetError	Swift.Error		
+protocol	conformance CloudAssets.AssetsDownloadCoordinator	Swift.Actor		
+protocol	conformance CloudAssets.AssetsUploadCoordinator	Swift.Actor		
+protocol	conformance CloudAssets.AssetUploadCoordinator	Swift.Actor		
+protocol	conformance CloudAssets.TestConfigurations	Swift.Equatable		
+protocol	conformance CloudAssets.TestConfigurations	Swift.Hashable		

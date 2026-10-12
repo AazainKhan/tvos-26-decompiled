@@ -1,0 +1,32 @@
+kind	name	superclass	protocols
+category	NSError(HHError)		
+category	NSInvocation(HomeHubAdditions)		
+category	NSXPCConnection(HHEndpoint)		
+category	NSXPCListener(HHEndpoint)		
+interface	HHAnalyticsBackend	NSObject	HHAnalyticsBackend
+interface	HHAnalyticsInterval	NSObject	
+interface	HHAnalyticsReporter	NSObject	HHAnalyticsReporter
+interface	HHEndpoint	NSObject	NSSecureCoding,HHEndpointAttributes
+interface	HHEndpointAppState	NSObject	NSSecureCoding
+interface	HHManagementClient	NSObject	HHManagementClientEventListenerDelegate,NSXPCConnectionDelegate
+interface	HHManagementClientEventListener	NSProxy	HHManagementEventListener
+interface	HHManagementClientSynchronizedState	NSObject	HHManagementClientSynchronizedState,HHSynchronizedStateDelegate
+interface	HHSiriEndpointIdleStatus	NSObject	
+interface	HHSiriEndpointSessionStatus	NSObject	
+interface	HHSynchronizedAppStateList	HHManagementClientSynchronizedState	
+interface	HHSynchronizedEndpointList	HHManagementClientSynchronizedState	
+interface	HHSynchronizedState	NSObject	
+interface	_HHBubbleIdRetriever	NSObject	HHBubbleIdRetriever
+protocol	HHAnalyticsBackend		
+protocol	HHAnalyticsReporter		NSObject
+protocol	HHBubbleIdRetriever		NSObject
+protocol	HHEndpointAttributes		NSObject
+protocol	HHManagement		HHManagementPrivate
+protocol	HHManagementClientEventListenerDelegate		
+protocol	HHManagementClientSynchronizedState		NSObject
+protocol	HHManagementEventListener		
+protocol	HHManagementPrivate		
+protocol	HHSynchronizedAppStateListDelegate		
+protocol	HHSynchronizedEndpointListDelegate		
+protocol	HHSynchronizedStateDelegate		NSObject
+protocol	OS_dispatch_queue		

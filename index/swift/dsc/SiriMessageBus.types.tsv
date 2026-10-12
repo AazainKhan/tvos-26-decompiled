@@ -1,0 +1,254 @@
+kind	type	conformance	member_kind	member
+class	SiriMessageBus.AssetInstrumentationLogger			
+class	SiriMessageBus.AssetInstrumentationLogger		let	assetLoggerQueue
+class	SiriMessageBus.AssetInstrumentationLogger		let	instrumentationUtil
+class	SiriMessageBus.AssetInstrumentationLogger		let	uodSupported
+class	SiriMessageBus.AssetInstrumentationLogger		let	shouldAsrRunOnServer
+class	SiriMessageBus.AssetInstrumentationLogger		var	currentSessionId
+class	SiriMessageBus.AssetInstrumentationLogger		var	assetsForLogging
+class	SiriMessageBus.AssetInstrumentationLogger		let	assetSetObserverProvider
+class	SiriMessageBus.AssetInstrumentationLogger		var	uafAssetSetObservers
+enum	SiriMessageBus.TrialAssetNamespaces			
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriUnderstandingNL
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriUnderstandingNLOverrides
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriUnderstandingAsrHammer
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriUnderstandingAsrAssistant
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriTextToSpeech
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriUnderstandingMorphun
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriExperienceCam
+enum	SiriMessageBus.TrialAssetNamespaces		case	siriUnderstandingAttention
+class	SiriMessageBus.Broker			
+class	SiriMessageBus.Broker		let	rdmbQueue
+class	SiriMessageBus.Broker		var	bridgeNameToBridge
+class	SiriMessageBus.Broker		var	started
+class	SiriMessageBus.Broker		var	messagesRouting
+class	SiriMessageBus.Broker		var	registerRouting
+class	SiriMessageBus.ReportingProvider			
+class	SiriMessageBus.ReportingProvider		let	eventReporter
+enum	SiriMessageBus.SiriCapabilityError			
+enum	SiriMessageBus.SiriCapabilityError		case	missingSpeechAssets
+enum	SiriMessageBus.SiriCapabilityError		case	missingNLAssets
+enum	SiriMessageBus.SiriCapabilityError		case	missingMorphunAssets
+enum	SiriMessageBus.SiriCapabilityError		case	missingAttentionAssets
+enum	SiriMessageBus.SiriCapabilityError		case	missingNLRouterAssets
+enum	SiriMessageBus.SiriCapabilityError.CodingKeys			
+enum	SiriMessageBus.SiriCapabilityError.CodingKeys		case	missingSpeechAssets
+enum	SiriMessageBus.SiriCapabilityError.CodingKeys		case	missingNLAssets
+enum	SiriMessageBus.SiriCapabilityError.CodingKeys		case	missingMorphunAssets
+enum	SiriMessageBus.SiriCapabilityError.CodingKeys		case	missingAttentionAssets
+enum	SiriMessageBus.SiriCapabilityError.CodingKeys		case	missingNLRouterAssets
+enum	SiriMessageBus.SiriCapabilityError.MissingSpeechAssetsCodingKeys			
+enum	SiriMessageBus.SiriCapabilityError.MissingNLAssetsCodingKeys			
+enum	SiriMessageBus.SiriCapabilityError.MissingMorphunAssetsCodingKeys			
+enum	SiriMessageBus.SiriCapabilityError.MissingAttentionAssetsCodingKeys			
+enum	SiriMessageBus.SiriCapabilityError.MissingNLRouterAssetsCodingKeys			
+class	SiriMessageBus.ConversationSession			
+class	SiriMessageBus.ConversationSession		let	sessionId
+class	SiriMessageBus.ConversationSession		let	assistantId
+class	SiriMessageBus.ConversationSession		let	sessionType
+class	SiriMessageBus.ConversationSession		let	syncQueue
+class	SiriMessageBus.ConversationSession		var	sessionState
+class	SiriMessageBus.ConversationSession		var	snapshots
+class	SiriMessageBus.ConversationSession		var	snapshotRequestIds
+class	SiriMessageBus.ImmutableConversationSession			
+class	SiriMessageBus.ImmutableConversationSession		let	sessionState
+enum	SiriMessageBus.ImmutableConversationSession.SessionStateDecodingError			
+enum	SiriMessageBus.ImmutableConversationSession.SessionStateDecodingError		case	sessionStateHolderDecodingError
+enum	SiriMessageBus.ImmutableConversationSession.CodingKeys			
+enum	SiriMessageBus.ImmutableConversationSession.CodingKeys		case	sessionState
+enum	SiriMessageBus.Logger			
+class	SiriMessageBus.MessageBusInstrumentationUtil			
+class	SiriMessageBus.MessageBusInstrumentationUtil		let	stream
+class	SiriMessageBus.MessageBusInstrumentationUtil		let	commonInstrumentationUtil
+class	SiriMessageBus.MessagePublisher			
+class	SiriMessageBus.MessagePublisher		var	broker
+class	SiriMessageBus.RequestDispatcher			
+class	SiriMessageBus.RequestDispatcher		let	isMUXEnabled
+class	SiriMessageBus.RequestDispatcher		let	afPreferences
+class	SiriMessageBus.RequestDispatcher		let	rdmbQueue
+class	SiriMessageBus.RequestDispatcher		let	broker
+class	SiriMessageBus.RequestDispatcher		let	messagePublisher
+class	SiriMessageBus.RequestDispatcher		let	sessionsManager
+class	SiriMessageBus.RequestDispatcher		var	aceCommandDispatcher
+class	SiriMessageBus.RequestDispatcher		let	serviceHelper
+class	SiriMessageBus.RequestDispatcher		let	instrumentationUtil
+class	SiriMessageBus.RequestDispatcher		let	assetLogger
+class	SiriMessageBus.RequestDispatcher		let	serverFallbackDisablingUtils
+class	SiriMessageBus.RequestDispatcher		let	featureChecker
+class	SiriMessageBus.RequestDispatcher		var	activeUserSessionObserver
+class	SiriMessageBus.RequestDispatcher		var	sessionContext
+struct	SiriMessageBus.RequestDispatcher.SessionContext			
+struct	SiriMessageBus.RequestDispatcher.SessionContext		let	sessionUserId
+struct	SiriMessageBus.RequestDispatcher.SessionContext		let	siriInputLocale
+struct	SiriMessageBus.RequestDispatcher.SessionContext		let	isSystemAssistantExperienceEnabled
+class	SiriMessageBus.Session			
+class	SiriMessageBus.Session		let	sessionId
+class	SiriMessageBus.Session		let	assistantId
+class	SiriMessageBus.Session		let	transactionName
+class	SiriMessageBus.Session		let	sessionTransaction
+class	SiriMessageBus.Session		var	lastAccessedTime
+class	SiriMessageBus.Session		var	expirationTime
+class	SiriMessageBus.Session		let	conversationSession
+class	SiriMessageBus.Session		var	userSessionState
+class	SiriMessageBus.IFRequestDispatcher			
+class	SiriMessageBus.SessionsManager			
+class	SiriMessageBus.SessionsManager		let	expirationInSeconds
+class	SiriMessageBus.SessionsManager		let	sessionEndDelayInSeconds
+class	SiriMessageBus.SessionsManager		let	queue
+class	SiriMessageBus.SessionsManager		var	assistantIdToSession
+class	SiriMessageBus.SessionsManager		var	sessions
+class	SiriMessageBus.SessionsManager		var	currentAssistantId
+class	SiriMessageBus.SessionsManager		var	nextExpirationTaskTimeCheck
+class	SiriMessageBus.SessionsManager		var	expirationScheduleTask
+class	SiriMessageBus.SessionsManager		var	broker
+class	SiriMessageBus.UIBridgeServiceIF	NSObject		
+class	SiriMessageBus.UIBridgeServiceIF	NSObject	var	delegate
+class	SiriMessageBus.UIBridgeServiceIF	NSObject	let	logger
+class	SiriMessageBus.UIBridgeServiceIF	NSObject	var	serviceDelegate
+struct	SiriMessageBus.SessionStateHolder			
+struct	SiriMessageBus.SessionStateHolder		var	userIdToSessionData
+struct	SiriMessageBus.SessionStateHolder		var	sharedSessionData
+class	SiriMessageBus.UAFAssetSetObserverProvider			
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject		
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject	let	logger
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject	let	queue
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject	var	connectionListener
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject	var	uiBridgeServiceIF
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject	var	uiBridgeServiceSRDProvider
+class	SiriMessageBus.UIBridgeConnectionProxy	NSObject	var	serviceImpl
+struct	SiriMessageBus.SimpleBridgeSetupContext			
+struct	SiriMessageBus.SimpleBridgeSetupContext		let	messagePublisher
+struct	SiriMessageBus.SimpleBridgeSetupContext		let	serviceHelper
+struct	SiriMessageBus.SimpleBridgeSetupContext		let	sessionsManager
+struct	SiriMessageBus.SimpleBridgeSetupContext		let	featureChecker
+protocol	SiriMessageBus.TRIClientInteface			
+protocol	SiriMessageBus.ActiveUserSessionObserving			
+protocol	SiriMessageBus.ReportingProviding			
+protocol	SiriMessageBus.RequestDispatcherInterface			
+protocol	SiriMessageBus.UIBridgeServiceSRDProvider			
+protocol	SiriMessageBus.UIBridgeServiceIFDelegate			
+protocol	SiriMessageBus.UAFAssetSetObserverProviding			
+protocol	SiriMessageBus.SiriXResponseAceCommand			
+protocol	conformance TRIClient	SiriMessageBus.TRIClientInteface		
+protocol	conformance SiriMessageBus.TrialAssetNamespaces	Swift.CaseIterable		
+protocol	conformance SiriMessageBus.TrialAssetNamespaces	Swift.RawRepresentable		
+protocol	conformance SiriMessageBus.TrialAssetNamespaces	Swift.Hashable		
+protocol	conformance SiriMessageBus.TrialAssetNamespaces	Swift.Equatable		
+protocol	conformance SiriMessageBus.ReportingProvider	SiriMessageBus.ReportingProviding		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Swift.Hashable		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Swift.Error		
+protocol	conformance SiriMessageBus.SiriCapabilityError	AppleIntelligenceReporting.AppleIntelligenceError		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Swift.Decodable		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Swift.Encodable		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Swift.Equatable		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Swift.CustomStringConvertible		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Foundation.LocalizedError		
+protocol	conformance SiriMessageBus.SiriCapabilityError	Foundation.CustomNSError		
+protocol	conformance MissingNLRouterAssetsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingNLRouterAssetsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingAttentionAssetsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingAttentionAssetsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingMorphunAssetsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingMorphunAssetsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingNLAssetsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingNLAssetsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingSpeechAssetsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingSpeechAssetsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MissingSpeechAssetsCodingKeys	Swift.CodingKey		
+protocol	conformance MissingNLAssetsCodingKeys	Swift.CodingKey		
+protocol	conformance MissingMorphunAssetsCodingKeys	Swift.CodingKey		
+protocol	conformance MissingAttentionAssetsCodingKeys	Swift.CodingKey		
+protocol	conformance MissingNLRouterAssetsCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriMessageBus.ImmutableConversationSession	Swift.Encodable		
+protocol	conformance SiriMessageBus.ImmutableConversationSession	Swift.Decodable		
+protocol	conformance SiriMessageBus.ImmutableConversationSession	SiriMessageTypes.ImmutableConversationSessionState		
+protocol	conformance SiriMessageBus.ConversationSession	SiriMessageTypes.ConversationSessionState		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ImmutableConversationSession.SessionStateDecodingError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SRDIntelligenceFlowAssetsStatusProvider	IntelligenceFlow.AssetsDelegate		
+protocol	conformance SiriMessageBus.Logger	SiriRequestDispatcher.SignpostLogger		
+protocol	conformance SiriMessageBus.MessagePublisher	SiriMessageTypes.MessagePublishing		
+protocol	conformance SiriMessageBus.RequestDispatcher	SiriMessageBus.RequestDispatcherInterface		
+protocol	conformance SiriMessageBus.RequestDispatcher	SiriMessageBus.UIBridgeServiceSRDProvider		
+protocol	conformance SiriMessageBus.IFRequestDispatcher	SiriMessageBus.RequestDispatcherInterface		
+protocol	conformance SiriMessageBus.IFRequestDispatcher	SiriMessageBus.UIBridgeServiceIFDelegate		
+protocol	conformance SiriMessageBus.SessionsManager	SiriMessageTypes.ConversationSessionsManaging		
+protocol	conformance SiriMessageBus.UAFAssetSetObserverProvider	SiriMessageBus.UAFAssetSetObserverProviding		
+protocol	conformance SAUIAddViews	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIAddDialogs	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUISayIt	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIRepeatIt	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SARequestCompleted	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SACommandFailed	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SACommandSucceeded	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAAppsAppSearch	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAAppsLaunchApp	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAAppsSearchMarketplace	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SADeviceControlLockDevice	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SADeviceControlTakeScreenshot	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SADPDevicePlaySound	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SADPDeviceSearch	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAExecuteOnRemoteRequest	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAGetRequestOrigin	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAIntentGroupHandleIntent	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAIntentGroupIntentSignal	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAIntentGroupLaunchAppWithIntent	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAIntentGroupProcessIntent	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAIntentGroupRunSiriKitExecutor	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAIntentGroupRunSiriKitExecutorCompleted	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAMPAddMediaItemsToLibrary	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAScreenActionShowHomeScreen	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASendCommands	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASetRequestOrigin	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingGetAppearance	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingGetFloatPreference	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingGetMidnightMode	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingGetNoiseManagement	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetAirplaneMode	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetAppearance	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetAutoBrightness	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetBrightness	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetCellularData	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetDoNotDisturb	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetFlashlight	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetFloatPreference	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetMidnightMode	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetNoiseManagement	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetPrivacyLocationService	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetSiriAuthorizationForApp	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetVoiceControl	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingSetVoiceOver	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASettingShowPassword	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SASExtractSpeechData	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAStartLocalRequest	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAStartRequest	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAStartUIRequest	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SATTSGetSpeechSynthesisVolume	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SATTSSetSpeechSynthesisVolume	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIAppPunchOut	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUICloseAssistant	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIDelayedActionCommand	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIHideSiriOverlay	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIPlayAudio	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIPlayNotificationSound	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIShowControlCenter	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUISnippetDisplayConfigurationResponse	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUISnippetDisplayConfigurationRequest	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUISuppressDelayFeedback	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAUIStartGenAIEnablementFlow	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SAGenericCommand	SiriMessageBus.SiriXResponseAceCommand		
+protocol	conformance SiriMessageBus.SimpleBridgeSetupContext	SiriRequestDispatcher.BridgeSetupContext		
+extension	SiriMessageBus.TrialAssetNamespaces	CaseIterable		
+extension	SiriMessageBus.TrialAssetNamespaces	RawRepresentable		
+extension	SiriMessageBus.ImmutableConversationSession.CodingKeys	RawRepresentable		
+extension	SiriMessageBus.SimpleBridgeSetupContext	BridgeSetupContext		

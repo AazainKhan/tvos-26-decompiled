@@ -1,0 +1,60 @@
+kind	name	superclass	protocols
+category	ATMessage(ATProtocolUtilities)		
+category	ATRequest(ATProtocolUtilities)		
+category	ATResponse(ATProtocolUtilities)		
+category	NSError(ATProtocolUtilities)		
+interface	ATAssetLinkController	NSObject	ATAssetLinkDelegate,ICEnvironmentMonitorObserver
+interface	ATAssetLinkPowerLogger	NSObject	
+interface	ATAssetLinkPowerLoggerAggregationKey	NSObject	NSCopying
+interface	ATConcreteAssetLink	NSObject	ATAssetLink,ATMessageLinkObserver
+interface	ATConcreteMessageLink	ATMessageLink	ATSocketDelegate
+interface	ATConcreteService	ATService	ATMessageLinkObserver,ATMessageLinkRequestHandler
+interface	ATCountSessionTask	ATSessionTask	
+interface	ATDownloadProgressManager	NSObject	NSXPCListenerDelegate,ATDownloadProgressListener,ATAssetLinkControllerObserver
+interface	ATInternalError	NSObject	
+interface	ATMessageLinkListener	NSObject	
+interface	ATMessageLinkProxyConnection	NSObject	ATMessageLinkProxyConnection,NSStreamDelegate,ATMessageLinkObserver,ATMessageLinkRequestHandler
+interface	ATMessageLinkProxyListener	NSObject	NSXPCListenerDelegate
+interface	ATMessageParser	NSObject	
+interface	ATMovingAverage	NSObject	
+interface	ATPError	PBCodable	NSCopying
+interface	ATPMessage	PBCodable	NSCopying
+interface	ATPRequest	PBRequest	NSCopying
+interface	ATPResponse	PBCodable	NSCopying
+interface	ATProvisioningHandler	NSObject	ATMessageLinkObserver,ATMessageLinkRequestHandler
+interface	ATServiceProxyConnection	NSObject	ATServiceProxyConnection,ATServiceObserver
+interface	ATServiceProxyListener	NSObject	NSXPCListenerDelegate
+interface	ATSessionProxyConnection	NSObject	ATSessionProxy,ATSessionObserver
+interface	ATSessionProxyListener	NSObject	NSXPCListenerDelegate,ATSessionObserver
+interface	ATSessionServerListener	NSObject	NSXPCListenerDelegate,ATSessionServer
+interface	ATSignatureProvider	NSObject	
+interface	ATSocket	NSObject	NSSecureCoding
+interface	ATStatusMonitor	NSObject	
+interface	ATStatusObserverConnection	NSObject	ATStatusObserverConnectionProtocol,ATStatusMonitorObserver
+interface	ATStatusObserverListener	NSObject	NSXPCListenerDelegate
+interface	ATThroughputCalculator	NSObject	
+protocol	ATAssetLink		NSObject
+protocol	ATAssetLinkControllerObserver		NSObject
+protocol	ATAssetLinkDelegate		NSObject
+protocol	ATDownloadProgressListener		NSObject
+protocol	ATDownloadProgressObserver		NSObject
+protocol	ATMessageLinkListenerDelegate		
+protocol	ATMessageLinkObserver		NSObject
+protocol	ATMessageLinkProxy		NSObject,ATMessageLinkObserver
+protocol	ATMessageLinkProxyConnection		NSObject
+protocol	ATMessageLinkRequestHandler		NSObject
+protocol	ATServiceObserver		NSObject
+protocol	ATServiceProxy		NSObject
+protocol	ATServiceProxyConnection		NSObject
+protocol	ATSessionConnection		NSObject
+protocol	ATSessionObserver		NSObject
+protocol	ATSessionProxy		NSObject
+protocol	ATSessionServer		NSObject
+protocol	ATSocketDelegate		NSObject
+protocol	ATStatusMonitorObserver		NSObject
+protocol	ATStatusObserverConnectionProtocol		NSObject
+protocol	ATStatusObserverProtocol		NSObject
+protocol	ICEnvironmentMonitorObserver		NSObject
+protocol	OS_dispatch_group		
+protocol	OS_dispatch_queue		
+protocol	OS_dispatch_source		

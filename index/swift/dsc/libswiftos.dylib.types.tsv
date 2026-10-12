@@ -1,0 +1,256 @@
+kind	type	conformance	member_kind	member
+struct	os.OSMetricDimensions			
+struct	os.OSMetricDimensions		let	values
+enum	os.OSMetricStatisticalLevel			
+enum	os.OSMetricStatisticalLevel		case	none
+enum	os.OSMetricStatisticalLevel		case	basic
+enum	os.OSMetricStatisticalLevel		case	detail
+enum	os.OSMetricType			
+enum	os.OSMetricType		case	counter
+enum	os.OSMetricType		case	gauge
+enum	os.OSMetricType		case	histogram
+enum	os.OSMetricUnit			
+enum	os.OSMetricUnit		case	none
+enum	os.OSMetricUnit		case	bytes
+enum	os.OSMetricUnit		case	seconds
+enum	os.OSMetricBinType			
+enum	os.OSMetricBinType		case	interval
+enum	os.OSMetricBinType		case	logarithmic
+struct	os.OSMetricFlags			
+struct	os.OSMetricFlags		let	rawValue
+enum	os.OSMetricScale			
+enum	os.OSMetricScale		case	custom
+enum	os.OSMetricScale		case	pico
+enum	os.OSMetricScale		case	nano
+enum	os.OSMetricScale		case	micro
+enum	os.OSMetricScale		case	milli
+enum	os.OSMetricScale		case	kilo
+enum	os.OSMetricScale		case	mega
+enum	os.OSMetricScale		case	giga
+enum	os.OSMetricScale		case	tera
+enum	os.OSMetricScale		case	none
+struct	os.OSMetricGroup			
+struct	os.OSMetricGroup		let	subsystem
+struct	os.OSMetricGroup		let	category
+struct	os.OSMetricGroup		let	dimensions
+struct	os.OSMetricCounter			
+struct	os.OSMetricCounter		var	bridge
+struct	os.OSMetricGauge			
+struct	os.OSMetricGauge		var	bridge
+struct	os.OSMetricHistogram			
+struct	os.OSMetricHistogram		var	bridge
+enum	os.OSMetricOperation			
+enum	os.OSMetricOperation		case	add
+enum	os.OSMetricOperation		case	subtract
+enum	os.OSMetricOperation		case	set
+enum	os.OSMetricOperation		case	reset
+struct	os.OSMetricBridge			
+struct	os.OSMetricBridge		var	metric
+enum	os.AnimationFormatString			
+struct	os.AnimationFormatString.OSLogMessage			
+struct	os.AnimationFormatString.OSLogMessage		var	formatStringPointer
+enum	os.OSSignpostAnimationBegin			
+enum	os.OSSignpostAnimationBegin		case	animationBegin
+struct	os.OSSignpostID			
+struct	os.OSSignpostID		let	rawValue
+struct	os.Category			
+struct	os.Category		let	rawValue
+struct	os.OSLogFloatFormatting			
+struct	os.OSLogFloatFormatting		var	explicitPositiveSign
+struct	os.OSLogFloatFormatting		var	uppercase
+struct	os.OSLogFloatFormatting		var	precision
+struct	os.OSLogFloatFormatting		var	notation
+enum	os.OSLogFloatFormatting.Notation			
+enum	os.OSLogFloatFormatting.Notation		case	hex
+enum	os.OSLogFloatFormatting.Notation		case	fixed
+enum	os.OSLogFloatFormatting.Notation		case	exponential
+enum	os.OSLogFloatFormatting.Notation		case	hybrid
+struct	os.OSLogIntegerFormatting			
+struct	os.OSLogIntegerFormatting		var	radix
+struct	os.OSLogIntegerFormatting		var	explicitPositiveSign
+struct	os.OSLogIntegerFormatting		var	includePrefix
+struct	os.OSLogIntegerFormatting		var	uppercase
+struct	os.OSLogIntegerFormatting		var	minDigits
+struct	os.OSLogInterpolation			
+struct	os.OSLogInterpolation		var	formatString
+struct	os.OSLogInterpolation		var	arguments
+struct	os.OSLogInterpolation		var	preamble
+struct	os.OSLogInterpolation		var	argumentCount
+struct	os.OSLogInterpolation		var	totalBytesForSerializingArguments
+struct	os.OSLogInterpolation		var	stringArgumentCount
+struct	os.OSLogInterpolation		var	objectArgumentCount
+enum	os.OSLogInterpolation.ArgumentType			
+enum	os.OSLogInterpolation.ArgumentType		case	scalar
+enum	os.OSLogInterpolation.ArgumentType		case	count
+enum	os.OSLogInterpolation.ArgumentType		case	string
+enum	os.OSLogInterpolation.ArgumentType		case	pointer
+enum	os.OSLogInterpolation.ArgumentType		case	object
+enum	os.OSLogInterpolation.ArgumentType		case	mask
+struct	os.OSLogMessage			
+struct	os.OSLogMessage		let	interpolation
+struct	os.OSLogArguments			
+struct	os.OSLogArguments		var	argumentClosures
+enum	os.OSLogPointerFormat			
+enum	os.OSLogPointerFormat		case	ipv6Address
+enum	os.OSLogPointerFormat		case	timeval
+enum	os.OSLogPointerFormat		case	timespec
+enum	os.OSLogPointerFormat		case	uuid
+enum	os.OSLogPointerFormat		case	sockaddr
+enum	os.OSLogPointerFormat		case	none
+struct	os.OSLogPrivacy			
+struct	os.OSLogPrivacy		var	privacy
+struct	os.OSLogPrivacy		var	mask
+enum	os.OSLogPrivacy.PrivacyOption			
+enum	os.OSLogPrivacy.PrivacyOption		case	private
+enum	os.OSLogPrivacy.PrivacyOption		case	public
+enum	os.OSLogPrivacy.PrivacyOption		case	sensitive
+enum	os.OSLogPrivacy.PrivacyOption		case	auto
+enum	os.OSLogPrivacy.Mask			
+enum	os.OSLogPrivacy.Mask		case	hash
+enum	os.OSLogPrivacy.Mask		case	none
+enum	os.OSLogPrivacy.Mask		case	_mailName
+enum	os.OSLogPrivacy.Mask		case	_mailAddress
+enum	os.OSLogPrivacy.Mask		case	_mailSubject
+enum	os.OSLogPrivacy.Mask		case	_mailSummary
+enum	os.OSLogPrivacy.Mask		case	_mailAccount
+enum	os.OSLogPrivacy.Mask		case	_mailbox
+enum	os.OSLogPrivacy.Mask		case	_mailboxPath
+enum	os.OSLogPrivacy.Mask		case	_mailAttachmentFileName
+enum	os.OSLogPrivacy._MailMask			
+enum	os.OSLogPrivacy._MailMask		case	name
+enum	os.OSLogPrivacy._MailMask		case	address
+enum	os.OSLogPrivacy._MailMask		case	subject
+enum	os.OSLogPrivacy._MailMask		case	summary
+enum	os.OSLogPrivacy._MailMask		case	account
+enum	os.OSLogPrivacy._MailMask		case	mailbox
+enum	os.OSLogPrivacy._MailMask		case	mailboxPath
+enum	os.OSLogPrivacy._MailMask		case	attachmentFileName
+enum	os.OSLogBoolFormat			
+enum	os.OSLogBoolFormat		case	truth
+enum	os.OSLogBoolFormat		case	answer
+enum	os.OSLogInt32ExtendedFormat			
+enum	os.OSLogInt32ExtendedFormat		case	ipv4Address
+enum	os.OSLogInt32ExtendedFormat		case	secondsSince1970
+enum	os.OSLogInt32ExtendedFormat		case	darwinErrno
+enum	os.OSLogInt32ExtendedFormat		case	darwinMode
+enum	os.OSLogInt32ExtendedFormat		case	darwinSignal
+enum	os.OSLogInt32ExtendedFormat		case	machErrno
+enum	os.OSLogInt32ExtendedFormat		case	bitrate
+enum	os.OSLogInt32ExtendedFormat		case	bitrateIEC
+enum	os.OSLogInt32ExtendedFormat		case	byteCount
+enum	os.OSLogInt32ExtendedFormat		case	byteCountIEC
+enum	os.OSLogInt32ExtendedFormat		case	truth
+enum	os.OSLogInt32ExtendedFormat		case	answer
+enum	os.OSLogIntExtendedFormat			
+enum	os.OSLogIntExtendedFormat		case	bitrate
+enum	os.OSLogIntExtendedFormat		case	bitrateIEC
+enum	os.OSLogIntExtendedFormat		case	byteCount
+enum	os.OSLogIntExtendedFormat		case	byteCountIEC
+enum	os.OSLogIntExtendedFormat		case	secondsSince1970
+enum	os.OSLogCollectionBound			
+enum	os.OSLogCollectionBound		case	start
+enum	os.OSLogCollectionBound		case	end
+struct	os.OSLogStringAlignment			
+struct	os.OSLogStringAlignment		var	minimumColumnWidth
+struct	os.OSLogStringAlignment		var	anchor
+struct	os.Logger			
+struct	os.Logger		let	logObject
+struct	os.OSSignposter			
+struct	os.OSSignposter		let	logHandle
+enum	os.OSSignpostError			
+enum	os.OSSignpostError		case	doubleEnd
+enum	os.OSSignpostError		case	none
+class	os.OSSignpostIntervalState			
+class	os.OSSignpostIntervalState		let	signpostID
+class	os.OSSignpostIntervalState		var	isOpen
+enum	os.OSSignpostIntervalState.CodingKeys			
+enum	os.OSSignpostIntervalState.CodingKeys		case	signpostID
+enum	os.OSSignpostIntervalState.CodingKeys		case	isOpen
+struct	os.JoinToken			
+struct	os.JoinToken		var	opaqueToken
+struct	os.OSAllocatedUnfairLockFlags			
+struct	os.OSAllocatedUnfairLockFlags		let	rawValue
+struct	os.OSAllocatedUnfairLock			
+struct	os.OSAllocatedUnfairLock		let	__lock
+enum	os.OSAllocatedUnfairLock.Ownership			
+enum	os.OSAllocatedUnfairLock.Ownership		case	owner
+enum	os.OSAllocatedUnfairLock.Ownership		case	notOwner
+protocol	conformance os.OSMetricDimensions	Swift.ExpressibleByDictionaryLiteral		
+protocol	conformance os.OSMetricStatisticalLevel	Swift.Equatable		
+protocol	conformance os.OSMetricStatisticalLevel	Swift.Hashable		
+protocol	conformance os.OSMetricType	Swift.Equatable		
+protocol	conformance os.OSMetricType	Swift.Hashable		
+protocol	conformance os.OSMetricUnit	Swift.Equatable		
+protocol	conformance os.OSMetricUnit	Swift.Hashable		
+protocol	conformance os.OSMetricFlags	Swift.OptionSet		
+protocol	conformance os.OSMetricFlags	Swift.SetAlgebra		
+protocol	conformance os.OSMetricFlags	Swift.RawRepresentable		
+protocol	conformance os.OSMetricFlags	Swift.Equatable		
+protocol	conformance os.OSMetricFlags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance os.OSMetricOperation	Swift.Equatable		
+protocol	conformance os.OSMetricOperation	Swift.Hashable		
+protocol	conformance AnimationFormatString.OSLogMessage	Swift.ExpressibleByStringLiteral		
+protocol	conformance AnimationFormatString.OSLogMessage	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance AnimationFormatString.OSLogMessage	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance os.OSSignpostAnimationBegin	Swift.Equatable		
+protocol	conformance os.OSSignpostAnimationBegin	Swift.Hashable		
+protocol	conformance os.OSSignpostID	Swift.Comparable		
+protocol	conformance os.OSSignpostID	Swift.Equatable		
+protocol	conformance OSLogFloatFormatting.Notation	Swift.Equatable		
+protocol	conformance OSLogFloatFormatting.Notation	Swift.Hashable		
+protocol	conformance OSLogInterpolation.ArgumentType	Swift.Equatable		
+protocol	conformance OSLogInterpolation.ArgumentType	Swift.Hashable		
+protocol	conformance os.OSLogInterpolation	Swift.StringInterpolationProtocol		
+protocol	conformance os.OSLogMessage	Swift.ExpressibleByStringInterpolation		
+protocol	conformance os.OSLogMessage	Swift.ExpressibleByStringLiteral		
+protocol	conformance os.OSLogMessage	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance os.OSLogMessage	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance os.OSLogPointerFormat	Swift.Equatable		
+protocol	conformance os.OSLogPointerFormat	Swift.Hashable		
+protocol	conformance OSLogPrivacy.PrivacyOption	Swift.Equatable		
+protocol	conformance OSLogPrivacy.PrivacyOption	Swift.Hashable		
+protocol	conformance OSLogPrivacy.Mask	Swift.Equatable		
+protocol	conformance OSLogPrivacy.Mask	Swift.Hashable		
+protocol	conformance OSLogPrivacy._MailMask	Swift.Equatable		
+protocol	conformance OSLogPrivacy._MailMask	Swift.Hashable		
+protocol	conformance os.OSLogBoolFormat	Swift.Equatable		
+protocol	conformance os.OSLogBoolFormat	Swift.Hashable		
+protocol	conformance os.OSLogInt32ExtendedFormat	Swift.Equatable		
+protocol	conformance os.OSLogInt32ExtendedFormat	Swift.Hashable		
+protocol	conformance os.OSLogIntExtendedFormat	Swift.Equatable		
+protocol	conformance os.OSLogIntExtendedFormat	Swift.Hashable		
+protocol	conformance os.OSLogCollectionBound	Swift.Equatable		
+protocol	conformance os.OSLogCollectionBound	Swift.Hashable		
+protocol	conformance os.OSSignpostError	Swift.Equatable		
+protocol	conformance os.OSSignpostError	Swift.Hashable		
+protocol	conformance os.OSSignpostIntervalState	Swift.Decodable		
+protocol	conformance os.OSSignpostIntervalState	Swift.Encodable		
+protocol	conformance OSSignpostIntervalState.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance OSSignpostIntervalState.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance OSSignpostIntervalState.CodingKeys	Swift.Hashable		
+protocol	conformance OSSignpostIntervalState.CodingKeys	Swift.Equatable		
+protocol	conformance OSSignpostIntervalState.CodingKeys	Swift.CodingKey		
+protocol	conformance os.OSAllocatedUnfairLockFlags	Swift.OptionSet		
+protocol	conformance os.OSAllocatedUnfairLockFlags	Swift.RawRepresentable		
+protocol	conformance os.OSAllocatedUnfairLockFlags	Swift.SetAlgebra		
+protocol	conformance os.OSAllocatedUnfairLockFlags	Swift.Equatable		
+protocol	conformance os.OSAllocatedUnfairLockFlags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance OSAllocatedUnfairLock.Ownership	Swift.Equatable		
+protocol	conformance OSAllocatedUnfairLock.Ownership	Swift.Hashable		
+extension	os.OSMetricDimensions	ExpressibleByDictionaryLiteral		
+extension	os.OSMetricFlags	OptionSet		
+extension	os.OSMetricFlags	SetAlgebra		
+extension	os.OSMetricFlags	RawRepresentable		
+extension	os.OSMetricFlags	ExpressibleByArrayLiteral		
+extension	os.AnimationFormatString.OSLogMessage	ExpressibleByStringLiteral		
+extension	os.AnimationFormatString.OSLogMessage	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	os.AnimationFormatString.OSLogMessage	ExpressibleByUnicodeScalarLiteral		
+extension	os.OSLogInterpolation	StringInterpolationProtocol		
+extension	os.OSLogMessage	ExpressibleByStringInterpolation		
+extension	os.OSLogMessage	ExpressibleByStringLiteral		
+extension	os.OSLogMessage	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	os.OSLogMessage	ExpressibleByUnicodeScalarLiteral		
+extension	os.OSAllocatedUnfairLockFlags	OptionSet		
+extension	os.OSAllocatedUnfairLockFlags	RawRepresentable		
+extension	os.OSAllocatedUnfairLockFlags	SetAlgebra		
+extension	os.OSAllocatedUnfairLockFlags	ExpressibleByArrayLiteral		

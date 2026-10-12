@@ -1,0 +1,785 @@
+kind	name	superclass	protocols
+category	AMSAccountCachedServerData(appstored)		
+category	AMSFinalizedBlind(appstored)		
+category	ASDEphemeralRequest(Daemon)		RequestController
+category	ASDPersistentRequest(Daemon)		RequestController
+category	BAApplicationConfigurationOverrides(MockData)		
+category	NSArray(appstored)		
+category	NSDictionary(appstored)		
+category	NSEnumerator(LibraryQueryEvalulator)		LibraryResultEnumerator
+category	NSObject(TypeCheckedReader)		
+category	NSOperationQueue(TaskScheduler)		TaskScheduler
+interface	AccountActiveTime	NSObject	NSCopying
+interface	AccountEvent	SQLiteMemoryEntity	NSCopying
+interface	AccountEventCoordinator	NSObject	
+interface	AccountEventEntity	SQLiteEntity	
+interface	AccountLookupRequestTask	RequestTask	
+interface	ActiveAccountObserver	NSObject	
+interface	ActiveLaunchEventEntity	LaunchEventEntity	
+interface	Analytics	NSObject	
+interface	AnonymousPingTask	Task	
+interface	AppConduit	NSObject	
+interface	AppDefaultsManager	NSObject	
+interface	AppDoneEntity	SQLiteEntity	
+interface	AppEvent	SQLiteMemoryEntity	NSCopying
+interface	AppEventEntity	SQLiteEntity	
+interface	AppEventEntityCrossfire	AppEventEntity	
+interface	AppEventEntityOcelot	AppEventEntity	
+interface	AppEventEntityOcelotPayout	AppEventEntity	
+interface	AppInstall	SQLiteMemoryEntity	
+interface	AppInstallDate	NSObject	
+interface	AppInstallDownloadResponse	NSObject	
+interface	AppInstallDownloadTask	AsyncTask	
+interface	AppInstallEntity	SQLiteEntity	
+interface	AppInstallImportAndPolicyTask	AsyncTask	
+interface	AppInstallImportResult	NSObject	
+interface	AppInstallInfo	NSObject	
+interface	AppInstallInstallResponse	NSObject	
+interface	AppInstallInstallTask	Task	
+interface	AppInstallObserver	NSObject	IXAppInstallCoordinatorObserver
+interface	AppInstallPolicy	NSObject	
+interface	AppInstallPostProcessResponse	NSObject	
+interface	AppInstallPostProcessTask	Task	
+interface	AppInstallPostambleTask	Task	
+interface	AppInstallPreambleResponse	NSObject	
+interface	AppInstallPreambleTask	AsyncTask	
+interface	AppInstallPredicates	NSObject	
+interface	AppInstallQueue	NSObject	CoordinatorPromiseDataConsumerDelegate,AppInstallPipeline
+interface	AppInstallRemote	SQLiteMemoryEntity	
+interface	AppInstallRemoteEntity	SQLiteEntity	
+interface	AppInstallScheduler	NSObject	
+interface	AppInstallsDatabaseChangeset	NSObject	
+interface	AppInstallsDatabaseSchema	NSObject	
+interface	AppInstallsDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	AppInstallsDatabaseStore	SQLiteDatabaseStore	
+interface	AppInstallsDatabaseTransaction	AppInstallsDatabaseSession	SQLiteDatabaseTransaction
+interface	AppLaunchEvent	NSObject	NSCopying
+interface	AppMetadata	SQLiteMemoryEntity	NSCopying
+interface	AppMetadataEntity	SQLiteEntity	
+interface	AppMetadataInstall	SQLiteMemoryEntity	NSCopying
+interface	AppMetadataInstallEntity	SQLiteEntity	
+interface	AppMetadataLoader	NSObject	
+interface	AppMetricsEvent	SQLiteMemoryEntity	AMSEngagementEvent,NSCopying
+interface	AppMetricsEventEntity	SQLiteEntity	
+interface	AppMetricsService	NSObject	ASDAppMetricsServiceProtocol
+interface	AppPackage	SQLiteMemoryEntity	
+interface	AppPackageEntity	SQLiteEntity	
+interface	AppProgressCoordinator	NSObject	
+interface	AppPurgeCoordinator	NSObject	CacheDeletePurgeableProvider
+interface	AppReceiptTask	AsyncTask	FetchReceiptTaskDelegate
+interface	AppSchedulerDatabaseTransaction	AppInstallsDatabaseTransaction	
+interface	AppSchedulerInfo	NSObject	
+interface	AppSchedulerResult	NSObject	
+interface	AppStatisticsResult	NSObject	
+interface	AppStore	NSObject	
+interface	AppStoreService	NSObject	ASDAppStoreServiceProtocol
+interface	AppTelemetry	NSObject	
+interface	AppTelemetryLaunchDetails	NSObject	
+interface	AppUpdateEntity	SQLiteEntity	
+interface	AppUpdateMemoryEntity	SQLiteMemoryEntity	NSCopying,UpdateMemoryEntityProtocol
+interface	AppUpdatesDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	AppUpdatesDatabaseStore	SQLiteDatabaseStore	
+interface	AppUpdatesDatabaseTransaction	AppUpdatesDatabaseSession	SQLiteDatabaseTransaction
+interface	AppUsageBaseManager	NSObject	
+interface	AppUsageDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	AppUsageDatabaseStore	SQLiteDatabaseStore	
+interface	AppUsageDatabaseTransaction	AppUsageDatabaseSession	SQLiteDatabaseTransaction
+interface	AppUsageManager	NSObject	
+interface	AppUsageMetricsEvent	AMSMetricsEvent	
+interface	AppUsageSession	SQLiteMemoryEntity	NSCopying
+interface	AppUsageSessionEntity	SQLiteEntity	
+interface	ApplicationContext	NSObject	
+interface	ApplicationProxy	NSObject	
+interface	ArcadeAppLaunchEvent	SQLiteMemoryEntity	NSCopying
+interface	ArcadeAppLaunchEventEntity	SQLiteEntity	
+interface	ArcadeManager	AppUsageBaseManager	
+interface	ArcadeMetricsHandler	MetricsHandler	
+interface	ArcadePayoutMetricsHandler	MetricsHandler	
+interface	ArcadeRepair	NSObject	ApplicationRepair
+interface	ArtworkLoader	NSObject	NSURLSessionDelegate
+interface	ArtworkURLFormatter	NSObject	
+interface	AssetRequest	NSMutableURLRequest	
+interface	AssetRequestProperties	NSObject	NSCopying,NSMutableCopying
+interface	AssetResponse	NSObject	
+interface	AssetResult	NSObject	
+interface	AssetSession	NSObject	NSURLSessionDelegate,NSURLSessionDataDelegate,NSURLSessionDataDelegatePrivate,NSURLSessionTaskDelegate,NSURLSessionTaskDelegatePrivate
+interface	AssetSessionCache	NSObject	
+interface	AssetSessionConfiguration	NSObject	
+interface	AssetTaskInfo	NSObject	
+interface	AsyncTask	Task	
+interface	AuthenticationChallenge	NSObject	
+interface	AuthenticationChallengeDialogRequest	AMSDialogRequest	
+interface	AuthorizeMachine	NSObject	
+interface	BackgroundAssetInfo	NSObject	
+interface	BackgroundTaskRequest	NSObject	
+interface	BadgingCoordinator	NSObject	PushMessageConsumer
+interface	Bag	NSObject	
+interface	BagService	NSObject	
+interface	BaseListener	NSObject	NSXPCListenerDelegate
+interface	BetaAppFeedbackEntity	SQLiteEntity	
+interface	BetaAppFeedbackMemoryEntity	SQLiteMemoryEntity	
+interface	BetaAppFeedbackMetadataMemoryEntity	SQLiteMemoryEntity	
+interface	BetaAppInfoEntity	SQLiteEntity	
+interface	BetaAppLaunchInfoMemoryEntity	SQLiteMemoryEntity	
+interface	BlockTask	Task	
+interface	BufferedStream	NSObject	
+interface	BufferedStreamReader	Stream	StreamReader
+interface	BufferedStreamWriter	Stream	StreamWriter
+interface	Bulletin	NSObject	
+interface	CacheDeleteCoordinator	NSObject	
+interface	CachedURLSession	NSObject	
+interface	CallerRequestPresenter	NSObject	RequestPresenter
+interface	CampaignTokens	NSObject	
+interface	CellularDataPromptDialogRequest	AMSDialogRequest	
+interface	CellularMonitor	NSObject	
+interface	CheckStoreQueueTask	Task	
+interface	ChunkedDigest	NSObject	NSCopying
+interface	CleanupManager	NSObject	
+interface	ClipAdditionalData	NSObject	
+interface	ClipAdditionalDataResponseDecoder	NSObject	AMSResponseDecoding
+interface	ClipAdditionalDataResult	AMSURLResult	
+interface	ClipAdditionalDataTask	NSObject	
+interface	ClipDownloadVariant	NSObject	ClipDownloadVariant
+interface	ClipDownloadVariantDelta	NSObject	ClipDownloadVariant
+interface	ClockFactory	NSObject	
+interface	CompleteCoordinatorsRequestTask	RequestTask	
+interface	CompleteRestoreCoordinatorsTask	Task	
+interface	CompleteRestoreRestoringInfo	NSObject	
+interface	ConcatenateEnumerator	NSEnumerator	
+interface	ContentRestoreTask	Task	
+interface	ContentRestoreURLRequestEncoder	AMSURLRequestEncoder	
+interface	ContextObject	NSObject	NSCopying
+interface	CoordinatorBuilder	NSObject	
+interface	CoordinatorPromiseDataConsumer	NSObject	AssetDataConsumer
+interface	CoordinatorPromiseProvider	NSObject	
+interface	CoordinatorPromiseSpecification	NSObject	NSCopying
+interface	CrashParser	NSObject	
+interface	CreatePlaceholdersRequestTask	RequestTask	
+interface	CrossfireManager	AppUsageBaseManager	
+interface	CrossfireMetricsHandler	MetricsHandler	
+interface	CrossfireService	NSObject	ASDCrossfireServiceProtocol
+interface	DAAPURLRequest	NSObject	
+interface	DNUMetricsHandler	MetricsHandler	
+interface	Daemon	NSObject	NSUserActivityDelegate
+interface	DataStreamReader	Stream	StreamReader
+interface	DecryptDataConsumer	NSObject	AssetDataConsumer
+interface	DemotedApplication	NSObject	NSCopying
+interface	DetermineSizeForURLTask	AsyncTask	
+interface	Device	NSObject	Device
+interface	DeviceStateMonitor	NSObject	
+interface	DiagnosticClock	NSObject	Clock
+interface	DiagnosticMessage	NSObject	NSSecureCoding
+interface	DiagnosticPublisher	NSObject	
+interface	DiagnosticService	NSObject	ASDDiagnosticServiceProtocol
+interface	DigestVerifier	NSObject	
+interface	DiskSpaceManager	NSObject	
+interface	DispatchQueue	NSObject	TaskScheduler
+interface	DownloadDRM	NSObject	
+interface	DownloadSinf	NSObject	
+interface	Environment	NSObject	
+interface	ExpensiveNetworkEvaluator	NSObject	
+interface	ExpiredUpdateRecoveryTask	AsyncTask	
+interface	ExternalManifestRequestTask	RequestTask	
+interface	FactoryApplicationRepair	NSObject	NSURLSessionDelegate,AMSURLProtocolDelegate,AMSAuthenticateTaskDelegate,ApplicationRepair
+interface	FailPurchaseTask	Task	
+interface	FairPlay	NSObject	
+interface	FairPlayDecryptSession	NSObject	
+interface	FairPlayRepair	NSObject	ApplicationRepair
+interface	FairPlayStreamReader	Stream	StreamDelegate,StreamReader
+interface	FamilyInfoLookupResult	NSObject	
+interface	FamilyInfoLookupTask	AMSTask	
+interface	FamilyManager	NSObject	
+interface	FamilyMember	NSObject	
+interface	FetchImageUploadURLsTask	TestFlightUploadSubTask	
+interface	FetchReceiptTask	AsyncTask	NSURLSessionDelegate,AMSURLProtocolDelegate
+interface	FetchTVProviderAppsTask	Task	
+interface	FileWriteStreamAdapter	NSObject	AssetDataConsumer
+interface	FilterEnumerator	NSEnumerator	
+interface	ForcedUpdatesTask	Task	
+interface	HRNSupport	NSObject	
+interface	HandleInvalidReceiptTask	AsyncTask	
+interface	HashDigest	NSObject	
+interface	IAPHistoryService	NSObject	ASDIAPHistoryServiceProtocol
+interface	IAPInfoDAAPRequestEncoder	NSObject	DAAPRequestDataProvider
+interface	IAPInfoDAAPResponseDecoder	NSObject	DKDAAPParserDelegate
+interface	IAPInfoDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	IAPInfoDatabaseStore	SQLiteDatabaseStore	
+interface	IAPInfoDatabaseTransaction	IAPInfoDatabaseSession	SQLiteDatabaseTransaction
+interface	IAPInfoIAPEntity	SQLiteEntity	
+interface	IAPInfoItemsRequest	NSOperation	
+interface	IAPInfoItemsRequestContext	NSObject	
+interface	IAPInfoItemsRequestResponse	NSObject	
+interface	IAPInfoManager	NSObject	PushMessageConsumer
+interface	IAPInfoRequestTask	RequestTask	
+interface	IAPInfoUpdateRequest	NSObject	
+interface	IAPInfoUpdateRequestContext	NSObject	
+interface	IAPInfoUpdateRequestTask	RequestTask	
+interface	ImportJobsForDemotedAppsTask	Task	
+interface	InstallAppReviewAppsTask	Task	
+interface	InstallCoordinationObserver	NSObject	IXAppInstallObserverDelegate
+interface	InstallCoordinationUninstaller	NSObject	LibraryUninstall
+interface	InstallEnterpriseAppsTask	Task	
+interface	InstallTestFlightAppsTask	Task	
+interface	InstallWatchAppsTask	AsyncTask	
+interface	InstallationService	NSObject	ASDInstallationServiceProtocol
+interface	InteractiveRequestPresenter	NSObject	AMSAuthenticateTaskDelegate,RequestPresenter
+interface	JobManagerClient	XPCClient	
+interface	JobManagerListener	BaseListener	ASDJobManager
+interface	KeepAlive	NSObject	
+interface	LZMADataConsumer	NSObject	AssetDataConsumer
+interface	LZMADecoder	NSObject	
+interface	LZMAStreamReader	Stream	StreamDelegate,StreamReader
+interface	LaunchCoordinator	NSObject	
+interface	LaunchEvent	SQLiteMemoryEntity	NSCopying
+interface	LaunchEventEntity	SQLiteEntity	
+interface	LaunchEventSyncMetadata	SQLiteMemoryEntity	NSCopying
+interface	LaunchEventSyncMetadataEntity	SQLiteEntity	
+interface	LaunchServicesCatalog	NSObject	LibraryCatalog,LibraryOpen,LibraryQueryEvaluator,LSApplicationWorkspaceObserverProtocol
+interface	LaunchServicesObserver	NSObject	LSApplicationWorkspaceObserverProtocol
+interface	LaunchServicesProgress	NSObject	LSApplicationWorkspaceObserverProtocol,LibraryProgress
+interface	LaunchableAppRequestTask	RequestTask	
+interface	LazyPromise	Promise	
+interface	LegacyActivityManager	NSObject	
+interface	LegacyManifestRequestTask	RequestTask	
+interface	LibraryCatalogObserver	NSObject	
+interface	LibraryErrorResultEnumerator	NSObject	LibraryResultEnumerator
+interface	LibraryExpressionClassifier	NSObject	
+interface	LibraryLazyResultsEnumerator	NSObject	LibraryResultEnumerator
+interface	LibraryQueryPlanner	NSObject	NSPredicateVisitor
+interface	LibraryService	NSObject	LibraryCatalogObserver,ASDAppLibraryServiceProtocol
+interface	LibraryStore	NSObject	
+interface	LoadStoreQueueRequestEncoder	AMSURLRequestEncoder	
+interface	LoadStoreQueueTask	Task	
+interface	LogPushConnection	PBCodable	NSCopying
+interface	LogTransactions	PBCodable	NSCopying
+interface	LowDataModePromptDialogRequest	AMSDialogRequest	
+interface	LowDataNetworkEvaluator	NSObject	
+interface	ManageSubscriptionsPrompter	NSObject	
+interface	ManagedAppService	NSObject	ASDManagedAppServiceProtocol
+interface	ManagedAppStatusTask	Task	
+interface	ManagedApplicationTask	AsyncTask	
+interface	ManagedPurchaseQueueDelegate	NSObject	AMSPurchaseResponseProtocol
+interface	MediaApp	NSObject	
+interface	MediaAppAttributes	NSObject	
+interface	MediaAppOffer	NSObject	
+interface	MediaAppPlatformAttributes	NSObject	
+interface	MetricsContext	NSObject	
+interface	MetricsCoordinator	NSObject	
+interface	MetricsHandler	NSObject	
+interface	MigrateToManagedTask	Task	
+interface	MigrationRequestTask	RequestTask	
+interface	Migrator	NSObject	
+interface	MigratorArcadeTask	MigratorTask	
+interface	MigratorAutoUpdateTask	MigratorTask	
+interface	MigratorConfiguration	NSObject	
+interface	MigratorConfigurationStore	NSObject	
+interface	MigratorMiscellaneousTask	MigratorTask	
+interface	MigratorODRTask	MigratorTask	
+interface	MigratorPromotionTask	MigratorTask	
+interface	MigratorTask	Task	
+interface	MigratorTestFlightFeedbackTask	MigratorTask	
+interface	MigratorUpdateHistoryTask	MigratorTask	
+interface	MigratorValidateAppleIDsTask	MigratorTask	
+interface	NetworkEmulation	NSObject	NSCopying
+interface	NetworkMonitor	NSObject	NetworkMonitor
+interface	NotifyTestFlightClientTask	Task	
+interface	ODPMetricsHandler	MetricsHandler	
+interface	ODRAppMapEntity	SQLiteEntity	
+interface	ODRAppReviewClient	NSObject	ODRAppReviewProtocol
+interface	ODRAppReviewListener	ODRBaseListener	
+interface	ODRApplication	NSObject	NSCopying,NSMutableCopying
+interface	ODRApplicationCleanTask	Task	
+interface	ODRApplicationImportTask	Task	
+interface	ODRApplicationPurgeTask	Task	
+interface	ODRApplicationRepairTask	Task	
+interface	ODRAssetDownload	SQLiteMemoryEntity	
+interface	ODRAssetDownloadEntity	SQLiteEntity	
+interface	ODRAssetDownloadRequest	NSObject	SZExtractorDelegate
+interface	ODRAssetDownloadResponse	NSObject	
+interface	ODRAssetPack	SQLiteMemoryEntity	
+interface	ODRAssetPackEntity	SQLiteEntity	
+interface	ODRAssetPackValidationMaintenanceTask	Task	
+interface	ODRBackgroundMaintenance	NSObject	
+interface	ODRBaseListener	BaseListener	
+interface	ODRBundleTagManifest	NSObject	
+interface	ODRClient	NSObject	ODRServerProtocol
+interface	ODRContentHash	NSObject	
+interface	ODRDataSampler	NSObject	
+interface	ODRDatabaseChangeset	NSObject	NSCopying
+interface	ODRDatabaseExternalTransaction	ODRDatabaseSession	
+interface	ODRDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	ODRDatabaseStore	SQLiteDatabaseStore	
+interface	ODRDatabaseTransaction	ODRDatabaseExternalTransaction	SQLiteDatabaseTransaction
+interface	ODRDeveloperToolsClient	NSObject	ODRDeveloperToolsProtocol
+interface	ODRDevtoolsListener	ODRBaseListener	
+interface	ODRDiagnosticsClient	NSObject	ODRDiagnosticsProtocol
+interface	ODRDiagnosticsListener	ODRBaseListener	
+interface	ODRDownloadManager	NSObject	
+interface	ODRFileUtilities	NSObject	
+interface	ODRInstallContext	NSObject	
+interface	ODRLaunchServicesClient	NSObject	ODRLaunchServicesProtocol
+interface	ODRLaunchServicesListener	ODRBaseListener	
+interface	ODRLaunchServicesObserver	NSObject	
+interface	ODRMaintenanceTask	Task	
+interface	ODRManager	NSObject	CacheDeletePurgeableProvider
+interface	ODRManifest	SQLiteMemoryEntity	
+interface	ODRManifestEntity	SQLiteEntity	
+interface	ODRManifestRequestTask	Task	
+interface	ODRManifestValidationMaintenanceTask	Task	
+interface	ODRMemorySampler	ODRDataSampler	
+interface	ODRMutableApplication	ODRApplication	
+interface	ODRPlatformPolicies	NSObject	
+interface	ODRPreallocatedFile	NSObject	
+interface	ODRServiceDelegate	NSObject	NSXPCListenerDelegate
+interface	ODRSimulatedDownloadsManager	NSObject	
+interface	ODRSpaceReduction	NSObject	
+interface	ODRTag	SQLiteMemoryEntity	
+interface	ODRTagEntity	SQLiteEntity	
+interface	ODRTagsRequest	NSObject	
+interface	ODRTaskQueue	NSObject	
+interface	ODRZipStreamDataConsumer	NSObject	AssetDataConsumer
+interface	OSVersion	NSObject	
+interface	OcelotService	NSObject	ASDOcelotServiceProtocol
+interface	Optional	NSObject	
+interface	PartialDownloadPurgeCoordinator	NSObject	CacheDeletePurgeableProvider
+interface	PartitionedBuffer	NSObject	
+interface	PerformPurchaseTask	AsyncTask	AMSPurchaseResponseProtocol,AMSAuthenticateTaskDelegate
+interface	PlaceholderBuilder	NSObject	
+interface	PostBulletinRequestTask	RequestTask	
+interface	PowerLogCoordinator	NSObject	
+interface	PowerMonitor	NSObject	
+interface	PredicateValidator	NSObject	NSPredicateVisitor
+interface	PreparePurchaseTask	AsyncTask	
+interface	PresentTapToRadarRequestFlow	NSObject	
+interface	ProcessTerminator	NSObject	RBSTerminationAssertionObserving
+interface	ProgressCache	NSObject	LibraryCatalog
+interface	ProgressInfo	NSObject	
+interface	ProgressPortions	NSObject	
+interface	ProgressSample	NSObject	
+interface	Promise	NSObject	
+interface	PromiseObserver	NSObject	
+interface	PromiseResult	NSObject	
+interface	PromptForAccountTask	AsyncTask	
+interface	PurchaseBatch	NSObject	
+interface	PurchaseHistoryAppEntity	SQLiteEntity	
+interface	PurchaseHistoryDAAPEncoding	NSObject	
+interface	PurchaseHistoryDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	PurchaseHistoryDatabaseStore	SQLiteDatabaseStore	
+interface	PurchaseHistoryDatabaseTransaction	PurchaseHistoryDatabaseSession	SQLiteDatabaseTransaction
+interface	PurchaseHistoryHideShowRequest	NSOperation	
+interface	PurchaseHistoryHideShowRequestContext	NSObject	
+interface	PurchaseHistoryHideShowRequestContextItem	NSObject	
+interface	PurchaseHistoryHideShowRequestEncoder	NSObject	DAAPRequestDataProvider
+interface	PurchaseHistoryItemsDAAPPartialResponse	NSObject	
+interface	PurchaseHistoryItemsDAAPRequestEncoder	NSObject	DAAPRequestDataProvider
+interface	PurchaseHistoryItemsDAAPResponseDecoder	NSObject	DKDAAPParserDelegate
+interface	PurchaseHistoryItemsDAAPResponseMetadataParser	NSObject	DKDAAPParserDelegate
+interface	PurchaseHistoryItemsRequest	NSObject	AMSAuthenticateTaskDelegate,NSURLSessionDelegate,AMSURLProtocolDelegate
+interface	PurchaseHistoryItemsRequestContext	NSObject	
+interface	PurchaseHistoryManager	NSObject	PushMessageConsumer
+interface	PurchaseHistoryService	NSObject	ASDPurchaseHistoryServiceProtocol
+interface	PurchaseHistoryUpdateCommand	NSObject	
+interface	PurchaseHistoryUpdateDAAPRequestEncoder	NSObject	DAAPRequestDataProvider
+interface	PurchaseHistoryUpdateDAAPResponseDecoder	NSObject	DKDAAPParserDelegate
+interface	PurchaseHistoryUpdateRequest	NSObject	AMSAuthenticateTaskDelegate,NSURLSessionDelegate,AMSURLProtocolDelegate
+interface	PurchaseHistoryUpdateRequestContext	NSObject	
+interface	PurchaseImportTask	Task	
+interface	PurchaseInfo	ContextObject	
+interface	PurchaseManager	NSObject	AMSPurchaseResponseProtocol,PushMessageConsumer,PurchaseManagerInterface
+interface	PurchaseOwner	NSObject	NSCopying
+interface	PurchaseRequestTask	RequestTask	
+interface	PurchaseService	NSObject	ASDPurchaseServiceProtocol
+interface	PurgeAppsRequestTask	RequestTask	
+interface	PurgeContext	NSObject	
+interface	PurgeableApp	NSObject	NSCopying
+interface	PurgeableAppRequestTask	RequestTask	
+interface	PushCacheDeleteUpdateRequestTask	RequestTask	
+interface	PushConnection	NSObject	APSConnectionDelegate
+interface	PushConnectionMessageHistory	NSObject	
+interface	PushMessage	NSObject	
+interface	PushRawMessage	NSObject	
+interface	PushRegisterTask	AsyncTask	
+interface	PushService	NSObject	AMSPushHandlerDelegate,PushConnectionDelegate
+interface	PushServiceTestFlightConsumer	NSObject	TestFlightServiceHostDelegate,PushConnectionDelegate
+interface	PushTypesTask	AsyncTask	
+interface	RecentBag	Bag	
+interface	RedownloadRecoveryTask	AsyncTask	
+interface	RefetchKeybag	NSObject	
+interface	RefreshMIDBasedAppSINFsTask	Task	
+interface	RegexHelper	NSObject	
+interface	RepairApplicationTask	AsyncTask	ApplicationRepairDelegate
+interface	RepairService	NSObject	ASDRepairServiceProtocol
+interface	RequestBroker	NSObject	NSXPCListenerDelegate
+interface	RequestBrokerClient	NSObject	ASDRequestService
+interface	RequestEnvironment	NSObject	NSCopying
+interface	RequestProxy	NSObject	ASDRequestProxy
+interface	RequestTask	Task	
+interface	RequestThrottle	NSObject	
+interface	RequestThrottlePersistence	NSObject	
+interface	RequestThrottleRecord	NSObject	NSSecureCoding
+interface	RescueAbandonedPlaceholderOperation	Task	
+interface	RestoreAppInstall	AppInstall	
+interface	RestoreApplicationsRequestTask	RequestTask	
+interface	RestoreBatchContext	NSObject	
+interface	RestoreBatchInfo	NSObject	
+interface	RestoreBatchTask	AsyncTask	
+interface	RestoreBootstrapInfo	NSObject	
+interface	RestoreDemotedApplicationsRequestTask	RequestTask	
+interface	RestoreInfo	NSObject	
+interface	RestoreManager	NSObject	AMSAuthenticateTaskDelegate
+interface	RestoreService	NSObject	ASDRestoreServiceProtocol
+interface	Restrictions	NSObject	
+interface	RunLoop	NSObject	
+interface	SQLiteComparisonPredicate	SQLitePropertyPredicate	NSCopying
+interface	SQLiteCompoundPredicate	SQLitePredicate	NSCopying
+interface	SQLiteConnection	NSObject	
+interface	SQLiteConnectionOptions	NSObject	NSCopying
+interface	SQLiteContainsPredicate	SQLitePropertyPredicate	NSCopying
+interface	SQLiteCursor	NSObject	
+interface	SQLiteDatabase	NSObject	SQLiteConnectionDelegate
+interface	SQLiteDatabaseSession	NSObject	SQLiteDatabaseSession
+interface	SQLiteDatabaseStore	NSObject	
+interface	SQLiteDatabaseStoreDescriptor	NSObject	
+interface	SQLiteDatabaseStoreMigrator	NSObject	
+interface	SQLiteDatabaseStoreSchema	NSObject	
+interface	SQLiteDatabaseTransaction	SQLiteDatabaseSession	SQLiteDatabaseTransaction
+interface	SQLiteEntity	NSObject	SQLiteEntity
+interface	SQLiteKeychainHelper	NSObject	
+interface	SQLiteMemoryEntity	NSObject	NSCopying
+interface	SQLiteNullPredicate	SQLitePropertyPredicate	NSCopying
+interface	SQLitePredicate	NSObject	NSCopying
+interface	SQLitePreparedStatement	NSObject	
+interface	SQLitePropertyPredicate	SQLitePredicate	NSCopying
+interface	SQLiteQuery	NSObject	
+interface	SQLiteQueryDescriptor	NSObject	NSCopying
+interface	SQLiteQueryResults	NSObject	SQLiteBinding
+interface	SQLiteSchema	NSObject	
+interface	SQLiteSchemaMigration	NSObject	
+interface	SQLiteStatement	NSObject	SQLiteBinding
+interface	SQLiteTransporter	NSObject	
+interface	SbsyncTask	Task	NSURLSessionDelegate,AMSURLProtocolDelegate
+interface	SbsyncTaskRequestEncoder	AMSURLRequestEncoder	
+interface	SecureClock	NSObject	
+interface	SilentRequestPresenter	NSObject	AMSAuthenticateTaskDelegate,RequestPresenter
+interface	SinfsArray	NSObject	
+interface	SoftwareUpdateAppMetadata	NSObject	NSCopying
+interface	SoftwareUpdateListener	BaseListener	ASDSoftwareUpdateProtocol
+interface	SpringBoardWidgetContext	NSObject	
+interface	Storage	NSObject	
+interface	StoreAsset	NSObject	NSCopying
+interface	StoreDRM	NSObject	
+interface	StoreItem	NSObject	NSCopying
+interface	StoreItemResponse	NSObject	
+interface	StoreItemSubGenre	NSObject	NSCopying
+interface	StoreKitServiceConnection	NSObject	AMSAuthenticateTaskDelegate,StoreKitServiceConnection
+interface	StoreKitServiceListener	NSObject	NSXPCListenerDelegate
+interface	StoreQueueListener	BaseListener	ASDStoreQueueProtocol
+interface	StoreQueueManager	NSObject	
+interface	StoreSinf	NSObject	
+interface	StoreSinfArray	NSObject	
+interface	Stream	NSObject	Stream
+interface	StreamingZipStreamConsumer	NSObject	StreamDelegate
+interface	SubmitTestFlightFeedbackTask	TestFlightUploadSubTask	
+interface	SubscriptionEntitlementsCoordinator	NSObject	PushMessageConsumer
+interface	SubscriptionEntitlementsRequest	NSObject	
+interface	SubscriptionEntitlementsResponse	NSObject	
+interface	SubscriptionEntitlementsResult	NSObject	
+interface	SubscriptionRequestInfo	NSObject	
+interface	SwitchAppOwnerTask	AsyncTask	
+interface	SwitchAppOwnerURLRequestEncoder	AMSURLRequestEncoder	
+interface	SyncTaskScheduler	NSObject	TaskScheduler
+interface	SystemAppBootstrapTask	Task	
+interface	SystemAppLookupItem	NSObject	
+interface	SystemAppLookupTask	Task	
+interface	TFAppleWatch	PBCodable	NSCopying
+interface	TFApplication	PBCodable	NSCopying
+interface	TFDevice	PBCodable	NSCopying
+interface	TFDisplay	PBCodable	NSCopying
+interface	TFFeedback	PBCodable	NSCopying
+interface	TFGetImageUploadUrlsRequest	PBRequest	NSCopying
+interface	TFGetImageUploadUrlsResponse	PBCodable	NSCopying
+interface	TFImageUpload	PBCodable	NSSecureCoding,NSCopying
+interface	TFMemoryUsage	PBCodable	NSCopying
+interface	TFPendingImageUpload	NSObject	NSCopying,NSSecureCoding
+interface	TFUploadFeedbackRequest	PBRequest	NSCopying
+interface	TFUploadFeedbackResponse	PBCodable	NSCopying
+interface	Task	NSOperation	
+interface	TaskQueue	NSObject	
+interface	TelephonyUtility	NSObject	
+interface	TestFlightServiceHost	NSObject	
+interface	TestFlightUploadSubTask	AsyncTask	
+interface	ThermalPressureMonitor	NSObject	
+interface	ThreadSafeDictionary	NSObject	
+interface	TimeWindow	NSObject	NSCopying
+interface	TransactionDetails	NSObject	
+interface	TransactionStore	NSObject	
+interface	TransformEnumerator	NSEnumerator	
+interface	TypeCheckedAbstractReader	NSObject	
+interface	TypeCheckedArrayReader	TypeCheckedAbstractReader	
+interface	TypeCheckedDictionaryReader	TypeCheckedAbstractReader	
+interface	UPPManifest	NSObject	
+interface	UPPManifestAsset	NSObject	
+interface	UPPManifestDialogRequest	AMSDialogRequest	
+interface	UPPManifestDownloadTask	AsyncTask	NSURLSessionTaskDelegate
+interface	UPPManifestItem	NSObject	
+interface	URLParserHelper	NSObject	
+interface	URLRequest	NSObject	
+interface	URLRequestEncoder	AMSURLRequestEncoder	AMSRequestEncoding
+interface	URLRequestProperties	NSObject	NSCopying
+interface	URLResponseDecoder	AMSURLResponseDecoder	AMSResponseDecoding
+interface	URLSessionManager	NSObject	
+interface	UnfairLock	NSObject	NSLocking
+interface	UpToDateBag	RecentBag	
+interface	UpdatableApp	NSObject	UpdatableApp
+interface	UpdateItemMetrics	NSObject	
+interface	UpdateMetricsEvent	AMSMetricsEvent	
+interface	UpdateMetricsManager	NSObject	
+interface	UpdatesBatchTask	Task	
+interface	UpdatesManager	NSObject	
+interface	UpdatesManager_ObjC	NSObject	UpdatesControllerInterface
+interface	UpdatesResponse	NSObject	
+interface	UpdatesService	NSObject	ASDUpdatesServiceProtocol
+interface	UpdatesTask	Task	
+interface	UploadTestFlightImageTask	TestFlightUploadSubTask	
+interface	UsedApp	NSObject	NSCopying
+interface	UserNotificationManager	NSObject	UNUserNotificationCenterDelegatePrivate
+interface	VPPRepair	NSObject	ApplicationRepair
+interface	ValidateAppleIDsTask	Task	
+interface	VariantDescriptor	NSObject	NSCopying
+interface	VerifyReceiptsTask	MigrateToManagedTask	
+interface	VoucherStore	NSObject	
+interface	WallClock	NSObject	Clock
+interface	WriteReceipt	NSObject	
+interface	XDCAppMetadata	PBCodable	NSCopying
+interface	XDCCancelInstallRequest	PBRequest	NSCopying
+interface	XDCCancelInstallResponse	PBCodable	NSCopying
+interface	XDCDevice	NSObject	
+interface	XDCDeviceManager	NSObject	
+interface	XDCInstallRequest	PBRequest	NSCopying
+interface	XDCInstallResponse	PBCodable	NSCopying
+interface	XDCLaunchAppRequest	PBRequest	NSCopying
+interface	XDCLaunchAppResponse	PBCodable	NSCopying
+interface	XDCMessage	NSObject	
+interface	XDCMessageHandler	NSObject	
+interface	XDCPingMessage	PBCodable	NSCopying
+interface	XDCProgress	PBCodable	NSCopying
+interface	XDCProgressMessage	PBCodable	NSCopying
+interface	XDCRegisterAppMessage	PBCodable	NSCopying
+interface	XPCClient	NSObject	
+interface	XPCEventRelay	NSObject	
+interface	XPCNotificationCenter	NSObject	
+interface	XPCNotificationSource	NSObject	
+interface	XPCRequestToken	NSObject	
+interface	XPCServiceBroker	NSObject	NSXPCListenerDelegate
+interface	XPCServiceCatalog	NSObject	
+interface	XPCServiceClient	NSObject	XPCNotificationClient,ASDServiceProtocol
+interface	XPCServiceEntitlements	NSObject	
+interface	ZipDataStreamAdapter	NSObject	AssetDataConsumer
+interface	ZipDataStreamStatus	NSObject	
+interface	_ASDSystemAlertDialogTask	AMSSystemAlertDialogTask	
+interface	_ApplicationContext	ApplicationContext	
+interface	_ProtocolDelegate	NSObject	NSURLSessionDelegate,AMSURLProtocolDelegate
+interface	_ProtocolHandler	AMSURLProtocolHandler	
+interface	_TtC9appstored10ASEMetrics	NSObject	
+interface	_TtC9appstored10CrashEvent	NSObject	
+interface	_TtC9appstored10QOSMetrics	NSObject	
+interface	_TtC9appstored10Throughput	NSObject	
+interface	_TtC9appstored12AssetPromise	NSObject	
+interface	_TtC9appstored13AppLedgerItem	NSObject	
+interface	_TtC9appstored13LaunchHistory	NSObject	
+interface	_TtC9appstored13MetricsBridge	NSObject	
+interface	_TtC9appstored13OwnsCheckTask	AsyncTask	
+interface	_TtC9appstored13RestoreKeeper	NSObject	
+interface	_TtC9appstored14AppLedgerEvent	NSObject	
+interface	_TtC9appstored14MediaAPIUpdate	SQLiteMemoryEntity	UpdateMemoryEntityProtocol
+interface	_TtC9appstored14UpdatesContext	NSObject	
+interface	_TtC9appstored14XPCTransaction	_TtCs12_SwiftObject	
+interface	_TtC9appstored15ActivityManager	NSObject	
+interface	_TtC9appstored15FairPlayService	NSObject	ASDFairPlayServiceProtocol
+interface	_TtC9appstored15ODPSyncActivity	_TtCs12_SwiftObject	
+interface	_TtC9appstored16CrashCoordinator	NSObject	
+interface	_TtC9appstored16LaunchSyncResult	NSObject	
+interface	_TtC9appstored17AppleIDLookupTask	AsyncTask	
+interface	_TtC9appstored17DictionaryDecoder	_TtCs12_SwiftObject	
+interface	_TtC9appstored17DictionaryEncoder	_TtCs12_SwiftObject	
+interface	_TtC9appstored17EvaluatorDownload	NSObject	
+interface	_TtC9appstored17RestrictionsCache	NSObject	MCProfileConnectionObserver
+interface	_TtC9appstored18PerformUpdatesTask	AsyncTask	
+interface	_TtC9appstored19AppDownloadDoneTask	AsyncTask	
+interface	_TtC9appstored19CacheDeleteActivity	_TtCs12_SwiftObject	
+interface	_TtC9appstored20AppInstallationEvent	NSObject	
+interface	_TtC9appstored20AppLedgerInstallItem	NSObject	
+interface	_TtC9appstored20AppLedgerQueryHelper	NSObject	
+interface	_TtC9appstored20MediaAPIUpdateEntity	SQLiteEntity	
+interface	_TtC9appstored20PushRecoveryActivity	NSObject	
+interface	_TtC9appstored20UpdatesManager_Swift	SwiftNativeNSObject	UpdatesControllerInterface
+interface	_TtC9appstored21AgeRevocationNotifier	AsyncTask	
+interface	_TtC9appstored21ODRPublicErrorMapping	NSObject	
+interface	_TtC9appstored21RestoreInstallCreator	NSObject	
+interface	_TtC9appstored22StoreItemResponseSwift	NSObject	
+interface	_TtC9appstored23BackgroundAssetsService	NSObject	ASDBackgroundAssetsServiceProtocol
+interface	_TtC9appstored23PurchaseArcadeBatchTask	AsyncTask	AMSPurchaseResponseProtocol
+interface	_TtC9appstored23ReviewNetworkPolicyTask	AsyncTask	
+interface	_TtC9appstored23StoreKitExternalGateway	NSObject	
+interface	_TtC9appstored24BackgroundAssetRelayTask	AsyncTask	
+interface	_TtC9appstored25ODRXPCMaintenanceActivity	_TtCs12_SwiftObject	
+interface	_TtC9appstored26CodeSignatureVersionRepair	NSObject	ApplicationRepair
+interface	_TtC9appstored26DetectDuplicateRequestTask	AsyncTask	
+interface	_TtC9appstored26UpdatesDatabaseMergeResult	NSObject	
+interface	_TtC9appstored27RemoteRedownloadRequestTask	AsyncTask	
+interface	_TtC9appstored29KatanaSubscriptionCoordinator	NSObject	
+interface	_TtC9appstored29ManagedBackgroundAssetsBridge	NSObject	
+interface	_TtC9appstored31AppStoreStyledFileSizeFormatter	NSObject	
+interface	_TtC9appstored31MediaAPIUpdateAvailabilityCheck	_TtCs12_SwiftObject	
+interface	_TtC9appstored31TestFlightExtensionSyncActivity	_TtCs12_SwiftObject	
+interface	_TtC9appstored35AdPlatformsStatusConditionsActivity	_TtCs12_SwiftObject	
+interface	_TtC9appstored36BackgroundAssetTransparencySheetTask	_TtCs12_SwiftObject	
+interface	_TtC9appstored38TestFlightExtensionSyncActivityManager	_TtCs12_SwiftObject	
+interface	_TtC9appstored42TestFlightExtensionSyncActivityManagerObjC	NSObject	
+interface	_TtC9appstored6LogKey	NSObject	NSSecureCoding,NSCopying
+interface	_TtC9appstored7Intents	NSObject	
+interface	_TtC9appstored7Metrics	_TtCs12_SwiftObject	
+interface	_TtC9appstored8QALogger	SwiftNativeNSObject	
+interface	_TtC9appstored9AppLedger	NSObject	
+interface	_TtC9appstoredP33_147681C71569E93911ECFD5EF52BD4E011GlobalState	_TtCs12_SwiftObject	
+interface	_TtC9appstoredP33_1D0CA4202202EC2E79D75091001C648835AgeRevocationNotifierRequestEncoder	AMSURLRequestEncoder	
+interface	_TtC9appstoredP33_4BC89524744D49B8BE6987A172A14CD911SystemAlert	_TtCs12_SwiftObject	
+interface	_TtC9appstoredP33_C1A1EAB8D4C3C08BC779EC4E688AD58A27OwnsCheckTaskRequestEncoder	AMSURLRequestEncoder	
+interface	_TtC9appstoredP33_CE29999887872BC054A90566175647F89ASDAMSBag	NSObject	AMSBagProtocol
+interface	_TtCC9appstored38TestFlightExtensionSyncActivityManagerP33_7B68A6CA0C2D7084A2592258C0EEA6498Delegate	NSObject	TestFlightServiceHostDelegate
+interface	_XPCInternalRequestToken	XPCRequestToken	XPCNotificationClient
+interface	lib_IXAppInstallCoordinatorState	NSObject	
+interface	lib_IXAppInstallCoordinatorTag	NSObject	NSCopying
+protocol	AMSAuthenticateTaskDelegate		NSObject
+protocol	AMSBagProtocol		NSObject
+protocol	AMSEngagementEvent		NSObject
+protocol	AMSPurchaseResponseProtocol		NSObject
+protocol	AMSPushHandlerDelegate		NSObject
+protocol	AMSRequestEncoding		NSObject
+protocol	AMSResponseDecoding		
+protocol	AMSURLProtocolDelegate		NSObject
+protocol	APSConnectionDelegate		NSObject
+protocol	ASDAppLibraryServiceProtocol		
+protocol	ASDAppMetricsServiceProtocol		
+protocol	ASDAppStoreServiceProtocol		
+protocol	ASDBackgroundAssetsServiceProtocol		
+protocol	ASDCrossfireServiceProtocol		NSObject
+protocol	ASDDiagnosticServiceProtocol		
+protocol	ASDExtensionRequestCleanupXPCInterface		NSObject
+protocol	ASDFairPlayServiceProtocol		NSObject
+protocol	ASDIAPHistoryServiceProtocol		
+protocol	ASDInstallationServiceProtocol		NSObject
+protocol	ASDJobManager		NSObject
+protocol	ASDJobManagerClient		NSObject
+protocol	ASDManagedAppServiceProtocol		
+protocol	ASDNotificationCenterDialogObserver		NSObject
+protocol	ASDOcelotServiceProtocol		NSObject
+protocol	ASDPurchaseHistoryServiceProtocol		
+protocol	ASDPurchaseServiceProtocol		
+protocol	ASDRepairServiceProtocol		
+protocol	ASDRequestDelegate		
+protocol	ASDRequestProxy		NSXPCProxyCreating
+protocol	ASDRequestService		
+protocol	ASDRestoreServiceProtocol		NSObject
+protocol	ASDServiceProtocol		NSObject
+protocol	ASDSoftwareUpdateProtocol		NSObject
+protocol	ASDStoreQueueProtocol		NSObject
+protocol	ASDTestFlightServiceExtensionRemoteXPCInterface		ASDTestFlightServiceExtensionXPCInterface,ASDExtensionRequestCleanupXPCInterface
+protocol	ASDTestFlightServiceExtensionXPCInterface		NSObject
+protocol	ASDUpdatesServiceProtocol		
+protocol	AdoptionManagerInterface		
+protocol	AppInstallPipeline		NSObject
+protocol	ApplicationRepair		NSObject
+protocol	ApplicationRepairDelegate		NSObject
+protocol	AssetDataConsumer		NSObject
+protocol	CacheDeletePurgeableProvider		NSObject
+protocol	ClipDownloadVariant		NSObject
+protocol	Clock		NSObject
+protocol	CoordinatorPromiseDataConsumerDelegate		NSObject
+protocol	DAAPRequestDataProvider		NSObject
+protocol	DKDAAPParserDelegate		NSObject
+protocol	Device		NSObject
+protocol	DiagnosticListener		NSObject
+protocol	FetchReceiptTaskDelegate		ASDNotificationCenterDialogObserver
+protocol	IXAppInstallCoordinatorObserver		NSObject
+protocol	IXAppInstallObserverDelegate		NSObject
+protocol	IXCoordinatorWithAppAssetPromise		NSObject
+protocol	IXCoordinatorWithDeviceSecurityPromise		NSObject
+protocol	IXCoordinatorWithEssentialAssetPromises		NSObject
+protocol	IXCoordinatorWithImportance		NSObject
+protocol	IXCoordinatorWithInitialODRAssetPromises		NSObject
+protocol	IXCoordinatorWithInstallOptions		NSObject
+protocol	IXCoordinatorWithPlaceholderPromise		NSObject
+protocol	IXCoordinatorWithPostProcessingPromises		NSObject
+protocol	IXCoordinatorWithUserDataPromise		NSObject
+protocol	LSApplicationWorkspaceObserverProtocol		NSObject
+protocol	LibraryCatalog		NSObject
+protocol	LibraryCatalogObserver		NSObject
+protocol	LibraryOpen		NSObject
+protocol	LibraryProgress		NSObject
+protocol	LibraryQueryEvaluator		
+protocol	LibraryResultEnumerator		NSFastEnumeration
+protocol	LibraryUninstall		NSObject
+protocol	MCProfileConnectionObserver		NSObject
+protocol	MILocationProtocol		
+protocol	NSCoding		
+protocol	NSCopying		
+protocol	NSFastEnumeration		
+protocol	NSLocking		
+protocol	NSMutableCopying		
+protocol	NSObject		
+protocol	NSPredicateVisitor		
+protocol	NSSecureCoding		NSCoding
+protocol	NSURLSessionDataDelegate		NSURLSessionTaskDelegate
+protocol	NSURLSessionDataDelegatePrivate		NSURLSessionDataDelegate
+protocol	NSURLSessionDelegate		NSObject
+protocol	NSURLSessionTaskDelegate		NSURLSessionDelegate
+protocol	NSURLSessionTaskDelegatePrivate		NSURLSessionTaskDelegate
+protocol	NSUserActivityDelegate		NSObject
+protocol	NSXPCListenerDelegate		NSObject
+protocol	NSXPCProxyCreating		
+protocol	NetworkMonitor		NSObject
+protocol	ODRAppReviewProtocol		NSObject
+protocol	ODRClientProtocol		
+protocol	ODRDeveloperToolsProtocol		NSObject
+protocol	ODRDiagnosticsProtocol		
+protocol	ODRLaunchServicesProtocol		NSObject
+protocol	ODRServerProtocol		NSObject
+protocol	OS_dispatch_group		
+protocol	OS_dispatch_queue		
+protocol	OS_dispatch_queue_serial		
+protocol	OS_dispatch_semaphore		
+protocol	OS_dispatch_source		
+protocol	OS_nw_activity		
+protocol	OS_os_activity		NSObject
+protocol	OS_os_transaction		
+protocol	OS_voucher		
+protocol	OS_xpc_object		
+protocol	OctaneAdNetworkProtocol		
+protocol	PurchaseManagerInterface		NSObject
+protocol	PushConnectionDelegate		NSObject
+protocol	PushMessageConsumer		NSObject
+protocol	RBSAssertionObserving		NSObject
+protocol	RBSTerminationAssertionObserving		RBSAssertionObserving
+protocol	RequestController		
+protocol	RequestPresenter		NSObject
+protocol	SQLiteBinding		NSObject
+protocol	SQLiteConnectionDelegate		NSObject
+protocol	SQLiteDatabaseSession		NSObject
+protocol	SQLiteDatabaseTransaction		SQLiteDatabaseSession
+protocol	SQLiteEntity		NSObject
+protocol	STExtractorDelegate		NSObject
+protocol	SZExtractorDelegate		NSObject,STExtractorDelegate
+protocol	StoreKitServiceConnection		OctaneAdNetworkProtocol,ASDNotificationCenterDialogObserver
+protocol	Stream		NSObject
+protocol	StreamDelegate		NSObject
+protocol	StreamReader		Stream
+protocol	StreamWriter		Stream
+protocol	TaskScheduler		NSObject
+protocol	TestFlightServiceHostDelegate		NSObject
+protocol	UNUserNotificationCenterDelegate		NSObject
+protocol	UNUserNotificationCenterDelegatePrivate		UNUserNotificationCenterDelegate
+protocol	UpdatableApp		NSObject
+protocol	UpdateMemoryEntityProtocol		NSObject
+protocol	UpdatesControllerInterface		NSObject
+protocol	XPCNotificationClient		NSObject

@@ -1,0 +1,729 @@
+kind	type	conformance	member_kind	member
+class	swtransparencyd.NetworkReachabilityMonitor			
+class	swtransparencyd.NetworkReachabilityMonitor		let	queue
+class	swtransparencyd.NetworkReachabilityMonitor		let	monitor
+class	swtransparencyd.NetworkReachabilityMonitor		var	handler
+class	swtransparencyd.NetworkReachabilityMonitor		var	hosts
+class	swtransparencyd.NetworkReachabilityMonitor		let	logger
+class	swtransparencyd.ReachabilityTracker			
+class	swtransparencyd.ReachabilityTracker		var	haveNetwork
+class	swtransparencyd.ReachabilityTracker		var	waiters
+class	swtransparencyd.ReachabilityTracker		var	monitor
+class	swtransparencyd.ReachabilityTracker		let	log
+class	swtransparencyd.ReachabilityTracker		var	handler
+class	swtransparencyd.AssociatedObjectKey			
+class	swtransparencyd.AssociatedObjectKey		var	value
+struct	swtransparencyd.VerifiableTypeHelpers			
+struct	swtransparencyd.VerifiableTypeHelpers.LogEntryEpochStatus			
+struct	swtransparencyd.VerifiableTypeHelpers.LogEntryEpochStatus		let	oldEpoch
+struct	swtransparencyd.VerifiableTypeHelpers.LogEntryEpochStatus		let	newEpoch
+struct	swtransparencyd.VerifiableTypeHelpers.LogEntryEpochStatus		let	revision
+struct	swtransparencyd.TransitionPathStep			
+struct	swtransparencyd.TransitionPathStep		let	paths
+struct	swtransparencyd.TransitionPath			
+struct	swtransparencyd.TransitionPath		var	initial
+struct	swtransparencyd.TransitionPath		var	paths
+class	swtransparencyd.TransitionWatcher			
+class	swtransparencyd.TransitionWatcher		let	initialState
+class	swtransparencyd.TransitionWatcher		var	expectedStates
+class	swtransparencyd.TransitionWatcher		var	state
+class	swtransparencyd.TransitionWatcher		var	continuation
+class	swtransparencyd.TransitionWatcher		let	id
+enum	swtransparencyd.TransitionWatcher.WatcherState			
+enum	swtransparencyd.TransitionWatcher.WatcherState		case	error
+enum	swtransparencyd.TransitionWatcher.WatcherState		case	waiting
+enum	swtransparencyd.TransitionWatcher.WatcherState		case	active
+enum	swtransparencyd.TransitionWatcher.WatcherState		case	finished
+struct	swtransparencyd.SerializationVersion			
+struct	swtransparencyd.SerializationVersion		var	rawValue
+struct	swtransparencyd.ATLeafType			
+struct	swtransparencyd.ATLeafType		var	rawValue
+struct	swtransparencyd.TransparencyExtensionType			
+struct	swtransparencyd.TransparencyExtensionType		var	rawValue
+enum	swtransparencyd.TransparencyExtension			
+enum	swtransparencyd.TransparencyExtension		case	unknownExtension
+struct	swtransparencyd.ATLeafData			
+struct	swtransparencyd.ATLeafData		var	version
+struct	swtransparencyd.ATLeafData		var	type
+struct	swtransparencyd.ATLeafData		var	ATDescription
+struct	swtransparencyd.ATLeafData		var	dataHash
+struct	swtransparencyd.ATLeafData		var	expiryMs
+struct	swtransparencyd.ATLeafData		var	extensions
+struct	swtransparencyd.ATLeafData		var	verifier
+enum	swtransparencyd.ConsistencyProofResponseError			
+enum	swtransparencyd.ConsistencyProofResponseError		case	serverError
+enum	swtransparencyd.ConsistencyProofResponseError		case	invalidLogType
+enum	swtransparencyd.ConsistencyProofResponseError		case	invalidApplication
+enum	swtransparencyd.ConsistencyProofResponseError		case	unsupportedLogType
+enum	swtransparencyd.ConsistencyProofResponseError		case	missingSlhs
+enum	swtransparencyd.ConsistencyProofResponseError		case	noKeyBag
+enum	swtransparencyd.ConsistencyProofResponseError		case	unexpectedSubResponse
+enum	swtransparencyd.MilestoneConsistencyError			
+enum	swtransparencyd.MilestoneConsistencyError		case	noVerifier
+enum	swtransparencyd.MilestoneConsistencyError		case	noStartSlh
+enum	swtransparencyd.MilestoneConsistencyError		case	missingMilestoneSlh
+enum	swtransparencyd.MilestoneConsistencyError		case	missingProofHashes
+enum	swtransparencyd.MilestoneConsistencyError		case	mismatchLogHeadHashForRevision
+enum	swtransparencyd.MilestoneConsistencyError		case	cannotParseLogHead
+enum	swtransparencyd.MilestoneConsistencyError		case	disjointConsistencyProof
+enum	swtransparencyd.MilestoneConsistencyError		case	consistencyVerificationFailed
+class	swtransparencyd.SWTConfigBagFetcher			
+class	swtransparencyd.SWTConfigBagFetcher		let	trigger
+class	swtransparencyd.SWTConfigBagFetcher		let	networkMonitor
+enum	swtransparencyd.SWTConfigBagFetcher.SWTConfigBagFetcher			
+enum	swtransparencyd.SWTConfigBagFetcher.SWTConfigBagFetcher		case	fetchFailed
+enum	swtransparencyd.SWTConfigBagFetcher.SWTConfigBagFetcher		case	noHttp
+enum	swtransparencyd.SWTConfigBagFetcher.SWTConfigBagFetcher		case	noURL
+struct	swtransparencyd.SWTDeps			
+struct	swtransparencyd.SWTDeps		let	atApplication
+struct	swtransparencyd.SWTDeps		let	container
+struct	swtransparencyd.SWTDeps		let	dbPath
+struct	swtransparencyd.SWTDeps		var	networkMonitor
+struct	swtransparencyd.SWTDeps		let	bagFetcher
+struct	swtransparencyd.SWTDeps		let	swtSettings
+struct	swtransparencyd.SWTDeps		let	swtFollowUp
+struct	swtransparencyd.SWTDeps		let	configBag
+struct	swtransparencyd.SWTDeps		var	publicKeyBag
+struct	swtransparencyd.SWTDeps		var	database
+struct	swtransparencyd.SWTDeps		var	analytics
+struct	swtransparencyd.SWTDeps		var	cloudTelemetry
+struct	swtransparencyd.SWTDeps		var	trigger
+struct	swtransparencyd.SWTDeps		let	requiredConfigBagKeys
+class	swtransparencyd.SWTCloudTelemetry			
+class	swtransparencyd.TriggerInterface			
+class	swtransparencyd.TriggerInterface		var	stateMachine
+class	swtransparencyd.TriggerInterface		var	lastNotifyReady
+class	swtransparencyd.SWTransparencyDaemon			
+class	swtransparencyd.SWTransparencyDaemon		let	logger
+class	swtransparencyd.SWTransparencyDaemon		let	deps
+class	swtransparencyd.SWTransparencyDaemon		var	service
+class	swtransparencyd.SWTransparencyDaemon		let	stateMachine
+class	swtransparencyd.SWTransparencyDaemon		var	trigger
+struct	swtransparencyd.SWTransparencyDaemonCommand			
+struct	swtransparencyd.JSONSError			
+struct	swtransparencyd.JSONSError		let	domain
+struct	swtransparencyd.JSONSError		let	code
+struct	swtransparencyd.JSONSError		let	underlyingErrrors
+enum	swtransparencyd.JSONSError.CodingKeys			
+enum	swtransparencyd.JSONSError.CodingKeys		case	domain
+enum	swtransparencyd.JSONSError.CodingKeys		case	code
+enum	swtransparencyd.JSONSError.CodingKeys		case	underlyingErrrors
+struct	swtransparencyd.SWTURLSession			
+class	swtransparencyd.SWTURLSession.URLSessionMaker			
+class	swtransparencyd.SWTURLSession.URLSessionMaker		var	session
+enum	swtransparencyd.ConsistencyDownloadError			
+enum	swtransparencyd.ConsistencyDownloadError		case	fetchFailed
+enum	swtransparencyd.ConsistencyDownloadError		case	invalidApplication
+enum	swtransparencyd.ConsistencyDownloadError		case	invalidLogType
+enum	swtransparencyd.ConsistencyDownloadError		case	noServerConfig
+enum	swtransparencyd.ConsistencyDownloadError		case	noHttp
+struct	swtransparencyd.ActualConsistencyFetcher			
+struct	swtransparencyd.ConsistencyDownload			
+struct	swtransparencyd.ConsistencyDownload		let	application
+struct	swtransparencyd.ConsistencyDownload		let	configBag
+struct	swtransparencyd.ConsistencyDownload		let	publicKeyBag
+struct	swtransparencyd.ConsistencyDownload		let	database
+struct	swtransparencyd.ConsistencyDownload		let	fetcher
+struct	swtransparencyd.ConsistencyDownload		let	events
+struct	swtransparencyd.ConsistencyDownload		let	analytics
+struct	swtransparencyd.ConsistencyDownload		let	cloudTelemetry
+struct	swtransparencyd.ConsistencyDownload.ProofRequest			
+struct	swtransparencyd.ConsistencyDownload.ProofRequest		let	protoRequests
+struct	swtransparencyd.ConsistencyDownload.ProofRequest		let	verifiedRevision
+enum	swtransparencyd.ATLeafDataError			
+enum	swtransparencyd.ATLeafDataError		case	unsupportedSerializationVersion
+enum	swtransparencyd.ATLeafDataError		case	unsupportedATLeafType
+enum	swtransparencyd.ATLeafDataError		case	notEnoughHashBytes
+enum	swtransparencyd.ATLeafDataError		case	expiredLeaf
+enum	swtransparencyd.ATLeafDataError		case	mismatchData
+enum	swtransparencyd.KTSWDBError			
+enum	swtransparencyd.KTSWDBError		case	noSuchMilestone
+enum	swtransparencyd.KTSWDBError		case	noSuchHead
+enum	swtransparencyd.KTSWDBError		case	unexpectedSQLResult
+class	swtransparencyd.KTSWDB			
+class	swtransparencyd.KTSWDB		let	schemaVersion
+class	swtransparencyd.KTSWDB		let	db
+class	swtransparencyd.KTSWDB		let	queue
+struct	swtransparencyd.KTSWDB.STHKey			
+struct	swtransparencyd.KTSWDB.STHKey		let	application
+struct	swtransparencyd.KTSWDB.STHKey		let	logBeginMs
+struct	swtransparencyd.KTSWDB.STHKey		let	logType
+struct	swtransparencyd.KTSWDB.STHKey		let	revision
+struct	swtransparencyd.KTSWDB.STHKey		let	logHeadHash
+struct	swtransparencyd.KTSWDB.SignedLogHead			
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	consistencyVerified
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	inclusionVerified
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	logBeginMs
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	logType
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	revision
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	signatureVerified
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	receiptTime
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	application
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	logHeadHash
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	sth
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	treeId
+struct	swtransparencyd.KTSWDB.SignedLogHead		var	isMilestone
+struct	swtransparencyd.KTSWDB.Milestone			
+struct	swtransparencyd.KTSWDB.Milestone		let	treeId
+struct	swtransparencyd.KTSWDB.Milestone		let	revision
+struct	swtransparencyd.KTSWDB.Milestone		let	logBeginMs
+enum	swtransparencyd.KTSWDB.Milestone.CodingKeys			
+enum	swtransparencyd.KTSWDB.Milestone.CodingKeys		case	treeId
+enum	swtransparencyd.KTSWDB.Milestone.CodingKeys		case	revision
+enum	swtransparencyd.KTSWDB.Milestone.CodingKeys		case	logBeginMs
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys			
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	consistencyVerified
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	inclusionVerified
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	logBeginMs
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	logType
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	revision
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	signatureVerified
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	receiptTime
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	application
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	logHeadHash
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	sth
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	treeId
+enum	swtransparencyd.KTSWDB.SignedLogHead.CodingKeys		case	isMilestone
+enum	swtransparencyd.KTSWDB.STHKey.CodingKeys			
+enum	swtransparencyd.KTSWDB.STHKey.CodingKeys		case	application
+enum	swtransparencyd.KTSWDB.STHKey.CodingKeys		case	logBeginMs
+enum	swtransparencyd.KTSWDB.STHKey.CodingKeys		case	logType
+enum	swtransparencyd.KTSWDB.STHKey.CodingKeys		case	revision
+enum	swtransparencyd.KTSWDB.STHKey.CodingKeys		case	logHeadHash
+enum	swtransparencyd.SWTFeatureFlags			
+enum	swtransparencyd.SWTFeatureFlags		case	ATMilestoneDownload
+enum	swtransparencyd.SWTFeatureFlags		case	ATPatConsistency
+enum	swtransparencyd.SWTFeatureFlags		case	SWTStateMachine
+enum	swtransparencyd.SWTFeatureFlags		case	SWTFailProofVerification
+enum	swtransparencyd.SWTFeatureFlags		case	SWTSplitViewCFU
+enum	swtransparencyd.KTSwiftDBError			
+enum	swtransparencyd.KTSwiftDBError		case	dbClosed
+class	swtransparencyd.KTSwiftDB			
+class	swtransparencyd.KTSwiftDB		var	db
+enum	swtransparencyd.KTSwiftDB.SQLStepResult			
+enum	swtransparencyd.KTSwiftDB.SQLStepResult		case	row
+enum	swtransparencyd.KTSwiftDB.SQLStepResult		case	done
+class	swtransparencyd.KTSwiftDB.SQLStatement			
+class	swtransparencyd.KTSwiftDB.SQLStatement		let	stmt
+class	swtransparencyd.KTSwiftDB.SQLRow			
+class	swtransparencyd.KTSwiftDB.SQLRow		let	row
+struct	__C_Synthesized.KTSDBObjcError			
+struct	__C_Synthesized.KTSDBObjcError		let	_nsError
+struct	swtransparencyd.MachTime			
+struct	swtransparencyd.MachTime		let	_time
+enum	swtransparencyd.MilestoneDownloadError			
+enum	swtransparencyd.MilestoneDownloadError		case	fetchFailed
+enum	swtransparencyd.MilestoneDownloadError		case	noServerConfig
+enum	swtransparencyd.MilestoneDownloadError		case	noHttp
+enum	swtransparencyd.MilestoneDownloadError		case	failedValidation
+enum	swtransparencyd.MilestoneDownloadError		case	invalidUrl
+enum	swtransparencyd.MilestoneDownloadError		case	invalidApplication
+struct	swtransparencyd.ActualMilestoneFetcher			
+struct	swtransparencyd.MilestoneDownload			
+struct	swtransparencyd.MilestoneDownload		let	application
+struct	swtransparencyd.MilestoneDownload		let	configBag
+struct	swtransparencyd.MilestoneDownload		let	publicKeyBag
+struct	swtransparencyd.MilestoneDownload		let	database
+struct	swtransparencyd.MilestoneDownload		let	fetcher
+struct	swtransparencyd.MilestoneDownload		let	events
+struct	swtransparencyd.MilestoneDownload		let	atHead
+struct	swtransparencyd.MilestoneDownload		let	analytics
+struct	swtransparencyd.MilestoneDownload		let	cloudTelemetry
+enum	swtransparencyd.ATLogProofsError			
+enum	swtransparencyd.ATLogProofsError		case	inclusionProofFailed
+enum	swtransparencyd.ATLogProofsError		case	milestoneDownload
+enum	swtransparencyd.ATLogProofsError		case	noKeyBag
+enum	swtransparencyd.ATLogProofsError		case	missingInclusionProof
+enum	swtransparencyd.ATLogProofsError		case	wrongNodeType
+enum	swtransparencyd.ATLogProofsError		case	noDatabase
+enum	swtransparencyd.ATLogProofsError		case	notIncludedInVerifiedMilestone
+enum	swtransparencyd.ATLogProofsError		case	invalidApplication
+struct	swtransparencyd.VerificationResult			
+struct	swtransparencyd.VerificationResult		let	result
+struct	swtransparencyd.VerificationResult		let	expiryMs
+enum	swtransparencyd.SignedLogHeadError			
+enum	swtransparencyd.SignedLogHeadError		case	invalidApplication
+enum	swtransparencyd.SignedLogHeadError		case	noLogHead
+enum	swtransparencyd.LogConsistencyError			
+enum	swtransparencyd.LogConsistencyError		case	noVerifier
+enum	swtransparencyd.LogConsistencyError		case	missingStartSlh
+enum	swtransparencyd.LogConsistencyError		case	missingEndSlh
+enum	swtransparencyd.LogConsistencyError		case	missingProofHashes
+enum	swtransparencyd.LogConsistencyError		case	missingPatInclusionProof
+enum	swtransparencyd.LogConsistencyError		case	missingTltInclusionProof
+enum	swtransparencyd.LogConsistencyError		case	patNodeBytesDoesntMatchEndSlh
+enum	swtransparencyd.LogConsistencyError		case	tltNodeBytesDoesntMatchPatHead
+enum	swtransparencyd.LogConsistencyError		case	wrongPatNodeType
+enum	swtransparencyd.LogConsistencyError		case	wrongTltNodeType
+enum	swtransparencyd.LogConsistencyError		case	mismatchLogHeadHashForRevision
+class	swtransparencyd.SWTransparencyXPCService	NSObject		
+class	swtransparencyd.SWTransparencyXPCService	NSObject	let	listener
+class	swtransparencyd.SWTransparencyXPCService	NSObject	let	xpcInterface
+class	swtransparencyd.SWTransparencyXPCService	NSObject	let	stateMachine
+class	swtransparencyd.SWTransparencyXPCService	NSObject	var	daemon
+enum	swtransparencyd.MilestoneRootsResponseError			
+enum	swtransparencyd.MilestoneRootsResponseError		case	serverError
+enum	swtransparencyd.MilestoneRootsResponseError		case	noKeyBag
+enum	swtransparencyd.MilestoneRootsResponseError		case	noStartSlh
+enum	swtransparencyd.MilestoneRootsResponseError		case	missingMilestones
+enum	swtransparencyd.MilestoneRootsResponseError		case	missingInclusionProofs
+enum	swtransparencyd.MilestoneRootsResponseError		case	missingEndSlh
+enum	swtransparencyd.MilestoneRootsResponseError		case	patNodeBytesDoesntMatchEndSlh
+enum	swtransparencyd.MilestoneRootsResponseError		case	tltNodeBytesDoesntMatchPatHead
+enum	swtransparencyd.MilestoneRootsResponseError		case	wrongPatNodeType
+enum	swtransparencyd.MilestoneRootsResponseError		case	wrongTltNodeType
+enum	swtransparencyd.MilestoneRootsResponseError		case	noRetentionConfig
+enum	swtransparencyd.SWTransparencyXPCError			
+enum	swtransparencyd.SWTransparencyXPCError		case	cleanXPCFailed
+enum	swtransparencyd.SWTransparencyXPCError		case	noData
+enum	swtransparencyd.SWTransparencyXPCError		case	unknownCFU
+enum	swtransparencyd.SWTransparencyXPCError		case	verifyProofsExpired
+class	swtransparencyd.SWTransparencyXPCImplementation	NSObject		
+class	swtransparencyd.SWTransparencyXPCImplementation	NSObject	let	stateMachine
+class	swtransparencyd.SWTransparencyXPCImplementation	NSObject	let	daemon
+class	swtransparencyd.SWTransparencyXPCImplementation	NSObject	let	clientName
+class	swtransparencyd.SWTransparencyXPCImplementation	NSObject	let	pid
+enum	swtransparencyd.SWTXPCError			
+enum	swtransparencyd.SWTXPCError		case	failProofsFeatureEnabled
+enum	swtransparencyd.SWTXPCError		case	swtransparencyGMEligible
+struct	swtransparencyd.SWTCFUInfo			
+struct	swtransparencyd.SWTCFUInfo		let	posted
+struct	swtransparencyd.SWTCFUInfo		let	expire
+struct	swtransparencyd.SWTCFUInfo		let	slh
+class	swtransparencyd.SWTFollowUp			
+class	swtransparencyd.SWTFollowUp		let	controller
+class	swtransparencyd.SWTFollowUp		let	log
+class	swtransparencyd.RealFileManager			
+class	swtransparencyd.RealFileManager		var	directory
+enum	swtransparencyd.SWTPublicKeyBagError			
+enum	swtransparencyd.SWTPublicKeyBagError		case	invalidDiskKeyBag
+enum	swtransparencyd.SWTPublicKeyBagError		case	expiredDiskKeyBag
+enum	swtransparencyd.SWTPublicKeyBagError		case	noFetcherProvided
+enum	swtransparencyd.SWTPublicKeyBagError		case	noKeyBag
+enum	swtransparencyd.SWTPublicKeyBagError		case	noKeyBagOnDisk
+enum	swtransparencyd.SWTPublicKeyBagError		case	noServerConfig
+class	swtransparencyd.SWTPublicKeyBag			
+class	swtransparencyd.SWTPublicKeyBag		var	keyBag
+class	swtransparencyd.SWTPublicKeyBag		let	analytics
+class	swtransparencyd.SWTPublicKeyBag		let	settings
+class	swtransparencyd.SWTPublicKeyBag		let	application
+class	swtransparencyd.SWTPublicKeyBag		let	fetcher
+class	swtransparencyd.SWTPublicKeyBag		let	trigger
+class	swtransparencyd.SWTPublicKeyBag		let	directory
+class	swtransparencyd.SWTPublicKeyBag		let	database
+class	swtransparencyd.SWTPublicKeyBag		let	followup
+class	swtransparencyd.ContinuationStore			
+class	swtransparencyd.ContinuationStore		var	continuation
+class	swtransparencyd.ContinuationStore		let	id
+class	swtransparencyd.ContinuationStore		var	state
+enum	swtransparencyd.ContinuationStore.ContinuationState			
+enum	swtransparencyd.ContinuationStore.ContinuationState		case	unset
+enum	swtransparencyd.ContinuationStore.ContinuationState		case	resumed
+enum	swtransparencyd.ContinuationStore.ContinuationState		case	pending
+enum	swtransparencyd.ContinuationStore.ContinuationState		case	cancelled
+enum	swtransparencyd.ContinuationStore.ContinuationState		case	pendingCancel
+enum	swtransparencyd.ContinuationStore.ContinuationState		case	used
+class	swtransparencyd.SMCondition			
+class	swtransparencyd.SMCondition		var	signalled
+class	swtransparencyd.SMCondition		var	waiters
+class	swtransparencyd.InitialLoadConfigState			
+class	swtransparencyd.InitialLoadConfigState		let	state
+class	swtransparencyd.InitialLoadConfigState		let	acceptEvents
+class	swtransparencyd.InitialLoadConfigState		let	priority
+class	swtransparencyd.InitialLoadConfigState		let	deps
+class	swtransparencyd.InitialLoadConfigState		var	pendingFetch
+enum	swtransparencyd.InitialLoadConfigState.FetchStatus			
+enum	swtransparencyd.InitialLoadConfigState.FetchStatus		case	networkFailure
+enum	swtransparencyd.InitialLoadConfigState.FetchStatus		case	error
+enum	swtransparencyd.InitialLoadConfigState.FetchStatus		case	success
+enum	swtransparencyd.InitialLoadConfigState.FetchStatus		case	pending
+class	swtransparencyd.LoadConfigState			
+class	swtransparencyd.LoadConfigState		let	state
+class	swtransparencyd.LoadConfigState		let	acceptEvents
+class	swtransparencyd.LoadConfigState		let	priority
+class	swtransparencyd.LoadConfigState		let	deps
+enum	swtransparencyd.SWTStateMachineError			
+enum	swtransparencyd.SWTStateMachineError		case	noDatabase
+enum	swtransparencyd.SWTStateMachineError		case	watcherSteppedOffPath
+enum	swtransparencyd.SWTStateMachineError		case	invalidTransition
+enum	swtransparencyd.SWTStateMachineError		case	notReady
+enum	swtransparencyd.SWTStateMachineError		case	noContainer
+enum	swtransparencyd.SWTStateMachineError		case	missingKeyBag
+enum	swtransparencyd.SWTStateMachineError		case	watcherTimeout
+enum	swtransparencyd.SWTSMEvent			
+enum	swtransparencyd.SWTSMEvent		case	networkAvailable
+enum	swtransparencyd.SWTSMEvent		case	reloadPublicKeyBag
+enum	swtransparencyd.SWTSMEvent		case	reloadConfig
+enum	swtransparencyd.SWTSMEvent		case	processPAT
+enum	swtransparencyd.SWTSMEvent		case	downloadMilestone
+enum	swtransparencyd.SWTSMEvent		case	detectSplitView
+enum	swtransparencyd.SWTSMEvent		case	userRequest
+enum	swtransparencyd.SWTSMEvent		case	shutdown
+class	swtransparencyd.StateMachineEvents			
+class	swtransparencyd.StateMachineEvents		var	flags
+class	swtransparencyd.StateMachineEvents		var	suspendedEvents
+class	swtransparencyd.StateMachineEvents		var	waitTypes
+enum	swtransparencyd.StateMachineEvents.WaitType			
+enum	swtransparencyd.StateMachineEvents.WaitType		case	network
+enum	swtransparencyd.SMState			
+enum	swtransparencyd.SMState		case	initialize
+enum	swtransparencyd.SMState		case	initialLoadConfig
+enum	swtransparencyd.SMState		case	waitForNetwork
+enum	swtransparencyd.SMState		case	loadConfig
+enum	swtransparencyd.SMState		case	initialLoadPublicKeys
+enum	swtransparencyd.SMState		case	milestoneDownload
+enum	swtransparencyd.SMState		case	patConsistency
+enum	swtransparencyd.SMState		case	reloadPublicKeys
+enum	swtransparencyd.SMState		case	detectSplitView
+enum	swtransparencyd.SMState		case	ready
+class	swtransparencyd.SWTStateMachine			
+class	swtransparencyd.SWTStateMachine		let	events
+class	swtransparencyd.SWTStateMachine		let	states
+class	swtransparencyd.SWTStateMachine		var	waitState
+class	swtransparencyd.SWTStateMachine		var	initialState
+class	swtransparencyd.SWTStateMachine		var	currentState
+class	swtransparencyd.SWTStateMachine		var	waitTask
+class	swtransparencyd.SWTStateMachine		var	running
+class	swtransparencyd.SWTStateMachine		var	shutdownSemaphore
+class	swtransparencyd.SWTStateMachine		var	idleSemaphore
+class	swtransparencyd.SWTStateMachine		let	finalEvent
+class	swtransparencyd.SWTStateMachine		let	logger
+class	swtransparencyd.SWTStateMachine		let	networkMonitor
+class	swtransparencyd.SWTStateMachine		var	watchers
+enum	swtransparencyd.SWTStateMachine.SMTransition			
+enum	swtransparencyd.SWTStateMachine.SMTransition		case	next
+enum	swtransparencyd.SWTStateMachine.SMTransition		case	waitTask
+enum	swtransparencyd.SWTStateMachine.SMTransition		case	idle
+enum	swtransparencyd.SWTStateMachine.SMEventResult			
+enum	swtransparencyd.SWTStateMachine.SMEventResult		case	next
+enum	swtransparencyd.SWTStateMachine.SMEventResult		case	pending
+enum	swtransparencyd.SWTStateMachine.SMEventResult		case	suspend
+enum	swtransparencyd.SWTStateMachine.SMRunningState			
+enum	swtransparencyd.SWTStateMachine.SMRunningState		case	stopped
+enum	swtransparencyd.SWTStateMachine.SMRunningState		case	running
+enum	swtransparencyd.SWTStateMachine.SMRunningState		case	semiIdle
+enum	swtransparencyd.SWTStateMachine.SMRunningState		case	idle
+enum	swtransparencyd.SWTStateMachine.SMRunningState		case	shutdown
+enum	swtransparencyd.TaskNamed			
+enum	swtransparencyd.TaskNamed		case	keyBagFetch
+struct	swtransparencyd.KeybagReloader			
+class	swtransparencyd.SWTKeyBagFetcher			
+class	swtransparencyd.SWTKeyBagFetcher		let	configBag
+class	swtransparencyd.SWTKeyBagFetcher		let	trigger
+class	swtransparencyd.SWTKeyBagFetcher		let	networkMonitor
+enum	swtransparencyd.SWTKeyBagFetcher.SWTKeyBagFetcherError			
+enum	swtransparencyd.SWTKeyBagFetcher.SWTKeyBagFetcherError		case	fetchFailure
+enum	swtransparencyd.SWTKeyBagFetcher.SWTKeyBagFetcherError		case	httpFetchFailed
+enum	swtransparencyd.SWTKeyBagFetcher.SWTKeyBagFetcherError		case	noHttp
+enum	swtransparencyd.TransparencyTLSError			
+enum	swtransparencyd.TransparencyTLSError		case	excessBytes
+enum	swtransparencyd.TransparencyTLSError		case	truncatedMessage
+struct	swtransparencyd.TransparencyByteBuffer			
+struct	swtransparencyd.TransparencyByteBuffer		var	backingData
+struct	swtransparencyd.TransparencyByteBuffer		var	readerIndex
+class	swtransparencyd.SWT2SM			
+class	swtransparencyd.SWT2SM		let	deps
+class	swtransparencyd.SWT2SM		let	sm
+class	swtransparencyd.SWT2SM		let	readyEnough
+class	swtransparencyd.Initial			
+class	swtransparencyd.Initial		let	state
+class	swtransparencyd.Initial		let	acceptEvents
+class	swtransparencyd.Initial		let	priority
+class	swtransparencyd.Initial		let	deps
+class	swtransparencyd.WaitForNetwork			
+class	swtransparencyd.WaitForNetwork		let	state
+class	swtransparencyd.WaitForNetwork		let	acceptEvents
+class	swtransparencyd.WaitForNetwork		let	priority
+class	swtransparencyd.InitialLoadPublicKeyState			
+class	swtransparencyd.InitialLoadPublicKeyState		let	state
+class	swtransparencyd.InitialLoadPublicKeyState		let	acceptEvents
+class	swtransparencyd.InitialLoadPublicKeyState		let	priority
+class	swtransparencyd.InitialLoadPublicKeyState		let	deps
+class	swtransparencyd.InitialLoadPublicKeyState		let	readyEnough
+class	swtransparencyd.InitialLoadPublicKeyState		var	pendingFetch
+enum	swtransparencyd.InitialLoadPublicKeyState.FetchStatus			
+enum	swtransparencyd.InitialLoadPublicKeyState.FetchStatus		case	networkFailure
+enum	swtransparencyd.InitialLoadPublicKeyState.FetchStatus		case	error
+enum	swtransparencyd.InitialLoadPublicKeyState.FetchStatus		case	success
+enum	swtransparencyd.InitialLoadPublicKeyState.FetchStatus		case	pending
+class	swtransparencyd.ReloadPublicKeyState			
+class	swtransparencyd.ReloadPublicKeyState		let	state
+class	swtransparencyd.ReloadPublicKeyState		let	acceptEvents
+class	swtransparencyd.ReloadPublicKeyState		let	priority
+class	swtransparencyd.ReloadPublicKeyState		let	deps
+class	swtransparencyd.MilestoneDownloadState			
+class	swtransparencyd.MilestoneDownloadState		let	state
+class	swtransparencyd.MilestoneDownloadState		let	acceptEvents
+class	swtransparencyd.MilestoneDownloadState		let	priority
+class	swtransparencyd.MilestoneDownloadState		let	deps
+class	swtransparencyd.PatConsistencyState			
+class	swtransparencyd.PatConsistencyState		let	state
+class	swtransparencyd.PatConsistencyState		let	acceptEvents
+class	swtransparencyd.PatConsistencyState		let	priority
+class	swtransparencyd.PatConsistencyState		let	deps
+class	swtransparencyd.DetectSplitViewState			
+class	swtransparencyd.DetectSplitViewState		let	state
+class	swtransparencyd.DetectSplitViewState		let	acceptEvents
+class	swtransparencyd.DetectSplitViewState		let	priority
+class	swtransparencyd.DetectSplitViewState		let	deps
+class	swtransparencyd.Ready			
+class	swtransparencyd.Ready		let	state
+class	swtransparencyd.Ready		let	acceptEvents
+class	swtransparencyd.Ready		let	priority
+class	swtransparencyd.Ready		let	deps
+enum	swtransparencyd.HTTPMethod			
+enum	swtransparencyd.HTTPMethod		case	GET
+enum	swtransparencyd.HTTPMethod		case	POST
+protocol	swtransparencyd.ReachabilityMonitor			
+protocol	swtransparencyd.ConsistencyFetcher			
+protocol	swtransparencyd.SWTDatabaseProtocol			
+protocol	swtransparencyd.MilestoneFetcher			
+protocol	swtransparencyd.SWTDaemonProtocol			
+protocol	swtransparencyd.FollowUpProtocol			
+protocol	swtransparencyd.TransparencyFileManager			
+protocol	swtransparencyd.SWTPublicKeyBagFetcher			
+protocol	swtransparencyd.SWTStateDependencies			
+protocol	swtransparencyd.SWTCloudTelemetryProtocol			
+protocol	swtransparencyd.SWTTriggerInterface			
+protocol	swtransparencyd.SMNetworkMonitor			
+protocol	SWTStateMachine.StateHandler			
+protocol	conformance swtransparencyd.NetworkReachabilityMonitor	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.NetworkReachabilityMonitor	swtransparencyd.ReachabilityMonitor		
+protocol	conformance swtransparencyd.ReachabilityTracker	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.ReachabilityTracker	swtransparencyd.SMNetworkMonitor		
+protocol	conformance VerifiableTypeHelpers.LogEntryEpochStatus	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.TransitionPathStep	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.TransitionWatcher	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.TransitionWatcher	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.TransitionWatcher	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SerializationVersion	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.SerializationVersion	protocol descriptor for CaseIterable		
+protocol	conformance swtransparencyd.SerializationVersion	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.SerializationVersion	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SerializationVersion	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.ATLeafType	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.ATLeafType	protocol descriptor for CaseIterable		
+protocol	conformance swtransparencyd.ATLeafType	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.ATLeafType	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.ATLeafType	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.TransparencyExtensionType	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.TransparencyExtensionType	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.TransparencyExtensionType	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.TransparencyExtensionType	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.TransparencyExtension	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.TransparencyExtension	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.ATLeafData	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.ATLeafData	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.ConsistencyProofResponseError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.ConsistencyProofResponseError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.ConsistencyProofResponseError	protocol descriptor for CustomNSError		
+protocol	conformance __C.LogType	protocol descriptor for Equatable		
+protocol	conformance __C.LogType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.Application	protocol descriptor for Equatable		
+protocol	conformance __C.Application	protocol descriptor for RawRepresentable		
+protocol	conformance __C.Status	protocol descriptor for Equatable		
+protocol	conformance __C.Status	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.MilestoneConsistencyError	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.MilestoneConsistencyError	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.MilestoneConsistencyError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.MilestoneConsistencyError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.MilestoneConsistencyError	protocol descriptor for CustomNSError		
+protocol	conformance SWTConfigBagFetcher.SWTConfigBagFetcher	protocol descriptor for LocalizedError		
+protocol	conformance SWTConfigBagFetcher.SWTConfigBagFetcher	protocol descriptor for Error		
+protocol	conformance swtransparencyd.SWTDeps	swtransparencyd.SWTStateDependencies		
+protocol	conformance swtransparencyd.SWTCloudTelemetry	swtransparencyd.SWTCloudTelemetryProtocol		
+protocol	conformance swtransparencyd.TriggerInterface	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.TriggerInterface	swtransparencyd.SWTTriggerInterface		
+protocol	conformance swtransparencyd.SWTransparencyDaemon	swtransparencyd.SWTDaemonProtocol		
+protocol	conformance swtransparencyd.SWTransparencyDaemonCommand	protocol descriptor for ParsableCommand		
+protocol	conformance swtransparencyd.SWTransparencyDaemonCommand	protocol descriptor for ParsableArguments		
+protocol	conformance swtransparencyd.SWTransparencyDaemonCommand	protocol descriptor for Decodable		
+protocol	conformance JSONSError	protocol descriptor for Decodable		
+protocol	conformance JSONSError	protocol descriptor for Encodable		
+protocol	conformance JSONSError.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance JSONSError.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance JSONSError.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance JSONSError.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance JSONSError.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance JSONSError.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance SWTURLSession.URLSessionMaker	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.SWTURLSession	protocol descriptor for GlobalActor		
+protocol	conformance swtransparencyd.ConsistencyDownloadError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.ConsistencyDownloadError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.ConsistencyDownloadError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.ActualConsistencyFetcher	swtransparencyd.ConsistencyFetcher		
+protocol	conformance __C.Application	protocol descriptor for Equatable		
+protocol	conformance __C.Application	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.ATLeafDataError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.ATLeafDataError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.ATLeafDataError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.KTSWDBError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.KTSWDBError	protocol descriptor for CustomNSError		
+protocol	conformance __C.LogType	protocol descriptor for Decodable: swtransparencyd		
+protocol	conformance __C.LogType	protocol descriptor for Encodable: swtransparencyd		
+protocol	conformance __C.KTResult	protocol descriptor for Decodable: swtransparencyd		
+protocol	conformance __C.KTResult	protocol descriptor for Encodable: swtransparencyd		
+protocol	conformance KTSWDB.STHKey	protocol descriptor for Decodable		
+protocol	conformance KTSWDB.STHKey	protocol descriptor for Encodable		
+protocol	conformance KTSWDB.STHKey	protocol descriptor for Hashable		
+protocol	conformance KTSWDB.STHKey	protocol descriptor for CustomStringConvertible		
+protocol	conformance KTSWDB.STHKey	protocol descriptor for Equatable		
+protocol	conformance KTSWDB.SignedLogHead	protocol descriptor for Decodable		
+protocol	conformance KTSWDB.SignedLogHead	protocol descriptor for Encodable		
+protocol	conformance KTSWDB.SignedLogHead	protocol descriptor for Equatable		
+protocol	conformance KTSWDB.Milestone	protocol descriptor for Decodable		
+protocol	conformance KTSWDB.Milestone	protocol descriptor for Encodable		
+protocol	conformance KTSWDB.Milestone	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.KTSWDB	swtransparencyd.SWTDatabaseProtocol		
+protocol	conformance swtransparencyd.KTSWDB	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance __C.LogType	protocol descriptor for Hashable		
+protocol	conformance __C.LogType	protocol descriptor for Equatable		
+protocol	conformance __C.LogType	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance __C.KTResult	protocol descriptor for Equatable: Transparency		
+protocol	conformance __C.KTResult	protocol descriptor for RawRepresentable: Transparency		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance swtransparencyd.SWTFeatureFlags	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SWTFeatureFlags	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.SWTFeatureFlags	protocol descriptor for FeatureFlagsKey		
+protocol	conformance swtransparencyd.KTSwiftDBError	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.KTSwiftDBError	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.KTSwiftDBError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.KTSwiftDBError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.KTSwiftDBError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.KTSwiftDB	protocol descriptor for Equatable		
+protocol	conformance __C_Synthesized.KTSDBObjcError	protocol descriptor for Equatable		
+protocol	conformance __C_Synthesized.KTSDBObjcError	protocol descriptor for Error		
+protocol	conformance __C_Synthesized.KTSDBObjcError	protocol descriptor for Hashable		
+protocol	conformance __C_Synthesized.KTSDBObjcError	protocol descriptor for _ObjectiveCBridgeableError		
+protocol	conformance __C_Synthesized.KTSDBObjcError	protocol descriptor for CustomNSError		
+protocol	conformance __C_Synthesized.KTSDBObjcError	protocol descriptor for _BridgedStoredNSError		
+protocol	conformance __C.Code	protocol descriptor for RawRepresentable		
+protocol	conformance __C.Code	protocol descriptor for _ErrorCodeProtocol		
+protocol	conformance __C.Code	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.MachTime	protocol descriptor for Comparable		
+protocol	conformance swtransparencyd.MachTime	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.MachTime	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.MilestoneDownloadError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.MilestoneDownloadError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.MilestoneDownloadError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.ActualMilestoneFetcher	swtransparencyd.MilestoneFetcher		
+protocol	conformance swtransparencyd.ATLogProofsError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.ATLogProofsError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.ATLogProofsError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.SignedLogHeadError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.SignedLogHeadError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.SignedLogHeadError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.LogConsistencyError	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.LogConsistencyError	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.LogConsistencyError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.LogConsistencyError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.LogConsistencyError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.MilestoneRootsResponseError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.MilestoneRootsResponseError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.MilestoneRootsResponseError	protocol descriptor for CustomNSError		
+protocol	conformance __C.Status	protocol descriptor for Equatable		
+protocol	conformance __C.Status	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.SWTransparencyXPCError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.SWTransparencyXPCError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.SWTransparencyXPCError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.SWTXPCError	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SWTXPCError	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.SWTXPCError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.SWTXPCError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.SWTXPCError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.SWTFollowUp	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.SWTFollowUp	swtransparencyd.FollowUpProtocol		
+protocol	conformance swtransparencyd.RealFileManager	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.RealFileManager	swtransparencyd.TransparencyFileManager		
+protocol	conformance swtransparencyd.SWTPublicKeyBagError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.SWTPublicKeyBagError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.SWTPublicKeyBagError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.SWTPublicKeyBag	protocol descriptor for Actor		
+protocol	conformance ContinuationStore.ContinuationState	protocol descriptor for Equatable		
+protocol	conformance ContinuationStore.ContinuationState	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.ContinuationStore	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.ContinuationStore	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SMCondition	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.InitialLoadConfigState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.InitialLoadConfigState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.LoadConfigState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.LoadConfigState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.SWTStateMachineError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.SWTSMEvent	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SWTSMEvent	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.SWTSMEvent	protocol descriptor for RawRepresentable		
+protocol	conformance StateMachineEvents.WaitType	protocol descriptor for Equatable		
+protocol	conformance StateMachineEvents.WaitType	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.StateMachineEvents	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.SMState	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SMState	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.SMState	protocol descriptor for RawRepresentable		
+protocol	conformance SWTStateMachine.SMRunningState	protocol descriptor for Equatable		
+protocol	conformance SWTStateMachine.SMRunningState	protocol descriptor for Hashable		
+protocol	conformance SWTStateMachine.SMRunningState	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.SWTStateMachine	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.TaskNamed	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.TaskNamed	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.TaskNamed	protocol descriptor for RawRepresentable		
+protocol	conformance swtransparencyd.TaskNamed	protocol descriptor for Error		
+protocol	conformance swtransparencyd.TaskNamed	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.TaskNamed	protocol descriptor for CustomNSError		
+protocol	conformance SWTKeyBagFetcher.SWTKeyBagFetcherError	protocol descriptor for Error		
+protocol	conformance SWTKeyBagFetcher.SWTKeyBagFetcherError	protocol descriptor for LocalizedError		
+protocol	conformance SWTKeyBagFetcher.SWTKeyBagFetcherError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.SWTKeyBagFetcher	swtransparencyd.SWTPublicKeyBagFetcher		
+protocol	conformance swtransparencyd.TransparencyTLSError	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.TransparencyTLSError	protocol descriptor for Error		
+protocol	conformance swtransparencyd.TransparencyTLSError	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.TransparencyTLSError	protocol descriptor for CustomStringConvertible		
+protocol	conformance swtransparencyd.TransparencyTLSError	protocol descriptor for LocalizedError		
+protocol	conformance swtransparencyd.TransparencyTLSError	protocol descriptor for CustomNSError		
+protocol	conformance swtransparencyd.TransparencyByteBuffer	protocol descriptor for Hashable		
+protocol	conformance swtransparencyd.TransparencyByteBuffer	protocol descriptor for Equatable		
+protocol	conformance swtransparencyd.SWT2SM	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.Initial	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.Initial	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.WaitForNetwork	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.WaitForNetwork	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.InitialLoadPublicKeyState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.InitialLoadPublicKeyState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.ReloadPublicKeyState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.ReloadPublicKeyState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.MilestoneDownloadState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.MilestoneDownloadState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.PatConsistencyState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.PatConsistencyState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.DetectSplitViewState	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.DetectSplitViewState	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance swtransparencyd.Ready	protocol descriptor for Actor		
+protocol	conformance swtransparencyd.Ready	swtransparencyd.SWTStateMachine.StateHandler		
+protocol	conformance HTTPMethod	protocol descriptor for Equatable		
+protocol	conformance HTTPMethod	protocol descriptor for Hashable		
+protocol	conformance HTTPMethod	protocol descriptor for RawRepresentable		
+extension	swtransparencyd.SerializationVersion	RawRepresentable		
+extension	swtransparencyd.SerializationVersion	CaseIterable		
+extension	swtransparencyd.ATLeafType	RawRepresentable		
+extension	swtransparencyd.ATLeafType	CaseIterable		
+extension	swtransparencyd.TransparencyExtensionType	RawRepresentable		
+extension	swtransparencyd.JSONSError.CodingKeys	RawRepresentable		
+extension	swtransparencyd.SWTURLSession	GlobalActor		
+extension	__C_Synthesized.KTSDBObjcError	_BridgedStoredNSError		
+extension	swtransparencyd.SWTSMEvent	RawRepresentable		
+extension	swtransparencyd.SMState	RawRepresentable		
+extension	swtransparencyd.SWTStateMachine.SMRunningState	RawRepresentable		
+extension	swtransparencyd.TaskNamed	RawRepresentable		
+extension	swtransparencyd.HTTPMethod	RawRepresentable		

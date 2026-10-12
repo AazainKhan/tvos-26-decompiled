@@ -1,0 +1,440 @@
+kind	type	conformance	member_kind	member
+class	SonicKit.AccountManager<A	SonicKit.EngineAccountSpecification>		
+class	SonicKit.AccountManager<A	SonicKit.EngineAccountSpecification>	var	behavior
+struct	SonicKit.AssetCacheDownloadParams			
+struct	SonicKit.AssetCacheDownloadParams		let	preferredTrait
+struct	SonicKit.AssetCacheDownloadParams		let	allowsCellularAccess
+struct	SonicKit.AssetCacheDownloadParams		let	timeRange
+enum	SonicKit.AssetCacheDownloadParams.Trait			
+enum	SonicKit.AssetCacheDownloadParams.Trait		case	stereo
+enum	SonicKit.AssetCacheDownloadParams.Trait		case	lossless
+enum	SonicKit.AssetCacheDownloadParams.Trait		case	highresLossless
+enum	SonicKit.AssetCacheDownloadParams.Trait		case	spatial
+enum	SonicKit.SharedAssetCaches			
+class	SonicKit.AssetCacheImpl	NSObject		
+class	SonicKit.AssetCacheImpl	NSObject	var	fileCache
+class	SonicKit.AssetCacheImpl	NSObject	let	logger
+class	SonicKit.AssetCacheImpl	NSObject	let	activeDownloadTasks
+class	SonicKit.AssetCacheImpl	NSObject	var	lazy
+class	SonicKit.AssetCacheImpl	NSObject	var	lazy
+class	SonicKit.AssetCacheImpl.FileAsset			
+class	SonicKit.AssetCacheImpl.FileAsset		var	asset
+class	SonicKit.AssetCacheImpl.FileAsset		var	fileCacheEntry
+class	SonicKit.AssetCacheImpl.OnlineAsset			
+class	SonicKit.AssetCacheImpl.OnlineAsset		var	asset
+class	SonicKit.AssetCacheImpl.OnlineAsset		var	isDownloadable
+class	SonicKit.AssetCacheImpl.OnlineAsset		var	fileCacheEntry
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl			
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl		let	onlineAsset
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl		let	fileCache
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl		let	downloadParams
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl		var	_avTask
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl		let	_state
+class	SonicKit.AssetCacheImpl.DownloadTaskImpl		let	logger
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState			
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState		var	destinationURL
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState		var	didFinishDownloading
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState		var	didPlayToEnd
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState		var	didFailToPlay
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState		var	didResignCurrent
+struct	SonicKit.AssetCacheImpl.DownloadTaskImpl.DownloadTaskState		var	importToCacheAllowed
+enum	SonicKit.AssetCacheError			
+enum	SonicKit.AssetCacheError		case	unknown
+enum	SonicKit.AssetCacheError		case	unupportedAssetType
+class	SonicKit.ContentManager<A	SonicKit.EngineContentSpecification>		
+class	SonicKit.ContentManager<A	SonicKit.EngineContentSpecification>	var	behavior
+enum	SonicKit.FacetBuildingError			
+enum	SonicKit.FacetBuildingError		case	unknown
+enum	SonicKit.FacetBuildingError		case	availabilityCalledOnUnoptimizedPlan
+enum	SonicKit.FacetBuildingError		case	valueCalledOnUnoptimizedPlan
+enum	SonicKit.FacetBuildingError		case	valueCalledOnUnexecutedPlan
+enum	SonicKit.FacetBuildingError		case	valueCalledOnUnavailableFacet
+enum	SonicKit.FacetBuildingError		case	unknownFacet
+enum	SonicKit.FacetBuildingError		case	alreadyOptimized
+enum	SonicKit.FacetBuildingError		case	failedToFindElement
+enum	SonicKit.FacetBuildingError		case	failedToFindRequestValue
+enum	SonicKit.FacetBuildingError		case	failedToFindElementAvailability
+class	SonicKit.FacetBuildingPlanner			
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>		
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	system
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	planner
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	facets
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	elements
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	requests
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	hasOptimized
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	_facetBuilders
+class	SonicKit.FacetBuildingPlan<A	SonicKit.ContentSystem>	var	hasExecuted
+struct	SonicKit.FacetBuilder<A	SonicKit.FacetBuilding>		
+struct	SonicKit.FacetBuilder<A	SonicKit.FacetBuilding>	let	id
+struct	SonicKit.FacetBuilder<A	SonicKit.FacetBuilding>	var	facet
+struct	SonicKit.FacetBuilder<A	SonicKit.FacetBuilding>	var	transform
+struct	SonicKit.FacetBuilder<A	SonicKit.FacetBuilding>	var	_buildElements
+struct	SonicKit.FacetBuilder<A	SonicKit.FacetBuilding>	var	_findElements
+enum	SonicKit.FacetElementAvailability<A	SonicKit.FacetElement>		
+enum	SonicKit.FacetElementAvailability<A	SonicKit.FacetElement>	case	available
+enum	SonicKit.FacetElementAvailability<A	SonicKit.FacetElement>	case	byRequest
+enum	SonicKit.FacetElementAvailability<A	SonicKit.FacetElement>	case	unavailable
+struct	SonicKit.FacetCollection<A	SonicKit.ContentSystem>		
+struct	SonicKit.FacetCollection<A	SonicKit.ContentSystem>	var	contentRegistration
+struct	SonicKit.FacetCollection<A	SonicKit.ContentSystem>	var	environment
+struct	SonicKit.FacetCollection<A	SonicKit.ContentSystem>	var	system
+struct	SonicKit.FacetCollection<A	SonicKit.ContentSystem>	var	plan
+enum	SonicKit.FacetAvailability			
+enum	SonicKit.FacetAvailability		case	unavailable
+enum	SonicKit.FacetAvailability		case	unlikely
+enum	SonicKit.FacetAvailability		case	likely
+enum	SonicKit.FacetAvailability		case	available
+enum	SonicKit.FacetSpeed			
+enum	SonicKit.FacetSpeed		case	slower
+enum	SonicKit.FacetSpeed		case	slow
+enum	SonicKit.FacetSpeed		case	fast
+enum	SonicKit.FacetSpeed		case	faster
+enum	SonicKit.ContentPlanningError			
+enum	SonicKit.ContentPlanningError		case	unknown
+enum	SonicKit.ContentPlanningError		case	attemptToUsePlanBeforeExcution
+enum	SonicKit.ContentPlanningError		case	missingRegistration
+enum	SonicKit.ContentPlanningError		case	missingFacets
+enum	SonicKit.ContentPlanningError		case	invalidAsyncContext
+enum	SonicKit.ContentPlanningError		case	itemNotInPlan
+enum	SonicKit.ContentPlanningError		case	failedToProduceValue
+enum	SonicKit.ContentPlanningError		case	failedToProduceRegistration
+struct	SonicKit.ContentManagementPlan<A	SonicKit.ContentSystem>		
+struct	SonicKit.ContentManagementPlan<A	SonicKit.ContentSystem>	var	execution
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>		
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	let	system
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	importIdentifiers
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	importIdentifierResults
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	findFirstMatching
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	findFirstMatchingResults
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	findRegistrations
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	findRegistrationResults
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	relate
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	prepare
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	optionalPrepare
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	after
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	afterResults
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	_rawMap
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	_registrations
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	_facetCollections
+class	SonicKit.ContentManagementPlan.Execution<A	SonicKit.ContentSystem>	var	executed
+struct	SonicKit.ContentManagementPlan.Link<A	SonicKit.ContentSystem>		
+struct	SonicKit.ContentManagementPlan.Link<A	SonicKit.ContentSystem>	var	value
+enum	SonicKit.ContentManagementPlan.Link.Mode<A	SonicKit.ContentSystem>		
+enum	SonicKit.ContentManagementPlan.Link.Mode<A	SonicKit.ContentSystem>	case	execution
+enum	SonicKit.ContentManagementPlan.Link.Mode<A	SonicKit.ContentSystem>	case	result
+struct	SonicKit.ContentRegistration<A	SonicKit.ContentSpecification>		
+struct	SonicKit.ContentRegistration<A	SonicKit.ContentSpecification>	var	id
+struct	SonicKit.ContentRegistration<A	SonicKit.ContentSpecification>	var	sourceInfo
+enum	SonicKit.ContentRegistration.SourceInfo<A	SonicKit.ContentSpecification>		
+enum	SonicKit.ContentRegistration.SourceInfo<A	SonicKit.ContentSpecification>	case	qualified
+enum	SonicKit.ContentRegistration.SourceInfo<A	SonicKit.ContentSpecification>	case	placeholder
+enum	SonicKit.ContentRegistration.SourceInfo<A	SonicKit.ContentSpecification>	case	redirected
+enum	SonicKit.NetworkReachability			
+enum	SonicKit.NetworkReachability		case	unreachable
+enum	SonicKit.NetworkReachability		case	unlikely
+enum	SonicKit.NetworkReachability		case	likely
+enum	SonicKit.NetworkReachability		case	reachable
+enum	SonicKit.NetworkReachability.Obstacle			
+enum	SonicKit.NetworkReachability.Obstacle		case	unknown
+enum	SonicKit.NetworkReachability.Obstacle		case	lowDataMode
+enum	SonicKit.NetworkReachability.Obstacle		case	cellularRestriction
+enum	SonicKit.NetworkReachability.Obstacle		case	serviceError
+enum	SonicKit.NetworkReachability.Speed			
+enum	SonicKit.NetworkReachability.Speed		case	observed
+enum	SonicKit.NetworkReachability.Speed		case	unknown
+struct	SonicKit.RelationshipKey			
+struct	SonicKit.RelationshipKey		var	rawValue
+struct	SonicKit.RelationshipKey		var	version
+struct	SonicKit._EmptyQualifier<A	SonicKit.ContentSpecification>		
+struct	SonicKit.BulkQualifier<A	SonicKit.ContentSpecification>		
+struct	SonicKit.BulkQualifier<A	SonicKit.ContentSpecification>	var	storage
+struct	SonicKit.TransformingQualifier<A	SonicKit.ContentSpecification>		
+struct	SonicKit.TransformingQualifier<A	SonicKit.ContentSpecification>	var	transform
+enum	SonicKit.FairPlay			
+enum	SonicKit.FairPlay.Error			
+enum	SonicKit.FairPlay.Error		case	unknown
+enum	SonicKit.FairPlay.Error		case	failedToObtainContextID
+enum	SonicKit.FairPlay.Error		case	failedToObtainHardwareInfo
+enum	SonicKit.FairPlay.Error		case	failedToObtainMachineIDOTPData
+enum	SonicKit.FairPlay.Error		case	streamInitializationFailed
+enum	SonicKit.FairPlay.Error		case	playerDelegateInfoProcessingFailed
+enum	SonicKit.FairPlay.Error		case	playerDelegateInfoExtractionFailed
+enum	SonicKit.FairPlay.Error		case	serverInfoGenerationFailed
+enum	SonicKit.FairPlay.Error		case	cloudTokenExtractionFailed
+enum	SonicKit.FairPlay.Error		case	serverResponseDecodeFailed
+enum	SonicKit.FairPlay.Error		case	serverResponseMissingAccount
+enum	SonicKit.FairPlay.WHAPlayer			
+class	SonicKit.FairPlay.WHAStreamer			
+class	SonicKit.FairPlay.WHAStreamer		var	accountID
+class	SonicKit.FairPlay.WHAStreamer		var	stream
+class	SonicKit.FairPlay.WHAStreamer		var	playerInfoContextRequest
+struct	SonicKit.FairPlay.WHAStreamer.Token			
+struct	SonicKit.FairPlay.WHAStreamer.Token		var	dsid
+struct	SonicKit.FairPlay.WHAStreamer.Token		var	playInfo
+struct	SonicKit.FairPlay.WHAStreamer.Token		var	tokenTTLInSeconds
+struct	SonicKit.FairPlay.WHAStreamer.Token		var	storefront
+enum	SonicKit.FairPlay.WHAStreamer.Token.CodingKeys			
+enum	SonicKit.FairPlay.WHAStreamer.Token.CodingKeys		case	dsid
+enum	SonicKit.FairPlay.WHAStreamer.Token.CodingKeys		case	playInfo
+enum	SonicKit.FairPlay.WHAStreamer.Token.CodingKeys		case	tokenTTLInSeconds
+enum	SonicKit.FairPlay.WHAStreamer.Token.CodingKeys		case	storefront
+class	SonicKit.DigitalRightsManager<A	SonicKit.EngineDRMSpecification>		
+class	SonicKit.DigitalRightsManager<A	SonicKit.EngineDRMSpecification>	var	behavior
+class	SonicKit.ErrorResolver<A	SonicKit.EngineErrorResolverSpecification>		
+class	SonicKit.ErrorResolver<A	SonicKit.EngineErrorResolverSpecification>	var	behavior
+struct	SonicKit.MediaRemoteCommandSystem			
+class	SonicKit.Publisher<A	SonicKit.EnginePublisherSpecification>		
+class	SonicKit.Publisher<A	SonicKit.EnginePublisherSpecification>	var	commandSystem
+class	SonicKit.Publisher<A	SonicKit.EnginePublisherSpecification>	var	behavior
+class	SonicKit.SessionDocument			
+class	SonicKit.SessionDocument		let	_
+class	SonicKit.SessionManager<A	SonicKit.EngineSessionSpecification>		
+class	SonicKit.SessionManager<A	SonicKit.EngineSessionSpecification>	var	behavior
+class	SonicKit.SessionManager<A	SonicKit.EngineSessionSpecification>	var	activeDocuments
+class	SonicKit.PlaybackEngine			
+class	SonicKit.PlaybackEngine		var	components
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>		
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>	var	accounts
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>	var	content
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>	var	digitalRights
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>	var	errorResolver
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>	var	publisher
+struct	SonicKit.PlaybackEngine.Components<A	SonicKit.EngineSpecification>	var	sessions
+class	SonicKit.Configuration			
+class	SonicKit.Configuration		var	storage
+class	SonicKit.Configuration		let	_
+enum	SonicKit.SonicEntitlementError			
+enum	SonicKit.SonicEntitlementError		case	unknown
+enum	SonicKit.SonicEntitlementError		case	missingContainerEntitlements
+enum	SonicKit.SonicEntitlementError		case	missingTCCEntitlement
+struct	SonicKit.BagURL			
+struct	SonicKit.BagURL		var	_urlString
+struct	SonicKit.MusicBag			
+struct	SonicKit.MusicBag		var	countryCode
+struct	SonicKit.MusicBag		var	musicAPIDomains
+struct	SonicKit.MusicBag		var	enhancedAudio
+struct	SonicKit.MusicBag		var	fairPlayStreamingRequestURL
+struct	SonicKit.MusicBag		var	fairPlayStreamingCertificateURL
+struct	SonicKit.MusicBag.EnhancedAudio			
+struct	SonicKit.MusicBag.EnhancedAudio		var	hlsKeyServerURL
+struct	SonicKit.MusicBag.EnhancedAudio		var	hlsPrefetchSKDURLs
+struct	SonicKit.MusicBag.MusicAPIDomains			
+struct	SonicKit.MusicBag.MusicAPIDomains		var	default
+struct	SonicKit.MusicBag.MusicAPIDomains		var	sharedListening
+enum	SonicKit.MusicBag.CodingKeys			
+enum	SonicKit.MusicBag.CodingKeys		case	countryCode
+enum	SonicKit.MusicBag.CodingKeys		case	musicAPIDomains
+enum	SonicKit.MusicBag.CodingKeys		case	enhancedAudio
+enum	SonicKit.MusicBag.CodingKeys		case	fairPlayStreamingRequestURL
+enum	SonicKit.MusicBag.CodingKeys		case	fairPlayStreamingCertificateURL
+enum	SonicKit.MusicBag.EnhancedAudio.CodingKeys			
+enum	SonicKit.MusicBag.EnhancedAudio.CodingKeys		case	hlsKeyServerURL
+enum	SonicKit.MusicBag.EnhancedAudio.CodingKeys		case	hlsPrefetchSKDURLs
+enum	SonicKit.MusicBag.MusicAPIDomains.CodingKeys			
+enum	SonicKit.MusicBag.MusicAPIDomains.CodingKeys		case	default
+enum	SonicKit.MusicBag.MusicAPIDomains.CodingKeys		case	sharedListening
+enum	SonicKit.Features			
+enum	SonicKit.Features.Sonic			
+enum	SonicKit.Features.Sonic		case	alchemy
+enum	SonicKit.Features.Sonic		case	atv_crossfade
+enum	SonicKit.Features.Sonic		case	atv_alchemy
+enum	SonicKit.Features.Sonic		case	homepod_alchemy
+enum	SonicKit.Features.Sonic		case	audioSessionQueue
+enum	SonicKit.Features.Sonic		case	XSQ
+enum	SonicKit.Features.Sonic		case	assetCache
+enum	SonicKit.Features.Sonic		case	alignmentsRefactor
+enum	SonicKit.Features.MediaRemote			
+enum	SonicKit.Features.MediaRemote		case	oneShotQHO
+enum	SonicKit.Features.Podcasts			
+enum	SonicKit.Features.Podcasts		case	hlsrss
+enum	SonicKit.Features.Podcasts		case	integratedTimeline
+enum	SonicKit.Features.Podcasts		case	useLiteralContinuousPlaybackSetting
+protocol	SonicKit.EngineAccountSpecification			
+protocol	SonicKit.AccountManagerBehavior			
+protocol	SonicKit.AssetCacheItem			
+protocol	SonicKit.AssetCacheDownloadTask			
+protocol	SonicKit.AssetCache			
+protocol	SonicKit.Facet	Value		
+protocol	SonicKit.FacetBuilding	Context		
+protocol	SonicKit._FacetBuilder	Facet		
+protocol	SonicKit._FacetElementAvailability	Element		
+protocol	SonicKit.FacetElement	Context, Value		
+protocol	SonicKit.FacetElementRequest			
+protocol	SonicKit.FacetBuildingContext	System		
+protocol	SonicKit._ContentManagementPlan			
+protocol	SonicKit.EngineContentSpecification			
+protocol	SonicKit.ContentManagerBehavior	Content, System		
+protocol	SonicKit.ContentSpecification	ID, ContentType, RawIdentifier, QualifiedIdentifier, Environment		
+protocol	SonicKit.ContentID			
+protocol	SonicKit.ContentQualifiedIdentifier	RawIdentifier		
+protocol	SonicKit.ContentEnvironment	Endpoint		
+protocol	SonicKit.ContentResourceType			
+protocol	SonicKit.ContentRawIdentifier	IdentifierType		
+protocol	SonicKit.ContentIDLookup	Content		
+protocol	SonicKit.ContentRawIdentifierQualifier	Content		
+protocol	SonicKit.ContentQualifiedIdentifierQualifier	Content		
+protocol	SonicKit.ContentSystem	Content, SourceType, Storage		
+protocol	SonicKit.ContentSourceType			
+protocol	SonicKit.ContentStorage	Content, Operations		
+protocol	SonicKit.ContentSourceStorage	Storage		
+protocol	SonicKit.ContentSource	Content		
+protocol	SonicKit.ContentStorageOperations	Content		
+protocol	SonicKit.ContentRegistrationStorageOperations			
+protocol	SonicKit.EngineDRMSpecification			
+protocol	SonicKit.DigitalRightsBehavior			
+protocol	SonicKit.ErrorResolvingBehavior			
+protocol	SonicKit.EngineErrorResolverSpecification			
+protocol	SonicKit.CommandPublishingSystem			
+protocol	SonicKit.EnginePublisherSpecification	CommandSystem		
+protocol	SonicKit.PublishingBehavior			
+protocol	SonicKit.SessionDocumentBehavior			
+protocol	SonicKit.EngineSessionSpecification	DocumentID		
+protocol	SonicKit.SessionManagerBehavior			
+protocol	EngineComponents			
+protocol	SonicKit.ConfigurationKey	Value		
+protocol	SonicKit.EngineBehavior			
+protocol	SonicKit.EngineComponentSpecification	Behavior		
+protocol	SonicKit.EngineComponent	Specification		
+protocol	SonicKit.EngineSpecification	Account, Publisher, Content, DRM, Session, ErrorResolver		
+protocol	SonicKit.CodableBag			
+protocol	conformance SonicKit.AccountManager	SonicKit.EngineComponent		
+protocol	conformance __C.AVMediaCharacteristic	Swift._HasCustomAnyHashableRepresentation: AVFCore		
+protocol	conformance __C.AVMediaCharacteristic	Swift.RawRepresentable: AVFCore		
+protocol	conformance __C.AVMediaCharacteristic	Swift._SwiftNewtypeWrapper: AVFCore		
+protocol	conformance __C.AVMediaCharacteristic	Swift.Equatable: AVFCore		
+protocol	conformance __C.AVMediaCharacteristic	Swift.Hashable: AVFCore		
+protocol	conformance __C.AVMediaCharacteristic	Swift._ObjectiveCBridgeable: AVFCore		
+protocol	conformance AssetCacheDownloadParams.Trait	Swift.Equatable		
+protocol	conformance AssetCacheDownloadParams.Trait	Swift.Hashable		
+protocol	conformance AssetCacheImpl.DownloadTaskImpl	SonicKit.AssetCacheDownloadTask		
+protocol	conformance AssetCacheImpl.OnlineAsset	SonicKit.AssetCacheItem		
+protocol	conformance AssetCacheImpl.FileAsset	SonicKit.AssetCacheItem		
+protocol	conformance AssetCacheImpl	SonicKit.AssetCache		
+protocol	conformance SonicKit.AssetCacheError	Swift.RawRepresentable		
+protocol	conformance SonicKit.AssetCacheError	Swift.Hashable		
+protocol	conformance SonicKit.AssetCacheError	Swift.Equatable		
+protocol	conformance SonicKit.AssetCacheError	SonicFoundation.SonicErrorCode		
+protocol	conformance SonicKit.ContentManager	SonicKit.EngineComponent		
+protocol	conformance SonicKit.FacetBuildingError	Swift.Equatable		
+protocol	conformance SonicKit.FacetBuildingError	Swift.Hashable		
+protocol	conformance SonicKit.FacetBuildingError	Swift.RawRepresentable		
+protocol	conformance SonicKit.FacetBuildingError	SonicFoundation.SonicErrorCode		
+protocol	conformance SonicKit.FacetBuilder	SonicKit._FacetBuilder		
+protocol	conformance SonicKit.FacetElementAvailability	SonicKit._FacetElementAvailability		
+protocol	conformance SonicKit.FacetCollection	SonicKit.FacetBuildingContext		
+protocol	conformance SonicKit.FacetAvailability	Swift.Comparable		
+protocol	conformance SonicKit.FacetAvailability	Swift.Equatable		
+protocol	conformance SonicKit.FacetAvailability	Swift.CustomStringConvertible		
+protocol	conformance SonicKit.FacetSpeed	Swift.Hashable		
+protocol	conformance SonicKit.FacetSpeed	Swift.Comparable		
+protocol	conformance SonicKit.FacetSpeed	Swift.Equatable		
+protocol	conformance SonicKit.ContentPlanningError	Swift.Equatable		
+protocol	conformance SonicKit.ContentPlanningError	Swift.Hashable		
+protocol	conformance SonicKit.ContentPlanningError	Swift.RawRepresentable		
+protocol	conformance SonicKit.ContentPlanningError	SonicFoundation.SonicErrorCode		
+protocol	conformance SonicKit.ContentManagementPlan	SonicKit._ContentManagementPlan		
+protocol	conformance SonicKit.ContentRegistration	Swift.Identifiable		
+protocol	conformance NetworkReachability.Obstacle	Swift.Equatable		
+protocol	conformance NetworkReachability.Obstacle	Swift.Hashable		
+protocol	conformance SonicKit.RelationshipKey	Swift.RawRepresentable		
+protocol	conformance SonicKit.RelationshipKey	Swift.Hashable		
+protocol	conformance SonicKit.RelationshipKey	Swift.Equatable		
+protocol	conformance SonicKit._EmptyQualifier	SonicKit.ContentRawIdentifierQualifier		
+protocol	conformance SonicKit._EmptyQualifier	SonicKit.ContentQualifiedIdentifierQualifier		
+protocol	conformance SonicKit.BulkQualifier	SonicKit.ContentRawIdentifierQualifier		
+protocol	conformance SonicKit.TransformingQualifier	SonicKit.ContentRawIdentifierQualifier		
+protocol	conformance FairPlay.Error	Swift.Equatable		
+protocol	conformance FairPlay.Error	Swift.Hashable		
+protocol	conformance FairPlay.Error	Swift.RawRepresentable		
+protocol	conformance FairPlay.Error	SonicFoundation.SonicErrorCode		
+protocol	conformance WHAStreamer.Token	Swift.Decodable		
+protocol	conformance Token.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Token.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Token.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Token.CodingKeys	Swift.Hashable		
+protocol	conformance Token.CodingKeys	Swift.Equatable		
+protocol	conformance Token.CodingKeys	Swift.CodingKey		
+protocol	conformance SonicKit.DigitalRightsManager	SonicKit.EngineComponent		
+protocol	conformance SonicKit.ErrorResolver	SonicKit.EngineComponent		
+protocol	conformance SonicKit.MediaRemoteCommandSystem	SonicKit.CommandPublishingSystem		
+protocol	conformance SonicKit.Publisher	SonicKit.EngineComponent		
+protocol	conformance SonicKit.SessionDocument	Observation.Observable		
+protocol	conformance SonicKit.SessionManager	SonicKit.EngineComponent		
+protocol	conformance PlaybackEngine.Components	SonicKit.EngineComponents		
+protocol	conformance SonicKit.Configuration	Observation.Observable		
+protocol	conformance Swift.Never	SonicKit.EngineComponentSpecification		
+protocol	conformance Swift.Never	SonicKit.EngineBehavior		
+protocol	conformance SonicKit.SonicEntitlementError	Swift.Equatable		
+protocol	conformance SonicKit.SonicEntitlementError	Swift.Hashable		
+protocol	conformance SonicKit.SonicEntitlementError	Swift.RawRepresentable		
+protocol	conformance SonicKit.SonicEntitlementError	SonicFoundation.SonicErrorCode		
+protocol	conformance SonicKit.BagURL	Swift.Decodable		
+protocol	conformance SonicKit.BagURL	Swift.Encodable		
+protocol	conformance SonicKit.MusicBag	SonicKit.CodableBag		
+protocol	conformance SonicKit.MusicBag	Swift.Decodable		
+protocol	conformance SonicKit.MusicBag	Swift.Encodable		
+protocol	conformance MusicBag.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MusicBag.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MusicBag.CodingKeys	Swift.CaseIterable		
+protocol	conformance MusicBag.CodingKeys	Swift.RawRepresentable		
+protocol	conformance MusicBag.CodingKeys	Swift.Hashable		
+protocol	conformance MusicBag.CodingKeys	Swift.Equatable		
+protocol	conformance MusicBag.EnhancedAudio	Swift.Decodable		
+protocol	conformance MusicBag.MusicAPIDomains	Swift.Decodable		
+protocol	conformance MusicBag.EnhancedAudio	Swift.Encodable		
+protocol	conformance MusicBag.MusicAPIDomains	Swift.Encodable		
+protocol	conformance MusicBag.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance EnhancedAudio.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EnhancedAudio.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EnhancedAudio.CodingKeys	Swift.RawRepresentable		
+protocol	conformance EnhancedAudio.CodingKeys	Swift.Hashable		
+protocol	conformance EnhancedAudio.CodingKeys	Swift.Equatable		
+protocol	conformance EnhancedAudio.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Features.Sonic	Swift.Equatable		
+protocol	conformance Features.Sonic	Swift.Hashable		
+protocol	conformance Features.Sonic	Swift.RawRepresentable		
+protocol	conformance Features.Sonic	SonicFoundation.SonicFeatureFlags		
+protocol	conformance Features.Sonic	FeatureFlags.FeatureFlagsKey		
+protocol	conformance Features.MediaRemote	Swift.Equatable		
+protocol	conformance Features.MediaRemote	Swift.Hashable		
+protocol	conformance Features.MediaRemote	Swift.RawRepresentable		
+protocol	conformance Features.MediaRemote	SonicFoundation.SonicFeatureFlags		
+protocol	conformance Features.MediaRemote	FeatureFlags.FeatureFlagsKey		
+protocol	conformance Features.Podcasts	Swift.Equatable		
+protocol	conformance Features.Podcasts	Swift.Hashable		
+protocol	conformance Features.Podcasts	Swift.RawRepresentable		
+protocol	conformance Features.Podcasts	SonicFoundation.SonicFeatureFlags		
+protocol	conformance Features.Podcasts	FeatureFlags.FeatureFlagsKey		
+extension	SonicKit.AccountManager	EngineComponent		
+extension	SonicKit.AssetCacheError	RawRepresentable		
+extension	SonicKit.ContentManager	EngineComponent		
+extension	SonicKit.FacetBuildingError	RawRepresentable		
+extension	SonicKit.FacetBuilder	_FacetBuilder		
+extension	SonicKit.FacetElementAvailability	_FacetElementAvailability		
+extension	SonicKit.FacetCollection	FacetBuildingContext		
+extension	SonicKit.ContentPlanningError	RawRepresentable		
+extension	SonicKit.ContentRegistration	Identifiable		
+extension	SonicKit.RelationshipKey	RawRepresentable		
+extension	SonicKit._EmptyQualifier	ContentRawIdentifierQualifier		
+extension	SonicKit._EmptyQualifier	ContentQualifiedIdentifierQualifier		
+extension	SonicKit.BulkQualifier	ContentRawIdentifierQualifier		
+extension	SonicKit.TransformingQualifier	ContentRawIdentifierQualifier		
+extension	SonicKit.FairPlay.Error	RawRepresentable		
+extension	SonicKit.FairPlay.WHAStreamer.Token.CodingKeys	RawRepresentable		
+extension	SonicKit.DigitalRightsManager	EngineComponent		
+extension	SonicKit.ErrorResolver	EngineComponent		
+extension	SonicKit.Publisher	EngineComponent		
+extension	SonicKit.SessionManager	EngineComponent		
+extension	Swift.Never	EngineComponentSpecification		
+extension	SonicKit.SonicEntitlementError	RawRepresentable		
+extension	SonicKit.MusicBag.CodingKeys	CaseIterable		
+extension	SonicKit.MusicBag.CodingKeys	RawRepresentable		
+extension	SonicKit.MusicBag.EnhancedAudio.CodingKeys	RawRepresentable		
+extension	SonicKit.Features.Sonic	RawRepresentable		
+extension	SonicKit.Features.MediaRemote	RawRepresentable		
+extension	SonicKit.Features.Podcasts	RawRepresentable		

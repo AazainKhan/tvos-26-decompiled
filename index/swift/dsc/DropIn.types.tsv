@@ -1,0 +1,211 @@
+kind	type	conformance	member_kind	member
+class	DropIn.AudioPlayer	NSObject		
+class	DropIn.AudioPlayer	NSObject	let	avAudioPlayer
+class	DropIn.AudioPlayer	NSObject	var	playHandler
+class	DropIn.AudioPlayer	NSObject	var	timeoutTimer
+enum	DropIn.AudioPlayer.PlaybackError			
+enum	DropIn.AudioPlayer.PlaybackError		case	decodingError
+enum	DropIn.AudioPlayer.PlaybackError		case	startPlayback
+enum	DropIn.AudioPlayer.PlaybackError		case	timedOut
+enum	DropIn.ActivationState			
+enum	DropIn.ActivationState		case	activationError
+enum	DropIn.ActivationState		case	idle
+enum	DropIn.ActivationState		case	start
+enum	DropIn.ActivationState		case	stopAudioServices
+enum	DropIn.ActivationState		case	playTone
+enum	DropIn.ActivationState		case	announce
+enum	DropIn.ActivationState		case	startSession
+enum	DropIn.ActivationState		case	sessionStarted
+enum	DropIn.ActivationState		case	scheduleToneReminder
+enum	DropIn.ActivationState		case	complete
+enum	DropIn.AppStateActivationError			
+enum	DropIn.AppStateActivationError		case	tonePlayback
+enum	DropIn.AppStateActivationError		case	siriAnnouncementFailed
+enum	DropIn.AppStateActivationError		case	unknown
+enum	DropIn.AppStateActivationError		case	invalidSession
+enum	DropIn.AppStateActivationError		case	timedOut
+class	DropIn.AppStateActivationResources			
+class	DropIn.AppStateActivationResources		let	session
+class	DropIn.AppStateActivationResources		let	ongoingTonePlayer
+class	DropIn.AppStateActivationResources		let	siriAnnouncement
+class	DropIn.AppStateActivation			
+class	DropIn.AppStateActivation		var	stateHandler
+class	DropIn.AppStateActivation		var	state
+class	DropIn.AppStateActivation		var	error
+class	DropIn.AppStateActivation		let	logger
+class	DropIn.AppStateActivation		var	session
+class	DropIn.AppStateActivation		var	startTonePlayer
+class	DropIn.AppStateActivation		var	ongoingTonePlayer
+class	DropIn.AppStateActivation		var	siriAnnouncement
+class	DropIn.DropInPlayerManager			
+class	DropIn.DropInPlayerManager		let	audioSession
+class	DropIn.DropInPlayerManager		let	audioSessionConfiguration
+class	DropIn.DropInPlayerManager		var	players
+class	DropIn.DropInPlayerManager		let	queue
+class	DropIn.DropInPlayerManager		var	lazy
+class	DropIn.DropInPlayerManager.WeakDropInPlayer			
+class	DropIn.DropInPlayerManager.WeakDropInPlayer		var	player
+struct	DropIn.DropInPlayerManager.AudioSessionConfiguration			
+struct	DropIn.DropInPlayerManager.AudioSessionConfiguration		let	category
+enum	DropIn.Constants			
+enum	DropIn.Constants.IDS			
+class	DropIn.DeviceStateUpdateThrottler	NSObject		
+class	DropIn.DeviceStateUpdateThrottler	NSObject	var	subject
+class	DropIn.DeviceStateUpdateThrottler	NSObject	var	cancellable
+class	DropIn.DeviceStateUpdateThrottler	NSObject	let	throttleTimeInterval
+class	DropIn.DeviceStateUpdateThrottler	NSObject	let	queue
+class	DropIn.DeviceStateUpdateThrottler.DeviceStateUpdateRequest			
+class	DropIn.DeviceStateUpdateThrottler.DeviceStateUpdateRequest		let	state
+class	DropIn.DeviceStateUpdateThrottler.DeviceStateUpdateRequest		let	reason
+class	DropIn.DeviceStateUpdateThrottler.DeviceStateUpdateRequest		var	handler
+class	DropIn.XPCManager	NSObject		
+class	DropIn.XPCManager	NSObject	let	clientContext
+class	DropIn.XPCManager	NSObject	var	clientQueue
+class	DropIn.XPCManager	NSObject	var	delegate
+class	DropIn.XPCManager	NSObject	var	needsCheckIn
+class	DropIn.XPCManager	NSObject	var	dispatcher
+class	DropIn.XPCManager	NSObject	var	isConnectionValid
+class	DropIn.XPCManager	NSObject	var	_connection
+class	DropIn.XPCManager	NSObject	let	logger
+class	DropIn.XPCManager	NSObject	var	notifyRegisterToken
+class	DropIn.XPCManager	NSObject	var	checkInObservers
+class	DropIn.XPCManager	NSObject	let	lock
+class	DropIn.AppStateController			
+class	DropIn.AppStateController		var	delegate
+class	DropIn.AppStateController		var	logger
+class	DropIn.AppStateController		var	lastDropInState
+class	DropIn.AppStateController		let	center
+class	DropIn.AppStateController		let	observer
+class	DropIn.AppStateController		let	audioPowerController
+class	DropIn.AppStateController		var	lazy
+class	DropIn.AppStateController		var	activationStatesContinuation
+class	DropIn.AppStateController		var	lazy
+class	DropIn.AppStateController		var	deactivationStatesContinuation
+class	DropIn.AppStateControllerSessionObserver	NSObject		
+class	DropIn.AppStateControllerSessionObserver	NSObject	var	controller
+class	DropIn.DropInSiriAnnouncement			
+class	DropIn.DropInSiriAnnouncement		let	request
+enum	DropIn.DropInSiriAnnouncement.AnnouncementError			
+enum	DropIn.DropInSiriAnnouncement.AnnouncementError		case	perform
+enum	DropIn.DeactivationState			
+enum	DropIn.DeactivationState		case	deactivationError
+enum	DropIn.DeactivationState		case	idle
+enum	DropIn.DeactivationState		case	start
+enum	DropIn.DeactivationState		case	endSession
+enum	DropIn.DeactivationState		case	sessionEnded
+enum	DropIn.DeactivationState		case	stopToneReminder
+enum	DropIn.DeactivationState		case	stopAudioServices
+enum	DropIn.DeactivationState		case	playTone
+enum	DropIn.DeactivationState		case	complete
+class	DropIn.AppStateDeactivation			
+class	DropIn.AppStateDeactivation		var	stateHandler
+class	DropIn.AppStateDeactivation		var	state
+class	DropIn.AppStateDeactivation		var	error
+class	DropIn.AppStateDeactivation		let	logger
+class	DropIn.AppStateDeactivation		var	endTonePlayer
+class	DropIn.AppStateDeactivation		var	activationResources
+enum	DropIn.AppStateDeactivationError			
+enum	DropIn.AppStateDeactivationError		case	unknown
+enum	DropIn.AppStateDeactivationError		case	invalidSession
+class	DropIn.XPCDispatcher	NSObject		
+class	DropIn.XPCDispatcher	NSObject	let	clientContext
+class	DropIn.XPCDispatcher	NSObject	let	logger
+class	DropIn.XPCDispatcher	NSObject	var	deviceListDelegate
+class	DropIn.XPCDispatcher	NSObject	var	deviceStatusDelegate
+class	DropIn.XPCDispatcher	NSObject	var	sessionStatusDelegate
+class	DropIn.XPCDispatcher	NSObject	var	audioPowerDelegate
+class	DropIn.XPCDispatcher	NSObject	var	audioStatusDelegate
+class	DropIn.DropInPlayer			
+class	DropIn.DropInPlayer		var	audioPlayer
+class	DropIn.DropInPlayer		let	settings
+class	DropIn.DropInPlayer		var	timer
+struct	DropIn.DropInPlayer.Settings			
+struct	DropIn.DropInPlayer.Settings		let	repeating
+struct	DropIn.DropInPlayer.Settings		let	timeout
+struct	DropIn.DropInPlayer.Settings		let	toneURL
+struct	DropIn.DropInPlayer.Settings		let	volume
+enum	DropIn.Feature			
+enum	DropIn.Feature		case	server
+enum	DropIn.HomeAppFeature			
+struct	DropIn.DropInUser			
+struct	DropIn.DropInUser		let	givenName
+struct	DropIn.DropInUser		let	familyName
+struct	DropIn.DropInUser		let	displayName
+struct	DropIn.DropInUser		let	imageData
+struct	DropIn.DropInUser		let	handleValue
+struct	DropIn.DropInUser		let	handleType
+class	DropIn.ClientContext	NSObject		
+class	DropIn.ClientContext	NSObject	let	homeIdentifier
+class	DropIn.OneshotTimer	NSObject		
+class	DropIn.OneshotTimer	NSObject	let	label
+class	DropIn.OneshotTimer	NSObject	let	identifier
+class	DropIn.OneshotTimer	NSObject	let	timeInterval
+class	DropIn.OneshotTimer	NSObject	let	timer
+class	DropIn.OneshotTimer	NSObject	let	deadline
+class	DropIn.OneshotTimer	NSObject	let	logger
+enum	DropIn.ToneProvider			
+struct	DropIn.Default			
+struct	DropIn.Default		let	userDefaults
+struct	DropIn.Default		let	key
+struct	DropIn.Default		let	defaultValue
+struct	DropIn.Default		let	localizedDescription
+enum	DropIn.Defaults			
+protocol	DropIn.AppStateControllerDelegate			
+protocol	DropIn.DecodableUserDefaultsValue			
+protocol	DropIn.EncodableUserDefaultsValue			
+protocol	DropIn.DefaultValueProviding	ValueType		
+protocol	DropIn.ResolvedValueProviding	ValueType		
+protocol	DropIn.UserDefaultsAccessible	ValueType		
+protocol	conformance __C.State	Swift.Equatable: DropIn		
+protocol	conformance __C.State	Swift.RawRepresentable: DropIn		
+protocol	conformance __C.State	Swift.Equatable: DropIn		
+protocol	conformance __C.State	Swift.RawRepresentable: DropIn		
+protocol	conformance __C.Category	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.Category	Swift.RawRepresentable		
+protocol	conformance __C.Category	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.Category	Swift.Equatable		
+protocol	conformance __C.Category	Swift.Hashable		
+protocol	conformance __C.Category	Swift._ObjectiveCBridgeable		
+protocol	conformance AudioPlayer.PlaybackError	Swift.Hashable		
+protocol	conformance AudioPlayer.PlaybackError	Swift.Equatable		
+protocol	conformance AudioPlayer.PlaybackError	Swift.Error		
+protocol	conformance DropIn.ActivationState	Swift.Equatable		
+protocol	conformance DropIn.ActivationState	Swift.Hashable		
+protocol	conformance DropIn.ActivationState	Swift.RawRepresentable		
+protocol	conformance DropIn.ActivationState	Swift.CaseIterable		
+protocol	conformance DropIn.AppStateActivationError	Swift.Error		
+protocol	conformance DropIn.AppStateActivationError	Swift.Equatable		
+protocol	conformance DropIn.AppStateActivation	Swift.Actor		
+protocol	conformance DeviceStateUpdateRequest	Swift.Equatable		
+protocol	conformance __C.State	Swift.CustomStringConvertible		
+protocol	conformance __C.StateReason	Swift.CustomStringConvertible		
+protocol	conformance __C.State	Swift.CustomStringConvertible		
+protocol	conformance DropIn.AppStateController	Swift.Actor		
+protocol	conformance DropIn.DropInSiriAnnouncement	Swift.CustomStringConvertible		
+protocol	conformance DropInSiriAnnouncement.AnnouncementError	Swift.Hashable		
+protocol	conformance DropInSiriAnnouncement.AnnouncementError	Swift.Equatable		
+protocol	conformance DropInSiriAnnouncement.AnnouncementError	Swift.Error		
+protocol	conformance __C.HandleType	Swift.CustomStringConvertible		
+protocol	conformance DropIn.DeactivationState	Swift.Equatable		
+protocol	conformance DropIn.DeactivationState	Swift.Hashable		
+protocol	conformance DropIn.DeactivationState	Swift.RawRepresentable		
+protocol	conformance DropIn.DeactivationState	Swift.CaseIterable		
+protocol	conformance DropIn.AppStateDeactivation	Swift.Actor		
+protocol	conformance DropIn.AppStateDeactivationError	Swift.Hashable		
+protocol	conformance DropIn.AppStateDeactivationError	Swift.Equatable		
+protocol	conformance DropIn.AppStateDeactivationError	Swift.Error		
+protocol	conformance DropIn.Feature	Swift.Equatable		
+protocol	conformance DropIn.Feature	Swift.Hashable		
+protocol	conformance DropIn.Feature	FeatureFlags.FeatureFlagsKey		
+protocol	conformance DropIn.HomeAppFeature	FeatureFlags.FeatureFlagsKey		
+protocol	conformance DropIn.Default	DropIn.UserDefaultsAccessible		
+protocol	conformance DropIn.Default	DropIn.DefaultValueProviding		
+protocol	conformance DropIn.Default	DropIn.ResolvedValueProviding		
+protocol	conformance DropIn.Default	Swift.CustomStringConvertible		
+extension	DropIn.ActivationState	RawRepresentable		
+extension	DropIn.ActivationState	CaseIterable		
+extension	DropIn.DeactivationState	RawRepresentable		
+extension	DropIn.DeactivationState	CaseIterable		
+extension	DropIn.Default	UserDefaultsAccessible		
+extension	DropIn.Default	DefaultValueProviding		
+extension	DropIn.Default	ResolvedValueProviding		

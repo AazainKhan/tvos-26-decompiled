@@ -1,0 +1,160 @@
+kind	type	conformance	member_kind	member
+class	Chirp.SecureBytes.Backing	Swift.ManagedBuffer Chirp.SecureBytes.BackingHeader Swift.UInt8		
+struct	Chirp.SecureBytes			
+struct	Chirp.SecureBytes		var	backing
+struct	Chirp.SecureBytes.BackingHeader			
+struct	Chirp.SecureBytes.BackingHeader		var	count
+struct	Chirp.SecureBytes.BackingHeader		var	capacity
+struct	Chirp.SecureBytes.Index			
+struct	Chirp.SecureBytes.Index		var	offset
+enum	Chirp.Modifiers			
+enum	Chirp.Modifiers		case	psk0
+enum	Chirp.Modifiers		case	psk1
+enum	Chirp.Modifiers		case	psk2
+enum	Chirp.Modifiers		case	psk3
+enum	Chirp.Modifiers		case	fallback
+struct	Chirp.HandshakeAndModifiers			
+struct	Chirp.HandshakeAndModifiers		let	pattern
+struct	Chirp.HandshakeAndModifiers		let	modifiers
+enum	Chirp.ChirpErrors			
+enum	Chirp.ChirpErrors		case	malformedData
+enum	Chirp.ChirpErrors		case	missingPSK
+enum	Chirp.ChirpErrors		case	incorrectStateMachine
+enum	Chirp.ChirpErrors		case	shouldbeInTransportMode
+enum	Chirp.ChirpErrors		case	unimplementedVariant
+enum	Chirp.ChirpErrors		case	payloadIsTooLarge
+enum	Chirp.ChirpErrors		case	payloadIsTooShort
+enum	Chirp.ChirpErrors		case	attemptingDecryptionOnOneWayPattern
+enum	Chirp.HandshakePattern			
+enum	Chirp.HandshakePattern		case	N
+enum	Chirp.HandshakePattern		case	K
+enum	Chirp.HandshakePattern		case	X
+enum	Chirp.HandshakePattern		case	NN
+enum	Chirp.HandshakePattern		case	NK
+enum	Chirp.HandshakePattern		case	KK
+enum	Chirp.HandshakePattern		case	KN
+enum	Chirp.HandshakePattern		case	NX
+enum	Chirp.HandshakePattern		case	XN
+enum	Chirp.HandshakePattern		case	KX
+enum	Chirp.HandshakePattern		case	XK
+enum	Chirp.HandshakePattern		case	IN
+enum	Chirp.HandshakePattern		case	IK
+enum	Chirp.HandshakePattern		case	XX
+enum	Chirp.HandshakePattern		case	IX
+enum	Chirp.HandshakePattern		case	NK1
+enum	Chirp.HandshakePattern		case	NX1
+enum	Chirp.HandshakePattern		case	X1N
+enum	Chirp.HandshakePattern		case	X1K
+enum	Chirp.HandshakePattern		case	XK1
+enum	Chirp.HandshakePattern		case	X1K1
+enum	Chirp.HandshakePattern		case	X1X
+enum	Chirp.HandshakePattern		case	XX1
+enum	Chirp.HandshakePattern		case	X1X1
+enum	Chirp.HandshakePattern		case	K1N
+enum	Chirp.HandshakePattern		case	K1K
+enum	Chirp.HandshakePattern		case	KK1
+enum	Chirp.HandshakePattern		case	K1K1
+enum	Chirp.HandshakePattern		case	K1X
+enum	Chirp.HandshakePattern		case	KX1
+enum	Chirp.HandshakePattern		case	K1X1
+enum	Chirp.HandshakePattern		case	I1N
+enum	Chirp.HandshakePattern		case	I1K
+enum	Chirp.HandshakePattern		case	IK1
+enum	Chirp.HandshakePattern		case	I1K1
+enum	Chirp.HandshakePattern		case	I1X
+enum	Chirp.HandshakePattern		case	IX1
+enum	Chirp.HandshakePattern		case	I1X1
+class	Chirp.Rng			
+class	Chirp.Drbg			
+class	Chirp.Drbg		var	state
+class	Chirp.Drbg		var	custom
+class	Chirp.Drbg		var	drbgInfo
+class	Chirp.Drbg		var	drbgCtx
+class	Chirp.SequenceDrbg			
+class	Chirp.SequenceDrbg		var	randomBytesPtr
+class	Chirp.SequenceDrbg		var	sequenceState
+enum	Chirp.MessagePatternTokens			
+enum	Chirp.MessagePatternTokens		case	e
+enum	Chirp.MessagePatternTokens		case	s
+enum	Chirp.MessagePatternTokens		case	ee
+enum	Chirp.MessagePatternTokens		case	es
+enum	Chirp.MessagePatternTokens		case	se
+enum	Chirp.MessagePatternTokens		case	ss
+enum	Chirp.MessagePatternTokens		case	psk
+protocol	Chirp.NoiseDH	PrivateKey		
+protocol	Chirp.NoiseDHPrivate			
+protocol	Chirp.NoiseDHPublic			
+protocol	Chirp.NoiseCipherNonce			
+protocol	Chirp.NoiseAEADSealedBox	Nonce		
+protocol	Chirp.NoiseCipher	Key, SealedBox, Nonce		
+protocol	Chirp.RngState			
+protocol	Chirp.Zeroization			
+protocol	Chirp.NoiseMessage			
+protocol	Chirp.NoiseHashFunction			
+protocol	conformance SecureBytes.Backing	Foundation.ContiguousBytes		
+protocol	conformance SecureBytes.Index	Swift.Strideable		
+protocol	conformance SecureBytes.Index	Swift.Comparable		
+protocol	conformance SecureBytes.Index	Swift.Equatable		
+protocol	conformance SecureBytes.Index	Swift.Hashable		
+protocol	conformance Chirp.SecureBytes	Foundation.MutableDataProtocol		
+protocol	conformance Chirp.SecureBytes	Foundation.DataProtocol		
+protocol	conformance Chirp.SecureBytes	Foundation.ContiguousBytes		
+protocol	conformance Chirp.SecureBytes	Swift.RangeReplaceableCollection		
+protocol	conformance Chirp.SecureBytes	Swift.MutableCollection		
+protocol	conformance Chirp.SecureBytes	Swift.RandomAccessCollection		
+protocol	conformance Chirp.SecureBytes	Swift.BidirectionalCollection		
+protocol	conformance Chirp.SecureBytes	Swift.Sequence		
+protocol	conformance Chirp.SecureBytes	Swift.Collection		
+protocol	conformance Chirp.SecureBytes	Swift.Equatable		
+protocol	conformance Chirp.Modifiers	Swift.Equatable		
+protocol	conformance Chirp.Modifiers	Swift.Hashable		
+protocol	conformance Chirp.Modifiers	Swift.RawRepresentable		
+protocol	conformance Chirp.Modifiers	Swift.CaseIterable		
+protocol	conformance Chirp.ChirpErrors	Swift.Equatable		
+protocol	conformance Chirp.ChirpErrors	Swift.Hashable		
+protocol	conformance Chirp.ChirpErrors	Swift.Error		
+protocol	conformance Chirp.HandshakePattern	Swift.Equatable		
+protocol	conformance Chirp.HandshakePattern	Swift.Hashable		
+protocol	conformance Chirp.HandshakePattern	Swift.CaseIterable		
+protocol	conformance Chirp.SequenceDrbg	Chirp.RngState		
+protocol	conformance Chirp.Drbg	Chirp.RngState		
+protocol	conformance Chirp.Rng	Chirp.RngState		
+protocol	conformance Swift.UnsafeMutablePointer	Chirp.Zeroization		
+protocol	conformance Swift.UnsafeMutableRawBufferPointer	Chirp.Zeroization		
+protocol	conformance Swift.Array	Chirp.Zeroization		
+protocol	conformance Foundation.Data	Chirp.Zeroization		
+protocol	conformance Chirp.MessagePatternTokens	Swift.CaseIterable		
+protocol	conformance Chirp.MessagePatternTokens	Swift.Hashable		
+protocol	conformance Chirp.MessagePatternTokens	Swift.Equatable		
+protocol	conformance CryptoKit.ChaChaPoly.Nonce	Chirp.NoiseCipherNonce		
+protocol	conformance CryptoKit.ChaChaPoly.SealedBox	Chirp.NoiseAEADSealedBox		
+protocol	conformance CryptoKit.ChaChaPoly	Chirp.NoiseCipher		
+protocol	conformance CryptoKit.AES.GCM.Nonce	Chirp.NoiseCipherNonce		
+protocol	conformance CryptoKit.AES.GCM.SealedBox	Chirp.NoiseAEADSealedBox		
+protocol	conformance CryptoKit.AES.GCM	Chirp.NoiseCipher		
+protocol	conformance CryptoKit.Curve25519	Chirp.NoiseDH		
+protocol	conformance CryptoKit.Curve25519.KeyAgreement.PrivateKey	Chirp.NoiseDHPrivate		
+protocol	conformance CryptoKit.Curve25519.KeyAgreement.PublicKey	Chirp.NoiseDHPublic		
+protocol	conformance CryptoKit.P256	Chirp.NoiseDH		
+protocol	conformance CryptoKit.P256.KeyAgreement.PrivateKey	Chirp.NoiseDHPrivate		
+protocol	conformance CryptoKit.P256.KeyAgreement.PublicKey	Chirp.NoiseDHPublic		
+protocol	conformance CryptoKit.SHA256	Chirp.NoiseHashFunction		
+protocol	conformance CryptoKit.SHA512	Chirp.NoiseHashFunction		
+extension	Chirp.SecureBytes.Index	Strideable		
+extension	Chirp.SecureBytes	DataProtocol		
+extension	Chirp.SecureBytes	RangeReplaceableCollection		
+extension	Chirp.SecureBytes	MutableCollection		
+extension	Chirp.SecureBytes	RandomAccessCollection		
+extension	Chirp.SecureBytes	BidirectionalCollection		
+extension	Chirp.SecureBytes	Sequence		
+extension	Chirp.SecureBytes	Collection		
+extension	Chirp.Modifiers	RawRepresentable		
+extension	Chirp.Modifiers	CaseIterable		
+extension	Chirp.HandshakePattern	CaseIterable		
+extension	Chirp.MessagePatternTokens	CaseIterable		
+extension	CryptoKit.ChaChaPoly.SealedBox	NoiseAEADSealedBox		
+extension	CryptoKit.ChaChaPoly	NoiseCipher		
+extension	CryptoKit.AES.GCM.SealedBox	NoiseAEADSealedBox		
+extension	CryptoKit.AES.GCM	NoiseCipher		
+extension	CryptoKit.Curve25519	NoiseDH		
+extension	CryptoKit.P256	NoiseDH		

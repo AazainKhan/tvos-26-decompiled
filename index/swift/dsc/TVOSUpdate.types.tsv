@@ -1,0 +1,409 @@
+kind	type	conformance	member_kind	member
+class	TVOSUpdate.XPCClientState			
+class	TVOSUpdate.XPCClientState		let	connection
+class	TVOSUpdate.XPCClientState		let	proxy
+class	TVOSUpdate.XPCClientState		let	xpcDeliveriesOutstanding
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject		
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject	let	logger
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject	let	xpcService
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject	let	xpcQueue
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject	var	xpcConnections
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject	let	updateEngine
+class	TVOSUpdate.TVOSUpdateXPCServer	NSObject	var	lazy
+enum	TVOSUpdate.SUEventType			
+enum	TVOSUpdate.SUEventType		case	dailyReport
+enum	TVOSUpdate.SUEventType		case	updateStalled
+enum	TVOSUpdate.SUEventType		case	updateStalledExtended
+enum	TVOSUpdate.SUEventType		case	updateAbandoned
+enum	TVOSUpdate.SUEventType		case	forcedRebootBecauseOfDAS
+enum	TVOSUpdate.SUEventType		case	failedSUCConfigure
+enum	TVOSUpdate.SUEventType		case	obliterate
+enum	TVOSUpdate.SUEventType		case	obliterateFailed
+enum	TVOSUpdate.SUEventType		case	mandatoryAttempt
+class	TVOSUpdate.TVOSUpdateMetricsService			
+class	TVOSUpdate.TVOSUpdateMetricsService		let	dataVersion
+class	TVOSUpdate.TVOSUpdateMetricsService		let	topic
+class	TVOSUpdate.TVOSUpdateMetricsService		let	urlVersion
+class	TVOSUpdate.TVOSUpdateMetricsService		let	amsBagKey
+class	TVOSUpdate.TVOSUpdateMetricsService		var	amsBag
+class	TVOSUpdate.TVOSUpdateMetricsService		let	networkSession
+class	TVOSUpdate.TVOSUpdateMetricsService		let	clientId
+class	TVOSUpdate.TVOSUpdateMetricsService		var	lazy
+class	TVOSUpdate.TVOSUpdateMetricsService		let	logger
+class	TVOSUpdate.TVOSUpdateMetricsService		let	networkRetryQueue
+class	TVOSUpdate.TVOSUpdateMetricsService		var	retryData
+class	TVOSUpdate.TVOSUpdateMetricsService		var	networkPublisher
+class	TVOSUpdate.TVOSUpdateMetricsService		var	lazy
+enum	TVOSUpdate.TVOSUpdateMetricsError			
+enum	TVOSUpdate.TVOSUpdateMetricsError		case	fetchBaseURLFailed
+enum	TVOSUpdate.TVOSUpdateMetricsError		case	uploadFailed
+class	TVOSUpdate.TVOSUpdateXPCClient			
+class	TVOSUpdate.TVOSUpdateXPCClient		var	notifyDaemonStartedToken
+class	TVOSUpdate.TVOSUpdateXPCClient		var	serviceConnection
+class	TVOSUpdate.TVOSUpdateXPCClient		let	logger
+class	TVOSUpdate.TVOSUpdateXPCClient		let	connectionQueue
+class	TVOSUpdate.TVOSUpdateXPCClient		var	interrupted
+class	TVOSUpdate.TVOSUpdateXPCClient		var	progressDelegate
+enum	TVOSUpdate.BuildType			
+enum	TVOSUpdate.BuildType		case	internal
+enum	TVOSUpdate.BuildType		case	customer
+enum	TVOSUpdate.BuildType		case	developer
+enum	TVOSUpdate.TVOSEnvironment			
+class	TVOSUpdate.TVOSUpdateDDM	NSObject		
+class	TVOSUpdate.TVOSUpdateDDM	NSObject	let	logger
+class	TVOSUpdate.TVOSUpdateDDM	NSObject	let	xpcManager
+enum	TVOSUpdate.TVOSUpdateDDM.TVOSUpdateDDMError			
+enum	TVOSUpdate.TVOSUpdateDDM.TVOSUpdateDDMError		case	unableToCreateProxy
+enum	TVOSUpdate.TVOSUpdateDDM.TVOSUpdateDDMError		case	noScheduledDeclaration
+enum	TVOSUpdate.TVOSUpdateDDM.TVOSUpdateDDMError		case	noGlobalSettings
+enum	TVOSUpdate.TVOSUpdateAccessControl.AccessError			
+enum	TVOSUpdate.TVOSUpdateAccessControl.AccessError		case	accessControlContents
+enum	TVOSUpdate.TVOSUpdateAccessControl.AccessError		case	allowListStart
+enum	TVOSUpdate.TVOSUpdateAccessControl.AccessError		case	bundleIdentifier
+enum	TVOSUpdate.TVOSUpdateAccessControl.AccessError		case	accessDeniedStart
+class	TVOSUpdate.TVOSObliteration			
+enum	TVOSUpdate.TVOSUpdateErrorCode			
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	engineNotStarted
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	engineBusy
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	scanFailed
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	configFailed
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	fetchStatusFailed
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	cancelUpdateFailed
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	applyFailed
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	downloadFailed
+enum	TVOSUpdate.TVOSUpdateErrorCode		case	updateCancelled
+class	TVOSUpdate.TVOSUpdateInternalError	NSObject		
+class	TVOSUpdate.TVOSUpdateInternalError	NSObject	let	code
+class	TVOSUpdate.TVOSUpdateInternalError	NSObject	let	message
+class	TVOSUpdate.TVOSUpdateInternalError	NSObject	let	underlyingError
+enum	TVOSUpdate.TVOSUpdateEngineError			
+enum	TVOSUpdate.TVOSUpdateEngineError		case	engineBusy
+enum	TVOSUpdate.TVOSUpdateEngineError		case	scanFailed
+enum	TVOSUpdate.TVOSUpdateEngineError		case	configFailed
+enum	TVOSUpdate.TVOSUpdateEngineError		case	fetchStatusFailed
+enum	TVOSUpdate.TVOSUpdateEngineError		case	cancelUpdateFailed
+enum	TVOSUpdate.TVOSUpdateEngineError		case	applyFailed
+enum	TVOSUpdate.TVOSUpdateEngineError		case	downloadFailed
+enum	TVOSUpdate.TVOSUpdateEngineError		case	engineNotStarted
+enum	TVOSUpdate.TVOSUpdateEngineError		case	updateCancelled
+enum	TVOSUpdate.TVOSUpdateInternalError.CodingKeys			
+enum	TVOSUpdate.TVOSUpdateInternalError.CodingKeys		case	code
+enum	TVOSUpdate.TVOSUpdateInternalError.CodingKeys		case	message
+enum	TVOSUpdate.TVOSUpdateInternalError.CodingKeys		case	error
+struct	TVOSUpdate.TVOSUpdateOperation			
+struct	TVOSUpdate.TVOSUpdateOperation		let	uuid
+struct	TVOSUpdate.TVOSUpdateOperation		let	type
+struct	TVOSUpdate.TVOSUpdateOperation		let	trigger
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType			
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType		case	unknown
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType		case	scan
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType		case	download
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType		case	apply
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType		case	cancel
+enum	TVOSUpdate.TVOSUpdateOperation.OperationType		case	restore
+enum	TVOSUpdate.TVOSUpdateOperation.ModifyOperationAction			
+enum	TVOSUpdate.TVOSUpdateOperation.ModifyOperationAction		case	new
+enum	TVOSUpdate.TVOSUpdateOperation.ModifyOperationAction		case	replaceTrigger
+class	TVOSUpdate.TVOSUpdateClient			
+class	TVOSUpdate.TVOSUpdateClient		let	logger
+class	TVOSUpdate.TVOSUpdateClient		let	xpcManager
+struct	TVOSUpdate.TVOSUpdateEngineOptions			
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	performAutoUpdate
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	performAutoScan
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	performAutoDownloadAndPrepare
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	performAutoInstall
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	autoAcceptTermsAndConditions
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	downloadDocAsset
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	ignoreRamping
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	restrictToFullReplacement
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	allowSameVersionUpdates
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	installOSBackgroundImagePath
+struct	TVOSUpdate.TVOSUpdateEngineOptions		var	internalOptions
+struct	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions			
+struct	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions		var	expiredSpecifiedAsExpired
+struct	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions		var	internalDefaultsAsExternal
+struct	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions		var	shouldFakeApplyFailure
+struct	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions		var	shouldFakeApplySuccess
+enum	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions.CodingKeys			
+enum	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions.CodingKeys		case	expiredSpecifiedAsExpired
+enum	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions.CodingKeys		case	internalDefaultsAsExternal
+enum	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions.CodingKeys		case	shouldFakeApplyFailure
+enum	TVOSUpdate.TVOSUpdateEngineOptions.InternalOptions.CodingKeys		case	shouldFakeApplySuccess
+class	TVOSUpdate.NetworkMonitor			
+class	TVOSUpdate.NetworkMonitor		let	monitor
+class	TVOSUpdate.NetworkMonitor		let	logger
+class	TVOSUpdate.NetworkMonitor		var	status
+enum	TVOSUpdate.NetworkMonitor.NotificationUserInfoKey			
+enum	TVOSUpdate.NetworkMonitor.NotificationUserInfoKey		case	networkAvailability
+struct	TVOSUpdate.TimedDeclaration			
+struct	TVOSUpdate.TimedDeclaration		let	declaration
+struct	TVOSUpdate.TimedDeclaration		let	scheduledDate
+struct	TVOSUpdate.TimedDeclaration		let	pendingBuildVersion
+class	TVOSUpdate.TVOSUpdateDDMController			
+class	TVOSUpdate.TVOSUpdateDDMController		let	ddmActivityScheduler
+class	TVOSUpdate.TVOSUpdateDDMController		let	logger
+class	TVOSUpdate.TVOSUpdateDDMController		let	ddmActivitySchedulerDelegate
+class	TVOSUpdate.TVOSUpdateDDMController		let	ddmStatusManager
+class	TVOSUpdate.TVOSUpdateDDMController		let	updateEngine
+class	TVOSUpdate.TVOSUpdateDDMController		let	ddmConfiguration
+class	TVOSUpdate.TVOSUpdateDDMController		var	evaluationTask
+class	TVOSUpdate.TVOSUpdateDDMController		var	shouldEvaluateWhenReady
+class	TVOSUpdate.TVOSUpdateDDMController		var	cancellables
+class	TVOSUpdate.TVOSUpdateDDMController		let	ddmStatePersistencePath
+class	TVOSUpdate.TVOSUpdateDDMController		var	currentEnforcedDeclaration
+class	TVOSUpdate.TVOSUpdateDDMControllerDelegate	NSObject		
+class	TVOSUpdate.TVOSUpdateDDMControllerDelegate	NSObject	var	actor
+enum	TVOSUpdate.TVOSUpdateTriggerAction			
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	none
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualCheck
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	backgroundCheck
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	autoApplyCheck
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	mdmAutoApplyCheck
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualCheckOnly
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualDownloadOnly
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualInstallOnly
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	restore
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	autoUpdateRequestedFromHome
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualUpdateRequestedFromHome
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualCheckRequestedFromHome
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	manualInstallRequestedFromHome
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	updateTonight
+enum	TVOSUpdate.TVOSUpdateTriggerAction		case	updateNowWithInstallPrompt
+class	TVOSUpdate.TVOSUpdateDescriptor	NSObject		
+class	TVOSUpdate.TVOSUpdateDescriptor	NSObject	let	suControllerDescriptor
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject		
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	operationID
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	operationType
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	trigger
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	engineState
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	amountComplete
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	estimatedSecondsRemaining
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	error
+class	TVOSUpdate.TVOSUpdateInternalProgress	NSObject	let	descriptor
+struct	TVOSUpdate.TVOSUpdateProgress			
+struct	TVOSUpdate.TVOSUpdateProgress		let	operationInternal
+struct	TVOSUpdate.TVOSUpdateProgress		let	engineState
+struct	TVOSUpdate.TVOSUpdateProgress		let	amountComplete
+struct	TVOSUpdate.TVOSUpdateProgress		let	estimatedSecondsRemaining
+struct	TVOSUpdate.TVOSUpdateProgress		let	error
+struct	TVOSUpdate.TVOSUpdateProgress		let	descriptor
+struct	TVOSUpdate.TVOSUpdateEngineStatus			
+struct	TVOSUpdate.TVOSUpdateEngineStatus		let	state
+struct	TVOSUpdate.TVOSUpdateEngineStatus		let	descriptor
+enum	TVOSUpdate.TVOSUpdateEngineState			
+enum	TVOSUpdate.TVOSUpdateEngineState		case	initializing
+enum	TVOSUpdate.TVOSUpdateEngineState		case	idle
+enum	TVOSUpdate.TVOSUpdateEngineState		case	scanning
+enum	TVOSUpdate.TVOSUpdateEngineState		case	updateFound
+enum	TVOSUpdate.TVOSUpdateEngineState		case	updateFoundScanPostponed
+enum	TVOSUpdate.TVOSUpdateEngineState		case	upToDate
+enum	TVOSUpdate.TVOSUpdateEngineState		case	scanFailed
+enum	TVOSUpdate.TVOSUpdateEngineState		case	loadingUpdateBrain
+enum	TVOSUpdate.TVOSUpdateEngineState		case	downloading
+enum	TVOSUpdate.TVOSUpdateEngineState		case	downloadFailed
+enum	TVOSUpdate.TVOSUpdateEngineState		case	preparing
+enum	TVOSUpdate.TVOSUpdateEngineState		case	prepared
+enum	TVOSUpdate.TVOSUpdateEngineState		case	awaitingConfirmationBeforeApply
+enum	TVOSUpdate.TVOSUpdateEngineState		case	awaitingDuetInstallation
+enum	TVOSUpdate.TVOSUpdateEngineState		case	prepareFailed
+enum	TVOSUpdate.TVOSUpdateEngineState		case	verifyingBeforeApplying
+enum	TVOSUpdate.TVOSUpdateEngineState		case	applying
+enum	TVOSUpdate.TVOSUpdateEngineState		case	applyFailed
+enum	TVOSUpdate.TVOSUpdateEngineState		case	appliedAwaitingReboot
+enum	TVOSUpdate.TVOSUpdateEngineState		case	awaitingCancellation
+enum	TVOSUpdate.TVOSUpdateEngineState		case	cancelled
+enum	TVOSUpdate.TVOSUpdateEngineState		case	cancelFailed
+enum	TVOSUpdate.TVOSUpdateEngineState		case	abandoningOldUpdate
+enum	TVOSUpdate.TVOSUpdateEngineState		case	unknown
+struct	TVOSUpdate.TVOSUpdateSchedule			
+struct	TVOSUpdate.TVOSUpdateSchedule		var	periodicScanInterval
+struct	TVOSUpdate.TVOSUpdateSchedule		var	postponedRescanDelay
+struct	TVOSUpdate.TVOSUpdateSchedule		var	useSpecifiedInstallWindow
+struct	TVOSUpdate.TVOSUpdateSchedule		var	autoInstallWindowBeginHour
+struct	TVOSUpdate.TVOSUpdateSchedule		var	autoInstallWindowBeginMinute
+struct	TVOSUpdate.TVOSUpdateSchedule		var	autoInstallWindowEndHour
+struct	TVOSUpdate.TVOSUpdateSchedule		var	autoInstallWindowEndMinute
+struct	TVOSUpdate.TVOSUpdateSchedule		var	MDMDelayPeriod
+struct	TVOSUpdate.TVOSUpdateSchedule		var	MDMUseDelayPeriod
+class	TVOSUpdate.TVOSUpdateDefaults	NSUserDefaults		
+class	TVOSUpdate.TVOSUpdateEngine	NSObject		
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	isEngineServer
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	isXPCEngineServer
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	deferredStartDone
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	xpcClient
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	metricsService
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	metricsProvider
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	forcedActionProvider
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	currentOperation
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	currentProgress
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	let	logger
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	suController
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	publishers
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	engineStarted
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	cancellables
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	scanScheduler
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	defaults
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	let	configQueue
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	let	operationQueue
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	stallTimer
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	extendedStallTimer
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	cantWaitForDASAnyLongerTimer
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	setupDoneObserverToken
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	suControllerStateObserverToken
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	var	defaultsObserver
+class	TVOSUpdate.TVOSUpdateEngine	NSObject	let	postBootTaskIdentifier
+struct	TVOSUpdate.TVOSUpdateEngine.Publishers			
+struct	TVOSUpdate.TVOSUpdateEngine.Publishers		var	currentProgress
+struct	TVOSUpdate.TVOSUpdateEngine.Publishers		var	state
+enum	TVOSUpdate.ForcedActionRequest			
+enum	TVOSUpdate.ForcedActionRequest		case	forcedActionInstall
+enum	TVOSUpdate.ForcedActionRequest		case	forcedActionReboot
+enum	TVOSUpdate.ForcedActionUrgency			
+enum	TVOSUpdate.ForcedActionUrgency		case	forcedActionUrgencyImmediately
+enum	TVOSUpdate.ForcedActionUrgency		case	forcedActionUrgencySoonest
+enum	TVOSUpdate.TVOSUpdateFeature			
+enum	TVOSUpdate.TVOSUpdateFeature		case	enableDaemon
+enum	TVOSUpdate.TVOSUpdateFeature		case	enableXPC
+enum	TVOSUpdate.TVOSUpdateFeature		case	groupUpdate
+enum	TVOSUpdate.TVOSUpdateFeature		case	otaAlerts
+class	TVOSUpdate.TVOSUpdateScanScheduler			
+class	TVOSUpdate.TVOSUpdateScanScheduler		let	logger
+class	TVOSUpdate.TVOSUpdateScanScheduler		var	delegate
+class	TVOSUpdate.TVOSUpdateScanScheduler		var	scanSchedule
+class	TVOSUpdate.TVOSUpdateScanScheduler		var	isFirstScanScheduled
+class	TVOSUpdate.TVOSUpdateScanScheduler		var	scheduledScanTask
+class	TVOSUpdate.TVOSUpdateScanScheduler		var	rescanTimer
+class	TVOSUpdate.TVOSUpdateScanScheduler		let	duetInstallKey
+class	TVOSUpdate.TVOSUpdateScanScheduler		let	updateScanKey
+class	TVOSUpdate.TVOSUpdateScanScheduler		let	updateRescanKey
+enum	TVOSUpdate.TVOSUpdateScanScheduler.Schedule			
+enum	TVOSUpdate.TVOSUpdateScanScheduler.Schedule		case	soon
+enum	TVOSUpdate.TVOSUpdateScanScheduler.Schedule		case	overnight
+class	TVOSUpdate.TVOSUpdateDDMStatusManager			
+class	TVOSUpdate.TVOSUpdateDDMStatusManager		var	ddmStatus
+class	TVOSUpdate.TVOSUpdateDDMStatusManager		var	updateEngine
+class	TVOSUpdate.TVOSUpdateDDMStatusManager		let	logger
+struct	TVOSUpdate.TVOSUpdateEngineConfiguration			
+struct	TVOSUpdate.TVOSUpdateEngineConfiguration		var	options
+struct	TVOSUpdate.TVOSUpdateEngineConfiguration		var	schedule
+struct	TVOSUpdate.TVOSUpdateEngineConfiguration		var	requestedProductMarketingVersion
+struct	TVOSUpdate.TVOSUpdateEngineConfiguration		var	managedSettings
+struct	TVOSUpdate.TVOSUpdateEngineConfiguration		var	overrideManagedSettings
+class	TVOSUpdate.RepeatingTimer			
+class	TVOSUpdate.RepeatingTimer		var	_timeInterval
+class	TVOSUpdate.RepeatingTimer		var	eventHandler
+class	TVOSUpdate.RepeatingTimer		var	runCount
+class	TVOSUpdate.RepeatingTimer		let	repeats
+class	TVOSUpdate.RepeatingTimer		var	timer
+struct	TVOSUpdate.TVOSUpdateManagedSettings			
+struct	TVOSUpdate.TVOSUpdateManagedSettings		var	enforceInstall
+struct	TVOSUpdate.TVOSUpdateManagedSettings		var	enforceAutoCheck
+struct	TVOSUpdate.TVOSUpdateManagedSettings		var	enforceDownload
+struct	TVOSUpdate.TVOSUpdateManagedSettings		var	combinedDeferralPeriod
+struct	TVOSUpdate.TVOSUpdateScheduledUpdate			
+struct	TVOSUpdate.TVOSUpdateScheduledUpdate		var	enforcedInstallDate
+struct	TVOSUpdate.TVOSUpdateScheduledUpdate		var	versionString
+struct	TVOSUpdate.TVOSUpdateScheduledUpdate		var	buildVersionString
+struct	TVOSUpdate.TVOSUpdateScheduledUpdate		var	enforcedDeclarationId
+protocol	TVOSUpdate.XPCProgressDelegate			
+protocol	TVOSUpdate.TVOSUpdateMetricsProvider			
+protocol	TVOSUpdate.TVOSUpdatingSim			
+protocol	TVOSUpdate.TVOSUpdating			
+protocol	TVOSUpdate.TVOSUpdateForcedActionProvider			
+protocol	TVOSUpdate.URLSessionProtocol			
+protocol	TVOSUpdate.TVOSUpdateScanSchedulerDelegate			
+protocol	TVOSUpdate.SUCorePolicyDDMConfigurationProtocol			
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.SUControllerManagerState	Swift.Equatable		
+protocol	conformance __C.SUControllerManagerState	Swift.RawRepresentable		
+protocol	conformance __C.AMSBagKey	Swift._HasCustomAnyHashableRepresentation: AppleMediaServices		
+protocol	conformance __C.AMSBagKey	Swift.RawRepresentable: AppleMediaServices		
+protocol	conformance __C.AMSBagKey	Swift._SwiftNewtypeWrapper: AppleMediaServices		
+protocol	conformance __C.AMSBagKey	Swift.Equatable: AppleMediaServices		
+protocol	conformance __C.AMSBagKey	Swift.Hashable: AppleMediaServices		
+protocol	conformance __C.AMSBagKey	Swift._ObjectiveCBridgeable: AppleMediaServices		
+protocol	conformance XPCClientState	Swift.Equatable		
+protocol	conformance XPCClientState	Swift.Hashable		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance TVOSUpdate.SUEventType	Swift.Equatable		
+protocol	conformance TVOSUpdate.SUEventType	Swift.Hashable		
+protocol	conformance TVOSUpdate.SUEventType	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateMetricsError	Swift.Hashable		
+protocol	conformance TVOSUpdate.TVOSUpdateMetricsError	Swift.Equatable		
+protocol	conformance TVOSUpdate.TVOSUpdateMetricsError	Swift.Error		
+protocol	conformance TVOSUpdate.BuildType	Swift.Equatable		
+protocol	conformance TVOSUpdate.BuildType	Swift.Hashable		
+protocol	conformance TVOSUpdate.BuildType	Swift.RawRepresentable		
+protocol	conformance TVOSUpdateDDM.TVOSUpdateDDMError	Foundation.LocalizedError		
+protocol	conformance TVOSUpdateDDM.TVOSUpdateDDMError	Swift.Hashable		
+protocol	conformance TVOSUpdateDDM.TVOSUpdateDDMError	Swift.Equatable		
+protocol	conformance TVOSUpdateDDM.TVOSUpdateDDMError	Swift.Error		
+protocol	conformance AccessError	Swift.Error		
+protocol	conformance TVOSUpdate.TVOSUpdateErrorCode	Swift.Equatable		
+protocol	conformance TVOSUpdate.TVOSUpdateErrorCode	Swift.Hashable		
+protocol	conformance TVOSUpdate.TVOSUpdateErrorCode	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateErrorCode	Swift.Decodable		
+protocol	conformance TVOSUpdate.TVOSUpdateErrorCode	Swift.Encodable		
+protocol	conformance TVOSUpdate.TVOSUpdateInternalError	Swift.Error		
+protocol	conformance TVOSUpdate.TVOSUpdateInternalError	Swift.Decodable		
+protocol	conformance TVOSUpdate.TVOSUpdateInternalError	Swift.Encodable		
+protocol	conformance TVOSUpdate.TVOSUpdateEngineError	Swift.Error		
+protocol	conformance TVOSUpdateInternalError.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TVOSUpdateInternalError.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TVOSUpdateInternalError.CodingKeys	Swift.RawRepresentable		
+protocol	conformance TVOSUpdateInternalError.CodingKeys	Swift.Hashable		
+protocol	conformance TVOSUpdateInternalError.CodingKeys	Swift.Equatable		
+protocol	conformance TVOSUpdateInternalError.CodingKeys	Swift.CodingKey		
+protocol	conformance TVOSUpdateOperation.OperationType	Swift.Equatable		
+protocol	conformance TVOSUpdateOperation.OperationType	Swift.Hashable		
+protocol	conformance TVOSUpdateOperation.OperationType	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateOperation	Swift.CustomStringConvertible		
+protocol	conformance TVOSUpdateEngineOptions.InternalOptions	Swift.Decodable		
+protocol	conformance TVOSUpdateEngineOptions.InternalOptions	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NetworkMonitor.NotificationUserInfoKey	Swift.Equatable		
+protocol	conformance NetworkMonitor.NotificationUserInfoKey	Swift.Hashable		
+protocol	conformance NetworkMonitor.NotificationUserInfoKey	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateDDMController	Swift.Actor		
+protocol	conformance TVOSUpdate.TVOSUpdateTriggerAction	Swift.Equatable		
+protocol	conformance TVOSUpdate.TVOSUpdateTriggerAction	Swift.Hashable		
+protocol	conformance TVOSUpdate.TVOSUpdateTriggerAction	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateProgress	Swift.CustomStringConvertible		
+protocol	conformance TVOSUpdate.TVOSUpdateEngineState	Swift.Equatable		
+protocol	conformance TVOSUpdate.TVOSUpdateEngineState	Swift.Hashable		
+protocol	conformance TVOSUpdate.TVOSUpdateEngineState	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateEngine	TVOSUpdate.XPCProgressDelegate		
+protocol	conformance TVOSUpdate.TVOSUpdateEngine	TVOSUpdate.TVOSUpdating		
+protocol	conformance TVOSUpdate.TVOSUpdateEngine	TVOSUpdate.TVOSUpdatingSim		
+protocol	conformance TVOSUpdate.TVOSUpdateEngine	TVOSUpdate.TVOSUpdateScanSchedulerDelegate		
+protocol	conformance TVOSUpdate.ForcedActionRequest	Swift.Equatable		
+protocol	conformance TVOSUpdate.ForcedActionRequest	Swift.Hashable		
+protocol	conformance TVOSUpdate.ForcedActionRequest	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.ForcedActionUrgency	Swift.Equatable		
+protocol	conformance TVOSUpdate.ForcedActionUrgency	Swift.Hashable		
+protocol	conformance TVOSUpdate.ForcedActionUrgency	Swift.RawRepresentable		
+protocol	conformance TVOSUpdate.TVOSUpdateFeature	Swift.Hashable		
+protocol	conformance TVOSUpdate.TVOSUpdateFeature	Swift.Equatable		
+protocol	conformance TVOSUpdate.TVOSUpdateFeature	FeatureFlags.FeatureFlagsKey		
+protocol	conformance NSURLSession	TVOSUpdate.URLSessionProtocol		
+protocol	conformance TVOSUpdate.TVOSUpdateScanScheduler	Swift.Actor		
+protocol	conformance TVOSUpdateScanScheduler.Schedule	Swift.Hashable		
+protocol	conformance TVOSUpdateScanScheduler.Schedule	Swift.Equatable		
+protocol	conformance TVOSUpdate.TVOSUpdateDDMStatusManager	Swift.Actor		
+protocol	conformance TVOSUpdate.TVOSUpdateEngineConfiguration	Swift.CustomStringConvertible		
+protocol	conformance SUCorePolicyDDMConfiguration	TVOSUpdate.SUCorePolicyDDMConfigurationProtocol		
+extension	TVOSUpdate.SUEventType	RawRepresentable		
+extension	TVOSUpdate.BuildType	RawRepresentable		
+extension	TVOSUpdate.TVOSUpdateErrorCode	RawRepresentable		
+extension	TVOSUpdate.TVOSUpdateInternalError.CodingKeys	RawRepresentable		
+extension	TVOSUpdate.TVOSUpdateOperation.OperationType	RawRepresentable		
+extension	TVOSUpdate.NetworkMonitor.NotificationUserInfoKey	RawRepresentable		
+extension	TVOSUpdate.TVOSUpdateTriggerAction	RawRepresentable		
+extension	TVOSUpdate.TVOSUpdateEngineState	RawRepresentable		
+extension	TVOSUpdate.ForcedActionRequest	RawRepresentable		
+extension	TVOSUpdate.ForcedActionUrgency	RawRepresentable		

@@ -1,0 +1,23 @@
+owner	kind	declaration
+LockdownSRPState	-	- (id)init;
+LockdownSRPState	-	- (void)invalidate;
+LockdownSRPState	property	@property (nonatomic) _Bool pairingSessionStarted;
+LockdownSRPState	property	@property (nonatomic) int retval;
+LockdownSRPState	property	@property (readonly, nonatomic) NSObject<OS_dispatch_semaphore> *sem;
+LockdownSRPState	property	@property (retain, nonatomic) CUPairingSession *pairingSession;
+LockdownSRPState	property	@property (retain, nonatomic) NSMutableDictionary *srpResponse;
+LockdownWiFiMonitor	-	- (id)MACAddress;
+LockdownWiFiMonitor	-	- (id)init;
+LockdownWiFiMonitor	-	- (void)handleEvent:(id)event;
+LockdownWiFiMonitor	-	- (void)linkDown;
+LockdownWiFiMonitor	-	- (void)linkUp;
+LockdownWiFiMonitor	property	@property (readonly, nonatomic) CWFInterface *interface;
+LockdownWiFiMonitor	property	@property (readonly, nonatomic) NSObject<OS_dispatch_queue> *queue;
+LockdownWiFiMonitor	property	@property _Bool cachedLinkDownStatus;
+NSData(MobileLockdown)	+	+ (id)dataFromString:(id)string;
+TribecaXPCProtocol	-	- (void)disableAE:(id /* block */)ae;
+TribecaXPCProtocol	-	- (void)getLockdownToken:(id /* block */)token;
+TribecaXPCProtocol	-	- (void)setLockdownToken:(id)token;
+TribecaXPCProtocol	-	- (void)sshExtend:(id /* block */)extend;
+TribecaXPCProtocol	-	- (void)status:(id /* block */)status;
+TribecaXPCProtocol	-	- (void)statusV2:(id /* block */)v2;

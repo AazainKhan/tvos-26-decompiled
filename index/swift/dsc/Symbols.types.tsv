@@ -1,0 +1,155 @@
+kind	type	conformance	member_kind	member
+struct	Symbols.SymbolEffectConfiguration			
+struct	Symbols.SymbolEffectConfiguration		var	effect
+enum	Symbols.SymbolEffectConfiguration.Effect			
+enum	Symbols.SymbolEffectConfiguration.Effect		case	pulse
+enum	Symbols.SymbolEffectConfiguration.Effect		case	bounce
+enum	Symbols.SymbolEffectConfiguration.Effect		case	variableColor
+enum	Symbols.SymbolEffectConfiguration.Effect		case	scale
+enum	Symbols.SymbolEffectConfiguration.Effect		case	appear
+enum	Symbols.SymbolEffectConfiguration.Effect		case	disappear
+enum	Symbols.SymbolEffectConfiguration.Effect		case	replace
+enum	Symbols.SymbolEffectConfiguration.Effect		case	automatic
+enum	Symbols.SymbolEffectConfiguration.Effect		case	wiggle
+enum	Symbols.SymbolEffectConfiguration.Effect		case	rotate
+enum	Symbols.SymbolEffectConfiguration.Effect		case	breathe
+enum	Symbols.SymbolEffectConfiguration.Effect		case	magicReplace
+enum	Symbols.SymbolEffectConfiguration.Effect		case	drawOn
+enum	Symbols.SymbolEffectConfiguration.Effect		case	drawOff
+struct	Symbols.PulseSymbolEffect			
+struct	Symbols.PulseSymbolEffect		var	isLayered
+struct	Symbols.BounceSymbolEffect			
+struct	Symbols.BounceSymbolEffect		var	isUp
+struct	Symbols.BounceSymbolEffect		var	isLayered
+struct	Symbols.VariableColorSymbolEffect			
+struct	Symbols.VariableColorSymbolEffect		var	isReversing
+struct	Symbols.VariableColorSymbolEffect		var	isIterative
+struct	Symbols.VariableColorSymbolEffect		var	hasReveal
+struct	Symbols.ScaleSymbolEffect			
+struct	Symbols.ScaleSymbolEffect		var	isUp
+struct	Symbols.ScaleSymbolEffect		var	isLayered
+struct	Symbols.AppearSymbolEffect			
+struct	Symbols.AppearSymbolEffect		var	isUp
+struct	Symbols.AppearSymbolEffect		var	isLayered
+struct	Symbols.DisappearSymbolEffect			
+struct	Symbols.DisappearSymbolEffect		var	isUp
+struct	Symbols.DisappearSymbolEffect		var	isLayered
+struct	Symbols.ReplaceSymbolEffect			
+struct	Symbols.ReplaceSymbolEffect		var	style
+struct	Symbols.ReplaceSymbolEffect		var	isLayered
+enum	Symbols.ReplaceSymbolEffect.ReplaceStyle			
+enum	Symbols.ReplaceSymbolEffect.ReplaceStyle		case	downUp
+enum	Symbols.ReplaceSymbolEffect.ReplaceStyle		case	upUp
+enum	Symbols.ReplaceSymbolEffect.ReplaceStyle		case	offUp
+struct	Symbols.AutomaticSymbolEffect			
+struct	Symbols.WiggleSymbolEffect			
+struct	Symbols.WiggleSymbolEffect		var	style
+struct	Symbols.WiggleSymbolEffect		var	isLayered
+enum	Symbols.WiggleSymbolEffect.WiggleStyle			
+enum	Symbols.WiggleSymbolEffect.WiggleStyle		case	rotational
+enum	Symbols.WiggleSymbolEffect.WiggleStyle		case	linear
+enum	Symbols.WiggleSymbolEffect.WiggleStyle		case	localized
+struct	Symbols.RotateSymbolEffect			
+struct	Symbols.RotateSymbolEffect		var	isClockwise
+struct	Symbols.RotateSymbolEffect		var	isLayered
+struct	Symbols.BreatheSymbolEffect			
+struct	Symbols.BreatheSymbolEffect		var	style
+struct	Symbols.BreatheSymbolEffect		var	isLayered
+enum	Symbols.BreatheSymbolEffect.BreatheStyle			
+enum	Symbols.BreatheSymbolEffect.BreatheStyle		case	dim
+enum	Symbols.BreatheSymbolEffect.BreatheStyle		case	scale
+struct	Symbols.MagicReplaceSymbolEffect			
+struct	Symbols.MagicReplaceSymbolEffect		var	fallback
+struct	Symbols.ReplaceSymbolEffect.MagicReplace			
+struct	Symbols.ReplaceSymbolEffect.MagicReplace		var	_backing
+enum	Symbols.DrawLayerBehavior			
+enum	Symbols.DrawLayerBehavior		case	byLayer
+enum	Symbols.DrawLayerBehavior		case	wholeSymbol
+enum	Symbols.DrawLayerBehavior		case	individually
+struct	Symbols.DrawOnSymbolEffect			
+struct	Symbols.DrawOnSymbolEffect		var	layerBehavior
+struct	Symbols.DrawOffSymbolEffect			
+struct	Symbols.DrawOffSymbolEffect		var	layerBehavior
+struct	Symbols.DrawOffSymbolEffect		var	isReversed
+struct	Symbols.SymbolEffectOptions			
+struct	Symbols.SymbolEffectOptions		var	speed
+struct	Symbols.SymbolEffectOptions		var	repeat
+struct	Symbols.SymbolEffectOptions		var	prefersContinuous
+struct	Symbols.SymbolEffectOptions		var	repeatDelay
+enum	Symbols.SymbolEffectOptions.RepeatOption			
+enum	Symbols.SymbolEffectOptions.RepeatOption		case	count
+enum	Symbols.SymbolEffectOptions.RepeatOption		case	indefinite
+struct	Symbols.SymbolEffectOptions._RepeatStyle			
+struct	Symbols.SymbolEffectOptions._RepeatStyle		var	_prefersContinuous
+struct	Symbols.SymbolEffectOptions._RepeatStyle		var	_delay
+struct	Symbols.SymbolEffectOptions._RepeatStyle		var	_count
+struct	Symbols.SymbolEffectOptions.RepeatBehavior			
+struct	Symbols.SymbolEffectOptions.RepeatBehavior		var	_backing
+protocol	Symbols.SymbolEffect			
+protocol	conformance SymbolEffectConfiguration.Effect	Swift.Hashable		
+protocol	conformance SymbolEffectConfiguration.Effect	Swift.Equatable		
+protocol	conformance Symbols.SymbolEffectConfiguration	Swift.Hashable		
+protocol	conformance Symbols.SymbolEffectConfiguration	Swift.Equatable		
+protocol	conformance Symbols.PulseSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.PulseSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.PulseSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.BounceSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.BounceSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.BounceSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.VariableColorSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.VariableColorSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.VariableColorSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.ScaleSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.ScaleSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.ScaleSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.AppearSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.AppearSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.AppearSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.DisappearSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.DisappearSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.DisappearSymbolEffect	Swift.Equatable		
+protocol	conformance ReplaceSymbolEffect.ReplaceStyle	Swift.Equatable		
+protocol	conformance ReplaceSymbolEffect.ReplaceStyle	Swift.Hashable		
+protocol	conformance Symbols.ReplaceSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.ReplaceSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.ReplaceSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.AutomaticSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.AutomaticSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.AutomaticSymbolEffect	Swift.Equatable		
+protocol	conformance WiggleSymbolEffect.WiggleStyle	Swift.Hashable		
+protocol	conformance WiggleSymbolEffect.WiggleStyle	Swift.Equatable		
+protocol	conformance Symbols.WiggleSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.WiggleSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.WiggleSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.RotateSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.RotateSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.RotateSymbolEffect	Swift.Equatable		
+protocol	conformance BreatheSymbolEffect.BreatheStyle	Swift.Equatable		
+protocol	conformance BreatheSymbolEffect.BreatheStyle	Swift.Hashable		
+protocol	conformance Symbols.BreatheSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.BreatheSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.BreatheSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.MagicReplaceSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.MagicReplaceSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.MagicReplaceSymbolEffect	Swift.Equatable		
+protocol	conformance ReplaceSymbolEffect.MagicReplace	Symbols.SymbolEffect		
+protocol	conformance ReplaceSymbolEffect.MagicReplace	Swift.Hashable		
+protocol	conformance ReplaceSymbolEffect.MagicReplace	Swift.Equatable		
+protocol	conformance Symbols.DrawLayerBehavior	Swift.Equatable		
+protocol	conformance Symbols.DrawLayerBehavior	Swift.Hashable		
+protocol	conformance Symbols.DrawOnSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.DrawOnSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.DrawOnSymbolEffect	Swift.Equatable		
+protocol	conformance Symbols.DrawOffSymbolEffect	Symbols.SymbolEffect		
+protocol	conformance Symbols.DrawOffSymbolEffect	Swift.Hashable		
+protocol	conformance Symbols.DrawOffSymbolEffect	Swift.Equatable		
+protocol	conformance __C.OptionKey	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.OptionKey	Swift.RawRepresentable		
+protocol	conformance __C.OptionKey	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.OptionKey	Swift.Equatable		
+protocol	conformance __C.OptionKey	Swift.Hashable		
+protocol	conformance __C.OptionKey	Swift._ObjectiveCBridgeable		
+protocol	conformance SymbolEffectOptions.RepeatOption	Swift.Hashable		
+protocol	conformance SymbolEffectOptions.RepeatOption	Swift.Equatable		
+protocol	conformance Symbols.SymbolEffectOptions	Swift.Hashable		
+protocol	conformance Symbols.SymbolEffectOptions	Swift.Equatable		

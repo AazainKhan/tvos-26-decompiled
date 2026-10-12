@@ -1,0 +1,278 @@
+kind	type	conformance	member_kind	member
+struct	AppleBrailleTranslator.Trigger			
+struct	AppleBrailleTranslator.Trigger		let	string
+struct	AppleBrailleTranslator.Trigger		let	canBePrefix
+struct	AppleBrailleTranslator.Trigger		let	canBeNonPrefix
+struct	AppleBrailleTranslator.Trigger		let	canBeSuffix
+struct	AppleBrailleTranslator.Trigger		let	canBeNonSuffix
+struct	AppleBrailleTranslator.Trigger		let	needDoubleQuoteOpen
+struct	AppleBrailleTranslator.Trigger		let	avoidLowerPunctuation
+struct	AppleBrailleTranslator.Trigger		let	avoidLowerOnlySequence
+struct	AppleBrailleTranslator.Trigger		let	needPrecedingLetter
+struct	AppleBrailleTranslator.Trigger		let	needFollowingLetter
+struct	AppleBrailleTranslator.Trigger		let	canBeFollowedByVowelOrY
+struct	AppleBrailleTranslator.Trigger		let	canBeFollowedByHangulClosingQuotes
+struct	AppleBrailleTranslator.Trigger		let	canBeStartOfEnglish
+struct	AppleBrailleTranslator.Trigger		let	needsToBeStartOfEnglish
+class	AppleBrailleTranslator.HangulAction			
+class	AppleBrailleTranslator.HangulAction		let	trigger
+class	AppleBrailleTranslator.HangulExpansionAction	AppleBrailleTranslator.HangulAction		
+class	AppleBrailleTranslator.HangulExpansionAction	AppleBrailleTranslator.HangulAction	let	expansion
+class	AppleBrailleTranslator.HangulExpansionAction	AppleBrailleTranslator.HangulAction	let	brailleMode
+class	AppleBrailleTranslator.HangulExpansionAction	AppleBrailleTranslator.HangulAction	let	languageMode
+class	AppleBrailleTranslator.HangulFlushAction	AppleBrailleTranslator.HangulAction		
+class	AppleBrailleTranslator.HangulLanguageModeAction	AppleBrailleTranslator.HangulAction		
+class	AppleBrailleTranslator.HangulLanguageModeAction	AppleBrailleTranslator.HangulAction	let	languageMode
+struct	AppleBrailleTranslator.EnglishExpansion			
+struct	AppleBrailleTranslator.EnglishExpansion		let	string
+struct	AppleBrailleTranslator.EnglishExpansion		let	languageMode
+struct	AppleBrailleTranslator.EnglishExpansion		let	brailleMode
+struct	AppleBrailleTranslator.EnglishExpansion		let	grade1Coverage
+struct	AppleBrailleTranslator.EnglishExpansion		let	capitalCoverage
+class	AppleBrailleTranslator.EnglishExpansionAction	AppleBrailleTranslator.HangulAction		
+class	AppleBrailleTranslator.EnglishExpansionAction	AppleBrailleTranslator.HangulAction	let	expansion
+class	AppleBrailleTranslator.InputReader			
+class	AppleBrailleTranslator.InputReader		let	input
+class	AppleBrailleTranslator.InputReader		let	inputCount
+class	AppleBrailleTranslator.InputReader		var	cursor
+class	AppleBrailleTranslator.InputReader		var	remainderLength
+struct	AppleBrailleTranslator.Output			
+struct	AppleBrailleTranslator.Output		let	string
+struct	AppleBrailleTranslator.Output		let	locations
+class	AppleBrailleTranslator.OutputBuilder			
+class	AppleBrailleTranslator.OutputBuilder		var	outputInProgress
+class	AppleBrailleTranslator.OutputBuilder		var	locationsInProgress
+class	AppleBrailleTranslator.ABTResult	NSObject		
+class	AppleBrailleTranslator.ABTResult	NSObject	let	string
+class	AppleBrailleTranslator.ABTResult	NSObject	let	locations
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject		
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	let	input
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	cursorIndex
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	resultOutput
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	resultLocations
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	inputCursor
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	vowelPreviousLetterEndedWith
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isAmbiguousSingleQuotationOpen
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isAmbiguousDoubleQuotationOpen
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isNumericMode
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isPreviousLetterDigit
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isPreviousLetterNumericHyphen
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isPreviousLetterCurrency
+class	AppleBrailleTranslator.ABTKoreanTranslator	NSObject	var	isPreviousLetterHangul
+enum	AppleBrailleTranslator.Choseong			
+enum	AppleBrailleTranslator.Choseong		case	ㄱ
+enum	AppleBrailleTranslator.Choseong		case	ㄲ
+enum	AppleBrailleTranslator.Choseong		case	ㄴ
+enum	AppleBrailleTranslator.Choseong		case	ㄷ
+enum	AppleBrailleTranslator.Choseong		case	ㄸ
+enum	AppleBrailleTranslator.Choseong		case	ㄹ
+enum	AppleBrailleTranslator.Choseong		case	ㅁ
+enum	AppleBrailleTranslator.Choseong		case	ㅂ
+enum	AppleBrailleTranslator.Choseong		case	ㅃ
+enum	AppleBrailleTranslator.Choseong		case	ㅅ
+enum	AppleBrailleTranslator.Choseong		case	ㅆ
+enum	AppleBrailleTranslator.Choseong		case	ㅇ
+enum	AppleBrailleTranslator.Choseong		case	ㅈ
+enum	AppleBrailleTranslator.Choseong		case	ㅉ
+enum	AppleBrailleTranslator.Choseong		case	ㅊ
+enum	AppleBrailleTranslator.Choseong		case	ㅋ
+enum	AppleBrailleTranslator.Choseong		case	ㅌ
+enum	AppleBrailleTranslator.Choseong		case	ㅍ
+enum	AppleBrailleTranslator.Choseong		case	ㅎ
+enum	AppleBrailleTranslator.Jungseong			
+enum	AppleBrailleTranslator.Jungseong		case	ㅏ
+enum	AppleBrailleTranslator.Jungseong		case	ㅐ
+enum	AppleBrailleTranslator.Jungseong		case	ㅑ
+enum	AppleBrailleTranslator.Jungseong		case	ㅒ
+enum	AppleBrailleTranslator.Jungseong		case	ㅓ
+enum	AppleBrailleTranslator.Jungseong		case	ㅔ
+enum	AppleBrailleTranslator.Jungseong		case	ㅕ
+enum	AppleBrailleTranslator.Jungseong		case	ㅖ
+enum	AppleBrailleTranslator.Jungseong		case	ㅗ
+enum	AppleBrailleTranslator.Jungseong		case	ㅘ
+enum	AppleBrailleTranslator.Jungseong		case	ㅙ
+enum	AppleBrailleTranslator.Jungseong		case	ㅚ
+enum	AppleBrailleTranslator.Jungseong		case	ㅛ
+enum	AppleBrailleTranslator.Jungseong		case	ㅜ
+enum	AppleBrailleTranslator.Jungseong		case	ㅝ
+enum	AppleBrailleTranslator.Jungseong		case	ㅞ
+enum	AppleBrailleTranslator.Jungseong		case	ㅟ
+enum	AppleBrailleTranslator.Jungseong		case	ㅠ
+enum	AppleBrailleTranslator.Jungseong		case	ㅡ
+enum	AppleBrailleTranslator.Jungseong		case	ㅢ
+enum	AppleBrailleTranslator.Jungseong		case	ㅣ
+enum	AppleBrailleTranslator.Jongseong			
+enum	AppleBrailleTranslator.Jongseong		case	ㄱ
+enum	AppleBrailleTranslator.Jongseong		case	ㄲ
+enum	AppleBrailleTranslator.Jongseong		case	ㄳ
+enum	AppleBrailleTranslator.Jongseong		case	ㄴ
+enum	AppleBrailleTranslator.Jongseong		case	ㄵ
+enum	AppleBrailleTranslator.Jongseong		case	ㄶ
+enum	AppleBrailleTranslator.Jongseong		case	ㄷ
+enum	AppleBrailleTranslator.Jongseong		case	ㄹ
+enum	AppleBrailleTranslator.Jongseong		case	ㄺ
+enum	AppleBrailleTranslator.Jongseong		case	ㄻ
+enum	AppleBrailleTranslator.Jongseong		case	ㄼ
+enum	AppleBrailleTranslator.Jongseong		case	ㄽ
+enum	AppleBrailleTranslator.Jongseong		case	ㄾ
+enum	AppleBrailleTranslator.Jongseong		case	ㄿ
+enum	AppleBrailleTranslator.Jongseong		case	ㅀ
+enum	AppleBrailleTranslator.Jongseong		case	ㅁ
+enum	AppleBrailleTranslator.Jongseong		case	ㅂ
+enum	AppleBrailleTranslator.Jongseong		case	ㅄ
+enum	AppleBrailleTranslator.Jongseong		case	ㅅ
+enum	AppleBrailleTranslator.Jongseong		case	ㅆ
+enum	AppleBrailleTranslator.Jongseong		case	ㅇ
+enum	AppleBrailleTranslator.Jongseong		case	ㅈ
+enum	AppleBrailleTranslator.Jongseong		case	ㅊ
+enum	AppleBrailleTranslator.Jongseong		case	ㅋ
+enum	AppleBrailleTranslator.Jongseong		case	ㅌ
+enum	AppleBrailleTranslator.Jongseong		case	ㅍ
+enum	AppleBrailleTranslator.Jongseong		case	ㅎ
+class	AppleBrailleTranslator.EnglishTranslator			
+class	AppleBrailleTranslator.EnglishTranslator		let	input
+class	AppleBrailleTranslator.EnglishTranslator		var	cursorIndex
+class	AppleBrailleTranslator.EnglishTranslator		var	isReadingCapsWord
+class	AppleBrailleTranslator.EnglishTranslator		var	capsPassageEndIndex
+class	AppleBrailleTranslator.EnglishTranslator		var	resultOutput
+class	AppleBrailleTranslator.EnglishTranslator		var	resultLocations
+class	AppleBrailleTranslator.EnglishTranslator		var	inputCursor
+class	AppleBrailleTranslator.HangulBuffer			
+class	AppleBrailleTranslator.HangulBuffer		let	outputBuilder
+class	AppleBrailleTranslator.HangulBuffer		var	partialHangul
+class	AppleBrailleTranslator.HangulBuffer		var	location
+class	AppleBrailleTranslator.HangulBuffer		var	languageMode
+class	AppleBrailleTranslator.HangulBuffer		var	brailleMode
+class	AppleBrailleTranslator.HangulBuffer		var	grade1Coverage
+class	AppleBrailleTranslator.HangulBuffer		var	capitalCoverage
+class	AppleBrailleTranslator.HangulBuffer		var	isStartOfEnglish
+class	AppleBrailleTranslator.HangulBuffer		var	doubleQuoteOpen
+class	AppleBrailleTranslator.HangulBuffer		let	letters
+class	AppleBrailleTranslator.HangulBuffer		let	contractions
+enum	AppleBrailleTranslator.LanguageMode			
+enum	AppleBrailleTranslator.LanguageMode		case	korean
+enum	AppleBrailleTranslator.LanguageMode		case	english
+enum	AppleBrailleTranslator.BrailleMode			
+enum	AppleBrailleTranslator.BrailleMode		case	nonNumber
+enum	AppleBrailleTranslator.BrailleMode		case	number
+enum	AppleBrailleTranslator.ModeCoverage			
+enum	AppleBrailleTranslator.ModeCoverage		case	passage
+enum	AppleBrailleTranslator.ModeCoverage		case	word
+enum	AppleBrailleTranslator.ModeCoverage		case	numeric
+enum	AppleBrailleTranslator.ModeCoverage		case	character
+enum	AppleBrailleTranslator.ModeCoverage		case	off
+enum	AppleBrailleTranslator.BackChoseong			
+enum	AppleBrailleTranslator.BackChoseong		case	ㄱ
+enum	AppleBrailleTranslator.BackChoseong		case	ㄲ
+enum	AppleBrailleTranslator.BackChoseong		case	ㄴ
+enum	AppleBrailleTranslator.BackChoseong		case	ㄷ
+enum	AppleBrailleTranslator.BackChoseong		case	ㄸ
+enum	AppleBrailleTranslator.BackChoseong		case	ㄹ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅁ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅂ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅃ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅅ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅆ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅇ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅈ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅉ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅊ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅋ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅌ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅍ
+enum	AppleBrailleTranslator.BackChoseong		case	ㅎ
+enum	AppleBrailleTranslator.BackJungseong			
+enum	AppleBrailleTranslator.BackJungseong		case	ㅏ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅐ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅑ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅒ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅓ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅔ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅕ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅖ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅗ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅘ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅙ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅚ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅛ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅜ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅝ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅞ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅟ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅠ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅡ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅢ
+enum	AppleBrailleTranslator.BackJungseong		case	ㅣ
+enum	AppleBrailleTranslator.BackJongseong			
+enum	AppleBrailleTranslator.BackJongseong		case	ㄱ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄲ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄳ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄴ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄵ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄶ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄷ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄹ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄺ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄻ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄼ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄽ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄾ
+enum	AppleBrailleTranslator.BackJongseong		case	ㄿ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅀ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅁ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅂ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅄ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅅ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅆ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅇ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅈ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅊ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅋ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅌ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅍ
+enum	AppleBrailleTranslator.BackJongseong		case	ㅎ
+struct	AppleBrailleTranslator.JasoSet			
+struct	AppleBrailleTranslator.JasoSet		let	choseong
+struct	AppleBrailleTranslator.JasoSet		let	jungseong
+struct	AppleBrailleTranslator.JasoSet		let	jongseong
+struct	AppleBrailleTranslator.PartialHangulString			
+struct	AppleBrailleTranslator.PartialHangulString		let	completeString
+struct	AppleBrailleTranslator.PartialHangulString		let	jasoSet
+class	AppleBrailleTranslator.ABTKoreanBackTranslator	NSObject		
+protocol	AppleBrailleTranslator.Buffer	ActionType		
+protocol	AppleBrailleTranslator.Action	B, A		
+protocol	conformance AppleBrailleTranslator.HangulAction	AppleBrailleTranslator.Action		
+protocol	conformance AppleBrailleTranslator.Output	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.Choseong	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.Choseong	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.Choseong	protocol descriptor for RawRepresentable		
+protocol	conformance AppleBrailleTranslator.Jungseong	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.Jungseong	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.Jungseong	protocol descriptor for RawRepresentable		
+protocol	conformance AppleBrailleTranslator.Jongseong	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.Jongseong	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.Jongseong	protocol descriptor for RawRepresentable		
+protocol	conformance AppleBrailleTranslator.HangulBuffer	AppleBrailleTranslator.Buffer		
+protocol	conformance AppleBrailleTranslator.LanguageMode	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.LanguageMode	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.BrailleMode	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.BrailleMode	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.ModeCoverage	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.ModeCoverage	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.BackChoseong	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.BackChoseong	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.BackChoseong	protocol descriptor for RawRepresentable		
+protocol	conformance AppleBrailleTranslator.BackJungseong	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.BackJungseong	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.BackJungseong	protocol descriptor for RawRepresentable		
+protocol	conformance AppleBrailleTranslator.BackJongseong	protocol descriptor for Equatable		
+protocol	conformance AppleBrailleTranslator.BackJongseong	protocol descriptor for Hashable		
+protocol	conformance AppleBrailleTranslator.BackJongseong	protocol descriptor for RawRepresentable		
+extension	AppleBrailleTranslator.HangulAction	Action		
+extension	AppleBrailleTranslator.Choseong	RawRepresentable		
+extension	AppleBrailleTranslator.Jungseong	RawRepresentable		
+extension	AppleBrailleTranslator.Jongseong	RawRepresentable		
+extension	AppleBrailleTranslator.HangulBuffer	Buffer		
+extension	AppleBrailleTranslator.BackChoseong	RawRepresentable		
+extension	AppleBrailleTranslator.BackJungseong	RawRepresentable		
+extension	AppleBrailleTranslator.BackJongseong	RawRepresentable		

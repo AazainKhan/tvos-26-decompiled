@@ -1,0 +1,51 @@
+kind	type	conformance	member_kind	member
+enum	Compression.Algorithm			
+enum	Compression.Algorithm		case	lzfse
+enum	Compression.Algorithm		case	zlib
+enum	Compression.Algorithm		case	lz4
+enum	Compression.Algorithm		case	lzma
+enum	Compression.Algorithm		case	lzbitmap
+enum	Compression.Algorithm		case	brotli
+enum	Compression.FilterOperation			
+enum	Compression.FilterOperation		case	compress
+enum	Compression.FilterOperation		case	decompress
+enum	Compression.FilterError			
+enum	Compression.FilterError		case	invalidState
+enum	Compression.FilterError		case	invalidData
+class	Compression.OutputFilter			
+class	Compression.OutputFilter		var	_stream
+class	Compression.OutputFilter		var	_buf
+class	Compression.OutputFilter		let	_bufCapacity
+class	Compression.OutputFilter		let	_writeFunc
+class	Compression.OutputFilter		var	_finalized
+class	Compression.InputFilter<A	Foundation.DataProtocol>		
+class	Compression.InputFilter<A	Foundation.DataProtocol>	let	_readCapacity
+class	Compression.InputFilter<A	Foundation.DataProtocol>	let	_readFunc
+class	Compression.InputFilter<A	Foundation.DataProtocol>	var	_stream
+class	Compression.InputFilter<A	Foundation.DataProtocol>	var	_buf
+class	Compression.InputFilter<A	Foundation.DataProtocol>	var	_eofReached
+class	Compression.InputFilter<A	Foundation.DataProtocol>	var	_endReached
+class	Compression.InputFilter.InputFilterBuffer<A	Foundation.DataProtocol, A1: Foundation.DataProtocol>		
+class	Compression.InputFilter.InputFilterBuffer<A	Foundation.DataProtocol, A1: Foundation.DataProtocol>	var	_data
+class	Compression.InputFilter.InputFilterBuffer<A	Foundation.DataProtocol, A1: Foundation.DataProtocol>	var	_remaining
+class	Compression.InputFilter.InputFilterBuffer<A	Foundation.DataProtocol, A1: Foundation.DataProtocol>	var	_regionIndex
+class	Compression.InputFilter.InputFilterBuffer<A	Foundation.DataProtocol, A1: Foundation.DataProtocol>	var	_regionRemaining
+protocol	conformance Compression.Algorithm	Swift.Equatable		
+protocol	conformance Compression.Algorithm	Swift.Hashable		
+protocol	conformance Compression.Algorithm	Swift.CaseIterable		
+protocol	conformance Compression.Algorithm	Swift.RawRepresentable		
+protocol	conformance Compression.FilterOperation	Swift.Equatable		
+protocol	conformance Compression.FilterOperation	Swift.Hashable		
+protocol	conformance Compression.FilterOperation	Swift.RawRepresentable		
+protocol	conformance Compression.FilterError	Swift.Equatable		
+protocol	conformance Compression.FilterError	Swift.Hashable		
+protocol	conformance Compression.FilterError	Swift.Error		
+protocol	conformance __C.compression_algorithm	Swift.RawRepresentable: Compression		
+protocol	conformance __C.compression_algorithm	Swift.Equatable: Compression		
+protocol	conformance __C.compression_algorithm	Swift.Hashable: Compression		
+protocol	conformance __C.compression_stream_operation	Swift.RawRepresentable: Compression		
+protocol	conformance __C.compression_stream_operation	Swift.Equatable: Compression		
+protocol	conformance __C.compression_stream_operation	Swift.Hashable: Compression		
+extension	Compression.Algorithm	CaseIterable		
+extension	Compression.Algorithm	RawRepresentable		
+extension	Compression.FilterOperation	RawRepresentable		

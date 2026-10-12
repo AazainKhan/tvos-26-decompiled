@@ -1,0 +1,1755 @@
+kind	type	conformance	member_kind	member
+struct	SQLiter.SQLiteRow			
+struct	SQLiter.SQLiteRow		let	context
+struct	SQLiter.SQLiteUndefined			
+enum	SQLiter.SQLiteError			
+enum	SQLiter.SQLiteError		case	resultCode
+enum	SQLiter.SQLiteError		case	columnNotFound
+enum	SQLiter.SQLiteError		case	failedToCreateVTable
+enum	SQLiter.SQLiteError		case	unexpectedError
+enum	SQLiter.SQLiteError		case	configurationError
+enum	SQLiter.SQLiteError		case	notThreadSafe
+enum	SQLiter.SQLiteError		case	excessiveNumberOfResults
+enum	SQLiter.SQLiteError		case	unexpectedlyFinalizedStatement
+enum	SQLiter.SQLiteError		case	databaseIsClosed
+enum	SQLiter.SQLiteError		case	insufficientNumberOfResults
+enum	SQLiter.SQLiteError		case	valueIsNull
+enum	SQLiter.SQLiteError		case	parametersExpected
+enum	SQLiter.SQLiteError		case	notRepresentable
+enum	SQLiter.SQLiteError		case	bindingParameterNotFound
+enum	SQLiter.SQLiteError		case	invalidCharacter
+enum	SQLiter.SQLiteError		case	attemptToDowngradeVersion
+class	SQLiter.SQLiteLogger			
+class	SQLiter.SQLiteDatabase			
+class	SQLiter.SQLiteDatabase		var	connection
+enum	SQLiter.SQLiteDatabase.TransactionError			
+enum	SQLiter.SQLiteDatabase.TransactionError		case	fatal
+enum	SQLiter.SQLiteDatabase.TransactionError		case	recoverable
+struct	SQLiter.SQLiteArgument			
+struct	SQLiter.SQLiteArgument		let	argument
+enum	SQLiter.SQLiteDataType			
+enum	SQLiter.SQLiteDataType		case	integer
+enum	SQLiter.SQLiteDataType		case	text
+enum	SQLiter.SQLiteDataType		case	blob
+enum	SQLiter.SQLiteDataType		case	float
+enum	SQLiter.SQLiteDataType		case	null
+struct	SQLiter.SQLiteStatement			
+struct	SQLiter.SQLiteStatement		let	context
+struct	SQLiter.SQLiteStatement		let	sqlString
+struct	SQLiter.SQLiteStatement		let	minRows
+struct	SQLiter.SQLiteStatement		let	maxRows
+struct	SQLiter.SQLiteStatement		let	verboseLog
+class	SQLiter.SQLiteStatement.Context			
+class	SQLiter.SQLiteStatement.Context		var	_database
+class	SQLiter.SQLiteStatement.Context		var	_statement
+class	SQLiter.SQLiteStatement.Context		var	columnNameToIndexCache
+enum	SQLiter.SQLiteColumnType			
+enum	SQLiter.SQLiteColumnType		case	text
+enum	SQLiter.SQLiteColumnType		case	blob
+enum	SQLiter.SQLiteColumnType		case	int32
+enum	SQLiter.SQLiteColumnType		case	int64
+enum	SQLiter.SQLiteColumnType		case	uInt32
+enum	SQLiter.SQLiteColumnType		case	uInt64
+enum	SQLiter.SQLiteColumnType		case	float
+enum	SQLiter.SQLiteColumnType		case	double
+enum	SQLiter.SQLiteColumnType		case	datetime
+enum	SQLiter.SQLiteColumnType		case	bool
+enum	SQLiter.SQLiteColumnType		case	any
+class	SQLiter.SQLiteBaseVTab			
+class	SQLiter.SQLiteBaseVTab		var	moduleName
+class	SQLiter.SQLiteBaseVTab		let	modulePointer
+class	SQLiter.SQLiteBaseVTab		let	style
+enum	SQLiter.SQLiteBaseVTab.Style			
+enum	SQLiter.SQLiteBaseVTab.Style		case	module
+enum	SQLiter.SQLiteBaseVTab.Style		case	eponymous
+enum	SQLiter.SQLiteBaseVTab.Style		case	eponymousOnly
+class	SQLiter.SQLiteBaseVTab.Connection			
+class	SQLiter.SQLiteBaseVTab.Connection		let	tableName
+class	SQLiter.SQLiteBaseVTab.Connection		var	table
+class	SQLiter.SQLiteBaseVTab.Cursor			
+class	SQLiter.SQLiteBaseVTab.Cursor		var	_rowid
+class	SQLiter.SQLiteBaseVTab.Cursor		var	connection
+class	FlusherUtil.SafeContinuation			
+class	FlusherUtil.SafeContinuation		let	lock
+class	FlusherUtil.MessageWrapper	NSObject		
+class	FlusherUtil.MessageWrapper	NSObject	let	message
+enum	FlusherUtil.RPCError			
+enum	FlusherUtil.RPCError		case	unexpectedRequestType
+enum	FlusherUtil.RPCError		case	missingURL
+struct	FlusherUtil.DPGGRPCConfig			
+struct	FlusherUtil.DPGGRPCConfig		var	baseURL
+struct	FlusherUtil.DPGGRPCConfig		var	name
+struct	FlusherUtil.DPGGRPCConfig		var	headers
+struct	FlusherUtil.DPGGRPCConfig		var	disableDeviceAuthentication
+struct	FlusherUtil.DPGGRPCConfig		var	logger
+class	FlusherUtil.ParsecCAEvent.DimensionWrapper			
+class	FlusherUtil.ParsecCAEvent.DimensionWrapper		let	dimensions
+class	FlusherUtil.BoundedSerialQueue			
+class	FlusherUtil.BoundedSerialQueue		let	lock
+struct	FlusherUtil.GetAttrListFacade			
+struct	FlusherUtil.DirectoryEntryFixedCount			
+struct	FlusherUtil.DirectoryEntryFixedCount		let	value
+enum	FlusherUtil.JSONSerializationUtilError			
+enum	FlusherUtil.JSONSerializationUtilError		case	invalidJSON
+struct	FlusherUtil.JSONSerializationUtil			
+class	FlusherUtil.DeferredSetup			
+class	FlusherUtil.DeferredSetup		let	state
+enum	FlusherUtil.DeferredSetup.State			
+enum	FlusherUtil.DeferredSetup.State		case	setupPending
+enum	FlusherUtil.DeferredSetup.State		case	setupComplete
+enum	FlusherUtil.ExtendedAttributeError			
+enum	FlusherUtil.ExtendedAttributeError		case	posixError
+enum	FlusherUtil.ExtendedAttributeError		case	failedToEncodeValue
+class	FlusherUtil.DiskWriteSpan	FlusherUtil.ActivitySpan FlusherUtil.DiskWriteActivity<A: FlusherUtil.DiskOperationMetrics>		
+class	FlusherUtil.DiskWriteSpan	FlusherUtil.ActivitySpan FlusherUtil.DiskWriteActivity<A: FlusherUtil.DiskOperationMetrics>	var	error
+class	FlusherUtil.DiskWriteSpan	FlusherUtil.ActivitySpan FlusherUtil.DiskWriteActivity<A: FlusherUtil.DiskOperationMetrics>	var	metrics
+enum	FlusherUtil.DiskWriteActivity			
+enum	FlusherUtil.DiskWriteActivity		case	unknown
+enum	FlusherUtil.DiskWriteActivity		case	parsecSession
+enum	FlusherUtil.DiskWriteActivity		case	parsecFeedbackEvent
+enum	FlusherUtil.DiskWriteActivity		case	customFeedback
+enum	FlusherUtil.DiskWriteActivity		case	batchedInstrumentation
+enum	FlusherUtil.DiskWriteActivity		case	fileInstrumentation
+enum	FlusherUtil.DiskWriteActivity		case	pegasusConfiguration
+enum	FlusherUtil.DiskWriteActivity		case	bagResource
+enum	FlusherUtil.DiskWriteActivity		case	bag
+struct	FlusherUtil.FeedbackDiskWriteMetrics			
+struct	FlusherUtil.FeedbackDiskWriteMetrics		var	bytesWritten
+struct	FlusherUtil.FeedbackDiskWriteMetrics		let	feedbackType
+enum	FlusherUtil.DiskWriteError			
+enum	FlusherUtil.DiskWriteError		case	unknown
+enum	FlusherUtil.DiskWriteError		case	noAssembly
+enum	FlusherUtil.DiskWriteError		case	readError
+enum	FlusherUtil.DiskWriteError		case	writeError
+enum	FlusherUtil.DiskWriteError		case	quotaExceeded
+enum	FlusherUtil.DiskWriteError		case	customFeedbackNoFile
+enum	FlusherUtil.DiskWriteError		case	errorMakingTempFile
+enum	FlusherUtil.DiskWriteError		case	mmapError
+enum	FlusherUtil.DiskWriteError		case	pathError
+enum	FlusherUtil.FlushFrequency			
+enum	FlusherUtil.FlushFrequency		case	daily
+enum	FlusherUtil.FlushFrequency		case	weekly
+enum	FlusherUtil.FlushFrequency		case	monthly
+enum	FlusherUtil.CohortsActivity			
+enum	FlusherUtil.CohortsActivity		case	e2e
+enum	FlusherUtil.CohortsActivity		case	skipped
+struct	FlusherUtil.CohortsUsageCounter			
+struct	FlusherUtil.CohortsUsageCounter		let	client
+struct	FlusherUtil.CohortsUsageCounter		let	hasActiveDays
+struct	FlusherUtil.CohortsUsageCounter		var	keystrokeFound
+struct	FlusherUtil.CohortsUsageCounter		var	matchedInvokedDays
+struct	FlusherUtil.CohortsUsageCounter		var	matchedZkwEngagedDays
+struct	FlusherUtil.CohortsUsageCounter		var	matchedSearchedDays
+struct	FlusherUtil.CohortsUsageCounter		var	matchedSuggestionDays
+struct	FlusherUtil.CohortsUsageCounter		var	matchedWebEngagedDays
+struct	FlusherUtil.CohortsUsageCounter		var	matchedVoiceSearchDays
+struct	FlusherUtil.CohortsUsageCounter		var	totalEngagementMatchesSinceKeyboard
+struct	FlusherUtil.CohortsUsageCounter		var	resultIDs
+struct	FlusherUtil.CohortsUsageCounter		var	sectionIDs
+struct	FlusherUtil.EngagementBundleID			
+struct	FlusherUtil.EngagementBundleID		var	results
+struct	FlusherUtil.EngagementBundleID		var	section
+enum	FlusherUtil.EngagementBundleID.Identifier			
+enum	FlusherUtil.EngagementBundleID.Identifier		case	raw
+enum	FlusherUtil.EngagementBundleID.Identifier		case	known
+class	FlusherUtil.SiriInstrumentationService	FlusherUtil.SiriMessageService SIServiceInstrumentationBatchSIServiceInstrumentationBatchResponse		
+class	FlusherUtil.UploadDescriptorEnumerator			
+class	FlusherUtil.UploadDescriptorEnumerator		let	bundleDescriptor
+class	FlusherUtil.UploadDescriptorEnumerator		var	iterator
+class	FlusherUtil.UploadDescriptorEnumerator		var	configuration
+struct	FlusherUtil.FileUploadDescriptor			
+struct	FlusherUtil.FileUploadDescriptor		let	identifier
+struct	FlusherUtil.FileUploadDescriptor		let	bundleDescriptor
+struct	FlusherUtil.FileUploadDescriptor		let	record
+class	FlusherUtil.SessionFeedbackFlusher			
+class	FlusherUtil.SessionFeedbackFlusher		let	fbfAssembly
+class	FlusherUtil.SessionFeedbackFlusher		let	bag
+class	FlusherUtil.SessionFeedbackFlusher		let	uploadManager
+class	FlusherUtil.SessionFeedbackFlusher		let	cohortsProvider
+class	FlusherUtil.SessionFeedbackFlusher		let	usageProcessor
+class	FlusherUtil.SessionFeedbackFlusher		let	sessionDatabase
+class	FlusherUtil.SessionFeedbackFlusher		let	uploadStateTracker
+struct	FlusherUtil.SessionFeedbackFlusherConfig			
+struct	FlusherUtil.SessionFeedbackFlusherConfig		let	fbfAssembly
+struct	FlusherUtil.SessionFeedbackFlusherConfig		let	uploadManager
+struct	FlusherUtil.SessionFeedbackFlusherConfig		let	cohortsProvider
+struct	FlusherUtil.SessionFeedbackFlusherConfig		let	usageProcessor
+struct	FlusherUtil.SessionFeedbackFlusherConfig		let	sessionDatabase
+struct	FlusherUtil.SessionFeedbackFlusherConfig		let	uploadStateTracker
+enum	FlusherUtil.Incident			
+enum	FlusherUtil.Incident		case	objCException
+enum	FlusherUtil.Incident		case	excessiveNumberOfFeedbackFilesPerType
+enum	FlusherUtil.Incident		case	cacheFolderDisappeared
+struct	FlusherUtil.CohortsUsageReducer			
+struct	FlusherUtil.CohortsUsageReducer		let	client
+struct	FlusherUtil.CohortsUsageReducer		var	sums
+struct	FlusherUtil.CohortsUsageReducer		var	numOfSearchEngagements
+enum	FlusherUtil.CohortsUsageReducer.UsageKind			
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	activity
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	invokedDays
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	zkwEngagedDays
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	searchedDays
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	suggestionOrAppleResultEngagedDays
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	webEngagedDays
+enum	FlusherUtil.CohortsUsageReducer.UsageKind		case	voiceSearchDays
+class	FlusherUtil.FeedbackFileFlusher			
+class	FlusherUtil.FeedbackFileFlusher		var	fbfAssembly
+class	FlusherUtil.FeedbackFileFlusher		var	enumerationCompletion
+class	FlusherUtil.FeedbackFileFlusher		let	bag
+class	FlusherUtil.FeedbackFileFlusher		let	cacheDir
+class	FlusherUtil.FeedbackFileFlusher		var	cohortFeedbackGenerator
+class	FlusherUtil.FeedbackFileFlusher		var	dataStorageContainer
+class	FlusherUtil.FeedbackFileFlusher		var	_uploadManager
+class	FlusherUtil.FeedbackFileFlusher		var	feedbackEnumerator
+struct	FlusherUtil.PBCodableTestObjectProducer			
+class	FlusherUtil.CBAFilterController			
+class	FlusherUtil.BatchEnumerator			
+class	FlusherUtil.BatchEnumerator		let	bundleDescriptor
+class	FlusherUtil.BatchEnumerator		var	batchIdIterator
+class	FlusherUtil.BatchEnumerator		var	batchIterator
+class	FlusherUtil.BatchEnumerator		let	matchingStatus
+struct	FlusherUtil.BatchDescriptor			
+struct	FlusherUtil.BatchDescriptor		let	bundleDescriptor
+struct	FlusherUtil.BatchDescriptor		let	batchIdentfier
+struct	FlusherUtil.BatchDescriptor		let	metadata
+struct	FlusherUtil.FeedbackLoggerUploadContext			
+struct	FlusherUtil.FeedbackLoggerUploadContext		let	assembly
+struct	FlusherUtil.FeedbackLoggerUploadContext		let	includeGroupContainer
+struct	FlusherUtil.FeedbackLoggerUploadContext		let	storeDirectoryEnumerator
+enum	FlusherUtil.FeedbackFlusherActivity			
+enum	FlusherUtil.FeedbackFlusherActivity		case	sessionUpload
+enum	FlusherUtil.FeedbackFlusherActivity		case	e2e
+class	FlusherUtil.NetworkSpan	FlusherUtil.ActivitySpan A<A: FlusherUtil.ActivityDescription>		
+class	FlusherUtil.NetworkSpan	FlusherUtil.ActivitySpan A<A: FlusherUtil.ActivityDescription>	let	task
+class	FlusherUtil.NetworkSpan	FlusherUtil.ActivitySpan A<A: FlusherUtil.ActivityDescription>	var	error
+class	FlusherUtil.NetworkSpan	FlusherUtil.ActivitySpan A<A: FlusherUtil.ActivityDescription>	var	networkActivity
+class	FlusherUtil.TransactionController			
+class	FlusherUtil.TransactionController		let	store
+class	FlusherUtil.TransactionController.TransactionWrapper			
+class	FlusherUtil.TransactionController.TransactionWrapper		let	transaction
+class	FlusherUtil.TransactionController.TransactionWrapper		let	dropOnInterrupt
+class	FlusherUtil.TransactionController.TransactionWrapper		var	usageCount
+enum	FlusherUtil.TransactionController.State			
+enum	FlusherUtil.TransactionController.State		case	active
+enum	FlusherUtil.TransactionController.State		case	closing
+enum	FlusherUtil.TransactionController.State		case	empty
+enum	FlusherUtil.TransactionController.State		case	closed
+struct	FlusherUtil.RemoteConnectorIdentity			
+struct	FlusherUtil.RemoteConnectorIdentity		let	isCodeSigned
+struct	FlusherUtil.RemoteConnectorIdentity		let	isPlatformBinary
+struct	FlusherUtil.CohortsAggregationAscendingDateMap			
+struct	FlusherUtil.CohortsAggregationAscendingDateMap		let	maxLookbackInDays
+struct	FlusherUtil.CohortsAggregationAscendingDateMap		let	fallbackStartDate
+struct	FlusherUtil.CohortsAggregationAscendingDateMap		var	dates
+class	FlusherUtil.ResourceAccessNetworkSpan	FlusherUtil.NetworkSpan FlusherUtil.ResourceNetworkActivity		
+class	FlusherUtil.ResourceAccessNetworkSpan	FlusherUtil.NetworkSpan FlusherUtil.ResourceNetworkActivity	let	client
+class	FlusherUtil.ResourceAccessNetworkSpan	FlusherUtil.NetworkSpan FlusherUtil.ResourceNetworkActivity	var	identifier
+struct	FlusherUtil.ResourceNetworkActivity			
+struct	FlusherUtil.ResourceNetworkActivity		var	parent
+struct	FlusherUtil.DevicePersistentData			
+struct	FlusherUtil.DevicePersistentData		let	d20
+struct	FlusherUtil.DevicePersistentData		let	deviceUUID
+enum	FlusherUtil.DevicePersistentData.CodingKeys			
+enum	FlusherUtil.DevicePersistentData.CodingKeys		case	d20
+enum	FlusherUtil.DevicePersistentData.CodingKeys		case	deviceUUID
+class	FlusherUtil.FBFOspreyConnectionConfiguration	OspreyConnectionConfiguration		
+class	FlusherUtil.FBFOspreyConnectionConfiguration	OspreyConnectionConfiguration	var	disableDeviceAuthentication
+class	FlusherUtil.FBFOspreyConnectionConfiguration	OspreyConnectionConfiguration	var	extraHeaders
+class	FlusherUtil.FBFOspreyConnectionConfiguration	OspreyConnectionConfiguration	var	country
+class	FlusherUtil.SiriService			
+class	FlusherUtil.SiriService		let	sisLog
+class	FlusherUtil.SiriService		let	connectionConfiguration
+class	FlusherUtil.SiriService		let	queue
+class	FlusherUtil.SiriService		var	delegate
+class	FlusherUtil.SiriService		var	ospreyService
+enum	FlusherUtil.UploaderEndpointVariant			
+enum	FlusherUtil.UploaderEndpointVariant		case	development
+enum	FlusherUtil.UploaderEndpointVariant		case	carry
+enum	FlusherUtil.UploaderEndpointVariant		case	seed
+enum	FlusherUtil.UploaderEndpointVariant		case	production
+enum	FlusherUtil.UploaderServiceError			
+enum	FlusherUtil.UploaderServiceError		case	invalidRequestType
+enum	FlusherUtil.UploaderServiceError		case	invalidResponseType
+enum	FlusherUtil.UploaderServiceError		case	serviceNotAcceptingNewRequest
+class	FlusherUtil.SISUploader			
+class	FlusherUtil.SISUploader		let	assembly
+class	FlusherUtil.SISUploader		let	sampler
+class	FlusherUtil.SISUploader		let	serviceProvider
+class	FlusherUtil.SISUploader		let	activityMonitor
+class	FlusherUtil.SISUploader		let	e2eGroup
+class	FlusherUtil.SISUploader		var	lastError
+class	FlusherUtil.SISUploader		let	enumerator
+class	FlusherUtil.SISUploader		var	uploadState
+class	FlusherUtil.SISUploader		var	uploadServices
+class	FlusherUtil.SISUploader		var	clientSuppliedHeaders
+struct	FlusherUtil.BatchUploadState			
+struct	FlusherUtil.BatchUploadState		let	lock
+enum	FlusherUtil.SISUploader.Activity			
+enum	FlusherUtil.SISUploader.Activity		case	successfulSISUpload
+enum	FlusherUtil.SISUploader.Activity		case	successfulDPGUpload
+enum	FlusherUtil.SISUploader.Activity		case	e2e
+class	FlusherUtil.LoggingConfigurationController			
+class	FlusherUtil.LoggingConfigurationController		let	activityMonitor
+class	FlusherUtil.LoggingConfigurationController		let	freshness
+class	FlusherUtil.LoggingConfigurationController		let	fileManager
+class	FlusherUtil.LoggingConfigurationController		let	configuration
+enum	FlusherUtil.ConfigurationFreshness			
+enum	FlusherUtil.ConfigurationFreshness		case	unknown
+enum	FlusherUtil.ConfigurationFreshness		case	stale
+enum	FlusherUtil.ConfigurationFreshness		case	fresh
+enum	FlusherUtil.ConfigurationFreshness		case	override
+class	FlusherUtil.ResourceAccessSpan	FlusherUtil.ActivitySpan FlusherUtil.ResourceAccessActivity		
+class	FlusherUtil.ResourceAccessSpan	FlusherUtil.ActivitySpan FlusherUtil.ResourceAccessActivity	var	outcome
+class	FlusherUtil.ResourceAccessSpan	FlusherUtil.ActivitySpan FlusherUtil.ResourceAccessActivity	var	networkSpan
+class	FlusherUtil.ResourceAccessSpan	FlusherUtil.ActivitySpan FlusherUtil.ResourceAccessActivity	var	identifier
+class	FlusherUtil.ResourceAccessSpan	FlusherUtil.ActivitySpan FlusherUtil.ResourceAccessActivity	let	client
+class	FlusherUtil.ResourceAccessSpan	FlusherUtil.ActivitySpan FlusherUtil.ResourceAccessActivity	var	excludeOutcomeForAnalytics
+class	FlusherUtil.SiriMessageService	FlusherUtil.SiriService<A: PBCodable, B, B: PBCodable, B>		
+class	FlusherUtil.SiriMessageService	FlusherUtil.SiriService<A: PBCodable, B, B: PBCodable, B>	var	completion
+class	FlusherUtil.SiriMessageService	FlusherUtil.SiriService<A: PBCodable, B, B: PBCodable, B>	var	closeStreamsUponFinalResponse
+class	FlusherUtil.SiriMessageService	FlusherUtil.SiriService<A: PBCodable, B, B: PBCodable, B>	var	requestsOutstanding
+class	FlusherUtil.SiriMessageService	FlusherUtil.SiriService<A: PBCodable, B, B: PBCodable, B>	var	lazy
+class	FlusherUtil.SiriMessageService	FlusherUtil.SiriService<A: PBCodable, B, B: PBCodable, B>	var	lazy
+enum	FlusherUtil.SiriMessageServiceError			
+enum	FlusherUtil.SiriMessageServiceError		case	responseFailedToDeserialize
+struct	FlusherUtil.FeedbackFile			
+struct	FlusherUtil.FeedbackFile		let	url
+struct	FlusherUtil.FeedbackFile		let	fileHandle
+class	FlusherUtil.SISFileUploader			
+class	FlusherUtil.SISFileUploader		let	assembly
+class	FlusherUtil.SISFileUploader		let	sampler
+class	FlusherUtil.SISFileUploader		let	serviceProvider
+class	FlusherUtil.SISFileUploader		let	e2eGroup
+class	FlusherUtil.SISFileUploader		var	lastError
+class	FlusherUtil.SISFileUploader		let	enumerator
+class	FlusherUtil.SISFileUploader		var	uploadState
+class	FlusherUtil.SISFileUploader		var	uploaderServices
+class	FlusherUtil.SISFileUploader		var	clientSuppliedHeaders
+struct	FlusherUtil.FileUploadState			
+struct	FlusherUtil.FileUploadState		var	idMap
+class	FlusherUtil.Redacter			
+enum	FlusherUtil.RedactionRanges			
+enum	FlusherUtil.RedactionRanges		case	CopyLeaf
+enum	FlusherUtil.RedactionRanges		case	RedactLeaf
+enum	FlusherUtil.RedactionRanges		case	Tree
+class	FlusherUtil.BundleDescriptor			
+class	FlusherUtil.BundleDescriptor		let	flLogger
+class	FlusherUtil.BundleDescriptor		let	bundleIdentifier
+class	FlusherUtil.BundleDescriptor		let	directoryURL
+class	FlusherUtil.BundleDescriptor		let	settings
+class	FlusherUtil.BundleDescriptor		let	isDPG
+class	FlusherUtil.CompressedOutputStream	NSOutputStream		
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	let	outputStream
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	stream
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	status
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	destBuffer
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	shaContext
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	digest
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	_uncompressedBytesWritten
+class	FlusherUtil.CompressedOutputStream	NSOutputStream	var	_compressedBytesWritten
+class	FlusherUtil.CoreDataEventFactory			
+class	FlusherUtil.CoreDataEventFactory		let	context
+struct	FlusherUtil.ObjcExceptionUtil			
+struct	FlusherUtil.RecordDescriptor			
+struct	FlusherUtil.RecordDescriptor		let	payload
+struct	FlusherUtil.RecordDescriptor		let	dateCreated
+struct	FlusherUtil.RecordDescriptor		let	bundleIdentifier
+struct	FlusherUtil.RecordDescriptor		let	batchIdentifier
+class	FlusherUtil.RecordDateRangeEnumerator			
+class	FlusherUtil.RecordDateRangeEnumerator		let	bundleDescriptor
+class	FlusherUtil.RecordDateRangeEnumerator		let	startSeconds
+class	FlusherUtil.RecordDateRangeEnumerator		let	endSeconds
+class	FlusherUtil.RecordDateRangeEnumerator		var	records
+class	FlusherUtil.FBFPeriodicTask			
+class	FlusherUtil.FBFPeriodicTask		let	fbfAssembly
+class	FlusherUtil.FBFPeriodicTask		let	task
+class	FlusherUtil.FBFPeriodicTask		let	activityQueue
+class	FlusherUtil.FBFPeriodicTask		let	activityGroup
+class	FlusherUtil.FBFPeriodicTask		let	logger
+class	FlusherUtil.FBFPeriodicTask		let	start
+class	FlusherUtil.FBFPeriodicTask		let	feedbackLoggerUploadContext
+class	FlusherUtil.FBFPeriodicTask		let	state
+class	FlusherUtil.FBFPeriodicTask		var	cohortsStore
+class	FlusherUtil.FBFPeriodicTask		var	_sessionUploader
+class	FlusherUtil.FBFPeriodicTask		var	_parsecUploader
+class	FlusherUtil.FBFPeriodicTask		var	_cohortScheduler
+class	FlusherUtil.FBFPeriodicTask		var	_sisUploader
+class	FlusherUtil.FBFPeriodicTask		var	_sisFileUploader
+class	FlusherUtil.FBFPeriodicTask		var	lazy
+class	FlusherUtil.FBFPeriodicTask		var	lazy
+enum	FlusherUtil.FBFPeriodicTask.State			
+enum	FlusherUtil.FBFPeriodicTask.State		case	running
+enum	FlusherUtil.FBFPeriodicTask.State		case	expired
+enum	FlusherUtil.FBFPeriodicTask.State		case	cancelled
+enum	FlusherUtil.FBFPeriodicTask.State		case	complete
+enum	FlusherUtil.FBFPeriodicTask.Activity			
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	e2e
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	start
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	deferral
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	cancellation
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	end
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	timer
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	uploadFeedback
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	updateWhitelist
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	uploadBatches
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	uploadFiles
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	configFetch
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	reportDiskMetriks
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	cohorts
+enum	FlusherUtil.FBFPeriodicTask.Activity		case	uploadSessionFeedback
+class	FlusherUtil.CoreDataQueryProcessor			
+class	FlusherUtil.CoreDataQueryProcessor		let	dataStorageContainer
+class	FlusherUtil.InstalledAppController			
+class	FlusherUtil.InstalledAppController		var	assembly
+class	FlusherUtil.InstalledAppController		var	lastAsyncUpdateRequestTime
+class	FlusherUtil.InstalledAppController		let	whitelistUpdateRequired
+class	FlusherUtil.FBFAssembly	NSObject		
+class	FlusherUtil.FBFAssembly	NSObject	let	userDefaults
+class	FlusherUtil.FBFAssembly	NSObject	let	fileManager
+class	FlusherUtil.FBFAssembly	NSObject	let	activityMonitor
+class	FlusherUtil.FBFAssembly	NSObject	let	workloop
+class	FlusherUtil.FBFAssembly	NSObject	let	whitelistUpdateQueue
+class	FlusherUtil.FBFAssembly	NSObject	let	sisQueue
+class	FlusherUtil.FBFAssembly	NSObject	let	transactionController
+class	FlusherUtil.FBFAssembly	NSObject	var	_loggingConfigurationController
+class	FlusherUtil.FBFAssembly	NSObject	var	_devicePersistentDataManager
+class	FlusherUtil.FBFAssembly	NSObject	var	_bagURLProvider
+class	FlusherUtil.FBFAssembly	NSObject	var	_installedAppController
+class	FlusherUtil.FBFAssembly	NSObject	let	deviceContext
+class	FlusherUtil.FBFAssembly	NSObject	var	uploadListener
+class	FlusherUtil.FBFAssembly	NSObject	var	cohortsListener
+class	FlusherUtil.FBFAssembly	NSObject	var	poirotFeatureFlagsProvider
+class	FlusherUtil.FBFAssembly	NSObject	let	flushingEagerly
+class	FlusherUtil.FBFAssembly	NSObject	let	cellularUploads
+class	FlusherUtil.FBFAssembly	NSObject	let	cancelled
+class	FlusherUtil.FBFAssembly	NSObject	var	osVariant
+class	FlusherUtil.FBFAssembly	NSObject	var	deviceUserOptions
+class	FlusherUtil.FBFAssembly	NSObject	var	entitlementEvaluator
+class	FlusherUtil.FBFAssembly	NSObject	var	sandboxExtensionDistributor
+class	FlusherUtil.FBFAssembly	NSObject	let	taskTracker
+class	FlusherUtil.FlusherClient	NSObject		
+class	FlusherUtil.FlusherClient	NSObject	let	connection
+struct	FlusherUtil.SISEndpoint			
+struct	FlusherUtil.SISEndpoint		let	fbfAssembly
+class	FlusherUtil.DPGUploadService			
+class	FlusherUtil.DPGUploadService		let	uploadUrl
+class	FlusherUtil.DPGUploadService		let	denyListBundleIDs
+class	FlusherUtil.DPGUploadService		let	disableDeviceAuthentication
+class	FlusherUtil.DPGUploadService		let	epVariant
+class	FlusherUtil.DPGUploadService		let	clientSuppliedHeaders
+class	FlusherUtil.DPGUploadService		let	targetURL
+class	FlusherUtil.DPGUploadService		let	state
+class	FlusherUtil.DPGUploadService		let	dpgService
+class	FlusherUtil.DPGEventBatch			
+class	FlusherUtil.DPGEventBatch		let	bundleID
+class	FlusherUtil.DPGEventBatch		let	batchID
+class	FlusherUtil.DPGEventBatch		var	request
+class	FlusherUtil.DPGServiceFacade			
+struct	FlusherUtil.DPGUploadService.State			
+struct	FlusherUtil.DPGUploadService.State		var	openRequestCount
+struct	FlusherUtil.DPGUploadService.State		var	wereAllRequestsEnqueued
+struct	FlusherUtil.DPGUploadService.State		var	streamClosed
+struct	FlusherUtil.DPGUploadService.State		var	delegate
+struct	FlusherUtil.DPGBatchResponse			
+struct	FlusherUtil.DPGBatchResponse		let	result
+struct	FlusherUtil.DPGBatchResponse		let	batchID
+enum	FlusherUtil.DPGInternalError			
+enum	FlusherUtil.DPGInternalError		case	uploadBlockedByDenyList
+class	FlusherUtil.Locker			
+class	FlusherUtil.Locker		let	lock
+struct	FlusherUtil.SandboxExtensionDistributor			
+struct	FlusherUtil.XPCConnectionEntitlementEvaluator			
+enum	FlusherUtil.ResourceAccessOutcome			
+enum	FlusherUtil.ResourceAccessOutcome		case	unknown
+enum	FlusherUtil.ResourceAccessOutcome		case	cacheHit
+enum	FlusherUtil.ResourceAccessOutcome		case	networkCallSucceed
+enum	FlusherUtil.ResourceAccessOutcome		case	xpcCallSucceed
+enum	FlusherUtil.ResourceAccessOutcome		case	finished
+enum	FlusherUtil.ResourceAccessOutcome		case	canceled
+enum	FlusherUtil.ResourceAccessOutcome		case	cacheMiss
+enum	FlusherUtil.ResourceAccessOutcome		case	configFetchSynchronized
+enum	FlusherUtil.ResourceAccessOutcome		case	configFetchThrottled
+enum	FlusherUtil.ResourceAccessOutcome		case	configFetchInBackground
+enum	FlusherUtil.ResourceAccessOutcome		case	skipSearch
+enum	FlusherUtil.ResourceAccessOutcome		case	pretendSearch
+enum	FlusherUtil.ResourceAccessOutcome		case	warmNotRequired
+enum	FlusherUtil.ResourceAccessOutcome		case	connectionStillWarm
+enum	FlusherUtil.ResourceAccessOutcome		case	skipSearchBecauseURL
+enum	FlusherUtil.ResourceAccessOutcome		case	notFound
+enum	FlusherUtil.ResourceAccessOutcome		case	warmError
+enum	FlusherUtil.ResourceAccessOutcome		case	badRequest
+enum	FlusherUtil.ResourceAccessOutcome		case	badResponse
+enum	FlusherUtil.ResourceAccessOutcome		case	badResponseStatus
+enum	FlusherUtil.ResourceAccessOutcome		case	emptyDataInResponse
+enum	FlusherUtil.ResourceAccessOutcome		case	invalidJSON
+enum	FlusherUtil.ResourceAccessOutcome		case	dataTaskFailure
+enum	FlusherUtil.ResourceAccessOutcome		case	responseNotHTTP
+enum	FlusherUtil.ResourceAccessOutcome		case	otherNetworkError
+enum	FlusherUtil.ResourceAccessOutcome		case	requestError
+enum	FlusherUtil.ResourceAccessOutcome		case	rpcError
+enum	FlusherUtil.ResourceAccessOutcome		case	timedOut
+enum	FlusherUtil.ResourceAccessOutcome		case	xpcError
+enum	FlusherUtil.ResourceAccessOutcome		case	missingContext
+enum	FlusherUtil.ResourceAccessOutcome		case	configFetchThrottledCacheReadFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	configFetchCompletedCacheReadFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	invalidConfig
+enum	FlusherUtil.ResourceAccessOutcome		case	otherConfigError
+enum	FlusherUtil.ResourceAccessOutcome		case	featureDisabled
+enum	FlusherUtil.ResourceAccessOutcome		case	deviceSetupIncomplete
+enum	FlusherUtil.ResourceAccessOutcome		case	ensureBagFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	noUserAgent
+enum	FlusherUtil.ResourceAccessOutcome		case	noBag
+enum	FlusherUtil.ResourceAccessOutcome		case	noAssembly
+enum	FlusherUtil.ResourceAccessOutcome		case	searchDisabledFromBag
+enum	FlusherUtil.ResourceAccessOutcome		case	missingSearchURLInBag
+enum	FlusherUtil.ResourceAccessOutcome		case	missingProxy
+enum	FlusherUtil.ResourceAccessOutcome		case	requestIneligible
+enum	FlusherUtil.ResourceAccessOutcome		case	badResource
+enum	FlusherUtil.ResourceAccessOutcome		case	proxyInitError
+enum	FlusherUtil.ResourceAccessOutcome		case	otherProxyError
+enum	FlusherUtil.ResourceAccessOutcome		case	notConfiguredError
+enum	FlusherUtil.ResourceAccessOutcome		case	otherPegasusError
+enum	FlusherUtil.ResourceAccessOutcome		case	contextError
+enum	FlusherUtil.ResourceAccessOutcome		case	otherContextError
+enum	FlusherUtil.ResourceAccessOutcome		case	otherSearchError
+enum	FlusherUtil.ResourceAccessOutcome		case	contextFetchFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	contextFetchSuccessUnchanged
+enum	FlusherUtil.ResourceAccessOutcome		case	contextFetchSuccessUpdated
+enum	FlusherUtil.ResourceAccessOutcome		case	contextFetchSuccessUpdatedStale
+enum	FlusherUtil.ResourceAccessOutcome		case	sqlError
+enum	FlusherUtil.ResourceAccessOutcome		case	v1Finished
+enum	FlusherUtil.ResourceAccessOutcome		case	v2Finished
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorCancelled
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorBadURL
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorTimedOut
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorUnsupportedURL
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorCannotFindHost
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorNetworkConnectionLost
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorDNSLookupFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorHTTPTooManyRedirects
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorResourceUnavailable
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorNotConnectedToInternet
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorRedirectToNonExistentLocation
+enum	FlusherUtil.ResourceAccessOutcome		case	urlErrorDataNotAllowed
+enum	FlusherUtil.ResourceAccessOutcome		case	appWhitelistImmediateUpdateTransactionMissing
+enum	FlusherUtil.ResourceAccessOutcome		case	appWhitelistDeferredUpdateBegan
+enum	FlusherUtil.ResourceAccessOutcome		case	appwhitelistDeferredUpdateTransactionMissing
+enum	FlusherUtil.ResourceAccessOutcome		case	appWhitelistDeferredUpdateSuperseded
+enum	FlusherUtil.ResourceAccessOutcome		case	failedToCreateFile
+enum	FlusherUtil.ResourceAccessOutcome		case	failedToCreateFileHandle
+enum	FlusherUtil.ResourceAccessOutcome		case	failedToSetExtendedAttributes
+enum	FlusherUtil.ResourceAccessOutcome		case	cacheDirectoryNotFound
+enum	FlusherUtil.ResourceAccessOutcome		case	cacheDirEnumeratorInitFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	disallowedNonPlatformBinary
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryFinished
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryMissingContext
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryNotFound
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetSet
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetName
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetLocation
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetMetadata
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryMissingMetadataEntry
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryCannotReadAsset
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryInvalidJSON
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryBadResource
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryBadURL
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryRequestIneligible
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryTaskCancelled
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryHashNotFound
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliverySameVersion
+enum	FlusherUtil.ResourceAccessOutcome		case	assetDeliveryInvalidContext
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskCompleted
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskError
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskCompletedWithEvents
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskObservedEvents
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskNoEventsFound
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskBiomeStreamIterationEmpty
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaTaskNoBookmarkFound
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaEventSavedToFL
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorReadingFromBiome
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorWriteToFL
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorPBDecode
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorPBEncode
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorPBSchemaMismatch
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorWebIDMissing
+enum	FlusherUtil.ResourceAccessOutcome		case	sbaErrorBookmarkDecodeError
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionInvalidRemoteObject
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionMissingPayload
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionUnsubscribeError
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionSubscribeError
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionSubscribeSuccess
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionUnsubscribeSuccess
+enum	FlusherUtil.ResourceAccessOutcome		case	cloudConnectionNoPushMessage
+enum	FlusherUtil.ResourceAccessOutcome		case	protoSterilizationFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	parsecKeysMissingTokenError
+enum	FlusherUtil.ResourceAccessOutcome		case	parsecKeysFound
+enum	FlusherUtil.ResourceAccessOutcome		case	sessionSuccess
+enum	FlusherUtil.ResourceAccessOutcome		case	sessionUnknown
+enum	FlusherUtil.ResourceAccessOutcome		case	timestampOutOfRange
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenSuccess
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenChallengeFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenChallengeDataMissing
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenFetcherInitFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenFetchFailed
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenPermissionDenied
+enum	FlusherUtil.ResourceAccessOutcome		case	patTokenNetworkError
+enum	FlusherUtil.ResourceAccessActivity			
+class	FlusherUtil.FBFImmediateServiceState			
+class	FlusherUtil.FBFImmediateServiceState		let	flusherService
+class	FlusherUtil.FBFImmediateServiceState		let	feedbackLoggerService
+class	FlusherUtil.FBFCompleteServiceState			
+class	FlusherUtil.FBFCompleteServiceState		let	baseServiceState
+class	FlusherUtil.FBFCompleteServiceState		let	fbfAssembly
+class	FlusherUtil.FBFCompleteServiceState		let	sigHandlers
+enum	FlusherUtil.FeedbackFileType			
+enum	FlusherUtil.FeedbackFileType		case	unknown
+enum	FlusherUtil.FeedbackFileType		case	parsec
+enum	FlusherUtil.FeedbackFileType		case	custom
+enum	FlusherUtil.FeedbackFileType		case	feedbackLogger
+class	FlusherUtil.FeedbackEnumeratorUtil			
+struct	FlusherUtil.FeedbackEnumerator			
+struct	FlusherUtil.FeedbackEnumerator		let	fileManager
+struct	FlusherUtil.FeedbackEnumerator		var	feedbackFiles
+class	FlusherUtil.CacheDirectoryEnumerator.ShallowEnumerator			
+class	FlusherUtil.CacheDirectoryEnumerator.ShallowEnumerator		let	path
+class	FlusherUtil.CacheDirectoryEnumerator.ShallowEnumerator		let	type
+class	FlusherUtil.CacheDirectoryEnumerator.ShallowEnumerator		var	enumerator
+class	FlusherUtil.CacheDirectoryEnumerator.ShallowEnumerator		var	remainingCount
+struct	FlusherUtil.CacheDirectoryEnumerator			
+struct	FlusherUtil.CacheDirectoryEnumerator		let	fileManager
+struct	FlusherUtil.CacheDirectoryEnumerator		var	feedbackTypeDirEnumerators
+class	FlusherUtil.ClientName	NSObject		
+class	FlusherUtil.BundleDescriptor.Settings			
+class	FlusherUtil.BundleDescriptor.Settings		let	bundleIdentifier
+class	FlusherUtil.BundleDescriptor.Settings		let	userDefaults
+class	FlusherUtil.ActivityMonitor			
+class	FlusherUtil.ActivityMonitor		var	delegate
+class	FlusherUtil.ActivityMonitor		let	locker
+class	FlusherUtil.ActivityMonitor		var	spans
+class	FlusherUtil.ActivityMonitor.WeakReference			
+class	FlusherUtil.ActivityMonitor.WeakReference		var	reference
+class	FlusherUtil.FeedbackLoggerService	NSObject		
+class	FlusherUtil.FeedbackLoggerService	NSObject	var	_fbfAssembly
+class	FlusherUtil.FeedbackLoggerService	NSObject	let	listener
+class	FlusherUtil.FeedbackLoggerService	NSObject	let	logger
+class	FlusherUtil.FeedbackLoggerService	NSObject	let	openConnections
+class	FlusherUtil.SiriFileUploadService	FlusherUtil.SiriMessageService SISchemaAnyEventDUServiceUploadResponse		
+class	FlusherUtil.AtomicLazy			
+class	FlusherUtil.AtomicLazy		let	lock
+class	FlusherUtil.AtomicLazy		var	inner
+enum	FlusherUtil.AtomicLazy.Inner			
+enum	FlusherUtil.AtomicLazy.Inner		case	uninitialized
+enum	FlusherUtil.AtomicLazy.Inner		case	initialized
+class	FlusherUtil.StoreEnumerator			
+class	FlusherUtil.StoreEnumerator		let	log
+class	FlusherUtil.StoreEnumerator		var	currentBundleDescriptor
+class	FlusherUtil.StoreEnumerator		let	assembly
+class	FlusherUtil.StoreEnumerator		let	fileEnumerator
+class	FlusherUtil.StoreEnumerator		var	fileEnumeratorToken
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest			
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest		var	events
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest		var	requestID
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest		var	unknownFields
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage			
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage		var	payloadType
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage		var	schemaName
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage		var	schemaFingerprint
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage		var	body
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage		var	unknownFields
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType			
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType		case	UNRECOGNIZED
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType		case	payloadUnknown
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType		case	payloadAvroRecord
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType		case	payloadProtoRecord
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata			
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	fqn
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	timestampMs
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	requestID
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	topicOverride
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	sourceCluster
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	stream
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	legacyHeaders
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata		var	unknownFields
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage			
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage		var	headers
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage		var	unknownFields
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage		var	_payload
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage		var	_metadata
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode			
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	UNRECOGNIZED
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventHeadersInvalid
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventBodyInvalid
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventBodyTooLarge
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventSchemaUnknown
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventUnsupported
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventTimeout
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode		case	eventProducerFailed
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus			
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus		case	UNRECOGNIZED
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus		case	ok
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus		case	failedAll
+enum	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus		case	failedPartial
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError			
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError		var	index
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError		var	requestID
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError		var	code
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError		var	message
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError		var	unknownFields
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse			
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse		var	status
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse		var	message
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse		var	errors
+struct	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse		var	unknownFields
+struct	FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment			
+struct	FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment		var	unknownFields
+struct	FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment		var	_buildVariant
+enum	FlusherUtil.Com_Apple_Ve_Common_BuildVariant			
+enum	FlusherUtil.Com_Apple_Ve_Common_BuildVariant		case	development
+enum	FlusherUtil.Com_Apple_Ve_Common_BuildVariant		case	qa
+enum	FlusherUtil.Com_Apple_Ve_Common_BuildVariant		case	carry
+enum	FlusherUtil.Com_Apple_Ve_Common_BuildVariant		case	seed
+enum	FlusherUtil.Com_Apple_Ve_Common_BuildVariant		case	production
+class	FlusherUtil.FeedbackLoggerConnection	NSObject		
+class	FlusherUtil.FeedbackLoggerConnection	NSObject	let	connection
+class	FlusherUtil.FeedbackLoggerConnection	NSObject	let	connectionIdentifier
+class	FlusherUtil.FeedbackLoggerConnection	NSObject	let	logger
+class	FlusherUtil.FeedbackLoggerConnection	NSObject	var	fbfAssembly
+struct	FlusherUtil.PegasusConfigURLProvider			
+struct	FlusherUtil.PegasusConfigURLProvider		let	fileManager
+struct	FlusherUtil.PegasusConfigURLProvider		let	pegasusConfigCacheDirectoryURL
+class	FlusherUtil.AtomicProperty			
+class	FlusherUtil.AtomicProperty		var	value
+class	FlusherUtil.AtomicProperty		let	lock
+enum	FlusherUtil.PegasusClientName			
+enum	FlusherUtil.PegasusClientName		case	Unknown
+enum	FlusherUtil.PegasusClientName		case	Safari
+enum	FlusherUtil.PegasusClientName		case	Spotlight
+enum	FlusherUtil.PegasusClientName		case	Siri
+enum	FlusherUtil.PegasusClientName		case	Lookup
+enum	FlusherUtil.PegasusClientName		case	Messages
+enum	FlusherUtil.PegasusClientName		case	News
+enum	FlusherUtil.PegasusClientName		case	Parsecd
+enum	FlusherUtil.PegasusClientName		case	ParsecTool
+enum	FlusherUtil.PegasusClientName		case	CoreSuggestions
+enum	FlusherUtil.PegasusClientName		case	FlightUtilities
+enum	FlusherUtil.PegasusClientName		case	MapsSuggestions
+enum	FlusherUtil.PegasusClientName		case	Mail
+enum	FlusherUtil.PegasusClientName		case	VisualIntelligence
+enum	FlusherUtil.PegasusClientName		case	Trystero
+enum	FlusherUtil.PegasusClientName		case	DuetExpert
+enum	FlusherUtil.PegasusClientName		case	ReverseTemplated
+enum	FlusherUtil.PegasusClientName		case	MediaAnalysisd
+enum	FlusherUtil.PegasusClientName		case	NotificationsLogging
+enum	FlusherUtil.PegasusClientName		case	PegasusKit
+enum	FlusherUtil.PegasusClientName		case	Photos
+enum	FlusherUtil.PegasusClientName		case	PhotoPicker
+enum	FlusherUtil.PegasusClientName		case	IntelligencePlatform
+enum	FlusherUtil.PegasusClientName		case	IntelligenceFlow
+enum	FlusherUtil.PegasusClientName		case	SafariBrowsingAssistant
+enum	FlusherUtil.PegasusClientName		case	ClockFace
+enum	FlusherUtil.PegasusClientName		case	LookupSearch
+enum	FlusherUtil.PegasusClientName		case	EncryptedVisualSearch
+enum	FlusherUtil.PegasusClientName		case	SearchAnalyticsWorker
+enum	FlusherUtil.PegasusClientName		case	CameraVisualSearch
+enum	FlusherUtil.PegasusClientName		case	EncryptedPQAGeo
+enum	FlusherUtil.PegasusClientName		case	EncryptedPhotosLocationSearch
+enum	FlusherUtil.PegasusClientName		case	Tips
+class	FlusherUtil.StoreDirectoryEnumerator			
+class	FlusherUtil.StoreDirectoryEnumerator		var	cachesDirectory
+class	FlusherUtil.StoreDirectoryEnumerator		var	containerDirectory
+class	FlusherUtil.StoreDirectoryEnumerator		let	fileManager
+class	FlusherUtil.StoreDirectoryEnumerator		var	defaultToken
+class	FlusherUtil.StoreDirectoryEnumerator		var	lazy
+class	FlusherUtil.StoreDirectoryEnumerator		var	lazy
+class	FlusherUtil.StoreDirectoryEnumerator		var	lazy
+struct	FlusherUtil.StoreDirectoryEnumerator.Token			
+struct	FlusherUtil.StoreDirectoryEnumerator.Token		var	index
+class	FlusherUtil.SiriConfigurationService	FlusherUtil.SiriMessageService LCServiceConfigurationRequestLCServiceConfigurationResponse		
+class	FlusherUtil.UploadServiceProvider			
+class	FlusherUtil.UploadServiceProvider		let	assembly
+class	FlusherUtil.UploadServiceProvider		let	sisEndpoint
+class	FlusherUtil.UploadServiceProvider		let	disableDeviceAuthentication
+class	FlusherUtil.UploadServiceProvider		let	devID
+struct	FlusherUtil.EventRedactionHelper			
+struct	FlusherUtil.EventRedactionHelper		let	logger
+struct	FlusherUtil.EventRedactionHelper		let	bundleID
+struct	FlusherUtil.EventRedactionHelper		let	controller
+class	FlusherUtil.CohortScheduler			
+class	FlusherUtil.CohortScheduler		var	assembly
+class	FlusherUtil.CohortScheduler		let	persistentStore
+class	FlusherUtil.CohortScheduler		let	cohortFeedbackGenerator
+class	FlusherUtil.CohortScheduler		let	calendar
+class	FlusherUtil.CohortScheduler		let	today
+class	FlusherUtil.CohortScheduler		let	localTZ
+class	FlusherUtil.CohortScheduler		let	isFlushingEagerly
+class	FlusherUtil.CohortScheduler		let	cancelled
+class	FlusherUtil.CohortScheduler		var	maxAgeInHours
+struct	FlusherUtil.OSVariant			
+class	FlusherUtil.SessionProcessingHelper			
+class	FlusherUtil.SessionProcessingHelper		var	nextMappedId
+class	FlusherUtil.SessionProcessingHelper		var	idMapping
+class	FlusherUtil.SessionProcessingHelper		var	identifiableMapping
+class	FlusherUtil.SessionProcessingHelper		var	expandedIdSet
+class	FlusherUtil.SessionProcessingHelper		var	allIdSet
+class	FlusherUtil.SessionProcessingHelper		let	firstTS
+class	FlusherUtil.SessionProcessingHelper		let	agent
+class	FlusherUtil.UploadManager	NSObject		
+class	FlusherUtil.UploadManager	NSObject	let	fbfAssembly
+class	FlusherUtil.UploadManager	NSObject	let	locker
+class	FlusherUtil.UploadManager	NSObject	var	_uploadSession
+class	FlusherUtil.UploadManager	NSObject	var	isSessionValid
+class	FlusherUtil.UploadManager	NSObject	let	bag
+class	FlusherUtil.UploadManager	NSObject	let	feedbackURL
+enum	FlusherUtil.UploadManager.UploadRequestError			
+enum	FlusherUtil.UploadManager.UploadRequestError		case	transactionCreationFailed
+enum	FlusherUtil.UploadManager.UploadRequestError		case	noValidSession
+struct	FlusherUtil.UploadRequest			
+struct	FlusherUtil.UploadRequest		let	request
+struct	FlusherUtil.UploadRequest		let	preProcessedFileURL
+struct	FlusherUtil.UploadRequest		let	postProcessedFileURL
+struct	FlusherUtil.UploadRequest		let	uncompressedSize
+struct	FlusherUtil.UploadRequest		let	compressedSize
+struct	FlusherUtil.UploadRequest		let	typeString
+struct	FlusherUtil.FBFToolSupport			
+class	FlusherUtil.FBFUploadableFile			
+class	FlusherUtil.FBFUploadableFile		let	fileType
+class	FlusherUtil.FBFUploadableFile		var	creationDate
+class	FlusherUtil.FBFUploadableFile		var	urlWrapper
+class	FlusherUtil.FBFUploadableFile		let	fileManager
+class	FlusherUtil.FBFUploadableFile		var	size
+class	FlusherUtil.FBFUploadableFile		let	sessionFilename
+class	FlusherUtil.FBFUploadableFile		var	parsecSession
+enum	FlusherUtil.FBFUploadableFile.FlushableSessionBox			
+enum	FlusherUtil.FBFUploadableFile.FlushableSessionBox		case	filled
+enum	FlusherUtil.FBFUploadableFile.FlushableSessionBox		case	shell
+enum	FlusherUtil.FBFUploadableFile.FlushableSessionBox		case	empty
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>		
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	var	monitor
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	var	data
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	let	activity
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	var	isDone
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	let	osLog
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	var	signpostID
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	var	timestamp
+class	FlusherUtil.ActivitySpan<A	FlusherUtil.ActivityDescription>	var	locker
+struct	FlusherUtil.ActivitySpan.ActivityData<A	FlusherUtil.ActivityDescription>		
+struct	FlusherUtil.ActivitySpan.ActivityData<A	FlusherUtil.ActivityDescription>	var	format
+struct	FlusherUtil.ActivitySpan.ActivityData<A	FlusherUtil.ActivityDescription>	var	analytics
+struct	FlusherUtil.ActivitySpan.ActivityData<A	FlusherUtil.ActivityDescription>	var	arguments
+struct	FlusherUtil.ActivitySpan.ActivityData<A	FlusherUtil.ActivityDescription>	var	cancellables
+struct	FlusherUtil.ActivitySpan.ActivityData<A	FlusherUtil.ActivityDescription>	var	transaction
+class	FlusherUtil.MetaEnumerator<A	FlusherUtil.StoreElementEnumeratorProtocol>		
+class	FlusherUtil.MetaEnumerator<A	FlusherUtil.StoreElementEnumeratorProtocol>	let	assembly
+class	FlusherUtil.MetaEnumerator<A	FlusherUtil.StoreElementEnumeratorProtocol>	let	configuration
+class	FlusherUtil.MetaEnumerator<A	FlusherUtil.StoreElementEnumeratorProtocol>	let	storeEnumerator
+class	FlusherUtil.MetaEnumerator<A	FlusherUtil.StoreElementEnumeratorProtocol>	var	recordsEnumerator
+class	FlusherUtil.CohortFeedbackGenerator			
+class	FlusherUtil.CohortFeedbackGenerator		let	collectionStartTimestamp
+class	FlusherUtil.CohortFeedbackGenerator		let	fileManager
+class	FlusherUtil.CohortFeedbackGenerator		var	activityMonitor
+class	FlusherUtil.CohortFeedbackGenerator		var	listener
+class	FlusherUtil.CohortFeedbackGenerator		let	bag
+class	FlusherUtil.CohortFeedbackGenerator		let	storageContainer
+class	FlusherUtil.CohortFeedbackGenerator		let	calendar
+class	FlusherUtil.CohortFeedbackGenerator		let	deviceContext
+class	FlusherUtil.CohortFeedbackGenerator		let	localTZ
+class	FlusherUtil.CohortFeedbackGenerator		let	today
+class	FlusherUtil.FlushableSession			
+class	FlusherUtil.FlushableSession		let	backingStore
+class	FlusherUtil.FlushableSession		var	minQueryId
+class	FlusherUtil.FlushableSession		let	newsTimestampBucketSize
+class	FlusherUtil.FlusherService	NSObject		
+class	FlusherUtil.FlusherService	NSObject	var	_fbfAssembly
+class	FlusherUtil.FlusherService	NSObject	let	listener
+class	FlusherUtil.DevicePersistentDataManager			
+class	FlusherUtil.DevicePersistentDataManager		let	activityMonitor
+class	FlusherUtil.DevicePersistentDataManager		let	logger
+class	FlusherUtil.DevicePersistentDataManager		let	fileManager
+class	FlusherUtil.DevicePersistentDataManager		var	cachedData
+class	FlusherUtil.DevicePersistentDataManager		var	locker
+enum	FlusherUtil.DevicePersistentDataManager.Activity			
+enum	FlusherUtil.DevicePersistentDataManager.Activity		case	creating
+enum	FlusherUtil.DevicePersistentDataManager.Activity		case	updating
+enum	FlusherUtil.DevicePersistentDataManager.Activity		case	failedToGetURL
+enum	FlusherUtil.DevicePersistentDataManager.Activity		case	failedToRead
+enum	FlusherUtil.DevicePersistentDataManager.Activity		case	failedToWrite
+enum	FlusherUtil.CodingKeys			
+enum	FlusherUtil.CodingKeys		case	timestamp
+enum	FlusherUtil.CodingKeys		case	appLaunch
+enum	FlusherUtil.CodingKeys		case	onDeviceAddressBookData
+enum	FlusherUtil.CodingKeys		case	onDeviceOtherPersonalData
+enum	FlusherUtil.CodingKeys		case	punchout
+enum	FlusherUtil.CodingKeys		case	thirdPartyInAppContent
+enum	FlusherUtil.CodingKeys		case	parsec
+enum	FlusherUtil.CodingKeys		case	querySuggestion
+enum	FlusherUtil.CodingKeys		case	other
+enum	FlusherUtil.CodingKeys		case	siriSuggestions
+enum	FlusherUtil.CodingKeys		case	parsecWeb
+enum	FlusherUtil.CodingKeys		case	parsecAppStore
+enum	FlusherUtil.CodingKeys		case	parsecMaps
+enum	FlusherUtil.CodingKeys		case	parsecWiki
+enum	FlusherUtil.CodingKeys		case	parsecNews
+enum	FlusherUtil.CodingKeys		case	parsecStocks
+enum	FlusherUtil.CodingKeys		case	parsecWeather
+enum	FlusherUtil.CodingKeys		case	parsecOther
+enum	FlusherUtil.CodingKeys		case	webSuggestions
+enum	FlusherUtil.CodingKeys			
+enum	FlusherUtil.CodingKeys		case	timestamp
+enum	FlusherUtil.CodingKeys		case	localGoto
+enum	FlusherUtil.CodingKeys		case	localTap
+enum	FlusherUtil.CodingKeys		case	parsecGoto
+enum	FlusherUtil.CodingKeys		case	parsecTap
+enum	FlusherUtil.CodingKeys		case	thirdPartyGoto
+enum	FlusherUtil.CodingKeys		case	thirdPartyTap
+enum	FlusherUtil.CodingKeys		case	thirdPartyCompletionOrRecentSearch
+enum	FlusherUtil.CodingKeys		case	goToSite
+enum	FlusherUtil.CodingKeys		case	other
+enum	FlusherUtil.CodingKeys		case	parsecWeb
+enum	FlusherUtil.CodingKeys		case	parsecAppStore
+enum	FlusherUtil.CodingKeys		case	parsecMaps
+enum	FlusherUtil.CodingKeys		case	parsecWiki
+enum	FlusherUtil.CodingKeys		case	parsecNews
+enum	FlusherUtil.CodingKeys		case	parsecStocks
+enum	FlusherUtil.CodingKeys		case	parsecWeather
+enum	FlusherUtil.CodingKeys		case	parsecOther
+enum	FlusherUtil.CodingKeys			
+enum	FlusherUtil.CodingKeys		case	timestamp
+enum	FlusherUtil.CodingKeys		case	zkw
+enum	FlusherUtil.CodingKeys		case	recentResult
+enum	FlusherUtil.CodingKeys		case	other
+enum	FlusherUtil.CodingKeys		case	querySuggestion
+enum	FlusherUtil.CodingKeys		case	image
+class	FlusherUtil.SamplingEnrollment			
+class	FlusherUtil.SamplingEnrollment		let	sipHashMagicKey
+class	FlusherUtil.SamplingEnrollment		let	uploadFactorDeviceIdentifierBytes
+class	FlusherUtil.SamplingEnrollment		let	realtimeFactorDeviceIdentifierBytes
+class	FlusherUtil.SamplingEnrollment		var	shouldForceUpload
+class	FlusherUtil.SamplingEnrollment		let	samplingRateProvider
+class	FlusherUtil.AssemblyPassthroughSampler			
+class	FlusherUtil.AssemblyPassthroughSampler		let	assembly
+class	FlusherUtil.CoreDataStorageContainer			
+class	FlusherUtil.CoreDataStorageContainer		let	fileManager
+class	FlusherUtil.CoreDataStorageContainer		var	maybePersistentContainer
+class	FlusherUtil.CoreDataStorageContainer		var	maybeManagedObjectContext
+class	FlusherUtil.CoreDataStorageContainer		var	maybeQueryProcessor
+class	FlusherUtil.CoreDataStorageContainer		var	maybeEventFactory
+class	FlusherUtil.CoreDataStorageContainer		var	aggregationDateMap
+class	FlusherUtil.ProgressTrackingDispatchGroup			
+class	FlusherUtil.ProgressTrackingDispatchGroup		let	lock
+class	FlusherUtil.ProgressTrackingDispatchGroup		let	group
+class	FlusherUtil.ProgressTrackingDispatchGroup		let	logger
+class	FlusherUtil.TaskTracker			
+class	FlusherUtil.TaskTracker		let	lock
+class	FlusherUtil.TaskTracker.WeakTask			
+class	FlusherUtil.TaskTracker.WeakTask		var	instance
+class	FlusherUtil.FlusherConnection	NSObject		
+class	FlusherUtil.FlusherConnection	NSObject	let	connection
+class	FlusherUtil.FlusherConnection	NSObject	let	clientProxy
+class	FlusherUtil.FlusherConnection	NSObject	var	fbfAssembly
+class	FlusherUtil.FlusherConnection	NSObject	var	isSendingStreamListener
+class	FlusherUtil.FlusherConnection	NSObject	var	isCohortsListener
+enum	FlusherUtil.WhitelistError			
+enum	FlusherUtil.WhitelistError		case	invalidWhitelistFile
+enum	FlusherUtil.WhitelistError		case	invalidAppList
+class	FlusherUtil.FBFURLWrapper			
+class	FlusherUtil.FBFURLWrapper		let	fileURL
+class	FlusherUtil.FBFURLWrapper		var	lazy
+class	FlusherUtil.FBFURLWrapper		var	lazy
+class	FlusherUtil.FBFURLWrapper		var	lazy
+class	FlusherUtil.FBFURLWrapper		var	lazy
+class	FlusherUtil.FBFURLWrapper		var	lazy
+class	FlusherUtil.ParsecURLRequestBuilder			
+class	FlusherUtil.ParsecURLRequestBuilder		let	urlComponents
+class	FlusherUtil.ParsecURLRequestBuilder		var	queryItems
+class	FlusherUtil.ParsecURLRequestBuilder		var	httpHeader
+enum	FlusherUtil.ParsecURLRequestBuilder.URLError			
+enum	FlusherUtil.ParsecURLRequestBuilder.URLError		case	InvalidURLSchemeError
+enum	FlusherUtil.ParsecURLRequestBuilder.URLError		case	InvalidURL
+class	FlusherUtil.SessionFilename			
+class	FlusherUtil.SessionFilename		var	sessionID
+class	FlusherUtil.SessionFilename		var	processID
+class	FlusherUtil.SessionFilename		var	state
+class	FlusherUtil.SessionFilename		var	uploadPending
+enum	FlusherUtil.SessionFilename.SessionFileState			
+enum	FlusherUtil.SessionFilename.SessionFileState		case	open
+enum	FlusherUtil.SessionFilename.SessionFileState		case	closed
+enum	FlusherUtil.SessionFilename.SessionFileState		case	processing
+enum	FlusherUtil.SessionFilename.SessionFileState		case	uploaded
+class	FlusherUtil.DeviceContext			
+class	FlusherUtil.DeviceContext		let	localeIdentifier
+class	FlusherUtil.DeviceContext		let	country
+class	FlusherUtil.DeviceContext		let	deviceModel
+class	FlusherUtil.DeviceContext		let	osVersion
+struct	FlusherUtil.ToolingUsageProcessor			
+struct	FlusherUtil.UsageProcessor			
+struct	FlusherUtil.UsageProcessor		let	persistentStore
+struct	FlusherUtil.DeviceUserOptions			
+class	FlusherUtil.SISConfigurationLoader			
+class	FlusherUtil.SISConfigurationLoader		let	assembly
+class	FlusherUtil.SISConfigurationLoader		let	sisEndpoint
+enum	FlusherUtil.SISConfigurationLoader.Activity			
+enum	FlusherUtil.SISConfigurationLoader.Activity		case	configRetrieval
+enum	FlusherUtil.SISConfigurationLoader.Activity		case	configIsCached
+class	SearchFeedback.BiomeReadableSessionDatabase	SearchFeedback.ReadableSessionDatabase		
+enum	SearchFeedback.UploadFrom			
+enum	SearchFeedback.UploadFrom		case	files
+enum	SearchFeedback.UploadFrom		case	biome
+enum	SearchFeedback.SessionDBFeatureFlags			
+enum	SearchFeedback.SessionDBFeatureFlags		case	sessionDBUpload
+class	SearchFeedback.ReadableSessionDatabase			
+class	SearchFeedback.ReadableSessionDatabase		let	reader
+struct	SearchFeedback.BiomeStreamsTelemetryReporter			
+class	SearchFeedback.BiomeDatabaseReader			
+class	SearchFeedback.BiomeDatabaseReader		var	fileManager
+enum	SearchFeedback.BiomeReadError			
+enum	SearchFeedback.BiomeReadError		case	noEventInstance
+enum	SearchFeedback.BiomeReadError		case	invalidPayload
+enum	SearchFeedback.BiomeReadError		case	cannotLocateStream
+enum	SearchFeedback.BiomeReadError		case	memoryError
+enum	SearchFeedback.BiomeReadError		case	unknownStream
+enum	SearchFeedback.BiomeReadError		case	invalidEnumeratorTimeInterval
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy			
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	type
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	session
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	bookmark
+struct	SearchFeedback.BiomeDatabaseReader.SessionProxy		let	time
+class	SearchFeedback.BiomeDatabaseWriter			
+class	SearchFeedback.BiomeDatabaseWriter		var	feedbackStreamWriters
+class	SearchFeedback.BiomeDatabaseWriter		var	_sessionStreamWriter
+class	SearchFeedback.BiomeDatabaseWriter		let	fileManager
+class	SearchFeedback.BiomeDatabaseWriter		let	telemetryReporter
+enum	SearchFeedback.UploadStateStoreError			
+enum	SearchFeedback.UploadStateStoreError		case	cannotResolveCacheFolder
+enum	SearchFeedback.UploadStateStoreError		case	attemptToStartWhenUploaded
+enum	SearchFeedback.UploadStateStoreError		case	attemptToFinishWhenUploaded
+enum	SearchFeedback.UploadStateStoreError		case	attemptToFinishWhenNotStarted
+enum	SearchFeedback.UploadStateStoreError		case	invalidUploadOrder
+class	SearchFeedback.UploadStateFileStore			
+class	SearchFeedback.UploadStateFileStore		let	logger
+class	SearchFeedback.UploadStateFileStore		let	fileManager
+class	SearchFeedback.UploadStateFileStore		let	sessionUploadStateFileName
+class	SearchFeedback.UploadStateFileStore		var	uploadStateCache
+struct	SearchFeedback.UploadStateFileStore.UploadState			
+struct	SearchFeedback.UploadStateFileStore.UploadState		let	bookmark
+struct	SearchFeedback.UploadStateFileStore.UploadState		var	state
+struct	SearchFeedback.UploadStateFileStore.UploadStates			
+struct	SearchFeedback.UploadStateFileStore.UploadStates		var	states
+enum	SearchFeedback.UploadStateFileStore.UploadState.CodingKeys			
+enum	SearchFeedback.UploadStateFileStore.UploadState.CodingKeys		case	bookmark
+enum	SearchFeedback.UploadStateFileStore.UploadState.CodingKeys		case	state
+enum	SearchFeedback.UploadStateFileStore.State			
+enum	SearchFeedback.UploadStateFileStore.State		case	uploading
+enum	SearchFeedback.UploadStateFileStore.State		case	uploaded
+enum	SearchFeedback.UploadStateFileStore.UploadStates.CodingKeys			
+enum	SearchFeedback.UploadStateFileStore.UploadStates.CodingKeys		case	states
+class	SearchFeedback.RawPayload	BMEventBase		
+class	SearchFeedback.RawPayload	BMEventBase	let	dataVersion
+class	SearchFeedback.RawPayload	BMEventBase	let	data
+class	SearchFeedback.SessionFeedback			
+class	SearchFeedback.SessionFeedback		var	backingStore
+class	SearchFeedback.SessionFeedback		let	type
+class	SearchFeedback.SessionFeedback		let	sessionId
+class	SearchFeedback.SessionFeedback		let	creationDate
+class	SearchFeedback.SessionFeedback		var	closingDate
+struct	SearchFeedback.BiomeSessionWrapper			
+struct	SearchFeedback.BiomeSessionWrapper		let	type
+struct	SearchFeedback.BiomeSessionWrapper		let	payload
+enum	SearchFeedback.BiomeSessionError			
+enum	SearchFeedback.BiomeSessionError		case	invalidSchema
+enum	SearchFeedback.BiomeSessionError		case	invalidSessionType
+enum	SearchFeedback.BiomeSessionError		case	unknownSessionType
+enum	SearchFeedback.BiomeSessionError		case	invalidPayload
+enum	SearchFeedback.BiomeSessionError		case	invalidSessionId
+struct	SearchFeedback.BiomeSessionWrapper.Schema			
+struct	SearchFeedback.BiomeSessionWrapper.Schema		let	store
+struct	SearchFeedback.BiomeSessionWrapper.Schema		let	wrapperMessage
+struct	SearchFeedback.BiomeSessionWrapper.Schema		let	sessionMessage
+enum	SearchFeedback.SearchFeedbackFeatureFlags			
+enum	SearchFeedback.SearchFeedbackFeatureFlags		case	aggregateStore
+enum	SearchFeedback.SearchFeedbackFeatureFlags		case	aggregateUpload
+class	SearchFeedback.Locker			
+class	SearchFeedback.Locker		let	lock
+enum	SearchFeedback.SessionDatabaseError			
+enum	SearchFeedback.SessionDatabaseError		case	streamIsNotSupported
+enum	SearchFeedback.SessionDatabaseError		case	unknownSessionType
+enum	SearchFeedback.SessionDatabaseError		case	failedToOpenSessionStore
+enum	SearchFeedback.SessionDatabaseError		case	failedToCreateEnumerator
+enum	SearchFeedback.SessionDatabaseError		case	emptySessionPayload
+enum	SearchFeedback.SessionDatabaseError		case	emptyFeedbackPayload
+struct	SearchFeedback.SessionFeedbackReference			
+struct	SearchFeedback.SessionFeedbackReference		let	session
+struct	SearchFeedback.SessionFeedbackReference		let	sessionBookmark
+class	SearchFeedback.SessionBookmark			
+class	SearchFeedback.SessionBookmark		let	bmBookmark
+class	SearchFeedback.SessionBookmark		let	sessionId
+class	SearchFeedback.SessionBookmark		let	timestamp
+enum	SearchFeedback.SessionBookmark.CodingKeys			
+enum	SearchFeedback.SessionBookmark.CodingKeys		case	bmBookmark
+enum	SearchFeedback.SessionBookmark.CodingKeys		case	sessionId
+enum	SearchFeedback.SessionBookmark.CodingKeys		case	timestamp
+enum	SearchFeedback.SessionBookmarkError			
+enum	SearchFeedback.SessionBookmarkError		case	failedToDecodeBookmark
+enum	SearchFeedback.SessionBookmarkError		case	failedToEncodeBookmark
+class	SearchFeedback.WritableSessionDatabase			
+class	SearchFeedback.WritableSessionDatabase		let	writer
+class	SearchFeedback.WritableSessionDatabase		let	ledger
+class	SearchFeedback.WritableSessionDatabase		let	locker
+class	SearchFeedback.WritableSessionDatabase		var	sessions
+struct	FlusherUtil.DPGService			
+struct	FlusherUtil.DPGService		let	lock
+protocol	SQLiter.SQLiteSafeType			
+protocol	SQLiter.SQLiteType			
+protocol	SQLiter.SQLiteInteger32			
+protocol	SQLiter.SQLiteInteger64			
+protocol	SQLiter.SQLiteExtension			
+protocol	SQLiter.SQLiteNamesValidating			
+protocol	SQLiter.SQLiteUnsafeType			
+protocol	SQLiter.SQLiteSchemaDescribing			
+protocol	SQLiter.SQLiteColumnDescribing			
+protocol	SQLiter.SQLiteBindable			
+protocol	FlusherUtil.DirectoryEntryCountProvider			
+protocol	FlusherUtil.Uploadable			
+protocol	FlusherUtil.UploadOutcomeTelemetryReporter			
+protocol	FlusherUtil.DiskOperationMetrics			
+protocol	FlusherUtil.UsageProcessorProtocol			
+protocol	FlusherUtil.EngagementReporter			
+protocol	FlusherUtil.EngagementReporterForSection			
+protocol	FlusherUtil.KeystrokeReporter			
+protocol	FlusherUtil.CohortSchedulerProtocol			
+protocol	FlusherUtil.CohortQueryProcessorProtocol			
+protocol	FlusherUtil.CohortFeedbackGeneratorProtocol			
+protocol	FlusherUtil.EventFactoryProtocol			
+protocol	FlusherUtil.PropensitySession			
+protocol	FlusherUtil.EngagementBundleIDProvider			
+protocol	FlusherUtil.UploadDescriptorEnumeratorProtocol			
+protocol	FlusherUtil.CohortsProvider			
+protocol	FlusherUtil.PBCodableTypeResolver			
+protocol	FlusherUtil.BatchEnumeratorProtocol			
+protocol	FlusherUtil.FeedbackFlusher			
+protocol	FlusherUtil.NetworkTask			
+protocol	FlusherUtil.TransactionControlling			
+protocol	FlusherUtil.CohortsAggregationDateMap			
+protocol	FlusherUtil.ActivityDescription			
+protocol	FlusherUtil.__CoreAnalyticsActivity			
+protocol	FlusherUtil.CoreAnalyticsActivity			
+protocol	FlusherUtil.TransactionActivity			
+protocol	FlusherUtil.__CrashSimulationActivity			
+protocol	FlusherUtil.OptionalCrashSimulationActivity			
+protocol	FlusherUtil.CrashSimulationActivity			
+protocol	FlusherUtil.SubActivityDescription	ParentActivity		
+protocol	FlusherUtil.DevicePersistentDataManagerProtocol			
+protocol	FlusherUtil.SiriServiceDelegate			
+protocol	FlusherUtil.SiriServiceProtocol			
+protocol	FlusherUtil.UploaderService			
+protocol	FlusherUtil.BatchResponseProtocol			
+protocol	FlusherUtil.UploadableEventBatch			
+protocol	FlusherUtil.FileUploadRequestProtocol			
+protocol	FlusherUtil.ResourceAccessProvider			
+protocol	FlusherUtil.FBFTask			
+protocol	FlusherUtil.InstalledAppControllerProtocol			
+protocol	FlusherUtil.FBFAssemblyProtocol			
+protocol	FlusherUtil.FBFProgressCheckpoint			
+protocol	VerifyingSecureCoding			
+protocol	FlusherUtil.EagerSessionUploader			
+protocol	FlusherUtil.HostConfigProtocol			
+protocol	FlusherUtil._CPRedactable			
+protocol	FlusherUtil._CPFeedbackContainingResults			
+protocol	FlusherUtil._CPFeedbackContainingRedactables			
+protocol	FlusherUtil.XPCConnectionEntitlementEvaluation			
+protocol	FlusherUtil.SandboxExtensionDistribution			
+protocol	FlusherUtil.SpanProtocol			
+protocol	FlusherUtil.ActivityAdopter	Activity		
+protocol	FlusherUtil.ActivityMonitorAdopter			
+protocol	FlusherUtil.ActivityMonitorDelegate			
+protocol	FlusherUtil.StoreEnumeratorProtocol			
+protocol	FlusherUtil.BagURLProvider			
+protocol	FlusherUtil.StoreDirectoryEnumeratorProtocol	Token		
+protocol	FlusherUtil.OSVariantInspector			
+protocol	FlusherUtil._CPIdentifiable			
+protocol	FlusherUtil._CPObfuscatable			
+protocol	FlusherUtil.StoreElementEnumeratorProtocol	Element, Configuration		
+protocol	FlusherUtil.MetaEnumeratorProtocol	Enumerator		
+protocol	FlusherUtil.PropensityProto			
+protocol	FlusherUtil.SamplingRateProvider			
+protocol	FlusherUtil.DeviceContextProtocol			
+protocol	FlusherUtil.ParsecPropensitySession			
+protocol	FlusherUtil.DeviceUserOptionsInspector			
+protocol	SearchFeedback.BiomeStreamsBookkeeping			
+protocol	SearchFeedback.UploadableSessionDatabaseProtocol			
+protocol	SearchFeedback.BiomeStreamsTelemetryReporting			
+protocol	SearchFeedback.SearchFeedbackFeatureFlagsProvider			
+protocol	SearchFeedback.SessionDatabaseReading			
+protocol	SearchFeedback.SessionDatabaseWriting			
+protocol	SearchFeedback.WritableSessionDatabaseProtocol			
+protocol	conformance nominal type descriptor for Bool	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Float	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Double	SQLiter.SQLiteSafeType		
+protocol	conformance SQLiter.SQLiteUndefined	SQLiter.SQLiteType		
+protocol	conformance SQLiter.SQLiteUndefined	SQLiter.SQLiteBindable		
+protocol	conformance SQLiter.SQLiteUndefined	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteUndefined	protocol descriptor for Equatable		
+protocol	conformance SQLiter.SQLiteError	protocol descriptor for Error		
+protocol	conformance SQLiter.SQLiteError	protocol descriptor for Equatable		
+protocol	conformance nominal type descriptor for Bool	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Float	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Double	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Data	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Optional	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int8	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt8	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int16	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt16	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int32	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteInteger32		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt32	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int64	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt64	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Int	SQLiter.SQLiteType		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteInteger64		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteSafeType		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for UInt	SQLiter.SQLiteType		
+protocol	conformance SQLiteDatabase.TransactionError	protocol descriptor for Error		
+protocol	conformance SQLiter.SQLiteDataType	protocol descriptor for Equatable		
+protocol	conformance SQLiter.SQLiteDataType	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteDataType	protocol descriptor for RawRepresentable		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteNamesValidating		
+protocol	conformance SQLiter.SQLiteColumnType	protocol descriptor for Equatable		
+protocol	conformance SQLiter.SQLiteColumnType	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteColumnType	protocol descriptor for RawRepresentable		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteUnsafeType		
+protocol	conformance nominal type descriptor for Data	SQLiter.SQLiteUnsafeType		
+protocol	conformance SQLiter.SQLiteSchema	SQLiter.SQLiteSchemaDescribing		
+protocol	conformance SQLiter.SQLiteSchema	SQLiter.SQLiteNamesValidating		
+protocol	conformance SQLiteBaseVTab.Style	protocol descriptor for Equatable		
+protocol	conformance SQLiteBaseVTab.Style	protocol descriptor for Hashable		
+protocol	conformance SQLiter.SQLiteBaseVTab	SQLiter.SQLiteExtension		
+protocol	conformance nominal type descriptor for Bool	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Float	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Double	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for String	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Data	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Array	SQLiter.SQLiteBindable		
+protocol	conformance nominal type descriptor for Optional	SQLiter.SQLiteBindable		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for _HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for RawRepresentable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for _SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for Equatable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C.FileProtectionType	protocol descriptor for _ObjectiveCBridgeable: Foundation		
+protocol	conformance __C._CPClient	protocol descriptor for Equatable		
+protocol	conformance __C._CPClient	protocol descriptor for RawRepresentable		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.FLLoggerUploadStatus	protocol descriptor for Equatable		
+protocol	conformance __C.FLLoggerUploadStatus	protocol descriptor for RawRepresentable		
+protocol	conformance __C.FLLoggerBatchStatus	protocol descriptor for Equatable		
+protocol	conformance __C.FLLoggerBatchStatus	protocol descriptor for RawRepresentable		
+protocol	conformance __C.compression_status	protocol descriptor for RawRepresentable: Compression		
+protocol	conformance __C.compression_status	protocol descriptor for Equatable: Compression		
+protocol	conformance __C._CPClient	protocol descriptor for Hashable		
+protocol	conformance __C.FileAttributeKey	protocol descriptor for Hashable: Foundation		
+protocol	conformance __C._CPBundleIdentifier	protocol descriptor for Hashable		
+protocol	conformance __C._CPBundleIdentifier	protocol descriptor for Equatable		
+protocol	conformance __C._CPBundleIdentifier	protocol descriptor for RawRepresentable		
+protocol	conformance __C.FBFUpdateWhitelistCondition	protocol descriptor for Equatable		
+protocol	conformance __C.FBFUpdateWhitelistCondition	protocol descriptor for RawRepresentable		
+protocol	conformance __C._CPCBAEngagementType	protocol descriptor for Equatable		
+protocol	conformance __C._CPCBAEngagementType	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.RPCError	protocol descriptor for Error		
+protocol	conformance GetAttrListFacade	FlusherUtil.DirectoryEntryCountProvider		
+protocol	conformance DirectoryEntryFixedCount	FlusherUtil.DirectoryEntryCountProvider		
+protocol	conformance FlusherUtil.JSONSerializationUtilError	protocol descriptor for Error		
+protocol	conformance ExtendedAttributeError	protocol descriptor for Error		
+protocol	conformance BatchMetadata	FlusherUtil.Uploadable		
+protocol	conformance UploadRecord	FlusherUtil.Uploadable		
+protocol	conformance FlusherUtil.FileUploadDescriptor	FlusherUtil.UploadOutcomeTelemetryReporter		
+protocol	conformance FlusherUtil.BatchDescriptor	FlusherUtil.UploadOutcomeTelemetryReporter		
+protocol	conformance FlusherUtil.DiskWriteActivity	FlusherUtil.__CoreAnalyticsActivity		
+protocol	conformance FlusherUtil.DiskWriteActivity	FlusherUtil.CoreAnalyticsActivity		
+protocol	conformance FlusherUtil.DiskWriteActivity	FlusherUtil.ActivityDescription		
+protocol	conformance FlusherUtil.DiskWriteActivity	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.DiskWriteActivity	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.DiskWriteActivity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.DiskWriteError	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.DiskWriteError	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.FeedbackDiskWriteMetrics	FlusherUtil.DiskOperationMetrics		
+protocol	conformance FlusherUtil.DiskWriteError	protocol descriptor for Error		
+protocol	conformance FlusherUtil.FlushFrequency	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.FlushFrequency	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.FlushFrequency	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.FlushFrequency	protocol descriptor for CaseIterable		
+protocol	conformance nominal type descriptor for PARSpotlightPropensity	FlusherUtil.PropensitySession		
+protocol	conformance nominal type descriptor for PARSafariPropensity	FlusherUtil.PropensitySession		
+protocol	conformance nominal type descriptor for PARImagesPropensity	FlusherUtil.PropensitySession		
+protocol	conformance FlusherUtil.CohortsActivity	FlusherUtil.ActivityDescription		
+protocol	conformance FlusherUtil.CohortsActivity	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.CohortsActivity	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.CohortsActivity	protocol descriptor for Equatable		
+protocol	conformance _CPResultEngagementFeedback	FlusherUtil.EngagementBundleIDProvider		
+protocol	conformance _CPSectionEngagementFeedback	FlusherUtil.EngagementBundleIDProvider		
+protocol	conformance _CPCommandEngagementFeedback	FlusherUtil.EngagementBundleIDProvider		
+protocol	conformance Identifier	protocol descriptor for Equatable		
+protocol	conformance Identifier	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.MetaEnumerator	FlusherUtil.UploadDescriptorEnumeratorProtocol		
+protocol	conformance FlusherUtil.UploadDescriptorEnumerator	FlusherUtil.StoreElementEnumeratorProtocol		
+protocol	conformance FlusherUtil.UploadDescriptorEnumerator	FlusherUtil.UploadDescriptorEnumeratorProtocol		
+protocol	conformance FlusherUtil.UploadDescriptorEnumerator	protocol descriptor for IteratorProtocol		
+protocol	conformance FlusherUtil.UploadDescriptorEnumerator	protocol descriptor for Sequence		
+protocol	conformance FlusherUtil.SessionFeedbackFlusher	FlusherUtil.ActivityAdopter		
+protocol	conformance FlusherUtil.SessionFeedbackFlusher	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FlusherUtil.SessionFeedbackFlusher	FlusherUtil.FeedbackFlusher		
+protocol	conformance FlusherUtil.Incident	protocol descriptor for Error		
+protocol	conformance _CPStartLocalSearchFeedback	FlusherUtil.KeystrokeReporter		
+protocol	conformance _CPStartNetworkSearchFeedback	FlusherUtil.KeystrokeReporter		
+protocol	conformance _CPResultEngagementFeedback	FlusherUtil.EngagementReporterForSection		
+protocol	conformance _CPResultEngagementFeedback	FlusherUtil.EngagementReporter		
+protocol	conformance _CPDidGoToSiteFeedback	FlusherUtil.EngagementReporter		
+protocol	conformance _CPDidGoToSearchFeedback	FlusherUtil.EngagementReporter		
+protocol	conformance _CPSuggestionEngagementFeedback	FlusherUtil.EngagementReporter		
+protocol	conformance _CPSectionEngagementFeedback	FlusherUtil.EngagementReporter		
+protocol	conformance _CPCommandEngagementFeedback	FlusherUtil.EngagementReporter		
+protocol	conformance CohortsUsageReducer.UsageKind	protocol descriptor for CaseIterable		
+protocol	conformance CohortsUsageReducer.UsageKind	protocol descriptor for RawRepresentable		
+protocol	conformance CohortsUsageReducer.UsageKind	protocol descriptor for Equatable		
+protocol	conformance CohortsUsageReducer.UsageKind	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.FeedbackFileFlusher	FlusherUtil.ActivityAdopter		
+protocol	conformance FlusherUtil.FeedbackFileFlusher	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FlusherUtil.FeedbackFileFlusher	FlusherUtil.FeedbackFlusher		
+protocol	conformance FlusherUtil.MetaEnumerator	FlusherUtil.BatchEnumeratorProtocol		
+protocol	conformance FlusherUtil.BatchEnumerator	FlusherUtil.StoreElementEnumeratorProtocol		
+protocol	conformance FlusherUtil.BatchEnumerator	FlusherUtil.BatchEnumeratorProtocol		
+protocol	conformance FlusherUtil.FeedbackFlusherActivity	FlusherUtil.ActivityDescription		
+protocol	conformance FlusherUtil.FeedbackFlusherActivity	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.FeedbackFlusherActivity	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.FeedbackFlusherActivity	protocol descriptor for Equatable		
+protocol	conformance NSURLSessionTask	FlusherUtil.NetworkTask		
+protocol	conformance FlusherUtil.TransactionController	FlusherUtil.TransactionControlling		
+protocol	conformance FlusherUtil.RemoteConnectorIdentity	protocol descriptor for CustomStringConvertible		
+protocol	conformance FlusherUtil.RemoteConnectorIdentity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.RemoteConnectorIdentity	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.CohortsAggregationAscendingDateMap	FlusherUtil.CohortsAggregationDateMap		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	FlusherUtil.__CrashSimulationActivity		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	FlusherUtil.__CoreAnalyticsActivity		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	FlusherUtil.ActivityDescription		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	FlusherUtil.OptionalCrashSimulationActivity		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	FlusherUtil.CoreAnalyticsActivity		
+protocol	conformance FlusherUtil.ResourceNetworkActivity	FlusherUtil.SubActivityDescription		
+protocol	conformance FlusherUtil.DevicePersistentData	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.DevicePersistentData	protocol descriptor for Encodable		
+protocol	conformance FlusherUtil.DevicePersistentData	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FlusherUtil.UploaderEndpointVariant	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.UploaderEndpointVariant	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.UploaderEndpointVariant	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.UploaderEndpointVariant	protocol descriptor for CaseIterable		
+protocol	conformance FlusherUtil.SiriService	FlusherUtil.SiriServiceProtocol		
+protocol	conformance FlusherUtil.UploaderServiceError	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.UploaderServiceError	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.UploaderServiceError	protocol descriptor for Error		
+protocol	conformance FlusherUtil.SISUploader	FlusherUtil.ActivityAdopter		
+protocol	conformance SISUploader.Activity	FlusherUtil.ActivityDescription		
+protocol	conformance SISUploader.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance SISUploader.Activity	protocol descriptor for Hashable		
+protocol	conformance SISUploader.Activity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.SISUploader	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FlusherUtil.SISUploader	FlusherUtil.SiriServiceDelegate		
+protocol	conformance FlusherUtil.LoggingConfigurationController	FlusherUtil.SamplingRateProvider		
+protocol	conformance FlusherUtil.LoggingConfigurationController	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FlusherUtil.LoggingConfigurationController	FlusherUtil.ActivityAdopter		
+protocol	conformance FlusherUtil.ConfigurationFreshness	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.ConfigurationFreshness	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.ConfigurationFreshness	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.ConfigurationFreshness	FlusherUtil.ActivityDescription		
+protocol	conformance FlusherUtil.ResourceAccessActivity	FlusherUtil.__CrashSimulationActivity		
+protocol	conformance FlusherUtil.ResourceAccessActivity	FlusherUtil.__CoreAnalyticsActivity		
+protocol	conformance FlusherUtil.ResourceAccessActivity	FlusherUtil.TransactionActivity		
+protocol	conformance FlusherUtil.ResourceAccessActivity	FlusherUtil.OptionalCrashSimulationActivity		
+protocol	conformance FlusherUtil.ResourceAccessActivity	FlusherUtil.CoreAnalyticsActivity		
+protocol	conformance FlusherUtil.ResourceAccessActivity	FlusherUtil.ActivityDescription		
+protocol	conformance FlusherUtil.SiriMessageService	FlusherUtil.UploaderService		
+protocol	conformance FlusherUtil.SiriMessageServiceError	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.SiriMessageServiceError	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.SiriMessageServiceError	protocol descriptor for Error		
+protocol	conformance FlusherUtil.SISFileUploader	FlusherUtil.SiriServiceDelegate		
+protocol	conformance FlusherUtil.RedactionRanges	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.CoreDataEventFactory	FlusherUtil.EventFactoryProtocol		
+protocol	conformance FlusherUtil.RecordDateRangeEnumerator	FlusherUtil.StoreElementEnumeratorProtocol		
+protocol	conformance FlusherUtil.CohortFeedbackGenerator	FlusherUtil.CohortsProvider		
+protocol	conformance FBFPeriodicTask.State	protocol descriptor for AtomicRepresentable		
+protocol	conformance FBFPeriodicTask.State	protocol descriptor for RawRepresentable		
+protocol	conformance FBFPeriodicTask.State	protocol descriptor for Hashable		
+protocol	conformance FBFPeriodicTask.State	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.FBFPeriodicTask	FlusherUtil.ActivityAdopter		
+protocol	conformance FBFPeriodicTask.Activity	FlusherUtil.ActivityDescription		
+protocol	conformance FBFPeriodicTask.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance FBFPeriodicTask.Activity	protocol descriptor for Hashable		
+protocol	conformance FBFPeriodicTask.Activity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.FBFPeriodicTask	FlusherUtil.FBFTask		
+protocol	conformance FlusherUtil.FBFPeriodicTask	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FBFPeriodicTask.Activity	FlusherUtil.__CrashSimulationActivity		
+protocol	conformance FBFPeriodicTask.Activity	FlusherUtil.CrashSimulationActivity		
+protocol	conformance FlusherUtil.CoreDataQueryProcessor	FlusherUtil.CohortQueryProcessorProtocol		
+protocol	conformance FlusherUtil.InstalledAppController	FlusherUtil.InstalledAppControllerProtocol		
+protocol	conformance FlusherUtil.FBFAssembly	FlusherUtil.FBFAssemblyProtocol		
+protocol	conformance FlusherUtil.FBFAssembly	FlusherUtil.FBFProgressCheckpoint		
+protocol	conformance nominal type descriptor for Dictionary	FlusherUtil.VerifyingSecureCoding		
+protocol	conformance nominal type descriptor for Array	FlusherUtil.VerifyingSecureCoding		
+protocol	conformance FlusherUtil.FlusherClient	FlusherUtil.EagerSessionUploader		
+protocol	conformance _CPSearchResultForFeedback	FlusherUtil._CPRedactable		
+protocol	conformance _CPCardSectionEngagementFeedback	FlusherUtil._CPRedactable		
+protocol	conformance _CPPunchoutForFeedback	FlusherUtil._CPRedactable		
+protocol	conformance _CPSectionRankingFeedback	FlusherUtil._CPRedactable		
+protocol	conformance _CPCardSectionForFeedback	FlusherUtil._CPRedactable		
+protocol	conformance _CPStartLocalSearchFeedback	FlusherUtil._CPRedactable		
+protocol	conformance _CPStartNetworkSearchFeedback	FlusherUtil._CPRedactable		
+protocol	conformance PBCodable	FlusherUtil._CPFeedbackContainingResults		
+protocol	conformance PBCodable	FlusherUtil._CPFeedbackContainingRedactables		
+protocol	conformance FlusherUtil.DPGEventBatch	FlusherUtil.FileUploadRequestProtocol		
+protocol	conformance FlusherUtil.DPGEventBatch	FlusherUtil.UploadableEventBatch		
+protocol	conformance FlusherUtil.DPGUploadService	FlusherUtil.SiriServiceProtocol		
+protocol	conformance FlusherUtil.DPGUploadService	FlusherUtil.UploaderService		
+protocol	conformance FlusherUtil.DPGInternalError	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.DPGInternalError	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.DPGBatchResponse	FlusherUtil.BatchResponseProtocol		
+protocol	conformance FlusherUtil.DPGInternalError	protocol descriptor for Error		
+protocol	conformance FlusherUtil.SandboxExtensionDistributor	FlusherUtil.SandboxExtensionDistribution		
+protocol	conformance FlusherUtil.XPCConnectionEntitlementEvaluator	FlusherUtil.XPCConnectionEntitlementEvaluation		
+protocol	conformance FlusherUtil.ResourceAccessActivity	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.ResourceAccessActivity	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.ResourceAccessActivity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.ResourceAccessOutcome	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.ResourceAccessOutcome	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.ResourceAccessOutcome	protocol descriptor for Equatable		
+protocol	conformance nominal type descriptor for String	protocol descriptor for LocalizedError: FlusherUtil		
+protocol	conformance nominal type descriptor for String	protocol descriptor for Error: FlusherUtil		
+protocol	conformance FlusherUtil.FeedbackFileType	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.FeedbackFileType	protocol descriptor for Hashable		
+protocol	conformance DUServiceUploadResponse	FlusherUtil.BatchResponseProtocol		
+protocol	conformance SISchemaAnyEvent	FlusherUtil.FileUploadRequestProtocol		
+protocol	conformance FlusherUtil.StoreEnumerator	FlusherUtil.StoreEnumeratorProtocol		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	protocol descriptor for Enum		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_BuildVariant	protocol descriptor for CaseIterable		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_Headers_IngestEnvironment	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishResponse	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_BatchPublishRequest	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventError	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataPayloadMessage	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMetadata	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage	protocol descriptor for _MessageImplementationBase		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	protocol descriptor for _ProtoNameProviding		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	protocol descriptor for CaseIterable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	protocol descriptor for CaseIterable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	protocol descriptor for CaseIterable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventMessage	protocol descriptor for Message		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_BuildVariant	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_BuildVariant	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_BuildVariant	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.Com_Apple_Ve_Common_BuildVariant	protocol descriptor for Enum		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	protocol descriptor for Enum		
+protocol	conformance FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	protocol descriptor for Enum		
+protocol	conformance FlusherUtil.PegasusConfigURLProvider	FlusherUtil.BagURLProvider		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for Decodable: FlusherUtil		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for Encodable: FlusherUtil		
+protocol	conformance __C._CPKnownFeedbackType	protocol descriptor for CaseIterable: FlusherUtil		
+protocol	conformance FlusherUtil.PegasusClientName	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.PegasusClientName	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.PegasusClientName	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.PegasusClientName	protocol descriptor for CaseIterable		
+protocol	conformance FlusherUtil.StoreDirectoryEnumerator	FlusherUtil.StoreDirectoryEnumeratorProtocol		
+protocol	conformance SIServiceInstrumentationBatch	FlusherUtil.UploadableEventBatch		
+protocol	conformance SIServiceInstrumentationBatchResponse	FlusherUtil.BatchResponseProtocol		
+protocol	conformance FlusherUtil.CohortScheduler	FlusherUtil.CohortSchedulerProtocol		
+protocol	conformance FlusherUtil.CohortScheduler	FlusherUtil.FBFTask		
+protocol	conformance FlusherUtil.OSVariant	FlusherUtil.OSVariantInspector		
+protocol	conformance _CPSearchResultForFeedback	FlusherUtil._CPIdentifiable		
+protocol	conformance _CPSearchSuggestionForFeedback	FlusherUtil._CPIdentifiable		
+protocol	conformance UploadManager.UploadRequestError	protocol descriptor for Hashable		
+protocol	conformance UploadManager.UploadRequestError	protocol descriptor for Equatable		
+protocol	conformance UploadManager.UploadRequestError	protocol descriptor for Error		
+protocol	conformance nominal type descriptor for Array	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPClientSession	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCardForFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCardSectionForFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPSearchResultForFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPResultSectionForFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPFeedbackPayload	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCardSectionEngagementFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCardSectionFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCardViewAppearFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCardViewDisappearFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPCommandEngagementFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPDynamicButtonVisibilityFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPLateSectionsAppendedFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPMapsCardSectionEngagementFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPRankingFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPResultEngagementFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPResultFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPResultsReceivedAfterTimeoutFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPResultGradingFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPResultRankingFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPSectionEngagementFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPSectionRankingFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPSessionMissingResultsFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPStoreCardSectionEngagementFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPUserReportFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance _CPVisibleResultsFeedback	FlusherUtil._CPObfuscatable		
+protocol	conformance FlusherUtil.ActivitySpan	FlusherUtil.SpanProtocol		
+protocol	conformance FlusherUtil.MetaEnumerator	FlusherUtil.MetaEnumeratorProtocol		
+protocol	conformance FlusherUtil.MetaEnumerator	protocol descriptor for IteratorProtocol		
+protocol	conformance FlusherUtil.MetaEnumerator	protocol descriptor for Sequence		
+protocol	conformance FlusherUtil.CohortFeedbackGenerator	FlusherUtil.CohortFeedbackGeneratorProtocol		
+protocol	conformance _CPEngagementTriggerRatio	FlusherUtil.PropensityProto		
+protocol	conformance FlusherUtil.DevicePersistentDataManager	FlusherUtil.ActivityAdopter		
+protocol	conformance DevicePersistentDataManager.Activity	FlusherUtil.ActivityDescription		
+protocol	conformance DevicePersistentDataManager.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance DevicePersistentDataManager.Activity	protocol descriptor for Hashable		
+protocol	conformance DevicePersistentDataManager.Activity	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.DevicePersistentDataManager	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FlusherUtil.DevicePersistentDataManager	FlusherUtil.DevicePersistentDataManagerProtocol		
+protocol	conformance _CPImagesUsagePropensity	FlusherUtil.PropensityProto		
+protocol	conformance nominal type descriptor for PARImagesPropensity	protocol descriptor for Encodable: FlusherUtil		
+protocol	conformance _CPNewsUsagePropensity	FlusherUtil.PropensityProto		
+protocol	conformance _CPSafariUsagePropensity	FlusherUtil.PropensityProto		
+protocol	conformance nominal type descriptor for PARSafariPropensity	protocol descriptor for Encodable: FlusherUtil		
+protocol	conformance _CPSpotlightUsagePropensity	FlusherUtil.PropensityProto		
+protocol	conformance nominal type descriptor for PARSpotlightPropensity	protocol descriptor for Encodable: FlusherUtil		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FlusherUtil.AssemblyPassthroughSampler	FlusherUtil.SamplingRateProvider		
+protocol	conformance FlusherUtil.WhitelistError	protocol descriptor for Hashable		
+protocol	conformance FlusherUtil.WhitelistError	protocol descriptor for Equatable		
+protocol	conformance FlusherUtil.WhitelistError	protocol descriptor for Error		
+protocol	conformance ParsecURLRequestBuilder.URLError	protocol descriptor for Hashable		
+protocol	conformance ParsecURLRequestBuilder.URLError	protocol descriptor for Equatable		
+protocol	conformance ParsecURLRequestBuilder.URLError	protocol descriptor for Error		
+protocol	conformance SessionFilename.SessionFileState	protocol descriptor for Equatable		
+protocol	conformance SessionFilename.SessionFileState	protocol descriptor for Hashable		
+protocol	conformance SessionFilename.SessionFileState	protocol descriptor for RawRepresentable		
+protocol	conformance FlusherUtil.DeviceContext	FlusherUtil.DeviceContextProtocol		
+protocol	conformance nominal type descriptor for PARSafariPropensity	FlusherUtil.ParsecPropensitySession		
+protocol	conformance nominal type descriptor for PARSpotlightPropensity	FlusherUtil.ParsecPropensitySession		
+protocol	conformance FlusherUtil.UsageProcessor	FlusherUtil.UsageProcessorProtocol		
+protocol	conformance FlusherUtil.DeviceUserOptions	FlusherUtil.DeviceUserOptionsInspector		
+protocol	conformance FlusherUtil.SISConfigurationLoader	FlusherUtil.ActivityMonitorAdopter		
+protocol	conformance FlusherUtil.SISConfigurationLoader	FlusherUtil.ActivityAdopter		
+protocol	conformance SISConfigurationLoader.Activity	FlusherUtil.__CrashSimulationActivity		
+protocol	conformance SISConfigurationLoader.Activity	FlusherUtil.CrashSimulationActivity		
+protocol	conformance SISConfigurationLoader.Activity	protocol descriptor for RawRepresentable		
+protocol	conformance SISConfigurationLoader.Activity	protocol descriptor for Hashable		
+protocol	conformance SISConfigurationLoader.Activity	protocol descriptor for Equatable		
+protocol	conformance SISConfigurationLoader.Activity	FlusherUtil.ActivityDescription		
+protocol	conformance SearchFeedback.UploadFrom	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.UploadFrom	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionDBFeatureFlags	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SessionDBFeatureFlags	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionDBFeatureFlags	protocol descriptor for FeatureFlagsKey		
+protocol	conformance SearchFeedback.ReadableSessionDatabase	SearchFeedback.UploadableSessionDatabaseProtocol		
+protocol	conformance SearchFeedback.BiomeStreamsTelemetryReporter	SearchFeedback.BiomeStreamsTelemetryReporting		
+protocol	conformance SearchFeedback.BiomeDatabaseReader	SearchFeedback.SessionDatabaseReading		
+protocol	conformance SearchFeedback.BiomeReadError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.BiomeDatabaseWriter	SearchFeedback.SessionDatabaseWriting		
+protocol	conformance SearchFeedback.UploadStateStoreError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.UploadStateStoreError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.UploadStateStoreError	protocol descriptor for Error		
+protocol	conformance UploadStateFileStore.UploadState	protocol descriptor for Encodable		
+protocol	conformance UploadStateFileStore.UploadState	protocol descriptor for Decodable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for RawRepresentable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Hashable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance UploadStateFileStore.UploadStates	protocol descriptor for Decodable		
+protocol	conformance UploadStateFileStore.UploadStates	protocol descriptor for Encodable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Encodable		
+protocol	conformance UploadStateFileStore.State	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance SearchFeedback.BiomeSessionError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.BiomeSessionError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.BiomeSessionError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.SearchFeedbackFeatureFlags	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SearchFeedbackFeatureFlags	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SearchFeedbackFeatureFlags	protocol descriptor for FeatureFlagsKey		
+protocol	conformance SearchFeedback.SearchFeedbackFeatureFlags	SearchFeedback.SearchFeedbackFeatureFlagsProvider		
+protocol	conformance SearchFeedback.SessionDatabaseError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.SessionDatabaseError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionDatabaseError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Comparable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Decodable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Encodable		
+protocol	conformance SearchFeedback.SessionBookmark	protocol descriptor for Equatable		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance SessionBookmark.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance SearchFeedback.SessionBookmarkError	protocol descriptor for Hashable		
+protocol	conformance SearchFeedback.SessionBookmarkError	protocol descriptor for Equatable		
+protocol	conformance SearchFeedback.SessionBookmarkError	protocol descriptor for Error		
+protocol	conformance SearchFeedback.WritableSessionDatabase	SearchFeedback.WritableSessionDatabaseProtocol		
+extension	SQLiter.SQLiteDataType	RawRepresentable		
+extension	SQLiter.SQLiteColumnType	RawRepresentable		
+extension	FlusherUtil.DiskWriteActivity	RawRepresentable		
+extension	FlusherUtil.FlushFrequency	RawRepresentable		
+extension	FlusherUtil.FlushFrequency	CaseIterable		
+extension	FlusherUtil.CohortsActivity	RawRepresentable		
+extension	FlusherUtil.UploadDescriptorEnumerator	StoreElementEnumeratorProtocol		
+extension	FlusherUtil.UploadDescriptorEnumerator	IteratorProtocol		
+extension	FlusherUtil.UploadDescriptorEnumerator	Sequence		
+extension	FlusherUtil.SessionFeedbackFlusher	ActivityAdopter		
+extension	FlusherUtil.CohortsUsageReducer.UsageKind	CaseIterable		
+extension	FlusherUtil.CohortsUsageReducer.UsageKind	RawRepresentable		
+extension	FlusherUtil.FeedbackFileFlusher	ActivityAdopter		
+extension	FlusherUtil.BatchEnumerator	StoreElementEnumeratorProtocol		
+extension	FlusherUtil.FeedbackFlusherActivity	RawRepresentable		
+extension	FlusherUtil.ResourceNetworkActivity	RawRepresentable		
+extension	FlusherUtil.ResourceNetworkActivity	SubActivityDescription		
+extension	FlusherUtil.UploaderEndpointVariant	RawRepresentable		
+extension	FlusherUtil.UploaderEndpointVariant	CaseIterable		
+extension	FlusherUtil.SISUploader	ActivityAdopter		
+extension	FlusherUtil.SISUploader.Activity	RawRepresentable		
+extension	FlusherUtil.LoggingConfigurationController	ActivityAdopter		
+extension	FlusherUtil.ConfigurationFreshness	RawRepresentable		
+extension	FlusherUtil.RecordDateRangeEnumerator	StoreElementEnumeratorProtocol		
+extension	FlusherUtil.FBFPeriodicTask.State	AtomicRepresentable		
+extension	FlusherUtil.FBFPeriodicTask.State	RawRepresentable		
+extension	FlusherUtil.FBFPeriodicTask	ActivityAdopter		
+extension	FlusherUtil.FBFPeriodicTask.Activity	RawRepresentable		
+extension	FlusherUtil.ResourceAccessActivity	RawRepresentable		
+extension	FlusherUtil.ResourceAccessOutcome	RawRepresentable		
+extension	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	RawRepresentable		
+extension	FlusherUtil.Com_Apple_Ve_Common_BuildVariant	CaseIterable		
+extension	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	CaseIterable		
+extension	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	CaseIterable		
+extension	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PayloadType	CaseIterable		
+extension	FlusherUtil.Com_Apple_Ve_Common_BuildVariant	RawRepresentable		
+extension	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_PublishStatus	RawRepresentable		
+extension	FlusherUtil.Com_Apple_Aiml_Dpg_Service_V1_DataEventErrorCode	RawRepresentable		
+extension	FlusherUtil.PegasusClientName	RawRepresentable		
+extension	FlusherUtil.PegasusClientName	CaseIterable		
+extension	FlusherUtil.StoreDirectoryEnumerator	StoreDirectoryEnumeratorProtocol		
+extension	FlusherUtil.MetaEnumerator	MetaEnumeratorProtocol		
+extension	FlusherUtil.MetaEnumerator	IteratorProtocol		
+extension	FlusherUtil.MetaEnumerator	Sequence		
+extension	FlusherUtil.DevicePersistentDataManager	ActivityAdopter		
+extension	FlusherUtil.DevicePersistentDataManager.Activity	RawRepresentable		
+extension	FlusherUtil.CodingKeys	RawRepresentable		
+extension	FlusherUtil.CodingKeys	RawRepresentable		
+extension	FlusherUtil.CodingKeys	RawRepresentable		
+extension	FlusherUtil.SessionFilename.SessionFileState	RawRepresentable		
+extension	FlusherUtil.SISConfigurationLoader	ActivityAdopter		
+extension	FlusherUtil.SISConfigurationLoader.Activity	RawRepresentable		
+extension	SearchFeedback.UploadStateFileStore.State	RawRepresentable		

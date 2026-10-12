@@ -1,0 +1,18 @@
+owner	kind	declaration
+BaseResourceArbiterClient	-	- (_Bool)asynchRequestResourceAccess:(_Bool)access;
+BaseResourceArbiterClient	-	- (_Bool)synchRequestResourceAccess;
+BaseResourceArbiterClient	-	- (void)releaseResourceAccess;
+BaseResourceArbiterClient	property	@property (weak, nonatomic) id <ResourceArbiterClientDelegate> delegate;
+ResourceArbiterClient	-	- (_Bool)asynchRequestResourceAccess:(_Bool)access;
+ResourceArbiterClient	-	- (_Bool)synchRequestResourceAccess;
+ResourceArbiterClient	-	- (id)initWithID:(int)id;
+ResourceArbiterClient	-	- (void)_processResourceAccessStatus:(_Bool)status;
+ResourceArbiterClient	-	- (void)dealloc;
+ResourceArbiterClient	-	- (void)releaseResourceAccess;
+ResourceArbiterClient	-	- (void)resourceAccessGranted;
+ResourceArbiterClient	-	- (void)resourceAccessRevoked;
+ResourceArbiterClient	property	@property (readonly, nonatomic) NSObject<OS_dispatch_semaphore> *sema;
+ResourceArbiterClient	property	@property (readonly, nonatomic) _Bool resourceAccessStatus;
+ResourceArbiterClient	property	@property (readonly, nonatomic) int clientPriority;
+ResourceArbiterClient	property	@property (readonly, nonatomic) int pendingResourceRequest;
+ResourceArbiterClient	property	@property (readonly, nonatomic) unsigned int ioService;

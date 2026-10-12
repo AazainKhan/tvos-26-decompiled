@@ -1,0 +1,537 @@
+kind	type	conformance	member_kind	member
+class	jetpackassetd.PushCheckpointChecker			
+class	jetpackassetd.PushCheckpointChecker		let	pushManager
+class	jetpackassetd.PushCheckpointChecker		let	checkpointStore
+struct	jetpackassetd.PushCheckpointChecker.CheckpointMismatch			
+struct	jetpackassetd.PushCheckpointChecker.CheckpointMismatch		let	channelID
+struct	jetpackassetd.PushCheckpointChecker.CheckpointMismatch		let	savedCheckpoint
+struct	jetpackassetd.PushCheckpointChecker.CheckpointMismatch		let	currentCheckpoint
+struct	jetpackassetd.PushCheckpointChecker.CheckpointMismatch		let	lastPushReceivedAt
+struct	jetpackassetd.DefaultJetPackAssetProvider			
+struct	jetpackassetd.DefaultJetPackAssetProvider		let	urlSessionFactoryProvider
+struct	jetpackassetd.AssetRetrievalCoordinator			
+struct	jetpackassetd.AssetRetrievalCoordinator		let	mode
+struct	jetpackassetd.AssetRetrievalCoordinator		let	localPreferences
+enum	jetpackassetd.AssetRetrievalCoordinator.RetrievalMode			
+enum	jetpackassetd.AssetRetrievalCoordinator.RetrievalMode		case	xpcGet
+enum	jetpackassetd.AssetRetrievalCoordinator.RetrievalMode		case	scheduledDownload
+struct	jetpackassetd.SystemAppRegistry			
+struct	jetpackassetd.SchedulingConfiguration			
+struct	jetpackassetd.SchedulingConfiguration		let	randomRolloutWindowRange
+struct	jetpackassetd.SchedulingConfiguration		let	priorityMapping
+struct	jetpackassetd.SchedulingConfiguration		let	standardRolloutWindow
+struct	jetpackassetd.SchedulingConfiguration		let	minimumRolloutWindow
+struct	jetpackassetd.SchedulingConfiguration		let	randomEndTimeJitterRange
+struct	jetpackassetd.SchedulingConfiguration		let	miniumEndTimeJitter
+struct	jetpackassetd.SchedulingConfiguration		let	minimumScheduleDelay
+struct	jetpackassetd.SchedulingConfiguration		let	tolerance
+struct	jetpackassetd.SchedulingConfiguration		let	downloadAttempts
+struct	jetpackassetd.SchedulingConfiguration		let	backoffBase
+struct	jetpackassetd.SchedulingConfiguration		let	backoffMaximum
+struct	jetpackassetd.PushSubscriptionRequestHandler			
+struct	jetpackassetd.CacheOverrideManager			
+struct	jetpackassetd.CacheOverrideManager		let	enabledKey
+struct	jetpackassetd.CacheOverrideManager		let	cache
+struct	jetpackassetd.CacheOverrideManager		let	localPreferences
+enum	jetpackassetd.CacheOverrideError			
+enum	jetpackassetd.CacheOverrideError		case	fileNotFound
+enum	jetpackassetd.CacheOverrideError		case	readError
+enum	jetpackassetd.CacheOverrideError		case	missingCacheID
+enum	jetpackassetd.CacheOverrideError		case	permissionDenied
+enum	jetpackassetd.PushEnvironment			
+enum	jetpackassetd.PushEnvironment		case	prod
+enum	jetpackassetd.PushEnvironment		case	dev
+enum	jetpackassetd.PushEnvironment		case	prototypeProd
+struct	jetpackassetd.DefaultBagProvider			
+enum	jetpackassetd.BagFetchMode			
+enum	jetpackassetd.BagFetchMode		case	cacheOnly
+enum	jetpackassetd.BagFetchMode		case	cacheOrNetwork
+enum	jetpackassetd.BagFetchMode		case	forcedRefresh
+struct	jetpackassetd.BagManager			
+struct	jetpackassetd.BagManager		let	enabledKey
+struct	jetpackassetd.BagManager		let	localPreferences
+struct	jetpackassetd.BagManager		let	bagProvider
+struct	jetpackassetd.BagManager		let	_cachedBagLock
+struct	jetpackassetd.BagManager		var	_cachedBagHadError
+struct	jetpackassetd.BagManager		let	cachedBagTimeout
+struct	jetpackassetd.BagRefreshRequestHandler			
+struct	jetpackassetd.DefaultTapToRadar			
+struct	jetpackassetd.DefaultTapToRadar		let	localPreferences
+struct	jetpackassetd.DefaultTapToRadar		let	provider
+struct	jetpackassetd.DefaultTapToRadar		let	allowRateLimitedKey
+enum	jetpackassetd.TapToRadarError			
+enum	jetpackassetd.TapToRadarError		case	symbolsNotAvailable
+enum	jetpackassetd.TapToRadarError		case	notAuthorized
+struct	jetpackassetd.PushDeleteSubscriptionRequestHandler			
+struct	jetpackassetd.RefreshTestAssetHandler			
+struct	jetpackassetd.PushInfoRequestHandler			
+struct	jetpackassetd.CacheOverrideRequestHandler			
+struct	jetpackassetd.PushMessage			
+struct	jetpackassetd.PushMessage		let	id
+struct	jetpackassetd.PushMessage		let	timestamp
+struct	jetpackassetd.PushMessage		let	channelID
+struct	jetpackassetd.PushMessage		let	userInfoJSONString
+struct	jetpackassetd.PushMessage		let	priority
+struct	jetpackassetd.PushMessage		let	evictOlderThanDate
+struct	jetpackassetd.PushMessage		let	evictIsExpiryOnly
+struct	jetpackassetd.PushMessage		let	actions
+struct	jetpackassetd.PushMessage		let	testCrashAfterJournal
+enum	jetpackassetd.Action			
+enum	jetpackassetd.Action		case	clearCache
+enum	jetpackassetd.Action		case	bagEnabled
+enum	jetpackassetd.Action		case	refreshBag
+enum	jetpackassetd.Action		case	pushReset
+enum	jetpackassetd.Action		case	killSwitchEnabled
+struct	jetpackassetd.PushMessageUserInfo			
+struct	jetpackassetd.PushMessageUserInfo		let	channelID
+struct	jetpackassetd.PushMessageUserInfo		let	priority
+struct	jetpackassetd.PushMessageUserInfo		let	evictOlderThanDate
+struct	jetpackassetd.PushMessageUserInfo		let	evictIsExpiryOnly
+struct	jetpackassetd.PushMessageUserInfo		let	actions
+struct	jetpackassetd.PushMessageUserInfo		let	testCrashAfterJournal
+enum	jetpackassetd.Action.CodingKeys			
+enum	jetpackassetd.Action.CodingKeys		case	actionType
+enum	jetpackassetd.Action.CodingKeys		case	value
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys			
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys		case	channelID
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys		case	priority
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys		case	evict
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys		case	expiryOnly
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys		case	actions
+enum	jetpackassetd.PushMessageUserInfo.CodingKeys		case	testCrashAfterJournal
+struct	jetpackassetd.DaemonStartupErrorLog			
+struct	jetpackassetd.DaemonStartupErrorLog		let	phase
+enum	jetpackassetd.DaemonStartupErrorLogPhase			
+enum	jetpackassetd.DaemonStartupErrorLogPhase		case	begin
+enum	jetpackassetd.DaemonStartupErrorLogPhase		case	containerLocation
+enum	jetpackassetd.DaemonStartupErrorLogPhase		case	database
+enum	jetpackassetd.DaemonStartupErrorLogPhase		case	pushManager
+enum	jetpackassetd.DaemonStartupErrorLogPhase		case	scheduler
+enum	jetpackassetd.DaemonStartupErrorLogPhase		case	end
+struct	jetpackassetd.GetAssetRequestHandlerErrorLog			
+struct	jetpackassetd.GetAssetRequestHandlerErrorLog		let	errorDomain
+struct	jetpackassetd.GetAssetRequestHandlerErrorLog		let	errorCode
+struct	jetpackassetd.GetAssetRequestHandlerErrorLog		let	bundleID
+struct	jetpackassetd.GetAssetRequestHandlerErrorLog		let	isConnectionError
+struct	jetpackassetd.HandleControlMessageErrorLog			
+struct	jetpackassetd.HandleControlMessageErrorLog		let	errorDomain
+struct	jetpackassetd.HandleControlMessageErrorLog		let	errorCode
+struct	jetpackassetd.HandleControlMessageErrorLog		let	action
+struct	jetpackassetd.HandlePushErrorLog			
+struct	jetpackassetd.HandlePushErrorLog		let	errorDomain
+struct	jetpackassetd.HandlePushErrorLog		let	errorCode
+struct	jetpackassetd.HandlePushErrorLog		let	channelID
+class	jetpackassetd.DefaultBeforeFirstUnlockChecker			
+enum	jetpackassetd.TapToRadarAuthorizationStatus			
+enum	jetpackassetd.TapToRadarAuthorizationStatus		case	authorized
+enum	jetpackassetd.TapToRadarAuthorizationStatus		case	rateLimited
+enum	jetpackassetd.TapToRadarAuthorizationStatus		case	notAuthorized
+enum	jetpackassetd.TapToRadarAuthorizationStatus		case	userDenied
+struct	jetpackassetd.DefaultTapToRadarProvider			
+struct	jetpackassetd.HandleScheduledTaskErrorLog			
+struct	jetpackassetd.HandleScheduledTaskErrorLog		let	errorDomain
+struct	jetpackassetd.HandleScheduledTaskErrorLog		let	errorCode
+struct	jetpackassetd.HandleScheduledTaskErrorLog		let	taskIdentifier
+struct	jetpackassetd.HandleScheduledTaskErrorLog		let	stage
+enum	jetpackassetd.ScheduledTaskStage			
+enum	jetpackassetd.ScheduledTaskStage		case	handleTask
+enum	jetpackassetd.ScheduledTaskStage		case	postProcess
+struct	jetpackassetd.PingLog			
+struct	jetpackassetd.PingLog		let	numPendingJetpacks
+struct	jetpackassetd.PingLog		let	numPendingToReattempt
+struct	jetpackassetd.PushNotificationReceivedLog			
+struct	jetpackassetd.PushNotificationReceivedLog		let	channelID
+struct	jetpackassetd.PushNotificationReceivedLog		let	bundleID
+struct	jetpackassetd.PushNotificationReceivedLog		let	priority
+struct	jetpackassetd.PushNotificationReceivedLog		let	timeSincePushSent
+struct	jetpackassetd.ScheduledAssetRetrievalLog			
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	assetURL
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	bundleID
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	usageID
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	version
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	priority
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	isSuccess
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	fetchReason
+struct	jetpackassetd.ScheduledAssetRetrievalLog		let	percentOfSchedulingWindow
+enum	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason			
+enum	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason		case	standard
+enum	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason		case	maintenance
+enum	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason		case	apsReconnect
+enum	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason		case	checkpoint
+class	jetpackassetd.PushManager	NSObject		
+class	jetpackassetd.PushManager	NSObject	let	database
+class	jetpackassetd.PushManager	NSObject	let	pushSubscriptionStore
+class	jetpackassetd.PushManager	NSObject	let	checkpointStore
+class	jetpackassetd.PushManager	NSObject	let	diskCache
+class	jetpackassetd.PushManager	NSObject	let	scheduler
+class	jetpackassetd.PushManager	NSObject	let	coreAnalyticsLogger
+class	jetpackassetd.PushManager	NSObject	let	bagManager
+class	jetpackassetd.PushManager	NSObject	let	killSwitchManager
+class	jetpackassetd.PushManager	NSObject	let	beforeFirstUnlockChecker
+class	jetpackassetd.PushManager	NSObject	let	connectionWrapper
+class	jetpackassetd.PushManager	NSObject	let	localPreferences
+class	jetpackassetd.PushManager	NSObject	let	dateProvider
+class	jetpackassetd.PushManager	NSObject	let	metricsPipelineManager
+class	jetpackassetd.PushManager	NSObject	let	pushJournal
+class	jetpackassetd.PushManager	NSObject	let	onCheckpointPersisted
+class	jetpackassetd.PushManager	NSObject	let	subscribedControlChannelIDKey
+class	jetpackassetd.PushManager	NSObject	let	apsLastKnownConnectedKey
+class	jetpackassetd.PushManager	NSObject	let	beforeUnlockPushes
+class	jetpackassetd.PushManager	NSObject	let	unlockListener
+struct	jetpackassetd.PushManager.CheckpointPersistenceEvent			
+struct	jetpackassetd.PushManager.CheckpointPersistenceEvent		let	channelID
+struct	jetpackassetd.PushManager.CheckpointPersistenceEvent		let	status
+enum	jetpackassetd.PushManager.CheckpointPersistenceEvent.Status			
+enum	jetpackassetd.PushManager.CheckpointPersistenceEvent.Status		case	success
+enum	jetpackassetd.PushManager.CheckpointPersistenceEvent.Status		case	failure
+enum	jetpackassetd.PushManager.CheckpointPersistenceEvent.Status		case	skipped
+class	jetpackassetd.PushJournal			
+class	jetpackassetd.PushJournal		let	directoryURL
+class	jetpackassetd.PushJournal		let	lock
+struct	jetpackassetd.PushJournalEntry			
+struct	jetpackassetd.PushJournalEntry		let	channelID
+struct	jetpackassetd.PushJournalEntry		let	priority
+struct	jetpackassetd.PushJournalEntry		let	timestamp
+struct	jetpackassetd.PushJournalEntry		let	evictOlderThan
+struct	jetpackassetd.PushJournalEntry		let	evictIsExpiryOnly
+struct	jetpackassetd.PushJournalEntry		var	retryCount
+enum	jetpackassetd.PushJournalEntry.CodingKeys			
+enum	jetpackassetd.PushJournalEntry.CodingKeys		case	channelID
+enum	jetpackassetd.PushJournalEntry.CodingKeys		case	priority
+enum	jetpackassetd.PushJournalEntry.CodingKeys		case	timestamp
+enum	jetpackassetd.PushJournalEntry.CodingKeys		case	evictOlderThan
+enum	jetpackassetd.PushJournalEntry.CodingKeys		case	evictIsExpiryOnly
+enum	jetpackassetd.PushJournalEntry.CodingKeys		case	retryCount
+struct	jetpackassetd.PushClearSubscriptionsRequestHandler			
+struct	jetpackassetd.PushResetSubscriptionRequestHandler			
+struct	jetpackassetd.PingRequestHandler			
+enum	jetpackassetd.CacheEvictError			
+enum	jetpackassetd.CacheEvictError		case	notFound
+struct	jetpackassetd.CacheEvictRequestHandler			
+enum	jetpackassetd.SchedulingPriority			
+enum	jetpackassetd.SchedulingPriority		case	urgent
+enum	jetpackassetd.SchedulingPriority		case	veryHigh
+enum	jetpackassetd.SchedulingPriority		case	high
+enum	jetpackassetd.SchedulingPriority		case	medium
+enum	jetpackassetd.SchedulingPriority		case	low
+enum	jetpackassetd.SchedulingPriority		case	debug
+struct	jetpackassetd.Scheduler			
+struct	jetpackassetd.Scheduler		let	pushSubscriptionStore
+struct	jetpackassetd.Scheduler		let	bagManager
+struct	jetpackassetd.Scheduler		let	dateProvider
+struct	jetpackassetd.Scheduler		let	systemTaskSchedulerWrapper
+struct	jetpackassetd.Scheduler		let	randomizer
+struct	jetpackassetd.DefaultRandomizer			
+struct	jetpackassetd.PostInstallScheduledTaskHandler			
+struct	jetpackassetd.MaintenanceCleanupTaskHandler			
+struct	jetpackassetd.BagRefreshTaskHandler			
+struct	jetpackassetd.StartupScheduledTaskHandler			
+struct	jetpackassetd.PushJournalReplayTaskHandler			
+struct	jetpackassetd.APSConnectedRefreshTaskHandler			
+struct	jetpackassetd.APSConnectedRefreshTaskHandler		let	refreshAssetsTaskHandler
+struct	jetpackassetd.APSConnectedRefreshTaskHandler		let	dateProvider
+struct	jetpackassetd.MaintenanceRefreshAssetsTaskHandler			
+struct	jetpackassetd.MaintenanceRefreshAssetsTaskHandler		let	refreshAssetsTaskHandler
+struct	jetpackassetd.MaintenanceRefreshAssetsTaskHandler		let	dateProvider
+struct	jetpackassetd.DefaultRefreshAssetsTaskHandler			
+struct	jetpackassetd.DefaultRefreshAssetsTaskHandler		let	refreshAssetsTaskHandler
+enum	jetpackassetd.SchedulingError			
+enum	jetpackassetd.SchedulingError		case	invalidSchedule
+struct	jetpackassetd.ScheduleTime			
+struct	jetpackassetd.ScheduleTime		let	scheduleAfter
+struct	jetpackassetd.ScheduleTime		let	scheduleBefore
+struct	jetpackassetd.RefreshAssetsTaskHandler			
+struct	jetpackassetd.RefreshAssetsTaskHandler		let	dateProvider
+class	jetpackassetd.DaemonActor			
+class	jetpackassetd.DaemonActor		let	executor
+struct	jetpackassetd.CacheOverrideClearRequestHandler			
+struct	jetpackassetd.PostInstallRequestHandler			
+struct	jetpackassetd.ReadTestAssetHandler			
+struct	jetpackassetd.XPCClientInfo			
+struct	jetpackassetd.XPCClientInfo		let	bundleIdentifier
+struct	jetpackassetd.XPCClientInfo		let	auditToken
+struct	jetpackassetd.GetAssetRequestHandler			
+enum	jetpackassetd.DaemonStartupStatus.Phase			
+enum	jetpackassetd.DaemonStartupStatus.Phase		case	begin
+enum	jetpackassetd.DaemonStartupStatus.Phase		case	containerLocation
+enum	jetpackassetd.DaemonStartupStatus.Phase		case	database
+enum	jetpackassetd.DaemonStartupStatus.Phase		case	pushManager
+enum	jetpackassetd.DaemonStartupStatus.Phase		case	scheduler
+enum	jetpackassetd.DaemonStartupStatus.Phase		case	end
+struct	jetpackassetd.DaemonStartupStatus			
+struct	jetpackassetd.DaemonStartupStatus		let	_phase
+class	jetpackassetd.KillSwitchManager			
+class	jetpackassetd.KillSwitchManager		let	enabledKey
+class	jetpackassetd.KillSwitchManager		let	localPreferences
+struct	jetpackassetd.SystemRestrictions			
+struct	jetpackassetd.AssetRequestMetricsEvent			
+struct	jetpackassetd.AssetRequestMetricsEvent		let	bundleID
+struct	jetpackassetd.AssetRequestMetricsEvent		let	usageID
+struct	jetpackassetd.AssetRequestMetricsEvent		let	assetURL
+struct	jetpackassetd.AssetRequestMetricsEvent		let	assetVersion
+struct	jetpackassetd.AssetRequestMetricsEvent		let	assetSource
+struct	jetpackassetd.AssetRequestMetricsEvent		let	fetchReason
+struct	jetpackassetd.AssetRequestMetricsEvent		let	isSuccess
+struct	jetpackassetd.AssetRequestMetricsEvent		let	attempt
+struct	jetpackassetd.AssetRequestMetricsEvent		let	broadcastTime
+struct	jetpackassetd.AssetRequestMetricsEvent		let	priority
+struct	jetpackassetd.DaemonMetricsEventRecorder			
+struct	jetpackassetd.DaemonMetricsEventRecorder		let	bag
+struct	jetpackassetd.DaemonMetricsEventRecorder		let	metricsWrapper
+struct	jetpackassetd.DaemonMetricsEventRecorder		let	defaultTopic
+struct	jetpackassetd.DaemonMetricsEventRecorder		let	anonymousTopics
+class	jetpackassetd.StaleAssetChecker			
+class	jetpackassetd.StaleAssetChecker		let	pushSubscriptionStore
+class	jetpackassetd.StaleAssetChecker		let	diskCache
+class	jetpackassetd.StaleAssetChecker		let	metadataStore
+class	jetpackassetd.StaleAssetChecker		let	appRegistry
+class	jetpackassetd.StaleAssetChecker		let	bagManager
+class	jetpackassetd.StaleAssetChecker		let	dateProvider
+class	jetpackassetd.StaleAssetChecker		let	tapToRadarService
+class	jetpackassetd.StaleAssetChecker		let	objectGraph
+class	jetpackassetd.StaleAssetChecker		let	localPreferences
+class	jetpackassetd.StaleAssetChecker		let	cachePolicy
+class	jetpackassetd.StaleAssetChecker		let	oneWeekInSeconds
+class	jetpackassetd.StaleAssetChecker		let	fourHoursInSeconds
+struct	jetpackassetd.VersionCheckJetPackAssetProvider			
+struct	jetpackassetd.VersionCheckJetPackAssetProvider		let	bagManager
+struct	jetpackassetd.StaleAssetCheckResult			
+struct	jetpackassetd.StaleAssetCheckResult		let	checkedCount
+struct	jetpackassetd.StaleAssetCheckResult		let	versionMismatchCount
+struct	jetpackassetd.StaleAssetCheckResult		let	errorCount
+struct	jetpackassetd.StaleAssetCheckResult		let	skippedRecentCount
+struct	jetpackassetd.StaleAssetCheckResult		let	skippedMissingCount
+struct	jetpackassetd.StaleAssetCheckResult		let	skippedUninstalledCount
+struct	jetpackassetd.StaleAssetCheckResult		let	skippedInvalidStatusCount
+struct	jetpackassetd.StaleAssetCheckResult		let	staleAssetURLs
+struct	jetpackassetd.StaleAssetCheckResult		let	ttrFiled
+struct	jetpackassetd.DaemonEventPayloadDecorator			
+struct	jetpackassetd.DaemonEventPayloadDecorator		let	beforeFirstUnlock
+struct	jetpackassetd.EventTimeMetricsFieldProvider			
+class	jetpackassetd.MetricsPipelineManager			
+class	jetpackassetd.MetricsPipelineManager		var	cachedPipeline
+class	jetpackassetd.MetricsPipelineManager		let	bagManager
+class	jetpackassetd.MetricsPipelineManager		let	restrictions
+enum	jetpackassetd.MetricsPipelineManagerError			
+enum	jetpackassetd.MetricsPipelineManagerError		case	noBagAvailable
+struct	jetpackassetd.PushReceivedMetricsEvent			
+struct	jetpackassetd.PushReceivedMetricsEvent		let	channelID
+struct	jetpackassetd.PushReceivedMetricsEvent		let	broadcastTime
+struct	jetpackassetd.PushReceivedMetricsEvent		let	priority
+struct	jetpackassetd.StaleAssetCheckRequestHandler			
+struct	jetpackassetd.ScheduleTaskRequestHandler			
+class	jetpackassetd.Daemon			
+class	jetpackassetd.Daemon		let	listener
+class	jetpackassetd.Daemon		let	objectGraph
+struct	jetpackassetd.Daemon.RequestHandler			
+struct	jetpackassetd.Daemon.RequestHandler		let	xpcSession
+struct	jetpackassetd.Daemon.RequestHandler		let	objectGraph
+protocol	jetpackassetd.JetPackAssetProvider			
+protocol	jetpackassetd.AppRegistry			
+protocol	jetpackassetd.CacheOverrideManagerProtocol			
+protocol	jetpackassetd.BagManagerProtocol			
+protocol	jetpackassetd.BagProvider			
+protocol	jetpackassetd.DaemonRequestHandler	RequestType		
+protocol	jetpackassetd.BeforeFirstUnlockProtocol			
+protocol	jetpackassetd.TapToRadarProtocol			
+protocol	jetpackassetd.TapToRadarProvider			
+protocol	jetpackassetd.PushManagerProtocol			
+protocol	jetpackassetd.PushJournalProtocol			
+protocol	jetpackassetd.SystemTaskScheduler			
+protocol	jetpackassetd.SchedulerProtocol			
+protocol	jetpackassetd.Randomizer			
+protocol	jetpackassetd.ScheduledTaskHandler			
+protocol	jetpackassetd.ScheduledTaskHandlerThatSchedulesNextTask			
+protocol	jetpackassetd.ClientInfo			
+protocol	jetpackassetd.KillSwitchManagerProtocol			
+protocol	jetpackassetd.Restrictions			
+protocol	jetpackassetd.MetricsEvent			
+protocol	jetpackassetd.MetricsPipelineManagerProtocol			
+protocol	conformance jetpackassetd.DefaultJetPackAssetProvider	jetpackassetd.JetPackAssetProvider		
+protocol	conformance AssetRetrievalCoordinator.RetrievalMode	protocol descriptor for Hashable		
+protocol	conformance AssetRetrievalCoordinator.RetrievalMode	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.SystemAppRegistry	jetpackassetd.AppRegistry		
+protocol	conformance jetpackassetd.PushSubscriptionRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.CacheOverrideManager	jetpackassetd.CacheOverrideManagerProtocol		
+protocol	conformance jetpackassetd.CacheOverrideError	protocol descriptor for LocalizedError		
+protocol	conformance jetpackassetd.CacheOverrideError	protocol descriptor for Error		
+protocol	conformance jetpackassetd.PushEnvironment	protocol descriptor for RawRepresentable		
+protocol	conformance jetpackassetd.PushEnvironment	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.PushEnvironment	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.BagFetchMode	protocol descriptor for CaseIterable		
+protocol	conformance jetpackassetd.BagFetchMode	protocol descriptor for RawRepresentable		
+protocol	conformance jetpackassetd.BagFetchMode	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.BagFetchMode	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.DefaultBagProvider	jetpackassetd.BagProvider		
+protocol	conformance jetpackassetd.BagManager	jetpackassetd.BagManagerProtocol		
+protocol	conformance jetpackassetd.BagRefreshRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.DefaultTapToRadar	jetpackassetd.TapToRadarProtocol		
+protocol	conformance jetpackassetd.TapToRadarError	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.TapToRadarError	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.TapToRadarError	protocol descriptor for Error		
+protocol	conformance jetpackassetd.PushDeleteSubscriptionRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.RefreshTestAssetHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.PushInfoRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.CacheOverrideRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.Action	protocol descriptor for CustomStringConvertible		
+protocol	conformance jetpackassetd.Action	protocol descriptor for Decodable		
+protocol	conformance jetpackassetd.Action	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.Action	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PushMessageUserInfo	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance jetpackassetd.DaemonStartupErrorLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.DaemonStartupErrorLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.DaemonStartupErrorLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.DaemonStartupErrorLogPhase	protocol descriptor for CaseIterable		
+protocol	conformance jetpackassetd.DaemonStartupErrorLogPhase	protocol descriptor for RawRepresentable		
+protocol	conformance jetpackassetd.DaemonStartupErrorLogPhase	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.DaemonStartupErrorLogPhase	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.GetAssetRequestHandlerErrorLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.GetAssetRequestHandlerErrorLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.GetAssetRequestHandlerErrorLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.HandleControlMessageErrorLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.HandleControlMessageErrorLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.HandleControlMessageErrorLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.HandlePushErrorLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.HandlePushErrorLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.HandlePushErrorLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.DefaultBeforeFirstUnlockChecker	jetpackassetd.BeforeFirstUnlockProtocol		
+protocol	conformance jetpackassetd.TapToRadarAuthorizationStatus	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.TapToRadarAuthorizationStatus	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.DefaultTapToRadarProvider	jetpackassetd.TapToRadarProvider		
+protocol	conformance jetpackassetd.HandleScheduledTaskErrorLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.HandleScheduledTaskErrorLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.HandleScheduledTaskErrorLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.ScheduledTaskStage	protocol descriptor for CaseIterable		
+protocol	conformance jetpackassetd.ScheduledTaskStage	protocol descriptor for RawRepresentable		
+protocol	conformance jetpackassetd.ScheduledTaskStage	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.ScheduledTaskStage	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PingLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PingLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.PingLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.PushNotificationReceivedLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PushNotificationReceivedLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.PushNotificationReceivedLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance jetpackassetd.ScheduledAssetRetrievalLog	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.ScheduledAssetRetrievalLog	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.ScheduledAssetRetrievalLog	protocol descriptor for CoreAnalyticsLog		
+protocol	conformance ScheduledAssetRetrievalLog.FetchReason	protocol descriptor for CaseIterable		
+protocol	conformance ScheduledAssetRetrievalLog.FetchReason	protocol descriptor for RawRepresentable		
+protocol	conformance ScheduledAssetRetrievalLog.FetchReason	protocol descriptor for Hashable		
+protocol	conformance ScheduledAssetRetrievalLog.FetchReason	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PushManager	jetpackassetd.PushManagerProtocol		
+protocol	conformance CheckpointPersistenceEvent.Status	protocol descriptor for Hashable		
+protocol	conformance CheckpointPersistenceEvent.Status	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PushJournal	jetpackassetd.PushJournalProtocol		
+protocol	conformance jetpackassetd.PushJournalEntry	protocol descriptor for Decodable		
+protocol	conformance jetpackassetd.PushJournalEntry	protocol descriptor for Encodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance jetpackassetd.PushClearSubscriptionsRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.PushResetSubscriptionRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.PingRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.CacheEvictRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.CacheEvictError	protocol descriptor for LocalizedError		
+protocol	conformance jetpackassetd.CacheEvictError	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.CacheEvictError	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.CacheEvictError	protocol descriptor for Error		
+protocol	conformance BGSystemTaskScheduler	jetpackassetd.SystemTaskScheduler		
+protocol	conformance jetpackassetd.SchedulingPriority	protocol descriptor for Decodable		
+protocol	conformance jetpackassetd.SchedulingPriority	protocol descriptor for CaseIterable		
+protocol	conformance jetpackassetd.SchedulingPriority	protocol descriptor for RawRepresentable		
+protocol	conformance jetpackassetd.SchedulingPriority	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.SchedulingPriority	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.SchedulingError	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.SchedulingError	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.DefaultRefreshAssetsTaskHandler	jetpackassetd.ScheduledTaskHandlerThatSchedulesNextTask		
+protocol	conformance jetpackassetd.StartupScheduledTaskHandler	jetpackassetd.ScheduledTaskHandlerThatSchedulesNextTask		
+protocol	conformance jetpackassetd.Scheduler	jetpackassetd.SchedulerProtocol		
+protocol	conformance jetpackassetd.DefaultRandomizer	jetpackassetd.Randomizer		
+protocol	conformance jetpackassetd.DefaultRefreshAssetsTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.PostInstallScheduledTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.MaintenanceRefreshAssetsTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.MaintenanceCleanupTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.BagRefreshTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.APSConnectedRefreshTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.StartupScheduledTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.PushJournalReplayTaskHandler	jetpackassetd.ScheduledTaskHandler		
+protocol	conformance jetpackassetd.SchedulingError	protocol descriptor for Error		
+protocol	conformance jetpackassetd.DaemonActor	protocol descriptor for GlobalActor		
+protocol	conformance jetpackassetd.DaemonActor	protocol descriptor for Actor		
+protocol	conformance jetpackassetd.CacheOverrideClearRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.PostInstallRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.ReadTestAssetHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.XPCClientInfo	protocol descriptor for Auditable		
+protocol	conformance jetpackassetd.XPCClientInfo	jetpackassetd.ClientInfo		
+protocol	conformance jetpackassetd.GetAssetRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance DaemonStartupStatus.Phase	protocol descriptor for RawRepresentable		
+protocol	conformance DaemonStartupStatus.Phase	protocol descriptor for Hashable		
+protocol	conformance DaemonStartupStatus.Phase	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.KillSwitchManager	jetpackassetd.KillSwitchManagerProtocol		
+protocol	conformance jetpackassetd.SystemRestrictions	jetpackassetd.Restrictions		
+protocol	conformance jetpackassetd.AssetRequestMetricsEvent	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.AssetRequestMetricsEvent	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.AssetRequestMetricsEvent	jetpackassetd.MetricsEvent		
+protocol	conformance jetpackassetd.DaemonMetricsEventRecorder	protocol descriptor for MetricsEventRecorder		
+protocol	conformance VersionCheckJetPackAssetProvider	jetpackassetd.JetPackAssetProvider		
+protocol	conformance jetpackassetd.DaemonEventPayloadDecorator	protocol descriptor for CoreAnalyticsEventPayloadDecorator		
+protocol	conformance jetpackassetd.EventTimeMetricsFieldProvider	protocol descriptor for MetricsFieldsProvider		
+protocol	conformance jetpackassetd.MetricsPipelineManager	jetpackassetd.MetricsPipelineManagerProtocol		
+protocol	conformance jetpackassetd.MetricsPipelineManager	protocol descriptor for Actor		
+protocol	conformance jetpackassetd.MetricsPipelineManagerError	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.MetricsPipelineManagerError	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.MetricsPipelineManagerError	protocol descriptor for Error		
+protocol	conformance jetpackassetd.PushReceivedMetricsEvent	protocol descriptor for Equatable		
+protocol	conformance jetpackassetd.PushReceivedMetricsEvent	protocol descriptor for Hashable		
+protocol	conformance jetpackassetd.PushReceivedMetricsEvent	jetpackassetd.MetricsEvent		
+protocol	conformance jetpackassetd.StaleAssetCheckRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance jetpackassetd.ScheduleTaskRequestHandler	jetpackassetd.DaemonRequestHandler		
+protocol	conformance RequestHandler	protocol descriptor for XPCPeerHandler		
+extension	jetpackassetd.PushSubscriptionRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.PushEnvironment	RawRepresentable		
+extension	jetpackassetd.BagFetchMode	CaseIterable		
+extension	jetpackassetd.BagFetchMode	RawRepresentable		
+extension	jetpackassetd.BagRefreshRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.PushDeleteSubscriptionRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.RefreshTestAssetHandler	DaemonRequestHandler		
+extension	jetpackassetd.PushInfoRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.CacheOverrideRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.Action.CodingKeys	RawRepresentable		
+extension	jetpackassetd.PushMessageUserInfo.CodingKeys	RawRepresentable		
+extension	jetpackassetd.DaemonStartupErrorLogPhase	CaseIterable		
+extension	jetpackassetd.DaemonStartupErrorLogPhase	RawRepresentable		
+extension	jetpackassetd.ScheduledTaskStage	CaseIterable		
+extension	jetpackassetd.ScheduledTaskStage	RawRepresentable		
+extension	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason	CaseIterable		
+extension	jetpackassetd.ScheduledAssetRetrievalLog.FetchReason	RawRepresentable		
+extension	jetpackassetd.PushJournalEntry.CodingKeys	RawRepresentable		
+extension	jetpackassetd.PushClearSubscriptionsRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.PushResetSubscriptionRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.PingRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.CacheEvictRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.SchedulingPriority	CaseIterable		
+extension	jetpackassetd.SchedulingPriority	RawRepresentable		
+extension	jetpackassetd.DaemonActor	GlobalActor		
+extension	jetpackassetd.CacheOverrideClearRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.PostInstallRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.ReadTestAssetHandler	DaemonRequestHandler		
+extension	jetpackassetd.GetAssetRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.DaemonStartupStatus.Phase	RawRepresentable		
+extension	jetpackassetd.StaleAssetCheckRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.ScheduleTaskRequestHandler	DaemonRequestHandler		
+extension	jetpackassetd.Daemon.RequestHandler	XPCPeerHandler		

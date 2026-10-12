@@ -1,0 +1,54 @@
+kind	type	conformance	member_kind	member
+struct	MLModelAsset.AssetError			
+struct	MLModelAsset.AssetError		var	kind
+struct	MLModelAsset.AssetError		var	debugMessage
+enum	MLModelAsset.AssetError.Kind			
+enum	MLModelAsset.AssetError.Kind		case	unsupportedVersion
+enum	MLModelAsset.AssetError.Kind		case	invalidFeatureType
+enum	MLModelAsset.AssetError.Kind		case	corruptedMetadata
+enum	MLModelAsset.AssetError.Kind		case	invalidName
+enum	MLModelAsset.AssetError.Kind		case	duplicateName
+struct	MLModelAsset.Metadata			
+struct	MLModelAsset.Metadata		var	storage
+enum	MLModelAsset.Metadata.CustomValue			
+enum	MLModelAsset.Metadata.CustomValue		case	string
+enum	MLModelAsset.Metadata.CustomValue		case	integer
+enum	MLModelAsset.Metadata.CustomValue		case	number
+enum	MLModelAsset.Metadata.CustomValue		case	array
+enum	MLModelAsset.Metadata.CustomValue		case	dictionary
+struct	MLModelAsset.Metadata.Feature			
+struct	MLModelAsset.Metadata.Feature		var	name
+struct	MLModelAsset.Metadata.Feature		var	type
+struct	MLModelAsset.Metadata.Feature		var	description
+enum	MLModelAsset.Metadata.Feature.DataType			
+enum	MLModelAsset.Metadata.Feature.DataType		case	tensor
+enum	MLModelAsset.Metadata.Feature.DataType		case	image
+struct	MLModelAsset.MetadataStorage			
+struct	MLModelAsset.MetadataStorage		var	assetVersion
+struct	MLModelAsset.MetadataStorage		var	author
+struct	MLModelAsset.MetadataStorage		var	license
+struct	MLModelAsset.MetadataStorage		var	description
+struct	MLModelAsset.MetadataStorage		var	customMetadata
+struct	MLModelAsset.MetadataStorage		var	inputs
+struct	MLModelAsset.MetadataStorage		var	outputs
+struct	MLModelAsset.MetadataStorage		var	unknownKeys
+struct	MLModelAsset.ModelAsset			
+struct	MLModelAsset.ModelAsset		let	url
+struct	MLModelAsset.ModelAsset		var	metadata
+protocol	conformance MLModelAsset.AssetError	Swift.Error		
+protocol	conformance MLModelAsset.AssetError	Foundation.LocalizedError		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance Metadata.CustomValue	Swift.Hashable		
+protocol	conformance Metadata.CustomValue	Swift.Equatable		
+protocol	conformance Metadata.CustomValue	Swift.CustomStringConvertible		
+protocol	conformance Metadata.Feature	Swift.Hashable		
+protocol	conformance Metadata.Feature	Swift.Equatable		
+protocol	conformance Feature.DataType	Swift.Hashable		
+protocol	conformance Feature.DataType	Swift.Equatable		
+protocol	conformance MLModelAsset.Metadata.Feature.DataType	Swift.LosslessStringConvertible		
+protocol	conformance MLModelAsset.Metadata.Feature.DataType	Swift.CustomStringConvertible		

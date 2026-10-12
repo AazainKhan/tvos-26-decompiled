@@ -1,0 +1,107 @@
+kind	type	conformance	member_kind	member
+struct	MobileTimer.MTLog			
+struct	MobileTimer.MTLog		let	logger
+struct	MobileTimer.MTLog		let	subsystem
+enum	MobileTimer.MTLog.Category			
+enum	MobileTimer.MTLog.Category		case	CoreData
+enum	MobileTimer.MTLog.Category		case	Activities
+enum	MobileTimer.MTLog.Category		case	BugCapture
+class	MobileTimer.AKCDAuthorization	NSManagedObject		
+class	MobileTimer.CallbackWrapper			
+class	MobileTimer.CallbackWrapper		let	callback
+class	MobileTimer.ChannelCore	NSObject		
+class	MobileTimer.ChannelCore	NSObject	let	channel
+class	MobileTimer.ChannelCore	NSObject	var	observersByEventName
+class	MobileTimer.ChannelCore	NSObject	let	observersQueue
+class	MobileTimer.ChannelCore	NSObject	var	eventTask
+enum	MobileTimer.ChannelEventName			
+class	MobileTimer.ChannelEvent	NSObject		
+class	MobileTimer.ChannelEvent	NSObject	let	eventName
+class	MobileTimer.ChannelEvent	NSObject	let	payload
+class	MobileTimer.MTCDSound	NSManagedObject		
+class	MobileTimer.MTCDTimerDuration	NSManagedObject		
+class	MobileTimer.BugCapture	NSObject		
+class	MobileTimer.AKCDAlarm	NSManagedObject		
+class	MobileTimer.MTCDDataStore	NSObject		
+class	MobileTimer.MTCDDataStore	NSObject	var	alarmObserver
+class	MobileTimer.MTCDDataStore	NSObject	var	timerObserver
+class	MobileTimer.MTCDDataStore	NSObject	var	alarmKitObserver
+class	MobileTimer.MTCDDataStore	NSObject	let	lock
+class	MobileTimer.MTCDDataStore	NSObject	var	lock_tasks
+class	MobileTimer.MTCDDataStore	NSObject	let	queue
+class	MobileTimer.MTCDDataStore	NSObject	let	calloutQueue
+class	MobileTimer.MTCDDataStore	NSObject	var	actor
+class	MobileTimer.MTCDDataStore	NSObject	var	storeLoaded
+class	MobileTimer.MTCDDataStore	NSObject	var	task
+class	MobileTimer.MTCDDataStore	NSObject	var	eventPublisher
+class	MobileTimer.CoreDataStoreActor			
+class	MobileTimer.CoreDataStoreActor		let	container
+enum	MobileTimer.MTCDError			
+enum	MobileTimer.MTCDError		case	couldntCreateUrlToObjectModel
+enum	MobileTimer.MTCDError		case	couldntLoadObjectModel
+enum	MobileTimer.MTCDError		case	couldntCreateGroupedContainerPath
+enum	MobileTimer.MTCDError		case	dataStoreNotReady
+class	MobileTimer.MTCDTimer	NSManagedObject		
+class	MobileTimer.MTCDAlarm	NSManagedObject		
+class	MobileTimer.MTCDUtilities			
+struct	MobileTimer.ContainerError			
+struct	MobileTimer.ContainerError		let	rawError
+enum	MobileTimer.ContainerError.Static			
+enum	MobileTimer.ContainerError.Static		case	couldNotAppendGroupContainerLibraryPath
+enum	MobileTimer.MobileTimerFeatureFlags			
+enum	MobileTimer.MobileTimerFeatureFlags		case	liveActivityAlerting
+enum	MobileTimer.MobileTimerFeatureFlags		case	liveActivityAlertTone
+enum	MobileTimer.MobileTimerFeatureFlags		case	liveActivityBanners
+enum	MobileTimer.ConductorStatus			
+enum	MobileTimer.ConductorStatus		case	timeout
+class	MobileTimer.StringConductor	NSObject		
+class	MobileTimer.StringConductor	NSObject	let	conductor
+class	MobileTimer.VoidConductor	NSObject		
+class	MobileTimer.VoidConductor	NSObject	let	conductor
+class	MobileTimer.Conductor			
+class	MobileTimer.Conductor		let	receiver
+class	MobileTimer.Conductor		var	cancellables
+class	MobileTimer.Conductor		let	lock
+class	MobileTimer.AKCDAttributes	NSManagedObject		
+class	MobileTimer.MockAlarmStorage	NSObject		
+protocol	conformance MTLog.Category	Swift.Equatable		
+protocol	conformance MTLog.Category	Swift.Hashable		
+protocol	conformance MTLog.Category	Swift.RawRepresentable		
+protocol	conformance MobileTimer.AKCDAuthorization	Swift.Identifiable		
+protocol	conformance MobileTimer.ChannelEventName	Swift.Equatable		
+protocol	conformance MobileTimer.ChannelEventName	Swift.Hashable		
+protocol	conformance MobileTimer.ChannelEventName	Swift.RawRepresentable		
+protocol	conformance MobileTimer.ChannelEventName	Swift.CaseIterable		
+protocol	conformance MobileTimer.MTCDSound	Swift.Identifiable		
+protocol	conformance MobileTimer.MTCDAlarm	Swift.Identifiable		
+protocol	conformance MobileTimer.CoreDataStoreActor	Swift.Actor		
+protocol	conformance MobileTimer.MTCDError	Swift.Equatable		
+protocol	conformance MobileTimer.MTCDError	Swift.Hashable		
+protocol	conformance MobileTimer.MTCDError	Swift.Error		
+protocol	conformance MobileTimer.AKCDAlarm	Swift.Identifiable		
+protocol	conformance MobileTimer.MTCDTimer	Swift.Identifiable		
+protocol	conformance ContainerError.Static	Swift.Equatable		
+protocol	conformance ContainerError.Static	Swift.Hashable		
+protocol	conformance ContainerError.Static	Swift.RawRepresentable		
+protocol	conformance ContainerError.Static	Swift.Error		
+protocol	conformance MobileTimer.ContainerError	Swift.Error		
+protocol	conformance MobileTimer.ContainerError	Swift.CustomStringConvertible		
+protocol	conformance MobileTimer.MobileTimerFeatureFlags	Swift.Equatable		
+protocol	conformance MobileTimer.MobileTimerFeatureFlags	Swift.Hashable		
+protocol	conformance MobileTimer.MobileTimerFeatureFlags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance MobileTimer.ConductorStatus	Swift.Equatable		
+protocol	conformance MobileTimer.ConductorStatus	Swift.Hashable		
+protocol	conformance MobileTimer.ConductorStatus	Swift.Error		
+protocol	conformance MobileTimer.AKCDAttributes	Swift.Identifiable		
+protocol	conformance MobileTimer.MTCDTimerDuration	Swift.Identifiable		
+extension	MobileTimer.MTLog.Category	RawRepresentable		
+extension	MobileTimer.AKCDAuthorization	Identifiable		
+extension	MobileTimer.ChannelEventName	RawRepresentable		
+extension	MobileTimer.ChannelEventName	CaseIterable		
+extension	MobileTimer.MTCDSound	Identifiable		
+extension	MobileTimer.MTCDAlarm	Identifiable		
+extension	MobileTimer.AKCDAlarm	Identifiable		
+extension	MobileTimer.MTCDTimer	Identifiable		
+extension	MobileTimer.ContainerError.Static	RawRepresentable		
+extension	MobileTimer.AKCDAttributes	Identifiable		
+extension	MobileTimer.MTCDTimerDuration	Identifiable		

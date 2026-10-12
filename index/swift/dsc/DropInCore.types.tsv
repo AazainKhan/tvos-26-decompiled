@@ -1,0 +1,621 @@
+kind	type	conformance	member_kind	member
+enum	DropInCore.MessageSender			
+enum	DropInCore.MessageSender		case	ids
+enum	DropInCore.MessageSender		case	rapport
+class	DropInCore.PerishableSet<A	Swift.Equatable>		
+class	DropInCore.PerishableSet<A	Swift.Equatable>	let	timeout
+class	DropInCore.PerishableSet<A	Swift.Equatable>	var	queue
+class	DropInCore.PerishableSet<A	Swift.Equatable>	var	purgeTask
+struct	DropInCore.PerishableSet.Element<A	Swift.Equatable>		
+struct	DropInCore.PerishableSet.Element<A	Swift.Equatable>	let	item
+struct	DropInCore.PerishableSet.Element<A	Swift.Equatable>	let	expiration
+class	DropInCore.CollectOneSuccess			
+class	DropInCore.CollectOneSuccess		var	promise
+class	DropInCore.CollectOneSuccess		var	jobsOutstanding
+class	DropInCore.CollectOneSuccess		var	errors
+enum	DropInCore.JobExecutorError			
+enum	DropInCore.JobExecutorError		case	allJobsFailed
+enum	DropInCore.JobExecutorError		case	numberOfJobsZero
+class	DropInCore.AudioSystemManager			
+class	DropInCore.AudioSystemManager		let	controller
+class	DropInCore.AudioSystemManager		let	logger
+class	DropInCore.AudioSystemManager		var	xpcClientDataSource
+struct	DropInCore.StartDropInResponse			
+struct	DropInCore.StartDropInResponse		let	sessionId
+struct	DropInCore.StartDropInResponse		let	homeIdentifier
+struct	DropInCore.StartDropInResponse		let	devicePseudonym
+struct	DropInCore.StartDropInResponse		let	devicePseudonymExpiration
+struct	DropInCore.StartDropInResponse		let	error
+struct	DropInCore.ValidatedResult			
+struct	DropInCore.ValidatedResult		let	model
+struct	DropInCore.ValidatedResult		let	senderMetadata
+class	DropInCore.XPCDispatcher			
+class	DropInCore.XPCDispatcher		let	dropInManager
+class	DropInCore.XPCDispatcher		let	audioSystemManager
+class	DropInCore.XPCDispatcher		let	logger
+class	DropInCore.XPCDispatcher		var	xpcClientDataSource
+enum	DropInCore.XPCDispatcher.XPCDispatcherError			
+enum	DropInCore.XPCDispatcher.XPCDispatcherError		case	nilSelf
+enum	DropInCore.XPCDispatcher.XPCDispatcherError		case	nilXPCConnection
+enum	DropInCore.XPCDispatcher.XPCDispatcherError		case	missingEntitlement
+enum	DropInCore.XPCDispatcher.XPCDispatcherError		case	xpcClientForConnectionNotFound
+enum	DropInCore.XPCDispatcher.XPCDispatcherError		case	unsupportedClientBundleID
+enum	DropInCore.XPCDispatcher.XPCDispatcherError		case	clientNotAllowedToSetDropInState
+struct	DropInCore.StartDropInRequest			
+struct	DropInCore.StartDropInRequest		let	homeIdentifier
+struct	DropInCore.StartDropInRequest		let	sessionType
+enum	DropInCore.StartDropInRequest.DropInSessionType			
+enum	DropInCore.StartDropInRequest.DropInSessionType		case	soundAnalysis
+enum	DropInCore.StartDropInRequest.DropInSessionType		case	userInitiated
+struct	DropInCore.InternalDefault			
+struct	DropInCore.InternalDefault		let	userDefaults
+struct	DropInCore.InternalDefault		let	key
+struct	DropInCore.InternalDefault		let	localizedDescription
+class	DropInCore.DropInManager	NSObject		
+class	DropInCore.DropInManager	NSObject	var	messageCenter
+class	DropInCore.DropInManager	NSObject	let	logger
+class	DropInCore.DropInManager	NSObject	let	signposter
+class	DropInCore.DropInManager	NSObject	var	callCenterManager
+class	DropInCore.DropInManager	NSObject	let	homeManagerProvider
+class	DropInCore.DropInManager	NSObject	let	deviceManager
+class	DropInCore.DropInManager	NSObject	let	stateManager
+class	DropInCore.DropInManager	NSObject	let	sessionManager
+class	DropInCore.DropInManager	NSObject	let	transactionManager
+class	DropInCore.DropInManager	NSObject	var	xpcClientDataSource
+class	DropInCore.DropInManager	NSObject	var	dropInStateSubscriber
+class	DropInCore.DropInManager	NSObject	var	dropInSessionAnalyticEvent
+enum	DropInCore.DropInManager.DropInManagerError			
+enum	DropInCore.DropInManager.DropInManagerError		case	invalidIdentifierFormat
+enum	DropInCore.DropInManager.DropInManagerError		case	homeNotFound
+enum	DropInCore.DropInManager.DropInManagerError		case	ownerNotFound
+enum	DropInCore.DropInManager.DropInManagerError		case	ownerUserIDNotFound
+enum	DropInCore.DropInManager.DropInManagerError		case	unsupportedHandle
+enum	DropInCore.DropInManager.DropInManagerError		case	accessoryNotFound
+enum	DropInCore.DropInManager.DropInManagerError		case	destinationNotFound
+enum	DropInCore.DropInManager.DropInManagerError		case	noHomeIdentifier
+enum	DropInCore.DropInManager.DropInManagerError		case	xpcCurrentConnectionNil
+enum	DropInCore.DropInManager.DropInManagerError		case	noURIForCurrentAccessoryCurrentUser
+enum	DropInCore.DropInManager.DropInManagerError		case	deviceNotFoundInHomeKit
+enum	DropInCore.DropInManager.DropInManagerError		case	xpcClientDataSourceNil
+enum	DropInCore.DropInManager.DropInManagerError		case	noInviteeHandle
+enum	DropInCore.DropInManager.DropInManagerError		case	noPendingSession
+enum	DropInCore.DropInManager.DropInManagerError		case	noActiveSession
+enum	DropInCore.DropInManager.DropInManagerError		case	sessionIsNotActive
+enum	DropInCore.DropInManager.DropInManagerError		case	unsupportedResponseType
+enum	DropInCore.DropInManager.DropInManagerError		case	dropInNotAllowed
+enum	DropInCore.DropInManager.DropInManagerError		case	deviceNotFound
+enum	DropInCore.DropInManager.DropInManagerError		case	unsupportedDropInDeviceState
+enum	DropInCore.DropInManager.DropInManagerError		case	nilSelf
+enum	DropInCore.DropInManager.DropInManagerError		case	unsupportedMessage
+enum	DropInCore.DropInManager.DropInManagerError		case	invalidHome
+enum	DropInCore.DropInManager.DropInManagerError		case	currentAudioVideoCallAlreadyActive
+enum	DropInCore.DropInManager.DropInManagerError		case	noCurrentAccessory
+enum	DropInCore.DropInManager.DropInManagerError		case	noHomeForCurrentAccessory
+enum	DropInCore.DropInManager.DropInManagerError		case	notCallManagerHost
+enum	DropInCore.DropInManager.DropInManagerError		case	notCallManagerClient
+enum	DropInCore.DropInManager.DropInManagerError		case	sessionCancelled
+enum	DropInCore.DropInManager.DropInManagerError		case	inviteeNotUser
+enum	DropInCore.DropInManager.DropInManagerError		case	sessionInvalid
+enum	DropInCore.DropInManager.DropInManagerError		case	failedToSetSession
+struct	DropInCore.DropInStateResponse			
+struct	DropInCore.DropInStateResponse		let	homeIdentifier
+struct	DropInCore.DropInStateResponse		let	accessoryId
+struct	DropInCore.DropInStateResponse		let	state
+struct	DropInCore.DropInStateResponse		let	reason
+struct	DropInCore.DropInStateResponse		let	expiration
+class	DropInCore.DropInStateManager			
+class	DropInCore.DropInStateManager		var	context
+class	DropInCore.DropInStateManager		var	stateChangeTask
+class	DropInCore.DropInStateManager		let	logger
+struct	DropInCore.DropInStateManager.Context			
+struct	DropInCore.DropInStateManager.Context		let	state
+struct	DropInCore.DropInStateManager.Context		let	reason
+struct	DropInCore.DropInStateManager.Context		let	expirationDate
+class	DropInCore.PseudonymManager			
+class	DropInCore.PseudonymManager		var	pseudonymLoader
+class	DropInCore.PseudonymManager		let	conversationProviderManager
+class	DropInCore.PseudonymManager		let	conversationProviderLoader
+class	DropInCore.PseudonymManager		let	logger
+enum	DropInCore.PseudonymManager.PseudonymManagerError			
+enum	DropInCore.PseudonymManager.PseudonymManagerError		case	nilSelf
+enum	DropInCore.PseudonymManager.PseudonymManagerError		case	noPseudonym
+struct	DropInCore.DropInStateRequest			
+struct	DropInCore.DropInStateRequest		let	homeIdentifier
+struct	DropInCore.RapportSenderContext			
+struct	DropInCore.RapportSenderContext		let	senderID
+struct	DropInCore.RapportSenderContext		let	senderCorrelationIdentifier
+struct	DropInCore.RapportSenderContext		let	idsDeviceID
+struct	DropInCore.RapportSenderContext		let	peerHomeKitUserIdentifier
+struct	DropInCore.Pseudonym			
+struct	DropInCore.Pseudonym		let	handle
+struct	DropInCore.Pseudonym		let	expirationDate
+struct	DropInCore.Pseudonym		let	expirationType
+enum	DropInCore.Pseudonym.ExpirationType			
+enum	DropInCore.Pseudonym.ExpirationType		case	normal
+enum	DropInCore.Pseudonym.ExpirationType		case	pregenerated
+enum	DropInCore.Pseudonym.ExpirationType.CodingKeys			
+enum	DropInCore.Pseudonym.ExpirationType.CodingKeys		case	normal
+enum	DropInCore.Pseudonym.ExpirationType.CodingKeys		case	pregenerated
+enum	DropInCore.Pseudonym.ExpirationType.NormalCodingKeys			
+enum	DropInCore.Pseudonym.ExpirationType.PregeneratedCodingKeys			
+enum	DropInCore.Pseudonym.PseudonymError			
+enum	DropInCore.Pseudonym.PseudonymError		case	unarchiveFailure
+enum	DropInCore.Pseudonym.CodingKeys			
+enum	DropInCore.Pseudonym.CodingKeys		case	handle
+enum	DropInCore.Pseudonym.CodingKeys		case	expirationDate
+enum	DropInCore.Pseudonym.CodingKeys		case	expirationType
+class	DropInCore.TransactionManager			
+class	DropInCore.TransactionManager		var	transactions
+class	DropInCore.TransactionManager		let	logger
+class	DropInCore.TransactionManager		var	expirationTask
+class	DropInCore.TransactionManager		var	scheduledExpirationDate
+struct	DropInCore.Transaction			
+struct	DropInCore.Transaction		let	transaction
+struct	DropInCore.Transaction		let	name
+enum	DropInCore.TransactionType			
+enum	DropInCore.TransactionType		case	dropInReady
+enum	DropInCore.TransactionType		case	sessionActive
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>		
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	let	idsManager
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	let	rapportManager
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	let	messageValidator
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	let	logger
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	var	handledMessages
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	let	eventHandlers
+class	DropInCore.MessageCenter<A	DropInCore.MessageValidator>	let	requestHandlers
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>		
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	invalidIDSDestination
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	invalidRapportDevice
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	invalidResponse
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	invalidMessage
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	noHandler
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	noCompanionLink
+enum	DropInCore.MessageCenter.MessageCenterError<A	DropInCore.MessageValidator>	case	messageAlreadyHandled
+class	DropInCore.ConversationTimer	DropInCore.OneshotTimer		
+class	DropInCore.ConversationTimer	DropInCore.OneshotTimer	let	mode
+enum	DropInCore.ConversationTimer.Mode			
+enum	DropInCore.ConversationTimer.Mode		case	waiting
+enum	DropInCore.ConversationTimer.Mode		case	active
+class	DropInCore.DropInServiceListenerDelegate	NSObject		
+class	DropInCore.DropInServiceListenerDelegate	NSObject	var	xpcClientDelegate
+class	DropInCore.DropInServiceListenerDelegate	NSObject	var	xpcDispatcher
+class	DropInCore.DropInServiceListenerDelegate	NSObject	var	xpcServerInterface
+class	DropInCore.DropInServiceListenerDelegate	NSObject	let	logger
+class	DropInCore.DropInServiceListenerDelegate	NSObject	let	queue
+class	DropInCore.DropInServiceListenerDelegate	NSObject	var	_xpcClients
+struct	DropInCore.DropInSessionAnalyticEvent			
+struct	DropInCore.DropInSessionAnalyticEvent		var	sessionType
+struct	DropInCore.DropInSessionAnalyticEvent		var	setupBegin
+struct	DropInCore.DropInSessionAnalyticEvent		var	setupEnd
+struct	DropInCore.DropInSessionAnalyticEvent		var	callBegin
+struct	DropInCore.DropInSessionAnalyticEvent		var	callEnd
+struct	DropInCore.DropInSessionAnalyticEvent		var	numberOfParticipantsOnCall
+struct	DropInCore.DropInSessionAnalyticEvent		var	endReason
+class	DropInCore.RapportManager			
+class	DropInCore.RapportManager		var	delegate
+class	DropInCore.RapportManager		let	queue
+class	DropInCore.RapportManager		let	logger
+class	DropInCore.RapportManager		let	eventNames
+class	DropInCore.RapportManager		let	requestNames
+class	DropInCore.RapportManager		let	companionLinkClientLoader
+enum	DropInCore.RapportManager.RapportManagerError			
+enum	DropInCore.RapportManager.RapportManagerError		case	nilSelf
+enum	DropInCore.RapportManager.RapportManagerError		case	noHandler
+enum	DropInCore.RapportManager.RapportManagerError		case	noSenderID
+class	DropInCore.HomeMessageValidator			
+class	DropInCore.HomeMessageValidator		let	homeManagerProvider
+class	DropInCore.HomeMessageValidator		let	logger
+class	DropInCore.HomeMessageValidator		let	remoteTransport
+enum	DropInCore.HomeMessageValidator.HomeMessageSender			
+enum	DropInCore.HomeMessageValidator.HomeMessageSender		case	user
+enum	DropInCore.HomeMessageValidator.HomeMessageSender		case	accessory
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError			
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	idsServiceNotSet
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	messageClassNotFound
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	invalidMessage
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	homeNotFound
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	userNotFound
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	remoteAccessNotAllowedForUser
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	dropInAccessNotAllowedForUser
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	unsupportedTransport
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	unsupportedTransportSenderCombination
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	homeAccessNotAllowedForUser
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	accessoryIsNotContainedInHome
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	unsupportedDestinationType
+enum	DropInCore.HomeMessageValidator.HomeMessageValidatorError		case	accessoryDoesNotSupportDropIn
+class	DropInCore.DeviceManager			
+class	DropInCore.DeviceManager		var	devices
+class	DropInCore.DeviceManager		let	logger
+class	DropInCore.HomeManager	NSObject		
+class	DropInCore.HomeManager	NSObject	let	manager
+class	DropInCore.HomeManager	NSObject	var	homesLoaded
+class	DropInCore.HomeManager	NSObject	let	serialQueue
+class	DropInCore.HomeManager	NSObject	var	homesLoadedHandlers
+class	DropInCore.HomeManager	NSObject	var	delegatesToQueues
+struct	DropInCore.MessageContainer			
+struct	DropInCore.MessageContainer		let	identifier
+struct	DropInCore.MessageContainer		let	payloadName
+struct	DropInCore.MessageContainer		let	payload
+enum	DropInCore.Rapport			
+class	DropInCore.IDSManager	NSObject		
+class	DropInCore.IDSManager	NSObject	let	logger
+class	DropInCore.IDSManager	NSObject	var	serialQueue
+class	DropInCore.IDSManager	NSObject	var	pendingMessageResponseHandlers
+class	DropInCore.IDSManager	NSObject	let	service
+class	DropInCore.IDSManager	NSObject	let	listenerID
+class	DropInCore.IDSManager	NSObject	var	delegate
+enum	DropInCore.IDSManager.MessageType			
+enum	DropInCore.IDSManager.MessageType		case	request
+enum	DropInCore.IDSManager.MessageType		case	response
+enum	DropInCore.IDSManager.MessageType		case	event
+enum	DropInCore.IDSManager.IDSManagerError			
+enum	DropInCore.IDSManager.IDSManagerError		case	nilMessageId
+enum	DropInCore.IDSManager.IDSManagerError		case	sendCallbackFailure
+enum	DropInCore.IDSManager.IDSManagerError		case	responseTimedOut
+class	DropInCore.DropInCoreService			
+class	DropInCore.DropInCoreService		let	logger
+class	DropInCore.DropInCoreService		let	listener
+class	DropInCore.DropInCoreService		let	listenerDelegate
+enum	DropInCore.DropInCoreService.DropInCoreServiceError			
+enum	DropInCore.DropInCoreService.DropInCoreServiceError		case	nilCompanionLinkClient
+struct	DropInCore.Group			
+struct	DropInCore.Group		let	timeLow
+struct	DropInCore.Group		let	timeMid
+struct	DropInCore.Group		let	timeHiAndVersion
+struct	DropInCore.Group		let	clockSeqHiAndRes
+struct	DropInCore.Group		let	node
+class	DropInCore.HomeParticipantValidator			
+class	DropInCore.HomeParticipantValidator		let	homeManagerProvider
+class	DropInCore.HomeParticipantValidator		let	idsService
+class	DropInCore.HomeParticipantValidator		let	listenerID
+class	DropInCore.HomeParticipantValidator		let	logger
+struct	DropInCore.DropInSessionFailureEvent			
+struct	DropInCore.DropInSessionFailureEvent		let	homeIdentifier
+struct	DropInCore.DropInSessionFailureEvent		let	sessionID
+struct	DropInCore.DropInSessionFailureEvent		let	error
+enum	DropInCore.RPCompanionLinkClientError			
+enum	DropInCore.RPCompanionLinkClientError		case	responseNotMessage
+class	DropInCore.AudioPowerManager	NSObject		
+class	DropInCore.AudioPowerManager	NSObject	var	registeredStreamTokens
+class	DropInCore.AudioPowerManager	NSObject	let	logger
+class	DropInCore.AudioPowerManager	NSObject	let	signposter
+class	DropInCore.AudioPowerManager	NSObject	var	mockDataTask
+class	DropInCore.AudioPowerManager	NSObject	let	queue
+class	DropInCore.AudioPowerManager	NSObject	let	delegateQueue
+class	DropInCore.AudioPowerManager	NSObject	var	delegate
+class	DropInCore.AudioPowerManager	NSObject	var	audioFrequencyController
+enum	DropInCore.IDSIDQueryControllerError			
+enum	DropInCore.IDSIDQueryControllerError		case	invalidResult
+struct	DropInCore.XPCClient			
+struct	DropInCore.XPCClient		let	logger
+struct	DropInCore.XPCClient		let	connection
+struct	DropInCore.XPCClient		var	options
+struct	DropInCore.XPCClient.Options			
+struct	DropInCore.XPCClient.Options		let	rawValue
+class	DropInCore.OneshotTimer	NSObject		
+class	DropInCore.OneshotTimer	NSObject	let	label
+class	DropInCore.OneshotTimer	NSObject	let	identifier
+class	DropInCore.OneshotTimer	NSObject	let	timeInterval
+class	DropInCore.OneshotTimer	NSObject	let	timer
+class	DropInCore.OneshotTimer	NSObject	let	deadline
+class	DropInCore.OneshotTimer	NSObject	let	logger
+enum	DropInCore.MessageDecodableError			
+enum	DropInCore.MessageDecodableError		case	decodeMessageFailure
+struct	DropInCore.DropInStateEvent			
+struct	DropInCore.DropInStateEvent		let	homeIdentifier
+struct	DropInCore.DropInStateEvent		let	accessoryId
+struct	DropInCore.DropInStateEvent		let	state
+struct	DropInCore.DropInStateEvent		let	reason
+struct	DropInCore.DropInStateEvent		let	expiration
+class	DropInCore.Loader			
+class	DropInCore.Loader		var	builder
+class	DropInCore.Loader		var	cache
+class	DropInCore.Loader		var	logger
+enum	DropInCore.Loader.CacheEntry			
+enum	DropInCore.Loader.CacheEntry		case	inProgress
+enum	DropInCore.Loader.CacheEntry		case	ready
+enum	DropInCore.Loader.CacheEntry		case	idle
+enum	DropInCore.Loader.LoaderError			
+enum	DropInCore.Loader.LoaderError		case	noBuilder
+class	DropInCore.CallCenterManager	NSObject		
+class	DropInCore.CallCenterManager	NSObject	var	callParticpants
+class	DropInCore.CallCenterManager	NSObject	var	delegate
+class	DropInCore.CallCenterManager	NSObject	let	callCenter
+class	DropInCore.CallCenterManager	NSObject	let	conversationProviderManager
+class	DropInCore.CallCenterManager	NSObject	let	participantValidator
+class	DropInCore.CallCenterManager	NSObject	var	conversationProviderLoader
+class	DropInCore.CallCenterManager	NSObject	let	serialQueue
+class	DropInCore.CallCenterManager	NSObject	var	audioPowerManager
+class	DropInCore.CallCenterManager	NSObject	let	logger
+class	DropInCore.CallCenterManager	NSObject	let	signposter
+class	DropInCore.CallCenterManager	NSObject	var	activeConversation
+class	DropInCore.CallCenterManager	NSObject	var	conversationTimer
+class	DropInCore.CallCenterManager	NSObject	var	someoneJoined
+class	DropInCore.CallCenterManager	NSObject	var	activeCall
+enum	DropInCore.CallCenterManager.CallCenterManagerError			
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	nilSelf
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	nilProvider
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	noPseudonym
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	failedToJoinConversation
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	activeConversationAlreadyInProgress
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	timedOutWaitingForParticipant
+enum	DropInCore.CallCenterManager.CallCenterManagerError		case	noActiveCall
+class	DropInCore.PhoneCallVolumeBooster			
+class	DropInCore.PhoneCallVolumeBooster		let	volumeController
+class	DropInCore.PhoneCallVolumeBooster		var	originalVolume
+class	DropInCore.PhoneCallVolumeBooster		let	logger
+class	DropInCore.CallCenterManagerHost	DropInCore.CallCenterManager		
+class	DropInCore.CallCenterManagerHost	DropInCore.CallCenterManager	var	volumeBooster
+class	DropInCore.CallCenterManagerHost	DropInCore.CallCenterManager	var	originalVolume
+class	DropInCore.CallCenterManagerHost	DropInCore.CallCenterManager	var	pseudonymManager
+class	DropInCore.CallCenterManagerHost	DropInCore.CallCenterManager	let	logger
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>		
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	waitStateValidExpiration
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	homeIdentifier
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	deviceAccessoryIdentifier
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	session
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	conversationIdentifier
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	devicePseudonym
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	invitees
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	let	logger
+class	DropInCore.SessionManager<A	DropInCore.DropInHandleConvertible, A: Swift.Hashable>	var	xpcClientDataSource
+protocol	DropInCore.DropInHandleConvertible			
+protocol	DropInCore.IDSDestinationConvertible			
+protocol	DropInCore.ParticipantValidator			
+protocol	DropInCore.Transport			
+protocol	DropInCore.MessageValidator	LocalTransport, RemoteTransport, SenderMetadata		
+protocol	DropInCore.IDSDestinationRemovingSelfTokenProtocol			
+protocol	DropInCore.DropInAnalyticsEventProtocol			
+protocol	DropInCore.XPCClientDataSource			
+protocol	DropInCore.XPCClientDelegate			
+protocol	DropInCore.RapportManagerDelegate			
+protocol	DropInCore.HomeObjectMessageable			
+protocol	DropInCore.IDSManagerDelegate			
+protocol	DropInCore.RapportCompanionLinkDeviceConvertible			
+protocol	DropInCore.AudioPowerManagerDelegate			
+protocol	DropInCore.HomeIdentifierProviding			
+protocol	DropInCore.HomeMessageConvertible			
+protocol	DropInCore.MessageNameProviding			
+protocol	DropInCore.MessageEncodable			
+protocol	DropInCore.MessageDecodable			
+protocol	DropInCore.EventMessageConvertible			
+protocol	DropInCore.RequestMessageConvertible			
+protocol	DropInCore.ResponseMessageConvertible			
+protocol	DropInCore.MessageConvertible			
+protocol	DropInCore.CallCenterManagerDelegate			
+protocol	DropInCore.DropInStateProviding			
+protocol	conformance __C.TUConversationState	Swift.Equatable: TelephonyUtilities		
+protocol	conformance __C.TUConversationState	Swift.RawRepresentable: TelephonyUtilities		
+protocol	conformance __C.State	Swift.Equatable: DropIn		
+protocol	conformance __C.State	Swift.RawRepresentable: DropIn		
+protocol	conformance DropInCore.MessageSender	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.MessageSender	DropInCore.IDSDestinationConvertible		
+protocol	conformance DropInCore.MessageSender	Swift.Hashable		
+protocol	conformance DropInCore.MessageSender	Swift.Equatable		
+protocol	conformance DropInCore.PerishableSet	Swift.Actor		
+protocol	conformance CollectOneSuccess	Swift.Actor		
+protocol	conformance DropInCore.JobExecutorError	Swift.Error		
+protocol	conformance HMUser	DropInCore.IDSDestinationConvertible		
+protocol	conformance HMAccessory	DropInCore.IDSDestinationConvertible		
+protocol	conformance HMUser	DropInCore.RapportCompanionLinkDeviceConvertible		
+protocol	conformance HMAccessory	DropInCore.RapportCompanionLinkDeviceConvertible		
+protocol	conformance DropInCore.StartDropInResponse	Swift.Equatable		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.StartDropInResponse	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.HomeIdentifierProviding		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.MessageConvertible		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.ResponseMessageConvertible		
+protocol	conformance DropInCore.StartDropInResponse	DropInCore.HomeMessageConvertible		
+protocol	conformance XPCDispatcher.XPCDispatcherError	Swift.Hashable		
+protocol	conformance XPCDispatcher.XPCDispatcherError	Swift.Equatable		
+protocol	conformance XPCDispatcher.XPCDispatcherError	Swift.Error		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.StartDropInRequest	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.HomeIdentifierProviding		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.MessageConvertible		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.RequestMessageConvertible		
+protocol	conformance DropInCore.StartDropInRequest	DropInCore.HomeMessageConvertible		
+protocol	conformance StartDropInRequest.DropInSessionType	Swift.CustomStringConvertible		
+protocol	conformance StartDropInRequest.DropInSessionType	Swift.RawRepresentable		
+protocol	conformance StartDropInRequest.DropInSessionType	Swift.Hashable		
+protocol	conformance StartDropInRequest.DropInSessionType	Swift.Equatable		
+protocol	conformance DropInCore.StartDropInRequest	Swift.Equatable		
+protocol	conformance DropInCore.InternalDefault	DropIn.UserDefaultsAccessible		
+protocol	conformance DropInCore.InternalDefault	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.DropInManager	DropInCore.XPCClientDelegate		
+protocol	conformance DropInCore.DropInManager	DropInCore.CallCenterManagerDelegate		
+protocol	conformance DropInManager.DropInManagerError	Foundation.CustomNSError		
+protocol	conformance DropInManager.DropInManagerError	Foundation.LocalizedError		
+protocol	conformance DropInManager.DropInManagerError	Swift.RawRepresentable		
+protocol	conformance DropInManager.DropInManagerError	Swift.Hashable		
+protocol	conformance DropInManager.DropInManagerError	Swift.Equatable		
+protocol	conformance DropInManager.DropInManagerError	Swift.Error		
+protocol	conformance DIHandle	DropInCore.IDSDestinationConvertible		
+protocol	conformance __C.TUConversationState	Swift.CustomStringConvertible: DropInCore		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.DropInStateResponse	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.HomeIdentifierProviding		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.MessageConvertible		
+protocol	conformance DropInCore.DropInStateResponse	Swift.Equatable		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.HomeMessageConvertible		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.DropInStateProviding		
+protocol	conformance DropInCore.DropInStateResponse	DropInCore.ResponseMessageConvertible		
+protocol	conformance DropInStateManager.Context	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.DropInStateManager	Swift.Actor		
+protocol	conformance DropInCore.PseudonymManager	Swift.Actor		
+protocol	conformance PseudonymManager.PseudonymManagerError	Foundation.LocalizedError		
+protocol	conformance PseudonymManager.PseudonymManagerError	Swift.RawRepresentable		
+protocol	conformance PseudonymManager.PseudonymManagerError	Swift.Hashable		
+protocol	conformance PseudonymManager.PseudonymManagerError	Swift.Equatable		
+protocol	conformance PseudonymManager.PseudonymManagerError	Swift.Error		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.DropInStateRequest	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.HomeIdentifierProviding		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.MessageConvertible		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.RequestMessageConvertible		
+protocol	conformance DropInCore.DropInStateRequest	DropInCore.HomeMessageConvertible		
+protocol	conformance DropInCore.DropInStateRequest	Swift.Equatable		
+protocol	conformance IDSDestination	DropInCore.IDSDestinationRemovingSelfTokenProtocol		
+protocol	conformance DropInCore.RapportSenderContext	Swift.Hashable		
+protocol	conformance DropInCore.RapportSenderContext	Swift.Equatable		
+protocol	conformance DropInCore.RapportSenderContext	Swift.CustomStringConvertible		
+protocol	conformance Pseudonym.ExpirationType	Swift.CustomStringConvertible		
+protocol	conformance Pseudonym.ExpirationType	Swift.Encodable		
+protocol	conformance Pseudonym.ExpirationType	Swift.Decodable		
+protocol	conformance Pseudonym.ExpirationType	Swift.Hashable		
+protocol	conformance Pseudonym.ExpirationType	Swift.Equatable		
+protocol	conformance DropInCore.Pseudonym	Swift.Equatable		
+protocol	conformance DropInCore.Pseudonym	Swift.Encodable		
+protocol	conformance DropInCore.Pseudonym	Swift.Decodable		
+protocol	conformance DropInCore.Pseudonym	DropIn.EncodableUserDefaultsValue		
+protocol	conformance DropInCore.Pseudonym	DropIn.DecodableUserDefaultsValue		
+protocol	conformance DropInCore.Pseudonym	Swift.CustomStringConvertible		
+protocol	conformance Pseudonym.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Pseudonym.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Pseudonym.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Pseudonym.CodingKeys	Swift.Hashable		
+protocol	conformance Pseudonym.CodingKeys	Swift.Equatable		
+protocol	conformance Pseudonym.PseudonymError	Foundation.LocalizedError		
+protocol	conformance Pseudonym.PseudonymError	Swift.RawRepresentable		
+protocol	conformance Pseudonym.PseudonymError	Swift.Hashable		
+protocol	conformance Pseudonym.PseudonymError	Swift.Equatable		
+protocol	conformance PregeneratedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PregeneratedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NormalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NormalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NormalCodingKeys	Swift.CodingKey		
+protocol	conformance PregeneratedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Pseudonym.PseudonymError	Swift.Error		
+protocol	conformance Pseudonym.CodingKeys	Swift.CodingKey		
+protocol	conformance DropInCore.Transaction	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.Transaction	Swift.Hashable		
+protocol	conformance DropInCore.Transaction	Swift.Equatable		
+protocol	conformance DropInCore.TransactionManager	Swift.Actor		
+protocol	conformance DropInCore.MessageCenter	DropInCore.RapportManagerDelegate		
+protocol	conformance DropInCore.MessageCenter	DropInCore.IDSManagerDelegate		
+protocol	conformance MessageCenter.MessageCenterError	Foundation.LocalizedError		
+protocol	conformance MessageCenter.MessageCenterError	Swift.RawRepresentable		
+protocol	conformance MessageCenter.MessageCenterError	Swift.Hashable		
+protocol	conformance MessageCenter.MessageCenterError	Swift.Equatable		
+protocol	conformance MessageCenter.MessageCenterError	Swift.Error		
+protocol	conformance ConversationTimer.Mode	Swift.CustomStringConvertible		
+protocol	conformance ConversationTimer.Mode	Swift.RawRepresentable		
+protocol	conformance ConversationTimer.Mode	Swift.Hashable		
+protocol	conformance ConversationTimer.Mode	Swift.Equatable		
+protocol	conformance DropInCore.DropInServiceListenerDelegate	DropInCore.XPCClientDataSource		
+protocol	conformance DropInCore.DropInSessionAnalyticEvent	DropInCore.DropInAnalyticsEventProtocol		
+protocol	conformance RapportManager.RapportManagerError	Swift.Hashable		
+protocol	conformance RapportManager.RapportManagerError	Swift.Equatable		
+protocol	conformance RapportManager.RapportManagerError	Swift.Error		
+protocol	conformance RPCompanionLinkClient	DropInCore.Transport		
+protocol	conformance IDSService	DropInCore.Transport		
+protocol	conformance HMAccessory	DropInCore.HomeObjectMessageable		
+protocol	conformance HMUser	DropInCore.HomeObjectMessageable		
+protocol	conformance HomeMessageValidator.HomeMessageSender	Swift.Hashable		
+protocol	conformance HomeMessageValidator.HomeMessageSender	Swift.Equatable		
+protocol	conformance HomeMessageValidator.HomeMessageSender	Swift.CustomStringConvertible		
+protocol	conformance HomeMessageValidator.HomeMessageSender	DropInCore.DropInHandleConvertible		
+protocol	conformance DropInCore.HomeMessageValidator	DropInCore.MessageValidator		
+protocol	conformance HomeMessageValidator.HomeMessageValidatorError	Foundation.LocalizedError		
+protocol	conformance HomeMessageValidator.HomeMessageValidatorError	Swift.RawRepresentable		
+protocol	conformance HomeMessageValidator.HomeMessageValidatorError	Swift.Hashable		
+protocol	conformance HomeMessageValidator.HomeMessageValidatorError	Swift.Equatable		
+protocol	conformance HomeMessageValidator.HomeMessageValidatorError	Swift.Error		
+protocol	conformance DropInCore.DeviceManager	Swift.Actor		
+protocol	conformance DropInCore.MessageContainer	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.MessageContainer	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.MessageContainer	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.MessageContainer	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.MessageContainer	DropInCore.MessageConvertible		
+protocol	conformance IDSManager.IDSManagerError	Swift.Hashable		
+protocol	conformance IDSManager.IDSManagerError	Swift.Equatable		
+protocol	conformance IDSManager.MessageType	Swift.CustomStringConvertible		
+protocol	conformance IDSManager.IDSManagerError	Swift.Error		
+protocol	conformance DropInCoreService.DropInCoreServiceError	Swift.Hashable		
+protocol	conformance DropInCoreService.DropInCoreServiceError	Swift.Equatable		
+protocol	conformance DropInCoreService.DropInCoreServiceError	Swift.Error		
+protocol	conformance Group	Swift.Equatable		
+protocol	conformance DropInCore.HomeParticipantValidator	DropInCore.ParticipantValidator		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.DropInSessionFailureEvent	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.HomeIdentifierProviding		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.MessageConvertible		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.EventMessageConvertible		
+protocol	conformance DropInCore.DropInSessionFailureEvent	DropInCore.HomeMessageConvertible		
+protocol	conformance DropInCore.DropInSessionFailureEvent	Swift.Equatable		
+protocol	conformance RPCompanionLinkClientError	Swift.Hashable		
+protocol	conformance RPCompanionLinkClientError	Swift.Equatable		
+protocol	conformance RPCompanionLinkClientError	Swift.Error		
+protocol	conformance IDSIDQueryControllerError	Foundation.LocalizedError		
+protocol	conformance IDSIDQueryControllerError	Swift.RawRepresentable		
+protocol	conformance IDSIDQueryControllerError	Swift.Hashable		
+protocol	conformance IDSIDQueryControllerError	Swift.Equatable		
+protocol	conformance IDSIDQueryControllerError	Swift.Error		
+protocol	conformance XPCClient.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance XPCClient.Options	Swift.Equatable		
+protocol	conformance XPCClient.Options	Swift.RawRepresentable		
+protocol	conformance XPCClient.Options	Swift.SetAlgebra		
+protocol	conformance XPCClient.Options	Swift.CustomStringConvertible		
+protocol	conformance XPCClient.Options	Swift.OptionSet		
+protocol	conformance DropInCore.XPCClient	Swift.Hashable		
+protocol	conformance DropInCore.XPCClient	Swift.Equatable		
+protocol	conformance DropInCore.XPCClient	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.MessageDecodableError	Foundation.LocalizedError		
+protocol	conformance DropInCore.MessageDecodableError	Swift.RawRepresentable		
+protocol	conformance DropInCore.MessageDecodableError	Swift.Hashable		
+protocol	conformance DropInCore.MessageDecodableError	Swift.Equatable		
+protocol	conformance DropInCore.MessageDecodableError	Swift.Error		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.MessageNameProviding		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.MessageDecodable		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.MessageEncodable		
+protocol	conformance DropInCore.DropInStateEvent	Swift.CustomStringConvertible		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.HomeIdentifierProviding		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.MessageConvertible		
+protocol	conformance DropInCore.DropInStateEvent	Swift.Equatable		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.HomeMessageConvertible		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.DropInStateProviding		
+protocol	conformance DropInCore.DropInStateEvent	DropInCore.EventMessageConvertible		
+protocol	conformance DropInCore.Loader	Swift.Actor		
+protocol	conformance Loader.LoaderError	Swift.Hashable		
+protocol	conformance Loader.LoaderError	Swift.Equatable		
+protocol	conformance Loader.LoaderError	Swift.Error		
+protocol	conformance DropInCore.CallCenterManager	DropInCore.AudioPowerManagerDelegate		
+protocol	conformance CallCenterManager.CallCenterManagerError	Foundation.LocalizedError		
+protocol	conformance CallCenterManager.CallCenterManagerError	Swift.RawRepresentable		
+protocol	conformance CallCenterManager.CallCenterManagerError	Swift.Hashable		
+protocol	conformance CallCenterManager.CallCenterManagerError	Swift.Equatable		
+protocol	conformance CallCenterManager.CallCenterManagerError	Swift.Error		
+protocol	conformance DropInCore.PhoneCallVolumeBooster	Swift.Actor		
+protocol	conformance DropInCore.SessionManager	Swift.Actor		
+extension	DropInCore.StartDropInRequest.DropInSessionType	RawRepresentable		
+extension	DropInCore.InternalDefault	UserDefaultsAccessible		
+extension	DropInCore.DropInManager.DropInManagerError	RawRepresentable		
+extension	DropInCore.PseudonymManager.PseudonymManagerError	RawRepresentable		
+extension	DropInCore.Pseudonym.CodingKeys	RawRepresentable		
+extension	DropInCore.Pseudonym.PseudonymError	RawRepresentable		
+extension	DropInCore.MessageCenter.MessageCenterError	RawRepresentable		
+extension	DropInCore.ConversationTimer.Mode	RawRepresentable		
+extension	DropInCore.HomeMessageValidator	MessageValidator		
+extension	DropInCore.HomeMessageValidator.HomeMessageValidatorError	RawRepresentable		
+extension	DropInCore.IDSIDQueryControllerError	RawRepresentable		
+extension	DropInCore.XPCClient.Options	ExpressibleByArrayLiteral		
+extension	DropInCore.XPCClient.Options	RawRepresentable		
+extension	DropInCore.XPCClient.Options	SetAlgebra		
+extension	DropInCore.XPCClient.Options	OptionSet		
+extension	DropInCore.MessageDecodableError	RawRepresentable		
+extension	DropInCore.CallCenterManager.CallCenterManagerError	RawRepresentable		

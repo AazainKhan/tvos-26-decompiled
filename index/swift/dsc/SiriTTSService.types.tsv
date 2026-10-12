@@ -1,0 +1,2037 @@
+kind	type	conformance	member_kind	member
+enum	SiriTTSService.AudioPlaybackError			
+enum	SiriTTSService.AudioPlaybackError		case	audioSessionNotFound
+enum	SiriTTSService.AudioPlaybackError		case	avsbarNotInstantiated
+enum	SiriTTSService.AudioPlaybackError		case	playbackStalled
+struct	SiriTTSService.AudioRouteInfo			
+struct	SiriTTSService.AudioRouteInfo		var	audioRouteName
+struct	SiriTTSService.AudioRouteInfo		var	isBluetoothRoute
+struct	SiriTTSService.AudioRouteInfo		var	isAppleProduct
+struct	SiriTTSService.AudioRouteInfo		var	vendorID
+struct	SiriTTSService.AudioRouteInfo		var	productID
+struct	SiriTTSService.AudioRouteInfo		var	volume
+enum	SiriTTSService.PredefinedAudioFormat			
+class	SiriTTSService.AudioData	NSObject		
+class	SiriTTSService.AudioData	NSObject	var	asbd
+class	SiriTTSService.AudioData	NSObject	var	audioData
+class	SiriTTSService.AudioData	NSObject	var	packetCount
+class	SiriTTSService.AudioData	NSObject	var	packetDescriptions
+class	SiriTTSService.BufferedAudioPlayback<A	SiriTTSService.AudioInterface>		
+class	SiriTTSService.BufferedAudioPlayback<A	SiriTTSService.AudioInterface>	let	audioInterface
+class	SiriTTSService.BufferedAudioPlayback<A	SiriTTSService.AudioInterface>	let	audioOperationQueue
+class	SiriTTSService.BufferedAudioPlayback<A	SiriTTSService.AudioInterface>	var	playbackError
+class	SiriTTSService.BufferedAudioPlayback<A	SiriTTSService.AudioInterface>	var	audioSequence
+struct	SiriTTSService.AudioPower			
+struct	SiriTTSService.AudioPower		let	averagePower
+struct	SiriTTSService.AudioPower		let	peakPower
+class	SiriTTSService.RewindPositionFinder			
+class	SiriTTSService.RewindPositionFinder		let	voiceActivityDetector
+class	SiriTTSService.RewindPositionFinder		var	opusDecoder
+class	SiriTTSService.RewindPositionFinder		var	rewindMarkers
+class	SiriTTSService.RewindPositionFinder		var	totalDuration
+class	SiriTTSService.AudioQueueInterface			
+class	SiriTTSService.AudioQueueInterface		var	discontinuedDuringPlayback
+class	SiriTTSService.AudioQueueInterface		let	outputRouteInfo
+class	SiriTTSService.AudioQueueInterface		let	audioQueue
+class	SiriTTSService.AudioQueueInterface		let	audioQueueLock
+class	SiriTTSService.AudioQueueInterface		var	startTime
+class	SiriTTSService.AudioQueueInterface		var	enqueuedDuration
+class	SiriTTSService.AudioQueueInterface		var	startTimeStamp
+class	SiriTTSService.AudioQueueInterface		var	enqueuedSampleCount
+class	SiriTTSService.AudioQueueInterface		var	audioPlaybackAudioQueueUID
+class	SiriTTSService.AudioQueueInterface		var	audioTrack
+class	SiriTTSService.AudioQueueInterface		var	noMoreEnqueuedData
+class	SiriTTSService.AudioQueueInterface		var	totalInjectedSilenceDuration
+class	SiriTTSService.AudioQueueInterface		var	isPaused
+class	SiriTTSService.AudioQueueInterface		var	rewindPositionFinder
+struct	SiriTTSService.RewindPositionFinder.RewindMarker			
+struct	SiriTTSService.RewindPositionFinder.RewindMarker		let	audioTrackTime
+struct	SiriTTSService.RewindPositionFinder.RewindMarker		let	rewindOffset
+enum	SiriTTSService.AudioData.CodingKeys			
+enum	SiriTTSService.AudioData.CodingKeys		case	asbd
+enum	SiriTTSService.AudioData.CodingKeys		case	audioData
+enum	SiriTTSService.AudioData.CodingKeys		case	packetCount
+enum	SiriTTSService.AudioData.CodingKeys		case	packetDescriptions
+struct	SiriTTSService.AudioQueueInterface.AudioQueueUserData			
+struct	SiriTTSService.AudioQueueInterface.AudioQueueUserData		let	audio
+struct	SiriTTSService.AudioQueueInterface.AudioQueueUserData		let	audioTrackTime
+class	SiriTTSService.UtteranceBuffer			
+class	SiriTTSService.UtteranceBuffer		var	content
+class	SiriTTSService.UtteranceBuffer		let	sentenceTokenizer
+class	SiriTTSService.UtteranceBuffer		let	sentenceBreakExceptions
+class	SiriTTSService.TTSAssetFactoryTrialAsset	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetFactoryTrialAsset	SiriTTSService.TTSAsset	let	asset
+class	SiriTTSService.TTSAssetFactoryTrialAsset	SiriTTSService.TTSAsset	let	factorName
+class	SiriTTSService.TTSAssetFactoryInstalledStrategy			
+class	SiriTTSService.TTSAssetFactoryInstalledStrategy		var	lazy
+class	SiriTTSService.DiagnosticService			
+class	SiriTTSService.DiagnosticService		let	notificationCenter
+class	SiriTTSService.DiagnosticService		var	observers
+class	SiriTTSService.DiagnosticService		var	requestId
+class	SiriTTSService.DiagnosticService		var	audioSessionCAReporterId
+class	SiriTTSService.WordTimingInfo	NSObject		
+class	SiriTTSService.WordTimingInfo	NSObject	var	startTime
+class	SiriTTSService.WordTimingInfo	NSObject	var	textRange
+class	SiriTTSService.AudibleContext	NSObject		
+class	SiriTTSService.AudibleContext	NSObject	var	audioSessionId
+class	SiriTTSService.AudibleContext	NSObject	var	immediate
+class	SiriTTSService.AudibleContext	NSObject	var	didStartSpeaking
+class	SiriTTSService.AudibleContext	NSObject	var	playbackVolume
+class	SiriTTSService.ProsodyProperties	NSObject		
+class	SiriTTSService.ProsodyProperties	NSObject	var	neuralSentencePitch
+class	SiriTTSService.ProsodyProperties	NSObject	var	neuralSentencePitchRange
+class	SiriTTSService.ProsodyProperties	NSObject	var	neuralSentenceDuration
+class	SiriTTSService.ProsodyProperties	NSObject	var	neuralSentenceEnergy
+class	SiriTTSService.ProsodyProperties	NSObject	var	neuralSentenceTilt
+class	SiriTTSService.SynthesisContext	NSObject		
+class	SiriTTSService.SynthesisContext	NSObject	var	text
+class	SiriTTSService.SynthesisContext	NSObject	var	voice
+class	SiriTTSService.SynthesisContext	NSObject	var	privacySensitive
+class	SiriTTSService.SynthesisContext	NSObject	var	minimizeDeviceUsage
+class	SiriTTSService.SynthesisContext	NSObject	var	contextInfo
+class	SiriTTSService.SynthesisContext	NSObject	var	rate
+class	SiriTTSService.SynthesisContext	NSObject	var	pitch
+class	SiriTTSService.SynthesisContext	NSObject	var	volume
+class	SiriTTSService.SynthesisContext	NSObject	var	customResourceURLs
+class	SiriTTSService.SynthesisContext	NSObject	var	synthesisProfile
+class	SiriTTSService.SynthesisContext	NSObject	var	synthesisPriority
+class	SiriTTSService.SynthesisContext	NSObject	var	disableCompactVoice
+class	SiriTTSService.SynthesisContext	NSObject	var	disableThermalFallback
+class	SiriTTSService.SynthesisContext	NSObject	var	didGenerateAudio
+class	SiriTTSService.SynthesisContext	NSObject	var	didGenerateWordTimings
+class	SiriTTSService.SynthesisContext	NSObject	var	style
+class	SiriTTSService.SynthesisContext	NSObject	var	whisper
+class	SiriTTSService.SynthesisContext	NSObject	var	prosodyProperties
+class	SiriTTSService.SynthesisContext	NSObject	var	forceOspreyTTS
+enum	SiriTTSService.SynthesisContext.SynthesisProfile			
+enum	SiriTTSService.SynthesisContext.SynthesisPriority			
+enum	SiriTTSService.SynthesisContext.PromptStyle			
+class	SiriTTSService.BaseRequest	NSObject		
+class	SiriTTSService.BaseRequest	NSObject	var	requestCreatedTime
+class	SiriTTSService.BaseRequest	NSObject	var	clientBundleId
+class	SiriTTSService.BaseRequest	NSObject	var	accessoryId
+class	SiriTTSService.BaseRequest	NSObject	var	outputPath
+class	SiriTTSService.BaseRequest	NSObject	var	sandboxToken
+class	SiriTTSService.BaseRequest	NSObject	var	logLinkId
+class	SiriTTSService.BaseRequest	NSObject	var	interactionLinkId
+class	SiriTTSService.BaseRequest	NSObject	var	streamId
+class	SiriTTSService.BaseRequest	NSObject	var	didReportInstrument
+class	SiriTTSService.BaseRequest	NSObject	var	isStreaming
+class	SiriTTSService.BaseRequest	NSObject	let	eventPublisher
+class	SiriTTSService.BaseRequest	NSObject	let	internalEventPublisher
+class	SiriTTSService.BaseRequest	NSObject	var	eventHandler
+class	SiriTTSService.AudioRequest	SiriTTSService.BaseRequest		
+class	SiriTTSService.AudioRequest	SiriTTSService.BaseRequest	let	audio
+class	SiriTTSService.AudioRequest	SiriTTSService.BaseRequest	var	audibleContext
+class	SiriTTSService.SynthesisRequest	SiriTTSService.BaseRequest		
+class	SiriTTSService.SynthesisRequest	SiriTTSService.BaseRequest	var	synthesisContext
+class	SiriTTSService.PhonemeRequest	SiriTTSService.BaseRequest		
+class	SiriTTSService.PhonemeRequest	SiriTTSService.BaseRequest	var	text
+class	SiriTTSService.PhonemeRequest	SiriTTSService.BaseRequest	var	voice
+class	SiriTTSService.PhonemeRequest	SiriTTSService.BaseRequest	var	phonemeSystem
+enum	SiriTTSService.PhonemeRequest.PhonemeSystem			
+class	SiriTTSService.SpeechRequest	SiriTTSService.BaseRequest		
+class	SiriTTSService.SpeechRequest	SiriTTSService.BaseRequest	var	audibleContext
+class	SiriTTSService.SpeechRequest	SiriTTSService.BaseRequest	var	synthesisContext
+enum	SiriTTSService.PreviewType			
+class	SiriTTSService.PreviewRequest	SiriTTSService.BaseRequest		
+class	SiriTTSService.PreviewRequest	SiriTTSService.BaseRequest	var	audibleContext
+class	SiriTTSService.PreviewRequest	SiriTTSService.BaseRequest	var	voice
+class	SiriTTSService.PreviewRequest	SiriTTSService.BaseRequest	var	language
+class	SiriTTSService.PreviewRequest	SiriTTSService.BaseRequest	var	previewType
+class	SiriTTSService.AudioHintRequest	SiriTTSService.BaseRequest		
+class	SiriTTSService.AudioHintRequest	SiriTTSService.BaseRequest	var	audibleContext
+class	SiriTTSService.AudioHintRequest	SiriTTSService.BaseRequest	var	voice
+class	SiriTTSService.AudioHintRequest	SiriTTSService.BaseRequest	var	dialogNumber
+class	SiriTTSService.AudioHintRequest	SiriTTSService.BaseRequest	var	useCompactHints
+class	SiriTTSService.SynthesisVoice	NSObject		
+class	SiriTTSService.SynthesisVoice	NSObject	var	language
+class	SiriTTSService.SynthesisVoice	NSObject	var	name
+class	SiriTTSService.SynthesisVoice	NSObject	var	footprint
+class	SiriTTSService.SynthesisVoice	NSObject	var	type
+class	SiriTTSService.SynthesisVoice	NSObject	var	gender
+class	SiriTTSService.SynthesisVoice	NSObject	var	version
+class	SiriTTSService.SynthesisVoice	NSObject	var	attributes
+enum	SiriTTSService.SynthesisVoice.Footprint			
+enum	SiriTTSService.SynthesisVoice.VoiceType			
+enum	SiriTTSService.SynthesisVoice.VoiceGender			
+class	SiriTTSService.SynthesisResource	NSObject		
+class	SiriTTSService.SynthesisResource	NSObject	var	language
+class	SiriTTSService.SynthesisResource	NSObject	var	version
+enum	SiriTTSService.SynthesisResource.CodingKeys			
+enum	SiriTTSService.SynthesisResource.CodingKeys		case	language
+enum	SiriTTSService.SynthesisResource.CodingKeys		case	version
+enum	SiriTTSService.SynthesisVoice.CodingKeys			
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	language
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	name
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	footprint
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	type
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	version
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	gender
+enum	SiriTTSService.SynthesisVoice.CodingKeys		case	attributes
+enum	SiriTTSService.AudioHintRequest.CodingKeys			
+enum	SiriTTSService.AudioHintRequest.CodingKeys		case	audibleContext
+enum	SiriTTSService.AudioHintRequest.CodingKeys		case	voice
+enum	SiriTTSService.AudioHintRequest.CodingKeys		case	dialogNumber
+enum	SiriTTSService.AudioHintRequest.CodingKeys		case	useCompactHints
+enum	SiriTTSService.PreviewRequest.CodingKeys			
+enum	SiriTTSService.PreviewRequest.CodingKeys		case	audibleContext
+enum	SiriTTSService.PreviewRequest.CodingKeys		case	voice
+enum	SiriTTSService.PreviewRequest.CodingKeys		case	language
+enum	SiriTTSService.PreviewRequest.CodingKeys		case	previewType
+enum	SiriTTSService.SpeechRequest.CodingKeys			
+enum	SiriTTSService.SpeechRequest.CodingKeys		case	audibleContext
+enum	SiriTTSService.SpeechRequest.CodingKeys		case	synthesisContext
+enum	SiriTTSService.PhonemeRequest.CodingKeys			
+enum	SiriTTSService.PhonemeRequest.CodingKeys		case	text
+enum	SiriTTSService.PhonemeRequest.CodingKeys		case	voice
+enum	SiriTTSService.PhonemeRequest.CodingKeys		case	phonemeSystem
+enum	SiriTTSService.SynthesisRequest.CodingKeys			
+enum	SiriTTSService.SynthesisRequest.CodingKeys		case	synthesisContext
+enum	SiriTTSService.AudioRequest.CodingKeys			
+enum	SiriTTSService.AudioRequest.CodingKeys		case	audio
+enum	SiriTTSService.AudioRequest.CodingKeys		case	audibleContext
+enum	SiriTTSService.BaseRequest.CodingKeys			
+enum	SiriTTSService.BaseRequest.CodingKeys		case	requestCreatedTime
+enum	SiriTTSService.BaseRequest.CodingKeys		case	clientBundleId
+enum	SiriTTSService.BaseRequest.CodingKeys		case	accessoryId
+enum	SiriTTSService.BaseRequest.CodingKeys		case	outputPath
+enum	SiriTTSService.BaseRequest.CodingKeys		case	logLinkId
+enum	SiriTTSService.BaseRequest.CodingKeys		case	sandboxToken
+enum	SiriTTSService.BaseRequest.CodingKeys		case	interactionLinkId
+enum	SiriTTSService.SynthesisContext.CodingKeys			
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	text
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	voice
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	privacySensitive
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	minimizeDeviceUsage
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	contextInfo
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	rate
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	pitch
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	volume
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	customResourceURLs
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	disableCompactVoice
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	didGenerateAudio
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	didGenerateWordTimings
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	style
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	whisper
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	forceOspreyTTS
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	synthesisProfile
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	synthesisPriority
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	prosodyProperties
+enum	SiriTTSService.SynthesisContext.CodingKeys		case	disableThermalFallback
+enum	SiriTTSService.ProsodyProperties.CodingKeys			
+enum	SiriTTSService.ProsodyProperties.CodingKeys		case	neuralSentencePitch
+enum	SiriTTSService.ProsodyProperties.CodingKeys		case	neuralSentencePitchRange
+enum	SiriTTSService.ProsodyProperties.CodingKeys		case	neuralSentenceDuration
+enum	SiriTTSService.ProsodyProperties.CodingKeys		case	neuralSentenceEnergy
+enum	SiriTTSService.ProsodyProperties.CodingKeys		case	neuralSentenceTilt
+enum	SiriTTSService.AudibleContext.CodingKeys			
+enum	SiriTTSService.AudibleContext.CodingKeys		case	audioSessionId
+enum	SiriTTSService.AudibleContext.CodingKeys		case	immediate
+enum	SiriTTSService.AudibleContext.CodingKeys		case	playbackVolume
+enum	SiriTTSService.WordTimingInfo.CodingKeys			
+enum	SiriTTSService.WordTimingInfo.CodingKeys		case	startTime
+enum	SiriTTSService.WordTimingInfo.CodingKeys		case	textRange
+class	SiriTTSService.CacheReadingAction	SiriTTSService.Buffer		
+class	SiriTTSService.CacheReadingAction	SiriTTSService.Buffer	let	cacheStorage
+class	SiriTTSService.CacheReadingAction	SiriTTSService.Buffer	let	preinstalledAudioStorage
+class	SiriTTSService.CacheReadingAction	SiriTTSService.Buffer	let	notification
+class	SiriTTSService.CacheReadingAction	SiriTTSService.Buffer	let	internalSettings
+enum	SiriTTSService.TTSAsset.VoiceAttribute			
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	synthesizerID
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	voiceID
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	name
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	localizedNames
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	nameRoot
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	identifier
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	age
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	gender
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	demo
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	language
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	locale
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	version
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	scriptCode
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	voiceGroup
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	voiceType
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	desirability
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	supportedCharacters
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	individuallySpokenCharacters
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	downloadSize
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	diskSize
+enum	SiriTTSService.TTSAsset.VoiceAttribute		case	description
+class	SiriTTSService.TTSAssetStubStrategy			
+class	SiriTTSService.TaskOperation	NSOperation		
+class	SiriTTSService.TaskOperation	NSOperation	let	request
+class	SiriTTSService.TaskOperation	NSOperation	let	workflow
+class	SiriTTSService.TaskOperation	NSOperation	let	delegate
+class	SiriTTSService.TaskOperation	NSOperation	let	audioHandler
+class	SiriTTSService.TaskOperation	NSOperation	let	notification
+class	SiriTTSService.TaskOperation	NSOperation	let	queue
+class	SiriTTSService.TaskOperation	NSOperation	var	workflowError
+class	SiriTTSService.MappedData			
+class	SiriTTSService.MappedData		let	filePath
+class	SiriTTSService.MappedData		var	count
+class	SiriTTSService.MappedData		var	mmappedData
+class	SiriTTSService.MappedData		var	mappedLength
+class	SiriTTSService.MappedData		var	fallbackInMemoryData
+class	SiriTTSService.MappedData		var	shouldCleanFile
+class	SiriTTSService.PassThroughAction	SiriTTSService.Buffer		
+class	SiriTTSService.AccessSafeDictionary<A	Swift.Hashable>		
+class	SiriTTSService.AccessSafeDictionary<A	Swift.Hashable>	let	protectedDictionary
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer		
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	var	synthesisBuffer
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	let	processInfo
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	var	lastReceivedTime
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	var	bufferingDeadline
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	var	detectedLowRTF
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	var	disableBuffering
+class	SiriTTSService.SynthesisBufferingAction	SiriTTSService.Buffer	let	notificationCenter
+class	SiriTTSService.HTMLSpeakableStringExtractor	NSObject		
+class	SiriTTSService.HTMLSpeakableStringExtractor	NSObject	var	_speakableString
+class	SiriTTSService.HTMLSpeakableStringExtractor	NSObject	var	elements
+class	SiriTTSService.HTMLSpeakableStringExtractor	NSObject	var	isInSpeakableRange
+class	SiriTTSService.HTMLSpeakableStringExtractor	NSObject	let	htmlString
+class	SiriTTSService.SpeakableStringExtractor	NSObject		
+class	SiriTTSService.SpeakableStringExtractor	NSObject	let	language
+class	SiriTTSService.SpeakableStringExtractor	NSObject	let	inputType
+class	SiriTTSService.SpeakableStringExtractor	NSObject	let	data
+enum	SiriTTSService.SpeakableStringExtractor.InputType			
+enum	SiriTTSService.SpeakableStringExtractor.InputType		case	plainText
+enum	SiriTTSService.SpeakableStringExtractor.InputType		case	html
+class	SiriTTSService.InlineStreamingStorage			
+class	SiriTTSService.InlineStreamingStorage		var	storage
+class	SiriTTSService.InlineStreamingStorage		var	streamingHandlers
+class	SiriTTSService.InlineStreamingStorage		var	signals
+class	SiriTTSService.InlineStreamingStorage		let	lock
+class	SiriTTSService.InlineStreamingStorage		let	queue
+class	SiriTTSService.EngineCachingService			
+class	SiriTTSService.EngineCachingService		let	lock
+class	SiriTTSService.EngineCachingService		var	_activeSessionCount
+class	SiriTTSService.EngineCachingService		var	_cachedEngine
+class	SiriTTSService.EngineCachingService		var	_loadResourceFailure
+struct	SiriTTSService.WorkoutConfig			
+class	SiriTTSService.VoiceActivityDetector			
+class	SiriTTSService.VoiceActivityDetector		let	params
+class	SiriTTSService.VoiceActivityDetector		var	states
+class	SiriTTSService.VoiceActivityDetector		let	queue
+class	SiriTTSService.VoiceActivityDetector		let	group
+struct	SiriTTSService.VoiceActivityDetector.VadStates			
+struct	SiriTTSService.VoiceActivityDetector.VadStates		var	windowedRmsSum
+struct	SiriTTSService.VoiceActivityDetector.VadStates		var	rmsWindows
+struct	SiriTTSService.VoiceActivityDetector.VadStates		var	frameSum
+struct	SiriTTSService.VoiceActivityDetector.VadStates		var	result
+struct	SiriTTSService.VoiceActivityDetector.VadParams			
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	rmsHistoricalRatio
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	rmsThreshold
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	backgroundNoiseLevel
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	backgroundNoiseLevelScalar
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	frameCountInWindow
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	frameDuration
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	minPauseDuration
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	slidingWindow
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	noPauseRewind
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	sampleRate
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	bytesPerFrame
+struct	SiriTTSService.VoiceActivityDetector.VadParams		var	channelsPerFrame
+struct	SiriTTSService.VoiceActivityDetector.RMSFrameResult			
+struct	SiriTTSService.VoiceActivityDetector.RMSFrameResult		var	sampleIdx
+struct	SiriTTSService.VoiceActivityDetector.RMSFrameResult		var	isSpeech
+class	SiriTTSService.SignpostHandler			
+class	SiriTTSService.SignpostHandler		let	notificationCenter
+class	SiriTTSService.SignpostHandler		var	observers
+class	SiriTTSService.SignpostHandler		let	signposter
+class	SiriTTSService.SignpostHandler		var	synthesisInterval
+class	SiriTTSService.SignpostHandler		var	voiceSelectionInternal
+class	SiriTTSService.SignpostHandler		var	engineSelectionInterval
+class	SiriTTSService.SignpostHandler		var	audioStartingInterval
+class	SiriTTSService.SignpostHandler		var	playbackInterval
+class	SiriTTSService.UserPreferences	NSObject		
+struct	SiriTTSService.MobileGestalt			
+struct	SiriTTSService.Features			
+class	SiriTTSService.NeuralUtils			
+class	SiriTTSService.NSRangeUtil	NSObject		
+struct	SiriTTSService.TimeoutUtility			
+struct	SiriTTSService.Locked			
+struct	SiriTTSService.Locked		let	lock
+struct	SiriTTSService.Locked		var	value
+enum	SiriTTSService.Features.Flags			
+enum	SiriTTSService.Features.Flags		case	lowInactiveMemory
+class	SiriTTSService.TTSFeatureFlagsContainer			
+enum	SiriTTSService.TTSFeatureFlagsContainer.Key			
+enum	SiriTTSService.TTSFeatureFlagsContainer.Key		case	swift_xpc
+enum	SiriTTSService.TTSFeatureFlagsContainer.Key		case	iteratorBasedMessageReading
+enum	SiriTTSService.TTSFeatureFlags			
+enum	SiriTTSService.TTSFeatureFlags.FFKey			
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	swift_xpc
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceAsIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceBnIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceBrxIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceDoiIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceKnIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceKokIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceKsIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceMaiIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceMlIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceMniIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceNeIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceOrIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceSaIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceSatIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceSdIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceTaIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceTeIn
+enum	SiriTTSService.TTSFeatureFlags.FFKey		case	useF26VoiceUrIn
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer		
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer	var	asyncContext
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer	var	notificationCenter
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer	var	newTokenObserver
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer	var	cancellationObserver
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer	var	request
+class	SiriTTSService.SentenceBufferingAction	SiriTTSService.Buffer	var	utteranceBuffer
+class	SiriTTSService.RetryTextModificationAction	SiriTTSService.Buffer		
+class	SiriTTSService.OspreyClient			
+class	SiriTTSService.OspreyClient		let	grpcChannel
+class	SiriTTSService.OspreyClient		let	speechId
+class	SiriTTSService.TTSAssetAdhocStrategy			
+class	SiriTTSService.TextToPhonemeAction			
+class	SiriTTSService.TextToPhonemeAction		let	notification
+class	SiriTTSService.TextToPhonemeAction		let	engineCachingService
+class	SiriTTSService.AlpineTTSAction	SiriTTSService.Buffer		
+class	SiriTTSService.AlpineTTSAction	SiriTTSService.Buffer	var	asyncContext
+class	SiriTTSService.AlpineTTSAction	SiriTTSService.Buffer	let	notificationCenter
+class	SiriTTSService.AlpineTTSAction	SiriTTSService.Buffer	var	observers
+class	SiriTTSService.TTSAssetProxyStrategy			
+class	SiriTTSService.TTSAssetProxyStrategy		let	serverIdent
+class	SiriTTSService.TTSAssetProxyStrategy		var	serverConnection
+class	SiriTTSService.TTSAssetProxyStrategy		var	sandboxHandles
+class	SiriTTSService.TTSAssetProxyStrategy		var	serverMutex
+enum	SiriTTSService.TTSAsset.ProxyKey			
+enum	SiriTTSService.TTSAsset.ProxyKey		case	message
+enum	SiriTTSService.TTSAsset.ProxyKey		case	types
+enum	SiriTTSService.TTSAsset.ProxyKey		case	filter
+enum	SiriTTSService.TTSAsset.ProxyKey		case	assets
+enum	SiriTTSService.TTSAsset.ProxyKey		case	attributes
+enum	SiriTTSService.TTSAsset.ProxyKey		case	cookie
+enum	SiriTTSService.TTSAsset.ProxyKey		case	bundle
+enum	SiriTTSService.TTSAsset.ProxyKey		case	authTokens
+enum	SiriTTSService.TTSAsset.ProxyKey		case	quality
+enum	SiriTTSService.VoiceBrand			
+class	SiriTTSService.TTSAssetMAStrategy			
+class	SiriTTSService.TTSAssetMAStrategy		let	stagingURL
+class	SiriTTSService.TTSAssetMAStrategy.DownloadSourceExtractor	NSObject		
+class	SiriTTSService.TTSAssetMAStrategy.DownloadSourceExtractor	NSObject	var	inKey
+class	SiriTTSService.TTSAssetMAStrategy.DownloadSourceExtractor	NSObject	var	wantValue
+class	SiriTTSService.TTSAssetMAStrategy.DownloadSourceExtractor	NSObject	var	text
+class	SiriTTSService.TTSAssetMAStrategy.DownloadSourceExtractor	NSObject	var	source
+class	SiriTTSService.Workflow			
+class	SiriTTSService.Workflow		let	graph
+class	SiriTTSService.Workflow		let	errorHandlers
+class	SiriTTSService.Workflow		var	_isCancelled
+class	SiriTTSService.Workflow		let	cancellationLock
+class	SiriTTSService.Workflow		let	notification
+class	SiriTTSService.DataContainer			
+class	SiriTTSService.DataContainer		var	idContainer
+class	SiriTTSService.Buffer			
+class	SiriTTSService.Buffer		var	buffer
+class	SiriTTSService.Buffer		let	bufferCondition
+class	SiriTTSService.AsynchronousContext			
+class	SiriTTSService.AsynchronousContext		var	isProcessing
+class	SiriTTSService.AsynchronousContext		var	asyncError
+class	SiriTTSService.AsynchronousContext		var	waitTimeout
+class	SiriTTSService.AsynchronousContext		var	isProcessingCondition
+class	SiriTTSService.WorkflowNode			
+class	SiriTTSService.WorkflowNode		let	action
+class	SiriTTSService.WorkflowNode.WorkflowCondition	SiriTTSService.Buffer		
+class	SiriTTSService.WorkflowNode.WorkflowCondition	SiriTTSService.Buffer	let	conditional
+struct	SiriTTSService.PresetVoices			
+struct	SiriTTSService.PresetVoices		let	voices
+struct	SiriTTSService.PresetVoices		let	version
+struct	SiriTTSService.Voice			
+struct	SiriTTSService.Voice		var	id
+struct	SiriTTSService.Voice		var	accent
+struct	SiriTTSService.Voice		var	gender
+struct	SiriTTSService.Voice		var	age
+struct	SiriTTSService.Voice		var	characteristics
+struct	SiriTTSService.Voice		var	delivery
+struct	SiriTTSService.Voice		var	dialogType
+struct	SiriTTSService.Voice		var	language
+enum	SiriTTSService.VoiceAttribute			
+enum	SiriTTSService.VoiceAttribute		case	accent
+enum	SiriTTSService.VoiceAttribute		case	gender
+enum	SiriTTSService.VoiceAttribute		case	age
+enum	SiriTTSService.VoiceAttribute		case	characteristic
+enum	SiriTTSService.VoiceAttribute		case	delivery
+enum	SiriTTSService.VoiceAttribute		case	dialogType
+enum	SiriTTSService.DialogType			
+enum	SiriTTSService.DialogType		case	brief
+enum	SiriTTSService.DialogType		case	comprehensive
+enum	SiriTTSService.DialogType		case	formal
+enum	SiriTTSService.DialogType		case	informal
+enum	SiriTTSService.DialogType		case	unknown
+enum	SiriTTSService.Delivery			
+enum	SiriTTSService.Delivery		case	calm
+enum	SiriTTSService.Delivery		case	casual
+enum	SiriTTSService.Delivery		case	confident
+enum	SiriTTSService.Delivery		case	upbeat
+enum	SiriTTSService.Delivery		case	friendly
+enum	SiriTTSService.Delivery		case	relaxed
+enum	SiriTTSService.Delivery		case	dynamic
+enum	SiriTTSService.Delivery		case	professional
+enum	SiriTTSService.Delivery		case	warm
+enum	SiriTTSService.Delivery		case	soothing
+enum	SiriTTSService.Delivery		case	cheerful
+enum	SiriTTSService.Delivery		case	playful
+enum	SiriTTSService.Delivery		case	enthusiastic
+enum	SiriTTSService.Delivery		case	unknown
+enum	SiriTTSService.Characteristic			
+enum	SiriTTSService.Characteristic		case	deep
+enum	SiriTTSService.Characteristic		case	smooth
+enum	SiriTTSService.Characteristic		case	softSpoken
+enum	SiriTTSService.Characteristic		case	rich
+enum	SiriTTSService.Characteristic		case	bright
+enum	SiriTTSService.Characteristic		case	raspy
+enum	SiriTTSService.Characteristic		case	breathy
+enum	SiriTTSService.Characteristic		case	melodious
+enum	SiriTTSService.Characteristic		case	unknown
+enum	SiriTTSService.Age			
+enum	SiriTTSService.Age		case	young
+enum	SiriTTSService.Age		case	adult20s
+enum	SiriTTSService.Age		case	adult30s
+enum	SiriTTSService.Age		case	adult40s
+enum	SiriTTSService.Age		case	elder
+enum	SiriTTSService.Age		case	unknown
+enum	SiriTTSService.Gender			
+enum	SiriTTSService.Gender		case	male
+enum	SiriTTSService.Gender		case	female
+enum	SiriTTSService.Gender		case	neutral
+enum	SiriTTSService.Gender		case	unknown
+enum	SiriTTSService.Accent			
+enum	SiriTTSService.Accent		case	australia
+enum	SiriTTSService.Accent		case	canada
+enum	SiriTTSService.Accent		case	india
+enum	SiriTTSService.Accent		case	ireland
+enum	SiriTTSService.Accent		case	newZealand
+enum	SiriTTSService.Accent		case	southAfrica
+enum	SiriTTSService.Accent		case	scotland
+enum	SiriTTSService.Accent		case	wales
+enum	SiriTTSService.Accent		case	northernIreland
+enum	SiriTTSService.Accent		case	northernEngland
+enum	SiriTTSService.Accent		case	southernEngland
+enum	SiriTTSService.Accent		case	newEnglandUS
+enum	SiriTTSService.Accent		case	midAtlanticUS
+enum	SiriTTSService.Accent		case	southernUS
+enum	SiriTTSService.Accent		case	midwestUS
+enum	SiriTTSService.Accent		case	westernUS
+enum	SiriTTSService.Accent		case	l2
+enum	SiriTTSService.Accent		case	unknown
+enum	SiriTTSService.SingleValueCodingError			
+enum	SiriTTSService.SingleValueCodingError		case	noMatchedCase
+enum	SiriTTSService.VoiceAttribute.CodingKeys			
+enum	SiriTTSService.VoiceAttribute.CodingKeys		case	accent
+enum	SiriTTSService.VoiceAttribute.CodingKeys		case	gender
+enum	SiriTTSService.VoiceAttribute.CodingKeys		case	age
+enum	SiriTTSService.VoiceAttribute.CodingKeys		case	characteristic
+enum	SiriTTSService.VoiceAttribute.CodingKeys		case	delivery
+enum	SiriTTSService.VoiceAttribute.CodingKeys		case	dialogType
+enum	SiriTTSService.VoiceAttribute.AccentCodingKeys			
+enum	SiriTTSService.VoiceAttribute.AccentCodingKeys		case	_0
+enum	SiriTTSService.VoiceAttribute.GenderCodingKeys			
+enum	SiriTTSService.VoiceAttribute.GenderCodingKeys		case	_0
+enum	SiriTTSService.VoiceAttribute.AgeCodingKeys			
+enum	SiriTTSService.VoiceAttribute.AgeCodingKeys		case	_0
+enum	SiriTTSService.VoiceAttribute.CharacteristicCodingKeys			
+enum	SiriTTSService.VoiceAttribute.CharacteristicCodingKeys		case	_0
+enum	SiriTTSService.VoiceAttribute.DeliveryCodingKeys			
+enum	SiriTTSService.VoiceAttribute.DeliveryCodingKeys		case	_0
+enum	SiriTTSService.VoiceAttribute.DialogTypeCodingKeys			
+enum	SiriTTSService.VoiceAttribute.DialogTypeCodingKeys		case	_0
+enum	SiriTTSService.Voice.CodingKeys			
+enum	SiriTTSService.Voice.CodingKeys		case	id
+enum	SiriTTSService.Voice.CodingKeys		case	accent
+enum	SiriTTSService.Voice.CodingKeys		case	gender
+enum	SiriTTSService.Voice.CodingKeys		case	age
+enum	SiriTTSService.Voice.CodingKeys		case	characteristics
+enum	SiriTTSService.Voice.CodingKeys		case	delivery
+enum	SiriTTSService.Voice.CodingKeys		case	dialogType
+enum	SiriTTSService.Voice.CodingKeys		case	language
+enum	SiriTTSService.PresetVoices.CodingKeys			
+enum	SiriTTSService.PresetVoices.CodingKeys		case	voices
+enum	SiriTTSService.PresetVoices.CodingKeys		case	version
+class	SiriTTSService.VoiceAssetsProviderLocalStore			
+class	SiriTTSService.VoiceAssetsProviderLocalStore		let	orderedPlistURLs
+enum	SiriTTSService.PersonalizationVoiceError			
+enum	SiriTTSService.PersonalizationVoiceError		case	voicePresetsEmpty
+enum	SiriTTSService.PersonalizationVoiceError		case	invalidRequestCount
+enum	SiriTTSService.PersonalizationVoiceError		case	invalidVoiceAttributesWeights
+enum	SiriTTSService.PersonalizationVoiceError		case	invalidTolerance
+enum	SiriTTSService.PersonalizationVoiceError		case	voiceAssetNotFound
+enum	SiriTTSService.PersonalizationVoiceError		case	invalidVoiceAsset
+enum	SiriTTSService.PersonalizationVoiceError		case	networkError
+class	SiriTTSService.VoiceComparator			
+class	SiriTTSService.VoiceComparator		let	voiceAssetsProvider
+struct	SiriTTSService.VoicePreviews			
+enum	SiriTTSService.VoicePreviews.VoicePreviewError			
+enum	SiriTTSService.VoicePreviews.VoicePreviewError		case	missingVoiceName
+enum	SiriTTSService.VoicePreviews.VoicePreviewError		case	unavailableVoicePreview
+enum	SiriTTSService.VoicePreviews.InterpolationError			
+enum	SiriTTSService.VoicePreviews.InterpolationError		case	mismatchedText
+enum	SiriTTSService.VoicePreviews.InterpolationError		case	unavailableVoicePreview
+enum	SiriTTSService.VoicePreviews.InterpolationError		case	invalidTime
+enum	SiriTTSService.VoicePreviews.InterpolationError		case	invalidWordOffset
+struct	SiriTTSService.VoicePreviews.Metadata			
+struct	SiriTTSService.VoicePreviews.Metadata		var	text
+struct	SiriTTSService.VoicePreviews.Metadata		var	wordTimings
+struct	SiriTTSService.VoicePreviews.Metadata		var	loopStartTime
+enum	SiriTTSService.VoicePreviews.Metadata.CodingKeys			
+enum	SiriTTSService.VoicePreviews.Metadata.CodingKeys		case	text
+enum	SiriTTSService.VoicePreviews.Metadata.CodingKeys		case	wordTimings
+enum	SiriTTSService.VoicePreviews.Metadata.CodingKeys		case	loopStartTime
+class	SiriTTSService.SynthesisCacheWritingAction			
+class	SiriTTSService.SynthesisCacheWritingAction		var	asyncContext
+class	SiriTTSService.SynthesisCacheWritingAction		var	_invalidated
+class	SiriTTSService.SynthesisCacheWritingAction		let	cacheStorage
+class	SiriTTSService.SynthesisCacheWritingAction		var	cacheFile
+class	SiriTTSService.SynthesisCacheWritingAction		var	cacheHashKey
+class	SiriTTSService.SynthesisCacheWritingAction		var	currentRequest
+class	SiriTTSService.SynthesisCacheWritingAction		let	cachingQueue
+class	SiriTTSService.SynthesisCacheWritingAction		let	internalSettings
+class	SiriTTSService.SynthesisCacheWritingAction		let	notificationCenter
+class	SiriTTSService.SynthesisCacheWritingAction		var	observers
+enum	SiriTTSService.Constants			
+enum	SiriTTSService.DaemonXPCAllowedTypeSets			
+struct	SiriTTSService.Entitlements			
+struct	SiriTTSService.Entitlements		let	canDumpAudio
+class	SiriTTSService.OpusDecoder			
+class	SiriTTSService.OpusDecoder		let	fromFormat
+class	SiriTTSService.OpusDecoder		let	toFormat
+class	SiriTTSService.OpusDecoder		let	converter
+class	SiriTTSService.OpusDecoder		let	buffer
+class	SiriTTSService.TTSAssetProxyAsset	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetProxyAsset	SiriTTSService.TTSAsset	let	cookie
+class	SiriTTSService.TTSAssetProxyAsset	SiriTTSService.TTSAsset	let	assetQuality
+class	SiriTTSService.TTSAssetProxyAsset	SiriTTSService.TTSAsset	let	bundlePath
+class	SiriTTSService.TTSAssetProxyAsset	SiriTTSService.TTSAsset	var	authorizedBundle
+class	SiriTTSService.TTSAssetProxyAsset	SiriTTSService.TTSAsset	let	proxy_attr
+class	SiriTTSService.SynthesisEngineSelectionAction	SiriTTSService.Buffer		
+class	SiriTTSService.SynthesisEngineSelectionAction	SiriTTSService.Buffer	let	engineCachingService
+class	SiriTTSService.SynthesisEngineSelectionAction	SiriTTSService.Buffer	let	notification
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	factorIdentifier
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	var	assetAttr
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	path
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	isDirty
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	isDownloading
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	updateCounter
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	progressQueue
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	lazyDownloadSize
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	lazyDiskSize
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	lazySupportedLanguages
+class	SiriTTSService.TTSAssetUAFAsset	SiriTTSService.TTSAsset	let	experimentId
+class	SiriTTSService.TTSAssetUAFVoiceAsset	SiriTTSService.TTSAssetUAFAsset		
+class	SiriTTSService.TTSAssetUAFVoiceAsset	SiriTTSService.TTSAssetUAFAsset	let	lazyName
+class	SiriTTSService.TTSAssetUAFResourceAsset	SiriTTSService.TTSAssetUAFAsset		
+struct	SiriTTSService.TTSAssetUAFIdentifier			
+struct	SiriTTSService.TTSAssetUAFIdentifier		let	identifier
+struct	SiriTTSService.TTSAssetUAFIdentifier		let	components
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType			
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType		case	generic
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType		case	iPhone
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType		case	iPod
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType		case	m10
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType		case	neuralAX
+enum	SiriTTSService.TTSAssetUAFAsset.assetDeviceType		case	h13_8gb
+class	SiriTTSService.TTSAssetUAFAssetProvider			
+class	SiriTTSService.TTSAssetUAFAssetProvider		let	downloadQueue
+struct	SiriTTSService.TTSProtoTTSEvent			
+struct	SiriTTSService.TTSProtoTTSEvent		var	eventType
+struct	SiriTTSService.TTSProtoTTSEvent		var	timestamp
+struct	SiriTTSService.TTSProtoTTSEvent		var	requestID
+struct	SiriTTSService.TTSProtoTTSEvent		var	clientBundleID
+struct	SiriTTSService.TTSProtoTTSEvent		var	logLinkID
+struct	SiriTTSService.TTSProtoTTSEvent		var	interactionLinkID
+struct	SiriTTSService.TTSProtoTTSEvent		var	eventData
+struct	SiriTTSService.TTSProtoTTSEvent		var	unknownFields
+enum	SiriTTSService.TTSProtoTTSEvent.EventType			
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	UNRECOGNIZED
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	unspecified
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	requestReceived
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	synthesisStarted
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	synthesisEnded
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	audioPlaybackStarted
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	audioPlaybackEnded
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	voiceSelected
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	encounteredIssue
+enum	SiriTTSService.TTSProtoTTSEvent.EventType		case	instrumentationMetrics
+struct	SiriTTSService.TTSProtoTTSEvent.EventValue			
+struct	SiriTTSService.TTSProtoTTSEvent.EventValue		var	value
+struct	SiriTTSService.TTSProtoTTSEvent.EventValue		var	unknownFields
+enum	SiriTTSService.TTSProtoTTSEvent.EventValue.OneOf_Value			
+enum	SiriTTSService.TTSProtoTTSEvent.EventValue.OneOf_Value		case	stringValue
+enum	SiriTTSService.TTSProtoTTSEvent.EventValue.OneOf_Value		case	intValue
+enum	SiriTTSService.TTSProtoTTSEvent.EventValue.OneOf_Value		case	doubleValue
+enum	SiriTTSService.TTSProtoTTSEvent.EventValue.OneOf_Value		case	boolValue
+class	SiriTTSService.ObjectPool			
+class	SiriTTSService.ObjectPool		var	constructorRegistry
+class	SiriTTSService.ObjectPool		var	objectPool
+class	SiriTTSService.TTSAssetMAAsset	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetMAAsset	SiriTTSService.TTSAsset	let	asset
+class	SiriTTSService.TTSAssetMACompactAsset	SiriTTSService.TTSAssetMAAsset		
+struct	SiriTTSService.TTSAssetMAAsset.DefaultMacinTalkProperties			
+struct	SiriTTSService.TTSAssetMAAsset.DefaultMacinTalkProperties		let	gender
+struct	SiriTTSService.TTSAssetMAAsset.DefaultMacinTalkProperties		let	quality
+struct	SiriTTSService.TTSAssetMAAsset.DefaultVocalizerProperties			
+struct	SiriTTSService.TTSAssetMAAsset.DefaultVocalizerProperties		let	name
+struct	SiriTTSService.TTSAssetMAAsset.DefaultVocalizerProperties		let	gender
+class	SiriTTSService.AudioHandler			
+class	SiriTTSService.AudioHandler		let	notificationCenter
+class	SiriTTSService.AudioHandler		var	observers
+class	SiriTTSService.AudioHandler		let	audioPowerProvider
+class	SiriTTSService.AudioHandler		var	audioVolumeController
+class	SiriTTSService.AudioHandler		var	audioPlaybackController
+class	SiriTTSService.OpusEncodingAction	SiriTTSService.Buffer		
+class	SiriTTSService.OpusEncodingAction	SiriTTSService.Buffer	var	encoder
+class	SiriTTSService.InternalSettings			
+class	SiriTTSService.InternalSettings		var	_disableTTS
+class	SiriTTSService.InternalSettings		var	_enableDiagnostic
+class	SiriTTSService.InternalSettings		var	_logSensitiveText
+class	SiriTTSService.InternalSettings		var	_disableCache
+class	SiriTTSService.InternalSettings		var	_overrideRequestsText
+class	SiriTTSService.InternalSettings		var	_disableAssetCleaning
+class	SiriTTSService.InternalSettings		var	_allowAnyAssetSubscriber
+class	SiriTTSService.InternalSettings		var	_defaultToNonDiscretionaryDownloads
+class	SiriTTSService.InternalSettings		var	_enableLocalVoices
+class	SiriTTSService.InternalSettings		var	_livingOnVoiceName
+class	SiriTTSService.InternalSettings		var	_defaultVolume
+class	SiriTTSService.InternalSettings		var	_defaultPitch
+class	SiriTTSService.InternalSettings		var	_defaultRate
+class	SiriTTSService.InternalSettings		var	_whisper
+class	SiriTTSService.InternalSettings		var	_serverLogs
+class	SiriTTSService.InternalSettings		var	_serverTTSTimeout
+class	SiriTTSService.InternalSettings		var	_deviceTTSWaitTime
+class	SiriTTSService.InternalSettings		var	_disableDeviceRacing
+class	SiriTTSService.InternalSettings		var	_forceServerTTS
+class	SiriTTSService.InternalSettings		var	_disableServerTTS
+class	SiriTTSService.InternalSettings		var	_disableInlineStreamTTS
+class	SiriTTSService.InternalSettings		var	_disableOspreyStreaming
+class	SiriTTSService.InternalSettings		var	_streamBufferDuration
+class	SiriTTSService.InternalSettings		var	_useBetaVoice
+class	SiriTTSService.InternalSettings		var	_ospreyEndpointURL
+class	SiriTTSService.InternalSettings		var	_simulateNetworkStall
+class	SiriTTSService.InternalSettings		var	_simulateAudioStall
+class	SiriTTSService.InternalSettings		var	_disableDeviceNeuralTTS
+class	SiriTTSService.InternalSettings		var	_useSSMLInput
+class	SiriTTSService.InternalSettings		var	_disableMobileAssetURLReset
+class	SiriTTSService.InternalSettings		var	_ignorePowerAndThermalState
+class	SiriTTSService.InternalSettings		var	_allowNaturalVoice
+class	SiriTTSService.InternalSettings		var	_disableAssetUpdate
+class	SiriTTSService.InternalSettings		var	_disableLanguageCheck
+class	SiriTTSService.InternalSettings		var	_disableNaturalVoiceOPUS
+class	SiriTTSService.InternalSettings		var	_narrationStyleSentences
+class	SiriTTSService.InternalSettings		var	_forceAlpine
+class	SiriTTSService.InternalSettings		var	_alpineToken
+class	SiriTTSService.InternalSettings		var	_alpineModel
+class	SiriTTSService.InternalSettings		var	_forcePegasus
+class	SiriTTSService.InternalSettings		var	_pegasusEndpoint
+class	SiriTTSService.InternalSettings		var	_forceGMS
+class	SiriTTSService.InternalSettings		var	_forceAVSBAR
+struct	SiriTTSService.InternalSettings.Default			
+struct	SiriTTSService.InternalSettings.Default		let	defaults
+struct	SiriTTSService.InternalSettings.Default		let	stringKey
+struct	SiriTTSService.InternalSettings.Default		let	defaultValue
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer		
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	asyncContext
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	let	streamingStorage
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	let	notificationCenter
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	observers
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	let	internalSettings
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	decoderDescription
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	isSiriOpusAudioBytes
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	signal
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	request
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	receivedAudioDuration
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	bufferDuration
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	var	bufferedOutput
+class	SiriTTSService.InlineStreamingAction	SiriTTSService.Buffer	let	timeout
+struct	SiriTTSService.TTSError			
+struct	SiriTTSService.TTSError		let	code
+struct	SiriTTSService.TTSError		let	description
+enum	SiriTTSService.TTSError.TTSErrorCode			
+enum	SiriTTSService.TTSError.TTSErrorCode		case	success
+enum	SiriTTSService.TTSError.TTSErrorCode		case	unknown
+enum	SiriTTSService.TTSError.TTSErrorCode		case	waitDequeueTimeout
+enum	SiriTTSService.TTSError.TTSErrorCode		case	crash
+enum	SiriTTSService.TTSError.TTSErrorCode		case	cancelled
+enum	SiriTTSService.TTSError.TTSErrorCode		case	noVoice
+enum	SiriTTSService.TTSError.TTSErrorCode		case	invalidVoice
+enum	SiriTTSService.TTSError.TTSErrorCode		case	lowSynthesisRTF
+enum	SiriTTSService.TTSError.TTSErrorCode		case	compactNeural
+enum	SiriTTSService.TTSError.TTSErrorCode		case	highSynthesisCPL
+enum	SiriTTSService.TTSError.TTSErrorCode		case	synthesisIssueBNNSInference
+enum	SiriTTSService.TTSError.TTSErrorCode		case	synthesisIssueAudioClick
+enum	SiriTTSService.TTSError.TTSErrorCode		case	engineInitFailure
+enum	SiriTTSService.TTSError.TTSErrorCode		case	engineFailCreateContext
+enum	SiriTTSService.TTSError.TTSErrorCode		case	engineLoadResourceFailure
+enum	SiriTTSService.TTSError.TTSErrorCode		case	audioUnknownError
+enum	SiriTTSService.TTSError.TTSErrorCode		case	audioDiscontinuity
+enum	SiriTTSService.TTSError.TTSErrorCode		case	ospreyUnknownError
+enum	SiriTTSService.TTSError.TTSErrorCode		case	ospreyNetworkTimeout
+enum	SiriTTSService.TTSError.TTSErrorCode		case	ospreyNetworkStall
+enum	SiriTTSService.TTSError.TTSErrorCode		case	ospreyInvalidAudioFormat
+enum	SiriTTSService.TTSError.TTSErrorCode		case	inlineStreamUnknownError
+enum	SiriTTSService.TTSError.TTSErrorCode		case	inlineStreamNetworkStall
+enum	SiriTTSService.TTSError.TTSErrorCode		case	inlineStreamTimeout
+enum	SiriTTSService.TTSError.TTSErrorCode		case	inlineStreamMismatchedVoice
+enum	SiriTTSService.TTSError.TTSErrorCode		case	unauthorizedClient
+enum	SiriTTSService.TTSError.CodingKeys			
+enum	SiriTTSService.TTSError.CodingKeys		case	code
+enum	SiriTTSService.TTSError.CodingKeys		case	description
+struct	SiriTTSService.SynthesisRouter			
+struct	SiriTTSService.SynthesisRouter		let	featureFlags
+struct	SiriTTSService.SynthesisRouter		let	neuralCapability
+enum	SiriTTSService.SynthesisRouter.Route			
+enum	SiriTTSService.SynthesisRouter.Route		case	device
+enum	SiriTTSService.SynthesisRouter.Route		case	osprey
+enum	SiriTTSService.SynthesisRouter.Route		case	gms
+enum	SiriTTSService.SynthesisRouter.Route		case	pegasus
+enum	SiriTTSService.SynthesisRouter.Route		case	alpine
+struct	SiriTTSService.DirectedAcyclicGraph<A	Swift.Equatable>		
+struct	SiriTTSService.DirectedAcyclicGraph<A	Swift.Equatable>	var	nodes
+struct	SiriTTSService.DirectedAcyclicGraph<A	Swift.Equatable>	var	edges
+struct	SiriTTSService.DirectedAcyclicGraph<A	Swift.Equatable>	var	startNode
+class	SiriTTSService.RequestPreprocessAction	SiriTTSService.Buffer		
+class	SiriTTSService.RequestPreprocessAction	SiriTTSService.Buffer	let	settings
+class	SiriTTSService.TTSAssetStaticVoice	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetStaticVoice	SiriTTSService.TTSAsset	let	root
+class	SiriTTSService.TTSAssetStaticVoice	SiriTTSService.TTSAsset	let	asset
+class	SiriTTSService.TTSAssetStaticVoice	SiriTTSService.TTSAsset	let	attr
+class	SiriTTSService.TTSAssetStaticVoice	SiriTTSService.TTSAsset	let	lazyAssetType
+class	SiriTTSService.TTSAssetAdhocVoice	SiriTTSService.TTSAssetStaticVoice		
+class	SiriTTSService.TTSAssetPreinstalledVoice	SiriTTSService.TTSAssetStaticVoice		
+class	SiriTTSService.TTSAssetStaticResource	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetStaticResource	SiriTTSService.TTSAsset	let	asset
+class	SiriTTSService.TTSAssetStaticResource	SiriTTSService.TTSAsset	let	assetAttr
+class	SiriTTSService.TTSAssetAdhocResource	SiriTTSService.TTSAssetStaticResource		
+class	SiriTTSService.Localization			
+class	SiriTTSService.DelegateHandler			
+class	SiriTTSService.DelegateHandler		let	notificationCenter
+class	SiriTTSService.DelegateHandler		var	observers
+class	SiriTTSService.DelegateHandler		var	delegate
+class	SiriTTSService.DelegateHandler		let	request
+class	SiriTTSService.BNNSModelCache			
+class	SiriTTSService.BNNSModelCache		let	cacheURL
+class	SiriTTSService.AudioFile			
+class	SiriTTSService.AudioFile		var	audioFile
+class	SiriTTSService.AudioFile		var	packetOffset
+class	SiriTTSService.AudioDumpAction			
+class	SiriTTSService.AudioDumpAction		var	asyncContext
+class	SiriTTSService.AudioDumpAction		let	queue
+class	SiriTTSService.AudioDumpAction		let	settings
+class	SiriTTSService.AudioDumpAction		let	entitlements
+class	SiriTTSService.AudioDumpAction		var	diagnosticAudioFile
+class	SiriTTSService.AudioDumpAction		var	synthesizedAudioFile
+class	SiriTTSService.AudioDumpAction		var	diagnosticTag
+enum	SiriTTSService.DaemonSwiftXPCRequest			
+enum	SiriTTSService.DaemonSwiftXPCRequest		case	prewarm
+enum	SiriTTSService.DaemonSwiftXPCRequest		case	subscribedVoices
+enum	SiriTTSService.DaemonSwiftXPCRequest		case	fetchVoiceAttributes
+enum	SiriTTSService.DaemonSwiftXPCRequest		case	predefinedVoices
+enum	SiriTTSService.DaemonSwiftXPCResult			
+enum	SiriTTSService.DaemonSwiftXPCResult		case	success
+enum	SiriTTSService.DaemonSwiftXPCResult		case	failure
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse			
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse		case	subscribedVoices
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse		case	fetchVoiceAttributes
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse		case	predefinedVoices
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse		case	empty
+struct	SiriTTSService.DaemonSwiftXPCMessage			
+struct	SiriTTSService.DaemonSwiftXPCMessage		let	requestId
+struct	SiriTTSService.DaemonSwiftXPCMessage		let	payload
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload			
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload		case	event
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload		case	internalEvent
+enum	SiriTTSService.DaemonSwiftXPCMessage.CodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCMessage.CodingKeys		case	requestId
+enum	SiriTTSService.DaemonSwiftXPCMessage.CodingKeys		case	payload
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.CodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.CodingKeys		case	event
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.CodingKeys		case	internalEvent
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.EventCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.EventCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.InternalEventCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCMessage.Payload.InternalEventCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCResult.CodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.CodingKeys		case	success
+enum	SiriTTSService.DaemonSwiftXPCResult.CodingKeys		case	failure
+enum	SiriTTSService.DaemonSwiftXPCResult.SuccessCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.SuccessCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCResult.FailureCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.FailureCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.CodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.CodingKeys		case	empty
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.CodingKeys		case	subscribedVoices
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.CodingKeys		case	fetchVoiceAttributes
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.CodingKeys		case	predefinedVoices
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.EmptyCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.SubscribedVoicesCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.SubscribedVoicesCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.FetchVoiceAttributesCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.FetchVoiceAttributesCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.PredefinedVoicesCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCResult.DaemonSwiftXPCResponse.PredefinedVoicesCodingKeys		case	_0
+enum	SiriTTSService.DaemonSwiftXPCRequest.CodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCRequest.CodingKeys		case	prewarm
+enum	SiriTTSService.DaemonSwiftXPCRequest.CodingKeys		case	subscribedVoices
+enum	SiriTTSService.DaemonSwiftXPCRequest.CodingKeys		case	fetchVoiceAttributes
+enum	SiriTTSService.DaemonSwiftXPCRequest.CodingKeys		case	predefinedVoices
+enum	SiriTTSService.DaemonSwiftXPCRequest.PrewarmCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCRequest.PrewarmCodingKeys		case	request
+enum	SiriTTSService.DaemonSwiftXPCRequest.SubscribedVoicesCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCRequest.SubscribedVoicesCodingKeys		case	clientId
+enum	SiriTTSService.DaemonSwiftXPCRequest.FetchVoiceAttributesCodingKeys			
+enum	SiriTTSService.DaemonSwiftXPCRequest.FetchVoiceAttributesCodingKeys		case	voice
+enum	SiriTTSService.DaemonSwiftXPCRequest.PredefinedVoicesCodingKeys			
+class	SiriTTSService.AssistantAsset	NSObject		
+class	SiriTTSService.AssistantAsset	NSObject	let	supportedLanguages
+class	SiriTTSService.AssistantAsset	NSObject	let	name
+class	SiriTTSService.AssistantAsset	NSObject	let	identifier
+class	SiriTTSService.AssistantAsset	NSObject	let	assistantGender
+class	SiriTTSService.AssistantAsset	NSObject	let	assistantOrder
+class	SiriTTSService.AssistantAsset	NSObject	let	nextGenAvailability
+class	SiriTTSService.TTSAsset.AssistantVoiceMaps	NSObject		
+class	SiriTTSService.TTSAsset.AssistantVoiceMaps	NSObject	let	voicesForLanguageMap
+class	SiriTTSService.TTSAsset.AssistantVoiceMaps	NSObject	let	deprecatedVoicesMap
+class	SiriTTSService.TTSAsset.AssistantVoiceMaps	NSObject	let	relativePitchOrderForVoicesMap
+class	SiriTTSService.TTSAsset.AssistantVoiceMaps	NSObject	let	relativeOrderForVoicesMap
+class	SiriTTSService.TTSAsset.AssistantVoiceMaps	NSObject	let	identifiersForVoicesMap
+class	SiriTTSService.HasAudioCondition			
+class	SiriTTSService.TTSAssetUAFStrategy			
+class	SiriTTSService.CoreAnalyticsService			
+class	SiriTTSService.CoreAnalyticsSynthesisHandler			
+class	SiriTTSService.CoreAnalyticsSynthesisHandler		let	notificationCenter
+class	SiriTTSService.CoreAnalyticsSynthesisHandler		var	observers
+class	SiriTTSService.CoreAnalyticsSynthesisHandler		let	coreAnalyticsService
+class	SiriTTSService.CoreAnalyticsSynthesisHandler		let	instrumentationMetrics
+class	SiriTTSService.CoreAnalyticsSynthesisHandler		var	audioStartingTimestamp
+class	SiriTTSService.VoiceAsset			
+class	SiriTTSService.VoiceAsset		let	voice
+class	SiriTTSService.VoiceAsset		let	path
+class	SiriTTSService.ResourceAsset			
+class	SiriTTSService.ResourceAsset		let	resource
+class	SiriTTSService.ResourceAsset		let	path
+class	SiriTTSService.LocalAssetProvider			
+class	SiriTTSService.BuiltInVoiceProvider			
+class	SiriTTSService.VocalizerCustomVoiceProvider			
+class	SiriTTSService.PreinstalledVoiceProvider			
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer		
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	let	notificationCenter
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	var	observers
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	var	asyncContext
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	let	internalSettings
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	let	ospreyClient
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	let	ospreyConfig
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	let	timeout
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	let	cacheStorage
+class	SiriTTSService.OspreyTTSAction	SiriTTSService.Buffer	var	streamingStartedDate
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer		
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	localAssetProvider
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	uafAssetProvider
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	builtInVoiceProvider
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	vocalizerCustomVoiceProvider
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	preinstalledVoiceProvider
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	notification
+class	SiriTTSService.VoiceSelectionAction	SiriTTSService.Buffer	let	internalSettings
+class	SiriTTSService.RequestParsingAction	SiriTTSService.Buffer		
+class	SiriTTSService.RequestParsingAction	SiriTTSService.Buffer	var	buffer
+class	SiriTTSService.RequestParsingAction	SiriTTSService.Buffer	let	notificationCenter
+enum	SiriTTSService.Logger			
+enum	SiriTTSService.Signpost			
+enum	SiriTTSService.Event			
+enum	SiriTTSService.Event		case	streamingEvent
+enum	SiriTTSService.Event.StreamingEvent			
+enum	SiriTTSService.Event.StreamingEvent		case	utteranceSent
+enum	SiriTTSService.Event.StreamingEvent		case	newSynthesisStarted
+enum	SiriTTSService.InternalEvent			
+enum	SiriTTSService.InternalEvent		case	streamingEvent
+enum	SiriTTSService.InternalEvent		case	delegateEvent
+enum	SiriTTSService.InternalEvent.StreamingEvent			
+enum	SiriTTSService.InternalEvent.StreamingEvent		case	inputStreamingAvailable
+enum	SiriTTSService.InternalEvent.DelegateEvent			
+enum	SiriTTSService.InternalEvent.DelegateEvent		case	availableInstrumentationMetrics
+enum	SiriTTSService.InternalEvent.DelegateEvent		case	availableAudio
+enum	SiriTTSService.InternalEvent.DelegateEvent		case	availableWordTimings
+enum	SiriTTSService.InternalEvent.DelegateEvent		case	ping
+enum	SiriTTSService.InternalEvent.DelegateEvent		case	didStartSpeaking
+enum	SiriTTSService.InternalEvent.CodingKeys			
+enum	SiriTTSService.InternalEvent.CodingKeys		case	streamingEvent
+enum	SiriTTSService.InternalEvent.CodingKeys		case	delegateEvent
+enum	SiriTTSService.InternalEvent.StreamingEventCodingKeys			
+enum	SiriTTSService.InternalEvent.StreamingEventCodingKeys		case	_0
+enum	SiriTTSService.InternalEvent.DelegateEventCodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEventCodingKeys		case	_0
+enum	SiriTTSService.InternalEvent.DelegateEvent.CodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEvent.CodingKeys		case	ping
+enum	SiriTTSService.InternalEvent.DelegateEvent.CodingKeys		case	didStartSpeaking
+enum	SiriTTSService.InternalEvent.DelegateEvent.CodingKeys		case	availableInstrumentationMetrics
+enum	SiriTTSService.InternalEvent.DelegateEvent.CodingKeys		case	availableAudio
+enum	SiriTTSService.InternalEvent.DelegateEvent.CodingKeys		case	availableWordTimings
+enum	SiriTTSService.InternalEvent.DelegateEvent.PingCodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEvent.DidStartSpeakingCodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEvent.AvailableInstrumentationMetricsCodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEvent.AvailableInstrumentationMetricsCodingKeys		case	metrics
+enum	SiriTTSService.InternalEvent.DelegateEvent.AvailableAudioCodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEvent.AvailableAudioCodingKeys		case	audio
+enum	SiriTTSService.InternalEvent.DelegateEvent.AvailableWordTimingsCodingKeys			
+enum	SiriTTSService.InternalEvent.DelegateEvent.AvailableWordTimingsCodingKeys		case	wordTimings
+enum	SiriTTSService.InternalEvent.StreamingEvent.CodingKeys			
+enum	SiriTTSService.InternalEvent.StreamingEvent.CodingKeys		case	inputStreamingAvailable
+enum	SiriTTSService.InternalEvent.StreamingEvent.InputStreamingAvailableCodingKeys			
+enum	SiriTTSService.Event.CodingKeys			
+enum	SiriTTSService.Event.CodingKeys		case	streamingEvent
+enum	SiriTTSService.Event.StreamingEventCodingKeys			
+enum	SiriTTSService.Event.StreamingEventCodingKeys		case	_0
+enum	SiriTTSService.Event.StreamingEvent.CodingKeys			
+enum	SiriTTSService.Event.StreamingEvent.CodingKeys		case	newSynthesisStarted
+enum	SiriTTSService.Event.StreamingEvent.CodingKeys		case	utteranceSent
+enum	SiriTTSService.Event.StreamingEvent.NewSynthesisStartedCodingKeys			
+enum	SiriTTSService.Event.StreamingEvent.UtteranceSentCodingKeys			
+enum	SiriTTSService.Event.StreamingEvent.UtteranceSentCodingKeys		case	text
+enum	SiriTTSService.AudioPlaybackServiceState			
+enum	SiriTTSService.AudioPlaybackServiceState		case	paused
+enum	SiriTTSService.AudioPlaybackServiceState		case	started
+enum	SiriTTSService.AudioPlaybackServiceState		case	waitForFinish
+enum	SiriTTSService.AudioPlaybackServiceState		case	stopped
+class	SiriTTSService.AVSBARPlayback			
+class	SiriTTSService.AVSBARPlayback		var	error
+class	SiriTTSService.AVSBARPlayback		var	audioQueueBufferLock
+class	SiriTTSService.AVSBARPlayback		var	renderer
+class	SiriTTSService.AVSBARPlayback		var	synchronizer
+class	SiriTTSService.AVSBARPlayback		var	dataQueue
+class	SiriTTSService.AVSBARPlayback		let	stateLock
+class	SiriTTSService.AVSBARPlayback		var	mappedAudioQueuedTimeStamp
+class	SiriTTSService.AVSBARPlayback		var	rendererEnqueuedAudioDuration
+class	SiriTTSService.AVSBARPlayback		var	mappedData
+class	SiriTTSService.AVSBARPlayback		var	enqueuedMappedAudioInfo
+class	SiriTTSService.AVSBARPlayback		var	startedProvidingData
+class	SiriTTSService.AVSBARPlayback		var	noRemainTasks
+class	SiriTTSService.AVSBARPlayback		var	asbd
+class	SiriTTSService.AVSBARPlayback		var	discontinuedDuringPlayback
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR			
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR		var	sampleBuffer
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR		var	audioBytesRange
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR		var	packetCount
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR		var	packetDescriptionsRange
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR		var	endOfSiriTTSUtterance
+class	SiriTTSService.AVSBARPlayback.AudioMappedInfoAVSBAR		var	finishCallback
+class	SiriTTSService.DaemonSwiftConnection			
+class	SiriTTSService.DaemonSwiftConnection		let	session
+class	SiriTTSService.Timeout			
+class	SiriTTSService.Timeout		var	timeoutDate
+class	SiriTTSService.Timeout		let	waitCondition
+class	SiriTTSService.Timeout		let	queue
+class	SiriTTSService.Timeout		var	shouldStop
+struct	SiriTTSService.TTSFeatureStoreEvent			
+struct	SiriTTSService.TTSFeatureStoreEvent		var	proto
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType			
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	requestReceived
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	synthesisStarted
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	synthesisEnded
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	audioPlaybackStarted
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	audioPlaybackEnded
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	voiceSelected
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	encounteredIssue
+enum	SiriTTSService.TTSFeatureStoreEvent.EventType		case	instrumentationMetrics
+enum	SiriTTSService.TTSCodableValue			
+enum	SiriTTSService.TTSCodableValue		case	string
+enum	SiriTTSService.TTSCodableValue		case	int
+enum	SiriTTSService.TTSCodableValue		case	double
+enum	SiriTTSService.TTSCodableValue		case	bool
+enum	SiriTTSService.TTSCodableValue		case	null
+class	SiriTTSService.IsNaturalVoiceCondition			
+class	SiriTTSService.IsNaturalVoiceCondition		let	internalSettings
+class	SiriTTSService.SSMLSimpleParser	NSObject		
+class	SiriTTSService.SSMLSimpleParser	NSObject	var	phonemes
+class	SiriTTSService.RoughDurationEstimationAction	SiriTTSService.Buffer		
+class	SiriTTSService.RoughDurationEstimationAction	SiriTTSService.Buffer	let	estimationDictionary
+class	SiriTTSService.DurationEstimator	NSObject		
+struct	SiriTTSService.SSMLSimpleParser.PhonemeElement			
+struct	SiriTTSService.SSMLSimpleParser.PhonemeElement		var	alphabet
+struct	SiriTTSService.SSMLSimpleParser.PhonemeElement		var	phoneme
+class	SiriTTSService.ServiceSession	NSObject		
+class	SiriTTSService.ServiceSession	NSObject	var	_clientId
+class	SiriTTSService.ServiceSession	NSObject	let	accessoryId
+class	SiriTTSService.ServiceSession	NSObject	let	tasksLock
+class	SiriTTSService.ServiceSession	NSObject	var	tasks
+class	SiriTTSService.ServiceSession	NSObject	let	queue
+class	SiriTTSService.AudioPlaybackAction			
+class	SiriTTSService.AudioPlaybackAction		var	asyncContext
+class	SiriTTSService.AudioPlaybackAction		var	buffer
+class	SiriTTSService.AudioPlaybackAction		var	audioPlayback
+class	SiriTTSService.AudioPlaybackAction		var	audibleRequest
+class	SiriTTSService.AudioPlaybackAction		var	audioSession
+class	SiriTTSService.AudioPlaybackAction		var	audioHardware
+class	SiriTTSService.AudioPlaybackAction		let	notificationCenter
+class	SiriTTSService.AudioPlaybackAction		let	internalSettings
+class	SiriTTSService.AudioPlaybackAction		var	observers
+class	SiriTTSService.AudioPlaybackAction		var	isStreamingInputFirstAudio
+class	SiriTTSService.AudioPlaybackAction		var	isStreamingInput
+class	SiriTTSService.TTSAssetPreinstalledStrategy			
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer		
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	var	asyncContext
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	let	queue
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	let	notificationCenter
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	var	observers
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	let	internalSettings
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	let	synthesisConfig
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	let	engineCachingService
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	var	_isCancelled
+class	SiriTTSService.DeviceSynthesisAction	SiriTTSService.Buffer	var	_ongoingEngine
+class	SiriTTSService.Preferences	NSObject		
+class	SiriTTSService.Preferences	NSObject	let	defaults
+enum	SiriTTSService.Preferences.VoiceServicesKey			
+enum	SiriTTSService.Preferences.VoiceServicesKey		case	kVSPreferencesSpokenLanguageKey
+class	SiriTTSService.TTSAsset	NSObject		
+class	SiriTTSService.TTSAsset	NSObject	var	age
+class	SiriTTSService.TTSAsset	NSObject	var	downloadSize
+class	SiriTTSService.TTSAsset	NSObject	var	diskSize
+class	SiriTTSService.TTSAsset	NSObject	var	bundle
+class	SiriTTSService.TTSAsset	NSObject	var	lazy
+class	SiriTTSService.OpusEncoder			
+class	SiriTTSService.OpusEncoder		let	fromFormat
+class	SiriTTSService.OpusEncoder		let	toFormat
+class	SiriTTSService.OpusEncoder		let	converter
+class	SiriTTSService.OpusEncoder		let	buffer
+class	SiriTTSService.CacheStorage			
+class	SiriTTSService.CacheStorage		var	storageURL
+struct	SiriTTSService.SynthesisCacheFile			
+struct	SiriTTSService.SynthesisCacheFile		let	fileURL
+struct	SiriTTSService.SynthesisCacheFile		let	handle
+struct	SiriTTSService.SynthesisCacheFile		let	voice
+struct	SiriTTSService.SynthesisCacheFile		let	resource
+struct	SiriTTSService.SynthesisCacheFile.SynthesisCacheChunkIterator			
+struct	SiriTTSService.SynthesisCacheFile.SynthesisCacheChunkIterator		let	handle
+struct	SiriTTSService.SynthesisCache			
+struct	SiriTTSService.SynthesisCache		let	audio
+struct	SiriTTSService.SynthesisCache		let	timingInfos
+enum	SiriTTSService.SynthesisCache.CodingKeys			
+enum	SiriTTSService.SynthesisCache.CodingKeys		case	magicVersion
+enum	SiriTTSService.SynthesisCache.CodingKeys		case	audio
+enum	SiriTTSService.SynthesisCache.CodingKeys		case	timingInfos
+class	SiriTTSService.TTSAssetLegacyAsset	SiriTTSService.TTSAsset		
+class	SiriTTSService.TTSAssetLegacyAsset	SiriTTSService.TTSAsset	let	asset
+class	SiriTTSService.TTSAssetLegacyAsset	SiriTTSService.TTSAsset	var	lazy
+class	SiriTTSService.Languages	NSObject		
+class	SiriTTSService.PreinstalledAudioStorage			
+class	SiriTTSService.PreinstalledAudioStorage		var	storageURL
+class	SiriTTSService.PreinstalledAudioStorage		var	previewURL
+class	SiriTTSService.OspreyBuiltInConfig			
+class	SiriTTSService.OspreyBuiltInConfig		var	timeout
+class	SiriTTSService.OspreyBuiltInConfig		var	deviceWaitTime
+class	SiriTTSService.OspreyBuiltInConfig		var	allowedAppIdentifiers
+class	SiriTTSService.OspreyChainedConfigs			
+class	SiriTTSService.OspreyChainedConfigs		let	configs
+class	SiriTTSService.WeakDaemonDelegateWrapper			
+class	SiriTTSService.WeakDaemonDelegateWrapper		var	delegate
+class	SiriTTSService.DaemonConnection	NSObject		
+class	SiriTTSService.DaemonConnection	NSObject	let	connection
+class	SiriTTSService.DaemonConnection	NSObject	let	weakDelegate
+class	SiriTTSService.DaemonConnection	NSObject	let	asyncProxy
+class	SiriTTSService.DaemonConnection	NSObject	let	syncProxy
+class	SiriTTSService.DaemonXPCCoder			
+struct	SiriTTSService.AudioTrack			
+struct	SiriTTSService.AudioTrack		let	track
+struct	SiriTTSService.AudioTrack		var	currentPacket
+class	SiriTTSService.InstrumentationMetrics	NSObject		
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	utterance
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	voice
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	resource
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	audioOutputRoute
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	clientBundleIdentifier
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	experimentIdentifier
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	requestCreatedTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	eagerRequestGapInterval
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	synthesisBeginTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	synthesisFirstAudioTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	synthesisEndTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	speechBeginTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	speechEndTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	speechEstimatedOutputBeginTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	audioStartLatency
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	serverFirstPacketTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	serverLastPacketTime
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	serverStreamedAudioDuration
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	audioDuration
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	isWarmStart
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	isStreamingInput
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	sourceOfTTS
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	privacySensitive
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	minimizeDeviceUsage
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	errorCode
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	encounteredIssues
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	isServerTTSRacing
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	promptCount
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	neuralAlignmentStall
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	neuralAudioClick
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	synthesisQualityIssue
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	useHydraFrontend
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	neuralFallback
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	isAudibleRequest
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	deviceThermalState
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	deviceThermalLevel
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	dynamicPromptVoice
+class	SiriTTSService.InstrumentationMetrics	NSObject	var	dynamicPromptStyle
+enum	SiriTTSService.InstrumentationMetrics.SourceOfTTS			
+class	SiriTTSService.SynthesisVoiceSubscription	NSObject		
+class	SiriTTSService.SynthesisVoiceSubscription	NSObject	var	voice
+class	SiriTTSService.SynthesisVoiceSubscription	NSObject	var	clientId
+class	SiriTTSService.SynthesisVoiceSubscription	NSObject	var	accessoryId
+class	SiriTTSService.InlineStreamingSignal	NSObject		
+class	SiriTTSService.InlineStreamingSignal	NSObject	let	text
+class	SiriTTSService.InlineStreamingSignal	NSObject	let	identifier
+class	SiriTTSService.DaemonSession	NSObject		
+class	SiriTTSService.DaemonSession	NSObject	var	lazy
+class	SiriTTSService.DaemonSession	NSObject	let	_connectionLock
+class	SiriTTSService.DaemonSession	NSObject	var	lazy
+class	SiriTTSService.DaemonSession	NSObject	let	requestsLock
+class	SiriTTSService.DaemonSession	NSObject	var	requests
+class	SiriTTSService.DaemonSession	NSObject	let	accessoryId
+class	SiriTTSService.DaemonSession	NSObject	var	_keepActive
+class	SiriTTSService.DaemonSession	NSObject	var	_clientId
+struct	SiriTTSService.DaemonSession.SynthesisInputStream			
+struct	SiriTTSService.DaemonSession.SynthesisInputStream		let	sessionConnection
+struct	SiriTTSService.DaemonSession.SynthesisInputStream		let	requestId
+enum	SiriTTSService.DaemonSession.SynthesisInputStream.Token			
+enum	SiriTTSService.DaemonSession.SynthesisInputStream.Token		case	text
+enum	SiriTTSService.DaemonSession.SynthesisInputStream.Token		case	endOfStream
+enum	SiriTTSService.SynthesisVoiceSubscription.CodingKeys			
+enum	SiriTTSService.SynthesisVoiceSubscription.CodingKeys		case	voice
+enum	SiriTTSService.SynthesisVoiceSubscription.CodingKeys		case	clientId
+enum	SiriTTSService.SynthesisVoiceSubscription.CodingKeys		case	accessoryId
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys			
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	utterance
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	voiceKey
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	resourceKey
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	audioOutputRoute
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	clientBundleIdentifier
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	experimentIdentifier
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	requestCreatedTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	eagerRequestGapInterval
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	synthesisBeginTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	synthesisEndTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	speechBeginTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	speechEndTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	speechEstimatedOutputBeginTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	audioStartLatency
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	serverFirstPacketTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	serverLastPacketTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	serverStreamedAudioDuration
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	audioDuration
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	isWarmStart
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	isStreamingInput
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	sourceOfTTS
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	privacySensitive
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	minimizeDeviceUsage
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	errorCode
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	encounteredIssues
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	isServerTTSRacing
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	promptCount
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	neuralAlignmentStall
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	neuralAudioClick
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	useHydraFrontend
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	neuralFallback
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	isAudibleRequest
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	synthesisFirstAudioTime
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	deviceThermalState
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	deviceThermalLevel
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	synthesisQualityIssue
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	dynamicPromptVoice
+enum	SiriTTSService.InstrumentationMetrics.CodingKeys		case	dynamicPromptStyle
+class	SiriTTSService.SentenceBreakException			
+class	SiriTTSService.SentenceBreakException		let	exceptionRegexes
+class	SiriTTSService.OspreyTTSPrewarmAction			
+class	SiriTTSService.OspreyTTSPrewarmAction		var	asyncContext
+class	SiriTTSService.OspreyTTSPrewarmAction		let	notificationCenter
+class	SiriTTSService.OspreyTTSPrewarmAction		var	observers
+class	SiriTTSService.OspreyTTSPrewarmAction		let	ospreyClient
+class	SiriTTSService.SynthesisPrewarmAction			
+class	SiriTTSService.SynthesisPrewarmAction		let	engineCachingService
+class	SiriTTSService.SiriAnalyticsHandler			
+class	SiriTTSService.SiriAnalyticsHandler		let	notificationCenter
+class	SiriTTSService.SiriAnalyticsHandler		var	observers
+class	SiriTTSService.SiriAnalyticsHandler		var	ttsId
+class	SiriTTSService.SiriAnalyticsHandler		let	contextId
+class	SiriTTSService.SiriAnalyticsHandler		var	isolatedStreamId
+class	SiriTTSService.SiriAnalyticsHandler		let	siriStream
+class	SiriTTSService.SiriAnalyticsHandler		let	siriPowerLogger
+class	SiriTTSService.SiriAnalyticsHandler		let	metrics
+class	SiriTTSService.SiriAnalyticsHandler		var	logSynthesisEvents
+class	SiriTTSService.SiriAnalyticsHandler		var	logFreeFormText
+class	SiriTTSService.SiriAnalyticsHandler		var	expectedVoice
+class	SiriTTSService.SiriAnalyticsHandler		var	selectedVoice
+class	SiriTTSService.SiriAnalyticsHandler		var	selectedResource
+class	SiriTTSService.SiriAnalyticsHandler		var	routeInfo
+class	SiriTTSService.SiriAnalyticsHandler		var	encounteredIssues
+class	SiriTTSService.SiriAnalyticsHandler		var	emittedStartRequest
+class	SiriTTSService.SiriAnalyticsHandler		var	clientId
+class	SiriTTSService.SiriAnalyticsHandler		var	logLinkId
+class	SiriTTSService.SiriAnalyticsHandler		var	interactionLinkId
+class	SiriTTSService.SiriAnalyticsHandler		var	streamId
+class	SiriTTSService.SiriAnalyticsHandler		var	audioPlaybackPauseRequest
+class	SiriTTSService.SiriAnalyticsHandler		var	voiceSelectStartTimestamp
+class	SiriTTSService.SiriAnalyticsHandler		var	voiceSelectLatencyInSeconds
+class	SiriTTSService.SiriAnalyticsHandler		var	audioStartingTimestamp
+struct	SiriTTSService.TTSAsset.Partition			
+struct	SiriTTSService.TTSAsset.Partition		var	sources
+struct	SiriTTSService.TTSAsset.Partition		var	assetTypes
+protocol	SiriTTSService.AudioPlayback			
+protocol	SiriTTSService.AudioPowerProviding			
+protocol	SiriTTSService.AudioVolumeControlling			
+protocol	SiriTTSService.AudioPlaybackControlling			
+protocol	SiriTTSService.AudioInterface			
+protocol	SiriTTSService.SynthesisConfigProviding			
+protocol	SiriTTSService.SpeakableStringGenerating			
+protocol	SiriTTSService.NeuralVoiceUtilities			
+protocol	SiriTTSService.TTSAssetStrategy			
+protocol	SiriTTSService.NotificationHandling			
+protocol	SiriTTSService.OptionalNotificationHandling			
+protocol	SiriTTSService.WorkflowErrorHandler			
+protocol	SiriTTSService.Actionable			
+protocol	SiriTTSService.Conditional			
+protocol	SiriTTSService.Asynchronous			
+protocol	SiriTTSService.WeightedAttribute			
+protocol	SiriTTSService.SingleValueCoding			
+protocol	SiriTTSService.VoiceAssetsProvider			
+protocol	SiriTTSService.DependencyInjectable			
+protocol	SiriTTSService.CoreAnalyticsInterface			
+protocol	SiriTTSService.OspreyConfigProviding			
+protocol	conformance SiriTTSService.AudioPlaybackError	Swift.Equatable		
+protocol	conformance SiriTTSService.AudioPlaybackError	Swift.Hashable		
+protocol	conformance SiriTTSService.AudioPlaybackError	Swift.RawRepresentable		
+protocol	conformance SiriTTSService.AudioRouteInfo	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.AudioData	Swift.Decodable		
+protocol	conformance SiriTTSService.AudioData	Swift.Encodable		
+protocol	conformance SiriTTSService.BufferedAudioPlayback	SiriTTSService.AudioPlayback		
+protocol	conformance SiriTTSService.AudioQueueInterface	SiriTTSService.AudioInterface		
+protocol	conformance SiriTTSService.AudioQueueInterface	SiriTTSService.AudioPowerProviding		
+protocol	conformance SiriTTSService.AudioQueueInterface	SiriTTSService.AudioVolumeControlling		
+protocol	conformance SiriTTSService.AudioQueueInterface	SiriTTSService.AudioPlaybackControlling		
+protocol	conformance AudioData.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AudioData.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AudioData.CodingKeys	Swift.Hashable		
+protocol	conformance AudioData.CodingKeys	Swift.Equatable		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.Name	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.Name	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.Name	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.Name	Swift.Equatable: Foundation		
+protocol	conformance __C.Name	Swift.Hashable: Foundation		
+protocol	conformance __C.Name	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.TTSAssetProperty	Swift.Equatable: SiriTTSService		
+protocol	conformance __C.TTSAssetProperty	Swift.RawRepresentable: SiriTTSService		
+protocol	conformance __C.DownloadOptions	Swift.ExpressibleByArrayLiteral: SiriTTSService		
+protocol	conformance __C.DownloadOptions	Swift.Equatable: SiriTTSService		
+protocol	conformance __C.DownloadOptions	Swift.RawRepresentable: SiriTTSService		
+protocol	conformance __C.DownloadOptions	Swift.SetAlgebra: SiriTTSService		
+protocol	conformance __C.DownloadOptions	Swift.OptionSet: SiriTTSService		
+protocol	conformance __C.CMSampleBuffer	Swift.Equatable: CoreMedia		
+protocol	conformance __C.CMSampleBuffer	Swift.Hashable: CoreMedia		
+protocol	conformance __C.CMSampleBuffer	CoreFoundation._CFObject: CoreMedia		
+protocol	conformance __C.TTSAssetProperty	Swift.Hashable: SiriTTSService		
+protocol	conformance AudioData.CodingKeys	Swift.CodingKey		
+protocol	conformance __C.TTSAssetVoiceGender	Swift.Equatable: SiriTTSService		
+protocol	conformance __C.TTSAssetVoiceGender	Swift.RawRepresentable: SiriTTSService		
+protocol	conformance __C.MAPurgeResult	Swift.Equatable		
+protocol	conformance __C.MAPurgeResult	Swift.RawRepresentable		
+protocol	conformance __C.SubscriptionDownloadStatus	Swift.Equatable: UnifiedAssetFramework		
+protocol	conformance __C.SubscriptionDownloadStatus	Swift.RawRepresentable: UnifiedAssetFramework		
+protocol	conformance __C.TTSAssetVoiceGender	Swift.Hashable: SiriTTSService		
+protocol	conformance SiriTTSService.TTSAssetFactoryInstalledStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance SiriTTSService.DiagnosticService	SiriTTSService.NotificationHandling		
+protocol	conformance SiriTTSService.WordTimingInfo	Swift.Decodable		
+protocol	conformance SiriTTSService.WordTimingInfo	Swift.Encodable		
+protocol	conformance SiriTTSService.AudibleContext	Swift.Decodable		
+protocol	conformance SiriTTSService.AudibleContext	Swift.Encodable		
+protocol	conformance SiriTTSService.ProsodyProperties	Swift.Decodable		
+protocol	conformance SiriTTSService.ProsodyProperties	Swift.Encodable		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.Equatable		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.Hashable		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.RawRepresentable		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.CaseIterable		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.Decodable		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.Encodable		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.Equatable		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.Hashable		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.RawRepresentable		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.CaseIterable		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.Decodable		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.Encodable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.Equatable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.Hashable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.RawRepresentable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.CaseIterable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.Decodable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.Encodable		
+protocol	conformance SiriTTSService.SynthesisContext	Swift.Decodable		
+protocol	conformance SiriTTSService.SynthesisContext	Swift.Encodable		
+protocol	conformance SynthesisContext.PromptStyle	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisContext.PromptStyle	Swift.CustomStringConvertible		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisContext.SynthesisProfile	Swift.CustomStringConvertible		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisContext.SynthesisPriority	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.BaseRequest	Swift.Decodable		
+protocol	conformance SiriTTSService.BaseRequest	Swift.Encodable		
+protocol	conformance PhonemeRequest.PhonemeSystem	Swift.Equatable		
+protocol	conformance PhonemeRequest.PhonemeSystem	Swift.Hashable		
+protocol	conformance PhonemeRequest.PhonemeSystem	Swift.RawRepresentable		
+protocol	conformance PhonemeRequest.PhonemeSystem	Swift.Decodable		
+protocol	conformance PhonemeRequest.PhonemeSystem	Swift.Encodable		
+protocol	conformance PhonemeRequest.PhonemeSystem	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.PreviewType	Swift.Equatable		
+protocol	conformance SiriTTSService.PreviewType	Swift.Hashable		
+protocol	conformance SiriTTSService.PreviewType	Swift.RawRepresentable		
+protocol	conformance SiriTTSService.PreviewType	Swift.Decodable		
+protocol	conformance SiriTTSService.PreviewType	Swift.Encodable		
+protocol	conformance SynthesisVoice.Footprint	Swift.Equatable		
+protocol	conformance SynthesisVoice.Footprint	Swift.Hashable		
+protocol	conformance SynthesisVoice.Footprint	Swift.RawRepresentable		
+protocol	conformance SynthesisVoice.Footprint	Swift.Comparable		
+protocol	conformance SynthesisVoice.Footprint	Swift.CaseIterable		
+protocol	conformance SynthesisVoice.Footprint	Swift.Decodable		
+protocol	conformance SynthesisVoice.Footprint	Swift.Encodable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.Equatable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.Hashable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.RawRepresentable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.Comparable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.CaseIterable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.Decodable		
+protocol	conformance SynthesisVoice.VoiceType	Swift.Encodable		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.Equatable		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.Hashable		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.RawRepresentable		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.Decodable		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.Encodable		
+protocol	conformance SiriTTSService.SynthesisVoice	Swift.Decodable		
+protocol	conformance SiriTTSService.SynthesisVoice	Swift.Encodable		
+protocol	conformance SynthesisVoice.Footprint	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisVoice.Footprint	Swift.CustomStringConvertible		
+protocol	conformance SynthesisVoice.VoiceType	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisVoice.VoiceType	Swift.CustomStringConvertible		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisVoice.VoiceGender	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.SynthesisResource	Swift.Decodable		
+protocol	conformance SiriTTSService.SynthesisResource	Swift.Encodable		
+protocol	conformance WordTimingInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WordTimingInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance WordTimingInfo.CodingKeys	Swift.Hashable		
+protocol	conformance WordTimingInfo.CodingKeys	Swift.Equatable		
+protocol	conformance AudibleContext.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AudibleContext.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AudibleContext.CodingKeys	Swift.Hashable		
+protocol	conformance AudibleContext.CodingKeys	Swift.Equatable		
+protocol	conformance ProsodyProperties.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ProsodyProperties.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ProsodyProperties.CodingKeys	Swift.Hashable		
+protocol	conformance ProsodyProperties.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisContext.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SynthesisContext.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SynthesisContext.CodingKeys	Swift.Hashable		
+protocol	conformance SynthesisContext.CodingKeys	Swift.Equatable		
+protocol	conformance BaseRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BaseRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BaseRequest.CodingKeys	Swift.CaseIterable		
+protocol	conformance BaseRequest.CodingKeys	Swift.Hashable		
+protocol	conformance BaseRequest.CodingKeys	Swift.Equatable		
+protocol	conformance AudioRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AudioRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AudioRequest.CodingKeys	Swift.Hashable		
+protocol	conformance AudioRequest.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SynthesisRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SynthesisRequest.CodingKeys	Swift.Hashable		
+protocol	conformance SynthesisRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PhonemeRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PhonemeRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PhonemeRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PhonemeRequest.CodingKeys	Swift.Equatable		
+protocol	conformance SpeechRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SpeechRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SpeechRequest.CodingKeys	Swift.Hashable		
+protocol	conformance SpeechRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PreviewRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PreviewRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PreviewRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PreviewRequest.CodingKeys	Swift.Equatable		
+protocol	conformance AudioHintRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AudioHintRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AudioHintRequest.CodingKeys	Swift.Hashable		
+protocol	conformance AudioHintRequest.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisVoice.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SynthesisVoice.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SynthesisVoice.CodingKeys	Swift.Hashable		
+protocol	conformance SynthesisVoice.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisResource.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SynthesisResource.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SynthesisResource.CodingKeys	Swift.Hashable		
+protocol	conformance SynthesisResource.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisResource.CodingKeys	Swift.CodingKey		
+protocol	conformance SynthesisVoice.CodingKeys	Swift.CodingKey		
+protocol	conformance AudioHintRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PreviewRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance SpeechRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PhonemeRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance SynthesisRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance AudioRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance BaseRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance SynthesisContext.CodingKeys	Swift.CodingKey		
+protocol	conformance ProsodyProperties.CodingKeys	Swift.CodingKey		
+protocol	conformance AudibleContext.CodingKeys	Swift.CodingKey		
+protocol	conformance WordTimingInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.CacheReadingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.CacheReadingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance TTSAsset.VoiceAttribute	Swift.RawRepresentable		
+protocol	conformance TTSAsset.VoiceAttribute	Swift.Hashable		
+protocol	conformance TTSAsset.VoiceAttribute	Swift.Equatable		
+protocol	conformance SiriTTSService.TTSAssetStubStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance SiriTTSService.PassThroughAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.AccessSafeDictionary	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriTTSService.AccessSafeDictionary	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.SynthesisBufferingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.SynthesisBufferingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SpeakableStringExtractor.InputType	Swift.Equatable		
+protocol	conformance SpeakableStringExtractor.InputType	Swift.Hashable		
+protocol	conformance SiriTTSService.HTMLSpeakableStringExtractor	SiriTTSService.SpeakableStringGenerating		
+protocol	conformance SiriTTSService.SignpostHandler	SiriTTSService.NotificationHandling		
+protocol	conformance SiriTTSService.NeuralUtils	SiriTTSService.NeuralVoiceUtilities		
+protocol	conformance Flags	Swift.Hashable		
+protocol	conformance Flags	Swift.Equatable		
+protocol	conformance Flags	FeatureFlags.FeatureFlagsKey		
+protocol	conformance TTSFeatureFlagsContainer.Key	Swift.Equatable		
+protocol	conformance TTSFeatureFlagsContainer.Key	Swift.Hashable		
+protocol	conformance TTSFeatureFlagsContainer.Key	FeatureFlags.FeatureFlagsKey		
+protocol	conformance TTSFeatureFlags.FFKey	Swift.Hashable		
+protocol	conformance TTSFeatureFlags.FFKey	Swift.Equatable		
+protocol	conformance TTSFeatureFlags.FFKey	FeatureFlags.FeatureFlagsKey		
+protocol	conformance SiriTTSService.SentenceBufferingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.SentenceBufferingAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.SentenceBufferingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.RetryTextModificationAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.RetryTextModificationAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.TTSAssetAdhocStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance SiriTTSService.TextToPhonemeAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.TextToPhonemeAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.AlpineTTSAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.AlpineTTSAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.AlpineTTSAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.AlpineTTSAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance SiriTTSService.TTSAssetProxyStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance TTSAsset.ProxyKey	Swift.RawRepresentable		
+protocol	conformance TTSAsset.ProxyKey	Swift.Equatable		
+protocol	conformance TTSAsset.ProxyKey	Swift.Hashable		
+protocol	conformance SiriTTSService.VoiceBrand	Swift.Equatable		
+protocol	conformance SiriTTSService.VoiceBrand	Swift.Hashable		
+protocol	conformance SiriTTSService.VoiceBrand	Swift.RawRepresentable		
+protocol	conformance SiriTTSService.VoiceBrand	Swift.CaseIterable		
+protocol	conformance SiriTTSService.VoiceBrand	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.TTSAssetMAStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance SiriTTSService.WorkflowNode	Swift.Equatable		
+protocol	conformance WorkflowNode.WorkflowCondition	SiriTTSService.Conditional		
+protocol	conformance WorkflowNode.WorkflowCondition	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.PresetVoices	Swift.Decodable		
+protocol	conformance SiriTTSService.PresetVoices	Swift.Encodable		
+protocol	conformance SiriTTSService.Voice	Swift.Equatable		
+protocol	conformance SiriTTSService.Voice	Swift.Decodable		
+protocol	conformance SiriTTSService.Voice	Swift.Encodable		
+protocol	conformance SiriTTSService.VoiceAttribute	Swift.Equatable		
+protocol	conformance SiriTTSService.VoiceAttribute	Swift.Decodable		
+protocol	conformance SiriTTSService.VoiceAttribute	Swift.Encodable		
+protocol	conformance SiriTTSService.VoiceAttribute	Swift.Hashable		
+protocol	conformance SiriTTSService.DialogType	Swift.Equatable		
+protocol	conformance SiriTTSService.DialogType	Swift.Hashable		
+protocol	conformance SiriTTSService.Delivery	Swift.Equatable		
+protocol	conformance SiriTTSService.Delivery	Swift.Hashable		
+protocol	conformance SiriTTSService.Characteristic	Swift.Equatable		
+protocol	conformance SiriTTSService.Characteristic	Swift.Hashable		
+protocol	conformance SiriTTSService.Age	Swift.Equatable		
+protocol	conformance SiriTTSService.Age	Swift.Hashable		
+protocol	conformance SiriTTSService.Gender	Swift.Equatable		
+protocol	conformance SiriTTSService.Gender	Swift.Hashable		
+protocol	conformance SiriTTSService.Accent	Swift.Equatable		
+protocol	conformance SiriTTSService.Accent	Swift.Hashable		
+protocol	conformance SiriTTSService.Delivery	SiriTTSService.WeightedAttribute		
+protocol	conformance SiriTTSService.Delivery	SiriTTSService.SingleValueCoding		
+protocol	conformance SiriTTSService.Delivery	Swift.CaseIterable		
+protocol	conformance SiriTTSService.Delivery	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.Delivery	Swift.Decodable		
+protocol	conformance SiriTTSService.Delivery	Swift.Encodable		
+protocol	conformance SiriTTSService.DialogType	SiriTTSService.WeightedAttribute		
+protocol	conformance SiriTTSService.DialogType	SiriTTSService.SingleValueCoding		
+protocol	conformance SiriTTSService.DialogType	Swift.CaseIterable		
+protocol	conformance SiriTTSService.DialogType	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.DialogType	Swift.Decodable		
+protocol	conformance SiriTTSService.DialogType	Swift.Encodable		
+protocol	conformance SiriTTSService.Characteristic	SiriTTSService.WeightedAttribute		
+protocol	conformance SiriTTSService.Characteristic	SiriTTSService.SingleValueCoding		
+protocol	conformance SiriTTSService.Characteristic	Swift.CaseIterable		
+protocol	conformance SiriTTSService.Characteristic	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.Characteristic	Swift.Decodable		
+protocol	conformance SiriTTSService.Characteristic	Swift.Encodable		
+protocol	conformance SiriTTSService.Age	SiriTTSService.WeightedAttribute		
+protocol	conformance SiriTTSService.Age	SiriTTSService.SingleValueCoding		
+protocol	conformance SiriTTSService.Age	Swift.CaseIterable		
+protocol	conformance SiriTTSService.Age	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.Age	Swift.Decodable		
+protocol	conformance SiriTTSService.Age	Swift.Encodable		
+protocol	conformance SiriTTSService.Gender	SiriTTSService.WeightedAttribute		
+protocol	conformance SiriTTSService.Gender	SiriTTSService.SingleValueCoding		
+protocol	conformance SiriTTSService.Gender	Swift.CaseIterable		
+protocol	conformance SiriTTSService.Gender	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.Gender	Swift.Decodable		
+protocol	conformance SiriTTSService.Gender	Swift.Encodable		
+protocol	conformance SiriTTSService.Accent	SiriTTSService.WeightedAttribute		
+protocol	conformance SiriTTSService.Accent	SiriTTSService.SingleValueCoding		
+protocol	conformance SiriTTSService.Accent	Swift.CaseIterable		
+protocol	conformance SiriTTSService.Accent	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.Accent	Swift.Decodable		
+protocol	conformance SiriTTSService.Accent	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DialogTypeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DialogTypeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DialogTypeCodingKeys	Swift.Hashable		
+protocol	conformance DialogTypeCodingKeys	Swift.Equatable		
+protocol	conformance DeliveryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeliveryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeliveryCodingKeys	Swift.Hashable		
+protocol	conformance DeliveryCodingKeys	Swift.Equatable		
+protocol	conformance CharacteristicCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CharacteristicCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CharacteristicCodingKeys	Swift.Hashable		
+protocol	conformance CharacteristicCodingKeys	Swift.Equatable		
+protocol	conformance AgeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AgeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AgeCodingKeys	Swift.Hashable		
+protocol	conformance AgeCodingKeys	Swift.Equatable		
+protocol	conformance GenderCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GenderCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GenderCodingKeys	Swift.Hashable		
+protocol	conformance GenderCodingKeys	Swift.Equatable		
+protocol	conformance AccentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AccentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AccentCodingKeys	Swift.Hashable		
+protocol	conformance AccentCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SiriTTSService.SingleValueCodingError	Swift.Error		
+protocol	conformance AccentCodingKeys	Swift.CodingKey		
+protocol	conformance GenderCodingKeys	Swift.CodingKey		
+protocol	conformance AgeCodingKeys	Swift.CodingKey		
+protocol	conformance CharacteristicCodingKeys	Swift.CodingKey		
+protocol	conformance DeliveryCodingKeys	Swift.CodingKey		
+protocol	conformance DialogTypeCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.DialogType	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.Delivery	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.Characteristic	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.Age	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.Gender	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.Accent	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.VoiceAssetsProviderLocalStore	SiriTTSService.VoiceAssetsProvider		
+protocol	conformance SiriTTSService.PersonalizationVoiceError	Swift.Hashable		
+protocol	conformance SiriTTSService.PersonalizationVoiceError	Swift.Equatable		
+protocol	conformance SiriTTSService.PersonalizationVoiceError	Swift.Error		
+protocol	conformance VoicePreviews.VoicePreviewError	Swift.Equatable		
+protocol	conformance VoicePreviews.VoicePreviewError	Swift.Hashable		
+protocol	conformance VoicePreviews.VoicePreviewError	Swift.Error		
+protocol	conformance VoicePreviews.InterpolationError	Swift.Equatable		
+protocol	conformance VoicePreviews.InterpolationError	Swift.Hashable		
+protocol	conformance VoicePreviews.InterpolationError	Swift.Error		
+protocol	conformance VoicePreviews.Metadata	Swift.Encodable		
+protocol	conformance VoicePreviews.Metadata	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.SynthesisCacheWritingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.SynthesisCacheWritingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.SynthesisCacheWritingAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.SynthesisCacheWritingAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance SiriTTSService.SynthesisEngineSelectionAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.SynthesisEngineSelectionAction	SiriTTSService.DependencyInjectable		
+protocol	conformance TTSAssetUAFAsset.assetDeviceType	Swift.RawRepresentable		
+protocol	conformance TTSAssetUAFAsset.assetDeviceType	Swift.Equatable		
+protocol	conformance TTSAssetUAFAsset.assetDeviceType	Swift.Hashable		
+protocol	conformance EventValue.OneOf_Value	Swift.Equatable		
+protocol	conformance TTSProtoTTSEvent.EventType	Swift.Equatable		
+protocol	conformance TTSProtoTTSEvent.EventType	Swift.Hashable		
+protocol	conformance TTSProtoTTSEvent.EventType	Swift.RawRepresentable		
+protocol	conformance TTSProtoTTSEvent.EventType	Swift.CaseIterable		
+protocol	conformance TTSProtoTTSEvent.EventType	InternalSwiftProtobuf.Enum		
+protocol	conformance TTSProtoTTSEvent.EventValue	Swift.Equatable		
+protocol	conformance TTSProtoTTSEvent.EventValue	Swift.Hashable		
+protocol	conformance TTSProtoTTSEvent.EventValue	Swift.CustomDebugStringConvertible		
+protocol	conformance TTSProtoTTSEvent.EventValue	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TTSProtoTTSEvent.EventValue	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TTSProtoTTSEvent.EventValue	InternalSwiftProtobuf.Message		
+protocol	conformance TTSProtoTTSEvent.EventType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SiriTTSService.TTSProtoTTSEvent	Swift.Equatable		
+protocol	conformance SiriTTSService.TTSProtoTTSEvent	Swift.Hashable		
+protocol	conformance SiriTTSService.TTSProtoTTSEvent	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriTTSService.TTSProtoTTSEvent	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SiriTTSService.TTSProtoTTSEvent	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SiriTTSService.TTSProtoTTSEvent	InternalSwiftProtobuf.Message		
+protocol	conformance SiriTTSService.AudioHandler	SiriTTSService.NotificationHandling		
+protocol	conformance SiriTTSService.AudioHandler	SiriTTSService.AudioPowerProviding		
+protocol	conformance SiriTTSService.AudioHandler	SiriTTSService.AudioVolumeControlling		
+protocol	conformance SiriTTSService.AudioHandler	SiriTTSService.AudioPlaybackControlling		
+protocol	conformance SiriTTSService.OpusEncodingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.OpusEncodingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.InlineStreamingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.InlineStreamingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.InlineStreamingAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.InlineStreamingAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance TTSError.TTSErrorCode	Swift.Equatable		
+protocol	conformance TTSError.TTSErrorCode	Swift.Hashable		
+protocol	conformance TTSError.TTSErrorCode	Swift.RawRepresentable		
+protocol	conformance TTSError.TTSErrorCode	Swift.Decodable		
+protocol	conformance TTSError.TTSErrorCode	Swift.Encodable		
+protocol	conformance SiriTTSService.TTSError	Swift.Error		
+protocol	conformance SiriTTSService.TTSError	Swift.Decodable		
+protocol	conformance SiriTTSService.TTSError	Swift.Encodable		
+protocol	conformance SiriTTSService.TTSError	Foundation.LocalizedError		
+protocol	conformance SiriTTSService.TTSError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SynthesisRouter.Route	Swift.Equatable		
+protocol	conformance SynthesisRouter.Route	Swift.Hashable		
+protocol	conformance SiriTTSService.SynthesisRouter	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.RequestPreprocessAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.RequestPreprocessAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.DelegateHandler	SiriTTSService.NotificationHandling		
+protocol	conformance SiriTTSService.AudioDumpAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.AudioDumpAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.AudioDumpAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.DaemonSwiftXPCRequest	Swift.Decodable		
+protocol	conformance SiriTTSService.DaemonSwiftXPCRequest	Swift.Encodable		
+protocol	conformance DaemonSwiftXPCResult.DaemonSwiftXPCResponse	Swift.Decodable		
+protocol	conformance DaemonSwiftXPCResult.DaemonSwiftXPCResponse	Swift.Encodable		
+protocol	conformance SiriTTSService.DaemonSwiftXPCResult	Swift.Decodable		
+protocol	conformance SiriTTSService.DaemonSwiftXPCResult	Swift.Encodable		
+protocol	conformance DaemonSwiftXPCMessage.Payload	Swift.Decodable		
+protocol	conformance DaemonSwiftXPCMessage.Payload	Swift.Encodable		
+protocol	conformance SiriTTSService.DaemonSwiftXPCMessage	Swift.Decodable		
+protocol	conformance SiriTTSService.DaemonSwiftXPCMessage	Swift.Encodable		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.Hashable		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.Equatable		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.Hashable		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.Equatable		
+protocol	conformance PrewarmCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrewarmCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrewarmCodingKeys	Swift.Hashable		
+protocol	conformance PrewarmCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.Hashable		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.Equatable		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.Hashable		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.Equatable		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.Hashable		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.Equatable		
+protocol	conformance EmptyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EmptyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FailureCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailureCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailureCodingKeys	Swift.Hashable		
+protocol	conformance FailureCodingKeys	Swift.Equatable		
+protocol	conformance SuccessCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SuccessCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SuccessCodingKeys	Swift.Hashable		
+protocol	conformance SuccessCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InternalEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InternalEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InternalEventCodingKeys	Swift.Hashable		
+protocol	conformance InternalEventCodingKeys	Swift.Equatable		
+protocol	conformance EventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EventCodingKeys	Swift.Hashable		
+protocol	conformance EventCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance EventCodingKeys	Swift.CodingKey		
+protocol	conformance InternalEventCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SuccessCodingKeys	Swift.CodingKey		
+protocol	conformance FailureCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance EmptyCodingKeys	Swift.CodingKey		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.CodingKey		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.CodingKey		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PrewarmCodingKeys	Swift.CodingKey		
+protocol	conformance SubscribedVoicesCodingKeys	Swift.CodingKey		
+protocol	conformance FetchVoiceAttributesCodingKeys	Swift.CodingKey		
+protocol	conformance PredefinedVoicesCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.HasAudioCondition	SiriTTSService.Conditional		
+protocol	conformance SiriTTSService.TTSAssetUAFStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance SiriTTSService.CoreAnalyticsSynthesisHandler	SiriTTSService.NotificationHandling		
+protocol	conformance SiriTTSService.CoreAnalyticsService	SiriTTSService.CoreAnalyticsInterface		
+protocol	conformance SiriTTSService.VoiceAsset	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.OspreyTTSAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.OspreyTTSAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.OspreyTTSAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.OspreyTTSAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance __C.ThermalState	Swift.CustomStringConvertible: SiriTTSService		
+protocol	conformance SiriTTSService.VoiceSelectionAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.VoiceSelectionAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.RequestParsingAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.RequestParsingAction	SiriTTSService.DependencyInjectable		
+protocol	conformance Event.StreamingEvent	Swift.Decodable		
+protocol	conformance Event.StreamingEvent	Swift.Encodable		
+protocol	conformance Event.StreamingEvent	Swift.Equatable		
+protocol	conformance Event.StreamingEvent	Swift.Hashable		
+protocol	conformance SiriTTSService.Event	Swift.Decodable		
+protocol	conformance SiriTTSService.Event	Swift.Encodable		
+protocol	conformance SiriTTSService.Event	Swift.Equatable		
+protocol	conformance InternalEvent.StreamingEvent	Swift.Equatable		
+protocol	conformance InternalEvent.StreamingEvent	Swift.Hashable		
+protocol	conformance InternalEvent.StreamingEvent	Swift.Decodable		
+protocol	conformance InternalEvent.StreamingEvent	Swift.Encodable		
+protocol	conformance InternalEvent.DelegateEvent	Swift.Decodable		
+protocol	conformance InternalEvent.DelegateEvent	Swift.Encodable		
+protocol	conformance InternalEvent.DelegateEvent	Swift.Equatable		
+protocol	conformance SiriTTSService.InternalEvent	Swift.Decodable		
+protocol	conformance SiriTTSService.InternalEvent	Swift.Encodable		
+protocol	conformance SiriTTSService.InternalEvent	Swift.Equatable		
+protocol	conformance UtteranceSentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UtteranceSentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UtteranceSentCodingKeys	Swift.Hashable		
+protocol	conformance UtteranceSentCodingKeys	Swift.Equatable		
+protocol	conformance NewSynthesisStartedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NewSynthesisStartedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance StreamingEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StreamingEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StreamingEventCodingKeys	Swift.Hashable		
+protocol	conformance StreamingEventCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InputStreamingAvailableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InputStreamingAvailableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AvailableWordTimingsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AvailableWordTimingsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AvailableWordTimingsCodingKeys	Swift.Hashable		
+protocol	conformance AvailableWordTimingsCodingKeys	Swift.Equatable		
+protocol	conformance AvailableAudioCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AvailableAudioCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AvailableAudioCodingKeys	Swift.Hashable		
+protocol	conformance AvailableAudioCodingKeys	Swift.Equatable		
+protocol	conformance AvailableInstrumentationMetricsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AvailableInstrumentationMetricsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AvailableInstrumentationMetricsCodingKeys	Swift.Hashable		
+protocol	conformance AvailableInstrumentationMetricsCodingKeys	Swift.Equatable		
+protocol	conformance DidStartSpeakingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DidStartSpeakingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DelegateEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DelegateEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DelegateEventCodingKeys	Swift.Hashable		
+protocol	conformance DelegateEventCodingKeys	Swift.Equatable		
+protocol	conformance StreamingEventCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StreamingEventCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StreamingEventCodingKeys	Swift.Hashable		
+protocol	conformance StreamingEventCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance StreamingEventCodingKeys	Swift.CodingKey		
+protocol	conformance DelegateEventCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PingCodingKeys	Swift.CodingKey		
+protocol	conformance DidStartSpeakingCodingKeys	Swift.CodingKey		
+protocol	conformance AvailableInstrumentationMetricsCodingKeys	Swift.CodingKey		
+protocol	conformance AvailableAudioCodingKeys	Swift.CodingKey		
+protocol	conformance AvailableWordTimingsCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance InputStreamingAvailableCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance StreamingEventCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NewSynthesisStartedCodingKeys	Swift.CodingKey		
+protocol	conformance UtteranceSentCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.AudioPlaybackServiceState	Swift.Equatable		
+protocol	conformance SiriTTSService.AudioPlaybackServiceState	Swift.Hashable		
+protocol	conformance SiriTTSService.AudioPlaybackServiceState	Swift.RawRepresentable		
+protocol	conformance SiriTTSService.AudioPlaybackServiceState	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.AVSBARPlayback	SiriTTSService.AudioPlayback		
+protocol	conformance SiriTTSService.AVSBARPlayback	SiriTTSService.AudioVolumeControlling		
+protocol	conformance SiriTTSService.AVSBARPlayback	SiriTTSService.AudioPlaybackControlling		
+protocol	conformance SiriTTSService.AVSBARPlayback	SiriTTSService.AudioPowerProviding		
+protocol	conformance TTSFeatureStoreEvent.EventType	Swift.Equatable		
+protocol	conformance TTSFeatureStoreEvent.EventType	Swift.Hashable		
+protocol	conformance TTSFeatureStoreEvent.EventType	Swift.RawRepresentable		
+protocol	conformance TTSFeatureStoreEvent.EventType	Swift.Decodable		
+protocol	conformance TTSFeatureStoreEvent.EventType	Swift.Encodable		
+protocol	conformance SiriTTSService.TTSFeatureStoreEvent	Swift.Decodable		
+protocol	conformance SiriTTSService.TTSFeatureStoreEvent	Swift.Encodable		
+protocol	conformance SiriTTSService.TTSFeatureStoreEvent	Swift.CustomStringConvertible		
+protocol	conformance SiriTTSService.IsNaturalVoiceCondition	SiriTTSService.Conditional		
+protocol	conformance SiriTTSService.IsNaturalVoiceCondition	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.RoughDurationEstimationAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.RoughDurationEstimationAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.AudioPlaybackAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.AudioPlaybackAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.AudioPlaybackAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance SiriTTSService.TTSAssetPreinstalledStrategy	SiriTTSService.TTSAssetStrategy		
+protocol	conformance SiriTTSService.DeviceSynthesisAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.DeviceSynthesisAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.DeviceSynthesisAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.DeviceSynthesisAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance VoiceServicesKey	Swift.CaseIterable		
+protocol	conformance VoiceServicesKey	Swift.RawRepresentable		
+protocol	conformance VoiceServicesKey	Swift.Hashable		
+protocol	conformance VoiceServicesKey	Swift.Equatable		
+protocol	conformance SynthesisCacheFile.SynthesisCacheChunkIterator	Swift.IteratorProtocol		
+protocol	conformance SiriTTSService.SynthesisCacheFile	Swift.Sequence		
+protocol	conformance SiriTTSService.SynthesisCache	Swift.Decodable		
+protocol	conformance SiriTTSService.SynthesisCache	Swift.Encodable		
+protocol	conformance SynthesisCache.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SynthesisCache.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SynthesisCache.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SynthesisCache.CodingKeys	Swift.Hashable		
+protocol	conformance SynthesisCache.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisCache.CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.OspreyBuiltInConfig	SiriTTSService.OspreyConfigProviding		
+protocol	conformance SiriTTSService.OspreyChainedConfigs	SiriTTSService.OspreyConfigProviding		
+protocol	conformance SiriTTSService.AudioTrack	Swift.Equatable		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.Equatable		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.Hashable		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.RawRepresentable		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.Decodable		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.Encodable		
+protocol	conformance SiriTTSService.InstrumentationMetrics	Swift.Decodable		
+protocol	conformance SiriTTSService.InstrumentationMetrics	Swift.Encodable		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.CustomStringConvertible		
+protocol	conformance InstrumentationMetrics.SourceOfTTS	Swift.LosslessStringConvertible		
+protocol	conformance SiriTTSService.SynthesisVoiceSubscription	Swift.Decodable		
+protocol	conformance SiriTTSService.SynthesisVoiceSubscription	Swift.Encodable		
+protocol	conformance SynthesisInputStream.Token	Swift.LosslessStringConvertible		
+protocol	conformance SynthesisInputStream.Token	Swift.CustomStringConvertible		
+protocol	conformance InstrumentationMetrics.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InstrumentationMetrics.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InstrumentationMetrics.CodingKeys	Swift.Hashable		
+protocol	conformance InstrumentationMetrics.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisVoiceSubscription.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SynthesisVoiceSubscription.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SynthesisVoiceSubscription.CodingKeys	Swift.Hashable		
+protocol	conformance SynthesisVoiceSubscription.CodingKeys	Swift.Equatable		
+protocol	conformance SynthesisVoiceSubscription.CodingKeys	Swift.CodingKey		
+protocol	conformance InstrumentationMetrics.CodingKeys	Swift.CodingKey		
+protocol	conformance SiriTTSService.OspreyTTSPrewarmAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.OspreyTTSPrewarmAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.OspreyTTSPrewarmAction	SiriTTSService.Asynchronous		
+protocol	conformance SiriTTSService.OspreyTTSPrewarmAction	SiriTTSService.OptionalNotificationHandling		
+protocol	conformance SiriTTSService.SynthesisPrewarmAction	SiriTTSService.Actionable		
+protocol	conformance SiriTTSService.SynthesisPrewarmAction	SiriTTSService.DependencyInjectable		
+protocol	conformance SiriTTSService.SiriAnalyticsHandler	SiriTTSService.NotificationHandling		
+extension	SiriTTSService.AudioPlaybackError	RawRepresentable		
+extension	SiriTTSService.SynthesisContext.SynthesisProfile	RawRepresentable		
+extension	SiriTTSService.SynthesisContext.SynthesisProfile	CaseIterable		
+extension	SiriTTSService.SynthesisContext.SynthesisPriority	RawRepresentable		
+extension	SiriTTSService.SynthesisContext.SynthesisPriority	CaseIterable		
+extension	SiriTTSService.SynthesisContext.PromptStyle	RawRepresentable		
+extension	SiriTTSService.SynthesisContext.PromptStyle	CaseIterable		
+extension	SiriTTSService.PhonemeRequest.PhonemeSystem	RawRepresentable		
+extension	SiriTTSService.PreviewType	RawRepresentable		
+extension	SiriTTSService.SynthesisVoice.Footprint	RawRepresentable		
+extension	SiriTTSService.SynthesisVoice.Footprint	CaseIterable		
+extension	SiriTTSService.SynthesisVoice.VoiceType	RawRepresentable		
+extension	SiriTTSService.SynthesisVoice.VoiceType	CaseIterable		
+extension	SiriTTSService.SynthesisVoice.VoiceGender	RawRepresentable		
+extension	SiriTTSService.BaseRequest.CodingKeys	CaseIterable		
+extension	SiriTTSService.TTSAsset.VoiceAttribute	RawRepresentable		
+extension	SiriTTSService.TTSAsset.ProxyKey	RawRepresentable		
+extension	SiriTTSService.VoiceBrand	RawRepresentable		
+extension	SiriTTSService.VoiceBrand	CaseIterable		
+extension	SiriTTSService.Delivery	CaseIterable		
+extension	SiriTTSService.DialogType	CaseIterable		
+extension	SiriTTSService.Characteristic	CaseIterable		
+extension	SiriTTSService.Age	CaseIterable		
+extension	SiriTTSService.Gender	CaseIterable		
+extension	SiriTTSService.Accent	CaseIterable		
+extension	SiriTTSService.TTSAssetUAFAsset.assetDeviceType	RawRepresentable		
+extension	SiriTTSService.TTSProtoTTSEvent.EventType	RawRepresentable		
+extension	SiriTTSService.TTSProtoTTSEvent.EventType	CaseIterable		
+extension	SiriTTSService.TTSError.TTSErrorCode	RawRepresentable		
+extension	SiriTTSService.AudioPlaybackServiceState	RawRepresentable		
+extension	SiriTTSService.TTSFeatureStoreEvent.EventType	RawRepresentable		
+extension	SiriTTSService.Preferences.VoiceServicesKey	CaseIterable		
+extension	SiriTTSService.Preferences.VoiceServicesKey	RawRepresentable		
+extension	SiriTTSService.SynthesisCacheFile.SynthesisCacheChunkIterator	IteratorProtocol		
+extension	SiriTTSService.SynthesisCacheFile	Sequence		
+extension	SiriTTSService.SynthesisCache.CodingKeys	RawRepresentable		
+extension	SiriTTSService.InstrumentationMetrics.SourceOfTTS	RawRepresentable		

@@ -1,0 +1,69 @@
+kind	type	conformance	member_kind	member
+class	PreviewsServices.XPCListener			
+class	PreviewsServices.XPCListener		let	listenerService
+class	PreviewsServices.XPCListener		let	service
+class	PreviewsServices.XPCListener		var	shouldAcceptConnectionHandler
+class	PreviewsServices.XPCListener		var	interruptionHandler
+class	PreviewsServices.XPCListener		var	invalidationHandler
+class	PreviewsServices.XPCListener		var	connectionErrorHandler
+class	PreviewsServices.XPCConnection			
+class	PreviewsServices.XPCConnection		let	connection
+class	PreviewsServices.XPCConnection		var	messageReceiver
+class	PreviewsServices.XPCConnection		var	interruptionHandler
+class	PreviewsServices.XPCConnection		var	invalidationHandler
+class	PreviewsServices.XPCConnection		var	connectionErrorHandler
+struct	PreviewsServices.XPCError			
+struct	PreviewsServices.XPCError		let	kind
+enum	PreviewsServices.XPCListener.Service			
+enum	PreviewsServices.XPCListener.Service		case	local
+enum	PreviewsServices.XPCListener.Service		case	hostToSim
+enum	PreviewsServices.XPCError.Kind			
+enum	PreviewsServices.XPCError.Kind		case	connectionInvalidated
+enum	PreviewsServices.XPCError.Kind		case	invalidType
+enum	PreviewsServices.XPCError.Kind		case	unknown
+enum	PreviewsServices.XPCError.Kind		case	connectionInterrupted
+enum	PreviewsServices.XPCError.Kind		case	terminationImminent
+enum	PreviewsServices.PreviewsService			
+enum	PreviewsServices.PreviewsService		case	install
+enum	PreviewsServices.PreviewsService		case	preview
+enum	PreviewsServices.PreviewsService		case	agentPipe
+enum	PreviewsServices.PreviewsService		case	shellPipe
+enum	PreviewsServices.PreviewsService		case	crashListener
+enum	PreviewsServices.PreviewsService		case	processExit
+enum	PreviewsServices.PreviewsService.Variant			
+enum	PreviewsServices.PreviewsService.Variant		case	default
+enum	PreviewsServices.PreviewsService.Variant		case	mac
+class	PreviewsServices.PreviewsServiceConnection			
+class	PreviewsServices.PreviewsServiceConnection		let	connection
+class	PreviewsServices.PreviewsServiceConnection		let	auditToken
+enum	PreviewsServices.PreviewsServiceConnection.Service			
+enum	PreviewsServices.PreviewsServiceConnection.Service		case	install
+enum	PreviewsServices.PreviewsServiceConnection.Service		case	preview
+enum	PreviewsServices.PreviewsServiceConnection.Service		case	agentPipe
+enum	PreviewsServices.PreviewsServiceConnection.Service		case	crashListener
+enum	PreviewsServices.PreviewsServiceConnection.Service		case	processExit
+class	PreviewsServices.PreviewsServiceConnection.Listener	NSObject		
+class	PreviewsServices.PreviewsServiceConnection.Listener	NSObject	let	listener
+class	PreviewsServices.PreviewsServiceConnection.Listener	NSObject	var	connectionHandler
+struct	PreviewsServices.PreviewsServiceConnection.InterfaceTarget			
+struct	PreviewsServices.PreviewsServiceConnection.InterfaceTarget		let	receiver
+struct	PreviewsServices.UltravioletConstants			
+protocol	PreviewsServices.XPCMessageReceiver			
+protocol	PreviewsServices.PreviewsServiceMessageReceiver			
+protocol	PreviewsServices.MinimalRegistryEntry	Executable		
+protocol	PreviewsServices.RegistryEntry			
+protocol	PreviewsServices.RegistryExecutable	Metadata, RuntimeEvent, ControlEvent		
+protocol	conformance PreviewsServices.XPCError	Foundation.LocalizedError		
+protocol	conformance PreviewsServices.XPCError	Swift.Error		
+protocol	conformance PreviewsServices.XPCConnection	Swift.CustomStringConvertible		
+protocol	conformance PreviewsServices.XPCConnection	Swift.Equatable		
+protocol	conformance PreviewsServices.XPCListener	Swift.CustomStringConvertible		
+protocol	conformance PreviewsService.Variant	Swift.Equatable		
+protocol	conformance PreviewsService.Variant	Swift.Hashable		
+protocol	conformance PreviewsServices.PreviewsService	Swift.CustomStringConvertible		
+protocol	conformance PreviewsService.Variant	Swift.CustomStringConvertible		
+protocol	conformance PreviewsServiceConnection.Service	Swift.Equatable		
+protocol	conformance PreviewsServiceConnection.Service	Swift.Hashable		
+protocol	conformance PreviewsServiceConnection.Service	Swift.RawRepresentable		
+protocol	conformance InterfaceTarget	PreviewsServices.XPCMessageReceiver		
+extension	PreviewsServices.PreviewsServiceConnection.Service	RawRepresentable		

@@ -1,0 +1,185 @@
+kind	type	conformance	member_kind	member
+struct	SiriCoreMetrics.ProcessedSiriTurn			
+struct	SiriCoreMetrics.ProcessedSiriTurn		let	dimensions
+struct	SiriCoreMetrics.ProcessedSiriTurn		let	currentTurnId
+struct	SiriCoreMetrics.ProcessedSiriTurn		let	nextTurnId
+struct	SiriCoreMetrics.ProcessedSiriTurn		let	isUserRequest
+struct	SiriCoreMetrics.ProcessedSiriTurn		let	utteranceRestatementScore
+struct	SiriCoreMetrics.ProcessedSiriTurn		let	phoneticRestatementScore
+struct	SiriCoreMetrics.ProcessedSiriConversation			
+struct	SiriCoreMetrics.ProcessedSiriConversation		let	processedTurns
+enum	SiriCoreMetrics.ProcessedSiriConversation.CodingKeys			
+enum	SiriCoreMetrics.ProcessedSiriConversation.CodingKeys		case	processedTurns
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys			
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys		case	dimensions
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys		case	currentTurnId
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys		case	nextTurnId
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys		case	isUserRequest
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys		case	utteranceRestatementScore
+enum	SiriCoreMetrics.ProcessedSiriTurn.CodingKeys		case	phoneticRestatementScore
+struct	SiriCoreMetrics.SiriCoreMetricsResultsV2			
+struct	SiriCoreMetrics.SiriCoreMetricsResultsV2		var	eventStreamMetadata
+struct	SiriCoreMetrics.SiriCoreMetricsResultsV2		var	conversationStreamMetadata
+struct	SiriCoreMetrics.SiriCoreMetricsResultsV2		let	turns
+class	SiriCoreMetrics.SiriCoreMetricsCalculatorV2			
+class	SiriCoreMetrics.SiriCoreMetricsCalculatorV2		let	logger
+class	SiriCoreMetrics.SiriCoreMetricsCalculatorV2		let	calendar
+class	SiriCoreMetrics.SiriCoreMetricsCalculatorV2		let	bookmarkService
+class	SiriCoreMetrics.SiriCoreMetricsCalculator			
+class	SiriCoreMetrics.SiriCoreMetricsCalculator		let	conversationTurnType
+class	SiriCoreMetrics.SiriCoreMetricsCalculator		let	logger
+class	SiriCoreMetrics.SiriCoreMetricsCalculator		let	calendar
+enum	SiriCoreMetrics.TwoByThreeSegment			
+enum	SiriCoreMetrics.TwoByThreeSegment		case	none
+enum	SiriCoreMetrics.TwoByThreeSegment		case	twoByThree
+enum	SiriCoreMetrics.TwoByThreeSegment		case	insufficientData
+struct	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics			
+struct	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics		let	siriInputLocale
+struct	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics		let	viewMode
+struct	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics		let	audioInterface
+struct	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics		let	product
+struct	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics		let	siriDataSharingOptInStatus
+struct	SiriCoreMetrics.SiriCoreMetricsAggregationKeys			
+struct	SiriCoreMetrics.SiriCoreMetricsAggregationKeys		let	aggregationInterval
+struct	SiriCoreMetrics.SiriCoreMetricsAggregationKeys		let	dimension
+struct	SiriCoreMetrics.SiriRequestCounts			
+struct	SiriCoreMetrics.SiriRequestCounts		var	allRequestCount
+struct	SiriCoreMetrics.SiriRequestCounts		var	userRequestCount
+struct	SiriCoreMetrics.SiriCountsAll			
+struct	SiriCoreMetrics.SiriCountsAll		let	aggregationInterval
+struct	SiriCoreMetrics.SiriCountsAll		var	dimensions
+struct	SiriCoreMetrics.SiriCountsAll		var	requestCounts
+struct	SiriCoreMetrics.SiriCoreMetricsResults			
+struct	SiriCoreMetrics.SiriCoreMetricsResults		let	processedConversations
+struct	SiriCoreMetrics.SiriCoreMetricsResults		let	countsReportedAll
+struct	SiriCoreMetrics.SiriCoreMetricsResults		var	eventStreamMetadata
+struct	SiriCoreMetrics.SiriCoreMetricsResults		var	conversationStreamMetadata
+struct	SiriCoreMetrics.SiriCoreMetricsResults		let	totalCounts
+struct	SiriCoreMetrics.SiriCoreMetricsResults		let	twoByThreeResults
+enum	SiriCoreMetrics.SiriCountsAll.CodingKeys			
+enum	SiriCoreMetrics.SiriCountsAll.CodingKeys		case	aggregationInterval
+enum	SiriCoreMetrics.SiriCountsAll.CodingKeys		case	dimensions
+enum	SiriCoreMetrics.SiriCountsAll.CodingKeys		case	requestCounts
+enum	SiriCoreMetrics.SiriRequestCounts.CodingKeys			
+enum	SiriCoreMetrics.SiriRequestCounts.CodingKeys		case	allRequestCount
+enum	SiriCoreMetrics.SiriRequestCounts.CodingKeys		case	userRequestCount
+enum	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics.CodingKeys			
+enum	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics.CodingKeys		case	siriInputLocale
+enum	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics.CodingKeys		case	viewMode
+enum	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics.CodingKeys		case	audioInterface
+enum	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics.CodingKeys		case	product
+enum	SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics.CodingKeys		case	siriDataSharingOptInStatus
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporter	SiriCoreMetrics.SiriCoreMetricsReporter		
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporter	SiriCoreMetrics.SiriCoreMetricsReporter	let	odmId
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporter	SiriCoreMetrics.SiriCoreMetricsReporter	let	logger
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporter	SiriCoreMetrics.SiriCoreMetricsReporter	var	odmClientEventsCountsReportedAll
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporter	SiriCoreMetrics.SiriCoreMetricsReporter	var	odmClientEventsTurnRestatementScores
+enum	SiriCoreMetrics.SiriCoreMetricsSELFMessageConverter			
+class	SiriCoreMetrics.SiriCoreMetricsJsonLoggingReporter	SiriCoreMetrics.SiriCoreMetricsReporter		
+class	SiriCoreMetrics.SiriCoreMetricsJsonLoggingReporter	SiriCoreMetrics.SiriCoreMetricsReporter	var	jsonResult
+class	SiriCoreMetrics.SiriCoreMetricsJsonLoggingReporter	SiriCoreMetrics.SiriCoreMetricsReporter	let	logger
+class	SiriCoreMetrics.SiriCoreMetricsReporter			
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporterV2			
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporterV2		let	logger
+class	SiriCoreMetrics.SiriCoreMetricsSELFReporterV2		let	stream
+enum	SiriCoreMetrics.SiriCoreMetricsSELFMessageConverterV2			
+class	SiriCoreMetrics.SiriCoreMetricsBiomeReporter	SiriCoreMetrics.SiriCoreMetricsReporter		
+class	SiriCoreMetrics.SiriCoreMetricsBiomeReporter	SiriCoreMetrics.SiriCoreMetricsReporter	let	biomeDonator
+class	SiriCoreMetrics.SiriCoreMetricsBiomeReporter	SiriCoreMetrics.SiriCoreMetricsReporter	let	logger
+class	SiriCoreMetrics.SiriCoreMetricsBiomeReporter	SiriCoreMetrics.SiriCoreMetricsReporter	let	odmId
+enum	SiriCoreMetrics.SiriCoreMetricsError			
+enum	SiriCoreMetrics.SiriCoreMetricsError		case	userDefaultsInit
+class	SiriCoreMetrics.SiriCoreMetricsV2			
+class	SiriCoreMetrics.SiriCoreMetricsV2		let	logger
+class	SiriCoreMetrics.SiriCoreMetricsV2		let	siriCoreMetricsDataProvider
+class	SiriCoreMetrics.SiriCoreMetricsV2		let	siriCoreMetricsCalculator
+class	SiriCoreMetrics.SiriCoreMetricsV2		let	siriCoreMetricsReporter
+struct	SiriCoreMetrics.SiriCoreMetricsDataRecord			
+struct	SiriCoreMetrics.SiriCoreMetricsDataRecord		let	featurizedConversationData
+struct	SiriCoreMetrics.SiriCoreMetricsDataRecord		let	previousRequestCounts
+class	SiriCoreMetrics.SiriCoreMetricsDataProvider			
+class	SiriCoreMetrics.SiriCoreMetricsDataProvider		let	logger
+class	SiriCoreMetrics.SiriCoreMetricsDataProvider		let	bookmarkService
+class	SiriCoreMetrics.SiriCoreMetricsDataProvider		let	featurizedConversationProvider
+class	SiriCoreMetrics.SiriCoreMetrics			
+class	SiriCoreMetrics.SiriCoreMetrics		let	logger
+class	SiriCoreMetrics.SiriCoreMetrics		let	siriCoreMetricsDataProvider
+class	SiriCoreMetrics.SiriCoreMetrics		let	siriCoreMetricsCalculator
+class	SiriCoreMetrics.SiriCoreMetrics		let	siriCoreMetricsReporter
+class	SiriCoreMetrics.SiriCoreMetrics		let	conversationType
+class	SiriCoreMetrics.SiriCoreMetrics		let	odmId
+protocol	conformance SiriCoreMetrics.ProcessedSiriTurn	Swift.Decodable		
+protocol	conformance SiriCoreMetrics.ProcessedSiriTurn	Swift.Encodable		
+protocol	conformance SiriCoreMetrics.ProcessedSiriConversation	Swift.Decodable		
+protocol	conformance SiriCoreMetrics.ProcessedSiriConversation	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsResultsV2	DeepThought.BookmarkedResult		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsResultsV2	lighthouse_runtime.Result		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsCalculatorV2	lighthouse_runtime.Worker		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsCalculator	lighthouse_runtime.Worker		
+protocol	conformance SiriCoreMetrics.TwoByThreeSegment	Swift.Equatable		
+protocol	conformance SiriCoreMetrics.TwoByThreeSegment	Swift.Hashable		
+protocol	conformance SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics	Swift.Hashable		
+protocol	conformance SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics	Swift.Decodable		
+protocol	conformance SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics	Swift.Encodable		
+protocol	conformance SiriCoreMetrics.DynamicDimensionsSiriCoreMetrics	Swift.Equatable		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsAggregationKeys	Swift.Hashable		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsAggregationKeys	Swift.Equatable		
+protocol	conformance SiriCoreMetrics.SiriRequestCounts	Swift.Decodable		
+protocol	conformance SiriCoreMetrics.SiriRequestCounts	Swift.Encodable		
+protocol	conformance SiriCoreMetrics.SiriRequestCounts	Swift.Equatable		
+protocol	conformance SiriCoreMetrics.SiriCountsAll	Swift.Decodable		
+protocol	conformance SiriCoreMetrics.SiriCountsAll	Swift.Encodable		
+protocol	conformance SiriCoreMetrics.SiriCountsAll	Swift.Equatable		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsResults	DeepThought.BookmarkedResult		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsResults	lighthouse_runtime.Result		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsReporter	lighthouse_runtime.Reporter		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsSELFReporterV2	lighthouse_runtime.Reporter		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsError	Swift.Equatable		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsError	Swift.Hashable		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsError	Swift.Error		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsV2	lighthouse_runtime.LighthousePlugin		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsV2	lighthouse_runtime.DataProvider		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsV2	lighthouse_runtime.Worker		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsV2	lighthouse_runtime.Reporter		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsDataRecord	lighthouse_runtime.DataRecord		
+protocol	conformance SiriCoreMetrics.SiriCoreMetricsDataProvider	lighthouse_runtime.DataProvider		
+protocol	conformance SiriCoreMetrics.SiriCoreMetrics	lighthouse_runtime.LighthousePlugin		
+protocol	conformance SiriCoreMetrics.SiriCoreMetrics	lighthouse_runtime.DataProvider		
+protocol	conformance SiriCoreMetrics.SiriCoreMetrics	lighthouse_runtime.Worker		
+protocol	conformance SiriCoreMetrics.SiriCoreMetrics	lighthouse_runtime.Reporter		
+extension	SiriCoreMetrics.SiriCoreMetricsCalculatorV2	Worker		
+extension	SiriCoreMetrics.SiriCoreMetricsCalculator	Worker		
+extension	SiriCoreMetrics.SiriCoreMetricsReporter	Reporter		
+extension	SiriCoreMetrics.SiriCoreMetricsSELFReporterV2	Reporter		
+extension	SiriCoreMetrics.SiriCoreMetricsV2	DataProvider		
+extension	SiriCoreMetrics.SiriCoreMetricsV2	Worker		
+extension	SiriCoreMetrics.SiriCoreMetricsV2	Reporter		
+extension	SiriCoreMetrics.SiriCoreMetricsDataProvider	DataProvider		
+extension	SiriCoreMetrics.SiriCoreMetrics	DataProvider		
+extension	SiriCoreMetrics.SiriCoreMetrics	Worker		
+extension	SiriCoreMetrics.SiriCoreMetrics	Reporter		

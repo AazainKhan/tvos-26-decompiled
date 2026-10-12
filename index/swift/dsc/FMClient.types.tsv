@@ -1,0 +1,270 @@
+kind	type	conformance	member_kind	member
+class	FMClient.Session	NSObject		
+class	FMClient.Session	NSObject	let	clientBundleId
+class	FMClient.Session	NSObject	let	clientProcessName
+class	FMClient.Session	NSObject	var	_activeConnection
+class	FMClient.Session	NSObject	var	lazy
+class	FMClient.Session	NSObject	var	authenticationProvider
+enum	FMClient.Session.SessionError			
+enum	FMClient.Session.SessionError		case	unknown
+enum	FMClient.Session.SessionError		case	noRegisteredAuthenticationProvider
+enum	FMClient.Session.SessionError		case	bundleIdCouldNotBeRead
+class	FMClient.URLSessionFactory			
+class	FMClient.PlaySoundDevice	NSObject		
+class	FMClient.PlaySoundDevice	NSObject	let	serverId
+class	FMClient.PlaySoundDevice	NSObject	let	locality
+class	FMClient.PlaySoundDevice	NSObject	let	safetyWarningConfirmed
+enum	FMClient.PlaySoundDevice.CodingKeys			
+enum	FMClient.PlaySoundDevice.CodingKeys		case	serverId
+enum	FMClient.PlaySoundDevice.CodingKeys		case	locality
+enum	FMClient.PlaySoundDevice.CodingKeys		case	safetyWarningConfirmed
+class	FMClient.ClientConfiguration	NSObject		
+class	FMClient.ClientConfiguration	NSObject	let	nearbyScanDuration
+class	FMClient.ClientConfiguration	NSObject	let	nearbyScanEnabled
+class	FMClient.ClientConfiguration	NSObject	let	nearbyScanWhileAuthenticated
+class	FMClient.ClientConfiguration	NSObject	let	deviceNameSyncInterval
+class	FMClient.ClientConfiguration	NSObject	let	deviceNameSyncEnabled
+enum	FMClient.ClientConfiguration.CodingKeys			
+enum	FMClient.ClientConfiguration.CodingKeys		case	nearbyScanDuration
+enum	FMClient.ClientConfiguration.CodingKeys		case	nearbyScanEnabled
+enum	FMClient.ClientConfiguration.CodingKeys		case	nearbyScanWhileAuthenticated
+enum	FMClient.ClientConfiguration.CodingKeys		case	deviceNameSyncInterval
+enum	FMClient.ClientConfiguration.CodingKeys		case	deviceNameSyncEnabled
+enum	FMClient.SyncCacheType			
+class	FMClient.SearchFilter	NSObject		
+class	FMClient.SearchFilter	NSObject	var	devices
+enum	FMClient.SearchFilter.CodingKeys			
+enum	FMClient.SearchFilter.CodingKeys		case	devices
+class	FMClient.VoiceAssistantSyncResult	NSObject		
+class	FMClient.VoiceAssistantSyncResult	NSObject	let	devices
+class	FMClient.VoiceAssistantSyncResult	NSObject	let	anchor
+enum	FMClient.VoiceAssistantSyncResult.CodingKeys			
+enum	FMClient.VoiceAssistantSyncResult.CodingKeys		case	devices
+enum	FMClient.VoiceAssistantSyncResult.CodingKeys		case	anchor
+enum	FMClient.RequestMethod			
+enum	FMClient.RequestMethod		case	GET
+enum	FMClient.RequestMethod		case	POST
+enum	FMClient.RequestMethod		case	PUT
+enum	FMClient.RequestMethod		case	DELETE
+struct	FMClient.Request			
+struct	FMClient.Request		let	method
+struct	FMClient.Request		let	path
+struct	FMClient.Request		let	bodyDictionary
+struct	FMClient.Request		let	additionalHeaderFields
+struct	FMClient.Request		let	credential
+enum	FMClient.Request.SerializationError			
+enum	FMClient.Request.SerializationError		case	unknown
+enum	FMClient.Request.SerializationError		case	invalidJSONBody
+enum	FMClient.Request.SerializationError		case	missingAuthHeaders
+struct	FMClient.Constants			
+class	FMClient.AuthenticationCredential	NSObject		
+class	FMClient.AuthenticationCredential	NSObject	let	authToken
+class	FMClient.AuthenticationCredential	NSObject	let	personId
+class	FMClient.AuthenticationCredential	NSObject	let	hostName
+enum	FMClient.AuthenticationCredential.CodingKeys			
+enum	FMClient.AuthenticationCredential.CodingKeys		case	authToken
+enum	FMClient.AuthenticationCredential.CodingKeys		case	personId
+enum	FMClient.AuthenticationCredential.CodingKeys		case	hostName
+class	FMClient.SessionInfo	NSObject		
+class	FMClient.SessionInfo	NSObject	let	bundleId
+class	FMClient.SessionInfo	NSObject	let	processName
+enum	FMClient.SessionInfo.CodingKeys			
+enum	FMClient.SessionInfo.CodingKeys		case	bundleId
+enum	FMClient.SessionInfo.CodingKeys		case	processName
+struct	FMClient.ServerCommand			
+struct	FMClient.ServerCommand		let	url
+struct	FMClient.ServerCommand		let	data
+struct	FMClient.ServerCommand		let	headers
+class	FMClient.FMClientXPCConnection	NSXPCConnection		
+enum	FMClient.Outcome			
+enum	FMClient.Outcome		case	success
+enum	FMClient.Outcome		case	error
+class	FMClient.VoiceAssistantDeviceName	NSObject		
+class	FMClient.VoiceAssistantDeviceName	NSObject	let	deviceName
+class	FMClient.VoiceAssistantDeviceName	NSObject	let	ownerFirstName
+class	FMClient.VoiceAssistantDeviceName	NSObject	let	ownerLastName
+class	FMClient.VoiceAssistantDeviceName	NSObject	var	lazy
+enum	FMClient.VoiceAssistantDeviceName.CodingKeys			
+enum	FMClient.VoiceAssistantDeviceName.CodingKeys		case	deviceName
+enum	FMClient.VoiceAssistantDeviceName.CodingKeys		case	ownerFirstName
+enum	FMClient.VoiceAssistantDeviceName.CodingKeys		case	ownerLastName
+class	FMClient.DiscoveredDevice	NSObject		
+class	FMClient.DiscoveredDevice	NSObject	let	deviceName
+class	FMClient.DiscoveredDevice	NSObject	let	discoveryId
+enum	FMClient.DiscoveredDevice.CodingKeys			
+enum	FMClient.DiscoveredDevice.CodingKeys		case	deviceName
+enum	FMClient.DiscoveredDevice.CodingKeys		case	discoveryId
+enum	FMClient.DiscoveredDevice.DiscoveredDeviceError			
+enum	FMClient.DiscoveredDevice.DiscoveredDeviceError		case	unknown
+enum	FMClient.DiscoveredDevice.DiscoveredDeviceError		case	missingDeviceName
+enum	FMClient.DiscoveredDevice.DiscoveredDeviceError		case	missingDiscoveryId
+class	FMClient.SearchResult	NSObject		
+class	FMClient.SearchResult	NSObject	var	devices
+class	FMClient.SearchResult	NSObject	var	resultCode
+enum	FMClient.SearchResult.ResultCode			
+enum	FMClient.SearchResult.CodingKeys			
+enum	FMClient.SearchResult.CodingKeys		case	devices
+enum	FMClient.SearchResult.CodingKeys		case	resultCode
+class	FMClient.HttpClient	NSObject		
+class	FMClient.HttpClient	NSObject	var	authenticationChallengeHandler
+class	FMClient.HttpClient	NSObject	let	httpSuccessCodeMin
+class	FMClient.HttpClient	NSObject	let	httpSuccessCodeMax
+class	FMClient.HttpClient	NSObject	let	endpoint
+class	FMClient.HttpClient	NSObject	var	statusCodeHandlers
+class	FMClient.HttpClient	NSObject	let	statusCodeHandlerQueue
+class	FMClient.HttpClient	NSObject	let	sessionQueue
+class	FMClient.HttpClient	NSObject	var	lazy
+struct	FMClient.HttpClient.ErrorCode			
+struct	FMClient.HttpClient.StatusCode			
+enum	FMClient.HttpClient.ClientError			
+enum	FMClient.HttpClient.ClientError		case	unknown
+enum	FMClient.HttpClient.ClientError		case	malformedURL
+class	FMClient.SearchResultDevice	NSObject		
+class	FMClient.SearchResultDevice	NSObject	let	firstName
+class	FMClient.SearchResultDevice	NSObject	let	lastName
+class	FMClient.SearchResultDevice	NSObject	let	ownerDsid
+class	FMClient.SearchResultDevice	NSObject	let	serverId
+class	FMClient.SearchResultDevice	NSObject	let	deviceName
+class	FMClient.SearchResultDevice	NSObject	let	deviceClass
+class	FMClient.SearchResultDevice	NSObject	let	productName
+class	FMClient.SearchResultDevice	NSObject	let	discoveryId
+class	FMClient.SearchResultDevice	NSObject	let	productType
+class	FMClient.SearchResultDevice	NSObject	let	thisDevice
+class	FMClient.SearchResultDevice	NSObject	let	needsSafety
+class	FMClient.SearchResultDevice	NSObject	let	pairedDevices
+enum	FMClient.SearchResultDevice.CodingKeys			
+enum	FMClient.SearchResultDevice.CodingKeys		case	firstName
+enum	FMClient.SearchResultDevice.CodingKeys		case	lastName
+enum	FMClient.SearchResultDevice.CodingKeys		case	ownerDsid
+enum	FMClient.SearchResultDevice.CodingKeys		case	serverId
+enum	FMClient.SearchResultDevice.CodingKeys		case	deviceName
+enum	FMClient.SearchResultDevice.CodingKeys		case	deviceClass
+enum	FMClient.SearchResultDevice.CodingKeys		case	productName
+enum	FMClient.SearchResultDevice.CodingKeys		case	discoveryId
+enum	FMClient.SearchResultDevice.CodingKeys		case	productType
+enum	FMClient.SearchResultDevice.CodingKeys		case	thisDevice
+enum	FMClient.SearchResultDevice.CodingKeys		case	needsSafety
+enum	FMClient.SearchResultDevice.CodingKeys		case	pairedDevices
+class	FMClient.SearchFilterDevice	NSObject		
+class	FMClient.SearchFilterDevice	NSObject	let	ownerName
+class	FMClient.SearchFilterDevice	NSObject	let	ownerDsid
+class	FMClient.SearchFilterDevice	NSObject	let	deviceName
+class	FMClient.SearchFilterDevice	NSObject	let	deviceClass
+class	FMClient.SearchFilterDevice	NSObject	let	productName
+class	FMClient.SearchFilterDevice	NSObject	let	productType
+enum	FMClient.SearchFilterDevice.CodingKeys			
+enum	FMClient.SearchFilterDevice.CodingKeys		case	ownerName
+enum	FMClient.SearchFilterDevice.CodingKeys		case	ownerDsid
+enum	FMClient.SearchFilterDevice.CodingKeys		case	deviceName
+enum	FMClient.SearchFilterDevice.CodingKeys		case	deviceClass
+enum	FMClient.SearchFilterDevice.CodingKeys		case	productName
+enum	FMClient.SearchFilterDevice.CodingKeys		case	productType
+protocol	FMClient.ClientURLSession			
+protocol	FMClient.RequestContentRepresentable			
+protocol	FMClient.RequestCredential			
+protocol	FMClient.ResponseSerializable			
+protocol	FMClient.EndpointConfigurating			
+protocol	conformance Session.SessionError	Swift.Hashable		
+protocol	conformance Session.SessionError	Swift.Equatable		
+protocol	conformance Session.SessionError	Swift.Error		
+protocol	conformance NSURLSession	FMClient.ClientURLSession		
+protocol	conformance FMClient.PlaySoundDevice	Swift.Decodable		
+protocol	conformance FMClient.PlaySoundDevice	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.ClientConfiguration	Swift.Decodable		
+protocol	conformance FMClient.ClientConfiguration	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.SyncCacheType	Swift.Equatable		
+protocol	conformance FMClient.SyncCacheType	Swift.Hashable		
+protocol	conformance FMClient.SyncCacheType	Swift.RawRepresentable		
+protocol	conformance FMClient.SearchFilter	Swift.Decodable		
+protocol	conformance FMClient.SearchFilter	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.VoiceAssistantSyncResult	Swift.Decodable		
+protocol	conformance FMClient.VoiceAssistantSyncResult	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.RequestMethod	Swift.Equatable		
+protocol	conformance FMClient.RequestMethod	Swift.Hashable		
+protocol	conformance FMClient.RequestMethod	Swift.RawRepresentable		
+protocol	conformance Request.SerializationError	Swift.Hashable		
+protocol	conformance Request.SerializationError	Swift.Equatable		
+protocol	conformance Request.SerializationError	Swift.Error		
+protocol	conformance FMClient.AuthenticationCredential	Swift.Decodable		
+protocol	conformance FMClient.AuthenticationCredential	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.SessionInfo	Swift.Decodable		
+protocol	conformance FMClient.SessionInfo	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.VoiceAssistantDeviceName	Swift.Decodable		
+protocol	conformance FMClient.VoiceAssistantDeviceName	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.DiscoveredDevice	Swift.Decodable		
+protocol	conformance FMClient.DiscoveredDevice	Swift.Encodable		
+protocol	conformance DiscoveredDevice.DiscoveredDeviceError	Swift.Hashable		
+protocol	conformance DiscoveredDevice.DiscoveredDeviceError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DiscoveredDevice.DiscoveredDeviceError	Swift.Error		
+protocol	conformance SearchResult.ResultCode	Swift.Equatable		
+protocol	conformance SearchResult.ResultCode	Swift.Hashable		
+protocol	conformance SearchResult.ResultCode	Swift.RawRepresentable		
+protocol	conformance SearchResult.ResultCode	Swift.Decodable		
+protocol	conformance SearchResult.ResultCode	Swift.Encodable		
+protocol	conformance FMClient.SearchResult	Swift.Decodable		
+protocol	conformance FMClient.SearchResult	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HttpClient.ClientError	Swift.Hashable		
+protocol	conformance HttpClient.ClientError	Swift.Equatable		
+protocol	conformance HttpClient.ClientError	Swift.Error		
+protocol	conformance FMClient.SearchResultDevice	Swift.Decodable		
+protocol	conformance FMClient.SearchResultDevice	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FMClient.SearchFilterDevice	Swift.Decodable		
+protocol	conformance FMClient.SearchFilterDevice	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	FMClient.SyncCacheType	RawRepresentable		
+extension	FMClient.RequestMethod	RawRepresentable		
+extension	FMClient.SearchResult.ResultCode	RawRepresentable		

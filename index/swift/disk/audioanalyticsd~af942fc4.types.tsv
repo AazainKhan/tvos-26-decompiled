@@ -1,0 +1,149 @@
+kind	type	conformance	member_kind	member
+class	audioanalyticsd.ClientServerInstance			
+class	audioanalyticsd.ClientServerInstance		let	serviceConfiguration
+class	audioanalyticsd.ClientServerInstance		let	clientProcessName
+class	audioanalyticsd.ClientServerInstance		let	logger
+class	audioanalyticsd.ClientServerInstance		let	server
+class	audioanalyticsd.ClientServerInstance		let	pid
+class	audioanalyticsd.ClientServerInstance		let	clientStartDate
+class	audioanalyticsd.ClientServerInstance		var	sessionsByReporterID
+class	audioanalyticsd.ClientServerInstance		var	timeToInvalidation
+class	audioanalyticsd.MobileAssetsHandler			
+class	audioanalyticsd.MobileAssetsHandler		var	downloadedCallback
+class	audioanalyticsd.MobileAssetsHandler		let	downloadOptions
+class	audioanalyticsd.MobileAssetsHandler		let	assetType
+class	audioanalyticsd.MobileAssetsHandler		let	xpcActivityRefreshID
+class	audioanalyticsd.MobileAssetsHandler		let	logger
+class	audioanalyticsd.NonOwningSession			
+class	audioanalyticsd.NonOwningSession		let	clientProcessName
+class	audioanalyticsd.NonOwningSession		let	reporterID
+class	audioanalyticsd.NonOwningSession		let	isSingleMessageSession
+class	audioanalyticsd.NonOwningSession		let	pid
+class	audioanalyticsd.NonOwningSession		let	serviceConfiguration
+class	audioanalyticsd.NonOwningSession		var	session
+struct	audioanalyticsd.MessageRuleResult			
+struct	audioanalyticsd.MessageRuleResult		let	workers
+struct	audioanalyticsd.MessageRuleResult		let	isBroadcast
+struct	audioanalyticsd.MessageRuleResult		let	isDiscardMessage
+class	audioanalyticsd.Server	NSObject		
+class	audioanalyticsd.Server	NSObject	var	systemMonitor
+class	audioanalyticsd.Server	NSObject	let	serverQueue
+class	audioanalyticsd.Server	NSObject	let	mobileAssetsQueue
+class	audioanalyticsd.Server	NSObject	var	clientServerInstances
+class	audioanalyticsd.Server	NSObject	var	xpcConnections
+class	audioanalyticsd.Server	NSObject	var	activeReporterIDs
+class	audioanalyticsd.Server	NSObject	let	clientConnectionMonitorQueue
+class	audioanalyticsd.Server	NSObject	let	clientConnectionMonitorFrequency
+class	audioanalyticsd.Server	NSObject	let	logger
+class	audioanalyticsd.Server	NSObject	let	listener
+class	audioanalyticsd.Server	NSObject	let	singleMessageSession
+class	audioanalyticsd.Server	NSObject	let	config
+class	audioanalyticsd.Session.RetainedMessages			
+class	audioanalyticsd.Session.RetainedMessages		var	retainedMessages
+class	audioanalyticsd.Session.RetainedMessages		let	reporterID
+class	audioanalyticsd.Session.RetainedMessages.MessageQueue			
+class	audioanalyticsd.Session.RetainedMessages.MessageQueue		var	requestCallbacks
+class	audioanalyticsd.Session.RetainedMessages.MessageQueue		var	messages
+class	audioanalyticsd.Session.RetainedMessages.MessageQueue		let	reporterID
+struct	audioanalyticsd.Session.RetainedMessages.CategoryTypePair			
+struct	audioanalyticsd.Session.RetainedMessages.CategoryTypePair		let	category
+struct	audioanalyticsd.Session.RetainedMessages.CategoryTypePair		let	type
+class	audioanalyticsd.Session			
+class	audioanalyticsd.Session		let	reporterID
+class	audioanalyticsd.Session		let	isSingleMessageSession
+class	audioanalyticsd.Session		let	clientProcessName
+class	audioanalyticsd.Session		let	pid
+class	audioanalyticsd.Session		let	serviceConfiguration
+class	audioanalyticsd.Session		var	serviceType
+class	audioanalyticsd.Session		let	server
+class	audioanalyticsd.Session		var	appCategory
+class	audioanalyticsd.Session		var	isStarted
+class	audioanalyticsd.Session		var	startDate
+class	audioanalyticsd.Session		var	configuration
+class	audioanalyticsd.Session		var	previousValues
+class	audioanalyticsd.Session		var	startedWorkers
+class	audioanalyticsd.Session		var	lazy
+class	audioanalyticsd.Session		var	lazy
+class	audioanalyticsd.Session		var	messageHistory
+class	audioanalyticsd.Session		let	logger
+class	audioanalyticsd.Session		let	stopWaitTime
+class	audioanalyticsd.Session		let	workQueue
+class	audioanalyticsd.Session		var	summaryDecoratorWorkers
+class	audioanalyticsd.Session		var	stopSignalTime
+class	audioanalyticsd.Session		var	numProcessedMessages
+class	audioanalyticsd.Session		var	numProcessedMessagesUnique
+class	audioanalyticsd.Session		var	startOnFirstMessageCalled
+struct	audioanalyticsd.SessionInfo			
+struct	audioanalyticsd.SessionInfo		let	serviceType
+struct	audioanalyticsd.SessionInfo		let	reporterID
+struct	audioanalyticsd.SessionInfo		let	isSingleMessageSession
+struct	audioanalyticsd.SessionInfo		let	clientProcessName
+struct	audioanalyticsd.SessionInfo		let	isStarted
+struct	audioanalyticsd.SessionInfo		let	startDate
+struct	audioanalyticsd.SessionInfo		let	configuration
+struct	audioanalyticsd.SessionInfo		let	previousValues
+struct	audioanalyticsd.SessionInfo		let	numProcessedMessages
+struct	audioanalyticsd.SessionInfo		let	numProcessedMessagesUnique
+struct	audioanalyticsd.SessionEvent			
+struct	audioanalyticsd.SessionEvent		let	method
+struct	audioanalyticsd.SessionEvent		let	numMessages
+struct	audioanalyticsd.SessionEvent		let	numUniqueMessages
+struct	audioanalyticsd.SessionEvent		let	reporterID
+struct	audioanalyticsd.SessionEvent		let	isStarted
+struct	audioanalyticsd.SessionEvent		let	clientProcessName
+struct	audioanalyticsd.SessionEvent		let	destroyedWithoutStop
+struct	audioanalyticsd.SessionEvent		let	runningSessionInfo
+enum	audioanalyticsd.SessionMethod			
+enum	audioanalyticsd.SessionMethod		case	start
+enum	audioanalyticsd.SessionMethod		case	signalStop
+enum	audioanalyticsd.SessionMethod		case	stop
+class	audioanalyticsd.SystemMonitor			
+class	audioanalyticsd.SystemMonitor		var	currentFeatureStates
+class	audioanalyticsd.SystemMonitor		let	features
+class	audioanalyticsd.SystemMonitor		let	config
+class	audioanalyticsd.SystemMonitor		let	notificationQueue
+class	audioanalyticsd.SystemMonitor		let	logger
+struct	audioanalyticsd.FeatureState			
+struct	audioanalyticsd.FeatureState		let	featureInfo
+struct	audioanalyticsd.FeatureState		let	value
+struct	audioanalyticsd.FeatureState		var	cachedToken
+struct	audioanalyticsd.FeatureInfo			
+struct	audioanalyticsd.FeatureInfo		let	monitorType
+struct	audioanalyticsd.FeatureInfo		let	name
+struct	audioanalyticsd.FeatureInfo		let	domain
+struct	audioanalyticsd.FeatureInfo		let	notification
+struct	audioanalyticsd.FeatureInfo		let	defaultValue
+struct	audioanalyticsd.FeatureInfo		let	dataType
+enum	audioanalyticsd.Workers			
+protocol	audioanalyticsd.ServerSingletonProtocol			
+protocol	audioanalyticsd.ServerSingletonSessionProtocol			
+protocol	conformance __C.AudioServiceType	protocol descriptor for Equatable		
+protocol	conformance __C.AudioServiceType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.Identifier	protocol descriptor for _HasCustomAnyHashableRepresentation		
+protocol	conformance __C.Identifier	protocol descriptor for RawRepresentable		
+protocol	conformance __C.Identifier	protocol descriptor for _SwiftNewtypeWrapper		
+protocol	conformance __C.Identifier	protocol descriptor for Equatable		
+protocol	conformance __C.Identifier	protocol descriptor for Hashable		
+protocol	conformance __C.Identifier	protocol descriptor for _ObjectiveCBridgeable		
+protocol	conformance __C.AudioEventCategory	protocol descriptor for Hashable		
+protocol	conformance __C.AudioEventCategory	protocol descriptor for Equatable		
+protocol	conformance __C.AudioEventCategory	protocol descriptor for RawRepresentable		
+protocol	conformance __C.AudioEventType	protocol descriptor for Hashable		
+protocol	conformance __C.AudioEventType	protocol descriptor for Equatable		
+protocol	conformance __C.AudioEventType	protocol descriptor for RawRepresentable		
+protocol	conformance __C.MADownloadResult	protocol descriptor for Equatable		
+protocol	conformance __C.MADownloadResult	protocol descriptor for RawRepresentable		
+protocol	conformance audioanalyticsd.ClientServerInstance	protocol descriptor for Equatable		
+protocol	conformance audioanalyticsd.ClientServerInstance	protocol descriptor for Hashable		
+protocol	conformance audioanalyticsd.NonOwningSession	protocol descriptor for SessionProtocol		
+protocol	conformance audioanalyticsd.MessageRuleResult	protocol descriptor for Equatable		
+protocol	conformance audioanalyticsd.Server	audioanalyticsd.ServerSingletonSessionProtocol		
+protocol	conformance audioanalyticsd.Server	audioanalyticsd.ServerSingletonProtocol		
+protocol	conformance RetainedMessages.CategoryTypePair	protocol descriptor for Equatable		
+protocol	conformance RetainedMessages.CategoryTypePair	protocol descriptor for Hashable		
+protocol	conformance audioanalyticsd.SessionMethod	protocol descriptor for CustomStringConvertible		
+protocol	conformance audioanalyticsd.SessionMethod	protocol descriptor for Hashable		
+protocol	conformance audioanalyticsd.SessionMethod	protocol descriptor for Equatable		
+protocol	conformance audioanalyticsd.FeatureInfo	protocol descriptor for Equatable		
+protocol	conformance audioanalyticsd.FeatureInfo	protocol descriptor for Hashable		
+protocol	conformance audioanalyticsd.FeatureState	protocol descriptor for Equatable		

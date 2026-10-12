@@ -1,0 +1,186 @@
+kind	type	conformance	member_kind	member
+struct	SeymourClientServices.AccountChanged			
+enum	SeymourClientServices.WristState			
+enum	SeymourClientServices.WristState		case	on
+enum	SeymourClientServices.WristState		case	off
+class	SeymourClientServices.WristStateObserver			
+struct	SeymourClientServices.MultiUserGroupActivity			
+struct	SeymourClientServices.MultiUserGroupActivity		let	activity
+struct	SeymourClientServices.MultiUserGroupActivity		var	activityMetadata
+enum	SeymourClientServices.MultiUserGroupActivity.CodingKeys			
+enum	SeymourClientServices.MultiUserGroupActivity.CodingKeys		case	activity
+enum	SeymourClientServices.MultiUserGroupActivity.CodingKeys		case	activityMetadata
+enum	SeymourClientServices.AccountState			
+enum	SeymourClientServices.AccountState		case	enabled
+enum	SeymourClientServices.AccountState		case	disabled
+enum	SeymourClientServices.AccountState		case	unknown
+class	SeymourClientServices.RequestCoalescer			
+class	SeymourClientServices.RequestCoalescer		var	state
+enum	SeymourClientServices.RequestCoalescer.State			
+enum	SeymourClientServices.RequestCoalescer.State		case	active
+enum	SeymourClientServices.RequestCoalescer.State		case	idle
+enum	SeymourClientServices.WristMonitorError			
+enum	SeymourClientServices.WristMonitorError		case	unsupportedPlatform
+struct	SeymourClientServices.WristStateChanged			
+struct	SeymourClientServices.WristStateChanged		let	state
+enum	SeymourClientServices.AccountType			
+enum	SeymourClientServices.AccountType		case	iTunesStore
+enum	SeymourClientServices.AccountType		case	apple
+enum	SeymourClientServices.AccountError			
+enum	SeymourClientServices.AccountError		case	noAccount
+enum	SeymourClientServices.AccountError		case	noMatchingAccount
+enum	SeymourClientServices.AccountError		case	noPrimaryAccount
+enum	SeymourClientServices.AccountError		case	underThirteen
+enum	SeymourClientServices.AccountError		case	noFirstName
+enum	SeymourClientServices.AccountError		case	noContact
+struct	SeymourClientServices.NotificationSettingsProvider			
+struct	SeymourClientServices.NotificationSettingsProvider		let	bag
+struct	SeymourClientServices.NotificationSettingConstants			
+struct	SeymourClientServices.AchievementProgressEvaluator			
+struct	SeymourClientServices.AchievementProgressEvaluator		let	progressEnvironment
+struct	SeymourClientServices.AchievementProgressEvaluator		let	transactionCoordinator
+enum	SeymourClientServices.RequestCoalescerError			
+enum	SeymourClientServices.RequestCoalescerError		case	noActiveRequest
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache			
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache		var	state
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache		let	catalogClient
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache		let	contentAvailabilityClient
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache		let	eventHub
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache		let	networkEvaluator
+class	SeymourClientServices.SummaryShelfLockupDescriptorsCache		let	subscriptionToken
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCache.State			
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCache.State		case	fetching
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCache.State		case	fetched
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCache.State		case	failed
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCache.State		case	idle
+struct	SeymourClientServices.SummaryShelfLockupDescriptorsCacheUpdated			
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCacheError			
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCacheError		case	inactive
+enum	SeymourClientServices.SummaryShelfLockupDescriptorsCacheError		case	noCachedShelfLockupDescriptors
+enum	SeymourClientServices.NotificationSettingError			
+enum	SeymourClientServices.NotificationSettingError		case	updateSettingsFailedToCreatePromise
+enum	SeymourClientServices.NotificationSettingError		case	fetchSettingsEmptyResult
+struct	SeymourClientServices.AccountSettingConstants			
+struct	SeymourClientServices.AppInstallRequestProvider			
+class	SeymourClientServices.AppRecordObserver	NSObject		
+class	SeymourClientServices.AppRecordObserver	NSObject	var	onRecordUpdated
+class	SeymourClientServices.AppRecordObserver	NSObject	let	query
+class	SeymourClientServices.AppRecordObserver	NSObject	let	bundleIdentifier
+enum	SeymourClientServices.AppInstallError			
+enum	SeymourClientServices.AppInstallError		case	alreadyInstalled
+enum	SeymourClientServices.AppInstallError		case	alreadyQueuedInstallRequest
+enum	SeymourClientServices.AppInstallError		case	installStatusUpdateTimeout
+enum	SeymourClientServices.AppInstallError		case	noApp
+enum	SeymourClientServices.AppInstallError		case	missingError
+enum	SeymourClientServices.AppInstallError		case	unknownError
+enum	SeymourClientServices.AppInstallError		case	unsupportedPlatform
+struct	SeymourClientServices.AppInstallConstants			
+class	SeymourClientServices.SystemAppInstaller			
+class	SeymourClientServices.SystemAppInstaller		var	onProgressUpdated
+class	SeymourClientServices.SystemAppInstaller		let	bundleIdentifier
+class	SeymourClientServices.SystemAppInstaller		let	appRecordObserver
+class	SeymourClientServices.SystemAppInstaller		var	state
+class	SeymourClientServices.SystemAppInstaller		let	lock
+class	SeymourClientServices.SystemAppInstaller		let	installRequestProvider
+class	SeymourClientServices.SystemAppInstaller		let	recordObserverProvider
+class	SeymourClientServices.SystemAppInstaller		let	timerProvider
+enum	SeymourClientServices.SystemAppInstaller.State			
+enum	SeymourClientServices.SystemAppInstaller.State		case	requested
+enum	SeymourClientServices.SystemAppInstaller.State		case	active
+enum	SeymourClientServices.SystemAppInstaller.State		case	idle
+enum	SeymourClientServices.SystemAppInstaller.State		case	preflight
+enum	SeymourClientServices.AppInstallRequestType			
+enum	SeymourClientServices.AppInstallRequestType		case	systemApp
+struct	SeymourClientServices.AppInstallerProvider			
+struct	SeymourClientServices.AppRecordObserverProvider			
+class	SeymourClientServices.AccountProvider			
+class	SeymourClientServices.AccountProvider		let	accountStore
+class	SeymourClientServices.AccountProvider		let	eventHub
+class	SeymourClientServices.AccountProvider		var	cachedPrimaryAccount
+enum	SeymourClientServices.DataError			
+enum	SeymourClientServices.DataError		case	randomValueGenerationFailed
+protocol	SeymourClientServices.WristStateObserving			
+protocol	SeymourClientServices.NotificationSettingsProviding			
+protocol	SeymourClientServices.SummaryShelfLockupDescriptorsCaching			
+protocol	SeymourClientServices.AccountStoring			
+protocol	SeymourClientServices.AppInstallRequestProviding			
+protocol	SeymourClientServices.AppRecordObserving			
+protocol	SeymourClientServices.AppInstalling			
+protocol	SeymourClientServices.AppRecord			
+protocol	SeymourClientServices.AppInstallRequesting			
+protocol	SeymourClientServices.AppInstallerProviding			
+protocol	SeymourClientServices.AppRecordObserverProviding			
+protocol	SeymourClientServices.AccountProviding			
+protocol	SeymourClientServices.RemoteBrowsingAccountSerializable			
+protocol	conformance SeymourClientServices.AccountChanged	SeymourClient.Event		
+protocol	conformance __C.HTTPCookiePropertyKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.HTTPCookiePropertyKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.HTTPCookiePropertyKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.HTTPCookiePropertyKey	Swift.Equatable: Foundation		
+protocol	conformance __C.HTTPCookiePropertyKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.HTTPCookiePropertyKey	Swift.Hashable: Foundation		
+protocol	conformance SeymourClientServices.WristState	Swift.Equatable		
+protocol	conformance SeymourClientServices.WristState	Swift.Hashable		
+protocol	conformance SeymourClientServices.WristStateObserver	SeymourClientServices.WristStateObserving		
+protocol	conformance SeymourClientServices.MultiUserGroupActivity	GroupActivities.GroupActivity		
+protocol	conformance SeymourClientServices.MultiUserGroupActivity	Swift.Decodable		
+protocol	conformance SeymourClientServices.MultiUserGroupActivity	Swift.Encodable		
+protocol	conformance SeymourClientServices.MultiUserGroupActivity	Swift.Equatable		
+protocol	conformance SeymourClientServices.MultiUserGroupActivity	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SeymourClientServices.AccountState	Swift.Equatable		
+protocol	conformance SeymourClientServices.AccountState	Swift.Hashable		
+protocol	conformance SeymourClientServices.AccountState	Swift.RawRepresentable		
+protocol	conformance SeymourClientServices.RequestCoalescer	Swift.Actor		
+protocol	conformance SeymourClientServices.WristMonitorError	Swift.Equatable		
+protocol	conformance SeymourClientServices.WristMonitorError	Swift.Hashable		
+protocol	conformance SeymourClientServices.WristMonitorError	Swift.Error		
+protocol	conformance SeymourClientServices.WristMonitorError	SeymourClient.AnalyticsErrorTransformable		
+protocol	conformance SeymourClientServices.WristMonitorError	SeymourClient.AnalyticsErrorProtocol		
+protocol	conformance SeymourClientServices.WristStateChanged	SeymourClient.Event		
+protocol	conformance SeymourClientServices.AccountType	Swift.Equatable		
+protocol	conformance SeymourClientServices.AccountType	Swift.Hashable		
+protocol	conformance SeymourClientServices.AccountError	Swift.Equatable		
+protocol	conformance SeymourClientServices.AccountError	Swift.Hashable		
+protocol	conformance SeymourClientServices.AccountError	Swift.Error		
+protocol	conformance SeymourClientServices.AccountError	SeymourClient.AnalyticsErrorTransformable		
+protocol	conformance SeymourClientServices.AccountError	SeymourClient.AnalyticsErrorProtocol		
+protocol	conformance SeymourClientServices.AccountError	SeymourCore.ErrorMatchingProtocol		
+protocol	conformance SeymourClientServices.NotificationSettingsProvider	SeymourClientServices.NotificationSettingsProviding		
+protocol	conformance SeymourClientServices.RequestCoalescerError	Swift.Equatable		
+protocol	conformance SeymourClientServices.RequestCoalescerError	Swift.Hashable		
+protocol	conformance SeymourClientServices.RequestCoalescerError	Swift.Error		
+protocol	conformance SeymourClientServices.RequestCoalescerError	SeymourCore.ErrorMatchingProtocol		
+protocol	conformance SeymourClientServices.SummaryShelfLockupDescriptorsCache	Swift.Actor		
+protocol	conformance SeymourClientServices.SummaryShelfLockupDescriptorsCache	SeymourClientServices.SummaryShelfLockupDescriptorsCaching		
+protocol	conformance SeymourClientServices.SummaryShelfLockupDescriptorsCacheUpdated	SeymourClient.Event		
+protocol	conformance SeymourClientServices.SummaryShelfLockupDescriptorsCacheError	Swift.Hashable		
+protocol	conformance SeymourClientServices.SummaryShelfLockupDescriptorsCacheError	Swift.Equatable		
+protocol	conformance SeymourClientServices.SummaryShelfLockupDescriptorsCacheError	Swift.Error		
+protocol	conformance SeymourClientServices.NotificationSettingError	Swift.Hashable		
+protocol	conformance SeymourClientServices.NotificationSettingError	Swift.Equatable		
+protocol	conformance SeymourClientServices.NotificationSettingError	Swift.Error		
+protocol	conformance ACAccountStore	SeymourClientServices.AccountStoring		
+protocol	conformance SeymourCore.RemoteBrowsingAccount	SeymourClientServices.RemoteBrowsingAccountSerializable		
+protocol	conformance SeymourCore.RemoteBrowsingAccountType	SeymourClientServices.RemoteBrowsingAccountSerializable		
+protocol	conformance SeymourCore.RemoteBrowsingAppleAccount	SeymourClientServices.RemoteBrowsingAccountSerializable		
+protocol	conformance SeymourClientServices.AppInstallRequestProvider	SeymourClientServices.AppInstallRequestProviding		
+protocol	conformance SeymourClientServices.AppRecordObserver	SeymourClientServices.AppRecordObserving		
+protocol	conformance SeymourClientServices.AppInstallError	Swift.Equatable		
+protocol	conformance SeymourClientServices.AppInstallError	Swift.Hashable		
+protocol	conformance SeymourClientServices.AppInstallError	Swift.Error		
+protocol	conformance SeymourClientServices.AppInstallError	SeymourCore.ErrorMatchingProtocol		
+protocol	conformance SeymourClientServices.SystemAppInstaller	SeymourClientServices.AppInstalling		
+protocol	conformance ASDApp	SeymourClientServices.AppRecord		
+protocol	conformance ASDInstallApps	SeymourClientServices.AppInstallRequesting		
+protocol	conformance SeymourClientServices.AppInstallerProvider	SeymourClientServices.AppInstallerProviding		
+protocol	conformance SeymourClientServices.AppRecordObserverProvider	SeymourClientServices.AppRecordObserverProviding		
+protocol	conformance SeymourCore.RemoteBrowsingAppleMediaServicesAccount	SeymourClientServices.RemoteBrowsingAccountSerializable		
+protocol	conformance SeymourClientServices.AccountProvider	Swift.Actor		
+protocol	conformance SeymourClientServices.AccountProvider	SeymourClientServices.AccountProviding		
+protocol	conformance SeymourClientServices.DataError	Swift.Error		
+extension	SeymourClientServices.AccountState	RawRepresentable		

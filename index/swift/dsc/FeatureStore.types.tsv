@@ -1,0 +1,135 @@
+kind	type	conformance	member_kind	member
+class	FeatureStore.AceObjectFeatureWrapper	FeatureStore.BaseFeatureWrapper A		
+class	FeatureStore.BaseFeatureWrapper			
+class	FeatureStore.BaseFeatureWrapper		let	feature
+class	FeatureStore.BaseFeatureWrapper		let	interactionId
+class	FeatureStore.BaseFeatureWrapper		let	dataVersion
+enum	FeatureStore.CompressionPolicy			
+enum	FeatureStore.CompressionPolicy		case	doNotCompress
+enum	FeatureStore.CompressionPolicy		case	lzfse
+enum	FeatureStore.CompressionPolicy		case	lz4
+enum	FeatureStore.CompressionPolicy		case	lzma
+enum	FeatureStore.CompressionPolicy		case	zlib
+class	FeatureStore.FeatureStoreBiomeEvent	NSObject		
+class	FeatureStore.FeatureStoreBiomeEvent	NSObject	let	interactionId
+class	FeatureStore.FeatureStoreBiomeEvent	NSObject	let	featureData
+class	FeatureStore.FeatureStoreBiomeEvent	NSObject	var	timestamp
+class	FeatureStore.FeatureStoreBiomeEvent	NSObject	var	dataVersion
+class	FeatureStore.FeatureStoreBiomeEvent	NSObject	var	compressionPolicy
+enum	FeatureStore.FeatureStoreBiomeEvent.CodingKeys			
+enum	FeatureStore.FeatureStoreBiomeEvent.CodingKeys		case	interactionId
+enum	FeatureStore.FeatureStoreBiomeEvent.CodingKeys		case	feature
+enum	FeatureStore.FeatureStoreBiomeEvent.CodingKeys		case	dataVersion
+enum	FeatureStore.FeatureStoreBiomeEvent.CodingKeys		case	compressionPolicy
+enum	FeatureStore.CompressionPolicy.CodingKeys			
+enum	FeatureStore.CompressionPolicy.CodingKeys		case	doNotCompress
+enum	FeatureStore.CompressionPolicy.CodingKeys		case	lzfse
+enum	FeatureStore.CompressionPolicy.CodingKeys		case	lz4
+enum	FeatureStore.CompressionPolicy.CodingKeys		case	lzma
+enum	FeatureStore.CompressionPolicy.CodingKeys		case	zlib
+enum	FeatureStore.CompressionPolicy.DoNotCompressCodingKeys			
+enum	FeatureStore.CompressionPolicy.LzfseCodingKeys			
+enum	FeatureStore.CompressionPolicy.Lz4CodingKeys			
+enum	FeatureStore.CompressionPolicy.LzmaCodingKeys			
+enum	FeatureStore.CompressionPolicy.ZlibCodingKeys			
+class	FeatureStore.NSCodingFeatureWrapper	FeatureStore.BaseFeatureWrapper A<A: NSObject, B>		
+class	FeatureStore.PBCodableFeatureWrapper	FeatureStore.BaseFeatureWrapper A<A: PBCodable, B>		
+class	FeatureStore.SerializableFeatureWrapper	FeatureStore.BaseFeatureWrapper A<A: FeatureStore.Serializable>		
+struct	FeatureStore.JSONCoder<A	Swift.Decodable, A: Swift.Encodable>		
+struct	FeatureStore.NSCodingCoder<A	NSObject, B, A: NSCoding>		
+struct	FeatureStore.PBCodableCoder<A	PBCodable, B>		
+class	FeatureStore.FeatureStoreService	NSObject		
+class	FeatureStore.FeatureStoreService.AccessorProvider			
+class	FeatureStore.FeatureStoreService.AccessorProvider		let	lock
+enum	FeatureStore.InjectionCursor			
+class	FeatureStore.FeatureStoreStreamHandle			
+class	FeatureStore.FeatureStoreStreamHandle		let	eventHandler
+class	FeatureStore.FeatureStoreStreamScheduler			
+class	FeatureStore.FeatureStoreStreamScheduler		let	state
+struct	FeatureStore.FeatureStoreStreamScheduler.State			
+struct	FeatureStore.FeatureStoreStreamScheduler.State		var	timer
+struct	FeatureStore.FeatureStoreStreamScheduler.State		var	streams
+class	FeatureStore.AceObjectStreamAccessor	FeatureStore.BaseStreamAccessor A		
+class	FeatureStore.BaseStreamAccessor			
+class	FeatureStore.BaseStreamAccessor		let	stream
+class	FeatureStore.FeatureStoreStreamAccessor			
+class	FeatureStore.FeatureStoreStreamAccessor		let	config
+class	FeatureStore.FeatureStoreStreamAccessor		let	stream
+class	FeatureStore.FeatureStoreStreamAccessor		let	streamSource
+class	FeatureStore.FeatureStoreStreamBookmark			
+class	FeatureStore.FeatureStoreStreamBookmark		var	biomeBookmark
+class	FeatureStore.FeatureStoreNSCodingAccessor	FeatureStore.BaseStreamAccessor A<A: NSObject, B>		
+class	FeatureStore.FeatureStoreNSCodingAccessorWithType	FeatureStore.BaseStreamAccessor A<A: NSObject, B>		
+class	FeatureStore.PBCodableStreamAccessor	FeatureStore.BaseStreamAccessor A<A: PBCodable, B>		
+class	FeatureStore.SerializableStreamAccessor	FeatureStore.BaseStreamAccessor A<A: FeatureStore.Serializable>		
+struct	FeatureStore.InteractionWrapper			
+struct	FeatureStore.InteractionWrapper		let	interactionId
+struct	FeatureStore.InteractionWrapper		let	timestamp
+struct	FeatureStore.InteractionWrapper		let	feature
+enum	FeatureStore.FeatureStoreError			
+enum	FeatureStore.FeatureStoreError		case	retrieveFailed
+enum	FeatureStore.FeatureStoreError		case	insertFailed
+enum	FeatureStore.FeatureStoreError		case	injectFailed
+enum	FeatureStore.FeatureStoreError		case	disabled
+enum	FeatureStore.Logger			
+struct	FeatureStore.LogSignpost			
+struct	FeatureStore.LogSignpost		let	name
+struct	FeatureStore.LogSignpost		let	state
+struct	FeatureStore.LogSignpost		let	signposter
+class	FeatureStore.StreamQuery	NSObject		
+class	FeatureStore.StreamQuery	NSObject	var	startDate
+class	FeatureStore.StreamQuery	NSObject	var	endDate
+class	FeatureStore.StreamQuery	NSObject	var	interactionIds
+class	FeatureStore.StreamQuery	NSObject	var	taskId
+protocol	FeatureStore.Coder	CodableType		
+protocol	FeatureStore.Serializable	DeserializeType		
+protocol	FeatureStore.FeatureMetadata			
+protocol	FeatureStore.StreamAccessor	FeatureType		
+protocol	conformance FeatureStore.CompressionPolicy	Swift.Equatable		
+protocol	conformance FeatureStore.CompressionPolicy	Swift.Hashable		
+protocol	conformance FeatureStore.CompressionPolicy	Swift.Decodable		
+protocol	conformance FeatureStore.CompressionPolicy	Swift.Encodable		
+protocol	conformance FeatureStoreBiomeEvent.CodingKeys	Swift.Equatable		
+protocol	conformance FeatureStoreBiomeEvent.CodingKeys	Swift.Hashable		
+protocol	conformance FeatureStoreBiomeEvent.CodingKeys	Swift.RawRepresentable		
+protocol	conformance FeatureStoreBiomeEvent.CodingKeys	Swift.CodingKey		
+protocol	conformance FeatureStoreBiomeEvent.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FeatureStoreBiomeEvent.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FeatureStore.FeatureStoreBiomeEvent	Swift.Decodable		
+protocol	conformance FeatureStore.FeatureStoreBiomeEvent	Swift.Encodable		
+protocol	conformance FeatureStore.FeatureStoreBiomeEvent	FeatureStore.FeatureMetadata		
+protocol	conformance ZlibCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ZlibCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LzmaCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LzmaCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Lz4CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Lz4CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LzfseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LzfseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DoNotCompressCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DoNotCompressCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DoNotCompressCodingKeys	Swift.CodingKey		
+protocol	conformance LzfseCodingKeys	Swift.CodingKey		
+protocol	conformance Lz4CodingKeys	Swift.CodingKey		
+protocol	conformance LzmaCodingKeys	Swift.CodingKey		
+protocol	conformance ZlibCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance INIntent	FeatureStore.Serializable		
+protocol	conformance INIntentResponse	FeatureStore.Serializable		
+protocol	conformance FeatureStore.JSONCoder	FeatureStore.Coder		
+protocol	conformance FeatureStore.NSCodingCoder	FeatureStore.Coder		
+protocol	conformance FeatureStore.PBCodableCoder	FeatureStore.Coder		
+protocol	conformance FeatureStore.FeatureStoreStreamAccessor	FeatureStore.StreamAccessor		
+protocol	conformance FeatureStore.InteractionWrapper	FeatureStore.FeatureMetadata		
+protocol	conformance FeatureStore.FeatureStoreError	Swift.Error		
+extension	FeatureStore.FeatureStoreBiomeEvent.CodingKeys	RawRepresentable		
+extension	INIntent	Serializable		
+extension	INIntentResponse	Serializable		
+extension	FeatureStore.JSONCoder	Coder		
+extension	FeatureStore.NSCodingCoder	Coder		
+extension	FeatureStore.PBCodableCoder	Coder		
+extension	FeatureStore.FeatureStoreStreamAccessor	StreamAccessor		

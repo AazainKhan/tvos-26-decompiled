@@ -1,0 +1,17 @@
+owner	kind	declaration
+ACSENetworkRequestController	-	- (id)initWithSession:(id)session numberOfSecondsBetweenRetries:(id)retries;
+ACSENetworkRequestController	-	- (id)initWithSession:(id)session;
+ACSENetworkRequestController	-	- (void)execute:(id)execute retryableStatusCodes:(id)codes completion:(id /* block */)completion;
+ACSENetworkRequestController	-	- (void)executeRequest:(id)request acceptedStatusCodes:(id)codes completion:(id /* block */)completion;
+ACSERetryController	-	- (_Bool)executeBlock;
+ACSERetryController	-	- (_Bool)retryAfterSeconds:(unsigned long long)seconds;
+ACSERetryController	-	- (id)initWithMaxNumberOfRetries:(unsigned long long)retries block:(id /* block */)block;
+ACSERetryController	property	@property (readonly, nonatomic) unsigned long long numberOfAttempts;
+NSError(ACSEError)	+	+ (id)forACSEError:(long long)acseerror;
+_TtC14ACSEFoundation16BAARequestSigner	-	- (id)init;
+_TtC14ACSEFoundation16BAARequestSigner	-	- (id)initWithDate:(id)date;
+_TtC14ACSEFoundation16BAARequestSigner	-	- (void)signWithRequest:(NSURLRequest *)request completionHandler:(id /* block */)handler;
+_TtC14ACSEFoundation16BAARequestSigner	property	@property (nonatomic, readonly) NSDate *date;
+_TtC14ACSEFoundation16TaskLimitersObjC	-	- (id)init;
+_TtC14ACSEFoundation16TaskLimitersObjC	-	- (void)performClosureNoParamsWithIdentifier:(id)identifier task:(id /* block */)task completion:(id /* block */)completion;
+_TtC14ACSEFoundation16TaskLimitersObjC	-	- (void)performWithIdentifier:(id)identifier task:(id /* block */)task completion:(id /* block */)completion;

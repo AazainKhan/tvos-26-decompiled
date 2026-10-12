@@ -1,0 +1,649 @@
+kind	type	conformance	member_kind	member
+class	FMIPClientXPCService.XPCSessionManager			
+class	FMIPClientXPCService.XPCSessionManager		var	listeners
+class	FMIPClientXPCService.RapportDiscovery			
+class	FMIPClientXPCService.RapportDiscovery		var	companionLink
+class	FMIPClientXPCService.RapportDiscovery		var	deviceDiscoveredHandler
+class	FMIPClientXPCService.RapportDiscovery		var	discoveryStoppedHandler
+class	FMIPClientXPCService.RapportDiscovery		let	serialQueue
+class	FMIPClientXPCService.RapportDiscovery		var	internalDiscoveredDevices
+enum	FMIPClientXPCService.RapportDiscovery.DiscoveryError			
+enum	FMIPClientXPCService.RapportDiscovery.DiscoveryError		case	unknown
+enum	FMIPClientXPCService.RapportDiscovery.DiscoveryError		case	interrupted
+enum	FMIPClientXPCService.RapportDiscovery.DiscoveryError		case	invalidated
+class	FMIPClientXPCService.DeviceSearchListRequestContent	FMIPClientXPCService.FMIPSiriBaseRequestContent		
+struct	FMIPClientXPCService.DeviceSearchRequestBody			
+struct	FMIPClientXPCService.DeviceSearchRequestBody		let	devices
+enum	FMIPClientXPCService.DeviceSearchRequestBody.CodingKeys			
+enum	FMIPClientXPCService.DeviceSearchRequestBody.CodingKeys		case	devices
+struct	FMIPClientXPCService.DefaultResponseContent			
+struct	FMIPClientXPCService.DefaultResponseContent		let	configuration
+enum	FMIPClientXPCService.DefaultResponseContent.CodingKeys			
+enum	FMIPClientXPCService.DefaultResponseContent.CodingKeys		case	configuration
+struct	FMIPClientXPCService.ConfigurationResponseContent			
+struct	FMIPClientXPCService.ConfigurationResponseContent		let	nearbyScanDurationValue
+struct	FMIPClientXPCService.ConfigurationResponseContent		let	deviceNameSyncInterval
+struct	FMIPClientXPCService.ConfigurationResponseContent		let	nearbyScanWhileAuthenticated
+enum	FMIPClientXPCService.ConfigurationResponseContent.CodingKeys			
+enum	FMIPClientXPCService.ConfigurationResponseContent.CodingKeys		case	nearbyScanDurationValue
+enum	FMIPClientXPCService.ConfigurationResponseContent.CodingKeys		case	deviceNameSyncInterval
+enum	FMIPClientXPCService.ConfigurationResponseContent.CodingKeys		case	nearbyScanWhileAuthenticated
+struct	FMIPClientXPCService.FMIPPlaySoundDevice			
+struct	FMIPClientXPCService.FMIPPlaySoundDevice		var	serverId
+struct	FMIPClientXPCService.FMIPPlaySoundDevice		let	locality
+struct	FMIPClientXPCService.FMIPPlaySoundDevice		let	safetyWarningConfirmed
+enum	FMIPClientXPCService.FMIPPlaySoundDevice.CodingKeys			
+enum	FMIPClientXPCService.FMIPPlaySoundDevice.CodingKeys		case	serverId
+enum	FMIPClientXPCService.FMIPPlaySoundDevice.CodingKeys		case	locality
+enum	FMIPClientXPCService.FMIPPlaySoundDevice.CodingKeys		case	safetyWarningConfirmed
+class	FMIPClientXPCService.FMIPRequestCredential			
+class	FMIPClientXPCService.FMIPRequestCredential		var	authToken
+class	FMIPClientXPCService.FMIPRequestCredential		var	personId
+class	FMIPClientXPCService.FMIPRequestCredential		var	hostName
+struct	FMIPClientXPCService.FMIPSearchResponseDevice			
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		var	serverId
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	deviceName
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	deviceClass
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	productName
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	productType
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	firstName
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	lastName
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	ownerDsid
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	discoveryId
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	thisDevice
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	needsSafety
+struct	FMIPClientXPCService.FMIPSearchResponseDevice		let	pairedDevices
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys			
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	firstName
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	lastName
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	ownerDsid
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	serverId
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	deviceName
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	deviceClass
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	productName
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	productType
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	discoveryId
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	thisDevice
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	needsSafety
+enum	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys		case	pairedDevices
+class	FMIPClientXPCService.ServerInteractionController			
+class	FMIPClientXPCService.ServerInteractionController		let	deviceInformationProvider
+class	FMIPClientXPCService.ServerInteractionController		let	clientConfigurationCache
+class	FMIPClientXPCService.ServerInteractionController		var	authenticationProvider
+class	FMIPClientXPCService.ServerInteractionController		let	apsTokenProvider
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError			
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	unknown
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	invalidResponse
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	credentialUnauthorized
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	missingAccountCredential
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	timedOut
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	redirected
+enum	FMIPClientXPCService.ServerInteractionController.ServerInteractionError		case	noAuthenticationProvider
+class	FMIPClientXPCService.NearbyDeviceFinder			
+class	FMIPClientXPCService.NearbyDeviceFinder		let	uuid
+class	FMIPClientXPCService.NearbyDeviceFinder		let	shortTimoutDuration
+class	FMIPClientXPCService.NearbyDeviceFinder		var	shortTimeoutTimer
+class	FMIPClientXPCService.NearbyDeviceFinder		var	discoveredDevices
+class	FMIPClientXPCService.NearbyDeviceFinder		let	dispatchQueue
+class	FMIPClientXPCService.NearbyDeviceFinder		var	scanStartDate
+class	FMIPClientXPCService.NearbyDeviceFinder		var	scanStopDate
+enum	FMIPClientXPCService.NearbyDeviceFinder.FinderError			
+enum	FMIPClientXPCService.NearbyDeviceFinder.FinderError		case	unknown
+enum	FMIPClientXPCService.NearbyDeviceFinder.FinderError		case	searchAlreadyStarted
+enum	FMIPClientXPCService.NearbyDeviceFinder.FinderError		case	timerFiredNoDevicesFound
+enum	FMIPClientXPCService.NearbyDeviceFinder.FinderError		case	discoveryEndedNoDevicesFound
+enum	FMIPClientXPCService.NearbyDeviceFinder.FinderError		case	discoveryDisabled
+struct	FMIPClientXPCService.RedirectedHost			
+struct	FMIPClientXPCService.RedirectedHost		let	host
+struct	FMIPClientXPCService.RedirectedHost		let	personId
+enum	FMIPClientXPCService.RedirectedHost.CodingKeys			
+enum	FMIPClientXPCService.RedirectedHost.CodingKeys		case	host
+enum	FMIPClientXPCService.RedirectedHost.CodingKeys		case	personId
+struct	FMIPClientXPCService.ClientContextRequestContent			
+struct	FMIPClientXPCService.ClientContextRequestContent		var	headerDictionary
+struct	FMIPClientXPCService.ClientContextRequestContent		var	bodyDictionary
+struct	FMIPClientXPCService.ClientContextProperties			
+struct	FMIPClientXPCService.ClientContextProperties		let	udid
+struct	FMIPClientXPCService.ClientContextProperties		let	source
+struct	FMIPClientXPCService.ClientContextProperties		let	timestamp
+struct	FMIPClientXPCService.ClientContextProperties		let	apsToken
+struct	FMIPClientXPCService.ClientContextProperties		let	unlockState
+struct	FMIPClientXPCService.ClientContextProperties		let	deviceListVersion
+struct	FMIPClientXPCService.ClientContextRequestBody<A	protocol descriptor for ResponseSerializable>		
+struct	FMIPClientXPCService.ClientContextRequestBody<A	protocol descriptor for ResponseSerializable>	let	properties
+enum	FMIPClientXPCService.ClientContextRequestBody.CodingKeys<A	protocol descriptor for ResponseSerializable>		
+enum	FMIPClientXPCService.ClientContextRequestBody.CodingKeys<A	protocol descriptor for ResponseSerializable>	case	properties
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys			
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys		case	udid
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys		case	source
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys		case	timestamp
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys		case	apsToken
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys		case	unlockState
+enum	FMIPClientXPCService.ClientContextProperties.CodingKeys		case	deviceListVersion
+class	FMIPClientXPCService.ServerSession	NSObject		
+class	FMIPClientXPCService.ServerSession	NSObject	let	connection
+class	FMIPClientXPCService.ServerSession	NSObject	let	concurrentQueue
+class	FMIPClientXPCService.ServerSession	NSObject	let	voiceAssistantCacheQueue
+class	FMIPClientXPCService.ServerSession	NSObject	let	identifier
+class	FMIPClientXPCService.ServerSession	NSObject	var	clientProxyInstance
+class	FMIPClientXPCService.ServerSession	NSObject	let	activeScanSerialQueue
+class	FMIPClientXPCService.ServerSession	NSObject	var	activeDeviceScans
+class	FMIPClientXPCService.ServerSession	NSObject	let	clientConfigurationCache
+class	FMIPClientXPCService.ServerSession	NSObject	let	deviceInformationProvider
+class	FMIPClientXPCService.ServerSession	NSObject	var	lazy
+class	FMIPClientXPCService.ServerSession	NSObject	var	sessionInfo
+enum	FMIPClientXPCService.ServerSession.ServerSessionError			
+enum	FMIPClientXPCService.ServerSession.ServerSessionError		case	unknown
+enum	FMIPClientXPCService.ServerSession.ServerSessionError		case	invalidParameterValue
+enum	FMIPClientXPCService.ServerSession.ServerSessionError		case	missingSessionInfo
+enum	FMIPClientXPCService.ServerSession.ServerSessionError		case	disabled
+struct	FMIPClientXPCService.FMIPSearchRequestDevice			
+struct	FMIPClientXPCService.FMIPSearchRequestDevice		let	deviceName
+struct	FMIPClientXPCService.FMIPSearchRequestDevice		let	deviceClass
+struct	FMIPClientXPCService.FMIPSearchRequestDevice		let	productName
+struct	FMIPClientXPCService.FMIPSearchRequestDevice		let	productType
+struct	FMIPClientXPCService.FMIPSearchRequestDevice		let	ownerName
+struct	FMIPClientXPCService.FMIPSearchRequestDevice		let	ownerDsid
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys			
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys		case	ownerName
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys		case	ownerDsid
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys		case	deviceName
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys		case	deviceClass
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys		case	productName
+enum	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys		case	productType
+class	FMIPClientXPCService.FMIPSiriBaseRequestContent			
+class	FMIPClientXPCService.FMIPSiriBaseRequestContent		var	headerDictionary
+class	FMIPClientXPCService.FMIPSiriBaseRequestContent		var	bodyDictionary
+struct	FMIPClientXPCService.UserAgentHeader			
+struct	FMIPClientXPCService.UserAgentHeader		let	userAgent
+enum	FMIPClientXPCService.UserAgentHeader.CodingKeys			
+enum	FMIPClientXPCService.UserAgentHeader.CodingKeys		case	userAgent
+class	FMIPClientXPCService.VoiceAssistantSyncCache			
+class	FMIPClientXPCService.VoiceAssistantSyncCache		let	serialQueue
+class	FMIPClientXPCService.VoiceAssistantSyncCache		let	authenticationProvider
+class	FMIPClientXPCService.VoiceAssistantSyncCache		var	apsTokenProvider
+class	FMIPClientXPCService.VoiceAssistantSyncCache		var	cacheValidity
+class	FMIPClientXPCService.VoiceAssistantSyncCache		let	devicesDiskCache
+class	FMIPClientXPCService.VoiceAssistantSyncCache		let	invalidationDiskCache
+struct	FMIPClientXPCService.CachedVoiceAssistantSyncInfo			
+struct	FMIPClientXPCService.CachedVoiceAssistantSyncInfo		let	devices
+struct	FMIPClientXPCService.CachedVoiceAssistantSyncInfo		let	createdDate
+struct	FMIPClientXPCService.CachedVoiceAssistantSyncInfo		let	serverAnchor
+struct	FMIPClientXPCService.VoiceAssistantSyncInfo			
+struct	FMIPClientXPCService.VoiceAssistantSyncInfo		let	devices
+struct	FMIPClientXPCService.VoiceAssistantSyncInfo		let	createdDate
+struct	FMIPClientXPCService.VoiceAssistantSyncInfo		let	ownerPersonId
+struct	FMIPClientXPCService.VoiceAssistantSyncInfo		let	ownerAPSToken
+struct	FMIPClientXPCService.VoiceAssistantSyncInfo		let	serverAnchor
+struct	FMIPClientXPCService.CacheInvalidationMarker			
+struct	FMIPClientXPCService.CacheInvalidationMarker		let	invalidationDate
+enum	FMIPClientXPCService.VoiceAssistantSyncInfo.CodingKeys			
+enum	FMIPClientXPCService.VoiceAssistantSyncInfo.CodingKeys		case	devices
+enum	FMIPClientXPCService.VoiceAssistantSyncInfo.CodingKeys		case	createdDate
+enum	FMIPClientXPCService.VoiceAssistantSyncInfo.CodingKeys		case	ownerPersonId
+enum	FMIPClientXPCService.VoiceAssistantSyncInfo.CodingKeys		case	ownerAPSToken
+enum	FMIPClientXPCService.VoiceAssistantSyncInfo.CodingKeys		case	serverAnchor
+enum	FMIPClientXPCService.CachedVoiceAssistantSyncInfo.CodingKeys			
+enum	FMIPClientXPCService.CachedVoiceAssistantSyncInfo.CodingKeys		case	devices
+enum	FMIPClientXPCService.CachedVoiceAssistantSyncInfo.CodingKeys		case	createdDate
+enum	FMIPClientXPCService.CachedVoiceAssistantSyncInfo.CodingKeys		case	serverAnchor
+enum	FMIPClientXPCService.CacheInvalidationMarker.CodingKeys			
+enum	FMIPClientXPCService.CacheInvalidationMarker.CodingKeys		case	invalidationDate
+class	FMIPClientXPCService.DeviceDiscoverySession			
+class	FMIPClientXPCService.DeviceDiscoverySession		let	configuration
+class	FMIPClientXPCService.DeviceDiscoverySession		let	uuid
+class	FMIPClientXPCService.DeviceDiscoverySession		var	discoveryStopDate
+class	FMIPClientXPCService.DeviceDiscoverySession		var	deviceDiscoveredHandler
+class	FMIPClientXPCService.DeviceDiscoverySession		var	discoveryStoppedHandler
+class	FMIPClientXPCService.DeviceDiscoverySession		var	requestStartHandler
+class	FMIPClientXPCService.DeviceDiscoverySession		var	requestStopHandler
+class	FMIPClientXPCService.DeviceDiscovery			
+class	FMIPClientXPCService.DeviceDiscovery		var	deviceDiscovery
+class	FMIPClientXPCService.DeviceDiscovery		var	deviceDiscoveredHandler
+class	FMIPClientXPCService.DeviceDiscovery		var	discoveryStoppedHandler
+class	FMIPClientXPCService.DeviceDiscovery		var	internalDiscoveredDevices
+class	FMIPClientXPCService.DeviceDiscovery		let	serialQueue
+class	FMIPClientXPCService.DeviceDiscovery		let	mode
+enum	FMIPClientXPCService.DeviceDiscovery.DiscoveryError			
+enum	FMIPClientXPCService.DeviceDiscovery.DiscoveryError		case	unknown
+enum	FMIPClientXPCService.DeviceDiscovery.DiscoveryError		case	interrupted
+enum	FMIPClientXPCService.DeviceDiscovery.DiscoveryError		case	invalidated
+class	FMIPClientXPCService.FMIPEndpointConfiguration			
+class	FMIPClientXPCService.FMIPEndpointConfiguration		var	credential
+class	FMIPClientXPCService.FMIPEndpointConfiguration		var	urlComponents
+class	FMIPClientXPCService.PlaySoundEndpoint	FMIPClientXPCService.FMIPEndpointConfiguration		
+class	FMIPClientXPCService.SearchDeviceEndpoint	FMIPClientXPCService.FMIPEndpointConfiguration		
+class	FMIPClientXPCService.VoiceAssistantSyncDeviceEndpoint	FMIPClientXPCService.FMIPEndpointConfiguration		
+struct	FMIPClientXPCService.RedirectedHostStore			
+struct	FMIPClientXPCService.RedirectedHostStore		let	serialQueue
+struct	FMIPClientXPCService.RedirectedHostStore		let	redirectedHostKeychain
+struct	FMIPClientXPCService.RedirectedHostStore		let	credential
+enum	FMIPClientXPCService.PreferencesPathError			
+enum	FMIPClientXPCService.PreferencesPathError		case	couldNotFindLibraryDirectory
+class	FMIPClientXPCService.DevicePlaySoundRequestContent	FMIPClientXPCService.FMIPSiriBaseRequestContent		
+struct	FMIPClientXPCService.PlaySoundRequestBody			
+struct	FMIPClientXPCService.PlaySoundRequestBody		let	devices
+enum	FMIPClientXPCService.PlaySoundRequestBody.CodingKeys			
+enum	FMIPClientXPCService.PlaySoundRequestBody.CodingKeys		case	devices
+class	FMIPClientXPCService.DeviceDiscoveryAutomation			
+class	FMIPClientXPCService.DeviceDiscoveryAutomation		var	internalDiscoveredDevices
+class	FMIPClientXPCService.DeviceDiscoveryAutomation		let	serialQueue
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler			
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler		var	client
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler		let	authenticationProvider
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler		let	consolidatedContent
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler		let	redirectedHostStore
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler		var	serverInteractionController
+struct	FMIPClientXPCService.HTTPClientStatusCodeHandler		let	retryCount
+class	FMIPClientXPCService.APSTokenProvider	NSObject		
+class	FMIPClientXPCService.APSTokenProvider	NSObject	let	topic
+class	FMIPClientXPCService.APSTokenProvider	NSObject	let	serialQueue
+class	FMIPClientXPCService.APSTokenProvider	NSObject	var	pendingTopicTokenFutures
+class	FMIPClientXPCService.APSTokenProvider	NSObject	var	topicAPSToken
+class	FMIPClientXPCService.APSTokenProvider	NSObject	var	publicAPSToken
+class	FMIPClientXPCService.APSTokenProvider	NSObject	var	_apsConnection
+class	FMIPClientXPCService.APSTokenProvider	NSObject	var	lazy
+struct	FMIPClientXPCService.DeviceSearchListResponseContent			
+struct	FMIPClientXPCService.DeviceSearchListResponseContent		let	devices
+struct	FMIPClientXPCService.DeviceSearchListResponseContent		let	deviceNameSync
+enum	FMIPClientXPCService.DeviceSearchListResponseContent.CodingKeys			
+enum	FMIPClientXPCService.DeviceSearchListResponseContent.CodingKeys		case	devices
+enum	FMIPClientXPCService.DeviceSearchListResponseContent.CodingKeys		case	deviceNameSync
+class	FMIPClientXPCService.VoiceAssistantSyncDeviceRequestContent	FMIPClientXPCService.FMIPSiriBaseRequestContent		
+class	FMIPClientXPCService.DeviceInformationProviderFactory			
+enum	FMIPClientXPCService.TransportAddress			
+enum	FMIPClientXPCService.TransportAddress		case	bluetooth
+enum	FMIPClientXPCService.TransportAddress		case	ids
+enum	FMIPClientXPCService.TransportAddress		case	unknown
+enum	FMIPClientXPCService.FutureError			
+enum	FMIPClientXPCService.FutureError		case	cancelled
+class	FMIPClientXPCService.Future			
+class	FMIPClientXPCService.Future		var	_isFinished
+class	FMIPClientXPCService.Future		var	_isCancelled
+class	FMIPClientXPCService.Future		var	_resultValue
+class	FMIPClientXPCService.Future		var	_resultError
+class	FMIPClientXPCService.Future		var	_completionBlocks
+class	FMIPClientXPCService.Future		let	accessQueue
+class	FMIPClientXPCService.Future		let	uuid
+class	FMIPClientXPCService.Promise			
+class	FMIPClientXPCService.Promise		var	future
+struct	FMIPClientXPCService.VoiceAssistantResponseContent			
+struct	FMIPClientXPCService.VoiceAssistantResponseContent		let	deviceNameSync
+enum	FMIPClientXPCService.VoiceAssistantResponseContent.CodingKeys			
+enum	FMIPClientXPCService.VoiceAssistantResponseContent.CodingKeys		case	deviceNameSync
+struct	FMIPClientXPCService.VoiceAssistantSyncResponseContent			
+struct	FMIPClientXPCService.VoiceAssistantSyncResponseContent		let	syncData
+struct	FMIPClientXPCService.VoiceAssistantSyncResponseContent		let	anchor
+enum	FMIPClientXPCService.VoiceAssistantSyncResponseContent.CodingKeys			
+enum	FMIPClientXPCService.VoiceAssistantSyncResponseContent.CodingKeys		case	syncData
+enum	FMIPClientXPCService.VoiceAssistantSyncResponseContent.CodingKeys		case	anchor
+struct	FMIPClientXPCService.VoiceAssistantSyncObjects			
+struct	FMIPClientXPCService.VoiceAssistantSyncObjects		let	firstName
+struct	FMIPClientXPCService.VoiceAssistantSyncObjects		let	lastName
+struct	FMIPClientXPCService.VoiceAssistantSyncObjects		let	devices
+enum	FMIPClientXPCService.VoiceAssistantSyncObjects.CodingKeys			
+enum	FMIPClientXPCService.VoiceAssistantSyncObjects.CodingKeys		case	firstName
+enum	FMIPClientXPCService.VoiceAssistantSyncObjects.CodingKeys		case	lastName
+enum	FMIPClientXPCService.VoiceAssistantSyncObjects.CodingKeys		case	devices
+struct	FMIPClientXPCService.DeviceDiscoveryDeviceInput			
+struct	FMIPClientXPCService.DeviceDiscoveryDeviceInput		let	devices
+enum	FMIPClientXPCService.DeviceDiscoveryDeviceInput.CodingKeys			
+enum	FMIPClientXPCService.DeviceDiscoveryDeviceInput.CodingKeys		case	devices
+struct	FMIPClientXPCService.FMIPVoiceAssistantDeviceName			
+struct	FMIPClientXPCService.FMIPVoiceAssistantDeviceName		var	deviceName
+enum	FMIPClientXPCService.FMIPVoiceAssistantDeviceName.CodingKeys			
+enum	FMIPClientXPCService.FMIPVoiceAssistantDeviceName.CodingKeys		case	deviceName
+class	FMIPClientXPCService.DeviceDiscoveryFactory			
+class	FMIPClientXPCService.DeviceDiscoveryFactory		var	deviceDiscoveryByMode
+class	FMIPClientXPCService.DeviceDiscoveryFactory		var	activeDiscoverySessions
+class	FMIPClientXPCService.DeviceDiscoveryFactory		let	serialQueue
+class	FMIPClientXPCService.DeviceDiscoveryFactory		var	discoveryTimer
+enum	FMIPClientXPCService.DeviceDiscoveryConfiguration.DiscoveryMode			
+enum	FMIPClientXPCService.DeviceDiscoveryConfiguration.DiscoveryMode		case	proximity
+enum	FMIPClientXPCService.DeviceDiscoveryConfiguration.DiscoveryMode		case	nearbyInfo
+enum	FMIPClientXPCService.DeviceDiscoveryConfiguration.DiscoveryMode		case	people
+struct	FMIPClientXPCService.DeviceDiscoveryConfiguration			
+struct	FMIPClientXPCService.DeviceDiscoveryConfiguration		let	duration
+struct	FMIPClientXPCService.DeviceDiscoveryConfiguration		let	mode
+struct	FMIPClientXPCService.ClientConfigurationCache			
+struct	FMIPClientXPCService.ClientConfigurationCache		let	diskCache
+struct	FMIPClientXPCService.ClientConfiguration			
+struct	FMIPClientXPCService.ClientConfiguration		let	nearbyScanDuration
+struct	FMIPClientXPCService.ClientConfiguration		let	nearbyScanEnabled
+struct	FMIPClientXPCService.ClientConfiguration		let	nearbyScanWhileAuthenticated
+struct	FMIPClientXPCService.ClientConfiguration		let	deviceNameSyncInterval
+struct	FMIPClientXPCService.ClientConfiguration		let	deviceNameSyncEnabled
+enum	FMIPClientXPCService.ClientConfiguration.CodingKeys			
+enum	FMIPClientXPCService.ClientConfiguration.CodingKeys		case	nearbyScanDuration
+enum	FMIPClientXPCService.ClientConfiguration.CodingKeys		case	nearbyScanEnabled
+enum	FMIPClientXPCService.ClientConfiguration.CodingKeys		case	nearbyScanWhileAuthenticated
+enum	FMIPClientXPCService.ClientConfiguration.CodingKeys		case	deviceNameSyncInterval
+enum	FMIPClientXPCService.ClientConfiguration.CodingKeys		case	deviceNameSyncEnabled
+class	FMIPClientXPCService.Scheduler			
+class	FMIPClientXPCService.CancellationToken			
+class	FMIPClientXPCService.CancellationToken		var	_isCanceled
+class	FMIPClientXPCService.CancellationToken		var	_cancellationBlocks
+class	FMIPClientXPCService.CancellationToken		let	accessQueue
+class	FMIPClientXPCService._ImmediateScheduler			
+class	FMIPClientXPCService._MainThreadScheduler			
+class	FMIPClientXPCService._QueueScheduler			
+class	FMIPClientXPCService._QueueScheduler		let	queue
+class	FMIPClientXPCService._OperationQueueScheduler			
+class	FMIPClientXPCService._OperationQueueScheduler		let	queue
+struct	FMIPClientXPCService.DeviceDiscoveryAutomationDevice			
+struct	FMIPClientXPCService.DeviceDiscoveryAutomationDevice		var	name
+struct	FMIPClientXPCService.DeviceDiscoveryAutomationDevice		var	idsUniqueIdentifier
+struct	FMIPClientXPCService.DeviceDiscoveryAutomationDevice		var	bluetoothAddress
+enum	FMIPClientXPCService.DeviceDiscoveryAutomationDevice.CodingKeys			
+enum	FMIPClientXPCService.DeviceDiscoveryAutomationDevice.CodingKeys		case	name
+enum	FMIPClientXPCService.DeviceDiscoveryAutomationDevice.CodingKeys		case	idsUniqueIdentifier
+enum	FMIPClientXPCService.DeviceDiscoveryAutomationDevice.CodingKeys		case	bluetoothAddress
+struct	FMIPClientXPCService.VAClientContextRequestContent			
+struct	FMIPClientXPCService.VAClientContextRequestContent		var	headerDictionary
+struct	FMIPClientXPCService.VAClientContextRequestContent		var	bodyDictionary
+struct	FMIPClientXPCService.VAClientContextProperties			
+struct	FMIPClientXPCService.VAClientContextProperties		let	vaAPSToken
+enum	FMIPClientXPCService.VAClientContextProperties.CodingKeys			
+enum	FMIPClientXPCService.VAClientContextProperties.CodingKeys		case	vaAPSToken
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status			
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	noError
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	success
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	deviceNameNotFound
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	ownerNameNotFound
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	deviceClassNotFound
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	productTypeNotFound
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.Status		case	productDisplayNameNotFound
+struct	FMIPClientXPCService.FMIPSearchResponseStatus			
+struct	FMIPClientXPCService.FMIPSearchResponseStatus		let	errorDescription
+struct	FMIPClientXPCService.FMIPSearchResponseStatus		let	errorCode
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.CodingKeys			
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.CodingKeys		case	errorCode
+enum	FMIPClientXPCService.FMIPSearchResponseStatus.CodingKeys		case	errorDescription
+class	FMIPClientXPCService.Daemon	NSObject		
+class	FMIPClientXPCService.Daemon	NSObject	let	xpcManager
+struct	FMIPClientXPCService.DiskCache<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>		
+struct	FMIPClientXPCService.DiskCache<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>	let	preferenceDomain
+struct	FMIPClientXPCService.DiskCache<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>	let	containerPath
+struct	FMIPClientXPCService.DiskCache.CacheFormat<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>		
+struct	FMIPClientXPCService.DiskCache.CacheFormat<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>	let	object
+enum	FMIPClientXPCService.DiskCache.CacheFormat.CodingKeys<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>		
+enum	FMIPClientXPCService.DiskCache.CacheFormat.CodingKeys<A	protocol descriptor for Decodable, A: protocol descriptor for Encodable>	case	object
+protocol	FMIPClientXPCService.APSTokenProviding			
+protocol	FMIPClientXPCService.DeviceInformationProviding			
+protocol	FMIPClientXPCService.DeviceDiscoveryDevice			
+protocol	PromiseProtocol	ResultType		
+protocol	FMIPClientXPCService.DeviceDiscovering			
+protocol	FMIPClientXPCService.ClientConfigurating			
+protocol	FMIPClientXPCService.Cancellable			
+protocol	FMIPClientXPCService.SchedulerProtocol			
+protocol	conformance RPCompanionLinkDevice	FMIPClientXPCService.DeviceDiscoveryDevice		
+protocol	conformance FMIPClientXPCService.RapportDiscovery	FMIPClientXPCService.DeviceDiscovering		
+protocol	conformance RapportDiscovery.DiscoveryError	protocol descriptor for Hashable		
+protocol	conformance RapportDiscovery.DiscoveryError	protocol descriptor for Equatable		
+protocol	conformance RapportDiscovery.DiscoveryError	protocol descriptor for Error		
+protocol	conformance DeviceSearchRequestBody	protocol descriptor for Encodable		
+protocol	conformance DeviceSearchRequestBody	protocol descriptor for Decodable		
+protocol	conformance DeviceSearchRequestBody	protocol descriptor for ResponseSerializable		
+protocol	conformance DeviceSearchRequestBody.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance DeviceSearchRequestBody.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance DeviceSearchRequestBody.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance DeviceSearchRequestBody.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance DeviceSearchRequestBody.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.DefaultResponseContent	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.DefaultResponseContent	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.DefaultResponseContent	protocol descriptor for ResponseSerializable		
+protocol	conformance FMIPClientXPCService.ConfigurationResponseContent	protocol descriptor for ResponseSerializable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.ConfigurationResponseContent	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.ConfigurationResponseContent	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.FMIPPlaySoundDevice	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.FMIPPlaySoundDevice	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.FMIPPlaySoundDevice	protocol descriptor for ResponseSerializable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.FMIPRequestCredential	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FMIPClientXPCService.FMIPRequestCredential	protocol descriptor for RequestCredential		
+protocol	conformance FMIPClientXPCService.FMIPSearchResponseDevice	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.FMIPSearchResponseDevice	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.FMIPSearchResponseDevice	protocol descriptor for ResponseSerializable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ServerInteractionController.ServerInteractionError	protocol descriptor for Hashable		
+protocol	conformance ServerInteractionController.ServerInteractionError	protocol descriptor for Equatable		
+protocol	conformance ServerInteractionController.ServerInteractionError	protocol descriptor for Error		
+protocol	conformance FMIPClientXPCService.NearbyDeviceFinder	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.NearbyDeviceFinder	protocol descriptor for Hashable		
+protocol	conformance NearbyDeviceFinder.FinderError	protocol descriptor for Hashable		
+protocol	conformance NearbyDeviceFinder.FinderError	protocol descriptor for Equatable		
+protocol	conformance NearbyDeviceFinder.FinderError	protocol descriptor for Error		
+protocol	conformance FMIPClientXPCService.RedirectedHost	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.RedirectedHost	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.ClientContextRequestBody	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.ClientContextRequestBody	protocol descriptor for Decodable		
+protocol	conformance ClientContextProperties	protocol descriptor for Encodable		
+protocol	conformance ClientContextProperties	protocol descriptor for Decodable		
+protocol	conformance ClientContextProperties	protocol descriptor for ResponseSerializable		
+protocol	conformance FMIPClientXPCService.ClientContextRequestContent	protocol descriptor for RequestContentRepresentable		
+protocol	conformance FMIPClientXPCService.ClientContextRequestBody	protocol descriptor for ResponseSerializable		
+protocol	conformance ClientContextProperties.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance ClientContextProperties.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance ClientContextProperties.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance ClientContextProperties.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ClientContextProperties.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance ServerSession.ServerSessionError	protocol descriptor for Hashable		
+protocol	conformance ServerSession.ServerSessionError	protocol descriptor for Equatable		
+protocol	conformance ServerSession.ServerSessionError	protocol descriptor for Error		
+protocol	conformance FMIPClientXPCService.FMIPSearchRequestDevice	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.FMIPSearchRequestDevice	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.FMIPSearchRequestDevice	protocol descriptor for ResponseSerializable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.FMIPSiriBaseRequestContent	protocol descriptor for RequestContentRepresentable		
+protocol	conformance UserAgentHeader	protocol descriptor for Encodable		
+protocol	conformance UserAgentHeader	protocol descriptor for Decodable		
+protocol	conformance UserAgentHeader	protocol descriptor for ResponseSerializable		
+protocol	conformance UserAgentHeader.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance UserAgentHeader.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance UserAgentHeader.CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance UserAgentHeader.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance UserAgentHeader.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance UserAgentHeader.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.CachedVoiceAssistantSyncInfo	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.CachedVoiceAssistantSyncInfo	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncInfo	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncInfo	protocol descriptor for Encodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CacheInvalidationMarker	protocol descriptor for Encodable		
+protocol	conformance CacheInvalidationMarker	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CacheInvalidationMarker.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CacheInvalidationMarker.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CacheInvalidationMarker.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CacheInvalidationMarker.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CacheInvalidationMarker.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.DeviceDiscoverySession	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FMIPClientXPCService.DeviceDiscoverySession	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.DeviceDiscoverySession	protocol descriptor for Hashable		
+protocol	conformance FMIPClientXPCService.DeviceDiscoverySession	FMIPClientXPCService.DeviceDiscovering		
+protocol	conformance SFDevice	FMIPClientXPCService.DeviceDiscoveryDevice		
+protocol	conformance FMIPClientXPCService.DeviceDiscovery	FMIPClientXPCService.DeviceDiscovering		
+protocol	conformance DeviceDiscovery.DiscoveryError	protocol descriptor for Hashable		
+protocol	conformance DeviceDiscovery.DiscoveryError	protocol descriptor for Equatable		
+protocol	conformance DeviceDiscovery.DiscoveryError	protocol descriptor for Error		
+protocol	conformance FMIPClientXPCService.FMIPEndpointConfiguration	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FMIPClientXPCService.FMIPEndpointConfiguration	protocol descriptor for EndpointConfigurating		
+protocol	conformance PreferencesPathError	protocol descriptor for Hashable		
+protocol	conformance PreferencesPathError	protocol descriptor for Equatable		
+protocol	conformance PreferencesPathError	protocol descriptor for Error		
+protocol	conformance PlaySoundRequestBody	protocol descriptor for Encodable		
+protocol	conformance PlaySoundRequestBody	protocol descriptor for Decodable		
+protocol	conformance PlaySoundRequestBody	protocol descriptor for ResponseSerializable		
+protocol	conformance PlaySoundRequestBody.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance PlaySoundRequestBody.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance PlaySoundRequestBody.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance PlaySoundRequestBody.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance PlaySoundRequestBody.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.DeviceDiscoveryAutomation	FMIPClientXPCService.DeviceDiscovering		
+protocol	conformance FMIPClientXPCService.APSTokenProvider	FMIPClientXPCService.APSTokenProviding		
+protocol	conformance DeviceSearchListResponseContent	protocol descriptor for Encodable		
+protocol	conformance DeviceSearchListResponseContent	protocol descriptor for Decodable		
+protocol	conformance DeviceSearchListResponseContent	protocol descriptor for ResponseSerializable		
+protocol	conformance DeviceSearchListResponseContent.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance DeviceSearchListResponseContent.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance DeviceSearchListResponseContent.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance DeviceSearchListResponseContent.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance DeviceSearchListResponseContent.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMSystemInfo	FMIPClientXPCService.DeviceInformationProviding		
+protocol	conformance FMIPClientXPCService.TransportAddress	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.TransportAddress	protocol descriptor for Hashable		
+protocol	conformance FMIPClientXPCService.FutureError	protocol descriptor for Hashable		
+protocol	conformance FMIPClientXPCService.FutureError	protocol descriptor for Error		
+protocol	conformance FMIPClientXPCService.FutureError	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.Future	FMIPClientXPCService.PromiseProtocol		
+protocol	conformance FMIPClientXPCService.Future	protocol descriptor for Hashable		
+protocol	conformance FMIPClientXPCService.Future	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.Future	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance FMIPClientXPCService.Promise	FMIPClientXPCService.PromiseProtocol		
+protocol	conformance VoiceAssistantResponseContent	protocol descriptor for Encodable		
+protocol	conformance VoiceAssistantResponseContent	protocol descriptor for Decodable		
+protocol	conformance VoiceAssistantResponseContent	protocol descriptor for ResponseSerializable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncResponseContent	protocol descriptor for ResponseSerializable		
+protocol	conformance VoiceAssistantResponseContent.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance VoiceAssistantResponseContent.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance VoiceAssistantResponseContent.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance VoiceAssistantResponseContent.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncResponseContent	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncResponseContent	protocol descriptor for Decodable		
+protocol	conformance VoiceAssistantResponseContent.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncObjects	protocol descriptor for ResponseSerializable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncObjects	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.VoiceAssistantSyncObjects	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.DeviceDiscoveryDeviceInput	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.DeviceDiscoveryDeviceInput	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.FMIPVoiceAssistantDeviceName	protocol descriptor for ResponseSerializable		
+protocol	conformance FMIPClientXPCService.FMIPVoiceAssistantDeviceName	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.FMIPVoiceAssistantDeviceName	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance DeviceDiscoveryConfiguration.DiscoveryMode	protocol descriptor for Hashable		
+protocol	conformance DeviceDiscoveryConfiguration.DiscoveryMode	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.ClientConfiguration	FMIPClientXPCService.ClientConfigurating		
+protocol	conformance FMIPClientXPCService.ClientConfiguration	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.ClientConfiguration	protocol descriptor for Decodable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance _MainThreadScheduler	FMIPClientXPCService.SchedulerProtocol		
+protocol	conformance _ImmediateScheduler	FMIPClientXPCService.SchedulerProtocol		
+protocol	conformance CancellationToken	FMIPClientXPCService.Cancellable		
+protocol	conformance _OperationQueueScheduler	FMIPClientXPCService.SchedulerProtocol		
+protocol	conformance _QueueScheduler	FMIPClientXPCService.SchedulerProtocol		
+protocol	conformance FMIPClientXPCService.DeviceDiscoveryAutomationDevice	protocol descriptor for Decodable		
+protocol	conformance FMIPClientXPCService.DeviceDiscoveryAutomationDevice	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.DeviceDiscoveryAutomationDevice	FMIPClientXPCService.DeviceDiscoveryDevice		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance VAClientContextProperties	protocol descriptor for Encodable		
+protocol	conformance VAClientContextProperties	protocol descriptor for Decodable		
+protocol	conformance VAClientContextProperties	protocol descriptor for ResponseSerializable		
+protocol	conformance FMIPClientXPCService.VAClientContextRequestContent	protocol descriptor for RequestContentRepresentable		
+protocol	conformance VAClientContextProperties.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance VAClientContextProperties.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance VAClientContextProperties.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance VAClientContextProperties.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance VAClientContextProperties.CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance FMIPClientXPCService.FMIPSearchResponseStatus	protocol descriptor for Encodable		
+protocol	conformance FMIPClientXPCService.FMIPSearchResponseStatus	protocol descriptor for Decodable		
+protocol	conformance FMIPSearchResponseStatus.Status	protocol descriptor for RawRepresentable		
+protocol	conformance FMIPSearchResponseStatus.Status	protocol descriptor for Hashable		
+protocol	conformance FMIPSearchResponseStatus.Status	protocol descriptor for Equatable		
+protocol	conformance FMIPClientXPCService.FMIPSearchResponseStatus	protocol descriptor for ResponseSerializable		
+protocol	conformance CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CodingKeys	protocol descriptor for RawRepresentable		
+protocol	conformance CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CodingKeys	protocol descriptor for CodingKey		
+protocol	conformance CacheFormat	protocol descriptor for Encodable		
+protocol	conformance CacheFormat	protocol descriptor for Decodable		
+protocol	conformance CacheFormat.CodingKeys	protocol descriptor for CustomDebugStringConvertible		
+protocol	conformance CacheFormat.CodingKeys	protocol descriptor for CustomStringConvertible		
+protocol	conformance CacheFormat.CodingKeys	protocol descriptor for Hashable		
+protocol	conformance CacheFormat.CodingKeys	protocol descriptor for Equatable		
+protocol	conformance CacheFormat.CodingKeys	protocol descriptor for CodingKey		
+extension	FMIPClientXPCService.ConfigurationResponseContent.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.FMIPPlaySoundDevice.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.FMIPSearchResponseDevice.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.ClientContextRequestBody.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.FMIPSearchRequestDevice.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.UserAgentHeader.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.Future	PromiseProtocol		
+extension	FMIPClientXPCService.Promise	PromiseProtocol		
+extension	FMIPClientXPCService.VoiceAssistantSyncObjects.CodingKeys	RawRepresentable		
+extension	FMIPClientXPCService.FMIPSearchResponseStatus.Status	RawRepresentable		
+extension	FMIPClientXPCService.FMIPSearchResponseStatus.CodingKeys	RawRepresentable		

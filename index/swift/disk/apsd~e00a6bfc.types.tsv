@@ -1,0 +1,152 @@
+kind	type	conformance	member_kind	member
+class	apsd.ServerTimeTracker	NSObject		
+class	apsd.ServerTimeTracker	NSObject	var	_mostRecentServerTimeInNanoSeconds
+class	apsd.ServerTimeTracker	NSObject	var	_alignedMonotonicTimeInNanoSeconds
+class	apsd.AliasUserIdentityProvider	NSObject		
+class	apsd.AliasUserIdentityProvider	NSObject	var	mainUserIdentityProvider
+enum	apsd.RetryPhase			
+enum	apsd.RetryPhase		case	standardPhase
+enum	apsd.RetryPhase		case	finalPhase
+class	apsd.DefaultConnectionRetryStateManager	NSObject		
+class	apsd.DefaultConnectionRetryStateManager	NSObject	let	defaults
+class	apsd.DefaultConnectionRetryStateManager	NSObject	var	currentPhase
+class	apsd.DefaultConnectionRetryStateManager	NSObject	var	remainingPhases
+class	apsd.DefaultConnectionRetryStateManager	NSObject	var	timeRemainingInPhase
+class	apsd.DefaultConnectionRetryStateManager	NSObject	var	remainingPresences
+class	apsd.DefaultConnectionRetryStateManager	NSObject	var	retryPhases
+class	apsd.DefaultConnectionRetryStateManager	NSObject	var	connectionAttemptTime
+enum	apsd.DefaultConnectionRetryStateManager.DictionaryRepresentation			
+class	apsd.UserDependencies	NSObject		
+class	apsd.UserDependencies	NSObject	let	clientIdentityProvider
+class	apsd.UserDependencies	NSObject	let	systemTokenStorage
+class	apsd.UserDependencies	NSObject	let	userPreferences
+class	apsd.UserDependencies	NSObject	let	userAppIDManager
+class	apsd.DefaultsDebugOverrides	NSObject		
+class	apsd.DefaultsDebugOverrides	NSObject	let	userDefaults
+enum	apsd.DefaultsDebugOverrides.DefaultsKeys			
+class	apsd.DisconnectMetric	NSObject		
+class	apsd.DisconnectMetric	NSObject	let	name
+class	apsd.DisconnectMetric	NSObject	let	reason
+class	apsd.DisconnectMetric	NSObject	let	linkQuality
+class	apsd.DisconnectMetric	NSObject	let	interface
+class	apsd.DisconnectMetric	NSObject	let	isOffloaded
+class	apsd.DisconnectMetric	NSObject	let	connectionEstablished
+class	apsd.NoOpClientIdentityProvider	NSObject		
+class	apsd.ReceiveMessageMetric	NSObject		
+class	apsd.ReceiveMessageMetric	NSObject	let	name
+class	apsd.ReceiveMessageMetric	NSObject	let	receiveTimeDifferenceInSeconds
+class	apsd.ReceiveMessageMetric	NSObject	let	isMessageFromStorage
+class	apsd.ReceiveMessageMetric	NSObject	let	isLastMessageFromStorage
+enum	apsd.APSFeatureFlag			
+enum	apsd.APSFeatureFlag		case	BAASupport
+class	apsd.ProcessModeUserTracker	NSObject		
+class	apsd.ProcessModeUserTracker	NSObject	var	responder
+class	apsd.ProcessModeUserTracker	NSObject	let	multiUserMode
+class	apsd.ProcessModeUserTracker	NSObject	let	systemModeUser
+class	apsd.ProcessModeUserTracker	NSObject	let	userModeUser
+class	apsd.ProcessModeUserTracker	NSObject	var	tokenDependencyMap
+struct	apsd.ProcessModeUserTracker.TokenDependencies			
+struct	apsd.ProcessModeUserTracker.TokenDependencies		let	tokenStorage
+struct	apsd.ProcessModeUserTracker.TokenDependencies		let	identityProvider
+class	apsd.SaltRollingMetric	NSObject		
+class	apsd.SaltRollingMetric	NSObject	var	name
+class	apsd.SaltRollingMetric	NSObject	var	activityIsPresent
+class	apsd.OffloadHeuristics	NSObject		
+class	apsd.OffloadHeuristics	NSObject	let	logger
+class	apsd.OffloadHeuristics	NSObject	var	delegates
+enum	apsd.LogCategory			
+enum	apsd.LogCategory		case	pubSub
+enum	apsd.LogCategory		case	offloader
+class	apsd.ClientIdentityMetric	NSObject		
+class	apsd.ClientIdentityMetric	NSObject	var	hasExistingToken
+class	apsd.ClientIdentityMetric	NSObject	var	baaFetchAttempts
+class	apsd.ClientIdentityMetric	NSObject	var	albertFetchAttempts
+class	apsd.ClientIdentityMetric	NSObject	var	invalidPresenceAttempts
+class	apsd.ClientIdentityMetric	NSObject	var	identitySwapReason
+class	apsd.ClientIdentityMetric	NSObject	var	startingProvider
+class	apsd.ClientIdentityMetric	NSObject	var	successfulProvider
+class	apsd.ClientIdentityMetric	NSObject	var	identityErrors
+class	apsd.ClientIdentityMetric	NSObject	var	correlationID
+class	apsd.ClientIdentityMetric	NSObject	var	name
+class	apsd.ClientIdentityMetric.FailureMetric			
+class	apsd.ClientIdentityMetric.FailureMetric		var	name
+class	apsd.ClientIdentityMetric.FailureMetric		let	baseMetric
+class	apsd.MultiClientIdentityProvider	NSObject		
+class	apsd.MultiClientIdentityProvider	NSObject	var	currentIdentityState
+class	apsd.MultiClientIdentityProvider	NSObject	var	baaIdentityProvider
+class	apsd.MultiClientIdentityProvider	NSObject	var	albertIdentityProvider
+class	apsd.MultiClientIdentityProvider	NSObject	var	identityFetchErrors
+class	apsd.MultiClientIdentityProvider	NSObject	var	metrics
+class	apsd.MultiClientIdentityProvider	NSObject	var	delegate
+class	apsd.MultiClientIdentityProvider	NSObject	var	retryCount
+class	apsd.MultiClientIdentityProvider	NSObject	var	baaEnabled
+class	apsd.MultiClientIdentityProvider	NSObject	var	albertFallbackEnabled
+class	apsd.MultiClientIdentityProvider	NSObject	var	shouldSwapIdentityProviderAfterNextInvalidPresence
+class	apsd.MultiClientIdentityProvider	NSObject	var	identityAvailabilityDidChangeBlock
+class	apsd.ClientIdentityMetricReporter			
+class	apsd.ClientIdentityMetricReporter		var	hasExistingToken
+class	apsd.ClientIdentityMetricReporter		var	baaFetchAttempts
+class	apsd.ClientIdentityMetricReporter		var	albertFetchAttempts
+class	apsd.ClientIdentityMetricReporter		var	invalidPresenceAttempts
+class	apsd.ClientIdentityMetricReporter		var	identitySwapReason
+class	apsd.ClientIdentityMetricReporter		var	startingProvider
+class	apsd.ClientIdentityMetricReporter		var	successfulProvider
+class	apsd.ClientIdentityMetricReporter		var	identityErrors
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason			
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason		case	tokenLostUpgradeToBAA
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason		case	invalidPresenceUpgradeToBAA
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason		case	baaDisabledViaBag
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason		case	tooManyFetchAttempts
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason		case	tooManyInvalidPresenceDowngradeToAlbert
+enum	apsd.ClientIdentityMetricReporter.IdentitySwapReason		case	debugging
+class	apsd.MissingTokenMetric	NSObject		
+class	apsd.MissingTokenMetric	NSObject	let	name
+class	apsd.MissingTokenMetric	NSObject	let	isSystemToken
+class	apsd.MissingTokenMetric	NSObject	let	keychainMiss
+class	apsd.MissingTokenMetric	NSObject	let	environmentType
+class	apsd.FilterChange	NSObject		
+class	apsd.FilterChange	NSObject	var	triggeringTopic
+class	apsd.FilterChange	NSObject	var	topicGroupChange
+class	apsd.FilterChange	NSObject	var	reason
+class	apsd.FilterVersionStateMachine	NSObject		
+class	apsd.FilterVersionStateMachine	NSObject	var	_highestSentVersion
+class	apsd.FilterVersionStateMachine	NSObject	var	_highestAckedVersion
+class	apsd.FilterVersionStateMachine	NSObject	var	_stateByInterface
+struct	apsd.FilterVersionStateMachine.InterfaceState			
+struct	apsd.FilterVersionStateMachine.InterfaceState		let	sentVersion
+struct	apsd.FilterVersionStateMachine.InterfaceState		let	ackedVersion
+struct	apsd.FilterVersionStateMachine.InterfaceState		let	sentAnyVersion
+struct	apsd.FilterVersionStateMachine.InterfaceState		let	receivedAnyAck
+class	apsd.ConnectionOffloadInfo	NSObject		
+class	apsd.ConnectionOffloadInfo	NSObject	let	logger
+class	apsd.ConnectionOffloadInfo	NSObject	var	tlsCipher
+class	apsd.ConnectionOffloadInfo	NSObject	var	ticketLifeTime
+class	apsd.ConnectionOffloadInfo	NSObject	var	ticketAgeAdd
+class	apsd.ConnectionOffloadInfo	NSObject	var	ticketCreationTime
+class	apsd.ConnectionOffloadInfo	NSObject	var	preShareKey
+class	apsd.ConnectionOffloadInfo	NSObject	var	preShareKeyID
+class	apsd.PubSubSubscriptionStore	NSObject		
+class	apsd.PubSubSubscriptionStore	NSObject	let	logger
+class	apsd.PubSubSubscriptionStore	NSObject	let	messageStore
+class	apsd.PubSubSubscriptionStore	NSObject	var	inMemorySubscriptions
+protocol	apsd.ULPNHeuristicsDelegate			
+protocol	conformance apsd.RetryPhase	protocol descriptor for Equatable		
+protocol	conformance apsd.APSFeatureFlag	protocol descriptor for Equatable		
+protocol	conformance apsd.APSFeatureFlag	protocol descriptor for Hashable		
+protocol	conformance apsd.APSFeatureFlag	protocol descriptor for FeatureFlagsKey		
+protocol	conformance apsd.OffloadHeuristics	apsd.ULPNHeuristicsDelegate		
+protocol	conformance apsd.LogCategory	protocol descriptor for Equatable		
+protocol	conformance apsd.LogCategory	protocol descriptor for Hashable		
+protocol	conformance apsd.LogCategory	protocol descriptor for RawRepresentable		
+protocol	conformance ClientIdentityMetricReporter.IdentitySwapReason	protocol descriptor for Equatable		
+protocol	conformance ClientIdentityMetricReporter.IdentitySwapReason	protocol descriptor for Hashable		
+protocol	conformance ClientIdentityMetricReporter.IdentitySwapReason	protocol descriptor for RawRepresentable		
+protocol	conformance __C.SecKey	protocol descriptor for Equatable		
+protocol	conformance __C.SecKey	protocol descriptor for Hashable		
+protocol	conformance __C.SecKey	protocol descriptor for _CFObject		
+protocol	conformance __C.APSIdentityProviderStatus	protocol descriptor for Equatable		
+protocol	conformance __C.APSIdentityProviderStatus	protocol descriptor for RawRepresentable		
+protocol	conformance __C.APSIdentityProviderFetchReason	protocol descriptor for Equatable		
+protocol	conformance __C.APSIdentityProviderFetchReason	protocol descriptor for RawRepresentable		
+extension	apsd.LogCategory	RawRepresentable		
+extension	apsd.ClientIdentityMetricReporter.IdentitySwapReason	RawRepresentable		

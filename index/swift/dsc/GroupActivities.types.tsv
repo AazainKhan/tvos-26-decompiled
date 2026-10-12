@@ -1,0 +1,1733 @@
+kind	type	conformance	member_kind	member
+class	GroupActivities.SystemCoordinatorHost	NSObject		
+class	GroupActivities.SystemCoordinatorHost	NSObject	var	currentState
+class	GroupActivities.SystemCoordinatorHost	NSObject	let	configurationUpdateSubject
+class	GroupActivities.SystemCoordinatorHost	NSObject	let	uuid
+class	GroupActivities.SystemCoordinatorHost	NSObject	let	queue
+class	GroupActivities.SystemCoordinatorHost	NSObject	var	delegate
+class	GroupActivities.SystemCoordinatorHost	NSObject	let	listener
+class	GroupActivities.SystemCoordinatorHost	NSObject	let	endpoint
+class	GroupActivities.SystemCoordinatorHost	NSObject	var	configurationUpdateSubscription
+class	GroupActivities.SystemCoordinatorHost	NSObject	var	connection
+struct	GroupActivities.EquatableSpatialTemplatePreference			
+struct	GroupActivities.EquatableSpatialTemplatePreference		let	spatialTemplatePreference
+enum	GroupActivities.GroupSessionErrors			
+enum	GroupActivities.GroupSessionErrors		case	invalidState
+enum	GroupActivities.GroupSessionErrors		case	lingeringState
+enum	GroupActivities.GroupSessionErrors		case	unknown
+enum	GroupActivities.GroupSessionErrors		case	invalidActivityType
+enum	GroupActivities.GroupSessionErrors		case	connectionError
+enum	GroupActivities.GroupSessionErrors		case	timedOut
+enum	GroupActivities.GroupSessionErrors		case	handedOff
+enum	GroupActivities.GroupSessionErrors		case	invalidAvcfReference
+enum	GroupActivities.GroupSessionErrors		case	left
+enum	GroupActivities.GroupSessionErrors		case	untracked
+enum	GroupActivities.GroupSessionErrors		case	serverBlocked
+enum	GroupActivities.GroupSessionErrors		case	noURL
+struct	GroupActivities.Capabilities			
+struct	GroupActivities.Capabilities		let	rawValue
+struct	GroupActivities.ActivityExternalParticipant			
+struct	GroupActivities.ActivityExternalParticipant		let	identifier
+struct	GroupActivities.ActivityExternalParticipant		let	displayName
+struct	GroupActivities.ActivityExternalParticipant		let	info
+struct	GroupActivities.ActivityExternalParticipant		let	status
+enum	GroupActivities.ActivityExternalParticipantStatus			
+enum	GroupActivities.ActivityExternalParticipantStatus		case	pending
+enum	GroupActivities.ActivityExternalParticipantStatus		case	approved
+enum	GroupActivities.ActivityExternalParticipantStatus		case	denied
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>		
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	initiator
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	playbackSyncerLink
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	playbackSyncMessenger
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	id
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	topicManager
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	linkManager
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	attachmentDownloadBytes
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	attachmentUploadBytes
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	attachmentDownloadTime
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	attachmentUploadTime
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	receivedDataHandler
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_receivedDataPublisher
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_receivedAttachmentPublisher
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_catchupNeededPublisher
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_state
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_activity
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_activeParticipants
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	sceneSessionIdentifier
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	timestamps
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_messageQueue
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	remoteEndpoint
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	isLocallyInitiated
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	isLightweightPrimaryInitiated
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	isFirstJoin
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	connection
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	queue
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	publishQueue
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	playbackSubscriptions
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	audioSessionAssertionManager
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	mediaAssertion
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	joinLatencyInterval
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	updateParticipantsTask
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	supportsSceneAssociation
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	requiresParticipantTranslation
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	capabilities
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	subscribedParticipantsSubscription
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	_internalActiveParticipants
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	_internalActiveParticipantsPublisher
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	_internalState
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	let	distributionCount
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	externalParticipantStatusChanged
+class	GroupActivities.GroupSession<A	GroupActivities.GroupActivity>	var	pendingActivityUpdatesCount
+enum	GroupActivities.GroupSession.State<A	GroupActivities.GroupActivity>		
+enum	GroupActivities.GroupSession.State<A	GroupActivities.GroupActivity>	case	invalidated
+enum	GroupActivities.GroupSession.State<A	GroupActivities.GroupActivity>	case	waiting
+enum	GroupActivities.GroupSession.State<A	GroupActivities.GroupActivity>	case	joined
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>		
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	onSendMessageCompletion
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	receivedMessageHandler
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	participantLeftHandler
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	connected
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	let	sessionUUID
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	let	localUUID
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	groupSession
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	messenger
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	let	playbackSyncer
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	shouldRequestCatchup
+class	GroupActivities.GroupSession.GroupSessionPlaybackSyncerLink<A	GroupActivities.GroupActivity, A1: GroupActivities.GroupActivity>	var	cancellables
+struct	GroupActivities.GroupSession.Timestamps<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupSession.Timestamps<A	GroupActivities.GroupActivity>	let	globalCreation
+struct	GroupActivities.GroupSession.Timestamps<A	GroupActivities.GroupActivity>	let	localCreation
+struct	GroupActivities.GroupSession.Timestamps<A	GroupActivities.GroupActivity>	let	permittedJoin
+struct	GroupActivities.InternalParticipant			
+struct	GroupActivities.InternalParticipant		var	participant
+struct	GroupActivities.InternalParticipant		var	isTranslated
+struct	GroupActivities.InternalParticipant		let	isSaltVerified
+struct	GroupActivities.InternalParticipant		let	isLocalParticipant
+struct	GroupActivities.AnyGroupActivity			
+struct	GroupActivities.AnyGroupActivity		var	activityIdentifier
+struct	GroupActivities.AnyGroupActivity		var	metadataProvider
+struct	GroupActivities.AnyGroupActivity		var	content
+struct	GroupActivities.AnyGroupActivity		var	uuid
+struct	GroupActivities.AnyGroupActivity		var	staticIdentifier
+enum	GroupActivities.AnyGroupActivity.MetadataProvider			
+enum	GroupActivities.AnyGroupActivity.MetadataProvider		case	metadata
+enum	GroupActivities.AnyGroupActivity.MetadataProvider		case	future
+enum	GroupActivities.AnyGroupActivity.CodingKeys			
+enum	GroupActivities.AnyGroupActivity.CodingKeys		case	activityIdentifier
+enum	GroupActivities.AnyGroupActivity.CodingKeys		case	content
+enum	GroupActivities.AnyGroupActivity.CodingKeys		case	uuid
+enum	GroupActivities.AnyGroupActivity.CodingKeys		case	staticIdentifier
+class	GroupActivities.PresenceGroupSessionProviderObserver			
+class	GroupActivities.PresenceGroupSessionProviderObserver		var	groupSessionService
+class	GroupActivities.PresenceGroupSessionProviderObserver		let	provider
+class	GroupActivities.PresenceGroupSessionProviderObserver		let	presenceSession
+class	GroupActivities.PresenceGroupSessionProviderObserver		var	cancellables
+class	GroupActivities.PlaybackSyncer			
+class	GroupActivities.PlaybackSyncer		var	localParticipantState
+class	GroupActivities.PlaybackSyncer		var	transportControlStates
+class	GroupActivities.PlaybackSyncer		let	messageEncoder
+class	GroupActivities.PlaybackSyncer		let	messageDecoder
+class	GroupActivities.PlaybackSyncer		var	cancellables
+class	GroupActivities.PlaybackSyncer		var	reloadCompletion
+class	GroupActivities.PlaybackSyncer		var	hasReceivedTransportState
+class	GroupActivities.PlaybackSyncer		var	transportStateTakeoverWorkItem
+class	GroupActivities.PlaybackSyncer		var	waitingForCatchupResponseFromParticipants
+class	GroupActivities.PlaybackSyncer		let	queue
+class	GroupActivities.PlaybackSyncer		var	avMediumDelegate
+class	GroupActivities.PlaybackSyncer		var	coordinator
+class	GroupActivities.PlaybackSyncer		var	link
+class	GroupActivities.PlaybackSyncer		var	syncerDelegate
+class	GroupActivities.PlaybackSyncer		let	defaultTransportStateTakeoverInterval
+class	GroupActivities.PlaybackSyncer		let	initiatorTransportStateTakeoverInterval
+class	GroupActivities.PlaybackSyncer.AVCoordinatorDelegateBridge	NSObject		
+class	GroupActivities.PlaybackSyncer.AVCoordinatorDelegateBridge	NSObject	let	localParticipantID
+class	GroupActivities.PlaybackSyncer.AVCoordinatorDelegateBridge	NSObject	var	delegate
+struct	GroupActivities.PlaybackSyncer.CatchupState			
+struct	GroupActivities.PlaybackSyncer.CatchupState		var	localParticipantState
+struct	GroupActivities.PlaybackSyncer.CatchupState		var	transportControlStates
+struct	GroupActivities.PlaybackSyncer.Message			
+struct	GroupActivities.PlaybackSyncer.Message		let	type
+struct	GroupActivities.PlaybackSyncer.Message		let	payload
+enum	GroupActivities.PlaybackSyncer.Message.MessageType			
+enum	GroupActivities.PlaybackSyncer.Message.MessageType		case	participantState
+enum	GroupActivities.PlaybackSyncer.Message.MessageType		case	transportControlState
+enum	GroupActivities.PlaybackSyncer.Message.MessageType		case	catchupRequest
+enum	GroupActivities.PlaybackSyncer.Message.MessageType		case	catchupResponse
+enum	GroupActivities.PlaybackSyncer.Message.CodingKeys			
+enum	GroupActivities.PlaybackSyncer.Message.CodingKeys		case	type
+enum	GroupActivities.PlaybackSyncer.Message.CodingKeys		case	payload
+enum	GroupActivities.PlaybackSyncer.CatchupState.CodingKeys			
+enum	GroupActivities.PlaybackSyncer.CatchupState.CodingKeys		case	localParticipantState
+enum	GroupActivities.PlaybackSyncer.CatchupState.CodingKeys		case	transportControlStates
+struct	GroupActivities.SpatialTemplatePreference			
+struct	GroupActivities.SpatialTemplatePreference		let	contentExtent
+struct	GroupActivities.SpatialTemplatePreference		let	storage
+enum	GroupActivities.SpatialTemplatePreference.Storage			
+enum	GroupActivities.SpatialTemplatePreference.Storage		case	none
+enum	GroupActivities.SpatialTemplatePreference.Storage		case	sideBySide
+enum	GroupActivities.SpatialTemplatePreference.Storage		case	conversational
+enum	GroupActivities.SpatialTemplatePreference.Storage		case	surround
+enum	GroupActivities.SpatialTemplatePreference.Storage		case	custom
+struct	GroupActivities.GroupSessionEndpointIdentifier			
+struct	GroupActivities.GroupSessionEndpointIdentifier		let	rawValue
+class	GroupActivities.SystemCoordinatorTable			
+class	GroupActivities.SystemCoordinatorTable		var	systemCoordinatorsById
+struct	GroupActivities.SystemCoordinatorTable.Storage			
+struct	GroupActivities.SystemCoordinatorTable.Storage		var	coordinator
+struct	GroupActivities.SystemCoordinatorTable.Storage		var	stateTask
+enum	GroupActivities.SystemCoordinatorTable.Storage.CoordinatorBox			
+enum	GroupActivities.SystemCoordinatorTable.Storage.CoordinatorBox		case	fetching
+enum	GroupActivities.SystemCoordinatorTable.Storage.CoordinatorBox		case	fetched
+class	GroupActivities.GroupActivitySuggestion			
+class	GroupActivities.GroupActivitySuggestion		let	invalidationToken
+enum	GroupActivities.GroupSessionProviderState			
+enum	GroupActivities.GroupSessionProviderState		case	invalidated
+enum	GroupActivities.GroupSessionProviderState		case	waiting
+enum	GroupActivities.GroupSessionProviderState		case	joined
+struct	GroupActivities.GroupSessionProviderTestingOverrides			
+struct	GroupActivities.GroupSessionProviderTestingOverrides		var	_groupSessionServiceProvider
+struct	GroupActivities.GroupSessionObserver<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupSessionObserver<A	GroupActivities.GroupActivity>	let	queue
+struct	GroupActivities.GroupSessionObserver<A	GroupActivities.GroupActivity>	let	provider
+struct	GroupActivities.GroupSessionObserver<A	GroupActivities.GroupActivity>	let	filter
+enum	GroupActivities.GroupActivityError			
+enum	GroupActivities.GroupActivityError		case	mismatchedActivityIdentifier
+enum	GroupActivities.GroupActivityError		case	invalidData
+enum	GroupActivities.GroupActivityActivationResult			
+enum	GroupActivities.GroupActivityActivationResult		case	activationPreferred
+enum	GroupActivities.GroupActivityActivationResult		case	activationDisabled
+enum	GroupActivities.GroupActivityActivationResult		case	cancelled
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>		
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	id
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	state
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	members
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	presenceInfo
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	let	activity
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	let	localMember
+class	GroupActivities.PersonalGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	let	isCrossAccount
+enum	GroupActivities.SendReliability			
+enum	GroupActivities.SendReliability		case	reliable
+enum	GroupActivities.SendReliability		case	unreliable
+struct	GroupActivities.GroupActivityTransferRepresentation<A	CoreTransferable.Transferable>		
+struct	GroupActivities.GroupActivityTransferRepresentation<A	CoreTransferable.Transferable>	let	exporter
+struct	GroupActivities.SpatialTemplateConfiguration			
+struct	GroupActivities.SpatialTemplateConfiguration		let	defaultInitiatorRole
+class	GroupActivities.AttachmentLedgerTopic			
+class	GroupActivities.AttachmentLedgerTopic		let	name
+class	GroupActivities.AttachmentLedgerTopic		let	lock
+class	GroupActivities.AttachmentLedgerTopic		let	pluginGenerator
+class	GroupActivities.AttachmentLedgerTopic		var	_topic
+class	GroupActivities.AttachmentLedgerTopic		let	stateMachine
+class	GroupActivities.AttachmentLedgerTopic		var	retainRefOnStart
+class	GroupActivities.AttachmentLedgerTopic		var	retainRef
+class	GroupActivities.AttachmentLedgerTopic		var	waitingForTopicCancellables
+class	GroupActivities.AttachmentLedgerTopic		var	subscribingCancellables
+class	GroupActivities.AttachmentLedgerTopic		var	pluginTopicCancellables
+class	GroupActivities.AttachmentLedgerTopic		var	dataCryptor
+class	GroupActivities.AttachmentLedgerTopic		var	_attachments
+class	GroupActivities.AttachmentLedgerTopic		var	retryInfo
+struct	GroupActivities.AttachmentLedgerTopic.RetryInfo			
+struct	GroupActivities.AttachmentLedgerTopic.RetryInfo		var	attempt
+struct	GroupActivities.AttachmentLedgerTopic.RetryInfo		var	retryAttemptInterval
+struct	GroupActivities.AttachmentLedgerTopic.RetryInfo		var	maximumAttempts
+struct	GroupActivities.AttachmentLedgerTopic.RetryInfo		var	pendingAttachments
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest			
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	id
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	key
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	assetSkeleton
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	developerMetadata
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	storageLocation
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	fileHash
+struct	GroupActivities.AttachmentLedgerTopic.UploadRequest		var	refSignature
+struct	GroupActivities.AttachmentLedgerTopic.BootstrapTopicInfo			
+struct	GroupActivities.AttachmentLedgerTopic.BootstrapTopicInfo		let	dataCryptorProvider
+struct	GroupActivities.AttachmentLedgerTopic.BootstrapTopicInfo		let	attachments
+enum	GroupActivities.AttachmentLedgerTopic.Errors			
+enum	GroupActivities.AttachmentLedgerTopic.Errors		case	invalidState
+enum	GroupActivities.AttachmentLedgerTopic.State			
+enum	GroupActivities.AttachmentLedgerTopic.State		case	idle
+enum	GroupActivities.AttachmentLedgerTopic.State		case	bootstrapping
+enum	GroupActivities.AttachmentLedgerTopic.State		case	subscribing
+enum	GroupActivities.AttachmentLedgerTopic.State		case	subscribed
+enum	GroupActivities.AttachmentLedgerTopic.State		case	retrying
+enum	GroupActivities.AttachmentLedgerTopic.Event			
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	fetchPluginTopic
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	subscribe
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	unsubscribe
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	subscribed
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	pluginShutdown
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	stagingRetry
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	retryAttempt
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	tokenRequest
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	tokenRefresh
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	uploadAttachment
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	updateAttachmentProgress
+enum	GroupActivities.AttachmentLedgerTopic.Event		case	removeAttachment
+enum	GroupActivities.ImageRepresentationEncodingErrors			
+enum	GroupActivities.ImageRepresentationEncodingErrors		case	unknown
+struct	GroupActivities.ImageRepresentation<A	CoreTransferable.Transferable>		
+struct	GroupActivities.ImageRepresentation<A	CoreTransferable.Transferable>	let	exporting
+struct	GroupActivities.ImageRepresentation<A	CoreTransferable.Transferable>	let	importing
+struct	GroupActivities.ImageRepresentation.Image<A	CoreTransferable.Transferable>		
+struct	GroupActivities.ImageRepresentation.Image<A	CoreTransferable.Transferable>	var	image
+class	GroupActivities.SystemCoordinatorConfiguration	NSObject		
+class	GroupActivities.SystemCoordinatorConfiguration	NSObject	let	supportsGroupImmersiveSpace
+class	GroupActivities.SystemCoordinatorConfiguration	NSObject	let	isObservingGroupImmersionStyle
+class	GroupActivities.SystemCoordinatorConfiguration	NSObject	let	faceAppTowardsEachParticipant
+class	GroupActivities.SystemCoordinatorConfiguration	NSObject	let	wrapped
+struct	GroupActivities.SystemCoordinatorConfiguration.Wrapped			
+struct	GroupActivities.SystemCoordinatorConfiguration.Wrapped		let	spatialTemplatePreferenceOutput
+struct	GroupActivities.SystemCoordinatorConfiguration.Wrapped		let	localParticipantRoleAssignmentRequest
+struct	GroupActivities.SystemCoordinatorConfiguration.Wrapped		let	defaultSpatialTemplatePreferences
+struct	GroupActivities.SystemCoordinatorConfiguration.Wrapped		let	defaultSpatialTemplateRoles
+class	GroupActivities.SystemCoordinatorConfiguration._SpatialTemplatePreference	NSObject		
+class	GroupActivities.SystemCoordinatorConfiguration._SpatialTemplatePreference	NSObject	let	storage
+class	GroupActivities.SystemCoordinatorConfiguration._SpatialTemplatePreference	NSObject	let	contentExtent
+enum	GroupActivities.SystemCoordinatorConfiguration.Wrapped.CodingKeys			
+enum	GroupActivities.SystemCoordinatorConfiguration.Wrapped.CodingKeys		case	spatialTemplatePreferenceOutput
+enum	GroupActivities.SystemCoordinatorConfiguration.Wrapped.CodingKeys		case	localParticipantRoleAssignmentRequest
+enum	GroupActivities.SystemCoordinatorConfiguration.Wrapped.CodingKeys		case	defaultSpatialTemplatePreferences
+enum	GroupActivities.SystemCoordinatorConfiguration.Wrapped.CodingKeys		case	defaultSpatialTemplateRoles
+class	GroupActivities.AssertionManager			
+class	GroupActivities.AssertionManager		let	updateCallback
+class	GroupActivities.AssertionManager		let	lock
+class	GroupActivities.AssertionManager		var	_assertionCount
+class	GroupActivities.AssertionManager.Assertion			
+class	GroupActivities.AssertionManager.Assertion		var	manager
+enum	GroupActivities._PublisherElements.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>		
+enum	GroupActivities._PublisherElements.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>	case	subscribed
+enum	GroupActivities._PublisherElements.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>	case	awaitingSubscription
+enum	GroupActivities._PublisherElements.Iterator.Inner.State<A	Combine.Publisher, Combine.Publisher.Failure ==: Swift.Never>	case	terminal
+struct	GroupActivities.PresenceSessionInfo			
+struct	GroupActivities.PresenceSessionInfo		let	activeParticipants
+struct	GroupActivities.PresenceSessionInfo.Participant			
+struct	GroupActivities.PresenceSessionInfo.Participant		let	id
+struct	GroupActivities.PresenceSessionInfo.Participant		let	handle
+struct	GroupActivities.PresenceSessionInfo.Participant		let	isCurrentDevice
+class	GroupActivities.PresenceSession			
+class	GroupActivities.PresenceSession		let	id
+class	GroupActivities.PresenceSession		var	_state
+class	GroupActivities.PresenceSession		var	activeParticipants
+class	GroupActivities.PresenceSession		var	_members
+class	GroupActivities.PresenceSession		var	_invitedMembers
+class	GroupActivities.PresenceSession		var	_sessionInfo
+class	GroupActivities.PresenceSession		let	workQueue
+class	GroupActivities.PresenceSession		let	featureFlags
+class	GroupActivities.PresenceSession		var	observers
+class	GroupActivities.PresenceSession		var	provider
+class	GroupActivities.PresenceSession		let	serviceProvider
+class	GroupActivities.PresenceSession		var	connection
+enum	GroupActivities.PresenceSession.Errors			
+enum	GroupActivities.PresenceSession.Errors		case	invalidState
+enum	GroupActivities.PresenceSession.Errors		case	conversionFailure
+enum	GroupActivities.PresenceSession.State			
+enum	GroupActivities.PresenceSession.State		case	waiting
+enum	GroupActivities.PresenceSession.State		case	joined
+enum	GroupActivities.PresenceSession.State		case	invalidated
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>		
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	id
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	state
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	members
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	invitedMembers
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	let	activity
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	let	localMember
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	presenceInfo
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	queue
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	container
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	_share
+class	GroupActivities.CKShareGroupSessionProvider<A	GroupActivities.IdentifiableGroupActivity>	var	cancellables
+enum	GroupActivities.CKShareGroupSessionProvider.Errors<A	GroupActivities.IdentifiableGroupActivity>		
+enum	GroupActivities.CKShareGroupSessionProvider.Errors<A	GroupActivities.IdentifiableGroupActivity>	case	invalidShare
+enum	GroupActivities.CKShareGroupSessionProvider.Errors<A	GroupActivities.IdentifiableGroupActivity>	case	invalidRecord
+class	GroupActivities.GroupSessionTable			
+class	GroupActivities.GroupSessionTable		var	lock
+class	GroupActivities.GroupSessionTable		var	contents
+struct	GroupActivities.GroupSessionTable.Storage			
+struct	GroupActivities.GroupSessionTable.Storage		var	object
+struct	GroupActivities.GroupSessionTable.Storage		let	distributionCount
+struct	GroupActivities.Archived<A	NSObject, B, A: NSSecureCoding>		
+struct	GroupActivities.Archived<A	NSObject, B, A: NSSecureCoding>	var	wrappedValue
+class	GroupActivities.ShareChangeObserver			
+class	GroupActivities.ShareChangeObserver		let	share
+class	GroupActivities.ShareChangeObserver		let	observer
+class	GroupActivities.ShareChangeObserver		var	continuations
+struct	GroupActivities.PublishRate<A	Combine.Scheduler>		
+struct	GroupActivities.PublishRate<A	Combine.Scheduler>	let	timeInGracePeriod
+struct	GroupActivities.PublishRate<A	Combine.Scheduler>	let	isThrottled
+struct	GroupActivities.TypedPayloadBox			
+struct	GroupActivities.TypedPayloadBox		var	value
+enum	GroupActivities.TypedPayloadBox.CodingKeys			
+enum	GroupActivities.TypedPayloadBox.CodingKeys		case	name
+enum	GroupActivities.TypedPayloadBox.CodingKeys		case	value
+struct	GroupActivities.AnySpatialTemplate			
+struct	GroupActivities.AnySpatialTemplate		let	spatialTemplate
+struct	GroupActivities.AddressableMember			
+struct	GroupActivities.AddressableMember		var	handle
+struct	GroupActivities.LocalAccountMember			
+struct	GroupActivities.LocalAccountMember		var	id
+class	GroupActivities.SystemCoordinatorHostManager			
+class	GroupActivities.SystemCoordinatorHostManager		var	_configurations
+class	GroupActivities.SystemCoordinatorHostManager		var	hosts
+class	GroupActivities.SystemCoordinatorHostManager		let	queue
+class	GroupActivities.SystemCoordinatorHostManager		var	aliasParticipantIdentifier
+class	GroupActivities.SystemCoordinatorHostManager		var	_state
+class	GroupActivities.SystemCoordinatorHostManager		let	configurationUpdatesRateLimit
+struct	GroupActivities.SystemCoordinatorHostManager.ConfigurationUpdatesRateLimit			
+struct	GroupActivities.SystemCoordinatorHostManager.ConfigurationUpdatesRateLimit		let	debounceInterval
+struct	GroupActivities.SystemCoordinatorHostManager.ConfigurationUpdatesRateLimit		let	throttleInterval
+struct	GroupActivities.SystemCoordinatorHostManager.ConfigurationUpdatesRateLimit		let	gracePeriod
+class	GroupActivities.SystemCoordinatorHostManager.EndpointProvider			
+class	GroupActivities.SystemCoordinatorHostManager.EndpointProvider		var	manager
+class	GroupActivities._Streamed<A	Swift.Equatable>		
+class	GroupActivities._Streamed<A	Swift.Equatable>	let	state
+struct	GroupActivities._Streamed.State<A	Swift.Equatable>		
+struct	GroupActivities._Streamed.State<A	Swift.Equatable>	var	generation
+struct	GroupActivities._Streamed.State<A	Swift.Equatable>	var	continuations
+struct	GroupActivities._Streamed.State<A	Swift.Equatable>	var	currentValue
+class	GroupActivities.SystemCoordinatorHostConnection	CopresenceCore.XPCHostConnection GroupActivities.SystemCoordinatorInterface		
+class	GroupActivities.SystemCoordinatorHostConnection	CopresenceCore.XPCHostConnection GroupActivities.SystemCoordinatorInterface	var	delegate
+class	GroupActivities.GroupStateObserver			
+class	GroupActivities.GroupStateObserver		var	_isEligibleForGroupSession
+struct	GroupActivities.Subject<B	Swift.Error>		
+struct	GroupActivities.Subject<B	Swift.Error>	let	subject
+struct	GroupActivities.ContentAssociation			
+struct	GroupActivities.ContentAssociation		let	tuContentAssociation
+class	GroupActivities.GroupSessionJournal			
+class	GroupActivities.GroupSessionJournal		let	session
+class	GroupActivities.GroupSessionJournal		var	lazy
+class	GroupActivities.GroupSessionJournal		var	__attachments
+class	GroupActivities.GroupSessionJournal		var	cancellables
+struct	GroupActivities.GroupSessionJournal.Attachment			
+struct	GroupActivities.GroupSessionJournal.Attachment		var	id
+struct	GroupActivities.GroupSessionJournal.Attachment		var	ledger
+struct	GroupActivities.GroupSessionJournal.Attachment		var	source
+enum	GroupActivities.GroupSessionJournal.Attachment.AttachmentSource			
+enum	GroupActivities.GroupSessionJournal.Attachment.AttachmentSource		case	local
+enum	GroupActivities.GroupSessionJournal.Attachment.AttachmentSource		case	ids
+enum	GroupActivities.GroupSessionJournal.Attachment.AttachmentSource		case	plugin
+struct	GroupActivities.GroupSessionJournal.Attachments			
+struct	GroupActivities.GroupSessionJournal.Attachments		let	base
+struct	GroupActivities.GroupSessionJournal.Attachments.Iterator			
+struct	GroupActivities.GroupSessionJournal.Attachments.Iterator		var	baseIterator
+enum	GroupActivities.GroupSessionJournal.InternalErrors			
+enum	GroupActivities.GroupSessionJournal.InternalErrors		case	notImplemented
+enum	GroupActivities.GroupSessionJournal.Errors			
+enum	GroupActivities.GroupSessionJournal.Errors		case	notSupported
+enum	GroupActivities.GroupSessionJournal.Errors		case	conversionFailure
+enum	GroupActivities.GroupSessionJournal.Errors		case	invalidObject
+class	GroupActivities.CollaborationActivity			
+class	GroupActivities.CollaborationActivity		let	id
+class	GroupActivities.CollaborationActivity		let	metadata
+class	GroupActivities.CollaborationActivity		let	container
+class	GroupActivities.CollaborationActivity		let	fetchShare
+class	GroupActivities.CollaborationActivity		let	sessionManager
+class	GroupActivities.CollaborationActivity		var	groupSessionProvider
+enum	GroupActivities.CollaborationActivity.CollaborationActivityError			
+enum	GroupActivities.CollaborationActivity.CollaborationActivityError		case	invalidActivity
+enum	GroupActivities.CollaborationActivity.CollaborationActivityError		case	invalidContainerID
+enum	GroupActivities.CollaborationActivity.CollaborationActivityError		case	updateShareFailed
+enum	GroupActivities.CollaborationActivity.CollaborationActivityError		case	decodingFailure
+enum	GroupActivities.CollaborationActivity.CollaborationActivityError		case	leaveFailure
+enum	GroupActivities.CollaborationActivity.CodingKeys			
+enum	GroupActivities.CollaborationActivity.CodingKeys		case	metadata
+enum	GroupActivities.CollaborationActivity.CodingKeys		case	id
+enum	GroupActivities.CollaborationActivity.CodingKeys		case	containerInfo
+struct	GroupActivities.TypedPayloadDecoder<A	Swift.Decodable, A: Swift.Encodable>		
+struct	GroupActivities.BroadcastOptions			
+struct	GroupActivities.BroadcastOptions		let	rawValue
+struct	GroupActivities.AnySpatialTemplateRole			
+struct	GroupActivities.AnySpatialTemplateRole		let	spatialTemplateRole
+class	GroupActivities.GroupSessionProviderObserver			
+class	GroupActivities.GroupSessionProviderObserver		var	groupSessionService
+class	GroupActivities.GroupSessionProviderObserver		let	provider
+class	GroupActivities.GroupSessionProviderObserver		var	membershipObserver
+class	GroupActivities.GroupSessionProviderObserver		var	unknownParticipants
+struct	GroupActivities.GroupSession.MessageQueue<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupSession.MessageQueue<A	GroupActivities.GroupActivity>	let	queueState
+struct	GroupActivities.PresentationSpatialTemplate			
+struct	GroupActivities.PresentationSpatialTemplate		let	elements
+struct	GroupActivities.PresentationSpatialTemplate		let	configuration
+enum	GroupActivities.PresentationSpatialTemplate.Role			
+enum	GroupActivities.PresentationSpatialTemplate.Role		case	presenter
+enum	GroupActivities.PresentationSpatialTemplate.PresenterRoleBehavior			
+enum	GroupActivities.PresentationSpatialTemplate.PresenterRoleBehavior		case	assignToInitiator
+enum	GroupActivities.PresentationSpatialTemplate.PresenterRoleBehavior		case	leaveEmpty
+class	GroupActivities.GroupSessionMessenger			
+class	GroupActivities.GroupSessionMessenger		let	session
+class	GroupActivities.GroupSessionMessenger		var	encoder
+class	GroupActivities.GroupSessionMessenger		let	deliveryMode
+enum	GroupActivities.GroupSessionMessenger.DeliveryMode			
+enum	GroupActivities.GroupSessionMessenger.DeliveryMode		case	reliable
+enum	GroupActivities.GroupSessionMessenger.DeliveryMode		case	unreliable
+enum	GroupActivities.GroupSessionMessenger.MessageReliability			
+enum	GroupActivities.GroupSessionMessenger.MessageReliability		case	reliable
+enum	GroupActivities.GroupSessionMessenger.MessageReliability		case	unreliable
+struct	GroupActivities.GroupSessionMessenger.MessageContext			
+struct	GroupActivities.GroupSessionMessenger.MessageContext		var	source
+struct	GroupActivities.GroupSessionMessenger.MessageStream<A	Swift.Decodable, A: Swift.Encodable>		
+struct	GroupActivities.GroupSessionMessenger.MessageStream<A	Swift.Decodable, A: Swift.Encodable>	let	outputStream
+enum	GroupActivities.GroupSessionMessenger.MessageStreamStore			
+struct	GroupActivities.GroupSessionMessenger.MessageWrapper			
+struct	GroupActivities.GroupSessionMessenger.MessageWrapper		var	message
+struct	GroupActivities.GroupSessionMessenger.MessageStreamStore.Storage			
+struct	GroupActivities.GroupSessionMessenger.MessageStreamStore.Storage		var	subscriptions
+struct	GroupActivities.GroupSessionMessenger.MessageStreamStore.Storage		let	decoder
+struct	GroupActivities.GroupSessionMessenger.MessageStreamStore.Storage		let	messageStream
+enum	GroupActivities.GroupSessionMessenger.MessageWrapper.CodingKeys			
+enum	GroupActivities.GroupSessionMessenger.MessageWrapper.CodingKeys		case	message
+enum	GroupActivities.GroupSessionMessenger.MessageType.CodingKeys			
+enum	GroupActivities.GroupSessionMessenger.MessageType.CodingKeys		case	data
+enum	GroupActivities.GroupSessionMessenger.MessageType.CodingKeys		case	typedPayload
+enum	GroupActivities.GroupSessionMessenger.MessageType			
+enum	GroupActivities.GroupSessionMessenger.MessageType		case	data
+enum	GroupActivities.GroupSessionMessenger.MessageType		case	typedPayload
+class	GroupActivities.GroupSessionAttachmentManager			
+class	GroupActivities.GroupSessionAttachmentManager		let	session
+class	GroupActivities.GroupSessionAttachmentManager		var	lazy
+class	GroupActivities.GroupSessionAttachmentManager		var	__attachments
+class	GroupActivities.GroupSessionAttachmentManager		var	cancellables
+struct	GroupActivities.GroupSessionAttachmentManager.Attachment			
+struct	GroupActivities.GroupSessionAttachmentManager.Attachment		var	id
+struct	GroupActivities.GroupSessionAttachmentManager.Attachment		var	ledger
+struct	GroupActivities.GroupSessionAttachmentManager.Attachment		var	source
+enum	GroupActivities.GroupSessionAttachmentManager.Attachment.AttachmentSource			
+enum	GroupActivities.GroupSessionAttachmentManager.Attachment.AttachmentSource		case	local
+enum	GroupActivities.GroupSessionAttachmentManager.Attachment.AttachmentSource		case	ids
+enum	GroupActivities.GroupSessionAttachmentManager.Attachment.AttachmentSource		case	plugin
+struct	GroupActivities.GroupSessionAttachmentManager.Attachments			
+struct	GroupActivities.GroupSessionAttachmentManager.Attachments		let	base
+struct	GroupActivities.GroupSessionAttachmentManager.Attachments.Iterator			
+struct	GroupActivities.GroupSessionAttachmentManager.Attachments.Iterator		var	baseIterator
+struct	GroupActivities.Participant			
+struct	GroupActivities.Participant		let	id
+struct	GroupActivities.Participant		let	handle
+struct	GroupActivities.Participant		let	serverIdentifier
+struct	GroupActivities.Participant		let	stableDeviceIdentifier
+struct	GroupActivities.Participant		var	isNearbyWithLocalParticipant
+struct	GroupActivities.Participant		var	isConnectedToCommunalDevice
+class	GroupActivities.BinaryEncoder			
+class	GroupActivities.BinaryEncoder		var	data
+class	GroupActivities.XPCWrapper	NSObject<A: Swift.Decodable, A: Swift.Encodable>		
+class	GroupActivities.XPCWrapper	NSObject<A: Swift.Decodable, A: Swift.Encodable>	let	wrapped
+class	GroupActivities.XPCWrapper	NSObject<A: Swift.Decodable, A: Swift.Encodable>	let	data
+class	GroupActivities.BinaryDecoder			
+class	GroupActivities.BinaryDecoder		var	data
+class	GroupActivities.BinaryDecoder		var	cursor
+struct	GroupActivities.SystemCoordinator.ParticipantState			
+struct	GroupActivities.SystemCoordinator.ParticipantState		let	isSpatial
+struct	GroupActivities.SystemCoordinator.ParticipantState		let	seat
+struct	GroupActivities.SystemCoordinator.ParticipantState		let	pose
+struct	GroupActivities.SystemCoordinator.ParticipantState		let	role
+struct	GroupActivities.SystemCoordinator.ParticipantState.Seat			
+struct	GroupActivities.SystemCoordinator.ParticipantState.Seat		let	pose
+struct	GroupActivities.SystemCoordinator.ParticipantState.Seat		let	role
+struct	GroupActivities.GenericSpatialTemplateRole			
+struct	GroupActivities.GenericSpatialTemplateRole		let	roleIdentifier
+struct	GroupActivities.SystemCoordinator.ParticipantStates			
+struct	GroupActivities.SystemCoordinator.ParticipantStates		let	base
+struct	GroupActivities.SystemCoordinator.ParticipantStates.Iterator			
+struct	GroupActivities.SystemCoordinator.ParticipantStates.Iterator		var	baseIterator
+class	GroupActivities.AttachmentDownloadTask			
+class	GroupActivities.AttachmentDownloadTask		let	topic
+class	GroupActivities.AttachmentDownloadTask		let	attachment
+class	GroupActivities.AttachmentDownloadTask		let	file
+class	GroupActivities.AttachmentDownloadTask		let	manager
+class	GroupActivities.AttachmentDownloadTask		var	signalHandler
+enum	GroupActivities.AttachmentDownloadTask.Errors			
+enum	GroupActivities.AttachmentDownloadTask.Errors		case	attachmentNotFound
+enum	GroupActivities.AttachmentDownloadTask.Errors		case	serverBlocking
+struct	GroupActivities._SpatialTemplateElementOutput			
+struct	GroupActivities._SpatialTemplateElementOutput		let	output
+struct	GroupActivities.SpatialTemplateSeatElement			
+struct	GroupActivities.SpatialTemplateSeatElement		let	position
+struct	GroupActivities.SpatialTemplateSeatElement		let	direction
+struct	GroupActivities.SpatialTemplateSeatElement		let	role
+struct	GroupActivities.SpatialTemplateElementDirection			
+struct	GroupActivities.SpatialTemplateElementDirection		let	output
+struct	GroupActivities.SpatialTemplateElementAxis			
+struct	GroupActivities.SpatialTemplateElementAxis		let	storage
+enum	GroupActivities.SpatialTemplateElementAxis.Storage			
+enum	GroupActivities.SpatialTemplateElementAxis.Storage		case	x
+enum	GroupActivities.SpatialTemplateElementAxis.Storage		case	z
+struct	GroupActivities.SpatialTemplateElementPosition			
+struct	GroupActivities.SpatialTemplateElementPosition		let	output
+struct	GroupActivities.GroupSessionEvent			
+struct	GroupActivities.GroupSessionEvent		let	originator
+struct	GroupActivities.GroupSessionEvent		let	action
+struct	GroupActivities.GroupSessionEvent		let	url
+struct	GroupActivities.GroupSessionEvent.Action			
+struct	GroupActivities.GroupSessionEvent.Action		let	eventType
+struct	GroupActivities.GroupSessionEvent.Action		let	item
+struct	GroupActivities.GroupSessionEvent.Action		let	queueItemType
+struct	GroupActivities.GroupSessionEvent.Action.QueueChange			
+struct	GroupActivities.GroupSessionEvent.Action.QueueChange		let	action
+struct	GroupActivities.GroupSessionEvent.Action.QueueChange.Item			
+struct	GroupActivities.GroupSessionEvent.Action.QueueChange.Item		let	name
+struct	GroupActivities.GroupSessionEvent.Action.QueueChange.Item		let	tuItemType
+struct	GroupActivities.QueueItem			
+struct	GroupActivities.QueueItem		let	item
+struct	GroupActivities.QueueItem		let	tuItemType
+struct	GroupActivities.GroupSession.Event<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupSession.Event<A	GroupActivities.GroupActivity>	let	originator
+struct	GroupActivities.GroupSession.Event<A	GroupActivities.GroupActivity>	let	action
+struct	GroupActivities.GroupSession.Event<A	GroupActivities.GroupActivity>	let	url
+enum	GroupActivities.GroupSession.Event.Action<A	GroupActivities.GroupActivity>		
+enum	GroupActivities.GroupSession.Event.Action<A	GroupActivities.GroupActivity>	case	skip
+enum	GroupActivities.GroupSession.Event.Action<A	GroupActivities.GroupActivity>	case	play
+enum	GroupActivities.GroupSession.Event.Action<A	GroupActivities.GroupActivity>	case	pause
+enum	GroupActivities.GroupSession.Event.Action<A	GroupActivities.GroupActivity>	case	seek
+class	GroupActivities.SystemCoordinatorClientConnection	CopresenceCore.XPCClient GroupActivities.SystemCoordinatorInterface		
+class	GroupActivities.SystemCoordinatorClientConnection	CopresenceCore.XPCClient GroupActivities.SystemCoordinatorInterface	var	serverDisconnectedCallback
+class	GroupActivities.SystemCoordinatorClientConnection	CopresenceCore.XPCClient GroupActivities.SystemCoordinatorInterface	var	stateCallback
+enum	GroupActivities.Participants			
+enum	GroupActivities.Participants		case	only
+enum	GroupActivities.Participants		case	all
+enum	GroupActivities.CPParticipants			
+enum	GroupActivities.CPParticipants		case	only
+enum	GroupActivities.CPParticipants		case	all
+struct	GroupActivities.GroupSessionMessenger.Messages<A	Swift.Decodable, A: Swift.Encodable>		
+struct	GroupActivities.GroupSessionMessenger.Messages<A	Swift.Decodable, A: Swift.Encodable>	let	base
+struct	GroupActivities.GroupSessionMessenger.Messages.Iterator<A	Swift.Decodable, A: Swift.Encodable>		
+struct	GroupActivities.GroupSessionMessenger.Messages.Iterator<A	Swift.Decodable, A: Swift.Encodable>	var	baseIterator
+class	GroupActivities.TopicManager			
+class	GroupActivities.TopicManager		var	_conversationClientsByGroupUUID
+class	GroupActivities.TopicManager		var	cancellables
+class	GroupActivities.TopicManager		let	lock
+class	GroupActivities.TopicManager		var	provider
+class	GroupActivities.TopicManager		let	featureFlags
+enum	GroupActivities.TopicManager.Errors			
+enum	GroupActivities.TopicManager.Errors		case	invalidCreation
+enum	GroupActivities.TopicManager.Errors		case	noConversation
+enum	GroupActivities.TopicManager.Errors		case	insufficientInfo
+enum	GroupActivities.TopicManager.ServiceName			
+enum	GroupActivities.TopicManager.ServiceName		case	pubSub
+enum	GroupActivities.TopicManager.ServiceName		case	unreliableMessaging
+enum	GroupActivities.TopicManager.ServiceName		case	attachmentLedger
+class	GroupActivities.TopicManager.ConversationClient			
+class	GroupActivities.TopicManager.ConversationClient		var	services
+class	GroupActivities.TopicManager.ConversationClient		var	activeSubscriptions
+class	GroupActivities.TopicManager.ConversationClient		let	lock
+enum	GroupActivities.TopicManager.ConversationClient.Service			
+enum	GroupActivities.TopicManager.ConversationClient.Service		case	pubSub
+enum	GroupActivities.TopicManager.ConversationClient.Service		case	unreliableMessaging
+enum	GroupActivities.TopicManager.ConversationClient.Service		case	attachmentLedger
+class	GroupActivities.TopicManager.Subscription			
+class	GroupActivities.TopicManager.Subscription		var	topicName
+class	GroupActivities.TopicManager.Subscription		var	conversationClient
+class	GroupActivities.SystemCoordinatorState	NSObject		
+class	GroupActivities.SystemCoordinatorState	NSObject	let	localParticipantState
+class	GroupActivities.SystemCoordinatorState	NSObject	let	remoteParticipantStates
+class	GroupActivities.SystemCoordinatorState	NSObject	let	groupImmersionStyle
+class	GroupActivities.SystemCoordinatorState	NSObject	let	activeSpatialParticipantCount
+class	GroupActivities.SystemCoordinatorState.ParticipantState	NSObject		
+class	GroupActivities.SystemCoordinatorState.ParticipantState	NSObject	let	isSpatial
+class	GroupActivities.SystemCoordinatorState.ParticipantState	NSObject	let	isSpatialInitiator
+class	GroupActivities.SystemCoordinatorState.ParticipantState	NSObject	let	roleIdentifier
+class	GroupActivities.SystemCoordinatorState.ParticipantState	NSObject	let	xpcWrappedSeat
+struct	GroupActivities.SystemCoordinatorState.ParticipantState.Seat			
+struct	GroupActivities.SystemCoordinatorState.ParticipantState.Seat		let	pose
+struct	GroupActivities.SystemCoordinatorState.ParticipantState.Seat		let	assignedParticipantPose
+struct	GroupActivities.SystemCoordinatorState.ParticipantState.Seat		let	roleIdentifier
+struct	GroupActivities.SystemCoordinatorState.ParticipantState.Seat		let	number
+enum	GroupActivities.SystemCoordinatorState.GroupImmersionStyle			
+enum	GroupActivities.SystemCoordinatorState.GroupImmersionStyle		case	mixed
+enum	GroupActivities.SystemCoordinatorState.GroupImmersionStyle		case	full
+enum	GroupActivities.SystemCoordinatorState.GroupImmersionStyle		case	progressive
+enum	GroupActivities.SystemCoordinatorState.ParticipantState.Seat.CodingKeys			
+enum	GroupActivities.SystemCoordinatorState.ParticipantState.Seat.CodingKeys		case	pose
+enum	GroupActivities.SystemCoordinatorState.ParticipantState.Seat.CodingKeys		case	assignedParticipantPose
+enum	GroupActivities.SystemCoordinatorState.ParticipantState.Seat.CodingKeys		case	roleIdentifier
+enum	GroupActivities.SystemCoordinatorState.ParticipantState.Seat.CodingKeys		case	number
+enum	GroupActivities.GroupSessionEvents			
+class	GroupActivities.AVAudioSessionAssertionManager			
+class	GroupActivities.AVAudioSessionAssertionManager		let	lock
+class	GroupActivities.AVAudioSessionAssertionManager		var	groupSessions
+class	GroupActivities.BackgroundAudioSessionAssertionManager			
+class	GroupActivities.AVAudioSessionAssertion			
+class	GroupActivities.AVAudioSessionAssertion		let	id
+class	GroupActivities.AVAudioSessionAssertion		let	manager
+struct	GroupActivities.GroupSession.Sessions<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupSession.Sessions<A	GroupActivities.GroupActivity>	let	base
+struct	GroupActivities.GroupSession.Sessions.Iterator<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupSession.Sessions.Iterator<A	GroupActivities.GroupActivity>	var	baseIterator
+class	GroupActivities.LinkManager	NSObject		
+class	GroupActivities.LinkManager	NSObject	let	lock
+class	GroupActivities.LinkManager	NSObject	var	unreliableMessenger
+class	GroupActivities.LinkManager	NSObject	var	_attachmentLedgerTopic
+class	GroupActivities.LinkManager	NSObject	var	pendingLocalAttachments
+class	GroupActivities.LinkManager	NSObject	var	_attachments
+class	GroupActivities.LinkManager	NSObject	var	cancellables
+class	GroupActivities.LinkManager	NSObject	let	featureFlags
+class	GroupActivities.LinkManager	NSObject	let	topic
+class	GroupActivities.LinkManager	NSObject	let	identifier
+class	GroupActivities.LinkManager	NSObject	let	groupUUID
+class	GroupActivities.LinkManager	NSObject	var	state
+class	GroupActivities.LinkManager	NSObject	let	localParticipant
+class	GroupActivities.LinkManager	NSObject	let	unreliableMessengerConfig
+class	GroupActivities.LinkManager	NSObject	var	hasConnectedOnce
+class	GroupActivities.LinkManager	NSObject	var	receivedDataHandler
+class	GroupActivities.LinkManager	NSObject	var	onFirstConnectedHandler
+class	GroupActivities.LinkManager	NSObject	var	invalidationHandler
+class	GroupActivities.LinkManager	NSObject	var	requestEncryptionKeysHandler
+enum	GroupActivities.LinkManager.Errors			
+enum	GroupActivities.LinkManager.Errors		case	invalidTopic
+enum	GroupActivities.LinkManager.Errors		case	serverBlocking
+enum	GroupActivities.LinkManager.Errors		case	invalidState
+enum	GroupActivities.LinkManager.Errors		case	invalidMessenger
+enum	GroupActivities.LinkManager.Errors		case	invalidDataCryptor
+enum	GroupActivities.LinkManager.Errors		case	invalidEncryption
+struct	GroupActivities.LinkManager.Attachment			
+struct	GroupActivities.LinkManager.Attachment		var	id
+struct	GroupActivities.LinkManager.Attachment		var	sentTime
+struct	GroupActivities.LinkManager.Attachment		var	source
+struct	GroupActivities.LinkManager.Attachment		var	file
+struct	GroupActivities.LinkManager.Attachment		var	state
+enum	GroupActivities.LinkManager.Attachment.Source			
+enum	GroupActivities.LinkManager.Attachment.Source		case	plugin
+enum	GroupActivities.LinkManager.Attachment.Source		case	local
+enum	GroupActivities.LinkManager.Attachment.State			
+enum	GroupActivities.LinkManager.Attachment.State		case	downloading
+enum	GroupActivities.LinkManager.Attachment.State		case	idle
+enum	GroupActivities.LinkManager.Attachment.State		case	uploading
+enum	GroupActivities.LinkManager.Attachment.State		case	finished
+enum	GroupActivities.LinkManager.LinkError			
+enum	GroupActivities.LinkManager.LinkError		case	noDestination
+enum	GroupActivities.LinkManager.LinkError		case	noService
+enum	GroupActivities.LinkManager.LinkError		case	serviceUnavailable
+enum	GroupActivities.LinkManager.LinkError		case	invalidRequest
+enum	GroupActivities.LinkManager.LinkError		case	invalidState
+enum	GroupActivities.LinkManager.State			
+enum	GroupActivities.LinkManager.State		case	waiting
+enum	GroupActivities.LinkManager.State		case	resumed
+class	GroupActivities.AttachmentUploadTask			
+class	GroupActivities.AttachmentUploadTask		let	topic
+class	GroupActivities.AttachmentUploadTask		let	file
+class	GroupActivities.AttachmentUploadTask		let	developerMetadata
+class	GroupActivities.AttachmentUploadTask		let	id
+class	GroupActivities.AttachmentUploadTask		let	stateMachine
+class	GroupActivities.AttachmentUploadTask		let	key
+class	GroupActivities.AttachmentUploadTask		var	protector
+class	GroupActivities.AttachmentUploadTask		var	assetManager
+class	GroupActivities.AttachmentUploadTask		var	topicUploadTask
+class	GroupActivities.AttachmentUploadTask		var	signalHandler
+class	GroupActivities.AttachmentUploadTask		var	_state
+enum	GroupActivities.AttachmentUploadTask.State			
+enum	GroupActivities.AttachmentUploadTask.State		case	idle
+enum	GroupActivities.AttachmentUploadTask.State		case	connecting
+enum	GroupActivities.AttachmentUploadTask.State		case	uploading
+enum	GroupActivities.AttachmentUploadTask.State		case	updatingStatusComplete
+enum	GroupActivities.AttachmentUploadTask.State		case	success
+enum	GroupActivities.AttachmentUploadTask.State		case	failure
+enum	GroupActivities.AttachmentUploadTask.Errors			
+enum	GroupActivities.AttachmentUploadTask.Errors		case	invalidState
+enum	GroupActivities.AttachmentUploadTask.Errors		case	serverBlocking
+enum	GroupActivities.AttachmentUploadTask.Event			
+enum	GroupActivities.AttachmentUploadTask.Event		case	fetchToken
+enum	GroupActivities.AttachmentUploadTask.Event		case	fetchTokenFailure
+enum	GroupActivities.AttachmentUploadTask.Event		case	creatingAsset
+enum	GroupActivities.AttachmentUploadTask.Event		case	createAssetFailure
+enum	GroupActivities.AttachmentUploadTask.Event		case	uploadFinished
+enum	GroupActivities.AttachmentUploadTask.Event		case	uploadFailure
+enum	GroupActivities.AttachmentUploadTask.Event		case	topicUploadAttempt
+enum	GroupActivities.AttachmentUploadTask.Event		case	updateSignal
+struct	GroupActivities.SceneAssociationBehavior			
+struct	GroupActivities.SceneAssociationBehavior		let	shouldAssociateScene
+struct	GroupActivities.SceneAssociationBehavior		let	contentIdentifier
+struct	GroupActivities.SceneAssociationBehavior		var	preferredSceneSessionRole
+struct	GroupActivities.AuthorizationPromptOptions			
+struct	GroupActivities.AuthorizationPromptOptions		let	title
+struct	GroupActivities.AuthorizationPromptOptions		let	message
+struct	GroupActivities.AuthorizationPromptOptions		let	startForEveryone
+struct	GroupActivities.AuthorizationPromptOptions		let	startForMe
+struct	GroupActivities.AuthorizationPromptOptions		let	promptCondition
+struct	GroupActivities.AuthorizationPromptOptions		let	confirmReplacement
+enum	GroupActivities.AuthorizationPromptOptions.PromptCondition			
+enum	GroupActivities.AuthorizationPromptOptions.PromptCondition		case	automatic
+enum	GroupActivities.AuthorizationPromptOptions.PromptCondition		case	always
+enum	GroupActivities.AuthorizationPromptOptions.PromptCondition		case	onSharedAppChange
+class	GroupActivities.SystemCoordinator			
+class	GroupActivities.SystemCoordinator		let	lock
+class	GroupActivities.SystemCoordinator		var	_localParticipantState
+class	GroupActivities.SystemCoordinator		var	_remoteParticipantStates
+class	GroupActivities.SystemCoordinator		var	lazy
+class	GroupActivities.SystemCoordinator		var	_activeSpatialParticipantCount
+class	GroupActivities.SystemCoordinator		var	_configuration
+class	GroupActivities.SystemCoordinator		var	spatialCatchupNeededHandler
+class	GroupActivities.SystemCoordinator		var	cachedSpatialCatchupNeededValue
+class	GroupActivities.SystemCoordinator		let	groupImmersionStyleSubject
+class	GroupActivities.SystemCoordinator		var	groupImmersionStyleAssertionManager
+class	GroupActivities.SystemCoordinator		var	currentState
+class	GroupActivities.SystemCoordinator		let	client
+class	GroupActivities.SystemCoordinator		var	subscriptions
+class	GroupActivities.SystemCoordinator		var	localParticipantStatePublisher
+class	GroupActivities.SystemCoordinator		let	canBeInitialSpatialDriver
+class	GroupActivities.SystemCoordinator		var	activeParticipants
+class	GroupActivities.SystemCoordinator		var	localParticipantRoleAssignmentRequest
+class	GroupActivities.SystemCoordinator		var	defaultSpatialTemplatePreferences
+class	GroupActivities.SystemCoordinator		var	defaultSpatialTemplateRoles
+class	GroupActivities.SystemCoordinator		let	_
+struct	GroupActivities.SystemCoordinator.Configuration			
+struct	GroupActivities.SystemCoordinator.Configuration		var	spatialTemplatePreference
+struct	GroupActivities.SystemCoordinator.Configuration		var	supportsGroupImmersiveSpace
+struct	GroupActivities.SystemCoordinator.Configuration		var	faceAppTowardsEachParticipant
+enum	GroupActivities.SystemCoordinator.RoleAssignmentDiagnostic			
+enum	GroupActivities.SystemCoordinator.RoleAssignmentDiagnostic		case	unknownRoleForCustomTemplate
+enum	GroupActivities.SystemCoordinator.RoleAssignmentDiagnostic		case	unsupportedTemplatePreference
+enum	GroupActivities.SystemCoordinator.RoleAssignmentDiagnostic		case	unknownRoleForPresentationTemplate
+enum	GroupActivities.SystemCoordinator.SpatialTemplateDiagnostic			
+enum	GroupActivities.SystemCoordinator.SpatialTemplateDiagnostic		case	lessThanFiveSeats
+enum	GroupActivities.BackgroundGroupSessionManagerError			
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	unknown
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	invalidActivity
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	operationFailed
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	invalidShare
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	missingShareProvider
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	deprecatedPath
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	serverDisconnected
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	alreadyStarted
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	conversionFailure
+enum	GroupActivities.BackgroundGroupSessionManagerError		case	cancelled
+class	GroupActivities.BackgroundGroupSessionManager			
+class	GroupActivities.BackgroundGroupSessionManager		let	client
+class	GroupActivities.BackgroundGroupSessionManager		var	presenceProviderObservers
+class	GroupActivities.BackgroundGroupSessionManager		var	providerObservers
+class	GroupActivities.BackgroundGroupSessionManager		var	requestedGroupSessionSignpostStates
+class	GroupActivities.BackgroundGroupSessionManager		var	lazy
+class	GroupActivities.BackgroundGroupSessionManager		let	audioSessionAssertionManager
+class	GroupActivities.BackgroundGroupSessionManager		let	_activitySessions
+class	GroupActivities.BackgroundGroupSessionManager		let	_groupSessions
+class	GroupActivities.BackgroundGroupSessionManager		var	lazy
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest			
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest		case	requestedRole
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest		case	none
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest		case	resignedRole
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.CodingKeys			
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.CodingKeys		case	none
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.CodingKeys		case	requestedRole
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.CodingKeys		case	resignedRole
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.NoneCodingKeys			
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.RequestedRoleCodingKeys			
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.RequestedRoleCodingKeys		case	roleIdentifier
+enum	GroupActivities.SystemCoordinatorParticipantRoleRequest.ResignedRoleCodingKeys			
+class	GroupActivities.Topic			
+class	GroupActivities.Topic		var	topic
+class	GroupActivities.Topic		let	pubSubTopicGenerator
+class	GroupActivities.Topic		var	cancellables
+class	GroupActivities.Topic		let	stateMachine
+class	GroupActivities.Topic		var	delegate
+class	GroupActivities.Topic		var	subscription
+class	GroupActivities.Topic		let	name
+class	GroupActivities.Topic		var	receivedDataHandler
+class	GroupActivities.Topic		var	pubSubStateChangedHandler
+class	GroupActivities.Topic		var	catchupNeededHandler
+class	GroupActivities.Topic		var	dataCryptor
+class	GroupActivities.Topic		var	_subscribedParticipants
+class	GroupActivities.Topic		var	_queueState
+class	GroupActivities.Topic		var	invalidationHandler
+class	GroupActivities.Topic		var	requestEncryptionKeysHandler
+class	GroupActivities.Topic		var	seqNumWatermark
+class	GroupActivities.Topic		var	pendingMessages
+class	GroupActivities.Topic		var	pendingMessagesLock
+enum	GroupActivities.Topic.State			
+enum	GroupActivities.Topic.State		case	subscribing
+enum	GroupActivities.Topic.State		case	subscribed
+enum	GroupActivities.Topic.State		case	unsubscribing
+enum	GroupActivities.Topic.State		case	unsubscribed
+enum	GroupActivities.Topic.Errors			
+enum	GroupActivities.Topic.Errors		case	invalidState
+enum	GroupActivities.Topic.Errors		case	unavailable
+enum	GroupActivities.Topic.Errors		case	unknownTopic
+enum	GroupActivities.Topic.Errors		case	rejectedMessage
+enum	GroupActivities.Topic.Errors		case	cryptorFailure
+struct	GroupActivities.Topic.BootstrapPubSubTopicInfo			
+struct	GroupActivities.Topic.BootstrapPubSubTopicInfo		let	dataCryptorProvider
+struct	GroupActivities.Topic.BootstrapPubSubTopicInfo		let	delegate
+struct	GroupActivities.Topic.BootstrapPubSubTopicInfo		let	seqNumWatermark
+struct	GroupActivities.Topic.PendingMessage			
+struct	GroupActivities.Topic.PendingMessage		let	data
+struct	GroupActivities.Topic.PendingMessage		let	participants
+struct	GroupActivities.Topic.PendingMessage		let	typeIdentifier
+struct	GroupActivities.Topic.PendingMessage		let	previousSeqNumUnacked
+struct	GroupActivities.Topic.PendingMessage		let	completion
+enum	GroupActivities.Topic.Event			
+enum	GroupActivities.Topic.Event		case	subscribe
+enum	GroupActivities.Topic.Event		case	unsubscribe
+enum	GroupActivities.Topic.Event		case	success
+enum	GroupActivities.Topic.Event		case	fail
+struct	GroupActivities.SpatialTemplatePreferenceOutput			
+struct	GroupActivities.SpatialTemplatePreferenceOutput		let	contentExtent
+struct	GroupActivities.SpatialTemplatePreferenceOutput		let	template
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate		case	customAbsolute
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate		case	presentation
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate		case	conversational
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate		case	sideBySide
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate		case	surround
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate		case	none
+struct	GroupActivities.AbsoluteSpatialTemplateOutput			
+struct	GroupActivities.AbsoluteSpatialTemplateOutput		let	elements
+struct	GroupActivities.AbsoluteSpatialTemplateOutput		let	defaultInitiatorRole
+struct	GroupActivities.PresentationTemplateOutput			
+struct	GroupActivities.PresentationTemplateOutput		let	assignInitiatorToPresenterRole
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element		case	seat
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat			
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat		let	role
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat		let	position
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat		let	direction
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Role			
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Role		let	identifier
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position			
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position		let	anchor
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position		let	offset
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.Anchor			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.Anchor		case	appCenter
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction			
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction		let	rotation
+struct	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction		let	_anchor
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.Anchor			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.Anchor		case	position
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.Anchor		case	alignedWith
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor		case	position
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor		case	alignedWith
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodingKeys		case	rotation
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodingKeys		case	_anchor
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.CodingKeys		case	anchor
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.CodingKeys		case	offset
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.Anchor.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.Anchor.CodingKeys		case	appCenter
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Position.Anchor.AppCenterCodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Role.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Role.CodingKeys		case	identifier
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat.CodingKeys		case	role
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat.CodingKeys		case	position
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Seat.CodingKeys		case	direction
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.CodingKeys		case	seat
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.SeatCodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.SeatCodingKeys		case	_0
+enum	GroupActivities.PresentationTemplateOutput.CodingKeys			
+enum	GroupActivities.PresentationTemplateOutput.CodingKeys		case	assignInitiatorToPresenterRole
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.CodingKeys		case	elements
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.CodingKeys		case	defaultInitiatorRole
+enum	GroupActivities.SpatialTemplatePreferenceOutput.CodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.CodingKeys		case	contentExtent
+enum	GroupActivities.SpatialTemplatePreferenceOutput.CodingKeys		case	template
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys		case	customAbsolute
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys		case	conversational
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys		case	sideBySide
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys		case	surround
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys		case	none
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CodingKeys		case	presentation
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CustomAbsoluteCodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.CustomAbsoluteCodingKeys		case	_0
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.ConversationalCodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.SideBySideCodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.SurroundCodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.NoneCodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.PresentationCodingKeys			
+enum	GroupActivities.SpatialTemplatePreferenceOutput.SpatialTemplate.PresentationCodingKeys		case	_0
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodingKeys		case	position
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodingKeys		case	alignedWith
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.PositionCodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.PositionCodingKeys		case	_0
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.AlignedWithCodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.AlignedWithCodingKeys		case	appAxis
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis		case	x
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis		case	y
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis		case	z
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.CodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.CodingKeys		case	x
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.CodingKeys		case	y
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.CodingKeys		case	z
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.XCodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.YCodingKeys			
+enum	GroupActivities.AbsoluteSpatialTemplateOutput.Element.Direction.CodableAnchor.CodableAxis.ZCodingKeys			
+struct	GroupActivities.GroupActivityAssociationKind			
+struct	GroupActivities.GroupActivityAssociationKind		let	storage
+enum	GroupActivities.GroupActivityAssociationKind.Storage			
+enum	GroupActivities.GroupActivityAssociationKind.Storage		case	primary
+struct	GroupActivities.StaticGroupActivity			
+struct	GroupActivities.StaticGroupActivity		let	id
+class	GroupActivities.StaticGroupActivityRegistry			
+class	GroupActivities.StaticGroupActivityRegistry		var	subscriptions
+class	GroupActivities.StaticGroupActivityRegistry		let	lock
+enum	GroupActivities.StaticGroupActivity.CodingKeys			
+enum	GroupActivities.StaticGroupActivity.CodingKeys		case	id
+class	GroupActivities.Conversation			
+class	GroupActivities.Conversation		var	id
+class	GroupActivities.Conversation		var	_state
+class	GroupActivities.Conversation		var	groupUUID
+class	GroupActivities.Conversation		var	_activeParticipants
+class	GroupActivities.Conversation		var	_localParticipantIdentifier
+class	GroupActivities.Conversation		var	_activitySessions
+class	GroupActivities.Conversation		let	isEligibleForGroupSessions
+enum	GroupActivities.Conversation.State			
+enum	GroupActivities.Conversation.State		case	waiting
+enum	GroupActivities.Conversation.State		case	preparing
+enum	GroupActivities.Conversation.State		case	joining
+enum	GroupActivities.Conversation.State		case	joined
+enum	GroupActivities.Conversation.State		case	leaving
+struct	GroupActivities.URLActivity			
+struct	GroupActivities.URLActivity		var	webpageURL
+enum	GroupActivities.URLActivity.CodingKeys			
+enum	GroupActivities.URLActivity.CodingKeys		case	webpageURL
+enum	GroupActivities.Subsystem			
+enum	GroupActivities.Subsystem		case	copresence
+enum	GroupActivities.Subsystem		case	runtimeIssues
+struct	GroupActivities.Log			
+class	GroupActivities.GroupActivityAdvertisement<A	GroupActivities.GroupActivity>		
+class	GroupActivities.GroupActivityAdvertisement<A	GroupActivities.GroupActivity>	let	provider
+class	GroupActivities.GroupActivityAdvertisement<A	GroupActivities.GroupActivity>	let	id
+class	GroupActivities.GroupActivityAdvertisement<A	GroupActivities.GroupActivity>	let	activity
+class	GroupActivities.GroupActivityAdvertisement<A	GroupActivities.GroupActivity>	let	destinations
+struct	GroupActivities.GroupActivityAdvertisement.Destinations<A	GroupActivities.GroupActivity>		
+struct	GroupActivities.GroupActivityAdvertisement.Destinations<A	GroupActivities.GroupActivity>	let	rawValue
+enum	GroupActivities.GroupActivityAdvertisement.Errors<A	GroupActivities.GroupActivity>		
+enum	GroupActivities.GroupActivityAdvertisement.Errors<A	GroupActivities.GroupActivity>	case	couldNotStartAdvertisement
+enum	GroupActivities.GroupActivityAdvertisement.Errors<A	GroupActivities.GroupActivity>	case	couldNotStopAdvertisement
+enum	GroupActivities.TUConversationActivityLoadError			
+enum	GroupActivities.TUConversationActivityLoadError		case	empty
+enum	GroupActivities.TUConversationActivityLoadError		case	unknownError
+class	GroupActivities.ConversationManager			
+class	GroupActivities.ConversationManager		let	_conversationsByUUID
+class	GroupActivities.ConversationManager		var	lazy
+class	GroupActivities.ConversationManager		var	lazy
+class	GroupActivities.ConversationManager		var	audioSessionAssertionManager
+class	GroupActivities.ConversationManager		var	lazy
+class	GroupActivities.ConversationManager		var	conversationManagerClient
+class	GroupActivities.ConversationManager		var	conversationManagerSubscription
+struct	GroupActivities.GroupActivityMetadata			
+struct	GroupActivities.GroupActivityMetadata		var	type
+struct	GroupActivities.GroupActivityMetadata		var	title
+struct	GroupActivities.GroupActivityMetadata		var	subtitle
+struct	GroupActivities.GroupActivityMetadata		var	previewImage
+struct	GroupActivities.GroupActivityMetadata		var	fallbackURL
+struct	GroupActivities.GroupActivityMetadata		var	preferredBroadcastOptions
+struct	GroupActivities.GroupActivityMetadata		var	supportsContinuationOnTV
+struct	GroupActivities.GroupActivityMetadata		var	invitationURL
+struct	GroupActivities.GroupActivityMetadata		var	sceneAssociationBehavior
+struct	GroupActivities.GroupActivityMetadata		var	_supportsActivityPreviews
+struct	GroupActivities.GroupActivityMetadata		var	lifetimePolicy
+struct	GroupActivities.GroupActivityMetadata.ActivityType			
+struct	GroupActivities.GroupActivityMetadata.ActivityType		var	description
+struct	GroupActivities.GroupActivityMetadata.LifetimePolicy			
+struct	GroupActivities.GroupActivityMetadata.LifetimePolicy		let	tuConversationActivityLifetimePolicy
+enum	GroupActivities.GroupActivityMetadata.CodingKeys			
+enum	GroupActivities.GroupActivityMetadata.CodingKeys		case	fallbackURL
+enum	GroupActivities.GroupActivityMetadata.CodingKeys		case	invitationURL
+enum	GroupActivities.GroupActivityMetadata.CodingKeys		case	supportsContinuationOnTV
+enum	GroupActivities.GroupActivityMetadata.Experience			
+enum	GroupActivities.GroupActivityMetadata.Experience		case	watchTogether
+enum	GroupActivities.GroupActivityMetadata.Experience		case	listenTogether
+enum	GroupActivities.SystemCoordinatorInterface			
+protocol	GroupActivities.SystemCoordinatorHostDelegate			
+protocol	GroupActivities.PlaybackSyncerDelegate			
+protocol	GroupActivities.CoordinatorDelegate			
+protocol	GroupActivities.PlaybackCoordinating			
+protocol	GroupActivities.PlaybackSyncerLink			
+protocol	GroupActivities.SpatialTemplateRole			
+protocol	GroupActivities.GroupSessionProvider	ActivityType		
+protocol	GroupActivities.PresenceGroupSessionProvider			
+protocol	GroupActivities.ErrorRecoveryGroupSessionProvider			
+protocol	GroupActivities.GroupActivity			
+protocol	GroupActivities.CustomGroupActivityDecodable			
+protocol	GroupActivities.SpatialTemplate			
+protocol	GroupActivities.AnyTransportSession			
+protocol	GroupActivities.AnyGroupSession			
+protocol	GroupActivities.BinaryEncodable			
+protocol	GroupActivities.BinaryDecodable			
+protocol	GroupActivities.ShareProviderProtocol			
+protocol	GroupActivities.Member			
+protocol	GroupActivities.CollaborationGroupActivity			
+protocol	GroupActivities.TypedPayloadDecoding			
+protocol	GroupActivities.InternalGroupSessionProvider			
+protocol	GroupActivities.GroupSessionServiceProvider			
+protocol	GroupActivities.CustomMessageIdentifiable			
+protocol	GroupActivities.IdentifiableGroupActivity			
+protocol	GroupActivities.DownloadAttachment			
+protocol	GroupActivities.DownloadAttachmentTopic			
+protocol	GroupActivities.SpatialTemplateElement			
+protocol	GroupActivities.TopicDelegate			
+protocol	GroupActivities.AudioSessionAssertionManager			
+protocol	GroupActivities.SystemCoordinatorClientProvider			
+protocol	GroupActivities.SystemCoordinatorClient			
+protocol	GroupActivities.PluginAttachmentLedgerTopicProvider			
+protocol	GroupActivities.AnyStaticGroupActivity			
+protocol	GroupActivities.AssetManager			
+protocol	GroupActivities.AssetUploadCoordinator			
+protocol	GroupActivities.AssetDownloadCoordinator			
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.AVPlaybackCoordinatorPlaybackObjectCommand	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.AVPlaybackCoordinatorPlaybackObjectCommand	Swift.RawRepresentable		
+protocol	conformance __C.AVPlaybackCoordinatorPlaybackObjectCommand	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.AVPlaybackCoordinatorPlaybackObjectCommand	Swift.Equatable		
+protocol	conformance __C.AVPlaybackCoordinatorPlaybackObjectCommand	Swift.Hashable		
+protocol	conformance __C.AVPlaybackCoordinatorPlaybackObjectCommand	Swift._ObjectiveCBridgeable		
+protocol	conformance __C.AVPlaybackCoordinationParticipantStateKey	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.AVPlaybackCoordinationParticipantStateKey	Swift.RawRepresentable		
+protocol	conformance __C.AVPlaybackCoordinationParticipantStateKey	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.AVPlaybackCoordinationParticipantStateKey	Swift.Equatable		
+protocol	conformance __C.AVPlaybackCoordinationParticipantStateKey	Swift._ObjectiveCBridgeable		
+protocol	conformance __C.AVPlaybackCoordinationTransportControlStateKey	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.AVPlaybackCoordinationTransportControlStateKey	Swift.RawRepresentable		
+protocol	conformance __C.AVPlaybackCoordinationTransportControlStateKey	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.AVPlaybackCoordinationTransportControlStateKey	Swift.Equatable		
+protocol	conformance __C.AVPlaybackCoordinationTransportControlStateKey	Swift._ObjectiveCBridgeable		
+protocol	conformance __C.CGImage	Swift.Equatable: CoreGraphics		
+protocol	conformance __C.CGImage	Swift.Hashable: CoreGraphics		
+protocol	conformance __C.CGImage	CoreFoundation._CFObject: CoreGraphics		
+protocol	conformance __C.TUConversationActivityContentAssociation	Swift.Equatable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityContentAssociation	Swift.RawRepresentable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityEventType	Swift.Equatable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityEventType	Swift.RawRepresentable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityEventQueueItemType	Swift.Equatable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityEventQueueItemType	Swift.RawRepresentable: TelephonyUtilities		
+protocol	conformance __C.Axis3D	Swift.RawRepresentable: Spatial		
+protocol	conformance __C.Axis3D	Swift.Equatable: Spatial		
+protocol	conformance __C.TUConversationActivityLifetimePolicy	Swift.Hashable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityLifetimePolicy	Swift.Equatable: TelephonyUtilities		
+protocol	conformance __C.TUConversationActivityLifetimePolicy	Swift.RawRepresentable: TelephonyUtilities		
+protocol	conformance __C.AVPlaybackCoordinationTransportControlStateKey	Swift.Hashable		
+protocol	conformance __C.AVPlaybackCoordinationParticipantStateKey	Swift.Hashable		
+protocol	conformance __C.CIImageRepresentationOption	Swift._HasCustomAnyHashableRepresentation: CoreImage		
+protocol	conformance __C.CIImageRepresentationOption	Swift.RawRepresentable: CoreImage		
+protocol	conformance __C.CIImageRepresentationOption	Swift._SwiftNewtypeWrapper: CoreImage		
+protocol	conformance __C.CIImageRepresentationOption	Swift.Equatable: CoreImage		
+protocol	conformance __C.CIImageRepresentationOption	Swift._ObjectiveCBridgeable: CoreImage		
+protocol	conformance __C.AVPlaybackCoordinatorDidIssueCommandToPlaybackObjectKey	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.AVPlaybackCoordinatorDidIssueCommandToPlaybackObjectKey	Swift.RawRepresentable		
+protocol	conformance __C.AVPlaybackCoordinatorDidIssueCommandToPlaybackObjectKey	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.AVPlaybackCoordinatorDidIssueCommandToPlaybackObjectKey	Swift.Equatable		
+protocol	conformance __C.AVPlaybackCoordinatorDidIssueCommandToPlaybackObjectKey	Swift.Hashable		
+protocol	conformance __C.AVPlaybackCoordinatorDidIssueCommandToPlaybackObjectKey	Swift._ObjectiveCBridgeable		
+protocol	conformance __C.CIImageRepresentationOption	Swift.Hashable: CoreImage		
+protocol	conformance GroupActivities.EquatableSpatialTemplatePreference	Swift.Equatable		
+protocol	conformance GroupActivities.GroupSessionErrors	Swift.Equatable		
+protocol	conformance GroupActivities.GroupSessionErrors	Swift.Hashable		
+protocol	conformance GroupActivities.GroupSessionErrors	Swift.Error		
+protocol	conformance GroupActivities.Capabilities	Swift.OptionSet		
+protocol	conformance GroupActivities.Capabilities	Swift.SetAlgebra		
+protocol	conformance GroupActivities.Capabilities	Swift.RawRepresentable		
+protocol	conformance GroupActivities.Capabilities	Swift.Equatable		
+protocol	conformance GroupActivities.Capabilities	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GroupActivities.ActivityExternalParticipant	Swift.Hashable		
+protocol	conformance GroupActivities.ActivityExternalParticipant	Swift.Equatable		
+protocol	conformance GroupActivities.ActivityExternalParticipantStatus	Swift.Equatable		
+protocol	conformance GroupActivities.ActivityExternalParticipantStatus	Swift.Hashable		
+protocol	conformance GroupActivities.ActivityExternalParticipantStatus	Swift.RawRepresentable		
+protocol	conformance GroupActivities.GroupSession	Combine.ObservableObject		
+protocol	conformance GroupActivities.GroupSession	GroupActivities.AnyGroupSession		
+protocol	conformance GroupActivities.GroupSession	GroupActivities.AnyTransportSession		
+protocol	conformance GroupSession.GroupSessionPlaybackSyncerLink	GroupActivities.PlaybackSyncerLink		
+protocol	conformance GroupSession.State	Swift.Equatable		
+protocol	conformance GroupActivities.GroupSession	Swift.CustomStringConvertible		
+protocol	conformance GroupActivities.GroupSession	GroupActivities.PlaybackSyncerDelegate		
+protocol	conformance GroupActivities.InternalParticipant	Swift.Hashable		
+protocol	conformance GroupActivities.InternalParticipant	Swift.Equatable		
+protocol	conformance GroupActivities.AnyGroupActivity	Swift.Decodable		
+protocol	conformance GroupActivities.AnyGroupActivity	Swift.Encodable		
+protocol	conformance GroupActivities.AnyGroupActivity	GroupActivities.GroupActivity		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GroupActivities.PlaybackSyncer	GroupActivities.CoordinatorDelegate		
+protocol	conformance PlaybackSyncer.CatchupState	Swift.Decodable		
+protocol	conformance PlaybackSyncer.CatchupState	Swift.Encodable		
+protocol	conformance Message.MessageType	Swift.Equatable		
+protocol	conformance Message.MessageType	Swift.Hashable		
+protocol	conformance Message.MessageType	Swift.RawRepresentable		
+protocol	conformance Message.MessageType	Swift.Decodable		
+protocol	conformance Message.MessageType	Swift.Encodable		
+protocol	conformance PlaybackSyncer.Message	Swift.Decodable		
+protocol	conformance PlaybackSyncer.Message	Swift.Encodable		
+protocol	conformance AVPlaybackCoordinator	GroupActivities.PlaybackCoordinating		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SpatialTemplatePreference.Storage	Swift.Equatable		
+protocol	conformance SpatialTemplatePreference.Storage	Swift.Hashable		
+protocol	conformance SpatialTemplatePreference.Storage	Swift.RawRepresentable		
+protocol	conformance GroupActivities.SpatialTemplatePreference	Swift.CustomStringConvertible		
+protocol	conformance GroupActivities.GroupSessionEndpointIdentifier	Swift.Hashable		
+protocol	conformance GroupActivities.GroupSessionEndpointIdentifier	Swift.RawRepresentable		
+protocol	conformance GroupActivities.GroupSessionEndpointIdentifier	Swift.Equatable		
+protocol	conformance GroupActivities.SystemCoordinatorTable	Swift.Actor		
+protocol	conformance GroupActivities.GroupActivitySuggestion	Combine.Cancellable		
+protocol	conformance GroupActivities.GroupSessionObserver	Combine.Publisher		
+protocol	conformance GroupActivities.GroupActivityError	Swift.Equatable		
+protocol	conformance GroupActivities.GroupActivityError	Swift.Hashable		
+protocol	conformance GroupActivities.GroupActivityError	Swift.Error		
+protocol	conformance GroupActivities.GroupActivityActivationResult	Swift.Equatable		
+protocol	conformance GroupActivities.GroupActivityActivationResult	Swift.Hashable		
+protocol	conformance GroupActivities.PersonalGroupSessionProvider	GroupActivities.PresenceGroupSessionProvider		
+protocol	conformance GroupActivities.PersonalGroupSessionProvider	Swift.CustomStringConvertible		
+protocol	conformance GroupActivities.PersonalGroupSessionProvider	GroupActivities.GroupSessionProvider		
+protocol	conformance GroupActivities.PersonalGroupSessionProvider	Swift.Identifiable		
+protocol	conformance GroupActivities.SendReliability	Swift.Equatable		
+protocol	conformance GroupActivities.SendReliability	Swift.Hashable		
+protocol	conformance GroupActivities.GroupActivityTransferRepresentation	CoreTransferable.TransferRepresentation		
+protocol	conformance GroupActivities.SpatialTemplateConfiguration	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplateConfiguration	Swift.Equatable		
+protocol	conformance GroupActivities.AttachmentLedgerTopic	Swift.CustomStringConvertible		
+protocol	conformance AttachmentLedgerTopic.Errors	Swift.Equatable		
+protocol	conformance AttachmentLedgerTopic.Errors	Swift.Hashable		
+protocol	conformance AttachmentLedgerTopic.Errors	Swift.Error		
+protocol	conformance AttachmentLedgerTopic.State	Swift.Equatable		
+protocol	conformance AttachmentLedgerTopic.State	Swift.Hashable		
+protocol	conformance Event	Swift.Equatable		
+protocol	conformance Event	Swift.Hashable		
+protocol	conformance GroupActivities.ImageRepresentationEncodingErrors	Swift.Equatable		
+protocol	conformance GroupActivities.ImageRepresentationEncodingErrors	Swift.Hashable		
+protocol	conformance GroupActivities.ImageRepresentationEncodingErrors	Swift.Error		
+protocol	conformance GroupActivities.ImageRepresentation	CoreTransferable.TransferRepresentation		
+protocol	conformance SystemCoordinatorConfiguration.Wrapped	Swift.Decodable		
+protocol	conformance SystemCoordinatorConfiguration.Wrapped	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Iterator.Inner	Combine.Subscriber		
+protocol	conformance Iterator.Inner	Combine.Cancellable		
+protocol	conformance Iterator.Inner	Combine.CustomCombineIdentifierConvertible		
+protocol	conformance _PublisherElements.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance GroupActivities._PublisherElements	Swift.AsyncSequence		
+protocol	conformance PresenceSessionInfo.Participant	Swift.Hashable		
+protocol	conformance PresenceSessionInfo.Participant	Swift.Identifiable		
+protocol	conformance PresenceSessionInfo.Participant	Swift.CustomStringConvertible		
+protocol	conformance PresenceSessionInfo.Participant	Swift.Equatable		
+protocol	conformance PresenceSession.Errors	Swift.Equatable		
+protocol	conformance PresenceSession.Errors	Swift.Hashable		
+protocol	conformance PresenceSession.Errors	Swift.Error		
+protocol	conformance PresenceSession.State	Swift.Equatable		
+protocol	conformance PresenceSession.State	Swift.Hashable		
+protocol	conformance GroupActivities.PresenceSession	Swift.Identifiable		
+protocol	conformance GroupActivities.PresenceSession	Swift.CustomStringConvertible		
+protocol	conformance CKShareGroupSessionProvider.Errors	Swift.Equatable		
+protocol	conformance CKShareGroupSessionProvider.Errors	Swift.Hashable		
+protocol	conformance CKShareGroupSessionProvider.Errors	Swift.Error		
+protocol	conformance GroupActivities.CKShareGroupSessionProvider	GroupActivities.PresenceGroupSessionProvider		
+protocol	conformance GroupActivities.CKShareGroupSessionProvider	Swift.CustomStringConvertible		
+protocol	conformance GroupActivities.CKShareGroupSessionProvider	GroupActivities.GroupSessionProvider		
+protocol	conformance GroupActivities.CKShareGroupSessionProvider	Swift.Identifiable		
+protocol	conformance GroupActivities.CKShareGroupSessionProvider	GroupActivities.ErrorRecoveryGroupSessionProvider		
+protocol	conformance GroupActivities.Archived	Swift.Decodable		
+protocol	conformance GroupActivities.Archived	Swift.Encodable		
+protocol	conformance GroupActivities.Archived	Swift.Equatable		
+protocol	conformance GroupActivities.ShareChangeObserver	Swift.CustomStringConvertible		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.Equatable		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.Hashable		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.RawRepresentable		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.CodingKey		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TypedPayloadBox.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GroupActivities.TypedPayloadBox	Swift.Decodable		
+protocol	conformance GroupActivities.TypedPayloadBox	Swift.Encodable		
+protocol	conformance GroupActivities.AnySpatialTemplate	Swift.Hashable		
+protocol	conformance GroupActivities.AnySpatialTemplate	Swift.Equatable		
+protocol	conformance GroupActivities.AddressableMember	GroupActivities.Member		
+protocol	conformance GroupActivities.AddressableMember	Swift.Hashable		
+protocol	conformance GroupActivities.AddressableMember	Swift.Identifiable		
+protocol	conformance GroupActivities.AddressableMember	Swift.Equatable		
+protocol	conformance GroupActivities.LocalAccountMember	GroupActivities.Member		
+protocol	conformance GroupActivities.LocalAccountMember	Swift.Hashable		
+protocol	conformance GroupActivities.LocalAccountMember	Swift.Identifiable		
+protocol	conformance GroupActivities.LocalAccountMember	Swift.Equatable		
+protocol	conformance SystemCoordinatorHostManager.EndpointProvider	CopresenceCore.CustomEndpointProvider		
+protocol	conformance GroupActivities.SystemCoordinatorHostManager	GroupActivities.SystemCoordinatorHostDelegate		
+protocol	conformance GroupActivities.GroupStateObserver	Combine.ObservableObject		
+protocol	conformance GroupActivities.ContentAssociation	Swift.Equatable		
+protocol	conformance GroupSessionJournal.Attachment	Swift.Identifiable		
+protocol	conformance Attachments.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance GroupSessionJournal.Attachments	Swift.AsyncSequence		
+protocol	conformance GroupSessionJournal.InternalErrors	Swift.Equatable		
+protocol	conformance GroupSessionJournal.InternalErrors	Swift.Hashable		
+protocol	conformance GroupSessionJournal.InternalErrors	Swift.Error		
+protocol	conformance GroupSessionJournal.Errors	Swift.Equatable		
+protocol	conformance GroupSessionJournal.Errors	Swift.Hashable		
+protocol	conformance GroupSessionJournal.Errors	Swift.Error		
+protocol	conformance CollaborationActivity.CollaborationActivityError	Swift.Equatable		
+protocol	conformance CollaborationActivity.CollaborationActivityError	Swift.Hashable		
+protocol	conformance CollaborationActivity.CollaborationActivityError	Swift.Error		
+protocol	conformance CollaborationActivity.CodingKeys	Swift.Equatable		
+protocol	conformance CollaborationActivity.CodingKeys	Swift.Hashable		
+protocol	conformance CollaborationActivity.CodingKeys	Swift.CodingKey		
+protocol	conformance CollaborationActivity.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CollaborationActivity.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GroupActivities.CollaborationActivity	GroupActivities.CollaborationGroupActivity		
+protocol	conformance GroupActivities.CollaborationActivity	GroupActivities.IdentifiableGroupActivity		
+protocol	conformance GroupActivities.CollaborationActivity	GroupActivities.GroupActivity		
+protocol	conformance GroupActivities.CollaborationActivity	Swift.Identifiable		
+protocol	conformance GroupActivities.CollaborationActivity	Swift.Decodable		
+protocol	conformance GroupActivities.CollaborationActivity	Swift.Encodable		
+protocol	conformance GroupActivities.CollaborationActivity	Swift.Equatable		
+protocol	conformance GroupActivities.TypedPayloadDecoder	GroupActivities.TypedPayloadDecoding		
+protocol	conformance GroupActivities.BroadcastOptions	Swift.OptionSet		
+protocol	conformance GroupActivities.BroadcastOptions	Swift.SetAlgebra		
+protocol	conformance GroupActivities.BroadcastOptions	Swift.RawRepresentable		
+protocol	conformance GroupActivities.BroadcastOptions	Swift.Equatable		
+protocol	conformance GroupActivities.BroadcastOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GroupActivities.AnySpatialTemplateRole	Swift.Hashable		
+protocol	conformance GroupActivities.AnySpatialTemplateRole	Swift.Equatable		
+protocol	conformance GroupSession.MessageQueue	Swift.Hashable		
+protocol	conformance GroupSession.MessageQueue	Swift.Equatable		
+protocol	conformance PresentationSpatialTemplate.Role	Swift.Equatable		
+protocol	conformance PresentationSpatialTemplate.Role	Swift.Hashable		
+protocol	conformance PresentationSpatialTemplate.Role	Swift.RawRepresentable		
+protocol	conformance PresentationSpatialTemplate.Role	Swift.CaseIterable		
+protocol	conformance PresentationSpatialTemplate.Role	GroupActivities.SpatialTemplateRole		
+protocol	conformance PresentationSpatialTemplate.PresenterRoleBehavior	Swift.Equatable		
+protocol	conformance PresentationSpatialTemplate.PresenterRoleBehavior	Swift.Hashable		
+protocol	conformance GroupActivities.PresentationSpatialTemplate	GroupActivities.SpatialTemplate		
+protocol	conformance GroupActivities.PresentationSpatialTemplate	Swift.Hashable		
+protocol	conformance GroupActivities.PresentationSpatialTemplate	Swift.Equatable		
+protocol	conformance GroupSessionMessenger.DeliveryMode	Swift.Equatable		
+protocol	conformance GroupSessionMessenger.DeliveryMode	Swift.Hashable		
+protocol	conformance GroupSessionMessenger.MessageReliability	Swift.Equatable		
+protocol	conformance GroupSessionMessenger.MessageReliability	Swift.Hashable		
+protocol	conformance GroupSessionMessenger.MessageStream	Combine.Publisher		
+protocol	conformance MessageWrapper	Swift.Encodable		
+protocol	conformance MessageWrapper	Swift.Decodable		
+protocol	conformance MessageType	Swift.Encodable		
+protocol	conformance MessageType	Swift.Decodable		
+protocol	conformance MessageType.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MessageType.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MessageType.CodingKeys	Swift.RawRepresentable		
+protocol	conformance MessageType.CodingKeys	Swift.Hashable		
+protocol	conformance MessageType.CodingKeys	Swift.Equatable		
+protocol	conformance MessageWrapper.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MessageWrapper.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MessageWrapper.CodingKeys	Swift.Hashable		
+protocol	conformance MessageWrapper.CodingKeys	Swift.Equatable		
+protocol	conformance MessageWrapper.CodingKeys	Swift.CodingKey		
+protocol	conformance MessageType.CodingKeys	Swift.CodingKey		
+protocol	conformance GroupSessionAttachmentManager.Attachment	Swift.Identifiable		
+protocol	conformance Attachments.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance GroupSessionAttachmentManager.Attachments	Swift.AsyncSequence		
+protocol	conformance GroupActivities.Participant	Swift.Hashable		
+protocol	conformance GroupActivities.Participant	Swift.Identifiable		
+protocol	conformance GroupActivities.Participant	Swift.Equatable		
+protocol	conformance GroupActivities.Participant	Swift.CustomStringConvertible		
+protocol	conformance SystemCoordinator.ParticipantState	Swift.Equatable		
+protocol	conformance ParticipantState.Seat	Swift.Hashable		
+protocol	conformance ParticipantState.Seat	Swift.Equatable		
+protocol	conformance GroupActivities.GenericSpatialTemplateRole	GroupActivities.SpatialTemplateRole		
+protocol	conformance GroupActivities.GenericSpatialTemplateRole	Swift.Hashable		
+protocol	conformance GroupActivities.GenericSpatialTemplateRole	Swift.Equatable		
+protocol	conformance ParticipantStates.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance SystemCoordinator.ParticipantStates	Swift.AsyncSequence		
+protocol	conformance GroupActivities.AttachmentLedgerTopic	GroupActivities.DownloadAttachmentTopic		
+protocol	conformance CopresenceCore.Attachment	GroupActivities.DownloadAttachment		
+protocol	conformance AttachmentDownloadTask.Errors	Swift.Equatable		
+protocol	conformance AttachmentDownloadTask.Errors	Swift.Hashable		
+protocol	conformance AttachmentDownloadTask.Errors	Swift.Error		
+protocol	conformance GroupActivities.AttachmentDownloadTask	Swift.Actor		
+protocol	conformance GroupActivities.SpatialTemplateSeatElement	GroupActivities.SpatialTemplateElement		
+protocol	conformance GroupActivities.SpatialTemplateSeatElement	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplateSeatElement	Swift.Equatable		
+protocol	conformance GroupActivities.SpatialTemplateElementDirection	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplateElementDirection	Swift.Equatable		
+protocol	conformance SpatialTemplateElementAxis.Storage	Swift.Equatable		
+protocol	conformance SpatialTemplateElementAxis.Storage	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplateElementAxis	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplateElementAxis	Swift.Equatable		
+protocol	conformance GroupActivities.SpatialTemplateElementPosition	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplateElementPosition	Swift.Equatable		
+protocol	conformance Messages.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance GroupSessionMessenger.Messages	Swift.AsyncSequence		
+protocol	conformance TopicManager.Errors	Swift.Equatable		
+protocol	conformance TopicManager.Errors	Swift.Hashable		
+protocol	conformance TopicManager.Errors	Swift.Error		
+protocol	conformance TopicManager.ServiceName	Swift.Equatable		
+protocol	conformance TopicManager.ServiceName	Swift.Hashable		
+protocol	conformance TopicManager.ServiceName	Swift.RawRepresentable		
+protocol	conformance TopicManager.ConversationClient	GroupActivities.TopicDelegate		
+protocol	conformance ParticipantState.Seat	Swift.Decodable		
+protocol	conformance ParticipantState.Seat	Swift.Encodable		
+protocol	conformance ParticipantState.Seat	Swift.Hashable		
+protocol	conformance ParticipantState.Seat	Swift.Equatable		
+protocol	conformance SystemCoordinatorState.GroupImmersionStyle	Swift.Equatable		
+protocol	conformance SystemCoordinatorState.GroupImmersionStyle	Swift.Hashable		
+protocol	conformance SystemCoordinatorState.GroupImmersionStyle	Swift.RawRepresentable		
+protocol	conformance SystemCoordinatorState.GroupImmersionStyle	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GroupActivities.AVAudioSessionAssertionManager	GroupActivities.AudioSessionAssertionManager		
+protocol	conformance GroupActivities.BackgroundAudioSessionAssertionManager	GroupActivities.AudioSessionAssertionManager		
+protocol	conformance Sessions.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance GroupSession.Sessions	Swift.AsyncSequence		
+protocol	conformance LinkManager.Errors	Swift.Equatable		
+protocol	conformance LinkManager.Errors	Swift.Hashable		
+protocol	conformance LinkManager.Errors	Swift.Error		
+protocol	conformance GroupActivities.LinkManager	CopresenceCore.UnreliableMessengerDelegate		
+protocol	conformance LinkManager.LinkError	Swift.Equatable		
+protocol	conformance LinkManager.LinkError	Swift.Hashable		
+protocol	conformance LinkManager.LinkError	Swift.Error		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance AttachmentUploadTask.State	Swift.Equatable		
+protocol	conformance AttachmentUploadTask.State	Swift.Hashable		
+protocol	conformance AttachmentUploadTask.Errors	Swift.Equatable		
+protocol	conformance AttachmentUploadTask.Errors	Swift.Hashable		
+protocol	conformance AttachmentUploadTask.Errors	Swift.Error		
+protocol	conformance GroupActivities.AttachmentUploadTask	Swift.Actor		
+protocol	conformance Event	Swift.Hashable		
+protocol	conformance Event	Swift.Equatable		
+protocol	conformance GroupActivities.SceneAssociationBehavior	Swift.Equatable		
+protocol	conformance AuthorizationPromptOptions.PromptCondition	Swift.Equatable		
+protocol	conformance AuthorizationPromptOptions.PromptCondition	Swift.Hashable		
+protocol	conformance SystemCoordinator.RoleAssignmentDiagnostic	Swift.CustomStringConvertible		
+protocol	conformance SystemCoordinator.SpatialTemplateDiagnostic	Swift.CustomStringConvertible		
+protocol	conformance GroupActivities.SystemCoordinator	Observation.Observable		
+protocol	conformance GroupActivities.GroupSession	GroupActivities.SystemCoordinatorClientProvider		
+protocol	conformance GroupActivities.SystemCoordinatorClientConnection	GroupActivities.SystemCoordinatorClient		
+protocol	conformance GroupActivities.BackgroundGroupSessionManagerError	Swift.Equatable		
+protocol	conformance GroupActivities.BackgroundGroupSessionManagerError	Swift.Hashable		
+protocol	conformance GroupActivities.BackgroundGroupSessionManagerError	Swift.Error		
+protocol	conformance GroupActivities.BackgroundGroupSessionManager	Swift.Actor		
+protocol	conformance GroupActivities.BackgroundGroupSessionManager	CopresenceCore.ActivitySessionContainerProvider		
+protocol	conformance GroupActivities.BackgroundGroupSessionManager	GroupActivities.GroupSessionServiceProvider		
+protocol	conformance GroupActivities.BackgroundGroupSessionManager	GroupActivities.InternalGroupSessionProvider		
+protocol	conformance GroupActivities.BackgroundGroupSessionManager	CopresenceCore.BackGroundSessionManagerClientDelegate		
+protocol	conformance GroupActivities.SystemCoordinatorParticipantRoleRequest	Swift.Decodable		
+protocol	conformance GroupActivities.SystemCoordinatorParticipantRoleRequest	Swift.Encodable		
+protocol	conformance GroupActivities.SystemCoordinatorParticipantRoleRequest	Swift.Hashable		
+protocol	conformance GroupActivities.SystemCoordinatorParticipantRoleRequest	Swift.Equatable		
+protocol	conformance ResignedRoleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ResignedRoleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestedRoleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestedRoleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestedRoleCodingKeys	Swift.Hashable		
+protocol	conformance RequestedRoleCodingKeys	Swift.Equatable		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance RequestedRoleCodingKeys	Swift.CodingKey		
+protocol	conformance ResignedRoleCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CopresenceCore.PluginAttachmentLedgerTopic	GroupActivities.PluginAttachmentLedgerTopicProvider		
+protocol	conformance Topic.State	Swift.Equatable		
+protocol	conformance Topic.State	Swift.Hashable		
+protocol	conformance Topic.Errors	Swift.Equatable		
+protocol	conformance Topic.Errors	Swift.Hashable		
+protocol	conformance Topic.Errors	Swift.Error		
+protocol	conformance GroupActivities.Topic	CopresenceCore.PubSubTopicDelegate		
+protocol	conformance Event	Swift.Hashable		
+protocol	conformance Event	Swift.Equatable		
+protocol	conformance SpatialTemplatePreferenceOutput.SpatialTemplate	Swift.Decodable		
+protocol	conformance SpatialTemplatePreferenceOutput.SpatialTemplate	Swift.Encodable		
+protocol	conformance SpatialTemplatePreferenceOutput.SpatialTemplate	Swift.Hashable		
+protocol	conformance SpatialTemplatePreferenceOutput.SpatialTemplate	Swift.Equatable		
+protocol	conformance GroupActivities.SpatialTemplatePreferenceOutput	Swift.Decodable		
+protocol	conformance GroupActivities.SpatialTemplatePreferenceOutput	Swift.Encodable		
+protocol	conformance GroupActivities.SpatialTemplatePreferenceOutput	Swift.Hashable		
+protocol	conformance GroupActivities.SpatialTemplatePreferenceOutput	Swift.Equatable		
+protocol	conformance GroupActivities.AbsoluteSpatialTemplateOutput	Swift.Decodable		
+protocol	conformance GroupActivities.AbsoluteSpatialTemplateOutput	Swift.Encodable		
+protocol	conformance GroupActivities.AbsoluteSpatialTemplateOutput	Swift.Hashable		
+protocol	conformance GroupActivities.AbsoluteSpatialTemplateOutput	Swift.Equatable		
+protocol	conformance GroupActivities.PresentationTemplateOutput	Swift.Decodable		
+protocol	conformance GroupActivities.PresentationTemplateOutput	Swift.Encodable		
+protocol	conformance GroupActivities.PresentationTemplateOutput	Swift.Hashable		
+protocol	conformance GroupActivities.PresentationTemplateOutput	Swift.Equatable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Element	Swift.Decodable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Element	Swift.Encodable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Element	Swift.Hashable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Element	Swift.Equatable		
+protocol	conformance Element.Seat	Swift.Decodable		
+protocol	conformance Element.Seat	Swift.Encodable		
+protocol	conformance Element.Seat	Swift.Hashable		
+protocol	conformance Element.Seat	Swift.Equatable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Role	Swift.Decodable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Role	Swift.Encodable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Role	Swift.Hashable		
+protocol	conformance AbsoluteSpatialTemplateOutput.Role	Swift.Equatable		
+protocol	conformance Position.Anchor	Swift.Equatable		
+protocol	conformance Position.Anchor	Swift.Decodable		
+protocol	conformance Position.Anchor	Swift.Encodable		
+protocol	conformance Position.Anchor	Swift.Hashable		
+protocol	conformance Element.Position	Swift.Decodable		
+protocol	conformance Element.Position	Swift.Encodable		
+protocol	conformance Element.Position	Swift.Hashable		
+protocol	conformance Element.Position	Swift.Equatable		
+protocol	conformance Direction.Anchor	Swift.Hashable		
+protocol	conformance Direction.Anchor	Swift.Equatable		
+protocol	conformance Element.Direction	Swift.Decodable		
+protocol	conformance Element.Direction	Swift.Encodable		
+protocol	conformance Element.Direction	Swift.Hashable		
+protocol	conformance Element.Direction	Swift.Equatable		
+protocol	conformance PresentationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PresentationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PresentationCodingKeys	Swift.Hashable		
+protocol	conformance PresentationCodingKeys	Swift.Equatable		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SurroundCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SurroundCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SideBySideCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SideBySideCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ConversationalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ConversationalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CustomAbsoluteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CustomAbsoluteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CustomAbsoluteCodingKeys	Swift.Hashable		
+protocol	conformance CustomAbsoluteCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SeatCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SeatCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SeatCodingKeys	Swift.Hashable		
+protocol	conformance SeatCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AppCenterCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppCenterCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodableAnchor	Swift.Equatable		
+protocol	conformance CodableAnchor	Swift.Hashable		
+protocol	conformance CodableAnchor	Swift.Decodable		
+protocol	conformance CodableAnchor	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AppCenterCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SeatCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CustomAbsoluteCodingKeys	Swift.CodingKey		
+protocol	conformance ConversationalCodingKeys	Swift.CodingKey		
+protocol	conformance SideBySideCodingKeys	Swift.CodingKey		
+protocol	conformance SurroundCodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance PresentationCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodableAnchor.CodableAxis	Swift.Hashable		
+protocol	conformance CodableAnchor.CodableAxis	Swift.Equatable		
+protocol	conformance CodableAnchor.AlignedWithCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAnchor.AlignedWithCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAnchor.AlignedWithCodingKeys	Swift.Hashable		
+protocol	conformance CodableAnchor.AlignedWithCodingKeys	Swift.Equatable		
+protocol	conformance CodableAnchor.PositionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAnchor.PositionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAnchor.PositionCodingKeys	Swift.Hashable		
+protocol	conformance CodableAnchor.PositionCodingKeys	Swift.Equatable		
+protocol	conformance CodableAnchor.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAnchor.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAnchor.CodingKeys	Swift.Hashable		
+protocol	conformance CodableAnchor.CodingKeys	Swift.Equatable		
+protocol	conformance CodableAnchor.CodableAxis	Swift.Decodable		
+protocol	conformance CodableAnchor.PositionCodingKeys	Swift.CodingKey		
+protocol	conformance CodableAnchor.CodableAxis	Swift.Encodable		
+protocol	conformance CodableAnchor.AlignedWithCodingKeys	Swift.CodingKey		
+protocol	conformance CodableAnchor.CodingKeys	Swift.CodingKey		
+protocol	conformance CodableAxis.ZCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAxis.ZCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAxis.YCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAxis.YCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAxis.XCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAxis.XCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAxis.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodableAxis.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodableAxis.CodingKeys	Swift.Hashable		
+protocol	conformance CodableAxis.CodingKeys	Swift.Equatable		
+protocol	conformance CodableAxis.XCodingKeys	Swift.CodingKey		
+protocol	conformance CodableAxis.YCodingKeys	Swift.CodingKey		
+protocol	conformance CodableAxis.ZCodingKeys	Swift.CodingKey		
+protocol	conformance CodableAxis.CodingKeys	Swift.CodingKey		
+protocol	conformance GroupActivityAssociationKind.Storage	Swift.Hashable		
+protocol	conformance GroupActivityAssociationKind.Storage	Swift.Equatable		
+protocol	conformance GroupActivities.GroupActivityAssociationKind	Swift.Hashable		
+protocol	conformance GroupActivities.GroupActivityAssociationKind	Swift.Equatable		
+protocol	conformance GroupActivities.StaticGroupActivity	GroupActivities.AnyStaticGroupActivity		
+protocol	conformance GroupActivities.StaticGroupActivity	GroupActivities.IdentifiableGroupActivity		
+protocol	conformance GroupActivities.StaticGroupActivity	GroupActivities.GroupActivity		
+protocol	conformance GroupActivities.StaticGroupActivity	Swift.Identifiable		
+protocol	conformance GroupActivities.StaticGroupActivity	Swift.Decodable		
+protocol	conformance GroupActivities.StaticGroupActivity	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Conversation.State	Swift.Equatable		
+protocol	conformance Conversation.State	Swift.Hashable		
+protocol	conformance GroupActivities.Conversation	Swift.Identifiable		
+protocol	conformance GroupActivities.URLActivity	GroupActivities.GroupActivity		
+protocol	conformance GroupActivities.URLActivity	Swift.Decodable		
+protocol	conformance GroupActivities.URLActivity	Swift.Encodable		
+protocol	conformance GroupActivities.URLActivity	GroupActivities.CustomGroupActivityDecodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GroupActivities.Subsystem	Swift.Equatable		
+protocol	conformance GroupActivities.Subsystem	Swift.Hashable		
+protocol	conformance GroupActivities.Subsystem	Swift.RawRepresentable		
+protocol	conformance GroupActivityAdvertisement.Destinations	Swift.OptionSet		
+protocol	conformance GroupActivityAdvertisement.Destinations	Swift.Hashable		
+protocol	conformance GroupActivityAdvertisement.Destinations	Swift.SetAlgebra		
+protocol	conformance GroupActivityAdvertisement.Destinations	Swift.RawRepresentable		
+protocol	conformance GroupActivityAdvertisement.Destinations	Swift.Equatable		
+protocol	conformance GroupActivityAdvertisement.Destinations	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GroupActivityAdvertisement.Errors	Swift.Equatable		
+protocol	conformance GroupActivityAdvertisement.Errors	Swift.Hashable		
+protocol	conformance GroupActivityAdvertisement.Errors	Swift.Error		
+protocol	conformance TUConversationActivityLoadError	Swift.Hashable		
+protocol	conformance TUConversationActivityLoadError	Swift.Equatable		
+protocol	conformance TUConversationActivityLoadError	Swift.Error		
+protocol	conformance GroupActivities.ConversationManager	Combine.ObservableObject		
+protocol	conformance GroupActivities.ConversationManager	GroupActivities.InternalGroupSessionProvider		
+protocol	conformance CloudAsset.AssetDownloadCoordinator	GroupActivities.AssetDownloadCoordinator		
+protocol	conformance CloudAsset.AssetUploadCoordinator	GroupActivities.AssetUploadCoordinator		
+protocol	conformance CloudAsset.AssetManager	GroupActivities.AssetManager		
+protocol	conformance GroupActivityMetadata.ActivityType	Swift.Hashable		
+protocol	conformance GroupActivityMetadata.ActivityType	Swift.Equatable		
+protocol	conformance GroupActivityMetadata.LifetimePolicy	Swift.Hashable		
+protocol	conformance GroupActivityMetadata.LifetimePolicy	Swift.Equatable		
+protocol	conformance GroupActivities.GroupActivityMetadata	Swift.Equatable		
+protocol	conformance GroupActivityMetadata.CodingKeys	Swift.Equatable		
+protocol	conformance GroupActivityMetadata.CodingKeys	Swift.Hashable		
+protocol	conformance GroupActivityMetadata.CodingKeys	Swift.RawRepresentable		
+protocol	conformance GroupActivityMetadata.CodingKeys	Swift.CodingKey		
+protocol	conformance GroupActivityMetadata.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GroupActivityMetadata.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GroupActivities.GroupActivityMetadata	Swift.Decodable		
+protocol	conformance GroupActivities.GroupActivityMetadata	Swift.Encodable		
+protocol	conformance GroupActivityMetadata.Experience	Swift.Equatable		
+protocol	conformance GroupActivityMetadata.Experience	Swift.Hashable		
+protocol	conformance GroupActivityMetadata.Experience	Swift.RawRepresentable		
+protocol	conformance GroupActivityMetadata.Experience	Swift.Decodable		
+protocol	conformance GroupActivityMetadata.Experience	Swift.Encodable		
+protocol	conformance GroupActivities.SystemCoordinatorInterface	CopresenceCore.XPCInterface		
+extension	GroupActivities.Capabilities	OptionSet		
+extension	GroupActivities.Capabilities	SetAlgebra		
+extension	GroupActivities.Capabilities	RawRepresentable		
+extension	GroupActivities.Capabilities	ExpressibleByArrayLiteral		
+extension	GroupActivities.ActivityExternalParticipantStatus	RawRepresentable		
+extension	GroupActivities.GroupSession	ObservableObject		
+extension	GroupActivities.AnyGroupActivity.CodingKeys	RawRepresentable		
+extension	GroupActivities.PlaybackSyncer.Message.MessageType	RawRepresentable		
+extension	GroupActivities.SpatialTemplatePreference.Storage	RawRepresentable		
+extension	GroupActivities.GroupSessionEndpointIdentifier	RawRepresentable		
+extension	GroupActivities.GroupSessionObserver	Publisher		
+extension	GroupActivities.PersonalGroupSessionProvider	GroupSessionProvider		
+extension	GroupActivities.PersonalGroupSessionProvider	Identifiable		
+extension	GroupActivities.GroupActivityTransferRepresentation	TransferRepresentation		
+extension	GroupActivities.ImageRepresentation	TransferRepresentation		
+extension	GroupActivities._PublisherElements.Iterator.Inner	Subscriber		
+extension	GroupActivities._PublisherElements.Iterator	AsyncIteratorProtocol		
+extension	GroupActivities._PublisherElements	AsyncSequence		
+extension	GroupActivities.PresenceSessionInfo.Participant	Identifiable		
+extension	GroupActivities.PresenceSession	Identifiable		
+extension	GroupActivities.CKShareGroupSessionProvider	GroupSessionProvider		
+extension	GroupActivities.CKShareGroupSessionProvider	Identifiable		
+extension	GroupActivities.TypedPayloadBox.CodingKeys	RawRepresentable		
+extension	GroupActivities.AddressableMember	Identifiable		
+extension	GroupActivities.LocalAccountMember	Identifiable		
+extension	GroupActivities.GroupStateObserver	ObservableObject		
+extension	GroupActivities.GroupSessionJournal.Attachment	Identifiable		
+extension	GroupActivities.GroupSessionJournal.Attachments.Iterator	AsyncIteratorProtocol		
+extension	GroupActivities.GroupSessionJournal.Attachments	AsyncSequence		
+extension	GroupActivities.CollaborationActivity	Identifiable		
+extension	GroupActivities.BroadcastOptions	OptionSet		
+extension	GroupActivities.BroadcastOptions	SetAlgebra		
+extension	GroupActivities.BroadcastOptions	RawRepresentable		
+extension	GroupActivities.BroadcastOptions	ExpressibleByArrayLiteral		
+extension	GroupActivities.PresentationSpatialTemplate.Role	RawRepresentable		
+extension	GroupActivities.PresentationSpatialTemplate.Role	CaseIterable		
+extension	GroupActivities.GroupSessionMessenger.MessageStream	Publisher		
+extension	GroupActivities.GroupSessionMessenger.MessageType.CodingKeys	RawRepresentable		
+extension	GroupActivities.GroupSessionAttachmentManager.Attachment	Identifiable		
+extension	GroupActivities.GroupSessionAttachmentManager.Attachments.Iterator	AsyncIteratorProtocol		
+extension	GroupActivities.GroupSessionAttachmentManager.Attachments	AsyncSequence		
+extension	GroupActivities.Participant	Identifiable		
+extension	GroupActivities.SystemCoordinator.ParticipantStates.Iterator	AsyncIteratorProtocol		
+extension	GroupActivities.SystemCoordinator.ParticipantStates	AsyncSequence		
+extension	GroupActivities.GroupSessionMessenger.Messages.Iterator	AsyncIteratorProtocol		
+extension	GroupActivities.GroupSessionMessenger.Messages	AsyncSequence		
+extension	GroupActivities.TopicManager.ServiceName	RawRepresentable		
+extension	GroupActivities.SystemCoordinatorState.GroupImmersionStyle	RawRepresentable		
+extension	GroupActivities.GroupSession.Sessions.Iterator	AsyncIteratorProtocol		
+extension	GroupActivities.GroupSession.Sessions	AsyncSequence		
+extension	GroupActivities.StaticGroupActivity	Identifiable		
+extension	GroupActivities.Conversation	Identifiable		
+extension	GroupActivities.Subsystem	RawRepresentable		
+extension	GroupActivities.GroupActivityAdvertisement.Destinations	OptionSet		
+extension	GroupActivities.GroupActivityAdvertisement.Destinations	SetAlgebra		
+extension	GroupActivities.GroupActivityAdvertisement.Destinations	RawRepresentable		
+extension	GroupActivities.GroupActivityAdvertisement.Destinations	ExpressibleByArrayLiteral		
+extension	GroupActivities.ConversationManager	ObservableObject		
+extension	GroupActivities.GroupActivityMetadata.CodingKeys	RawRepresentable		
+extension	GroupActivities.GroupActivityMetadata.Experience	RawRepresentable		
+extension	GroupActivities.SystemCoordinatorInterface	XPCInterface		

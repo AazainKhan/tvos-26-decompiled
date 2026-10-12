@@ -1,0 +1,98 @@
+kind	type	conformance	member_kind	member
+enum	PodcastsKit.SubscriptionResult			
+class	PodcastsKit.SubscriptionControllerFactory	NSObject		
+class	PodcastsKit.StoreId	NSObject		
+class	PodcastsKit.StoreId	NSObject	let	underlyingStoreId
+class	PodcastsKit.ShowStoreId	PodcastsKit.StoreId		
+class	PodcastsKit.EpisodeStoreId	PodcastsKit.StoreId		
+enum	PodcastsKit.CommandResult			
+class	PodcastsKit.DurationSnapshot	NSObject		
+class	PodcastsKit.DurationSnapshot	NSObject	let	snapshotTime
+class	PodcastsKit.DurationSnapshot	NSObject	let	rate
+class	PodcastsKit.DurationSnapshot	NSObject	let	elapsedDuration
+class	PodcastsKit.DurationSnapshot	NSObject	let	duration
+class	PodcastsKit.Episode	NSObject		
+class	PodcastsKit.Episode	NSObject	let	title
+class	PodcastsKit.Episode	NSObject	let	releaseDate
+class	PodcastsKit.Episode	NSObject	let	isExplicit
+class	PodcastsKit.Episode	NSObject	let	duration
+class	PodcastsKit.Episode	NSObject	let	storeId
+class	PodcastsKit.Episode	NSObject	let	show
+class	PodcastsKit.Episode	NSObject	var	guid
+class	PodcastsKit.Episode	NSObject	var	uuid
+class	PodcastsKit.Episode	NSObject	let	streamUrl
+class	PodcastsKit.Episode	NSObject	var	episodeUuid
+class	PodcastsKit.Catalog	NSObject		
+class	PodcastsKit.CoreDataLibrary	NSObject		
+class	PodcastsKit.CoreDataLibrary	NSObject	var	lazy
+class	PodcastsKit.Database			
+class	PodcastsKit.SearchResult	NSObject		
+class	PodcastsKit.SearchResult	NSObject	let	episodes
+class	PodcastsKit.SearchResult	NSObject	let	shows
+class	PodcastsKit.Provider	NSObject		
+class	PodcastsKit.GenericPlayPodcasts			
+enum	PodcastsKit.PlaybackOrder			
+enum	PodcastsKit.PlaybackOrder		case	default
+enum	PodcastsKit.PlaybackOrder		case	newest
+enum	PodcastsKit.PlaybackOrder		case	oldest
+class	PodcastsKit.SiriContext	NSObject		
+class	PodcastsKit.SiriContext	NSObject	let	assetInfo
+class	PodcastsKit.SiriContext	NSObject	let	requesterSharedUserId
+class	PodcastsKit.SiriContext	NSObject	let	sharedUserIdFromPlayableITunesAccount
+class	PodcastsKit.SiriContext	NSObject	let	hashedRouteUIDs
+class	PodcastsKit.SiriContext	NSObject	let	decodedRouteUIDs
+class	PodcastsKit.SiriContext	NSObject	let	originatingOutputDeviceUID
+class	PodcastsKit.SiriContext	NSObject	let	referenceId
+class	PodcastsKit.SiriContext	NSObject	let	playbackOrder
+class	PodcastsKit.MediaRemoteSubscriptionController	NSObject		
+class	PodcastsKit.Station	NSObject		
+class	PodcastsKit.Station	NSObject	var	id
+class	PodcastsKit.Show	NSObject		
+class	PodcastsKit.Show	NSObject	let	title
+class	PodcastsKit.Show	NSObject	let	descriptionText
+class	PodcastsKit.Show	NSObject	let	storeId
+class	PodcastsKit.Show	NSObject	let	uuid
+class	PodcastsKit.Show	NSObject	let	feedUrl
+class	PodcastsKit.Show	NSObject	var	podcastUuid
+class	PodcastsKit.Show	NSObject	let	artworkDictionary
+class	PodcastsKit.PlayerManifest	NSObject		
+class	PodcastsKit.PlayerManifest	NSObject	var	playableContent
+class	PodcastsKit.PlayerManifest	NSObject	var	assetInfo
+class	PodcastsKit.PlayerManifest	NSObject	var	siriContext
+class	PodcastsKit.MediaAPISubscriptionController			
+class	PodcastsKit.MediaAPISubscriptionController		let	accountResolver
+class	PodcastsKit.ProxyPlayerController	NSObject		
+class	PodcastsKit.ProxyPlayerController	NSObject	var	currentEpisode
+class	PodcastsKit.ProxyPlayerController	NSObject	var	playerResponseHandler
+class	PodcastsKit.ProxyPlayerController	NSObject	var	contextExpirationTime
+class	PodcastsKit.ProxyPlayerController	NSObject	var	contextTuple
+class	PodcastsKit.ProxyPlayerController	NSObject	var	_currentContentItemIdentifier
+class	PodcastsKit.ProxyPlayerController	NSObject	let	requestResponseController
+protocol	PodcastsKit.StoreBackedContentTypeProviding			
+protocol	PodcastsKit.StoreBackedContentTypeFetchable			
+protocol	PodcastsKit.StoreBackedContentTypeDeserializable			
+protocol	PodcastsKit.PlayableContent			
+protocol	conformance PodcastsKit.SubscriptionResult	Swift.Equatable		
+protocol	conformance PodcastsKit.SubscriptionResult	Swift.Hashable		
+protocol	conformance PodcastsKit.SubscriptionResult	Swift.RawRepresentable		
+protocol	conformance __C.MRMediaRemoteCommandHandlerStatus	Swift.Equatable		
+protocol	conformance __C.MRMediaRemoteCommandHandlerStatus	Swift.RawRepresentable		
+protocol	conformance PodcastsKit.CommandResult	Swift.Equatable		
+protocol	conformance PodcastsKit.CommandResult	Swift.Hashable		
+protocol	conformance PodcastsKit.CommandResult	Swift.RawRepresentable		
+protocol	conformance PodcastsKit.Episode	PodcastsKit.StoreBackedContentTypeProviding		
+protocol	conformance PodcastsKit.Episode	PodcastsKit.StoreBackedContentTypeFetchable		
+protocol	conformance PodcastsKit.Episode	PodcastsKit.PlayableContent		
+protocol	conformance PodcastsKit.Show	PodcastsKit.PlayableContent		
+protocol	conformance PodcastsKit.ShowStoreId	PodcastsKit.PlayableContent		
+protocol	conformance PodcastsKit.EpisodeStoreId	PodcastsKit.PlayableContent		
+protocol	conformance PodcastsKit.GenericPlayPodcasts	PodcastsKit.PlayableContent		
+protocol	conformance PodcastsKit.Station	PodcastsKit.PlayableContent		
+protocol	conformance PodcastsKit.PlaybackOrder	Swift.Equatable		
+protocol	conformance PodcastsKit.PlaybackOrder	Swift.Hashable		
+protocol	conformance PodcastsKit.Show	PodcastsKit.StoreBackedContentTypeDeserializable		
+protocol	conformance PodcastsKit.Episode	PodcastsKit.StoreBackedContentTypeDeserializable		
+protocol	conformance PodcastsKit.Show	PodcastsKit.StoreBackedContentTypeProviding		
+protocol	conformance PodcastsKit.Show	PodcastsKit.StoreBackedContentTypeFetchable		
+extension	PodcastsKit.SubscriptionResult	RawRepresentable		
+extension	PodcastsKit.CommandResult	RawRepresentable		

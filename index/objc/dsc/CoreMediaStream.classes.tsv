@@ -1,0 +1,104 @@
+kind	name	superclass	protocols
+category	NSArray(MSArrayUtilities)		
+category	NSData(MSDataUtilities)		
+category	NSDictionary(MCDictionaryUtilities)		
+category	NSError(MSErrorUtilities)		
+category	NSKeyedUnarchiver(MSUtilities)		
+category	NSMutableArray(MSArrayUtilities)		
+category	NSMutableDictionary(MSASServerSideModel)		
+category	NSString(MSStringUtilities)		
+interface	MMCSEngine	NSObject	
+interface	MMCSRequestorContext	NSObject	
+interface	MPSStateRequest	PBRequest	NSCopying
+interface	MPSStateResponse	PBCodable	NSCopying
+interface	MSASAlbum	NSObject	NSCopying,NSSecureCoding
+interface	MSASAlbumChange	NSObject	
+interface	MSASAssetCollection	NSObject	NSCopying,NSSecureCoding
+interface	MSASAssetCollectionChange	NSObject	
+interface	MSASAssetDownloader	MSASAssetTransferer	
+interface	MSASAssetInfoToReauthForDownload	NSObject	
+interface	MSASAssetTransferer	NSObject	MMCSEngineDelegate
+interface	MSASAssetUploader	MSASAssetTransferer	
+interface	MSASCloudKitPlugin	NSObject	
+interface	MSASComment	NSObject	NSSecureCoding
+interface	MSASCommentChange	NSObject	
+interface	MSASCommentCheckOperation	NSObject	
+interface	MSASDaemonModel	MSASModelBase	
+interface	MSASEnqueuedCommand	NSObject	NSCoding
+interface	MSASGroupedQueue	NSObject	
+interface	MSASInvitation	MSASSharingRelationship	
+interface	MSASModelBase	NSObject	
+interface	MSASModelEnumerator	NSEnumerator	
+interface	MSASPConnectionGate	NSObject	
+interface	MSASPendingChanges	NSObject	
+interface	MSASPersonInfoManager	NSObject	
+interface	MSASPersonModel	MSASModelBase	
+interface	MSASPersonModelItem	NSObject	NSCopying
+interface	MSASPhoneInvitations	NSObject	IDSServiceDelegate
+interface	MSASProtocol	NSObject	NSURLConnectionDelegate
+interface	MSASServerSideModel	MSASModelBase	MSASModel,MSASStateMachineDelegate
+interface	MSASServerSideModelGroupedCommandQueue	MSASGroupedQueue	
+interface	MSASSharingRelationship	NSObject	NSCopying,NSSecureCoding
+interface	MSASStateMachine	NSObject	MSBackoffManagerDelegate,MSASAssetUploaderDelegate,MSASAssetDownloaderDelegate
+interface	MSAlbumSharingDaemon	MSDaemon	
+interface	MSAsset	NSObject	MMCSAsset,NSSecureCoding,NSCopying
+interface	MSAssetCollection	NSObject	NSSecureCoding
+interface	MSBackoffManager	NSObject	NSSecureCoding
+interface	MSCupidStateMachine	NSObject	MSStreamsProtocolDelegate
+interface	MSDaemon	NSObject	
+interface	MSDeleteStreamsProtocol	MSStreamsProtocol	
+interface	MSDeleter	MSCupidStateMachine	MSDeleter,MSDeleteStreamsProtocolDelegate
+interface	MSFileUtilities	NSObject	
+interface	MSImageScalingSpecification	NSObject	
+interface	MSMMCSProtocol	NSObject	MSStorageProtocol
+interface	MSMediaStreamDaemon	MSDaemon	
+interface	MSObjectQueue	NSObject	
+interface	MSObjectWrapper	NSObject	
+interface	MSPerformanceLogger	MSASModelBase	
+interface	MSProtocolUtilities	NSObject	
+interface	MSPublishMMCSProtocol	MSMMCSProtocol	MSPublishStorageProtocol
+interface	MSPublishStreamsProtocol	MSStreamsProtocol	
+interface	MSPublisher	MSCupidStateMachine	MSPublisher,MSPublishStreamsProtocolDelegate,MSPublishStorageProtocolDelegate
+interface	MSReauthorizationProtocol	MSStreamsProtocol	
+interface	MSResetServer	NSObject	MSResetServerProtocolDelegate
+interface	MSResetServerProtocol	MSStreamsProtocol	
+interface	MSServerSideConfigManager	NSObject	MSServerSideConfigProtocolDelegate
+interface	MSServerSideConfigProtocol	NSObject	
+interface	MSStreamsProtocol	NSObject	
+interface	MSSubscribeMMCSProtocol	MSMMCSProtocol	MSSubscribeStorageProtocol
+interface	MSSubscribeStreamsProtocol	MSStreamsProtocol	
+interface	MSSubscribedStream	NSObject	NSSecureCoding
+interface	MSSubscriber	MSCupidStateMachine	MSSubscriber,MSSubscribeStreamsProtocolDelegate,MSSubscribeStorageProtocolDelegate,MSReauthorizationProtocolDelegate
+interface	MSTimerGate	NSObject	
+interface	MSVideoDerivativeSpecification	NSObject	
+protocol	IDSServiceDelegate		NSObject
+protocol	MMCSAsset		NSObject
+protocol	MMCSEngineDelegate		NSObject
+protocol	MSASAssetDownloaderDelegate		NSObject
+protocol	MSASAssetUploaderDelegate		NSObject
+protocol	MSASModel		NSObject
+protocol	MSASStateMachineDelegate		
+protocol	MSAlbumSharingDaemonDelegate		
+protocol	MSBackoffManagerDelegate		NSObject
+protocol	MSDeleteStreamsProtocolDelegate		MSStreamsProtocolDelegate
+protocol	MSDeleter		NSObject
+protocol	MSDeleterDelegate		
+protocol	MSMediaStreamDaemonDelegate		
+protocol	MSPublishStorageProtocol		MSStorageProtocol
+protocol	MSPublishStorageProtocolDelegate		NSObject
+protocol	MSPublishStreamsProtocolDelegate		MSStreamsProtocolDelegate
+protocol	MSPublisher		NSObject
+protocol	MSPublisherDelegate		
+protocol	MSReauthorizationProtocolDelegate		MSStreamsProtocolDelegate
+protocol	MSResetServerProtocolDelegate		MSStreamsProtocolDelegate
+protocol	MSServerSideConfigProtocolDelegate		NSObject
+protocol	MSStorageProtocol		NSObject
+protocol	MSStreamsProtocolDelegate		NSObject
+protocol	MSSubscribeStorageProtocol		MSStorageProtocol
+protocol	MSSubscribeStorageProtocolDelegate		NSObject
+protocol	MSSubscribeStreamsProtocolDelegate		MSStreamsProtocolDelegate
+protocol	MSSubscriber		
+protocol	MSSubscriberDelegate		
+protocol	NSURLConnectionDelegate		NSObject
+protocol	OS_dispatch_group		
+protocol	OS_dispatch_queue		

@@ -1,0 +1,27 @@
+owner	kind	declaration
+CacheDeleteManagedAssets	+	+ (id)cacheDeleteManagedAssetsWithInfo:(id)info atUrgency:(int)urgency;
+CacheDeleteManagedAssets	-	- (_Bool)dateHasExpired:(id)expired interval:(double)interval;
+CacheDeleteManagedAssets	-	- (_Bool)periodicShouldRemoveAsset:(id)asset;
+CacheDeleteManagedAssets	-	- (id)analytics;
+CacheDeleteManagedAssets	-	- (id)assetsFromArray:(id)array forAmount:(unsigned long long)amount;
+CacheDeleteManagedAssets	-	- (id)initWithInfo:(id)info atUrgency:(int)urgency;
+CacheDeleteManagedAssets	-	- (id)sizeEligibleAsset:(long long *)asset;
+CacheDeleteManagedAssets	-	- (id)sortAssets:(id)assets;
+CacheDeleteManagedAssets	-	- (unsigned long long)purgeAssets:(unsigned long long)assets testObject:(id)object;
+CacheDeleteManagedAssets	-	- (void)cancelPurge;
+CacheDeleteManagedAssets	-	- (void)periodic:(id)periodic;
+CacheDeleteManagedAssets	property	@property (readonly) int urgency;
+CacheDeleteManagedAssets	property	@property (readonly, nonatomic) NSDictionary *info;
+CacheDeleteManagedAssets	property	@property (readonly, nonatomic) NSString *volume;
+CacheDeleteManagedAssets	property	@property _Bool cancel;
+CacheDeletePruner	+	+ (id)prunerWithFileAge:(double)age dirAge:(double)age;
+CacheDeletePruner	-	- (id)initWithFileAge:(double)age dirAge:(double)age;
+CacheDeletePruner	-	- (unsigned long long)pruneContainerTmps;
+CacheDeletePruner	-	- (unsigned long long)pruneDir:(id)dir bundleID:(id)id;
+CacheDeletePruner	-	- (unsigned long long)pruneSystemTmp;
+CacheDeletePruner	-	- (unsigned long long)pruneUserTmp;
+CacheDeletePruner	-	- (void)stop;
+CacheDeletePruner	property	@property (nonatomic) long long dir_age;
+CacheDeletePruner	property	@property (nonatomic) long long file_age;
+CacheDeletePruner	property	@property (retain) TestTelemetry *testObject;
+CacheDeletePruner	property	@property _Bool cancel;

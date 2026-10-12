@@ -1,0 +1,573 @@
+kind	type	conformance	member_kind	member
+enum	SyncedModels.SyncedModelOwnerState			
+enum	SyncedModels.SyncedModelOwnerState		case	remote
+enum	SyncedModels.SyncedModelOwnerState		case	unowned
+enum	SyncedModels.SyncedModelOwnerState		case	local
+class	SyncedModels.SyncedModelTester<A	SyncedModels.SyncedModel>		
+class	SyncedModels.SyncedModelTester<A	SyncedModels.SyncedModel>	let	model
+class	SyncedModels.SyncedModelTester<A	SyncedModels.SyncedModel>	let	backingController
+enum	SyncedModels.SyncedModelsTester			
+class	SyncedModels.SyncedModelGroupSessionMessenger			
+class	SyncedModels.SyncedModelGroupSessionMessenger		let	messenger
+class	SyncedModels.SyncedModelGroupSessionMessenger		var	incomingData
+class	SyncedModels.SyncedModelGroupSessionMessenger		var	lastMessageSize
+class	SyncedModels.SyncedModelGroupSessionMessenger		var	increaseMessagesCount
+struct	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage			
+struct	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage		let	uuid
+struct	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage		let	payload
+struct	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage		let	lastChunk
+enum	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage.CodingKeys			
+enum	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage.CodingKeys		case	uuid
+enum	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage.CodingKeys		case	payload
+enum	SyncedModels.SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage.CodingKeys		case	lastChunk
+class	SyncedModels.SyncedPropertyBase			
+class	SyncedModels.SyncedPropertyBase		var	_timestamp
+class	SyncedModels.SyncedPropertyBase		var	_controller
+class	SyncedModels.SyncedPropertyBase		var	_parentPropertyID
+class	SyncedModels.SyncedPropertyBase		var	_propertyID
+class	SyncedModels.SyncedPropertyBase		var	_pendingModelControllers
+class	SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable>		
+class	SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable>	var	_value
+class	SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable>	let	_valueTypeIsSyncedModel
+class	SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable>	var	_decodedModelUUID
+class	SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable>	var	_decodedOwnerUUID
+class	SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable>	let	didChangePassthrough
+enum	SyncedModels.SyncedProperty.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	SyncedModels.SyncedProperty.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	value
+enum	SyncedModels.SyncedProperty.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	timestamp
+enum	SyncedModels.SyncedProperty.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	id
+enum	SyncedModels.SyncedProperty.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	owner
+enum	SyncedModels.CatchupKind			
+enum	SyncedModels.CatchupKind		case	replaceFromLeader
+enum	SyncedModels.CatchupKind		case	mergeFromAll
+struct	SyncedModels.SyncedModelOptions			
+struct	SyncedModels.SyncedModelOptions		var	catchupKind
+class	SyncedModels.SyncedModelManager			
+class	SyncedModels.SyncedModelManager		var	_outgoingMessages
+class	SyncedModels.SyncedModelManager		var	rootModel
+class	SyncedModels.SyncedModelManager		var	dynamicModels
+class	SyncedModels.SyncedModelManager		var	_dispatchQueue
+class	SyncedModels.SyncedModelManager		var	_isInitialAuthority
+class	SyncedModels.SyncedModelManager		var	localParticipant
+class	SyncedModels.SyncedModelManager		let	options
+class	SyncedModels.SyncedModelManager		var	remoteParticipants
+class	SyncedModels.SyncedModelManager		var	sendDataHandler
+class	SyncedModels.SyncedModelManager		var	precatchupMessageBuffer
+struct	SyncedModels.SyncedModelManager.SyncedModelMessageBufferItem			
+struct	SyncedModels.SyncedModelManager.SyncedModelMessageBufferItem		let	message
+struct	SyncedModels.SyncedModelManager.SyncedModelMessageBufferItem		let	from
+struct	SyncedModels.SyncedModelManager.MessageWrapper			
+struct	SyncedModels.SyncedModelManager.MessageWrapper		var	data
+struct	SyncedModels.SyncedModelManager.MessageWrapper		var	to
+class	SyncedModels.SyncedModelManagerStore			
+class	SyncedModels.SyncedModelManagerStore		var	runLoopObserver
+class	SyncedModels.SyncedModelManagerStore		let	storageLock
+class	SyncedModels.SyncedModelManagerStore		var	storage
+struct	SyncedModels.SyncedModelManagerStore.Item			
+struct	SyncedModels.SyncedModelManagerStore.Item		let	manager
+struct	SyncedModels.SyncedModelManagerStore.Item		let	messenger
+struct	SyncedModels.SyncedModelManagerStore.Item		let	cancellables
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	_set
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	_tombstones
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	_valueTimestamps
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	_decodedModelUUIDs
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	_decodedOwnerUUIDs
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	_valueTypeIsSyncedModel
+class	SyncedModels.SyncedSet	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	didChangePassthrough
+struct	SyncedModels.SyncedSet.SyncedSetChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+struct	SyncedModels.SyncedSet.SyncedSetChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	removedElements
+struct	SyncedModels.SyncedSet.SyncedSetChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	var	addedElements
+enum	SyncedModels.SyncedSet.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+enum	SyncedModels.SyncedSet.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	set
+enum	SyncedModels.SyncedSet.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	tombstones
+enum	SyncedModels.SyncedSet.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	timestamp
+struct	SyncedModels.SyncedSet.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+struct	SyncedModels.SyncedSet.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	value
+struct	SyncedModels.SyncedSet.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	timestamp
+struct	SyncedModels.SyncedSet.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	id
+struct	SyncedModels.SyncedSet.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	owner
+struct	SyncedModels.SyncedSet.MergeValues<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+struct	SyncedModels.SyncedSet.MergeValues<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	timestamp
+struct	SyncedModels.SyncedSet.MergeValues<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	elements
+struct	SyncedModels.SyncedSet.MergeValues<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	elementTimestamps
+struct	SyncedModels.SyncedSet.MergeValues<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	tombstoneValues
+struct	SyncedModels.SyncedSet.MergeValues<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	let	tombstoneTimestamps
+enum	SyncedModels.SyncedSet.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>		
+enum	SyncedModels.SyncedSet.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	value
+enum	SyncedModels.SyncedSet.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	timestamp
+enum	SyncedModels.SyncedSet.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	id
+enum	SyncedModels.SyncedSet.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable>	case	owner
+enum	SyncedModels.PropertyDecodingError			
+enum	SyncedModels.PropertyDecodingError		case	emptyArray
+class	SyncedModels.SyncedModelManagerHub			
+class	SyncedModels.SyncedModelManagerHub		var	managers
+class	SyncedModels.SyncedModelManagerHub		var	participantMap
+class	SyncedModels.SyncedModelManagerHub		var	collectedTransactions
+class	SyncedModels.TestSyncedModelController	SyncedModels.SyncedModelController		
+class	SyncedModels.TestSyncedModelController	SyncedModels.SyncedModelController	var	ownerState
+class	SyncedModels.TestSyncedModelController	SyncedModels.SyncedModelController	var	localParticipant
+class	SyncedModels.TestSyncedModelController	SyncedModels.SyncedModelController	var	shouldReceiveOwnership
+class	SyncedModels.SyncedModelControllerFactory			
+class	SyncedModels.SyncedModelControllerTable			
+struct	SyncedModels.SyncedModelControllerTable.Storage			
+struct	SyncedModels.SyncedModelControllerTable.Storage		var	object
+enum	SyncedModels.OwnershipRequestResult			
+enum	SyncedModels.OwnershipRequestResult		case	succeeded
+enum	SyncedModels.OwnershipRequestResult		case	failed
+enum	SyncedModels.OwnershipRequestResult		case	timedOut
+enum	SyncedModels.SyncedModelStatus			
+enum	SyncedModels.SyncedModelStatus		case	alone
+enum	SyncedModels.SyncedModelStatus		case	catchingUp
+enum	SyncedModels.SyncedModelStatus		case	caughtUp
+class	SyncedModels.SyncedModelController			
+class	SyncedModels.SyncedModelController		var	_manager
+class	SyncedModels.SyncedModelController		var	_uuid
+class	SyncedModels.SyncedModelController		var	_type
+class	SyncedModels.SyncedModelController		var	_properties
+class	SyncedModels.SyncedModelController		var	_transaction
+class	SyncedModels.SyncedModelController		let	transactionLock
+class	SyncedModels.SyncedModelController		var	_ownershipUUID
+class	SyncedModels.SyncedModelController		var	_ownerUUIDsToParticipants
+class	SyncedModels.SyncedModelController		var	_authorityParticipant
+class	SyncedModels.SyncedModelController		var	_ownerUUID
+class	SyncedModels.SyncedModelController		var	_ownershipRequestHandler
+class	SyncedModels.SyncedModelController		var	_ownershipCounter
+class	SyncedModels.SyncedModelController		var	cancellables
+class	SyncedModels.SyncedModelController		var	_pendingOwnershipRequest
+class	SyncedModels.SyncedModelController		var	_ownershipRequestsAwaitingReply
+class	SyncedModels.SyncedModelController		var	_ownershipRequestsAwaitingHandoffReply
+class	SyncedModels.SyncedModelController		var	ownershipChangedHandler
+class	SyncedModels.SyncedModelController		var	status
+struct	SyncedModels.CachedOwnershipRequest			
+struct	SyncedModels.CachedOwnershipRequest		let	message
+struct	SyncedModels.CachedOwnershipRequest		let	finishBlock
+struct	SyncedModels.CachedOwnershipRequest		let	timeCached
+struct	SyncedModels.CachedOwnershipRequest		let	requestUUID
+struct	SyncedModels.SyncedModelController.PropertyStorage			
+struct	SyncedModels.SyncedModelController.PropertyStorage		var	property
+struct	SyncedModels.PendingOwnershipRequest			
+struct	SyncedModels.PendingOwnershipRequest		let	finishBlock
+struct	SyncedModels.PendingOwnershipRequest		let	timeCached
+struct	SyncedModels.OwnershipChangeRequestMessage			
+struct	SyncedModels.OwnershipChangeRequestMessage		var	modelType
+struct	SyncedModels.OwnershipChangeRequestMessage		var	changeType
+struct	SyncedModels.OwnershipChangeRequestMessage		var	ownershipCounter
+struct	SyncedModels.OwnershipChangeRequestMessage		var	unknownFields
+struct	SyncedModels.OwnershipChangeRequestMessage		var	_modelUuidpb
+struct	SyncedModels.OwnershipChangeRequestMessage		var	_prospectiveOwnerUuidpb
+struct	SyncedModels.OwnershipChangeRequestMessage		var	_requestUuidpb
+enum	SyncedModels.OwnershipChangeType			
+enum	SyncedModels.OwnershipChangeType		case	UNRECOGNIZED
+enum	SyncedModels.OwnershipChangeType		case	request
+enum	SyncedModels.OwnershipChangeType		case	release
+enum	SyncedModels.SyncedModelType			
+enum	SyncedModels.SyncedModelType		case	UNRECOGNIZED
+enum	SyncedModels.SyncedModelType		case	unregistered
+enum	SyncedModels.SyncedModelType		case	static
+enum	SyncedModels.SyncedModelType		case	dynamic
+struct	SyncedModels.SyncTransactionMessage			
+struct	SyncedModels.SyncTransactionMessage		var	modelType
+struct	SyncedModels.SyncTransactionMessage		var	propertyMessages
+struct	SyncedModels.SyncTransactionMessage		var	setMessages
+struct	SyncedModels.SyncTransactionMessage		var	dictionaryMessages
+struct	SyncedModels.SyncTransactionMessage		var	unknownFields
+struct	SyncedModels.SyncTransactionMessage		var	_modelUuidpb
+struct	SyncedModels.DictionaryChangedMessage			
+struct	SyncedModels.DictionaryChangedMessage		var	propertyID
+struct	SyncedModels.DictionaryChangedMessage		var	removedKeys
+struct	SyncedModels.DictionaryChangedMessage		var	removedTimestamps
+struct	SyncedModels.DictionaryChangedMessage		var	changedKeys
+struct	SyncedModels.DictionaryChangedMessage		var	changedValues
+struct	SyncedModels.DictionaryChangedMessage		var	changedTimestamps
+struct	SyncedModels.DictionaryChangedMessage		var	addedKeys
+struct	SyncedModels.DictionaryChangedMessage		var	addedValues
+struct	SyncedModels.DictionaryChangedMessage		var	addedTimestamps
+struct	SyncedModels.DictionaryChangedMessage		var	unknownFields
+struct	SyncedModels.DictionaryChangedMessage		var	_ownershipUuidpb
+struct	SyncedModels.SetChangedMessage			
+struct	SyncedModels.SetChangedMessage		var	propertyID
+struct	SyncedModels.SetChangedMessage		var	addedData
+struct	SyncedModels.SetChangedMessage		var	removedData
+struct	SyncedModels.SetChangedMessage		var	unknownFields
+struct	SyncedModels.SetChangedMessage		var	_timestamp
+struct	SyncedModels.SyncMessage			
+struct	SyncedModels.SyncMessage		var	contents
+struct	SyncedModels.SyncMessage		var	unknownFields
+enum	SyncedModels.SyncMessage.OneOf_Contents			
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	syncTransaction
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	catchupRequest
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	catchupResponse
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	ownershipChangeRequest
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	ownershipChangeReply
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	ownershipChangeBroadcast
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	ownershipHandoffRequest
+enum	SyncedModels.SyncMessage.OneOf_Contents		case	ownershipHandoffReply
+struct	SyncedModels.OwnershipHandoffReplyMessage			
+struct	SyncedModels.OwnershipHandoffReplyMessage		var	modelType
+struct	SyncedModels.OwnershipHandoffReplyMessage		var	handoffAllowed
+struct	SyncedModels.OwnershipHandoffReplyMessage		var	unknownFields
+struct	SyncedModels.OwnershipHandoffReplyMessage		var	_modelUuidpb
+struct	SyncedModels.OwnershipHandoffReplyMessage		var	_prospectiveOwnerUuidpb
+struct	SyncedModels.OwnershipHandoffReplyMessage		var	_requestUuidpb
+struct	SyncedModels.OwnershipHandoffRequestMessage			
+struct	SyncedModels.OwnershipHandoffRequestMessage		var	modelType
+struct	SyncedModels.OwnershipHandoffRequestMessage		var	ownershipCounter
+struct	SyncedModels.OwnershipHandoffRequestMessage		var	unknownFields
+struct	SyncedModels.OwnershipHandoffRequestMessage		var	_modelUuidpb
+struct	SyncedModels.OwnershipHandoffRequestMessage		var	_prospectiveOwnerUuidpb
+struct	SyncedModels.OwnershipHandoffRequestMessage		var	_requestUuidpb
+struct	SyncedModels.OwnershipChangeBroadcastMessage			
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	modelType
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	ownershipCounter
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	autoAcceptsOwnershipRequests
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	unknownFields
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	_modelUuidpb
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	_senderOwnerUuidpb
+struct	SyncedModels.OwnershipChangeBroadcastMessage		var	_newOwnerUuidpb
+struct	SyncedModels.OwnershipChangeReplyMessage			
+struct	SyncedModels.OwnershipChangeReplyMessage		var	modelType
+struct	SyncedModels.OwnershipChangeReplyMessage		var	result
+struct	SyncedModels.OwnershipChangeReplyMessage		var	ownershipCounter
+struct	SyncedModels.OwnershipChangeReplyMessage		var	unknownFields
+struct	SyncedModels.OwnershipChangeReplyMessage		var	_modelUuidpb
+struct	SyncedModels.OwnershipChangeReplyMessage		var	_requestUuidpb
+enum	SyncedModels.OwnershipChangeResultType			
+enum	SyncedModels.OwnershipChangeResultType		case	UNRECOGNIZED
+enum	SyncedModels.OwnershipChangeResultType		case	invalid
+enum	SyncedModels.OwnershipChangeResultType		case	requestSuccessfulWasUnowned
+enum	SyncedModels.OwnershipChangeResultType		case	requestSuccessfulOwnerHandedOff
+enum	SyncedModels.OwnershipChangeResultType		case	requestFailedOwnerRefusedHandoff
+enum	SyncedModels.OwnershipChangeResultType		case	requestFailedUnknownOwner
+enum	SyncedModels.OwnershipChangeResultType		case	requestFailedHandoffTimedOut
+enum	SyncedModels.OwnershipChangeResultType		case	releaseSuccessful
+enum	SyncedModels.OwnershipChangeResultType		case	releaseFailedNotOwner
+enum	SyncedModels.OwnershipChangeResultType		case	notAuthority
+struct	SyncedModels.CatchupResponseMessage			
+struct	SyncedModels.CatchupResponseMessage		var	chunkData
+struct	SyncedModels.CatchupResponseMessage		var	chunkIndex
+struct	SyncedModels.CatchupResponseMessage		var	chunkTotal
+struct	SyncedModels.CatchupResponseMessage		var	senderIsAuthority
+struct	SyncedModels.CatchupResponseMessage		var	unknownFields
+struct	SyncedModels.CatchupRequestMessage			
+struct	SyncedModels.CatchupRequestMessage		var	unknownFields
+struct	SyncedModels.ValueData			
+struct	SyncedModels.ValueData		var	data
+struct	SyncedModels.ValueData		var	unknownFields
+struct	SyncedModels.ValueData		var	_modelUuidpb
+struct	SyncedModels.ValueData		var	_ownerUuidpb
+struct	SyncedModels.PropertyChangedMessage			
+struct	SyncedModels.PropertyChangedMessage		var	propertyID
+struct	SyncedModels.PropertyChangedMessage		var	unknownFields
+struct	SyncedModels.PropertyChangedMessage		var	_timestamp
+struct	SyncedModels.PropertyChangedMessage		var	_newValueData
+struct	SyncedModels.PBUUID			
+struct	SyncedModels.PBUUID		var	high
+struct	SyncedModels.PBUUID		var	low
+struct	SyncedModels.PBUUID		var	unknownFields
+struct	SyncedModels.LamportTimestamp			
+struct	SyncedModels.LamportTimestamp		var	counter
+struct	SyncedModels.LamportTimestamp		var	unknownFields
+struct	SyncedModels.LamportTimestamp		var	_sourcePb
+struct	SyncedModels.PropertyCatchupData			
+struct	SyncedModels.PropertyCatchupData		var	unknownFields
+struct	SyncedModels.PropertyCatchupData		var	_valueData
+struct	SyncedModels.PropertyCatchupData		var	_timestamp
+struct	SyncedModels.DictionaryCatchupData			
+struct	SyncedModels.DictionaryCatchupData		var	dictionaryKeysData
+struct	SyncedModels.DictionaryCatchupData		var	dictionaryValueData
+struct	SyncedModels.DictionaryCatchupData		var	dictionaryTimestamps
+struct	SyncedModels.DictionaryCatchupData		var	tombstoneTimestamps
+struct	SyncedModels.DictionaryCatchupData		var	unknownFields
+struct	SyncedModels.DictionaryCatchupData.TombstoneTimestamp			
+struct	SyncedModels.DictionaryCatchupData.TombstoneTimestamp		var	key
+struct	SyncedModels.DictionaryCatchupData.TombstoneTimestamp		var	unknownFields
+struct	SyncedModels.DictionaryCatchupData.TombstoneTimestamp		var	_value
+struct	SyncedModels.SetCatchupData			
+struct	SyncedModels.SetCatchupData		var	setElementValueData
+struct	SyncedModels.SetCatchupData		var	setTimestamps
+struct	SyncedModels.SetCatchupData		var	tombstoneElementValueData
+struct	SyncedModels.SetCatchupData		var	tombstoneTimestamps
+struct	SyncedModels.SetCatchupData		var	unknownFields
+struct	SyncedModels.SetCatchupData		var	_timestamp
+struct	SyncedModels.ModelData			
+struct	SyncedModels.ModelData		var	ownershipCounter
+struct	SyncedModels.ModelData		var	propertyDataPb
+struct	SyncedModels.ModelData		var	ownershipUuidsToAccountIdentifiersPb
+struct	SyncedModels.ModelData		var	unknownFields
+struct	SyncedModels.ModelData		var	_modelUuidpb
+struct	SyncedModels.ModelData		var	_ownerUuidpb
+struct	SyncedModels.ModelData.PropertyDataMap			
+struct	SyncedModels.ModelData.PropertyDataMap		var	key
+struct	SyncedModels.ModelData.PropertyDataMap		var	value
+struct	SyncedModels.ModelData.PropertyDataMap		var	unknownFields
+struct	SyncedModels.ModelData.OwnershipUUIDToAccountIdentifier			
+struct	SyncedModels.ModelData.OwnershipUUIDToAccountIdentifier		var	value
+struct	SyncedModels.ModelData.OwnershipUUIDToAccountIdentifier		var	unknownFields
+struct	SyncedModels.ModelData.OwnershipUUIDToAccountIdentifier		var	_key
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>		
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	_dictionary
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	_tombstones
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	_keyTimestamps
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	_decodedModelUUIDs
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	_decodedOwnerUUIDs
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	let	_valueTypeIsSyncedModel
+class	SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyBase<A: Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	let	didChangePassthrough
+struct	SyncedModels.SyncedDictionary.SyncedDictionaryChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>		
+struct	SyncedModels.SyncedDictionary.SyncedDictionaryChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	keysRemoved
+struct	SyncedModels.SyncedDictionary.SyncedDictionaryChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	keysChanged
+struct	SyncedModels.SyncedDictionary.SyncedDictionaryChangeInfo<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	var	keysAdded
+enum	SyncedModels.SyncedDictionary.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>		
+enum	SyncedModels.SyncedDictionary.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	dictionary
+enum	SyncedModels.SyncedDictionary.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	tombstones
+enum	SyncedModels.SyncedDictionary.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	timestamp
+struct	SyncedModels.SyncedDictionary.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>		
+struct	SyncedModels.SyncedDictionary.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	let	value
+struct	SyncedModels.SyncedDictionary.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	let	timestamp
+struct	SyncedModels.SyncedDictionary.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	let	id
+struct	SyncedModels.SyncedDictionary.Element<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	let	owner
+enum	SyncedModels.SyncedDictionary.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>		
+enum	SyncedModels.SyncedDictionary.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	value
+enum	SyncedModels.SyncedDictionary.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	timestamp
+enum	SyncedModels.SyncedDictionary.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	id
+enum	SyncedModels.SyncedDictionary.Element.CodingKeys<A	Swift.Decodable, A: Swift.Encodable, A: Swift.Hashable, B: Swift.Decodable, B: Swift.Encodable, B: Swift.Equatable>	case	owner
+protocol	SyncedModels.SyncedPropertyInModel			
+protocol	SyncedModels.SyncedModelBase			
+protocol	SyncedModels.SyncedModel			
+protocol	SyncedModels.SyncedSetInModel			
+protocol	SyncedModels.SyncedDictionaryInModel			
+protocol	conformance SyncedModels.SyncedModelOwnerState	Swift.Equatable		
+protocol	conformance SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage	Swift.Encodable		
+protocol	conformance SyncedModelGroupSessionMessenger.ChunkedSyncedModelMessage	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SyncedModels.SyncedProperty	SyncedModels.SyncedPropertyInModel		
+protocol	conformance SyncedModels.SyncedProperty	Combine.Publisher		
+protocol	conformance SyncedModels.SyncedProperty	Swift.Decodable		
+protocol	conformance SyncedModels.SyncedProperty	Swift.Encodable		
+protocol	conformance SyncedProperty.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedProperty.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncedProperty.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SyncedProperty.CodingKeys	Swift.Hashable		
+protocol	conformance SyncedProperty.CodingKeys	Swift.Equatable		
+protocol	conformance SyncedProperty.CodingKeys	Swift.CodingKey		
+protocol	conformance SyncedModels.CatchupKind	Swift.Equatable		
+protocol	conformance SyncedModels.CatchupKind	Swift.Hashable		
+protocol	conformance SyncedModels.SyncedModelOptions	Swift.CustomStringConvertible		
+protocol	conformance Swift.Optional	SyncedModels.SyncedModelBase		
+protocol	conformance SyncedModels.SyncedSet	SyncedModels.SyncedSetInModel		
+protocol	conformance SyncedModels.SyncedSet	Combine.Publisher		
+protocol	conformance SyncedModels.SyncedSet	Swift.Decodable		
+protocol	conformance SyncedModels.SyncedSet	Swift.Encodable		
+protocol	conformance SyncedModels.SyncedSet	SyncedModels.SyncedPropertyInModel		
+protocol	conformance SyncedSet.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedSet.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncedSet.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SyncedSet.CodingKeys	Swift.Hashable		
+protocol	conformance SyncedSet.CodingKeys	Swift.Equatable		
+protocol	conformance SyncedSet.Element	Swift.Encodable		
+protocol	conformance SyncedSet.Element	Swift.Decodable		
+protocol	conformance SyncedSet.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SyncedModels.LamportTimestamp	Swift.Comparable		
+protocol	conformance SyncedModels.LamportTimestamp	Swift.Encodable		
+protocol	conformance SyncedModels.LamportTimestamp	Swift.Decodable		
+protocol	conformance SyncedModels.PropertyDecodingError	Swift.Hashable		
+protocol	conformance SyncedModels.PropertyDecodingError	Swift.Equatable		
+protocol	conformance SyncedModels.PropertyDecodingError	Swift.Error		
+protocol	conformance SyncedModels.OwnershipRequestResult	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipRequestResult	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipRequestResult	Swift.RawRepresentable		
+protocol	conformance SyncedModels.SyncedModelStatus	Swift.Equatable		
+protocol	conformance SyncedModels.SyncedModelStatus	Swift.Hashable		
+protocol	conformance SyncedModels.SyncedModelStatus	Swift.RawRepresentable		
+protocol	conformance SyncedModels.OwnershipChangeResultType	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipChangeResultType	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipChangeResultType	Swift.RawRepresentable		
+protocol	conformance SyncedModels.OwnershipChangeResultType	InternalSwiftProtobuf.Enum		
+protocol	conformance SyncMessage.OneOf_Contents	Swift.Equatable		
+protocol	conformance SyncedModels.SyncedModelType	Swift.Equatable		
+protocol	conformance SyncedModels.SyncedModelType	Swift.Hashable		
+protocol	conformance SyncedModels.SyncedModelType	Swift.RawRepresentable		
+protocol	conformance SyncedModels.SyncedModelType	InternalSwiftProtobuf.Enum		
+protocol	conformance SyncedModels.OwnershipChangeType	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipChangeType	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipChangeType	Swift.RawRepresentable		
+protocol	conformance SyncedModels.OwnershipChangeType	InternalSwiftProtobuf.Enum		
+protocol	conformance SyncedModels.ValueData	Swift.Equatable		
+protocol	conformance SyncedModels.ValueData	Swift.Hashable		
+protocol	conformance SyncedModels.ValueData	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.ValueData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.ValueData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.ValueData	InternalSwiftProtobuf.Message		
+protocol	conformance ModelData.OwnershipUUIDToAccountIdentifier	Swift.Equatable		
+protocol	conformance ModelData.OwnershipUUIDToAccountIdentifier	Swift.Hashable		
+protocol	conformance ModelData.OwnershipUUIDToAccountIdentifier	Swift.CustomDebugStringConvertible		
+protocol	conformance ModelData.OwnershipUUIDToAccountIdentifier	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance ModelData.OwnershipUUIDToAccountIdentifier	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance ModelData.OwnershipUUIDToAccountIdentifier	InternalSwiftProtobuf.Message		
+protocol	conformance ModelData.PropertyDataMap	Swift.Equatable		
+protocol	conformance ModelData.PropertyDataMap	Swift.Hashable		
+protocol	conformance ModelData.PropertyDataMap	Swift.CustomDebugStringConvertible		
+protocol	conformance ModelData.PropertyDataMap	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance ModelData.PropertyDataMap	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance ModelData.PropertyDataMap	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.ModelData	Swift.Equatable		
+protocol	conformance SyncedModels.ModelData	Swift.Hashable		
+protocol	conformance SyncedModels.ModelData	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.ModelData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.ModelData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.ModelData	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.SetCatchupData	Swift.Equatable		
+protocol	conformance SyncedModels.SetCatchupData	Swift.Hashable		
+protocol	conformance SyncedModels.SetCatchupData	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.SetCatchupData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.SetCatchupData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.SetCatchupData	InternalSwiftProtobuf.Message		
+protocol	conformance DictionaryCatchupData.TombstoneTimestamp	Swift.Equatable		
+protocol	conformance DictionaryCatchupData.TombstoneTimestamp	Swift.Hashable		
+protocol	conformance DictionaryCatchupData.TombstoneTimestamp	Swift.CustomDebugStringConvertible		
+protocol	conformance DictionaryCatchupData.TombstoneTimestamp	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance DictionaryCatchupData.TombstoneTimestamp	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance DictionaryCatchupData.TombstoneTimestamp	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.DictionaryCatchupData	Swift.Equatable		
+protocol	conformance SyncedModels.DictionaryCatchupData	Swift.Hashable		
+protocol	conformance SyncedModels.DictionaryCatchupData	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.DictionaryCatchupData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.DictionaryCatchupData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.DictionaryCatchupData	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.PropertyCatchupData	Swift.Equatable		
+protocol	conformance SyncedModels.PropertyCatchupData	Swift.Hashable		
+protocol	conformance SyncedModels.PropertyCatchupData	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.PropertyCatchupData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.PropertyCatchupData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.PropertyCatchupData	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.DictionaryChangedMessage	Swift.Equatable		
+protocol	conformance SyncedModels.DictionaryChangedMessage	Swift.Hashable		
+protocol	conformance SyncedModels.DictionaryChangedMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.DictionaryChangedMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.DictionaryChangedMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.DictionaryChangedMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.SetChangedMessage	Swift.Equatable		
+protocol	conformance SyncedModels.SetChangedMessage	Swift.Hashable		
+protocol	conformance SyncedModels.SetChangedMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.SetChangedMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.SetChangedMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.SetChangedMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.PropertyChangedMessage	Swift.Equatable		
+protocol	conformance SyncedModels.PropertyChangedMessage	Swift.Hashable		
+protocol	conformance SyncedModels.PropertyChangedMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.PropertyChangedMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.PropertyChangedMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.PropertyChangedMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.OwnershipHandoffReplyMessage	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipHandoffReplyMessage	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipHandoffReplyMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.OwnershipHandoffReplyMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipHandoffReplyMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.OwnershipHandoffReplyMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.OwnershipHandoffRequestMessage	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipHandoffRequestMessage	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipHandoffRequestMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.OwnershipHandoffRequestMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipHandoffRequestMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.OwnershipHandoffRequestMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.OwnershipChangeBroadcastMessage	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipChangeBroadcastMessage	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipChangeBroadcastMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.OwnershipChangeBroadcastMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipChangeBroadcastMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.OwnershipChangeBroadcastMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.OwnershipChangeReplyMessage	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipChangeReplyMessage	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipChangeReplyMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.OwnershipChangeReplyMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipChangeReplyMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.OwnershipChangeReplyMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.OwnershipChangeRequestMessage	Swift.Equatable		
+protocol	conformance SyncedModels.OwnershipChangeRequestMessage	Swift.Hashable		
+protocol	conformance SyncedModels.OwnershipChangeRequestMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.OwnershipChangeRequestMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipChangeRequestMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.OwnershipChangeRequestMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.CatchupResponseMessage	Swift.Equatable		
+protocol	conformance SyncedModels.CatchupResponseMessage	Swift.Hashable		
+protocol	conformance SyncedModels.CatchupResponseMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.CatchupResponseMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.CatchupResponseMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.CatchupResponseMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.CatchupRequestMessage	Swift.Equatable		
+protocol	conformance SyncedModels.CatchupRequestMessage	Swift.Hashable		
+protocol	conformance SyncedModels.CatchupRequestMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.CatchupRequestMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.CatchupRequestMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.CatchupRequestMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.SyncTransactionMessage	Swift.Equatable		
+protocol	conformance SyncedModels.SyncTransactionMessage	Swift.Hashable		
+protocol	conformance SyncedModels.SyncTransactionMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.SyncTransactionMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.SyncTransactionMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.SyncTransactionMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.SyncMessage	Swift.Equatable		
+protocol	conformance SyncedModels.SyncMessage	Swift.Hashable		
+protocol	conformance SyncedModels.SyncMessage	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.SyncMessage	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.SyncMessage	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.SyncMessage	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.LamportTimestamp	Swift.Equatable		
+protocol	conformance SyncedModels.LamportTimestamp	Swift.Hashable		
+protocol	conformance SyncedModels.LamportTimestamp	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.LamportTimestamp	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.LamportTimestamp	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.LamportTimestamp	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.PBUUID	Swift.Equatable		
+protocol	conformance SyncedModels.PBUUID	Swift.Hashable		
+protocol	conformance SyncedModels.PBUUID	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedModels.PBUUID	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.PBUUID	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance SyncedModels.PBUUID	InternalSwiftProtobuf.Message		
+protocol	conformance SyncedModels.OwnershipChangeResultType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipChangeType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.SyncedModelType	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance SyncedModels.OwnershipChangeResultType	Swift.CaseIterable		
+protocol	conformance SyncedModels.OwnershipChangeType	Swift.CaseIterable		
+protocol	conformance SyncedModels.SyncedModelType	Swift.CaseIterable		
+protocol	conformance SyncedModels.SyncedDictionary	SyncedModels.SyncedDictionaryInModel		
+protocol	conformance SyncedModels.SyncedDictionary	Combine.Publisher		
+protocol	conformance SyncedModels.SyncedDictionary	Swift.Decodable		
+protocol	conformance SyncedModels.SyncedDictionary	Swift.Encodable		
+protocol	conformance SyncedModels.SyncedDictionary	SyncedModels.SyncedPropertyInModel		
+protocol	conformance SyncedDictionary.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SyncedDictionary.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SyncedDictionary.CodingKeys	Swift.RawRepresentable		
+protocol	conformance SyncedDictionary.CodingKeys	Swift.Hashable		
+protocol	conformance SyncedDictionary.CodingKeys	Swift.Equatable		
+protocol	conformance SyncedDictionary.Element	Swift.Encodable		
+protocol	conformance SyncedDictionary.Element	Swift.Decodable		
+protocol	conformance SyncedDictionary.CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	SyncedModels.SyncedProperty	Publisher		
+extension	SyncedModels.SyncedProperty.CodingKeys	RawRepresentable		
+extension	SyncedModels.SyncedSet	Publisher		
+extension	SyncedModels.SyncedSet.CodingKeys	RawRepresentable		
+extension	SyncedModels.OwnershipRequestResult	RawRepresentable		
+extension	SyncedModels.SyncedModelStatus	RawRepresentable		
+extension	SyncedModels.OwnershipChangeResultType	RawRepresentable		
+extension	SyncedModels.SyncedModelType	RawRepresentable		
+extension	SyncedModels.OwnershipChangeType	RawRepresentable		
+extension	SyncedModels.OwnershipChangeResultType	CaseIterable		
+extension	SyncedModels.OwnershipChangeType	CaseIterable		
+extension	SyncedModels.SyncedModelType	CaseIterable		
+extension	SyncedModels.SyncedDictionary	Publisher		
+extension	SyncedModels.SyncedDictionary.CodingKeys	RawRepresentable		

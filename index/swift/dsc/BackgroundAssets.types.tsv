@@ -1,0 +1,213 @@
+kind	type	conformance	member_kind	member
+class	BackgroundAssets._BackgroundDownloadHandler	NSObject<A: BackgroundAssets.BADownloaderExtension>		
+class	BackgroundAssets._BackgroundDownloadHandler	NSObject<A: BackgroundAssets.BADownloaderExtension>	let	appEx
+struct	BackgroundAssets._BackgroundDownloaderExtensionConfiguration<A	BackgroundAssets.BADownloaderExtension>		
+struct	BackgroundAssets._BackgroundDownloaderExtensionConfiguration<A	BackgroundAssets.BADownloaderExtension>	let	connectionHandler
+struct	BackgroundAssets._BackgroundDownloaderExtensionConfiguration<A	BackgroundAssets.BADownloaderExtension>	let	downloadHandlerWrapper
+class	BackgroundAssets.AssetPackManager			
+class	BackgroundAssets.AssetPackManager		let	statusUpdates
+class	BackgroundAssets.AssetPackManager		let	bundleID
+class	BackgroundAssets.AssetPackManager		let	teamID
+class	BackgroundAssets.AssetPackManager		let	appInfo
+class	BackgroundAssets.AssetPackManager		let	stagingDirectoryPath
+class	BackgroundAssets.AssetPackManager		let	manifestCache
+class	BackgroundAssets.AssetPackManager		var	isCheckingForUpdates
+class	BackgroundAssets.AssetPackManager		var	foregroundDownloadIDs
+class	BackgroundAssets.AssetPackManager		let	helper
+class	BackgroundAssets.AssetPackManager		let	objcDelegateReference
+enum	BackgroundAssets.AssetPackManager.DownloadStatusUpdate			
+enum	BackgroundAssets.AssetPackManager.DownloadStatusUpdate		case	began
+enum	BackgroundAssets.AssetPackManager.DownloadStatusUpdate		case	paused
+enum	BackgroundAssets.AssetPackManager.DownloadStatusUpdate		case	downloading
+enum	BackgroundAssets.AssetPackManager.DownloadStatusUpdate		case	finished
+enum	BackgroundAssets.AssetPackManager.DownloadStatusUpdate		case	failed
+class	BackgroundAssets.AssetPackManagerWrapper	NSObject		
+class	BackgroundAssets.AssetPackManagerWrapper	NSObject	let	manager
+class	BackgroundAssets.DefaultManagedAssetPackDownloadDelegate	NSObject		
+struct	BackgroundAssets.AssetPackManager.ObjCDelegateReference			
+struct	BackgroundAssets.AssetPackManager.ObjCDelegateReference		var	delegate
+enum	BackgroundAssets.AssetPackManagerError			
+enum	BackgroundAssets.AssetPackManagerError		case	assetPackUnavailable
+enum	BackgroundAssets.AssetPackManagerError		case	invalidRootDirectoryName
+enum	BackgroundAssets.AssetPackManagerError		case	statusUnavailable
+enum	BackgroundAssets.AssetPackManagerError		case	urlConversionFailed
+enum	BackgroundAssets.AssetPackManagerError		case	noManifestAvailableInLocalCache
+struct	BackgroundAssets.StandardError			
+class	BackgroundAssets.ManifestCache			
+class	BackgroundAssets.ManifestCache		var	cachedManifestInMemory
+class	BackgroundAssets.ManifestCache		let	teamID
+class	BackgroundAssets.ManifestCache		let	appGroupID
+class	BackgroundAssets.ManifestCache		let	helper
+enum	BackgroundAssets.ManagedBackgroundAssetsError			
+enum	BackgroundAssets.ManagedBackgroundAssetsError		case	assetPackNotFound
+enum	BackgroundAssets.ManagedBackgroundAssetsError		case	fileNotFound
+class	BackgroundAssets.SystemDownloadManagerDelegate	NSObject		
+class	BackgroundAssets.SystemDownloadManagerDelegate	NSObject	let	progressCache
+class	BackgroundAssets.SystemDownloadManagerDelegate	NSObject	let	stream
+class	BackgroundAssets.SystemDownloadManagerDelegate	NSObject	let	continuation
+class	BackgroundAssets.SystemDownloadManagerDelegate	NSObject	let	observationToken
+class	BackgroundAssets.SystemDownloadManagerDelegate.ProgressCache			
+class	BackgroundAssets.SystemDownloadManagerDelegate.ProgressCache		var	progressMap
+enum	BackgroundAssets.SystemDownloadManagerDelegateError			
+enum	BackgroundAssets.SystemDownloadManagerDelegateError		case	pathConversionFailed
+class	BackgroundAssets.ManifestInstaller			
+class	BackgroundAssets.ManifestInstaller		let	helper
+struct	BackgroundAssets.AssetPack			
+struct	BackgroundAssets.AssetPack		let	id
+struct	BackgroundAssets.AssetPack		let	downloadSize
+struct	BackgroundAssets.AssetPack		let	version
+struct	BackgroundAssets.AssetPack		let	userInfo
+struct	BackgroundAssets.AssetPack		let	downloadPolicy
+struct	BackgroundAssets.AssetPack		let	url
+struct	BackgroundAssets.AssetPack		let	appGroupID
+struct	BackgroundAssets.AssetPack		let	isManaged
+struct	BackgroundAssets.AssetPack		let	host
+struct	BackgroundAssets.AssetPack.Status			
+struct	BackgroundAssets.AssetPack.Status		let	rawValue
+class	BackgroundAssets.AssetPackWrapper	NSObject		
+class	BackgroundAssets.AssetPackWrapper	NSObject	let	assetPack
+enum	BackgroundAssets.AssetPackError			
+enum	BackgroundAssets.AssetPackError		case	invalidBehaviorString
+enum	BackgroundAssets.AssetPackError		case	invalidInstallationEventTypesString
+enum	BackgroundAssets.AssetPackError		case	invalidInternalVersionIDString
+enum	BackgroundAssets.AssetPackError		case	unknownManifestDataSource
+enum	BackgroundAssets.AssetPackError		case	invalidUserInfo
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.LatestVersionInfoCodingKeys			
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.LatestVersionInfoCodingKeys		case	versionNumber
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.LatestVersionInfoCodingKeys		case	versionPublicID
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.LatestVersionInfoCodingKeys		case	versionID
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys			
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys		case	id
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys		case	type
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys		case	attributes
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys			
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys		case	latestVersionInfo
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys		case	downloadSizeInBytes
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys		case	downloadPolicy
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys		case	providerReferenceID
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys		case	downloadURL
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.DownloadPolicyCodingKeys			
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.DownloadPolicyCodingKeys		case	downloadScenario
+enum	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.DownloadPolicyCodingKeys		case	installEventType
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys			
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	id
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	downloadSize
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	version
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	userInfo
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	downloadPolicy
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	url
+enum	BackgroundAssets.AssetPack.LocalCacheCodingKeys		case	host
+struct	BackgroundAssets.AssetPackManifest			
+struct	BackgroundAssets.AssetPackManifest		let	assetPacks
+struct	BackgroundAssets.AssetPackManifest		let	isFromAppReview
+struct	BackgroundAssets.AssetPackManifest		let	appGroupID
+struct	BackgroundAssets.AssetPackManifest.DecodingConfiguration			
+struct	BackgroundAssets.AssetPackManifest.DecodingConfiguration		let	appGroupID
+struct	BackgroundAssets.AssetPackManifest.DecodingConfiguration		let	assetPacksAreManaged
+struct	BackgroundAssets.AssetPackManifest.DecodingConfiguration		let	source
+struct	BackgroundAssets.AssetPackManifest.DecodingConfiguration		let	decodingHandler
+enum	BackgroundAssets.AssetPackManifestError			
+enum	BackgroundAssets.AssetPackManifestError		case	unknownManifestDataSource
+enum	BackgroundAssets.AssetPackManifestError		case	noDecodingHandlerProvided
+enum	BackgroundAssets.AssetPackManifest.AppStoreCodingKeys			
+enum	BackgroundAssets.AssetPackManifest.AppStoreCodingKeys		case	data
+enum	BackgroundAssets.AssetPackManifest.LocalCacheCodingKeys			
+enum	BackgroundAssets.AssetPackManifest.LocalCacheCodingKeys		case	assetPacks
+enum	BackgroundAssets.AssetPackManifest.LocalCacheCodingKeys		case	isFromAppReview
+protocol	BackgroundAssets.ManagedDownloaderExtension			
+protocol	BackgroundAssets.BADownloaderExtension			
+protocol	BackgroundAssets.BADownloaderExtensionConfiguration			
+protocol	BackgroundAssets.ManagedDownloaderExtensionConfiguration	DownloadManagerDelegateType		
+protocol	conformance __C.ReadingOptions	Swift.ExpressibleByArrayLiteral: Foundation		
+protocol	conformance __C.ReadingOptions	Swift.Equatable: Foundation		
+protocol	conformance __C.ReadingOptions	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.ReadingOptions	Swift.SetAlgebra: Foundation		
+protocol	conformance __C.ReadingOptions	Swift.OptionSet: Foundation		
+protocol	conformance __C.ManifestDataSource	Swift.Equatable: ManagedBackgroundAssetsHelper		
+protocol	conformance __C.ManifestDataSource	Swift.RawRepresentable: ManagedBackgroundAssetsHelper		
+protocol	conformance __C.__BAAssetPackStatus	Swift.ExpressibleByArrayLiteral: BackgroundAssets		
+protocol	conformance __C.__BAAssetPackStatus	Swift.Equatable: BackgroundAssets		
+protocol	conformance __C.__BAAssetPackStatus	Swift.RawRepresentable: BackgroundAssets		
+protocol	conformance __C.__BAAssetPackStatus	Swift.SetAlgebra: BackgroundAssets		
+protocol	conformance __C.__BAAssetPackStatus	Swift.OptionSet: BackgroundAssets		
+protocol	conformance BackgroundAssets._BackgroundDownloaderExtensionConfiguration	ExtensionFoundation.AppExtensionConfiguration		
+protocol	conformance BackgroundAssets._BackgroundDownloaderExtensionConfiguration	BackgroundAssets.BADownloaderExtensionConfiguration		
+protocol	conformance AssetPackManager.DownloadStatusUpdate	Swift.CustomStringConvertible		
+protocol	conformance BackgroundAssets.AssetPackManager	Swift.Actor		
+protocol	conformance AssetPackManagerError	Foundation.LocalizedError		
+protocol	conformance AssetPackManagerError	Swift.CustomStringConvertible		
+protocol	conformance AssetPackManagerError	Swift.Error		
+protocol	conformance BackgroundAssets._BackgroundDownloaderExtensionConfiguration	BackgroundAssets.ManagedDownloaderExtensionConfiguration		
+protocol	conformance BackgroundAssets.StandardError	Swift.TextOutputStream		
+protocol	conformance BackgroundAssets.ManagedBackgroundAssetsError	Swift.CustomStringConvertible		
+protocol	conformance BackgroundAssets.ManagedBackgroundAssetsError	Foundation.LocalizedError		
+protocol	conformance BackgroundAssets.ManagedBackgroundAssetsError	Swift.Error		
+protocol	conformance SystemDownloadManagerDelegateError	Foundation.LocalizedError		
+protocol	conformance SystemDownloadManagerDelegateError	Swift.CustomStringConvertible		
+protocol	conformance SystemDownloadManagerDelegateError	Swift.Error		
+protocol	conformance AssetPack.Status	Swift.OptionSet		
+protocol	conformance AssetPack.Status	Swift.SetAlgebra		
+protocol	conformance AssetPack.Status	Swift.RawRepresentable		
+protocol	conformance AssetPack.Status	Swift.Equatable		
+protocol	conformance AssetPack.Status	Swift.ExpressibleByArrayLiteral		
+protocol	conformance BackgroundAssets.AssetPack	Swift.CustomStringConvertible		
+protocol	conformance BackgroundAssets.AssetPack	Foundation.DecodableWithConfiguration		
+protocol	conformance BackgroundAssets.AssetPack	Swift.Encodable		
+protocol	conformance BackgroundAssets.AssetPack	Swift.Hashable		
+protocol	conformance BackgroundAssets.AssetPack	Swift.Identifiable		
+protocol	conformance BackgroundAssets.AssetPack	Swift.Equatable		
+protocol	conformance LocalCacheCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LocalCacheCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LocalCacheCodingKeys	Swift.Hashable		
+protocol	conformance LocalCacheCodingKeys	Swift.Equatable		
+protocol	conformance AttributesCodingKeys.DownloadPolicyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttributesCodingKeys.DownloadPolicyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttributesCodingKeys.DownloadPolicyCodingKeys	Swift.Hashable		
+protocol	conformance AttributesCodingKeys.DownloadPolicyCodingKeys	Swift.Equatable		
+protocol	conformance AppStoreCodingKeys.AttributesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppStoreCodingKeys.AttributesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppStoreCodingKeys.AttributesCodingKeys	Swift.RawRepresentable		
+protocol	conformance AppStoreCodingKeys.AttributesCodingKeys	Swift.Hashable		
+protocol	conformance AppStoreCodingKeys.AttributesCodingKeys	Swift.Equatable		
+protocol	conformance AppStoreCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppStoreCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppStoreCodingKeys	Swift.Hashable		
+protocol	conformance AppStoreCodingKeys	Swift.Equatable		
+protocol	conformance AttributesCodingKeys.LatestVersionInfoCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttributesCodingKeys.LatestVersionInfoCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttributesCodingKeys.LatestVersionInfoCodingKeys	Swift.RawRepresentable		
+protocol	conformance AttributesCodingKeys.LatestVersionInfoCodingKeys	Swift.Hashable		
+protocol	conformance AttributesCodingKeys.LatestVersionInfoCodingKeys	Swift.Equatable		
+protocol	conformance AssetPackError	Foundation.LocalizedError		
+protocol	conformance AttributesCodingKeys.DownloadPolicyCodingKeys	Swift.CodingKey		
+protocol	conformance AttributesCodingKeys.LatestVersionInfoCodingKeys	Swift.CodingKey		
+protocol	conformance AppStoreCodingKeys.AttributesCodingKeys	Swift.CodingKey		
+protocol	conformance AppStoreCodingKeys	Swift.CodingKey		
+protocol	conformance LocalCacheCodingKeys	Swift.CodingKey		
+protocol	conformance AssetPackError	Swift.Error		
+protocol	conformance AssetPackManifest.DecodingConfiguration	Swift.CustomStringConvertible		
+protocol	conformance BackgroundAssets.AssetPackManifest	Swift.CustomStringConvertible		
+protocol	conformance BackgroundAssets.AssetPackManifest	Foundation.DecodableWithConfiguration		
+protocol	conformance BackgroundAssets.AssetPackManifest	Swift.Encodable		
+protocol	conformance AssetPackManifest.LocalCacheCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AssetPackManifest.LocalCacheCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AssetPackManifest.LocalCacheCodingKeys	Swift.Hashable		
+protocol	conformance AssetPackManifest.LocalCacheCodingKeys	Swift.Equatable		
+protocol	conformance AssetPackManifest.AppStoreCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AssetPackManifest.AppStoreCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AssetPackManifest.AppStoreCodingKeys	Swift.Hashable		
+protocol	conformance AssetPackManifest.AppStoreCodingKeys	Swift.Equatable		
+protocol	conformance AssetPackManifestError	Foundation.LocalizedError		
+protocol	conformance AssetPackManifest.AppStoreCodingKeys	Swift.CodingKey		
+protocol	conformance AssetPackManifest.LocalCacheCodingKeys	Swift.CodingKey		
+protocol	conformance AssetPackManifestError	Swift.Error		
+extension	BackgroundAssets._BackgroundDownloaderExtensionConfiguration	ManagedDownloaderExtensionConfiguration		
+extension	BackgroundAssets.AssetPack.Status	OptionSet		
+extension	BackgroundAssets.AssetPack.Status	SetAlgebra		
+extension	BackgroundAssets.AssetPack.Status	RawRepresentable		
+extension	BackgroundAssets.AssetPack.Status	ExpressibleByArrayLiteral		
+extension	BackgroundAssets.AssetPack	DecodableWithConfiguration		
+extension	BackgroundAssets.AssetPack	Identifiable		
+extension	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys	RawRepresentable		
+extension	BackgroundAssets.AssetPack.AppStoreCodingKeys.AttributesCodingKeys.LatestVersionInfoCodingKeys	RawRepresentable		
+extension	BackgroundAssets.AssetPackManifest	DecodableWithConfiguration		

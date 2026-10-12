@@ -1,0 +1,380 @@
+kind	type	conformance	member_kind	member
+struct	__C_Synthesized.ASDErrorCode			
+struct	__C_Synthesized.ASDErrorCode		let	_nsError
+struct	__C_Synthesized.ASDServerErrorCode			
+struct	__C_Synthesized.ASDServerErrorCode		let	_nsError
+struct	AppState.AdamID			
+struct	AppState.AdamID		let	value
+enum	AppState.AdamID.Error			
+enum	AppState.AdamID.Error		case	invalid
+struct	AppState.AdamID.Context			
+struct	AppState.AdamID.Context		let	logger
+class	AppState.AMSAccountFamily			
+class	AppState.AMSAccountFamily		let	lookupTaskFactory
+class	AppState.AMSAccountFamily		let	bag
+class	AppState.AMSAccountFamily		var	familyIDsCache
+class	AppState.AMSAccountFamily		let	primaryAccount
+struct	AppState.App			
+struct	AppState.App		let	id
+struct	AppState.App		var	kind
+enum	AppState.App.Kind			
+enum	AppState.App.Kind		case	store
+enum	AppState.App.Kind		case	beta
+struct	AppState.AppStateRulesNamespace.RemoteInstalled			
+struct	AppState.AppInstallation			
+struct	AppState.AppInstallation		let	asdAppStore
+struct	AppState.AppInstallation		var	phase
+struct	AppState.AppInstallation		var	progress
+struct	AppState.AppInstallation		let	hasPostProcessingPhase
+struct	AppState.AppInstallation		let	essentialBackgroundAssetDownloadEstimate
+struct	AppState.AppInstallation		let	isExternalUpdateAvailable
+struct	AppState.AppInstallation		let	externalVersionId
+struct	AppState.AppInstallation.Progress			
+struct	AppState.AppInstallation.Progress		var	startDate
+struct	AppState.AppInstallation.Progress		let	fractionCompleted
+struct	AppState.AppInstallation.Progress		let	progress
+enum	AppState.AppInstallation.Phase			
+enum	AppState.AppInstallation.Phase		case	downloading
+enum	AppState.AppInstallation.Phase		case	installing
+enum	AppState.AppInstallation.Phase		case	postProcessing
+enum	AppState.AppInstallation.Phase		case	paused
+enum	AppState.AppInstallation.Phase		case	unknown
+class	AppState.AppInstallation.ASDAppStore			
+class	AppState.AppInstallation.ASDAppStore		let	app
+enum	AppState.AppInstallationType			
+enum	AppState.AppInstallationType		case	unknown
+enum	AppState.AppInstallationType		case	purchase
+enum	AppState.AppInstallationType		case	update
+enum	AppState.AppInstallationType		case	redownload
+struct	AppState.AppOffer			
+struct	AppState.AppOffer		let	flags
+struct	AppState.AppOffer		let	ageRating
+struct	AppState.AppOffer		let	baseBuyParams
+struct	AppState.AppOffer		let	metricsBuyParams
+struct	AppState.AppOffer.Flags			
+struct	AppState.AppOffer.Flags		let	rawValue
+enum	AppState.AppOpenableDestination			
+enum	AppState.AppOpenableDestination		case	app
+enum	AppState.AppOpenableDestination		case	messages
+enum	AppState.AppPurchaseType			
+enum	AppState.AppPurchaseType		case	standard
+enum	AppState.AppPurchaseType		case	preorder
+class	AppState.RemoteInstalledAppStateDataSource			
+class	AppState.RemoteInstalledAppStateDataSource		var	expectedAppStates
+class	AppState.RemoteInstalledAppStateDataSource		let	supportedAppKinds
+class	AppState.RemoteInstalledAppStateDataSource		let	stateAccessLock
+class	AppState.RemoteInstalledAppStateDataSource		let	onSynchronizeAppStates
+enum	AppState.State			
+enum	AppState.State		case	waiting
+enum	AppState.State		case	purchased
+enum	AppState.State		case	updatable
+enum	AppState.State		case	downloadable
+enum	AppState.State		case	installing
+enum	AppState.State		case	openable
+enum	AppState.State		case	buyable
+enum	AppState.State		case	installed
+enum	AppState.State		case	remoteInstalled
+enum	AppState.State		case	unknown
+enum	AppState.State.Key			
+enum	AppState.State.Key		case	buyable
+enum	AppState.State.Key		case	waiting
+enum	AppState.State.Key		case	purchased
+enum	AppState.State.Key		case	updatable
+enum	AppState.State.Key		case	downloadable
+enum	AppState.State.Key		case	installing
+enum	AppState.State.Key		case	installed
+enum	AppState.State.Key		case	remoteInstalled
+enum	AppState.State.Key		case	openable
+enum	AppState.State.Key		case	unknown
+class	AppState.AppStateMachine			
+class	AppState.AppStateMachine		let	id
+class	AppState.AppStateMachine		let	onStateChange
+class	AppState.AppStateMachine		var	states
+class	AppState.AppStateMachine		let	transitionRules
+class	AppState.AppStateMachine		let	logger
+struct	AppState.AppStateMachine.StateChange			
+struct	AppState.AppStateMachine.StateChange		let	id
+struct	AppState.AppStateMachine.StateChange		let	kind
+struct	AppState.AppStateMachine.StateChange		let	newState
+enum	AppState.AppStoreType			
+enum	AppState.AppStoreType		case	default
+enum	AppState.AppStoreType		case	messages
+enum	AppState.AppStoreType		case	watch
+enum	AppState.AppStoreType		case	mac
+enum	AppState.ArcadeEntitlementRefreshCondition			
+enum	AppState.ArcadeEntitlementRefreshCondition		case	ifCacheIsExpired
+enum	AppState.ArcadeEntitlementRefreshCondition		case	ifCacheIsExpiredOrSubscribed
+enum	AppState.ArcadeEntitlementRefreshCondition		case	ifCacheIsExpiredOrUnsubscribed
+enum	AppState.ArcadeEntitlementRefreshCondition		case	never
+enum	AppState.ArcadeEntitlementRefreshCondition		case	always
+enum	AppState.ArcadeIntroOfferState			
+enum	AppState.ArcadeIntroOfferState		case	unknown
+enum	AppState.ArcadeIntroOfferState		case	available
+enum	AppState.ArcadeIntroOfferState		case	consumed
+enum	AppState.ArcadeState			
+enum	AppState.ArcadeState		case	notSubscribed
+enum	AppState.ArcadeState		case	purchasing
+enum	AppState.ArcadeState		case	subscribed
+enum	AppState.ArcadeState		case	unknown
+class	AppState.ASDArcadeSubscriptionManager			
+class	AppState.ASDArcadeSubscriptionManager		let	arcadeSubscriptionFamilyID
+class	AppState.ASDArcadeSubscriptionManager		let	subscriptionEntitlements
+class	AppState.ASDArcadeSubscriptionManager		let	accounts
+class	AppState.ASDArcadeSubscriptionManager		let	requestingBundleID
+class	AppState.ASDArcadeSubscriptionManager		let	notificationCenter
+class	AppState.ASDArcadeSubscriptionManager		let	consistencyLock
+class	AppState.ASDArcadeSubscriptionManager		var	subscriptionState
+class	AppState.ASDArcadeSubscriptionManager		let	onSubscriptionStateChange
+struct	AppState.ASDArcadeSubscriptionManager.EntitlementsResult			
+struct	AppState.ASDArcadeSubscriptionManager.EntitlementsResult		let	entitlements
+struct	AppState.ASDArcadeSubscriptionManager.EntitlementsResult		let	resultFromCache
+struct	AppState.ASDArcadeSubscriptionManager.EntitlementsResult		let	cacheExpired
+struct	AppState.ASDDeviceAppFetcher			
+struct	AppState.ASDDeviceAppFetcher		let	regulatoryLogger
+class	AppState.ASDDeviceAppFetcher.QueryObservation	NSObject		
+class	AppState.ASDDeviceAppFetcher.QueryObservation	NSObject	let	appQuery
+class	AppState.ASDDeviceAppFetcher.QueryObservation	NSObject	let	taskScheduler
+class	AppState.ASDDeviceAppFetcher.QueryObservation	NSObject	let	observer
+struct	AppState.TimedOutError			
+class	AppState.AsyncExpensive			
+class	AppState.AsyncExpensive		let	accessQueue
+class	AppState.AsyncExpensive		var	value
+struct	AppState.AvailableUpdate			
+struct	AppState.AvailableUpdate		let	versionID
+struct	AppState.AvailableUpdate		let	buyParameters
+struct	AppState.AppStateRulesNamespace.Buyable			
+class	AppState.DefaultAppStateDataSource			
+class	AppState.DefaultAppStateDataSource		let	onSynchronizeAppStates
+class	AppState.DefaultAppStateRules			
+class	AppState.DefaultAppStateRules		let	rules
+struct	AppState.BetaAppRuleset			
+struct	AppState.StoreAppRuleset			
+enum	AppState.DeviceAppQuery			
+enum	AppState.DeviceAppQuery		case	storeIDs
+enum	AppState.DeviceAppQuery		case	bundleIDs
+enum	AppState.DeviceAppQuery		case	betaIDs
+enum	AppState.DeviceAppQuery		case	custom
+enum	AppState.DeviceAppQuery		case	allStoreApps
+enum	AppState.DeviceAppQuery		case	betaApps
+class	AppState.DeviceAppStateDataSource			
+class	AppState.DeviceAppStateDataSource		let	logger
+class	AppState.DeviceAppStateDataSource		let	query
+class	AppState.DeviceAppStateDataSource		let	fetcher
+class	AppState.DeviceAppStateDataSource		let	updateRegistry
+class	AppState.DeviceAppStateDataSource		let	store
+class	AppState.DeviceAppStateDataSource		var	expectedAppStates
+class	AppState.DeviceAppStateDataSource		var	adamIDsByBundleID
+class	AppState.DeviceAppStateDataSource		var	managedAppIDs
+class	AppState.DeviceAppStateDataSource		var	queryObservation
+class	AppState.DeviceAppStateDataSource		let	stateAccessLock
+class	AppState.DeviceAppStateDataSource		let	onSynchronizeAppStates
+class	AppState.DeviceUpdateRegistry			
+class	AppState.DeviceUpdateRegistry		var	registry
+class	AppState.DeviceUpdateRegistry		let	logger
+class	AppState.DisabledArcadeSubscriptionManager			
+class	AppState.DisabledArcadeSubscriptionManager		let	onSubscriptionStateChange
+struct	AppState.AppStateRulesNamespace.Downloadable			
+struct	AppState.GreenTeaLogger			
+struct	AppState.GreenTeaLogger		let	backing
+struct	AppState.HardwarePlatform			
+struct	AppState.HardwarePlatform		let	device
+struct	AppState.HardwarePlatform		let	isRosettaAvailableFlag
+struct	AppState.HardwarePlatform		let	isAppleSiliconSupportEnabled
+struct	AppState.AppStateRulesNamespace.Installed			
+struct	AppState.AppStateRulesNamespace.Installing			
+class	AppState.ManagedRestrictions			
+class	AppState.ManagedRestrictions		let	accounts
+class	AppState.ManagedRestrictions		let	profile
+class	AppState.ManagedRestrictions		let	notificationCenter
+class	AppState.ManagedRestrictions		let	onRestrictionsChange
+struct	AppState.AppStateRulesNamespace.Openable			
+struct	AppState.AppStateRulesNamespace.Purchased			
+class	AppState.PurchaseHistoryAppStateDataSource			
+class	AppState.PurchaseHistoryAppStateDataSource		let	family
+class	AppState.PurchaseHistoryAppStateDataSource		let	platform
+class	AppState.PurchaseHistoryAppStateDataSource		let	purchaseHistory
+class	AppState.PurchaseHistoryAppStateDataSource		let	purchaseHistoryContext
+class	AppState.PurchaseHistoryAppStateDataSource		let	notificationCenter
+class	AppState.PurchaseHistoryAppStateDataSource		var	expectedAppStates
+class	AppState.PurchaseHistoryAppStateDataSource		var	lastAccountID
+class	AppState.PurchaseHistoryAppStateDataSource		var	hasRequestedPurchasesDatabaseUpdate
+class	AppState.PurchaseHistoryAppStateDataSource		let	logger
+class	AppState.PurchaseHistoryAppStateDataSource		let	stateAccessLock
+class	AppState.PurchaseHistoryAppStateDataSource		let	onSynchronizeAppStates
+struct	AppState.SingleAccountFamily			
+struct	AppState.SingleAccountFamily		let	primaryAccount
+class	AppState.StorefrontAppStateController			
+class	AppState.StorefrontAppStateController		let	dataSources
+class	AppState.StorefrontAppStateController		var	dataSourceState
+class	AppState.StorefrontAppStateController		var	statesByID
+class	AppState.StorefrontAppStateController		var	preloadedApps
+class	AppState.StorefrontAppStateController		let	stateTransitionRules
+class	AppState.StorefrontAppStateController		let	updateRegistry
+class	AppState.StorefrontAppStateController		var	availableOffers
+class	AppState.StorefrontAppStateController		var	observedApps
+class	AppState.StorefrontAppStateController		let	dataSourceLoadTimeout
+class	AppState.StorefrontAppStateController		let	logger
+class	AppState.StorefrontAppStateController		let	stateAccessLock
+class	AppState.StorefrontAppStateController		let	stateSynchronizationQueue
+class	AppState.StorefrontAppStateController		let	statePrefersDownloadableState
+class	AppState.StorefrontAppStateController		let	onLoad
+class	AppState.StorefrontAppStateController		let	onStateChange
+class	AppState.StorefrontAppStateController.DataSourceLoadObserver			
+class	AppState.StorefrontAppStateController.DataSourceLoadObserver		var	_ids
+struct	AppState.StorefrontAppStateController.Configuration			
+struct	AppState.StorefrontAppStateController.Configuration		let	updateRegistry
+struct	AppState.StorefrontAppStateController.Configuration		var	dataSources
+struct	AppState.StorefrontAppStateController.Configuration		var	stateTransitionRules
+struct	AppState.StorefrontAppStateController.Configuration		var	dataSourceLoadTimeout
+struct	AppState.StorefrontAppStateController.Configuration		var	logger
+struct	AppState.StorefrontAppStateController.Configuration		var	statePrefersDownloadableState
+enum	AppState.StorefrontAppStateController.DataSourceState			
+enum	AppState.StorefrontAppStateController.DataSourceState		case	loading
+enum	AppState.StorefrontAppStateController.DataSourceState		case	pending
+enum	AppState.StorefrontAppStateController.DataSourceState		case	loaded
+struct	AppState.AppStateRulesNamespace.Unknown			
+struct	AppState.AppStateRulesNamespace.Updatable			
+struct	AppState.AppStateRulesNamespace.Waiting			
+class	AppState.WaitingAppStateDataSource			
+class	AppState.WaitingAppStateDataSource		var	expectedAppStates
+class	AppState.WaitingAppStateDataSource		let	supportedAppKinds
+class	AppState.WaitingAppStateDataSource		let	stateAccessLock
+class	AppState.WaitingAppStateDataSource		let	onSynchronizeAppStates
+struct	AppState.AppStateRulesNamespace.Wildcard			
+protocol	AppState.AccountFamily			
+protocol	AppState.AppStateController			
+protocol	AppState.AppStateDataSource			
+protocol	AppState.AppStateRule			
+protocol	AppState.AppStateRules			
+protocol	AppState.ArcadeSubscriptionManager			
+protocol	AppState.Ruleset			
+protocol	AppState.DeviceProtocol			
+protocol	AppState.DeviceAppFetcher			
+protocol	AppState.DeviceAppObservation			
+protocol	AppState.Platform			
+protocol	AppState.PurchaseHistory			
+protocol	AppState.PurchaseManager			
+protocol	AppState.RegulatoryLogger			
+protocol	AppState.Restrictions			
+protocol	AppState.SubscriptionEntitlements			
+protocol	AppState.UpdateRegistry			
+protocol	conformance __C.ASDPurchaseHistoryContext	Swift.Equatable: AppStoreDaemon		
+protocol	conformance __C.ASDPurchaseHistoryContext	Swift.RawRepresentable: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDError	Swift.Equatable: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDError	Swift.Error: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDError	Swift.Hashable: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDError	Foundation._ObjectiveCBridgeableError: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDError	Foundation.CustomNSError: AppStoreDaemon		
+protocol	conformance __C.Code	Swift.Equatable: AppStoreDaemon		
+protocol	conformance __C.Code	Swift.RawRepresentable: AppStoreDaemon		
+protocol	conformance __C.Code	Foundation._ErrorCodeProtocol: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDServerError	Foundation._BridgedStoredNSError: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDServerError	Swift.Hashable: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDServerError	Swift.Equatable: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDServerError	Foundation._ObjectiveCBridgeableError: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDServerError	Swift.Error: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDServerError	Foundation.CustomNSError: AppStoreDaemon		
+protocol	conformance __C_Synthesized.ASDError	Foundation._BridgedStoredNSError: AppStoreDaemon		
+protocol	conformance __C.Code	Swift.RawRepresentable: AppStoreDaemon		
+protocol	conformance __C.Code	Foundation._ErrorCodeProtocol: AppStoreDaemon		
+protocol	conformance __C.Code	Swift.Equatable: AppStoreDaemon		
+protocol	conformance AdamID.Error	Foundation.LocalizedError		
+protocol	conformance AdamID.Error	Swift.Error		
+protocol	conformance AppState.AdamID	Swift.Hashable		
+protocol	conformance AppState.AdamID	Swift.Equatable		
+protocol	conformance AppState.AMSAccountFamily	AppState.AccountFamily		
+protocol	conformance App.Kind	Swift.Equatable		
+protocol	conformance App.Kind	Swift.Hashable		
+protocol	conformance App.Kind	Swift.CaseIterable		
+protocol	conformance AppState.App	Swift.Hashable		
+protocol	conformance AppState.App	Swift.Equatable		
+protocol	conformance AppStateRulesNamespace.RemoteInstalled	AppState.AppStateRule		
+protocol	conformance AppInstallation.Progress	Swift.Hashable		
+protocol	conformance AppInstallation.Progress	Swift.Equatable		
+protocol	conformance AppInstallation.Phase	Swift.Hashable		
+protocol	conformance AppInstallation.Phase	Swift.Equatable		
+protocol	conformance AppState.AppInstallation	Swift.Hashable		
+protocol	conformance AppState.AppInstallation	Swift.Equatable		
+protocol	conformance ASDAppStore	Swift.Equatable		
+protocol	conformance ASDAppStore	Swift.Hashable		
+protocol	conformance AppState.AppInstallationType	Swift.Equatable		
+protocol	conformance AppState.AppInstallationType	Swift.Hashable		
+protocol	conformance AppState.AppInstallationType	Swift.RawRepresentable		
+protocol	conformance AppOffer.Flags	Swift.OptionSet		
+protocol	conformance AppOffer.Flags	Swift.Hashable		
+protocol	conformance AppOffer.Flags	Swift.SetAlgebra		
+protocol	conformance AppOffer.Flags	Swift.RawRepresentable		
+protocol	conformance AppOffer.Flags	Swift.Equatable		
+protocol	conformance AppOffer.Flags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance AppState.AppOffer	Swift.Hashable		
+protocol	conformance AppState.AppOffer	Swift.Equatable		
+protocol	conformance AppState.AppOpenableDestination	Swift.Equatable		
+protocol	conformance AppState.AppOpenableDestination	Swift.Hashable		
+protocol	conformance AppState.AppOpenableDestination	Swift.RawRepresentable		
+protocol	conformance AppState.AppPurchaseType	Swift.Equatable		
+protocol	conformance AppState.AppPurchaseType	Swift.Hashable		
+protocol	conformance AppState.RemoteInstalledAppStateDataSource	AppState.AppStateDataSource		
+protocol	conformance State.Key	Swift.Equatable		
+protocol	conformance State.Key	Swift.Hashable		
+protocol	conformance State.Key	Swift.RawRepresentable		
+protocol	conformance AppState.State	Swift.Hashable		
+protocol	conformance AppState.State	Swift.Equatable		
+protocol	conformance AppState.AppStateMachine	Swift.CustomStringConvertible		
+protocol	conformance AppState.AppStoreType	Swift.Equatable		
+protocol	conformance AppState.AppStoreType	Swift.Hashable		
+protocol	conformance AppState.ArcadeEntitlementRefreshCondition	Swift.CustomStringConvertible		
+protocol	conformance AppState.ArcadeEntitlementRefreshCondition	Swift.Hashable		
+protocol	conformance AppState.ArcadeEntitlementRefreshCondition	Swift.Equatable		
+protocol	conformance AppState.ArcadeIntroOfferState	Swift.Equatable		
+protocol	conformance AppState.ArcadeIntroOfferState	Swift.Hashable		
+protocol	conformance AppState.ArcadeState	Swift.CustomStringConvertible		
+protocol	conformance AppState.ArcadeState	Swift.Equatable		
+protocol	conformance AppState.ASDArcadeSubscriptionManager	AppState.ArcadeSubscriptionManager		
+protocol	conformance AppState.ASDDeviceAppFetcher	AppState.DeviceAppFetcher		
+protocol	conformance QueryObservation	AppState.DeviceAppObservation		
+protocol	conformance ASDPurchaseHistory	AppState.PurchaseHistory		
+protocol	conformance ASDPurchaseManager	AppState.PurchaseManager		
+protocol	conformance ASDSubscriptionEntitlements	AppState.SubscriptionEntitlements		
+protocol	conformance AppState.TimedOutError	Swift.Equatable		
+protocol	conformance AppState.TimedOutError	Swift.Error		
+protocol	conformance AppState.AvailableUpdate	Swift.Hashable		
+protocol	conformance AppState.AvailableUpdate	Swift.Equatable		
+protocol	conformance AppStateRulesNamespace.Buyable	AppState.AppStateRule		
+protocol	conformance AppState.DefaultAppStateDataSource	AppState.AppStateDataSource		
+protocol	conformance AppState.DefaultAppStateRules	AppState.AppStateRules		
+protocol	conformance BetaAppRuleset	AppState.Ruleset		
+protocol	conformance StoreAppRuleset	AppState.Ruleset		
+protocol	conformance JetEngine.Device	AppState.DeviceProtocol		
+protocol	conformance AppState.DeviceAppStateDataSource	AppState.AppStateDataSource		
+protocol	conformance AppState.DeviceAppStateDataSource	Swift.CustomStringConvertible		
+protocol	conformance AppState.DeviceUpdateRegistry	AppState.UpdateRegistry		
+protocol	conformance AppState.DisabledArcadeSubscriptionManager	AppState.ArcadeSubscriptionManager		
+protocol	conformance AppStateRulesNamespace.Downloadable	AppState.AppStateRule		
+protocol	conformance AppState.GreenTeaLogger	AppState.RegulatoryLogger		
+protocol	conformance AppState.HardwarePlatform	AppState.Platform		
+protocol	conformance AppStateRulesNamespace.Installed	AppState.AppStateRule		
+protocol	conformance AppStateRulesNamespace.Installing	AppState.AppStateRule		
+protocol	conformance AppState.ManagedRestrictions	AppState.Restrictions		
+protocol	conformance AppStateRulesNamespace.Openable	AppState.AppStateRule		
+protocol	conformance AppStateRulesNamespace.Purchased	AppState.AppStateRule		
+protocol	conformance AppState.PurchaseHistoryAppStateDataSource	AppState.AppStateDataSource		
+protocol	conformance AppState.PurchaseHistoryAppStateDataSource	Swift.CustomStringConvertible		
+protocol	conformance AppState.SingleAccountFamily	AppState.AccountFamily		
+protocol	conformance AppState.StorefrontAppStateController	AppState.AppStateController		
+protocol	conformance DataSourceLoadObserver	JetEngine.EventObserver		
+protocol	conformance AppStateRulesNamespace.Unknown	AppState.AppStateRule		
+protocol	conformance AppStateRulesNamespace.Updatable	AppState.AppStateRule		
+protocol	conformance AppStateRulesNamespace.Waiting	AppState.AppStateRule		
+protocol	conformance AppState.WaitingAppStateDataSource	AppState.AppStateDataSource		
+protocol	conformance AppStateRulesNamespace.Wildcard	AppState.AppStateRule		
+extension	__C_Synthesized.ASDServerError	_BridgedStoredNSError		
+extension	__C_Synthesized.ASDError	_BridgedStoredNSError		
+extension	AppState.App.Kind	CaseIterable		
+extension	AppState.AppInstallationType	RawRepresentable		
+extension	AppState.AppOffer.Flags	OptionSet		
+extension	AppState.AppOffer.Flags	SetAlgebra		
+extension	AppState.AppOffer.Flags	RawRepresentable		
+extension	AppState.AppOffer.Flags	ExpressibleByArrayLiteral		
+extension	AppState.AppOpenableDestination	RawRepresentable		
+extension	AppState.State.Key	RawRepresentable		
+extension	AppState.StorefrontAppStateController.DataSourceLoadObserver	EventObserver		

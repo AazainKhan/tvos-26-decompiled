@@ -1,0 +1,236 @@
+kind	type	conformance	member_kind	member
+class	SearchAssets.DeviceContext			
+class	SearchAssets.DeviceContext		let	localeIdentifier
+class	SearchAssets.DeviceContext		let	country
+class	SearchAssets.DeviceContext		let	deviceModel
+class	SearchAssets.DeviceContext		let	osVersion
+class	SearchAssets.AtomicProperty			
+class	SearchAssets.AtomicProperty		var	value
+class	SearchAssets.AtomicProperty		let	lock
+class	SearchAssets.NetworkSpan	SearchAssets.ActivitySpan A<A: SearchAssets.ActivityDescription>		
+class	SearchAssets.NetworkSpan	SearchAssets.ActivitySpan A<A: SearchAssets.ActivityDescription>	let	task
+class	SearchAssets.NetworkSpan	SearchAssets.ActivitySpan A<A: SearchAssets.ActivityDescription>	var	error
+class	SearchAssets.NetworkSpan	SearchAssets.ActivitySpan A<A: SearchAssets.ActivityDescription>	var	networkActivity
+class	SearchAssets.ResourceAccessNetworkSpan	SearchAssets.NetworkSpan SearchAssets.ResourceNetworkActivity		
+class	SearchAssets.ResourceAccessNetworkSpan	SearchAssets.NetworkSpan SearchAssets.ResourceNetworkActivity	let	client
+class	SearchAssets.ResourceAccessNetworkSpan	SearchAssets.NetworkSpan SearchAssets.ResourceNetworkActivity	var	identifier
+struct	SearchAssets.ResourceNetworkActivity			
+struct	SearchAssets.ResourceNetworkActivity		var	parent
+class	SearchAssets.ActivityMonitor			
+class	SearchAssets.ActivityMonitor		var	delegate
+class	SearchAssets.ActivityMonitor		let	locker
+class	SearchAssets.ActivityMonitor		var	spans
+class	SearchAssets.ActivityMonitor.WeakReference			
+class	SearchAssets.ActivityMonitor.WeakReference		var	reference
+class	SearchAssets.ParsecCAEvent.DimensionWrapper			
+class	SearchAssets.ParsecCAEvent.DimensionWrapper		let	dimensions
+class	SearchAssets.BoundedSerialQueue			
+class	SearchAssets.BoundedSerialQueue		let	lock
+enum	SearchAssets.ResourceAccessOutcome			
+enum	SearchAssets.ResourceAccessOutcome		case	unknown
+enum	SearchAssets.ResourceAccessOutcome		case	cacheHit
+enum	SearchAssets.ResourceAccessOutcome		case	networkCallSucceed
+enum	SearchAssets.ResourceAccessOutcome		case	xpcCallSucceed
+enum	SearchAssets.ResourceAccessOutcome		case	finished
+enum	SearchAssets.ResourceAccessOutcome		case	canceled
+enum	SearchAssets.ResourceAccessOutcome		case	cacheMiss
+enum	SearchAssets.ResourceAccessOutcome		case	configFetchSynchronized
+enum	SearchAssets.ResourceAccessOutcome		case	configFetchThrottled
+enum	SearchAssets.ResourceAccessOutcome		case	configFetchInBackground
+enum	SearchAssets.ResourceAccessOutcome		case	skipSearch
+enum	SearchAssets.ResourceAccessOutcome		case	pretendSearch
+enum	SearchAssets.ResourceAccessOutcome		case	warmNotRequired
+enum	SearchAssets.ResourceAccessOutcome		case	connectionStillWarm
+enum	SearchAssets.ResourceAccessOutcome		case	skipSearchBecauseURL
+enum	SearchAssets.ResourceAccessOutcome		case	notFound
+enum	SearchAssets.ResourceAccessOutcome		case	warmError
+enum	SearchAssets.ResourceAccessOutcome		case	badRequest
+enum	SearchAssets.ResourceAccessOutcome		case	badResponse
+enum	SearchAssets.ResourceAccessOutcome		case	badResponseStatus
+enum	SearchAssets.ResourceAccessOutcome		case	emptyDataInResponse
+enum	SearchAssets.ResourceAccessOutcome		case	invalidJSON
+enum	SearchAssets.ResourceAccessOutcome		case	dataTaskFailure
+enum	SearchAssets.ResourceAccessOutcome		case	responseNotHTTP
+enum	SearchAssets.ResourceAccessOutcome		case	otherNetworkError
+enum	SearchAssets.ResourceAccessOutcome		case	requestError
+enum	SearchAssets.ResourceAccessOutcome		case	rpcError
+enum	SearchAssets.ResourceAccessOutcome		case	timedOut
+enum	SearchAssets.ResourceAccessOutcome		case	xpcError
+enum	SearchAssets.ResourceAccessOutcome		case	missingContext
+enum	SearchAssets.ResourceAccessOutcome		case	configFetchThrottledCacheReadFailed
+enum	SearchAssets.ResourceAccessOutcome		case	configFetchCompletedCacheReadFailed
+enum	SearchAssets.ResourceAccessOutcome		case	invalidConfig
+enum	SearchAssets.ResourceAccessOutcome		case	otherConfigError
+enum	SearchAssets.ResourceAccessOutcome		case	featureDisabled
+enum	SearchAssets.ResourceAccessOutcome		case	deviceSetupIncomplete
+enum	SearchAssets.ResourceAccessOutcome		case	ensureBagFailed
+enum	SearchAssets.ResourceAccessOutcome		case	noUserAgent
+enum	SearchAssets.ResourceAccessOutcome		case	noBag
+enum	SearchAssets.ResourceAccessOutcome		case	noAssembly
+enum	SearchAssets.ResourceAccessOutcome		case	searchDisabledFromBag
+enum	SearchAssets.ResourceAccessOutcome		case	missingSearchURLInBag
+enum	SearchAssets.ResourceAccessOutcome		case	missingProxy
+enum	SearchAssets.ResourceAccessOutcome		case	requestIneligible
+enum	SearchAssets.ResourceAccessOutcome		case	badResource
+enum	SearchAssets.ResourceAccessOutcome		case	proxyInitError
+enum	SearchAssets.ResourceAccessOutcome		case	otherProxyError
+enum	SearchAssets.ResourceAccessOutcome		case	notConfiguredError
+enum	SearchAssets.ResourceAccessOutcome		case	otherPegasusError
+enum	SearchAssets.ResourceAccessOutcome		case	contextError
+enum	SearchAssets.ResourceAccessOutcome		case	otherContextError
+enum	SearchAssets.ResourceAccessOutcome		case	otherSearchError
+enum	SearchAssets.ResourceAccessOutcome		case	contextFetchFailed
+enum	SearchAssets.ResourceAccessOutcome		case	contextFetchSuccessUnchanged
+enum	SearchAssets.ResourceAccessOutcome		case	contextFetchSuccessUpdated
+enum	SearchAssets.ResourceAccessOutcome		case	contextFetchSuccessUpdatedStale
+enum	SearchAssets.ResourceAccessOutcome		case	sqlError
+enum	SearchAssets.ResourceAccessOutcome		case	v1Finished
+enum	SearchAssets.ResourceAccessOutcome		case	v2Finished
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorCancelled
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorBadURL
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorTimedOut
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorUnsupportedURL
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorCannotFindHost
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorNetworkConnectionLost
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorDNSLookupFailed
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorHTTPTooManyRedirects
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorResourceUnavailable
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorNotConnectedToInternet
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorRedirectToNonExistentLocation
+enum	SearchAssets.ResourceAccessOutcome		case	urlErrorDataNotAllowed
+enum	SearchAssets.ResourceAccessOutcome		case	appWhitelistImmediateUpdateTransactionMissing
+enum	SearchAssets.ResourceAccessOutcome		case	appWhitelistDeferredUpdateBegan
+enum	SearchAssets.ResourceAccessOutcome		case	appwhitelistDeferredUpdateTransactionMissing
+enum	SearchAssets.ResourceAccessOutcome		case	appWhitelistDeferredUpdateSuperseded
+enum	SearchAssets.ResourceAccessOutcome		case	failedToCreateFile
+enum	SearchAssets.ResourceAccessOutcome		case	failedToCreateFileHandle
+enum	SearchAssets.ResourceAccessOutcome		case	failedToSetExtendedAttributes
+enum	SearchAssets.ResourceAccessOutcome		case	cacheDirectoryNotFound
+enum	SearchAssets.ResourceAccessOutcome		case	cacheDirEnumeratorInitFailed
+enum	SearchAssets.ResourceAccessOutcome		case	disallowedNonPlatformBinary
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryFinished
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryMissingContext
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryNotFound
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetSet
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetName
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetLocation
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryNotFoundUAFAssetMetadata
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryMissingMetadataEntry
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryCannotReadAsset
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryInvalidJSON
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryBadResource
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryBadURL
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryRequestIneligible
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryTaskCancelled
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryHashNotFound
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliverySameVersion
+enum	SearchAssets.ResourceAccessOutcome		case	assetDeliveryInvalidContext
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskCompleted
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskError
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskCompletedWithEvents
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskObservedEvents
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskNoEventsFound
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskBiomeStreamIterationEmpty
+enum	SearchAssets.ResourceAccessOutcome		case	sbaTaskNoBookmarkFound
+enum	SearchAssets.ResourceAccessOutcome		case	sbaEventSavedToFL
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorReadingFromBiome
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorWriteToFL
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorPBDecode
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorPBEncode
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorPBSchemaMismatch
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorWebIDMissing
+enum	SearchAssets.ResourceAccessOutcome		case	sbaErrorBookmarkDecodeError
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionInvalidRemoteObject
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionMissingPayload
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionUnsubscribeError
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionSubscribeError
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionSubscribeSuccess
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionUnsubscribeSuccess
+enum	SearchAssets.ResourceAccessOutcome		case	cloudConnectionNoPushMessage
+enum	SearchAssets.ResourceAccessOutcome		case	protoSterilizationFailed
+enum	SearchAssets.ResourceAccessOutcome		case	parsecKeysMissingTokenError
+enum	SearchAssets.ResourceAccessOutcome		case	parsecKeysFound
+enum	SearchAssets.ResourceAccessOutcome		case	sessionSuccess
+enum	SearchAssets.ResourceAccessOutcome		case	sessionUnknown
+enum	SearchAssets.ResourceAccessOutcome		case	timestampOutOfRange
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenSuccess
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenChallengeFailed
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenChallengeDataMissing
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenFetcherInitFailed
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenFetchFailed
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenPermissionDenied
+enum	SearchAssets.ResourceAccessOutcome		case	patTokenNetworkError
+enum	SearchAssets.ResourceAccessActivity			
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>		
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	var	monitor
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	var	data
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	let	activity
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	var	isDone
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	let	osLog
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	var	signpostID
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	var	timestamp
+class	SearchAssets.ActivitySpan<A	SearchAssets.ActivityDescription>	var	locker
+struct	SearchAssets.ActivitySpan.ActivityData<A	SearchAssets.ActivityDescription>		
+struct	SearchAssets.ActivitySpan.ActivityData<A	SearchAssets.ActivityDescription>	var	format
+struct	SearchAssets.ActivitySpan.ActivityData<A	SearchAssets.ActivityDescription>	var	analytics
+struct	SearchAssets.ActivitySpan.ActivityData<A	SearchAssets.ActivityDescription>	var	arguments
+struct	SearchAssets.ActivitySpan.ActivityData<A	SearchAssets.ActivityDescription>	var	cancellables
+struct	SearchAssets.ActivitySpan.ActivityData<A	SearchAssets.ActivityDescription>	var	transaction
+class	SearchAssets.ResourceAccessSpan	SearchAssets.ActivitySpan SearchAssets.ResourceAccessActivity		
+class	SearchAssets.ResourceAccessSpan	SearchAssets.ActivitySpan SearchAssets.ResourceAccessActivity	var	outcome
+class	SearchAssets.ResourceAccessSpan	SearchAssets.ActivitySpan SearchAssets.ResourceAccessActivity	var	networkSpan
+class	SearchAssets.ResourceAccessSpan	SearchAssets.ActivitySpan SearchAssets.ResourceAccessActivity	var	identifier
+class	SearchAssets.ResourceAccessSpan	SearchAssets.ActivitySpan SearchAssets.ResourceAccessActivity	let	client
+class	SearchAssets.ResourceAccessSpan	SearchAssets.ActivitySpan SearchAssets.ResourceAccessActivity	var	excludeOutcomeForAnalytics
+class	SearchAssets.Locker			
+class	SearchAssets.Locker		let	lock
+protocol	SearchAssets.ActivityDescription			
+protocol	SearchAssets.__CoreAnalyticsActivity			
+protocol	SearchAssets.CoreAnalyticsActivity			
+protocol	SearchAssets.TransactionActivity			
+protocol	SearchAssets.__CrashSimulationActivity			
+protocol	SearchAssets.OptionalCrashSimulationActivity			
+protocol	SearchAssets.CrashSimulationActivity			
+protocol	SearchAssets.SubActivityDescription	ParentActivity		
+protocol	SearchAssets.DeviceContextProtocol			
+protocol	SearchAssets.NetworkTask			
+protocol	SearchAssets.UAFAssetSetManaging			
+protocol	SearchAssets.SpanProtocol			
+protocol	SearchAssets.ActivityAdopter	Activity		
+protocol	SearchAssets.ActivityMonitorAdopter			
+protocol	SearchAssets.ActivityMonitorDelegate			
+protocol	SearchAssets.ResourceAccessProvider			
+protocol	SearchAssets.SASafariAssistantAssetSpecifying			
+protocol	SearchAssets.CPBloomFiltering			
+protocol	conformance SearchAssets.DeviceContext	SearchAssets.DeviceContextProtocol		
+protocol	conformance NSURLSessionTask	SearchAssets.NetworkTask		
+protocol	conformance _PASBloomFilter	SearchAssets.CPBloomFiltering		
+protocol	conformance UAFAssetSetManager	SearchAssets.UAFAssetSetManaging		
+protocol	conformance SearchAssets.ResourceNetworkActivity	Swift.Equatable		
+protocol	conformance SearchAssets.ResourceNetworkActivity	Swift.RawRepresentable		
+protocol	conformance SearchAssets.ResourceNetworkActivity	Swift.Hashable		
+protocol	conformance SearchAssets.ResourceNetworkActivity	SearchAssets.__CrashSimulationActivity		
+protocol	conformance SearchAssets.ResourceNetworkActivity	SearchAssets.__CoreAnalyticsActivity		
+protocol	conformance SearchAssets.ResourceNetworkActivity	SearchAssets.ActivityDescription		
+protocol	conformance SearchAssets.ResourceNetworkActivity	SearchAssets.OptionalCrashSimulationActivity		
+protocol	conformance SearchAssets.ResourceNetworkActivity	SearchAssets.CoreAnalyticsActivity		
+protocol	conformance SearchAssets.ResourceNetworkActivity	SearchAssets.SubActivityDescription		
+protocol	conformance __C.SATreatmentAllocStatus	Swift.CustomStringConvertible		
+protocol	conformance __C.SABuildType	Swift.CustomStringConvertible		
+protocol	conformance SearchAssets.ResourceAccessActivity	Swift.RawRepresentable		
+protocol	conformance SearchAssets.ResourceAccessActivity	Swift.Hashable		
+protocol	conformance SearchAssets.ResourceAccessActivity	Swift.Equatable		
+protocol	conformance SearchAssets.ResourceAccessOutcome	Swift.RawRepresentable		
+protocol	conformance SearchAssets.ResourceAccessOutcome	Swift.Hashable		
+protocol	conformance SearchAssets.ResourceAccessOutcome	Swift.Equatable		
+protocol	conformance SearchAssets.ActivitySpan	SearchAssets.SpanProtocol		
+protocol	conformance SearchAssets.ResourceAccessActivity	SearchAssets.__CrashSimulationActivity		
+protocol	conformance SearchAssets.ResourceAccessActivity	SearchAssets.__CoreAnalyticsActivity		
+protocol	conformance SearchAssets.ResourceAccessActivity	SearchAssets.TransactionActivity		
+protocol	conformance SearchAssets.ResourceAccessActivity	SearchAssets.OptionalCrashSimulationActivity		
+protocol	conformance SearchAssets.ResourceAccessActivity	SearchAssets.CoreAnalyticsActivity		
+protocol	conformance SearchAssets.ResourceAccessActivity	SearchAssets.ActivityDescription		
+extension	SearchAssets.ResourceNetworkActivity	RawRepresentable		
+extension	SearchAssets.ResourceNetworkActivity	SubActivityDescription		
+extension	SearchAssets.ResourceAccessActivity	RawRepresentable		
+extension	SearchAssets.ResourceAccessOutcome	RawRepresentable		

@@ -1,0 +1,98 @@
+kind	type	conformance	member_kind	member
+struct	Catalyst.CATWeakSendableBox<A	class>		
+struct	Catalyst.CATWeakSendableBox<A	class>	var	contents
+class	Catalyst.CATSerializer			
+class	Catalyst.CATSerializer		let	underlyingSerializer
+class	Catalyst.CATAsyncGate			
+class	Catalyst.CATAsyncGate		let	supportsTaskCancellation
+class	Catalyst.CATAsyncGate		let	stream
+class	Catalyst.CATAsyncGate		let	continuation
+class	Catalyst.CATPriorityPump			
+class	Catalyst.CATPriorityPump		let	lock
+class	Catalyst.CATPriorityPump		let	stream
+class	Catalyst.CATPriorityPump		let	continuation
+class	Catalyst.CATPriorityPump		var	wasInitialPriorityYielded
+class	Catalyst.CATPriorityPump		var	escalatedPriorities
+class	Catalyst.CATPriorityPump		var	threshold
+class	Catalyst.CATAsyncStreamMulticaster			
+class	Catalyst.CATAsyncStreamMulticaster		let	bufferingPolicy
+class	Catalyst.CATAsyncStreamMulticaster		var	continuationsByIdentifier
+class	Catalyst.CATAsyncStreamMulticaster		let	buffer
+class	Catalyst.CATAsyncStreamMulticaster		var	isFinished
+class	Catalyst.CATAsyncStreamMulticaster		let	lock
+class	Catalyst.CATAsyncStreamMulticaster		var	currentSubscriberSessionIdentifier
+class	Catalyst.CATAsyncStreamMulticaster		var	_subscriberSessionDidBegin
+class	Catalyst.CATAsyncStreamMulticaster		var	_subscriberSessionDidEnd
+enum	Catalyst.CATAsyncStreamMulticaster.BufferingPolicy			
+enum	Catalyst.CATAsyncStreamMulticaster.BufferingPolicy		case	bufferingNewest
+enum	Catalyst.CATAsyncStreamMulticaster.BufferingPolicy		case	unbounded
+enum	Catalyst.CATAsyncStreamMulticaster.YieldResult			
+enum	Catalyst.CATAsyncStreamMulticaster.YieldResult		case	enqueued
+enum	Catalyst.CATAsyncStreamMulticaster.YieldResult		case	droppedDueToInvalidSubscriberSession
+enum	Catalyst.CATAsyncStreamMulticaster.YieldResult		case	terminated
+struct	Catalyst.CATAsyncStreamMulticaster.SubscriberSessionContinuation			
+struct	Catalyst.CATAsyncStreamMulticaster.SubscriberSessionContinuation		let	multicaster
+struct	Catalyst.CATAsyncStreamMulticaster.SubscriberSessionContinuation		let	subscriberSessionIdentifier
+class	Catalyst.CATBodyRunner			
+class	Catalyst.CATBodyRunner		let	body
+enum	Catalyst.CATTaskTimeoutError			
+enum	Catalyst.CATTaskTimeoutError		case	timedOut
+class	Catalyst.CATQueue			
+class	Catalyst.CATQueue		let	capacity
+class	Catalyst.CATQueue		var	storage
+class	Catalyst.CATQueue		var	left
+class	Catalyst.CATQueue		var	right
+class	Catalyst.CATAsyncSerializer			
+class	Catalyst.CATAsyncSerializer		let	nucleus
+class	Catalyst.CATAsyncSerializer.Nucleus			
+class	Catalyst.CATAsyncSerializer.Nucleus		var	currentWorkItem
+class	Catalyst.CATAsyncSerializer.Nucleus		var	queuedWork
+class	Catalyst.CATAsyncSerializer.Nucleus		let	executionLoopStream
+class	Catalyst.CATAsyncSerializer.Nucleus		let	executionLoopContinuation
+class	Catalyst.CATAsyncSerializer.Nucleus		var	executionLoop
+class	Catalyst.CATAsyncSerializer.Nucleus		let	commandLoopStream
+class	Catalyst.CATAsyncSerializer.Nucleus		let	commandLoopContinuation
+class	Catalyst.CATAsyncSerializer.Nucleus		var	commandLoop
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work			
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work		let	id
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work		let	task
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work		let	respectsCancelAll
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work		let	priorityPump
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work		let	startGate
+struct	Catalyst.CATAsyncSerializer.Nucleus.Work		let	finishGate
+enum	Catalyst.CATAsyncSerializer.Nucleus.Command			
+enum	Catalyst.CATAsyncSerializer.Nucleus.Command		case	enqueue
+enum	Catalyst.CATAsyncSerializer.Nucleus.Command		case	cancelAllTasks
+enum	Catalyst.CATAsyncSerializer.Nucleus.Command		case	cancelAllQueuedTasks
+class	Catalyst.CATAsyncPromise			
+class	Catalyst.CATAsyncPromise		let	nucleus
+class	Catalyst.CATAsyncPromise.Continuation			
+class	Catalyst.CATAsyncPromise.Continuation		let	nucleus
+enum	Catalyst.CATAsyncPromiseError			
+enum	Catalyst.CATAsyncPromiseError		case	awaitCancelled
+enum	Catalyst.CATAsyncPromiseError		case	continuationDeallocatedWithoutFulfillment
+enum	Catalyst.CATAsyncPromise.FulfillmentResult			
+enum	Catalyst.CATAsyncPromise.FulfillmentResult		case	dropped
+enum	Catalyst.CATAsyncPromise.FulfillmentResult		case	fulfilled
+class	Catalyst.CATAsyncPromise.Nucleus			
+class	Catalyst.CATAsyncPromise.Nucleus		var	fulfilledResult
+class	Catalyst.CATAsyncPromise.Nucleus		let	fulfilledResultMulticaster
+class	Catalyst.CATAsyncPromise.Nucleus		let	lock
+protocol	Catalyst.CATAnyTask			
+protocol	conformance Swift.Task	Catalyst.CATAnyTask		
+protocol	conformance CATAsyncStreamMulticaster.YieldResult	Swift.Equatable		
+protocol	conformance CATAsyncStreamMulticaster.YieldResult	Swift.Hashable		
+protocol	conformance Catalyst.CATTaskTimeoutError	Swift.Equatable		
+protocol	conformance Catalyst.CATTaskTimeoutError	Swift.Hashable		
+protocol	conformance Catalyst.CATTaskTimeoutError	Swift.Error		
+protocol	conformance CATBodyRunner	Swift.Actor		
+protocol	conformance Catalyst.CATQueue	Swift.Sequence		
+protocol	conformance Catalyst.CATQueue	Swift.Collection		
+protocol	conformance Nucleus.Work	Swift.Identifiable		
+protocol	conformance Nucleus	Swift.Actor		
+protocol	conformance Catalyst.CATAsyncPromiseError	Swift.Equatable		
+protocol	conformance Catalyst.CATAsyncPromiseError	Swift.Hashable		
+protocol	conformance Catalyst.CATAsyncPromiseError	Swift.Error		
+extension	Catalyst.CATQueue	Sequence		
+extension	Catalyst.CATQueue	Collection		
+extension	Catalyst.CATAsyncSerializer.Nucleus.Work	Identifiable		

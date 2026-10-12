@@ -1,0 +1,158 @@
+kind	type	conformance	member_kind	member
+class	ReplicatorCore.ReplicationServer	NSObject		
+class	ReplicatorCore.ReplicationServer	NSObject	var	isEnabled
+class	ReplicatorCore.ReplicationServer	NSObject	var	lock
+class	ReplicatorCore.ReplicationServer	NSObject	var	lock_clients
+class	ReplicatorCore.ReplicationServer	NSObject	var	lock_devices
+class	ReplicatorCore.ReplicationServer	NSObject	let	queue
+class	ReplicatorCore.ReplicationServer	NSObject	let	replicator
+class	ReplicatorCore.ReplicationServer	NSObject	let	syncService
+class	ReplicatorCore.ReplicationServer	NSObject	var	lock_dataSources
+class	ReplicatorCore.ReplicationServer	NSObject	var	subscriptions
+class	ReplicatorCore.ReplicationServer	NSObject	let	recordDataStore
+class	ReplicatorCore.ReplicationServer	NSObject	let	clientDescriptorStore
+class	ReplicatorCore.ReplicationServer	NSObject	let	clientSettingsStore
+class	ReplicatorCore.ReplicationServer	NSObject	let	allowedClientVerifier
+class	ReplicatorCore.ReplicationServer	NSObject	let	notificationPoster
+class	ReplicatorCore.ReplicationServer	NSObject	var	predefinedClientDescriptorIDs
+class	ReplicatorCore.ReplicationServer	NSObject	var	lock_incomingMessages
+class	ReplicatorCore.ReplicationServer	NSObject	var	listener
+class	ReplicatorCore.Client	NSObject		
+class	ReplicatorCore.Client	NSObject	let	pid
+class	ReplicatorCore.Client	NSObject	let	connection
+class	ReplicatorCore.Client	NSObject	let	lock
+class	ReplicatorCore.Client	NSObject	var	delegate
+class	ReplicatorCore.Client	NSObject	var	lock_descriptors
+enum	ReplicatorCore.ReplicationServer.ReplicationServerError			
+enum	ReplicatorCore.ReplicationServer.ReplicationServerError		case	illegalParameter
+enum	ReplicatorCore.ReplicationServer.ReplicationServerError		case	connection
+class	ReplicatorCore.Daemon			
+class	ReplicatorCore.Daemon		let	replicator
+class	ReplicatorCore.Daemon		let	personaIntroducer
+class	ReplicatorCore.Daemon		let	replicationServer
+class	ReplicatorCore.Daemon		let	stateCaptureServer
+class	ReplicatorCore.Daemon		let	controlServer
+class	ReplicatorCore.Daemon		let	migrationClient
+class	ReplicatorCore.Daemon		let	database
+class	ReplicatorCore.Daemon		var	sigtermSource
+class	ReplicatorCore.Daemon		let	queue
+class	ReplicatorCore.ClientRecordChangeNotifier			
+class	ReplicatorCore.ClientRecordChangeNotifier		let	xpcNotifier
+class	ReplicatorCore.ClientRecordChangeNotifier		let	notificationPoster
+class	ReplicatorCore.StateCaptureInvalidator			
+class	ReplicatorCore.StateCaptureInvalidator		var	invalidated
+class	ReplicatorCore.StateCaptureInvalidator		var	handle
+class	ReplicatorCore.StateCaptureEntry			
+class	ReplicatorCore.StateCaptureEntry		var	title
+class	ReplicatorCore.StateCaptureEntry		var	queue
+class	ReplicatorCore.StateCaptureEntry		var	captureHandler
+class	ReplicatorCore.StateCaptureItem			
+class	ReplicatorCore.StateCaptureItem		let	title
+class	ReplicatorCore.StateCaptureItem		let	identifier
+class	ReplicatorCore.StateCaptureItem		var	captureHandler
+class	ReplicatorCore.StateCaptureItem		let	invalidatable
+class	ReplicatorCore.StateCaptureService			
+class	ReplicatorCore.StateCaptureService		var	itemsByIdentifier
+class	ReplicatorCore.StateCaptureService		var	subitemsByIdentifier
+class	ReplicatorCore.StateCaptureService		let	queue
+class	ReplicatorCore.NotifydNotificationPoster			
+class	ReplicatorCore.DebouncingNotificationPoster			
+class	ReplicatorCore.DebouncingNotificationPoster		let	queue
+class	ReplicatorCore.DebouncingNotificationPoster		var	queue_pendingNotifications
+class	ReplicatorCore.DebouncingNotificationPoster		let	innerPoster
+class	ReplicatorCore.MobileKeybagFirstLockStateProvider			
+class	ReplicatorCore.MobileKeybagFirstLockStateProvider		let	queue
+class	ReplicatorCore.MobileKeybagFirstLockStateProvider		var	lazy
+class	ReplicatorCore.MobileKeybagFirstLockStateProvider		let	_hasUnlockedSinceBootPublisher
+class	ReplicatorCore.MobileKeybagFirstLockStateProvider		var	_queue_hasUnlockedSinceBoot
+class	ReplicatorCore.MobileKeybagFirstLockStateProvider		var	mkbEvent
+class	ReplicatorCore.ReplicatorControlServer	NSObject		
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	isXPCServerEnabled
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	lock
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	lock_clients
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	lock_devices
+class	ReplicatorCore.ReplicatorControlServer	NSObject	let	queue
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	replicator
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	subscriptions
+class	ReplicatorCore.ReplicatorControlServer	NSObject	let	notificationPoster
+class	ReplicatorCore.ReplicatorControlServer	NSObject	let	clientSettingsStore
+class	ReplicatorCore.ReplicatorControlServer	NSObject	let	idsService
+class	ReplicatorCore.ReplicatorControlServer	NSObject	var	listener
+class	ReplicatorCore.Client	NSObject		
+class	ReplicatorCore.Client	NSObject	let	pid
+class	ReplicatorCore.Client	NSObject	let	connection
+class	ReplicatorCore.Client	NSObject	let	lock
+class	ReplicatorCore.Client	NSObject	var	delegate
+class	ReplicatorCore.Client	NSObject	var	lock_descriptors
+class	ReplicatorCore.AllowedClientVerifier			
+class	ReplicatorCore.AllowedClientVerifier		let	clientIDs
+struct	ReplicatorCore.AllowedClientVerifier.AllowList			
+struct	ReplicatorCore.AllowedClientVerifier.AllowList		var	clientIDs
+enum	ReplicatorCore.AllowedClientVerifier.AllowList.CodingKeys			
+enum	ReplicatorCore.AllowedClientVerifier.AllowList.CodingKeys		case	clientIDs
+class	ReplicatorCore.FixedStateFirstLockStateProvider			
+class	ReplicatorCore.FixedStateFirstLockStateProvider		var	hasUnlockedSinceBoot
+class	ReplicatorCore.FixedStateFirstLockStateProvider		var	isLocked
+class	ReplicatorCore.FixedStateFirstLockStateProvider		var	lazy
+class	ReplicatorCore.FixedStateFirstLockStateProvider		let	_hasUnlockedSinceBootPublisher
+class	ReplicatorCore.MigrationClient	NSObject		
+class	ReplicatorCore.MigrationClient	NSObject	var	recordMetadataStore
+class	ReplicatorCore.MigrationClient	NSObject	let	recordStore
+class	ReplicatorCore.MigrationClient	NSObject	let	clientDescriptorStore
+class	ReplicatorCore.MigrationClient	NSObject	let	url
+class	ReplicatorCore.MigrationClient	NSObject	var	connection
+class	ReplicatorCore.MigrationClient	NSObject	let	queue
+class	ReplicatorCore.StateCaptureServer	NSObject		
+class	ReplicatorCore.StateCaptureServer	NSObject	let	requestProcessingQueue
+class	ReplicatorCore.StateCaptureServer	NSObject	let	stateCaptureManager
+class	ReplicatorCore.StateCaptureServer	NSObject	var	listener
+class	ReplicatorCore.DataMigrator			
+class	ReplicatorCore.DataMigrator		let	database
+class	ReplicatorCore.DataMigrator		let	deviceType
+class	ReplicatorCore.DataMigrator		let	stages
+struct	ReplicatorCore.DataMigrator.Context			
+struct	ReplicatorCore.DataMigrator.Context		var	database
+struct	ReplicatorCore.DataMigrator.Context		var	deviceType
+class	ReplicatorCore.ClientDataSource			
+class	ReplicatorCore.ClientDataSource		let	clientDescriptor
+class	ReplicatorCore.ClientDataSource		let	zoneDescriptor
+class	ReplicatorCore.ClientDataSource		let	recordDataStore
+class	ReplicatorCore.ClientDataSource		let	notificationPoster
+class	ReplicatorCore.ClientDataSource		let	recordChangeNotifier
+class	ReplicatorCore.ClientDataSource		let	notificationQueue
+class	ReplicatorCore.ClientDataSource		let	replicator
+protocol	ClientDelegate			
+protocol	ReplicatorCore.ClientRecordChangeNotifying			
+protocol	ReplicatorCore.StateCaptureManaging			
+protocol	ReplicatorCore.StateCapturing			
+protocol	ReplicatorCore.StateHierarchyCapturing			
+protocol	ReplicatorCore.StateCaptureInvalidatable			
+protocol	ReplicatorCore.NotificationPosting			
+protocol	ClientDelegate			
+protocol	ReplicatorCore.AllowedClientVerifying			
+protocol	DataMigratorStage			
+protocol	conformance ReplicatorCore.ReplicationServer	ReplicatorCore.StateCapturing		
+protocol	conformance ReplicatorCore.ReplicationServer	ReplicatorCore.ClientDelegate		
+protocol	conformance ReplicatorCore.ReplicationServer	ReplicatorCore.ClientRecordChangeNotifying		
+protocol	conformance ReplicatorCore.ReplicationServer	ReplicatorEngine.SyncServiceDelegate		
+protocol	conformance ReplicationServer.ReplicationServerError	Swift.Hashable		
+protocol	conformance ReplicationServer.ReplicationServerError	Swift.Equatable		
+protocol	conformance ReplicationServer.ReplicationServerError	Swift.Error		
+protocol	conformance ReplicatorEngine.Replicator	ReplicatorCore.StateCapturing		
+protocol	conformance ReplicatorCore.ClientRecordChangeNotifier	ReplicatorCore.ClientRecordChangeNotifying		
+protocol	conformance ReplicatorCore.StateCaptureInvalidator	ReplicatorCore.StateCaptureInvalidatable		
+protocol	conformance ReplicatorCore.StateCaptureService	ReplicatorCore.StateCaptureManaging		
+protocol	conformance ReplicatorCore.NotifydNotificationPoster	ReplicatorCore.NotificationPosting		
+protocol	conformance ReplicatorCore.DebouncingNotificationPoster	ReplicatorCore.NotificationPosting		
+protocol	conformance ReplicatorCore.MobileKeybagFirstLockStateProvider	ReplicatorEngine.FirstLockStateProviding		
+protocol	conformance ReplicatorCore.ReplicatorControlServer	ReplicatorCore.ClientDelegate		
+protocol	conformance ReplicatorCore.AllowedClientVerifier	ReplicatorCore.AllowedClientVerifying		
+protocol	conformance AllowList	Swift.Encodable		
+protocol	conformance AllowList	Swift.Decodable		
+protocol	conformance AllowList.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AllowList.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AllowList.CodingKeys	Swift.Hashable		
+protocol	conformance AllowList.CodingKeys	Swift.Equatable		
+protocol	conformance AllowList.CodingKeys	Swift.CodingKey		
+protocol	conformance ReplicatorCore.FixedStateFirstLockStateProvider	ReplicatorEngine.FirstLockStateProviding		
+protocol	conformance ReplicatorCore.ClientDataSource	ReplicatorEngine.ReplicatorDataSource		

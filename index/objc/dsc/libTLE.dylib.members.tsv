@@ -1,0 +1,20 @@
+owner	kind	declaration
+LWCR	+	+ (id)withData:(id)data withError:(id *)error;
+LWCR	+	+ (id)withVersion:(long long)version withConstraintCategory:(long long)category withRequirements:(id)requirements withError:(id *)error;
+LWCR	-	- (id)externalRepresentation;
+LWCR	-	- (id)init;
+LWCR	-	- (void)dealloc;
+LWCR	property	@property (readonly) NSDictionary *dictionary;
+LWCR	property	@property (readonly) _Bool hasRequirements;
+LWCR	property	@property (readonly) long long constraintCategory;
+LWCR	property	@property (readonly) long long version;
+LWCRExecutor	+	+ (id)executor;
+LWCRExecutor	-	- (_Bool)evaluateRequirements:(id)requirements withFacts:(id)facts;
+LWCRFact	+	+ (id)boolFact:(_Bool)fact;
+LWCRFact	+	+ (id)dataFact:(id)fact;
+LWCRFact	+	+ (id)entitlementsFact:(id)fact;
+LWCRFact	+	+ (id)integerFact:(id)fact;
+LWCRFact	+	+ (id)stringFact:(id)fact;
+LWCRFact	-	- (void)bindName:(const char *)name withLength:(unsigned long long)length;
+LWCRFact	-	- (void)bindName:(id)name;
+LWCRFact	-	- (void)dealloc;

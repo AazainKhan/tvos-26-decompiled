@@ -1,0 +1,39 @@
+kind	name	superclass	protocols
+category	PBCodable(BMStoreData)		BMStoreData
+interface	BMFrame	NSObject	
+interface	BMFrameStore	NSObject	
+interface	BMMemoryMapping	NSObject	
+interface	BMPBStoreBookmark	PBCodable	NSCopying
+interface	BMPBSubscriptionEvent	PBCodable	NSCopying
+interface	BMPBTombstoneEvent	PBCodable	NSCopying
+interface	BMPruningPolicy	NSObject	
+interface	BMSegmentManager	NSObject	BMFileManagerDelegate
+interface	BMSegmentManagerProtectedState	NSObject	
+interface	BMStoreBookmark	NSObject	NSCopying,NSSecureCoding,BMProtoBufWrapper
+interface	BMStoreConfig	NSObject	NSCopying
+interface	BMStoreDataClassLogging	NSObject	
+interface	BMStoreEnumerator	NSObject	
+interface	BMStoreEvent	NSObject	BMStoreEvent,NSSecureCoding
+interface	BMStreamDatastore	NSObject	BMSegmentManagerDelegate,BMFileManagerDelegate
+interface	BMStreamDatastoreOutOfProcessWriter	NSObject	BMStreamDatastoreWriting
+interface	BMStreamDatastorePruner	NSObject	
+interface	BMStreamDatastoreReader	NSObject	
+interface	BMStreamDatastoreWriter	NSObject	BMStreamDatastoreWriting
+interface	BMStreamMetadata	NSObject	NSSecureCoding
+interface	BMSubscriptionEvent	NSObject	BMProtoBufWrapper,NSSecureCoding,BMStoreData
+interface	BMTombstoneEvent	NSObject	BMProtoBufWrapper,NSSecureCoding,BMStoreData,BMTombstoneEvent
+interface	BMWriteServer	NSObject	BMXPCListenerDelegate
+interface	BMWriteServerExported	NSObject	BMWriteServiceServer
+interface	BMWriteService	NSObject	BMWriteServiceClient
+protocol	BMFileManagerDelegate		NSObject
+protocol	BMProtoBufWrapper		
+protocol	BMSegmentManagerDelegate		NSObject
+protocol	BMStoreBookmarkEnumerator		
+protocol	BMStoreData		NSObject
+protocol	BMStoreEvent		NSObject
+protocol	BMStreamDatastorePruningDelegate		
+protocol	BMStreamDatastoreWriting		NSObject
+protocol	BMTombstoneEvent		NSObject,BMProtoBufWrapper,NSSecureCoding,BMStoreData
+protocol	BMWriteServiceClient		
+protocol	BMWriteServiceServer		
+protocol	BMXPCListenerDelegate		

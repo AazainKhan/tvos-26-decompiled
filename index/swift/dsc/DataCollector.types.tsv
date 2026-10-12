@@ -1,0 +1,409 @@
+kind	type	conformance	member_kind	member
+enum	DataCollector.BatchError			
+enum	DataCollector.BatchError		case	staleEvent
+struct	DataCollector.BatchConfig			
+struct	DataCollector.BatchConfig		let	byteCountLimit
+struct	DataCollector.BatchConfig		let	eventCountLimit
+struct	DataCollector.Bookmark			
+struct	DataCollector.Bookmark		var	timestamp
+struct	DataCollector.Bookmark		var	index
+enum	DataCollector.Bookmark.CodingKeys			
+enum	DataCollector.Bookmark.CodingKeys		case	timestamp
+enum	DataCollector.Bookmark.CodingKeys		case	index
+enum	DataCollector.BoundedBatchError			
+enum	DataCollector.BoundedBatchError		case	eventCountLimitReached
+enum	DataCollector.BoundedBatchError		case	byteCountLimitReached
+enum	DataCollector.Destination			
+enum	DataCollector.Destination		case	dataPlatform
+enum	DataCollector.Destination		case	unilogDataPlatform
+enum	DataCollector.Destination		case	custom
+struct	DataCollector.DataPlatformURLBuilder			
+struct	DataCollector.DataPlatformURLBuilder		let	urlString
+struct	DataCollector.DataPlatformURLBuilder		let	name
+struct	DataCollector.DataPlatformURLBuilder		let	variant
+enum	DataCollector.DataPlatformVariant			
+enum	DataCollector.DataPlatformVariant		case	development
+enum	DataCollector.DataPlatformVariant		case	carry
+enum	DataCollector.DataPlatformVariant		case	seed
+enum	DataCollector.DataPlatformVariant		case	production
+struct	DataCollector.Event			
+struct	DataCollector.Event		let	payload
+struct	DataCollector.Event		let	timestamp
+struct	DataCollector.Event		let	schema
+struct	DataCollector.LiveUploaderFactory			
+struct	DataCollector.LiveUploaderDescriptor			
+struct	DataCollector.LiveUploaderDescriptor		var	sender
+struct	DataCollector.LiveUploaderDescriptor		var	destination
+struct	DataCollector.LiveUploaderDescriptor		var	schema
+struct	DataCollector.LiveUploaderDescriptor		var	telemetryClient
+struct	DataCollector.LiveUploaderDescriptor		var	uploaderConfig
+struct	DataCollector.LiveUploaderDescriptor		var	batchConfig
+struct	DataCollector.LiveUploaderDescriptor		var	observer
+struct	DataCollector.Sender			
+struct	DataCollector.Sender		let	bundleID
+struct	DataCollector.UploaderConfig			
+struct	DataCollector.UploaderConfig		var	requiresDiagnosticsAndUsage
+struct	DataCollector.UploaderConfig		var	uploadRetryCount
+struct	DataCollector.UploaderConfig		var	eventLookBackLimitInDays
+struct	DataCollector.UploaderConfig		var	allowUploadMetricsReporting
+enum	DataCollector.UploaderError			
+enum	DataCollector.UploaderError		case	unsupportedBatchEntry
+enum	DataCollector.UploaderError		case	serviceError
+enum	DataCollector.UploaderError		case	observerError
+enum	DataCollector.UploaderError		case	networkError
+enum	DataCollector.UploaderError		case	rpcSetupError
+enum	DataCollector.UploaderError		case	unknownDestinationURL
+enum	DataCollector.UploaderError		case	unsupportedDestination
+enum	DataCollector.UploaderError		case	contextDeallocated
+enum	DataCollector.UploaderError		case	uploadDisabled
+enum	DataCollector.UploaderError		case	multipleUploadOnSameEventStreamNotSupported
+enum	DataCollector.UploaderError		case	eventRequiresSchema
+enum	DataCollector.NetworkErrorCode			
+enum	DataCollector.NetworkErrorCode		case	cancelled
+enum	DataCollector.NetworkErrorCode		case	badURL
+enum	DataCollector.NetworkErrorCode		case	timedOut
+enum	DataCollector.NetworkErrorCode		case	unsupportedURL
+enum	DataCollector.NetworkErrorCode		case	cannotFindHost
+enum	DataCollector.NetworkErrorCode		case	cannotConnectToHost
+enum	DataCollector.NetworkErrorCode		case	networkConnectionLost
+enum	DataCollector.NetworkErrorCode		case	dnsLookupFailed
+enum	DataCollector.NetworkErrorCode		case	httpTooManyRedirects
+enum	DataCollector.NetworkErrorCode		case	resourceUnavailable
+enum	DataCollector.NetworkErrorCode		case	notConnectedToInternet
+enum	DataCollector.NetworkErrorCode		case	redirectToNonExistentLocation
+enum	DataCollector.NetworkErrorCode		case	badServerResponse
+enum	DataCollector.NetworkErrorCode		case	userCancelledAuthentication
+enum	DataCollector.NetworkErrorCode		case	userAuthenticationRequired
+enum	DataCollector.NetworkErrorCode		case	zeroByteResource
+enum	DataCollector.NetworkErrorCode		case	cannotDecodeRawData
+enum	DataCollector.NetworkErrorCode		case	cannotDecodeContentData
+enum	DataCollector.NetworkErrorCode		case	cannotParseResponse
+enum	DataCollector.NetworkErrorCode		case	secureConnectionFailed
+enum	DataCollector.NetworkErrorCode		case	serverCertificateHasBadDate
+enum	DataCollector.NetworkErrorCode		case	serverCertificateUntrusted
+enum	DataCollector.NetworkErrorCode		case	serverCertificateHasUnknownRoot
+enum	DataCollector.NetworkErrorCode		case	serverCertificateNotYetValid
+enum	DataCollector.NetworkErrorCode		case	clientCertificateRejected
+enum	DataCollector.NetworkErrorCode		case	clientCertificateRequired
+enum	DataCollector.UploadResult			
+enum	DataCollector.UploadResult		case	failed
+enum	DataCollector.UploadResult		case	skipped
+enum	DataCollector.UploadResult		case	uploaded
+struct	DataCollector.BiomeEventStream<A	BMStoreData>		
+struct	DataCollector.BiomeEventStream<A	BMStoreData>	let	stream
+struct	DataCollector.BiomeEventStream<A	BMStoreData>	let	useCase
+struct	DataCollector.BiomeEventStream<A	BMStoreData>	let	schema
+struct	DataCollector.BYOSEventStream			
+struct	DataCollector.BYOSEventStream		let	source
+struct	DataCollector.BYOSEventStream		let	useCase
+struct	DataCollector.BYOSEventStream		let	schema
+struct	DataCollector.BYOSEventStream		let	filterClosure
+struct	DataCollector.PassthroughUploadSampling			
+struct	DataCollector.RateBasedUploadSampling			
+struct	DataCollector.RateBasedUploadSampling		let	rate
+struct	DataCollector.BlockUploadObserver			
+struct	DataCollector.BlockUploadObserver		let	onUploadProgress
+class	DataCollector.CompositeObserver			
+class	DataCollector.CompositeObserver		let	observers
+class	DataCollector.TransactionHoldingObserver			
+class	DataCollector.TransactionHoldingObserver		let	protectedState
+class	DataCollector.TransactionHoldingObserver		let	name
+class	DataCollector.TransactionHoldingObserver		let	cancelOnEnd
+class	DataCollector.TransactionHoldingObserver.State			
+class	DataCollector.TransactionHoldingObserver.State		var	isCancelled
+class	DataCollector.TransactionHoldingObserver.State		var	transaction
+class	DataCollector.RBAssertionHoldingObserver			
+class	DataCollector.RBAssertionHoldingObserver		let	protectedState
+class	DataCollector.RBAssertionHoldingObserver		let	explanation
+class	DataCollector.RBAssertionHoldingObserver		let	cancelOnEnd
+class	DataCollector.RBAssertionHoldingObserver.State			
+class	DataCollector.RBAssertionHoldingObserver.State		var	isCancelled
+class	DataCollector.RBAssertionHoldingObserver.State		var	assertion
+class	DataCollector.UserDefaultBookmarkManager			
+class	DataCollector.UserDefaultBookmarkManager		let	key
+class	DataCollector.UserDefaultBookmarkManager		let	userDefaults
+class	DataCollector.UserDefaultBookmarkManager		var	bookmark
+enum	DataCollector.UploadTaskEndState			
+enum	DataCollector.UploadTaskEndState		case	taskInProgress
+enum	DataCollector.UploadTaskEndState		case	cancelled
+enum	DataCollector.UploadTaskEndState		case	stoppedOnUploadFailure
+enum	DataCollector.UploadTaskEndState		case	uploadCompleted
+struct	DataCollector.UnilogAdapter			
+enum	DataCollector.UnilogCancellationError			
+enum	DataCollector.UnilogCancellationError		case	uploadNotAllowed
+enum	DataCollector.UnilogCancellationError		case	contextIsMissing
+class	DataCollector.FixedBookmarkManager			
+struct	DataCollector.DefaultBatchConfigProvider			
+class	DataCollector.UnilogTelemetryObserver			
+class	DataCollector.UnilogTelemetryObserver		let	client
+class	DataCollector.TelemetryActor			
+class	DataCollector.DefaultUploaderContext			
+class	DataCollector.DefaultUploaderContext		let	sender
+class	DataCollector.DefaultUploaderContext		let	destination
+class	DataCollector.DefaultUploaderContext		let	config
+class	DataCollector.DefaultUploaderContext		let	uploadSampling
+class	DataCollector.DefaultUploaderContext		let	controller
+class	DataCollector.DefaultUploaderContext		let	observer
+class	DataCollector.DefaultUploaderContext		let	deviceUserOptions
+class	DataCollector.DefaultUploaderContext		let	batchConfigProvider
+class	DataCollector.DefaultUploaderContext		var	factoryRef
+class	DataCollector.DefaultUploaderContext		var	batchUploader
+class	DataCollector.DefaultUploaderContext		var	streamUploader
+class	DataCollector.DefaultUploaderContext		var	uploadService
+struct	DataCollector.ComponentFactory			
+class	DataCollector.Connector	NSObject		
+class	DataCollector.Connector	NSObject	let	state
+class	DataCollector.Connector	NSObject	let	transformer
+struct	DataCollector.AsyncBPSPublisher			
+struct	DataCollector.AsyncBPSPublisher		let	connector
+struct	DataCollector.AsyncBPSPublisher		let	publisher
+enum	DataCollector.AsyncBPSPublisherError			
+enum	DataCollector.AsyncBPSPublisherError		case	completionError
+enum	DataCollector.AsyncBPSPublisherError		case	unknownCompletion
+enum	DataCollector.AsyncBPSPublisherError		case	requestInProgress
+class	DataCollector.DataPlatformUploadService			
+class	DataCollector.DataPlatformUploadService		let	bundleID
+class	DataCollector.DataPlatformUploadService		let	serviceType
+class	DataCollector.DataPlatformUploadService		let	service
+enum	DataCollector.DataPlatformServiceType			
+enum	DataCollector.DataPlatformServiceType		case	default
+enum	DataCollector.DataPlatformServiceType		case	unilog
+struct	DataCollector.DataPlatformBatch			
+struct	DataCollector.DataPlatformBatch		var	id
+struct	DataCollector.DataPlatformBatch		let	bundleID
+struct	DataCollector.DataPlatformBatch		let	byteCountLimit
+struct	DataCollector.DataPlatformBatch		let	eventCountLimit
+struct	DataCollector.DataPlatformBatch		let	minValidTimestamp
+struct	DataCollector.DataPlatformBatch		let	payloadType
+struct	DataCollector.DataPlatformBatch		var	timestamp
+struct	DataCollector.DataPlatformBatch		var	request
+struct	DataCollector.DataPlatformBatch		var	byteCount
+class	DataCollector.OspreyRPCChannel			
+class	DataCollector.OspreyRPCChannel		let	channel
+class	DataCollector.OspreyMethod			
+class	DataCollector.OspreyMethod		let	method
+class	DataCollector.OspreyProducer			
+class	DataCollector.OspreyProducer		let	producer
+struct	DataCollector.OspreyRPCServiceFactory			
+class	DataCollector.AttestedRPCService			
+class	DataCollector.AttestedRPCService		let	config
+class	DataCollector.AttestedRPCService		let	factory
+class	DataCollector.AttestedRPCService		let	protectedURLChannelMap
+class	DataCollector.SafeContinuation			
+class	DataCollector.SafeContinuation		let	lock
+class	DataCollector.MessageWrapper	NSObject		
+class	DataCollector.MessageWrapper	NSObject	let	message
+struct	DataCollector.RPCConfig			
+struct	DataCollector.RPCConfig		var	baseURL
+struct	DataCollector.RPCConfig		var	name
+struct	DataCollector.RPCConfig		var	headers
+struct	DataCollector.RPCConfig		var	disableDeviceAuthentication
+struct	DataCollector.RPCConfig		var	compressionEnabled
+struct	DataCollector.RPCConfig		var	logger
+enum	DataCollector.RPCError			
+enum	DataCollector.RPCError		case	unexpectedRequestType
+enum	DataCollector.RPCError		case	missingURL
+struct	DataCollector.BasicUploadMetrics			
+struct	DataCollector.BasicUploadMetrics		var	uploadedBatches
+struct	DataCollector.BasicUploadMetrics		var	uploadedEvents
+struct	DataCollector.BasicUploadMetrics		var	uploadedBytes
+struct	DataCollector.BasicUploadMetrics		var	skippedBatches
+struct	DataCollector.BasicUploadMetrics		var	skippedEvents
+struct	DataCollector.BasicUploadMetrics		var	skippedBytes
+struct	DataCollector.BasicUploadMetrics		var	processedEvents
+struct	DataCollector.BasicUploadMetrics		var	batchLatenciesInHours
+struct	DataCollector.BasicUploadMetrics		var	duration
+struct	DataCollector.BasicUploadMetrics		var	error
+struct	DataCollector.BasicUploadMetrics		var	batchSpecs
+struct	DataCollector.BasicUploadMetrics		var	hasCompleted
+struct	DataCollector.BasicBatchMetrics			
+struct	DataCollector.BasicBatchMetrics		var	processedEvents
+struct	DataCollector.BasicBatchMetrics		var	duration
+struct	DataCollector.BasicBatchMetrics		let	start
+struct	DataCollector.BasicBatchMetrics		var	endState
+class	DataCollector.DefaultBatchUploader			
+class	DataCollector.DefaultBatchUploader		var	context
+class	DataCollector.DefaultBatchUploader		var	uploadInProgress
+class	DataCollector.DefaultBatchUploader		let	bundleId
+class	DataCollector.DefaultBatchUploader		let	allowUploadMetricsReporting
+class	DataCollector.DefaultLiveUploader			
+class	DataCollector.DefaultLiveUploader		let	descriptor
+class	DataCollector.DefaultLiveUploader		let	store
+class	DataCollector.DefaultLiveUploader		let	observer
+class	DataCollector.ClosureBasedEventStream			
+class	DataCollector.ClosureBasedEventStream		let	source
+class	DataCollector.ClosureBasedEventStream		let	schema
+class	DataCollector.ClosureBasedEventStream		let	timestamp
+class	DataCollector.EventCountingObserver			
+class	DataCollector.EventCountingObserver		let	totalUploadedCounter
+class	DataCollector.EventCountingObserver		let	uploadAttempted
+class	DataCollector.EventCountingObserver		let	logger
+struct	DataCollector.SingleBatchConfigProvider			
+struct	DataCollector.SingleBatchConfigProvider		let	batchConfig
+class	DataCollector.DefaultStreamUploader			
+class	DataCollector.DefaultStreamUploader		var	context
+class	DataCollector.DefaultStreamUploader		var	uploadInProgress
+class	DataCollector.DefaultStreamUploader		let	bundleId
+class	DataCollector.DefaultStreamUploader		let	allowUploadMetricsReporting
+struct	DataCollector.DeviceUserOptions			
+enum	DataCollector.Logs			
+enum	DataCollector.Logs		case	uploader
+enum	DataCollector.Logs		case	io
+struct	DataCollector.UploaderContextBuilder			
+struct	DataCollector.UploaderContextBuilder		var	sender
+struct	DataCollector.UploaderContextBuilder		var	destination
+struct	DataCollector.UploaderContextBuilder		var	uploadSampling
+struct	DataCollector.UploaderContextBuilder		var	config
+struct	DataCollector.UploaderContextBuilder		var	controller
+struct	DataCollector.UploaderContextBuilder		var	batchConfigProvider
+struct	DataCollector.UploaderContextBuilder		var	observer
+struct	DataCollector.Connector.State			
+struct	DataCollector.Connector.State		var	closed
+struct	DataCollector.Connector.State		var	subscribed
+struct	DataCollector.Connector.State		var	subscription
+struct	DataCollector.Connector.State		var	continuation
+struct	DataCollector.Connector.State		var	inputs
+protocol	DataCollector.Batch			
+protocol	DataCollector.BatchConfigProvider			
+protocol	DataCollector.BoundedBatch			
+protocol	DataCollector.LiveUploader			
+protocol	DataCollector.BPSPublisherProvider			
+protocol	DataCollector.BookmarkManager			
+protocol	DataCollector.EventStream			
+protocol	DataCollector.UploadMetrics			
+protocol	DataCollector.BatchMetrics			
+protocol	DataCollector.UploadObserver			
+protocol	DataCollector.UploadController			
+protocol	DataCollector.UploadSampling			
+protocol	DataCollector.UploadService			
+protocol	DataCollector.UploadServiceFactory			
+protocol	DataCollector.UploaderTelemetryError			
+protocol	DataCollector.BatchUploader			
+protocol	DataCollector.StreamUploader			
+protocol	DataCollector.UploaderContext			
+protocol	DataCollector.InternalUploaderContext			
+protocol	DataCollector.ComponentFactoryProtocol			
+protocol	DataCollector.AttestedRPCServiceFactory			
+protocol	DataCollector.AttestedRPCChannel			
+protocol	DataCollector.AttestedRPCMethod			
+protocol	DataCollector.AttestedRPCProducer			
+protocol	DataCollector.RPCService			
+protocol	DataCollector.DeviceUserOptionsProtocol			
+protocol	DataCollector.OSVariantInspector			
+protocol	conformance DataCollector.BatchError	Swift.Equatable		
+protocol	conformance DataCollector.BatchError	Swift.Hashable		
+protocol	conformance DataCollector.BatchError	Swift.Error		
+protocol	conformance DataCollector.Bookmark	Swift.Hashable		
+protocol	conformance DataCollector.Bookmark	Swift.Comparable		
+protocol	conformance DataCollector.Bookmark	Swift.Decodable		
+protocol	conformance DataCollector.Bookmark	Swift.Encodable		
+protocol	conformance DataCollector.Bookmark	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DataCollector.BoundedBatchError	Swift.Equatable		
+protocol	conformance DataCollector.BoundedBatchError	Swift.Error		
+protocol	conformance DataCollector.BoundedBatchError	Swift.Hashable		
+protocol	conformance DataCollector.DataPlatformURLBuilder	Swift.Hashable		
+protocol	conformance DataCollector.DataPlatformURLBuilder	Swift.ExpressibleByStringLiteral		
+protocol	conformance DataCollector.DataPlatformURLBuilder	Swift.Equatable		
+protocol	conformance DataCollector.DataPlatformURLBuilder	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance DataCollector.DataPlatformURLBuilder	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance DataCollector.DataPlatformVariant	Swift.Equatable		
+protocol	conformance DataCollector.DataPlatformVariant	Swift.Hashable		
+protocol	conformance DataCollector.Event	Swift.Hashable		
+protocol	conformance DataCollector.Event	Swift.Equatable		
+protocol	conformance DataCollector.Sender	Swift.Hashable		
+protocol	conformance DataCollector.Sender	Swift.ExpressibleByStringLiteral		
+protocol	conformance DataCollector.Sender	Swift.Equatable		
+protocol	conformance DataCollector.Sender	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance DataCollector.Sender	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance DataCollector.UploaderConfig	Swift.Equatable		
+protocol	conformance DataCollector.UploaderError	Swift.Error		
+protocol	conformance DataCollector.UploaderError	Swift.Equatable		
+protocol	conformance DataCollector.NetworkErrorCode	Swift.Equatable		
+protocol	conformance DataCollector.NetworkErrorCode	Swift.RawRepresentable		
+protocol	conformance DataCollector.NetworkErrorCode	Swift.Hashable		
+protocol	conformance DataCollector.UploadResult	Swift.CustomStringConvertible		
+protocol	conformance DataCollector.BiomeEventStream	DataCollector.EventStream		
+protocol	conformance BMStreamBase	DataCollector.BPSPublisherProvider		
+protocol	conformance DataCollector.BYOSEventStream	DataCollector.EventStream		
+protocol	conformance DataCollector.IteratorEventStream	DataCollector.EventStream		
+protocol	conformance AsyncWrapper	Swift.Actor		
+protocol	conformance AsyncWrapper	Swift.AsyncIteratorProtocol		
+protocol	conformance DataCollector.PassthroughUploadSampling	DataCollector.UploadSampling		
+protocol	conformance DataCollector.RateBasedUploadSampling	DataCollector.UploadSampling		
+protocol	conformance DataCollector.BlockUploadObserver	DataCollector.UploadObserver		
+protocol	conformance DataCollector.CompositeObserver	DataCollector.UploadObserver		
+protocol	conformance DataCollector.TransactionHoldingObserver	DataCollector.UploadObserver		
+protocol	conformance DataCollector.RBAssertionHoldingObserver	DataCollector.UploadObserver		
+protocol	conformance DataCollector.UserDefaultBookmarkManager	Swift.Actor		
+protocol	conformance DataCollector.UserDefaultBookmarkManager	DataCollector.BookmarkManager		
+protocol	conformance DataCollector.UploadTaskEndState	Swift.Equatable		
+protocol	conformance DataCollector.UploadTaskEndState	Swift.Hashable		
+protocol	conformance DataCollector.UnilogCancellationError	Swift.Equatable		
+protocol	conformance DataCollector.UnilogCancellationError	Swift.Hashable		
+protocol	conformance DataCollector.UnilogCancellationError	Swift.RawRepresentable		
+protocol	conformance DataCollector.UnilogCancellationError	DataCollector.UploaderTelemetryError		
+protocol	conformance DataCollector.UnilogCancellationError	Swift.Error		
+protocol	conformance DataCollector.UnilogCancellationError	Swift.CustomStringConvertible		
+protocol	conformance DataCollector.FixedBookmarkManager	DataCollector.BookmarkManager		
+protocol	conformance DataCollector.DefaultBatchConfigProvider	DataCollector.BatchConfigProvider		
+protocol	conformance DataCollector.TelemetryActor	Swift.Actor		
+protocol	conformance DataCollector.TelemetryActor	Swift.GlobalActor		
+protocol	conformance DataCollector.UnilogTelemetryObserver	DataCollector.UploadObserver		
+protocol	conformance DataCollector.DefaultUploaderContext	Swift.CustomStringConvertible		
+protocol	conformance DataCollector.DefaultUploaderContext	DataCollector.InternalUploaderContext		
+protocol	conformance DataCollector.DefaultUploaderContext	Swift.Actor		
+protocol	conformance DataCollector.DefaultUploaderContext	DataCollector.UploaderContext		
+protocol	conformance DataCollector.ComponentFactory	DataCollector.ComponentFactoryProtocol		
+protocol	conformance DataCollector.AsyncBPSPublisher	Swift.AsyncSequence		
+protocol	conformance DataCollector.AsyncBPSPublisher	Swift.AsyncIteratorProtocol		
+protocol	conformance DataCollector.AsyncBPSPublisherError	Swift.Hashable		
+protocol	conformance DataCollector.AsyncBPSPublisherError	Swift.Equatable		
+protocol	conformance DataCollector.AsyncBPSPublisherError	Swift.Error		
+protocol	conformance DataCollector.DataPlatformServiceType	Swift.Hashable		
+protocol	conformance DataCollector.DataPlatformServiceType	Swift.Equatable		
+protocol	conformance DataCollector.DataPlatformUploadService	DataCollector.UploadService		
+protocol	conformance DataCollector.DataPlatformUploadService	Swift.Actor		
+protocol	conformance DataCollector.DataPlatformBatch	DataCollector.BoundedBatch		
+protocol	conformance DataCollector.DataPlatformBatch	DataCollector.Batch		
+protocol	conformance OspreyProducer	DataCollector.AttestedRPCProducer		
+protocol	conformance OspreyMethod	DataCollector.AttestedRPCMethod		
+protocol	conformance DataCollector.OspreyRPCChannel	DataCollector.AttestedRPCChannel		
+protocol	conformance DataCollector.OspreyRPCServiceFactory	DataCollector.AttestedRPCServiceFactory		
+protocol	conformance DataCollector.AttestedRPCService	DataCollector.RPCService		
+protocol	conformance DataCollector.RPCError	Swift.Error		
+protocol	conformance BasicBatchMetrics	DataCollector.BatchMetrics		
+protocol	conformance DataCollector.BasicUploadMetrics	DataCollector.UploadMetrics		
+protocol	conformance DataCollector.DefaultBatchUploader	DataCollector.BatchUploader		
+protocol	conformance DataCollector.DefaultBatchUploader	Swift.Actor		
+protocol	conformance EventCountingObserver	DataCollector.UploadObserver		
+protocol	conformance ClosureBasedEventStream	Swift.AsyncIteratorProtocol		
+protocol	conformance ClosureBasedEventStream	DataCollector.EventStream		
+protocol	conformance DataCollector.DefaultLiveUploader	DataCollector.LiveUploader		
+protocol	conformance DataCollector.SingleBatchConfigProvider	DataCollector.BatchConfigProvider		
+protocol	conformance DataCollector.DefaultStreamUploader	DataCollector.StreamUploader		
+protocol	conformance DataCollector.DefaultStreamUploader	Swift.Actor		
+protocol	conformance DataCollector.DeviceUserOptions	DataCollector.DeviceUserOptionsProtocol		
+protocol	conformance DataCollector.Logs	Swift.CaseIterable		
+protocol	conformance DataCollector.Logs	Swift.RawRepresentable		
+protocol	conformance DataCollector.Logs	Swift.Equatable		
+protocol	conformance DataCollector.Logs	Swift.Hashable		
+extension	DataCollector.DataPlatformURLBuilder	ExpressibleByStringLiteral		
+extension	DataCollector.DataPlatformURLBuilder	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	DataCollector.DataPlatformURLBuilder	ExpressibleByUnicodeScalarLiteral		
+extension	DataCollector.Sender	ExpressibleByStringLiteral		
+extension	DataCollector.Sender	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	DataCollector.Sender	ExpressibleByUnicodeScalarLiteral		
+extension	DataCollector.NetworkErrorCode	RawRepresentable		
+extension	DataCollector.IteratorEventStream.AsyncWrapper	AsyncIteratorProtocol		
+extension	DataCollector.UnilogCancellationError	RawRepresentable		
+extension	DataCollector.TelemetryActor	GlobalActor		
+extension	DataCollector.AsyncBPSPublisher	AsyncSequence		
+extension	DataCollector.AsyncBPSPublisher	AsyncIteratorProtocol		
+extension	DataCollector.ClosureBasedEventStream	AsyncIteratorProtocol		
+extension	DataCollector.Logs	CaseIterable		
+extension	DataCollector.Logs	RawRepresentable		

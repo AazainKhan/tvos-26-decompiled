@@ -1,0 +1,1481 @@
+kind	type	conformance	member_kind	member
+struct	CryptexKit.CryptexInfo			
+struct	CryptexKit.CryptexInfo		let	identifier
+struct	CryptexKit.CryptexInfo		let	version
+struct	CryptexKit.CryptexInfo		let	devicePath
+struct	CryptexKit.CryptexInfo		let	subdevicePath
+struct	CryptexKit.CryptexInfo		let	mountPath
+enum	CryptexKit.SliceValidationError			
+enum	CryptexKit.SliceValidationError		case	missingAssets
+enum	CryptexKit.SliceValidationError		case	notImplemented
+struct	CryptexKit.RequestTestError			
+struct	CryptexKit.ResponseTestError			
+class	CryptexKit.Cryptex			
+class	CryptexKit.Cryptex		let	identifier
+class	CryptexKit.Cryptex		let	version
+class	CryptexKit.Cryptex		var	personalizedIdentity
+class	CryptexKit.Cryptex		var	personalizedNonce
+class	CryptexKit.Cryptex		var	_cachedDependencies
+class	CryptexKit.Cryptex		let	buildIdentity
+class	CryptexKit.Cryptex		var	_cryptex
+class	CryptexKit.Cryptex		let	queue
+class	CryptexKit.Cryptex		let	logger
+enum	CryptexKit.Cryptex.Format			
+enum	CryptexKit.Cryptex.Format		case	research
+enum	CryptexKit.Cryptex.Format		case	legacy
+enum	CryptexKit.Cryptex.Format		case	cryptex1
+struct	CryptexKit.PkgMeta			
+struct	CryptexKit.PkgMeta		let	id
+struct	CryptexKit.PkgMeta		let	schema
+struct	CryptexKit.PkgMeta		let	data
+struct	CryptexKit.PkgMeta.Schema			
+struct	CryptexKit.PkgMeta.Schema		let	rawValue
+struct	CryptexKit.PkgMeta.Spec			
+struct	CryptexKit.PkgMeta.Spec		let	schema
+struct	CryptexKit.PkgMeta.Spec		let	data
+enum	CryptexKit.PkgMeta.Spec.CodingKeys			
+enum	CryptexKit.PkgMeta.Spec.CodingKeys		case	schema
+enum	CryptexKit.PkgMeta.Spec.CodingKeys		case	data
+enum	CryptexKit.PkgMeta.CodingKeys			
+enum	CryptexKit.PkgMeta.CodingKeys		case	id
+enum	CryptexKit.PkgMeta.CodingKeys		case	schema
+enum	CryptexKit.PkgMeta.CodingKeys		case	data
+struct	CryptexKit.CryptexNonce			
+struct	CryptexKit.CryptexNonce		let	data
+struct	CryptexKit.CryptexNonce		let	spec
+enum	CryptexKit.CryptexPersistence			
+enum	CryptexKit.CryptexPersistence		case	untilReboot
+enum	CryptexKit.CryptexPersistence		case	untilSoftwareUpdate
+enum	CryptexKit.CryptexNonceSpec			
+enum	CryptexKit.CryptexNonceSpec		case	legacy
+enum	CryptexKit.CryptexNonceSpec		case	cryptex1
+enum	CryptexKit.CryptexNonceSpec		case	research
+struct	CryptexKit.CryptexReadNonceOptions			
+struct	CryptexKit.CryptexReadNonceOptions		var	nonceSpec
+struct	CryptexKit.Cryptex.UninstallOptions			
+struct	CryptexKit.Cryptex.UninstallOptions		var	forceUnmount
+enum	CryptexKit.PkgAssetType			
+enum	CryptexKit.PkgAssetType		case	infoPlist
+enum	CryptexKit.PkgAssetType		case	diskImage
+enum	CryptexKit.PkgAssetType		case	directory
+enum	CryptexKit.PkgAssetType		case	rootHash
+enum	CryptexKit.PkgAssetType		case	signature
+struct	CryptexKit.RequestInstallBuiltinCryptex			
+struct	CryptexKit.RequestInstallBuiltinCryptex		let	path
+struct	CryptexKit.RequestInstallBuiltinCryptex		let	options
+enum	CryptexKit.RequestInstallBuiltinCryptex.CodingKeys			
+enum	CryptexKit.RequestInstallBuiltinCryptex.CodingKeys		case	path
+enum	CryptexKit.RequestInstallBuiltinCryptex.CodingKeys		case	options
+struct	CryptexKit.ResponseInstallBuiltinCryptex			
+enum	CryptexKit.PkgRef.CodingKeys			
+enum	CryptexKit.PkgRef.CodingKeys		case	publisher
+enum	CryptexKit.PkgRef.CodingKeys		case	name
+enum	CryptexKit.PkgRef.CodingKeys		case	version
+enum	CryptexKit.PkgRef.CodingKeys		case	variant
+struct	CryptexKit.PkgEnvCreateRequest			
+struct	CryptexKit.PkgEnvCreateRequest		let	spec
+enum	CryptexKit.PkgEnvCreateRequest.CodingKeys			
+enum	CryptexKit.PkgEnvCreateRequest.CodingKeys		case	spec
+struct	CryptexKit.PkgEnvCreateResponse			
+struct	CryptexKit.PkgEnvCreateResponse		let	id
+enum	CryptexKit.PkgEnvCreateResponse.CodingKeys			
+enum	CryptexKit.PkgEnvCreateResponse.CodingKeys		case	id
+struct	CryptexKit.Cryptex.BootstrapOptions			
+struct	CryptexKit.Cryptex.BootstrapOptions		var	globalEnvironment
+enum	CryptexKit.Cryptex.BootstrapOptions.CodingKeys			
+enum	CryptexKit.Cryptex.BootstrapOptions.CodingKeys		case	globalEnvironment
+struct	CryptexKit.PkgInfo			
+struct	CryptexKit.PkgInfo		let	publisher
+struct	CryptexKit.PkgInfo		let	name
+struct	CryptexKit.PkgInfo		let	version
+struct	CryptexKit.PkgInfo		let	scheme
+struct	CryptexKit.PkgInfo		let	summary
+struct	CryptexKit.PkgInfo		var	homepage
+struct	CryptexKit.PkgInfo		var	license
+enum	CryptexKit.PkgInfo.CodingKeys			
+enum	CryptexKit.PkgInfo.CodingKeys		case	publisher
+enum	CryptexKit.PkgInfo.CodingKeys		case	name
+enum	CryptexKit.PkgInfo.CodingKeys		case	version
+enum	CryptexKit.PkgInfo.CodingKeys		case	summary
+enum	CryptexKit.PkgInfo.CodingKeys		case	homepage
+enum	CryptexKit.PkgInfo.CodingKeys		case	license
+enum	CryptexKit.PkgInfo.CodingKeys		case	scheme
+struct	CryptexKit.PkgInfoOptions			
+struct	CryptexKit.PkgInfoOptions		let	rawValue
+struct	CryptexKit.PkgIndex			
+struct	CryptexKit.PkgIndex		let	validFields
+struct	CryptexKit.PkgIndex		var	entries
+struct	CryptexKit.PkgIndex.VariantInfo			
+struct	CryptexKit.PkgIndex.VariantInfo		let	name
+struct	CryptexKit.PkgIndex.VariantInfo		let	mountpoint
+struct	CryptexKit.PkgIndex.VariantInfo		let	envs
+struct	CryptexKit.PkgIndex.Entry			
+struct	CryptexKit.PkgIndex.Entry		let	info
+struct	CryptexKit.PkgIndex.Entry		let	variants
+struct	CryptexKit.PkgIndex.Package			
+struct	CryptexKit.PkgIndex.Package		let	publisher
+struct	CryptexKit.PkgIndex.Package		let	name
+struct	CryptexKit.PkgIndex.Package		let	version
+struct	CryptexKit.PkgIndex.Package		let	validFields
+struct	CryptexKit.PkgIndex.Package		let	variants
+struct	CryptexKit.PkgIndex.Package		let	info
+struct	CryptexKit.PkgIndex.Iterator			
+struct	CryptexKit.PkgIndex.Iterator		var	base
+struct	CryptexKit.PkgIndex.Iterator		let	validFields
+enum	CryptexKit.CryptexAssetType			
+enum	CryptexKit.CryptexAssetType		case	diskImage
+enum	CryptexKit.CryptexAssetType		case	volumeHash
+enum	CryptexKit.CryptexAssetType		case	infoPlist
+enum	CryptexKit.CryptexAssetType		case	trustCache
+enum	CryptexKit.CryptexAssetType		case	image4Ticket
+enum	CryptexKit.CryptexAssetType		case	bootstrapOptions
+class	CryptexKit.CryptexAsset			
+class	CryptexKit.CryptexAsset		let	type
+class	CryptexKit.CryptexAsset		let	file
+class	CryptexKit.CryptexAsset		let	logger
+struct	CryptexKit.CryptexType			
+struct	CryptexKit.CryptexType		let	type
+struct	CryptexKit.CryptexType		let	subtype
+enum	CryptexKit.PkgValue			
+enum	CryptexKit.PkgValue		case	bool
+enum	CryptexKit.PkgValue		case	int
+enum	CryptexKit.PkgValue		case	number
+enum	CryptexKit.PkgValue		case	string
+enum	CryptexKit.PkgValue		case	array
+enum	CryptexKit.PkgValue		case	dict
+enum	CryptexKit.PkgValue		case	null
+enum	CryptexKit.PkgValue.Kind			
+enum	CryptexKit.PkgValue.Kind		case	null
+enum	CryptexKit.PkgValue.Kind		case	bool
+enum	CryptexKit.PkgValue.Kind		case	int
+enum	CryptexKit.PkgValue.Kind		case	number
+enum	CryptexKit.PkgValue.Kind		case	string
+enum	CryptexKit.PkgValue.Kind		case	array
+enum	CryptexKit.PkgValue.Kind		case	dict
+struct	CryptexKit.PkgObjectId			
+struct	CryptexKit.PkgObjectId		let	string
+struct	CryptexKit.InstallationRecord			
+struct	CryptexKit.InstallationRecord		let	identifier
+struct	CryptexKit.InstallationRecord		let	installOrder
+struct	CryptexKit.InstallationResult			
+struct	CryptexKit.InstallationResult		let	succeeded
+struct	CryptexKit.InstallationResult		let	failed
+struct	CryptexKit.InstallationResult		let	skipped
+struct	CryptexKit.CryptexBulkInstallBundle			
+struct	CryptexKit.CryptexBulkInstallBundle		let	cryptex
+struct	CryptexKit.CryptexBulkInstallBundle		let	installOptions
+struct	CryptexKit.CryptexBulkInstallBundle		let	additionalDependencies
+class	CryptexKit.CryptexBulkInstaller			
+class	CryptexKit.CryptexBulkInstaller		var	cryptexes
+class	CryptexKit.CryptexBulkInstaller		let	logger
+struct	CryptexKit.CryptexVersion			
+struct	CryptexKit.CryptexVersion		let	components
+struct	CryptexKit.CryptexBundleIndex			
+struct	CryptexKit.CryptexBundleIndex		let	buildIdentity
+struct	CryptexKit.CryptexBundleIndex		let	variant
+struct	CryptexKit.AsyncCryptexSequence			
+struct	CryptexKit.AsyncCryptexSequence.AsyncIterator			
+class	CryptexKit.CryptexBundle			
+class	CryptexKit.CryptexBundle		var	buildManifest
+class	CryptexKit.CryptexBundle		let	_bundle
+class	CryptexKit.CryptexBundle		let	queue
+class	CryptexKit.CryptexBundle		let	logger
+struct	CryptexKit.Cryptex.InstallOptions			
+struct	CryptexKit.Cryptex.InstallOptions		var	ephemeral
+struct	CryptexKit.Cryptex.InstallOptions		var	limitJobsToRestrictedExecMode
+struct	CryptexKit.Cryptex.InstallOptions		var	readWrite
+struct	CryptexKit.Cryptex.InstallOptions		var	jetsamPropertiesVariant
+struct	CryptexKit.Cryptex.InstallOptions		var	bootstrap
+struct	CryptexKit.Cryptex.InstallOptions		var	server
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys			
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys		case	ephemeral
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys		case	limitJobsToRestrictedExecMode
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys		case	readWrite
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys		case	jetsamPropertiesVariant
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys		case	bootstrap
+enum	CryptexKit.Cryptex.InstallOptions.CodingKeys		case	server
+struct	CryptexKit.PkgEnvBootstrapRequest			
+struct	CryptexKit.PkgEnvBootstrapRequest		let	id
+enum	CryptexKit.PkgEnvBootstrapRequest.CodingKeys			
+enum	CryptexKit.PkgEnvBootstrapRequest.CodingKeys		case	id
+struct	CryptexKit.PkgEnvBootstrapResponse			
+enum	CryptexKit.AppleImage4Error			
+enum	CryptexKit.AppleImage4Error		case	image4InstantiateFailed
+enum	CryptexKit.AppleImage4Error		case	copyNonceFailed
+enum	CryptexKit.AppleImage4Error		case	getNonceDomainHandleFailed
+enum	CryptexKit.AppleImage4Error		case	getNonceDomainFailed
+enum	CryptexKit.TatsuError			
+enum	CryptexKit.TatsuError		case	networkError
+enum	CryptexKit.TatsuError		case	notApprovedForThisBuildAndDevice
+enum	CryptexKit.TatsuError		case	failedToFindSigningKey
+enum	CryptexKit.TatsuError		case	missingTicketTags
+enum	CryptexKit.TatsuError		case	httpError
+enum	CryptexKit.TatsuError		case	unknownError
+enum	CryptexKit.CryptexError			
+enum	CryptexKit.CryptexError		case	trustSigningServiceFailed
+enum	CryptexKit.CryptexError		case	attachPersonalizedManifestFailed
+enum	CryptexKit.CryptexError		case	cryptexNotAuthentic
+enum	CryptexKit.CryptexError		case	failedToReadFile
+enum	CryptexKit.CryptexError		case	graftFailed
+enum	CryptexKit.CryptexError		case	ungraftFailed
+enum	CryptexKit.CryptexError		case	getGraftInfoFailed
+enum	CryptexKit.CryptexError		case	symlinkFailed
+enum	CryptexKit.CryptexError		case	missingRequiredAsset
+enum	CryptexKit.CryptexError		case	invalidDependencyFormat
+enum	CryptexKit.CryptexError		case	tooManyDependencies
+enum	CryptexKit.CryptexError		case	alreadyPersonalized
+enum	CryptexKit.CryptexError		case	notYetPersonalized
+enum	CryptexKit.CryptexError		case	invalidInput
+enum	CryptexKit.CryptexError		case	unknownError
+enum	CryptexKit.CryptexError		case	cryptexNotFound
+enum	CryptexKit.CryptexError		case	authenticationSetupFailed
+enum	CryptexKit.CryptexError		case	alreadyInstalled
+enum	CryptexKit.CryptexError		case	notConnected
+enum	CryptexKit.CryptexError		case	serializationFailure
+enum	CryptexKit.CryptexError		case	unexpectedFailure
+enum	CryptexKit.CryptexError		case	invalidAssetPath
+enum	CryptexKit.CryptexError		case	entitlementMissing
+enum	CryptexKit.CryptexError		case	notPermitted
+enum	CryptexKit.CryptexError		case	typeMissing
+enum	CryptexKit.CryptexError		case	subTypeMissing
+enum	CryptexKit.CryptexError		case	cryptexNotGrafted
+enum	CryptexKit.CryptexError		case	bootstrapFailed
+enum	CryptexKit.CryptexError		case	filesystemError
+enum	CryptexKit.CryptexError		case	invalidCryptex
+enum	CryptexKit.CryptexError		case	unsupportedOperationError
+enum	CryptexKit.CryptexError		case	missingDependencyIdentifier
+struct	CryptexKit.CryptexErrorMessage			
+struct	CryptexKit.CryptexErrorMessage		let	error
+struct	CryptexKit.CryptexErrorMessage		let	message
+struct	CryptexKit.CryptexErrorMessage		let	file
+struct	CryptexKit.CryptexErrorMessage		let	function
+struct	CryptexKit.CryptexErrorMessage		let	lineNumber
+enum	CryptexKit.BulkInstallerError			
+enum	CryptexKit.BulkInstallerError		case	duplicateCryptexIdentifier
+enum	CryptexKit.BulkInstallerError		case	circularDependency
+enum	CryptexKit.BulkInstallerError		case	installationFailed
+struct	CryptexKit.Cryptex.PersonalizeOptions			
+struct	CryptexKit.Cryptex.PersonalizeOptions		var	sso
+struct	CryptexKit.Cryptex.PersonalizeOptions		var	allowMixAndMatch
+struct	CryptexKit.Cryptex.PersonalizeOptions		var	server
+struct	CryptexKit.Cryptex.PersonalizeOptions		var	socksProxy
+struct	CryptexKit.CryptexDependency			
+struct	CryptexKit.CryptexDependency		let	identifier
+struct	CryptexKit.CryptexDependency		let	version
+class	CryptexKit.PkgValueEncoder			
+class	CryptexKit.PkgValueEncoder		var	userInfo
+class	CryptexKit._Encoder			
+class	CryptexKit._Encoder		let	codingPath
+class	CryptexKit._Encoder		let	userInfo
+class	CryptexKit._Encoder		var	box
+class	CryptexKit.SingleValueBuilder			
+class	CryptexKit.SingleValueBuilder		let	codingPath
+class	CryptexKit.SingleValueBuilder		let	userInfo
+class	CryptexKit.SingleValueBuilder		var	pkgValue
+class	CryptexKit.ArrayBuilder			
+class	CryptexKit.ArrayBuilder		let	codingPath
+class	CryptexKit.ArrayBuilder		let	userInfo
+class	CryptexKit.ArrayBuilder		var	elements
+class	CryptexKit.DictBuilder<A	Swift.CodingKey>		
+class	CryptexKit.DictBuilder<A	Swift.CodingKey>	let	codingPath
+class	CryptexKit.DictBuilder<A	Swift.CodingKey>	let	userInfo
+class	CryptexKit.DictBuilder<A	Swift.CodingKey>	var	entries
+class	CryptexKit.PkgValueDecoder			
+class	CryptexKit.PkgValueDecoder		var	userInfo
+class	CryptexKit._Decoder			
+class	CryptexKit._Decoder		let	codingPath
+class	CryptexKit._Decoder		let	userInfo
+class	CryptexKit._Decoder		let	value
+enum	CryptexKit.ValueBox			
+enum	CryptexKit.ValueBox		case	single
+enum	CryptexKit.ValueBox		case	array
+enum	CryptexKit.ValueBox		case	dict
+struct	CryptexKit.IndexKey			
+struct	CryptexKit.IndexKey		let	intValue
+struct	CryptexKit.IndexKey		let	stringValue
+struct	CryptexKit.KeyedContainer<A	Swift.CodingKey>		
+struct	CryptexKit.KeyedContainer<A	Swift.CodingKey>	let	codingPath
+struct	CryptexKit.KeyedContainer<A	Swift.CodingKey>	let	userInfo
+struct	CryptexKit.KeyedContainer<A	Swift.CodingKey>	let	entries
+struct	CryptexKit.UnkeyedContainer			
+struct	CryptexKit.UnkeyedContainer		let	codingPath
+struct	CryptexKit.UnkeyedContainer		let	userInfo
+struct	CryptexKit.UnkeyedContainer		let	elements
+struct	CryptexKit.UnkeyedContainer		var	currentIndex
+struct	CryptexKit.SingleValueContainer			
+struct	CryptexKit.SingleValueContainer		let	value
+struct	CryptexKit.SingleValueContainer		let	codingPath
+struct	CryptexKit.SingleValueContainer		let	userInfo
+struct	CryptexKit.PkgRequests			
+struct	CryptexKit.PkgSliceEncoder			
+enum	CryptexKit.PkgSliceEncoder.CodingKeys			
+enum	CryptexKit.PkgSliceEncoder.CodingKeys		case	variant
+enum	CryptexKit.PkgSliceEncoder.CodingKeys		case	type
+enum	CryptexKit.PkgSliceEncoder.CodingKeys		case	fileDescriptor
+class	CryptexKit.PkgImportRequest			
+class	CryptexKit.PkgImportRequest		let	slice
+enum	CryptexKit.PkgImportRequest.CodingKeys			
+enum	CryptexKit.PkgImportRequest.CodingKeys		case	slice
+struct	CryptexKit.PkgImportResponse			
+enum	CryptexKit.Base32			
+struct	CryptexKit.FileStat			
+struct	CryptexKit.FileStat		var	rawValue
+class	CryptexKit.PkgRemoveRequest			
+class	CryptexKit.PkgRemoveRequest		let	ref
+enum	CryptexKit.PkgRemoveRequest.CodingKeys			
+enum	CryptexKit.PkgRemoveRequest.CodingKeys		case	ref
+struct	CryptexKit.PkgRemoveResponse			
+enum	CryptexKit.CryptexAsset.CodingKeys			
+enum	CryptexKit.CryptexAsset.CodingKeys		case	type
+enum	CryptexKit.CryptexAsset.CodingKeys		case	fileHandle
+struct	CryptexKit.PkgEnvResolveRequest			
+struct	CryptexKit.PkgEnvResolveRequest		let	ref
+struct	CryptexKit.PkgEnvResolveRequest		let	to
+enum	CryptexKit.PkgEnvResolveRequest.CodingKeys			
+enum	CryptexKit.PkgEnvResolveRequest.CodingKeys		case	ref
+enum	CryptexKit.PkgEnvResolveRequest.CodingKeys		case	to
+struct	CryptexKit.PkgEnvResolveResponse			
+struct	CryptexKit.PkgEnvResolveResponse		let	ref
+enum	CryptexKit.PkgEnvResolveResponse.CodingKeys			
+enum	CryptexKit.PkgEnvResolveResponse.CodingKeys		case	ref
+struct	CryptexKit.PkgEnvLinkRequest			
+struct	CryptexKit.PkgEnvLinkRequest		let	id
+struct	CryptexKit.PkgEnvLinkRequest		let	name
+struct	CryptexKit.PkgEnvLinkRequest		let	lease
+enum	CryptexKit.PkgEnvLinkRequest.CodingKeys			
+enum	CryptexKit.PkgEnvLinkRequest.CodingKeys		case	id
+enum	CryptexKit.PkgEnvLinkRequest.CodingKeys		case	name
+enum	CryptexKit.PkgEnvLinkRequest.CodingKeys		case	lease
+struct	CryptexKit.PkgEnvLinkResponse			
+struct	CryptexKit.CopyFileFlags			
+struct	CryptexKit.CopyFileFlags		let	rawValue
+enum	CryptexKit.CopyFileWhat			
+enum	CryptexKit.CopyFileWhat		case	error
+enum	CryptexKit.CopyFileWhat		case	file
+enum	CryptexKit.CopyFileWhat		case	directory
+enum	CryptexKit.CopyFileWhat		case	directoryCleanup
+enum	CryptexKit.CopyFileWhat		case	copyData
+enum	CryptexKit.CopyFileWhat		case	copyXattr
+enum	CryptexKit.CopyFileStage			
+enum	CryptexKit.CopyFileStage		case	start
+enum	CryptexKit.CopyFileStage		case	finish
+enum	CryptexKit.CopyFileStage		case	error
+enum	CryptexKit.CopyFileStage		case	progress
+enum	CryptexKit.CopyFileAction			
+enum	CryptexKit.CopyFileAction		case	continue
+enum	CryptexKit.CopyFileAction		case	skip
+enum	CryptexKit.CopyFileAction		case	quit
+class	CryptexKit.CopyFileCtx			
+class	CryptexKit.CopyFileCtx		let	root
+class	CryptexKit.CopyFileCtx		var	error
+class	CryptexKit.CopyFileCtx		var	callback
+class	CryptexKit.CopyFileState			
+class	CryptexKit.CopyFileState		let	ptr
+class	CryptexKit.CopyFileState		let	owned
+enum	CryptexKit.CopyFileError			
+enum	CryptexKit.CopyFileError		case	internal
+enum	CryptexKit.CopyFileError		case	quit
+enum	CryptexKit.CopyFileError		case	skip
+struct	CryptexKit.CopyFileStatus			
+struct	CryptexKit.CopyFileStatus		let	from
+struct	CryptexKit.CopyFileStatus		let	what
+struct	CryptexKit.CopyFileStatus		let	stage
+struct	CryptexKit.CopyFileStatus		let	source
+struct	CryptexKit.CopyFileStatus		let	destination
+struct	CryptexKit.CopyFileStatus		let	state
+enum	CryptexKit.CopyFileDirHint			
+enum	CryptexKit.CopyFileDirHint		case	yes
+enum	CryptexKit.CopyFileDirHint		case	no
+enum	CryptexKit.CopyFileDirHint		case	auto
+struct	CryptexKit.CopyFileTreeFilter			
+struct	CryptexKit.CopyFileTreeFilter		var	trie
+struct	CryptexKit.CopyFileTreeFilter		let	prefix
+struct	CryptexKit.CryptexTrustOptions			
+struct	CryptexKit.CryptexTrustOptions		var	sso
+struct	CryptexKit.CryptexTrustOptions		var	tssUrl
+struct	CryptexKit.RequestWrapper			
+struct	CryptexKit.RequestWrapper		let	type
+struct	CryptexKit.RequestWrapper		let	request
+enum	CryptexKit.RequestWrapper.CodingKeys			
+enum	CryptexKit.RequestWrapper.CodingKeys		case	type
+enum	CryptexKit.RequestWrapper.CodingKeys		case	request
+struct	CryptexKit.CryptexIdentity			
+struct	CryptexKit.CryptexIdentity		let	chipInstance
+enum	CryptexKit.CryptexIdentity.ProductClass			
+enum	CryptexKit.CryptexIdentity.ProductClass		case	macIntel
+enum	CryptexKit.CryptexIdentity.ProductClass		case	macAppleSilicon
+enum	CryptexKit.CryptexIdentity.ProductClass		case	iOS
+enum	CryptexKit.CryptexIdentity.ProductClass		case	watchOS
+enum	CryptexKit.CryptexIdentity.ProductClass		case	tvOS
+enum	CryptexKit.CryptexIdentity.ProductClass		case	visionOS
+enum	CryptexKit.CryptexIdentity.ProductionStatus			
+enum	CryptexKit.CryptexIdentity.ProductionStatus		case	devFused
+enum	CryptexKit.CryptexIdentity.ProductionStatus		case	prodFused
+struct	CryptexKit.PkgTree			
+struct	CryptexKit.PkgTree		let	id
+struct	CryptexKit.PkgTree		let	entries
+struct	CryptexKit.PkgTree.Link			
+struct	CryptexKit.PkgTree.Link		let	name
+struct	CryptexKit.PkgTree.Link		let	target
+enum	CryptexKit.PkgTree.Entry			
+enum	CryptexKit.PkgTree.Entry		case	package
+enum	CryptexKit.PkgTree.Entry		case	symlink
+enum	CryptexKit.PkgTree.Entry.CodingKeys			
+enum	CryptexKit.PkgTree.Entry.CodingKeys		case	type
+enum	CryptexKit.PkgTree.Entry.EntryType			
+enum	CryptexKit.PkgTree.Entry.EntryType		case	package
+enum	CryptexKit.PkgTree.Entry.EntryType		case	symlink
+enum	CryptexKit.PkgTree.Link.CodingKeys			
+enum	CryptexKit.PkgTree.Link.CodingKeys		case	name
+enum	CryptexKit.PkgTree.Link.CodingKeys		case	target
+struct	CryptexKit.PkgTree.Options			
+struct	CryptexKit.PkgTree.Options		let	rawValue
+struct	CryptexKit.PkgTree.Spec			
+struct	CryptexKit.PkgTree.Spec		let	entries
+enum	CryptexKit.PkgTree.Spec.CodingKeys			
+enum	CryptexKit.PkgTree.Spec.CodingKeys		case	entries
+enum	CryptexKit.PkgTree.CodingKeys			
+enum	CryptexKit.PkgTree.CodingKeys		case	id
+enum	CryptexKit.PkgTree.CodingKeys		case	entries
+class	CryptexKit.CryptexCore			
+class	CryptexKit.CryptexCore		let	assets
+class	CryptexKit.PkgInvQueryRequest			
+class	CryptexKit.PkgInvQueryRequest		let	options
+class	CryptexKit.PkgInvQueryRequest		let	environment
+class	CryptexKit.PkgInvQueryRequest		let	publishers
+enum	CryptexKit.PkgInvQueryRequest.CodingKeys			
+enum	CryptexKit.PkgInvQueryRequest.CodingKeys		case	options
+enum	CryptexKit.PkgInvQueryRequest.CodingKeys		case	environment
+enum	CryptexKit.PkgInvQueryRequest.CodingKeys		case	publishers
+struct	CryptexKit.PkgInvQueryResponse			
+struct	CryptexKit.PkgInvQueryResponse		let	index
+enum	CryptexKit.PkgInvQueryResponse.CodingKeys			
+enum	CryptexKit.PkgInvQueryResponse.CodingKeys		case	validFields
+enum	CryptexKit.PkgInvQueryResponse.CodingKeys		case	entries
+struct	CryptexKit.CryptexSigningService			
+struct	CryptexKit.CryptexSigningService		let	url
+struct	CryptexKit.CryptexSigningService		let	rootCertDER
+struct	CryptexKit.CryptexSigningService		let	logger
+enum	CryptexKit.CodingKeys<A	CryptexKit.Response, B: CryptexKit.CryptexErrorMessage>		
+enum	CryptexKit.CodingKeys<A	CryptexKit.Response, B: CryptexKit.CryptexErrorMessage>	case	response
+enum	CryptexKit.CodingKeys<A	CryptexKit.Response, B: CryptexKit.CryptexErrorMessage>	case	error
+struct	CryptexKit.PkgError			
+struct	CryptexKit.PkgError		let	kind
+struct	CryptexKit.PkgError		let	message
+struct	CryptexKit.PkgError		let	underlying
+enum	CryptexKit.PkgError.Kind			
+enum	CryptexKit.PkgError.Kind		case	stillInUse
+enum	CryptexKit.PkgError.Kind		case	invalidArgument
+enum	CryptexKit.PkgError.Kind		case	notFound
+enum	CryptexKit.PkgError.Kind		case	conflict
+enum	CryptexKit.PkgError.Kind		case	dataCorrupted
+enum	CryptexKit.PkgError.Kind		case	failed
+enum	CryptexKit.PkgError.Kind		case	internalError
+class	CryptexKit.PkgInvEraseRequest			
+struct	CryptexKit.PkgInvEraseResponse			
+struct	CryptexKit.InstallBuiltinOptions			
+struct	CryptexKit.InstallBuiltinOptions		var	ephemeral
+enum	CryptexKit.InstallBuiltinOptions.CodingKeys			
+enum	CryptexKit.InstallBuiltinOptions.CodingKeys		case	ephemeral
+enum	CryptexKit.PkgMeta.Spec.XpcKeys			
+enum	CryptexKit.PkgMeta.Spec.XpcKeys		case	schema
+enum	CryptexKit.PkgMeta.Spec.XpcKeys		case	data
+enum	CryptexKit.PkgMeta.XpcKeys			
+enum	CryptexKit.PkgMeta.XpcKeys		case	id
+enum	CryptexKit.PkgMeta.XpcKeys		case	schema
+enum	CryptexKit.PkgMeta.XpcKeys		case	data
+struct	CryptexKit.ContentHasher			
+struct	CryptexKit.ContentHasher		var	state
+struct	CryptexKit.PkgEnvDirectoryManifest			
+struct	CryptexKit.PkgEnvDirectoryManifest		let	version
+struct	CryptexKit.PkgEnvDirectoryManifest		let	tree
+struct	CryptexKit.ManifestVersion			
+struct	CryptexKit.ManifestVersion		let	version
+enum	CryptexKit.PkgEnvDirectoryManifest.CodingKeys			
+enum	CryptexKit.PkgEnvDirectoryManifest.CodingKeys		case	version
+enum	CryptexKit.PkgEnvDirectoryManifest.CodingKeys		case	tree
+enum	CryptexKit.ManifestVersion.CodingKeys			
+enum	CryptexKit.ManifestVersion.CodingKeys		case	version
+class	CryptexKit.SendableXPCObj	NSObject		
+class	CryptexKit.SendableXPCObj	NSObject	let	value
+struct	CryptexKit.PkgEnvTeardownRequest			
+struct	CryptexKit.PkgEnvTeardownRequest		let	id
+enum	CryptexKit.PkgEnvTeardownRequest.CodingKeys			
+enum	CryptexKit.PkgEnvTeardownRequest.CodingKeys		case	id
+struct	CryptexKit.PkgEnvTeardownResponse			
+enum	CryptexKit.CodingKeys<A	CryptexKit.XpcCodable>		
+enum	CryptexKit.CodingKeys<A	CryptexKit.XpcCodable>	case	path
+enum	CryptexKit.CodingKeys<A	CryptexKit.XpcCodable>	case	value
+enum	CryptexKit.PkgTree.Link.XpcKeys			
+enum	CryptexKit.PkgTree.Link.XpcKeys		case	name
+enum	CryptexKit.PkgTree.Link.XpcKeys		case	target
+enum	CryptexKit.PkgTree.Entry.XpcKeys			
+enum	CryptexKit.PkgTree.Entry.XpcKeys		case	type
+enum	CryptexKit.PkgTree.Entry.XpcKeys		case	value
+enum	CryptexKit.PkgTree.Spec.XpcKeys			
+enum	CryptexKit.PkgTree.Spec.XpcKeys		case	entries
+enum	CryptexKit.PkgTree.XpcKeys			
+enum	CryptexKit.PkgTree.XpcKeys		case	id
+enum	CryptexKit.PkgTree.XpcKeys		case	entries
+enum	CryptexKit.PkgIndex.VariantInfo.CodingKeys			
+enum	CryptexKit.PkgIndex.VariantInfo.CodingKeys		case	name
+enum	CryptexKit.PkgIndex.VariantInfo.CodingKeys		case	mountpoint
+enum	CryptexKit.PkgIndex.VariantInfo.CodingKeys		case	envs
+enum	CryptexKit.PkgIndex.Entry.CodingKeys			
+enum	CryptexKit.PkgIndex.Entry.CodingKeys		case	info
+enum	CryptexKit.PkgIndex.Entry.CodingKeys		case	variants
+class	CryptexKit.PkgExportRequest			
+class	CryptexKit.PkgExportRequest		let	ref
+enum	CryptexKit.PkgExportRequest.CodingKeys			
+enum	CryptexKit.PkgExportRequest.CodingKeys		case	ref
+class	CryptexKit.PkgExportResponse			
+class	CryptexKit.PkgExportResponse		var	slice
+enum	CryptexKit.PkgExportResponse.CodingKeys			
+enum	CryptexKit.PkgExportResponse.CodingKeys		case	slice
+struct	CryptexKit.PkgRef			
+struct	CryptexKit.PkgRef		let	publisher
+struct	CryptexKit.PkgRef		let	name
+struct	CryptexKit.PkgRef		let	version
+struct	CryptexKit.PkgRef		let	variant
+struct	CryptexKit.PkgEnv			
+struct	CryptexKit.PkgEnv		let	id
+struct	CryptexKit.PkgEnv		let	parent
+struct	CryptexKit.PkgEnv		let	tree
+struct	CryptexKit.PkgEnv		let	links
+struct	CryptexKit.PkgEnv		let	meta
+struct	CryptexKit.PkgEnv.Options			
+struct	CryptexKit.PkgEnv.Options		let	rawValue
+struct	CryptexKit.PkgEnv.Spec			
+struct	CryptexKit.PkgEnv.Spec		let	parent
+struct	CryptexKit.PkgEnv.Spec		let	tree
+struct	CryptexKit.PkgEnv.Spec		let	meta
+enum	CryptexKit.PkgEnv.Spec.CodingKeys			
+enum	CryptexKit.PkgEnv.Spec.CodingKeys		case	parent
+enum	CryptexKit.PkgEnv.Spec.CodingKeys		case	tree
+enum	CryptexKit.PkgEnv.Spec.CodingKeys		case	meta
+enum	CryptexKit.PkgEnvRef			
+enum	CryptexKit.PkgEnvRef		case	name
+enum	CryptexKit.PkgEnvRef		case	id
+enum	CryptexKit.PkgEnvRef		case	current
+enum	CryptexKit.PkgEnvRef.Kind			
+enum	CryptexKit.PkgEnvRef.Kind		case	current
+enum	CryptexKit.PkgEnvRef.Kind		case	name
+enum	CryptexKit.PkgEnvRef.Kind		case	id
+enum	CryptexKit.PkgEnvRef.CurrentCodingKeys			
+enum	CryptexKit.PkgEnvRef.NameCodingKeys			
+enum	CryptexKit.PkgEnvRef.NameCodingKeys		case	_0
+enum	CryptexKit.PkgEnvRef.IdCodingKeys			
+enum	CryptexKit.PkgEnvRef.IdCodingKeys		case	_0
+enum	CryptexKit.PkgEnvRef.Kind.CodingKeys			
+enum	CryptexKit.PkgEnvRef.Kind.CodingKeys		case	current
+enum	CryptexKit.PkgEnvRef.Kind.CodingKeys		case	name
+enum	CryptexKit.PkgEnvRef.Kind.CodingKeys		case	id
+enum	CryptexKit.PkgEnvRef.Kind.CurrentCodingKeys			
+enum	CryptexKit.PkgEnvRef.Kind.NameCodingKeys			
+enum	CryptexKit.PkgEnvRef.Kind.IdCodingKeys			
+enum	CryptexKit.PkgEnv.CodingKeys			
+enum	CryptexKit.PkgEnv.CodingKeys		case	id
+enum	CryptexKit.PkgEnv.CodingKeys		case	parent
+enum	CryptexKit.PkgEnv.CodingKeys		case	tree
+enum	CryptexKit.PkgEnv.CodingKeys		case	links
+enum	CryptexKit.PkgEnv.CodingKeys		case	meta
+struct	CryptexKit.RenameOptions			
+struct	CryptexKit.RenameOptions		let	rawValue
+struct	CryptexKit.Image4PropertySpec			
+struct	CryptexKit.Image4PropertySpec		let	_4ccStr
+struct	CryptexKit.Image4PropertySpec		let	trustSection
+struct	CryptexKit.Image4PropertySpec		let	type
+struct	CryptexKit.Image4Auth			
+class	CryptexKit.CryptexLocalDevice			
+class	CryptexKit.CryptexLocalDevice		var	inventoryConn
+class	CryptexKit.CryptexLocalDevice		let	queue
+class	CryptexKit.CryptexLocalDevice		let	logger
+class	CryptexKit.CryptexLocalDevice		var	cachedIdentity
+enum	CryptexKit.PkgEnv.Spec.XpcKeys			
+enum	CryptexKit.PkgEnv.Spec.XpcKeys		case	tree
+enum	CryptexKit.PkgEnv.Spec.XpcKeys		case	parent
+enum	CryptexKit.PkgEnv.Spec.XpcKeys		case	meta
+enum	CryptexKit.PkgEnvRef.CodingKeys			
+enum	CryptexKit.PkgEnvRef.CodingKeys		case	current
+enum	CryptexKit.PkgEnvRef.CodingKeys		case	name
+enum	CryptexKit.PkgEnvRef.CodingKeys		case	id
+enum	CryptexKit.PkgEnv.XpcKeys			
+enum	CryptexKit.PkgEnv.XpcKeys		case	id
+enum	CryptexKit.PkgEnv.XpcKeys		case	parent
+enum	CryptexKit.PkgEnv.XpcKeys		case	tree
+enum	CryptexKit.PkgEnv.XpcKeys		case	links
+enum	CryptexKit.PkgEnv.XpcKeys		case	meta
+struct	CryptexKit.PkgEnvInfoRequest			
+struct	CryptexKit.PkgEnvInfoRequest		let	ref
+struct	CryptexKit.PkgEnvInfoRequest		let	options
+enum	CryptexKit.PkgEnvInfoRequest.CodingKeys			
+enum	CryptexKit.PkgEnvInfoRequest.CodingKeys		case	ref
+enum	CryptexKit.PkgEnvInfoRequest.CodingKeys		case	options
+struct	CryptexKit.PkgEnvInfoResponse			
+struct	CryptexKit.PkgEnvInfoResponse		let	info
+enum	CryptexKit.PkgEnvInfoResponse.CodingKeys			
+enum	CryptexKit.PkgEnvInfoResponse.CodingKeys		case	info
+struct	CryptexKit.CryptexPersonalizationService			
+struct	CryptexKit.CryptexPersonalizationService		let	url
+struct	CryptexKit.CryptexPersonalizationService		let	signingPolicy
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy			
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy		case	notSigned
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy		case	signed
+enum	CryptexKit.CryptexPersonalizationService.CodingKeys			
+enum	CryptexKit.CryptexPersonalizationService.CodingKeys		case	url
+enum	CryptexKit.CryptexPersonalizationService.CodingKeys		case	signingPolicy
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy.CodingKeys			
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy.CodingKeys		case	notSigned
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy.CodingKeys		case	signed
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy.NotSignedCodingKeys			
+enum	CryptexKit.CryptexPersonalizationService.SigningPolicy.SignedCodingKeys			
+struct	CryptexKit.PkgEnvUnlinkRequest			
+struct	CryptexKit.PkgEnvUnlinkRequest		let	name
+struct	CryptexKit.PkgEnvUnlinkRequest		let	lease
+enum	CryptexKit.PkgEnvUnlinkRequest.CodingKeys			
+enum	CryptexKit.PkgEnvUnlinkRequest.CodingKeys		case	name
+enum	CryptexKit.PkgEnvUnlinkRequest.CodingKeys		case	lease
+struct	CryptexKit.PkgEnvUnlinkResponse			
+enum	CryptexKit.CryptexErrorMessage.CodingKeys			
+enum	CryptexKit.CryptexErrorMessage.CodingKeys		case	error
+enum	CryptexKit.CryptexErrorMessage.CodingKeys		case	message
+enum	CryptexKit.CryptexErrorMessage.CodingKeys		case	file
+enum	CryptexKit.CryptexErrorMessage.CodingKeys		case	function
+enum	CryptexKit.CryptexErrorMessage.CodingKeys		case	lineNumber
+struct	CryptexKit.Trie			
+struct	CryptexKit.Trie		var	root
+class	CryptexKit.Trie.Node			
+class	CryptexKit.Trie.Node		let	name
+class	CryptexKit.Trie.Node		var	value
+class	CryptexKit.Trie.Node		var	children
+enum	CryptexKit.Trie.TraversalOrder<A	~Copyable>		
+enum	CryptexKit.Trie.TraversalOrder<A	~Copyable>	case	pre
+enum	CryptexKit.Trie.TraversalOrder<A	~Copyable>	case	post
+struct	CryptexKit.Iterator			
+struct	CryptexKit.Iterator		var	stack
+enum	CryptexKit.BackOff			
+enum	CryptexKit.BackOff		case	fixed
+enum	CryptexKit.BackOff		case	linear
+enum	CryptexKit.BackOff		case	custom
+struct	CryptexKit.PkgSlice			
+struct	CryptexKit.PkgSlice		var	assets
+struct	CryptexKit.PkgDirectory			
+struct	CryptexKit.PkgDirectory		let	path
+struct	CryptexKit.PkgDirectory		let	infoFd
+struct	CryptexKit.PkgDirectory		let	info
+struct	CryptexKit.RawCryptex			
+struct	CryptexKit.RawCryptex		var	cryptex
+struct	CryptexKit.PkgEnvDirectory			
+struct	CryptexKit.PkgEnvDirectory		let	path
+struct	CryptexKit.PkgEnvDirectory		let	spec
+struct	CryptexKit.TempFd			
+struct	CryptexKit.TempFd		let	rawValue
+struct	CryptexKit.TemporaryDirectory			
+struct	CryptexKit.TemporaryDirectory		let	path
+struct	CryptexKit.TemporaryDirectory		var	disposed
+protocol	CryptexKit.CryptexDevice			
+protocol	CryptexKit.XpcCodable			
+protocol	CryptexKit.XpcDictCodable			
+protocol	CryptexKit.XpcStringCodable			
+protocol	CryptexKit.XpcArrayCodable			
+protocol	CryptexKit.XpcDataCodable			
+protocol	DictContainer			
+protocol	CopyFileFilter			
+protocol	CryptexKit.Request	ResponseType		
+protocol	CryptexKit.Response			
+protocol	CryptexKit.ContentAddressable			
+protocol	CryptexKit.ContentSpec	Object		
+protocol	CryptexKit.AssetAuthenticatorProtocol			
+protocol	conformance CryptexKit.SliceValidationError	Swift.Error		
+protocol	conformance NSFileHandle	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.RequestTestError	CryptexKit.Request		
+protocol	conformance CryptexKit.RequestTestError	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.RequestTestError	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.ResponseTestError	CryptexKit.Response		
+protocol	conformance CryptexKit.ResponseTestError	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.ResponseTestError	CryptexKit.XpcCodable		
+protocol	conformance Cryptex.Format	Swift.Equatable		
+protocol	conformance Cryptex.Format	Swift.Hashable		
+protocol	conformance CryptexKit.Cryptex	Swift.Actor		
+protocol	conformance CryptexKit.PkgMeta	Swift.Equatable		
+protocol	conformance CryptexKit.PkgMeta	Swift.Hashable		
+protocol	conformance CryptexKit.PkgMeta	Swift.Decodable		
+protocol	conformance CryptexKit.PkgMeta	Swift.Encodable		
+protocol	conformance PkgMeta.Schema	Swift.RawRepresentable		
+protocol	conformance PkgMeta.Schema	Swift.Hashable		
+protocol	conformance PkgMeta.Schema	Swift.Equatable		
+protocol	conformance PkgMeta.Schema	Swift.Decodable		
+protocol	conformance PkgMeta.Schema	Swift.Encodable		
+protocol	conformance PkgMeta.Schema	Swift.CodingKeyRepresentable		
+protocol	conformance PkgMeta.Schema	Swift.Comparable		
+protocol	conformance PkgMeta.Spec	Swift.Decodable		
+protocol	conformance PkgMeta.Spec	Swift.Encodable		
+protocol	conformance PkgMeta.Spec	Swift.Equatable		
+protocol	conformance PkgMeta.Spec	Swift.Hashable		
+protocol	conformance PkgMeta.Spec	CryptexKit.ContentSpec		
+protocol	conformance PkgMeta.Spec	CryptexKit.ContentAddressable		
+protocol	conformance PkgMeta.Schema	CryptexKit.ContentAddressable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CryptexKit.CryptexPersistence	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexPersistence	Swift.Hashable		
+protocol	conformance CryptexKit.CryptexPersistence	Swift.Comparable		
+protocol	conformance CryptexKit.Cryptex.BootstrapOptions	CryptexKit.XpcDataCodable		
+protocol	conformance CryptexKit.Cryptex.BootstrapOptions	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgAssetType	Swift.Equatable		
+protocol	conformance CryptexKit.PkgAssetType	Swift.Hashable		
+protocol	conformance CryptexKit.PkgAssetType	Swift.RawRepresentable		
+protocol	conformance CryptexKit.PkgAssetType	Swift.CodingKey		
+protocol	conformance CryptexKit.PkgAssetType	Swift.CaseIterable		
+protocol	conformance CryptexKit.PkgAssetType	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgAssetType	Swift.CustomStringConvertible		
+protocol	conformance RequestInstallBuiltinCryptex.CodingKeys	Swift.Equatable		
+protocol	conformance RequestInstallBuiltinCryptex.CodingKeys	Swift.Hashable		
+protocol	conformance RequestInstallBuiltinCryptex.CodingKeys	Swift.RawRepresentable		
+protocol	conformance RequestInstallBuiltinCryptex.CodingKeys	Swift.CodingKey		
+protocol	conformance RequestInstallBuiltinCryptex.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestInstallBuiltinCryptex.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.RequestInstallBuiltinCryptex	CryptexKit.Request		
+protocol	conformance CryptexKit.RequestInstallBuiltinCryptex	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.RequestInstallBuiltinCryptex	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.ResponseInstallBuiltinCryptex	CryptexKit.Response		
+protocol	conformance CryptexKit.ResponseInstallBuiltinCryptex	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.ResponseInstallBuiltinCryptex	CryptexKit.XpcCodable		
+protocol	conformance PkgRef.CodingKeys	Swift.Equatable		
+protocol	conformance PkgRef.CodingKeys	Swift.Hashable		
+protocol	conformance PkgRef.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgRef.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgRef.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgRef.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgRef	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgRef	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvCreateRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvCreateRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvCreateRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvCreateRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvCreateRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvCreateRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvCreateRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvCreateRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvCreateRequest	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvCreateResponse.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvCreateResponse.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvCreateResponse.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvCreateResponse.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvCreateResponse.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvCreateResponse.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvCreateResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvCreateResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvCreateResponse	CryptexKit.XpcCodable		
+protocol	conformance Cryptex.BootstrapOptions	Swift.Decodable		
+protocol	conformance Cryptex.BootstrapOptions	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CryptexKit.PkgInfo	Swift.Equatable		
+protocol	conformance PkgInfo.CodingKeys	Swift.Equatable		
+protocol	conformance PkgInfo.CodingKeys	Swift.Hashable		
+protocol	conformance PkgInfo.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgInfo	Swift.Decodable		
+protocol	conformance CryptexKit.PkgInfo	Swift.Encodable		
+protocol	conformance CryptexKit.PkgInfoOptions	Swift.OptionSet		
+protocol	conformance CryptexKit.PkgInfoOptions	Swift.SetAlgebra		
+protocol	conformance CryptexKit.PkgInfoOptions	Swift.RawRepresentable		
+protocol	conformance CryptexKit.PkgInfoOptions	Swift.Equatable		
+protocol	conformance CryptexKit.PkgInfoOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance PkgIndex.Iterator	Swift.IteratorProtocol		
+protocol	conformance CryptexKit.PkgIndex	Swift.Sequence		
+protocol	conformance CryptexKit.CryptexAssetType	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexAssetType	Swift.Hashable		
+protocol	conformance CryptexKit.CryptexAssetType	Swift.CaseIterable		
+protocol	conformance CryptexKit.CryptexAssetType	Swift.CodingKey		
+protocol	conformance CryptexKit.CryptexAssetType	Swift.CustomStringConvertible		
+protocol	conformance CryptexKit.CryptexAssetType	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.CryptexType	Swift.Equatable		
+protocol	conformance CryptexKit.PkgValue	Swift.Equatable		
+protocol	conformance CryptexKit.PkgValue	Swift.Hashable		
+protocol	conformance PkgValue.Kind	Swift.Equatable		
+protocol	conformance PkgValue.Kind	Swift.Hashable		
+protocol	conformance PkgValue.Kind	Swift.RawRepresentable		
+protocol	conformance CryptexKit.PkgValue	Swift.Decodable		
+protocol	conformance CryptexKit.PkgValue	Swift.Encodable		
+protocol	conformance CryptexKit.PkgValue	CryptexKit.ContentAddressable		
+protocol	conformance CryptexKit.PkgObjectId	Swift.CustomStringConvertible		
+protocol	conformance CryptexKit.PkgObjectId	Swift.Decodable		
+protocol	conformance CryptexKit.PkgObjectId	Swift.Encodable		
+protocol	conformance CryptexKit.PkgObjectId	Swift.Equatable		
+protocol	conformance CryptexKit.PkgObjectId	Swift.Hashable		
+protocol	conformance Swift.String	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.InstallationRecord	Swift.Hashable		
+protocol	conformance CryptexKit.InstallationRecord	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexBulkInstaller	Swift.Actor		
+protocol	conformance CryptexKit.CryptexVersion	Swift.LosslessStringConvertible		
+protocol	conformance CryptexKit.CryptexVersion	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexVersion	Swift.CustomStringConvertible		
+protocol	conformance AsyncCryptexSequence.AsyncIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance CryptexKit.AsyncCryptexSequence	Swift.AsyncSequence		
+protocol	conformance CryptexKit.CryptexBundle	Swift.Actor		
+protocol	conformance Cryptex.InstallOptions	Swift.Decodable		
+protocol	conformance Cryptex.InstallOptions	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvBootstrapRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvBootstrapRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvBootstrapRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvBootstrapRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvBootstrapRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvBootstrapRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvBootstrapRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvBootstrapRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvBootstrapRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgEnvBootstrapResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvBootstrapResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvBootstrapResponse	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgValue	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.AppleImage4Error	Swift.Error		
+protocol	conformance __C.AMSupportError	Swift.Error: CryptexKit		
+protocol	conformance CryptexKit.TatsuError	Swift.Error		
+protocol	conformance CryptexKit.TatsuError	Foundation.LocalizedError		
+protocol	conformance CryptexKit.CryptexError	Swift.Error		
+protocol	conformance CryptexKit.CryptexError	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexErrorMessage	Swift.Error		
+protocol	conformance CryptexKit.CryptexErrorMessage	Swift.Decodable		
+protocol	conformance CryptexKit.CryptexErrorMessage	Swift.Encodable		
+protocol	conformance CryptexKit.CryptexErrorMessage	Foundation.LocalizedError		
+protocol	conformance CryptexKit.CryptexError	Foundation.LocalizedError		
+protocol	conformance CryptexKit.BulkInstallerError	Swift.Error		
+protocol	conformance CryptexKit.BulkInstallerError	Foundation.LocalizedError		
+protocol	conformance __C.AMSupportError	Swift.RawRepresentable		
+protocol	conformance CryptexKit.CryptexDependency	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexDependency	Swift.CustomStringConvertible		
+protocol	conformance DictBuilder	CryptexKit.DictContainer		
+protocol	conformance DictBuilder	Swift.KeyedEncodingContainerProtocol		
+protocol	conformance ArrayBuilder	Swift.UnkeyedEncodingContainer		
+protocol	conformance SingleValueBuilder	Swift.SingleValueEncodingContainer		
+protocol	conformance _Decoder	Swift.Decoder		
+protocol	conformance _Encoder	Swift.Encoder		
+protocol	conformance IndexKey	Swift.CustomDebugStringConvertible		
+protocol	conformance IndexKey	Swift.CustomStringConvertible		
+protocol	conformance IndexKey	Swift.CodingKey		
+protocol	conformance KeyedContainer	Swift.KeyedDecodingContainerProtocol		
+protocol	conformance UnkeyedContainer	Swift.UnkeyedDecodingContainer		
+protocol	conformance SingleValueContainer	Swift.SingleValueDecodingContainer		
+protocol	conformance PkgSliceEncoder.CodingKeys	Swift.Equatable		
+protocol	conformance PkgSliceEncoder.CodingKeys	Swift.Hashable		
+protocol	conformance PkgSliceEncoder.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgSliceEncoder.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgSliceEncoder.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgSliceEncoder.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PkgImportRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgImportRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgImportRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgImportRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgImportRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgImportRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgImportRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgImportRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgImportRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgImportResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgImportResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgImportResponse	CryptexKit.XpcCodable		
+protocol	conformance Foundation.Data	CryptexKit.XpcCodable		
+protocol	conformance System.FilePath	CryptexKit.XpcCodable		
+protocol	conformance PkgRemoveRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgRemoveRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgRemoveRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgRemoveRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgRemoveRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgRemoveRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgRemoveRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgRemoveRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgRemoveRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgRemoveResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgRemoveResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgRemoveResponse	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.CryptexAssetType	CryptexKit.XpcCodable		
+protocol	conformance CryptexAsset.CodingKeys	Swift.Equatable		
+protocol	conformance CryptexAsset.CodingKeys	Swift.Hashable		
+protocol	conformance CryptexAsset.CodingKeys	Swift.RawRepresentable		
+protocol	conformance CryptexAsset.CodingKeys	Swift.CodingKey		
+protocol	conformance CryptexAsset.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CryptexAsset.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.CryptexAsset	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.CryptexAsset	CryptexKit.XpcCodable		
+protocol	conformance Swift.Dictionary	CryptexKit.XpcCodable		
+protocol	conformance Swift.Dictionary	CryptexKit.XpcDictCodable		
+protocol	conformance System.FileDescriptor	CryptexKit.XpcCodable		
+protocol	conformance Swift.Array	CryptexKit.XpcCodable		
+protocol	conformance Swift.Array	CryptexKit.XpcArrayCodable		
+protocol	conformance PkgEnvResolveRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvResolveRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvResolveRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvResolveRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvResolveRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvResolveRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvResolveRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvResolveRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvResolveRequest	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvResolveResponse.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvResolveResponse.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvResolveResponse.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvResolveResponse.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvResolveResponse.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvResolveResponse.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvResolveResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvResolveResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvResolveResponse	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvLinkRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvLinkRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvLinkRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvLinkRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvLinkRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvLinkRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvLinkRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvLinkRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvLinkRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgEnvLinkResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvLinkResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvLinkResponse	CryptexKit.XpcCodable		
+protocol	conformance CopyFileFlags	Swift.OptionSet		
+protocol	conformance CopyFileFlags	Swift.SetAlgebra		
+protocol	conformance CopyFileFlags	Swift.RawRepresentable		
+protocol	conformance CopyFileFlags	Swift.Equatable		
+protocol	conformance CopyFileFlags	Swift.ExpressibleByArrayLiteral		
+protocol	conformance CopyFileWhat	Swift.Equatable		
+protocol	conformance CopyFileWhat	Swift.Hashable		
+protocol	conformance CopyFileWhat	Swift.RawRepresentable		
+protocol	conformance CopyFileStage	Swift.Equatable		
+protocol	conformance CopyFileStage	Swift.Hashable		
+protocol	conformance CopyFileStage	Swift.RawRepresentable		
+protocol	conformance CopyFileAction	Swift.Equatable		
+protocol	conformance CopyFileAction	Swift.Hashable		
+protocol	conformance CopyFileAction	Swift.RawRepresentable		
+protocol	conformance CopyFileError	Swift.Error		
+protocol	conformance CopyFileDirHint	Swift.Equatable		
+protocol	conformance CopyFileDirHint	Swift.Hashable		
+protocol	conformance CopyFileTreeFilter	CryptexKit.CopyFileFilter		
+protocol	conformance RequestWrapper.CodingKeys	Swift.Equatable		
+protocol	conformance RequestWrapper.CodingKeys	Swift.Hashable		
+protocol	conformance RequestWrapper.CodingKeys	Swift.RawRepresentable		
+protocol	conformance RequestWrapper.CodingKeys	Swift.CodingKey		
+protocol	conformance RequestWrapper.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestWrapper.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.RequestWrapper	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.RequestWrapper	CryptexKit.XpcCodable		
+protocol	conformance CryptexIdentity.ProductClass	Swift.Equatable		
+protocol	conformance CryptexIdentity.ProductClass	Swift.Hashable		
+protocol	conformance CryptexIdentity.ProductClass	Swift.RawRepresentable		
+protocol	conformance CryptexIdentity.ProductionStatus	Swift.Equatable		
+protocol	conformance CryptexIdentity.ProductionStatus	Swift.Hashable		
+protocol	conformance CryptexKit.CryptexIdentity	Swift.Equatable		
+protocol	conformance CryptexKit.CryptexIdentity	Swift.Hashable		
+protocol	conformance CryptexKit.CryptexIdentity	Swift.CustomStringConvertible		
+protocol	conformance __C.img4_chip_instance_omit_t	Swift.ExpressibleByArrayLiteral		
+protocol	conformance __C.img4_chip_instance_omit_t	Swift.Equatable		
+protocol	conformance __C.img4_chip_instance_omit_t	Swift.RawRepresentable		
+protocol	conformance __C.img4_chip_instance_omit_t	Swift.SetAlgebra		
+protocol	conformance __C.img4_chip_instance_omit_t	Swift.OptionSet		
+protocol	conformance CryptexKit.PkgTree	Swift.Equatable		
+protocol	conformance CryptexKit.PkgTree	Swift.Hashable		
+protocol	conformance CryptexKit.PkgTree	Swift.Decodable		
+protocol	conformance CryptexKit.PkgTree	Swift.Encodable		
+protocol	conformance PkgTree.Link	Swift.Hashable		
+protocol	conformance PkgTree.Link	Swift.Equatable		
+protocol	conformance Entry.CodingKeys	Swift.Equatable		
+protocol	conformance Entry.CodingKeys	Swift.Hashable		
+protocol	conformance Entry.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Entry.CodingKeys	Swift.CodingKey		
+protocol	conformance Entry.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Entry.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Entry.EntryType	Swift.Equatable		
+protocol	conformance Entry.EntryType	Swift.Hashable		
+protocol	conformance Entry.EntryType	Swift.RawRepresentable		
+protocol	conformance Entry.EntryType	Swift.Decodable		
+protocol	conformance Entry.EntryType	Swift.Encodable		
+protocol	conformance PkgTree.Entry	Swift.Decodable		
+protocol	conformance PkgTree.Entry	Swift.Encodable		
+protocol	conformance PkgTree.Entry	Swift.Equatable		
+protocol	conformance PkgTree.Entry	Swift.Hashable		
+protocol	conformance PkgTree.Link	Swift.CustomStringConvertible		
+protocol	conformance Link.CodingKeys	Swift.Equatable		
+protocol	conformance Link.CodingKeys	Swift.Hashable		
+protocol	conformance Link.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Link.CodingKeys	Swift.CodingKey		
+protocol	conformance Link.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Link.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PkgTree.Link	Swift.Decodable		
+protocol	conformance PkgTree.Link	Swift.Encodable		
+protocol	conformance PkgTree.Entry	Swift.CustomStringConvertible		
+protocol	conformance PkgTree.Options	Swift.OptionSet		
+protocol	conformance PkgTree.Options	Swift.SetAlgebra		
+protocol	conformance PkgTree.Options	Swift.RawRepresentable		
+protocol	conformance PkgTree.Options	Swift.Equatable		
+protocol	conformance PkgTree.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance PkgTree.Spec	Swift.Decodable		
+protocol	conformance PkgTree.Spec	Swift.Encodable		
+protocol	conformance PkgTree.Spec	Swift.Equatable		
+protocol	conformance PkgTree.Spec	Swift.Hashable		
+protocol	conformance PkgTree.Link	CryptexKit.ContentAddressable		
+protocol	conformance PkgTree.Entry	CryptexKit.ContentAddressable		
+protocol	conformance PkgTree.Spec	CryptexKit.ContentSpec		
+protocol	conformance PkgTree.Spec	CryptexKit.ContentAddressable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PkgInvQueryRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgInvQueryRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgInvQueryRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgInvQueryRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgInvQueryRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgInvQueryRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgInvQueryRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgInvQueryRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgInvQueryRequest	CryptexKit.XpcCodable		
+protocol	conformance PkgInvQueryResponse.CodingKeys	Swift.Equatable		
+protocol	conformance PkgInvQueryResponse.CodingKeys	Swift.Hashable		
+protocol	conformance PkgInvQueryResponse.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgInvQueryResponse.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgInvQueryResponse.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgInvQueryResponse.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgInvQueryResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgInvQueryResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgInvQueryResponse	CryptexKit.XpcCodable		
+protocol	conformance Swift.Bool	CryptexKit.XpcCodable		
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance __C.AMSupportError	Swift.RawRepresentable		
+protocol	conformance __C.AMSupportError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PkgError.Kind	Swift.Equatable		
+protocol	conformance PkgError.Kind	Swift.CustomStringConvertible		
+protocol	conformance CryptexKit.PkgError	Swift.Error		
+protocol	conformance CryptexKit.PkgError	Swift.CustomStringConvertible		
+protocol	conformance CryptexKit.PkgInvEraseRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgInvEraseRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgInvEraseRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgInvEraseResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgInvEraseResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgInvEraseResponse	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.InstallBuiltinOptions	Swift.Decodable		
+protocol	conformance CryptexKit.InstallBuiltinOptions	Swift.Encodable		
+protocol	conformance CryptexKit.InstallBuiltinOptions	CryptexKit.XpcDataCodable		
+protocol	conformance CryptexKit.InstallBuiltinOptions	CryptexKit.XpcCodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CryptexKit.PkgMeta.Schema	Swift.LosslessStringConvertible		
+protocol	conformance CryptexKit.PkgMeta.Schema	Swift.CustomStringConvertible		
+protocol	conformance CryptexKit.PkgMeta.Schema	CryptexKit.XpcStringCodable		
+protocol	conformance CryptexKit.PkgMeta.Schema	CryptexKit.XpcCodable		
+protocol	conformance Spec.XpcKeys	Swift.Equatable		
+protocol	conformance Spec.XpcKeys	Swift.Hashable		
+protocol	conformance Spec.XpcKeys	Swift.RawRepresentable		
+protocol	conformance Spec.XpcKeys	Swift.CodingKey		
+protocol	conformance Spec.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance Spec.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgMeta.Spec	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgMeta.Spec	CryptexKit.XpcCodable		
+protocol	conformance PkgMeta.XpcKeys	Swift.Equatable		
+protocol	conformance PkgMeta.XpcKeys	Swift.Hashable		
+protocol	conformance PkgMeta.XpcKeys	Swift.RawRepresentable		
+protocol	conformance PkgMeta.XpcKeys	Swift.CodingKey		
+protocol	conformance PkgMeta.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgMeta.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgMeta	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgMeta	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvDirectoryManifest	Swift.Encodable		
+protocol	conformance PkgEnvDirectoryManifest	Swift.Decodable		
+protocol	conformance ManifestVersion	Swift.Decodable		
+protocol	conformance ManifestVersion.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ManifestVersion.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ManifestVersion.CodingKeys	Swift.Hashable		
+protocol	conformance ManifestVersion.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvDirectoryManifest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PkgEnvDirectoryManifest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvDirectoryManifest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvDirectoryManifest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvDirectoryManifest.CodingKeys	Swift.CodingKey		
+protocol	conformance ManifestVersion.CodingKeys	Swift.CodingKey		
+protocol	conformance CryptexKit.Cryptex.InstallOptions	CryptexKit.XpcDataCodable		
+protocol	conformance CryptexKit.Cryptex.InstallOptions	CryptexKit.XpcCodable		
+protocol	conformance Swift.UInt	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvTeardownRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvTeardownRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvTeardownRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvTeardownRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvTeardownRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvTeardownRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvTeardownRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvTeardownRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvTeardownRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgEnvTeardownResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvTeardownResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvTeardownResponse	CryptexKit.XpcCodable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.Trie	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgObjectId	CryptexKit.XpcCodable		
+protocol	conformance Link.XpcKeys	Swift.Equatable		
+protocol	conformance Link.XpcKeys	Swift.Hashable		
+protocol	conformance Link.XpcKeys	Swift.RawRepresentable		
+protocol	conformance Link.XpcKeys	Swift.CodingKey		
+protocol	conformance Link.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance Link.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgTree.Link	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgTree.Link	CryptexKit.XpcCodable		
+protocol	conformance Entry.XpcKeys	Swift.Equatable		
+protocol	conformance Entry.XpcKeys	Swift.Hashable		
+protocol	conformance Entry.XpcKeys	Swift.RawRepresentable		
+protocol	conformance Entry.XpcKeys	Swift.CodingKey		
+protocol	conformance Entry.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance Entry.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgTree.Entry	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgTree.Entry	CryptexKit.XpcCodable		
+protocol	conformance Spec.XpcKeys	Swift.Equatable		
+protocol	conformance Spec.XpcKeys	Swift.Hashable		
+protocol	conformance Spec.XpcKeys	Swift.RawRepresentable		
+protocol	conformance Spec.XpcKeys	Swift.CodingKey		
+protocol	conformance Spec.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance Spec.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgTree.Spec	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgTree.Spec	CryptexKit.XpcCodable		
+protocol	conformance PkgTree.XpcKeys	Swift.Equatable		
+protocol	conformance PkgTree.XpcKeys	Swift.Hashable		
+protocol	conformance PkgTree.XpcKeys	Swift.RawRepresentable		
+protocol	conformance PkgTree.XpcKeys	Swift.CodingKey		
+protocol	conformance PkgTree.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgTree.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgTree	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgTree	CryptexKit.XpcCodable		
+protocol	conformance VariantInfo.CodingKeys	Swift.Equatable		
+protocol	conformance VariantInfo.CodingKeys	Swift.Hashable		
+protocol	conformance VariantInfo.CodingKeys	Swift.RawRepresentable		
+protocol	conformance VariantInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance VariantInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance VariantInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgIndex.VariantInfo	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgIndex.VariantInfo	CryptexKit.XpcCodable		
+protocol	conformance Entry.CodingKeys	Swift.Equatable		
+protocol	conformance Entry.CodingKeys	Swift.Hashable		
+protocol	conformance Entry.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Entry.CodingKeys	Swift.CodingKey		
+protocol	conformance Entry.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Entry.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgIndex.Entry	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgIndex.Entry	CryptexKit.XpcCodable		
+protocol	conformance PkgExportRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgExportRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgExportRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgExportRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgExportRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgExportRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgExportRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgExportRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgExportRequest	CryptexKit.XpcCodable		
+protocol	conformance PkgExportResponse.CodingKeys	Swift.Equatable		
+protocol	conformance PkgExportResponse.CodingKeys	Swift.Hashable		
+protocol	conformance PkgExportResponse.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgExportResponse.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgExportResponse.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgExportResponse.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgExportResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgExportResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgExportResponse	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgRef	Swift.Decodable		
+protocol	conformance CryptexKit.PkgRef	Swift.Encodable		
+protocol	conformance CryptexKit.PkgRef	Swift.Equatable		
+protocol	conformance CryptexKit.PkgRef	Swift.Hashable		
+protocol	conformance CryptexKit.PkgRef	Swift.CustomStringConvertible		
+protocol	conformance CryptexKit.PkgRef	CryptexKit.ContentAddressable		
+protocol	conformance PkgEnv.Options	Swift.OptionSet		
+protocol	conformance PkgEnv.Options	Swift.SetAlgebra		
+protocol	conformance PkgEnv.Options	Swift.RawRepresentable		
+protocol	conformance PkgEnv.Options	Swift.Equatable		
+protocol	conformance PkgEnv.Options	Swift.ExpressibleByArrayLiteral		
+protocol	conformance CryptexKit.PkgEnv	Swift.Decodable		
+protocol	conformance CryptexKit.PkgEnv	Swift.Encodable		
+protocol	conformance Spec.CodingKeys	Swift.Equatable		
+protocol	conformance Spec.CodingKeys	Swift.Hashable		
+protocol	conformance Spec.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Spec.CodingKeys	Swift.CodingKey		
+protocol	conformance Spec.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Spec.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PkgEnv.Spec	Swift.Decodable		
+protocol	conformance PkgEnv.Spec	Swift.Encodable		
+protocol	conformance PkgEnv.Spec	CryptexKit.ContentSpec		
+protocol	conformance PkgEnv.Spec	CryptexKit.ContentAddressable		
+protocol	conformance PkgEnvRef.Kind	Swift.Equatable		
+protocol	conformance PkgEnvRef.Kind	Swift.Hashable		
+protocol	conformance PkgEnvRef.Kind	Swift.Decodable		
+protocol	conformance PkgEnvRef.Kind	Swift.Encodable		
+protocol	conformance CryptexKit.PkgEnvRef	Swift.Decodable		
+protocol	conformance CryptexKit.PkgEnvRef	Swift.Encodable		
+protocol	conformance CryptexKit.PkgEnvRef	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvRef.Kind	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance IdCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IdCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NameCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NameCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CurrentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CurrentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance IdCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IdCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IdCodingKeys	Swift.Hashable		
+protocol	conformance IdCodingKeys	Swift.Equatable		
+protocol	conformance NameCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NameCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NameCodingKeys	Swift.Hashable		
+protocol	conformance NameCodingKeys	Swift.Equatable		
+protocol	conformance CurrentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CurrentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CurrentCodingKeys	Swift.CodingKey		
+protocol	conformance NameCodingKeys	Swift.CodingKey		
+protocol	conformance IdCodingKeys	Swift.CodingKey		
+protocol	conformance CurrentCodingKeys	Swift.CodingKey		
+protocol	conformance NameCodingKeys	Swift.CodingKey		
+protocol	conformance IdCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RenameOptions	Swift.OptionSet		
+protocol	conformance RenameOptions	Swift.SetAlgebra		
+protocol	conformance RenameOptions	Swift.RawRepresentable		
+protocol	conformance RenameOptions	Swift.Equatable		
+protocol	conformance RenameOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance CryptexKit.Image4PropertySpec	Swift.Equatable		
+protocol	conformance CryptexKit.Image4Auth	CryptexKit.AssetAuthenticatorProtocol		
+protocol	conformance __C.image4_trust_section_t	Swift.Equatable		
+protocol	conformance __C.image4_trust_section_t	Swift.RawRepresentable		
+protocol	conformance CryptexKit.CryptexLocalDevice	Swift.Actor		
+protocol	conformance CryptexKit.CryptexLocalDevice	CryptexKit.CryptexDevice		
+protocol	conformance Spec.XpcKeys	Swift.Equatable		
+protocol	conformance Spec.XpcKeys	Swift.Hashable		
+protocol	conformance Spec.XpcKeys	Swift.RawRepresentable		
+protocol	conformance Spec.XpcKeys	Swift.CodingKey		
+protocol	conformance Spec.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance Spec.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnv.Spec	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnv.Spec	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvRef.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvRef.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvRef.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvRef.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvRef.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvRef.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvRef	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvRef	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgEnvRef.Kind	CryptexKit.XpcStringCodable		
+protocol	conformance CryptexKit.PkgEnvRef.Kind	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgEnvRef.Kind	Swift.LosslessStringConvertible		
+protocol	conformance CryptexKit.PkgEnv.Options	CryptexKit.XpcCodable		
+protocol	conformance PkgEnv.XpcKeys	Swift.Equatable		
+protocol	conformance PkgEnv.XpcKeys	Swift.Hashable		
+protocol	conformance PkgEnv.XpcKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnv.XpcKeys	Swift.CodingKey		
+protocol	conformance PkgEnv.XpcKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnv.XpcKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnv	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnv	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvInfoRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvInfoRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvInfoRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvInfoRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvInfoRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvInfoRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvInfoRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvInfoRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvInfoRequest	CryptexKit.XpcCodable		
+protocol	conformance PkgEnvInfoResponse.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvInfoResponse.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvInfoResponse.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvInfoResponse.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvInfoResponse.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvInfoResponse.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvInfoResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvInfoResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvInfoResponse	CryptexKit.XpcCodable		
+protocol	conformance CryptexPersonalizationService.SigningPolicy	Swift.Equatable		
+protocol	conformance CryptexPersonalizationService.SigningPolicy	Swift.Hashable		
+protocol	conformance CryptexPersonalizationService.SigningPolicy	Swift.Decodable		
+protocol	conformance CryptexPersonalizationService.SigningPolicy	Swift.Encodable		
+protocol	conformance CryptexKit.CryptexPersonalizationService	Swift.Decodable		
+protocol	conformance CryptexKit.CryptexPersonalizationService	Swift.Encodable		
+protocol	conformance SignedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SignedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotSignedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotSignedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NotSignedCodingKeys	Swift.CodingKey		
+protocol	conformance SignedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvUnlinkRequest.CodingKeys	Swift.Equatable		
+protocol	conformance PkgEnvUnlinkRequest.CodingKeys	Swift.Hashable		
+protocol	conformance PkgEnvUnlinkRequest.CodingKeys	Swift.RawRepresentable		
+protocol	conformance PkgEnvUnlinkRequest.CodingKeys	Swift.CodingKey		
+protocol	conformance PkgEnvUnlinkRequest.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PkgEnvUnlinkRequest.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.PkgEnvUnlinkRequest	CryptexKit.Request		
+protocol	conformance CryptexKit.PkgEnvUnlinkRequest	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvUnlinkRequest	CryptexKit.XpcCodable		
+protocol	conformance CryptexKit.PkgEnvUnlinkResponse	CryptexKit.Response		
+protocol	conformance CryptexKit.PkgEnvUnlinkResponse	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.PkgEnvUnlinkResponse	CryptexKit.XpcCodable		
+protocol	conformance CryptexErrorMessage.CodingKeys	Swift.Equatable		
+protocol	conformance CryptexErrorMessage.CodingKeys	Swift.Hashable		
+protocol	conformance CryptexErrorMessage.CodingKeys	Swift.RawRepresentable		
+protocol	conformance CryptexErrorMessage.CodingKeys	Swift.CodingKey		
+protocol	conformance CryptexErrorMessage.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CryptexErrorMessage.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CryptexKit.CryptexErrorMessage	CryptexKit.XpcDictCodable		
+protocol	conformance CryptexKit.CryptexErrorMessage	CryptexKit.XpcCodable		
+protocol	conformance Trie.TraversalOrder	Swift.Equatable		
+protocol	conformance Trie.TraversalOrder	Swift.Hashable		
+protocol	conformance Iterator	Swift.IteratorProtocol		
+protocol	conformance CryptexKit.Trie	Swift.Sequence		
+extension	CryptexKit.RequestTestError	Request		
+extension	CryptexKit.PkgMeta.Schema	RawRepresentable		
+extension	CryptexKit.PkgMeta.Spec	ContentSpec		
+extension	CryptexKit.PkgAssetType	RawRepresentable		
+extension	CryptexKit.PkgAssetType	CaseIterable		
+extension	CryptexKit.RequestInstallBuiltinCryptex.CodingKeys	RawRepresentable		
+extension	CryptexKit.RequestInstallBuiltinCryptex	Request		
+extension	CryptexKit.PkgRef.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvCreateRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvCreateRequest	Request		
+extension	CryptexKit.PkgEnvCreateResponse.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgInfo.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgInfoOptions	OptionSet		
+extension	CryptexKit.PkgInfoOptions	SetAlgebra		
+extension	CryptexKit.PkgInfoOptions	RawRepresentable		
+extension	CryptexKit.PkgInfoOptions	ExpressibleByArrayLiteral		
+extension	CryptexKit.PkgIndex.Iterator	IteratorProtocol		
+extension	CryptexKit.PkgIndex	Sequence		
+extension	CryptexKit.CryptexAssetType	CaseIterable		
+extension	CryptexKit.PkgValue.Kind	RawRepresentable		
+extension	CryptexKit.AsyncCryptexSequence.AsyncIterator	AsyncIteratorProtocol		
+extension	CryptexKit.AsyncCryptexSequence	AsyncSequence		
+extension	CryptexKit.PkgEnvBootstrapRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvBootstrapRequest	Request		
+extension	CryptexKit.DictBuilder	KeyedEncodingContainerProtocol		
+extension	CryptexKit.KeyedContainer	KeyedDecodingContainerProtocol		
+extension	CryptexKit.PkgSliceEncoder.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgImportRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgImportRequest	Request		
+extension	CryptexKit.PkgRemoveRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgRemoveRequest	Request		
+extension	CryptexKit.CryptexAsset.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvResolveRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvResolveRequest	Request		
+extension	CryptexKit.PkgEnvResolveResponse.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvLinkRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvLinkRequest	Request		
+extension	CryptexKit.CopyFileFlags	OptionSet		
+extension	CryptexKit.CopyFileFlags	SetAlgebra		
+extension	CryptexKit.CopyFileFlags	RawRepresentable		
+extension	CryptexKit.CopyFileFlags	ExpressibleByArrayLiteral		
+extension	CryptexKit.CopyFileWhat	RawRepresentable		
+extension	CryptexKit.CopyFileStage	RawRepresentable		
+extension	CryptexKit.CopyFileAction	RawRepresentable		
+extension	CryptexKit.RequestWrapper.CodingKeys	RawRepresentable		
+extension	CryptexKit.CryptexIdentity.ProductClass	RawRepresentable		
+extension	CryptexKit.PkgTree.Entry.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgTree.Entry.EntryType	RawRepresentable		
+extension	CryptexKit.PkgTree.Link.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgTree.Options	OptionSet		
+extension	CryptexKit.PkgTree.Options	SetAlgebra		
+extension	CryptexKit.PkgTree.Options	RawRepresentable		
+extension	CryptexKit.PkgTree.Options	ExpressibleByArrayLiteral		
+extension	CryptexKit.PkgTree.Spec	ContentSpec		
+extension	CryptexKit.PkgInvQueryRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgInvQueryRequest	Request		
+extension	CryptexKit.PkgInvQueryResponse.CodingKeys	RawRepresentable		
+extension	CryptexKit.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgInvEraseRequest	Request		
+extension	CryptexKit.PkgMeta.Spec.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgMeta.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvTeardownRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvTeardownRequest	Request		
+extension	CryptexKit.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgTree.Link.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgTree.Entry.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgTree.Spec.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgTree.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgIndex.VariantInfo.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgIndex.Entry.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgExportRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgExportRequest	Request		
+extension	CryptexKit.PkgExportResponse.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnv.Options	OptionSet		
+extension	CryptexKit.PkgEnv.Options	SetAlgebra		
+extension	CryptexKit.PkgEnv.Options	RawRepresentable		
+extension	CryptexKit.PkgEnv.Options	ExpressibleByArrayLiteral		
+extension	CryptexKit.PkgEnv.Spec.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnv.Spec	ContentSpec		
+extension	CryptexKit.RenameOptions	OptionSet		
+extension	CryptexKit.RenameOptions	SetAlgebra		
+extension	CryptexKit.RenameOptions	RawRepresentable		
+extension	CryptexKit.RenameOptions	ExpressibleByArrayLiteral		
+extension	CryptexKit.PkgEnv.Spec.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvRef.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnv.XpcKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvInfoRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvInfoRequest	Request		
+extension	CryptexKit.PkgEnvInfoResponse.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvUnlinkRequest.CodingKeys	RawRepresentable		
+extension	CryptexKit.PkgEnvUnlinkRequest	Request		
+extension	CryptexKit.CryptexErrorMessage.CodingKeys	RawRepresentable		
+extension	CryptexKit.Iterator	IteratorProtocol		
+extension	CryptexKit.Trie	Sequence		

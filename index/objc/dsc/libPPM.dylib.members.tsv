@@ -1,0 +1,26 @@
+owner	kind	declaration
+PPMClient	+	+ (id)sharedInstanceWithClientRepresentation:(id)representation error:(id *)error;
+PPMClient	+	+ (id)sharedInstanceWithClientRepresentation:(id)representation options:(id)options error:(id *)error;
+PPMClient	-	- (_Bool)activityStartedWithLevel:(id)level options:(id)options error:(id *)error;
+PPMClient	-	- (_Bool)activityStoppedWithLevel:(id)level options:(id)options error:(id *)error;
+PPMClient	-	- (_Bool)admissionCheckWithLevel:(id)level options:(id)options error:(id *)error handler:(id /* block */)handler;
+PPMClient	-	- (_Bool)endInteraction:(id *)interaction;
+PPMClient	-	- (_Bool)initWithClient:(id)client error:(id *)error;
+PPMClient	-	- (_Bool)pushTelemetryToPPM:(struct __CFDictionary *)ppm error:(id *)error;
+PPMClient	-	- (_Bool)registerForNotificationsWithError:(id *)error handler:(id /* block */)handler;
+PPMClient	-	- (_Bool)setupIOKitUserClientWith:(id)with error:(id *)error;
+PPMClient	-	- (id)initWithClientIdentifier:(id)identifier;
+PPMClient	-	- (int)getClientNumber:(id)number;
+PPMClient	property	@property (retain) NSString *identifier;
+PPMClient	property	@property (retain) PPMClientUserClientInterface *userClient;
+PPMClient	property	@property unsigned int connect;
+PPMClient	property	@property unsigned int version;
+PPMClientUserClientInterface	-	- (int)admissionCheckOfValuePPM:(unsigned int)ppm clientNumber:(unsigned int)number level:(int)level result:(unsigned int *)result;
+PPMClientUserClientInterface	-	- (int)openPPMUserClient:(unsigned int)client clientNumber:(int)number;
+PPMClientUserClientInterface	-	- (int)pushTelemetry:(unsigned int)telemetry userDictRef:(struct UserClientTelemetryDict { unsigned int x0; unsigned int x1; signed char x2[128] x[20]; int x3[20]; } *)ref;
+PPMClientUserClientInterface	-	- (int)setBudget:(unsigned int)budget clientNumber:(unsigned int)number value:(unsigned int)value;
+PPMClientUserClientInterface	-	- (int)setDebugFlag:(unsigned int)flag value:(unsigned int)value;
+PPMClientUserClientInterface	-	- (int)startActivity:(unsigned int)activity clientNumber:(unsigned int)number level:(int)level;
+PPMClientUserClientInterface	-	- (int)stopActivity:(unsigned int)activity clientNumber:(unsigned int)number level:(int)level;
+PPMClientUserClientInterface	property	@property (readonly) _Bool attribute;
+PPMClientUserClientInterface	property	@property (readonly) unsigned int connect;

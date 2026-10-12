@@ -1,0 +1,205 @@
+kind	type	conformance	member_kind	member
+class	SiriIdentityProvider.DeviceContext			
+class	SiriIdentityProvider.DeviceContext		var	lazy
+enum	SiriIdentityProvider.DeviceType			
+enum	SiriIdentityProvider.DeviceType		case	homePod
+enum	SiriIdentityProvider.DeviceType		case	appleTV
+enum	SiriIdentityProvider.DeviceType		case	other
+struct	__C_Synthesized.UPProfileStoreErrorCode			
+struct	__C_Synthesized.UPProfileStoreErrorCode		let	_nsError
+class	SiriIdentityProvider.IdentityBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriIdentityProvider.IdentityBridge		
+class	SiriIdentityProvider.IdentityBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriIdentityProvider.IdentityBridge	var	homeMembers
+class	SiriIdentityProvider.IdentityBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriIdentityProvider.IdentityBridge	let	identityDataProvider
+class	SiriIdentityProvider.IdentityBridge	SiriRequestDispatcher.CandidateRequestAwareBridgeBase SiriIdentityProvider.IdentityBridge	let	signposterProvider
+struct	SiriIdentityProvider.IdentityDataProvider			
+class	SiriIdentityProvider.IdentityInstrumentationUtil			
+class	SiriIdentityProvider.IdentityInstrumentationUtil		let	requestId
+class	SiriIdentityProvider.IdentityInstrumentationUtil		let	stream
+class	SiriIdentityProvider.IdentityInstrumentationUtil		let	commonInstrumentationUtil
+struct	SiriIdentityProvider.IdentityOverrides			
+struct	SiriIdentityProvider.IdentityOverrides		let	defaults
+struct	SiriIdentityProvider.IdentityOverrides		let	allowsInternalSecurityPolicies
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS			
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence			
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence		case	certain
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence		case	known
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence		case	unsure1
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence		case	unsuren
+enum	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence		case	unknown
+enum	SiriIdentityProvider.IdentityOverrides.IdentityOverrideError			
+enum	SiriIdentityProvider.IdentityOverrides.IdentityOverrideError		case	invalidConfidence
+enum	SiriIdentityProvider.IdentityOverrides.IdentityOverrideError		case	confidenceRequiresSharedUserID
+enum	SiriIdentityProvider.IdentityOverrides.IdentityOverrideError		case	unsureNNotSupported
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase		
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	identityLookupTimeout
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	queue
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	timer
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	currentState
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	lastUserIdentificationMessage
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	instrumentationUtil
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	var	identityStreamTask
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	homeMembers
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	identityDataProvider
+class	SiriIdentityProvider.IdentityRequestProcessor	SiriRequestDispatcher.RequestProcessorBase	let	signpostProvider
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingState			
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingState		case	waiting
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingState		case	exiting
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingState		case	stopped
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingState		case	running
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent			
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent		case	startListening
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent		case	stopListening
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent		case	requestEnds
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent		case	identityMessageSent
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent		case	processedSufficientAudio
+enum	SiriIdentityProvider.IdentityRequestProcessor.IdentityProcessingEvent		case	timeout
+enum	SiriIdentityProvider.IdentityRequestProcessor.WaitingType			
+enum	SiriIdentityProvider.IdentityRequestProcessor.WaitingType		case	firstMessage
+enum	SiriIdentityProvider.IdentityRequestProcessor.WaitingType		case	sufficientAudio
+class	SiriIdentityProvider.IdentityStateMachineActor<A	SiriIdentityProvider.IdentityResult>		
+class	SiriIdentityProvider.IdentityStateMachineActor<A	SiriIdentityProvider.IdentityResult>	let	voiceTriggerDurationMs
+class	SiriIdentityProvider.IdentityStateMachineActor<A	SiriIdentityProvider.IdentityResult>	var	lastResult
+class	SiriIdentityProvider.IdentityStateMachineActor<A	SiriIdentityProvider.IdentityResult>	var	continuation
+class	SiriIdentityProvider.IdentityStateMachineActor<A	SiriIdentityProvider.IdentityResult>	var	stream
+class	SiriIdentityProvider.IdentityStateMachineActor<A	SiriIdentityProvider.IdentityResult>	var	currentState
+enum	SiriIdentityProvider.IdentityStateMachineActor.State<A	SiriIdentityProvider.IdentityResult>		
+enum	SiriIdentityProvider.IdentityStateMachineActor.State<A	SiriIdentityProvider.IdentityResult>	case	waiting
+enum	SiriIdentityProvider.IdentityStateMachineActor.State<A	SiriIdentityProvider.IdentityResult>	case	stopped
+enum	SiriIdentityProvider.TimerType			
+enum	SiriIdentityProvider.TimerType		case	preliminaryTimeout
+enum	SiriIdentityProvider.TimerType		case	finalTargetTime
+enum	SiriIdentityProvider.TimerType		case	finalTimeout
+enum	SiriIdentityProvider.IdentityStateMachineActor.Event<A	SiriIdentityProvider.IdentityResult>		
+enum	SiriIdentityProvider.IdentityStateMachineActor.Event<A	SiriIdentityProvider.IdentityResult>	case	received
+enum	SiriIdentityProvider.IdentityStateMachineActor.Event<A	SiriIdentityProvider.IdentityResult>	case	timerFiring
+enum	SiriIdentityProvider.IdentityStateMachineActor.Blocker<A	SiriIdentityProvider.IdentityResult>		
+enum	SiriIdentityProvider.IdentityStateMachineActor.Blocker<A	SiriIdentityProvider.IdentityResult>	case	haveNotReceivedAnyResults
+enum	SiriIdentityProvider.IdentityStateMachineActor.Blocker<A	SiriIdentityProvider.IdentityResult>	case	haveNotReceivedResultWithSufficientAudioProcessed
+enum	SiriIdentityProvider.IdentityStateMachineActor.Blocker<A	SiriIdentityProvider.IdentityResult>	case	finalTargetTimerHasNotFired
+enum	SiriIdentityProvider.IdentityStateMachineActor.ResultPhase<A	SiriIdentityProvider.IdentityResult>		
+enum	SiriIdentityProvider.IdentityStateMachineActor.ResultPhase<A	SiriIdentityProvider.IdentityResult>	case	preliminary
+enum	SiriIdentityProvider.IdentityStateMachineActor.ResultPhase<A	SiriIdentityProvider.IdentityResult>	case	final
+struct	SiriIdentityProvider.SignposterProvider			
+struct	SiriIdentityProvider.SignposterProvider		let	signposter
+struct	SiriIdentityProvider.ResultStreamCoordinator			
+struct	SiriIdentityProvider.ResultStreamCoordinator		let	deviceContext
+struct	SiriIdentityProvider.ResultStreamCoordinator		let	identityOverrides
+struct	SiriIdentityProvider.ResultStreamCoordinator		let	mockOriginStream
+struct	SiriIdentityProvider.SiriSpeakerID			
+struct	SiriIdentityProvider.SiriSpeakerID		let	streamCoordinator
+struct	SiriIdentityProvider.SiriSpeakerID.UserIdentity			
+struct	SiriIdentityProvider.SiriSpeakerID.UserIdentity		let	siriSharedUserID
+struct	SiriIdentityProvider.SiriSpeakerID.UserIdentity		let	iCloudAltDSID
+struct	SiriIdentityProvider.SiriSpeakerID.UserIdentity		let	personaID
+struct	SiriIdentityProvider.SiriSpeakerID.UserIdentity		let	homeUserID
+struct	SiriIdentityProvider.SiriSpeakerID.UserIdentity		let	companionIdsID
+enum	SiriIdentityProvider.SiriSpeakerID.ConfidenceClassification			
+enum	SiriIdentityProvider.SiriSpeakerID.ConfidenceClassification		case	certain
+enum	SiriIdentityProvider.SiriSpeakerID.ConfidenceClassification		case	known
+enum	SiriIdentityProvider.SiriSpeakerID.ConfidenceClassification		case	unsure1
+enum	SiriIdentityProvider.SiriSpeakerID.ConfidenceClassification		case	unsureN
+enum	SiriIdentityProvider.SiriSpeakerID.ConfidenceClassification		case	unknown
+enum	SiriIdentityProvider.SiriSpeakerID.Phase			
+enum	SiriIdentityProvider.SiriSpeakerID.Phase		case	preliminary
+enum	SiriIdentityProvider.SiriSpeakerID.Phase		case	final
+struct	SiriIdentityProvider.SiriSpeakerID.Result			
+struct	SiriIdentityProvider.SiriSpeakerID.Result		let	confidenceClassification
+struct	SiriIdentityProvider.SiriSpeakerID.Result		let	phase
+struct	SiriIdentityProvider.SiriSpeakerID.Result		let	allowsPersonalRequests
+enum	SiriIdentityProvider.SiriSpeakerID.ActivationType			
+enum	SiriIdentityProvider.SiriSpeakerID.ActivationType		case	speech
+enum	SiriIdentityProvider.SiriSpeakerID.ActivationType		case	text
+enum	SiriIdentityProvider.UserIdentityAggregationErrors			
+enum	SiriIdentityProvider.UserIdentityAggregationErrors		case	userProfilesError
+enum	SiriIdentityProvider.UserIdentityAggregationErrors		case	unexpectedError
+struct	SiriIdentityProvider.UserIdentityAggregator			
+struct	SiriIdentityProvider.UserIdentityAggregator		let	userProfileProvider
+struct	SiriIdentityProvider.UserIdentityAggregator		let	multiUserConnection
+struct	SiriIdentityProvider.UserProfileUserIdentifiers			
+struct	SiriIdentityProvider.UserProfileUserIdentifiers		let	sharedUserID
+struct	SiriIdentityProvider.UserProfileUserIdentifiers		let	iCloudAltDSID
+struct	SiriIdentityProvider.UserProfileUserIdentifiers		let	personaID
+struct	SiriIdentityProvider.UserProfileUserIdentifiers		let	homeUserID
+enum	SiriIdentityProvider.UserProfilePrividingErrors			
+enum	SiriIdentityProvider.UserProfilePrividingErrors		case	profileNotFound
+enum	SiriIdentityProvider.UserProfilePrividingErrors		case	userHasNoSharedUserID
+enum	SiriIdentityProvider.UserProfilePrividingErrors		case	profileStoreError
+enum	SiriIdentityProvider.UserProfilePrividingErrors		case	unexpectedError
+struct	SiriIdentityProvider.UserProfilesProvider			
+struct	SiriIdentityProvider.UserProfilesProvider		let	profileStore
+class	SiriIdentityProvider.VoiceIDScoreCardObserver	NSObject		
+class	SiriIdentityProvider.VoiceIDScoreCardObserver	NSObject	var	lazy
+class	SiriIdentityProvider.VoiceIDScoreCardObserver	NSObject	var	continuation
+struct	SiriIdentityProvider.VoiceIdScoreCardStream			
+struct	SiriIdentityProvider.VoiceIdScoreCardStream		var	observer
+struct	SiriIdentityProvider.VoiceIdScoreCardStream		var	originStreamProvider
+protocol	SiriIdentityProvider.DeviceContextProviding			
+protocol	SiriIdentityProvider.IdentityDataProviding			
+protocol	SiriIdentityProvider.IdentityStream	Result		
+protocol	SiriIdentityProvider.IdentityResult			
+protocol	SiriIdentityProvider.SignposterProviding			
+protocol	SiriIdentityProvider.PerceptionStateMachineControlling			
+protocol	SiriIdentityProvider.UserIdentityAggregating			
+protocol	SiriIdentityProvider.UserProfilesProviding			
+protocol	conformance SiriIdentityProvider.DeviceType	Swift.Hashable		
+protocol	conformance SiriIdentityProvider.DeviceType	Swift.Equatable		
+protocol	conformance SiriIdentityProvider.DeviceContext	Swift.Actor		
+protocol	conformance SiriIdentityProvider.DeviceContext	SiriIdentityProvider.DeviceContextProviding		
+protocol	conformance __C.Code	Swift.Equatable: UserProfiles		
+protocol	conformance __C.Code	Swift.RawRepresentable: UserProfiles		
+protocol	conformance __C_Synthesized.UPProfileStoreError	Swift.Equatable: UserProfiles		
+protocol	conformance __C_Synthesized.UPProfileStoreError	Swift.Error: UserProfiles		
+protocol	conformance __C_Synthesized.UPProfileStoreError	Swift.Hashable: UserProfiles		
+protocol	conformance __C_Synthesized.UPProfileStoreError	Foundation._ObjectiveCBridgeableError: UserProfiles		
+protocol	conformance __C_Synthesized.UPProfileStoreError	Foundation.CustomNSError: UserProfiles		
+protocol	conformance __C_Synthesized.UPProfileStoreError	Foundation._BridgedStoredNSError: UserProfiles		
+protocol	conformance __C.AFUserIdentityClassfication	Swift.Equatable		
+protocol	conformance __C.AFUserIdentityClassfication	Swift.RawRepresentable		
+protocol	conformance __C.Code	Foundation._ErrorCodeProtocol: UserProfiles		
+protocol	conformance AFVoiceIdScoreCard	SiriIdentityProvider.IdentityResult		
+protocol	conformance SiriIdentityProvider.IdentityDataProvider	SiriIdentityProvider.IdentityDataProviding		
+protocol	conformance CONSTANTS.Confidence	Swift.Equatable		
+protocol	conformance CONSTANTS.Confidence	Swift.Hashable		
+protocol	conformance CONSTANTS.Confidence	Swift.RawRepresentable		
+protocol	conformance CONSTANTS.Confidence	Swift.CaseIterable		
+protocol	conformance IdentityOverrides.IdentityOverrideError	Swift.Hashable		
+protocol	conformance IdentityOverrides.IdentityOverrideError	Swift.Error		
+protocol	conformance IdentityOverrides.IdentityOverrideError	Swift.Equatable		
+protocol	conformance IdentityRequestProcessor.IdentityProcessingState	Swift.Equatable		
+protocol	conformance IdentityRequestProcessor.IdentityProcessingState	Swift.CustomStringConvertible		
+protocol	conformance IdentityRequestProcessor.IdentityProcessingEvent	Swift.CustomStringConvertible		
+protocol	conformance IdentityRequestProcessor.WaitingType	Swift.Hashable		
+protocol	conformance IdentityRequestProcessor.WaitingType	Swift.Equatable		
+protocol	conformance IdentityRequestProcessor.IdentityProcessingEvent	Swift.Hashable		
+protocol	conformance IdentityRequestProcessor.IdentityProcessingEvent	Swift.Equatable		
+protocol	conformance IdentityStateMachineActor.State	Swift.Equatable		
+protocol	conformance SiriIdentityProvider.IdentityStateMachineActor	Swift.Actor		
+protocol	conformance IdentityStateMachineActor.ResultPhase	Swift.Equatable		
+protocol	conformance IdentityStateMachineActor.ResultPhase	Swift.Hashable		
+protocol	conformance IdentityStateMachineActor.Blocker	Swift.Equatable		
+protocol	conformance IdentityStateMachineActor.Event	Swift.Equatable		
+protocol	conformance SiriIdentityProvider.TimerType	Swift.Equatable		
+protocol	conformance SiriIdentityProvider.TimerType	Swift.Hashable		
+protocol	conformance IdentityStateMachineActor.Blocker	Swift.Hashable		
+protocol	conformance SiriIdentityProvider.SignposterProvider	SiriIdentityProvider.SignposterProviding		
+protocol	conformance SiriIdentityProvider.PerceptionStateMachineController	SiriIdentityProvider.PerceptionStateMachineControlling		
+protocol	conformance SiriIdentityProvider.PerceptionStateMachineController	Swift.Actor		
+protocol	conformance SiriSpeakerID.UserIdentity	Swift.Equatable		
+protocol	conformance SiriSpeakerID.ConfidenceClassification	Swift.Equatable		
+protocol	conformance SiriSpeakerID.Phase	Swift.Hashable		
+protocol	conformance SiriSpeakerID.Phase	Swift.Equatable		
+protocol	conformance SiriSpeakerID.Result	Swift.Equatable		
+protocol	conformance SiriSpeakerID.ActivationType	Swift.Equatable		
+protocol	conformance SiriSpeakerID.ActivationType	Swift.Hashable		
+protocol	conformance SiriIdentityProvider.UserIdentityAggregationErrors	Swift.Equatable		
+protocol	conformance SiriIdentityProvider.UserIdentityAggregationErrors	Swift.Error		
+protocol	conformance SiriIdentityProvider.UserIdentityAggregator	SiriIdentityProvider.UserIdentityAggregating		
+protocol	conformance SiriIdentityProvider.UserProfilePrividingErrors	Swift.Equatable		
+protocol	conformance SiriIdentityProvider.UserProfilePrividingErrors	Swift.Hashable		
+protocol	conformance SiriIdentityProvider.UserProfilePrividingErrors	Swift.Error		
+protocol	conformance SiriIdentityProvider.UserProfilesProvider	SiriIdentityProvider.UserProfilesProviding		
+protocol	conformance SiriIdentityProvider.VoiceIdScoreCardStream	SiriIdentityProvider.IdentityStream		
+extension	__C_Synthesized.UPProfileStoreError	_BridgedStoredNSError		
+extension	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence	RawRepresentable		
+extension	SiriIdentityProvider.IdentityOverrides.CONSTANTS.Confidence	CaseIterable		
+extension	SiriIdentityProvider.VoiceIdScoreCardStream	IdentityStream		

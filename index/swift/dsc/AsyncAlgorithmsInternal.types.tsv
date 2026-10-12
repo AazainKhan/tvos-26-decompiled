@@ -1,0 +1,592 @@
+kind	type	conformance	member_kind	member
+class	AsyncAlgorithmsInternal.UnboundedBufferStorage<A	Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.UnboundedBufferStorage<A	Swift.AsyncSequence>	let	stateMachine
+struct	AsyncAlgorithmsInternal.ChannelStorage<B	Swift.Error>		
+struct	AsyncAlgorithmsInternal.ChannelStorage<B	Swift.Error>	let	stateMachine
+struct	AsyncAlgorithmsInternal.ChannelStorage<B	Swift.Error>	let	ids
+class	AsyncAlgorithmsInternal.DebounceStorage<A	Swift.AsyncSequence, B: Swift.Clock>		
+class	AsyncAlgorithmsInternal.DebounceStorage<A	Swift.AsyncSequence, B: Swift.Clock>	let	stateMachine
+class	AsyncAlgorithmsInternal.DebounceStorage<A	Swift.AsyncSequence, B: Swift.Clock>	let	interval
+class	AsyncAlgorithmsInternal.DebounceStorage<A	Swift.AsyncSequence, B: Swift.Clock>	let	tolerance
+class	AsyncAlgorithmsInternal.DebounceStorage<A	Swift.AsyncSequence, B: Swift.Clock>	let	clock
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence<A	Swift.AsyncSequence, B: Swift.Clock>		
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	base
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	clock
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	interval
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	tolerance
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>		
+struct	AsyncAlgorithmsInternal.AsyncDebounceSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>	let	internalClass
+class	AsyncAlgorithmsInternal.AsyncDebounceSequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.Clock>		
+class	AsyncAlgorithmsInternal.AsyncDebounceSequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.Clock>	let	storage
+struct	AsyncAlgorithmsInternal.DebounceStateMachine<A	Swift.AsyncSequence, B: Swift.Clock>		
+struct	AsyncAlgorithmsInternal.DebounceStateMachine<A	Swift.AsyncSequence, B: Swift.Clock>	var	state
+struct	AsyncAlgorithmsInternal.DebounceStateMachine<A	Swift.AsyncSequence, B: Swift.Clock>	let	interval
+struct	AsyncAlgorithmsInternal.DebounceStateMachine<A	Swift.AsyncSequence, B: Swift.Clock>	let	clock
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>	case	initial
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>	case	waitingForDemand
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>	case	demandSignalled
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>	case	debouncing
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>	case	upstreamFailure
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.State<A	Swift.AsyncSequence, B: Swift.Clock>	case	finished
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuationWithError
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	cancelTaskAndClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuationWithNilAndCancelTaskAndUpstreamAndClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuationWithElementAndCancelTaskAndUpstreamAndClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ClockTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ClockTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ClockTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuationWithError
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ClockSleepFinishedAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.ClockSleepFinishedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeDownstreamContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	cancelTaskAndClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeContinuationWithErrorAndCancelTaskAndUpstreamContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	startTask
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeUpstreamContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeUpstreamAndClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeDownstreamContinuationWithNil
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeDownstreamContinuationWithError
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	resumeDownstreamContinuationWithNilAndCancelTaskAndUpstreamAndClockContinuation
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.Clock>		
+enum	AsyncAlgorithmsInternal.DebounceStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.Clock>	case	cancelTaskAndUpstreamAndClockContinuations
+class	AsyncAlgorithmsInternal.AsyncChannel			
+class	AsyncAlgorithmsInternal.AsyncChannel		let	storage
+struct	AsyncAlgorithmsInternal.AsyncChannel.Iterator			
+struct	AsyncAlgorithmsInternal.AsyncChannel.Iterator		let	storage
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence<A	Swift.AsyncSequence>	let	separator
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence<A	Swift.AsyncSequence>	let	every
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Separator<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Separator<A	Swift.AsyncSequence>	case	element
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Separator<A	Swift.AsyncSequence>	case	syncClosure
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Separator<A	Swift.AsyncSequence>	case	asyncClosure
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator<A	Swift.AsyncSequence>	let	separator
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator<A	Swift.AsyncSequence>	let	every
+struct	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator<A	Swift.AsyncSequence>	var	state
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	start
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	element
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	separator
+enum	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	finished
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence<A	Swift.AsyncSequence>	let	separator
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence<A	Swift.AsyncSequence>	let	every
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Separator<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Separator<A	Swift.AsyncSequence>	case	syncClosure
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Separator<A	Swift.AsyncSequence>	case	asyncClosure
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator<A	Swift.AsyncSequence>	let	separator
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator<A	Swift.AsyncSequence>	let	every
+struct	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator<A	Swift.AsyncSequence>	var	state
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	start
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	element
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	separator
+enum	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator.State<A	Swift.AsyncSequence>	case	finished
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendSuspendedAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendSuspendedAction<B	Swift.Error>	case	resumeProducerAndConsumer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendSuspendedAction<B	Swift.Error>	case	resumeProducer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendCancelledAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendCancelledAction<B	Swift.Error>	case	resumeProducer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendCancelledAction<B	Swift.Error>	case	none
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendAction<B	Swift.Error>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.SendAction<B	Swift.Error>	case	suspend
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.FinishAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.FinishAction<B	Swift.Error>	case	resumeProducersAndConsumers
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.FinishAction<B	Swift.Error>	case	none
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedProducer<B	Swift.Error>		
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedProducer<B	Swift.Error>	let	id
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedProducer<B	Swift.Error>	let	continuation
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedProducer<B	Swift.Error>	let	element
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextSuspendedAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextSuspendedAction<B	Swift.Error>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextSuspendedAction<B	Swift.Error>	case	resumeConsumerWithError
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextSuspendedAction<B	Swift.Error>	case	resumeProducerAndConsumer
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedConsumer<B	Swift.Error>		
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedConsumer<B	Swift.Error>	let	id
+struct	AsyncAlgorithmsInternal.ChannelStateMachine.SuspendedConsumer<B	Swift.Error>	let	continuation
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextCancelledAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextCancelledAction<B	Swift.Error>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextCancelledAction<B	Swift.Error>	case	none
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextAction<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextAction<B	Swift.Error>	case	resumeProducer
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.NextAction<B	Swift.Error>	case	suspend
+struct	AsyncAlgorithmsInternal.ChannelStateMachine<B	Swift.Error>		
+struct	AsyncAlgorithmsInternal.ChannelStateMachine<B	Swift.Error>	var	state
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.State<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.State<B	Swift.Error>	case	channeling
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.State<B	Swift.Error>	case	terminated
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.Termination<B	Swift.Error>		
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.Termination<B	Swift.Error>	case	failed
+enum	AsyncAlgorithmsInternal.ChannelStateMachine.Termination<B	Swift.Error>	case	finished
+class	AsyncAlgorithmsInternal.AsyncThrowingChannel<B	Swift.Error>		
+class	AsyncAlgorithmsInternal.AsyncThrowingChannel<B	Swift.Error>	let	storage
+struct	AsyncAlgorithmsInternal.AsyncThrowingChannel.Iterator<B	Swift.Error>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingChannel.Iterator<B	Swift.Error>	let	storage
+struct	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy			
+struct	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy		let	policy
+struct	AsyncAlgorithmsInternal.AsyncBufferSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncBufferSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncBufferSequence<A	Swift.AsyncSequence>	let	policy
+struct	AsyncAlgorithmsInternal.AsyncBufferSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncBufferSequence.Iterator<A	Swift.AsyncSequence>	var	storageType
+enum	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy._Policy			
+enum	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy._Policy		case	bounded
+enum	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy._Policy		case	bufferingNewest
+enum	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy._Policy		case	bufferingOldest
+enum	AsyncAlgorithmsInternal.AsyncBufferSequencePolicy._Policy		case	unbounded
+enum	AsyncAlgorithmsInternal.AsyncBufferSequence.StorageType<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.AsyncBufferSequence.StorageType<A	Swift.AsyncSequence>	case	transparent
+enum	AsyncAlgorithmsInternal.AsyncBufferSequence.StorageType<A	Swift.AsyncSequence>	case	bounded
+enum	AsyncAlgorithmsInternal.AsyncBufferSequence.StorageType<A	Swift.AsyncSequence>	case	unbounded
+struct	AsyncAlgorithmsInternal.BoundedBufferStateMachine<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.BoundedBufferStateMachine<A	Swift.AsyncSequence>	var	state
+struct	AsyncAlgorithmsInternal.BoundedBufferStateMachine<A	Swift.AsyncSequence>	let	limit
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.State<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	initial
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	buffering
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	finished
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	modifying
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.ProducerSuspendedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.ProducerSuspendedAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.ProducerSuspendedAction<A	Swift.AsyncSequence>	case	resumeProducer
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.FinishAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.FinishAction<A	Swift.AsyncSequence>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.FinishAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.ElementProducedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.ElementProducedAction<A	Swift.AsyncSequence>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.ElementProducedAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextSuspendedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextSuspendedAction<A	Swift.AsyncSequence>	case	returnResult
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextSuspendedAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>	case	startTask
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>	case	returnResult
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>	case	suspend
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.InterruptedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.InterruptedAction<A	Swift.AsyncSequence>	case	resumeProducerAndConsumer
+enum	AsyncAlgorithmsInternal.BoundedBufferStateMachine.InterruptedAction<A	Swift.AsyncSequence>	case	none
+class	AsyncAlgorithmsInternal.CombineLatestStorage<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.CombineLatestStorage<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	stateMachine
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	base1
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	base2
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	base3
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	internalClass
+class	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	storage
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	state
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	numberOfUpstreamSequences
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	initial
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	waitingForDemand
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	combining
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	upstreamsFinished
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	upstreamThrew
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	finished
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	modifying
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	continuation
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	element
+struct	AsyncAlgorithmsInternal.CombineLatestStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	isFinished
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuationWithError
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuationWithNilAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuationWithErrorAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	startTask
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeDownstreamContinuationWithNil
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeDownstreamContinuationWithNilAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.CombineLatestStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	cancelTaskAndUpstreamContinuations
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	base1
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	base2
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	internalClass
+class	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	storage
+class	AsyncAlgorithmsInternal.BoundedBufferStorage<A	Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.BoundedBufferStorage<A	Swift.AsyncSequence>	let	stateMachine
+struct	AsyncAlgorithmsInternal.AsyncZip2Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncZip2Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	base1
+struct	AsyncAlgorithmsInternal.AsyncZip2Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	base2
+struct	AsyncAlgorithmsInternal.AsyncZip2Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncZip2Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	internalClass
+class	AsyncAlgorithmsInternal.AsyncZip2Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.AsyncZip2Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence>	let	storage
+struct	AsyncAlgorithmsInternal.AsyncZip3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncZip3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	base1
+struct	AsyncAlgorithmsInternal.AsyncZip3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	base2
+struct	AsyncAlgorithmsInternal.AsyncZip3Sequence<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	base3
+struct	AsyncAlgorithmsInternal.AsyncZip3Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncZip3Sequence.Iterator<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	internalClass
+class	AsyncAlgorithmsInternal.AsyncZip3Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.AsyncZip3Sequence.Iterator.InternalClass<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	storage
+struct	AsyncAlgorithmsInternal.ZipStateMachine<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.ZipStateMachine<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	state
+struct	AsyncAlgorithmsInternal.ZipStateMachine<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	numberOfUpstreamSequences
+enum	AsyncAlgorithmsInternal.ZipStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	initial
+enum	AsyncAlgorithmsInternal.ZipStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	waitingForDemand
+enum	AsyncAlgorithmsInternal.ZipStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	zipping
+enum	AsyncAlgorithmsInternal.ZipStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	finished
+enum	AsyncAlgorithmsInternal.ZipStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	modifying
+struct	AsyncAlgorithmsInternal.ZipStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.ZipStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	continuation
+struct	AsyncAlgorithmsInternal.ZipStateMachine.State.Upstream<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	var	element
+enum	AsyncAlgorithmsInternal.ZipStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.ZipStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuationWithError
+enum	AsyncAlgorithmsInternal.ZipStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuationWithNilAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.ZipStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.ZipStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeContinuationWithErrorAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.ZipStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	startTask
+enum	AsyncAlgorithmsInternal.ZipStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeUpstreamContinuations
+enum	AsyncAlgorithmsInternal.ZipStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeDownstreamContinuationWithNil
+enum	AsyncAlgorithmsInternal.ZipStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	resumeDownstreamContinuationWithNilAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.ZipStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.ZipStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.ZipStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	case	cancelTaskAndUpstreamContinuations
+class	AsyncAlgorithmsInternal.ZipStorage<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>		
+class	AsyncAlgorithmsInternal.ZipStorage<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence>	let	stateMachine
+struct	AsyncAlgorithmsInternal.UnboundedBufferStateMachine<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.UnboundedBufferStateMachine<A	Swift.AsyncSequence>	var	state
+struct	AsyncAlgorithmsInternal.UnboundedBufferStateMachine<A	Swift.AsyncSequence>	let	policy
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.Policy<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.Policy<A	Swift.AsyncSequence>	case	bufferingNewest
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.Policy<A	Swift.AsyncSequence>	case	bufferingOldest
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.Policy<A	Swift.AsyncSequence>	case	unlimited
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.State<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	initial
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	buffering
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	finished
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.State<A	Swift.AsyncSequence>	case	modifying
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.FinishAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.FinishAction<A	Swift.AsyncSequence>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.FinishAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.ElementProducedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.ElementProducedAction<A	Swift.AsyncSequence>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.ElementProducedAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextSuspendedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextSuspendedAction<A	Swift.AsyncSequence>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextSuspendedAction<A	Swift.AsyncSequence>	case	none
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>	case	startTask
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>	case	returnResult
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.NextAction<A	Swift.AsyncSequence>	case	suspend
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.InterruptedAction<A	Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.InterruptedAction<A	Swift.AsyncSequence>	case	resumeConsumer
+enum	AsyncAlgorithmsInternal.UnboundedBufferStateMachine.InterruptedAction<A	Swift.AsyncSequence>	case	none
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence<A	Swift.AsyncSequence, B: Swift.Clock>		
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	base
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	interval
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	clock
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence<A	Swift.AsyncSequence, B: Swift.Clock>	let	reducing
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>		
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>	var	base
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>	var	last
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>	let	interval
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>	let	clock
+struct	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator<A	Swift.AsyncSequence, B: Swift.Clock>	let	reducing
+enum	AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence.Either<A	Swift.AsyncSequence, B: Swift.RangeReplaceableCollection, C: Swift.AsyncSequence, ElementSciQz: ElementSTQy_>		
+enum	AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence.Either<A	Swift.AsyncSequence, B: Swift.RangeReplaceableCollection, C: Swift.AsyncSequence, ElementSciQz: ElementSTQy_>	case	element
+enum	AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence.Either<A	Swift.AsyncSequence, B: Swift.RangeReplaceableCollection, C: Swift.AsyncSequence, ElementSciQz: ElementSTQy_>	case	terminal
+enum	AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence.Either<A	Swift.AsyncSequence, B: Swift.RangeReplaceableCollection, C: Swift.AsyncSequence, ElementSciQz: ElementSTQy_>	case	signal
+struct	AsyncAlgorithmsInternal.AsyncJoinedSequence<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncJoinedSequence<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>	var	state
+enum	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator.State<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>		
+enum	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator.State<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>	case	initial
+enum	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator.State<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>	case	sequence
+enum	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator.State<A	Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence>	case	terminal
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence<A	Swift.AsyncSequence>	let	predicate
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>	let	predicate
+struct	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>	var	last
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence<A	Swift.AsyncSequence>	let	predicate
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>	let	predicate
+struct	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence.Iterator<A	Swift.AsyncSequence>	var	last
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	element
+struct	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence<A	Swift.Clock>		
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence<A	Swift.Clock>	let	clock
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence<A	Swift.Clock>	let	interval
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence<A	Swift.Clock>	let	tolerance
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence.Iterator<A	Swift.Clock>		
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence.Iterator<A	Swift.Clock>	var	clock
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence.Iterator<A	Swift.Clock>	let	interval
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence.Iterator<A	Swift.Clock>	let	tolerance
+struct	AsyncAlgorithmsInternal.AsyncTimerSequence.Iterator<A	Swift.Clock>	var	last
+enum	AsyncAlgorithmsInternal.MergeStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	initial
+enum	AsyncAlgorithmsInternal.MergeStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	merging
+enum	AsyncAlgorithmsInternal.MergeStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	upstreamFailure
+enum	AsyncAlgorithmsInternal.MergeStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	finished
+enum	AsyncAlgorithmsInternal.MergeStateMachine.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	modifying
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	resumeContinuationWithError
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ChildTaskSuspendedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	none
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	resumeContinuationWithNilAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamFinishedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	none
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	resumeContinuation
+enum	AsyncAlgorithmsInternal.MergeStateMachine.ElementProducedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	none
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	resumeContinuationWithErrorAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.UpstreamThrewAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	none
+enum	AsyncAlgorithmsInternal.MergeStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	startTaskAndSuspendDownstreamTask
+enum	AsyncAlgorithmsInternal.MergeStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	returnElement
+enum	AsyncAlgorithmsInternal.MergeStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	throwError
+enum	AsyncAlgorithmsInternal.MergeStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	returnNil
+enum	AsyncAlgorithmsInternal.MergeStateMachine.NextAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	suspendDownstreamTask
+enum	AsyncAlgorithmsInternal.MergeStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	resumeDownstreamContinuationWithNilAndCancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.CancelledAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	none
+enum	AsyncAlgorithmsInternal.MergeStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>		
+enum	AsyncAlgorithmsInternal.MergeStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	cancelTaskAndUpstreamContinuations
+enum	AsyncAlgorithmsInternal.MergeStateMachine.IteratorDeinitializedAction<A	Swift.AsyncSequence, B: Swift.AsyncSequence, C: Swift.AsyncSequence, ElementSciQz: ElementSciQy_, ElementSciQy_: ElementSciQy0_>	case	none
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	element
+struct	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	let	transform
+class	AsyncAlgorithmsInternal.ManagedCriticalState.LockedBuffer	Swift.ManagedBuffer  empty-list A __C.os_unfair_lock_s		
+struct	AsyncAlgorithmsInternal.Lock			
+struct	AsyncAlgorithmsInternal.Lock		let	platformLock
+struct	AsyncAlgorithmsInternal.ManagedCriticalState			
+struct	AsyncAlgorithmsInternal.ManagedCriticalState		let	buffer
+struct	AsyncAlgorithmsInternal.AsyncSyncSequence<A	Swift.Sequence>		
+struct	AsyncAlgorithmsInternal.AsyncSyncSequence<A	Swift.Sequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncSyncSequence.Iterator<A	Swift.Sequence>		
+struct	AsyncAlgorithmsInternal.AsyncSyncSequence.Iterator<A	Swift.Sequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncBufferedByteIterator			
+struct	AsyncAlgorithmsInternal.AsyncBufferedByteIterator		var	buffer
+struct	AsyncAlgorithmsInternal._AsyncBytesBuffer			
+struct	AsyncAlgorithmsInternal._AsyncBytesBuffer		let	storage
+struct	AsyncAlgorithmsInternal._AsyncBytesBuffer		var	nextPointer
+struct	AsyncAlgorithmsInternal._AsyncBytesBuffer		var	endPointer
+struct	AsyncAlgorithmsInternal._AsyncBytesBuffer		let	readFunction
+struct	AsyncAlgorithmsInternal._AsyncBytesBuffer		var	finished
+class	AsyncAlgorithmsInternal._AsyncBytesBuffer.Storage			
+class	AsyncAlgorithmsInternal._AsyncBytesBuffer.Storage		let	buffer
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence<A	Swift.AsyncSequence>	let	initial
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	current
+struct	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence.Iterator<A	Swift.AsyncSequence>	var	base
+struct	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence.Iterator<A	Swift.AsyncSequence>	var	previousElement
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>		
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	initial
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	sequence
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	separator
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	terminal
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State.SeparatorState<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>		
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State.SeparatorState<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	initial
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State.SeparatorState<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	partialAsync
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State.SeparatorState<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	cached
+enum	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator.State.SeparatorState<A	Swift.AsyncSequence, B: Swift.AsyncSequence, ElementSciQz: Swift.AsyncSequence, ElementSciQy_: ElementSci_AASciQZ>	case	partialCached
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence<A	Swift.AsyncSequence>	let	base
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence<A	Swift.AsyncSequence>	let	initial
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>		
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	iterator
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	var	current
+struct	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence.Iterator<A	Swift.AsyncSequence>	let	transform
+struct	AsyncAlgorithmsInternal.UnsafeTransfer			
+struct	AsyncAlgorithmsInternal.UnsafeTransfer		let	wrapped
+protocol	AsyncAlgorithmsInternal._ErrorMechanism	Output		
+protocol	conformance AsyncChain2Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChain2Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncAlgorithmsInternal.AsyncDebounceSequence	Swift.AsyncSequence		
+protocol	conformance AsyncDebounceSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncChannel.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChannel	Swift.AsyncSequence		
+protocol	conformance AsyncInterspersedSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncInterspersedSequence	Swift.AsyncSequence		
+protocol	conformance AsyncThrowingInterspersedSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence	Swift.AsyncSequence		
+protocol	conformance SuspendedConsumer	Swift.Equatable		
+protocol	conformance SuspendedProducer	Swift.Equatable		
+protocol	conformance SuspendedProducer	Swift.Hashable		
+protocol	conformance SuspendedConsumer	Swift.Hashable		
+protocol	conformance AsyncThrowingChannel.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncThrowingChannel	Swift.AsyncSequence		
+protocol	conformance AsyncBufferSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncBufferSequence	Swift.AsyncSequence		
+protocol	conformance BoundedBufferStateMachine.ProducerSuspendedAction	Swift.Hashable		
+protocol	conformance BoundedBufferStateMachine.ProducerSuspendedAction	Swift.Equatable		
+protocol	conformance AsyncCombineLatest3Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncCombineLatest2Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncZip2Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncZip2Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncZip3Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncZip3Sequence	Swift.AsyncSequence		
+protocol	conformance _AsyncThrottleSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal._AsyncThrottleSequence	Swift.AsyncSequence		
+protocol	conformance AsyncChunksOfCountOrSignalSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence	Swift.AsyncSequence		
+protocol	conformance AsyncJoinedSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncJoinedSequence	Swift.AsyncSequence		
+protocol	conformance AsyncRemoveDuplicatesSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence	Swift.AsyncSequence		
+protocol	conformance AsyncThrowingRemoveDuplicatesSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence	Swift.AsyncSequence		
+protocol	conformance AsyncThrowingInclusiveReductionsSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence	Swift.AsyncSequence		
+protocol	conformance AsyncChain3Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChain3Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncTimerSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncTimerSequence	Swift.AsyncSequence		
+protocol	conformance AsyncAlgorithmsInternal.AsyncMerge2Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncMerge2Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncMerge3Sequence	Swift.AsyncSequence		
+protocol	conformance AsyncMerge3Sequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncInclusiveReductionsSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence	Swift.AsyncSequence		
+protocol	conformance Swift.Result	AsyncAlgorithmsInternal._ErrorMechanism		
+protocol	conformance AsyncChunksOfCountSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChunksOfCountSequence	Swift.AsyncSequence		
+protocol	conformance AsyncChunkedByGroupSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChunkedByGroupSequence	Swift.AsyncSequence		
+protocol	conformance AsyncSyncSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncSyncSequence	Swift.AsyncSequence		
+protocol	conformance AsyncChunkedOnProjectionSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncChunkedOnProjectionSequence	Swift.AsyncSequence		
+protocol	conformance AsyncCompactedSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncCompactedSequence	Swift.AsyncSequence		
+protocol	conformance AsyncAlgorithmsInternal.AsyncBufferedByteIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncThrowingExclusiveReductionsSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence	Swift.AsyncSequence		
+protocol	conformance AsyncAdjacentPairsSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence	Swift.AsyncSequence		
+protocol	conformance AsyncJoinedBySeparatorSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence	Swift.AsyncSequence		
+protocol	conformance AsyncExclusiveReductionsSequence.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence	Swift.AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncChain2Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChain2Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncDebounceSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncDebounceSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChannel.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChannel	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncInterspersedSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncInterspersedSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncThrowingInterspersedSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncThrowingChannel.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncThrowingChannel	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncBufferSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncBufferSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncCombineLatest3Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncCombineLatest2Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncZip2Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncZip2Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncZip3Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncZip3Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal._AsyncThrottleSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal._AsyncThrottleSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChunksOfCountOrSignalSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncJoinedSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncJoinedSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncRemoveDuplicatesSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncThrowingRemoveDuplicatesSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncThrowingInclusiveReductionsSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncChain3Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChain3Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncTimerSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncTimerSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncMerge2Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncMerge2Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncMerge3Sequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncMerge3Sequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncInclusiveReductionsSequence	AsyncSequence		
+extension	Swift.Result	_ErrorMechanism		
+extension	AsyncAlgorithmsInternal.AsyncChunksOfCountSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChunksOfCountSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncChunkedByGroupSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChunkedByGroupSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncSyncSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncSyncSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncChunkedOnProjectionSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncChunkedOnProjectionSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncCompactedSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncCompactedSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncBufferedByteIterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncThrowingExclusiveReductionsSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncAdjacentPairsSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncJoinedBySeparatorSequence	AsyncSequence		
+extension	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence.Iterator	AsyncIteratorProtocol		
+extension	AsyncAlgorithmsInternal.AsyncExclusiveReductionsSequence	AsyncSequence		

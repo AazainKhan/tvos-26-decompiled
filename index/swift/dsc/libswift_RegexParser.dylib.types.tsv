@@ -1,0 +1,1560 @@
+kind	type	conformance	member_kind	member
+struct	_RegexParser.AST			
+struct	_RegexParser.AST		var	root
+struct	_RegexParser.AST		var	globalOptions
+struct	_RegexParser.AST		var	diags
+enum	_RegexParser.AST.Node			
+enum	_RegexParser.AST.Node		case	alternation
+enum	_RegexParser.AST.Node		case	concatenation
+enum	_RegexParser.AST.Node		case	group
+enum	_RegexParser.AST.Node		case	conditional
+enum	_RegexParser.AST.Node		case	quantification
+enum	_RegexParser.AST.Node		case	quote
+enum	_RegexParser.AST.Node		case	trivia
+enum	_RegexParser.AST.Node		case	interpolation
+enum	_RegexParser.AST.Node		case	atom
+enum	_RegexParser.AST.Node		case	customCharacterClass
+enum	_RegexParser.AST.Node		case	absentFunction
+enum	_RegexParser.AST.Node		case	empty
+struct	_RegexParser.AST.Alternation			
+struct	_RegexParser.AST.Alternation		let	children
+struct	_RegexParser.AST.Alternation		let	pipes
+struct	_RegexParser.AST.Concatenation			
+struct	_RegexParser.AST.Concatenation		let	children
+struct	_RegexParser.AST.Concatenation		let	location
+struct	_RegexParser.AST.Quote			
+struct	_RegexParser.AST.Quote		let	literal
+struct	_RegexParser.AST.Quote		let	location
+struct	_RegexParser.AST.Trivia			
+struct	_RegexParser.AST.Trivia		let	contents
+struct	_RegexParser.AST.Trivia		let	location
+struct	_RegexParser.AST.Interpolation			
+struct	_RegexParser.AST.Interpolation		let	contents
+struct	_RegexParser.AST.Interpolation		let	location
+struct	_RegexParser.AST.Empty			
+struct	_RegexParser.AST.Empty		let	location
+struct	_RegexParser.AST.AbsentFunction			
+struct	_RegexParser.AST.AbsentFunction		var	start
+struct	_RegexParser.AST.AbsentFunction		var	kind
+struct	_RegexParser.AST.AbsentFunction		var	location
+enum	_RegexParser.AST.AbsentFunction.Start			
+enum	_RegexParser.AST.AbsentFunction.Start		case	withPipe
+enum	_RegexParser.AST.AbsentFunction.Start		case	withoutPipe
+enum	_RegexParser.AST.AbsentFunction.Kind			
+enum	_RegexParser.AST.AbsentFunction.Kind		case	repeater
+enum	_RegexParser.AST.AbsentFunction.Kind		case	expression
+enum	_RegexParser.AST.AbsentFunction.Kind		case	stopper
+enum	_RegexParser.AST.AbsentFunction.Kind		case	clearer
+struct	_RegexParser.AST.Reference			
+struct	_RegexParser.AST.Reference		var	kind
+struct	_RegexParser.AST.Reference		var	recursionLevel
+struct	_RegexParser.AST.Reference		var	innerLoc
+enum	_RegexParser.AST.Reference.Kind			
+enum	_RegexParser.AST.Reference.Kind		case	absolute
+enum	_RegexParser.AST.Reference.Kind		case	relative
+enum	_RegexParser.AST.Reference.Kind		case	named
+struct	_RegexParser.AST.GlobalMatchingOptionSequence			
+struct	_RegexParser.AST.GlobalMatchingOptionSequence		var	options
+struct	_RegexParser.AST.Atom			
+struct	_RegexParser.AST.Atom		let	kind
+struct	_RegexParser.AST.Atom		let	location
+enum	_RegexParser.AST.Atom.Kind			
+enum	_RegexParser.AST.Atom.Kind		case	char
+enum	_RegexParser.AST.Atom.Kind		case	scalar
+enum	_RegexParser.AST.Atom.Kind		case	scalarSequence
+enum	_RegexParser.AST.Atom.Kind		case	property
+enum	_RegexParser.AST.Atom.Kind		case	escaped
+enum	_RegexParser.AST.Atom.Kind		case	keyboardControl
+enum	_RegexParser.AST.Atom.Kind		case	keyboardMeta
+enum	_RegexParser.AST.Atom.Kind		case	keyboardMetaControl
+enum	_RegexParser.AST.Atom.Kind		case	namedCharacter
+enum	_RegexParser.AST.Atom.Kind		case	backreference
+enum	_RegexParser.AST.Atom.Kind		case	subpattern
+enum	_RegexParser.AST.Atom.Kind		case	callout
+enum	_RegexParser.AST.Atom.Kind		case	backtrackingDirective
+enum	_RegexParser.AST.Atom.Kind		case	changeMatchingOptions
+enum	_RegexParser.AST.Atom.Kind		case	dot
+enum	_RegexParser.AST.Atom.Kind		case	caretAnchor
+enum	_RegexParser.AST.Atom.Kind		case	dollarAnchor
+enum	_RegexParser.AST.Atom.Kind		case	invalid
+struct	_RegexParser.AST.Atom.Number			
+struct	_RegexParser.AST.Atom.Number		var	value
+struct	_RegexParser.AST.Atom.Number		var	location
+struct	_RegexParser.AST.Atom.Scalar			
+struct	_RegexParser.AST.Atom.Scalar		var	value
+struct	_RegexParser.AST.Atom.Scalar		var	location
+struct	_RegexParser.AST.Atom.ScalarSequence			
+struct	_RegexParser.AST.Atom.ScalarSequence		var	scalars
+struct	_RegexParser.AST.Atom.ScalarSequence		var	trivia
+enum	_RegexParser.AST.Atom.EscapedBuiltin			
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	alarm
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	escape
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	formfeed
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	newline
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	carriageReturn
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	tab
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	singleDataUnit
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	decimalDigit
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notDecimalDigit
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	horizontalWhitespace
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notHorizontalWhitespace
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notNewline
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	newlineSequence
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	whitespace
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notWhitespace
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	verticalTab
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notVerticalTab
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	wordCharacter
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notWordCharacter
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	backspace
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	graphemeCluster
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	wordBoundary
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notWordBoundary
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	startOfSubject
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	endOfSubjectBeforeNewline
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	endOfSubject
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	firstMatchingPositionInSubject
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	resetStartOfMatch
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	trueAnychar
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	textSegment
+enum	_RegexParser.AST.Atom.EscapedBuiltin		case	notTextSegment
+struct	_RegexParser.AST.Atom.CharacterProperty			
+struct	_RegexParser.AST.Atom.CharacterProperty		var	kind
+struct	_RegexParser.AST.Atom.CharacterProperty		var	isInverted
+struct	_RegexParser.AST.Atom.CharacterProperty		var	isPOSIX
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind			
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	generalCategory
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	binary
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	script
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	scriptExtension
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	named
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	numericType
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	numericValue
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	mapping
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	ccc
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	age
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	block
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	posix
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	pcreSpecial
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	javaSpecial
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	invalid
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	any
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	assigned
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind		case	ascii
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind.MapKind			
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind.MapKind		case	lowercase
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind.MapKind		case	uppercase
+enum	_RegexParser.AST.Atom.CharacterProperty.Kind.MapKind		case	titlecase
+enum	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory			
+enum	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory		case	alphanumeric
+enum	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory		case	posixSpace
+enum	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory		case	perlSpace
+enum	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory		case	universallyNamed
+enum	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory		case	perlWord
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial			
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	alphabetic
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	defined
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	digit
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	identifierIgnorable
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	ideographic
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	isoControl
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	javaIdentifierPart
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	javaIdentifierStart
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	javaLetter
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	javaLetterOrDigit
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	lowerCase
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	mirrored
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	spaceChar
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	titleCase
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	unicodeIdentifierPart
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	unicodeIdentifierStart
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	upperCase
+enum	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial		case	whitespace
+enum	_RegexParser.AST.Atom.Callout			
+enum	_RegexParser.AST.Atom.Callout		case	pcre
+enum	_RegexParser.AST.Atom.Callout		case	onigurumaNamed
+enum	_RegexParser.AST.Atom.Callout		case	onigurumaOfContents
+struct	_RegexParser.AST.Atom.Callout.PCRE			
+struct	_RegexParser.AST.Atom.Callout.PCRE		var	arg
+enum	_RegexParser.AST.Atom.Callout.PCRE.Argument			
+enum	_RegexParser.AST.Atom.Callout.PCRE.Argument		case	number
+enum	_RegexParser.AST.Atom.Callout.PCRE.Argument		case	string
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed			
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed		var	name
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed		var	tag
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed		var	args
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed.ArgList			
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed.ArgList		var	leftBrace
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed.ArgList		var	args
+struct	_RegexParser.AST.Atom.Callout.OnigurumaNamed.ArgList		var	rightBrace
+struct	_RegexParser.AST.Atom.Callout.OnigurumaOfContents			
+struct	_RegexParser.AST.Atom.Callout.OnigurumaOfContents		var	openBraces
+struct	_RegexParser.AST.Atom.Callout.OnigurumaOfContents		var	contents
+struct	_RegexParser.AST.Atom.Callout.OnigurumaOfContents		var	closeBraces
+struct	_RegexParser.AST.Atom.Callout.OnigurumaOfContents		var	tag
+struct	_RegexParser.AST.Atom.Callout.OnigurumaOfContents		var	direction
+enum	_RegexParser.AST.Atom.Callout.OnigurumaOfContents.Direction			
+enum	_RegexParser.AST.Atom.Callout.OnigurumaOfContents.Direction		case	inProgress
+enum	_RegexParser.AST.Atom.Callout.OnigurumaOfContents.Direction		case	inRetraction
+enum	_RegexParser.AST.Atom.Callout.OnigurumaOfContents.Direction		case	both
+struct	_RegexParser.AST.Atom.Callout.OnigurumaTag			
+struct	_RegexParser.AST.Atom.Callout.OnigurumaTag		var	leftBracket
+struct	_RegexParser.AST.Atom.Callout.OnigurumaTag		var	name
+struct	_RegexParser.AST.Atom.Callout.OnigurumaTag		var	rightBracket
+struct	_RegexParser.AST.Atom.BacktrackingDirective			
+struct	_RegexParser.AST.Atom.BacktrackingDirective		var	kind
+struct	_RegexParser.AST.Atom.BacktrackingDirective		var	name
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind			
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	accept
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	fail
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	mark
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	commit
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	prune
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	skip
+enum	_RegexParser.AST.Atom.BacktrackingDirective.Kind		case	then
+struct	_RegexParser.AST.Conditional			
+struct	_RegexParser.AST.Conditional		var	location
+struct	_RegexParser.AST.Conditional		var	condition
+struct	_RegexParser.AST.Conditional		var	trueBranch
+struct	_RegexParser.AST.Conditional		var	pipe
+struct	_RegexParser.AST.Conditional		var	falseBranch
+struct	_RegexParser.AST.Conditional.Condition			
+struct	_RegexParser.AST.Conditional.Condition		var	kind
+struct	_RegexParser.AST.Conditional.Condition		var	location
+enum	_RegexParser.AST.Conditional.Condition.Kind			
+enum	_RegexParser.AST.Conditional.Condition.Kind		case	groupMatched
+enum	_RegexParser.AST.Conditional.Condition.Kind		case	groupRecursionCheck
+enum	_RegexParser.AST.Conditional.Condition.Kind		case	pcreVersionCheck
+enum	_RegexParser.AST.Conditional.Condition.Kind		case	group
+enum	_RegexParser.AST.Conditional.Condition.Kind		case	recursionCheck
+enum	_RegexParser.AST.Conditional.Condition.Kind		case	defineGroup
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionNumber			
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionNumber		var	major
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionNumber		var	minor
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionNumber		var	location
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionCheck			
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionCheck		var	kind
+struct	_RegexParser.AST.Conditional.Condition.PCREVersionCheck		var	num
+enum	_RegexParser.AST.Conditional.Condition.PCREVersionCheck.Kind			
+enum	_RegexParser.AST.Conditional.Condition.PCREVersionCheck.Kind		case	equal
+enum	_RegexParser.AST.Conditional.Condition.PCREVersionCheck.Kind		case	greaterThanOrEqual
+struct	_RegexParser.AST.CustomCharacterClass			
+struct	_RegexParser.AST.CustomCharacterClass		var	start
+struct	_RegexParser.AST.CustomCharacterClass		var	members
+struct	_RegexParser.AST.CustomCharacterClass		let	location
+enum	_RegexParser.AST.CustomCharacterClass.Member			
+enum	_RegexParser.AST.CustomCharacterClass.Member		case	custom
+enum	_RegexParser.AST.CustomCharacterClass.Member		case	range
+enum	_RegexParser.AST.CustomCharacterClass.Member		case	atom
+enum	_RegexParser.AST.CustomCharacterClass.Member		case	quote
+enum	_RegexParser.AST.CustomCharacterClass.Member		case	trivia
+enum	_RegexParser.AST.CustomCharacterClass.Member		case	setOperation
+struct	_RegexParser.AST.CustomCharacterClass.Range			
+struct	_RegexParser.AST.CustomCharacterClass.Range		var	lhs
+struct	_RegexParser.AST.CustomCharacterClass.Range		var	dashLoc
+struct	_RegexParser.AST.CustomCharacterClass.Range		var	rhs
+struct	_RegexParser.AST.CustomCharacterClass.Range		var	trivia
+enum	_RegexParser.AST.CustomCharacterClass.SetOp			
+enum	_RegexParser.AST.CustomCharacterClass.SetOp		case	subtraction
+enum	_RegexParser.AST.CustomCharacterClass.SetOp		case	intersection
+enum	_RegexParser.AST.CustomCharacterClass.SetOp		case	symmetricDifference
+enum	_RegexParser.AST.CustomCharacterClass.Start			
+enum	_RegexParser.AST.CustomCharacterClass.Start		case	normal
+enum	_RegexParser.AST.CustomCharacterClass.Start		case	inverted
+struct	_RegexParser.AST.Group			
+struct	_RegexParser.AST.Group		let	kind
+struct	_RegexParser.AST.Group		let	child
+struct	_RegexParser.AST.Group		let	location
+enum	_RegexParser.AST.Group.Kind			
+enum	_RegexParser.AST.Group.Kind		case	namedCapture
+enum	_RegexParser.AST.Group.Kind		case	balancedCapture
+enum	_RegexParser.AST.Group.Kind		case	changeMatchingOptions
+enum	_RegexParser.AST.Group.Kind		case	capture
+enum	_RegexParser.AST.Group.Kind		case	nonCapture
+enum	_RegexParser.AST.Group.Kind		case	nonCaptureReset
+enum	_RegexParser.AST.Group.Kind		case	atomicNonCapturing
+enum	_RegexParser.AST.Group.Kind		case	lookahead
+enum	_RegexParser.AST.Group.Kind		case	negativeLookahead
+enum	_RegexParser.AST.Group.Kind		case	nonAtomicLookahead
+enum	_RegexParser.AST.Group.Kind		case	lookbehind
+enum	_RegexParser.AST.Group.Kind		case	negativeLookbehind
+enum	_RegexParser.AST.Group.Kind		case	nonAtomicLookbehind
+enum	_RegexParser.AST.Group.Kind		case	scriptRun
+enum	_RegexParser.AST.Group.Kind		case	atomicScriptRun
+struct	_RegexParser.AST.Group.BalancedCapture			
+struct	_RegexParser.AST.Group.BalancedCapture		var	name
+struct	_RegexParser.AST.Group.BalancedCapture		var	dash
+struct	_RegexParser.AST.Group.BalancedCapture		var	priorName
+struct	_RegexParser.AST.MatchingOption			
+struct	_RegexParser.AST.MatchingOption		var	kind
+struct	_RegexParser.AST.MatchingOption		var	location
+enum	_RegexParser.AST.MatchingOption.Kind			
+enum	_RegexParser.AST.MatchingOption.Kind		case	caseInsensitive
+enum	_RegexParser.AST.MatchingOption.Kind		case	allowDuplicateGroupNames
+enum	_RegexParser.AST.MatchingOption.Kind		case	multiline
+enum	_RegexParser.AST.MatchingOption.Kind		case	namedCapturesOnly
+enum	_RegexParser.AST.MatchingOption.Kind		case	singleLine
+enum	_RegexParser.AST.MatchingOption.Kind		case	reluctantByDefault
+enum	_RegexParser.AST.MatchingOption.Kind		case	extended
+enum	_RegexParser.AST.MatchingOption.Kind		case	extraExtended
+enum	_RegexParser.AST.MatchingOption.Kind		case	unicodeWordBoundaries
+enum	_RegexParser.AST.MatchingOption.Kind		case	asciiOnlyDigit
+enum	_RegexParser.AST.MatchingOption.Kind		case	asciiOnlyPOSIXProps
+enum	_RegexParser.AST.MatchingOption.Kind		case	asciiOnlySpace
+enum	_RegexParser.AST.MatchingOption.Kind		case	asciiOnlyWord
+enum	_RegexParser.AST.MatchingOption.Kind		case	textSegmentGraphemeMode
+enum	_RegexParser.AST.MatchingOption.Kind		case	textSegmentWordMode
+enum	_RegexParser.AST.MatchingOption.Kind		case	graphemeClusterSemantics
+enum	_RegexParser.AST.MatchingOption.Kind		case	unicodeScalarSemantics
+enum	_RegexParser.AST.MatchingOption.Kind		case	byteSemantics
+enum	_RegexParser.AST.MatchingOption.Kind		case	possessiveByDefault
+enum	_RegexParser.AST.MatchingOption.Kind		case	nsreCompatibleDot
+struct	_RegexParser.AST.MatchingOptionSequence			
+struct	_RegexParser.AST.MatchingOptionSequence		var	caretLoc
+struct	_RegexParser.AST.MatchingOptionSequence		var	adding
+struct	_RegexParser.AST.MatchingOptionSequence		var	minusLoc
+struct	_RegexParser.AST.MatchingOptionSequence		var	removing
+struct	_RegexParser.AST.GlobalMatchingOption			
+struct	_RegexParser.AST.GlobalMatchingOption		var	kind
+struct	_RegexParser.AST.GlobalMatchingOption		var	location
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching			
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching		case	carriageReturnOnly
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching		case	linefeedOnly
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching		case	carriageAndLinefeedOnly
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching		case	anyCarriageReturnOrLinefeed
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching		case	anyUnicode
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineMatching		case	nulCharacter
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineSequenceMatching			
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineSequenceMatching		case	anyCarriageReturnOrLinefeed
+enum	_RegexParser.AST.GlobalMatchingOption.NewlineSequenceMatching		case	anyUnicode
+enum	_RegexParser.AST.GlobalMatchingOption.Kind			
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	limitDepth
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	limitHeap
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	limitMatch
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	newlineMatching
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	newlineSequenceMatching
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	notEmpty
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	notEmptyAtStart
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	noAutoPossess
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	noDotStarAnchor
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	noJIT
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	noStartOpt
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	utfMode
+enum	_RegexParser.AST.GlobalMatchingOption.Kind		case	unicodeProperties
+struct	_RegexParser.AST.Quantification			
+struct	_RegexParser.AST.Quantification		let	amount
+struct	_RegexParser.AST.Quantification		let	kind
+struct	_RegexParser.AST.Quantification		let	child
+struct	_RegexParser.AST.Quantification		let	location
+struct	_RegexParser.AST.Quantification		let	trivia
+enum	_RegexParser.AST.Quantification.Amount			
+enum	_RegexParser.AST.Quantification.Amount		case	exactly
+enum	_RegexParser.AST.Quantification.Amount		case	nOrMore
+enum	_RegexParser.AST.Quantification.Amount		case	upToN
+enum	_RegexParser.AST.Quantification.Amount		case	range
+enum	_RegexParser.AST.Quantification.Amount		case	zeroOrMore
+enum	_RegexParser.AST.Quantification.Amount		case	oneOrMore
+enum	_RegexParser.AST.Quantification.Amount		case	zeroOrOne
+enum	_RegexParser.AST.Quantification.Kind			
+enum	_RegexParser.AST.Quantification.Kind		case	eager
+enum	_RegexParser.AST.Quantification.Kind		case	reluctant
+enum	_RegexParser.AST.Quantification.Kind		case	possessive
+struct	_RegexParser.CaptureList			
+struct	_RegexParser.CaptureList		var	captures
+struct	_RegexParser.CaptureList.Capture			
+struct	_RegexParser.CaptureList.Capture		var	name
+struct	_RegexParser.CaptureList.Capture		var	type
+struct	_RegexParser.CaptureList.Capture		var	optionalDepth
+struct	_RegexParser.CaptureList.Capture		var	location
+struct	_RegexParser.CaptureList.Capture		var	visibleInTypedOutput
+struct	_RegexParser.CaptureList.Builder			
+struct	_RegexParser.CaptureList.Builder		var	captures
+struct	_RegexParser.CaptureList.Builder.OptionalNesting			
+struct	_RegexParser.CaptureList.Builder.OptionalNesting		var	outerDepth
+struct	_RegexParser.CaptureList.Builder.OptionalNesting		var	canNest
+struct	_RegexParser.CaptureList.Builder.OptionalNesting		var	innerDepth
+struct	_RegexParser.CompilerLexError			
+struct	_RegexParser.CompilerLexError		var	underlyingLocation
+struct	_RegexParser.CompilerLexError		var	message
+struct	_RegexParser.CompilerLexError		var	completelyErroneous
+struct	_RegexParser.CompilerParseError			
+struct	_RegexParser.CompilerParseError		var	message
+struct	_RegexParser.CompilerParseError		var	location
+struct	_RegexParser.Delimiter			
+struct	_RegexParser.Delimiter		let	kind
+struct	_RegexParser.Delimiter		let	poundCount
+struct	_RegexParser.DelimiterLexError			
+struct	_RegexParser.DelimiterLexError		var	kind
+struct	_RegexParser.DelimiterLexError		var	resumeLocation
+enum	_RegexParser.DelimiterLexError.Kind			
+enum	_RegexParser.DelimiterLexError.Kind		case	unterminated
+enum	_RegexParser.DelimiterLexError.Kind		case	invalidUTF8
+enum	_RegexParser.DelimiterLexError.Kind		case	unknownDelimiter
+enum	_RegexParser.DelimiterLexError.Kind		case	unprintableASCII
+enum	_RegexParser.DelimiterLexError.Kind		case	multilineClosingNotOnNewline
+struct	_RegexParser.Diagnostic			
+struct	_RegexParser.Diagnostic		let	behavior
+struct	_RegexParser.Diagnostic		let	message
+struct	_RegexParser.Diagnostic		let	location
+struct	_RegexParser.Diagnostic		let	underlyingParseError
+enum	_RegexParser.Diagnostic.Behavior			
+enum	_RegexParser.Diagnostic.Behavior		case	fatalError
+enum	_RegexParser.Diagnostic.Behavior		case	error
+enum	_RegexParser.Diagnostic.Behavior		case	warning
+struct	_RegexParser.Diagnostics			
+struct	_RegexParser.Diagnostics		var	diags
+struct	_RegexParser.Diagnostics		var	suppressFurtherDiagnostics
+struct	_RegexParser.Source			
+struct	_RegexParser.Source		var	input
+struct	_RegexParser.Source		var	bounds
+struct	_RegexParser.Source.Location			
+struct	_RegexParser.Source.Location		var	range
+struct	_RegexParser.Source.LocatedError<A	Swift.Error>		
+struct	_RegexParser.Source.LocatedError<A	Swift.Error>	let	error
+struct	_RegexParser.Source.LocatedError<A	Swift.Error>	let	location
+struct	_RegexParser.Source.Located			
+struct	_RegexParser.Source.Located		var	value
+struct	_RegexParser.Source.Located		var	location
+struct	_RegexParser.SyntaxOptions			
+struct	_RegexParser.SyntaxOptions		var	rawValue
+struct	_RegexParser.PrettyPrinter			
+struct	_RegexParser.PrettyPrinter		var	maxTopDownLevels
+struct	_RegexParser.PrettyPrinter		var	minBottomUpLevels
+struct	_RegexParser.PrettyPrinter		var	indentWidth
+struct	_RegexParser.PrettyPrinter		var	result
+struct	_RegexParser.PrettyPrinter		var	startOfLine
+struct	_RegexParser.PrettyPrinter		var	indentLevel
+struct	_RegexParser.PrettyPrinter		var	quantificationBehavior
+struct	_RegexParser.PrettyPrinter		var	inlineMatchingOptions
+struct	_RegexParser.AllScalars			
+struct	_RegexParser.Unsupported			
+struct	_RegexParser.Unsupported		var	message
+struct	_RegexParser.Unsupported		var	file
+struct	_RegexParser.Unsupported		var	line
+struct	_RegexParser.Unreachable			
+struct	_RegexParser.Unreachable		var	message
+struct	_RegexParser.Unreachable		var	file
+struct	_RegexParser.Unreachable		var	line
+struct	_RegexParser.AnyType			
+struct	_RegexParser.AnyType		var	base
+enum	_RegexParser.Script			
+enum	_RegexParser.Script		case	adlam
+enum	_RegexParser.Script		case	ahom
+enum	_RegexParser.Script		case	anatolianHieroglyphs
+enum	_RegexParser.Script		case	arabic
+enum	_RegexParser.Script		case	armenian
+enum	_RegexParser.Script		case	avestan
+enum	_RegexParser.Script		case	balinese
+enum	_RegexParser.Script		case	bamum
+enum	_RegexParser.Script		case	bassaVah
+enum	_RegexParser.Script		case	batak
+enum	_RegexParser.Script		case	bengali
+enum	_RegexParser.Script		case	bhaiksuki
+enum	_RegexParser.Script		case	bopomofo
+enum	_RegexParser.Script		case	brahmi
+enum	_RegexParser.Script		case	braille
+enum	_RegexParser.Script		case	buginese
+enum	_RegexParser.Script		case	buhid
+enum	_RegexParser.Script		case	canadianAboriginal
+enum	_RegexParser.Script		case	carian
+enum	_RegexParser.Script		case	caucasianAlbanian
+enum	_RegexParser.Script		case	chakma
+enum	_RegexParser.Script		case	cham
+enum	_RegexParser.Script		case	cherokee
+enum	_RegexParser.Script		case	chorasmian
+enum	_RegexParser.Script		case	common
+enum	_RegexParser.Script		case	coptic
+enum	_RegexParser.Script		case	cuneiform
+enum	_RegexParser.Script		case	cypriot
+enum	_RegexParser.Script		case	cyrillic
+enum	_RegexParser.Script		case	cyproMinoan
+enum	_RegexParser.Script		case	deseret
+enum	_RegexParser.Script		case	devanagari
+enum	_RegexParser.Script		case	divesAkuru
+enum	_RegexParser.Script		case	dogra
+enum	_RegexParser.Script		case	duployan
+enum	_RegexParser.Script		case	egyptianHieroglyphs
+enum	_RegexParser.Script		case	elbasan
+enum	_RegexParser.Script		case	elymaic
+enum	_RegexParser.Script		case	ethiopic
+enum	_RegexParser.Script		case	garay
+enum	_RegexParser.Script		case	georgian
+enum	_RegexParser.Script		case	glagolitic
+enum	_RegexParser.Script		case	gothic
+enum	_RegexParser.Script		case	grantha
+enum	_RegexParser.Script		case	greek
+enum	_RegexParser.Script		case	gujarati
+enum	_RegexParser.Script		case	gunjalaGondi
+enum	_RegexParser.Script		case	gurmukhi
+enum	_RegexParser.Script		case	gurungKhema
+enum	_RegexParser.Script		case	han
+enum	_RegexParser.Script		case	hangul
+enum	_RegexParser.Script		case	hanifiRohingya
+enum	_RegexParser.Script		case	hanunoo
+enum	_RegexParser.Script		case	hatran
+enum	_RegexParser.Script		case	hebrew
+enum	_RegexParser.Script		case	hiragana
+enum	_RegexParser.Script		case	imperialAramaic
+enum	_RegexParser.Script		case	inherited
+enum	_RegexParser.Script		case	inscriptionalPahlavi
+enum	_RegexParser.Script		case	inscriptionalParthian
+enum	_RegexParser.Script		case	javanese
+enum	_RegexParser.Script		case	kaithi
+enum	_RegexParser.Script		case	kannada
+enum	_RegexParser.Script		case	katakana
+enum	_RegexParser.Script		case	katakanaOrHiragana
+enum	_RegexParser.Script		case	kawi
+enum	_RegexParser.Script		case	kayahLi
+enum	_RegexParser.Script		case	kharoshthi
+enum	_RegexParser.Script		case	khitanSmallScript
+enum	_RegexParser.Script		case	khmer
+enum	_RegexParser.Script		case	khojki
+enum	_RegexParser.Script		case	khudawadi
+enum	_RegexParser.Script		case	lao
+enum	_RegexParser.Script		case	latin
+enum	_RegexParser.Script		case	lepcha
+enum	_RegexParser.Script		case	limbu
+enum	_RegexParser.Script		case	linearA
+enum	_RegexParser.Script		case	linearB
+enum	_RegexParser.Script		case	lisu
+enum	_RegexParser.Script		case	lycian
+enum	_RegexParser.Script		case	lydian
+enum	_RegexParser.Script		case	kiratRai
+enum	_RegexParser.Script		case	mahajani
+enum	_RegexParser.Script		case	makasar
+enum	_RegexParser.Script		case	malayalam
+enum	_RegexParser.Script		case	mandaic
+enum	_RegexParser.Script		case	manichaean
+enum	_RegexParser.Script		case	marchen
+enum	_RegexParser.Script		case	masaramGondi
+enum	_RegexParser.Script		case	medefaidrin
+enum	_RegexParser.Script		case	meeteiMayek
+enum	_RegexParser.Script		case	mendeKikakui
+enum	_RegexParser.Script		case	meroiticCursive
+enum	_RegexParser.Script		case	meroiticHieroglyphs
+enum	_RegexParser.Script		case	miao
+enum	_RegexParser.Script		case	modi
+enum	_RegexParser.Script		case	mongolian
+enum	_RegexParser.Script		case	mro
+enum	_RegexParser.Script		case	multani
+enum	_RegexParser.Script		case	myanmar
+enum	_RegexParser.Script		case	nabataean
+enum	_RegexParser.Script		case	nagMundari
+enum	_RegexParser.Script		case	nandinagari
+enum	_RegexParser.Script		case	newa
+enum	_RegexParser.Script		case	newTaiLue
+enum	_RegexParser.Script		case	nko
+enum	_RegexParser.Script		case	nushu
+enum	_RegexParser.Script		case	nyiakengPuachueHmong
+enum	_RegexParser.Script		case	ogham
+enum	_RegexParser.Script		case	olChiki
+enum	_RegexParser.Script		case	oldHungarian
+enum	_RegexParser.Script		case	oldItalic
+enum	_RegexParser.Script		case	oldNorthArabian
+enum	_RegexParser.Script		case	oldPermic
+enum	_RegexParser.Script		case	oldPersian
+enum	_RegexParser.Script		case	oldSogdian
+enum	_RegexParser.Script		case	oldSouthArabian
+enum	_RegexParser.Script		case	oldTurkic
+enum	_RegexParser.Script		case	oldUyghur
+enum	_RegexParser.Script		case	olOnal
+enum	_RegexParser.Script		case	oriya
+enum	_RegexParser.Script		case	osage
+enum	_RegexParser.Script		case	osmanya
+enum	_RegexParser.Script		case	pahawhHmong
+enum	_RegexParser.Script		case	palmyrene
+enum	_RegexParser.Script		case	pauCinHau
+enum	_RegexParser.Script		case	phagsPa
+enum	_RegexParser.Script		case	phoenician
+enum	_RegexParser.Script		case	psalterPahlavi
+enum	_RegexParser.Script		case	rejang
+enum	_RegexParser.Script		case	runic
+enum	_RegexParser.Script		case	samaritan
+enum	_RegexParser.Script		case	saurashtra
+enum	_RegexParser.Script		case	sharada
+enum	_RegexParser.Script		case	shavian
+enum	_RegexParser.Script		case	siddham
+enum	_RegexParser.Script		case	signWriting
+enum	_RegexParser.Script		case	sinhala
+enum	_RegexParser.Script		case	sogdian
+enum	_RegexParser.Script		case	soraSompeng
+enum	_RegexParser.Script		case	soyombo
+enum	_RegexParser.Script		case	sundanese
+enum	_RegexParser.Script		case	sunuwar
+enum	_RegexParser.Script		case	sylotiNagri
+enum	_RegexParser.Script		case	syriac
+enum	_RegexParser.Script		case	tagalog
+enum	_RegexParser.Script		case	tagbanwa
+enum	_RegexParser.Script		case	taiLe
+enum	_RegexParser.Script		case	taiTham
+enum	_RegexParser.Script		case	taiViet
+enum	_RegexParser.Script		case	takri
+enum	_RegexParser.Script		case	tamil
+enum	_RegexParser.Script		case	tangsa
+enum	_RegexParser.Script		case	tangut
+enum	_RegexParser.Script		case	telugu
+enum	_RegexParser.Script		case	thaana
+enum	_RegexParser.Script		case	thai
+enum	_RegexParser.Script		case	tibetan
+enum	_RegexParser.Script		case	tifinagh
+enum	_RegexParser.Script		case	tirhuta
+enum	_RegexParser.Script		case	todhri
+enum	_RegexParser.Script		case	toto
+enum	_RegexParser.Script		case	tuluTigalari
+enum	_RegexParser.Script		case	ugaritic
+enum	_RegexParser.Script		case	unknown
+enum	_RegexParser.Script		case	vai
+enum	_RegexParser.Script		case	vithkuqi
+enum	_RegexParser.Script		case	wancho
+enum	_RegexParser.Script		case	warangCiti
+enum	_RegexParser.Script		case	yezidi
+enum	_RegexParser.Script		case	yi
+enum	_RegexParser.Script		case	zanabazarSquare
+enum	_RegexParser.POSIXProperty			
+enum	_RegexParser.POSIXProperty		case	alnum
+enum	_RegexParser.POSIXProperty		case	blank
+enum	_RegexParser.POSIXProperty		case	graph
+enum	_RegexParser.POSIXProperty		case	print
+enum	_RegexParser.POSIXProperty		case	word
+enum	_RegexParser.POSIXProperty		case	xdigit
+enum	_RegexParser.ExtendedGeneralCategory			
+enum	_RegexParser.ExtendedGeneralCategory		case	other
+enum	_RegexParser.ExtendedGeneralCategory		case	control
+enum	_RegexParser.ExtendedGeneralCategory		case	format
+enum	_RegexParser.ExtendedGeneralCategory		case	unassigned
+enum	_RegexParser.ExtendedGeneralCategory		case	privateUse
+enum	_RegexParser.ExtendedGeneralCategory		case	surrogate
+enum	_RegexParser.ExtendedGeneralCategory		case	letter
+enum	_RegexParser.ExtendedGeneralCategory		case	casedLetter
+enum	_RegexParser.ExtendedGeneralCategory		case	lowercaseLetter
+enum	_RegexParser.ExtendedGeneralCategory		case	modifierLetter
+enum	_RegexParser.ExtendedGeneralCategory		case	otherLetter
+enum	_RegexParser.ExtendedGeneralCategory		case	titlecaseLetter
+enum	_RegexParser.ExtendedGeneralCategory		case	uppercaseLetter
+enum	_RegexParser.ExtendedGeneralCategory		case	mark
+enum	_RegexParser.ExtendedGeneralCategory		case	spacingMark
+enum	_RegexParser.ExtendedGeneralCategory		case	enclosingMark
+enum	_RegexParser.ExtendedGeneralCategory		case	nonspacingMark
+enum	_RegexParser.ExtendedGeneralCategory		case	number
+enum	_RegexParser.ExtendedGeneralCategory		case	decimalNumber
+enum	_RegexParser.ExtendedGeneralCategory		case	letterNumber
+enum	_RegexParser.ExtendedGeneralCategory		case	otherNumber
+enum	_RegexParser.ExtendedGeneralCategory		case	punctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	connectorPunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	dashPunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	closePunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	finalPunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	initialPunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	otherPunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	openPunctuation
+enum	_RegexParser.ExtendedGeneralCategory		case	symbol
+enum	_RegexParser.ExtendedGeneralCategory		case	currencySymbol
+enum	_RegexParser.ExtendedGeneralCategory		case	modifierSymbol
+enum	_RegexParser.ExtendedGeneralCategory		case	mathSymbol
+enum	_RegexParser.ExtendedGeneralCategory		case	otherSymbol
+enum	_RegexParser.ExtendedGeneralCategory		case	separator
+enum	_RegexParser.ExtendedGeneralCategory		case	lineSeparator
+enum	_RegexParser.ExtendedGeneralCategory		case	paragraphSeparator
+enum	_RegexParser.ExtendedGeneralCategory		case	spaceSeparator
+enum	_RegexParser.BinaryProperty			
+enum	_RegexParser.BinaryProperty		case	asciiHexDigit
+enum	_RegexParser.BinaryProperty		case	alphabetic
+enum	_RegexParser.BinaryProperty		case	bidiControl
+enum	_RegexParser.BinaryProperty		case	bidiMirrored
+enum	_RegexParser.BinaryProperty		case	cased
+enum	_RegexParser.BinaryProperty		case	compositionExclusion
+enum	_RegexParser.BinaryProperty		case	caseIgnorable
+enum	_RegexParser.BinaryProperty		case	changesWhenCasefolded
+enum	_RegexParser.BinaryProperty		case	changesWhenCasemapped
+enum	_RegexParser.BinaryProperty		case	changesWhenNFKCCasefolded
+enum	_RegexParser.BinaryProperty		case	changesWhenLowercased
+enum	_RegexParser.BinaryProperty		case	changesWhenTitlecased
+enum	_RegexParser.BinaryProperty		case	changesWhenUppercased
+enum	_RegexParser.BinaryProperty		case	dash
+enum	_RegexParser.BinaryProperty		case	deprecated
+enum	_RegexParser.BinaryProperty		case	defaultIgnorableCodePoint
+enum	_RegexParser.BinaryProperty		case	diacratic
+enum	_RegexParser.BinaryProperty		case	emojiModifierBase
+enum	_RegexParser.BinaryProperty		case	emojiComponent
+enum	_RegexParser.BinaryProperty		case	emojiModifier
+enum	_RegexParser.BinaryProperty		case	emoji
+enum	_RegexParser.BinaryProperty		case	emojiPresentation
+enum	_RegexParser.BinaryProperty		case	extender
+enum	_RegexParser.BinaryProperty		case	extendedPictographic
+enum	_RegexParser.BinaryProperty		case	fullCompositionExclusion
+enum	_RegexParser.BinaryProperty		case	graphemeBase
+enum	_RegexParser.BinaryProperty		case	graphemeExtended
+enum	_RegexParser.BinaryProperty		case	graphemeLink
+enum	_RegexParser.BinaryProperty		case	hexDigit
+enum	_RegexParser.BinaryProperty		case	hyphen
+enum	_RegexParser.BinaryProperty		case	idContinue
+enum	_RegexParser.BinaryProperty		case	ideographic
+enum	_RegexParser.BinaryProperty		case	idStart
+enum	_RegexParser.BinaryProperty		case	idsBinaryOperator
+enum	_RegexParser.BinaryProperty		case	idsTrinaryOperator
+enum	_RegexParser.BinaryProperty		case	joinControl
+enum	_RegexParser.BinaryProperty		case	logicalOrderException
+enum	_RegexParser.BinaryProperty		case	lowercase
+enum	_RegexParser.BinaryProperty		case	math
+enum	_RegexParser.BinaryProperty		case	noncharacterCodePoint
+enum	_RegexParser.BinaryProperty		case	otherAlphabetic
+enum	_RegexParser.BinaryProperty		case	otherDefaultIgnorableCodePoint
+enum	_RegexParser.BinaryProperty		case	otherGraphemeExtended
+enum	_RegexParser.BinaryProperty		case	otherIDContinue
+enum	_RegexParser.BinaryProperty		case	otherIDStart
+enum	_RegexParser.BinaryProperty		case	otherLowercase
+enum	_RegexParser.BinaryProperty		case	otherMath
+enum	_RegexParser.BinaryProperty		case	otherUppercase
+enum	_RegexParser.BinaryProperty		case	patternSyntax
+enum	_RegexParser.BinaryProperty		case	patternWhitespace
+enum	_RegexParser.BinaryProperty		case	prependedConcatenationMark
+enum	_RegexParser.BinaryProperty		case	quotationMark
+enum	_RegexParser.BinaryProperty		case	radical
+enum	_RegexParser.BinaryProperty		case	regionalIndicator
+enum	_RegexParser.BinaryProperty		case	softDotted
+enum	_RegexParser.BinaryProperty		case	sentenceTerminal
+enum	_RegexParser.BinaryProperty		case	terminalPunctuation
+enum	_RegexParser.BinaryProperty		case	unifiedIdiograph
+enum	_RegexParser.BinaryProperty		case	uppercase
+enum	_RegexParser.BinaryProperty		case	variationSelector
+enum	_RegexParser.BinaryProperty		case	whitespace
+enum	_RegexParser.BinaryProperty		case	xidContinue
+enum	_RegexParser.BinaryProperty		case	xidStart
+enum	_RegexParser.BinaryProperty		case	expandsOnNFC
+enum	_RegexParser.BinaryProperty		case	expandsOnNFD
+enum	_RegexParser.BinaryProperty		case	expandsOnNFKC
+enum	_RegexParser.BinaryProperty		case	expandsOnNFKD
+enum	_RegexParser.Block			
+enum	_RegexParser.Block		case	basicLatin
+enum	_RegexParser.Block		case	latin1Supplement
+enum	_RegexParser.Block		case	latinExtendedA
+enum	_RegexParser.Block		case	latinExtendedB
+enum	_RegexParser.Block		case	ipaExtensions
+enum	_RegexParser.Block		case	spacingModifierLetters
+enum	_RegexParser.Block		case	combiningDiacriticalMarks
+enum	_RegexParser.Block		case	greekAndCoptic
+enum	_RegexParser.Block		case	cyrillic
+enum	_RegexParser.Block		case	cyrillicSupplement
+enum	_RegexParser.Block		case	armenian
+enum	_RegexParser.Block		case	hebrew
+enum	_RegexParser.Block		case	arabic
+enum	_RegexParser.Block		case	syriac
+enum	_RegexParser.Block		case	arabicSupplement
+enum	_RegexParser.Block		case	thaana
+enum	_RegexParser.Block		case	nko
+enum	_RegexParser.Block		case	samaritan
+enum	_RegexParser.Block		case	mandaic
+enum	_RegexParser.Block		case	syriacSupplement
+enum	_RegexParser.Block		case	arabicExtendedB
+enum	_RegexParser.Block		case	arabicExtendedA
+enum	_RegexParser.Block		case	devanagari
+enum	_RegexParser.Block		case	bengali
+enum	_RegexParser.Block		case	gurmukhi
+enum	_RegexParser.Block		case	gujarati
+enum	_RegexParser.Block		case	oriya
+enum	_RegexParser.Block		case	tamil
+enum	_RegexParser.Block		case	telugu
+enum	_RegexParser.Block		case	kannada
+enum	_RegexParser.Block		case	malayalam
+enum	_RegexParser.Block		case	sinhala
+enum	_RegexParser.Block		case	thai
+enum	_RegexParser.Block		case	lao
+enum	_RegexParser.Block		case	tibetan
+enum	_RegexParser.Block		case	myanmar
+enum	_RegexParser.Block		case	georgian
+enum	_RegexParser.Block		case	hangulJamo
+enum	_RegexParser.Block		case	ethiopic
+enum	_RegexParser.Block		case	ethiopicSupplement
+enum	_RegexParser.Block		case	cherokee
+enum	_RegexParser.Block		case	unifiedCanadianAboriginalSyllabics
+enum	_RegexParser.Block		case	ogham
+enum	_RegexParser.Block		case	runic
+enum	_RegexParser.Block		case	tagalog
+enum	_RegexParser.Block		case	hanunoo
+enum	_RegexParser.Block		case	buhid
+enum	_RegexParser.Block		case	tagbanwa
+enum	_RegexParser.Block		case	khmer
+enum	_RegexParser.Block		case	mongolian
+enum	_RegexParser.Block		case	unifiedCanadianAboriginalSyllabicsExtended
+enum	_RegexParser.Block		case	limbu
+enum	_RegexParser.Block		case	taiLe
+enum	_RegexParser.Block		case	newTailue
+enum	_RegexParser.Block		case	khmerSymbols
+enum	_RegexParser.Block		case	buginese
+enum	_RegexParser.Block		case	taiTham
+enum	_RegexParser.Block		case	combiningDiacriticalMarksExtended
+enum	_RegexParser.Block		case	balinese
+enum	_RegexParser.Block		case	sundanese
+enum	_RegexParser.Block		case	batak
+enum	_RegexParser.Block		case	lepcha
+enum	_RegexParser.Block		case	olChiki
+enum	_RegexParser.Block		case	cyrillicExtendedC
+enum	_RegexParser.Block		case	georgianExtended
+enum	_RegexParser.Block		case	sundaneseSupplement
+enum	_RegexParser.Block		case	vedicExtensions
+enum	_RegexParser.Block		case	phoneticExtensions
+enum	_RegexParser.Block		case	phoneticExtensionsSupplement
+enum	_RegexParser.Block		case	combiningDiacriticalMarksSupplement
+enum	_RegexParser.Block		case	latinExtendedAdditional
+enum	_RegexParser.Block		case	greekExtended
+enum	_RegexParser.Block		case	generalPunctuation
+enum	_RegexParser.Block		case	superscriptsAndSubscripts
+enum	_RegexParser.Block		case	currencySymbols
+enum	_RegexParser.Block		case	combiningDiacriticalMarksForSymbols
+enum	_RegexParser.Block		case	letterLikeSymbols
+enum	_RegexParser.Block		case	numberForms
+enum	_RegexParser.Block		case	arrows
+enum	_RegexParser.Block		case	mathematicalOperators
+enum	_RegexParser.Block		case	miscellaneousTechnical
+enum	_RegexParser.Block		case	controlPictures
+enum	_RegexParser.Block		case	opticalCharacterRecognition
+enum	_RegexParser.Block		case	enclosedAlphanumerics
+enum	_RegexParser.Block		case	boxDrawing
+enum	_RegexParser.Block		case	blockElements
+enum	_RegexParser.Block		case	geometricShapes
+enum	_RegexParser.Block		case	miscellaneousSymbols
+enum	_RegexParser.Block		case	dingbats
+enum	_RegexParser.Block		case	miscellaneousMathematicalSymbolsA
+enum	_RegexParser.Block		case	supplementalArrowsA
+enum	_RegexParser.Block		case	braillePatterns
+enum	_RegexParser.Block		case	supplementalArrowsB
+enum	_RegexParser.Block		case	miscellaneousMathematicalSymbolsB
+enum	_RegexParser.Block		case	supplementalMathematicalOperators
+enum	_RegexParser.Block		case	miscellaneousSymbolsAndArrows
+enum	_RegexParser.Block		case	glagolitic
+enum	_RegexParser.Block		case	latinExtendedC
+enum	_RegexParser.Block		case	coptic
+enum	_RegexParser.Block		case	georgianSupplement
+enum	_RegexParser.Block		case	tifinagh
+enum	_RegexParser.Block		case	ethiopicExtended
+enum	_RegexParser.Block		case	cyrillicExtendedA
+enum	_RegexParser.Block		case	supplementalPunctuation
+enum	_RegexParser.Block		case	cjkRadicalsSupplement
+enum	_RegexParser.Block		case	kangxiRadicals
+enum	_RegexParser.Block		case	ideographicDescriptionCharacters
+enum	_RegexParser.Block		case	cjkSymbolsAndPunctuation
+enum	_RegexParser.Block		case	hiragana
+enum	_RegexParser.Block		case	katakana
+enum	_RegexParser.Block		case	bopomofo
+enum	_RegexParser.Block		case	hangulCompatibilityJamo
+enum	_RegexParser.Block		case	kanbun
+enum	_RegexParser.Block		case	bopomofoExtended
+enum	_RegexParser.Block		case	cjkStrokes
+enum	_RegexParser.Block		case	katakanaPhoneticExtensions
+enum	_RegexParser.Block		case	enclosedCJKLettersAndMonths
+enum	_RegexParser.Block		case	cjkCompatibility
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionA
+enum	_RegexParser.Block		case	yijingHexagramSymbols
+enum	_RegexParser.Block		case	cjkUnifiedIdeographs
+enum	_RegexParser.Block		case	yiSyllables
+enum	_RegexParser.Block		case	yiRadicals
+enum	_RegexParser.Block		case	lisu
+enum	_RegexParser.Block		case	vai
+enum	_RegexParser.Block		case	cyrillicExtendedB
+enum	_RegexParser.Block		case	bamum
+enum	_RegexParser.Block		case	modifierToneLetters
+enum	_RegexParser.Block		case	latinExtendedD
+enum	_RegexParser.Block		case	sylotiNagri
+enum	_RegexParser.Block		case	commonIndicNumberForms
+enum	_RegexParser.Block		case	phagsPA
+enum	_RegexParser.Block		case	saurashtra
+enum	_RegexParser.Block		case	devanagariExtended
+enum	_RegexParser.Block		case	kayahLi
+enum	_RegexParser.Block		case	rejang
+enum	_RegexParser.Block		case	hangulJamoExtendedA
+enum	_RegexParser.Block		case	javanese
+enum	_RegexParser.Block		case	myanmarExtendedB
+enum	_RegexParser.Block		case	cham
+enum	_RegexParser.Block		case	myanmarExtendedA
+enum	_RegexParser.Block		case	taiViet
+enum	_RegexParser.Block		case	meeteiMayekExtensions
+enum	_RegexParser.Block		case	ethiopicExtendedA
+enum	_RegexParser.Block		case	latinExtendedE
+enum	_RegexParser.Block		case	cherokeeSupplement
+enum	_RegexParser.Block		case	meeteiMayek
+enum	_RegexParser.Block		case	hangulSyllables
+enum	_RegexParser.Block		case	hangulJamoExtendedB
+enum	_RegexParser.Block		case	highSurrogates
+enum	_RegexParser.Block		case	highPrivateUseSurrogates
+enum	_RegexParser.Block		case	lowSurrogates
+enum	_RegexParser.Block		case	privateUseArea
+enum	_RegexParser.Block		case	cjkCompatibilityIdeographs
+enum	_RegexParser.Block		case	alphabeticPresentationForms
+enum	_RegexParser.Block		case	arabicPresentationFormsA
+enum	_RegexParser.Block		case	variationSelectors
+enum	_RegexParser.Block		case	verticalForms
+enum	_RegexParser.Block		case	combiningHalfMarks
+enum	_RegexParser.Block		case	cjkcompatibilityForms
+enum	_RegexParser.Block		case	smallFormVariants
+enum	_RegexParser.Block		case	arabicPresentationFormsB
+enum	_RegexParser.Block		case	halfwidthAndFullwidthForms
+enum	_RegexParser.Block		case	specials
+enum	_RegexParser.Block		case	linearBSyllabary
+enum	_RegexParser.Block		case	linearBIdeograms
+enum	_RegexParser.Block		case	aegeanNumbers
+enum	_RegexParser.Block		case	ancientGreekNumbers
+enum	_RegexParser.Block		case	ancientSymbols
+enum	_RegexParser.Block		case	phaistosDisc
+enum	_RegexParser.Block		case	lycian
+enum	_RegexParser.Block		case	carian
+enum	_RegexParser.Block		case	copticEpactNumbers
+enum	_RegexParser.Block		case	oldItalic
+enum	_RegexParser.Block		case	gothic
+enum	_RegexParser.Block		case	oldPermic
+enum	_RegexParser.Block		case	ugaritic
+enum	_RegexParser.Block		case	oldPersian
+enum	_RegexParser.Block		case	deseret
+enum	_RegexParser.Block		case	shavian
+enum	_RegexParser.Block		case	osmanya
+enum	_RegexParser.Block		case	osage
+enum	_RegexParser.Block		case	elbasan
+enum	_RegexParser.Block		case	caucasianAlbanian
+enum	_RegexParser.Block		case	vithkuqi
+enum	_RegexParser.Block		case	linearA
+enum	_RegexParser.Block		case	latinExtendedF
+enum	_RegexParser.Block		case	cypriotSyllabary
+enum	_RegexParser.Block		case	imperialAramaic
+enum	_RegexParser.Block		case	palmyrene
+enum	_RegexParser.Block		case	nabataean
+enum	_RegexParser.Block		case	hatran
+enum	_RegexParser.Block		case	phoenician
+enum	_RegexParser.Block		case	lydian
+enum	_RegexParser.Block		case	meroiticHieroglyphs
+enum	_RegexParser.Block		case	meroiticCursive
+enum	_RegexParser.Block		case	kharoshthi
+enum	_RegexParser.Block		case	oldSouthArabian
+enum	_RegexParser.Block		case	oldNorthArabian
+enum	_RegexParser.Block		case	manichaean
+enum	_RegexParser.Block		case	avestan
+enum	_RegexParser.Block		case	inscriptionalParthian
+enum	_RegexParser.Block		case	inscriptionalPahlavi
+enum	_RegexParser.Block		case	psalterPahlavi
+enum	_RegexParser.Block		case	oldTurkic
+enum	_RegexParser.Block		case	oldHungarian
+enum	_RegexParser.Block		case	hanifiRohingya
+enum	_RegexParser.Block		case	rumiNumeralSymbols
+enum	_RegexParser.Block		case	yezidi
+enum	_RegexParser.Block		case	oldSogdian
+enum	_RegexParser.Block		case	sogdian
+enum	_RegexParser.Block		case	oldUyghur
+enum	_RegexParser.Block		case	chorasmian
+enum	_RegexParser.Block		case	elymaic
+enum	_RegexParser.Block		case	brahmi
+enum	_RegexParser.Block		case	kaithi
+enum	_RegexParser.Block		case	soraSompeng
+enum	_RegexParser.Block		case	chakma
+enum	_RegexParser.Block		case	mahajani
+enum	_RegexParser.Block		case	sharada
+enum	_RegexParser.Block		case	sinhalaArchaicNumbers
+enum	_RegexParser.Block		case	khojki
+enum	_RegexParser.Block		case	multani
+enum	_RegexParser.Block		case	khudawadi
+enum	_RegexParser.Block		case	grantha
+enum	_RegexParser.Block		case	newa
+enum	_RegexParser.Block		case	tirhuta
+enum	_RegexParser.Block		case	siddham
+enum	_RegexParser.Block		case	modi
+enum	_RegexParser.Block		case	mongolianSupplement
+enum	_RegexParser.Block		case	takri
+enum	_RegexParser.Block		case	ahom
+enum	_RegexParser.Block		case	dogra
+enum	_RegexParser.Block		case	warangCiti
+enum	_RegexParser.Block		case	divesAkuru
+enum	_RegexParser.Block		case	nandinagari
+enum	_RegexParser.Block		case	zanabazarSquare
+enum	_RegexParser.Block		case	soyombo
+enum	_RegexParser.Block		case	unifiedCanadianAboriginalSyllabicsExtendedA
+enum	_RegexParser.Block		case	pauCinHau
+enum	_RegexParser.Block		case	bhaiksuki
+enum	_RegexParser.Block		case	marchen
+enum	_RegexParser.Block		case	masaramGondi
+enum	_RegexParser.Block		case	gunjalaGondi
+enum	_RegexParser.Block		case	makasar
+enum	_RegexParser.Block		case	lisuSupplement
+enum	_RegexParser.Block		case	tamilSupplement
+enum	_RegexParser.Block		case	cuneiform
+enum	_RegexParser.Block		case	cuneiformNumbersAndPunctuation
+enum	_RegexParser.Block		case	earlyDynasticCuneiform
+enum	_RegexParser.Block		case	cyproMinoan
+enum	_RegexParser.Block		case	egyptianHieroglyphs
+enum	_RegexParser.Block		case	egyptianHieroglyphFormatControls
+enum	_RegexParser.Block		case	anatolianHieroglyphs
+enum	_RegexParser.Block		case	bamumSupplement
+enum	_RegexParser.Block		case	mro
+enum	_RegexParser.Block		case	tangsa
+enum	_RegexParser.Block		case	bassaVah
+enum	_RegexParser.Block		case	pahawhHmong
+enum	_RegexParser.Block		case	medefaidrin
+enum	_RegexParser.Block		case	miao
+enum	_RegexParser.Block		case	ideographicSymbolsAndPunctuation
+enum	_RegexParser.Block		case	tangut
+enum	_RegexParser.Block		case	tangutComponents
+enum	_RegexParser.Block		case	khitanSmallScript
+enum	_RegexParser.Block		case	tangutSupplement
+enum	_RegexParser.Block		case	kanaExtendedB
+enum	_RegexParser.Block		case	kanaSupplement
+enum	_RegexParser.Block		case	kanaExtendedA
+enum	_RegexParser.Block		case	smallKanaExtension
+enum	_RegexParser.Block		case	nushu
+enum	_RegexParser.Block		case	duployan
+enum	_RegexParser.Block		case	shorthandFormatControls
+enum	_RegexParser.Block		case	znamennyMusicalNotation
+enum	_RegexParser.Block		case	byzantineMusicalSymbols
+enum	_RegexParser.Block		case	musicalSymbols
+enum	_RegexParser.Block		case	ancientGreekMusicalNotation
+enum	_RegexParser.Block		case	mayanNumerals
+enum	_RegexParser.Block		case	taiXuanJingSymbols
+enum	_RegexParser.Block		case	countingRodNumerals
+enum	_RegexParser.Block		case	mathematicalAlphanumericSymbols
+enum	_RegexParser.Block		case	suttonSignwriting
+enum	_RegexParser.Block		case	latinExtendedG
+enum	_RegexParser.Block		case	glagoliticSupplement
+enum	_RegexParser.Block		case	nyiakengPuachueHmong
+enum	_RegexParser.Block		case	toto
+enum	_RegexParser.Block		case	wancho
+enum	_RegexParser.Block		case	ethiopicExtendedB
+enum	_RegexParser.Block		case	mendeKikakui
+enum	_RegexParser.Block		case	adlam
+enum	_RegexParser.Block		case	indicSiyaqNumbers
+enum	_RegexParser.Block		case	ottomanSiyaqNumbers
+enum	_RegexParser.Block		case	arabicMathematicalAlphabeticSymbols
+enum	_RegexParser.Block		case	mahjongTiles
+enum	_RegexParser.Block		case	dominoTiles
+enum	_RegexParser.Block		case	playingCards
+enum	_RegexParser.Block		case	enclosedAlphanumericSupplement
+enum	_RegexParser.Block		case	enclosedIdeographicSupplement
+enum	_RegexParser.Block		case	miscellaneousSymbolsandPictographs
+enum	_RegexParser.Block		case	emoticons
+enum	_RegexParser.Block		case	ornamentalDingbats
+enum	_RegexParser.Block		case	transportAndMapSymbols
+enum	_RegexParser.Block		case	alchemicalSymbols
+enum	_RegexParser.Block		case	geometricShapesExtended
+enum	_RegexParser.Block		case	supplementalArrowsC
+enum	_RegexParser.Block		case	supplementalSymbolsAndPictographs
+enum	_RegexParser.Block		case	chessSymbols
+enum	_RegexParser.Block		case	symbolsAndPictographsExtendedA
+enum	_RegexParser.Block		case	symbolsForLegacyComputing
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionB
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionC
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionD
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionE
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionF
+enum	_RegexParser.Block		case	cjkCompatibilityIdeographsSupplement
+enum	_RegexParser.Block		case	cjkUnifiedIdeographsExtensionG
+enum	_RegexParser.Block		case	tags
+enum	_RegexParser.Block		case	variationSelectorsSupplement
+enum	_RegexParser.Block		case	supplementaryPrivateUseAreaA
+enum	_RegexParser.Block		case	supplementaryPrivateUseAreaB
+enum	_RegexParser.Block		case	noBlock
+enum	_RegexParser.TypeConstruction			
+enum	_RegexParser.ParseError			
+enum	_RegexParser.ParseError		case	numberOverflow
+enum	_RegexParser.ParseError		case	expectedNumDigits
+enum	_RegexParser.ParseError		case	expectedNumber
+enum	_RegexParser.ParseError		case	expected
+enum	_RegexParser.ParseError		case	misc
+enum	_RegexParser.ParseError		case	tooManyBranchesInConditional
+enum	_RegexParser.ParseError		case	unsupportedCondition
+enum	_RegexParser.ParseError		case	tooManyAbsentExpressionChildren
+enum	_RegexParser.ParseError		case	globalMatchingOptionNotAtStart
+enum	_RegexParser.ParseError		case	expectedASCII
+enum	_RegexParser.ParseError		case	invalidEscape
+enum	_RegexParser.ParseError		case	confusableCharacter
+enum	_RegexParser.ParseError		case	quantifierRequiresOperand
+enum	_RegexParser.ParseError		case	backtrackingDirectiveMustHaveName
+enum	_RegexParser.ParseError		case	unknownGroupKind
+enum	_RegexParser.ParseError		case	unknownCalloutKind
+enum	_RegexParser.ParseError		case	unknownTextSegmentMatchingOption
+enum	_RegexParser.ParseError		case	invalidMatchingOption
+enum	_RegexParser.ParseError		case	unknownProperty
+enum	_RegexParser.ParseError		case	unrecognizedScript
+enum	_RegexParser.ParseError		case	unrecognizedCategory
+enum	_RegexParser.ParseError		case	unrecognizedBlock
+enum	_RegexParser.ParseError		case	invalidAge
+enum	_RegexParser.ParseError		case	invalidNumericValue
+enum	_RegexParser.ParseError		case	unrecognizedNumericType
+enum	_RegexParser.ParseError		case	invalidCCC
+enum	_RegexParser.ParseError		case	expectedIdentifier
+enum	_RegexParser.ParseError		case	identifierMustBeAlphaNumeric
+enum	_RegexParser.ParseError		case	identifierCannotStartWithNumber
+enum	_RegexParser.ParseError		case	unsupported
+enum	_RegexParser.ParseError		case	deprecatedUnicode
+enum	_RegexParser.ParseError		case	invalidReference
+enum	_RegexParser.ParseError		case	invalidNamedReference
+enum	_RegexParser.ParseError		case	duplicateNamedCapture
+enum	_RegexParser.ParseError		case	invalidQuantifierRange
+enum	_RegexParser.ParseError		case	invalidCharacterRange
+enum	_RegexParser.ParseError		case	unexpectedEndOfInput
+enum	_RegexParser.ParseError		case	expectedNonEmptyContents
+enum	_RegexParser.ParseError		case	expectedEscape
+enum	_RegexParser.ParseError		case	quoteMayNotSpanMultipleLines
+enum	_RegexParser.ParseError		case	unsetExtendedSyntaxMayNotSpanMultipleLines
+enum	_RegexParser.ParseError		case	cannotReferToWholePattern
+enum	_RegexParser.ParseError		case	cannotRemoveMatchingOptionsAfterCaret
+enum	_RegexParser.ParseError		case	expectedCustomCharacterClassMembers
+enum	_RegexParser.ParseError		case	emptyProperty
+enum	_RegexParser.ParseError		case	expectedGroupSpecifier
+enum	_RegexParser.ParseError		case	unbalancedEndOfGroup
+enum	_RegexParser.ParseError		case	cannotRemoveTextSegmentOptions
+enum	_RegexParser.ParseError		case	cannotRemoveSemanticsOptions
+enum	_RegexParser.ParseError		case	cannotRemoveExtendedSyntaxInMultilineMode
+enum	_RegexParser.ParseError		case	cannotResetExtendedSyntaxInMultilineMode
+enum	_RegexParser.ParseError		case	expectedCalloutArgument
+enum	_RegexParser.ParseError		case	nestingTooDeep
+enum	_RegexParser.ParseError		case	invalidCharacterClassRangeOperand
+enum	_RegexParser.ParseError		case	unsupportedDotNetSubtraction
+enum	_RegexParser.ParseError		case	notQuantifiable
+enum	_RegexParser.Delimiter.Kind			
+enum	_RegexParser.Delimiter.Kind		case	forwardSlash
+enum	_RegexParser.Delimiter.Kind		case	experimental
+struct	_RegexParser.UnsafeSourceLocation			
+struct	_RegexParser.UnsafeSourceLocation		let	ptr
+struct	_RegexParser.Parser			
+struct	_RegexParser.Parser		var	src
+struct	_RegexParser.Parser		var	context
+struct	_RegexParser.Parser		var	diags
+struct	_RegexParser.Diagnostics.ErrorDiagnostic			
+struct	_RegexParser.Diagnostics.ErrorDiagnostic		var	diag
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Range<A	Swift.Comparable>		
+struct	Swift.Range<A	Swift.Comparable>	let	lowerBound
+struct	Swift.Range<A	Swift.Comparable>	let	upperBound
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+struct	_RegexParser.Source.Located			
+struct	_RegexParser.Source.Located		var	value
+struct	_RegexParser.Source.Located		var	location
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+enum	_RegexParser.CaptureStructure			
+enum	_RegexParser.CaptureStructure		case	atom
+enum	_RegexParser.CaptureStructure		case	optional
+enum	_RegexParser.CaptureStructure		case	tuple
+enum	_RegexParser.FatalParseError			
+enum	_RegexParser.FatalParseError		case	unreachable
+enum	_RegexParser.IdentifierKind			
+enum	_RegexParser.IdentifierKind		case	groupName
+enum	_RegexParser.IdentifierKind		case	onigurumaCalloutName
+enum	_RegexParser.IdentifierKind		case	onigurumaCalloutTag
+enum	_RegexParser.RadixKind			
+enum	_RegexParser.RadixKind		case	octal
+enum	_RegexParser.RadixKind		case	decimal
+enum	_RegexParser.RadixKind		case	hex
+struct	_RegexParser.ParsingContext			
+struct	_RegexParser.ParsingContext		var	isInCustomCharacterClass
+struct	_RegexParser.ParsingContext		var	priorGroupCount
+struct	_RegexParser.ParsingContext		var	usedGroupNames
+struct	_RegexParser.ParsingContext		var	parseDepth
+struct	_RegexParser.ParsingContext		var	syntax
+struct	_RegexParser.ParsingContext		var	newlineMode
+struct	_RegexParser.Source.Located			
+struct	_RegexParser.Source.Located		var	value
+struct	_RegexParser.Source.Located		var	location
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	_RegexParser.Source.Located			
+struct	_RegexParser.Source.Located		var	value
+struct	_RegexParser.Source.Located		var	location
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+enum	Swift.Optional<A	~Copyable & ~Escapable>		
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	some
+enum	Swift.Optional<A	~Copyable & ~Escapable>	case	none
+struct	Swift.Array			
+struct	Swift.Array		var	_buffer
+protocol	_RegexParser._ASTNode			
+protocol	_RegexParser._ASTParent			
+protocol	_RegexParser.LocatedErrorProtocol			
+protocol	_RegexParser._ASTPrintable			
+protocol	_RegexParser._TreeNode			
+protocol	conformance _RegexParser.AST	Swift.Hashable		
+protocol	conformance _RegexParser.AST	Swift.Equatable		
+protocol	conformance AST.Node	Swift.Hashable		
+protocol	conformance AST.Node	_RegexParser._TreeNode		
+protocol	conformance AST.Node	Swift.Equatable		
+protocol	conformance AST.Alternation	Swift.Hashable		
+protocol	conformance AST.Alternation	_RegexParser._ASTNode		
+protocol	conformance AST.Alternation	Swift.Equatable		
+protocol	conformance AST.Alternation	_RegexParser._ASTPrintable		
+protocol	conformance AST.Alternation	Swift.CustomStringConvertible		
+protocol	conformance AST.Alternation	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Concatenation	Swift.Hashable		
+protocol	conformance AST.Concatenation	_RegexParser._ASTNode		
+protocol	conformance AST.Concatenation	Swift.Equatable		
+protocol	conformance AST.Concatenation	_RegexParser._ASTPrintable		
+protocol	conformance AST.Concatenation	Swift.CustomStringConvertible		
+protocol	conformance AST.Concatenation	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Quote	Swift.Hashable		
+protocol	conformance AST.Quote	_RegexParser._ASTNode		
+protocol	conformance AST.Quote	Swift.Equatable		
+protocol	conformance AST.Quote	_RegexParser._ASTPrintable		
+protocol	conformance AST.Quote	Swift.CustomStringConvertible		
+protocol	conformance AST.Quote	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Trivia	Swift.Hashable		
+protocol	conformance AST.Trivia	_RegexParser._ASTNode		
+protocol	conformance AST.Trivia	Swift.Equatable		
+protocol	conformance AST.Trivia	_RegexParser._ASTPrintable		
+protocol	conformance AST.Trivia	Swift.CustomStringConvertible		
+protocol	conformance AST.Trivia	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Interpolation	Swift.Hashable		
+protocol	conformance AST.Interpolation	_RegexParser._ASTNode		
+protocol	conformance AST.Interpolation	Swift.Equatable		
+protocol	conformance AST.Interpolation	_RegexParser._ASTPrintable		
+protocol	conformance AST.Interpolation	Swift.CustomStringConvertible		
+protocol	conformance AST.Interpolation	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Empty	Swift.Hashable		
+protocol	conformance AST.Empty	_RegexParser._ASTNode		
+protocol	conformance AST.Empty	Swift.Equatable		
+protocol	conformance AST.Empty	_RegexParser._ASTPrintable		
+protocol	conformance AST.Empty	Swift.CustomStringConvertible		
+protocol	conformance AST.Empty	Swift.CustomDebugStringConvertible		
+protocol	conformance AbsentFunction.Start	Swift.Equatable		
+protocol	conformance AbsentFunction.Start	Swift.Hashable		
+protocol	conformance AbsentFunction.Kind	Swift.Hashable		
+protocol	conformance AbsentFunction.Kind	Swift.Equatable		
+protocol	conformance AST.AbsentFunction	Swift.Hashable		
+protocol	conformance AST.AbsentFunction	_RegexParser._ASTNode		
+protocol	conformance AST.AbsentFunction	Swift.Equatable		
+protocol	conformance AST.AbsentFunction	_RegexParser._ASTPrintable		
+protocol	conformance AST.AbsentFunction	Swift.CustomStringConvertible		
+protocol	conformance AST.AbsentFunction	Swift.CustomDebugStringConvertible		
+protocol	conformance Reference.Kind	Swift.Hashable		
+protocol	conformance Reference.Kind	Swift.Equatable		
+protocol	conformance AST.Reference	Swift.Hashable		
+protocol	conformance AST.Reference	Swift.Equatable		
+protocol	conformance AST.GlobalMatchingOptionSequence	Swift.Hashable		
+protocol	conformance AST.GlobalMatchingOptionSequence	Swift.Equatable		
+protocol	conformance AST.Concatenation	_RegexParser._ASTParent		
+protocol	conformance AST.Alternation	_RegexParser._ASTParent		
+protocol	conformance AST.Group	_RegexParser._ASTParent		
+protocol	conformance AST.Group	_RegexParser._ASTNode		
+protocol	conformance AST.Quantification	_RegexParser._ASTParent		
+protocol	conformance AST.Quantification	_RegexParser._ASTNode		
+protocol	conformance AST.AbsentFunction	_RegexParser._ASTParent		
+protocol	conformance Atom.Kind	Swift.Hashable		
+protocol	conformance Atom.Kind	Swift.Equatable		
+protocol	conformance AST.Atom	Swift.Hashable		
+protocol	conformance AST.Atom	_RegexParser._ASTNode		
+protocol	conformance AST.Atom	Swift.Equatable		
+protocol	conformance AST.Atom	_RegexParser._ASTPrintable		
+protocol	conformance AST.Atom	Swift.CustomStringConvertible		
+protocol	conformance AST.Atom	Swift.CustomDebugStringConvertible		
+protocol	conformance Atom.Number	Swift.Hashable		
+protocol	conformance Atom.Number	Swift.Equatable		
+protocol	conformance Atom.Scalar	Swift.Hashable		
+protocol	conformance Atom.Scalar	Swift.Equatable		
+protocol	conformance Atom.ScalarSequence	Swift.Hashable		
+protocol	conformance Atom.ScalarSequence	Swift.Equatable		
+protocol	conformance Atom.EscapedBuiltin	Swift.Equatable		
+protocol	conformance Atom.EscapedBuiltin	Swift.Hashable		
+protocol	conformance Atom.CharacterProperty	Swift.Hashable		
+protocol	conformance Atom.CharacterProperty	Swift.Equatable		
+protocol	conformance Kind.MapKind	Swift.Equatable		
+protocol	conformance Kind.MapKind	Swift.Hashable		
+protocol	conformance CharacterProperty.Kind	Swift.Hashable		
+protocol	conformance CharacterProperty.Kind	Swift.Equatable		
+protocol	conformance CharacterProperty.PCRESpecialCategory	Swift.Equatable		
+protocol	conformance CharacterProperty.PCRESpecialCategory	Swift.RawRepresentable		
+protocol	conformance CharacterProperty.PCRESpecialCategory	Swift.Hashable		
+protocol	conformance CharacterProperty.JavaSpecial	Swift.Equatable		
+protocol	conformance CharacterProperty.JavaSpecial	Swift.RawRepresentable		
+protocol	conformance CharacterProperty.JavaSpecial	Swift.Hashable		
+protocol	conformance CharacterProperty.JavaSpecial	Swift.CaseIterable		
+protocol	conformance PCRE.Argument	Swift.Hashable		
+protocol	conformance PCRE.Argument	Swift.Equatable		
+protocol	conformance Callout.PCRE	Swift.Hashable		
+protocol	conformance Callout.PCRE	Swift.Equatable		
+protocol	conformance OnigurumaNamed.ArgList	Swift.Hashable		
+protocol	conformance OnigurumaNamed.ArgList	Swift.Equatable		
+protocol	conformance Callout.OnigurumaNamed	Swift.Hashable		
+protocol	conformance Callout.OnigurumaNamed	Swift.Equatable		
+protocol	conformance OnigurumaOfContents.Direction	Swift.Equatable		
+protocol	conformance OnigurumaOfContents.Direction	Swift.Hashable		
+protocol	conformance Callout.OnigurumaOfContents	Swift.Hashable		
+protocol	conformance Callout.OnigurumaOfContents	Swift.Equatable		
+protocol	conformance Atom.Callout	Swift.Hashable		
+protocol	conformance Atom.Callout	Swift.Equatable		
+protocol	conformance Callout.OnigurumaTag	Swift.Hashable		
+protocol	conformance Callout.OnigurumaTag	Swift.Equatable		
+protocol	conformance BacktrackingDirective.Kind	Swift.Equatable		
+protocol	conformance BacktrackingDirective.Kind	Swift.Hashable		
+protocol	conformance Atom.BacktrackingDirective	Swift.Hashable		
+protocol	conformance Atom.BacktrackingDirective	Swift.Equatable		
+protocol	conformance AST.Conditional	Swift.Hashable		
+protocol	conformance AST.Conditional	_RegexParser._ASTNode		
+protocol	conformance AST.Conditional	Swift.Equatable		
+protocol	conformance AST.Conditional	_RegexParser._ASTPrintable		
+protocol	conformance AST.Conditional	Swift.CustomStringConvertible		
+protocol	conformance AST.Conditional	Swift.CustomDebugStringConvertible		
+protocol	conformance Condition.Kind	Swift.Hashable		
+protocol	conformance Condition.Kind	Swift.Equatable		
+protocol	conformance Conditional.Condition	Swift.Hashable		
+protocol	conformance Conditional.Condition	Swift.Equatable		
+protocol	conformance Condition.PCREVersionNumber	Swift.Hashable		
+protocol	conformance Condition.PCREVersionNumber	Swift.Equatable		
+protocol	conformance PCREVersionCheck.Kind	Swift.Equatable		
+protocol	conformance PCREVersionCheck.Kind	Swift.Hashable		
+protocol	conformance Condition.PCREVersionCheck	Swift.Hashable		
+protocol	conformance Condition.PCREVersionCheck	Swift.Equatable		
+protocol	conformance CustomCharacterClass.Member	Swift.Hashable		
+protocol	conformance CustomCharacterClass.Member	Swift.Equatable		
+protocol	conformance CustomCharacterClass.Range	Swift.Hashable		
+protocol	conformance CustomCharacterClass.Range	Swift.Equatable		
+protocol	conformance CustomCharacterClass.SetOp	Swift.Equatable		
+protocol	conformance CustomCharacterClass.SetOp	Swift.RawRepresentable		
+protocol	conformance CustomCharacterClass.SetOp	Swift.Hashable		
+protocol	conformance CustomCharacterClass.Start	Swift.Equatable		
+protocol	conformance CustomCharacterClass.Start	Swift.RawRepresentable		
+protocol	conformance CustomCharacterClass.Start	Swift.Hashable		
+protocol	conformance AST.CustomCharacterClass	Swift.Hashable		
+protocol	conformance AST.CustomCharacterClass	Swift.Equatable		
+protocol	conformance Group.Kind	Swift.Hashable		
+protocol	conformance Group.Kind	Swift.Equatable		
+protocol	conformance AST.Group	Swift.Hashable		
+protocol	conformance AST.Group	Swift.Equatable		
+protocol	conformance Group.BalancedCapture	Swift.Hashable		
+protocol	conformance Group.BalancedCapture	Swift.Equatable		
+protocol	conformance MatchingOption.Kind	Swift.Equatable		
+protocol	conformance MatchingOption.Kind	Swift.Hashable		
+protocol	conformance AST.MatchingOption	Swift.Hashable		
+protocol	conformance AST.MatchingOption	Swift.Equatable		
+protocol	conformance AST.MatchingOptionSequence	Swift.Hashable		
+protocol	conformance AST.MatchingOptionSequence	Swift.Equatable		
+protocol	conformance AST.MatchingOption	_RegexParser._ASTPrintable		
+protocol	conformance AST.MatchingOption	Swift.CustomStringConvertible		
+protocol	conformance AST.MatchingOption	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.MatchingOptionSequence	_RegexParser._ASTPrintable		
+protocol	conformance AST.MatchingOptionSequence	Swift.CustomStringConvertible		
+protocol	conformance AST.MatchingOptionSequence	Swift.CustomDebugStringConvertible		
+protocol	conformance GlobalMatchingOption.NewlineMatching	Swift.Equatable		
+protocol	conformance GlobalMatchingOption.NewlineMatching	Swift.Hashable		
+protocol	conformance GlobalMatchingOption.NewlineSequenceMatching	Swift.Equatable		
+protocol	conformance GlobalMatchingOption.NewlineSequenceMatching	Swift.Hashable		
+protocol	conformance GlobalMatchingOption.Kind	Swift.Hashable		
+protocol	conformance GlobalMatchingOption.Kind	Swift.Equatable		
+protocol	conformance AST.GlobalMatchingOption	_RegexParser._ASTNode		
+protocol	conformance AST.GlobalMatchingOption	Swift.Hashable		
+protocol	conformance AST.GlobalMatchingOption	Swift.Equatable		
+protocol	conformance Quantification.Amount	Swift.Hashable		
+protocol	conformance Quantification.Amount	Swift.Equatable		
+protocol	conformance Quantification.Kind	Swift.Equatable		
+protocol	conformance Quantification.Kind	Swift.RawRepresentable		
+protocol	conformance Quantification.Kind	Swift.Hashable		
+protocol	conformance AST.Quantification	Swift.Hashable		
+protocol	conformance AST.Quantification	Swift.Equatable		
+protocol	conformance CaptureList.Capture	Swift.Equatable		
+protocol	conformance _RegexParser.CaptureList	Swift.Equatable		
+protocol	conformance CaptureList.Capture	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.CaptureList	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.CaptureList	Swift.ExpressibleByArrayLiteral		
+protocol	conformance _RegexParser.CompilerLexError	Swift.Error		
+protocol	conformance _RegexParser.CompilerParseError	Swift.Error		
+protocol	conformance _RegexParser.Delimiter	Swift.Hashable		
+protocol	conformance _RegexParser.Delimiter	Swift.Equatable		
+protocol	conformance DelimiterLexError.Kind	Swift.Equatable		
+protocol	conformance DelimiterLexError.Kind	Swift.Hashable		
+protocol	conformance _RegexParser.DelimiterLexError	Swift.Error		
+protocol	conformance _RegexParser.DelimiterLexError	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.Diagnostic	Swift.Hashable		
+protocol	conformance _RegexParser.Diagnostic	Swift.Equatable		
+protocol	conformance Diagnostic.Behavior	Swift.Equatable		
+protocol	conformance Diagnostic.Behavior	Swift.Hashable		
+protocol	conformance _RegexParser.Diagnostics	Swift.Hashable		
+protocol	conformance _RegexParser.Diagnostics	Swift.Equatable		
+protocol	conformance Source.Location	Swift.Hashable		
+protocol	conformance Source.Location	Swift.Equatable		
+protocol	conformance Source.LocatedError	Swift.Error		
+protocol	conformance Source.LocatedError	_RegexParser.LocatedErrorProtocol		
+protocol	conformance Source.Located	Swift.Equatable		
+protocol	conformance Source.Located	Swift.Hashable		
+protocol	conformance Source.LocatedError	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.SyntaxOptions	Swift.OptionSet		
+protocol	conformance _RegexParser.SyntaxOptions	Swift.SetAlgebra		
+protocol	conformance _RegexParser.SyntaxOptions	Swift.RawRepresentable		
+protocol	conformance _RegexParser.SyntaxOptions	Swift.Equatable		
+protocol	conformance _RegexParser.SyntaxOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance _RegexParser.AST	_RegexParser._ASTPrintable		
+protocol	conformance _RegexParser.AST	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.AST	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Node	_RegexParser._ASTPrintable		
+protocol	conformance AST.Node	Swift.CustomStringConvertible		
+protocol	conformance AST.Node	Swift.CustomDebugStringConvertible		
+protocol	conformance Conditional.Condition	_RegexParser._ASTPrintable		
+protocol	conformance Conditional.Condition	Swift.CustomStringConvertible		
+protocol	conformance Conditional.Condition	Swift.CustomDebugStringConvertible		
+protocol	conformance PCREVersionCheck.Kind	_RegexParser._ASTPrintable		
+protocol	conformance PCREVersionCheck.Kind	Swift.CustomStringConvertible		
+protocol	conformance PCREVersionCheck.Kind	Swift.CustomDebugStringConvertible		
+protocol	conformance Condition.PCREVersionNumber	_RegexParser._ASTPrintable		
+protocol	conformance Condition.PCREVersionNumber	Swift.CustomStringConvertible		
+protocol	conformance Condition.PCREVersionNumber	Swift.CustomDebugStringConvertible		
+protocol	conformance Condition.PCREVersionCheck	_RegexParser._ASTPrintable		
+protocol	conformance Condition.PCREVersionCheck	Swift.CustomStringConvertible		
+protocol	conformance Condition.PCREVersionCheck	Swift.CustomDebugStringConvertible		
+protocol	conformance Atom.Number	_RegexParser._ASTPrintable		
+protocol	conformance Atom.Number	Swift.CustomStringConvertible		
+protocol	conformance Atom.Number	Swift.CustomDebugStringConvertible		
+protocol	conformance Atom.Callout	_RegexParser._ASTPrintable		
+protocol	conformance Atom.Callout	Swift.CustomStringConvertible		
+protocol	conformance Atom.Callout	Swift.CustomDebugStringConvertible		
+protocol	conformance Callout.PCRE	_RegexParser._ASTPrintable		
+protocol	conformance Callout.PCRE	Swift.CustomStringConvertible		
+protocol	conformance Callout.PCRE	Swift.CustomDebugStringConvertible		
+protocol	conformance Callout.OnigurumaTag	_RegexParser._ASTPrintable		
+protocol	conformance Callout.OnigurumaTag	Swift.CustomStringConvertible		
+protocol	conformance Callout.OnigurumaTag	Swift.CustomDebugStringConvertible		
+protocol	conformance OnigurumaNamed.ArgList	_RegexParser._ASTPrintable		
+protocol	conformance OnigurumaNamed.ArgList	Swift.CustomStringConvertible		
+protocol	conformance OnigurumaNamed.ArgList	Swift.CustomDebugStringConvertible		
+protocol	conformance Callout.OnigurumaNamed	_RegexParser._ASTPrintable		
+protocol	conformance Callout.OnigurumaNamed	Swift.CustomStringConvertible		
+protocol	conformance Callout.OnigurumaNamed	Swift.CustomDebugStringConvertible		
+protocol	conformance Callout.OnigurumaOfContents	_RegexParser._ASTPrintable		
+protocol	conformance Callout.OnigurumaOfContents	Swift.CustomStringConvertible		
+protocol	conformance Callout.OnigurumaOfContents	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Reference	_RegexParser._ASTPrintable		
+protocol	conformance AST.Reference	Swift.CustomStringConvertible		
+protocol	conformance AST.Reference	Swift.CustomDebugStringConvertible		
+protocol	conformance Group.Kind	_RegexParser._ASTPrintable		
+protocol	conformance Group.Kind	Swift.CustomStringConvertible		
+protocol	conformance Group.Kind	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Group	_RegexParser._ASTPrintable		
+protocol	conformance AST.Group	Swift.CustomStringConvertible		
+protocol	conformance AST.Group	Swift.CustomDebugStringConvertible		
+protocol	conformance Quantification.Amount	_RegexParser._ASTPrintable		
+protocol	conformance Quantification.Amount	Swift.CustomStringConvertible		
+protocol	conformance Quantification.Amount	Swift.CustomDebugStringConvertible		
+protocol	conformance Quantification.Kind	_RegexParser._ASTPrintable		
+protocol	conformance Quantification.Kind	Swift.CustomStringConvertible		
+protocol	conformance Quantification.Kind	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.Quantification	_RegexParser._ASTPrintable		
+protocol	conformance AST.Quantification	Swift.CustomStringConvertible		
+protocol	conformance AST.Quantification	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.CustomCharacterClass	_RegexParser._ASTNode		
+protocol	conformance AST.CustomCharacterClass	_RegexParser._ASTPrintable		
+protocol	conformance AST.CustomCharacterClass	Swift.CustomStringConvertible		
+protocol	conformance AST.CustomCharacterClass	Swift.CustomDebugStringConvertible		
+protocol	conformance CustomCharacterClass.Member	_RegexParser._ASTPrintable		
+protocol	conformance CustomCharacterClass.Member	Swift.CustomStringConvertible		
+protocol	conformance CustomCharacterClass.Member	Swift.CustomDebugStringConvertible		
+protocol	conformance CustomCharacterClass.Range	_RegexParser._ASTPrintable		
+protocol	conformance CustomCharacterClass.Range	Swift.CustomStringConvertible		
+protocol	conformance CustomCharacterClass.Range	Swift.CustomDebugStringConvertible		
+protocol	conformance Atom.BacktrackingDirective	_RegexParser._ASTPrintable		
+protocol	conformance Atom.BacktrackingDirective	Swift.CustomStringConvertible		
+protocol	conformance Atom.BacktrackingDirective	Swift.CustomDebugStringConvertible		
+protocol	conformance Group.BalancedCapture	_RegexParser._ASTPrintable		
+protocol	conformance Group.BalancedCapture	Swift.CustomStringConvertible		
+protocol	conformance Group.BalancedCapture	Swift.CustomDebugStringConvertible		
+protocol	conformance GlobalMatchingOption.Kind	_RegexParser._ASTPrintable		
+protocol	conformance GlobalMatchingOption.Kind	Swift.CustomStringConvertible		
+protocol	conformance GlobalMatchingOption.Kind	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.GlobalMatchingOption	_RegexParser._ASTPrintable		
+protocol	conformance AST.GlobalMatchingOption	Swift.CustomStringConvertible		
+protocol	conformance AST.GlobalMatchingOption	Swift.CustomDebugStringConvertible		
+protocol	conformance AST.GlobalMatchingOptionSequence	_RegexParser._ASTPrintable		
+protocol	conformance AST.GlobalMatchingOptionSequence	Swift.CustomStringConvertible		
+protocol	conformance AST.GlobalMatchingOptionSequence	Swift.CustomDebugStringConvertible		
+protocol	conformance AllScalars	Swift.RandomAccessCollection		
+protocol	conformance AllScalars	Swift.BidirectionalCollection		
+protocol	conformance AllScalars	Swift.Collection		
+protocol	conformance AllScalars	Swift.Sequence		
+protocol	conformance _RegexParser.Unsupported	Swift.Error		
+protocol	conformance _RegexParser.Unsupported	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.Unreachable	Swift.Error		
+protocol	conformance _RegexParser.Unreachable	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.AnyType	Swift.Hashable		
+protocol	conformance _RegexParser.AnyType	Swift.Equatable		
+protocol	conformance Script	Swift.Equatable		
+protocol	conformance Script	Swift.RawRepresentable		
+protocol	conformance Script	Swift.Hashable		
+protocol	conformance Script	Swift.CaseIterable		
+protocol	conformance POSIXProperty	Swift.Equatable		
+protocol	conformance POSIXProperty	Swift.RawRepresentable		
+protocol	conformance POSIXProperty	Swift.Hashable		
+protocol	conformance POSIXProperty	Swift.CaseIterable		
+protocol	conformance ExtendedGeneralCategory	Swift.Equatable		
+protocol	conformance ExtendedGeneralCategory	Swift.RawRepresentable		
+protocol	conformance ExtendedGeneralCategory	Swift.Hashable		
+protocol	conformance ExtendedGeneralCategory	Swift.CaseIterable		
+protocol	conformance BinaryProperty	Swift.Equatable		
+protocol	conformance BinaryProperty	Swift.RawRepresentable		
+protocol	conformance BinaryProperty	Swift.Hashable		
+protocol	conformance BinaryProperty	Swift.CaseIterable		
+protocol	conformance Block	Swift.Equatable		
+protocol	conformance Block	Swift.RawRepresentable		
+protocol	conformance Block	Swift.Hashable		
+protocol	conformance Block	Swift.CaseIterable		
+protocol	conformance ErrorDiagnostic	Swift.CustomStringConvertible		
+protocol	conformance ErrorDiagnostic	Swift.Error		
+protocol	conformance Delimiter.Kind	Swift.CaseIterable		
+protocol	conformance Delimiter.Kind	Swift.Hashable		
+protocol	conformance Delimiter.Kind	Swift.Equatable		
+protocol	conformance _RegexParser.ParseError	Swift.Equatable		
+protocol	conformance _RegexParser.ParseError	Swift.Hashable		
+protocol	conformance _RegexParser.ParseError	Swift.Error		
+protocol	conformance _RegexParser.FatalParseError	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.ParseError	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.CaptureStructure	Swift.CustomStringConvertible		
+protocol	conformance _RegexParser.RadixKind	Swift.Hashable		
+protocol	conformance _RegexParser.RadixKind	Swift.Equatable		
+protocol	conformance _RegexParser.IdentifierKind	Swift.Hashable		
+protocol	conformance _RegexParser.IdentifierKind	Swift.Equatable		
+protocol	conformance _RegexParser.FatalParseError	Swift.Equatable		
+protocol	conformance _RegexParser.FatalParseError	Swift.Error		
+protocol	conformance _RegexParser.FatalParseError	Swift.Hashable		
+protocol	conformance _RegexParser.CaptureStructure	Swift.Equatable		
+extension	_RegexParser.AST.Atom.CharacterProperty.PCRESpecialCategory	RawRepresentable		
+extension	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial	RawRepresentable		
+extension	_RegexParser.AST.Atom.CharacterProperty.JavaSpecial	CaseIterable		
+extension	_RegexParser.AST.CustomCharacterClass.SetOp	RawRepresentable		
+extension	_RegexParser.AST.CustomCharacterClass.Start	RawRepresentable		
+extension	_RegexParser.AST.Quantification.Kind	RawRepresentable		
+extension	_RegexParser.CaptureList	ExpressibleByArrayLiteral		
+extension	_RegexParser.SyntaxOptions	OptionSet		
+extension	_RegexParser.SyntaxOptions	SetAlgebra		
+extension	_RegexParser.SyntaxOptions	RawRepresentable		
+extension	_RegexParser.SyntaxOptions	ExpressibleByArrayLiteral		
+extension	_RegexParser.AllScalars	RandomAccessCollection		
+extension	_RegexParser.AllScalars	BidirectionalCollection		
+extension	_RegexParser.AllScalars	Collection		
+extension	_RegexParser.AllScalars	Sequence		
+extension	_RegexParser.Script	RawRepresentable		
+extension	_RegexParser.Script	CaseIterable		
+extension	_RegexParser.POSIXProperty	RawRepresentable		
+extension	_RegexParser.POSIXProperty	CaseIterable		
+extension	_RegexParser.ExtendedGeneralCategory	RawRepresentable		
+extension	_RegexParser.ExtendedGeneralCategory	CaseIterable		
+extension	_RegexParser.BinaryProperty	RawRepresentable		
+extension	_RegexParser.BinaryProperty	CaseIterable		
+extension	_RegexParser.Block	RawRepresentable		
+extension	_RegexParser.Block	CaseIterable		
+extension	_RegexParser.Delimiter.Kind	CaseIterable		

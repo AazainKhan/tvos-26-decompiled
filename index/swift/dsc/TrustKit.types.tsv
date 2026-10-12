@@ -1,0 +1,618 @@
+kind	type	conformance	member_kind	member
+enum	TrustKit.Fail			
+enum	TrustKit.Fail		case	invalidInput
+enum	TrustKit.Fail		case	networkFailure
+enum	TrustKit.Fail		case	operationFailed
+enum	TrustKit.Fail		case	cloudKitFailure
+enum	TrustKit.Fail		case	logicGraphInvalidResponse
+enum	TrustKit.Fail		case	logicGraphExecutionFailure
+enum	TrustKit.Fail		case	assetLoadFailure
+enum	TrustKit.Fail		case	uafAssetSubscriptionFailure
+enum	TrustKit.Fail		case	uafAssetRetrievalFailure
+enum	TrustKit.Fail		case	ckMustBackOffFailure
+enum	TrustKit.Fail		case	ckRecordFailure
+enum	TrustKit.Fail		case	sqliteFailure
+enum	TrustKit.Fail		case	signatureAnalysisFailure
+enum	TrustKit.Fail		case	senderLookUpFailure
+enum	TrustKit.Fail		case	insufficientlyPrepared
+enum	TrustKit.Fail		case	attestationFailure
+enum	TrustKit.Fail		case	featureDisabled
+enum	TrustKit.Fail		case	tkMustBackOffFailure
+enum	TrustKit.Fail		case	senderLookUpFailureNS_1001
+enum	TrustKit.Fail		case	senderLookUpFailureNS_1003
+enum	TrustKit.Fail		case	senderLookUpFailureNS_1004
+enum	TrustKit.Fail		case	senderLookupFailureNS_1009
+enum	TrustKit.Fail		case	senderLookupFailureNS_Other
+enum	TrustKit.Fail		case	senderLookupFailureServerError
+enum	TrustKit.Fail		case	senderLookupFailureNWManagerError
+enum	TrustKit.Fail		case	senderLookupFailureMissingConfig
+enum	TrustKit.Fail		case	senderLookUpFailureOtherCMLError
+enum	TrustKit.Fail		case	senderLookUpFailureXPCInterrupted
+enum	TrustKit.Fail		case	senderLookUpFailureOtherCocoaDomain
+enum	TrustKit.Fail		case	textRecognitionFail
+enum	TrustKit.Fail		case	backgroundActivityExpirationFail
+class	TrustKit.BackgroundActivityManager			
+class	TrustKit.BackgroundActivityManager		let	logger
+class	TrustKit.NetworkManager<A	TrustKit.NetworkOperation>		
+class	TrustKit.NetworkManager<A	TrustKit.NetworkOperation>	let	handler
+class	TrustKit.NetworkManager<A	TrustKit.NetworkOperation>	let	logger
+class	TrustKit.TKReportService			
+class	TrustKit.TKReportService		var	customServerClient
+class	TrustKit.TKReportService		let	reportNetworkManager
+class	TrustKit.TKReportService		let	attestationManager
+class	TrustKit.TKReportService		let	logger
+enum	TrustKit.TKReportService.TKReportType			
+enum	TrustKit.TKReportService.TKReportType		case	junk
+enum	TrustKit.TKReportService.TKReportType		case	notJunk
+enum	TrustKit.TKReportService.TKReportType		case	unknown
+class	TrustKit.ClientAnalyticsManager			
+class	TrustKit.ClientAnalyticsManager		let	logger
+class	TrustKit.ClientAnalyticsManager		let	eligibilityManager
+enum	TrustKit.ClientAnalyticsManager.Event			
+enum	TrustKit.ClientAnalyticsManager.Event		case	createRecord
+enum	TrustKit.ClientAnalyticsManager.Event		case	fetchEncryptionKey
+enum	TrustKit.ClientAnalyticsManager.Event		case	upload
+enum	TrustKit.ClientAnalyticsManager.Event		case	prepare
+enum	TrustKit.ClientAnalyticsManager.Event		case	inference
+class	TrustKit.SpamDecisioningManager			
+class	TrustKit.SpamDecisioningManager		let	signatureAnalysisDecisioningComponentProvider
+class	TrustKit.SpamDecisioningManager		var	lazy
+class	TrustKit.SpamDecisioningManager		let	analyticsManager
+class	TrustKit.SpamDecisioningManager		let	signpostsManager
+class	TrustKit.SpamDecisioningManager		let	logger
+struct	TrustKit.CKSignature			
+struct	TrustKit.CKSignature		let	name
+struct	TrustKit.CKSignature		let	signatureId
+struct	TrustKit.CKSignature		let	signature
+struct	TrustKit.CKSignature		let	threshold
+struct	TrustKit.CKSignature		let	metadata
+struct	TrustKit.CKSignature		let	zoneName
+struct	TrustKit.CKSignature		let	modificationDate
+enum	TrustKit.CKSignature.CodingKeys			
+enum	TrustKit.CKSignature.CodingKeys		case	name
+enum	TrustKit.CKSignature.CodingKeys		case	signatureId
+enum	TrustKit.CKSignature.CodingKeys		case	signature
+enum	TrustKit.CKSignature.CodingKeys		case	threshold
+enum	TrustKit.CKSignature.CodingKeys		case	metadata
+enum	TrustKit.CKSignature.CodingKeys		case	zoneName
+enum	TrustKit.CKSignature.CodingKeys		case	modificationDate
+class	TrustKit.TKDebugUIService			
+class	TrustKit.TKDebugUIService		var	customServerClient
+class	TrustKit.TKDebugUIService		let	analyticsManager
+class	TrustKit.TKDebugUIService		let	logger
+struct	TrustKit.TKDebugUIService.TKPillBannerContext			
+struct	TrustKit.TKDebugUIService.TKPillBannerContext		let	title
+struct	TrustKit.TKDebugUIService.TKPillBannerContext		let	subtitle
+struct	TrustKit.ReportingAsset			
+struct	TrustKit.ReportingAsset		let	assetInfo
+struct	TrustKit.ReportingAsset		let	configuration
+struct	TrustKit.ReportingAsset		let	logger
+class	TrustKit.ServerClient	NSObject		
+class	TrustKit.ServerClient	NSObject	let	connection
+class	TrustKit.ServerClient	NSObject	let	logger
+class	TrustKit.AttestationManager			
+class	TrustKit.AttestationManager		let	options
+class	TrustKit.AttestationManager		let	logger
+class	TrustKit.MobileAssetManager			
+class	TrustKit.MobileAssetManager		let	configuration
+class	TrustKit.MobileAssetManager		var	autoAsset
+class	TrustKit.MobileAssetManager		let	logger
+struct	TrustKit.MobileAssetManager.AssetConfiguration			
+struct	TrustKit.MobileAssetManager.AssetConfiguration		let	assetType
+struct	TrustKit.MobileAssetManager.AssetConfiguration		let	assetSpecifier
+class	TrustKit.RecordZonesAsset			
+class	TrustKit.RecordZonesAsset		let	recordZones
+class	TrustKit.RecordZonesAsset		let	logger
+class	TrustKit.NotificationBackgroundActivity			
+class	TrustKit.NotificationBackgroundActivity		let	fallbackActivityInterval
+class	TrustKit.NotificationBackgroundActivity		let	fallbackActivityDelay
+class	TrustKit.NotificationBackgroundActivity		var	lazy
+class	TrustKit.NotificationBackgroundActivity		let	logger
+class	TrustKit.TKDecisioningService			
+class	TrustKit.TKDecisioningService		var	customServerClient
+class	TrustKit.TKDecisioningService		let	analyticsManager
+class	TrustKit.TKDecisioningService		let	signpostsManager
+class	TrustKit.TKDecisioningService		let	timeout
+class	TrustKit.TKDecisioningService		let	logger
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput			
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	origin
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	sender
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	messageBody
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	receiverISOCountryCode
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	attachments
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	trustIndicator
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	messageType
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	inferenceType
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	conversationState
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	decisionInfo
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningInput		let	isChatBot
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.MessageType			
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.MessageType		case	otp
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.InferenceType			
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.InferenceType		case	arrival
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.InferenceType		case	read
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.InferenceType		case	delayed
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.ConversationState			
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.ConversationState		case	alreadyInSpam
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningInput.ConversationState		case	revokedFromSpam
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput			
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	origin
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	sender
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	receiverISOCountryCode
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	fileURL
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	inferenceType
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	conversationState
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	decisionInfo
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	trustIndicator
+struct	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput		let	isChatBot
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.InferenceType			
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.InferenceType		case	arrival
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.InferenceType		case	read
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.InferenceType		case	delayed
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.ConversationState			
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.ConversationState		case	alreadyInSpam
+enum	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.ConversationState		case	revokedFromSpam
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningOutput			
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningOutput		let	decision
+struct	TrustKit.TKDecisioningService.TKSpamDecisioningOutput		let	decisionInfo
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningOutput.TKSpamClassification			
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningOutput.TKSpamClassification		case	spam
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningOutput.TKSpamClassification		case	notSpam
+enum	TrustKit.TKDecisioningService.TKSpamDecisioningOutput.TKSpamClassification		case	warn
+class	TrustKit.SignpostsManager			
+class	TrustKit.SignpostsManager		var	signpostsMap
+class	TrustKit.SignpostsManager		let	signposter
+class	TrustKit.SignpostsManager		let	logger
+struct	TrustKit.SignpostsManager.SignpostState			
+struct	TrustKit.SignpostsManager.SignpostState		let	signpostID
+struct	TrustKit.SignpostsManager.SignpostState		var	signpostState
+class	TrustKit.TKRecordService			
+class	TrustKit.SignatureAnalysisDecisioningComponent			
+class	TrustKit.SignatureAnalysisDecisioningComponent		let	provider
+class	TrustKit.SignatureAnalysisDecisioningComponent		let	changeTokenCache
+class	TrustKit.SignatureAnalysisDecisioningComponent		let	logger
+class	TrustKit.EligibilityManager			
+class	TrustKit.EligibilityManager		var	lazy
+class	TrustKit.EligibilityManager		let	logger
+class	TrustKit.ConfigurationsAsset			
+class	TrustKit.ConfigurationsAsset		let	configs
+class	TrustKit.ConfigurationsAsset		let	logger
+struct	TrustKit.ConfigurationsAsset.Configs			
+struct	TrustKit.ConfigurationsAsset.Configs		let	reporting
+struct	TrustKit.ConfigurationsAsset.Configs		let	signatureAnalysis
+struct	TrustKit.ConfigurationsAsset.Configs		let	senderLookUp
+struct	TrustKit.ConfigurationsAsset.Configs		let	inference
+enum	TrustKit.ConfigurationsAsset.Configs.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.Configs.CodingKeys		case	reporting
+enum	TrustKit.ConfigurationsAsset.Configs.CodingKeys		case	signatureAnalysis
+enum	TrustKit.ConfigurationsAsset.Configs.CodingKeys		case	senderLookUp
+enum	TrustKit.ConfigurationsAsset.Configs.CodingKeys		case	inference
+struct	TrustKit.ConfigurationsAsset.InferenceConfig			
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	reInferenceCheckEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	reInferenceBackgroundSchedule
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	reInferenceBackgroundMaxDelay
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	reInferenceBackgroundOnPowerEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	arrivalCheckEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	delayCheckEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	readCheckEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	smsEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	iMessageEnabled
+struct	TrustKit.ConfigurationsAsset.InferenceConfig		let	rcsEnabled
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig			
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig		let	arrivalCheckEnabled
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig		let	delayCheckEnabled
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig		let	readCheckEnabled
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig		let	smsEnabled
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig		let	iMessageEnabled
+struct	TrustKit.ConfigurationsAsset.SenderLookUpConfig		let	rcsEnabled
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig			
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	coolOffMinSeconds
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	coolOffRangeSeconds
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	container
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitShortTimeout
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitLongTimeout
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitBackgroundTimeout
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitBackgroundSchedule
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitBackgroundMaxDelay
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitAdHocBackgroundSchedule
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitAdHocBackgroundMaxDelay
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitConnectionTimeout
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	cloudKitRecordsLimit
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	smsEnabled
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	arrivalCheckEnabled
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	delayCheckEnabled
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	readCheckEnabled
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	iMessageEnabled
+struct	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig		let	rcsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig			
+struct	TrustKit.ConfigurationsAsset.ReportingConfig		let	reportUnknown
+struct	TrustKit.ConfigurationsAsset.ReportingConfig		let	reportNotJunk
+struct	TrustKit.ConfigurationsAsset.ReportingConfig		let	reportJunk
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	reInferenceCheckEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	reInferenceBackgroundSchedule
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	reInferenceBackgroundMaxDelay
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	reInferenceBackgroundOnPowerEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	arrivalCheckEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	delayCheckEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	readCheckEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	smsEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	iMessageEnabled
+enum	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys		case	rcsEnabled
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys		case	arrivalCheckEnabled
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys		case	delayCheckEnabled
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys		case	readCheckEnabled
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys		case	smsEnabled
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys		case	iMessageEnabled
+enum	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys		case	rcsEnabled
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	coolOffMinSeconds
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	coolOffRangeSeconds
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	container
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitShortTimeout
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitLongTimeout
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitBackgroundTimeout
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitBackgroundSchedule
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitBackgroundMaxDelay
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitAdHocBackgroundSchedule
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitAdHocBackgroundMaxDelay
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitConnectionTimeout
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	cloudKitRecordsLimit
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	arrivalCheckEnabled
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	delayCheckEnabled
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	readCheckEnabled
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	smsEnabled
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	iMessageEnabled
+enum	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys		case	rcsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.CodingKeys		case	reportUnknown
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.CodingKeys		case	reportNotJunk
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.CodingKeys		case	reportJunk
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig			
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig		let	urls
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig		let	smsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig		let	iMessageEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig		let	rcsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig			
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig		let	urls
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig		let	smsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig		let	iMessageEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig		let	rcsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig			
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig		let	urls
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig		let	smsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig		let	iMessageEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig		let	rcsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig.CodingKeys		case	urls
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig.CodingKeys		case	smsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig.CodingKeys		case	iMessageEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig.CodingKeys		case	rcsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig.CodingKeys		case	urls
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig.CodingKeys		case	smsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig.CodingKeys		case	iMessageEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig.CodingKeys		case	rcsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig.CodingKeys		case	urls
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig.CodingKeys		case	smsEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig.CodingKeys		case	iMessageEnabled
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig.CodingKeys		case	rcsEnabled
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.URLs			
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.URLs		let	QA
+struct	TrustKit.ConfigurationsAsset.ReportingConfig.URLs		let	Production
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.URLs.CodingKeys			
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.URLs.CodingKeys		case	QA
+enum	TrustKit.ConfigurationsAsset.ReportingConfig.URLs.CodingKeys		case	Production
+class	TrustKit.SenderLookUpDecisioningComponent			
+class	TrustKit.SenderLookUpDecisioningComponent		let	provider
+class	TrustKit.SenderLookUpDecisioningComponent		let	logger
+class	TrustKit.TaskQueue			
+class	TrustKit.TaskQueue		let	maxConcurrentTasks
+class	TrustKit.TaskQueue		var	runningTasks
+class	TrustKit.TaskQueue		var	queue
+class	TrustKit.CloudKitManager<A	TrustKit.CloudKitRecord>		
+class	TrustKit.CloudKitManager<A	TrustKit.CloudKitRecord>	let	databaseOverride
+class	TrustKit.CloudKitManager<A	TrustKit.CloudKitRecord>	let	changeTokenCache
+class	TrustKit.CloudKitManager<A	TrustKit.CloudKitRecord>	let	zoneChangesOperationResultsLimit
+class	TrustKit.CloudKitManager<A	TrustKit.CloudKitRecord>	let	zoneChangesOperationShouldFetchNewestChangesFirst
+class	TrustKit.CloudKitManager<A	TrustKit.CloudKitRecord>	let	logger
+struct	TrustKit.ChangeTokenCache			
+struct	TrustKit.ChangeTokenCache		let	logger
+class	TrustKit.SignaturesSQLiteManager			
+class	TrustKit.SignaturesSQLiteManager		let	databasePath
+class	TrustKit.SignaturesSQLiteManager		var	database
+class	TrustKit.SignaturesSQLiteManager		let	SQLITE_TRANSIENT
+class	TrustKit.SignaturesSQLiteManager		let	logger
+class	TrustKit.LookUpOperation			
+class	TrustKit.LookUpOperation		var	lazy
+class	TrustKit.LookUpOperation		let	logger
+class	TrustKit.ReportOperation			
+class	TrustKit.ReportOperation		let	attestationManager
+class	TrustKit.ReportOperation		let	logger
+class	TrustKit.TKRecord			
+class	TrustKit.TKRecord		var	recordID
+class	TrustKit.TKRecord		var	recordHash
+class	TrustKit.TKRecord		let	eligibilityManager
+class	TrustKit.TKRecord		let	analyticsManager
+class	TrustKit.TKRecord		let	logger
+class	TrustKit.DaemonAnalyticsManager			
+class	TrustKit.DaemonAnalyticsManager		let	logger
+class	TrustKit.DaemonAnalyticsManager		let	eligibilityManager
+enum	TrustKit.DaemonAnalyticsManager.Event			
+enum	TrustKit.DaemonAnalyticsManager.Event		case	senderLookUp
+enum	TrustKit.DaemonAnalyticsManager.Event		case	signatureAnalysis
+enum	TrustKit.DaemonAnalyticsManager.Event		case	logicGraph
+enum	TrustKit.DaemonAnalyticsManager.Event		case	reporting
+class	TrustKit.ReportManager			
+class	TrustKit.ReportManager		var	reportingAsset
+class	TrustKit.ReportManager		let	eligibilityManager
+class	TrustKit.ReportManager		let	uafAssetManager
+class	TrustKit.ReportManager		let	attestationManager
+class	TrustKit.ReportManager		let	networkManager
+class	TrustKit.ReportManager		let	analyticsManager
+class	TrustKit.ReportManager		let	logger
+class	TrustKit.AdHocSignaturesBackgroundActivity			
+class	TrustKit.AdHocSignaturesBackgroundActivity		let	defaultExpiredTaskRetry
+class	TrustKit.AdHocSignaturesBackgroundActivity		let	fallbackActivityInterval
+class	TrustKit.AdHocSignaturesBackgroundActivity		let	fallbackActivityDelay
+class	TrustKit.AdHocSignaturesBackgroundActivity		let	fallbackMaximumTimeout
+class	TrustKit.AdHocSignaturesBackgroundActivity		var	lazy
+class	TrustKit.AdHocSignaturesBackgroundActivity		let	analyticsManager
+class	TrustKit.AdHocSignaturesBackgroundActivity		let	logger
+class	TrustKit.Ref			
+class	TrustKit.Ref		var	value
+class	TrustKit.Executor			
+class	TrustKit.Executor		var	shouldExecute
+enum	TrustKit.TimeoutError			
+enum	TrustKit.TimeoutError		case	timeout
+class	TrustKit.TextSpamDecisioningInput	NSObject		
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	origin
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	sender
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	messageBody
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	receiverISOCountryCode
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	attachments
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	trustIndicator
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	messageType
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	inferenceType
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	conversationState
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	decisionInfo
+class	TrustKit.TextSpamDecisioningInput	NSObject	let	isChatBot
+class	TrustKit.ImageSpamDecisioningInput	NSObject		
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	origin
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	sender
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	fileURL
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	receiverISOCountryCode
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	inferenceType
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	conversationState
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	trustIndicator
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	decisionInfo
+class	TrustKit.ImageSpamDecisioningInput	NSObject	let	isChatBot
+class	TrustKit.Inference	NSObject		
+class	TrustKit.Inference	NSObject	let	decision
+class	TrustKit.Inference	NSObject	let	decisionInfo
+class	TrustKit.ConversationStateWrapper	NSObject		
+class	TrustKit.ConversationStateWrapper	NSObject	let	alreadyInSpamFrom
+class	TrustKit.ConversationStateWrapper	NSObject	let	revokedFromSpamBy
+class	TrustKit.SignaturesBackgroundActivity			
+class	TrustKit.SignaturesBackgroundActivity		let	defaultExpiredTaskRetry
+class	TrustKit.SignaturesBackgroundActivity		let	fallbackActivityInterval
+class	TrustKit.SignaturesBackgroundActivity		let	fallbackActivityDelay
+class	TrustKit.SignaturesBackgroundActivity		let	fallbackMaximumTimeout
+class	TrustKit.SignaturesBackgroundActivity		var	lazy
+class	TrustKit.SignaturesBackgroundActivity		let	analyticsManager
+class	TrustKit.SignaturesBackgroundActivity		let	logger
+enum	TrustKit.SpamDecisioningManager.ConversationState			
+enum	TrustKit.SpamDecisioningManager.ConversationState		case	alreadyInSpam
+enum	TrustKit.SpamDecisioningManager.ConversationState		case	revokedFromSpam
+class	TrustKit.JavaScriptAsset			
+class	TrustKit.JavaScriptAsset		let	filePath
+class	TrustKit.JavaScriptAsset		let	logger
+enum	TrustKit.TKError			
+enum	TrustKit.TKError		case	invalidInput
+enum	TrustKit.TKError		case	networkFailure
+enum	TrustKit.TKError		case	operationFailed
+enum	TrustKit.TKError		case	featureUnavailable
+class	TrustKit.UAFAssetManager			
+class	TrustKit.UAFAssetManager		let	assetConfiguration
+class	TrustKit.UAFAssetManager		let	logger
+struct	TrustKit.UAFAssetManager.AssetConfiguration			
+struct	TrustKit.UAFAssetManager.AssetConfiguration		let	assetSetName
+struct	TrustKit.UAFAssetManager.AssetConfiguration		let	assetName
+struct	TrustKit.UAFAssetManager.AssetConfiguration		let	subscriber
+struct	TrustKit.UAFAssetManager.AssetConfiguration		let	subscriptionName
+struct	TrustKit.UAFAssetManager.AssetInfo			
+struct	TrustKit.UAFAssetManager.AssetInfo		let	name
+struct	TrustKit.UAFAssetManager.AssetInfo		let	assetDataURL
+struct	TrustKit.UAFAssetManager.AssetInfo		let	version
+class	TrustKit.DebugUIManager			
+class	TrustKit.DebugUIManager		let	logger
+protocol	TrustKit.BackgroundActivity			
+protocol	TrustKit.RepeatingBackgroundActivity			
+protocol	TrustKit.NonRepeatingBackgroundActivity			
+protocol	TrustKit.NetworkManaging			
+protocol	TrustKit.CloudKitRecord			
+protocol	TKDebugUIService.TKBannerContext			
+protocol	TrustKit.UAFAssetBase			
+protocol	TrustKit.NetworkOperationContext			
+protocol	TrustKit.NetworkOperationResult			
+protocol	TrustKit.NetworkOperation			
+protocol	TKDecisioningService.TKDecisioningInput			
+protocol	TKDecisioningService.TKDecisioningOutput			
+protocol	TrustKit.SignatureAnalysisDecisioningComponentProviding			
+protocol	SignatureAnalysisDecisioningComponent.SignatureAnalysisBaseInput			
+protocol	TrustKit.SenderLookUpDecisioningComponentProviding			
+protocol	TrustKit.AnalyticsManager	T, U		
+protocol	TrustKit.RecognizerContext			
+protocol	TrustKit.RecognizerObservation			
+protocol	TrustKit.RecognizerOutput	ObservationType		
+protocol	TrustKit.Recognizer	T, U		
+protocol	TrustKit.DictionaryConvertible			
+protocol	TrustKit.SQLiteManager	T		
+protocol	SpamDecisioningManager.Input			
+protocol	conformance TrustKit.Fail	Foundation.CustomNSError		
+protocol	conformance TrustKit.Fail	Foundation.LocalizedError		
+protocol	conformance TrustKit.Fail	Swift.Error		
+protocol	conformance TrustKit.BackgroundActivityManager	Swift.Actor		
+protocol	conformance TrustKit.NetworkManager	TrustKit.NetworkManaging		
+protocol	conformance TKReportService.TKReportType	Swift.Equatable		
+protocol	conformance TKReportService.TKReportType	Swift.Hashable		
+protocol	conformance TKReportService.TKReportType	Swift.RawRepresentable		
+protocol	conformance TrustKit.ClientAnalyticsManager	TrustKit.AnalyticsManager		
+protocol	conformance ClientAnalyticsManager.Event	Swift.RawRepresentable		
+protocol	conformance ClientAnalyticsManager.Event	Swift.Hashable		
+protocol	conformance ClientAnalyticsManager.Event	Swift.Equatable		
+protocol	conformance TrustKit.SpamDecisioningManager	Swift.Actor		
+protocol	conformance TrustKit.CKSignature	Swift.Equatable		
+protocol	conformance TrustKit.CKSignature	Swift.Hashable		
+protocol	conformance TrustKit.CKSignature	Swift.Encodable		
+protocol	conformance TrustKit.CKSignature	Swift.Decodable		
+protocol	conformance TrustKit.CKSignature	TrustKit.CloudKitRecord		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TKDebugUIService.TKPillBannerContext	TrustKit.TKDebugUIService.TKBannerContext		
+protocol	conformance TKDebugUIService.TKPillBannerContext	Swift.CustomStringConvertible		
+protocol	conformance TrustKit.ReportingAsset	TrustKit.UAFAssetBase		
+protocol	conformance MobileAssetManager.AssetConfiguration	Swift.CustomStringConvertible		
+protocol	conformance TrustKit.NotificationBackgroundActivity	TrustKit.BackgroundActivity		
+protocol	conformance TrustKit.NotificationBackgroundActivity	TrustKit.RepeatingBackgroundActivity		
+protocol	conformance TKSpamDecisioningInput.MessageType	Swift.Equatable		
+protocol	conformance TKSpamDecisioningInput.MessageType	Swift.Hashable		
+protocol	conformance TKSpamDecisioningInput.MessageType	Swift.RawRepresentable		
+protocol	conformance TKSpamDecisioningInput.InferenceType	Swift.Equatable		
+protocol	conformance TKSpamDecisioningInput.InferenceType	Swift.Hashable		
+protocol	conformance TKSpamDecisioningInput.InferenceType	Swift.RawRepresentable		
+protocol	conformance TKSpamDecisioningInput.ConversationState	Swift.Equatable		
+protocol	conformance TKDecisioningService.TKSpamDecisioningInput	TrustKit.TKDecisioningService.TKDecisioningInput		
+protocol	conformance TKDecisioningService.TKSpamDecisioningInput	Swift.CustomStringConvertible		
+protocol	conformance TKImageSpamDecisioningInput.InferenceType	Swift.Equatable		
+protocol	conformance TKImageSpamDecisioningInput.InferenceType	Swift.Hashable		
+protocol	conformance TKImageSpamDecisioningInput.InferenceType	Swift.RawRepresentable		
+protocol	conformance TKImageSpamDecisioningInput.ConversationState	Swift.Equatable		
+protocol	conformance TKDecisioningService.TKImageSpamDecisioningInput	TrustKit.TKDecisioningService.TKDecisioningInput		
+protocol	conformance TKDecisioningService.TKImageSpamDecisioningInput	Swift.CustomStringConvertible		
+protocol	conformance TKSpamDecisioningOutput.TKSpamClassification	Swift.Equatable		
+protocol	conformance TKSpamDecisioningOutput.TKSpamClassification	Swift.Hashable		
+protocol	conformance TKSpamDecisioningOutput.TKSpamClassification	Swift.RawRepresentable		
+protocol	conformance TKDecisioningService.TKSpamDecisioningOutput	TrustKit.TKDecisioningService.TKDecisioningOutput		
+protocol	conformance TKDecisioningService.TKSpamDecisioningOutput	Swift.CustomStringConvertible		
+protocol	conformance TrustKit.SignpostsManager	Swift.Actor		
+protocol	conformance TrustKit.SignatureAnalysisDecisioningComponent	Swift.Actor		
+protocol	conformance ConfigurationsAsset.Configs	Swift.Encodable		
+protocol	conformance ConfigurationsAsset.Configs	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ConfigurationsAsset.InferenceConfig	Swift.Encodable		
+protocol	conformance ConfigurationsAsset.SenderLookUpConfig	Swift.Encodable		
+protocol	conformance ConfigurationsAsset.SignatureAnalysisConfig	Swift.Encodable		
+protocol	conformance ConfigurationsAsset.ReportingConfig	Swift.Encodable		
+protocol	conformance ConfigurationsAsset.InferenceConfig	Swift.Decodable		
+protocol	conformance ConfigurationsAsset.SenderLookUpConfig	Swift.Decodable		
+protocol	conformance ConfigurationsAsset.SignatureAnalysisConfig	Swift.Decodable		
+protocol	conformance ConfigurationsAsset.ReportingConfig	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ReportingConfig.ReportJunkConfig	Swift.Encodable		
+protocol	conformance ReportingConfig.ReportNotJunkConfig	Swift.Encodable		
+protocol	conformance ReportingConfig.ReportUnknownConfig	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReportingConfig.ReportJunkConfig	Swift.Decodable		
+protocol	conformance ReportingConfig.ReportNotJunkConfig	Swift.Decodable		
+protocol	conformance ReportingConfig.ReportUnknownConfig	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ReportingConfig.URLs	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReportingConfig.URLs	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TrustKit.SenderLookUpDecisioningComponent	Swift.Actor		
+protocol	conformance TrustKit.TaskQueue	Swift.Actor		
+protocol	conformance TrustKit.SignaturesSQLiteManager	TrustKit.SQLiteManager		
+protocol	conformance TrustKit.LookUpOperation	TrustKit.NetworkOperation		
+protocol	conformance TrustKit.ReportOperation	TrustKit.NetworkOperation		
+protocol	conformance TrustKit.TKRecord	Swift.CustomStringConvertible		
+protocol	conformance TrustKit.DaemonAnalyticsManager	TrustKit.AnalyticsManager		
+protocol	conformance DaemonAnalyticsManager.Event	Swift.RawRepresentable		
+protocol	conformance DaemonAnalyticsManager.Event	Swift.Hashable		
+protocol	conformance DaemonAnalyticsManager.Event	Swift.Equatable		
+protocol	conformance TrustKit.AdHocSignaturesBackgroundActivity	TrustKit.BackgroundActivity		
+protocol	conformance TrustKit.AdHocSignaturesBackgroundActivity	TrustKit.NonRepeatingBackgroundActivity		
+protocol	conformance Executor	Swift.Actor		
+protocol	conformance TrustKit.TimeoutError	Swift.Hashable		
+protocol	conformance TrustKit.TimeoutError	Swift.Equatable		
+protocol	conformance TrustKit.TimeoutError	Swift.Error		
+protocol	conformance TrustKit.SignaturesBackgroundActivity	TrustKit.BackgroundActivity		
+protocol	conformance TrustKit.SignaturesBackgroundActivity	TrustKit.RepeatingBackgroundActivity		
+protocol	conformance SpamDecisioningManager.ConversationState	Swift.CustomStringConvertible		
+protocol	conformance SpamDecisioningManager.ConversationState	Swift.Equatable		
+protocol	conformance SpamDecisioningManager.ConversationState	Swift.Hashable		
+protocol	conformance TrustKit.TKError	Foundation.LocalizedError		
+protocol	conformance TrustKit.TKError	Swift.Error		
+protocol	conformance UAFAssetManager.AssetInfo	Swift.CustomStringConvertible		
+protocol	conformance UAFAssetManager.AssetConfiguration	Swift.CustomStringConvertible		
+extension	TrustKit.TKReportService.TKReportType	RawRepresentable		
+extension	TrustKit.ClientAnalyticsManager	AnalyticsManager		
+extension	TrustKit.ClientAnalyticsManager.Event	RawRepresentable		
+extension	TrustKit.TKDecisioningService.TKSpamDecisioningInput.MessageType	RawRepresentable		
+extension	TrustKit.TKDecisioningService.TKSpamDecisioningInput.InferenceType	RawRepresentable		
+extension	TrustKit.TKDecisioningService.TKImageSpamDecisioningInput.InferenceType	RawRepresentable		
+extension	TrustKit.TKDecisioningService.TKSpamDecisioningOutput.TKSpamClassification	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.Configs.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.ReportingConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.SignatureAnalysisConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.SenderLookUpConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.InferenceConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.ReportingConfig.ReportUnknownConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.ReportingConfig.ReportNotJunkConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.ConfigurationsAsset.ReportingConfig.ReportJunkConfig.CodingKeys	RawRepresentable		
+extension	TrustKit.SignaturesSQLiteManager	SQLiteManager		
+extension	TrustKit.DaemonAnalyticsManager	AnalyticsManager		
+extension	TrustKit.DaemonAnalyticsManager.Event	RawRepresentable		

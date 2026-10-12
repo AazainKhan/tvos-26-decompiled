@@ -1,0 +1,56 @@
+kind	type	conformance	member_kind	member
+class	JoinRequests.RequesterCredentials			
+class	JoinRequests.RequesterCredentials		let	localKey
+class	JoinRequests.RequesterCredentials		var	keyAgreement
+enum	JoinRequests.RequesterCredentials.Errors			
+enum	JoinRequests.RequesterCredentials.Errors		case	invalidOwnerPublicKey
+enum	JoinRequests.RequesterCredentials.Errors		case	requesterPublicKeyFailed
+enum	JoinRequests.Subsystem			
+enum	JoinRequests.Subsystem		case	joinRequests
+struct	JoinRequests.Log			
+struct	JoinRequests.RequestKeyAgreement			
+struct	JoinRequests.RequestKeyAgreement		var	requestKey
+struct	JoinRequests.RequestKeyAgreement		var	responseKey
+enum	JoinRequests.RequestKeyAgreement.Errors			
+enum	JoinRequests.RequestKeyAgreement.Errors		case	requestKeyExhausted
+enum	JoinRequests.RequestKeyAgreement.Errors		case	responseKeyExhausted
+enum	JoinRequests.RequestKeyAgreement.Errors		case	encryptionFailed
+enum	JoinRequests.RequestKeyAgreement.Errors		case	decryptionFailed
+enum	JoinRequests.JoinRequestError			
+enum	JoinRequests.JoinRequestError		case	unknown
+enum	JoinRequests.JoinRequestError		case	invalidAccountInfo
+enum	JoinRequests.JoinRequestError		case	noValidURI
+enum	JoinRequests.JoinRequestProvider			
+enum	JoinRequests.JoinRequestProvider		case	Wrangler
+enum	JoinRequests.JoinRequestProvider		case	GroupTestService
+class	JoinRequests.OwnerCredentials			
+class	JoinRequests.OwnerCredentials		let	privateKey
+enum	JoinRequests.OwnerCredentials.Errors			
+enum	JoinRequests.OwnerCredentials.Errors		case	invalidRequesterPublicKey
+enum	JoinRequests.OwnerCredentials.Errors		case	invalidResponseKeyData
+enum	JoinRequests.OwnerCredentials.Errors		case	encryptionFailed
+enum	JoinRequests.OwnerCredentials.Errors		case	decryptionFailed
+protocol	JoinRequests.IDSServiceProtocol			
+protocol	conformance RequesterCredentials.Errors	Swift.Equatable		
+protocol	conformance RequesterCredentials.Errors	Swift.Hashable		
+protocol	conformance RequesterCredentials.Errors	Swift.Error		
+protocol	conformance JoinRequests.Subsystem	Swift.Equatable		
+protocol	conformance JoinRequests.Subsystem	Swift.Hashable		
+protocol	conformance JoinRequests.Subsystem	Swift.RawRepresentable		
+protocol	conformance RequestKeyAgreement.Errors	Swift.Equatable		
+protocol	conformance RequestKeyAgreement.Errors	Swift.Hashable		
+protocol	conformance RequestKeyAgreement.Errors	Swift.Error		
+protocol	conformance JoinRequests.JoinRequestError	Swift.Equatable		
+protocol	conformance JoinRequests.JoinRequestError	Swift.Hashable		
+protocol	conformance JoinRequests.JoinRequestError	Swift.RawRepresentable		
+protocol	conformance JoinRequests.JoinRequestError	Swift.Error		
+protocol	conformance IDSService	JoinRequests.IDSServiceProtocol		
+protocol	conformance JoinRequests.JoinRequestProvider	Swift.Equatable		
+protocol	conformance JoinRequests.JoinRequestProvider	Swift.Hashable		
+protocol	conformance JoinRequests.JoinRequestProvider	Swift.RawRepresentable		
+protocol	conformance OwnerCredentials.Errors	Swift.Equatable		
+protocol	conformance OwnerCredentials.Errors	Swift.Hashable		
+protocol	conformance OwnerCredentials.Errors	Swift.Error		
+extension	JoinRequests.Subsystem	RawRepresentable		
+extension	JoinRequests.JoinRequestError	RawRepresentable		
+extension	JoinRequests.JoinRequestProvider	RawRepresentable		

@@ -1,0 +1,38 @@
+kind	type	conformance	member_kind	member
+enum	FindMyStorage.DatabaseState			
+enum	FindMyStorage.DatabaseState		case	unavailable
+enum	FindMyStorage.DatabaseState		case	available
+enum	FindMyStorage.DatabaseError			
+enum	FindMyStorage.DatabaseError		case	unknownSchemaVersion
+enum	FindMyStorage.DatabaseError		case	migrationError
+enum	FindMyStorage.DatabaseError		case	unknownError
+enum	FindMyStorage.DatabaseError		case	encryptionError
+enum	FindMyStorage.DatabaseError		case	notConnected
+enum	FindMyStorage.DatabaseCheckpointMode			
+enum	FindMyStorage.DatabaseCheckpointMode		case	passive
+enum	FindMyStorage.DatabaseCheckpointMode		case	full
+enum	FindMyStorage.DatabaseCheckpointMode		case	restart
+enum	FindMyStorage.DatabaseCheckpointMode		case	truncate
+class	FindMyStorage.ConnectionPair			
+class	FindMyStorage.ConnectionPair		let	readConnection
+class	FindMyStorage.ConnectionPair		let	writeConnection
+protocol	FindMyStorage.Database			
+protocol	FindMyStorage.DatabaseStorable			
+protocol	conformance FindMyStorage.DatabaseState	Swift.Equatable		
+protocol	conformance FindMyStorage.DatabaseState	Swift.Hashable		
+protocol	conformance FindMyStorage.DatabaseError	Swift.Error		
+protocol	conformance Swift.UInt8	SwiftSQLite.Value: FindMyStorage		
+protocol	conformance Swift.UInt8	SwiftSQLite.Expressible: FindMyStorage		
+protocol	conformance Swift.Int32	SwiftSQLite.Value: FindMyStorage		
+protocol	conformance Swift.Int32	SwiftSQLite.Expressible: FindMyStorage		
+protocol	conformance Swift.UInt32	SwiftSQLite.Value: FindMyStorage		
+protocol	conformance Swift.UInt32	SwiftSQLite.Expressible: FindMyStorage		
+protocol	conformance Swift.UInt64	SwiftSQLite.Value: FindMyStorage		
+protocol	conformance Swift.UInt64	SwiftSQLite.Expressible: FindMyStorage		
+protocol	conformance FindMyStorage.DatabaseCheckpointMode	Swift.Equatable		
+protocol	conformance FindMyStorage.DatabaseCheckpointMode	Swift.Hashable		
+protocol	conformance FindMyStorage.ConnectionPair	Swift.CustomStringConvertible		
+extension	Swift.UInt8	Value		
+extension	Swift.Int32	Value		
+extension	Swift.UInt32	Value		
+extension	Swift.UInt64	Value		

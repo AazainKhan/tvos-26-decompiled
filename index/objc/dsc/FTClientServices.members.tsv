@@ -1,0 +1,28 @@
+owner	kind	declaration
+FTCServiceAvailabilityCenter	+	+ (id)sharedInstance;
+FTCServiceAvailabilityCenter	-	- (_Bool)_isValidServiceType:(long long)type;
+FTCServiceAvailabilityCenter	-	- (_Bool)addListenerID:(id)id forService:(long long)service;
+FTCServiceAvailabilityCenter	-	- (_Bool)hasListenerID:(id)id forService:(long long)service;
+FTCServiceAvailabilityCenter	-	- (_Bool)removeListenerID:(id)id forService:(long long)service;
+FTCServiceAvailabilityCenter	-	- (id)containerForService:(long long)service create:(_Bool)create;
+FTCServiceAvailabilityCenter	-	- (id)init;
+FTCServiceAvailabilityCenter	-	- (long long)availabilityForListenerID:(id)id forService:(long long)service;
+FTCServiceAvailabilityCenter	-	- (void)_handleServiceMonitorNotification:(id)notification;
+FTCServiceAvailabilityCenter	-	- (void)_postNotificationForService:(long long)service availability:(long long)availability;
+FTCServiceAvailabilityCenter	-	- (void)_startListeningToMonitor:(id)monitor;
+FTCServiceAvailabilityCenter	-	- (void)_stopListeningToMonitor:(id)monitor;
+FTCServiceAvailabilityCenter	-	- (void)dealloc;
+FTCServiceContainer	-	- (_Bool)addListenerID:(id)id;
+FTCServiceContainer	-	- (_Bool)hasListenerID:(id)id;
+FTCServiceContainer	-	- (_Bool)removeListenerID:(id)id;
+FTCServiceContainer	-	- (id)initWithServiceType:(long long)type;
+FTCServiceContainer	-	- (void)dealloc;
+FTCServiceContainer	property	@property (readonly, retain, nonatomic) NSMutableSet *listeners;
+FTCServiceContainer	property	@property (retain, nonatomic) FTCServiceMonitor *monitor;
+FTCServiceMonitor	-	- (id)initWithServiceType:(long long)type;
+FTCServiceMonitor	-	- (long long)serviceAvailability;
+FTCServiceMonitor	-	- (void)_postAvailability:(long long)availability;
+FTCServiceMonitor	-	- (void)_updateAvailability;
+FTCServiceMonitor	-	- (void)dealloc;
+FTCServiceMonitor	-	- (void)updateAvailability;
+FTCServiceMonitor	property	@property (readonly, nonatomic) long long serviceType;

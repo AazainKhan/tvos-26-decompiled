@@ -1,0 +1,91 @@
+kind	type	conformance	member_kind	member
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject		
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	callCenter
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	callQueue
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	_currentCallEvent
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	observers
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	newObservers
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	_currentCallCount
+class	ScreenReaderOutput.BRUILiveCaptionsCallManager	NSObject	var	_currentVideoCallCount
+enum	ScreenReaderOutput.BRUILiveCaptionsCallManager.Event			
+enum	ScreenReaderOutput.BRUILiveCaptionsCallManager.Event		case	callDidBegin
+enum	ScreenReaderOutput.BRUILiveCaptionsCallManager.Event		case	callDidEnd
+class	ScreenReaderOutput.BRUINemethParserStack			
+class	ScreenReaderOutput.BRUINemethParserStack		var	stack
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType			
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	fracDenom
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	simpleFracDenom
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	radical
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	fracNumer
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	simpleFracNumer
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	superScript
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	overline
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	sqrt
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	radicalIndex
+enum	ScreenReaderOutput.BRUINemethParserStack.ElementType		case	linear
+class	ScreenReaderOutput.BRUINemethParserStack.Element			
+class	ScreenReaderOutput.BRUINemethParserStack.Element		let	type
+class	ScreenReaderOutput.BRUINemethParserStack.Element		var	terminators
+class	ScreenReaderOutput.BRUINemethParserStack.Element		var	units
+class	ScreenReaderOutput.BRUIUEBMathParser			
+class	ScreenReaderOutput.BRUIUEBMathParser		let	input
+class	ScreenReaderOutput.BRUIUEBMathParser		var	currentIndex
+class	ScreenReaderOutput.BRUIUEBMathParser		var	grade
+class	ScreenReaderOutput.BRUIUEBMathParser		var	letterCase
+class	ScreenReaderOutput.BRUIUEBMathParser		var	isAtWordBeginning
+class	ScreenReaderOutput.BRUIUEBMathParser		var	latestNumberUnits
+class	ScreenReaderOutput.BRUIUEBMathParser		var	stack
+class	ScreenReaderOutput.BRUIUEBMathParser.Element			
+class	ScreenReaderOutput.BRUIUEBMathParser.Element		let	type
+class	ScreenReaderOutput.BRUIUEBMathParser.Element		var	units
+enum	ScreenReaderOutput.BRUIUEBMathParser.Case			
+enum	ScreenReaderOutput.BRUIUEBMathParser.Case		case	lower
+enum	ScreenReaderOutput.BRUIUEBMathParser.Case		case	upper
+enum	ScreenReaderOutput.BRUIUEBMathParser.Case		case	wordUpper
+enum	ScreenReaderOutput.BRUIUEBMathParser.Grade			
+enum	ScreenReaderOutput.BRUIUEBMathParser.Grade		case	one
+enum	ScreenReaderOutput.BRUIUEBMathParser.Grade		case	wordOne
+enum	ScreenReaderOutput.BRUIUEBMathParser.Grade		case	numeric
+enum	ScreenReaderOutput.BRUIUEBMathParser.Grade		case	two
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType			
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	fracDenom
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	simpleFracDenom
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	radical
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	linear
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	fracNumer
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	simpleFracNumer
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	superScript
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	sqrt
+enum	ScreenReaderOutput.BRUIUEBMathParser.ElementType		case	radicalIndex
+struct	ScreenReaderOutput.BRUITranslationManager			
+struct	ScreenReaderOutput.BRUIMathCharacter			
+struct	ScreenReaderOutput.BRUIMathCharacter		let	latexRepresentation
+struct	ScreenReaderOutput.BRUILinearMathString			
+struct	ScreenReaderOutput.BRUILinearMathString		let	units
+struct	ScreenReaderOutput.BRUIFractionMathString			
+struct	ScreenReaderOutput.BRUIFractionMathString		let	numer
+struct	ScreenReaderOutput.BRUIFractionMathString		let	denom
+struct	ScreenReaderOutput.BRUISuperScriptMathString			
+struct	ScreenReaderOutput.BRUISuperScriptMathString		let	superScript
+struct	ScreenReaderOutput.BRUIOverlinedMathString			
+struct	ScreenReaderOutput.BRUIOverlinedMathString		let	content
+struct	ScreenReaderOutput.BRUIRadicalMathString			
+struct	ScreenReaderOutput.BRUIRadicalMathString		let	radicand
+struct	ScreenReaderOutput.BRUIRadicalMathString		let	index
+protocol	ScreenReaderOutput.BRUIMathStringProtocol			
+protocol	conformance BRUILiveCaptionsCallManager.Event	Swift.Equatable		
+protocol	conformance BRUILiveCaptionsCallManager.Event	Swift.Hashable		
+protocol	conformance ScreenReaderOutput.BRUILiveCaptionsCallManager	Combine.ObservableObject		
+protocol	conformance __C.TUCallStatus	Swift.Equatable: TelephonyUtilities		
+protocol	conformance __C.TUCallStatus	Swift.RawRepresentable: TelephonyUtilities		
+protocol	conformance Grade	Swift.Hashable		
+protocol	conformance Grade	Swift.Equatable		
+protocol	conformance Case	Swift.Hashable		
+protocol	conformance Case	Swift.Equatable		
+protocol	conformance ScreenReaderOutput.BRUIMathCharacter	ScreenReaderOutput.BRUIMathStringProtocol		
+protocol	conformance ScreenReaderOutput.BRUILinearMathString	ScreenReaderOutput.BRUIMathStringProtocol		
+protocol	conformance ScreenReaderOutput.BRUIFractionMathString	ScreenReaderOutput.BRUIMathStringProtocol		
+protocol	conformance ScreenReaderOutput.BRUISuperScriptMathString	ScreenReaderOutput.BRUIMathStringProtocol		
+protocol	conformance ScreenReaderOutput.BRUIOverlinedMathString	ScreenReaderOutput.BRUIMathStringProtocol		
+protocol	conformance ScreenReaderOutput.BRUIRadicalMathString	ScreenReaderOutput.BRUIMathStringProtocol		
+extension	ScreenReaderOutput.BRUILiveCaptionsCallManager	ObservableObject		

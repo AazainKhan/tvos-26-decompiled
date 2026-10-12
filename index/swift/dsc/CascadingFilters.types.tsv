@@ -1,0 +1,164 @@
+kind	type	conformance	member_kind	member
+struct	CascadingFilters.ByteBuffer			
+struct	CascadingFilters.ByteBuffer		var	backingData
+struct	CascadingFilters.ByteBuffer		var	readerIndex
+enum	CascadingFilters.ByteBufferError			
+enum	CascadingFilters.ByteBufferError		case	excessBytes
+enum	CascadingFilters.Membership			
+enum	CascadingFilters.Membership		case	member
+enum	CascadingFilters.Membership		case	nonmember
+enum	CascadingFilters.Membership		case	notInUniverse
+enum	CascadingFilters.Membership		case	noData
+class	CascadingFilters.BloomFilter			
+class	CascadingFilters.BloomFilter		var	hashAlgorithm
+class	CascadingFilters.BloomFilter		var	bitSize
+class	CascadingFilters.BloomFilter		var	numberOfHashes
+class	CascadingFilters.BloomFilter		var	layerNumber
+class	CascadingFilters.BloomFilter		var	bitArray
+enum	CascadingFilters.BloomFilterError			
+enum	CascadingFilters.BloomFilterError		case	bitIndexOutOfBounds
+enum	CascadingFilters.BloomFilterError		case	invalidFilterSize
+enum	CascadingFilters.BloomFilterError		case	parsingHashEnum
+enum	CascadingFilters.BloomFilterError		case	parsingFilterSize
+enum	CascadingFilters.BloomFilterError		case	parsingNumHashfuncs
+enum	CascadingFilters.BloomFilterError		case	parsingLayerNumber
+enum	CascadingFilters.BloomFilterError		case	parsingFilterBytes
+enum	CascadingFilters.BloomFilterError		case	unsupportedAlgorithm
+class	CascadingFilters.CascadeBuilder			
+class	CascadingFilters.CascadeBuilder		var	filters
+class	CascadingFilters.CascadeBuilder		let	salt
+class	CascadingFilters.CascadeBuilder		let	hashAlgorithm
+class	CascadingFilters.CascadeBuilder		var	toInclude
+class	CascadingFilters.CascadeBuilder		var	toExclude
+class	CascadingFilters.CascadeBuilder		var	status
+struct	CascadingFilters.BuildStatus			
+struct	CascadingFilters.BuildStatus		var	includeCount
+struct	CascadingFilters.BuildStatus		var	excludeCount
+enum	CascadingFilters.CascadeBuilderError			
+enum	CascadingFilters.CascadeBuilderError		case	collision
+enum	CascadingFilters.CascadeBuilderError		case	excludeCapacity
+enum	CascadingFilters.CascadeBuilderError		case	finalize
+enum	CascadingFilters.CascadeBuilderError		case	includeCapacity
+enum	CascadingFilters.CascadeBuilderError		case	tooManyFilters
+class	CascadingFilters.CascadingBloomFilters	NSObject		
+class	CascadingFilters.CascadingBloomFilters	NSObject	var	version
+class	CascadingFilters.CascadingBloomFilters	NSObject	var	hashAlgorithm
+class	CascadingFilters.CascadingBloomFilters	NSObject	var	numberOfLayers
+class	CascadingFilters.CascadingBloomFilters	NSObject	var	invertedLogic
+class	CascadingFilters.CascadingBloomFilters	NSObject	var	salt
+class	CascadingFilters.CascadingBloomFilters	NSObject	var	filters
+enum	CascadingFilters.CascadingFiltersError			
+enum	CascadingFilters.CascadingFiltersError		case	emptyFilters
+enum	CascadingFilters.CascadingFiltersError		case	invalidSaltSize
+enum	CascadingFilters.CascadingFiltersError		case	parsingVersion
+enum	CascadingFilters.CascadingFiltersError		case	parsingInvertedLogic
+enum	CascadingFilters.CascadingFiltersError		case	parsingSaltSize
+enum	CascadingFilters.CascadingFiltersError		case	parsingSalt
+enum	CascadingFilters.CascadingFiltersError		case	parseFilters
+enum	CascadingFilters.CascadingFiltersError		case	unsupportedVersion
+enum	CascadingFilters.CascadingFiltersError		case	unsupportedAlgorithm
+enum	CascadingFilters.CascadingFiltersError		case	verificationFalseNegative
+enum	CascadingFilters.CascadingFiltersError		case	verificationFalsePositive
+enum	CascadingFilters.HashAlgorithmEnum			
+enum	CascadingFilters.HashAlgorithmEnum		case	MurmurHash3
+enum	CascadingFilters.HashAlgorithmEnum		case	Sha256l32
+enum	CascadingFilters.HashAlgorithmEnum		case	Sha256
+class	CascadingFilters.IndexGenerator			
+class	CascadingFilters.IndexGenerator		var	key
+class	CascadingFilters.IndexGenerator		var	counter
+class	CascadingFilters.IndexGenerator		var	state
+class	CascadingFilters.IndexGenerator		var	stateAvailable
+enum	CascadingFilters.IndexGeneratorError			
+enum	CascadingFilters.IndexGeneratorError		case	convertingBytesToInt
+struct	CascadingFilters.ClubcardEquation			
+struct	CascadingFilters.ClubcardEquation		var	s
+struct	CascadingFilters.ClubcardEquation		var	a
+struct	CascadingFilters.ClubcardEquation		var	b
+struct	CascadingFilters.CRLiteKey			
+struct	CascadingFilters.CRLiteKey		let	issuerSPKIHash
+struct	CascadingFilters.CRLiteKey		let	serial
+struct	CascadingFilters.CRLiteKey		let	issuerSerialHash
+struct	CascadingFilters.CRLiteLogTimestamp			
+struct	CascadingFilters.CRLiteLogTimestamp		let	logId
+struct	CascadingFilters.CRLiteLogTimestamp		let	timestamp
+struct	CascadingFilters.CRLiteQuery			
+struct	CascadingFilters.CRLiteQuery		let	key
+struct	CascadingFilters.CRLiteQuery		let	logTimestamp
+enum	CascadingFilters.CRLiteStatus			
+enum	CascadingFilters.CRLiteStatus		case	good
+enum	CascadingFilters.CRLiteStatus		case	notCovered
+enum	CascadingFilters.CRLiteStatus		case	notEnrolled
+enum	CascadingFilters.CRLiteStatus		case	revoked
+struct	CascadingFilters.CRLiteClubcard			
+struct	CascadingFilters.CRLiteClubcard		let	inner
+struct	CascadingFilters.TimestampInterval			
+struct	CascadingFilters.TimestampInterval		let	start
+struct	CascadingFilters.TimestampInterval		let	end
+struct	CascadingFilters.ClubcardIndexEntry			
+struct	CascadingFilters.ClubcardIndexEntry		let	approxFilterM
+struct	CascadingFilters.ClubcardIndexEntry		let	exactFilterM
+struct	CascadingFilters.ClubcardIndexEntry		let	approxFilterRank
+struct	CascadingFilters.ClubcardIndexEntry		let	approxFilterOffset
+struct	CascadingFilters.ClubcardIndexEntry		let	exactFilterOffset
+struct	CascadingFilters.ClubcardIndexEntry		let	inverted
+struct	CascadingFilters.ClubcardIndexEntry		let	exceptions
+struct	CascadingFilters.Clubcard			
+struct	CascadingFilters.Clubcard		let	universe
+struct	CascadingFilters.Clubcard		let	index
+struct	CascadingFilters.Clubcard		let	approxFilter
+struct	CascadingFilters.Clubcard		let	exactFilter
+enum	CascadingFilters.ClubcardParsingError			
+enum	CascadingFilters.ClubcardParsingError		case	unexpectedEOF
+enum	CascadingFilters.ClubcardParsingError		case	invalidBoolean
+enum	CascadingFilters.ClubcardParsingError		case	integerOutOfRange
+enum	CascadingFilters.ClubcardParsingError		case	invalidVersion
+class	CascadingFilters.Utils			
+protocol	CascadingFilters.AsQuery			
+protocol	CascadingFilters.Queryable	UniverseMetadata, PartitionMetadata		
+protocol	conformance CascadingFilters.ByteBuffer	Swift.Hashable		
+protocol	conformance CascadingFilters.ByteBuffer	Swift.Equatable		
+protocol	conformance CascadingFilters.ByteBufferError	Swift.Equatable		
+protocol	conformance CascadingFilters.ByteBufferError	Swift.Hashable		
+protocol	conformance CascadingFilters.ByteBufferError	Swift.Error		
+protocol	conformance CascadingFilters.Membership	Swift.Hashable		
+protocol	conformance CascadingFilters.Membership	Swift.Equatable		
+protocol	conformance CascadingFilters.BloomFilterError	Swift.Hashable		
+protocol	conformance CascadingFilters.BloomFilterError	Swift.Error		
+protocol	conformance CascadingFilters.BloomFilterError	Swift.Equatable		
+protocol	conformance CascadingFilters.BloomFilterError	Foundation.LocalizedError		
+protocol	conformance CascadingFilters.CascadeBuilderError	Swift.Hashable		
+protocol	conformance CascadingFilters.CascadeBuilderError	Swift.Error		
+protocol	conformance CascadingFilters.CascadeBuilderError	Swift.Equatable		
+protocol	conformance CascadingFilters.CascadeBuilderError	Foundation.LocalizedError		
+protocol	conformance CascadingFilters.CascadingFiltersError	Swift.Hashable		
+protocol	conformance CascadingFilters.CascadingFiltersError	Swift.Error		
+protocol	conformance CascadingFilters.CascadingFiltersError	Swift.Equatable		
+protocol	conformance CascadingFilters.CascadingFiltersError	Foundation.LocalizedError		
+protocol	conformance CascadingFilters.HashAlgorithmEnum	Swift.Equatable		
+protocol	conformance CascadingFilters.HashAlgorithmEnum	Swift.Hashable		
+protocol	conformance CascadingFilters.HashAlgorithmEnum	Swift.RawRepresentable		
+protocol	conformance CascadingFilters.IndexGeneratorError	Swift.Hashable		
+protocol	conformance CascadingFilters.IndexGeneratorError	Swift.Error		
+protocol	conformance CascadingFilters.IndexGeneratorError	Swift.Equatable		
+protocol	conformance CascadingFilters.IndexGeneratorError	Foundation.LocalizedError		
+protocol	conformance CascadingFilters.IndexGenerator	Swift.Equatable		
+protocol	conformance CascadingFilters.ClubcardEquation	Swift.Equatable		
+protocol	conformance CascadingFilters.CRLiteKey	Swift.Equatable		
+protocol	conformance CascadingFilters.CRLiteLogTimestamp	Swift.Equatable		
+protocol	conformance CascadingFilters.CRLiteQuery	CascadingFilters.AsQuery		
+protocol	conformance CascadingFilters.CRLiteQuery	CascadingFilters.Queryable		
+protocol	conformance CascadingFilters.CRLiteQuery	Swift.Equatable		
+protocol	conformance CascadingFilters.CRLiteStatus	Swift.Hashable		
+protocol	conformance CascadingFilters.CRLiteStatus	Swift.Equatable		
+protocol	conformance CascadingFilters.CRLiteClubcard	Swift.Equatable		
+protocol	conformance CascadingFilters.TimestampInterval	Swift.Equatable		
+protocol	conformance CascadingFilters.TimestampInterval	Swift.Hashable		
+protocol	conformance CascadingFilters.ClubcardIndexEntry	Swift.Equatable		
+protocol	conformance CascadingFilters.ClubcardIndexEntry	Swift.Hashable		
+protocol	conformance CascadingFilters.Clubcard	Swift.Equatable		
+protocol	conformance CascadingFilters.ClubcardParsingError	Foundation.LocalizedError		
+protocol	conformance CascadingFilters.ClubcardParsingError	Swift.Equatable		
+protocol	conformance CascadingFilters.ClubcardParsingError	Swift.Hashable		
+protocol	conformance CascadingFilters.ClubcardParsingError	Swift.Error		
+extension	CascadingFilters.HashAlgorithmEnum	RawRepresentable		
+extension	CascadingFilters.CRLiteQuery	Queryable		

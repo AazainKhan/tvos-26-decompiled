@@ -1,0 +1,141 @@
+kind	type	conformance	member_kind	member
+struct	MediaML.SQLError			
+struct	MediaML.SQLError		var	code
+struct	MediaML.SQLError		var	desc
+enum	MediaML.DBError			
+enum	MediaML.DBError		case	noRows
+enum	MediaML.DBError		case	tooManyRows
+enum	MediaML.DBError		case	wrongColumns
+enum	MediaML.DBError		case	closed
+class	MediaML.SQLiteDB			
+class	MediaML.SQLiteDB		let	handle
+enum	MediaML.SQLiteDB.Location			
+enum	MediaML.SQLiteDB.Location		case	url
+enum	MediaML.SQLiteDB.Location		case	memory
+class	MediaML.SQLiteDB.DBHandle			
+class	MediaML.SQLiteDB.DBHandle		let	rawHandle
+class	MediaML.SQLiteDB.DBHandle		var	closed
+class	MediaML.SQLiteDB.Statement			
+class	MediaML.SQLiteDB.Statement		let	handle
+class	MediaML.SQLiteDB.Statement		var	finished
+struct	MediaML.SQLiteDB.Row			
+struct	MediaML.SQLiteDB.Row		let	statement
+class	MediaML.SQLiteDB.Transaction			
+class	MediaML.SQLiteDB.Transaction		let	db
+class	MediaML.SQLiteDB.Transaction		var	finalized
+struct	MediaML.ModelStats			
+struct	MediaML.ModelStats		var	interfaceType
+struct	MediaML.ModelStats		var	trainingRowCount
+struct	MediaML.ModelStats		var	validationRowCount
+struct	MediaML.ModelStats		var	carrierCount
+struct	MediaML.ModelStats		var	ssidCount
+struct	MediaML.ModelStats		var	appNameCount
+struct	MediaML.ModelStats		var	sessionIDCount
+struct	MediaML.ModelStats		var	trainingMAPE
+struct	MediaML.ModelStats		var	validationMAPE
+struct	MediaML.ModelStats		var	trainingDate
+struct	MediaML.WiFiModelGuts			
+struct	MediaML.CellModelGuts			
+class	MediaML.WifiModel			
+class	MediaML.WifiModel		var	model
+class	MediaML.WifiModel		let	parametersURL
+class	MediaML.WifiModel		let	targetColumnID
+class	MediaML.WifiModel		let	estimator
+class	MediaML.CellularModel			
+class	MediaML.CellularModel		let	targetColumnID
+class	MediaML.CellularModel		var	model
+class	MediaML.CellularModel		let	cellParametersURL
+class	MediaML.CellularModel		let	estimator
+struct	MediaML.WiFiDataPointForWriting			
+struct	MediaML.WiFiDataPointForWriting		let	sessionID
+struct	MediaML.WiFiDataPointForWriting		let	timestamp
+struct	MediaML.WiFiDataPointForWriting		let	appName
+struct	MediaML.WiFiDataPointForWriting		let	bucketedSSID
+struct	MediaML.WiFiDataPointForWriting		let	hour
+struct	MediaML.WiFiDataPointForWriting		let	dow
+struct	MediaML.WiFiDataPointForWriting		let	rssi
+struct	MediaML.WiFiDataPointForWriting		let	cca
+struct	MediaML.WiFiDataPointForWriting		let	snr
+struct	MediaML.WiFiDataPointForWriting		let	noise
+struct	MediaML.WiFiDataPointForWriting		let	txRate
+struct	MediaML.WiFiDataPointForWriting		let	rxRate
+struct	MediaML.WiFiDataPointForWriting		let	throughputTrue
+struct	MediaML.CellDataPointForWriting			
+struct	MediaML.CellDataPointForWriting		let	sessionID
+struct	MediaML.CellDataPointForWriting		let	timestamp
+struct	MediaML.CellDataPointForWriting		let	appName
+struct	MediaML.CellDataPointForWriting		let	carrier
+struct	MediaML.CellDataPointForWriting		let	hour
+struct	MediaML.CellDataPointForWriting		let	dow
+struct	MediaML.CellDataPointForWriting		let	rssi
+struct	MediaML.CellDataPointForWriting		let	rsrp
+struct	MediaML.CellDataPointForWriting		let	rscp
+struct	MediaML.CellDataPointForWriting		let	rsrq
+struct	MediaML.CellDataPointForWriting		let	snr
+struct	MediaML.CellDataPointForWriting		let	bars
+struct	MediaML.CellDataPointForWriting		let	throughputTrue
+struct	MediaML.WiFiDataPointForPrediciton			
+struct	MediaML.WiFiDataPointForPrediciton		let	appName
+struct	MediaML.WiFiDataPointForPrediciton		let	bucketedSSID
+struct	MediaML.WiFiDataPointForPrediciton		let	hour
+struct	MediaML.WiFiDataPointForPrediciton		let	dow
+struct	MediaML.WiFiDataPointForPrediciton		let	rssi
+struct	MediaML.WiFiDataPointForPrediciton		let	noise
+struct	MediaML.WiFiDataPointForPrediciton		let	txRate
+struct	MediaML.WiFiDataPointForPrediciton		let	rxRate
+struct	MediaML.CellDataPointForPrediction			
+struct	MediaML.CellDataPointForPrediction		let	appName
+struct	MediaML.CellDataPointForPrediction		let	carrier
+struct	MediaML.CellDataPointForPrediction		let	binnedRssi
+struct	MediaML.CellDataPointForPrediction		let	binnedRsrp
+struct	MediaML.CellDataPointForPrediction		let	binnedRscp
+struct	MediaML.CellDataPointForPrediction		let	binnedRsrq
+struct	MediaML.CellDataPointForPrediction		let	binnedSnr
+struct	MediaML.CellDataPointForPrediction		let	bars
+class	MediaML.DataWriter			
+class	MediaML.DataWriter		var	database
+class	MediaML.DataWriter		let	currentVersion
+class	MediaML.MediaML			
+class	MediaML.MediaML		var	dataWriter
+class	MediaML.MediaML		let	wifiModel
+class	MediaML.MediaML		let	cellModel
+protocol	MediaML.SQLType			
+protocol	MediaML.SQLNullableType			
+protocol	MediaML.SQLBindable			
+protocol	conformance __C.Options	Swift.ExpressibleByArrayLiteral: Foundation		
+protocol	conformance __C.Options	Swift.Equatable: Foundation		
+protocol	conformance __C.Options	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.Options	Swift.OptionSet: Foundation		
+protocol	conformance __C.MatchingOptions	Swift.ExpressibleByArrayLiteral: Foundation		
+protocol	conformance __C.MatchingOptions	Swift.Equatable: Foundation		
+protocol	conformance __C.MatchingOptions	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.MatchingOptions	Swift.OptionSet: Foundation		
+protocol	conformance __C.MatchingOptions	Swift.SetAlgebra: Foundation		
+protocol	conformance __C.Options	Swift.SetAlgebra: Foundation		
+protocol	conformance MediaML.SQLError	Foundation.LocalizedError		
+protocol	conformance MediaML.SQLError	Swift.CustomStringConvertible		
+protocol	conformance MediaML.SQLError	Swift.Error		
+protocol	conformance MediaML.DBError	Swift.Equatable		
+protocol	conformance MediaML.DBError	Swift.Hashable		
+protocol	conformance MediaML.DBError	Foundation.LocalizedError		
+protocol	conformance MediaML.DBError	Swift.CustomStringConvertible		
+protocol	conformance MediaML.DBError	Swift.Error		
+protocol	conformance MediaML.SQLiteDB	Swift.Actor		
+protocol	conformance Swift.Int	MediaML.SQLType		
+protocol	conformance Swift.Int	MediaML.SQLBindable		
+protocol	conformance Swift.Int64	MediaML.SQLType		
+protocol	conformance Swift.Int64	MediaML.SQLBindable		
+protocol	conformance Swift.Double	MediaML.SQLType		
+protocol	conformance Swift.Double	MediaML.SQLBindable		
+protocol	conformance Swift.String	MediaML.SQLNullableType		
+protocol	conformance Swift.String	MediaML.SQLBindable		
+protocol	conformance MediaML.WifiModel	Swift.Actor		
+protocol	conformance MediaML.CellularModel	Swift.Actor		
+protocol	conformance MediaML.DataWriter	Swift.Actor		
+protocol	conformance MediaML.MediaML	Swift.Actor		
+protocol	conformance __C.URLResourceKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Equatable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.URLResourceKey	Swift.Hashable: Foundation		

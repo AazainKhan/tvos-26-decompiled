@@ -1,0 +1,250 @@
+kind	type	conformance	member_kind	member
+class	SwiftSQLite.TableBuilder			
+class	SwiftSQLite.TableBuilder		var	definitions
+enum	SwiftSQLite.TableBuilder.Dependency			
+enum	SwiftSQLite.TableBuilder.Dependency		case	noAction
+enum	SwiftSQLite.TableBuilder.Dependency		case	restrict
+enum	SwiftSQLite.TableBuilder.Dependency		case	setNull
+enum	SwiftSQLite.TableBuilder.Dependency		case	setDefault
+enum	SwiftSQLite.TableBuilder.Dependency		case	cascade
+enum	SwiftSQLite.PrimaryKey			
+enum	SwiftSQLite.PrimaryKey		case	default
+enum	SwiftSQLite.PrimaryKey		case	autoincrement
+struct	SwiftSQLite.Module			
+struct	SwiftSQLite.Module		let	name
+struct	SwiftSQLite.Module		let	arguments
+struct	SwiftSQLite.Setter			
+struct	SwiftSQLite.Setter		let	column
+struct	SwiftSQLite.Setter		let	value
+struct	SwiftSQLite.Blob			
+struct	SwiftSQLite.Blob		let	bytes
+struct	SwiftSQLite.Expression			
+struct	SwiftSQLite.Expression		var	template
+struct	SwiftSQLite.Expression		var	bindings
+enum	SwiftSQLite.QueryError			
+enum	SwiftSQLite.QueryError		case	noSuchTable
+enum	SwiftSQLite.QueryError		case	noSuchColumn
+enum	SwiftSQLite.QueryError		case	ambiguousColumn
+enum	SwiftSQLite.QueryError		case	unexpectedNullValue
+class	SwiftSQLite.DateFunctions			
+class	SwiftSQLite.Statement			
+class	SwiftSQLite.Statement		var	handle
+class	SwiftSQLite.Statement		let	connection
+class	SwiftSQLite.Statement		var	lazy
+class	SwiftSQLite.Statement		var	lazy
+class	SwiftSQLite.Statement		var	lazy
+struct	SwiftSQLite.Cursor			
+struct	SwiftSQLite.Cursor		let	handle
+struct	SwiftSQLite.Cursor		let	columnCount
+class	SwiftSQLite.Connection			
+class	SwiftSQLite.Connection		var	_handle
+class	SwiftSQLite.Connection		var	busyTimeout
+class	SwiftSQLite.Connection		var	busyHandler
+class	SwiftSQLite.Connection		var	trace
+class	SwiftSQLite.Connection		var	updateHook
+class	SwiftSQLite.Connection		var	commitHook
+class	SwiftSQLite.Connection		var	rollbackHook
+class	SwiftSQLite.Connection		var	functions
+class	SwiftSQLite.Connection		var	collations
+class	SwiftSQLite.Connection		var	queue
+class	SwiftSQLite.Connection		var	lazy
+enum	SwiftSQLite.Connection.Location			
+enum	SwiftSQLite.Connection.Location		case	uri
+enum	SwiftSQLite.Connection.Location		case	inMemory
+enum	SwiftSQLite.Connection.Location		case	temporary
+enum	SwiftSQLite.Connection.Operation			
+enum	SwiftSQLite.Connection.Operation		case	insert
+enum	SwiftSQLite.Connection.Operation		case	update
+enum	SwiftSQLite.Connection.Operation		case	delete
+enum	SwiftSQLite.Connection.TransactionMode			
+enum	SwiftSQLite.Connection.TransactionMode		case	deferred
+enum	SwiftSQLite.Connection.TransactionMode		case	immediate
+enum	SwiftSQLite.Connection.TransactionMode		case	exclusive
+enum	SwiftSQLite.Result			
+enum	SwiftSQLite.Result		case	error
+class	SwiftSQLite.SQLiteEncoder			
+class	SwiftSQLite.SQLiteEncoder		var	setters
+class	SwiftSQLite.SQLiteEncoder		let	codingPath
+class	SwiftSQLite.SQLiteEncoder		let	userInfo
+class	SwiftSQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer<A	Swift.CodingKey>		
+class	SwiftSQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer<A	Swift.CodingKey>	let	encoder
+class	SwiftSQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer<A	Swift.CodingKey>	let	codingPath
+class	SwiftSQLite.SQLiteDecoder			
+class	SwiftSQLite.SQLiteDecoder		let	row
+class	SwiftSQLite.SQLiteDecoder		let	codingPath
+class	SwiftSQLite.SQLiteDecoder		let	userInfo
+class	SwiftSQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer<A	Swift.CodingKey>		
+class	SwiftSQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer<A	Swift.CodingKey>	let	codingPath
+class	SwiftSQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer<A	Swift.CodingKey>	let	row
+struct	SwiftSQLite.Table			
+struct	SwiftSQLite.Table		var	clauses
+struct	SwiftSQLite.View			
+struct	SwiftSQLite.View		var	clauses
+struct	SwiftSQLite.VirtualTable			
+struct	SwiftSQLite.VirtualTable		var	clauses
+struct	SwiftSQLite.ScalarQuery			
+struct	SwiftSQLite.ScalarQuery		var	clauses
+struct	SwiftSQLite.Select			
+struct	SwiftSQLite.Select		var	template
+struct	SwiftSQLite.Select		var	bindings
+struct	SwiftSQLite.Insert			
+struct	SwiftSQLite.Insert		var	template
+struct	SwiftSQLite.Insert		var	bindings
+struct	SwiftSQLite.Update			
+struct	SwiftSQLite.Update		var	template
+struct	SwiftSQLite.Update		var	bindings
+struct	SwiftSQLite.Delete			
+struct	SwiftSQLite.Delete		var	template
+struct	SwiftSQLite.Delete		var	bindings
+struct	SwiftSQLite.RowIterator			
+struct	SwiftSQLite.RowIterator		let	statement
+struct	SwiftSQLite.RowIterator		let	columnNames
+struct	SwiftSQLite.Row			
+struct	SwiftSQLite.Row		let	columnNames
+struct	SwiftSQLite.Row		let	values
+enum	SwiftSQLite.JoinType			
+enum	SwiftSQLite.JoinType		case	cross
+enum	SwiftSQLite.JoinType		case	inner
+enum	SwiftSQLite.JoinType		case	leftOuter
+enum	SwiftSQLite.OnConflict			
+enum	SwiftSQLite.OnConflict		case	replace
+enum	SwiftSQLite.OnConflict		case	rollback
+enum	SwiftSQLite.OnConflict		case	abort
+enum	SwiftSQLite.OnConflict		case	fail
+enum	SwiftSQLite.OnConflict		case	ignore
+struct	SwiftSQLite.QueryClauses			
+struct	SwiftSQLite.QueryClauses		var	select
+struct	SwiftSQLite.QueryClauses		var	from
+struct	SwiftSQLite.QueryClauses		var	join
+struct	SwiftSQLite.QueryClauses		var	filters
+struct	SwiftSQLite.QueryClauses		var	group
+struct	SwiftSQLite.QueryClauses		var	order
+struct	SwiftSQLite.QueryClauses		var	limit
+struct	SwiftSQLite.QueryClauses		var	union
+enum	SwiftSQLite.Collation			
+enum	SwiftSQLite.Collation		case	custom
+enum	SwiftSQLite.Collation		case	binary
+enum	SwiftSQLite.Collation		case	nocase
+enum	SwiftSQLite.Collation		case	rtrim
+protocol	SwiftSQLite._OptionalType	WrappedType		
+protocol	SwiftSQLite.ExpressionType	UnderlyingType		
+protocol	SwiftSQLite.Expressible			
+protocol	SwiftSQLite.FailableIterator			
+protocol	SwiftSQLite.Binding			
+protocol	SwiftSQLite.Number			
+protocol	SwiftSQLite.Value	ValueType, Datatype		
+protocol	SwiftSQLite.QueryType			
+protocol	SwiftSQLite.SchemaType			
+protocol	conformance TableBuilder.Dependency	Swift.Equatable		
+protocol	conformance TableBuilder.Dependency	Swift.Hashable		
+protocol	conformance TableBuilder.Dependency	Swift.RawRepresentable		
+protocol	conformance SwiftSQLite.PrimaryKey	Swift.Equatable		
+protocol	conformance SwiftSQLite.PrimaryKey	Swift.Hashable		
+protocol	conformance SwiftSQLite.Module	SwiftSQLite.Expressible		
+protocol	conformance Swift.Optional	SwiftSQLite._OptionalType		
+protocol	conformance Foundation.Data	SwiftSQLite.Value		
+protocol	conformance Foundation.Data	SwiftSQLite.Expressible		
+protocol	conformance Foundation.Date	SwiftSQLite.Value		
+protocol	conformance Foundation.Date	SwiftSQLite.Expressible		
+protocol	conformance Foundation.UUID	SwiftSQLite.Value		
+protocol	conformance Foundation.UUID	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Setter	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Blob	Swift.CustomStringConvertible		
+protocol	conformance SwiftSQLite.Blob	Swift.Equatable		
+protocol	conformance SwiftSQLite.Expression	SwiftSQLite.ExpressionType		
+protocol	conformance SwiftSQLite.Expression	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.QueryError	Swift.Error		
+protocol	conformance SwiftSQLite.QueryError	Swift.CustomStringConvertible		
+protocol	conformance SwiftSQLite.Statement	Swift.Sequence		
+protocol	conformance SwiftSQLite.Statement	SwiftSQLite.FailableIterator		
+protocol	conformance SwiftSQLite.Statement	Swift.IteratorProtocol		
+protocol	conformance SwiftSQLite.Statement	Swift.CustomStringConvertible		
+protocol	conformance SwiftSQLite.Cursor	Swift.Sequence		
+protocol	conformance Swift.Double	SwiftSQLite.Number		
+protocol	conformance Swift.Double	SwiftSQLite.Value		
+protocol	conformance Swift.Double	SwiftSQLite.Binding		
+protocol	conformance Swift.Double	SwiftSQLite.Expressible		
+protocol	conformance Swift.Int64	SwiftSQLite.Number		
+protocol	conformance Swift.Int64	SwiftSQLite.Value		
+protocol	conformance Swift.Int64	SwiftSQLite.Binding		
+protocol	conformance Swift.Int64	SwiftSQLite.Expressible		
+protocol	conformance Swift.String	SwiftSQLite.Binding		
+protocol	conformance Swift.String	SwiftSQLite.Value		
+protocol	conformance Swift.String	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Blob	SwiftSQLite.Binding		
+protocol	conformance SwiftSQLite.Blob	SwiftSQLite.Value		
+protocol	conformance SwiftSQLite.Blob	SwiftSQLite.Expressible		
+protocol	conformance Swift.Bool	SwiftSQLite.Binding		
+protocol	conformance Swift.Bool	SwiftSQLite.Value		
+protocol	conformance Swift.Bool	SwiftSQLite.Expressible		
+protocol	conformance Swift.Int	SwiftSQLite.Number		
+protocol	conformance Swift.Int	SwiftSQLite.Value		
+protocol	conformance Swift.Int	SwiftSQLite.Binding		
+protocol	conformance Swift.Int	SwiftSQLite.Expressible		
+protocol	conformance Connection.Operation	Swift.Equatable		
+protocol	conformance Connection.Operation	Swift.Hashable		
+protocol	conformance Connection.TransactionMode	Swift.Equatable		
+protocol	conformance Connection.TransactionMode	Swift.Hashable		
+protocol	conformance Connection.TransactionMode	Swift.RawRepresentable		
+protocol	conformance SwiftSQLite.Connection	Swift.CustomStringConvertible		
+protocol	conformance Connection.Location	Swift.CustomStringConvertible		
+protocol	conformance SwiftSQLite.Result	Swift.Error		
+protocol	conformance SwiftSQLite.Result	Swift.CustomStringConvertible		
+protocol	conformance SQLiteDecoder.SQLiteKeyedDecodingContainer	Swift.KeyedDecodingContainerProtocol		
+protocol	conformance SQLiteEncoder.SQLiteKeyedEncodingContainer	Swift.KeyedEncodingContainerProtocol		
+protocol	conformance SQLiteDecoder	Swift.Decoder		
+protocol	conformance SQLiteEncoder	Swift.Encoder		
+protocol	conformance SwiftSQLite.Table	SwiftSQLite.SchemaType		
+protocol	conformance SwiftSQLite.Table	SwiftSQLite.QueryType		
+protocol	conformance SwiftSQLite.Table	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.View	SwiftSQLite.SchemaType		
+protocol	conformance SwiftSQLite.View	SwiftSQLite.QueryType		
+protocol	conformance SwiftSQLite.View	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.VirtualTable	SwiftSQLite.SchemaType		
+protocol	conformance SwiftSQLite.VirtualTable	SwiftSQLite.QueryType		
+protocol	conformance SwiftSQLite.VirtualTable	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.ScalarQuery	SwiftSQLite.QueryType		
+protocol	conformance SwiftSQLite.ScalarQuery	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Select	SwiftSQLite.ExpressionType		
+protocol	conformance SwiftSQLite.Select	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Insert	SwiftSQLite.ExpressionType		
+protocol	conformance SwiftSQLite.Insert	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Update	SwiftSQLite.ExpressionType		
+protocol	conformance SwiftSQLite.Update	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Delete	SwiftSQLite.ExpressionType		
+protocol	conformance SwiftSQLite.Delete	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.RowIterator	SwiftSQLite.FailableIterator		
+protocol	conformance SwiftSQLite.RowIterator	Swift.IteratorProtocol		
+protocol	conformance SwiftSQLite.JoinType	Swift.Equatable		
+protocol	conformance SwiftSQLite.JoinType	Swift.Hashable		
+protocol	conformance SwiftSQLite.JoinType	Swift.RawRepresentable		
+protocol	conformance SwiftSQLite.OnConflict	Swift.Equatable		
+protocol	conformance SwiftSQLite.OnConflict	Swift.Hashable		
+protocol	conformance SwiftSQLite.OnConflict	Swift.RawRepresentable		
+protocol	conformance SwiftSQLite.Collation	SwiftSQLite.Expressible		
+protocol	conformance SwiftSQLite.Collation	Swift.CustomStringConvertible		
+extension	SwiftSQLite.TableBuilder.Dependency	RawRepresentable		
+extension	Optional	_OptionalType		
+extension	Foundation.Data	Value		
+extension	Foundation.Date	Value		
+extension	Foundation.UUID	Value		
+extension	SwiftSQLite.Expression	ExpressionType		
+extension	SwiftSQLite.Statement	Sequence		
+extension	SwiftSQLite.Statement	IteratorProtocol		
+extension	SwiftSQLite.Cursor	Sequence		
+extension	Double	Value		
+extension	Swift.Int64	Value		
+extension	String	Value		
+extension	SwiftSQLite.Blob	Value		
+extension	Swift.Bool	Value		
+extension	Int	Value		
+extension	SwiftSQLite.Connection.TransactionMode	RawRepresentable		
+extension	SwiftSQLite.SQLiteDecoder.SQLiteKeyedDecodingContainer	KeyedDecodingContainerProtocol		
+extension	SwiftSQLite.SQLiteEncoder.SQLiteKeyedEncodingContainer	KeyedEncodingContainerProtocol		
+extension	SwiftSQLite.Select	ExpressionType		
+extension	SwiftSQLite.Insert	ExpressionType		
+extension	SwiftSQLite.Update	ExpressionType		
+extension	SwiftSQLite.Delete	ExpressionType		
+extension	SwiftSQLite.RowIterator	IteratorProtocol		
+extension	SwiftSQLite.JoinType	RawRepresentable		
+extension	SwiftSQLite.OnConflict	RawRepresentable		

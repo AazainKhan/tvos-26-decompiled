@@ -1,0 +1,2367 @@
+kind	type	conformance	member_kind	member
+class	MediaControl.ArtworkCache			
+class	MediaControl.ArtworkCache		var	lazy
+class	MediaControl.ArtworkCache		var	lazy
+class	MediaControl.ArtworkCache		var	lazy
+class	MediaControl.ArtworkCache		var	lazy
+class	MediaControl.ArtworkCache		var	lock
+class	MediaControl.RemoteArtworkCache			
+class	MediaControl.RemoteArtworkCache		var	cachedRemoteArtworks
+class	MediaControl.RemoteArtworkCache		var	lock
+class	MediaControl.ArtworkToken			
+class	MediaControl.ArtworkToken		let	playerPathData
+class	MediaControl.ArtworkToken		let	contentItemIdentifier
+class	MediaControl.ArtworkToken		let	artworkIdentifier
+class	MediaControl.ArtworkToken		let	supportsRemoteArtwork
+class	MediaControl.ArtworkToken		let	maxPixelSize
+class	MediaControl.ArtworkToken		let	remoteArtworkData
+class	MediaControl.StandardArtworkDataSource			
+class	MediaControl.StandardArtworkDataSource		var	artworkCompletions
+class	MediaControl.StandardArtworkDataSource		var	lock
+enum	MediaControl.StandardArtworkDataSource.ArtworkError			
+enum	MediaControl.StandardArtworkDataSource.ArtworkError		case	emptyPlaybackQueueArtwork
+enum	MediaControl.StandardArtworkDataSource.ArtworkError		case	invalidRemoteArtworkRepresentation
+enum	MediaControl.StandardArtworkDataSource.ArtworkError		case	invalidImageRepresentation
+enum	MediaControl.StandardArtworkDataSource.ArtworkError		case	invalidRequestSize
+enum	MediaControl.ArtworkToken.CodingKeys			
+enum	MediaControl.ArtworkToken.CodingKeys		case	artworkIdentifier
+enum	MediaControl.ArtworkToken.CodingKeys		case	contentItemIdentifier
+enum	MediaControl.ArtworkToken.CodingKeys		case	playerPath
+enum	MediaControl.ArtworkToken.CodingKeys		case	supportsRemoteArtwork
+enum	MediaControl.ArtworkToken.CodingKeys		case	maxPixelSize
+enum	MediaControl.ArtworkToken.CodingKeys		case	remoteArtworkData
+enum	MediaControl.Features			
+enum	MediaControl.Features.MediaRemote			
+enum	MediaControl.Features.MediaRemote		case	cayenne
+enum	MediaControl.Features.MediaRemote		case	cayenneConditionalIndicators
+enum	MediaControl.Features.MediaRemote		case	cayenneMultiItemActions
+enum	MediaControl.Features.MediaRemote		case	cayenneClientValidation
+enum	MediaControl.Features.MediaRemote		case	cayenneArtworkCache
+struct	MediaControl.IPCMessage<A	Swift.Decodable, A: Swift.Encodable>		
+struct	MediaControl.IPCMessage<A	Swift.Decodable, A: Swift.Encodable>	let	priority
+struct	MediaControl.IPCMessage<A	Swift.Decodable, A: Swift.Encodable>	let	message
+struct	MediaControl.RoutingSessionUpdateMessage			
+struct	MediaControl.RoutingSessionUpdateMessage		var	snapshot
+struct	MediaControl.PendingItemIdentifiersUpdateMessage			
+struct	MediaControl.PendingItemIdentifiersUpdateMessage		var	pendingItems
+struct	MediaControl.PresentDialogMessage			
+struct	MediaControl.PresentDialogMessage		var	dialog
+struct	MediaControl.InteractWithItemResultMessage			
+struct	MediaControl.InteractWithItemResultMessage		var	itemIdentifier
+struct	MediaControl.InteractWithItemResultMessage		var	error
+struct	MediaControl.InteractWithControlResultMessage			
+struct	MediaControl.InteractWithControlResultMessage		var	control
+struct	MediaControl.InteractWithControlResultMessage		var	error
+struct	MediaControl.SessionTransitionMessage			
+struct	MediaControl.SessionTransitionMessage		var	sourceIdentifier
+struct	MediaControl.SessionTransitionMessage		var	destinationIdentifier
+struct	MediaControl.PresentShareAudioMessage			
+struct	MediaControl.PresentTVRemoteMessage			
+struct	MediaControl.PresentTVRemoteMessage		var	context
+enum	MediaControl.IPCServerMessage			
+enum	MediaControl.IPCServerMessage		case	prototype
+enum	MediaControl.IPCServerMessage		case	connect
+enum	MediaControl.IPCServerMessage		case	setRoutingMode
+enum	MediaControl.IPCServerMessage		case	setUIPresented
+enum	MediaControl.IPCServerMessage		case	setExpandedSessionIdentifiers
+enum	MediaControl.IPCServerMessage		case	interactWithItem
+enum	MediaControl.IPCServerMessage		case	interactWithSession
+enum	MediaControl.IPCServerMessage		case	interactWithDialog
+enum	MediaControl.IPCServerMessage		case	interactWithControl
+enum	MediaControl.IPCServerMessage		case	beginInteractionWithContinuousControl
+enum	MediaControl.IPCServerMessage		case	endInteractionWithContinuousControl
+enum	MediaControl.IPCServerMessage		case	interactWithSessionAction
+enum	MediaControl.IPCServerMessage		case	interactWithItemAction
+enum	MediaControl.IPCServerMessage		case	flushPendingControls
+enum	MediaControl.IPCServerMessage		case	ping
+enum	MediaControl.IPCClientMessage			
+enum	MediaControl.IPCClientMessage		case	updateRoutingSnapshot
+enum	MediaControl.IPCClientMessage		case	updatePendingItems
+enum	MediaControl.IPCClientMessage		case	presentDialog
+enum	MediaControl.IPCClientMessage		case	interactWithItemResult
+enum	MediaControl.IPCClientMessage		case	interactWithControlResult
+enum	MediaControl.IPCClientMessage		case	sessionTransition
+enum	MediaControl.IPCClientMessage		case	presentShareAudio
+enum	MediaControl.IPCClientMessage		case	presentTVRemote
+enum	MediaControl.IPCClientMessage		case	requestDismissal
+enum	MediaControl.IPCClientMessage		case	ping
+struct	MediaControl.PrototypeMessage			
+struct	MediaControl.PrototypeMessage		let	optionsData
+struct	MediaControl.IPCConnectMessage			
+struct	MediaControl.IPCConnectMessage		let	configuration
+struct	MediaControl.SetRoutingModeMessage			
+struct	MediaControl.SetRoutingModeMessage		let	routingMode
+struct	MediaControl.SetUIPresentedStateMessage			
+struct	MediaControl.SetUIPresentedStateMessage		let	isPresented
+struct	MediaControl.SetExpandedSessionsStateMessage			
+struct	MediaControl.SetExpandedSessionsStateMessage		let	expandedSessionIdentifiers
+struct	MediaControl.InteractWithItemMessage			
+struct	MediaControl.InteractWithItemMessage		let	itemIdentifier
+struct	MediaControl.InteractWithSessionMessage			
+struct	MediaControl.InteractWithSessionMessage		let	sessionIdentifier
+struct	MediaControl.InteractWithDialogMessage			
+struct	MediaControl.InteractWithDialogMessage		let	dialogIdentifier
+struct	MediaControl.InteractWithDialogMessage		let	action
+struct	MediaControl.InteractWithControlMessage			
+struct	MediaControl.InteractWithControlMessage		let	control
+struct	MediaControl.BeginInteractionWithContinuousControlMessage			
+struct	MediaControl.BeginInteractionWithContinuousControlMessage		let	control
+struct	MediaControl.EndInteractionWithContinuousControlMessage			
+struct	MediaControl.EndInteractionWithContinuousControlMessage		let	control
+struct	MediaControl.InteractWithSessionActionMessage			
+struct	MediaControl.InteractWithSessionActionMessage		let	action
+struct	MediaControl.InteractWithItemActionMessage			
+struct	MediaControl.InteractWithItemActionMessage		let	action
+struct	MediaControl.FlushPendingControlsMessage			
+struct	MediaControl.FlushPendingControlsMessage		let	controls
+struct	MediaControl.ReplyMessage			
+struct	MediaControl.ReplyMessage		var	reply
+struct	MediaControl.ReplyMessage		var	error
+enum	MediaControl.ReplyMessage.CodingKeys			
+enum	MediaControl.ReplyMessage.CodingKeys		case	reply
+enum	MediaControl.ReplyMessage.CodingKeys		case	error
+enum	MediaControl.FlushPendingControlsMessage.CodingKeys			
+enum	MediaControl.FlushPendingControlsMessage.CodingKeys		case	controls
+enum	MediaControl.InteractWithItemActionMessage.CodingKeys			
+enum	MediaControl.InteractWithItemActionMessage.CodingKeys		case	action
+enum	MediaControl.InteractWithSessionActionMessage.CodingKeys			
+enum	MediaControl.InteractWithSessionActionMessage.CodingKeys		case	action
+enum	MediaControl.EndInteractionWithContinuousControlMessage.CodingKeys			
+enum	MediaControl.EndInteractionWithContinuousControlMessage.CodingKeys		case	control
+enum	MediaControl.BeginInteractionWithContinuousControlMessage.CodingKeys			
+enum	MediaControl.BeginInteractionWithContinuousControlMessage.CodingKeys		case	control
+enum	MediaControl.InteractWithControlMessage.CodingKeys			
+enum	MediaControl.InteractWithControlMessage.CodingKeys		case	control
+enum	MediaControl.InteractWithDialogMessage.CodingKeys			
+enum	MediaControl.InteractWithDialogMessage.CodingKeys		case	dialogIdentifier
+enum	MediaControl.InteractWithDialogMessage.CodingKeys		case	action
+enum	MediaControl.InteractWithSessionMessage.CodingKeys			
+enum	MediaControl.InteractWithSessionMessage.CodingKeys		case	sessionIdentifier
+enum	MediaControl.InteractWithItemMessage.CodingKeys			
+enum	MediaControl.InteractWithItemMessage.CodingKeys		case	itemIdentifier
+enum	MediaControl.SetExpandedSessionsStateMessage.CodingKeys			
+enum	MediaControl.SetExpandedSessionsStateMessage.CodingKeys		case	expandedSessionIdentifiers
+enum	MediaControl.SetUIPresentedStateMessage.CodingKeys			
+enum	MediaControl.SetUIPresentedStateMessage.CodingKeys		case	isPresented
+enum	MediaControl.SetRoutingModeMessage.CodingKeys			
+enum	MediaControl.SetRoutingModeMessage.CodingKeys		case	routingMode
+enum	MediaControl.IPCConnectMessage.CodingKeys			
+enum	MediaControl.IPCConnectMessage.CodingKeys		case	configuration
+enum	MediaControl.PrototypeMessage.CodingKeys			
+enum	MediaControl.PrototypeMessage.CodingKeys		case	optionsData
+enum	MediaControl.IPCClientMessage.CodingKeys			
+enum	MediaControl.IPCClientMessage.CodingKeys		case	updateRoutingSnapshot
+enum	MediaControl.IPCClientMessage.CodingKeys		case	updatePendingItems
+enum	MediaControl.IPCClientMessage.CodingKeys		case	presentDialog
+enum	MediaControl.IPCClientMessage.CodingKeys		case	interactWithItemResult
+enum	MediaControl.IPCClientMessage.CodingKeys		case	interactWithControlResult
+enum	MediaControl.IPCClientMessage.CodingKeys		case	sessionTransition
+enum	MediaControl.IPCClientMessage.CodingKeys		case	presentShareAudio
+enum	MediaControl.IPCClientMessage.CodingKeys		case	presentTVRemote
+enum	MediaControl.IPCClientMessage.CodingKeys		case	requestDismissal
+enum	MediaControl.IPCClientMessage.CodingKeys		case	ping
+enum	MediaControl.IPCClientMessage.UpdateRoutingSnapshotCodingKeys			
+enum	MediaControl.IPCClientMessage.UpdateRoutingSnapshotCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.UpdatePendingItemsCodingKeys			
+enum	MediaControl.IPCClientMessage.UpdatePendingItemsCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.PresentDialogCodingKeys			
+enum	MediaControl.IPCClientMessage.PresentDialogCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.InteractWithItemResultCodingKeys			
+enum	MediaControl.IPCClientMessage.InteractWithItemResultCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.InteractWithControlResultCodingKeys			
+enum	MediaControl.IPCClientMessage.InteractWithControlResultCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.SessionTransitionCodingKeys			
+enum	MediaControl.IPCClientMessage.SessionTransitionCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.PresentShareAudioCodingKeys			
+enum	MediaControl.IPCClientMessage.PresentShareAudioCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.PresentTVRemoteCodingKeys			
+enum	MediaControl.IPCClientMessage.PresentTVRemoteCodingKeys		case	_0
+enum	MediaControl.IPCClientMessage.RequestDismissalCodingKeys			
+enum	MediaControl.IPCClientMessage.PingCodingKeys			
+enum	MediaControl.IPCServerMessage.CodingKeys			
+enum	MediaControl.IPCServerMessage.CodingKeys		case	prototype
+enum	MediaControl.IPCServerMessage.CodingKeys		case	connect
+enum	MediaControl.IPCServerMessage.CodingKeys		case	setRoutingMode
+enum	MediaControl.IPCServerMessage.CodingKeys		case	setUIPresented
+enum	MediaControl.IPCServerMessage.CodingKeys		case	setExpandedSessionIdentifiers
+enum	MediaControl.IPCServerMessage.CodingKeys		case	interactWithItem
+enum	MediaControl.IPCServerMessage.CodingKeys		case	interactWithSession
+enum	MediaControl.IPCServerMessage.CodingKeys		case	interactWithDialog
+enum	MediaControl.IPCServerMessage.CodingKeys		case	interactWithControl
+enum	MediaControl.IPCServerMessage.CodingKeys		case	beginInteractionWithContinuousControl
+enum	MediaControl.IPCServerMessage.CodingKeys		case	endInteractionWithContinuousControl
+enum	MediaControl.IPCServerMessage.CodingKeys		case	interactWithSessionAction
+enum	MediaControl.IPCServerMessage.CodingKeys		case	interactWithItemAction
+enum	MediaControl.IPCServerMessage.CodingKeys		case	flushPendingControls
+enum	MediaControl.IPCServerMessage.CodingKeys		case	ping
+enum	MediaControl.IPCServerMessage.PrototypeCodingKeys			
+enum	MediaControl.IPCServerMessage.PrototypeCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.ConnectCodingKeys			
+enum	MediaControl.IPCServerMessage.ConnectCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.SetRoutingModeCodingKeys			
+enum	MediaControl.IPCServerMessage.SetRoutingModeCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.SetUIPresentedCodingKeys			
+enum	MediaControl.IPCServerMessage.SetUIPresentedCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.SetExpandedSessionIdentifiersCodingKeys			
+enum	MediaControl.IPCServerMessage.SetExpandedSessionIdentifiersCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.InteractWithItemCodingKeys			
+enum	MediaControl.IPCServerMessage.InteractWithItemCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.InteractWithSessionCodingKeys			
+enum	MediaControl.IPCServerMessage.InteractWithSessionCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.InteractWithDialogCodingKeys			
+enum	MediaControl.IPCServerMessage.InteractWithDialogCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.InteractWithControlCodingKeys			
+enum	MediaControl.IPCServerMessage.InteractWithControlCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.BeginInteractionWithContinuousControlCodingKeys			
+enum	MediaControl.IPCServerMessage.BeginInteractionWithContinuousControlCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.EndInteractionWithContinuousControlCodingKeys			
+enum	MediaControl.IPCServerMessage.EndInteractionWithContinuousControlCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.InteractWithSessionActionCodingKeys			
+enum	MediaControl.IPCServerMessage.InteractWithSessionActionCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.InteractWithItemActionCodingKeys			
+enum	MediaControl.IPCServerMessage.InteractWithItemActionCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.FlushPendingControlsCodingKeys			
+enum	MediaControl.IPCServerMessage.FlushPendingControlsCodingKeys		case	_0
+enum	MediaControl.IPCServerMessage.PingCodingKeys			
+enum	MediaControl.PresentTVRemoteMessage.CodingKeys			
+enum	MediaControl.PresentTVRemoteMessage.CodingKeys		case	context
+enum	MediaControl.PresentShareAudioMessage.CodingKeys			
+enum	MediaControl.SessionTransitionMessage.CodingKeys			
+enum	MediaControl.SessionTransitionMessage.CodingKeys		case	sourceIdentifier
+enum	MediaControl.SessionTransitionMessage.CodingKeys		case	destinationIdentifier
+enum	MediaControl.InteractWithControlResultMessage.CodingKeys			
+enum	MediaControl.InteractWithControlResultMessage.CodingKeys		case	control
+enum	MediaControl.InteractWithControlResultMessage.CodingKeys		case	error
+enum	MediaControl.InteractWithItemResultMessage.CodingKeys			
+enum	MediaControl.InteractWithItemResultMessage.CodingKeys		case	itemIdentifier
+enum	MediaControl.InteractWithItemResultMessage.CodingKeys		case	error
+enum	MediaControl.PresentDialogMessage.CodingKeys			
+enum	MediaControl.PresentDialogMessage.CodingKeys		case	dialog
+enum	MediaControl.PendingItemIdentifiersUpdateMessage.CodingKeys			
+enum	MediaControl.PendingItemIdentifiersUpdateMessage.CodingKeys		case	pendingItems
+enum	MediaControl.RoutingSessionUpdateMessage.CodingKeys			
+enum	MediaControl.RoutingSessionUpdateMessage.CodingKeys		case	snapshot
+enum	MediaControl.IPCMessage.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	MediaControl.IPCMessage.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	priority
+enum	MediaControl.IPCMessage.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	message
+class	MediaControl.MediaControlService			
+class	MediaControl.MediaControlService		var	lazy
+class	MediaControl.MediaControlService		var	state
+class	MediaControl.MediaControlService		var	lock
+class	MediaControl.MediaControlService		var	_session
+class	MediaControl.MediaControlService		var	interruptionHandler
+class	MediaControl.MediaControlService		var	messageHandler
+class	MediaControl.MediaControlService		let	identifier
+enum	MediaControl.MediaControlService.Errors			
+enum	MediaControl.MediaControlService.Errors		case	connectionInterrupted
+enum	MediaControl.MediaControlService.Errors		case	malformedReply
+enum	MediaControl.MediaControlService.Errors		case	errorReply
+enum	MediaControl.MediaControlService.State			
+enum	MediaControl.MediaControlService.State		case	initial
+enum	MediaControl.MediaControlService.State		case	activated
+enum	MediaControl.MediaControlService.State		case	interrupted
+enum	MediaControl.MediaControlService.State		case	failed
+struct	MediaControl.TextMessage			
+struct	MediaControl.TextMessage		let	text
+enum	MediaControl.MessageService			
+enum	MediaControl.MessageService.IPCClientMessage			
+enum	MediaControl.MessageService.IPCClientMessage		case	reply
+enum	MediaControl.MessageService.IPCServerMessage			
+enum	MediaControl.MessageService.IPCServerMessage		case	hello
+enum	MediaControl.MessageService.IPCServerMessage.CodingKeys			
+enum	MediaControl.MessageService.IPCServerMessage.CodingKeys		case	hello
+enum	MediaControl.MessageService.IPCServerMessage.HelloCodingKeys			
+enum	MediaControl.MessageService.IPCServerMessage.HelloCodingKeys		case	_0
+enum	MediaControl.MessageService.IPCClientMessage.CodingKeys			
+enum	MediaControl.MessageService.IPCClientMessage.CodingKeys		case	reply
+enum	MediaControl.MessageService.IPCClientMessage.ReplyCodingKeys			
+enum	MediaControl.MessageService.IPCClientMessage.ReplyCodingKeys		case	_0
+enum	MediaControl.TextMessage.CodingKeys			
+enum	MediaControl.TextMessage.CodingKeys		case	text
+class	MediaControl.RoutingSessionsController			
+class	MediaControl.RoutingSessionsController		var	dataSource
+class	MediaControl.RoutingSessionsController		let	configuration
+class	MediaControl.RoutingSessionsController		var	delegate
+class	MediaControl.DistantRoutingSessionsDataSource			
+class	MediaControl.DistantRoutingSessionsDataSource		var	listener
+class	MediaControl.DistantRoutingSessionsDataSource		var	delegate
+class	MediaControl.DistantRoutingSessionsDataSource		var	_optimisticSnapshot
+class	MediaControl.DistantRoutingSessionsDataSource		var	_snapshot
+class	MediaControl.DistantRoutingSessionsDataSource		var	_pendingItemIdentifiers
+class	MediaControl.DistantRoutingSessionsDataSource		var	_routingMode
+class	MediaControl.DistantRoutingSessionsDataSource		var	_isPresentingUI
+class	MediaControl.DistantRoutingSessionsDataSource		var	_expandedSessionIdentifiers
+class	MediaControl.DistantRoutingSessionsDataSource		var	pendingSessionTransition
+class	MediaControl.DistantRoutingSessionsDataSource		var	lock
+class	MediaControl.DistantRoutingSessionsDataSource		var	service
+class	MediaControl.DistantRoutingSessionsDataSource		let	configuration
+class	MediaControl.DistantRoutingSessionsDataSource		let	identifier
+class	MediaControl.DistantRoutingSessionsDataSource		var	lazy
+class	MediaControl.DistantRoutingSessionsDataSource.VolumeControlSegment			
+class	MediaControl.DistantRoutingSessionsDataSource.VolumeControlSegment		var	processingSessionAbsoluteVolumeControl
+class	MediaControl.DistantRoutingSessionsDataSource.VolumeControlSegment		var	pendingSessionAbsoluteVolumeControl
+class	MediaControl.DistantRoutingSessionsDataSource.VolumeControlSegment		var	lazy
+class	MediaControl.DistantRoutingSessionsDataSource.VolumeControlSegment		var	lazy
+class	MediaControl.DistantRoutingSessionsDataSource.VolumeControlSegment		let	identifier
+enum	MediaControl.RoutingMode			
+enum	MediaControl.RoutingMode		case	disabled
+enum	MediaControl.RoutingMode		case	prewarm
+enum	MediaControl.RoutingMode		case	localNetwork
+enum	MediaControl.RoutingMode		case	detailed
+enum	MediaControl.RoutingMode.CodingKeys			
+enum	MediaControl.RoutingMode.CodingKeys		case	disabled
+enum	MediaControl.RoutingMode.CodingKeys		case	prewarm
+enum	MediaControl.RoutingMode.CodingKeys		case	localNetwork
+enum	MediaControl.RoutingMode.CodingKeys		case	detailed
+enum	MediaControl.RoutingMode.DisabledCodingKeys			
+enum	MediaControl.RoutingMode.PrewarmCodingKeys			
+enum	MediaControl.RoutingMode.LocalNetworkCodingKeys			
+enum	MediaControl.RoutingMode.DetailedCodingKeys			
+struct	MediaControl.RoutingControls			
+struct	MediaControl.RoutingControls		var	play
+struct	MediaControl.RoutingControls		var	pause
+struct	MediaControl.RoutingControls		var	stop
+struct	MediaControl.RoutingControls		var	skipForward
+struct	MediaControl.RoutingControls		var	skipBackward
+struct	MediaControl.RoutingControls		var	nextTrack
+struct	MediaControl.RoutingControls		var	previousTrack
+struct	MediaControl.RoutingControls		var	seek
+struct	MediaControl.RoutingControls		var	fastForward
+struct	MediaControl.RoutingControls		var	rewind
+struct	MediaControl.RoutingControls		var	favorite
+struct	MediaControl.RoutingControls		var	unfavorite
+struct	MediaControl.RoutingControls		var	absoluteVolume
+struct	MediaControl.RoutingControls		var	relativeVolume
+struct	MediaControl.RoutingControls		var	TVRemote
+struct	MediaControl.RoutingControls.PlayControl			
+struct	MediaControl.RoutingControls.PlayControl		let	isDisabled
+struct	MediaControl.RoutingControls.PlayControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.PlayControl		var	useToggle
+struct	MediaControl.RoutingControls.PauseControl			
+struct	MediaControl.RoutingControls.PauseControl		let	isDisabled
+struct	MediaControl.RoutingControls.PauseControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.PauseControl		var	useToggle
+struct	MediaControl.RoutingControls.StopControl			
+struct	MediaControl.RoutingControls.StopControl		let	isDisabled
+struct	MediaControl.RoutingControls.StopControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.NextTrackControl			
+struct	MediaControl.RoutingControls.NextTrackControl		let	isDisabled
+struct	MediaControl.RoutingControls.NextTrackControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.PreviousTrackControl			
+struct	MediaControl.RoutingControls.PreviousTrackControl		let	isDisabled
+struct	MediaControl.RoutingControls.PreviousTrackControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.SkipForwardControl			
+struct	MediaControl.RoutingControls.SkipForwardControl		let	intervals
+struct	MediaControl.RoutingControls.SkipForwardControl		let	preferredInterval
+struct	MediaControl.RoutingControls.SkipForwardControl		let	isDisabled
+struct	MediaControl.RoutingControls.SkipForwardControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.SkipBackwardControl			
+struct	MediaControl.RoutingControls.SkipBackwardControl		let	intervals
+struct	MediaControl.RoutingControls.SkipBackwardControl		let	preferredInterval
+struct	MediaControl.RoutingControls.SkipBackwardControl		let	isDisabled
+struct	MediaControl.RoutingControls.SkipBackwardControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.SeekControl			
+struct	MediaControl.RoutingControls.SeekControl		let	isDisabled
+struct	MediaControl.RoutingControls.SeekControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.FastForwardControl			
+struct	MediaControl.RoutingControls.FastForwardControl		let	isDisabled
+struct	MediaControl.RoutingControls.FastForwardControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.RewindControl			
+struct	MediaControl.RoutingControls.RewindControl		let	isDisabled
+struct	MediaControl.RoutingControls.RewindControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.FavoriteControl			
+struct	MediaControl.RoutingControls.FavoriteControl		let	isDisabled
+struct	MediaControl.RoutingControls.FavoriteControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.UnfavoriteControl			
+struct	MediaControl.RoutingControls.UnfavoriteControl		let	isDisabled
+struct	MediaControl.RoutingControls.UnfavoriteControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.AbsoluteVolumeControl			
+struct	MediaControl.RoutingControls.AbsoluteVolumeControl		let	target
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target			
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target		case	session
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target		case	item
+struct	MediaControl.RoutingControls.RelativeVolumeControl			
+struct	MediaControl.RoutingControls.RelativeVolumeControl		let	target
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType		case	increase
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType		case	decrease
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target		case	session
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target		case	item
+struct	MediaControl.RoutingControls.TVRemoteControl			
+struct	MediaControl.RoutingControls.TVRemoteControl		var	sessionIdentifier
+struct	MediaControl.RoutingControls.TVRemoteControl		let	context
+struct	MediaControl.RoutingControls.TVRemoteControl.Context			
+struct	MediaControl.RoutingControls.TVRemoteControl.Context		let	identifier
+struct	MediaControl.RoutingControls.TVRemoteControl.Context		let	deviceType
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType			
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType		case	appleTV
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType		case	television
+struct	MediaControl.ContinuousRoutingControl			
+struct	MediaControl.ContinuousRoutingControl		var	control
+struct	MediaControl.RoutingControl			
+struct	MediaControl.RoutingControl		var	target
+struct	MediaControl.RoutingControl		var	identifier
+struct	MediaControl.RoutingControl		var	type
+enum	MediaControl.RoutingControl.Target			
+enum	MediaControl.RoutingControl.Target		case	session
+enum	MediaControl.RoutingControl.Target		case	item
+enum	MediaControl.RoutingControl.RoutingControlType			
+enum	MediaControl.RoutingControl.RoutingControlType		case	togglePlayPause
+enum	MediaControl.RoutingControl.RoutingControlType		case	seek
+enum	MediaControl.RoutingControl.RoutingControlType		case	skipForward
+enum	MediaControl.RoutingControl.RoutingControlType		case	skipBackward
+enum	MediaControl.RoutingControl.RoutingControlType		case	absoluteVolume
+enum	MediaControl.RoutingControl.RoutingControlType		case	relativeVolume
+enum	MediaControl.RoutingControl.RoutingControlType		case	previousTrack
+enum	MediaControl.RoutingControl.RoutingControlType		case	nextTrack
+enum	MediaControl.RoutingControl.RoutingControlType		case	play
+enum	MediaControl.RoutingControl.RoutingControlType		case	pause
+enum	MediaControl.RoutingControl.RoutingControlType		case	stop
+enum	MediaControl.RoutingControl.RoutingControlType		case	rewind
+enum	MediaControl.RoutingControl.RoutingControlType		case	fastForward
+enum	MediaControl.RoutingControl.RoutingControlType		case	tvRemote
+enum	MediaControl.RoutingControl.RoutingControlType		case	favorite
+enum	MediaControl.RoutingControl.RoutingControlType		case	unfavorite
+enum	MediaControl.RoutingControl.RoutingControlType		case	mute
+enum	MediaControl.RoutingControl.CodingKeys			
+enum	MediaControl.RoutingControl.CodingKeys		case	target
+enum	MediaControl.RoutingControl.CodingKeys		case	identifier
+enum	MediaControl.RoutingControl.CodingKeys		case	type
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	previousTrack
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	nextTrack
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	play
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	pause
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	togglePlayPause
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	stop
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	rewind
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	fastForward
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	seek
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	skipForward
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	skipBackward
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	tvRemote
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	favorite
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	unfavorite
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	absoluteVolume
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	relativeVolume
+enum	MediaControl.RoutingControl.RoutingControlType.CodingKeys		case	mute
+enum	MediaControl.RoutingControl.RoutingControlType.PreviousTrackCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.NextTrackCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.PlayCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.PauseCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.TogglePlayPauseCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.TogglePlayPauseCodingKeys		case	state
+enum	MediaControl.RoutingControl.RoutingControlType.StopCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.RewindCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.FastForwardCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.SeekCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.SeekCodingKeys		case	position
+enum	MediaControl.RoutingControl.RoutingControlType.SkipForwardCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.SkipForwardCodingKeys		case	interval
+enum	MediaControl.RoutingControl.RoutingControlType.SkipBackwardCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.SkipBackwardCodingKeys		case	interval
+enum	MediaControl.RoutingControl.RoutingControlType.TvRemoteCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.FavoriteCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.UnfavoriteCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.AbsoluteVolumeCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.AbsoluteVolumeCodingKeys		case	level
+enum	MediaControl.RoutingControl.RoutingControlType.RelativeVolumeCodingKeys			
+enum	MediaControl.RoutingControl.RoutingControlType.RelativeVolumeCodingKeys		case	adjustment
+enum	MediaControl.RoutingControl.RoutingControlType.MuteCodingKeys			
+enum	MediaControl.RoutingControl.Target.CodingKeys			
+enum	MediaControl.RoutingControl.Target.CodingKeys		case	session
+enum	MediaControl.RoutingControl.Target.CodingKeys		case	item
+enum	MediaControl.RoutingControl.Target.SessionCodingKeys			
+enum	MediaControl.RoutingControl.Target.SessionCodingKeys		case	identifier
+enum	MediaControl.RoutingControl.Target.ItemCodingKeys			
+enum	MediaControl.RoutingControl.Target.ItemCodingKeys		case	identifier
+enum	MediaControl.ContinuousRoutingControl.CodingKeys			
+enum	MediaControl.ContinuousRoutingControl.CodingKeys		case	control
+enum	MediaControl.RoutingControls.CodingKeys			
+enum	MediaControl.RoutingControls.CodingKeys		case	play
+enum	MediaControl.RoutingControls.CodingKeys		case	pause
+enum	MediaControl.RoutingControls.CodingKeys		case	stop
+enum	MediaControl.RoutingControls.CodingKeys		case	skipForward
+enum	MediaControl.RoutingControls.CodingKeys		case	skipBackward
+enum	MediaControl.RoutingControls.CodingKeys		case	nextTrack
+enum	MediaControl.RoutingControls.CodingKeys		case	previousTrack
+enum	MediaControl.RoutingControls.CodingKeys		case	seek
+enum	MediaControl.RoutingControls.CodingKeys		case	fastForward
+enum	MediaControl.RoutingControls.CodingKeys		case	rewind
+enum	MediaControl.RoutingControls.CodingKeys		case	favorite
+enum	MediaControl.RoutingControls.CodingKeys		case	unfavorite
+enum	MediaControl.RoutingControls.CodingKeys		case	absoluteVolume
+enum	MediaControl.RoutingControls.CodingKeys		case	relativeVolume
+enum	MediaControl.RoutingControls.CodingKeys		case	TVRemote
+enum	MediaControl.RoutingControls.TVRemoteControl.CodingKeys			
+enum	MediaControl.RoutingControls.TVRemoteControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.TVRemoteControl.CodingKeys		case	context
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.CodingKeys			
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.CodingKeys		case	identifier
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.CodingKeys		case	deviceType
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType.CodingKeys			
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType.CodingKeys		case	appleTV
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType.CodingKeys		case	television
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType.AppleTVCodingKeys			
+enum	MediaControl.RoutingControls.TVRemoteControl.Context.DeviceType.TelevisionCodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.CodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.CodingKeys		case	target
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.CodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.CodingKeys		case	session
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.CodingKeys		case	item
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.SessionCodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.SessionCodingKeys		case	identifier
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.ItemCodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.Target.ItemCodingKeys		case	identifier
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType.CodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType.CodingKeys		case	increase
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType.CodingKeys		case	decrease
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType.IncreaseCodingKeys			
+enum	MediaControl.RoutingControls.RelativeVolumeControl.AdjustmentType.DecreaseCodingKeys			
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.CodingKeys			
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.CodingKeys		case	target
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.CodingKeys			
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.CodingKeys		case	session
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.CodingKeys		case	item
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.SessionCodingKeys			
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.SessionCodingKeys		case	identifier
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.ItemCodingKeys			
+enum	MediaControl.RoutingControls.AbsoluteVolumeControl.Target.ItemCodingKeys		case	identifier
+enum	MediaControl.RoutingControls.UnfavoriteControl.CodingKeys			
+enum	MediaControl.RoutingControls.UnfavoriteControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.UnfavoriteControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.FavoriteControl.CodingKeys			
+enum	MediaControl.RoutingControls.FavoriteControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.FavoriteControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.RewindControl.CodingKeys			
+enum	MediaControl.RoutingControls.RewindControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.RewindControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.FastForwardControl.CodingKeys			
+enum	MediaControl.RoutingControls.FastForwardControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.FastForwardControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.SeekControl.CodingKeys			
+enum	MediaControl.RoutingControls.SeekControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.SeekControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.SkipBackwardControl.CodingKeys			
+enum	MediaControl.RoutingControls.SkipBackwardControl.CodingKeys		case	intervals
+enum	MediaControl.RoutingControls.SkipBackwardControl.CodingKeys		case	preferredInterval
+enum	MediaControl.RoutingControls.SkipBackwardControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.SkipBackwardControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.SkipForwardControl.CodingKeys			
+enum	MediaControl.RoutingControls.SkipForwardControl.CodingKeys		case	intervals
+enum	MediaControl.RoutingControls.SkipForwardControl.CodingKeys		case	preferredInterval
+enum	MediaControl.RoutingControls.SkipForwardControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.SkipForwardControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.PreviousTrackControl.CodingKeys			
+enum	MediaControl.RoutingControls.PreviousTrackControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.PreviousTrackControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.NextTrackControl.CodingKeys			
+enum	MediaControl.RoutingControls.NextTrackControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.NextTrackControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.StopControl.CodingKeys			
+enum	MediaControl.RoutingControls.StopControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.StopControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.PauseControl.CodingKeys			
+enum	MediaControl.RoutingControls.PauseControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.PauseControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.PauseControl.CodingKeys		case	useToggle
+enum	MediaControl.RoutingControls.PlayControl.CodingKeys			
+enum	MediaControl.RoutingControls.PlayControl.CodingKeys		case	isDisabled
+enum	MediaControl.RoutingControls.PlayControl.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingControls.PlayControl.CodingKeys		case	useToggle
+class	MediaControl.ContinuousInteraction			
+class	MediaControl.ContinuousInteraction		let	identifier
+class	MediaControl.ContinuousInteraction		var	finalizer
+struct	MediaControl.RoutingItem			
+struct	MediaControl.RoutingItem		var	baseIdentifier
+struct	MediaControl.RoutingItem		var	scopeIdentifier
+struct	MediaControl.RoutingItem		var	title
+struct	MediaControl.RoutingItem		var	symbolName
+struct	MediaControl.RoutingItem		var	selectionIndicator
+struct	MediaControl.RoutingItem		var	volume
+struct	MediaControl.RoutingItem		var	controls
+struct	MediaControl.RoutingItem		var	attributes
+struct	MediaControl.RoutingItem		var	properties
+struct	MediaControl.RoutingItem		var	actions
+struct	MediaControl.RoutingItem.Attributes			
+struct	MediaControl.RoutingItem.Attributes		var	batteryInfo
+struct	MediaControl.RoutingItem.Attributes		var	properties
+struct	MediaControl.RoutingItem.Attributes.BatteryInfo			
+struct	MediaControl.RoutingItem.Attributes.BatteryInfo		var	solo
+struct	MediaControl.RoutingItem.Attributes.BatteryInfo		var	left
+struct	MediaControl.RoutingItem.Attributes.BatteryInfo		var	right
+struct	MediaControl.RoutingItem.Attributes.BatteryInfo		var	chargeCase
+struct	MediaControl.RoutingItem.Attributes.Properties			
+struct	MediaControl.RoutingItem.Attributes.Properties		let	rawValue
+struct	MediaControl.RoutingItem.Properties			
+struct	MediaControl.RoutingItem.Properties		let	rawValue
+struct	MediaControl.RoutingItem.Action			
+struct	MediaControl.RoutingItem.Action		let	title
+struct	MediaControl.RoutingItem.Action		let	symbolName
+struct	MediaControl.RoutingItem.Action		let	kind
+struct	MediaControl.RoutingItem.Action		let	itemIdentifier
+enum	MediaControl.RoutingItem.Action.Kind			
+enum	MediaControl.RoutingItem.Action.Kind		case	shareAudio
+enum	MediaControl.RoutingItem.Action.Kind		case	remoteControl
+enum	MediaControl.RoutingItem.SelectionIndicator			
+enum	MediaControl.RoutingItem.SelectionIndicator		case	none
+enum	MediaControl.RoutingItem.SelectionIndicator		case	selectable
+enum	MediaControl.RoutingItem.SelectionIndicator		case	selected
+enum	MediaControl.RoutingItem.SelectionIndicator		case	pullable
+struct	MediaControl.RoutingSession			
+struct	MediaControl.RoutingSession		var	identifier
+struct	MediaControl.RoutingSession		var	preferredItems
+struct	MediaControl.RoutingSession		var	remainingItems
+struct	MediaControl.RoutingSession		var	nowPlayingInfo
+struct	MediaControl.RoutingSession		var	volume
+struct	MediaControl.RoutingSession		var	controls
+struct	MediaControl.RoutingSession		var	actions
+struct	MediaControl.RoutingSession		var	symbolName
+struct	MediaControl.RoutingSession		var	lastPlayingSnapshot
+struct	MediaControl.RoutingSession		var	hostInfo
+struct	MediaControl.RoutingSession		var	properties
+struct	MediaControl.RoutingSession.NowPlayingInfo			
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	title
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	subtitle
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	playbackInfo
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	trackInfo
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	artworkToken
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	applicationBundleIdentifier
+struct	MediaControl.RoutingSession.NowPlayingInfo		var	playbackProcessIdentifier
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo			
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo		var	playbackState
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo		var	playbackType
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState		case	playing
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState		case	paused
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType		case	finite
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType		case	live
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo			
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo		var	start
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo		var	end
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo		var	duration
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo		var	progressSnapshot
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo		var	rate
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.ProgressSnapshot			
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.ProgressSnapshot		var	time
+struct	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.ProgressSnapshot		var	date
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo			
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	title
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	album
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	artist
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	composer
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	station
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	attribution
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo		var	extendedInfo
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo			
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo		var	storeIdentifier
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo		var	subscriptionIdentifier
+struct	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo		var	isrc
+struct	MediaControl.RoutingSession.HostInfo			
+struct	MediaControl.RoutingSession.HostInfo		var	name
+struct	MediaControl.RoutingSession.HostInfo		var	symbolName
+struct	MediaControl.RoutingSession.HostInfo		var	productName
+struct	MediaControl.RoutingSession.HostInfo		var	isVisibleSilentHost
+struct	MediaControl.RoutingSession.HostInfo		var	isPersonalHost
+struct	MediaControl.RoutingSession.Action			
+struct	MediaControl.RoutingSession.Action		let	title
+struct	MediaControl.RoutingSession.Action		let	symbolName
+struct	MediaControl.RoutingSession.Action		let	kind
+struct	MediaControl.RoutingSession.Action		let	sessionIdentifier
+enum	MediaControl.RoutingSession.Action.Kind			
+enum	MediaControl.RoutingSession.Action.Kind		case	shareAudio
+struct	MediaControl.RoutingSession.Properties			
+struct	MediaControl.RoutingSession.Properties		let	rawValue
+struct	MediaControl.RoutingDialog			
+struct	MediaControl.RoutingDialog		let	identifier
+struct	MediaControl.RoutingDialog		let	titleText
+struct	MediaControl.RoutingDialog		let	detailText
+struct	MediaControl.RoutingDialog		let	actions
+enum	MediaControl.RoutingDialog.Action			
+enum	MediaControl.RoutingDialog.Action		case	cancel
+enum	MediaControl.RoutingDialog.Action		case	confirm
+enum	MediaControl.RoutingDialog.Action		case	acknowledge
+enum	MediaControl.RoutingDialog.Action		case	dismiss
+struct	MediaControl.RoutingSessionSnapshot			
+struct	MediaControl.RoutingSessionSnapshot		var	activeSession
+struct	MediaControl.RoutingSessionSnapshot		var	activeSessions
+struct	MediaControl.RoutingSessionSnapshot		var	inactiveSessions
+struct	MediaControl.RoutingSessionConfiguration			
+struct	MediaControl.RoutingSessionConfiguration		var	context
+struct	MediaControl.RoutingSessionConfiguration		var	filterInactiveSessions
+struct	MediaControl.RoutingSessionConfiguration		var	itemTypes
+struct	MediaControl.RoutingSessionConfiguration		var	attribution
+struct	MediaControl.RoutingSessionConfiguration		var	surface
+struct	MediaControl.RoutingSessionConfiguration		var	nowPlayingInfoProperties
+struct	MediaControl.RoutingSessionConfiguration		var	routingItemProperties
+struct	MediaControl.RoutingSessionConfiguration		var	alwaysWantsLocalSession
+struct	MediaControl.RoutingSessionConfiguration		var	prefersVideoRouting
+enum	MediaControl.RoutingSessionConfiguration.Attribution			
+enum	MediaControl.RoutingSessionConfiguration.Attribution		case	attributed
+enum	MediaControl.RoutingSessionConfiguration.Attribution		case	none
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType		case	app
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType		case	anonymous
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType		case	nowPlayingApp
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType		case	foregroundMediaApp
+enum	MediaControl.RoutingSessionConfiguration.Context			
+enum	MediaControl.RoutingSessionConfiguration.Context		case	app
+enum	MediaControl.RoutingSessionConfiguration.Context		case	deviceTarget
+enum	MediaControl.RoutingSessionConfiguration.Context		case	platterTarget
+enum	MediaControl.RoutingSessionConfiguration.Context		case	deviceSessionTarget
+enum	MediaControl.RoutingSessionConfiguration.Context		case	nonUI
+enum	MediaControl.RoutingSessionConfiguration.Context		case	ui
+enum	MediaControl.RoutingSessionConfiguration.Context		case	localSessionTarget
+enum	MediaControl.RoutingSessionConfiguration.Context		case	activeSessionTarget
+enum	MediaControl.RoutingSessionConfiguration.Surface			
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	controlCenter
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	coverSheet
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	dynamicIsland
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	siri
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	home
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	proximityCard
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	app
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	ambient
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	bluePill
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	activityBanner
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	routeRecommendation
+enum	MediaControl.RoutingSessionConfiguration.Surface		case	other
+enum	MediaControl.RoutingSessionConfiguration.ItemType			
+enum	MediaControl.RoutingSessionConfiguration.ItemType		case	audioSession
+enum	MediaControl.RoutingSessionConfiguration.ItemType		case	appSpecific
+enum	MediaControl.RoutingSessionConfiguration.ItemType		case	standard
+struct	MediaControl.RoutingSessionConfiguration.RoutingItemProperties			
+struct	MediaControl.RoutingSessionConfiguration.RoutingItemProperties		let	rawValue
+struct	MediaControl.RoutingSessionConfiguration.NowPlayingInfoProperties			
+struct	MediaControl.RoutingSessionConfiguration.NowPlayingInfoProperties		let	rawValue
+enum	MediaControl.InternalRoutingError			
+enum	MediaControl.InternalRoutingError		case	external
+enum	MediaControl.InternalRoutingError		case	itemNotFound
+enum	MediaControl.InternalRoutingError		case	sessionNotFound
+enum	MediaControl.InternalRoutingError		case	noActiveSession
+enum	MediaControl.InternalRoutingError		case	noActivePlayer
+enum	MediaControl.InternalRoutingError		case	notImplemented
+enum	MediaControl.InternalRoutingError		case	invalidAction
+enum	MediaControl.InternalRoutingError		case	cancelled
+enum	MediaControl.InternalRoutingError		case	timedOut
+enum	MediaControl.InternalRoutingError		case	unsupportedOperation
+enum	MediaControl.InternalRoutingError		case	NOP
+enum	MediaControl.InternalRoutingError		case	replacedBySubsequentInteraction
+enum	MediaControl.InternalRoutingError		case	unsupportedControl
+enum	MediaControl.InternalRoutingError		case	sessionRequiresAuthorization
+enum	MediaControl.InternalRoutingError		case	endpointEntryNotFound
+enum	MediaControl.InternalRoutingError		case	stabilityTimeout
+enum	MediaControl.InternalRoutingError.CodingKeys			
+enum	MediaControl.InternalRoutingError.CodingKeys		case	itemNotFound
+enum	MediaControl.InternalRoutingError.CodingKeys		case	sessionNotFound
+enum	MediaControl.InternalRoutingError.CodingKeys		case	noActiveSession
+enum	MediaControl.InternalRoutingError.CodingKeys		case	noActivePlayer
+enum	MediaControl.InternalRoutingError.CodingKeys		case	notImplemented
+enum	MediaControl.InternalRoutingError.CodingKeys		case	invalidAction
+enum	MediaControl.InternalRoutingError.CodingKeys		case	cancelled
+enum	MediaControl.InternalRoutingError.CodingKeys		case	timedOut
+enum	MediaControl.InternalRoutingError.CodingKeys		case	unsupportedOperation
+enum	MediaControl.InternalRoutingError.CodingKeys		case	NOP
+enum	MediaControl.InternalRoutingError.CodingKeys		case	replacedBySubsequentInteraction
+enum	MediaControl.InternalRoutingError.CodingKeys		case	unsupportedControl
+enum	MediaControl.InternalRoutingError.CodingKeys		case	sessionRequiresAuthorization
+enum	MediaControl.InternalRoutingError.CodingKeys		case	endpointEntryNotFound
+enum	MediaControl.InternalRoutingError.CodingKeys		case	stabilityTimeout
+enum	MediaControl.InternalRoutingError.CodingKeys		case	external
+enum	MediaControl.InternalRoutingError.ItemNotFoundCodingKeys			
+enum	MediaControl.InternalRoutingError.SessionNotFoundCodingKeys			
+enum	MediaControl.InternalRoutingError.NoActiveSessionCodingKeys			
+enum	MediaControl.InternalRoutingError.NoActivePlayerCodingKeys			
+enum	MediaControl.InternalRoutingError.NotImplementedCodingKeys			
+enum	MediaControl.InternalRoutingError.InvalidActionCodingKeys			
+enum	MediaControl.InternalRoutingError.CancelledCodingKeys			
+enum	MediaControl.InternalRoutingError.TimedOutCodingKeys			
+enum	MediaControl.InternalRoutingError.UnsupportedOperationCodingKeys			
+enum	MediaControl.InternalRoutingError.NOPCodingKeys			
+enum	MediaControl.InternalRoutingError.ReplacedBySubsequentInteractionCodingKeys			
+enum	MediaControl.InternalRoutingError.UnsupportedControlCodingKeys			
+enum	MediaControl.InternalRoutingError.SessionRequiresAuthorizationCodingKeys			
+enum	MediaControl.InternalRoutingError.EndpointEntryNotFoundCodingKeys			
+enum	MediaControl.InternalRoutingError.StabilityTimeoutCodingKeys			
+enum	MediaControl.InternalRoutingError.ExternalCodingKeys			
+enum	MediaControl.InternalRoutingError.ExternalCodingKeys		case	description
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	context
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	filterInactiveSessions
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	itemTypes
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	attribution
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	surface
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	nowPlayingInfoProperties
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	routingItemProperties
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	alwaysWantsLocalSession
+enum	MediaControl.RoutingSessionConfiguration.CodingKeys		case	prefersVideoRouting
+enum	MediaControl.RoutingSessionConfiguration.ItemType.CodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.ItemType.CodingKeys		case	standard
+enum	MediaControl.RoutingSessionConfiguration.ItemType.CodingKeys		case	audioSession
+enum	MediaControl.RoutingSessionConfiguration.ItemType.CodingKeys		case	appSpecific
+enum	MediaControl.RoutingSessionConfiguration.ItemType.StandardCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.ItemType.AudioSessionCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.ItemType.AudioSessionCodingKeys		case	identifier
+enum	MediaControl.RoutingSessionConfiguration.ItemType.AppSpecificCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.ItemType.AppSpecificCodingKeys		case	bundleIdentifier
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	controlCenter
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	coverSheet
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	dynamicIsland
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	siri
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	home
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	proximityCard
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	app
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	ambient
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	bluePill
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	activityBanner
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	routeRecommendation
+enum	MediaControl.RoutingSessionConfiguration.Surface.CodingKeys		case	other
+enum	MediaControl.RoutingSessionConfiguration.Surface.ControlCenterCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.CoverSheetCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.DynamicIslandCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.SiriCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.HomeCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.ProximityCardCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.AppCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.AmbientCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.BluePillCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.ActivityBannerCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.RouteRecommendationCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Surface.OtherCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	nonUI
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	ui
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	app
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	deviceTarget
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	platterTarget
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	deviceSessionTarget
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	localSessionTarget
+enum	MediaControl.RoutingSessionConfiguration.Context.CodingKeys		case	activeSessionTarget
+enum	MediaControl.RoutingSessionConfiguration.Context.NonUICodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.UiCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.AppCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.AppCodingKeys		case	bundleIdentifier
+enum	MediaControl.RoutingSessionConfiguration.Context.DeviceTargetCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.DeviceTargetCodingKeys		case	deviceIdentifier
+enum	MediaControl.RoutingSessionConfiguration.Context.PlatterTargetCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.PlatterTargetCodingKeys		case	deviceIdentifier
+enum	MediaControl.RoutingSessionConfiguration.Context.DeviceSessionTargetCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.DeviceSessionTargetCodingKeys		case	deviceIdentifier
+enum	MediaControl.RoutingSessionConfiguration.Context.LocalSessionTargetCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Context.ActiveSessionTargetCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.CodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.CodingKeys		case	none
+enum	MediaControl.RoutingSessionConfiguration.Attribution.CodingKeys		case	attributed
+enum	MediaControl.RoutingSessionConfiguration.Attribution.NoneCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributedCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributedCodingKeys		case	to
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.CodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.CodingKeys		case	anonymous
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.CodingKeys		case	app
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.CodingKeys		case	nowPlayingApp
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.CodingKeys		case	foregroundMediaApp
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.AnonymousCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.AppCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.AppCodingKeys		case	bundleIdentifier
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.NowPlayingAppCodingKeys			
+enum	MediaControl.RoutingSessionConfiguration.Attribution.AttributionType.ForegroundMediaAppCodingKeys			
+enum	MediaControl.RoutingSessionSnapshot.CodingKeys			
+enum	MediaControl.RoutingSessionSnapshot.CodingKeys		case	activeSession
+enum	MediaControl.RoutingSessionSnapshot.CodingKeys		case	activeSessions
+enum	MediaControl.RoutingSessionSnapshot.CodingKeys		case	inactiveSessions
+enum	MediaControl.RoutingDialog.CodingKeys			
+enum	MediaControl.RoutingDialog.CodingKeys		case	identifier
+enum	MediaControl.RoutingDialog.CodingKeys		case	titleText
+enum	MediaControl.RoutingDialog.CodingKeys		case	detailText
+enum	MediaControl.RoutingDialog.CodingKeys		case	actions
+enum	MediaControl.RoutingDialog.Action.CodingKeys			
+enum	MediaControl.RoutingDialog.Action.CodingKeys		case	dismiss
+enum	MediaControl.RoutingDialog.Action.CodingKeys		case	cancel
+enum	MediaControl.RoutingDialog.Action.CodingKeys		case	confirm
+enum	MediaControl.RoutingDialog.Action.CodingKeys		case	acknowledge
+enum	MediaControl.RoutingDialog.Action.DismissCodingKeys			
+enum	MediaControl.RoutingDialog.Action.CancelCodingKeys			
+enum	MediaControl.RoutingDialog.Action.CancelCodingKeys		case	text
+enum	MediaControl.RoutingDialog.Action.ConfirmCodingKeys			
+enum	MediaControl.RoutingDialog.Action.ConfirmCodingKeys		case	text
+enum	MediaControl.RoutingDialog.Action.AcknowledgeCodingKeys			
+enum	MediaControl.RoutingDialog.Action.AcknowledgeCodingKeys		case	text
+enum	MediaControl.RoutingSession.CodingKeys			
+enum	MediaControl.RoutingSession.CodingKeys		case	identifier
+enum	MediaControl.RoutingSession.CodingKeys		case	preferredItems
+enum	MediaControl.RoutingSession.CodingKeys		case	remainingItems
+enum	MediaControl.RoutingSession.CodingKeys		case	nowPlayingInfo
+enum	MediaControl.RoutingSession.CodingKeys		case	volume
+enum	MediaControl.RoutingSession.CodingKeys		case	controls
+enum	MediaControl.RoutingSession.CodingKeys		case	actions
+enum	MediaControl.RoutingSession.CodingKeys		case	symbolName
+enum	MediaControl.RoutingSession.CodingKeys		case	lastPlayingSnapshot
+enum	MediaControl.RoutingSession.CodingKeys		case	hostInfo
+enum	MediaControl.RoutingSession.CodingKeys		case	properties
+enum	MediaControl.RoutingSession.Action.CodingKeys			
+enum	MediaControl.RoutingSession.Action.CodingKeys		case	title
+enum	MediaControl.RoutingSession.Action.CodingKeys		case	symbolName
+enum	MediaControl.RoutingSession.Action.CodingKeys		case	kind
+enum	MediaControl.RoutingSession.Action.CodingKeys		case	sessionIdentifier
+enum	MediaControl.RoutingSession.Action.Kind.CodingKeys			
+enum	MediaControl.RoutingSession.Action.Kind.CodingKeys		case	shareAudio
+enum	MediaControl.RoutingSession.Action.Kind.ShareAudioCodingKeys			
+enum	MediaControl.RoutingSession.HostInfo.CodingKeys			
+enum	MediaControl.RoutingSession.HostInfo.CodingKeys		case	name
+enum	MediaControl.RoutingSession.HostInfo.CodingKeys		case	symbolName
+enum	MediaControl.RoutingSession.HostInfo.CodingKeys		case	productName
+enum	MediaControl.RoutingSession.HostInfo.CodingKeys		case	isVisibleSilentHost
+enum	MediaControl.RoutingSession.HostInfo.CodingKeys		case	isPersonalHost
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	title
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	subtitle
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	playbackInfo
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	trackInfo
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	artworkToken
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	applicationBundleIdentifier
+enum	MediaControl.RoutingSession.NowPlayingInfo.CodingKeys		case	playbackProcessIdentifier
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	title
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	album
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	artist
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	composer
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	station
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	attribution
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.CodingKeys		case	extendedInfo
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo.CodingKeys		case	storeIdentifier
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo.CodingKeys		case	subscriptionIdentifier
+enum	MediaControl.RoutingSession.NowPlayingInfo.TrackInfo.ExtendedInfo.CodingKeys		case	isrc
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.CodingKeys		case	playbackState
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.CodingKeys		case	playbackType
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.CodingKeys		case	live
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.CodingKeys		case	finite
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.LiveCodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.FiniteCodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.FiniteCodingKeys		case	_0
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.CodingKeys		case	start
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.CodingKeys		case	end
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.CodingKeys		case	duration
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.CodingKeys		case	progressSnapshot
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.CodingKeys		case	rate
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.ProgressSnapshot.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.ProgressSnapshot.CodingKeys		case	time
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackType.DurationInfo.ProgressSnapshot.CodingKeys		case	date
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState.CodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState.CodingKeys		case	playing
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState.CodingKeys		case	paused
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState.PlayingCodingKeys			
+enum	MediaControl.RoutingSession.NowPlayingInfo.PlaybackInfo.PlaybackState.PausedCodingKeys			
+enum	MediaControl.RoutingItem.CodingKeys			
+enum	MediaControl.RoutingItem.CodingKeys		case	baseIdentifier
+enum	MediaControl.RoutingItem.CodingKeys		case	scopeIdentifier
+enum	MediaControl.RoutingItem.CodingKeys		case	title
+enum	MediaControl.RoutingItem.CodingKeys		case	symbolName
+enum	MediaControl.RoutingItem.CodingKeys		case	selectionIndicator
+enum	MediaControl.RoutingItem.CodingKeys		case	volume
+enum	MediaControl.RoutingItem.CodingKeys		case	controls
+enum	MediaControl.RoutingItem.CodingKeys		case	attributes
+enum	MediaControl.RoutingItem.CodingKeys		case	properties
+enum	MediaControl.RoutingItem.CodingKeys		case	actions
+enum	MediaControl.RoutingItem.SelectionIndicator.CodingKeys			
+enum	MediaControl.RoutingItem.SelectionIndicator.CodingKeys		case	none
+enum	MediaControl.RoutingItem.SelectionIndicator.CodingKeys		case	selectable
+enum	MediaControl.RoutingItem.SelectionIndicator.CodingKeys		case	selected
+enum	MediaControl.RoutingItem.SelectionIndicator.CodingKeys		case	pullable
+enum	MediaControl.RoutingItem.SelectionIndicator.NoneCodingKeys			
+enum	MediaControl.RoutingItem.SelectionIndicator.SelectableCodingKeys			
+enum	MediaControl.RoutingItem.SelectionIndicator.SelectedCodingKeys			
+enum	MediaControl.RoutingItem.SelectionIndicator.PullableCodingKeys			
+enum	MediaControl.RoutingItem.Action.CodingKeys			
+enum	MediaControl.RoutingItem.Action.CodingKeys		case	title
+enum	MediaControl.RoutingItem.Action.CodingKeys		case	symbolName
+enum	MediaControl.RoutingItem.Action.CodingKeys		case	kind
+enum	MediaControl.RoutingItem.Action.CodingKeys		case	itemIdentifier
+enum	MediaControl.RoutingItem.Action.Kind.CodingKeys			
+enum	MediaControl.RoutingItem.Action.Kind.CodingKeys		case	shareAudio
+enum	MediaControl.RoutingItem.Action.Kind.CodingKeys		case	remoteControl
+enum	MediaControl.RoutingItem.Action.Kind.ShareAudioCodingKeys			
+enum	MediaControl.RoutingItem.Action.Kind.RemoteControlCodingKeys			
+enum	MediaControl.RoutingItem.Attributes.CodingKeys			
+enum	MediaControl.RoutingItem.Attributes.CodingKeys		case	batteryInfo
+enum	MediaControl.RoutingItem.Attributes.CodingKeys		case	properties
+enum	MediaControl.RoutingItem.Attributes.BatteryInfo.CodingKeys			
+enum	MediaControl.RoutingItem.Attributes.BatteryInfo.CodingKeys		case	solo
+enum	MediaControl.RoutingItem.Attributes.BatteryInfo.CodingKeys		case	left
+enum	MediaControl.RoutingItem.Attributes.BatteryInfo.CodingKeys		case	right
+enum	MediaControl.RoutingItem.Attributes.BatteryInfo.CodingKeys		case	chargeCase
+class	MediaControl.VolumeGroup			
+class	MediaControl.VolumeGroup		var	itemRelativeVolumeLevels
+class	MediaControl.VolumeGroup		var	itemVolumeLevels
+class	MediaControl.VolumeGroup		var	groupVolumeLevel
+enum	MediaControl.VolumeGroup.CodingKeys			
+enum	MediaControl.VolumeGroup.CodingKeys		case	itemRelativeVolumeLevels
+enum	MediaControl.VolumeGroup.CodingKeys		case	itemVolumeLevels
+enum	MediaControl.VolumeGroup.CodingKeys		case	groupVolumeLevel
+struct	MediaControl.ExecutionPriority			
+struct	MediaControl.ExecutionPriority		var	priority
+struct	MediaControl.ExecutionPriority		var	rawQOS
+enum	MediaControl.ExecutionPriority.CodingKeys			
+enum	MediaControl.ExecutionPriority.CodingKeys		case	priority
+enum	MediaControl.ExecutionPriority.CodingKeys		case	rawQOS
+class	MediaControl.ImageUtilities			
+enum	MediaControl.ImageUtilities.Error			
+enum	MediaControl.ImageUtilities.Error		case	invalidImageData
+enum	MediaControl.LocalizedStrings			
+enum	MediaControl.LocalizedStrings.Dialog			
+enum	MediaControl.LocalizedStrings.Dialog.ReplaceAudio			
+enum	MediaControl.LocalizedStrings.Dialog.ReplaceAudio.Action			
+enum	MediaControl.LocalizedStrings.Dialog.InterruptGroupSession			
+enum	MediaControl.LocalizedStrings.Dialog.InterruptGroupSession.Action			
+enum	MediaControl.LocalizedStrings.RoutingSession			
+enum	MediaControl.LocalizedStrings.RoutingSession.Action			
+enum	MediaControl.LocalizedStrings.RoutingItem			
+enum	MediaControl.LocalizedStrings.RoutingItem.Title			
+enum	MediaControl.LocalizedStrings.RoutingItem.Action			
+class	MediaControl.Preferences			
+class	MediaControl.Preferences		let	defaults
+class	MediaControl.Preferences.Storage			
+class	MediaControl.ArtworkLoader			
+class	MediaControl.ArtworkLoader		var	handler
+class	MediaControl.ArtworkLoader		var	token
+class	MediaControl.ArtworkLoader		var	lastLoadedToken
+class	MediaControl.ArtworkLoader		let	identifier
+class	MediaControl.DynamicArtworkDataSource			
+class	MediaControl.DynamicArtworkDataSource		var	artworkCompletions
+class	MediaControl.DynamicArtworkDataSource		var	lock
+class	MediaControl.ArtworkCatalogDataSource	MPStoreArtworkDataSource		
+enum	MediaControl.DynamicArtworkDataSource.ArtworkError			
+enum	MediaControl.DynamicArtworkDataSource.ArtworkError		case	emptyPlaybackQueueArtwork
+enum	MediaControl.DynamicArtworkDataSource.ArtworkError		case	invalidRemoteArtworkRepresentation
+enum	MediaControl.DynamicArtworkDataSource.ArtworkError		case	invalidImageRepresentation
+enum	MediaControl.DynamicArtworkDataSource.ArtworkError		case	invalidRequestSize
+protocol	MediaControl.ArtworkDataSource			
+protocol	MediaControl.RoutingSessionsControllerProtocol			
+protocol	MediaControl.RoutingSessionsControllerDelegate			
+protocol	MediaControl.RoutingSessionsDataSource			
+protocol	MediaControl.RoutingSessionsDataSourceListener			
+protocol	MediaControl.RoutingSessionsDataSourceDelegate			
+protocol	MediaControl.ConditionalControl			
+protocol	conformance __C.CFString	Swift.Equatable: CoreFoundation		
+protocol	conformance __C.CFString	CoreFoundation._CFObject: CoreFoundation		
+protocol	conformance __C.CFString	Swift.Hashable: CoreFoundation		
+protocol	conformance MediaControl.ArtworkToken	Swift.Hashable		
+protocol	conformance MediaControl.ArtworkToken	Swift.Decodable		
+protocol	conformance MediaControl.ArtworkToken	Swift.Encodable		
+protocol	conformance MediaControl.ArtworkToken	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.ArtworkToken	Swift.Equatable		
+protocol	conformance MediaControl.StandardArtworkDataSource	MediaControl.ArtworkDataSource		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance StandardArtworkDataSource.ArtworkError	Swift.Hashable		
+protocol	conformance StandardArtworkDataSource.ArtworkError	Swift.Equatable		
+protocol	conformance StandardArtworkDataSource.ArtworkError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Features.MediaRemote	Swift.Equatable		
+protocol	conformance Features.MediaRemote	Swift.Hashable		
+protocol	conformance Features.MediaRemote	FeatureFlags.FeatureFlagsKey		
+protocol	conformance MediaControl.IPCMessage	Swift.Decodable		
+protocol	conformance MediaControl.IPCMessage	Swift.Encodable		
+protocol	conformance MediaControl.RoutingSessionUpdateMessage	Swift.Decodable		
+protocol	conformance MediaControl.RoutingSessionUpdateMessage	Swift.Encodable		
+protocol	conformance MediaControl.PendingItemIdentifiersUpdateMessage	Swift.Decodable		
+protocol	conformance MediaControl.PendingItemIdentifiersUpdateMessage	Swift.Encodable		
+protocol	conformance MediaControl.PresentDialogMessage	Swift.Decodable		
+protocol	conformance MediaControl.PresentDialogMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithItemResultMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithItemResultMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithControlResultMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithControlResultMessage	Swift.Encodable		
+protocol	conformance MediaControl.SessionTransitionMessage	Swift.Decodable		
+protocol	conformance MediaControl.SessionTransitionMessage	Swift.Encodable		
+protocol	conformance MediaControl.PresentShareAudioMessage	Swift.Decodable		
+protocol	conformance MediaControl.PresentShareAudioMessage	Swift.Encodable		
+protocol	conformance MediaControl.PresentTVRemoteMessage	Swift.Decodable		
+protocol	conformance MediaControl.PresentTVRemoteMessage	Swift.Encodable		
+protocol	conformance MediaControl.IPCServerMessage	Swift.Decodable		
+protocol	conformance MediaControl.IPCServerMessage	Swift.Encodable		
+protocol	conformance MediaControl.IPCServerMessage	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.IPCClientMessage	Swift.Decodable		
+protocol	conformance MediaControl.IPCClientMessage	Swift.Encodable		
+protocol	conformance MediaControl.IPCClientMessage	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.PrototypeMessage	Swift.Decodable		
+protocol	conformance MediaControl.PrototypeMessage	Swift.Encodable		
+protocol	conformance MediaControl.IPCConnectMessage	Swift.Decodable		
+protocol	conformance MediaControl.IPCConnectMessage	Swift.Encodable		
+protocol	conformance MediaControl.SetRoutingModeMessage	Swift.Decodable		
+protocol	conformance MediaControl.SetRoutingModeMessage	Swift.Encodable		
+protocol	conformance MediaControl.SetUIPresentedStateMessage	Swift.Decodable		
+protocol	conformance MediaControl.SetUIPresentedStateMessage	Swift.Encodable		
+protocol	conformance MediaControl.SetExpandedSessionsStateMessage	Swift.Decodable		
+protocol	conformance MediaControl.SetExpandedSessionsStateMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithItemMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithItemMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithSessionMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithSessionMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithDialogMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithDialogMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithControlMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithControlMessage	Swift.Encodable		
+protocol	conformance MediaControl.BeginInteractionWithContinuousControlMessage	Swift.Decodable		
+protocol	conformance MediaControl.BeginInteractionWithContinuousControlMessage	Swift.Encodable		
+protocol	conformance MediaControl.EndInteractionWithContinuousControlMessage	Swift.Decodable		
+protocol	conformance MediaControl.EndInteractionWithContinuousControlMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithSessionActionMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithSessionActionMessage	Swift.Encodable		
+protocol	conformance MediaControl.InteractWithItemActionMessage	Swift.Decodable		
+protocol	conformance MediaControl.InteractWithItemActionMessage	Swift.Encodable		
+protocol	conformance MediaControl.FlushPendingControlsMessage	Swift.Decodable		
+protocol	conformance MediaControl.FlushPendingControlsMessage	Swift.Encodable		
+protocol	conformance MediaControl.ReplyMessage	Swift.Decodable		
+protocol	conformance MediaControl.ReplyMessage	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FlushPendingControlsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FlushPendingControlsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FlushPendingControlsCodingKeys	Swift.Hashable		
+protocol	conformance FlushPendingControlsCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithItemActionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithItemActionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithItemActionCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithItemActionCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithSessionActionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithSessionActionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithSessionActionCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithSessionActionCodingKeys	Swift.Equatable		
+protocol	conformance EndInteractionWithContinuousControlCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EndInteractionWithContinuousControlCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EndInteractionWithContinuousControlCodingKeys	Swift.Hashable		
+protocol	conformance EndInteractionWithContinuousControlCodingKeys	Swift.Equatable		
+protocol	conformance BeginInteractionWithContinuousControlCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BeginInteractionWithContinuousControlCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BeginInteractionWithContinuousControlCodingKeys	Swift.Hashable		
+protocol	conformance BeginInteractionWithContinuousControlCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithControlCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithControlCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithControlCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithControlCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithDialogCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithDialogCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithDialogCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithDialogCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithSessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithSessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithSessionCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithSessionCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithItemCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithItemCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithItemCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithItemCodingKeys	Swift.Equatable		
+protocol	conformance SetExpandedSessionIdentifiersCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SetExpandedSessionIdentifiersCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SetExpandedSessionIdentifiersCodingKeys	Swift.Hashable		
+protocol	conformance SetExpandedSessionIdentifiersCodingKeys	Swift.Equatable		
+protocol	conformance SetUIPresentedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SetUIPresentedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SetUIPresentedCodingKeys	Swift.Hashable		
+protocol	conformance SetUIPresentedCodingKeys	Swift.Equatable		
+protocol	conformance SetRoutingModeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SetRoutingModeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SetRoutingModeCodingKeys	Swift.Hashable		
+protocol	conformance SetRoutingModeCodingKeys	Swift.Equatable		
+protocol	conformance ConnectCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ConnectCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ConnectCodingKeys	Swift.Hashable		
+protocol	conformance ConnectCodingKeys	Swift.Equatable		
+protocol	conformance PrototypeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrototypeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrototypeCodingKeys	Swift.Hashable		
+protocol	conformance PrototypeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RequestDismissalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestDismissalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PresentTVRemoteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PresentTVRemoteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PresentTVRemoteCodingKeys	Swift.Hashable		
+protocol	conformance PresentTVRemoteCodingKeys	Swift.Equatable		
+protocol	conformance PresentShareAudioCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PresentShareAudioCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PresentShareAudioCodingKeys	Swift.Hashable		
+protocol	conformance PresentShareAudioCodingKeys	Swift.Equatable		
+protocol	conformance SessionTransitionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionTransitionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionTransitionCodingKeys	Swift.Hashable		
+protocol	conformance SessionTransitionCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithControlResultCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithControlResultCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithControlResultCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithControlResultCodingKeys	Swift.Equatable		
+protocol	conformance InteractWithItemResultCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InteractWithItemResultCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InteractWithItemResultCodingKeys	Swift.Hashable		
+protocol	conformance InteractWithItemResultCodingKeys	Swift.Equatable		
+protocol	conformance PresentDialogCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PresentDialogCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PresentDialogCodingKeys	Swift.Hashable		
+protocol	conformance PresentDialogCodingKeys	Swift.Equatable		
+protocol	conformance UpdatePendingItemsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpdatePendingItemsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpdatePendingItemsCodingKeys	Swift.Hashable		
+protocol	conformance UpdatePendingItemsCodingKeys	Swift.Equatable		
+protocol	conformance UpdateRoutingSnapshotCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UpdateRoutingSnapshotCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UpdateRoutingSnapshotCodingKeys	Swift.Hashable		
+protocol	conformance UpdateRoutingSnapshotCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance UpdateRoutingSnapshotCodingKeys	Swift.CodingKey		
+protocol	conformance UpdatePendingItemsCodingKeys	Swift.CodingKey		
+protocol	conformance PresentDialogCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithItemResultCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithControlResultCodingKeys	Swift.CodingKey		
+protocol	conformance SessionTransitionCodingKeys	Swift.CodingKey		
+protocol	conformance PresentShareAudioCodingKeys	Swift.CodingKey		
+protocol	conformance PresentTVRemoteCodingKeys	Swift.CodingKey		
+protocol	conformance RequestDismissalCodingKeys	Swift.CodingKey		
+protocol	conformance PingCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PrototypeCodingKeys	Swift.CodingKey		
+protocol	conformance ConnectCodingKeys	Swift.CodingKey		
+protocol	conformance SetRoutingModeCodingKeys	Swift.CodingKey		
+protocol	conformance SetUIPresentedCodingKeys	Swift.CodingKey		
+protocol	conformance SetExpandedSessionIdentifiersCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithItemCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithSessionCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithDialogCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithControlCodingKeys	Swift.CodingKey		
+protocol	conformance BeginInteractionWithContinuousControlCodingKeys	Swift.CodingKey		
+protocol	conformance EndInteractionWithContinuousControlCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithSessionActionCodingKeys	Swift.CodingKey		
+protocol	conformance InteractWithItemActionCodingKeys	Swift.CodingKey		
+protocol	conformance FlushPendingControlsCodingKeys	Swift.CodingKey		
+protocol	conformance PingCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaControlService.Errors	Swift.Equatable		
+protocol	conformance MediaControlService.Errors	Swift.Hashable		
+protocol	conformance MediaControlService.Errors	Swift.Error		
+protocol	conformance State	Swift.CustomStringConvertible		
+protocol	conformance State	Swift.Hashable		
+protocol	conformance State	Swift.Equatable		
+protocol	conformance MediaControl.TextMessage	Swift.Decodable		
+protocol	conformance MediaControl.TextMessage	Swift.Encodable		
+protocol	conformance MessageService.IPCClientMessage	Swift.Decodable		
+protocol	conformance MessageService.IPCClientMessage	Swift.Encodable		
+protocol	conformance MessageService.IPCClientMessage	Swift.CustomStringConvertible		
+protocol	conformance MessageService.IPCServerMessage	Swift.Decodable		
+protocol	conformance MessageService.IPCServerMessage	Swift.Encodable		
+protocol	conformance MessageService.IPCServerMessage	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ReplyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReplyCodingKeys	Swift.Hashable		
+protocol	conformance ReplyCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance HelloCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HelloCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HelloCodingKeys	Swift.Hashable		
+protocol	conformance HelloCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance HelloCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ReplyCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaControl.RoutingSessionsController	MediaControl.RoutingSessionsControllerProtocol		
+protocol	conformance MediaControl.RoutingSessionsController	MediaControl.RoutingSessionsDataSourceListener		
+protocol	conformance MediaControl.RoutingSessionsController	MediaControl.RoutingSessionsDataSourceDelegate		
+protocol	conformance DistantRoutingSessionsDataSource.VolumeControlSegment	Swift.CustomDebugStringConvertible		
+protocol	conformance DistantRoutingSessionsDataSource.VolumeControlSegment	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.DistantRoutingSessionsDataSource	MediaControl.RoutingSessionsDataSource		
+protocol	conformance MediaControl.RoutingMode	Swift.Equatable		
+protocol	conformance MediaControl.RoutingMode	Swift.Hashable		
+protocol	conformance MediaControl.RoutingMode	Swift.Decodable		
+protocol	conformance MediaControl.RoutingMode	Swift.Encodable		
+protocol	conformance MediaControl.RoutingMode	Swift.CustomStringConvertible		
+protocol	conformance DetailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DetailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LocalNetworkCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LocalNetworkCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrewarmCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrewarmCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DisabledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DisabledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DisabledCodingKeys	Swift.CodingKey		
+protocol	conformance PrewarmCodingKeys	Swift.CodingKey		
+protocol	conformance LocalNetworkCodingKeys	Swift.CodingKey		
+protocol	conformance DetailedCodingKeys	Swift.CodingKey		
+protocol	conformance RoutingControls.PlayControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.PlayControl	Swift.Hashable		
+protocol	conformance RoutingControls.PlayControl	Swift.Decodable		
+protocol	conformance RoutingControls.PlayControl	Swift.Encodable		
+protocol	conformance RoutingControls.PlayControl	Swift.Equatable		
+protocol	conformance RoutingControls.PauseControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.PauseControl	Swift.Hashable		
+protocol	conformance RoutingControls.PauseControl	Swift.Decodable		
+protocol	conformance RoutingControls.PauseControl	Swift.Encodable		
+protocol	conformance RoutingControls.PauseControl	Swift.Equatable		
+protocol	conformance RoutingControls.StopControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.StopControl	Swift.Hashable		
+protocol	conformance RoutingControls.StopControl	Swift.Decodable		
+protocol	conformance RoutingControls.StopControl	Swift.Encodable		
+protocol	conformance RoutingControls.StopControl	Swift.Equatable		
+protocol	conformance RoutingControls.NextTrackControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.NextTrackControl	Swift.Hashable		
+protocol	conformance RoutingControls.NextTrackControl	Swift.Decodable		
+protocol	conformance RoutingControls.NextTrackControl	Swift.Encodable		
+protocol	conformance RoutingControls.NextTrackControl	Swift.Equatable		
+protocol	conformance RoutingControls.PreviousTrackControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.PreviousTrackControl	Swift.Hashable		
+protocol	conformance RoutingControls.PreviousTrackControl	Swift.Decodable		
+protocol	conformance RoutingControls.PreviousTrackControl	Swift.Encodable		
+protocol	conformance RoutingControls.PreviousTrackControl	Swift.Equatable		
+protocol	conformance RoutingControls.SkipForwardControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.SkipForwardControl	Swift.Hashable		
+protocol	conformance RoutingControls.SkipForwardControl	Swift.Decodable		
+protocol	conformance RoutingControls.SkipForwardControl	Swift.Encodable		
+protocol	conformance RoutingControls.SkipForwardControl	Swift.Equatable		
+protocol	conformance RoutingControls.SkipBackwardControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.SkipBackwardControl	Swift.Hashable		
+protocol	conformance RoutingControls.SkipBackwardControl	Swift.Decodable		
+protocol	conformance RoutingControls.SkipBackwardControl	Swift.Encodable		
+protocol	conformance RoutingControls.SkipBackwardControl	Swift.Equatable		
+protocol	conformance RoutingControls.SeekControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.SeekControl	Swift.Hashable		
+protocol	conformance RoutingControls.SeekControl	Swift.Decodable		
+protocol	conformance RoutingControls.SeekControl	Swift.Encodable		
+protocol	conformance RoutingControls.SeekControl	Swift.Equatable		
+protocol	conformance RoutingControls.FastForwardControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.FastForwardControl	Swift.Hashable		
+protocol	conformance RoutingControls.FastForwardControl	Swift.Decodable		
+protocol	conformance RoutingControls.FastForwardControl	Swift.Encodable		
+protocol	conformance RoutingControls.FastForwardControl	Swift.Equatable		
+protocol	conformance RoutingControls.RewindControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.RewindControl	Swift.Hashable		
+protocol	conformance RoutingControls.RewindControl	Swift.Decodable		
+protocol	conformance RoutingControls.RewindControl	Swift.Encodable		
+protocol	conformance RoutingControls.RewindControl	Swift.Equatable		
+protocol	conformance RoutingControls.FavoriteControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.FavoriteControl	Swift.Hashable		
+protocol	conformance RoutingControls.FavoriteControl	Swift.Decodable		
+protocol	conformance RoutingControls.FavoriteControl	Swift.Encodable		
+protocol	conformance RoutingControls.FavoriteControl	Swift.Equatable		
+protocol	conformance RoutingControls.UnfavoriteControl	MediaControl.ConditionalControl		
+protocol	conformance RoutingControls.UnfavoriteControl	Swift.Hashable		
+protocol	conformance RoutingControls.UnfavoriteControl	Swift.Decodable		
+protocol	conformance RoutingControls.UnfavoriteControl	Swift.Encodable		
+protocol	conformance RoutingControls.UnfavoriteControl	Swift.Equatable		
+protocol	conformance AbsoluteVolumeControl.Target	Swift.Hashable		
+protocol	conformance AbsoluteVolumeControl.Target	Swift.Decodable		
+protocol	conformance AbsoluteVolumeControl.Target	Swift.Encodable		
+protocol	conformance AbsoluteVolumeControl.Target	Swift.CustomStringConvertible		
+protocol	conformance AbsoluteVolumeControl.Target	Swift.Equatable		
+protocol	conformance RoutingControls.AbsoluteVolumeControl	Swift.Hashable		
+protocol	conformance RoutingControls.AbsoluteVolumeControl	Swift.Decodable		
+protocol	conformance RoutingControls.AbsoluteVolumeControl	Swift.Encodable		
+protocol	conformance RoutingControls.AbsoluteVolumeControl	Swift.Equatable		
+protocol	conformance RelativeVolumeControl.AdjustmentType	Swift.Equatable		
+protocol	conformance RelativeVolumeControl.AdjustmentType	Swift.Hashable		
+protocol	conformance RelativeVolumeControl.AdjustmentType	Swift.Decodable		
+protocol	conformance RelativeVolumeControl.AdjustmentType	Swift.Encodable		
+protocol	conformance RelativeVolumeControl.AdjustmentType	Swift.CustomStringConvertible		
+protocol	conformance RelativeVolumeControl.Target	Swift.Hashable		
+protocol	conformance RelativeVolumeControl.Target	Swift.Decodable		
+protocol	conformance RelativeVolumeControl.Target	Swift.Encodable		
+protocol	conformance RelativeVolumeControl.Target	Swift.CustomStringConvertible		
+protocol	conformance RelativeVolumeControl.Target	Swift.Equatable		
+protocol	conformance RoutingControls.RelativeVolumeControl	Swift.Hashable		
+protocol	conformance RoutingControls.RelativeVolumeControl	Swift.Decodable		
+protocol	conformance RoutingControls.RelativeVolumeControl	Swift.Encodable		
+protocol	conformance RoutingControls.RelativeVolumeControl	Swift.Equatable		
+protocol	conformance Context.DeviceType	Swift.Equatable		
+protocol	conformance Context.DeviceType	Swift.Hashable		
+protocol	conformance Context.DeviceType	Swift.Decodable		
+protocol	conformance Context.DeviceType	Swift.Encodable		
+protocol	conformance Context.DeviceType	Swift.CustomStringConvertible		
+protocol	conformance TVRemoteControl.Context	Swift.Hashable		
+protocol	conformance TVRemoteControl.Context	Swift.Decodable		
+protocol	conformance TVRemoteControl.Context	Swift.Encodable		
+protocol	conformance TVRemoteControl.Context	Swift.Equatable		
+protocol	conformance RoutingControls.TVRemoteControl	Swift.Hashable		
+protocol	conformance RoutingControls.TVRemoteControl	Swift.Decodable		
+protocol	conformance RoutingControls.TVRemoteControl	Swift.Encodable		
+protocol	conformance RoutingControls.TVRemoteControl	Swift.Equatable		
+protocol	conformance MediaControl.RoutingControls	Swift.Hashable		
+protocol	conformance MediaControl.RoutingControls	Swift.Decodable		
+protocol	conformance MediaControl.RoutingControls	Swift.Encodable		
+protocol	conformance MediaControl.RoutingControls	Swift.Equatable		
+protocol	conformance MediaControl.ContinuousRoutingControl	Swift.Hashable		
+protocol	conformance MediaControl.ContinuousRoutingControl	Swift.Decodable		
+protocol	conformance MediaControl.ContinuousRoutingControl	Swift.Encodable		
+protocol	conformance MediaControl.ContinuousRoutingControl	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.ContinuousRoutingControl	Swift.Equatable		
+protocol	conformance RoutingControl.Target	Swift.Hashable		
+protocol	conformance RoutingControl.Target	Swift.Decodable		
+protocol	conformance RoutingControl.Target	Swift.Encodable		
+protocol	conformance RoutingControl.Target	Swift.CustomStringConvertible		
+protocol	conformance RoutingControl.Target	Swift.Equatable		
+protocol	conformance RoutingControl.RoutingControlType	Swift.Hashable		
+protocol	conformance RoutingControl.RoutingControlType	Swift.Decodable		
+protocol	conformance RoutingControl.RoutingControlType	Swift.Encodable		
+protocol	conformance RoutingControl.RoutingControlType	Swift.CustomStringConvertible		
+protocol	conformance RoutingControl.RoutingControlType	Swift.Equatable		
+protocol	conformance MediaControl.RoutingControl	Swift.Hashable		
+protocol	conformance MediaControl.RoutingControl	Swift.Decodable		
+protocol	conformance MediaControl.RoutingControl	Swift.Encodable		
+protocol	conformance MediaControl.RoutingControl	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.RoutingControl	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ItemCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ItemCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ItemCodingKeys	Swift.Hashable		
+protocol	conformance ItemCodingKeys	Swift.Equatable		
+protocol	conformance SessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.Hashable		
+protocol	conformance SessionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DecreaseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DecreaseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IncreaseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IncreaseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ItemCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ItemCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ItemCodingKeys	Swift.Hashable		
+protocol	conformance ItemCodingKeys	Swift.Equatable		
+protocol	conformance SessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.Hashable		
+protocol	conformance SessionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TelevisionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TelevisionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppleTVCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppleTVCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ItemCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ItemCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ItemCodingKeys	Swift.Hashable		
+protocol	conformance ItemCodingKeys	Swift.Equatable		
+protocol	conformance SessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionCodingKeys	Swift.Hashable		
+protocol	conformance SessionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MuteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MuteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RelativeVolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RelativeVolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RelativeVolumeCodingKeys	Swift.Hashable		
+protocol	conformance RelativeVolumeCodingKeys	Swift.Equatable		
+protocol	conformance AbsoluteVolumeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AbsoluteVolumeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AbsoluteVolumeCodingKeys	Swift.Hashable		
+protocol	conformance AbsoluteVolumeCodingKeys	Swift.Equatable		
+protocol	conformance UnfavoriteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnfavoriteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FavoriteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FavoriteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TvRemoteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TvRemoteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SkipBackwardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SkipBackwardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SkipBackwardCodingKeys	Swift.Hashable		
+protocol	conformance SkipBackwardCodingKeys	Swift.Equatable		
+protocol	conformance SkipForwardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SkipForwardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SkipForwardCodingKeys	Swift.Hashable		
+protocol	conformance SkipForwardCodingKeys	Swift.Equatable		
+protocol	conformance SeekCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SeekCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SeekCodingKeys	Swift.Hashable		
+protocol	conformance SeekCodingKeys	Swift.Equatable		
+protocol	conformance FastForwardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FastForwardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RewindCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RewindCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StopCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StopCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TogglePlayPauseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TogglePlayPauseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TogglePlayPauseCodingKeys	Swift.Hashable		
+protocol	conformance TogglePlayPauseCodingKeys	Swift.Equatable		
+protocol	conformance PauseCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PauseCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PlayCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PlayCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NextTrackCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NextTrackCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PreviousTrackCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PreviousTrackCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PreviousTrackCodingKeys	Swift.CodingKey		
+protocol	conformance NextTrackCodingKeys	Swift.CodingKey		
+protocol	conformance PlayCodingKeys	Swift.CodingKey		
+protocol	conformance PauseCodingKeys	Swift.CodingKey		
+protocol	conformance TogglePlayPauseCodingKeys	Swift.CodingKey		
+protocol	conformance StopCodingKeys	Swift.CodingKey		
+protocol	conformance RewindCodingKeys	Swift.CodingKey		
+protocol	conformance FastForwardCodingKeys	Swift.CodingKey		
+protocol	conformance SeekCodingKeys	Swift.CodingKey		
+protocol	conformance SkipForwardCodingKeys	Swift.CodingKey		
+protocol	conformance SkipBackwardCodingKeys	Swift.CodingKey		
+protocol	conformance TvRemoteCodingKeys	Swift.CodingKey		
+protocol	conformance FavoriteCodingKeys	Swift.CodingKey		
+protocol	conformance UnfavoriteCodingKeys	Swift.CodingKey		
+protocol	conformance AbsoluteVolumeCodingKeys	Swift.CodingKey		
+protocol	conformance RelativeVolumeCodingKeys	Swift.CodingKey		
+protocol	conformance MuteCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SessionCodingKeys	Swift.CodingKey		
+protocol	conformance ItemCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AppleTVCodingKeys	Swift.CodingKey		
+protocol	conformance TelevisionCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SessionCodingKeys	Swift.CodingKey		
+protocol	conformance ItemCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IncreaseCodingKeys	Swift.CodingKey		
+protocol	conformance DecreaseCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SessionCodingKeys	Swift.CodingKey		
+protocol	conformance ItemCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Attributes.BatteryInfo	Swift.Hashable		
+protocol	conformance Attributes.BatteryInfo	Swift.Decodable		
+protocol	conformance Attributes.BatteryInfo	Swift.Encodable		
+protocol	conformance Attributes.BatteryInfo	Swift.CustomStringConvertible		
+protocol	conformance Attributes.BatteryInfo	Swift.Equatable		
+protocol	conformance Attributes.Properties	Swift.OptionSet		
+protocol	conformance Attributes.Properties	Swift.Hashable		
+protocol	conformance Attributes.Properties	Swift.Decodable		
+protocol	conformance Attributes.Properties	Swift.Encodable		
+protocol	conformance Attributes.Properties	Swift.CustomStringConvertible		
+protocol	conformance Attributes.Properties	Swift.SetAlgebra		
+protocol	conformance Attributes.Properties	Swift.RawRepresentable		
+protocol	conformance Attributes.Properties	Swift.Equatable		
+protocol	conformance Attributes.Properties	Swift.ExpressibleByArrayLiteral		
+protocol	conformance RoutingItem.Attributes	Swift.Hashable		
+protocol	conformance RoutingItem.Attributes	Swift.Decodable		
+protocol	conformance RoutingItem.Attributes	Swift.Encodable		
+protocol	conformance RoutingItem.Attributes	Swift.CustomStringConvertible		
+protocol	conformance RoutingItem.Attributes	Swift.Equatable		
+protocol	conformance RoutingItem.Properties	Swift.OptionSet		
+protocol	conformance RoutingItem.Properties	Swift.Hashable		
+protocol	conformance RoutingItem.Properties	Swift.Decodable		
+protocol	conformance RoutingItem.Properties	Swift.Encodable		
+protocol	conformance RoutingItem.Properties	Swift.CustomStringConvertible		
+protocol	conformance RoutingItem.Properties	Swift.SetAlgebra		
+protocol	conformance RoutingItem.Properties	Swift.RawRepresentable		
+protocol	conformance RoutingItem.Properties	Swift.Equatable		
+protocol	conformance RoutingItem.Properties	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Action.Kind	Swift.Equatable		
+protocol	conformance Action.Kind	Swift.Hashable		
+protocol	conformance Action.Kind	Swift.Decodable		
+protocol	conformance Action.Kind	Swift.Encodable		
+protocol	conformance Action.Kind	Swift.CustomStringConvertible		
+protocol	conformance RoutingItem.Action	Swift.Hashable		
+protocol	conformance RoutingItem.Action	Swift.Decodable		
+protocol	conformance RoutingItem.Action	Swift.Encodable		
+protocol	conformance RoutingItem.Action	Swift.CustomStringConvertible		
+protocol	conformance RoutingItem.Action	Swift.Equatable		
+protocol	conformance RoutingItem.SelectionIndicator	Swift.Equatable		
+protocol	conformance RoutingItem.SelectionIndicator	Swift.Hashable		
+protocol	conformance RoutingItem.SelectionIndicator	Swift.Decodable		
+protocol	conformance RoutingItem.SelectionIndicator	Swift.Encodable		
+protocol	conformance MediaControl.RoutingItem	Swift.Hashable		
+protocol	conformance MediaControl.RoutingItem	Swift.Decodable		
+protocol	conformance MediaControl.RoutingItem	Swift.Encodable		
+protocol	conformance MediaControl.RoutingItem	Swift.CustomDebugStringConvertible		
+protocol	conformance MediaControl.RoutingItem	Swift.Equatable		
+protocol	conformance PlaybackInfo.PlaybackState	Swift.Equatable		
+protocol	conformance PlaybackInfo.PlaybackState	Swift.Hashable		
+protocol	conformance PlaybackInfo.PlaybackState	Swift.Decodable		
+protocol	conformance PlaybackInfo.PlaybackState	Swift.Encodable		
+protocol	conformance PlaybackInfo.PlaybackState	Swift.CustomStringConvertible		
+protocol	conformance DurationInfo.ProgressSnapshot	Swift.Hashable		
+protocol	conformance DurationInfo.ProgressSnapshot	Swift.Decodable		
+protocol	conformance DurationInfo.ProgressSnapshot	Swift.Encodable		
+protocol	conformance DurationInfo.ProgressSnapshot	Swift.CustomStringConvertible		
+protocol	conformance DurationInfo.ProgressSnapshot	Swift.Equatable		
+protocol	conformance PlaybackType.DurationInfo	Swift.Hashable		
+protocol	conformance PlaybackType.DurationInfo	Swift.Decodable		
+protocol	conformance PlaybackType.DurationInfo	Swift.Encodable		
+protocol	conformance PlaybackType.DurationInfo	Swift.CustomStringConvertible		
+protocol	conformance PlaybackType.DurationInfo	Swift.Equatable		
+protocol	conformance PlaybackInfo.PlaybackType	Swift.Hashable		
+protocol	conformance PlaybackInfo.PlaybackType	Swift.Decodable		
+protocol	conformance PlaybackInfo.PlaybackType	Swift.Encodable		
+protocol	conformance PlaybackInfo.PlaybackType	Swift.CustomStringConvertible		
+protocol	conformance PlaybackInfo.PlaybackType	Swift.Equatable		
+protocol	conformance NowPlayingInfo.PlaybackInfo	Swift.Hashable		
+protocol	conformance NowPlayingInfo.PlaybackInfo	Swift.Decodable		
+protocol	conformance NowPlayingInfo.PlaybackInfo	Swift.Encodable		
+protocol	conformance NowPlayingInfo.PlaybackInfo	Swift.CustomStringConvertible		
+protocol	conformance NowPlayingInfo.PlaybackInfo	Swift.Equatable		
+protocol	conformance TrackInfo.ExtendedInfo	Swift.Hashable		
+protocol	conformance TrackInfo.ExtendedInfo	Swift.Decodable		
+protocol	conformance TrackInfo.ExtendedInfo	Swift.Encodable		
+protocol	conformance TrackInfo.ExtendedInfo	Swift.CustomStringConvertible		
+protocol	conformance TrackInfo.ExtendedInfo	Swift.Equatable		
+protocol	conformance NowPlayingInfo.TrackInfo	Swift.Hashable		
+protocol	conformance NowPlayingInfo.TrackInfo	Swift.Decodable		
+protocol	conformance NowPlayingInfo.TrackInfo	Swift.Encodable		
+protocol	conformance NowPlayingInfo.TrackInfo	Swift.CustomStringConvertible		
+protocol	conformance NowPlayingInfo.TrackInfo	Swift.Equatable		
+protocol	conformance RoutingSession.NowPlayingInfo	Swift.Hashable		
+protocol	conformance RoutingSession.NowPlayingInfo	Swift.Decodable		
+protocol	conformance RoutingSession.NowPlayingInfo	Swift.Encodable		
+protocol	conformance RoutingSession.NowPlayingInfo	Swift.CustomStringConvertible		
+protocol	conformance RoutingSession.NowPlayingInfo	Swift.Equatable		
+protocol	conformance RoutingSession.HostInfo	Swift.Hashable		
+protocol	conformance RoutingSession.HostInfo	Swift.Decodable		
+protocol	conformance RoutingSession.HostInfo	Swift.Encodable		
+protocol	conformance RoutingSession.HostInfo	Swift.CustomStringConvertible		
+protocol	conformance RoutingSession.HostInfo	Swift.Equatable		
+protocol	conformance Action.Kind	Swift.Equatable		
+protocol	conformance Action.Kind	Swift.Hashable		
+protocol	conformance Action.Kind	Swift.Decodable		
+protocol	conformance Action.Kind	Swift.Encodable		
+protocol	conformance Action.Kind	Swift.CustomStringConvertible		
+protocol	conformance RoutingSession.Action	Swift.Hashable		
+protocol	conformance RoutingSession.Action	Swift.Decodable		
+protocol	conformance RoutingSession.Action	Swift.Encodable		
+protocol	conformance RoutingSession.Action	Swift.CustomStringConvertible		
+protocol	conformance RoutingSession.Action	Swift.Equatable		
+protocol	conformance RoutingSession.Properties	Swift.OptionSet		
+protocol	conformance RoutingSession.Properties	Swift.Hashable		
+protocol	conformance RoutingSession.Properties	Swift.Decodable		
+protocol	conformance RoutingSession.Properties	Swift.Encodable		
+protocol	conformance RoutingSession.Properties	Swift.CustomStringConvertible		
+protocol	conformance RoutingSession.Properties	Swift.SetAlgebra		
+protocol	conformance RoutingSession.Properties	Swift.RawRepresentable		
+protocol	conformance RoutingSession.Properties	Swift.Equatable		
+protocol	conformance RoutingSession.Properties	Swift.ExpressibleByArrayLiteral		
+protocol	conformance MediaControl.RoutingSession	Swift.Hashable		
+protocol	conformance MediaControl.RoutingSession	Swift.Decodable		
+protocol	conformance MediaControl.RoutingSession	Swift.Encodable		
+protocol	conformance MediaControl.RoutingSession	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.RoutingSession	Swift.CustomDebugStringConvertible		
+protocol	conformance MediaControl.RoutingSession	Swift.Equatable		
+protocol	conformance RoutingDialog.Action	Swift.Hashable		
+protocol	conformance RoutingDialog.Action	Swift.Decodable		
+protocol	conformance RoutingDialog.Action	Swift.Encodable		
+protocol	conformance RoutingDialog.Action	Swift.CustomStringConvertible		
+protocol	conformance RoutingDialog.Action	Swift.Equatable		
+protocol	conformance MediaControl.RoutingDialog	Swift.Hashable		
+protocol	conformance MediaControl.RoutingDialog	Swift.Decodable		
+protocol	conformance MediaControl.RoutingDialog	Swift.Encodable		
+protocol	conformance MediaControl.RoutingDialog	Swift.Equatable		
+protocol	conformance MediaControl.RoutingSessionSnapshot	Swift.Hashable		
+protocol	conformance MediaControl.RoutingSessionSnapshot	Swift.Decodable		
+protocol	conformance MediaControl.RoutingSessionSnapshot	Swift.Encodable		
+protocol	conformance MediaControl.RoutingSessionSnapshot	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.RoutingSessionSnapshot	Swift.CustomDebugStringConvertible		
+protocol	conformance MediaControl.RoutingSessionSnapshot	Swift.Equatable		
+protocol	conformance Attribution.AttributionType	Swift.Hashable		
+protocol	conformance Attribution.AttributionType	Swift.Decodable		
+protocol	conformance Attribution.AttributionType	Swift.Encodable		
+protocol	conformance Attribution.AttributionType	Swift.CustomStringConvertible		
+protocol	conformance Attribution.AttributionType	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.Attribution	Swift.Hashable		
+protocol	conformance RoutingSessionConfiguration.Attribution	Swift.Decodable		
+protocol	conformance RoutingSessionConfiguration.Attribution	Swift.Encodable		
+protocol	conformance RoutingSessionConfiguration.Attribution	Swift.CustomStringConvertible		
+protocol	conformance RoutingSessionConfiguration.Attribution	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.Context	Swift.Hashable		
+protocol	conformance RoutingSessionConfiguration.Context	Swift.Decodable		
+protocol	conformance RoutingSessionConfiguration.Context	Swift.Encodable		
+protocol	conformance RoutingSessionConfiguration.Context	Swift.CustomStringConvertible		
+protocol	conformance RoutingSessionConfiguration.Context	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.Surface	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.Surface	Swift.Hashable		
+protocol	conformance RoutingSessionConfiguration.Surface	Swift.Decodable		
+protocol	conformance RoutingSessionConfiguration.Surface	Swift.Encodable		
+protocol	conformance RoutingSessionConfiguration.Surface	Swift.CustomStringConvertible		
+protocol	conformance RoutingSessionConfiguration.ItemType	Swift.Hashable		
+protocol	conformance RoutingSessionConfiguration.ItemType	Swift.Decodable		
+protocol	conformance RoutingSessionConfiguration.ItemType	Swift.Encodable		
+protocol	conformance RoutingSessionConfiguration.ItemType	Swift.CustomStringConvertible		
+protocol	conformance RoutingSessionConfiguration.ItemType	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.OptionSet		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.Hashable		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.Decodable		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.Encodable		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.CustomStringConvertible		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.SetAlgebra		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.RawRepresentable		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.RoutingItemProperties	Swift.ExpressibleByArrayLiteral		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.OptionSet		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.Hashable		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.Decodable		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.Encodable		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.CustomStringConvertible		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.SetAlgebra		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.RawRepresentable		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.Equatable		
+protocol	conformance RoutingSessionConfiguration.NowPlayingInfoProperties	Swift.ExpressibleByArrayLiteral		
+protocol	conformance MediaControl.RoutingSessionConfiguration	Swift.Hashable		
+protocol	conformance MediaControl.RoutingSessionConfiguration	Swift.Decodable		
+protocol	conformance MediaControl.RoutingSessionConfiguration	Swift.Encodable		
+protocol	conformance MediaControl.RoutingSessionConfiguration	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.RoutingSessionConfiguration	Swift.Equatable		
+protocol	conformance MediaControl.InternalRoutingError	Swift.Error		
+protocol	conformance MediaControl.InternalRoutingError	Swift.Decodable		
+protocol	conformance MediaControl.InternalRoutingError	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RemoteControlCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemoteControlCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ShareAudioCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShareAudioCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PullableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PullableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SelectedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SelectedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SelectableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SelectableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PausedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PausedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PlayingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PlayingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FiniteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FiniteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FiniteCodingKeys	Swift.Hashable		
+protocol	conformance FiniteCodingKeys	Swift.Equatable		
+protocol	conformance LiveCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LiveCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ShareAudioCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShareAudioCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AcknowledgeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AcknowledgeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AcknowledgeCodingKeys	Swift.Hashable		
+protocol	conformance AcknowledgeCodingKeys	Swift.Equatable		
+protocol	conformance ConfirmCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ConfirmCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ConfirmCodingKeys	Swift.Hashable		
+protocol	conformance ConfirmCodingKeys	Swift.Equatable		
+protocol	conformance CancelCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CancelCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CancelCodingKeys	Swift.Hashable		
+protocol	conformance CancelCodingKeys	Swift.Equatable		
+protocol	conformance DismissCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DismissCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ForegroundMediaAppCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ForegroundMediaAppCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NowPlayingAppCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NowPlayingAppCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppCodingKeys	Swift.Hashable		
+protocol	conformance AppCodingKeys	Swift.Equatable		
+protocol	conformance AnonymousCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AnonymousCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AttributedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttributedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttributedCodingKeys	Swift.Hashable		
+protocol	conformance AttributedCodingKeys	Swift.Equatable		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ActiveSessionTargetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ActiveSessionTargetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LocalSessionTargetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LocalSessionTargetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceSessionTargetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceSessionTargetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceSessionTargetCodingKeys	Swift.Hashable		
+protocol	conformance DeviceSessionTargetCodingKeys	Swift.Equatable		
+protocol	conformance PlatterTargetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PlatterTargetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PlatterTargetCodingKeys	Swift.Hashable		
+protocol	conformance PlatterTargetCodingKeys	Swift.Equatable		
+protocol	conformance DeviceTargetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceTargetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceTargetCodingKeys	Swift.Hashable		
+protocol	conformance DeviceTargetCodingKeys	Swift.Equatable		
+protocol	conformance AppCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppCodingKeys	Swift.Hashable		
+protocol	conformance AppCodingKeys	Swift.Equatable		
+protocol	conformance UiCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UiCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NonUICodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NonUICodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance OtherCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance OtherCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RouteRecommendationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RouteRecommendationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ActivityBannerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ActivityBannerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BluePillCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BluePillCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AmbientCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AmbientCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ProximityCardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ProximityCardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance HomeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HomeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SiriCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DynamicIslandCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DynamicIslandCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CoverSheetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CoverSheetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ControlCenterCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ControlCenterCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AppSpecificCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppSpecificCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppSpecificCodingKeys	Swift.Hashable		
+protocol	conformance AppSpecificCodingKeys	Swift.Equatable		
+protocol	conformance AudioSessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AudioSessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AudioSessionCodingKeys	Swift.Hashable		
+protocol	conformance AudioSessionCodingKeys	Swift.Equatable		
+protocol	conformance StandardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StandardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ExternalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ExternalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ExternalCodingKeys	Swift.Hashable		
+protocol	conformance ExternalCodingKeys	Swift.Equatable		
+protocol	conformance StabilityTimeoutCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StabilityTimeoutCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EndpointEntryNotFoundCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EndpointEntryNotFoundCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionRequiresAuthorizationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionRequiresAuthorizationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedControlCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnsupportedControlCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReplacedBySubsequentInteractionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplacedBySubsequentInteractionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NOPCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NOPCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnsupportedOperationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnsupportedOperationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TimedOutCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TimedOutCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CancelledCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CancelledCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidActionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidActionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotImplementedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotImplementedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoActivePlayerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoActivePlayerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoActiveSessionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoActiveSessionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SessionNotFoundCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SessionNotFoundCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ItemNotFoundCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ItemNotFoundCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ItemNotFoundCodingKeys	Swift.CodingKey		
+protocol	conformance SessionNotFoundCodingKeys	Swift.CodingKey		
+protocol	conformance NoActiveSessionCodingKeys	Swift.CodingKey		
+protocol	conformance NoActivePlayerCodingKeys	Swift.CodingKey		
+protocol	conformance NotImplementedCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidActionCodingKeys	Swift.CodingKey		
+protocol	conformance CancelledCodingKeys	Swift.CodingKey		
+protocol	conformance TimedOutCodingKeys	Swift.CodingKey		
+protocol	conformance UnsupportedOperationCodingKeys	Swift.CodingKey		
+protocol	conformance NOPCodingKeys	Swift.CodingKey		
+protocol	conformance ReplacedBySubsequentInteractionCodingKeys	Swift.CodingKey		
+protocol	conformance UnsupportedControlCodingKeys	Swift.CodingKey		
+protocol	conformance SessionRequiresAuthorizationCodingKeys	Swift.CodingKey		
+protocol	conformance EndpointEntryNotFoundCodingKeys	Swift.CodingKey		
+protocol	conformance StabilityTimeoutCodingKeys	Swift.CodingKey		
+protocol	conformance ExternalCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance StandardCodingKeys	Swift.CodingKey		
+protocol	conformance AudioSessionCodingKeys	Swift.CodingKey		
+protocol	conformance AppSpecificCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ControlCenterCodingKeys	Swift.CodingKey		
+protocol	conformance CoverSheetCodingKeys	Swift.CodingKey		
+protocol	conformance DynamicIslandCodingKeys	Swift.CodingKey		
+protocol	conformance SiriCodingKeys	Swift.CodingKey		
+protocol	conformance HomeCodingKeys	Swift.CodingKey		
+protocol	conformance ProximityCardCodingKeys	Swift.CodingKey		
+protocol	conformance AppCodingKeys	Swift.CodingKey		
+protocol	conformance AmbientCodingKeys	Swift.CodingKey		
+protocol	conformance BluePillCodingKeys	Swift.CodingKey		
+protocol	conformance ActivityBannerCodingKeys	Swift.CodingKey		
+protocol	conformance RouteRecommendationCodingKeys	Swift.CodingKey		
+protocol	conformance OtherCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NonUICodingKeys	Swift.CodingKey		
+protocol	conformance UiCodingKeys	Swift.CodingKey		
+protocol	conformance AppCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceTargetCodingKeys	Swift.CodingKey		
+protocol	conformance PlatterTargetCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceSessionTargetCodingKeys	Swift.CodingKey		
+protocol	conformance LocalSessionTargetCodingKeys	Swift.CodingKey		
+protocol	conformance ActiveSessionTargetCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance AttributedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AnonymousCodingKeys	Swift.CodingKey		
+protocol	conformance AppCodingKeys	Swift.CodingKey		
+protocol	conformance NowPlayingAppCodingKeys	Swift.CodingKey		
+protocol	conformance ForegroundMediaAppCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DismissCodingKeys	Swift.CodingKey		
+protocol	conformance CancelCodingKeys	Swift.CodingKey		
+protocol	conformance ConfirmCodingKeys	Swift.CodingKey		
+protocol	conformance AcknowledgeCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ShareAudioCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LiveCodingKeys	Swift.CodingKey		
+protocol	conformance FiniteCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PlayingCodingKeys	Swift.CodingKey		
+protocol	conformance PausedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance SelectableCodingKeys	Swift.CodingKey		
+protocol	conformance SelectedCodingKeys	Swift.CodingKey		
+protocol	conformance PullableCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ShareAudioCodingKeys	Swift.CodingKey		
+protocol	conformance RemoteControlCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaControl.VolumeGroup	Swift.Hashable		
+protocol	conformance MediaControl.VolumeGroup	Swift.Decodable		
+protocol	conformance MediaControl.VolumeGroup	Swift.Encodable		
+protocol	conformance MediaControl.VolumeGroup	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.VolumeGroup	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MediaControl.ExecutionPriority	Swift.Hashable		
+protocol	conformance MediaControl.ExecutionPriority	Swift.Decodable		
+protocol	conformance MediaControl.ExecutionPriority	Swift.Encodable		
+protocol	conformance MediaControl.ExecutionPriority	Swift.CustomStringConvertible		
+protocol	conformance MediaControl.ExecutionPriority	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImageUtilities.Error	Swift.Hashable		
+protocol	conformance ImageUtilities.Error	Swift.Equatable		
+protocol	conformance ImageUtilities.Error	Swift.Error		
+protocol	conformance MediaControl.ArtworkLoader	Swift.CustomStringConvertible		
+protocol	conformance DynamicArtworkDataSource	MediaControl.ArtworkDataSource		
+protocol	conformance DynamicArtworkDataSource.ArtworkError	Swift.Hashable		
+protocol	conformance DynamicArtworkDataSource.ArtworkError	Swift.Equatable		
+protocol	conformance DynamicArtworkDataSource.ArtworkError	Swift.Error		
+extension	MediaControl.ArtworkToken.CodingKeys	RawRepresentable		
+extension	MediaControl.RoutingItem.Attributes.Properties	OptionSet		
+extension	MediaControl.RoutingItem.Attributes.Properties	SetAlgebra		
+extension	MediaControl.RoutingItem.Attributes.Properties	RawRepresentable		
+extension	MediaControl.RoutingItem.Attributes.Properties	ExpressibleByArrayLiteral		
+extension	MediaControl.RoutingItem.Properties	OptionSet		
+extension	MediaControl.RoutingItem.Properties	SetAlgebra		
+extension	MediaControl.RoutingItem.Properties	RawRepresentable		
+extension	MediaControl.RoutingItem.Properties	ExpressibleByArrayLiteral		
+extension	MediaControl.RoutingSession.Properties	OptionSet		
+extension	MediaControl.RoutingSession.Properties	SetAlgebra		
+extension	MediaControl.RoutingSession.Properties	RawRepresentable		
+extension	MediaControl.RoutingSession.Properties	ExpressibleByArrayLiteral		
+extension	MediaControl.RoutingSessionConfiguration.RoutingItemProperties	OptionSet		
+extension	MediaControl.RoutingSessionConfiguration.RoutingItemProperties	SetAlgebra		
+extension	MediaControl.RoutingSessionConfiguration.RoutingItemProperties	RawRepresentable		
+extension	MediaControl.RoutingSessionConfiguration.RoutingItemProperties	ExpressibleByArrayLiteral		
+extension	MediaControl.RoutingSessionConfiguration.NowPlayingInfoProperties	OptionSet		
+extension	MediaControl.RoutingSessionConfiguration.NowPlayingInfoProperties	SetAlgebra		
+extension	MediaControl.RoutingSessionConfiguration.NowPlayingInfoProperties	RawRepresentable		
+extension	MediaControl.RoutingSessionConfiguration.NowPlayingInfoProperties	ExpressibleByArrayLiteral		

@@ -1,0 +1,2369 @@
+kind	type	conformance	member_kind	member
+struct	GameServices.FriendActivity			
+struct	GameServices.FriendActivity		let	player
+struct	GameServices.FriendActivity		let	context
+struct	GameServices.FriendActivity		let	image
+struct	GameServices.FriendActivity		let	date
+enum	GameServices.FriendActivity.CodingKeys			
+enum	GameServices.FriendActivity.CodingKeys		case	player
+enum	GameServices.FriendActivity.CodingKeys		case	context
+enum	GameServices.FriendActivity.CodingKeys		case	image
+enum	GameServices.FriendActivity.CodingKeys		case	date
+enum	GameServices.ChallengeDefinitionFilter			
+enum	GameServices.ChallengeDefinitionFilter		case	definition
+enum	GameServices.ChallengeDefinitionFilter		case	isArchived
+enum	GameServices.ChallengeDefinitionFilter		case	tracking
+enum	GameServices.ChallengeDefinitionFilter		case	releaseState
+enum	GameServices.ChallengeFilter			
+enum	GameServices.ChallengeFilter		case	challenge
+enum	GameServices.ChallengeFilter		case	definition
+enum	GameServices.ChallengeFilter		case	game
+enum	GameServices.ChallengeFilter		case	creator
+enum	GameServices.ChallengeFilter		case	participant
+enum	GameServices.ChallengeFilter		case	active
+enum	GameServices.ChallengeFilter		case	complete
+enum	GameServices.ChallengeFilter		case	won
+enum	GameServices.ChallengeInviteFilter			
+enum	GameServices.ChallengeInviteFilter		case	challenge
+enum	GameServices.ChallengeInviteFilter		case	game
+enum	GameServices.ChallengeInviteFilter		case	from
+enum	GameServices.ChallengeInviteFilter		case	to
+struct	GameServices.ChallengeDefinition			
+struct	GameServices.ChallengeDefinition		let	id
+struct	GameServices.ChallengeDefinition		var	groupId
+struct	GameServices.ChallengeDefinition		let	ref
+struct	GameServices.ChallengeDefinition		let	title
+struct	GameServices.ChallengeDefinition		let	description
+struct	GameServices.ChallengeDefinition		let	artwork
+struct	GameServices.ChallengeDefinition		let	tracking
+struct	GameServices.ChallengeDefinition		let	durations
+struct	GameServices.ChallengeDefinition		let	isRepeatable
+struct	GameServices.ChallengeDefinition		let	isArchived
+struct	GameServices.ChallengeDefinition		let	versions
+struct	GameServices.ChallengeDefinition		let	releaseState
+struct	GameServices.ChallengeDefinition		let	validationErrors
+struct	GameServices.ChallengeDefinition		let	_attemptLimits
+enum	GameServices.ChallengeDefinition.Trackable			
+enum	GameServices.ChallengeDefinition.Trackable		case	leaderboard
+enum	GameServices.ChallengeDefinition.Trackable		case	none
+struct	GameServices.ChallengeDefinition.DurationComponent			
+struct	GameServices.ChallengeDefinition.DurationComponent		let	unit
+struct	GameServices.ChallengeDefinition.DurationComponent		let	value
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit			
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	second
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	minute
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	hour
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	day
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	week
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	month
+enum	GameServices.ChallengeDefinition.DurationComponent.TimeUnit		case	year
+enum	GameServices.ChallengeDefinition.AttemptLimit			
+enum	GameServices.ChallengeDefinition.AttemptLimit		case	limited
+enum	GameServices.ChallengeDefinition.AttemptLimit		case	unlimited
+struct	GameServices.ChallengeDefinition.Version			
+struct	GameServices.ChallengeDefinition.Version		let	platforms
+struct	GameServices.ChallengeDefinition.Version		let	minimumVersion
+enum	GameServices.ChallengeDefinition.ValidationError			
+enum	GameServices.ChallengeDefinition.ValidationError		case	missingTrackable
+enum	GameServices.ChallengeDefinition.ValidationError		case	trackableRequiresDuration
+struct	GameServices.ChallengeDescription			
+struct	GameServices.ChallengeDescription		let	id
+struct	GameServices.ChallengeDescription		let	ref
+struct	GameServices.ChallengeDescription		let	creator
+struct	GameServices.ChallengeDescription		let	definition
+struct	GameServices.ChallengeDescription		let	games
+struct	GameServices.ChallengeDescription		let	startTime
+struct	GameServices.ChallengeDescription		let	duration
+struct	GameServices.ChallengeDescription		let	attemptsLimit
+struct	GameServices.ChallengeState			
+struct	GameServices.ChallengeState		let	challenge
+struct	GameServices.ChallengeState		let	scheduledEndTime
+struct	GameServices.ChallengeState		let	message
+struct	GameServices.ChallengeState		let	completedAt
+struct	GameServices.ChallengeState		let	_game
+enum	GameServices.ChallengeLeaveResult			
+enum	GameServices.ChallengeLeaveResult		case	alreadyEnded
+enum	GameServices.ChallengeLeaveResult		case	invalid
+enum	GameServices.ChallengeLeaveResult		case	left
+enum	GameServices.ChallengeLeaveResult		case	notJoined
+struct	GameServices.ChallengeParticipantState			
+struct	GameServices.ChallengeParticipantState		let	player
+struct	GameServices.ChallengeParticipantState		let	challenge
+struct	GameServices.ChallengeParticipantState		let	attemptsCount
+struct	GameServices.ChallengeParticipantState		let	formattedScoreValue
+struct	GameServices.ChallengeParticipantState		let	score
+struct	GameServices.ChallengeParticipantState		let	rank
+struct	GameServices.ChallengeParticipantState		let	_game
+struct	GameServices.ChallengeInvite			
+struct	GameServices.ChallengeInvite		let	ref
+struct	GameServices.ChallengeInvite		let	details
+enum	GameServices.ChallengeInvite.Details			
+enum	GameServices.ChallengeInvite.Details		case	player
+enum	GameServices.ChallengeInvite.Details		case	code
+enum	GameServices.ChallengeInviteState			
+enum	GameServices.ChallengeInviteState		case	active
+enum	GameServices.ChallengeInviteState		case	alreadyAccepted
+enum	GameServices.ChallengeInviteState		case	alreadyInvited
+enum	GameServices.ChallengeInviteState		case	challengeAlreadyEnded
+enum	GameServices.ChallengeInviteState		case	challengeLimitExceeded
+enum	GameServices.ChallengeInviteState		case	invalid
+enum	GameServices.ChallengeInviteState		case	inviteLimitExceeded
+enum	GameServices.ChallengeInviteState		case	unavailable
+enum	GameServices.ChallengeInvite.CodingKeys			
+enum	GameServices.ChallengeInvite.CodingKeys		case	ref
+enum	GameServices.ChallengeInvite.CodingKeys		case	details
+enum	GameServices.ChallengeInvite.Details.CodingKeys			
+enum	GameServices.ChallengeInvite.Details.CodingKeys		case	player
+enum	GameServices.ChallengeInvite.Details.CodingKeys		case	code
+enum	GameServices.ChallengeInvite.Details.PlayerCodingKeys			
+enum	GameServices.ChallengeInvite.Details.PlayerCodingKeys		case	from
+enum	GameServices.ChallengeInvite.Details.PlayerCodingKeys		case	to
+enum	GameServices.ChallengeInvite.Details.PlayerCodingKeys		case	invitedAt
+enum	GameServices.ChallengeInvite.Details.CodeCodingKeys			
+enum	GameServices.ChallengeInvite.Details.CodeCodingKeys		case	code
+enum	GameServices.ChallengeParticipantState.CodingKeys			
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	player
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	challenge
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	attemptsCount
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	formattedScoreValue
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	score
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	rank
+enum	GameServices.ChallengeParticipantState.CodingKeys		case	_game
+enum	GameServices.ChallengeState.CodingKeys			
+enum	GameServices.ChallengeState.CodingKeys		case	challenge
+enum	GameServices.ChallengeState.CodingKeys		case	scheduledEndTime
+enum	GameServices.ChallengeState.CodingKeys		case	message
+enum	GameServices.ChallengeState.CodingKeys		case	completedAt
+enum	GameServices.ChallengeState.CodingKeys		case	_game
+enum	GameServices.ChallengeDescription.CodingKeys			
+enum	GameServices.ChallengeDescription.CodingKeys		case	id
+enum	GameServices.ChallengeDescription.CodingKeys		case	ref
+enum	GameServices.ChallengeDescription.CodingKeys		case	creator
+enum	GameServices.ChallengeDescription.CodingKeys		case	definition
+enum	GameServices.ChallengeDescription.CodingKeys		case	games
+enum	GameServices.ChallengeDescription.CodingKeys		case	startTime
+enum	GameServices.ChallengeDescription.CodingKeys		case	duration
+enum	GameServices.ChallengeDescription.CodingKeys		case	attemptsLimit
+enum	GameServices.ChallengeDefinition.CodingKeys			
+enum	GameServices.ChallengeDefinition.CodingKeys		case	id
+enum	GameServices.ChallengeDefinition.CodingKeys		case	groupId
+enum	GameServices.ChallengeDefinition.CodingKeys		case	ref
+enum	GameServices.ChallengeDefinition.CodingKeys		case	title
+enum	GameServices.ChallengeDefinition.CodingKeys		case	description
+enum	GameServices.ChallengeDefinition.CodingKeys		case	artwork
+enum	GameServices.ChallengeDefinition.CodingKeys		case	tracking
+enum	GameServices.ChallengeDefinition.CodingKeys		case	durations
+enum	GameServices.ChallengeDefinition.CodingKeys		case	isRepeatable
+enum	GameServices.ChallengeDefinition.CodingKeys		case	isArchived
+enum	GameServices.ChallengeDefinition.CodingKeys		case	versions
+enum	GameServices.ChallengeDefinition.CodingKeys		case	releaseState
+enum	GameServices.ChallengeDefinition.CodingKeys		case	validationErrors
+enum	GameServices.ChallengeDefinition.CodingKeys		case	_attemptLimits
+enum	GameServices.ChallengeDefinition.ValidationError.CodingKeys			
+enum	GameServices.ChallengeDefinition.ValidationError.CodingKeys		case	missingTrackable
+enum	GameServices.ChallengeDefinition.ValidationError.CodingKeys		case	trackableRequiresDuration
+enum	GameServices.ChallengeDefinition.ValidationError.MissingTrackableCodingKeys			
+enum	GameServices.ChallengeDefinition.ValidationError.TrackableRequiresDurationCodingKeys			
+enum	GameServices.ChallengeDefinition.Version.CodingKeys			
+enum	GameServices.ChallengeDefinition.Version.CodingKeys		case	platforms
+enum	GameServices.ChallengeDefinition.Version.CodingKeys		case	minimumVersion
+enum	GameServices.ChallengeDefinition.AttemptLimit.CodingKeys			
+enum	GameServices.ChallengeDefinition.AttemptLimit.CodingKeys		case	limited
+enum	GameServices.ChallengeDefinition.AttemptLimit.CodingKeys		case	unlimited
+enum	GameServices.ChallengeDefinition.AttemptLimit.LimitedCodingKeys			
+enum	GameServices.ChallengeDefinition.AttemptLimit.LimitedCodingKeys		case	count
+enum	GameServices.ChallengeDefinition.AttemptLimit.UnlimitedCodingKeys			
+enum	GameServices.ChallengeDefinition.DurationComponent.CodingKeys			
+enum	GameServices.ChallengeDefinition.DurationComponent.CodingKeys		case	unit
+enum	GameServices.ChallengeDefinition.DurationComponent.CodingKeys		case	value
+enum	GameServices.ChallengeDefinition.Trackable.CodingKeys			
+enum	GameServices.ChallengeDefinition.Trackable.CodingKeys		case	leaderboard
+enum	GameServices.ChallengeDefinition.Trackable.CodingKeys		case	none
+enum	GameServices.ChallengeDefinition.Trackable.LeaderboardCodingKeys			
+enum	GameServices.ChallengeDefinition.Trackable.LeaderboardCodingKeys		case	ref
+enum	GameServices.ChallengeDefinition.Trackable.NoneCodingKeys			
+enum	GameServices.ChallengeInviteFilter.CodingKeys			
+enum	GameServices.ChallengeInviteFilter.CodingKeys		case	challenge
+enum	GameServices.ChallengeInviteFilter.CodingKeys		case	game
+enum	GameServices.ChallengeInviteFilter.CodingKeys		case	from
+enum	GameServices.ChallengeInviteFilter.CodingKeys		case	to
+enum	GameServices.ChallengeInviteFilter.ChallengeCodingKeys			
+enum	GameServices.ChallengeInviteFilter.ChallengeCodingKeys		case	ref
+enum	GameServices.ChallengeInviteFilter.GameCodingKeys			
+enum	GameServices.ChallengeInviteFilter.GameCodingKeys		case	ref
+enum	GameServices.ChallengeInviteFilter.FromCodingKeys			
+enum	GameServices.ChallengeInviteFilter.FromCodingKeys		case	ref
+enum	GameServices.ChallengeInviteFilter.ToCodingKeys			
+enum	GameServices.ChallengeInviteFilter.ToCodingKeys		case	ref
+enum	GameServices.ChallengeFilter.CodingKeys			
+enum	GameServices.ChallengeFilter.CodingKeys		case	challenge
+enum	GameServices.ChallengeFilter.CodingKeys		case	definition
+enum	GameServices.ChallengeFilter.CodingKeys		case	game
+enum	GameServices.ChallengeFilter.CodingKeys		case	creator
+enum	GameServices.ChallengeFilter.CodingKeys		case	participant
+enum	GameServices.ChallengeFilter.CodingKeys		case	active
+enum	GameServices.ChallengeFilter.CodingKeys		case	complete
+enum	GameServices.ChallengeFilter.CodingKeys		case	won
+enum	GameServices.ChallengeFilter.ChallengeCodingKeys			
+enum	GameServices.ChallengeFilter.ChallengeCodingKeys		case	ref
+enum	GameServices.ChallengeFilter.DefinitionCodingKeys			
+enum	GameServices.ChallengeFilter.DefinitionCodingKeys		case	ref
+enum	GameServices.ChallengeFilter.GameCodingKeys			
+enum	GameServices.ChallengeFilter.GameCodingKeys		case	ref
+enum	GameServices.ChallengeFilter.CreatorCodingKeys			
+enum	GameServices.ChallengeFilter.CreatorCodingKeys		case	ref
+enum	GameServices.ChallengeFilter.ParticipantCodingKeys			
+enum	GameServices.ChallengeFilter.ParticipantCodingKeys		case	ref
+enum	GameServices.ChallengeFilter.ActiveCodingKeys			
+enum	GameServices.ChallengeFilter.CompleteCodingKeys			
+enum	GameServices.ChallengeFilter.WonCodingKeys			
+enum	GameServices.ChallengeDefinitionFilter.CodingKeys			
+enum	GameServices.ChallengeDefinitionFilter.CodingKeys		case	definition
+enum	GameServices.ChallengeDefinitionFilter.CodingKeys		case	isArchived
+enum	GameServices.ChallengeDefinitionFilter.CodingKeys		case	tracking
+enum	GameServices.ChallengeDefinitionFilter.CodingKeys		case	releaseState
+enum	GameServices.ChallengeDefinitionFilter.DefinitionCodingKeys			
+enum	GameServices.ChallengeDefinitionFilter.DefinitionCodingKeys		case	ref
+enum	GameServices.ChallengeDefinitionFilter.IsArchivedCodingKeys			
+enum	GameServices.ChallengeDefinitionFilter.IsArchivedCodingKeys		case	value
+enum	GameServices.ChallengeDefinitionFilter.TrackingCodingKeys			
+enum	GameServices.ChallengeDefinitionFilter.TrackingCodingKeys		case	trackable
+enum	GameServices.ChallengeDefinitionFilter.ReleaseStateCodingKeys			
+enum	GameServices.ChallengeDefinitionFilter.ReleaseStateCodingKeys		case	value
+enum	GameServices.GameServiceChangeEventType			
+enum	GameServices.GameServiceChangeEventType		case	challengeDefinitions
+enum	GameServices.GameServiceChangeEventType		case	challenges
+enum	GameServices.GameServiceChangeEventType		case	library
+struct	GameServices.SpotlightIndexRequest			
+struct	GameServices.SpotlightIndexRequest		let	player
+struct	GameServices.SpotlightIndexRequest		var	limit
+struct	GameServices.SpotlightIndexRequest		var	bundleIDs
+struct	GameServices.SpotlightIndexRequest		var	batchSize
+struct	GameServices.SpotlightIndexRequest		var	indexTTLSeconds
+struct	GameServices.SpotlightIndexResult			
+struct	GameServices.SpotlightIndexResult		let	gamesIndexed
+struct	GameServices.SpotlightIndexResult		let	gamesSkipped
+struct	GameServices.SpotlightIndexResult		let	duration
+enum	GameServices.SpotlightIndexResult.CodingKeys			
+enum	GameServices.SpotlightIndexResult.CodingKeys		case	gamesIndexed
+enum	GameServices.SpotlightIndexResult.CodingKeys		case	gamesSkipped
+enum	GameServices.SpotlightIndexResult.CodingKeys		case	duration
+enum	GameServices.SpotlightIndexRequest.CodingKeys			
+enum	GameServices.SpotlightIndexRequest.CodingKeys		case	player
+enum	GameServices.SpotlightIndexRequest.CodingKeys		case	limit
+enum	GameServices.SpotlightIndexRequest.CodingKeys		case	bundleIDs
+enum	GameServices.SpotlightIndexRequest.CodingKeys		case	batchSize
+enum	GameServices.SpotlightIndexRequest.CodingKeys		case	indexTTLSeconds
+enum	GameServices.LeaderboardPlayerScope			
+enum	GameServices.LeaderboardPlayerScope		case	friends
+enum	GameServices.LeaderboardPlayerScope		case	global
+struct	GameServices.LeaderboardScore			
+struct	GameServices.LeaderboardScore		let	player
+struct	GameServices.LeaderboardScore		let	value
+struct	GameServices.LeaderboardScore		let	context
+struct	GameServices.LeaderboardScore		let	leaderboard
+enum	GameServices.LeaderboardTimeScope			
+enum	GameServices.LeaderboardTimeScope		case	past24h
+enum	GameServices.LeaderboardTimeScope		case	pastWeek
+enum	GameServices.LeaderboardTimeScope		case	allTime
+enum	GameServices.LeaderboardType			
+enum	GameServices.LeaderboardType		case	classic
+enum	GameServices.LeaderboardType		case	recurring
+enum	GameServices.LeaderboardVisibility			
+enum	GameServices.LeaderboardVisibility		case	showForAll
+enum	GameServices.LeaderboardVisibility		case	hideForAll
+struct	GameServices.GameWithPlayer			
+struct	GameServices.GameWithPlayer		let	game
+struct	GameServices.GameWithPlayer		let	player
+struct	GameServices.RecurringLeaderboardProperties			
+struct	GameServices.RecurringLeaderboardProperties		var	startDate
+struct	GameServices.RecurringLeaderboardProperties		var	nextStartDate
+struct	GameServices.RecurringLeaderboardProperties		var	duration
+struct	GameServices.LeaderboardDescription			
+struct	GameServices.LeaderboardDescription		var	baseLeaderboardId
+struct	GameServices.LeaderboardDescription		var	groupId
+struct	GameServices.LeaderboardDescription		var	recurringProperties
+struct	GameServices.LeaderboardDescription		var	title
+struct	GameServices.LeaderboardDescription		var	type
+struct	GameServices.LeaderboardDescription		var	supportsChallenge
+struct	GameServices.LeaderboardDescription		var	image
+struct	GameServices.LeaderboardDescription		var	activityIdentifier
+struct	GameServices.LeaderboardDescription		var	activityProperties
+struct	GameServices.LeaderboardDescription		let	releaseState
+struct	GameServices.LeaderboardDescription		let	visibility
+struct	GameServices.LeaderboardDescription		let	description
+struct	GameServices.LeaderboardEntry			
+struct	GameServices.LeaderboardEntry		var	context
+struct	GameServices.LeaderboardEntry		var	dateEarned
+struct	GameServices.LeaderboardEntry		var	formattedScore
+struct	GameServices.LeaderboardEntry		var	leaderboard
+struct	GameServices.LeaderboardEntry		var	player
+struct	GameServices.LeaderboardEntry		var	rank
+struct	GameServices.LeaderboardEntry		var	score
+struct	GameServices.LeaderboardSetDescription			
+struct	GameServices.LeaderboardSetDescription		var	id
+struct	GameServices.LeaderboardSetDescription		var	groupId
+struct	GameServices.LeaderboardSetDescription		var	title
+struct	GameServices.LeaderboardSetDescription		var	image
+enum	GameServices.LeaderboardSetDescription.CodingKeys			
+enum	GameServices.LeaderboardSetDescription.CodingKeys		case	id
+enum	GameServices.LeaderboardSetDescription.CodingKeys		case	groupId
+enum	GameServices.LeaderboardSetDescription.CodingKeys		case	title
+enum	GameServices.LeaderboardSetDescription.CodingKeys		case	image
+enum	GameServices.LeaderboardEntry.CodingKeys			
+enum	GameServices.LeaderboardEntry.CodingKeys		case	context
+enum	GameServices.LeaderboardEntry.CodingKeys		case	dateEarned
+enum	GameServices.LeaderboardEntry.CodingKeys		case	formattedScore
+enum	GameServices.LeaderboardEntry.CodingKeys		case	leaderboard
+enum	GameServices.LeaderboardEntry.CodingKeys		case	player
+enum	GameServices.LeaderboardEntry.CodingKeys		case	rank
+enum	GameServices.LeaderboardEntry.CodingKeys		case	score
+enum	GameServices.LeaderboardDescription.CodingKeys			
+enum	GameServices.LeaderboardDescription.CodingKeys		case	baseLeaderboardId
+enum	GameServices.LeaderboardDescription.CodingKeys		case	groupId
+enum	GameServices.LeaderboardDescription.CodingKeys		case	recurringProperties
+enum	GameServices.LeaderboardDescription.CodingKeys		case	title
+enum	GameServices.LeaderboardDescription.CodingKeys		case	type
+enum	GameServices.LeaderboardDescription.CodingKeys		case	supportsChallenge
+enum	GameServices.LeaderboardDescription.CodingKeys		case	image
+enum	GameServices.LeaderboardDescription.CodingKeys		case	activityIdentifier
+enum	GameServices.LeaderboardDescription.CodingKeys		case	activityProperties
+enum	GameServices.LeaderboardDescription.CodingKeys		case	releaseState
+enum	GameServices.LeaderboardDescription.CodingKeys		case	visibility
+enum	GameServices.LeaderboardDescription.CodingKeys		case	description
+enum	GameServices.RecurringLeaderboardProperties.CodingKeys			
+enum	GameServices.RecurringLeaderboardProperties.CodingKeys		case	startDate
+enum	GameServices.RecurringLeaderboardProperties.CodingKeys		case	nextStartDate
+enum	GameServices.RecurringLeaderboardProperties.CodingKeys		case	duration
+enum	GameServices.GameWithPlayer.CodingKeys			
+enum	GameServices.GameWithPlayer.CodingKeys		case	game
+enum	GameServices.GameWithPlayer.CodingKeys		case	player
+enum	GameServices.LeaderboardVisibility.CodingKeys			
+enum	GameServices.LeaderboardVisibility.CodingKeys		case	showForAll
+enum	GameServices.LeaderboardVisibility.CodingKeys		case	hideForAll
+enum	GameServices.LeaderboardVisibility.ShowForAllCodingKeys			
+enum	GameServices.LeaderboardVisibility.HideForAllCodingKeys			
+enum	GameServices.LeaderboardScore.CodingKeys			
+enum	GameServices.LeaderboardScore.CodingKeys		case	player
+enum	GameServices.LeaderboardScore.CodingKeys		case	value
+enum	GameServices.LeaderboardScore.CodingKeys		case	context
+enum	GameServices.LeaderboardScore.CodingKeys		case	leaderboard
+struct	GameServices.DefaultGameActivityEnvironment			
+struct	GameServices.DefaultGameActivityEnvironment		var	language
+struct	GameServices.DefaultGameActivityEnvironment		var	partyStartURL
+struct	GameServices.ActivityInstanceDeletionResult			
+struct	GameServices.ActivityInstanceDeletionResult		let	deleted
+struct	GameServices.ActivityInstanceDeletionResult		let	remaining
+enum	GameServices.GameActivityDefinitionFilter			
+enum	GameServices.GameActivityDefinitionFilter		case	associatedWith
+enum	GameServices.GameActivityDefinitionFilter		case	definition
+enum	GameServices.GameActivityDefinitionFilter		case	isArchived
+enum	GameServices.GameActivityDefinitionFilter		case	playStyle
+enum	GameServices.GameActivityDefinitionFilter		case	releaseState
+enum	GameServices.GameActivityDefinitionFilter		case	supportsPartyCode
+enum	GameServices.GameActivityDefinitionFilter		case	supportsMiniGame
+enum	GameServices.GameActivityFilter			
+enum	GameServices.GameActivityFilter		case	creator
+enum	GameServices.GameActivityFilter		case	gameActivity
+enum	GameServices.GameActivityFilter		case	instances
+enum	GameServices.GameActivityFilter		case	state
+enum	GameServices.GameActivityFilter		case	consumptionState
+enum	GameServices.GameActivityFilter		case	language
+enum	GameServices.GameActivityUpdateContext			
+enum	GameServices.GameActivityUpdateContext		case	notSet
+enum	GameServices.GameActivityUpdateContext		case	initialized
+enum	GameServices.GameActivityUpdateContext		case	started
+enum	GameServices.GameActivityUpdateContext		case	paused
+enum	GameServices.GameActivityUpdateContext		case	resumed
+enum	GameServices.GameActivityUpdateContext		case	ended
+enum	GameServices.GameActivityUpdateContext		case	participantChanged
+enum	GameServices.GameActivityUpdateContext		case	leaderboardScoreUpdated
+enum	GameServices.GameActivityUpdateContext		case	achievementProgressUpdated
+enum	GameServices.GameActivityUpdateContext		case	consumptionStateChanged
+enum	GameServices.GameActivityUpdateContext		case	prepareForSharing
+enum	GameServices.GameActivityPlayStyle			
+enum	GameServices.GameActivityPlayStyle		case	unspecified
+enum	GameServices.GameActivityPlayStyle		case	synchronous
+enum	GameServices.GameActivityPlayStyle		case	asynchronous
+struct	GameServices.GameActivityDefinition			
+struct	GameServices.GameActivityDefinition		let	id
+struct	GameServices.GameActivityDefinition		let	groupId
+struct	GameServices.GameActivityDefinition		let	ascUUID
+struct	GameServices.GameActivityDefinition		let	language
+struct	GameServices.GameActivityDefinition		let	partyStartURL
+struct	GameServices.GameActivityDefinition		var	storeFront
+struct	GameServices.GameActivityDefinition		let	title
+struct	GameServices.GameActivityDefinition		let	details
+struct	GameServices.GameActivityDefinition		let	defaultProperties
+struct	GameServices.GameActivityDefinition		let	fallbackURL
+struct	GameServices.GameActivityDefinition		let	supportsPartyCode
+struct	GameServices.GameActivityDefinition		let	supportsMiniGame
+struct	GameServices.GameActivityDefinition		let	artwork
+struct	GameServices.GameActivityDefinition		let	maxPlayers
+struct	GameServices.GameActivityDefinition		let	minPlayers
+struct	GameServices.GameActivityDefinition		let	playStyle
+struct	GameServices.GameActivityDefinition		let	associatedLeaderboardUUIDs
+struct	GameServices.GameActivityDefinition		let	associatedAchievementDescriptionUUIDs
+struct	GameServices.GameActivityDefinition		var	associatedLeaderboardIDs
+struct	GameServices.GameActivityDefinition		var	associatedAchievementDescriptionIDs
+struct	GameServices.GameActivityDefinition		let	releaseState
+struct	GameServices.GameActivityDefinition		let	archived
+struct	GameServices.GameActivityDefinition		let	compatibleBundleIDs
+enum	GameServices.GameActivityParticipantState			
+enum	GameServices.GameActivityParticipantState		case	unknown
+enum	GameServices.GameActivityParticipantState		case	invited
+enum	GameServices.GameActivityParticipantState		case	joined
+enum	GameServices.GameActivityParticipantState		case	left
+enum	GameServices.GameActivityRuntimeStat			
+enum	GameServices.GameActivityRuntimeStat		case	leaderboardScore
+enum	GameServices.GameActivityRuntimeStat		case	achievement
+enum	GameServices.GameActivityStaticStat			
+enum	GameServices.GameActivityStaticStat		case	leaderboard
+enum	GameServices.GameActivityStaticStat		case	achievementDescription
+enum	GameServices.GameActivityState			
+enum	GameServices.GameActivityState		case	unknown
+enum	GameServices.GameActivityState		case	idle
+enum	GameServices.GameActivityState		case	active
+enum	GameServices.GameActivityState		case	paused
+enum	GameServices.GameActivityState		case	ended
+enum	GameServices.GameActivityConsumptionState			
+enum	GameServices.GameActivityConsumptionState		case	received
+enum	GameServices.GameActivityConsumptionState		case	pending
+enum	GameServices.GameActivityConsumptionState		case	delivered
+enum	GameServices.GameActivityConsumptionState		case	processed
+struct	GameServices.GameActivityInstance			
+struct	GameServices.GameActivityInstance		let	id
+struct	GameServices.GameActivityInstance		let	definitionRef
+struct	GameServices.GameActivityInstance		var	properties
+struct	GameServices.GameActivityInstance		var	state
+struct	GameServices.GameActivityInstance		let	partyCode
+struct	GameServices.GameActivityInstance		var	creationDate
+struct	GameServices.GameActivityInstance		var	startDate
+struct	GameServices.GameActivityInstance		var	lastResumeDate
+struct	GameServices.GameActivityInstance		var	endDate
+struct	GameServices.GameActivityInstance		var	duration
+struct	GameServices.GameActivityInstance		var	shortGroupID
+struct	GameServices.GameActivityInstance		var	runtimeStats
+struct	GameServices.GameActivityInstance		let	participants
+struct	GameServices.GameActivityInstance		let	participantStates
+struct	GameServices.GameActivityInstance		let	creator
+struct	GameServices.GameActivityInstance		let	initiatedByApple
+struct	GameServices.GameActivityInstance		var	deepLinkReferral
+struct	GameServices.GameActivityInstance		var	consumptionState
+enum	GameServices.GameActivityInstance.URLParseError			
+enum	GameServices.GameActivityInstance.URLParseError		case	failureGeneratingInstance
+enum	GameServices.GameActivityInstance.URLParseError		case	invalidGameID
+enum	GameServices.GameActivityInstance.URLParseError		case	invalidPartyCode
+enum	GameServices.GameActivityInstance.URLParseError		case	invalidURL
+enum	GameServices.GameActivityInstance.URLParseError		case	missingComponent
+enum	GameServices.GameActivityInstance.URLParseError		case	deprecated
+struct	GameServices.GameActivityInstance.URLParseResult			
+struct	GameServices.GameActivityInstance.URLParseResult		let	gameBundleID
+struct	GameServices.GameActivityInstance.URLParseResult		let	activityInstance
+struct	GameServices.GameActivityInstance.URLParseResult		let	storeFront
+struct	GameServices.GameActivityInstance.ParsedLink			
+struct	GameServices.GameActivityInstance.ParsedLink		var	gameBundleID
+struct	GameServices.GameActivityInstance.ParsedLink		var	adamID
+struct	GameServices.GameActivityInstance.ParsedLink		var	activityInstance
+struct	GameServices.GameActivityInstance.ParsedLink		var	gameActivityDefinitionID
+struct	GameServices.GameActivityInstance.ParsedLink		var	partyCode
+struct	GameServices.GameActivityInstance.ParsedLink		var	shortGroupID
+struct	GameServices.GameActivityInstance.ParsedLink		var	deepLinkStat
+struct	GameServices.GameActivityInstance.ParsedLink		var	inviterPlayerID
+struct	GameServices.GameActivityInstance.ParsedLink		var	storeFront
+struct	GameServices.GameActivityInstance.ParsedLink		var	properties
+struct	GameServices.GameActivityInstance.ParsedLink		var	parsingError
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys			
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	gameBundleID
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	adamID
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	activityInstance
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	gameActivityDefinitionID
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	partyCode
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	shortGroupID
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	deepLinkStat
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	inviterPlayerID
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	storeFront
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	properties
+enum	GameServices.GameActivityInstance.ParsedLink.CodingKeys		case	parsingError
+enum	GameServices.GameActivityInstance.URLParseResult.CodingKeys			
+enum	GameServices.GameActivityInstance.URLParseResult.CodingKeys		case	gameBundleID
+enum	GameServices.GameActivityInstance.URLParseResult.CodingKeys		case	activityInstance
+enum	GameServices.GameActivityInstance.URLParseResult.CodingKeys		case	storeFront
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys			
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys		case	failureGeneratingInstance
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys		case	invalidGameID
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys		case	invalidPartyCode
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys		case	invalidURL
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys		case	missingComponent
+enum	GameServices.GameActivityInstance.URLParseError.CodingKeys		case	deprecated
+enum	GameServices.GameActivityInstance.URLParseError.FailureGeneratingInstanceCodingKeys			
+enum	GameServices.GameActivityInstance.URLParseError.InvalidGameIDCodingKeys			
+enum	GameServices.GameActivityInstance.URLParseError.InvalidPartyCodeCodingKeys			
+enum	GameServices.GameActivityInstance.URLParseError.InvalidURLCodingKeys			
+enum	GameServices.GameActivityInstance.URLParseError.MissingComponentCodingKeys			
+enum	GameServices.GameActivityInstance.URLParseError.DeprecatedCodingKeys			
+enum	GameServices.GameActivityInstance.CodingKeys			
+enum	GameServices.GameActivityInstance.CodingKeys		case	id
+enum	GameServices.GameActivityInstance.CodingKeys		case	definitionRef
+enum	GameServices.GameActivityInstance.CodingKeys		case	properties
+enum	GameServices.GameActivityInstance.CodingKeys		case	state
+enum	GameServices.GameActivityInstance.CodingKeys		case	partyCode
+enum	GameServices.GameActivityInstance.CodingKeys		case	creationDate
+enum	GameServices.GameActivityInstance.CodingKeys		case	startDate
+enum	GameServices.GameActivityInstance.CodingKeys		case	lastResumeDate
+enum	GameServices.GameActivityInstance.CodingKeys		case	endDate
+enum	GameServices.GameActivityInstance.CodingKeys		case	duration
+enum	GameServices.GameActivityInstance.CodingKeys		case	shortGroupID
+enum	GameServices.GameActivityInstance.CodingKeys		case	runtimeStats
+enum	GameServices.GameActivityInstance.CodingKeys		case	participants
+enum	GameServices.GameActivityInstance.CodingKeys		case	participantStates
+enum	GameServices.GameActivityInstance.CodingKeys		case	creator
+enum	GameServices.GameActivityInstance.CodingKeys		case	initiatedByApple
+enum	GameServices.GameActivityInstance.CodingKeys		case	deepLinkReferral
+enum	GameServices.GameActivityInstance.CodingKeys		case	consumptionState
+enum	GameServices.GameActivityStaticStat.CodingKeys			
+enum	GameServices.GameActivityStaticStat.CodingKeys		case	leaderboard
+enum	GameServices.GameActivityStaticStat.CodingKeys		case	achievementDescription
+enum	GameServices.GameActivityStaticStat.LeaderboardCodingKeys			
+enum	GameServices.GameActivityStaticStat.LeaderboardCodingKeys		case	ref
+enum	GameServices.GameActivityStaticStat.AchievementDescriptionCodingKeys			
+enum	GameServices.GameActivityStaticStat.AchievementDescriptionCodingKeys		case	ref
+enum	GameServices.GameActivityRuntimeStat.CodingKeys			
+enum	GameServices.GameActivityRuntimeStat.CodingKeys		case	leaderboardScore
+enum	GameServices.GameActivityRuntimeStat.CodingKeys		case	achievement
+enum	GameServices.GameActivityRuntimeStat.LeaderboardScoreCodingKeys			
+enum	GameServices.GameActivityRuntimeStat.LeaderboardScoreCodingKeys		case	score
+enum	GameServices.GameActivityRuntimeStat.AchievementCodingKeys			
+enum	GameServices.GameActivityRuntimeStat.AchievementCodingKeys		case	progress
+enum	GameServices.GameActivityDefinition.CodingKeys			
+enum	GameServices.GameActivityDefinition.CodingKeys		case	id
+enum	GameServices.GameActivityDefinition.CodingKeys		case	groupId
+enum	GameServices.GameActivityDefinition.CodingKeys		case	ascUUID
+enum	GameServices.GameActivityDefinition.CodingKeys		case	language
+enum	GameServices.GameActivityDefinition.CodingKeys		case	partyStartURL
+enum	GameServices.GameActivityDefinition.CodingKeys		case	storeFront
+enum	GameServices.GameActivityDefinition.CodingKeys		case	title
+enum	GameServices.GameActivityDefinition.CodingKeys		case	details
+enum	GameServices.GameActivityDefinition.CodingKeys		case	defaultProperties
+enum	GameServices.GameActivityDefinition.CodingKeys		case	fallbackURL
+enum	GameServices.GameActivityDefinition.CodingKeys		case	supportsPartyCode
+enum	GameServices.GameActivityDefinition.CodingKeys		case	supportsMiniGame
+enum	GameServices.GameActivityDefinition.CodingKeys		case	artwork
+enum	GameServices.GameActivityDefinition.CodingKeys		case	maxPlayers
+enum	GameServices.GameActivityDefinition.CodingKeys		case	minPlayers
+enum	GameServices.GameActivityDefinition.CodingKeys		case	playStyle
+enum	GameServices.GameActivityDefinition.CodingKeys		case	associatedLeaderboardUUIDs
+enum	GameServices.GameActivityDefinition.CodingKeys		case	associatedAchievementDescriptionUUIDs
+enum	GameServices.GameActivityDefinition.CodingKeys		case	associatedLeaderboardIDs
+enum	GameServices.GameActivityDefinition.CodingKeys		case	associatedAchievementDescriptionIDs
+enum	GameServices.GameActivityDefinition.CodingKeys		case	releaseState
+enum	GameServices.GameActivityDefinition.CodingKeys		case	archived
+enum	GameServices.GameActivityDefinition.CodingKeys		case	compatibleBundleIDs
+enum	GameServices.GameActivityFilter.CodingKeys			
+enum	GameServices.GameActivityFilter.CodingKeys		case	creator
+enum	GameServices.GameActivityFilter.CodingKeys		case	gameActivity
+enum	GameServices.GameActivityFilter.CodingKeys		case	instances
+enum	GameServices.GameActivityFilter.CodingKeys		case	state
+enum	GameServices.GameActivityFilter.CodingKeys		case	consumptionState
+enum	GameServices.GameActivityFilter.CodingKeys		case	language
+enum	GameServices.GameActivityFilter.CreatorCodingKeys			
+enum	GameServices.GameActivityFilter.CreatorCodingKeys		case	ref
+enum	GameServices.GameActivityFilter.GameActivityCodingKeys			
+enum	GameServices.GameActivityFilter.GameActivityCodingKeys		case	ids
+enum	GameServices.GameActivityFilter.InstancesCodingKeys			
+enum	GameServices.GameActivityFilter.InstancesCodingKeys		case	ids
+enum	GameServices.GameActivityFilter.StateCodingKeys			
+enum	GameServices.GameActivityFilter.StateCodingKeys		case	value
+enum	GameServices.GameActivityFilter.ConsumptionStateCodingKeys			
+enum	GameServices.GameActivityFilter.ConsumptionStateCodingKeys		case	value
+enum	GameServices.GameActivityFilter.LanguageCodingKeys			
+enum	GameServices.GameActivityFilter.LanguageCodingKeys		case	value
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	associatedWith
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	definition
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	isArchived
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	playStyle
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	releaseState
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	supportsPartyCode
+enum	GameServices.GameActivityDefinitionFilter.CodingKeys		case	supportsMiniGame
+enum	GameServices.GameActivityDefinitionFilter.AssociatedWithCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.AssociatedWithCodingKeys		case	stat
+enum	GameServices.GameActivityDefinitionFilter.DefinitionCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.DefinitionCodingKeys		case	id
+enum	GameServices.GameActivityDefinitionFilter.IsArchivedCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.IsArchivedCodingKeys		case	value
+enum	GameServices.GameActivityDefinitionFilter.PlayStyleCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.PlayStyleCodingKeys		case	value
+enum	GameServices.GameActivityDefinitionFilter.ReleaseStateCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.ReleaseStateCodingKeys		case	value
+enum	GameServices.GameActivityDefinitionFilter.SupportsPartyCodeCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.SupportsPartyCodeCodingKeys		case	value
+enum	GameServices.GameActivityDefinitionFilter.SupportsMiniGameCodingKeys			
+enum	GameServices.GameActivityDefinitionFilter.SupportsMiniGameCodingKeys		case	value
+enum	GameServices.ActivityInstanceDeletionResult.CodingKeys			
+enum	GameServices.ActivityInstanceDeletionResult.CodingKeys		case	deleted
+enum	GameServices.ActivityInstanceDeletionResult.CodingKeys		case	remaining
+enum	GameServices.DefaultGameActivityEnvironment.CodingKeys			
+enum	GameServices.DefaultGameActivityEnvironment.CodingKeys		case	language
+enum	GameServices.DefaultGameActivityEnvironment.CodingKeys		case	partyStartURL
+enum	GameServices.GameServicesError			
+enum	GameServices.GameServicesError		case	illegalArgument
+enum	GameServices.GameServicesError		case	internalError
+enum	GameServices.GameServicesError		case	invalidReference
+enum	GameServices.GameServicesError		case	userError
+enum	GameServices.GameServicesError		case	notConnectedToInternet
+enum	GameServices.GameServicesInternalError			
+enum	GameServices.GameServicesInternalError		case	illegalCast
+enum	GameServices.GameServicesInternalError		case	illegalState
+enum	GameServices.GameServicesInternalError		case	invalidServerResponse
+enum	GameServices.GameServicesInternalError		case	authenticationFailed
+enum	GameServices.GameServicesInternalError		case	notYetImplemented
+enum	GameServices.GameServicesInternalError		case	deprecated
+struct	GameServices.GameLockup			
+struct	GameServices.GameLockup		let	name
+struct	GameServices.GameLockup		let	shortName
+struct	GameServices.GameLockup		let	ref
+struct	GameServices.GameLockup		let	artwork
+struct	GameServices.GameLockup		let	rawResponse
+class	GameServices.GameDebuggerServiceWorkaround			
+class	GameServices.GameDebuggerServiceWorkaround		let	id
+class	GameServices.GameDebuggerServiceWorkaround		let	actorSystem
+class	GameServices.GameDebuggerServiceWorkaround		var	delegate
+enum	GameServices.GameLockup.CodingKeys			
+enum	GameServices.GameLockup.CodingKeys		case	name
+enum	GameServices.GameLockup.CodingKeys		case	shortName
+enum	GameServices.GameLockup.CodingKeys		case	ref
+enum	GameServices.GameLockup.CodingKeys		case	artwork
+enum	GameServices.GameLockup.CodingKeys		case	rawResponse
+enum	GameServices.GameActivityInstanceCoder			
+enum	GameServices.AchievementRefFields<A	GameServices.Achievement>		
+enum	GameServices.AchievementRefFields<A	GameServices.Achievement>	case	id
+enum	GameServices.AchievementDescriptionRefFields<A	GameServices.AchievementDescriptionEntity>		
+enum	GameServices.AchievementDescriptionRefFields<A	GameServices.AchievementDescriptionEntity>	case	id
+enum	GameServices.ChallengeRefFields<A	GameServices.Challenge>		
+enum	GameServices.ChallengeRefFields<A	GameServices.Challenge>	case	id
+enum	GameServices.ChallengeDefinitionRefFields<A	GameServices.ChallengeDefinitionEntity>		
+enum	GameServices.ChallengeDefinitionRefFields<A	GameServices.ChallengeDefinitionEntity>	case	vendorID
+enum	GameServices.InviteDetails<A	GameServices.ChallengeInviteEntity>		
+enum	GameServices.InviteDetails<A	GameServices.ChallengeInviteEntity>	case	code
+enum	GameServices.InviteDetails<A	GameServices.ChallengeInviteEntity>	case	player
+enum	GameServices.ChallengeInviteRefFields<A	GameServices.ChallengeInviteEntity>		
+enum	GameServices.ChallengeInviteRefFields<A	GameServices.ChallengeInviteEntity>	case	type
+enum	GameServices.ChallengeInviteRefFields<A	GameServices.ChallengeInviteEntity>	case	fromPlayerID
+enum	GameServices.ChallengeInviteRefFields<A	GameServices.ChallengeInviteEntity>	case	toPlayerID
+enum	GameServices.ChallengeInviteRefFields<A	GameServices.ChallengeInviteEntity>	case	code
+enum	GameServices.ContactRefFields<A	GameServices.Contact>		
+enum	GameServices.ContactRefFields<A	GameServices.Contact>	case	id
+enum	GameServices.ContactRefFields<A	GameServices.Contact>	case	associationID
+enum	GameServices.GameRefFields<A	GameServices.Game>		
+enum	GameServices.GameRefFields<A	GameServices.Game>	case	adamID
+enum	GameServices.GameRefFields<A	GameServices.Game>	case	bundleID
+enum	GameServices.GameRefFields<A	GameServices.Game>	case	platform
+enum	GameServices.GameRefFields<A	GameServices.Game>	case	shortBundleVersion
+enum	GameServices.GameActivityRefFields<A	GameServices.GameActivityEntity>		
+enum	GameServices.GameActivityRefFields<A	GameServices.GameActivityEntity>	case	id
+enum	GameServices.GameActivityDefinitionRefFields<A	GameServices.GameActivityDefinitionEntity>		
+enum	GameServices.GameActivityDefinitionRefFields<A	GameServices.GameActivityDefinitionEntity>	case	id
+enum	GameServices.GameActivityDefinitionRefFields<A	GameServices.GameActivityDefinitionEntity>	case	language
+enum	GameServices.GameActivityDefinitionRefFields<A	GameServices.GameActivityDefinitionEntity>	case	partyStartURLString
+enum	GameServices.ImageRefFields<A	GameServices.ImageEntity>		
+enum	GameServices.ImageRefFields<A	GameServices.ImageEntity>	case	encodedURL
+enum	GameServices.ImageRefFields<A	GameServices.ImageEntity>	case	bundleID
+enum	GameServices.ImageRefFields<A	GameServices.ImageEntity>	case	type
+enum	GameServices.ImageRefType<A	GameServices.ImageEntity>		
+enum	GameServices.ImageRefType<A	GameServices.ImageEntity>	case	template
+enum	GameServices.ImageRefType<A	GameServices.ImageEntity>	case	appIcon
+enum	GameServices.LeaderboardRefFields<A	GameServices.Leaderboard>		
+enum	GameServices.LeaderboardRefFields<A	GameServices.Leaderboard>	case	id
+enum	GameServices.LeaderboardSetRefFields<A	GameServices.LeaderboardSet>		
+enum	GameServices.LeaderboardSetRefFields<A	GameServices.LeaderboardSet>	case	id
+enum	GameServices.PlayerID<A	GameServices.Player>		
+enum	GameServices.PlayerID<A	GameServices.Player>	case	game
+enum	GameServices.PlayerID<A	GameServices.Player>	case	internal
+enum	GameServices.PlayerID<A	GameServices.Player>	case	team
+enum	GameServices.PlayerRefFields<A	GameServices.Player>		
+enum	GameServices.PlayerRefFields<A	GameServices.Player>	case	gamePlayerID
+enum	GameServices.PlayerRefFields<A	GameServices.Player>	case	internalPlayerID
+enum	GameServices.PlayerRefFields<A	GameServices.Player>	case	teamPlayerID
+enum	GameServices.Loggers			
+enum	GameServices.ReleaseState			
+enum	GameServices.ReleaseState		case	live
+enum	GameServices.ReleaseState		case	staged
+enum	GameServices.ReleaseState		case	development
+struct	GameServices.Page<A	Swift.Decodable, A: Swift.Encodable>		
+struct	GameServices.Page<A	Swift.Decodable, A: Swift.Encodable>	var	elements
+struct	GameServices.Page<A	Swift.Decodable, A: Swift.Encodable>	var	previous
+struct	GameServices.Page<A	Swift.Decodable, A: Swift.Encodable>	var	next
+struct	GameServices.Cursor			
+struct	GameServices.Cursor		var	rawValue
+struct	GameServices.PaginatedSequence<A	Swift.Decodable, A: Swift.Encodable>		
+struct	GameServices.PaginatedSequence<A	Swift.Decodable, A: Swift.Encodable>	let	initialCursor
+struct	GameServices.PaginatedSequence<A	Swift.Decodable, A: Swift.Encodable>	let	fetchPageAfter
+enum	GameServices.Page.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	GameServices.Page.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	elements
+enum	GameServices.Page.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	previous
+enum	GameServices.Page.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	next
+struct	GameServices.Profile			
+struct	GameServices.Profile		let	player
+struct	GameServices.Profile		let	subscriptions
+struct	GameServices.Profile		let	contact
+struct	GameServices.Profile		let	nickname
+struct	GameServices.Profile		let	contactName
+struct	GameServices.Profile		let	image
+struct	GameServices.Profile		let	artwork
+struct	GameServices.Profile		let	isChallengeable
+struct	GameServices.Profile		let	supportsMultiplayerActivities
+struct	GameServices.Profile.Subscriptions			
+struct	GameServices.Profile.Subscriptions		let	rawValue
+struct	GameServices.ParticipantInteraction			
+struct	GameServices.ParticipantInteraction		let	date
+struct	GameServices.ParticipantInteraction		let	mode
+struct	GameServices.ParticipantInteraction		let	player
+struct	GameServices.ParticipantInteraction		let	contact
+enum	GameServices.ParticipantInteraction.Mode			
+enum	GameServices.ParticipantInteraction.Mode		case	challenge
+enum	GameServices.ParticipantInteraction.Mode		case	multiplayer
+struct	GameServices.SuggestedNickname			
+struct	GameServices.SuggestedNickname		let	nickname
+enum	GameServices.SuggestedNickname.CodingKeys			
+enum	GameServices.SuggestedNickname.CodingKeys		case	nickname
+enum	GameServices.ParticipantInteraction.CodingKeys			
+enum	GameServices.ParticipantInteraction.CodingKeys		case	date
+enum	GameServices.ParticipantInteraction.CodingKeys		case	mode
+enum	GameServices.ParticipantInteraction.CodingKeys		case	player
+enum	GameServices.ParticipantInteraction.CodingKeys		case	contact
+enum	GameServices.ParticipantInteraction.Mode.CodingKeys			
+enum	GameServices.ParticipantInteraction.Mode.CodingKeys		case	challenge
+enum	GameServices.ParticipantInteraction.Mode.CodingKeys		case	multiplayer
+enum	GameServices.ParticipantInteraction.Mode.ChallengeCodingKeys			
+enum	GameServices.ParticipantInteraction.Mode.ChallengeCodingKeys		case	game
+enum	GameServices.ParticipantInteraction.Mode.MultiplayerCodingKeys			
+enum	GameServices.ParticipantInteraction.Mode.MultiplayerCodingKeys		case	game
+enum	GameServices.Profile.CodingKeys			
+enum	GameServices.Profile.CodingKeys		case	player
+enum	GameServices.Profile.CodingKeys		case	subscriptions
+enum	GameServices.Profile.CodingKeys		case	contact
+enum	GameServices.Profile.CodingKeys		case	nickname
+enum	GameServices.Profile.CodingKeys		case	contactName
+enum	GameServices.Profile.CodingKeys		case	image
+enum	GameServices.Profile.CodingKeys		case	artwork
+enum	GameServices.Profile.CodingKeys		case	isChallengeable
+enum	GameServices.Profile.CodingKeys		case	supportsMultiplayerActivities
+enum	GameServices.PartyCodeGenerator			
+enum	GameServices.PartyCodeGenerator		let	id
+enum	GameServices.PartyCodeGenerator		let	actorSystem
+struct	GameServices.AchievementDescription			
+struct	GameServices.AchievementDescription		var	game
+struct	GameServices.AchievementDescription		var	id
+struct	GameServices.AchievementDescription		var	groupId
+struct	GameServices.AchievementDescription		var	title
+struct	GameServices.AchievementDescription		var	unachievedDescription
+struct	GameServices.AchievementDescription		var	achievedDescription
+struct	GameServices.AchievementDescription		var	maximumPoints
+struct	GameServices.AchievementDescription		var	isHidden
+struct	GameServices.AchievementDescription		var	isReplayable
+struct	GameServices.AchievementDescription		var	rarityPercent
+struct	GameServices.AchievementDescription		var	image
+struct	GameServices.AchievementDescription		var	activityIdentifier
+struct	GameServices.AchievementDescription		var	activityProperties
+struct	GameServices.AchievementDescription		let	releaseState
+struct	GameServices.AchievementProgress			
+struct	GameServices.AchievementProgress		var	player
+struct	GameServices.AchievementProgress		var	achievement
+struct	GameServices.AchievementProgress		var	percentComplete
+struct	GameServices.AchievementProgress		var	isCompleted
+struct	GameServices.AchievementProgress		var	lastReportedDate
+enum	GameServices.AchievementProgress.CodingKeys			
+enum	GameServices.AchievementProgress.CodingKeys		case	player
+enum	GameServices.AchievementProgress.CodingKeys		case	achievement
+enum	GameServices.AchievementProgress.CodingKeys		case	percentComplete
+enum	GameServices.AchievementProgress.CodingKeys		case	isCompleted
+enum	GameServices.AchievementProgress.CodingKeys		case	lastReportedDate
+enum	GameServices.AchievementDescription.CodingKeys			
+enum	GameServices.AchievementDescription.CodingKeys		case	game
+enum	GameServices.AchievementDescription.CodingKeys		case	id
+enum	GameServices.AchievementDescription.CodingKeys		case	groupId
+enum	GameServices.AchievementDescription.CodingKeys		case	title
+enum	GameServices.AchievementDescription.CodingKeys		case	unachievedDescription
+enum	GameServices.AchievementDescription.CodingKeys		case	achievedDescription
+enum	GameServices.AchievementDescription.CodingKeys		case	maximumPoints
+enum	GameServices.AchievementDescription.CodingKeys		case	isHidden
+enum	GameServices.AchievementDescription.CodingKeys		case	isReplayable
+enum	GameServices.AchievementDescription.CodingKeys		case	rarityPercent
+enum	GameServices.AchievementDescription.CodingKeys		case	image
+enum	GameServices.AchievementDescription.CodingKeys		case	activityIdentifier
+enum	GameServices.AchievementDescription.CodingKeys		case	activityProperties
+enum	GameServices.AchievementDescription.CodingKeys		case	releaseState
+struct	GameServices.ProfileSettings			
+struct	GameServices.ProfileSettings		let	gdprVersion
+struct	GameServices.ProfileSettings		let	gamesPrivacyVersion
+struct	GameServices.ProfileSettings		let	gamesCrossUseVersion
+struct	GameServices.ProfileSettings		let	linkedDSID
+struct	GameServices.AccountInfo			
+struct	GameServices.AccountInfo		let	dsid
+struct	GameServices.AccountInfo		let	accountID
+struct	GameServices.OnboardingRequest			
+struct	GameServices.OnboardingRequest		let	player
+struct	GameServices.OnboardingRequest		var	appStoreAccountInfo
+struct	GameServices.OnboardingRequest		var	awaitMigration
+struct	GameServices.UpdateCrossUseConsentRequest			
+struct	GameServices.UpdateCrossUseConsentRequest		let	player
+struct	GameServices.UpdateCrossUseConsentRequest		let	consent
+struct	GameServices.UpdateCrossUseConsentRequest		var	appStoreAccountInfo
+struct	GameServices.UpdateCrossUseConsentRequest		var	awaitCompletion
+struct	GameServices.OnboardingState			
+struct	GameServices.OnboardingState		let	ref
+struct	GameServices.OnboardingState		let	gdprPrivacyInfo
+struct	GameServices.OnboardingState		let	gamesPrivacyInfo
+struct	GameServices.OnboardingState		let	gamesCrossUsePrivacyInfo
+struct	GameServices.OnboardingState		let	crossUseConsentPrivacyInfo
+struct	GameServices.OnboardingState		let	isDefaultNickname
+struct	GameServices.OnboardingState		let	isDefaultPrivacyVisibility
+struct	GameServices.OnboardingState		let	isDefaultContactsIntegrationConsent
+struct	GameServices.OnboardingState		let	linkedDSID
+struct	GameServices.OnboardingState.PrivacyInfo			
+struct	GameServices.OnboardingState.PrivacyInfo		let	currentVersion
+struct	GameServices.OnboardingState.PrivacyInfo		let	noticeAccepted
+enum	GameServices.AgeCategory			
+enum	GameServices.AgeCategory		case	unknown
+enum	GameServices.AgeCategory		case	adult
+enum	GameServices.AgeCategory		case	adolescent
+enum	GameServices.AgeCategory		case	child
+enum	GameServices.ProfilePrivacy			
+enum	GameServices.ProfilePrivacy		case	everyone
+enum	GameServices.ProfilePrivacy		case	friendsOnly
+enum	GameServices.ProfilePrivacy		case	meOnly
+enum	GameServices.ContactsIntegrationConsent			
+enum	GameServices.ContactsIntegrationConsent		case	notSet
+enum	GameServices.ContactsIntegrationConsent		case	optOut
+enum	GameServices.ContactsIntegrationConsent		case	optIn
+enum	GameServices.ContactsIntegrationConsent		case	invalid
+enum	GameServices.OnboardingState.CodingKeys			
+enum	GameServices.OnboardingState.CodingKeys		case	ref
+enum	GameServices.OnboardingState.CodingKeys		case	gdprPrivacyInfo
+enum	GameServices.OnboardingState.CodingKeys		case	gamesPrivacyInfo
+enum	GameServices.OnboardingState.CodingKeys		case	gamesCrossUsePrivacyInfo
+enum	GameServices.OnboardingState.CodingKeys		case	crossUseConsentPrivacyInfo
+enum	GameServices.OnboardingState.CodingKeys		case	isDefaultNickname
+enum	GameServices.OnboardingState.CodingKeys		case	isDefaultPrivacyVisibility
+enum	GameServices.OnboardingState.CodingKeys		case	isDefaultContactsIntegrationConsent
+enum	GameServices.OnboardingState.CodingKeys		case	linkedDSID
+enum	GameServices.OnboardingState.PrivacyInfo.CodingKeys			
+enum	GameServices.OnboardingState.PrivacyInfo.CodingKeys		case	currentVersion
+enum	GameServices.OnboardingState.PrivacyInfo.CodingKeys		case	noticeAccepted
+enum	GameServices.UpdateCrossUseConsentRequest.CodingKeys			
+enum	GameServices.UpdateCrossUseConsentRequest.CodingKeys		case	player
+enum	GameServices.UpdateCrossUseConsentRequest.CodingKeys		case	consent
+enum	GameServices.UpdateCrossUseConsentRequest.CodingKeys		case	appStoreAccountInfo
+enum	GameServices.UpdateCrossUseConsentRequest.CodingKeys		case	awaitCompletion
+enum	GameServices.OnboardingRequest.CodingKeys			
+enum	GameServices.OnboardingRequest.CodingKeys		case	player
+enum	GameServices.OnboardingRequest.CodingKeys		case	appStoreAccountInfo
+enum	GameServices.OnboardingRequest.CodingKeys		case	awaitMigration
+enum	GameServices.AccountInfo.CodingKeys			
+enum	GameServices.AccountInfo.CodingKeys		case	dsid
+enum	GameServices.AccountInfo.CodingKeys		case	accountID
+enum	GameServices.ProfileSettings.CodingKeys			
+enum	GameServices.ProfileSettings.CodingKeys		case	gdprVersion
+enum	GameServices.ProfileSettings.CodingKeys		case	gamesPrivacyVersion
+enum	GameServices.ProfileSettings.CodingKeys		case	gamesCrossUseVersion
+enum	GameServices.ProfileSettings.CodingKeys		case	linkedDSID
+struct	GameServices.Artwork			
+struct	GameServices.Artwork		let	ref
+struct	GameServices.Artwork		let	sourceImageSize
+struct	GameServices.Artwork		let	backgroundColor
+struct	GameServices.Artwork		let	textColor1
+struct	GameServices.Artwork		let	textColor2
+struct	GameServices.Artwork		let	textColor3
+struct	GameServices.Artwork		let	textColor4
+struct	GameServices.Artwork.Size			
+struct	GameServices.Artwork.Size		let	width
+struct	GameServices.Artwork.Size		let	height
+enum	GameServices.Artwork.CodingKeys			
+enum	GameServices.Artwork.CodingKeys		case	ref
+enum	GameServices.Artwork.CodingKeys		case	sourceImageSize
+enum	GameServices.Artwork.CodingKeys		case	backgroundColor
+enum	GameServices.Artwork.CodingKeys		case	textColor1
+enum	GameServices.Artwork.CodingKeys		case	textColor2
+enum	GameServices.Artwork.CodingKeys		case	textColor3
+enum	GameServices.Artwork.CodingKeys		case	textColor4
+enum	GameServices.Artwork.Size.CodingKeys			
+enum	GameServices.Artwork.Size.CodingKeys		case	width
+enum	GameServices.Artwork.Size.CodingKeys		case	height
+enum	GameServices.DataRefreshScope			
+enum	GameServices.DataRefreshScope		case	all
+enum	GameServices.DataRefreshScope		case	stale
+enum	GameServices.DataRefreshScope		case	missing
+struct	GameServices.AnonymousGameCenterInfo			
+struct	GameServices.AnonymousGameCenterInfo		let	capabilities
+struct	GameServices.AnonymousGameCenterInfo		let	name
+struct	GameServices.AnonymousGameCenterInfo		let	resourceCounts
+struct	GameServices.AnonymousGameCenterInfo.ResourceCounts			
+struct	GameServices.AnonymousGameCenterInfo.ResourceCounts		let	achievements
+struct	GameServices.AnonymousGameCenterInfo.ResourceCounts		let	leaderboards
+struct	GameServices.GameGenre			
+struct	GameServices.GameGenre		let	id
+struct	GameServices.GameGenre		let	name
+struct	GameServices.GameGenre		let	parentId
+struct	GameServices.DesignedForPlatforms			
+struct	GameServices.DesignedForPlatforms		let	rawValue
+struct	GameServices.GameFilters			
+struct	GameServices.GameFilters		var	installedOnly
+struct	GameServices.GameFilters		var	arcadeOnly
+struct	GameServices.GameFilters		var	controllerSupportedOnly
+struct	GameServices.GameFilters		var	leaderboardChallengesSupportedOnly
+struct	GameServices.GameFilters		var	achievementsSupportedOnly
+struct	GameServices.GameFilters		var	challengeDefinitionsSupportedOnly
+struct	GameServices.GameFilters		var	multiplayerActivitySupportedOnly
+struct	GameServices.GameFilters		var	friendsArePlayingOnly
+struct	GameServices.GameFilters		var	designedForMacOnly
+struct	GameServices.GameFilters		var	designedForPlatformsOnly
+struct	GameServices.GameFilters		var	unrestrictedOnly
+struct	GameServices.GameFilters		var	genreIDs
+struct	GameServices.GameFilters		var	recentlyDownloadedOnly
+struct	GameServices.GameFilters		var	recentlyDownloadedAppStoreOnly
+struct	GameServices.GameFilters		var	recentlyPlayedOnly
+struct	GameServices.GameFilters		var	neverPlayedOnly
+struct	GameServices.GameFilters		var	updatedWithinDays
+struct	GameServices.GameSortDescriptor			
+struct	GameServices.GameSortDescriptor		let	compared
+struct	GameServices.GameSortDescriptor		let	order
+enum	GameServices.GameSortDescriptor.Compared			
+enum	GameServices.GameSortDescriptor.Compared		case	name
+enum	GameServices.GameSortDescriptor.Compared		case	purchaseDate
+enum	GameServices.GameSortDescriptor.Compared		case	recentlyPlayed
+enum	GameServices.GameSortDescriptor.Compared		case	size
+enum	GameServices.GameSortDescriptor.Compared		case	installDate
+enum	GameServices.GameSortDescriptor.Compared		case	lastUpdateDate
+struct	GameServices.ListGamesRequest			
+struct	GameServices.ListGamesRequest		let	player
+struct	GameServices.ListGamesRequest		var	filters
+struct	GameServices.ListGamesRequest		var	sortDescriptor
+struct	GameServices.ListGamesRequest		var	limit
+struct	GameServices.ListGamesRequest		var	cursor
+struct	GameServices.ListGamesRequest		var	localDataOnly
+struct	GameServices.DescribeGamesRequest			
+struct	GameServices.DescribeGamesRequest		let	games
+struct	GameServices.DescribeGamesRequest		var	localDataOnly
+struct	GameServices.DescribeGamesRequest		var	includeFriendsWhoPlayThis
+struct	GameServices.ListGameGenreRequest			
+struct	GameServices.ListGameGenreRequest		let	player
+struct	GameServices.ListGameGenreRequest		let	localDataOnly
+struct	GameServices.ListGameGenreRequest		let	filters
+struct	GameServices.GameHistory			
+struct	GameServices.GameHistory		let	playHistory
+struct	GameServices.GameHistory		let	installHistory
+struct	GameServices.GameHistory		let	ref
+struct	GameServices.GameHistory.PlayHistory			
+struct	GameServices.GameHistory.PlayHistory		let	lastPlayed
+struct	GameServices.GameHistory.InstallHistory			
+struct	GameServices.GameHistory.InstallHistory		let	source
+struct	GameServices.GameHistory.InstallHistory		let	purchaseDate
+struct	GameServices.GameHistory.InstallHistory		let	isInstalled
+struct	GameServices.GameHistory.InstallHistory		var	installDate
+enum	GameServices.GameHistory.InstallHistory.Source			
+enum	GameServices.GameHistory.InstallHistory.Source		case	appleAppStore
+enum	GameServices.GameHistory.InstallHistory.Source		case	thirdParty
+struct	GameServices.GameDescription			
+struct	GameServices.GameDescription		let	appName
+struct	GameServices.GameDescription		var	gameName
+struct	GameServices.GameDescription		var	shortName
+struct	GameServices.GameDescription		let	ref
+struct	GameServices.GameDescription		var	subscriptions
+struct	GameServices.GameDescription		var	capabilities
+struct	GameServices.GameDescription		var	compatiblePlatforms
+struct	GameServices.GameDescription		var	isIOSBinaryMacOSCompatible
+struct	GameServices.GameDescription		var	icon
+struct	GameServices.GameDescription		var	prerenderedIcon
+struct	GameServices.GameDescription		var	categoryName
+struct	GameServices.GameDescription		var	rawResponse
+struct	GameServices.GameDescription		let	releaseState
+struct	GameServices.GameDescription		var	miniGamesDeepLink
+struct	GameServices.GameDescription		var	executableURL
+struct	GameServices.GameDescription		var	friendsWhoPlayThis
+struct	GameServices.GameDescription		var	sizeInBytesOnDevice
+struct	GameServices.GameDescription		var	hasOptedOutOfKnowledgeGraph
+struct	GameServices.GameDescription		var	lastUpdateDate
+struct	GameServices.GameDescription.CompatiblePlatforms			
+struct	GameServices.GameDescription.CompatiblePlatforms		let	rawValue
+struct	GameServices.GameDescription.Capabilities			
+struct	GameServices.GameDescription.Capabilities		let	rawValue
+enum	GameServices.GameDescription.CodingKeys			
+enum	GameServices.GameDescription.CodingKeys		case	appName
+enum	GameServices.GameDescription.CodingKeys		case	gameName
+enum	GameServices.GameDescription.CodingKeys		case	shortName
+enum	GameServices.GameDescription.CodingKeys		case	ref
+enum	GameServices.GameDescription.CodingKeys		case	subscriptions
+enum	GameServices.GameDescription.CodingKeys		case	capabilities
+enum	GameServices.GameDescription.CodingKeys		case	compatiblePlatforms
+enum	GameServices.GameDescription.CodingKeys		case	isIOSBinaryMacOSCompatible
+enum	GameServices.GameDescription.CodingKeys		case	icon
+enum	GameServices.GameDescription.CodingKeys		case	prerenderedIcon
+enum	GameServices.GameDescription.CodingKeys		case	categoryName
+enum	GameServices.GameDescription.CodingKeys		case	rawResponse
+enum	GameServices.GameDescription.CodingKeys		case	releaseState
+enum	GameServices.GameDescription.CodingKeys		case	miniGamesDeepLink
+enum	GameServices.GameDescription.CodingKeys		case	executableURL
+enum	GameServices.GameDescription.CodingKeys		case	friendsWhoPlayThis
+enum	GameServices.GameDescription.CodingKeys		case	sizeInBytesOnDevice
+enum	GameServices.GameDescription.CodingKeys		case	hasOptedOutOfKnowledgeGraph
+enum	GameServices.GameDescription.CodingKeys		case	lastUpdateDate
+enum	GameServices.GameHistory.CodingKeys			
+enum	GameServices.GameHistory.CodingKeys		case	playHistory
+enum	GameServices.GameHistory.CodingKeys		case	installHistory
+enum	GameServices.GameHistory.CodingKeys		case	ref
+enum	GameServices.GameHistory.InstallHistory.CodingKeys			
+enum	GameServices.GameHistory.InstallHistory.CodingKeys		case	source
+enum	GameServices.GameHistory.InstallHistory.CodingKeys		case	purchaseDate
+enum	GameServices.GameHistory.InstallHistory.CodingKeys		case	isInstalled
+enum	GameServices.GameHistory.InstallHistory.CodingKeys		case	installDate
+enum	GameServices.GameHistory.InstallHistory.Source.CodingKeys			
+enum	GameServices.GameHistory.InstallHistory.Source.CodingKeys		case	appleAppStore
+enum	GameServices.GameHistory.InstallHistory.Source.CodingKeys		case	thirdParty
+enum	GameServices.GameHistory.InstallHistory.Source.AppleAppStoreCodingKeys			
+enum	GameServices.GameHistory.InstallHistory.Source.ThirdPartyCodingKeys			
+enum	GameServices.GameHistory.PlayHistory.CodingKeys			
+enum	GameServices.GameHistory.PlayHistory.CodingKeys		case	lastPlayed
+enum	GameServices.ListGameGenreRequest.CodingKeys			
+enum	GameServices.ListGameGenreRequest.CodingKeys		case	player
+enum	GameServices.ListGameGenreRequest.CodingKeys		case	localDataOnly
+enum	GameServices.ListGameGenreRequest.CodingKeys		case	filters
+enum	GameServices.DescribeGamesRequest.CodingKeys			
+enum	GameServices.DescribeGamesRequest.CodingKeys		case	games
+enum	GameServices.DescribeGamesRequest.CodingKeys		case	localDataOnly
+enum	GameServices.DescribeGamesRequest.CodingKeys		case	includeFriendsWhoPlayThis
+enum	GameServices.ListGamesRequest.CodingKeys			
+enum	GameServices.ListGamesRequest.CodingKeys		case	player
+enum	GameServices.ListGamesRequest.CodingKeys		case	filters
+enum	GameServices.ListGamesRequest.CodingKeys		case	sortDescriptor
+enum	GameServices.ListGamesRequest.CodingKeys		case	limit
+enum	GameServices.ListGamesRequest.CodingKeys		case	cursor
+enum	GameServices.ListGamesRequest.CodingKeys		case	localDataOnly
+enum	GameServices.GameSortDescriptor.CodingKeys			
+enum	GameServices.GameSortDescriptor.CodingKeys		case	compared
+enum	GameServices.GameSortDescriptor.CodingKeys		case	order
+enum	GameServices.GameFilters.CodingKeys			
+enum	GameServices.GameFilters.CodingKeys		case	installedOnly
+enum	GameServices.GameFilters.CodingKeys		case	arcadeOnly
+enum	GameServices.GameFilters.CodingKeys		case	controllerSupportedOnly
+enum	GameServices.GameFilters.CodingKeys		case	leaderboardChallengesSupportedOnly
+enum	GameServices.GameFilters.CodingKeys		case	achievementsSupportedOnly
+enum	GameServices.GameFilters.CodingKeys		case	challengeDefinitionsSupportedOnly
+enum	GameServices.GameFilters.CodingKeys		case	multiplayerActivitySupportedOnly
+enum	GameServices.GameFilters.CodingKeys		case	friendsArePlayingOnly
+enum	GameServices.GameFilters.CodingKeys		case	designedForMacOnly
+enum	GameServices.GameFilters.CodingKeys		case	designedForPlatformsOnly
+enum	GameServices.GameFilters.CodingKeys		case	unrestrictedOnly
+enum	GameServices.GameFilters.CodingKeys		case	genreIDs
+enum	GameServices.GameFilters.CodingKeys		case	recentlyDownloadedOnly
+enum	GameServices.GameFilters.CodingKeys		case	recentlyDownloadedAppStoreOnly
+enum	GameServices.GameFilters.CodingKeys		case	recentlyPlayedOnly
+enum	GameServices.GameFilters.CodingKeys		case	neverPlayedOnly
+enum	GameServices.GameFilters.CodingKeys		case	updatedWithinDays
+enum	GameServices.GameGenre.CodingKeys			
+enum	GameServices.GameGenre.CodingKeys		case	id
+enum	GameServices.GameGenre.CodingKeys		case	name
+enum	GameServices.GameGenre.CodingKeys		case	parentId
+enum	GameServices.AnonymousGameCenterInfo.CodingKeys			
+enum	GameServices.AnonymousGameCenterInfo.CodingKeys		case	capabilities
+enum	GameServices.AnonymousGameCenterInfo.CodingKeys		case	name
+enum	GameServices.AnonymousGameCenterInfo.CodingKeys		case	resourceCounts
+enum	GameServices.AnonymousGameCenterInfo.ResourceCounts.CodingKeys			
+enum	GameServices.AnonymousGameCenterInfo.ResourceCounts.CodingKeys		case	achievements
+enum	GameServices.AnonymousGameCenterInfo.ResourceCounts.CodingKeys		case	leaderboards
+enum	GameServices.GameActivity			
+enum	GameServices.GameActivity.Keys			
+enum	GameServices.GameActivity.DeepLinks			
+enum	GameServices.PersonHandle			
+enum	GameServices.PersonHandle		case	contact
+enum	GameServices.PersonHandle		case	player
+struct	GameServices.FriendRequest			
+struct	GameServices.FriendRequest		let	senderHandles
+struct	GameServices.FriendRequest		let	recipient
+struct	GameServices.FriendRequest		let	addressedToContact
+struct	GameServices.FriendRequest		let	date
+struct	GameServices.FriendSuggestion			
+struct	GameServices.FriendSuggestion		let	ref
+struct	GameServices.FriendSuggestion		let	source
+struct	GameServices.FriendSuggestion		let	supportedProtocolVersion
+struct	GameServices.FriendSuggestion		let	avatar
+struct	GameServices.FriendSuggestion		let	contact
+struct	GameServices.FriendSuggestion		let	handle
+enum	GameServices.FriendSuggestion.Source			
+enum	GameServices.FriendSuggestion.Source		case	peopleSuggester
+enum	GameServices.FriendSuggestion.FriendingProtocolVersion			
+enum	GameServices.FriendSuggestion.FriendingProtocolVersion		case	v1
+enum	GameServices.FriendSuggestion.FriendingProtocolVersion		case	v2
+enum	GameServices.FriendSuggestion.CodingKeys			
+enum	GameServices.FriendSuggestion.CodingKeys		case	ref
+enum	GameServices.FriendSuggestion.CodingKeys		case	source
+enum	GameServices.FriendSuggestion.CodingKeys		case	supportedProtocolVersion
+enum	GameServices.FriendSuggestion.CodingKeys		case	avatar
+enum	GameServices.FriendSuggestion.CodingKeys		case	contact
+enum	GameServices.FriendSuggestion.CodingKeys		case	handle
+enum	GameServices.FriendRequest.CodingKeys			
+enum	GameServices.FriendRequest.CodingKeys		case	senderHandles
+enum	GameServices.FriendRequest.CodingKeys		case	recipient
+enum	GameServices.FriendRequest.CodingKeys		case	addressedToContact
+enum	GameServices.FriendRequest.CodingKeys		case	date
+enum	GameServices.PersonHandle.CodingKeys			
+enum	GameServices.PersonHandle.CodingKeys		case	contact
+enum	GameServices.PersonHandle.CodingKeys		case	player
+enum	GameServices.PersonHandle.ContactCodingKeys			
+enum	GameServices.PersonHandle.ContactCodingKeys		case	ref
+enum	GameServices.PersonHandle.PlayerCodingKeys			
+enum	GameServices.PersonHandle.PlayerCodingKeys		case	ref
+struct	GameServices.GameServicesActorID			
+struct	GameServices.GameServicesActorID		let	id
+enum	GameServices.GameServicesActorSystemError			
+enum	GameServices.GameServicesActorSystemError		case	actorUnavailable
+enum	GameServices.GameServicesActorSystemError		case	decodingError
+enum	GameServices.GameServicesActorSystemError		case	encodingError
+enum	GameServices.GameServicesActorSystemError		case	invalidActorID
+enum	GameServices.GameServicesActorSystemError		case	remotingUnavailable
+enum	GameServices.GameServicesActorSystemError		case	systemNotReady
+enum	GameServices.GameServicesActorSystemError		case	systemUnavailable
+enum	GameServices.GameServicesActorSystemError		case	unsupportedResult
+class	GameServices.GameServicesActorRegistry			
+class	GameServices.GameServicesActorRegistry		let	serialQueue
+class	GameServices.GameServicesActorRegistry		var	actors
+class	GameServices.GameServicesActorRegistry.WeakDistributedActorReference			
+class	GameServices.GameServicesActorRegistry.WeakDistributedActorReference		var	actor
+class	GameServices.GameServicesActorSystem			
+class	GameServices.GameServicesActorSystem		let	invoker
+class	GameServices.GameServicesActorSystem		let	registry
+class	GameServices.GameServicesActorSystem		var	taskQueue
+class	GameServices.GameServicesActorSystem		var	taskRef
+struct	GameServices.GameServicesActorSystem.JSONInvocationEncoder			
+struct	GameServices.GameServicesActorSystem.JSONInvocationEncoder		var	arguments
+struct	GameServices.GameServicesActorSystem.JSONInvocationEncoder		let	encoder
+struct	GameServices.GameServicesActorSystem.JSONInvocationEncoder		var	genericSubstitutions
+struct	GameServices.GameServicesActorSystem.JSONInvocationDecoder			
+struct	GameServices.GameServicesActorSystem.JSONInvocationDecoder		var	arguments
+struct	GameServices.GameServicesActorSystem.JSONInvocationDecoder		let	decoder
+struct	GameServices.GameServicesActorSystem.JSONInvocationDecoder		var	genericSubstitutions
+struct	GameServices.GameServicesActorSystem.JSONResultHandler			
+struct	GameServices.GameServicesActorSystem.JSONResultHandler		let	handler
+struct	GameServices.GameServicesActorSystem.Invocation			
+struct	GameServices.GameServicesActorSystem.Invocation		let	actor
+struct	GameServices.GameServicesActorSystem.Invocation		let	target
+struct	GameServices.GameServicesActorSystem.Invocation		let	arguments
+struct	GameServices.GameServicesActorSystem.Invocation		let	genericSubstitutions
+struct	GameServices.GameServicesActorSystem.TaskQueue.TaskObject			
+struct	GameServices.GameServicesActorSystem.TaskQueue.TaskObject		let	invocationData
+struct	GameServices.GameServicesActorSystem.TaskQueue.TaskObject		let	handler
+struct	GameServices.GameServicesActorSystem.TaskQueue.TaskObject		let	description
+struct	GameServices.GameServicesActorSystem.TaskQueue			
+struct	GameServices.GameServicesActorSystem.TaskQueue		var	continuation
+struct	GameServices.GameServicesActorSystem.TaskQueue		let	stream
+struct	GameServices.GameServicesActorSystem.TaskQueue		let	executionHandler
+enum	GameServices.GameServicesActorID.CodingKeys			
+enum	GameServices.GameServicesActorID.CodingKeys		case	id
+enum	GameServices.GameServicesActorSystem.Invocation.CodingKeys			
+enum	GameServices.GameServicesActorSystem.Invocation.CodingKeys		case	actor
+enum	GameServices.GameServicesActorSystem.Invocation.CodingKeys		case	target
+enum	GameServices.GameServicesActorSystem.Invocation.CodingKeys		case	arguments
+enum	GameServices.GameServicesActorSystem.Invocation.CodingKeys		case	genericSubstitutions
+struct	GameServices.Ref			
+struct	GameServices.Ref		var	rawValue
+protocol	GameServices.ActivityServiceProtocol			
+protocol	GameServices.ChallengeServiceProtocol			
+protocol	GameServices.DistributedChallengeServiceProtocol			
+protocol	GameServices.GameKitServiceProtocol			
+protocol	GameServices.DistributedGameKitServiceProtocol			
+protocol	GameServices.GameServiceDelegate			
+protocol	GameServices.GameServiceRootProtocol			
+protocol	GameServices.LeaderboardServiceProtocol			
+protocol	GameServices.DistributedLeaderboardServiceProtocol			
+protocol	GameServices.ActivitiesMessageExtensionServiceProtocol			
+protocol	GameServices.DistributedActivitiesMessageExtensionServiceProtocol			
+protocol	GameServices.GameActivityEnvironment			
+protocol	GameServices.GameActivityServiceProtocol			
+protocol	GameServices.DistributedGameActivityServiceProtocol			
+protocol	GameServices.GameServicesDebuggerProtocol			
+protocol	GameServices.DistributedGameServicesDebuggerProtocol			
+protocol	GameServices.RefFields	EntityRef		
+protocol	GameServices.ProfileServiceProtocol			
+protocol	GameServices.DistributedProfileServiceProtocol			
+protocol	GameServices.AssetServiceProtocol			
+protocol	GameServices.DistributedAssetServiceProtocol			
+protocol	GameServices.AchievementServiceProtocol			
+protocol	GameServices.DistributedAchievementServiceProtocol			
+protocol	GameServices.OnboardingServiceProtocol			
+protocol	GameServices.DistributedOnboardingServiceProtocol			
+protocol	GameServices.AuthenticationServiceProtocol			
+protocol	GameServices.DistributedAuthenticationServiceProtocol			
+protocol	GameServices.PreferencesServiceProtocol			
+protocol	GameServices.DistributedPreferencesServiceProtocol			
+protocol	GameServices.GameLibraryServiceProtocol			
+protocol	GameServices.DistributedGameLibraryServiceProtocol			
+protocol	GameServices.FriendServiceProtocol			
+protocol	GameServices.GamesCLIServiceProtocol			
+protocol	GameServices.DistributedGamesCLIServiceProtocol			
+protocol	GameServices.GameServicesIdentifiableActor			
+protocol	GameServices.Entity			
+protocol	GameServices.Achievement			
+protocol	GameServices.AchievementDescriptionEntity			
+protocol	GameServices.Challenge			
+protocol	GameServices.ChallengeDefinitionEntity			
+protocol	GameServices.Contact			
+protocol	GameServices.FriendSuggestionEntity			
+protocol	GameServices.GameActivityEntity			
+protocol	GameServices.GameActivityDefinitionEntity			
+protocol	GameServices.Game			
+protocol	GameServices.ImageEntity			
+protocol	GameServices.ChallengeInviteEntity			
+protocol	GameServices.Leaderboard			
+protocol	GameServices.LeaderboardSet			
+protocol	GameServices.Player			
+protocol	conformance GameServices.FriendActivity	Swift.Decodable		
+protocol	conformance GameServices.FriendActivity	Swift.Encodable		
+protocol	conformance GameServices.FriendActivity	Swift.Equatable		
+protocol	conformance GameServices.FriendActivity	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.ChallengeDefinitionFilter	Swift.Decodable		
+protocol	conformance GameServices.ChallengeDefinitionFilter	Swift.Encodable		
+protocol	conformance GameServices.ChallengeDefinitionFilter	Swift.Equatable		
+protocol	conformance GameServices.ChallengeDefinitionFilter	Swift.Hashable		
+protocol	conformance GameServices.ChallengeFilter	Swift.Decodable		
+protocol	conformance GameServices.ChallengeFilter	Swift.Encodable		
+protocol	conformance GameServices.ChallengeFilter	Swift.Equatable		
+protocol	conformance GameServices.ChallengeFilter	Swift.Hashable		
+protocol	conformance GameServices.ChallengeInviteFilter	Swift.Decodable		
+protocol	conformance GameServices.ChallengeInviteFilter	Swift.Encodable		
+protocol	conformance GameServices.ChallengeInviteFilter	Swift.Equatable		
+protocol	conformance GameServices.ChallengeInviteFilter	Swift.Hashable		
+protocol	conformance ChallengeDefinition.Trackable	Swift.Decodable		
+protocol	conformance ChallengeDefinition.Trackable	Swift.Encodable		
+protocol	conformance ChallengeDefinition.Trackable	Swift.Equatable		
+protocol	conformance ChallengeDefinition.Trackable	Swift.Hashable		
+protocol	conformance DurationComponent.TimeUnit	Swift.Equatable		
+protocol	conformance DurationComponent.TimeUnit	Swift.Hashable		
+protocol	conformance DurationComponent.TimeUnit	Swift.RawRepresentable		
+protocol	conformance DurationComponent.TimeUnit	Swift.Decodable		
+protocol	conformance DurationComponent.TimeUnit	Swift.Encodable		
+protocol	conformance ChallengeDefinition.DurationComponent	Swift.Decodable		
+protocol	conformance ChallengeDefinition.DurationComponent	Swift.Encodable		
+protocol	conformance ChallengeDefinition.DurationComponent	Swift.Equatable		
+protocol	conformance ChallengeDefinition.DurationComponent	Swift.Hashable		
+protocol	conformance ChallengeDefinition.AttemptLimit	Swift.Decodable		
+protocol	conformance ChallengeDefinition.AttemptLimit	Swift.Encodable		
+protocol	conformance ChallengeDefinition.AttemptLimit	Swift.Equatable		
+protocol	conformance ChallengeDefinition.AttemptLimit	Swift.Hashable		
+protocol	conformance ChallengeDefinition.Version	Swift.Decodable		
+protocol	conformance ChallengeDefinition.Version	Swift.Encodable		
+protocol	conformance ChallengeDefinition.Version	Swift.Equatable		
+protocol	conformance ChallengeDefinition.Version	Swift.Hashable		
+protocol	conformance ChallengeDefinition.ValidationError	Swift.Decodable		
+protocol	conformance ChallengeDefinition.ValidationError	Swift.Encodable		
+protocol	conformance ChallengeDefinition.ValidationError	Swift.Equatable		
+protocol	conformance ChallengeDefinition.ValidationError	Swift.Hashable		
+protocol	conformance GameServices.ChallengeDefinition	Swift.Decodable		
+protocol	conformance GameServices.ChallengeDefinition	Swift.Encodable		
+protocol	conformance GameServices.ChallengeDefinition	Swift.Equatable		
+protocol	conformance GameServices.ChallengeDefinition	Swift.Hashable		
+protocol	conformance GameServices.ChallengeDescription	Swift.Decodable		
+protocol	conformance GameServices.ChallengeDescription	Swift.Encodable		
+protocol	conformance GameServices.ChallengeDescription	Swift.Equatable		
+protocol	conformance GameServices.ChallengeDescription	Swift.Hashable		
+protocol	conformance GameServices.ChallengeState	Swift.Decodable		
+protocol	conformance GameServices.ChallengeState	Swift.Encodable		
+protocol	conformance GameServices.ChallengeState	Swift.Equatable		
+protocol	conformance GameServices.ChallengeState	Swift.Hashable		
+protocol	conformance GameServices.ChallengeLeaveResult	Swift.RawRepresentable		
+protocol	conformance GameServices.ChallengeLeaveResult	Swift.Decodable		
+protocol	conformance GameServices.ChallengeLeaveResult	Swift.Encodable		
+protocol	conformance GameServices.ChallengeLeaveResult	Swift.Equatable		
+protocol	conformance GameServices.ChallengeLeaveResult	Swift.Hashable		
+protocol	conformance GameServices.ChallengeParticipantState	Swift.Decodable		
+protocol	conformance GameServices.ChallengeParticipantState	Swift.Encodable		
+protocol	conformance GameServices.ChallengeParticipantState	Swift.Equatable		
+protocol	conformance GameServices.ChallengeParticipantState	Swift.Hashable		
+protocol	conformance ChallengeInvite.Details	Swift.Decodable		
+protocol	conformance ChallengeInvite.Details	Swift.Encodable		
+protocol	conformance ChallengeInvite.Details	Swift.Equatable		
+protocol	conformance ChallengeInvite.Details	Swift.Hashable		
+protocol	conformance GameServices.ChallengeInvite	Swift.Decodable		
+protocol	conformance GameServices.ChallengeInvite	Swift.Encodable		
+protocol	conformance GameServices.ChallengeInvite	Swift.Equatable		
+protocol	conformance GameServices.ChallengeInvite	Swift.Hashable		
+protocol	conformance GameServices.ChallengeInviteState	Swift.RawRepresentable		
+protocol	conformance GameServices.ChallengeInviteState	Swift.Decodable		
+protocol	conformance GameServices.ChallengeInviteState	Swift.Encodable		
+protocol	conformance GameServices.ChallengeInviteState	Swift.Equatable		
+protocol	conformance GameServices.ChallengeInviteState	Swift.Hashable		
+protocol	conformance ReleaseStateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReleaseStateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReleaseStateCodingKeys	Swift.Hashable		
+protocol	conformance ReleaseStateCodingKeys	Swift.Equatable		
+protocol	conformance TrackingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TrackingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TrackingCodingKeys	Swift.Hashable		
+protocol	conformance TrackingCodingKeys	Swift.Equatable		
+protocol	conformance IsArchivedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsArchivedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsArchivedCodingKeys	Swift.Hashable		
+protocol	conformance IsArchivedCodingKeys	Swift.Equatable		
+protocol	conformance DefinitionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DefinitionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DefinitionCodingKeys	Swift.Hashable		
+protocol	conformance DefinitionCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance WonCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance WonCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CompleteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CompleteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ActiveCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ActiveCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParticipantCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ParticipantCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParticipantCodingKeys	Swift.Hashable		
+protocol	conformance ParticipantCodingKeys	Swift.Equatable		
+protocol	conformance CreatorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CreatorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CreatorCodingKeys	Swift.Hashable		
+protocol	conformance CreatorCodingKeys	Swift.Equatable		
+protocol	conformance GameCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GameCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GameCodingKeys	Swift.Hashable		
+protocol	conformance GameCodingKeys	Swift.Equatable		
+protocol	conformance DefinitionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DefinitionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DefinitionCodingKeys	Swift.Hashable		
+protocol	conformance DefinitionCodingKeys	Swift.Equatable		
+protocol	conformance ChallengeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ChallengeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ChallengeCodingKeys	Swift.Hashable		
+protocol	conformance ChallengeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ToCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ToCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ToCodingKeys	Swift.Hashable		
+protocol	conformance ToCodingKeys	Swift.Equatable		
+protocol	conformance FromCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FromCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FromCodingKeys	Swift.Hashable		
+protocol	conformance FromCodingKeys	Swift.Equatable		
+protocol	conformance GameCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GameCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GameCodingKeys	Swift.Hashable		
+protocol	conformance GameCodingKeys	Swift.Equatable		
+protocol	conformance ChallengeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ChallengeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ChallengeCodingKeys	Swift.Hashable		
+protocol	conformance ChallengeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LeaderboardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LeaderboardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LeaderboardCodingKeys	Swift.Hashable		
+protocol	conformance LeaderboardCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance UnlimitedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnlimitedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LimitedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LimitedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LimitedCodingKeys	Swift.Hashable		
+protocol	conformance LimitedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance TrackableRequiresDurationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TrackableRequiresDurationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingTrackableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingTrackableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodeCodingKeys	Swift.Hashable		
+protocol	conformance CodeCodingKeys	Swift.Equatable		
+protocol	conformance PlayerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PlayerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PlayerCodingKeys	Swift.Hashable		
+protocol	conformance PlayerCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PlayerCodingKeys	Swift.CodingKey		
+protocol	conformance CodeCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MissingTrackableCodingKeys	Swift.CodingKey		
+protocol	conformance TrackableRequiresDurationCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LimitedCodingKeys	Swift.CodingKey		
+protocol	conformance UnlimitedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LeaderboardCodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ChallengeCodingKeys	Swift.CodingKey		
+protocol	conformance GameCodingKeys	Swift.CodingKey		
+protocol	conformance FromCodingKeys	Swift.CodingKey		
+protocol	conformance ToCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ChallengeCodingKeys	Swift.CodingKey		
+protocol	conformance DefinitionCodingKeys	Swift.CodingKey		
+protocol	conformance GameCodingKeys	Swift.CodingKey		
+protocol	conformance CreatorCodingKeys	Swift.CodingKey		
+protocol	conformance ParticipantCodingKeys	Swift.CodingKey		
+protocol	conformance ActiveCodingKeys	Swift.CodingKey		
+protocol	conformance CompleteCodingKeys	Swift.CodingKey		
+protocol	conformance WonCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DefinitionCodingKeys	Swift.CodingKey		
+protocol	conformance IsArchivedCodingKeys	Swift.CodingKey		
+protocol	conformance TrackingCodingKeys	Swift.CodingKey		
+protocol	conformance ReleaseStateCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.GameServiceChangeEventType	Swift.Equatable		
+protocol	conformance GameServices.GameServiceChangeEventType	Swift.Hashable		
+protocol	conformance GameServices.SpotlightIndexRequest	Swift.Decodable		
+protocol	conformance GameServices.SpotlightIndexRequest	Swift.Encodable		
+protocol	conformance GameServices.SpotlightIndexResult	Swift.Decodable		
+protocol	conformance GameServices.SpotlightIndexResult	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.LeaderboardPlayerScope	Swift.RawRepresentable		
+protocol	conformance GameServices.LeaderboardPlayerScope	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardPlayerScope	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardPlayerScope	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardPlayerScope	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardScore	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardScore	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardScore	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardScore	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardTimeScope	Swift.RawRepresentable		
+protocol	conformance GameServices.LeaderboardTimeScope	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardTimeScope	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardTimeScope	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardTimeScope	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardType	Swift.RawRepresentable		
+protocol	conformance GameServices.LeaderboardType	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardType	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardType	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardType	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardVisibility	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardVisibility	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardVisibility	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardVisibility	Swift.Hashable		
+protocol	conformance GameServices.GameWithPlayer	Swift.Decodable		
+protocol	conformance GameServices.GameWithPlayer	Swift.Encodable		
+protocol	conformance GameServices.GameWithPlayer	Swift.Equatable		
+protocol	conformance GameServices.GameWithPlayer	Swift.Hashable		
+protocol	conformance GameServices.RecurringLeaderboardProperties	Swift.Decodable		
+protocol	conformance GameServices.RecurringLeaderboardProperties	Swift.Encodable		
+protocol	conformance GameServices.RecurringLeaderboardProperties	Swift.Equatable		
+protocol	conformance GameServices.RecurringLeaderboardProperties	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardDescription	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardDescription	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardDescription	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardDescription	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardEntry	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardEntry	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardEntry	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardEntry	Swift.Hashable		
+protocol	conformance GameServices.LeaderboardSetDescription	Swift.Decodable		
+protocol	conformance GameServices.LeaderboardSetDescription	Swift.Encodable		
+protocol	conformance GameServices.LeaderboardSetDescription	Swift.Equatable		
+protocol	conformance GameServices.LeaderboardSetDescription	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance HideForAllCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance HideForAllCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ShowForAllCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShowForAllCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ShowForAllCodingKeys	Swift.CodingKey		
+protocol	conformance HideForAllCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.DefaultGameActivityEnvironment	GameServices.GameActivityEnvironment		
+protocol	conformance GameServices.DefaultGameActivityEnvironment	Swift.Decodable		
+protocol	conformance GameServices.DefaultGameActivityEnvironment	Swift.Encodable		
+protocol	conformance GameServices.DefaultGameActivityEnvironment	Swift.Equatable		
+protocol	conformance GameServices.DefaultGameActivityEnvironment	Swift.Hashable		
+protocol	conformance GameServices.ActivityInstanceDeletionResult	Swift.Decodable		
+protocol	conformance GameServices.ActivityInstanceDeletionResult	Swift.Encodable		
+protocol	conformance GameServices.ActivityInstanceDeletionResult	Swift.Equatable		
+protocol	conformance GameServices.ActivityInstanceDeletionResult	Swift.Hashable		
+protocol	conformance GameServices.GameActivityDefinitionFilter	Swift.Decodable		
+protocol	conformance GameServices.GameActivityDefinitionFilter	Swift.Encodable		
+protocol	conformance GameServices.GameActivityDefinitionFilter	Swift.Equatable		
+protocol	conformance GameServices.GameActivityDefinitionFilter	Swift.Hashable		
+protocol	conformance GameServices.GameActivityFilter	Swift.Decodable		
+protocol	conformance GameServices.GameActivityFilter	Swift.Encodable		
+protocol	conformance GameServices.GameActivityFilter	Swift.Equatable		
+protocol	conformance GameServices.GameActivityFilter	Swift.Hashable		
+protocol	conformance GameServices.GameActivityUpdateContext	Swift.RawRepresentable		
+protocol	conformance GameServices.GameActivityUpdateContext	Swift.Decodable		
+protocol	conformance GameServices.GameActivityUpdateContext	Swift.Encodable		
+protocol	conformance GameServices.GameActivityUpdateContext	Swift.Equatable		
+protocol	conformance GameServices.GameActivityUpdateContext	Swift.Hashable		
+protocol	conformance GameServices.GameActivityPlayStyle	Swift.RawRepresentable		
+protocol	conformance GameServices.GameActivityPlayStyle	Swift.CaseIterable		
+protocol	conformance GameServices.GameActivityPlayStyle	Swift.Decodable		
+protocol	conformance GameServices.GameActivityPlayStyle	Swift.Encodable		
+protocol	conformance GameServices.GameActivityPlayStyle	Swift.Equatable		
+protocol	conformance GameServices.GameActivityPlayStyle	Swift.Hashable		
+protocol	conformance GameServices.GameActivityDefinition	Swift.Decodable		
+protocol	conformance GameServices.GameActivityDefinition	Swift.Encodable		
+protocol	conformance GameServices.GameActivityDefinition	Swift.Equatable		
+protocol	conformance GameServices.GameActivityDefinition	Swift.Hashable		
+protocol	conformance GameServices.GameActivityParticipantState	Swift.RawRepresentable		
+protocol	conformance GameServices.GameActivityParticipantState	Swift.CaseIterable		
+protocol	conformance GameServices.GameActivityParticipantState	Swift.Decodable		
+protocol	conformance GameServices.GameActivityParticipantState	Swift.Encodable		
+protocol	conformance GameServices.GameActivityParticipantState	Swift.Equatable		
+protocol	conformance GameServices.GameActivityParticipantState	Swift.Hashable		
+protocol	conformance GameServices.GameActivityRuntimeStat	Swift.Decodable		
+protocol	conformance GameServices.GameActivityRuntimeStat	Swift.Encodable		
+protocol	conformance GameServices.GameActivityRuntimeStat	Swift.Equatable		
+protocol	conformance GameServices.GameActivityRuntimeStat	Swift.Hashable		
+protocol	conformance GameServices.GameActivityStaticStat	Swift.Decodable		
+protocol	conformance GameServices.GameActivityStaticStat	Swift.Encodable		
+protocol	conformance GameServices.GameActivityStaticStat	Swift.Equatable		
+protocol	conformance GameServices.GameActivityStaticStat	Swift.Hashable		
+protocol	conformance GameServices.GameActivityState	Swift.RawRepresentable		
+protocol	conformance GameServices.GameActivityState	Swift.CaseIterable		
+protocol	conformance GameServices.GameActivityState	Swift.Decodable		
+protocol	conformance GameServices.GameActivityState	Swift.Encodable		
+protocol	conformance GameServices.GameActivityState	Swift.Equatable		
+protocol	conformance GameServices.GameActivityState	Swift.Hashable		
+protocol	conformance GameServices.GameActivityConsumptionState	Swift.RawRepresentable		
+protocol	conformance GameServices.GameActivityConsumptionState	Swift.CaseIterable		
+protocol	conformance GameServices.GameActivityConsumptionState	Swift.Decodable		
+protocol	conformance GameServices.GameActivityConsumptionState	Swift.Encodable		
+protocol	conformance GameServices.GameActivityConsumptionState	Swift.Equatable		
+protocol	conformance GameServices.GameActivityConsumptionState	Swift.Hashable		
+protocol	conformance GameServices.GameActivityInstance	Swift.Decodable		
+protocol	conformance GameServices.GameActivityInstance	Swift.Encodable		
+protocol	conformance GameServices.GameActivityInstance	Swift.Equatable		
+protocol	conformance GameServices.GameActivityInstance	Swift.Hashable		
+protocol	conformance GameServices.GameActivityInstance	Swift.Identifiable		
+protocol	conformance GameActivityInstance.URLParseError	Swift.Equatable		
+protocol	conformance GameActivityInstance.URLParseError	Swift.Hashable		
+protocol	conformance GameActivityInstance.URLParseError	Swift.Error		
+protocol	conformance GameActivityInstance.URLParseError	Swift.Decodable		
+protocol	conformance GameActivityInstance.URLParseError	Swift.Encodable		
+protocol	conformance GameActivityInstance.URLParseResult	Swift.Decodable		
+protocol	conformance GameActivityInstance.URLParseResult	Swift.Encodable		
+protocol	conformance GameActivityInstance.ParsedLink	Swift.Decodable		
+protocol	conformance GameActivityInstance.ParsedLink	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SupportsMiniGameCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SupportsMiniGameCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SupportsMiniGameCodingKeys	Swift.Hashable		
+protocol	conformance SupportsMiniGameCodingKeys	Swift.Equatable		
+protocol	conformance SupportsPartyCodeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SupportsPartyCodeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SupportsPartyCodeCodingKeys	Swift.Hashable		
+protocol	conformance SupportsPartyCodeCodingKeys	Swift.Equatable		
+protocol	conformance ReleaseStateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReleaseStateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReleaseStateCodingKeys	Swift.Hashable		
+protocol	conformance ReleaseStateCodingKeys	Swift.Equatable		
+protocol	conformance PlayStyleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PlayStyleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PlayStyleCodingKeys	Swift.Hashable		
+protocol	conformance PlayStyleCodingKeys	Swift.Equatable		
+protocol	conformance IsArchivedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsArchivedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsArchivedCodingKeys	Swift.Hashable		
+protocol	conformance IsArchivedCodingKeys	Swift.Equatable		
+protocol	conformance DefinitionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DefinitionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DefinitionCodingKeys	Swift.Hashable		
+protocol	conformance DefinitionCodingKeys	Swift.Equatable		
+protocol	conformance AssociatedWithCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AssociatedWithCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AssociatedWithCodingKeys	Swift.Hashable		
+protocol	conformance AssociatedWithCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance LanguageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LanguageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LanguageCodingKeys	Swift.Hashable		
+protocol	conformance LanguageCodingKeys	Swift.Equatable		
+protocol	conformance ConsumptionStateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ConsumptionStateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ConsumptionStateCodingKeys	Swift.Hashable		
+protocol	conformance ConsumptionStateCodingKeys	Swift.Equatable		
+protocol	conformance StateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StateCodingKeys	Swift.Hashable		
+protocol	conformance StateCodingKeys	Swift.Equatable		
+protocol	conformance InstancesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InstancesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InstancesCodingKeys	Swift.Hashable		
+protocol	conformance InstancesCodingKeys	Swift.Equatable		
+protocol	conformance GameActivityCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GameActivityCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GameActivityCodingKeys	Swift.Hashable		
+protocol	conformance GameActivityCodingKeys	Swift.Equatable		
+protocol	conformance CreatorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CreatorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CreatorCodingKeys	Swift.Hashable		
+protocol	conformance CreatorCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AchievementCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AchievementCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AchievementCodingKeys	Swift.Hashable		
+protocol	conformance AchievementCodingKeys	Swift.Equatable		
+protocol	conformance LeaderboardScoreCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LeaderboardScoreCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LeaderboardScoreCodingKeys	Swift.Hashable		
+protocol	conformance LeaderboardScoreCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AchievementDescriptionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AchievementDescriptionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AchievementDescriptionCodingKeys	Swift.Hashable		
+protocol	conformance AchievementDescriptionCodingKeys	Swift.Equatable		
+protocol	conformance LeaderboardCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance LeaderboardCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance LeaderboardCodingKeys	Swift.Hashable		
+protocol	conformance LeaderboardCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DeprecatedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeprecatedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingComponentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingComponentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidURLCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidURLCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidPartyCodeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidPartyCodeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidGameIDCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidGameIDCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailureGeneratingInstanceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailureGeneratingInstanceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FailureGeneratingInstanceCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidGameIDCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidPartyCodeCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidURLCodingKeys	Swift.CodingKey		
+protocol	conformance MissingComponentCodingKeys	Swift.CodingKey		
+protocol	conformance DeprecatedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LeaderboardCodingKeys	Swift.CodingKey		
+protocol	conformance AchievementDescriptionCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LeaderboardScoreCodingKeys	Swift.CodingKey		
+protocol	conformance AchievementCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CreatorCodingKeys	Swift.CodingKey		
+protocol	conformance GameActivityCodingKeys	Swift.CodingKey		
+protocol	conformance InstancesCodingKeys	Swift.CodingKey		
+protocol	conformance StateCodingKeys	Swift.CodingKey		
+protocol	conformance ConsumptionStateCodingKeys	Swift.CodingKey		
+protocol	conformance LanguageCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AssociatedWithCodingKeys	Swift.CodingKey		
+protocol	conformance DefinitionCodingKeys	Swift.CodingKey		
+protocol	conformance IsArchivedCodingKeys	Swift.CodingKey		
+protocol	conformance PlayStyleCodingKeys	Swift.CodingKey		
+protocol	conformance ReleaseStateCodingKeys	Swift.CodingKey		
+protocol	conformance SupportsPartyCodeCodingKeys	Swift.CodingKey		
+protocol	conformance SupportsMiniGameCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.GameServicesError	Swift.Error		
+protocol	conformance GameServices.GameServicesError	Swift.Equatable		
+protocol	conformance GameServices.GameServicesError	Foundation.LocalizedError		
+protocol	conformance GameServices.GameServicesInternalError	Swift.Error		
+protocol	conformance GameServices.GameServicesInternalError	Swift.Equatable		
+protocol	conformance GameServices.GameLockup	Swift.Decodable		
+protocol	conformance GameServices.GameLockup	Swift.Encodable		
+protocol	conformance GameServices.GameLockup	Swift.Equatable		
+protocol	conformance GameServices.GameLockup	Swift.Hashable		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	Distributed.DistributedActor		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	GameServices.GameServicesDebuggerProtocol		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	GameServices.GameServicesIdentifiableActor		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	Swift.Hashable		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	Swift.Identifiable		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	Swift.Equatable		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	Swift.Encodable		
+protocol	conformance GameServices.GameDebuggerServiceWorkaround	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AchievementRefFields	Swift.Equatable		
+protocol	conformance AchievementRefFields	Swift.Hashable		
+protocol	conformance AchievementRefFields	GameServices.RefFields		
+protocol	conformance AchievementRefFields	Swift.CaseIterable		
+protocol	conformance AchievementDescriptionRefFields	Swift.Equatable		
+protocol	conformance AchievementDescriptionRefFields	Swift.Hashable		
+protocol	conformance AchievementDescriptionRefFields	GameServices.RefFields		
+protocol	conformance AchievementDescriptionRefFields	Swift.CaseIterable		
+protocol	conformance ChallengeRefFields	Swift.Equatable		
+protocol	conformance ChallengeRefFields	Swift.Hashable		
+protocol	conformance ChallengeRefFields	GameServices.RefFields		
+protocol	conformance ChallengeRefFields	Swift.CaseIterable		
+protocol	conformance ChallengeDefinitionRefFields	Swift.Equatable		
+protocol	conformance ChallengeDefinitionRefFields	Swift.Hashable		
+protocol	conformance ChallengeDefinitionRefFields	GameServices.RefFields		
+protocol	conformance ChallengeDefinitionRefFields	Swift.CaseIterable		
+protocol	conformance InviteDetails	Swift.Equatable		
+protocol	conformance ChallengeInviteRefFields	Swift.Equatable		
+protocol	conformance ChallengeInviteRefFields	Swift.Hashable		
+protocol	conformance ChallengeInviteRefFields	GameServices.RefFields		
+protocol	conformance ChallengeInviteRefFields	Swift.CaseIterable		
+protocol	conformance ContactRefFields	Swift.Equatable		
+protocol	conformance ContactRefFields	Swift.Hashable		
+protocol	conformance ContactRefFields	GameServices.RefFields		
+protocol	conformance ContactRefFields	Swift.CaseIterable		
+protocol	conformance GameRefFields	Swift.Equatable		
+protocol	conformance GameRefFields	Swift.Hashable		
+protocol	conformance GameRefFields	GameServices.RefFields		
+protocol	conformance GameRefFields	Swift.CaseIterable		
+protocol	conformance GameActivityRefFields	Swift.Equatable		
+protocol	conformance GameActivityRefFields	Swift.Hashable		
+protocol	conformance GameActivityRefFields	GameServices.RefFields		
+protocol	conformance GameActivityRefFields	Swift.CaseIterable		
+protocol	conformance GameActivityDefinitionRefFields	Swift.Equatable		
+protocol	conformance GameActivityDefinitionRefFields	Swift.Hashable		
+protocol	conformance GameActivityDefinitionRefFields	GameServices.RefFields		
+protocol	conformance GameActivityDefinitionRefFields	Swift.CaseIterable		
+protocol	conformance ImageRefFields	Swift.Equatable		
+protocol	conformance ImageRefFields	Swift.Hashable		
+protocol	conformance ImageRefFields	GameServices.RefFields		
+protocol	conformance ImageRefFields	Swift.CaseIterable		
+protocol	conformance ImageRefType	Swift.Equatable		
+protocol	conformance ImageRefType	Swift.Hashable		
+protocol	conformance ImageRefType	Swift.RawRepresentable		
+protocol	conformance LeaderboardRefFields	Swift.Equatable		
+protocol	conformance LeaderboardRefFields	Swift.Hashable		
+protocol	conformance LeaderboardRefFields	GameServices.RefFields		
+protocol	conformance LeaderboardRefFields	Swift.CaseIterable		
+protocol	conformance LeaderboardSetRefFields	Swift.Equatable		
+protocol	conformance LeaderboardSetRefFields	Swift.Hashable		
+protocol	conformance LeaderboardSetRefFields	GameServices.RefFields		
+protocol	conformance LeaderboardSetRefFields	Swift.CaseIterable		
+protocol	conformance PlayerID	Swift.Equatable		
+protocol	conformance PlayerRefFields	Swift.Equatable		
+protocol	conformance PlayerRefFields	Swift.Hashable		
+protocol	conformance PlayerRefFields	GameServices.RefFields		
+protocol	conformance PlayerRefFields	Swift.CaseIterable		
+protocol	conformance GameServices.ReleaseState	Swift.RawRepresentable		
+protocol	conformance GameServices.ReleaseState	Swift.CaseIterable		
+protocol	conformance GameServices.ReleaseState	Swift.Decodable		
+protocol	conformance GameServices.ReleaseState	Swift.Encodable		
+protocol	conformance GameServices.ReleaseState	Swift.Equatable		
+protocol	conformance GameServices.ReleaseState	Swift.Hashable		
+protocol	conformance GameServices.Page	Swift.Decodable		
+protocol	conformance GameServices.Page	Swift.Encodable		
+protocol	conformance GameServices.Cursor	Swift.RawRepresentable		
+protocol	conformance GameServices.Cursor	Swift.Decodable		
+protocol	conformance GameServices.Cursor	Swift.Encodable		
+protocol	conformance GameServices.PaginatedSequence	Swift.AsyncSequence		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Profile.Subscriptions	Swift.OptionSet		
+protocol	conformance Profile.Subscriptions	Swift.Decodable		
+protocol	conformance Profile.Subscriptions	Swift.Encodable		
+protocol	conformance Profile.Subscriptions	Swift.Equatable		
+protocol	conformance Profile.Subscriptions	Swift.Hashable		
+protocol	conformance Profile.Subscriptions	Swift.SetAlgebra		
+protocol	conformance Profile.Subscriptions	Swift.RawRepresentable		
+protocol	conformance Profile.Subscriptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GameServices.Profile	Swift.Decodable		
+protocol	conformance GameServices.Profile	Swift.Encodable		
+protocol	conformance GameServices.Profile	Swift.Equatable		
+protocol	conformance GameServices.Profile	Swift.Hashable		
+protocol	conformance ParticipantInteraction.Mode	Swift.Decodable		
+protocol	conformance ParticipantInteraction.Mode	Swift.Encodable		
+protocol	conformance ParticipantInteraction.Mode	Swift.Equatable		
+protocol	conformance ParticipantInteraction.Mode	Swift.Hashable		
+protocol	conformance GameServices.ParticipantInteraction	Swift.Decodable		
+protocol	conformance GameServices.ParticipantInteraction	Swift.Encodable		
+protocol	conformance GameServices.ParticipantInteraction	Swift.Equatable		
+protocol	conformance GameServices.ParticipantInteraction	Swift.Hashable		
+protocol	conformance GameServices.SuggestedNickname	Swift.Decodable		
+protocol	conformance GameServices.SuggestedNickname	Swift.Encodable		
+protocol	conformance GameServices.SuggestedNickname	Swift.Equatable		
+protocol	conformance GameServices.SuggestedNickname	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MultiplayerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MultiplayerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MultiplayerCodingKeys	Swift.Hashable		
+protocol	conformance MultiplayerCodingKeys	Swift.Equatable		
+protocol	conformance ChallengeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ChallengeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ChallengeCodingKeys	Swift.Hashable		
+protocol	conformance ChallengeCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ChallengeCodingKeys	Swift.CodingKey		
+protocol	conformance MultiplayerCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.AchievementDescription	Swift.Decodable		
+protocol	conformance GameServices.AchievementDescription	Swift.Encodable		
+protocol	conformance GameServices.AchievementDescription	Swift.Equatable		
+protocol	conformance GameServices.AchievementDescription	Swift.Hashable		
+protocol	conformance GameServices.AchievementProgress	Swift.Decodable		
+protocol	conformance GameServices.AchievementProgress	Swift.Encodable		
+protocol	conformance GameServices.AchievementProgress	Swift.Equatable		
+protocol	conformance GameServices.AchievementProgress	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.ProfileSettings	Swift.Decodable		
+protocol	conformance GameServices.ProfileSettings	Swift.Encodable		
+protocol	conformance GameServices.ProfileSettings	Swift.Equatable		
+protocol	conformance GameServices.ProfileSettings	Swift.Hashable		
+protocol	conformance GameServices.AccountInfo	Swift.Decodable		
+protocol	conformance GameServices.AccountInfo	Swift.Encodable		
+protocol	conformance GameServices.AccountInfo	Swift.Equatable		
+protocol	conformance GameServices.AccountInfo	Swift.Hashable		
+protocol	conformance GameServices.OnboardingRequest	Swift.Decodable		
+protocol	conformance GameServices.OnboardingRequest	Swift.Encodable		
+protocol	conformance GameServices.OnboardingRequest	Swift.Equatable		
+protocol	conformance GameServices.OnboardingRequest	Swift.Hashable		
+protocol	conformance GameServices.UpdateCrossUseConsentRequest	Swift.Decodable		
+protocol	conformance GameServices.UpdateCrossUseConsentRequest	Swift.Encodable		
+protocol	conformance GameServices.UpdateCrossUseConsentRequest	Swift.Equatable		
+protocol	conformance GameServices.UpdateCrossUseConsentRequest	Swift.Hashable		
+protocol	conformance OnboardingState.PrivacyInfo	Swift.Decodable		
+protocol	conformance OnboardingState.PrivacyInfo	Swift.Encodable		
+protocol	conformance GameServices.OnboardingState	Swift.Decodable		
+protocol	conformance GameServices.OnboardingState	Swift.Encodable		
+protocol	conformance GameServices.AgeCategory	Swift.RawRepresentable		
+protocol	conformance GameServices.AgeCategory	Swift.Decodable		
+protocol	conformance GameServices.AgeCategory	Swift.Encodable		
+protocol	conformance GameServices.AgeCategory	Swift.Equatable		
+protocol	conformance GameServices.AgeCategory	Swift.Hashable		
+protocol	conformance GameServices.ProfilePrivacy	Swift.RawRepresentable		
+protocol	conformance GameServices.ProfilePrivacy	Swift.Decodable		
+protocol	conformance GameServices.ProfilePrivacy	Swift.Encodable		
+protocol	conformance GameServices.ProfilePrivacy	Swift.Equatable		
+protocol	conformance GameServices.ProfilePrivacy	Swift.Hashable		
+protocol	conformance GameServices.ContactsIntegrationConsent	Swift.RawRepresentable		
+protocol	conformance GameServices.ContactsIntegrationConsent	Swift.Decodable		
+protocol	conformance GameServices.ContactsIntegrationConsent	Swift.Encodable		
+protocol	conformance GameServices.ContactsIntegrationConsent	Swift.Equatable		
+protocol	conformance GameServices.ContactsIntegrationConsent	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Artwork.Size	Swift.Decodable		
+protocol	conformance Artwork.Size	Swift.Encodable		
+protocol	conformance Artwork.Size	Swift.Equatable		
+protocol	conformance Artwork.Size	Swift.Hashable		
+protocol	conformance GameServices.Artwork	Swift.Decodable		
+protocol	conformance GameServices.Artwork	Swift.Encodable		
+protocol	conformance GameServices.Artwork	Swift.Equatable		
+protocol	conformance GameServices.Artwork	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.DataRefreshScope	Swift.RawRepresentable		
+protocol	conformance GameServices.DataRefreshScope	Swift.CaseIterable		
+protocol	conformance GameServices.DataRefreshScope	Swift.Decodable		
+protocol	conformance GameServices.DataRefreshScope	Swift.Encodable		
+protocol	conformance GameServices.DataRefreshScope	Swift.Equatable		
+protocol	conformance GameServices.DataRefreshScope	Swift.Hashable		
+protocol	conformance AnonymousGameCenterInfo.ResourceCounts	Swift.Decodable		
+protocol	conformance AnonymousGameCenterInfo.ResourceCounts	Swift.Encodable		
+protocol	conformance AnonymousGameCenterInfo.ResourceCounts	Swift.Equatable		
+protocol	conformance AnonymousGameCenterInfo.ResourceCounts	Swift.Hashable		
+protocol	conformance GameServices.AnonymousGameCenterInfo	Swift.Decodable		
+protocol	conformance GameServices.AnonymousGameCenterInfo	Swift.Encodable		
+protocol	conformance GameServices.AnonymousGameCenterInfo	Swift.Equatable		
+protocol	conformance GameServices.AnonymousGameCenterInfo	Swift.Hashable		
+protocol	conformance GameServices.GameGenre	Swift.Decodable		
+protocol	conformance GameServices.GameGenre	Swift.Encodable		
+protocol	conformance GameServices.GameGenre	Swift.Equatable		
+protocol	conformance GameServices.GameGenre	Swift.Hashable		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.OptionSet		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.Decodable		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.Encodable		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.Equatable		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.Hashable		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.SetAlgebra		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.RawRepresentable		
+protocol	conformance GameServices.DesignedForPlatforms	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GameServices.GameFilters	Swift.Decodable		
+protocol	conformance GameServices.GameFilters	Swift.Encodable		
+protocol	conformance GameServices.GameFilters	Swift.Equatable		
+protocol	conformance GameServices.GameFilters	Swift.Hashable		
+protocol	conformance GameSortDescriptor.Compared	Swift.Equatable		
+protocol	conformance GameSortDescriptor.Compared	Swift.Hashable		
+protocol	conformance GameSortDescriptor.Compared	Swift.RawRepresentable		
+protocol	conformance GameSortDescriptor.Compared	Swift.Decodable		
+protocol	conformance GameSortDescriptor.Compared	Swift.Encodable		
+protocol	conformance GameSortDescriptor.Compared	Swift.CaseIterable		
+protocol	conformance GameServices.GameSortDescriptor	Swift.Decodable		
+protocol	conformance GameServices.GameSortDescriptor	Swift.Encodable		
+protocol	conformance GameServices.GameSortDescriptor	Swift.Equatable		
+protocol	conformance GameServices.GameSortDescriptor	Swift.Hashable		
+protocol	conformance GameServices.ListGamesRequest	Swift.Decodable		
+protocol	conformance GameServices.ListGamesRequest	Swift.Encodable		
+protocol	conformance GameServices.DescribeGamesRequest	Swift.Decodable		
+protocol	conformance GameServices.DescribeGamesRequest	Swift.Encodable		
+protocol	conformance GameServices.ListGameGenreRequest	Swift.Decodable		
+protocol	conformance GameServices.ListGameGenreRequest	Swift.Encodable		
+protocol	conformance GameHistory.PlayHistory	Swift.Decodable		
+protocol	conformance GameHistory.PlayHistory	Swift.Encodable		
+protocol	conformance GameHistory.PlayHistory	Swift.Equatable		
+protocol	conformance GameHistory.PlayHistory	Swift.Hashable		
+protocol	conformance InstallHistory.Source	Swift.Equatable		
+protocol	conformance InstallHistory.Source	Swift.Hashable		
+protocol	conformance InstallHistory.Source	Swift.Decodable		
+protocol	conformance InstallHistory.Source	Swift.Encodable		
+protocol	conformance GameHistory.InstallHistory	Swift.Decodable		
+protocol	conformance GameHistory.InstallHistory	Swift.Encodable		
+protocol	conformance GameHistory.InstallHistory	Swift.Equatable		
+protocol	conformance GameHistory.InstallHistory	Swift.Hashable		
+protocol	conformance GameServices.GameHistory	Swift.Decodable		
+protocol	conformance GameServices.GameHistory	Swift.Encodable		
+protocol	conformance GameServices.GameHistory	Swift.Equatable		
+protocol	conformance GameServices.GameHistory	Swift.Hashable		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.OptionSet		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.Decodable		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.Encodable		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.Equatable		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.Hashable		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.SetAlgebra		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.RawRepresentable		
+protocol	conformance GameDescription.CompatiblePlatforms	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GameDescription.Capabilities	Swift.OptionSet		
+protocol	conformance GameDescription.Capabilities	Swift.Decodable		
+protocol	conformance GameDescription.Capabilities	Swift.Encodable		
+protocol	conformance GameDescription.Capabilities	Swift.Equatable		
+protocol	conformance GameDescription.Capabilities	Swift.Hashable		
+protocol	conformance GameDescription.Capabilities	Swift.SetAlgebra		
+protocol	conformance GameDescription.Capabilities	Swift.RawRepresentable		
+protocol	conformance GameDescription.Capabilities	Swift.ExpressibleByArrayLiteral		
+protocol	conformance GameServices.GameDescription	Swift.Decodable		
+protocol	conformance GameServices.GameDescription	Swift.Encodable		
+protocol	conformance GameServices.GameDescription	Swift.Equatable		
+protocol	conformance GameServices.GameDescription	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ThirdPartyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ThirdPartyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AppleAppStoreCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AppleAppStoreCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance AppleAppStoreCodingKeys	Swift.CodingKey		
+protocol	conformance ThirdPartyCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.PersonHandle	Swift.Decodable		
+protocol	conformance GameServices.PersonHandle	Swift.Encodable		
+protocol	conformance GameServices.PersonHandle	Swift.Equatable		
+protocol	conformance GameServices.PersonHandle	Swift.Hashable		
+protocol	conformance GameServices.FriendRequest	Swift.Decodable		
+protocol	conformance GameServices.FriendRequest	Swift.Encodable		
+protocol	conformance GameServices.FriendRequest	Swift.Equatable		
+protocol	conformance GameServices.FriendRequest	Swift.Hashable		
+protocol	conformance FriendSuggestion.Source	Swift.RawRepresentable		
+protocol	conformance FriendSuggestion.Source	Swift.Decodable		
+protocol	conformance FriendSuggestion.Source	Swift.Encodable		
+protocol	conformance FriendSuggestion.Source	Swift.Equatable		
+protocol	conformance FriendSuggestion.Source	Swift.Hashable		
+protocol	conformance FriendSuggestion.FriendingProtocolVersion	Swift.RawRepresentable		
+protocol	conformance FriendSuggestion.FriendingProtocolVersion	Swift.Decodable		
+protocol	conformance FriendSuggestion.FriendingProtocolVersion	Swift.Encodable		
+protocol	conformance FriendSuggestion.FriendingProtocolVersion	Swift.Equatable		
+protocol	conformance FriendSuggestion.FriendingProtocolVersion	Swift.Hashable		
+protocol	conformance GameServices.FriendSuggestion	Swift.Decodable		
+protocol	conformance GameServices.FriendSuggestion	Swift.Encodable		
+protocol	conformance GameServices.FriendSuggestion	Swift.Equatable		
+protocol	conformance GameServices.FriendSuggestion	Swift.Hashable		
+protocol	conformance PlayerCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PlayerCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PlayerCodingKeys	Swift.Hashable		
+protocol	conformance PlayerCodingKeys	Swift.Equatable		
+protocol	conformance ContactCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ContactCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ContactCodingKeys	Swift.Hashable		
+protocol	conformance ContactCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ContactCodingKeys	Swift.CodingKey		
+protocol	conformance PlayerCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.GameServicesActorID	Swift.Identifiable		
+protocol	conformance GameServices.GameServicesActorID	Swift.Hashable		
+protocol	conformance GameServices.GameServicesActorID	Swift.Decodable		
+protocol	conformance GameServices.GameServicesActorID	Swift.Encodable		
+protocol	conformance GameServices.GameServicesActorID	Swift.CustomStringConvertible		
+protocol	conformance GameServices.GameServicesActorID	Swift.Equatable		
+protocol	conformance GameServices.GameServicesActorSystemError	Swift.Error		
+protocol	conformance GameServicesActorSystem.JSONInvocationEncoder	Distributed.DistributedTargetInvocationEncoder		
+protocol	conformance GameServicesActorSystem.JSONInvocationDecoder	Distributed.DistributedTargetInvocationDecoder		
+protocol	conformance GameServicesActorSystem.JSONResultHandler	Distributed.DistributedTargetInvocationResultHandler		
+protocol	conformance GameServices.GameServicesActorSystem	Distributed.DistributedActorSystem		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Invocation	Swift.Encodable		
+protocol	conformance Invocation	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Invocation.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Invocation.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Invocation.CodingKeys	Swift.Hashable		
+protocol	conformance Invocation.CodingKeys	Swift.Equatable		
+protocol	conformance Invocation.CodingKeys	Swift.CodingKey		
+protocol	conformance GameServices.Ref	Swift.Decodable		
+protocol	conformance GameServices.Ref	Swift.Encodable		
+protocol	conformance GameServices.Ref	Swift.ExpressibleByStringLiteral		
+protocol	conformance GameServices.Ref	Swift.Hashable		
+protocol	conformance GameServices.Ref	Swift.RawRepresentable		
+protocol	conformance GameServices.Ref	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance GameServices.Ref	Swift.Equatable		
+protocol	conformance GameServices.Ref	Swift.ExpressibleByUnicodeScalarLiteral		
+extension	GameServices.ChallengeDefinition.DurationComponent.TimeUnit	RawRepresentable		
+extension	GameServices.ChallengeLeaveResult	RawRepresentable		
+extension	GameServices.ChallengeInviteState	RawRepresentable		
+extension	GameServices.LeaderboardPlayerScope	RawRepresentable		
+extension	GameServices.LeaderboardTimeScope	RawRepresentable		
+extension	GameServices.LeaderboardType	RawRepresentable		
+extension	GameServices.GameActivityUpdateContext	RawRepresentable		
+extension	GameServices.GameActivityPlayStyle	RawRepresentable		
+extension	GameServices.GameActivityPlayStyle	CaseIterable		
+extension	GameServices.GameActivityParticipantState	RawRepresentable		
+extension	GameServices.GameActivityParticipantState	CaseIterable		
+extension	GameServices.GameActivityState	RawRepresentable		
+extension	GameServices.GameActivityState	CaseIterable		
+extension	GameServices.GameActivityConsumptionState	RawRepresentable		
+extension	GameServices.GameActivityConsumptionState	CaseIterable		
+extension	GameServices.GameActivityInstance	Identifiable		
+extension	GameServices.GameDebuggerServiceWorkaround	DistributedActor		
+extension	GameServices.GameDebuggerServiceWorkaround	Identifiable		
+extension	GameServices.AchievementRefFields	RefFields		
+extension	GameServices.AchievementRefFields	CaseIterable		
+extension	GameServices.AchievementDescriptionRefFields	RefFields		
+extension	GameServices.AchievementDescriptionRefFields	CaseIterable		
+extension	GameServices.ChallengeRefFields	RefFields		
+extension	GameServices.ChallengeRefFields	CaseIterable		
+extension	GameServices.ChallengeDefinitionRefFields	RefFields		
+extension	GameServices.ChallengeDefinitionRefFields	CaseIterable		
+extension	GameServices.ChallengeInviteRefFields	RefFields		
+extension	GameServices.ChallengeInviteRefFields	CaseIterable		
+extension	GameServices.ContactRefFields	RefFields		
+extension	GameServices.ContactRefFields	CaseIterable		
+extension	GameServices.GameRefFields	RefFields		
+extension	GameServices.GameRefFields	CaseIterable		
+extension	GameServices.GameActivityRefFields	RefFields		
+extension	GameServices.GameActivityRefFields	CaseIterable		
+extension	GameServices.GameActivityDefinitionRefFields	RefFields		
+extension	GameServices.GameActivityDefinitionRefFields	CaseIterable		
+extension	GameServices.ImageRefFields	RefFields		
+extension	GameServices.ImageRefFields	CaseIterable		
+extension	GameServices.ImageRefType	RawRepresentable		
+extension	GameServices.LeaderboardRefFields	RefFields		
+extension	GameServices.LeaderboardRefFields	CaseIterable		
+extension	GameServices.LeaderboardSetRefFields	RefFields		
+extension	GameServices.LeaderboardSetRefFields	CaseIterable		
+extension	GameServices.PlayerRefFields	RefFields		
+extension	GameServices.PlayerRefFields	CaseIterable		
+extension	GameServices.ReleaseState	RawRepresentable		
+extension	GameServices.ReleaseState	CaseIterable		
+extension	GameServices.Cursor	RawRepresentable		
+extension	GameServices.PaginatedSequence	AsyncSequence		
+extension	GameServices.Profile.Subscriptions	OptionSet		
+extension	GameServices.Profile.Subscriptions	SetAlgebra		
+extension	GameServices.Profile.Subscriptions	RawRepresentable		
+extension	GameServices.Profile.Subscriptions	ExpressibleByArrayLiteral		
+extension	GameServices.AgeCategory	RawRepresentable		
+extension	GameServices.ProfilePrivacy	RawRepresentable		
+extension	GameServices.ContactsIntegrationConsent	RawRepresentable		
+extension	GameServices.DataRefreshScope	RawRepresentable		
+extension	GameServices.DataRefreshScope	CaseIterable		
+extension	GameServices.DesignedForPlatforms	OptionSet		
+extension	GameServices.DesignedForPlatforms	SetAlgebra		
+extension	GameServices.DesignedForPlatforms	RawRepresentable		
+extension	GameServices.DesignedForPlatforms	ExpressibleByArrayLiteral		
+extension	GameServices.GameSortDescriptor.Compared	RawRepresentable		
+extension	GameServices.GameSortDescriptor.Compared	CaseIterable		
+extension	GameServices.GameDescription.CompatiblePlatforms	OptionSet		
+extension	GameServices.GameDescription.CompatiblePlatforms	SetAlgebra		
+extension	GameServices.GameDescription.CompatiblePlatforms	RawRepresentable		
+extension	GameServices.GameDescription.CompatiblePlatforms	ExpressibleByArrayLiteral		
+extension	GameServices.GameDescription.Capabilities	OptionSet		
+extension	GameServices.GameDescription.Capabilities	SetAlgebra		
+extension	GameServices.GameDescription.Capabilities	RawRepresentable		
+extension	GameServices.GameDescription.Capabilities	ExpressibleByArrayLiteral		
+extension	GameServices.FriendSuggestion.Source	RawRepresentable		
+extension	GameServices.FriendSuggestion.FriendingProtocolVersion	RawRepresentable		
+extension	GameServices.GameServicesActorID	Identifiable		
+extension	GameServices.GameServicesActorSystem.JSONInvocationEncoder	DistributedTargetInvocationEncoder		
+extension	GameServices.GameServicesActorSystem.JSONInvocationDecoder	DistributedTargetInvocationDecoder		
+extension	GameServices.GameServicesActorSystem.JSONResultHandler	DistributedTargetInvocationResultHandler		
+extension	GameServices.GameServicesActorSystem	DistributedActorSystem		
+extension	GameServices.Ref	ExpressibleByStringLiteral		
+extension	GameServices.Ref	RawRepresentable		
+extension	GameServices.Ref	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	GameServices.Ref	ExpressibleByUnicodeScalarLiteral		

@@ -1,0 +1,2367 @@
+kind	type	conformance	member_kind	member
+class	IMCore.DaemonConnection	NSObject		
+class	IMCore.DaemonConnection	NSObject	let	queue
+class	IMCore.DaemonConnection	NSObject	let	setupQueue
+class	IMCore.DaemonConnection	NSObject	var	isInvokingSetup
+class	IMCore.DaemonConnection	NSObject	let	listener
+struct	IMCore.DaemonConnection.SetupState			
+struct	IMCore.DaemonConnection.SetupState		var	pendingSetupInvocation
+struct	IMCore.DaemonConnection.State			
+struct	IMCore.DaemonConnection.State		var	connection
+struct	IMCore.DaemonConnection.State		var	remoteProxy
+struct	IMCore.DaemonConnection.State		var	synchronousRemoteProxy
+struct	IMCore.DaemonConnection.State		var	shouldRequestSetup
+struct	IMCore.DaemonConnection.State		var	capabilities
+struct	IMCore.DaemonConnection.State		var	context
+struct	IMCore.DaemonConnection.State		var	onSetupComplete
+struct	IMCore.ImportExport.ExportedAttachmentStatistics			
+struct	IMCore.ImportExport.ExportedAttachmentStatistics		var	downloadCount
+struct	IMCore.ImportExport.ExportedAttachmentStatistics		var	downloadFailureCount
+struct	IMCore.ImportExport.ExportedAttachmentStatistics		var	downloadErrors
+struct	IMCore.ImportExport.ExportedAttachmentStatistics		var	missingCount
+struct	IMCore.ImportExport.ExportedAttachmentStatistics		var	totalDownloadBytes
+struct	IMCore.ImportExport.ExportedAttachmentStatistics		var	totalDownloadSeconds
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys			
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys		case	downloadCount
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys		case	downloadFailureCount
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys		case	downloadErrors
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys		case	missingCount
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys		case	totalDownloadBytes
+enum	IMCore.ImportExport.ExportedAttachmentStatistics.CodingKeys		case	totalDownloadSeconds
+struct	IMCore.CountStatistics			
+struct	IMCore.CountStatistics		let	totalCount
+struct	IMCore.CountStatistics		let	syncedCount
+struct	IMCore.CountStatistics		let	unresolvedCount
+struct	IMCore.CountStatistics		let	chatCounts
+struct	IMCore.CountStatistics		let	messageCounts
+struct	IMCore.CountStatistics		let	attachmentCounts
+struct	IMCore.CountStatistics		let	messageUpdateCounts
+struct	IMCore.CountStatistics		let	recoverableMessageCounts
+enum	IMCore.CountStatistics.RootKeys			
+enum	IMCore.CountStatistics.RootKeys		case	totalCount
+enum	IMCore.CountStatistics.RootKeys		case	allSynced
+enum	IMCore.CountStatistics.RootKeys		case	unresolvedCount
+enum	IMCore.CountStatistics.RootKeys		case	serverCounts
+enum	IMCore.CountStatistics.RootKeys		case	syncStoreCounts
+enum	IMCore.CountStatistics.RootKeys		case	totalChats
+enum	IMCore.CountStatistics.RootKeys		case	syncedChats
+enum	IMCore.CountStatistics.RootKeys		case	deletedChats
+enum	IMCore.CountStatistics.RootKeys		case	unresolvedChats
+enum	IMCore.CountStatistics.RootKeys		case	totalMessages
+enum	IMCore.CountStatistics.RootKeys		case	syncedMessages
+enum	IMCore.CountStatistics.RootKeys		case	deletedMessages
+enum	IMCore.CountStatistics.RootKeys		case	unresolvedMessages
+enum	IMCore.CountStatistics.RootKeys		case	totalAttachments
+enum	IMCore.CountStatistics.RootKeys		case	syncedAttachments
+enum	IMCore.CountStatistics.RootKeys		case	deletedAttachments
+enum	IMCore.CountStatistics.RootKeys		case	unresolvedAttachments
+enum	IMCore.CountStatistics.RootKeys		case	totalRecoverableMessages
+enum	IMCore.CountStatistics.RootKeys		case	syncedRecoverableMessages
+enum	IMCore.CountStatistics.RootKeys		case	deletedRecoverableMessages
+enum	IMCore.CountStatistics.RootKeys		case	unresolvedRecoverableMessages
+enum	IMCore.CountStatistics.RootKeys		case	updateT1NeedingSync
+enum	IMCore.CountStatistics.RootKeys		case	updateT2NeedingSync
+enum	IMCore.CountStatistics.SyncStoreCountKeys			
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writableChats
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writtenChats
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writableMessages
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writtenMessages
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writableAttachments
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writtenAttachments
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writableMessageUpdates
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writtenMessageUpdates
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writableRecoverableMessages
+enum	IMCore.CountStatistics.SyncStoreCountKeys		case	writtenRecoverableMessages
+enum	IMCore.CountStatistics.ServerZoneKeys			
+enum	IMCore.CountStatistics.ServerZoneKeys		case	chatManateeZone
+enum	IMCore.CountStatistics.ServerZoneKeys		case	messageManateeZone
+enum	IMCore.CountStatistics.ServerZoneKeys		case	attachmentManateeZone
+enum	IMCore.CountStatistics.ServerZoneKeys		case	messageUpdateZone
+enum	IMCore.CountStatistics.ServerZoneKeys		case	recoverableMessageDeleteZone
+enum	IMCore.CountStatistics.ServerCountKeys			
+enum	IMCore.CountStatistics.ServerCountKeys		case	totalRecords
+enum	IMCore.CountStatistics.ServerCountKeys		case	liveRecords
+class	IMCore.ImportExport.ArchivedConversation			
+class	IMCore.ImportExport.ArchivedConversation		var	conversation
+class	IMCore.ImportExport.ArchivedConversation		var	messageBatchRelativePaths
+class	IMCore.ImportExport.ArchivedConversation		var	messageCount
+class	IMCore.ImportExport.ArchivedConversation.Iterator			
+class	IMCore.ImportExport.ArchivedConversation.Iterator		var	currentIndex
+class	IMCore.ImportExport.ArchivedConversation.Iterator		var	archivedConversation
+class	IMCore.ImportExport.ArchivedConversation.Iterator		let	archivedConversationFileURL
+enum	IMCore.ImportExport.ArchivedConversation.Iterator.CodingKeys			
+enum	IMCore.ImportExport.ArchivedConversation.Iterator.CodingKeys		case	currentIndex
+enum	IMCore.ImportExport.ArchivedConversation.Iterator.CodingKeys		case	archivedConversation
+enum	IMCore.ImportExport.ArchivedConversation.Iterator.CodingKeys		case	archivedConversationFileURL
+enum	IMCore.ImportExport.ArchivedConversation.CodingKeys			
+enum	IMCore.ImportExport.ArchivedConversation.CodingKeys		case	conversation
+enum	IMCore.ImportExport.ArchivedConversation.CodingKeys		case	messageBatchRelativePaths
+enum	IMCore.ImportExport.ArchivedConversation.CodingKeys		case	messageCount
+class	IMCore.ImportExport.ParticipantExportIterator			
+class	IMCore.ImportExport.ParticipantExportIterator		let	exportOptions
+class	IMCore.ImportExport.ParticipantExportIterator		var	exportStatistics
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator			
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		let	exportOptions
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		var	exportStatistics
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		var	iterationState
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		let	exportConfiguration
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		var	hasExportedEmptyAccountParticipant
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		var	lastExportedURI
+class	IMCore.ImportExport.ParticipantExportIterator.Iterator		var	exportedAccountAddresses
+struct	IMCore.ImportExport.ParticipantExportIterator.Iterator.Batch			
+struct	IMCore.ImportExport.ParticipantExportIterator.Iterator.Batch		let	records
+struct	IMCore.ImportExport.ParticipantExportIterator.Iterator.Batch		let	progress
+class	IMCore.IMServiceReachabilityControllerLiveDelegate			
+struct	IMCore.ImportExport.Attachment			
+struct	IMCore.ImportExport.Attachment		let	id
+struct	IMCore.ImportExport.Attachment		let	sequenceID
+struct	IMCore.ImportExport.Attachment		let	messageID
+struct	IMCore.ImportExport.Attachment		let	fileName
+struct	IMCore.ImportExport.Attachment		let	contentType
+struct	IMCore.ImportExport.Attachment		let	mimeType
+struct	IMCore.ImportExport.Attachment		var	_filePath
+struct	IMCore.ImportExport.Attachment		let	shouldExistOnDisk
+struct	IMCore.ImportExport.Attachment		let	isRelativeFilePath
+struct	IMCore.ImportExport.Attachment		let	wasDownloaded
+struct	IMCore.ImportExport.Attachment		let	createdDate
+struct	IMCore.ImportExport.Attachment		let	totalBytes
+struct	IMCore.ImportExport.Attachment		let	isSticker
+struct	IMCore.ImportExport.Attachment		let	isSafetySensitive
+struct	IMCore.ImportExport.Attachment		let	isOutgoing
+struct	IMCore.ImportExport.Attachment		let	emojiImageContentIdentifier
+struct	IMCore.ImportExport.Attachment		let	emojiImageShortDescription
+struct	IMCore.ImportExport.Attachment		let	downloadError
+struct	IMCore.ImportExport.Attachment		let	isAdaptiveImageGlyph
+struct	IMCore.ImportExport.Attachment		let	missingFileReasons
+struct	IMCore.ImportExport.Attachment		var	_transferUserInfo
+struct	IMCore.ImportExport.Attachment		var	_stickerUserInfo
+struct	IMCore.ImportExport.Attachment		var	_attributionInfo
+struct	IMCore.ImportExport.Attachment.MissingFileReasons			
+struct	IMCore.ImportExport.Attachment.MissingFileReasons		let	rawValue
+enum	IMCore.ImportExport.AttachmentError			
+enum	IMCore.ImportExport.AttachmentError		case	attachmentForGuidNotFound
+enum	IMCore.ImportExport.AttachmentError		case	attachmentNotFound
+enum	IMCore.ImportExport.AttachmentError		case	failedToCreateAttachmentRecord
+enum	IMCore.ImportExport.Attachment.CodingKeys			
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	id
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	sequenceID
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	messageID
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	fileName
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	contentType
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	mimeType
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	filePath
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	shouldExistOnDisk
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	isRelativeFilePath
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	wasDownloaded
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	createdDate
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	totalBytes
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	isSticker
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	isSafetySensitive
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	isOutgoing
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	emojiImageContentIdentifier
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	emojiImageShortDescription
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	downloadError
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	isAdaptiveImageGlyph
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	missingFileReasons
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	transferUserInfo
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	stickerUserInfo
+enum	IMCore.ImportExport.Attachment.CodingKeys		case	attributionInfo
+struct	IMCore.ImportExport.Message.LayoutDescriptor			
+struct	IMCore.ImportExport.Message.LayoutDescriptor		let	layoutIntent
+struct	IMCore.ImportExport.Message.LayoutDescriptor		let	associatedLayoutIntent
+struct	IMCore.ImportExport.Message.LayoutDescriptor		let	parentPreviewWidth
+struct	IMCore.ImportExport.Message.LayoutDescriptor		let	scalar
+struct	IMCore.ImportExport.Message.LayoutDescriptor		let	scale
+struct	IMCore.ImportExport.Message.LayoutDescriptor		let	rotation
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent			
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	none
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	topLeft
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	topRight
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	bottomLeft
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	bottomRight
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	center
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	centerTop
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	centerBottom
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	centerLeft
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	centerRight
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	tapback
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	messageHighlight
+enum	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent		case	stickerReaction
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys			
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys		case	layoutIntent
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys		case	associatedLayoutIntent
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys		case	parentPreviewWidth
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys		case	scalar
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys		case	scale
+enum	IMCore.ImportExport.Message.LayoutDescriptor.CodingKeys		case	rotation
+struct	IMCore.ImportExport.Conversation			
+struct	IMCore.ImportExport.Conversation		let	sequenceID
+struct	IMCore.ImportExport.Conversation		let	guid
+struct	IMCore.ImportExport.Conversation		let	conversationIdentifier
+struct	IMCore.ImportExport.Conversation		let	conversationType
+struct	IMCore.ImportExport.Conversation		let	groupID
+struct	IMCore.ImportExport.Conversation		let	groupName
+struct	IMCore.ImportExport.Conversation		let	account
+struct	IMCore.ImportExport.Conversation		let	accountParticipant
+struct	IMCore.ImportExport.Conversation		let	participants
+struct	IMCore.ImportExport.Conversation		let	isPinned
+struct	IMCore.ImportExport.Conversation		let	serviceTypeString
+struct	IMCore.ImportExport.Conversation		let	serviceType
+struct	IMCore.ImportExport.Conversation		let	filterType
+struct	IMCore.ImportExport.Conversation		let	lastAddressUsedForSelf
+struct	IMCore.ImportExport.Conversation		let	rcsGroupIdentifier
+struct	IMCore.ImportExport.Conversation		let	rcsGroupID
+struct	IMCore.ImportExport.Conversation		let	rcsGroupURI
+struct	IMCore.ImportExport.Conversation		var	groupPhoto
+struct	IMCore.ImportExport.Conversation		var	_properties
+enum	IMCore.ImportExport.Conversation.FilterType			
+enum	IMCore.ImportExport.Conversation.FilterType		case	none
+enum	IMCore.ImportExport.Conversation.FilterType		case	unknownSender
+enum	IMCore.ImportExport.Conversation.FilterType		case	junk
+enum	IMCore.ImportExport.Conversation.FilterType		case	smsPromotional
+enum	IMCore.ImportExport.Conversation.FilterType		case	smsTransactional
+enum	IMCore.ImportExport.Conversation.ConversationType			
+enum	IMCore.ImportExport.Conversation.ConversationType		case	group
+enum	IMCore.ImportExport.Conversation.ConversationType		case	individual
+enum	IMCore.ImportExport.ConversationError			
+enum	IMCore.ImportExport.ConversationError		case	addressListDuplicateEntryError
+enum	IMCore.ImportExport.ConversationError		case	emptyAddressListError
+enum	IMCore.ImportExport.ConversationError		case	groupIDError
+enum	IMCore.ImportExport.ConversationError		case	missingRequiredField
+enum	IMCore.ImportExport.ConversationError		case	savingConversationFailed
+enum	IMCore.ImportExport.ConversationError		case	invalidRCSConversation
+enum	IMCore.ImportExport.ConversationError		case	invalidParticipant
+enum	IMCore.ImportExport.ConversationError		case	invalidParticipantList
+enum	IMCore.ImportExport.ConversationError		case	misconfigured
+enum	IMCore.ImportExport.ConversationError		case	fallbackAccountParticipantIsRequired
+enum	IMCore.ImportExport.ConversationError.CodingKeys			
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	addressListDuplicateEntryError
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	emptyAddressListError
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	groupIDError
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	missingRequiredField
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	savingConversationFailed
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	invalidRCSConversation
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	invalidParticipant
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	invalidParticipantList
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	misconfigured
+enum	IMCore.ImportExport.ConversationError.CodingKeys		case	fallbackAccountParticipantIsRequired
+enum	IMCore.ImportExport.ConversationError.AddressListDuplicateEntryErrorCodingKeys			
+enum	IMCore.ImportExport.ConversationError.AddressListDuplicateEntryErrorCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.EmptyAddressListErrorCodingKeys			
+enum	IMCore.ImportExport.ConversationError.EmptyAddressListErrorCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.GroupIDErrorCodingKeys			
+enum	IMCore.ImportExport.ConversationError.GroupIDErrorCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.MissingRequiredFieldCodingKeys			
+enum	IMCore.ImportExport.ConversationError.MissingRequiredFieldCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.SavingConversationFailedCodingKeys			
+enum	IMCore.ImportExport.ConversationError.SavingConversationFailedCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.InvalidRCSConversationCodingKeys			
+enum	IMCore.ImportExport.ConversationError.InvalidRCSConversationCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.InvalidParticipantCodingKeys			
+enum	IMCore.ImportExport.ConversationError.InvalidParticipantCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.InvalidParticipantListCodingKeys			
+enum	IMCore.ImportExport.ConversationError.InvalidParticipantListCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.MisconfiguredCodingKeys			
+enum	IMCore.ImportExport.ConversationError.MisconfiguredCodingKeys		case	_0
+enum	IMCore.ImportExport.ConversationError.FallbackAccountParticipantIsRequiredCodingKeys			
+enum	IMCore.ImportExport.ConversationError.FallbackAccountParticipantIsRequiredCodingKeys		case	_0
+enum	IMCore.ImportExport.Conversation.CodingKeys			
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	sequenceID
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	guid
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	conversationIdentifier
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	conversationType
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	groupID
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	groupName
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	account
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	accountParticipant
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	participants
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	isPinned
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	serviceTypeString
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	serviceType
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	filterType
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	lastAddressUsedForSelf
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	rcsGroupIdentifier
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	rcsGroupID
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	rcsGroupURI
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	groupPhoto
+enum	IMCore.ImportExport.Conversation.CodingKeys		case	properties
+struct	IMCore.ImportExport.Message			
+struct	IMCore.ImportExport.Message		let	id
+struct	IMCore.ImportExport.Message		let	sequenceID
+struct	IMCore.ImportExport.Message		let	messageState
+struct	IMCore.ImportExport.Message		let	conversationID
+struct	IMCore.ImportExport.Message		let	senderID
+struct	IMCore.ImportExport.Message		let	account
+struct	IMCore.ImportExport.Message		let	destinationCallerID
+struct	IMCore.ImportExport.Message		let	subject
+struct	IMCore.ImportExport.Message		var	body
+struct	IMCore.ImportExport.Message		let	dateReceived
+struct	IMCore.ImportExport.Message		let	dateDelivered
+struct	IMCore.ImportExport.Message		let	dateRead
+struct	IMCore.ImportExport.Message		let	countryCode
+struct	IMCore.ImportExport.Message		let	serviceTypeString
+struct	IMCore.ImportExport.Message		let	serviceType
+struct	IMCore.ImportExport.Message		let	messageParts
+struct	IMCore.ImportExport.Message		var	_messageSummaryInfo
+struct	IMCore.ImportExport.Message		let	fallbackHash
+struct	IMCore.ImportExport.Message		let	rcsMessageID
+struct	IMCore.ImportExport.Message		let	sender
+struct	IMCore.ImportExport.Message		let	accountParticipant
+struct	IMCore.ImportExport.Message		var	error
+struct	IMCore.ImportExport.Message		let	remarks
+struct	IMCore.ImportExport.Message		var	databaseAttachmentGUIDs
+enum	IMCore.ImportExport.MessageError			
+enum	IMCore.ImportExport.MessageError		case	invalidMessage
+enum	IMCore.ImportExport.MessageError		case	invalidMessagePart
+enum	IMCore.ImportExport.MessageError		case	invalidMessageSender
+enum	IMCore.ImportExport.MessageError.CodingKeys			
+enum	IMCore.ImportExport.MessageError.CodingKeys		case	invalidMessage
+enum	IMCore.ImportExport.MessageError.CodingKeys		case	invalidMessagePart
+enum	IMCore.ImportExport.MessageError.CodingKeys		case	invalidMessageSender
+enum	IMCore.ImportExport.MessageError.InvalidMessageCodingKeys			
+enum	IMCore.ImportExport.MessageError.InvalidMessageCodingKeys		case	_0
+enum	IMCore.ImportExport.MessageError.InvalidMessagePartCodingKeys			
+enum	IMCore.ImportExport.MessageError.InvalidMessagePartCodingKeys		case	_0
+enum	IMCore.ImportExport.MessageError.InvalidMessageSenderCodingKeys			
+enum	IMCore.ImportExport.MessageError.InvalidMessageSenderCodingKeys		case	_0
+enum	IMCore.ImportExport.Message.CodingKeys			
+enum	IMCore.ImportExport.Message.CodingKeys		case	id
+enum	IMCore.ImportExport.Message.CodingKeys		case	sequenceID
+enum	IMCore.ImportExport.Message.CodingKeys		case	messageState
+enum	IMCore.ImportExport.Message.CodingKeys		case	conversationID
+enum	IMCore.ImportExport.Message.CodingKeys		case	senderID
+enum	IMCore.ImportExport.Message.CodingKeys		case	account
+enum	IMCore.ImportExport.Message.CodingKeys		case	destinationCallerID
+enum	IMCore.ImportExport.Message.CodingKeys		case	subject
+enum	IMCore.ImportExport.Message.CodingKeys		case	body
+enum	IMCore.ImportExport.Message.CodingKeys		case	dateReceived
+enum	IMCore.ImportExport.Message.CodingKeys		case	dateDelivered
+enum	IMCore.ImportExport.Message.CodingKeys		case	dateRead
+enum	IMCore.ImportExport.Message.CodingKeys		case	countryCode
+enum	IMCore.ImportExport.Message.CodingKeys		case	serviceTypeString
+enum	IMCore.ImportExport.Message.CodingKeys		case	serviceType
+enum	IMCore.ImportExport.Message.CodingKeys		case	messageParts
+enum	IMCore.ImportExport.Message.CodingKeys		case	messageSummaryInfo
+enum	IMCore.ImportExport.Message.CodingKeys		case	fallbackHash
+enum	IMCore.ImportExport.Message.CodingKeys		case	rcsMessageID
+enum	IMCore.ImportExport.Message.CodingKeys		case	sender
+enum	IMCore.ImportExport.Message.CodingKeys		case	accountParticipant
+enum	IMCore.ImportExport.Message.CodingKeys		case	error
+enum	IMCore.ImportExport.Message.CodingKeys		case	remarks
+struct	IMCore.ImportExport.Message.Reply			
+struct	IMCore.ImportExport.Message.Reply		let	threadOriginatorMessageID
+struct	IMCore.ImportExport.Message.Reply		let	threadOriginatorMessagePartID
+struct	IMCore.ImportExport.Message.Reply		let	threadOriginatorMessageWasDeleted
+struct	IMCore.ImportExport.Message.Reply		let	rangeInOriginatingMessagePart
+struct	IMCore.ImportExport.Message.Reply		let	threadOriginatorMessagePartIndex
+struct	IMCore.ImportExport.Message.Reply		let	remarks
+enum	IMCore.ImportExport.Message.Reply.CodingKeys			
+enum	IMCore.ImportExport.Message.Reply.CodingKeys		case	threadOriginatorMessageID
+enum	IMCore.ImportExport.Message.Reply.CodingKeys		case	threadOriginatorMessagePartID
+enum	IMCore.ImportExport.Message.Reply.CodingKeys		case	threadOriginatorMessageWasDeleted
+enum	IMCore.ImportExport.Message.Reply.CodingKeys		case	rangeInOriginatingMessagePart
+enum	IMCore.ImportExport.Message.Reply.CodingKeys		case	threadOriginatorMessagePartIndex
+enum	IMCore.ImportExport.Message.Reply.CodingKeys		case	remarks
+struct	IMCore.ImportExport.MessageExportExclusionFilter			
+struct	IMCore.ImportExport.MessageExportExclusionFilter		let	rawValue
+struct	IMCore.ImportExport.MessagePart			
+struct	IMCore.ImportExport.MessagePart		let	id
+struct	IMCore.ImportExport.MessagePart		let	messageType
+struct	IMCore.ImportExport.MessagePart		let	messagePartType
+struct	IMCore.ImportExport.MessagePart		let	parentMessageID
+struct	IMCore.ImportExport.MessagePart		let	rangeInParent
+struct	IMCore.ImportExport.MessagePart		let	sequenceID
+struct	IMCore.ImportExport.MessagePart		var	reply
+struct	IMCore.ImportExport.MessagePart		var	reaction
+struct	IMCore.ImportExport.MessagePart		let	attachment
+struct	IMCore.ImportExport.MessagePart		let	attachmentID
+struct	IMCore.ImportExport.MessagePart		let	balloonBundleID
+struct	IMCore.ImportExport.MessagePart		let	payloadData
+struct	IMCore.ImportExport.MessagePart		let	expressiveSendStyleID
+struct	IMCore.ImportExport.MessagePart		let	expressiveSendPlayedTime
+struct	IMCore.ImportExport.MessagePart		let	isExpirable
+struct	IMCore.ImportExport.MessagePart		let	expireState
+struct	IMCore.ImportExport.MessagePart		let	wasDetonated
+struct	IMCore.ImportExport.MessagePart		let	body
+struct	IMCore.ImportExport.MessagePart		let	links
+struct	IMCore.ImportExport.MessagePart		let	remarks
+struct	IMCore.ImportExport.MessagePart		var	_dataDetectorsInfo
+struct	IMCore.ImportExport.MessagePartType			
+struct	IMCore.ImportExport.MessagePartType		let	rawValue
+enum	IMCore.ImportExport.MessagePart.ExpireState			
+enum	IMCore.ImportExport.MessagePart.ExpireState		case	notExpiring
+enum	IMCore.ImportExport.MessagePart.ExpireState		case	expiring
+enum	IMCore.ImportExport.MessagePart.ExpireState		case	expired
+enum	IMCore.ImportExport.MessagePart.ExpireState		case	saved
+enum	IMCore.ImportExport.MessagePart.CodingKeys			
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	id
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	messageType
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	messagePartType
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	parentMessageID
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	rangeInParent
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	sequenceID
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	reply
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	reaction
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	attachment
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	attachmentID
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	balloonBundleID
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	payloadData
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	expressiveSendStyleID
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	expressiveSendPlayedTime
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	isExpirable
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	expireState
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	wasDetonated
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	body
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	links
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	remarks
+enum	IMCore.ImportExport.MessagePart.CodingKeys		case	dataDetectorsInfo
+class	IMCore.ImportExport.AttachmentExportIterator			
+class	IMCore.ImportExport.AttachmentExportIterator		let	exportOptions
+class	IMCore.ImportExport.AttachmentExportIterator		var	exportStatistics
+class	IMCore.ImportExport.AttachmentExportIterator.Iterator			
+class	IMCore.ImportExport.AttachmentExportIterator.Iterator		let	exportOptions
+class	IMCore.ImportExport.AttachmentExportIterator.Iterator		var	exportStatistics
+class	IMCore.ImportExport.AttachmentExportIterator.Iterator		let	exportConfiguration
+class	IMCore.ImportExport.AttachmentExportIterator.Iterator		let	accountForDownloader
+class	IMCore.ImportExport.AttachmentExportIterator.Iterator		var	iterationState
+struct	IMCore.ImportExport.AttachmentExportIterator.Iterator.Batch			
+struct	IMCore.ImportExport.AttachmentExportIterator.Iterator.Batch		let	records
+struct	IMCore.ImportExport.AttachmentExportIterator.Iterator.Batch		let	downloader
+struct	IMCore.ImportExport.AttachmentExportIterator.Iterator.Batch		let	progress
+struct	IMCore.ImportExport.FormattedAddress			
+struct	IMCore.ImportExport.FormattedAddress		let	id
+struct	IMCore.ImportExport.FormattedAddress		let	format
+struct	IMCore.ImportExport.FormattedAddress		let	formattingFailure
+struct	IMCore.ImportExport.FormattedAddress		let	formattedValue
+struct	IMCore.ImportExport.FormattedAddress		let	unformattedValue
+struct	IMCore.ImportExport.FormattedAddress		let	value
+struct	IMCore.ImportExport.FormattedAddress		let	countryCode
+struct	IMCore.ImportExport.FormattedAddress.Format			
+struct	IMCore.ImportExport.FormattedAddress.Format		let	rawValue
+enum	IMCore.ImportExport.FormattedAddress.FormattingFailure			
+enum	IMCore.ImportExport.FormattedAddress.FormattingFailure		case	none
+enum	IMCore.ImportExport.FormattedAddress.FormattingFailure		case	unknownFailure
+enum	IMCore.ImportExport.FormattedAddress.FormattingFailure		case	invalidPhoneNumberCountryCode
+enum	IMCore.ImportExport.FormattedAddress.FormattingFailure		case	invalidAddressFormat
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys			
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	id
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	format
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	formattingFailure
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	formattedValue
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	unformattedValue
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	value
+enum	IMCore.ImportExport.FormattedAddress.CodingKeys		case	countryCode
+struct	IMCore.ImportExport.Participant.IMDHandleRecordKey			
+struct	IMCore.ImportExport.Participant.IMDHandleRecordKey		let	canonicalizedURI
+struct	IMCore.ImportExport.Participant.IMDHandleRecordKey		let	serviceName
+enum	IMCore.ImportExport.ImportExportRecordExportIteratingError			
+enum	IMCore.ImportExport.ImportExportRecordExportIteratingError		case	alreadyIterated
+enum	IMCore.ImportExport.ImportExportRecordExportIteratingError.CodingKeys			
+enum	IMCore.ImportExport.ImportExportRecordExportIteratingError.CodingKeys		case	alreadyIterated
+enum	IMCore.ImportExport.ImportExportRecordExportIteratingError.AlreadyIteratedCodingKeys			
+enum	IMCore.ImportExport.ImportExportRecordExportIteratingError.AlreadyIteratedCodingKeys		case	_0
+struct	IMCore.ImportExport.Participant			
+struct	IMCore.ImportExport.Participant		let	id
+struct	IMCore.ImportExport.Participant		let	canonicalizedURI
+struct	IMCore.ImportExport.Participant		let	uncanonicalizedURI
+struct	IMCore.ImportExport.Participant		let	formattedCanconicalURI
+struct	IMCore.ImportExport.Participant		let	serviceType
+struct	IMCore.ImportExport.Participant		let	countryCode
+struct	IMCore.ImportExport.Participant		let	conversationStatus
+struct	IMCore.ImportExport.Participant		let	participantType
+enum	IMCore.ImportExport.ParticipantError			
+enum	IMCore.ImportExport.ParticipantError		case	malformedParticipant
+enum	IMCore.ImportExport.ParticipantError		case	savingHandleFailed
+enum	IMCore.ImportExport.ParticipantError		case	invalidAddress
+enum	IMCore.ImportExport.ParticipantError		case	invalidConversationStatus
+enum	IMCore.ImportExport.ParticipantError		case	invalidSequenceID
+struct	IMCore.ImportExport.Participant.ConversationStatus			
+struct	IMCore.ImportExport.Participant.ConversationStatus		let	rawValue
+enum	IMCore.ImportExport.ParticipantType			
+enum	IMCore.ImportExport.ParticipantType		case	unknown
+enum	IMCore.ImportExport.ParticipantType		case	participant
+enum	IMCore.ImportExport.ParticipantType		case	account
+enum	IMCore.ImportExport.ParticipantError.CodingKeys			
+enum	IMCore.ImportExport.ParticipantError.CodingKeys		case	malformedParticipant
+enum	IMCore.ImportExport.ParticipantError.CodingKeys		case	savingHandleFailed
+enum	IMCore.ImportExport.ParticipantError.CodingKeys		case	invalidAddress
+enum	IMCore.ImportExport.ParticipantError.CodingKeys		case	invalidConversationStatus
+enum	IMCore.ImportExport.ParticipantError.CodingKeys		case	invalidSequenceID
+enum	IMCore.ImportExport.ParticipantError.MalformedParticipantCodingKeys			
+enum	IMCore.ImportExport.ParticipantError.MalformedParticipantCodingKeys		case	_0
+enum	IMCore.ImportExport.ParticipantError.SavingHandleFailedCodingKeys			
+enum	IMCore.ImportExport.ParticipantError.SavingHandleFailedCodingKeys		case	_0
+enum	IMCore.ImportExport.ParticipantError.InvalidAddressCodingKeys			
+enum	IMCore.ImportExport.ParticipantError.InvalidAddressCodingKeys		case	_0
+enum	IMCore.ImportExport.ParticipantError.InvalidConversationStatusCodingKeys			
+enum	IMCore.ImportExport.ParticipantError.InvalidConversationStatusCodingKeys		case	_0
+enum	IMCore.ImportExport.ParticipantError.InvalidSequenceIDCodingKeys			
+enum	IMCore.ImportExport.ParticipantError.InvalidSequenceIDCodingKeys		case	_0
+enum	IMCore.ImportExport.Participant.CodingKeys			
+enum	IMCore.ImportExport.Participant.CodingKeys		case	id
+enum	IMCore.ImportExport.Participant.CodingKeys		case	address
+enum	IMCore.ImportExport.Participant.CodingKeys		case	sequenceID
+enum	IMCore.ImportExport.Participant.CodingKeys		case	canonicalizedURI
+enum	IMCore.ImportExport.Participant.CodingKeys		case	uncanonicalizedURI
+enum	IMCore.ImportExport.Participant.CodingKeys		case	serviceType
+enum	IMCore.ImportExport.Participant.CodingKeys		case	countryCode
+enum	IMCore.ImportExport.Participant.CodingKeys		case	conversationID
+enum	IMCore.ImportExport.Participant.CodingKeys		case	conversationStatus
+enum	IMCore.ImportExport.Participant.CodingKeys		case	participantType
+enum	IMCore.ImportExport.Participant.CodingKeys		case	formattedCanconicalURI
+enum	IMCore.ImportExport.Participant.CodingKeys		case	addresses
+enum	IMCore.ImportExport.Participant.CodingKeys		case	selectedAddressIndex
+struct	IMCore.ImportExport.Message.Reaction			
+struct	IMCore.ImportExport.Message.Reaction		let	reactionType
+struct	IMCore.ImportExport.Message.Reaction		let	reactingToMessageID
+struct	IMCore.ImportExport.Message.Reaction		let	reactingToMessagePartID
+struct	IMCore.ImportExport.Message.Reaction		let	reactingToMessagePartRange
+struct	IMCore.ImportExport.Message.Reaction		let	reactingToMessagePartIndex
+struct	IMCore.ImportExport.Message.Reaction		let	reactionEmoji
+struct	IMCore.ImportExport.Message.Reaction		let	layoutDescriptor
+struct	IMCore.ImportExport.Message.Reaction		let	sticker
+struct	IMCore.ImportExport.Message.Reaction		let	compatibilityMessage
+struct	IMCore.ImportExport.Message.Reaction		let	remarks
+struct	IMCore.ImportExport.Message.Reaction		let	reactingToMessageLength
+struct	IMCore.ImportExport.Message.Reaction		var	range
+enum	IMCore.ImportExport.Message.Reaction.ReactionType			
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	sticker
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	emojiSticker
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	heartTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	thumbsUpTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	thumbsDownTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	haHaTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	exclamationTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	questionMarkTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	emojiTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	stickerTapback
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	heartTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	thumbsUpTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	thumbsDownTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	haHaTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	exclamationTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	questionMarkTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	emojiTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.ReactionType		case	stickerTapbackRemoved
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys			
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactionType
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactingToMessageID
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactingToMessagePartID
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactingToMessagePartRange
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactingToMessagePartIndex
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactionEmoji
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	layoutDescriptor
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	sticker
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	compatibilityMessage
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	remarks
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	reactingToMessageLength
+enum	IMCore.ImportExport.Message.Reaction.CodingKeys		case	range
+class	IMCore.ImportExport.Timer			
+class	IMCore.ImportExport.Timer		var	startTime
+class	IMCore.ImportExport.Timer		var	endTime
+enum	IMCore.ImportExport.Timer.CodingKeys			
+enum	IMCore.ImportExport.Timer.CodingKeys		case	startTime
+enum	IMCore.ImportExport.Timer.CodingKeys		case	endTime
+enum	IMCore.ImportExport.MessageBatchImporterError			
+enum	IMCore.ImportExport.MessageBatchImporterError		case	conversationImportFailed
+enum	IMCore.ImportExport.MessageBatchImporterError		case	participantImportFailed
+enum	IMCore.ImportExport.MessageBatchImporterError		case	attachmentImportFailed
+struct	IMCore.ImportExport.MessageBatchImporter			
+struct	IMCore.ImportExport.MessageBatchImporter		let	messageBatch
+struct	IMCore.ImportExport.MessageBatchImporter		var	conversation
+struct	IMCore.ImportExport.MessageBatchImporter		var	importedCounts
+struct	IMCore.ImportExport.MessageBatchImporter		var	chatRecord
+struct	IMCore.ImportExport.MessageBatchImporter		var	handleRecords
+enum	IMCore.ImportExport.MessageBatchImporterError.CodingKeys			
+enum	IMCore.ImportExport.MessageBatchImporterError.CodingKeys		case	conversationImportFailed
+enum	IMCore.ImportExport.MessageBatchImporterError.CodingKeys		case	participantImportFailed
+enum	IMCore.ImportExport.MessageBatchImporterError.CodingKeys		case	attachmentImportFailed
+enum	IMCore.ImportExport.MessageBatchImporterError.ConversationImportFailedCodingKeys			
+enum	IMCore.ImportExport.MessageBatchImporterError.ConversationImportFailedCodingKeys		case	_0
+enum	IMCore.ImportExport.MessageBatchImporterError.ParticipantImportFailedCodingKeys			
+enum	IMCore.ImportExport.MessageBatchImporterError.ParticipantImportFailedCodingKeys		case	_0
+enum	IMCore.ImportExport.MessageBatchImporterError.AttachmentImportFailedCodingKeys			
+enum	IMCore.ImportExport.MessageBatchImporterError.AttachmentImportFailedCodingKeys		case	_0
+struct	IMCore.ImportExport.Remark			
+struct	IMCore.ImportExport.Remark		let	type
+struct	IMCore.ImportExport.Remark		let	message
+struct	IMCore.ImportExport.Remark		let	effects
+struct	IMCore.ImportExport.Remark.Effects			
+struct	IMCore.ImportExport.Remark.Effects		let	rawValue
+enum	IMCore.ImportExport.Remark.RemarkType			
+enum	IMCore.ImportExport.Remark.RemarkType		case	invalidAssociatedMessageType
+enum	IMCore.ImportExport.Remark.RemarkType		case	invalidAssociatedMessageEmoji
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingStickerAttachment
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingAssociatedMessage
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingAssociatedMessagePart
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingTransfer
+enum	IMCore.ImportExport.Remark.RemarkType		case	malformedPartDescriptor
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingThreadOriginator
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingThreadIdentifier
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingReplyToPart
+enum	IMCore.ImportExport.Remark.RemarkType		case	replyCreationFailed
+enum	IMCore.ImportExport.Remark.RemarkType		case	reactionCreationFailed
+enum	IMCore.ImportExport.Remark.RemarkType		case	messageCreationFailed
+enum	IMCore.ImportExport.Remark.RemarkType		case	remarkedAssociatedMessage
+enum	IMCore.ImportExport.Remark.RemarkType		case	remarkedThreadOriginator
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingAssociatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType		case	missingReaction
+enum	IMCore.ImportExport.Remark.RemarkType		case	emptyMessageParts
+enum	IMCore.ImportExport.Remark.RemarkType		case	reactionToReaction
+struct	IMCore.ImportExport.Remarks			
+struct	IMCore.ImportExport.Remarks		var	remarks
+enum	IMCore.ImportExport.Remarks.CodingKeys			
+enum	IMCore.ImportExport.Remarks.CodingKeys		case	remarks
+enum	IMCore.ImportExport.Remark.CodingKeys			
+enum	IMCore.ImportExport.Remark.CodingKeys		case	type
+enum	IMCore.ImportExport.Remark.CodingKeys		case	message
+enum	IMCore.ImportExport.Remark.CodingKeys		case	effects
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingAssociatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	invalidAssociatedMessageType
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	invalidAssociatedMessageEmoji
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingStickerAttachment
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingAssociatedMessage
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingAssociatedMessagePart
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingTransfer
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingReaction
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	malformedPartDescriptor
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	emptyMessageParts
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	reactionToReaction
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingThreadOriginator
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingThreadIdentifier
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	missingReplyToPart
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	replyCreationFailed
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	reactionCreationFailed
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	messageCreationFailed
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	remarkedAssociatedMessage
+enum	IMCore.ImportExport.Remark.RemarkType.CodingKeys		case	remarkedThreadOriginator
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessageGUIDCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.InvalidAssociatedMessageTypeCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.InvalidAssociatedMessageTypeCodingKeys		case	associatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.InvalidAssociatedMessageTypeCodingKeys		case	type
+enum	IMCore.ImportExport.Remark.RemarkType.InvalidAssociatedMessageEmojiCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.InvalidAssociatedMessageEmojiCodingKeys		case	associatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingStickerAttachmentCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingStickerAttachmentCodingKeys		case	associatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessageCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessageCodingKeys		case	associatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessagePartCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessagePartCodingKeys		case	associatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessagePartCodingKeys		case	partNumber
+enum	IMCore.ImportExport.Remark.RemarkType.MissingAssociatedMessagePartCodingKeys		case	encodedMessagePartGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingTransferCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingTransferCodingKeys		case	transferGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingReactionCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MalformedPartDescriptorCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MalformedPartDescriptorCodingKeys		case	index
+enum	IMCore.ImportExport.Remark.RemarkType.EmptyMessagePartsCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.ReactionToReactionCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingThreadOriginatorCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingThreadOriginatorCodingKeys		case	threadOriginatorGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingThreadIdentifierCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingThreadIdentifierCodingKeys		case	threadOriginatorGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingReplyToPartCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MissingReplyToPartCodingKeys		case	threadOriginatorGUID
+enum	IMCore.ImportExport.Remark.RemarkType.MissingReplyToPartCodingKeys		case	replyToIndex
+enum	IMCore.ImportExport.Remark.RemarkType.ReplyCreationFailedCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.ReplyCreationFailedCodingKeys		case	reason
+enum	IMCore.ImportExport.Remark.RemarkType.ReactionCreationFailedCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.ReactionCreationFailedCodingKeys		case	reason
+enum	IMCore.ImportExport.Remark.RemarkType.MessageCreationFailedCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.MessageCreationFailedCodingKeys		case	reason
+enum	IMCore.ImportExport.Remark.RemarkType.RemarkedAssociatedMessageCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.RemarkedAssociatedMessageCodingKeys		case	associatedMessageGUID
+enum	IMCore.ImportExport.Remark.RemarkType.RemarkedAssociatedMessageCodingKeys		case	remarks
+enum	IMCore.ImportExport.Remark.RemarkType.RemarkedThreadOriginatorCodingKeys			
+enum	IMCore.ImportExport.Remark.RemarkType.RemarkedThreadOriginatorCodingKeys		case	threadOriginatorGUID
+enum	IMCore.ImportExport.Remark.RemarkType.RemarkedThreadOriginatorCodingKeys		case	remarks
+class	IMCore.ImportExport.AccountManager			
+struct	IMCore.ImportExport.ParticipantAddress			
+struct	IMCore.ImportExport.ParticipantAddress		var	id
+struct	IMCore.ImportExport.ParticipantAddress		let	canonicalizedURI
+struct	IMCore.ImportExport.ParticipantAddress		let	formattedCanconicalURI
+struct	IMCore.ImportExport.ParticipantAddress		let	uncanonicalizedURI
+struct	IMCore.ImportExport.ParticipantAddress		let	countryCode
+enum	IMCore.ImportExport.MessagePart.MessageType			
+enum	IMCore.ImportExport.MessagePart.MessageType		case	message
+enum	IMCore.ImportExport.MessagePart.MessageType		case	reply
+enum	IMCore.ImportExport.MessagePart.MessageType		case	reaction
+enum	IMCore.ImportExport.MessagePart.MessageType		case	plugin
+enum	IMCore.ImportExport.MessagePart.MessageType		case	expressive
+enum	IMCore.ImportExport.MessagePart.MessageType		case	audioMessage
+class	IMCore.ImportExport.DownloadableAttachmentBatch	IMCore.ImportExport.DownloadableMessageAttachmentBatch		
+enum	IMCore.ImportExport.ParticipantAddress.CodingKeys			
+enum	IMCore.ImportExport.ParticipantAddress.CodingKeys		case	id
+enum	IMCore.ImportExport.ParticipantAddress.CodingKeys		case	canonicalizedURI
+enum	IMCore.ImportExport.ParticipantAddress.CodingKeys		case	formattedCanconicalURI
+enum	IMCore.ImportExport.ParticipantAddress.CodingKeys		case	uncanonicalizedURI
+enum	IMCore.ImportExport.ParticipantAddress.CodingKeys		case	countryCode
+class	IMCore.ImportExport.ExportIterator			
+class	IMCore.ImportExport.ExportIterator		var	exportOptions
+class	IMCore.ImportExport.ExportIterator		let	conversations
+class	IMCore.ImportExport.ExportIterator		var	conversationIndex
+class	IMCore.ImportExport.ExportIterator		var	conversationRowID
+class	IMCore.ImportExport.ExportIterator		var	conversationExporter
+class	IMCore.ImportExport.ExportIterator		let	exporter
+struct	IMCore.ImportExport.DatabaseRecord<A	IMDRecord, B>		
+struct	IMCore.ImportExport.DatabaseRecord<A	IMDRecord, B>	let	record
+enum	IMCore.ImportExport.DatabaseRecordError			
+enum	IMCore.ImportExport.DatabaseRecordError		case	internalError
+enum	IMCore.ImportExport.DatabaseRecord.CodingKeys<A	IMDRecord>		
+enum	IMCore.ImportExport.DatabaseRecord.CodingKeys<A	IMDRecord>	case	record
+struct	IMCore.ImportExport.MessageState			
+struct	IMCore.ImportExport.MessageState		let	rawValue
+class	IMCore.ImportExport.MessageExportIterator			
+class	IMCore.ImportExport.MessageExportIterator		let	exportOptions
+class	IMCore.ImportExport.MessageExportIterator		var	exportStatistics
+class	IMCore.ImportExport.MessageExportIterator		let	filteredCounts
+class	IMCore.ImportExport.MessageExportIterator		var	chatRowIDs
+class	IMCore.ImportExport.MessageExportIterator		var	databaseOnly
+class	IMCore.ImportExport.MessageExportIterator.Iterator			
+class	IMCore.ImportExport.MessageExportIterator.Iterator		let	exportOptions
+class	IMCore.ImportExport.MessageExportIterator.Iterator		var	exportStatistics
+class	IMCore.ImportExport.MessageExportIterator.Iterator		let	exportConfiguration
+class	IMCore.ImportExport.MessageExportIterator.Iterator		let	filteredCounts
+class	IMCore.ImportExport.MessageExportIterator.Iterator		var	iterationState
+class	IMCore.ImportExport.MessageExportIterator.Iterator		let	chatRowIDs
+class	IMCore.ImportExport.MessageExportIterator.Iterator		let	databaseOnly
+struct	IMCore.ImportExport.MessageExportIterator.Iterator.Batch			
+struct	IMCore.ImportExport.MessageExportIterator.Iterator.Batch		let	records
+struct	IMCore.ImportExport.MessageExportIterator.Iterator.Batch		let	progress
+struct	IMCore.ImportExport.MessageExportIterator.Iterator.Batch		let	filterCounts
+struct	IMCore.ImportExport.ArchiveManifest			
+struct	IMCore.ImportExport.ArchiveManifest		var	fileURL
+struct	IMCore.ImportExport.ArchiveManifest		var	conversations
+struct	IMCore.ImportExport.ArchiveManifest		var	exportStatistics
+class	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator			
+class	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator		var	currentIndex
+class	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator		var	archiveManifest
+enum	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator.CodingKeys			
+enum	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator.CodingKeys		case	currentIndex
+enum	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator.CodingKeys		case	archiveManifest
+enum	IMCore.ImportExport.ArchiveManifest.CodingKeys			
+enum	IMCore.ImportExport.ArchiveManifest.CodingKeys		case	fileURL
+enum	IMCore.ImportExport.ArchiveManifest.CodingKeys		case	conversations
+enum	IMCore.ImportExport.ArchiveManifest.CodingKeys		case	exportStatistics
+enum	IMCore.MetricServiceChangeReason			
+enum	IMCore.MetricServiceChangeReason		case	localDeviceNotRegistered
+enum	IMCore.MetricServiceChangeReason		case	localDeviceRegistered
+enum	IMCore.MetricServiceChangeReason		case	recipientsNotReachable
+enum	IMCore.MetricServiceChangeReason		case	recipientsReachable
+enum	IMCore.MetricServiceChangeReason		case	sendFailures
+enum	IMCore.MetricServiceChangeReason		case	satellite
+struct	IMCore.ImportExport.MessageBatch			
+struct	IMCore.ImportExport.MessageBatch		let	conversation
+struct	IMCore.ImportExport.MessageBatch		let	messages
+struct	IMCore.ImportExport.MessageBatch		let	downloadableAttachments
+enum	IMCore.ImportExport.MessageBatchError			
+enum	IMCore.ImportExport.MessageBatchError		case	malformedMessageBatch
+enum	IMCore.ImportExport.MessageBatch.CodingKeys			
+enum	IMCore.ImportExport.MessageBatch.CodingKeys		case	conversation
+enum	IMCore.ImportExport.MessageBatch.CodingKeys		case	messages
+enum	IMCore.ImportExport.MessageBatch.CodingKeys		case	downloadableAttachments
+struct	IMCore.ImportExport.RecordCounts			
+struct	IMCore.ImportExport.RecordCounts		var	conversationCount
+struct	IMCore.ImportExport.RecordCounts		var	messageCount
+struct	IMCore.ImportExport.RecordCounts		var	attachmentCount
+struct	IMCore.ImportExport.RecordCounts		var	participantCount
+struct	IMCore.ImportExport.RecordCounts		var	attachmentSizeOnDisk
+struct	IMCore.ImportExport.RecordCounts		var	groupPhotoCount
+struct	IMCore.ImportExport.RecordCounts		var	attachmentRecordCounts
+enum	IMCore.ImportExport.RecordCounts.CodingKeys			
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	conversationCount
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	messageCount
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	attachmentCount
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	participantCount
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	attachmentSizeOnDisk
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	groupPhotoCount
+enum	IMCore.ImportExport.RecordCounts.CodingKeys		case	attachmentRecordCounts
+struct	IMCore.ImportExport.AttachmentDownloader			
+struct	IMCore.ImportExport.AttachmentDownloader		let	attachments
+struct	IMCore.ImportExport.AttachmentDownloader		let	exportOptions
+struct	IMCore.ImportExport.AttachmentDownloader		var	downloadDirectoryURL
+struct	IMCore.ImportExport.AttachmentDownloader		var	downloadTimeout
+struct	IMCore.ImportExport.AttachmentDownloader		let	exportStatistics
+struct	IMCore.ImportExport.AttachmentDownloader		let	downloadingAccount
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator			
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator		let	attachments
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator		var	currentIndex
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator		let	downloadDirectoryURL
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator		let	downloadTimeout
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator		let	downloadingAccount
+struct	IMCore.ImportExport.AttachmentDownloader.Iterator		let	exportStatistics
+class	IMCore.ImportExport.ArchiveExporter			
+class	IMCore.ImportExport.ArchiveExporter		let	archivingOptions
+class	IMCore.ImportExport.ArchiveExporter		let	exporter
+class	IMCore.ImportExport.ArchiveExporter		var	archiveManifest
+enum	IMCore.ImportExport.ArchiveExporter.CodingKeys			
+enum	IMCore.ImportExport.ArchiveExporter.CodingKeys		case	archivingOptions
+enum	IMCore.ImportExport.ArchiveExporter.CodingKeys		case	exporter
+enum	IMCore.ImportExport.ArchiveExporter.CodingKeys		case	archiveManifest
+class	IMCore.ImportExportAsyncRecordExportIteratingState			
+class	IMCore.ImportExportAsyncRecordExportIteratingState		var	exporterState
+class	IMCore.ImportExportAsyncRecordExportIteratingState		var	isDone
+class	IMCore.ImportExportAsyncRecordExportIteratingState		var	batchFetchingTimer
+class	IMCore.ImportExportAsyncRecordExportIteratingState		var	executionTimer
+struct	IMCore.ImportExport.Report			
+struct	IMCore.ImportExport.Report		let	reportTitle
+struct	IMCore.ImportExport.Report		var	items
+struct	IMCore.ImportExport.Report		var	children
+struct	IMCore.ImportExport.Report		let	isList
+struct	IMCore.ImportExport.Report		let	skipEmptyReports
+enum	IMCore.ImportExport.Report.CodingKeys			
+enum	IMCore.ImportExport.Report.CodingKeys		case	reportTitle
+enum	IMCore.ImportExport.Report.CodingKeys		case	items
+enum	IMCore.ImportExport.Report.CodingKeys		case	children
+enum	IMCore.ImportExport.Report.CodingKeys		case	isList
+enum	IMCore.ImportExport.Report.CodingKeys		case	skipEmptyReports
+struct	IMCore.LiveDatabaseCounts			
+struct	IMCore.LiveDatabaseCounts		let	countType
+struct	IMCore.LiveDatabaseCounts		var	synced
+struct	IMCore.LiveDatabaseCounts		var	total
+struct	IMCore.LiveDatabaseCounts		var	deletes
+struct	IMCore.LiveDatabaseCounts		var	unresolved
+enum	IMCore.LiveDatabaseCounts.CodingKeys			
+enum	IMCore.LiveDatabaseCounts.CodingKeys		case	countType
+enum	IMCore.LiveDatabaseCounts.CodingKeys		case	synced
+enum	IMCore.LiveDatabaseCounts.CodingKeys		case	total
+enum	IMCore.LiveDatabaseCounts.CodingKeys		case	deletes
+enum	IMCore.LiveDatabaseCounts.CodingKeys		case	unresolved
+enum	IMCore.SyncCountType			
+enum	IMCore.SyncCountType		case	chats
+enum	IMCore.SyncCountType		case	messages
+enum	IMCore.SyncCountType		case	attachments
+enum	IMCore.SyncCountType		case	messageUpdates
+enum	IMCore.SyncCountType		case	recoverableMessages
+struct	IMCore.ServerRecordCounts			
+struct	IMCore.ServerRecordCounts		let	countType
+struct	IMCore.ServerRecordCounts		var	total
+struct	IMCore.ServerRecordCounts		var	live
+enum	IMCore.ServerRecordCounts.CodingKeys			
+enum	IMCore.ServerRecordCounts.CodingKeys		case	countType
+enum	IMCore.ServerRecordCounts.CodingKeys		case	total
+enum	IMCore.ServerRecordCounts.CodingKeys		case	live
+struct	IMCore.OverallCounts			
+struct	IMCore.OverallCounts		let	countType
+struct	IMCore.OverallCounts		var	liveDatabaseCounts
+struct	IMCore.OverallCounts		var	syncStoreCounts
+struct	IMCore.OverallCounts		var	serverCounts
+enum	IMCore.OverallCounts.CodingKeys			
+enum	IMCore.OverallCounts.CodingKeys		case	countType
+enum	IMCore.OverallCounts.CodingKeys		case	liveDatabaseCounts
+enum	IMCore.OverallCounts.CodingKeys		case	syncStoreCounts
+enum	IMCore.OverallCounts.CodingKeys		case	serverCounts
+class	IMCore.MultiplexedDaemonConnection	NSObject		
+class	IMCore.MultiplexedDaemonConnection	NSObject	let	label
+class	IMCore.MultiplexedDaemonConnection	NSObject	let	capabilities
+class	IMCore.MultiplexedDaemonConnection	NSObject	let	context
+class	IMCore.MultiplexedDaemonConnection	NSObject	let	onInvalidate
+class	IMCore.MultiplexedDaemonConnection	NSObject	let	onDeinit
+class	IMCore.ImportExport.ImportStatistics			
+class	IMCore.ImportExport.ImportStatistics		let	version
+class	IMCore.ImportExport.ImportStatistics		var	timer
+class	IMCore.ImportExport.ImportStatistics		var	batchCount
+class	IMCore.ImportExport.ImportStatistics		var	expectedCounts
+class	IMCore.ImportExport.ImportStatistics		var	importedCounts
+enum	IMCore.ImportExport.ImportStatistics.CodingKeys			
+enum	IMCore.ImportExport.ImportStatistics.CodingKeys		case	version
+enum	IMCore.ImportExport.ImportStatistics.CodingKeys		case	timer
+enum	IMCore.ImportExport.ImportStatistics.CodingKeys		case	batchCount
+enum	IMCore.ImportExport.ImportStatistics.CodingKeys		case	expectedCounts
+enum	IMCore.ImportExport.ImportStatistics.CodingKeys		case	importedCounts
+class	IMCore.ImportExport.Importer			
+class	IMCore.ImportExport.Importer		var	importStatistics
+class	IMCore.ImportExport.Importer		var	hasStarted
+enum	IMCore.ImportExport.ImporterError			
+enum	IMCore.ImportExport.ImporterError		case	internalError
+enum	IMCore.ImportExport.ImporterError.CodingKeys			
+enum	IMCore.ImportExport.ImporterError.CodingKeys		case	internalError
+enum	IMCore.ImportExport.ImporterError.InternalErrorCodingKeys			
+enum	IMCore.ImportExport.ImporterError.InternalErrorCodingKeys		case	_0
+enum	IMCore.ImportExport.Importer.CodingKeys			
+enum	IMCore.ImportExport.Importer.CodingKeys		case	importStatistics
+enum	IMCore.ImportExport.Importer.CodingKeys		case	hasStarted
+class	IMCore.ImportExport.ArchiveImporter			
+class	IMCore.ImportExport.ArchiveImporter		var	archiveManifest
+class	IMCore.ImportExport.ArchiveImporter		let	importer
+class	IMCore.ImportExport.ArchiveImporter		var	archiveImporterStatistics
+enum	IMCore.ImportExport.ArchiveImporter.CodingKeys			
+enum	IMCore.ImportExport.ArchiveImporter.CodingKeys		case	archiveManifest
+enum	IMCore.ImportExport.ArchiveImporter.CodingKeys		case	importer
+enum	IMCore.ImportExport.ArchiveImporter.CodingKeys		case	archiveImporterStatistics
+struct	IMCore.ExecutorID			
+struct	IMCore.ExecutorID		let	groupName
+struct	IMCore.ExecutorID		let	lane
+struct	IMCore.DerivedState			
+struct	IMCore.DerivedState		var	remainingMessages
+struct	IMCore.DerivedState		var	remainingChats
+struct	IMCore.SyncStoreCounts			
+struct	IMCore.SyncStoreCounts		let	countType
+struct	IMCore.SyncStoreCounts		var	writable
+struct	IMCore.SyncStoreCounts		var	written
+enum	IMCore.SyncStoreCounts.CodingKeys			
+enum	IMCore.SyncStoreCounts.CodingKeys		case	countType
+enum	IMCore.SyncStoreCounts.CodingKeys		case	writable
+enum	IMCore.SyncStoreCounts.CodingKeys		case	written
+class	IMCore.ImportExport.CachedValueType			
+class	IMCore.ImportExport.CachedValueType		let	valueType
+struct	IMCore.ImportExport.Caches			
+class	IMCore.ImportExport.MessageAttachmentDownloader			
+class	IMCore.ImportExport.MessageAttachmentDownloader		let	downloadableAttachmentBatchIterator
+class	IMCore.ImportExport.MessageAttachmentDownloader		var	message
+class	IMCore.ImportExport.MessageAttachmentDownloader		var	attachment
+enum	IMCore.ImportExport.MessageAttachmentDownloader.CodingKeys			
+enum	IMCore.ImportExport.MessageAttachmentDownloader.CodingKeys		case	downloadableAttachmentBatchIterator
+enum	IMCore.ImportExport.MessageAttachmentDownloader.CodingKeys		case	message
+enum	IMCore.ImportExport.MessageAttachmentDownloader.CodingKeys		case	attachment
+struct	IMCore.ImportExport.StringReportItem			
+struct	IMCore.ImportExport.StringReportItem		let	name
+struct	IMCore.ImportExport.StringReportItem		let	stringValue
+enum	IMCore.ImportExport.StringReportItem.CodingKeys			
+enum	IMCore.ImportExport.StringReportItem.CodingKeys		case	name
+enum	IMCore.ImportExport.StringReportItem.CodingKeys		case	stringValue
+class	IMCore.ImportExport.ConversationExporter			
+class	IMCore.ImportExport.ConversationExporter		let	conversation
+class	IMCore.ImportExport.ConversationExporter		let	exportOptions
+class	IMCore.ImportExport.ConversationExporter		var	exportStatistics
+class	IMCore.ImportExport.ConversationExporter		var	currentBatch
+class	IMCore.ImportExport.ConversationExporter		var	messageExporterState
+class	IMCore.ImportExport.ConversationExporter		var	standaloneMode
+class	IMCore.ImportExport.ConversationExporter		var	batchCount
+class	IMCore.ImportExport.ConversationExporter		let	fallbackAccountParticipant
+class	IMCore.ImportExport.ArchiveImportIterator			
+class	IMCore.ImportExport.ArchiveImportIterator		let	archiveImporter
+class	IMCore.ImportExport.ArchiveImportIterator		var	missingAttachments
+class	IMCore.ImportExport.ArchiveImportIterator		var	archiveManifestIterator
+class	IMCore.ImportExport.ArchiveImportIterator		var	archivedConversationIterator
+class	IMCore.ImportExport.ArchiveImportIterator		var	archivedConversation
+enum	IMCore.ImportExport.ArchiveImportIterator.CodingKeys			
+enum	IMCore.ImportExport.ArchiveImportIterator.CodingKeys		case	archiveImporter
+enum	IMCore.ImportExport.ArchiveImportIterator.CodingKeys		case	missingAttachments
+enum	IMCore.ImportExport.ArchiveImportIterator.CodingKeys		case	archiveManifestIterator
+enum	IMCore.ImportExport.ArchiveImportIterator.CodingKeys		case	archivedConversationIterator
+enum	IMCore.ImportExport.ArchiveImportIterator.CodingKeys		case	archivedConversation
+struct	IMCore.ImportExport.ReportableEvent			
+struct	IMCore.ImportExport.ReportableEvent		let	eventIdentifier
+struct	IMCore.ImportExport.ReportableEvent		let	eventType
+struct	IMCore.ImportExport.ReportableEvent		let	eventDescription
+struct	IMCore.ImportExport.ReportableEvent		let	codeLocation
+struct	IMCore.ImportExport.ReportableEvent		let	name
+struct	IMCore.ImportExport.ReportableEvent		let	error
+struct	IMCore.ImportExport.ReportableEvent		let	isEmpty
+struct	IMCore.ImportExport.ReportableEvent		let	timestamp
+struct	IMCore.ImportExport.ReportableEvent		let	itemIdentifier
+enum	IMCore.ImportExport.ReportableEvent.EventType			
+enum	IMCore.ImportExport.ReportableEvent.EventType		case	messageExportError
+enum	IMCore.ImportExport.ReportableEvent.EventType		case	conversationExportError
+enum	IMCore.ImportExport.ReportableEvent.EventType		case	participantExportError
+enum	IMCore.ImportExport.ReportableEvent.EventType		case	attachmentExportError
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys			
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	eventIdentifier
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	eventType
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	eventDescription
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	codeLocation
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	name
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	error
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	isEmpty
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	timestamp
+enum	IMCore.ImportExport.ReportableEvent.CodingKeys		case	itemIdentifier
+class	IMCore.ImportExport.ReportableEvents			
+class	IMCore.ImportExport.ReportableEvents		var	eventCounts
+class	IMCore.ImportExport.ReportableEvents		var	events
+enum	IMCore.ImportExport.ReportableEvents.CodingKeys			
+enum	IMCore.ImportExport.ReportableEvents.CodingKeys		case	eventCounts
+enum	IMCore.ImportExport.ReportableEvents.CodingKeys		case	events
+enum	IMCore.ImportExport.ServiceType			
+enum	IMCore.ImportExport.ServiceType		case	unknown
+enum	IMCore.ImportExport.ServiceType		case	any
+enum	IMCore.ImportExport.ServiceType		case	iMessage
+enum	IMCore.ImportExport.ServiceType		case	iMessageLite
+enum	IMCore.ImportExport.ServiceType		case	sms
+enum	IMCore.ImportExport.ServiceType		case	faceTime
+enum	IMCore.ImportExport.ServiceType		case	rcs
+enum	IMCore.ImportExport.ServiceType		case	satelliteSMS
+enum	IMCore.ImportExport.ServiceNameError			
+enum	IMCore.ImportExport.ServiceNameError		case	unknownServiceName
+struct	IMCore.State			
+struct	IMCore.State		var	didInitialLoad
+struct	IMCore.State		var	selfOptedIn
+struct	IMCore.State		var	ktVerifierResultForHandleID
+struct	IMCore.State		var	idsKTInfoForHandleID
+struct	IMCore.State		var	latestTimestampForHandleID
+struct	IMCore.ImportExport.FilePathURL			
+struct	IMCore.ImportExport.FilePathURL		var	wrappedValue
+class	IMCore.ImportExport.ConversationExportIterator			
+class	IMCore.ImportExport.ConversationExportIterator		let	exportOptions
+class	IMCore.ImportExport.ConversationExportIterator		var	exportStatistics
+class	IMCore.ImportExport.ConversationExportIterator.Iterator			
+class	IMCore.ImportExport.ConversationExportIterator.Iterator		let	exportOptions
+class	IMCore.ImportExport.ConversationExportIterator.Iterator		var	exportStatistics
+class	IMCore.ImportExport.ConversationExportIterator.Iterator		var	iterationState
+class	IMCore.ImportExport.ConversationExportIterator.Iterator		var	pinnedConversationResolver
+class	IMCore.ImportExport.ConversationExportIterator.Iterator		let	exportConfiguration
+struct	IMCore.ImportExport.ConversationExportIterator.Iterator.Batch			
+struct	IMCore.ImportExport.ConversationExportIterator.Iterator.Batch		let	records
+struct	IMCore.ImportExport.ConversationExportIterator.Iterator.Batch		let	progress
+enum	IMCore.ImportExport			
+class	IMCore.ImportExport.ExportStatistics			
+class	IMCore.ImportExport.ExportStatistics		let	version
+class	IMCore.ImportExport.ExportStatistics		var	timer
+class	IMCore.ImportExport.ExportStatistics		var	predictedRecordCounts
+class	IMCore.ImportExport.ExportStatistics		var	examinedRecordCounts
+class	IMCore.ImportExport.ExportStatistics		var	failedExportCounts
+class	IMCore.ImportExport.ExportStatistics		var	exportedCounts
+class	IMCore.ImportExport.ExportStatistics		var	downloadedCounts
+class	IMCore.ImportExport.ExportStatistics		var	recordsFetchedPerSecondCounts
+class	IMCore.ImportExport.ExportStatistics		var	unexportedMessageTypeCounts
+class	IMCore.ImportExport.ExportStatistics		var	attachmentStatistics
+class	IMCore.ImportExport.ExportStatistics		var	reportableEvents
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys			
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	version
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	timer
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	predictedRecordCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	examinedRecordCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	failedExportCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	exportedCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	downloadedCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	recordsFetchedPerSecondCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	unexportedMessageTypeCounts
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	attachmentStatistics
+enum	IMCore.ImportExport.ExportStatistics.CodingKeys		case	reportableEvents
+struct	IMCore.ImportExport.ArchiveImporterBatch			
+struct	IMCore.ImportExport.ArchiveImporterBatch		let	conversation
+struct	IMCore.ImportExport.ArchiveImporterBatch		let	messages
+struct	IMCore.ImportExport.ArchiveImporterBatch		let	missingAttachments
+struct	IMCore.ImportExport.ArchiveImporterBatch		let	importCounts
+enum	IMCore.ImportExport.ArchiveImporterBatch.CodingKeys			
+enum	IMCore.ImportExport.ArchiveImporterBatch.CodingKeys		case	conversation
+enum	IMCore.ImportExport.ArchiveImporterBatch.CodingKeys		case	messages
+enum	IMCore.ImportExport.ArchiveImporterBatch.CodingKeys		case	missingAttachments
+enum	IMCore.ImportExport.ArchiveImporterBatch.CodingKeys		case	importCounts
+class	IMCore.ImportExport.ConversationArchiver			
+class	IMCore.ImportExport.ConversationArchiver		let	conversation
+class	IMCore.ImportExport.ConversationArchiver		let	archivingOptions
+class	IMCore.ImportExport.ConversationArchiver		let	conversationFileRelativePath
+class	IMCore.ImportExport.ConversationArchiver		var	conversationExporter
+class	IMCore.ImportExport.ConversationArchiver		let	conversationDirectories
+class	IMCore.ImportExport.DownloadableMessageAttachmentBatch			
+class	IMCore.ImportExport.DownloadableMessageAttachmentBatch		let	exportOptions
+class	IMCore.ImportExport.DownloadableMessageAttachmentBatch		let	messageAttachmentPairs
+class	IMCore.ImportExport.DownloadableMessageAttachmentBatch		let	exportStatistics
+class	IMCore.ImportExport.DownloadableMessageAttachmentBatch		var	progress
+struct	IMCore.ImportExport.MessageAttachmentPair			
+struct	IMCore.ImportExport.MessageAttachmentPair		let	message
+struct	IMCore.ImportExport.MessageAttachmentPair		let	attachment
+class	IMCore.ImportExport.MessageAttachmentDownloadIterator			
+class	IMCore.ImportExport.MessageAttachmentDownloadIterator		let	downloadableAttachmentBatch
+class	IMCore.ImportExport.MessageAttachmentDownloadIterator		var	attachmentQueue
+class	IMCore.ImportExport.MessageAttachmentDownloadIterator		var	messages
+class	IMCore.ImportExport.MessageAttachmentDownloadIterator		var	processedMessages
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress			
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	totalMessageCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	totalAttachmentCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	totalAttachmentSizeOnDisk
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		var	messageCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		var	attachmentCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		var	attachmentSizeOnDisk
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	timer
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	conversationCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	participantCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	totalConversationCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	totalParticipantCount
+class	IMCore.ImportExport.MessageAttachmentDownloadProgress		let	moreProgressValues
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys			
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	totalMessageCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	totalAttachmentCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	totalAttachmentSizeOnDisk
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	messageCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	attachmentCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	attachmentSizeOnDisk
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	timer
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	conversationCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	participantCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	totalConversationCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	totalParticipantCount
+enum	IMCore.ImportExport.MessageAttachmentDownloadProgress.CodingKeys		case	moreProgressValues
+enum	IMCore.ImportExport.MessageAttachmentDownloadIterator.CodingKeys			
+enum	IMCore.ImportExport.MessageAttachmentDownloadIterator.CodingKeys		case	downloadableAttachmentBatch
+enum	IMCore.ImportExport.MessageAttachmentDownloadIterator.CodingKeys		case	attachmentQueue
+enum	IMCore.ImportExport.MessageAttachmentDownloadIterator.CodingKeys		case	messages
+enum	IMCore.ImportExport.MessageAttachmentDownloadIterator.CodingKeys		case	processedMessages
+enum	IMCore.ImportExport.MessageAttachmentPair.CodingKeys			
+enum	IMCore.ImportExport.MessageAttachmentPair.CodingKeys		case	message
+enum	IMCore.ImportExport.MessageAttachmentPair.CodingKeys		case	attachment
+enum	IMCore.ImportExport.DownloadableMessageAttachmentBatch.CodingKeys			
+enum	IMCore.ImportExport.DownloadableMessageAttachmentBatch.CodingKeys		case	exportOptions
+enum	IMCore.ImportExport.DownloadableMessageAttachmentBatch.CodingKeys		case	messageAttachmentPairs
+enum	IMCore.ImportExport.DownloadableMessageAttachmentBatch.CodingKeys		case	exportStatistics
+enum	IMCore.ImportExport.DownloadableMessageAttachmentBatch.CodingKeys		case	progress
+struct	IMCore.ImportExport.ArchivingOptions			
+struct	IMCore.ImportExport.ArchivingOptions		var	exportOptions
+struct	IMCore.ImportExport.ArchivingOptions		var	exportDirectoryURL
+struct	IMCore.ImportExport.ArchivingOptions		var	jsonFormattingRawValue
+enum	IMCore.ImportExport.ArchivingOptions.CodingKeys			
+enum	IMCore.ImportExport.ArchivingOptions.CodingKeys		case	exportOptions
+enum	IMCore.ImportExport.ArchivingOptions.CodingKeys		case	exportDirectoryURL
+enum	IMCore.ImportExport.ArchivingOptions.CodingKeys		case	jsonFormattingRawValue
+class	IMCore.ImportExport.ArchiveWritingIterator			
+class	IMCore.ImportExport.ArchiveWritingIterator		let	archivingOptions
+class	IMCore.ImportExport.ArchiveWritingIterator		let	archiver
+class	IMCore.ImportExport.ArchiveWritingIterator		var	conversations
+class	IMCore.ImportExport.ArchiveWritingIterator		var	exportIterator
+class	IMCore.ImportExport.ArchiveWritingIterator		var	conversationDirectories
+struct	IMCore.ImportExport.ArchivedConversationDirectories			
+struct	IMCore.ImportExport.ArchivedConversationDirectories		let	rootDirectoryURL
+struct	IMCore.ImportExport.ArchivedConversationDirectories		let	conversationDirectoryURL
+struct	IMCore.ImportExport.ArchivedConversationDirectories		let	messageDirectoryURL
+struct	IMCore.ImportExport.ArchivedConversationDirectories		let	attachmentDirectoryURL
+struct	IMCore.ImportExport.ArchivedConversationDirectories		let	archivedConversationFileURL
+struct	IMCore.ImportExport.ArchivedConversationDirectories		let	conversation
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys			
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys		case	rootDirectoryURL
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys		case	conversationDirectoryURL
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys		case	messageDirectoryURL
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys		case	attachmentDirectoryURL
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys		case	archivedConversationFileURL
+enum	IMCore.ImportExport.ArchivedConversationDirectories.CodingKeys		case	conversation
+class	IMCore.ImportExport.Exporter			
+class	IMCore.ImportExport.Exporter		let	conversations
+class	IMCore.ImportExport.Exporter		var	exportStatistics
+class	IMCore.ImportExport.Exporter		let	exportOptions
+class	IMCore.ImportExport.Exporter		let	fallbackAccountParticipant
+enum	IMCore.ImportExport.ExportError			
+enum	IMCore.ImportExport.ExportError		case	messagePartNotFound
+enum	IMCore.ImportExport.ExportError		case	messagePartNotExported
+enum	IMCore.ImportExport.ExportError		case	attachmentNotFound
+enum	IMCore.ImportExport.ExportError		case	attachmentNotExported
+enum	IMCore.ImportExport.ExportError		case	fetchingRecordCountsFailed
+enum	IMCore.ImportExport.ExportError		case	exportFailed
+enum	IMCore.ImportExport.ExportError		case	internalError
+enum	IMCore.ImportExport.Exporter.CodingKeys			
+enum	IMCore.ImportExport.Exporter.CodingKeys		case	conversations
+enum	IMCore.ImportExport.Exporter.CodingKeys		case	exportStatistics
+enum	IMCore.ImportExport.Exporter.CodingKeys		case	exportOptions
+enum	IMCore.ImportExport.Exporter.CodingKeys		case	fallbackAccountParticipant
+struct	IMCore.ImportExport.ArchivedConversationBatch			
+struct	IMCore.ImportExport.ArchivedConversationBatch		let	archivedConversation
+struct	IMCore.ImportExport.ArchivedConversationBatch		let	archivedConversationFileURL
+struct	IMCore.ImportExport.ArchivedConversationBatch		let	messages
+enum	IMCore.ImportExport.Format.DelimeterStyle			
+enum	IMCore.ImportExport.Format.DelimeterStyle		case	custom
+enum	IMCore.ImportExport.Format.DelimeterStyle		case	space
+enum	IMCore.ImportExport.Format.DelimeterStyle		case	comma
+enum	IMCore.ImportExport.Format.DelimeterStyle		case	crlf
+enum	IMCore.ImportExport.ExportSortOrder			
+enum	IMCore.ImportExport.ExportSortOrder		case	ascending
+enum	IMCore.ImportExport.ExportSortOrder		case	descending
+struct	IMCore.ImportExport.MessagePart.ReactionImport			
+struct	IMCore.ImportExport.MessagePart.ReactionImport		let	associatedMessageGUID
+struct	IMCore.ImportExport.MessagePart.ReactionImport		let	associatedMessageType
+struct	IMCore.ImportExport.MessagePart.ReactionImport		let	associatedMessageRange
+struct	IMCore.ImportExport.MessagePart.ReactionImport		let	reactionEmoji
+struct	IMCore.ImportExport.MessagePart.ReactionImport		let	compatibilityMessage
+struct	IMCore.ImportExport.NumericReportItem<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>		
+struct	IMCore.ImportExport.NumericReportItem<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>	let	name
+struct	IMCore.ImportExport.NumericReportItem<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>	let	numberValue
+struct	IMCore.ImportExport.NumericReportItem<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>	let	stringValue
+enum	IMCore.ImportExport.NumericReportItem.CodingKeys<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>		
+enum	IMCore.ImportExport.NumericReportItem.CodingKeys<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>	case	name
+enum	IMCore.ImportExport.NumericReportItem.CodingKeys<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>	case	numberValue
+enum	IMCore.ImportExport.NumericReportItem.CodingKeys<A	Swift.CustomStringConvertible, A: Swift.Decodable, A: Swift.Encodable, A: Swift.Numeric>	case	stringValue
+enum	IMCore.ExportError			
+enum	IMCore.ExportError		case	messagePartNotFound
+enum	IMCore.ExportError		case	messagePartNotExported
+enum	IMCore.ExportError		case	attachmentNotFound
+enum	IMCore.ExportError		case	attachmentNotExported
+struct	IMCore.ImportExport.PinnedConversationResolver			
+struct	IMCore.ImportExport.PinnedConversationResolver		let	identifierSet
+struct	IMCore.ImportExport.PinnedConversationResolver		let	metadata
+struct	IMCore.ImportExport.PinnedConversationResolver		var	claimedPinIdentifiers
+class	IMCore.ImportExport.AttachmentDownloadingResult			
+class	IMCore.ImportExport.AttachmentDownloadingResult		let	attachment
+class	IMCore.ImportExport.AttachmentDownloadingResult		let	downloadInterval
+class	IMCore.ImportExport.AttachmentDownloadingResult		let	fileTransfer
+class	IMCore.DownloadEventListener	SwiftNativeNSObject		
+class	IMCore.DownloadEventListener	SwiftNativeNSObject	var	fileTransfer
+class	IMCore.DownloadEventListener	SwiftNativeNSObject	var	notificationObservers
+class	IMCore.DownloadEventListener	SwiftNativeNSObject	var	hasCompleted
+class	IMCore.DownloadEventListener	SwiftNativeNSObject	var	continuations
+class	IMCore.DownloadEventListener	SwiftNativeNSObject	var	timeoutTask
+class	IMCore.ImportExport.ArchiveImporterStatistics			
+class	IMCore.ImportExport.ArchiveImporterStatistics		let	importStatistics
+class	IMCore.ImportExport.ArchiveImporterStatistics		let	missingAttachments
+enum	IMCore.ImportExport.ArchiveImporterStatistics.CodingKeys			
+enum	IMCore.ImportExport.ArchiveImporterStatistics.CodingKeys		case	importStatistics
+enum	IMCore.ImportExport.ArchiveImporterStatistics.CodingKeys		case	missingAttachments
+class	IMCore.NicknameProvider	NSObject		
+class	IMCore.NicknameProvider	NSObject	var	listener
+class	IMCore.NicknameProvider	NSObject	let	daemonConnection
+class	IMCore.NicknameProvider	NSObject	let	nicknameController
+struct	IMCore.ImportExport.ExportOptions			
+struct	IMCore.ImportExport.ExportOptions		var	downloadMissingAttachments
+struct	IMCore.ImportExport.ExportOptions		var	batchSize
+struct	IMCore.ImportExport.ExportOptions		var	attachmentDownloadTimeout
+struct	IMCore.ImportExport.ExportOptions		var	attachmentDownloadDirectoryURL
+struct	IMCore.ImportExport.ExportOptions		var	messagesExcluded
+struct	IMCore.ImportExport.ExportOptions		var	sortOrder
+struct	IMCore.ImportExport.ExportOptions		var	fetchStartingCounts
+struct	IMCore.ImportExport.ExportOptions		var	excludeRemarkedItems
+struct	IMCore.ImportExport.ExportOptions		var	limitToGUIDs
+struct	IMCore.ImportExport.ExportOptions		var	quickEstimates
+enum	IMCore.ImportExport.ExportOptions.CodingKeys			
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	downloadMissingAttachments
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	batchSize
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	attachmentDownloadTimeout
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	attachmentDownloadDirectoryURL
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	messagesExcluded
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	sortOrder
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	fetchStartingCounts
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	excludeRemarkedItems
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	limitToGUIDs
+enum	IMCore.ImportExport.ExportOptions.CodingKeys		case	quickEstimates
+struct	IMCore.ImportExport.ImportedMessageBatch			
+struct	IMCore.ImportExport.ImportedMessageBatch		let	messageBatch
+struct	IMCore.ImportExport.ImportedMessageBatch		let	importCounts
+enum	IMCore.ImportExport.ImportedMessageBatch.CodingKeys			
+enum	IMCore.ImportExport.ImportedMessageBatch.CodingKeys		case	messageBatch
+enum	IMCore.ImportExport.ImportedMessageBatch.CodingKeys		case	importCounts
+class	IMCore.MadridServiceInfoProvider			
+struct	IMCore.ImportExport.AttachmentDownloadError			
+struct	IMCore.ImportExport.AttachmentDownloadError		let	errorKind
+struct	IMCore.ImportExport.AttachmentDownloadError		let	errorDescription
+struct	IMCore.ImportExport.AttachmentDownloadError		let	fileTransferErrorReason
+struct	IMCore.ImportExport.AttachmentDownloadError		let	fileTransferErrorReasonDescription
+struct	IMCore.ImportExport.AttachmentDownloadError		let	downloadURL
+struct	IMCore.ImportExport.AttachmentDownloadError		let	missingFileReasons
+enum	IMCore.ImportExport.AttachmentDownloadError.ErrorKind			
+enum	IMCore.ImportExport.AttachmentDownloadError.ErrorKind		case	unknown
+enum	IMCore.ImportExport.AttachmentDownloadError.ErrorKind		case	fileTransferFailed
+enum	IMCore.ImportExport.AttachmentDownloadError.ErrorKind		case	timedOut
+enum	IMCore.ImportExport.AttachmentDownloadError.ErrorKind		case	missingFile
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys			
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys		case	errorKind
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys		case	errorDescription
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys		case	fileTransferErrorReason
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys		case	fileTransferErrorReasonDescription
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys		case	downloadURL
+enum	IMCore.ImportExport.AttachmentDownloadError.CodingKeys		case	missingFileReasons
+struct	IMCore.ImportExport.Sticker			
+struct	IMCore.ImportExport.Sticker		let	attachment
+enum	IMCore.ImportExport.Sticker.CodingKeys			
+enum	IMCore.ImportExport.Sticker.CodingKeys		case	attachment
+class	IMCore.IMCoreHelloWorldClass	NSObject		
+class	IMCore.IMCoreHelloWorldClass	NSObject	let	sharedUtilitiesHelloWorld
+class	IMCore.IMCoreHelloWorldClass	NSObject	let	persistenceHelloWorld
+struct	IMCore.IMCoreHelloWorld			
+struct	IMCore.IMCoreHelloWorld		let	sharedUtilitiesHelloWorld
+struct	IMCore.IMCoreHelloWorld		let	persistenceHelloWorld
+protocol	IMCore.ImportExportDisplayedReportItem			
+protocol	IMCore.ImportExportStorable	IMDRecordType, IMDDatabaseRecordKey		
+protocol	IMCore.ImportExportMessageBatch			
+protocol	IMCore.ImportExportRecordExportIterating			
+protocol	IMCore.ImportExportProgressReporting			
+protocol	IMCore.ImportExportReportable			
+protocol	IMCore.ImportExportCombinableReport			
+protocol	IMCore.ImportExportLoggable			
+protocol	IMCore.ImportExportAsyncRecordExportIterating	ExporterState, BatchType		
+protocol	IMCore.ImportExportStatistics			
+protocol	conformance __C.MessagesClientCapabilities	Swift.ExpressibleByArrayLiteral: IMSharedUtilities		
+protocol	conformance __C.MessagesClientCapabilities	Swift.Equatable: IMSharedUtilities		
+protocol	conformance __C.MessagesClientCapabilities	Swift.RawRepresentable: IMSharedUtilities		
+protocol	conformance __C.MessagesClientCapabilities	Swift.SetAlgebra: IMSharedUtilities		
+protocol	conformance __C.MessagesClientCapabilities	Swift.OptionSet: IMSharedUtilities		
+protocol	conformance __C.FileAttributeKey	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift.Equatable: Foundation		
+protocol	conformance __C.FileAttributeKey	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.FZErrorType	Swift.Equatable		
+protocol	conformance __C.FZErrorType	Swift.RawRepresentable		
+protocol	conformance __C.IMCloudKitSyncProgressType	Swift.Equatable: IMCore		
+protocol	conformance __C.IMCloudKitSyncProgressType	Swift.RawRepresentable: IMCore		
+protocol	conformance __C.FileAttributeKey	Swift.Hashable: Foundation		
+protocol	conformance __C.IMChatLookupDomain	Swift._HasCustomAnyHashableRepresentation: IMSharedUtilities		
+protocol	conformance __C.IMChatLookupDomain	Swift.RawRepresentable: IMSharedUtilities		
+protocol	conformance __C.IMChatLookupDomain	Swift._SwiftNewtypeWrapper: IMSharedUtilities		
+protocol	conformance __C.IMChatLookupDomain	Swift.Equatable: IMSharedUtilities		
+protocol	conformance __C.IMChatLookupDomain	Swift.Hashable: IMSharedUtilities		
+protocol	conformance __C.IMChatLookupDomain	Swift._ObjectiveCBridgeable: IMSharedUtilities		
+protocol	conformance __C.Key	Swift._HasCustomAnyHashableRepresentation: Foundation		
+protocol	conformance __C.Key	Swift.RawRepresentable: Foundation		
+protocol	conformance __C.Key	Swift._SwiftNewtypeWrapper: Foundation		
+protocol	conformance __C.Key	Swift.Equatable: Foundation		
+protocol	conformance __C.Key	Swift._ObjectiveCBridgeable: Foundation		
+protocol	conformance __C.Key	Swift.Hashable: Foundation		
+protocol	conformance __C.IMPersistentTaskLane	Swift.Hashable: IMSharedUtilities		
+protocol	conformance __C.IMPersistentTaskLane	Swift.Equatable: IMSharedUtilities		
+protocol	conformance __C.IMPersistentTaskLane	Swift.RawRepresentable: IMSharedUtilities		
+protocol	conformance ImportExport.ExportedAttachmentStatistics	Swift.Decodable		
+protocol	conformance ImportExport.ExportedAttachmentStatistics	Swift.Encodable		
+protocol	conformance ImportExport.ExportedAttachmentStatistics	Swift.AdditiveArithmetic		
+protocol	conformance ImportExport.ExportedAttachmentStatistics	Swift.Equatable		
+protocol	conformance ImportExport.ExportedAttachmentStatistics	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ExportedAttachmentStatistics	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CountStatistics.RootKeys	Swift.Equatable		
+protocol	conformance CountStatistics.RootKeys	Swift.Hashable		
+protocol	conformance CountStatistics.RootKeys	Swift.RawRepresentable		
+protocol	conformance CountStatistics.RootKeys	Swift.CodingKey		
+protocol	conformance CountStatistics.RootKeys	Swift.CustomStringConvertible		
+protocol	conformance CountStatistics.RootKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountStatistics.SyncStoreCountKeys	Swift.Equatable		
+protocol	conformance CountStatistics.SyncStoreCountKeys	Swift.Hashable		
+protocol	conformance CountStatistics.SyncStoreCountKeys	Swift.RawRepresentable		
+protocol	conformance CountStatistics.SyncStoreCountKeys	Swift.CodingKey		
+protocol	conformance CountStatistics.SyncStoreCountKeys	Swift.CustomStringConvertible		
+protocol	conformance CountStatistics.SyncStoreCountKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountStatistics.ServerZoneKeys	Swift.Equatable		
+protocol	conformance CountStatistics.ServerZoneKeys	Swift.Hashable		
+protocol	conformance CountStatistics.ServerZoneKeys	Swift.RawRepresentable		
+protocol	conformance CountStatistics.ServerZoneKeys	Swift.CodingKey		
+protocol	conformance CountStatistics.ServerZoneKeys	Swift.CustomStringConvertible		
+protocol	conformance CountStatistics.ServerZoneKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountStatistics.ServerCountKeys	Swift.Equatable		
+protocol	conformance CountStatistics.ServerCountKeys	Swift.Hashable		
+protocol	conformance CountStatistics.ServerCountKeys	Swift.RawRepresentable		
+protocol	conformance CountStatistics.ServerCountKeys	Swift.CodingKey		
+protocol	conformance CountStatistics.ServerCountKeys	Swift.CustomStringConvertible		
+protocol	conformance CountStatistics.ServerCountKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IMCore.CountStatistics	Swift.Decodable		
+protocol	conformance IMCore.CountStatistics	Swift.CustomStringConvertible		
+protocol	conformance IMDAttachmentRecord	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ArchivedConversation	Swift.Decodable		
+protocol	conformance ImportExport.ArchivedConversation	Swift.Encodable		
+protocol	conformance ImportExport.ArchivedConversation	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ArchivedConversation	Swift.CustomStringConvertible		
+protocol	conformance ArchivedConversation.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ArchivedConversation.Iterator	Swift.Decodable		
+protocol	conformance ArchivedConversation.Iterator	Swift.Encodable		
+protocol	conformance ImportExport.ArchivedConversation	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ParticipantExportIterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance ImportExport.ParticipantExportIterator	Swift.AsyncSequence		
+protocol	conformance ParticipantExportIterator.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ParticipantExportIterator.Iterator	IMCore.ImportExportAsyncRecordExportIterating		
+protocol	conformance ParticipantExportIterator.Iterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance Iterator.Batch	Swift.CustomStringConvertible		
+protocol	conformance ParticipantExportIterator.Iterator	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.Attachment	Swift.Decodable		
+protocol	conformance ImportExport.Attachment	Swift.Encodable		
+protocol	conformance ImportExport.Attachment	Swift.Identifiable		
+protocol	conformance ImportExport.Attachment	Swift.Hashable		
+protocol	conformance ImportExport.Attachment	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Attachment	Swift.Equatable		
+protocol	conformance Attachment.MissingFileReasons	Swift.OptionSet		
+protocol	conformance Attachment.MissingFileReasons	Swift.Decodable		
+protocol	conformance Attachment.MissingFileReasons	Swift.Encodable		
+protocol	conformance Attachment.MissingFileReasons	Swift.Equatable		
+protocol	conformance Attachment.MissingFileReasons	Swift.SetAlgebra		
+protocol	conformance Attachment.MissingFileReasons	Swift.RawRepresentable		
+protocol	conformance Attachment.MissingFileReasons	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Attachment.MissingFileReasons	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Attachment	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.AttachmentError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Message.LayoutDescriptor	Swift.Decodable		
+protocol	conformance Message.LayoutDescriptor	Swift.Encodable		
+protocol	conformance Message.LayoutDescriptor	Swift.Equatable		
+protocol	conformance Message.LayoutDescriptor	Swift.CustomStringConvertible		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.Hashable		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.Decodable		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.Encodable		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.Equatable		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.RawRepresentable		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.Comparable		
+protocol	conformance LayoutDescriptor.LayoutIntent	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Conversation	Swift.Decodable		
+protocol	conformance ImportExport.Conversation	Swift.Encodable		
+protocol	conformance ImportExport.Conversation	Swift.Identifiable		
+protocol	conformance Conversation.FilterType	Swift.Hashable		
+protocol	conformance Conversation.FilterType	Swift.RawRepresentable		
+protocol	conformance Conversation.FilterType	Swift.Decodable		
+protocol	conformance Conversation.FilterType	Swift.Encodable		
+protocol	conformance Conversation.FilterType	Swift.Equatable		
+protocol	conformance Conversation.FilterType	Swift.CustomStringConvertible		
+protocol	conformance Conversation.ConversationType	Swift.Hashable		
+protocol	conformance Conversation.ConversationType	Swift.RawRepresentable		
+protocol	conformance Conversation.ConversationType	Swift.Decodable		
+protocol	conformance Conversation.ConversationType	Swift.Encodable		
+protocol	conformance Conversation.ConversationType	Swift.Equatable		
+protocol	conformance Conversation.ConversationType	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Conversation	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Conversation	Swift.CustomDebugStringConvertible		
+protocol	conformance ImportExport.Conversation	Swift.Hashable		
+protocol	conformance ImportExport.Conversation	Swift.Equatable		
+protocol	conformance ImportExport.ConversationError	Swift.Error		
+protocol	conformance ImportExport.ConversationError	Swift.Decodable		
+protocol	conformance ImportExport.ConversationError	Swift.Encodable		
+protocol	conformance ImportExport.Conversation	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FallbackAccountParticipantIsRequiredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FallbackAccountParticipantIsRequiredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FallbackAccountParticipantIsRequiredCodingKeys	Swift.Hashable		
+protocol	conformance FallbackAccountParticipantIsRequiredCodingKeys	Swift.Equatable		
+protocol	conformance MisconfiguredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MisconfiguredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MisconfiguredCodingKeys	Swift.Hashable		
+protocol	conformance MisconfiguredCodingKeys	Swift.Equatable		
+protocol	conformance InvalidParticipantListCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidParticipantListCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidParticipantListCodingKeys	Swift.Hashable		
+protocol	conformance InvalidParticipantListCodingKeys	Swift.Equatable		
+protocol	conformance InvalidParticipantCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidParticipantCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidParticipantCodingKeys	Swift.Hashable		
+protocol	conformance InvalidParticipantCodingKeys	Swift.Equatable		
+protocol	conformance InvalidRCSConversationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidRCSConversationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidRCSConversationCodingKeys	Swift.Hashable		
+protocol	conformance InvalidRCSConversationCodingKeys	Swift.Equatable		
+protocol	conformance SavingConversationFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SavingConversationFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SavingConversationFailedCodingKeys	Swift.Hashable		
+protocol	conformance SavingConversationFailedCodingKeys	Swift.Equatable		
+protocol	conformance MissingRequiredFieldCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingRequiredFieldCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingRequiredFieldCodingKeys	Swift.Hashable		
+protocol	conformance MissingRequiredFieldCodingKeys	Swift.Equatable		
+protocol	conformance GroupIDErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GroupIDErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GroupIDErrorCodingKeys	Swift.Hashable		
+protocol	conformance GroupIDErrorCodingKeys	Swift.Equatable		
+protocol	conformance EmptyAddressListErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EmptyAddressListErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EmptyAddressListErrorCodingKeys	Swift.Hashable		
+protocol	conformance EmptyAddressListErrorCodingKeys	Swift.Equatable		
+protocol	conformance AddressListDuplicateEntryErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AddressListDuplicateEntryErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AddressListDuplicateEntryErrorCodingKeys	Swift.Hashable		
+protocol	conformance AddressListDuplicateEntryErrorCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AddressListDuplicateEntryErrorCodingKeys	Swift.CodingKey		
+protocol	conformance EmptyAddressListErrorCodingKeys	Swift.CodingKey		
+protocol	conformance GroupIDErrorCodingKeys	Swift.CodingKey		
+protocol	conformance MissingRequiredFieldCodingKeys	Swift.CodingKey		
+protocol	conformance SavingConversationFailedCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidRCSConversationCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidParticipantCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidParticipantListCodingKeys	Swift.CodingKey		
+protocol	conformance MisconfiguredCodingKeys	Swift.CodingKey		
+protocol	conformance FallbackAccountParticipantIsRequiredCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance __C.FZErrorType	Swift.Decodable: IMCore		
+protocol	conformance __C.FZErrorType	Swift.Encodable: IMCore		
+protocol	conformance ImportExport.Message	Swift.Decodable		
+protocol	conformance ImportExport.Message	Swift.Encodable		
+protocol	conformance ImportExport.Message	Swift.Identifiable		
+protocol	conformance ImportExport.Message	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Message	Swift.Equatable		
+protocol	conformance ImportExport.Message	Swift.Hashable		
+protocol	conformance ImportExport.Message	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.MessageError	Swift.Error		
+protocol	conformance ImportExport.MessageError	Swift.Decodable		
+protocol	conformance ImportExport.MessageError	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InvalidMessageSenderCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidMessageSenderCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidMessageSenderCodingKeys	Swift.Hashable		
+protocol	conformance InvalidMessageSenderCodingKeys	Swift.Equatable		
+protocol	conformance InvalidMessagePartCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidMessagePartCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidMessagePartCodingKeys	Swift.Hashable		
+protocol	conformance InvalidMessagePartCodingKeys	Swift.Equatable		
+protocol	conformance InvalidMessageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidMessageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidMessageCodingKeys	Swift.Hashable		
+protocol	conformance InvalidMessageCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InvalidMessageCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidMessagePartCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidMessageSenderCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Message.Reply	Swift.Decodable		
+protocol	conformance Message.Reply	Swift.Encodable		
+protocol	conformance Message.Reply	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.OptionSet		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.Decodable		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.Encodable		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.Equatable		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.CaseIterable		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.SetAlgebra		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.RawRepresentable		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.ExpressibleByArrayLiteral		
+protocol	conformance ImportExport.MessageExportExclusionFilter	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.MessagePart	Swift.Decodable		
+protocol	conformance ImportExport.MessagePart	Swift.Encodable		
+protocol	conformance ImportExport.MessagePart	Swift.Identifiable		
+protocol	conformance ImportExport.MessagePart	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.MessagePart	Swift.Equatable		
+protocol	conformance ImportExport.MessagePart	Swift.Hashable		
+protocol	conformance ImportExport.MessagePart	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.MessagePartType	Swift.OptionSet		
+protocol	conformance ImportExport.MessagePartType	Swift.Decodable		
+protocol	conformance ImportExport.MessagePartType	Swift.Encodable		
+protocol	conformance ImportExport.MessagePartType	Swift.Equatable		
+protocol	conformance ImportExport.MessagePartType	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.MessagePartType	Swift.SetAlgebra		
+protocol	conformance ImportExport.MessagePartType	Swift.RawRepresentable		
+protocol	conformance ImportExport.MessagePartType	Swift.ExpressibleByArrayLiteral		
+protocol	conformance MessagePart.ExpireState	Swift.Hashable		
+protocol	conformance MessagePart.ExpireState	Swift.Decodable		
+protocol	conformance MessagePart.ExpireState	Swift.Encodable		
+protocol	conformance MessagePart.ExpireState	Swift.Equatable		
+protocol	conformance MessagePart.ExpireState	Swift.RawRepresentable		
+protocol	conformance MessagePart.ExpireState	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.AttachmentExportIterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance ImportExport.AttachmentExportIterator	Swift.AsyncSequence		
+protocol	conformance AttachmentExportIterator.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AttachmentExportIterator.Iterator	IMCore.ImportExportAsyncRecordExportIterating		
+protocol	conformance AttachmentExportIterator.Iterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance Iterator.Batch	Swift.CustomStringConvertible		
+protocol	conformance AttachmentExportIterator.Iterator	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.FormattedAddress	Swift.Decodable		
+protocol	conformance ImportExport.FormattedAddress	Swift.Encodable		
+protocol	conformance ImportExport.FormattedAddress	Swift.Identifiable		
+protocol	conformance ImportExport.FormattedAddress	Swift.Hashable		
+protocol	conformance ImportExport.FormattedAddress	Swift.Equatable		
+protocol	conformance ImportExport.FormattedAddress	Swift.CustomStringConvertible		
+protocol	conformance FormattedAddress.Format	Swift.OptionSet		
+protocol	conformance FormattedAddress.Format	Swift.Decodable		
+protocol	conformance FormattedAddress.Format	Swift.Encodable		
+protocol	conformance FormattedAddress.Format	Swift.Equatable		
+protocol	conformance FormattedAddress.Format	Swift.Hashable		
+protocol	conformance FormattedAddress.Format	Swift.SetAlgebra		
+protocol	conformance FormattedAddress.Format	Swift.RawRepresentable		
+protocol	conformance FormattedAddress.Format	Swift.ExpressibleByArrayLiteral		
+protocol	conformance FormattedAddress.Format	Swift.CustomStringConvertible		
+protocol	conformance FormattedAddress.FormattingFailure	Swift.Decodable		
+protocol	conformance FormattedAddress.FormattingFailure	Swift.Encodable		
+protocol	conformance FormattedAddress.FormattingFailure	Swift.Equatable		
+protocol	conformance FormattedAddress.FormattingFailure	Swift.Hashable		
+protocol	conformance FormattedAddress.FormattingFailure	Swift.RawRepresentable		
+protocol	conformance FormattedAddress.FormattingFailure	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.FormattedAddress	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IMCore.ImportExport.Participant	IMCore.ImportExportStorable		
+protocol	conformance ImportExport.ImportExportRecordExportIteratingError	Swift.Error		
+protocol	conformance ImportExport.ImportExportRecordExportIteratingError	Swift.Decodable		
+protocol	conformance ImportExport.ImportExportRecordExportIteratingError	Swift.Encodable		
+protocol	conformance AlreadyIteratedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AlreadyIteratedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AlreadyIteratedCodingKeys	Swift.Hashable		
+protocol	conformance AlreadyIteratedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AlreadyIteratedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Participant	Swift.Identifiable		
+protocol	conformance ImportExport.Participant	Swift.Decodable		
+protocol	conformance ImportExport.Participant	Swift.Encodable		
+protocol	conformance ImportExport.Participant	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Participant	Swift.CustomDebugStringConvertible		
+protocol	conformance ImportExport.Participant	Swift.Hashable		
+protocol	conformance ImportExport.Participant	Swift.Equatable		
+protocol	conformance ImportExport.Participant	Swift.Comparable		
+protocol	conformance ImportExport.ParticipantError	Swift.Error		
+protocol	conformance ImportExport.ParticipantError	Swift.Decodable		
+protocol	conformance ImportExport.ParticipantError	Swift.Encodable		
+protocol	conformance Participant.ConversationStatus	Swift.OptionSet		
+protocol	conformance Participant.ConversationStatus	Swift.Decodable		
+protocol	conformance Participant.ConversationStatus	Swift.Encodable		
+protocol	conformance Participant.ConversationStatus	Swift.Equatable		
+protocol	conformance Participant.ConversationStatus	Swift.SetAlgebra		
+protocol	conformance Participant.ConversationStatus	Swift.RawRepresentable		
+protocol	conformance Participant.ConversationStatus	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Participant.ConversationStatus	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ParticipantType	Swift.Equatable		
+protocol	conformance ImportExport.ParticipantType	Swift.Hashable		
+protocol	conformance ImportExport.ParticipantType	Swift.Decodable		
+protocol	conformance ImportExport.ParticipantType	Swift.Encodable		
+protocol	conformance ImportExport.ParticipantType	Swift.RawRepresentable		
+protocol	conformance ImportExport.ParticipantType	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InvalidSequenceIDCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidSequenceIDCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidSequenceIDCodingKeys	Swift.Hashable		
+protocol	conformance InvalidSequenceIDCodingKeys	Swift.Equatable		
+protocol	conformance InvalidConversationStatusCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidConversationStatusCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidConversationStatusCodingKeys	Swift.Hashable		
+protocol	conformance InvalidConversationStatusCodingKeys	Swift.Equatable		
+protocol	conformance InvalidAddressCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidAddressCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidAddressCodingKeys	Swift.Hashable		
+protocol	conformance InvalidAddressCodingKeys	Swift.Equatable		
+protocol	conformance SavingHandleFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SavingHandleFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SavingHandleFailedCodingKeys	Swift.Hashable		
+protocol	conformance SavingHandleFailedCodingKeys	Swift.Equatable		
+protocol	conformance MalformedParticipantCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MalformedParticipantCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MalformedParticipantCodingKeys	Swift.Hashable		
+protocol	conformance MalformedParticipantCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance MalformedParticipantCodingKeys	Swift.CodingKey		
+protocol	conformance SavingHandleFailedCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidAddressCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidConversationStatusCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidSequenceIDCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Message.Reaction	Swift.Decodable		
+protocol	conformance Message.Reaction	Swift.Encodable		
+protocol	conformance Message.Reaction	Swift.Equatable		
+protocol	conformance Reaction.ReactionType	Swift.Hashable		
+protocol	conformance Reaction.ReactionType	Swift.Decodable		
+protocol	conformance Reaction.ReactionType	Swift.Encodable		
+protocol	conformance Reaction.ReactionType	Swift.Equatable		
+protocol	conformance Reaction.ReactionType	Swift.RawRepresentable		
+protocol	conformance Message.Reaction	Swift.CustomStringConvertible		
+protocol	conformance Reaction.ReactionType	Swift.CustomStringConvertible		
+protocol	conformance Message.Reaction	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Timer	Swift.Decodable		
+protocol	conformance ImportExport.Timer	Swift.Encodable		
+protocol	conformance ImportExport.Timer	IMCore.ImportExportCombinableReport		
+protocol	conformance ImportExport.Timer	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.Timer	Swift.Equatable		
+protocol	conformance ImportExport.Timer	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Timer	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.MessageBatchImporterError	Swift.Error		
+protocol	conformance ImportExport.MessageBatchImporterError	Swift.Decodable		
+protocol	conformance ImportExport.MessageBatchImporterError	Swift.Encodable		
+protocol	conformance AttachmentImportFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AttachmentImportFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AttachmentImportFailedCodingKeys	Swift.Hashable		
+protocol	conformance AttachmentImportFailedCodingKeys	Swift.Equatable		
+protocol	conformance ParticipantImportFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ParticipantImportFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ParticipantImportFailedCodingKeys	Swift.Hashable		
+protocol	conformance ParticipantImportFailedCodingKeys	Swift.Equatable		
+protocol	conformance ConversationImportFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ConversationImportFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ConversationImportFailedCodingKeys	Swift.Hashable		
+protocol	conformance ConversationImportFailedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ImportExport.MessageBatchImporter	IMCore.ImportExportLoggable		
+protocol	conformance ConversationImportFailedCodingKeys	Swift.CodingKey		
+protocol	conformance ParticipantImportFailedCodingKeys	Swift.CodingKey		
+protocol	conformance AttachmentImportFailedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Remark.Effects	Swift.OptionSet		
+protocol	conformance Remark.Effects	Swift.Decodable		
+protocol	conformance Remark.Effects	Swift.Encodable		
+protocol	conformance Remark.Effects	Swift.Hashable		
+protocol	conformance Remark.Effects	Swift.SetAlgebra		
+protocol	conformance Remark.Effects	Swift.RawRepresentable		
+protocol	conformance Remark.Effects	Swift.Equatable		
+protocol	conformance Remark.Effects	Swift.ExpressibleByArrayLiteral		
+protocol	conformance Remark.RemarkType	Swift.Decodable		
+protocol	conformance Remark.RemarkType	Swift.Encodable		
+protocol	conformance Remark.RemarkType	Swift.Hashable		
+protocol	conformance Remark.RemarkType	Swift.Equatable		
+protocol	conformance ImportExport.Remark	Swift.Decodable		
+protocol	conformance ImportExport.Remark	Swift.Encodable		
+protocol	conformance ImportExport.Remark	Swift.Hashable		
+protocol	conformance ImportExport.Remark	Swift.Equatable		
+protocol	conformance ImportExport.Remarks	Swift.Decodable		
+protocol	conformance ImportExport.Remarks	Swift.Encodable		
+protocol	conformance RemarkedThreadOriginatorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemarkedThreadOriginatorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemarkedThreadOriginatorCodingKeys	Swift.Hashable		
+protocol	conformance RemarkedThreadOriginatorCodingKeys	Swift.Equatable		
+protocol	conformance RemarkedAssociatedMessageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RemarkedAssociatedMessageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RemarkedAssociatedMessageCodingKeys	Swift.Hashable		
+protocol	conformance RemarkedAssociatedMessageCodingKeys	Swift.Equatable		
+protocol	conformance MessageCreationFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MessageCreationFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MessageCreationFailedCodingKeys	Swift.Hashable		
+protocol	conformance MessageCreationFailedCodingKeys	Swift.Equatable		
+protocol	conformance ReactionCreationFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReactionCreationFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReactionCreationFailedCodingKeys	Swift.Hashable		
+protocol	conformance ReactionCreationFailedCodingKeys	Swift.Equatable		
+protocol	conformance ReplyCreationFailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReplyCreationFailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ReplyCreationFailedCodingKeys	Swift.Hashable		
+protocol	conformance ReplyCreationFailedCodingKeys	Swift.Equatable		
+protocol	conformance MissingReplyToPartCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingReplyToPartCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingReplyToPartCodingKeys	Swift.Hashable		
+protocol	conformance MissingReplyToPartCodingKeys	Swift.Equatable		
+protocol	conformance MissingThreadIdentifierCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingThreadIdentifierCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingThreadIdentifierCodingKeys	Swift.Hashable		
+protocol	conformance MissingThreadIdentifierCodingKeys	Swift.Equatable		
+protocol	conformance MissingThreadOriginatorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingThreadOriginatorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingThreadOriginatorCodingKeys	Swift.Hashable		
+protocol	conformance MissingThreadOriginatorCodingKeys	Swift.Equatable		
+protocol	conformance ReactionToReactionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ReactionToReactionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EmptyMessagePartsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EmptyMessagePartsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MalformedPartDescriptorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MalformedPartDescriptorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MalformedPartDescriptorCodingKeys	Swift.Hashable		
+protocol	conformance MalformedPartDescriptorCodingKeys	Swift.Equatable		
+protocol	conformance MissingReactionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingReactionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingTransferCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingTransferCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingTransferCodingKeys	Swift.Hashable		
+protocol	conformance MissingTransferCodingKeys	Swift.Equatable		
+protocol	conformance MissingAssociatedMessagePartCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingAssociatedMessagePartCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingAssociatedMessagePartCodingKeys	Swift.Hashable		
+protocol	conformance MissingAssociatedMessagePartCodingKeys	Swift.Equatable		
+protocol	conformance MissingAssociatedMessageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingAssociatedMessageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingAssociatedMessageCodingKeys	Swift.Hashable		
+protocol	conformance MissingAssociatedMessageCodingKeys	Swift.Equatable		
+protocol	conformance MissingStickerAttachmentCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingStickerAttachmentCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MissingStickerAttachmentCodingKeys	Swift.Hashable		
+protocol	conformance MissingStickerAttachmentCodingKeys	Swift.Equatable		
+protocol	conformance InvalidAssociatedMessageEmojiCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidAssociatedMessageEmojiCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidAssociatedMessageEmojiCodingKeys	Swift.Hashable		
+protocol	conformance InvalidAssociatedMessageEmojiCodingKeys	Swift.Equatable		
+protocol	conformance InvalidAssociatedMessageTypeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidAssociatedMessageTypeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidAssociatedMessageTypeCodingKeys	Swift.Hashable		
+protocol	conformance InvalidAssociatedMessageTypeCodingKeys	Swift.Equatable		
+protocol	conformance MissingAssociatedMessageGUIDCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MissingAssociatedMessageGUIDCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MissingAssociatedMessageGUIDCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidAssociatedMessageTypeCodingKeys	Swift.CodingKey		
+protocol	conformance InvalidAssociatedMessageEmojiCodingKeys	Swift.CodingKey		
+protocol	conformance MissingStickerAttachmentCodingKeys	Swift.CodingKey		
+protocol	conformance MissingAssociatedMessageCodingKeys	Swift.CodingKey		
+protocol	conformance MissingAssociatedMessagePartCodingKeys	Swift.CodingKey		
+protocol	conformance MissingTransferCodingKeys	Swift.CodingKey		
+protocol	conformance MissingReactionCodingKeys	Swift.CodingKey		
+protocol	conformance MalformedPartDescriptorCodingKeys	Swift.CodingKey		
+protocol	conformance EmptyMessagePartsCodingKeys	Swift.CodingKey		
+protocol	conformance ReactionToReactionCodingKeys	Swift.CodingKey		
+protocol	conformance MissingThreadOriginatorCodingKeys	Swift.CodingKey		
+protocol	conformance MissingThreadIdentifierCodingKeys	Swift.CodingKey		
+protocol	conformance MissingReplyToPartCodingKeys	Swift.CodingKey		
+protocol	conformance ReplyCreationFailedCodingKeys	Swift.CodingKey		
+protocol	conformance ReactionCreationFailedCodingKeys	Swift.CodingKey		
+protocol	conformance MessageCreationFailedCodingKeys	Swift.CodingKey		
+protocol	conformance RemarkedAssociatedMessageCodingKeys	Swift.CodingKey		
+protocol	conformance RemarkedThreadOriginatorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ParticipantAddress	Swift.Decodable		
+protocol	conformance ImportExport.ParticipantAddress	Swift.Encodable		
+protocol	conformance MessagePart.MessageType	Swift.Hashable		
+protocol	conformance MessagePart.MessageType	Swift.Decodable		
+protocol	conformance MessagePart.MessageType	Swift.Encodable		
+protocol	conformance MessagePart.MessageType	Swift.Equatable		
+protocol	conformance MessagePart.MessageType	Swift.RawRepresentable		
+protocol	conformance MessagePart.MessageType	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ExportIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ImportExport.ExportIterator	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.DatabaseRecord	Swift.Decodable		
+protocol	conformance ImportExport.DatabaseRecord	Swift.Encodable		
+protocol	conformance ImportExport.DatabaseRecord	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.DatabaseRecord	Swift.Identifiable		
+protocol	conformance ImportExport.DatabaseRecord	Swift.Equatable		
+protocol	conformance ImportExport.DatabaseRecordError	Swift.Error		
+protocol	conformance DatabaseRecord.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DatabaseRecord.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DatabaseRecord.CodingKeys	Swift.RawRepresentable		
+protocol	conformance DatabaseRecord.CodingKeys	Swift.Hashable		
+protocol	conformance DatabaseRecord.CodingKeys	Swift.Equatable		
+protocol	conformance DatabaseRecord.CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.MessageState	Swift.OptionSet		
+protocol	conformance ImportExport.MessageState	Swift.Decodable		
+protocol	conformance ImportExport.MessageState	Swift.Encodable		
+protocol	conformance ImportExport.MessageState	Swift.Equatable		
+protocol	conformance ImportExport.MessageState	Swift.Hashable		
+protocol	conformance ImportExport.MessageState	Swift.SetAlgebra		
+protocol	conformance ImportExport.MessageState	Swift.RawRepresentable		
+protocol	conformance ImportExport.MessageState	Swift.ExpressibleByArrayLiteral		
+protocol	conformance ImportExport.MessageState	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.MessageExportIterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance ImportExport.MessageExportIterator	Swift.AsyncSequence		
+protocol	conformance MessageExportIterator.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance MessageExportIterator.Iterator	IMCore.ImportExportAsyncRecordExportIterating		
+protocol	conformance MessageExportIterator.Iterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance Iterator.Batch	Swift.CustomStringConvertible		
+protocol	conformance MessageExportIterator.Iterator	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ArchiveManifest	Swift.Decodable		
+protocol	conformance ImportExport.ArchiveManifest	Swift.Encodable		
+protocol	conformance ImportExport.ArchiveManifest	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ArchiveManifest	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ArchiveManifest	IMCore.ImportExportLoggable		
+protocol	conformance ArchiveManifest.ArchiveManifestIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ArchiveManifest.ArchiveManifestIterator	Swift.Decodable		
+protocol	conformance ArchiveManifest.ArchiveManifestIterator	Swift.Encodable		
+protocol	conformance ImportExport.ArchiveManifest	Swift.AsyncSequence		
+protocol	conformance ArchiveManifest.ArchiveManifestIterator	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MetricServiceChangeReason	Swift.RawRepresentable		
+protocol	conformance MetricServiceChangeReason	Swift.Hashable		
+protocol	conformance MetricServiceChangeReason	Swift.Equatable		
+protocol	conformance ImportExport.MessageBatch	IMCore.ImportExportMessageBatch		
+protocol	conformance ImportExport.MessageBatch	Swift.Decodable		
+protocol	conformance ImportExport.MessageBatch	Swift.Encodable		
+protocol	conformance ImportExport.MessageBatch	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.MessageBatchError	Swift.Error		
+protocol	conformance ImportExport.MessageBatch	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.RecordCounts	Swift.Decodable		
+protocol	conformance ImportExport.RecordCounts	Swift.Encodable		
+protocol	conformance ImportExport.RecordCounts	Swift.AdditiveArithmetic		
+protocol	conformance ImportExport.RecordCounts	Swift.Equatable		
+protocol	conformance ImportExport.RecordCounts	IMCore.ImportExportCombinableReport		
+protocol	conformance ImportExport.RecordCounts	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.RecordCounts	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.AttachmentDownloader	Swift.AsyncSequence		
+protocol	conformance AttachmentDownloader.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance AttachmentDownloader.Iterator	IMCore.ImportExportLoggable		
+protocol	conformance IMCore.ImportExport.Attachment	IMCore.ImportExportStorable		
+protocol	conformance ImportExport.ArchiveExporter	Swift.AsyncSequence		
+protocol	conformance ImportExport.ArchiveExporter	Swift.Decodable		
+protocol	conformance ImportExport.ArchiveExporter	Swift.Encodable		
+protocol	conformance ImportExport.ArchiveExporter	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance __C.IMCloudKitSyncProgressType	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Report	Swift.Decodable		
+protocol	conformance ImportExport.Report	Swift.Encodable		
+protocol	conformance ImportExport.Report	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.Report	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.Report	IMCore.ImportExportLoggable		
+protocol	conformance Report.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance Report.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance Report.CodingKeys	Swift.RawRepresentable		
+protocol	conformance Report.CodingKeys	Swift.Hashable		
+protocol	conformance Report.CodingKeys	Swift.Equatable		
+protocol	conformance Report.CodingKeys	Swift.CodingKey		
+protocol	conformance IMCore.LiveDatabaseCounts	Swift.CustomStringConvertible		
+protocol	conformance IMCore.LiveDatabaseCounts	Swift.Equatable		
+protocol	conformance IMCore.LiveDatabaseCounts	Swift.Encodable		
+protocol	conformance IMCore.LiveDatabaseCounts	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IMCore.SyncCountType	Swift.RawRepresentable		
+protocol	conformance IMCore.SyncCountType	Swift.Hashable		
+protocol	conformance IMCore.SyncCountType	Swift.Equatable		
+protocol	conformance IMCore.SyncCountType	Swift.Encodable		
+protocol	conformance IMCore.SyncCountType	Swift.Decodable		
+protocol	conformance IMCore.ServerRecordCounts	Swift.CustomStringConvertible		
+protocol	conformance IMCore.ServerRecordCounts	Swift.Equatable		
+protocol	conformance IMCore.ServerRecordCounts	Swift.Encodable		
+protocol	conformance IMCore.ServerRecordCounts	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IMCore.OverallCounts	Swift.CustomStringConvertible		
+protocol	conformance IMCore.OverallCounts	Swift.Equatable		
+protocol	conformance IMCore.OverallCounts	Swift.Encodable		
+protocol	conformance IMCore.OverallCounts	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ImportStatistics	IMCore.ImportExportStatistics		
+protocol	conformance ImportExport.ImportStatistics	Swift.Decodable		
+protocol	conformance ImportExport.ImportStatistics	Swift.Encodable		
+protocol	conformance ImportExport.ImportStatistics	IMCore.ImportExportCombinableReport		
+protocol	conformance ImportExport.ImportStatistics	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ImportStatistics	Swift.Equatable		
+protocol	conformance ImportExport.ImportStatistics	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ImportStatistics	IMCore.ImportExportProgressReporting		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Importer	Swift.Decodable		
+protocol	conformance ImportExport.Importer	Swift.Encodable		
+protocol	conformance ImportExport.Importer	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ImporterError	Swift.Error		
+protocol	conformance ImportExport.ImporterError	Swift.Decodable		
+protocol	conformance ImportExport.ImporterError	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InternalErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InternalErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InternalErrorCodingKeys	Swift.Hashable		
+protocol	conformance InternalErrorCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance InternalErrorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ArchiveImporter	Swift.AsyncSequence		
+protocol	conformance ImportExport.ArchiveImporter	Swift.Decodable		
+protocol	conformance ImportExport.ArchiveImporter	Swift.Encodable		
+protocol	conformance ImportExport.ArchiveImporter	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ExecutorID	Swift.Equatable		
+protocol	conformance ExecutorID	Swift.Hashable		
+protocol	conformance IMCore.SyncStoreCounts	Swift.CustomStringConvertible		
+protocol	conformance IMCore.SyncStoreCounts	Swift.Equatable		
+protocol	conformance IMCore.SyncStoreCounts	Swift.Encodable		
+protocol	conformance IMCore.SyncStoreCounts	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Caches	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.MessageAttachmentDownloader	Swift.Decodable		
+protocol	conformance ImportExport.MessageAttachmentDownloader	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.StringReportItem	IMCore.ImportExportDisplayedReportItem		
+protocol	conformance ImportExport.StringReportItem	Swift.Decodable		
+protocol	conformance ImportExport.StringReportItem	Swift.Encodable		
+protocol	conformance ImportExport.StringReportItem	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ConversationExporter	Swift.AsyncIteratorProtocol		
+protocol	conformance ImportExport.ConversationExporter	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ArchiveImportIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ImportExport.ArchiveImportIterator	Swift.Decodable		
+protocol	conformance ImportExport.ArchiveImportIterator	Swift.Encodable		
+protocol	conformance ImportExport.ArchiveImportIterator	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ReportableEvent	Swift.Decodable		
+protocol	conformance ImportExport.ReportableEvent	Swift.Encodable		
+protocol	conformance ImportExport.ReportableEvent	IMCore.ImportExportDisplayedReportItem		
+protocol	conformance ImportExport.ReportableEvent	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ReportableEvent	Swift.Hashable		
+protocol	conformance ImportExport.ReportableEvent	Swift.Equatable		
+protocol	conformance ReportableEvent.EventType	Swift.Decodable		
+protocol	conformance ReportableEvent.EventType	Swift.Encodable		
+protocol	conformance ReportableEvent.EventType	Swift.Equatable		
+protocol	conformance ReportableEvent.EventType	Swift.RawRepresentable		
+protocol	conformance ReportableEvent.EventType	Swift.CustomStringConvertible		
+protocol	conformance ReportableEvent.EventType	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ReportableEvents	Swift.Decodable		
+protocol	conformance ImportExport.ReportableEvents	Swift.Encodable		
+protocol	conformance ImportExport.ReportableEvents	IMCore.ImportExportCombinableReport		
+protocol	conformance ImportExport.ReportableEvents	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ReportableEvents	Swift.Equatable		
+protocol	conformance ImportExport.ReportableEvents	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ReportableEvents	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ServiceType	Swift.CaseIterable		
+protocol	conformance ImportExport.ServiceType	Swift.Equatable		
+protocol	conformance ImportExport.ServiceType	Swift.Decodable		
+protocol	conformance ImportExport.ServiceType	Swift.Encodable		
+protocol	conformance ImportExport.ServiceType	Swift.RawRepresentable		
+protocol	conformance ImportExport.ServiceType	Swift.Hashable		
+protocol	conformance ImportExport.ServiceType	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ServiceNameError	Swift.Error		
+protocol	conformance ImportExport.FilePathURL	Swift.Decodable		
+protocol	conformance ImportExport.FilePathURL	Swift.Encodable		
+protocol	conformance ImportExport.FilePathURL	Swift.Equatable		
+protocol	conformance ImportExport.FilePathURL	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ConversationExportIterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance ImportExport.ConversationExportIterator	Swift.AsyncSequence		
+protocol	conformance ConversationExportIterator.Iterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ConversationExportIterator.Iterator	IMCore.ImportExportAsyncRecordExportIterating		
+protocol	conformance ConversationExportIterator.Iterator	IMCore.ImportExportRecordExportIterating		
+protocol	conformance Iterator.Batch	Swift.CustomStringConvertible		
+protocol	conformance ConversationExportIterator.Iterator	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ExportStatistics	IMCore.ImportExportStatistics		
+protocol	conformance ImportExport.ExportStatistics	Swift.Decodable		
+protocol	conformance ImportExport.ExportStatistics	Swift.Encodable		
+protocol	conformance ImportExport.ExportStatistics	IMCore.ImportExportCombinableReport		
+protocol	conformance ImportExport.ExportStatistics	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ExportStatistics	Swift.Equatable		
+protocol	conformance ImportExport.ExportStatistics	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.ExportStatistics	IMCore.ImportExportProgressReporting		
+protocol	conformance ImportExport.ExportStatistics	IMCore.ImportExportLoggable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ArchiveImporterBatch	Swift.Decodable		
+protocol	conformance ImportExport.ArchiveImporterBatch	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ConversationArchiver	Swift.AsyncIteratorProtocol		
+protocol	conformance IMCore.ImportExport.Conversation	IMCore.ImportExportStorable		
+protocol	conformance IMDHandleRecord	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.DownloadableMessageAttachmentBatch	Swift.Sequence		
+protocol	conformance ImportExport.DownloadableMessageAttachmentBatch	Swift.Decodable		
+protocol	conformance ImportExport.DownloadableMessageAttachmentBatch	Swift.Encodable		
+protocol	conformance ImportExport.MessageAttachmentPair	Swift.Decodable		
+protocol	conformance ImportExport.MessageAttachmentPair	Swift.Encodable		
+protocol	conformance ImportExport.MessageAttachmentDownloadIterator	Swift.IteratorProtocol		
+protocol	conformance ImportExport.MessageAttachmentDownloadIterator	Swift.Decodable		
+protocol	conformance ImportExport.MessageAttachmentDownloadIterator	Swift.Encodable		
+protocol	conformance ImportExport.MessageAttachmentDownloadProgress	IMCore.ImportExportProgressReporting		
+protocol	conformance ImportExport.MessageAttachmentDownloadProgress	Swift.Decodable		
+protocol	conformance ImportExport.MessageAttachmentDownloadProgress	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ArchivingOptions	Swift.Decodable		
+protocol	conformance ImportExport.ArchivingOptions	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ArchiveWritingIterator	Swift.AsyncIteratorProtocol		
+protocol	conformance ImportExport.ArchiveWritingIterator	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ArchivedConversationDirectories	Swift.Decodable		
+protocol	conformance ImportExport.ArchivedConversationDirectories	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Exporter	Swift.AsyncSequence		
+protocol	conformance ImportExport.Exporter	Swift.Decodable		
+protocol	conformance ImportExport.Exporter	Swift.Encodable		
+protocol	conformance ImportExport.Exporter	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ExportError	Swift.Error		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ArchivedConversationBatch	Swift.CustomStringConvertible		
+protocol	conformance IMCore.ImportExport.Message	IMCore.ImportExportStorable		
+protocol	conformance ImportExport.ExportSortOrder	Swift.Hashable		
+protocol	conformance ImportExport.ExportSortOrder	Swift.Decodable		
+protocol	conformance ImportExport.ExportSortOrder	Swift.Encodable		
+protocol	conformance ImportExport.ExportSortOrder	Swift.RawRepresentable		
+protocol	conformance ImportExport.ExportSortOrder	Swift.Equatable		
+protocol	conformance ImportExport.ExportSortOrder	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.NumericReportItem	IMCore.ImportExportDisplayedReportItem		
+protocol	conformance ImportExport.NumericReportItem	Swift.Decodable		
+protocol	conformance ImportExport.NumericReportItem	Swift.Encodable		
+protocol	conformance ImportExport.NumericReportItem	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ExportError	Swift.Error		
+protocol	conformance IMDMessageRecord	IMCore.ImportExportLoggable		
+protocol	conformance IMFileTransfer	IMCore.ImportExportLoggable		
+protocol	conformance DownloadEventListener	Swift.Actor		
+protocol	conformance ImportExport.ArchiveImporterStatistics	Swift.Decodable		
+protocol	conformance ImportExport.ArchiveImporterStatistics	Swift.Encodable		
+protocol	conformance ImportExport.ArchiveImporterStatistics	IMCore.ImportExportReportable		
+protocol	conformance ImportExport.ArchiveImporterStatistics	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance IMDChatRecord	IMCore.ImportExportLoggable		
+protocol	conformance ImportExport.ExportOptions	Swift.Decodable		
+protocol	conformance ImportExport.ExportOptions	Swift.Encodable		
+protocol	conformance ImportExport.ExportOptions	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.ImportedMessageBatch	IMCore.ImportExportMessageBatch		
+protocol	conformance ImportExport.ImportedMessageBatch	Swift.Decodable		
+protocol	conformance ImportExport.ImportedMessageBatch	Swift.Encodable		
+protocol	conformance ImportExport.ImportedMessageBatch	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance MadridServiceInfoProvider	IMSharedUtilities.IMMadridEligibilityControllerServiceInfoProviding		
+protocol	conformance ImportExport.AttachmentDownloadError	Swift.Error		
+protocol	conformance ImportExport.AttachmentDownloadError	Swift.Decodable		
+protocol	conformance ImportExport.AttachmentDownloadError	Swift.Encodable		
+protocol	conformance AttachmentDownloadError.ErrorKind	Swift.Equatable		
+protocol	conformance AttachmentDownloadError.ErrorKind	Swift.Hashable		
+protocol	conformance AttachmentDownloadError.ErrorKind	Swift.Decodable		
+protocol	conformance AttachmentDownloadError.ErrorKind	Swift.Encodable		
+protocol	conformance AttachmentDownloadError.ErrorKind	Swift.RawRepresentable		
+protocol	conformance ImportExport.AttachmentDownloadError	Swift.CustomStringConvertible		
+protocol	conformance ImportExport.AttachmentDownloadError	Swift.Hashable		
+protocol	conformance ImportExport.AttachmentDownloadError	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ImportExport.Sticker	Swift.Identifiable		
+protocol	conformance ImportExport.Sticker	Swift.Decodable		
+protocol	conformance ImportExport.Sticker	Swift.Encodable		
+protocol	conformance ImportExport.Sticker	Swift.Equatable		
+protocol	conformance ImportExport.Sticker	Swift.Hashable		
+protocol	conformance ImportExport.Sticker	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+extension	IMCore.CountStatistics.RootKeys	RawRepresentable		
+extension	IMCore.CountStatistics.SyncStoreCountKeys	RawRepresentable		
+extension	IMCore.CountStatistics.ServerZoneKeys	RawRepresentable		
+extension	IMCore.CountStatistics.ServerCountKeys	RawRepresentable		
+extension	IMCore.ImportExport.ArchivedConversation.Iterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.ParticipantExportIterator	AsyncSequence		
+extension	IMCore.ImportExport.ParticipantExportIterator.Iterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.ParticipantExportIterator.Iterator	ImportExportAsyncRecordExportIterating		
+extension	IMCore.ImportExport.Attachment	Identifiable		
+extension	IMCore.ImportExport.Attachment.MissingFileReasons	OptionSet		
+extension	IMCore.ImportExport.Attachment.MissingFileReasons	SetAlgebra		
+extension	IMCore.ImportExport.Attachment.MissingFileReasons	RawRepresentable		
+extension	IMCore.ImportExport.Attachment.MissingFileReasons	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.Message.LayoutDescriptor.LayoutIntent	RawRepresentable		
+extension	IMCore.ImportExport.Conversation	Identifiable		
+extension	IMCore.ImportExport.Conversation.FilterType	RawRepresentable		
+extension	IMCore.ImportExport.Conversation.ConversationType	RawRepresentable		
+extension	IMCore.ImportExport.Message	Identifiable		
+extension	IMCore.ImportExport.Message.CodingKeys	RawRepresentable		
+extension	IMCore.ImportExport.MessageExportExclusionFilter	OptionSet		
+extension	IMCore.ImportExport.MessageExportExclusionFilter	CaseIterable		
+extension	IMCore.ImportExport.MessageExportExclusionFilter	SetAlgebra		
+extension	IMCore.ImportExport.MessageExportExclusionFilter	RawRepresentable		
+extension	IMCore.ImportExport.MessageExportExclusionFilter	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.MessagePart	Identifiable		
+extension	IMCore.ImportExport.MessagePartType	OptionSet		
+extension	IMCore.ImportExport.MessagePartType	SetAlgebra		
+extension	IMCore.ImportExport.MessagePartType	RawRepresentable		
+extension	IMCore.ImportExport.MessagePartType	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.MessagePart.ExpireState	RawRepresentable		
+extension	IMCore.ImportExport.AttachmentExportIterator	AsyncSequence		
+extension	IMCore.ImportExport.AttachmentExportIterator.Iterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.AttachmentExportIterator.Iterator	ImportExportAsyncRecordExportIterating		
+extension	IMCore.ImportExport.FormattedAddress	Identifiable		
+extension	IMCore.ImportExport.FormattedAddress.Format	OptionSet		
+extension	IMCore.ImportExport.FormattedAddress.Format	SetAlgebra		
+extension	IMCore.ImportExport.FormattedAddress.Format	RawRepresentable		
+extension	IMCore.ImportExport.FormattedAddress.Format	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.FormattedAddress.FormattingFailure	RawRepresentable		
+extension	IMCore.ImportExport.Participant	ImportExportStorable		
+extension	IMCore.ImportExport.Participant	Identifiable		
+extension	IMCore.ImportExport.Participant.ConversationStatus	OptionSet		
+extension	IMCore.ImportExport.Participant.ConversationStatus	SetAlgebra		
+extension	IMCore.ImportExport.Participant.ConversationStatus	RawRepresentable		
+extension	IMCore.ImportExport.Participant.ConversationStatus	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.ParticipantType	RawRepresentable		
+extension	IMCore.ImportExport.Participant.CodingKeys	RawRepresentable		
+extension	IMCore.ImportExport.Message.Reaction.ReactionType	RawRepresentable		
+extension	IMCore.ImportExport.Remark.Effects	OptionSet		
+extension	IMCore.ImportExport.Remark.Effects	SetAlgebra		
+extension	IMCore.ImportExport.Remark.Effects	RawRepresentable		
+extension	IMCore.ImportExport.Remark.Effects	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.MessagePart.MessageType	RawRepresentable		
+extension	IMCore.ImportExport.ExportIterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.DatabaseRecord	Identifiable		
+extension	IMCore.ImportExport.DatabaseRecord.CodingKeys	RawRepresentable		
+extension	IMCore.ImportExport.MessageState	OptionSet		
+extension	IMCore.ImportExport.MessageState	SetAlgebra		
+extension	IMCore.ImportExport.MessageState	RawRepresentable		
+extension	IMCore.ImportExport.MessageState	ExpressibleByArrayLiteral		
+extension	IMCore.ImportExport.MessageExportIterator	AsyncSequence		
+extension	IMCore.ImportExport.MessageExportIterator.Iterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.MessageExportIterator.Iterator	ImportExportAsyncRecordExportIterating		
+extension	IMCore.ImportExport.ArchiveManifest.ArchiveManifestIterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.ArchiveManifest	AsyncSequence		
+extension	IMCore.MetricServiceChangeReason	RawRepresentable		
+extension	IMCore.ImportExport.AttachmentDownloader	AsyncSequence		
+extension	IMCore.ImportExport.AttachmentDownloader.Iterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.Attachment	ImportExportStorable		
+extension	IMCore.ImportExport.ArchiveExporter	AsyncSequence		
+extension	IMCore.ImportExport.Report.CodingKeys	RawRepresentable		
+extension	IMCore.SyncCountType	RawRepresentable		
+extension	IMCore.ImportExport.ArchiveImporter	AsyncSequence		
+extension	IMCore.ImportExport.ConversationExporter	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.ArchiveImportIterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.ReportableEvent.EventType	RawRepresentable		
+extension	IMCore.ImportExport.ServiceType	CaseIterable		
+extension	IMCore.ImportExport.ServiceType	RawRepresentable		
+extension	IMCore.ImportExport.ConversationExportIterator	AsyncSequence		
+extension	IMCore.ImportExport.ConversationExportIterator.Iterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.ConversationExportIterator.Iterator	ImportExportAsyncRecordExportIterating		
+extension	IMCore.ImportExport.ConversationArchiver	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.Conversation	ImportExportStorable		
+extension	IMCore.ImportExport.DownloadableMessageAttachmentBatch	Sequence		
+extension	IMCore.ImportExport.MessageAttachmentDownloadIterator	IteratorProtocol		
+extension	IMCore.ImportExport.ArchiveWritingIterator	AsyncIteratorProtocol		
+extension	IMCore.ImportExport.Exporter	AsyncSequence		
+extension	IMCore.ImportExport.Message	ImportExportStorable		
+extension	IMCore.ImportExport.ExportSortOrder	RawRepresentable		
+extension	IMCore.ImportExport.AttachmentDownloadError.ErrorKind	RawRepresentable		
+extension	IMCore.ImportExport.Sticker	Identifiable		

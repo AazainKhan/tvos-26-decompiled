@@ -1,0 +1,482 @@
+kind	type	conformance	member_kind	member
+struct	LinkPresentationStyleSheetParsing.TokenSequence			
+struct	LinkPresentationStyleSheetParsing.TokenSequence		let	tokens
+struct	LinkPresentationStyleSheetParsing.TokenSequence.Iterator			
+struct	LinkPresentationStyleSheetParsing.TokenSequence.Iterator		var	sequence
+struct	LinkPresentationStyleSheetParsing.TokenSequence.Iterator		var	currentTokenIndex
+struct	LinkPresentationStyleSheetParsing.TokenSequence.Iterator		var	reconsumeActivated
+struct	LinkPresentationStyleSheetParsing.AnyTokenProducer			
+struct	LinkPresentationStyleSheetParsing.AnyTokenProducer		let	producer
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Whitespace			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.QuotationMark			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.NumberSign			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.DollarSign			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Apostrophe			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.LeftParenthesis			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.RightParenthesis			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Asterisk			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.PlusSign			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Comma			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.HyphenMinus			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.FullStop			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Solidus			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Colon			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Semicolon			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.LessThanSign			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.CommercialAt			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.LeftSquareBracket			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.ReverseSolidus			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.RightSquareBracket			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.CircumflexAccent			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.LeftCurlyBracket			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.RightCurlyBracket			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.LatinLetterU			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.VerticalLine			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Tilde			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Digit			
+struct	LinkPresentationStyleSheetParsing.TokenProducers.Name			
+enum	LinkPresentationStyleSheetParsing.Token			
+enum	LinkPresentationStyleSheetParsing.Token		case	ident
+enum	LinkPresentationStyleSheetParsing.Token		case	function
+enum	LinkPresentationStyleSheetParsing.Token		case	atKeyword
+enum	LinkPresentationStyleSheetParsing.Token		case	hash
+enum	LinkPresentationStyleSheetParsing.Token		case	string
+enum	LinkPresentationStyleSheetParsing.Token		case	url
+enum	LinkPresentationStyleSheetParsing.Token		case	delim
+enum	LinkPresentationStyleSheetParsing.Token		case	number
+enum	LinkPresentationStyleSheetParsing.Token		case	percentage
+enum	LinkPresentationStyleSheetParsing.Token		case	dimension
+enum	LinkPresentationStyleSheetParsing.Token		case	badString
+enum	LinkPresentationStyleSheetParsing.Token		case	badUrl
+enum	LinkPresentationStyleSheetParsing.Token		case	unicodeRange
+enum	LinkPresentationStyleSheetParsing.Token		case	includeMatch
+enum	LinkPresentationStyleSheetParsing.Token		case	dashMatch
+enum	LinkPresentationStyleSheetParsing.Token		case	prefixMatch
+enum	LinkPresentationStyleSheetParsing.Token		case	suffixMatch
+enum	LinkPresentationStyleSheetParsing.Token		case	substringMatch
+enum	LinkPresentationStyleSheetParsing.Token		case	column
+enum	LinkPresentationStyleSheetParsing.Token		case	whitespace
+enum	LinkPresentationStyleSheetParsing.Token		case	cdo
+enum	LinkPresentationStyleSheetParsing.Token		case	cdc
+enum	LinkPresentationStyleSheetParsing.Token		case	colon
+enum	LinkPresentationStyleSheetParsing.Token		case	semicolon
+enum	LinkPresentationStyleSheetParsing.Token		case	comma
+enum	LinkPresentationStyleSheetParsing.Token		case	leftSquareBracket
+enum	LinkPresentationStyleSheetParsing.Token		case	rightSqaureBracket
+enum	LinkPresentationStyleSheetParsing.Token		case	leftParenthesis
+enum	LinkPresentationStyleSheetParsing.Token		case	rightParenthesis
+enum	LinkPresentationStyleSheetParsing.Token		case	leftCurlyBracket
+enum	LinkPresentationStyleSheetParsing.Token		case	rightCurlyBracket
+enum	LinkPresentationStyleSheetParsing.Token		case	eof
+enum	LinkPresentationStyleSheetParsing.Token.Number			
+enum	LinkPresentationStyleSheetParsing.Token.Number		case	integer
+enum	LinkPresentationStyleSheetParsing.Token.Number		case	number
+enum	LinkPresentationStyleSheetParsing.Token.HashType			
+enum	LinkPresentationStyleSheetParsing.Token.HashType		case	id
+enum	LinkPresentationStyleSheetParsing.Token.HashType		case	other
+class	LinkPresentationStyleSheetParsing.Tokenizer			
+class	LinkPresentationStyleSheetParsing.Tokenizer		var	cachedTokens
+class	LinkPresentationStyleSheetParsing.Tokenizer		var	source
+class	LinkPresentationStyleSheetParsing.Tokenizer		var	reconsumeActivated
+class	LinkPresentationStyleSheetParsing.Tokenizer		var	currentIndex
+class	LinkPresentationStyleSheetParsing.Tokenizer		var	lookAhead
+struct	LinkPresentationStyleSheetParsing.AnyDeclarationParser			
+struct	LinkPresentationStyleSheetParsing.AnyDeclarationParser		let	parser
+enum	LinkPresentationStyleSheetParsing.DeclarationParsers			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.Default			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.Default		let	property
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.TextAlign			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.FontSize			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.FontWeight			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.FontStyle			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.FontVariant			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.FontFamily			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.Font			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.Color			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.Color		let	parser
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.BackgroundColor			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.BackgroundColor		let	parser
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.BackgroundImage			
+struct	LinkPresentationStyleSheetParsing.DeclarationParsers.BaseColor			
+enum	LinkPresentationStyleSheetParsing.DeclarationParsers.BaseColor.ColorComponentRepresentation			
+enum	LinkPresentationStyleSheetParsing.DeclarationParsers.BaseColor.ColorComponentRepresentation		case	percentage
+enum	LinkPresentationStyleSheetParsing.DeclarationParsers.BaseColor.ColorComponentRepresentation		case	number
+struct	LinkPresentationStyleSheetParsing.StyleSheet			
+struct	LinkPresentationStyleSheetParsing.StyleSheet		let	rules
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule		case	qualified
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule		case	atKeyword
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration		case	invalid
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration		case	color
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration		case	backgroundColor
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration		case	textAlign
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration		case	font
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration		case	backgroundImage
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Color			
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Color		let	red
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Color		let	green
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Color		let	blue
+enum	LinkPresentationStyleSheetParsing.StyleSheet.TextAlign			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.TextAlign		case	left
+enum	LinkPresentationStyleSheetParsing.StyleSheet.TextAlign		case	center
+enum	LinkPresentationStyleSheetParsing.StyleSheet.TextAlign		case	right
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font		case	specified
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font		case	system
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified			
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified		let	size
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified		let	weight
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified		let	style
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified		let	variant
+struct	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified		let	family
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	normal
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	bold
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	bolder
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	lighter
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value100
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value200
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value300
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value400
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value500
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value600
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value700
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value800
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight		case	value900
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size		case	specified
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size		case	absolute
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Unit			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Unit		case	percent
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Unit		case	px
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Unit		case	em
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Unit		case	ex
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	xxSmall
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	xSmall
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	small
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	medium
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	large
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	xLarge
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute		case	xxLarge
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Style			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Style		case	normal
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Style		case	italic
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Style		case	oblique
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Variant			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Variant		case	normal
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Variant		case	smallCaps
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System		case	caption
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System		case	icon
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System		case	menu
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System		case	messageBox
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System		case	smallCaption
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.System		case	statusBar
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.CodingKeys		case	specified
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.CodingKeys		case	system
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.SpecifiedCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.SpecifiedCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.SystemCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.SystemCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.CodingKeys		case	specified
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.CodingKeys		case	absolute
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.SpecifiedCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.SpecifiedCodingKeys		case	value
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.SpecifiedCodingKeys		case	unit
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.AbsoluteCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.AbsoluteCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified.CodingKeys		case	size
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified.CodingKeys		case	weight
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified.CodingKeys		case	style
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified.CodingKeys		case	variant
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified.CodingKeys		case	family
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Color.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Color.CodingKeys		case	red
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Color.CodingKeys		case	green
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Color.CodingKeys		case	blue
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.CodingKeys		case	qualified
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.CodingKeys		case	atKeyword
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.QualifiedCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.QualifiedCodingKeys		case	selector
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.QualifiedCodingKeys		case	declarations
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.AtKeywordCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.AtKeywordCodingKeys		case	identifier
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.AtKeywordCodingKeys		case	prelude
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.AtKeywordCodingKeys		case	declarations
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys		case	invalid
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys		case	color
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys		case	backgroundColor
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys		case	textAlign
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys		case	font
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.CodingKeys		case	backgroundImage
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.InvalidCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.InvalidCodingKeys		case	property
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.InvalidCodingKeys		case	value
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.ColorCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.ColorCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.BackgroundColorCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.BackgroundColorCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.TextAlignCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.TextAlignCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.FontCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.FontCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.BackgroundImageCodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration.BackgroundImageCodingKeys		case	_0
+enum	LinkPresentationStyleSheetParsing.StyleSheet.CodingKeys			
+enum	LinkPresentationStyleSheetParsing.StyleSheet.CodingKeys		case	rules
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node			
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Block			
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Block		let	token
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Block		let	value
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.ComponentValue			
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.ComponentValue		case	preserved
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.ComponentValue		case	simpleBlock
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.ComponentValue		case	function
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.Rule			
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.Rule		case	qualified
+enum	LinkPresentationStyleSheetParsing.TokenParser.Node.Rule		case	atKeyword
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Declaration			
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Declaration		let	name
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Declaration		let	value
+struct	LinkPresentationStyleSheetParsing.TokenParser.Node.Declaration		let	important
+enum	LinkPresentationStyleSheetParsing.StyleSheetError			
+enum	LinkPresentationStyleSheetParsing.StyleSheetError		case	invalidSyntax
+enum	LinkPresentationStyleSheetParsing.StyleSheetError		case	tokenizationFailed
+enum	LinkPresentationStyleSheetParsing.StyleSheetError		case	notImplemented
+enum	LinkPresentationStyleSheetParsing.StyleSheetError		case	preconditionFailed
+enum	LinkPresentationStyleSheetParsing.StyleSheetError		case	unexpectedEOF
+struct	LinkPresentationStyleSheetParsing.AnySerializer			
+struct	LinkPresentationStyleSheetParsing.TokenParser			
+struct	LinkPresentationStyleSheetParsing.TokenParser		let	tokenizable
+protocol	LinkPresentationStyleSheetParsing.Tokenizable			
+protocol	LinkPresentationStyleSheetParsing.TokenProducer			
+protocol	LinkPresentationStyleSheetParsing.DeclarationParser			
+protocol	LinkPresentationStyleSheetParsing.StyleSheetProtocol			
+protocol	LinkPresentationStyleSheetParsing.Serializer	Input		
+protocol	conformance TokenSequence.Iterator	Swift.IteratorProtocol		
+protocol	conformance LinkPresentationStyleSheetParsing.TokenSequence	Swift.Sequence		
+protocol	conformance LinkPresentationStyleSheetParsing.AnyTokenProducer	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Whitespace	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.QuotationMark	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.NumberSign	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.DollarSign	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Apostrophe	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.LeftParenthesis	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.RightParenthesis	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Asterisk	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.PlusSign	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Comma	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.HyphenMinus	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.FullStop	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Solidus	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Colon	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Semicolon	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.LessThanSign	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.CommercialAt	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.LeftSquareBracket	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.ReverseSolidus	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.RightSquareBracket	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.CircumflexAccent	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.LeftCurlyBracket	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.RightCurlyBracket	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.LatinLetterU	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.VerticalLine	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Tilde	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Digit	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance TokenProducers.Name	LinkPresentationStyleSheetParsing.TokenProducer		
+protocol	conformance Token.Number	Swift.Hashable		
+protocol	conformance Token.Number	Swift.Equatable		
+protocol	conformance Token.HashType	Swift.Hashable		
+protocol	conformance Token.HashType	Swift.Equatable		
+protocol	conformance LinkPresentationStyleSheetParsing.Token	Swift.Equatable		
+protocol	conformance LinkPresentationStyleSheetParsing.Tokenizer	LinkPresentationStyleSheetParsing.Tokenizable		
+protocol	conformance LinkPresentationStyleSheetParsing.AnyDeclarationParser	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.Default	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.TextAlign	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.FontSize	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.FontWeight	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.FontStyle	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.FontVariant	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.FontFamily	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.Font	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.Color	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.BackgroundColor	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance DeclarationParsers.BackgroundImage	LinkPresentationStyleSheetParsing.DeclarationParser		
+protocol	conformance BaseColor.ColorComponentRepresentation	Swift.Equatable		
+protocol	conformance BaseColor.ColorComponentRepresentation	Swift.Hashable		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet.Color	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet.Font.Size	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet.Font.Specified	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet.Font	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet.Rule.Declaration	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet.Rule	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet	Swift.CustomDebugStringConvertible		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet	LinkPresentationStyleSheetParsing.StyleSheetProtocol		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet	Swift.Equatable		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet	Swift.Decodable		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheet	Swift.Encodable		
+protocol	conformance Rule.Declaration	Swift.Equatable		
+protocol	conformance Rule.Declaration	Swift.Decodable		
+protocol	conformance Rule.Declaration	Swift.Encodable		
+protocol	conformance StyleSheet.Rule	Swift.Equatable		
+protocol	conformance StyleSheet.Rule	Swift.Decodable		
+protocol	conformance StyleSheet.Rule	Swift.Encodable		
+protocol	conformance StyleSheet.Color	Swift.Equatable		
+protocol	conformance StyleSheet.Color	Swift.Decodable		
+protocol	conformance StyleSheet.Color	Swift.Encodable		
+protocol	conformance StyleSheet.TextAlign	Swift.Hashable		
+protocol	conformance StyleSheet.TextAlign	Swift.RawRepresentable		
+protocol	conformance StyleSheet.TextAlign	Swift.Equatable		
+protocol	conformance StyleSheet.TextAlign	Swift.Decodable		
+protocol	conformance StyleSheet.TextAlign	Swift.Encodable		
+protocol	conformance Font.Specified	Swift.Equatable		
+protocol	conformance Font.Specified	Swift.Decodable		
+protocol	conformance Font.Specified	Swift.Encodable		
+protocol	conformance Font.Weight	Swift.Hashable		
+protocol	conformance Font.Weight	Swift.RawRepresentable		
+protocol	conformance Font.Weight	Swift.Equatable		
+protocol	conformance Font.Weight	Swift.Decodable		
+protocol	conformance Font.Weight	Swift.Encodable		
+protocol	conformance Size.Unit	Swift.Hashable		
+protocol	conformance Size.Unit	Swift.RawRepresentable		
+protocol	conformance Size.Unit	Swift.Equatable		
+protocol	conformance Size.Unit	Swift.Decodable		
+protocol	conformance Size.Unit	Swift.Encodable		
+protocol	conformance Size.Absolute	Swift.Hashable		
+protocol	conformance Size.Absolute	Swift.RawRepresentable		
+protocol	conformance Size.Absolute	Swift.Equatable		
+protocol	conformance Size.Absolute	Swift.Decodable		
+protocol	conformance Size.Absolute	Swift.Encodable		
+protocol	conformance Font.Size	Swift.Equatable		
+protocol	conformance Font.Size	Swift.Decodable		
+protocol	conformance Font.Size	Swift.Encodable		
+protocol	conformance Font.Style	Swift.Hashable		
+protocol	conformance Font.Style	Swift.RawRepresentable		
+protocol	conformance Font.Style	Swift.Equatable		
+protocol	conformance Font.Style	Swift.Decodable		
+protocol	conformance Font.Style	Swift.Encodable		
+protocol	conformance Font.Variant	Swift.Hashable		
+protocol	conformance Font.Variant	Swift.RawRepresentable		
+protocol	conformance Font.Variant	Swift.Equatable		
+protocol	conformance Font.Variant	Swift.Decodable		
+protocol	conformance Font.Variant	Swift.Encodable		
+protocol	conformance Font.System	Swift.Hashable		
+protocol	conformance Font.System	Swift.RawRepresentable		
+protocol	conformance Font.System	Swift.Equatable		
+protocol	conformance Font.System	Swift.Decodable		
+protocol	conformance Font.System	Swift.Encodable		
+protocol	conformance StyleSheet.Font	Swift.Equatable		
+protocol	conformance StyleSheet.Font	Swift.Decodable		
+protocol	conformance StyleSheet.Font	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance BackgroundImageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BackgroundImageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BackgroundImageCodingKeys	Swift.Hashable		
+protocol	conformance BackgroundImageCodingKeys	Swift.Equatable		
+protocol	conformance FontCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FontCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FontCodingKeys	Swift.Hashable		
+protocol	conformance FontCodingKeys	Swift.Equatable		
+protocol	conformance TextAlignCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TextAlignCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TextAlignCodingKeys	Swift.Hashable		
+protocol	conformance TextAlignCodingKeys	Swift.Equatable		
+protocol	conformance BackgroundColorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BackgroundColorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BackgroundColorCodingKeys	Swift.Hashable		
+protocol	conformance BackgroundColorCodingKeys	Swift.Equatable		
+protocol	conformance ColorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ColorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ColorCodingKeys	Swift.Hashable		
+protocol	conformance ColorCodingKeys	Swift.Equatable		
+protocol	conformance InvalidCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InvalidCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InvalidCodingKeys	Swift.Hashable		
+protocol	conformance InvalidCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AtKeywordCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AtKeywordCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AtKeywordCodingKeys	Swift.Hashable		
+protocol	conformance AtKeywordCodingKeys	Swift.Equatable		
+protocol	conformance QualifiedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance QualifiedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance QualifiedCodingKeys	Swift.Hashable		
+protocol	conformance QualifiedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AbsoluteCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AbsoluteCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AbsoluteCodingKeys	Swift.Hashable		
+protocol	conformance AbsoluteCodingKeys	Swift.Equatable		
+protocol	conformance SpecifiedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SpecifiedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SpecifiedCodingKeys	Swift.Hashable		
+protocol	conformance SpecifiedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SystemCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SystemCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SystemCodingKeys	Swift.Hashable		
+protocol	conformance SystemCodingKeys	Swift.Equatable		
+protocol	conformance SpecifiedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SpecifiedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SpecifiedCodingKeys	Swift.Hashable		
+protocol	conformance SpecifiedCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance SpecifiedCodingKeys	Swift.CodingKey		
+protocol	conformance SystemCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SpecifiedCodingKeys	Swift.CodingKey		
+protocol	conformance AbsoluteCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance QualifiedCodingKeys	Swift.CodingKey		
+protocol	conformance AtKeywordCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance InvalidCodingKeys	Swift.CodingKey		
+protocol	conformance ColorCodingKeys	Swift.CodingKey		
+protocol	conformance BackgroundColorCodingKeys	Swift.CodingKey		
+protocol	conformance TextAlignCodingKeys	Swift.CodingKey		
+protocol	conformance FontCodingKeys	Swift.CodingKey		
+protocol	conformance BackgroundImageCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance LinkPresentationStyleSheetParsing.StyleSheetError	Swift.Error		
+extension	LinkPresentationStyleSheetParsing.TokenSequence.Iterator	IteratorProtocol		
+extension	LinkPresentationStyleSheetParsing.TokenSequence	Sequence		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.TextAlign	RawRepresentable		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.Font.Weight	RawRepresentable		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Unit	RawRepresentable		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.Font.Size.Absolute	RawRepresentable		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.Font.Style	RawRepresentable		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.Font.Variant	RawRepresentable		
+extension	LinkPresentationStyleSheetParsing.StyleSheet.Font.System	RawRepresentable		

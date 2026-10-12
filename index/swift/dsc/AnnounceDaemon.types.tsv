@@ -1,0 +1,167 @@
+kind	type	conformance	member_kind	member
+class	AnnounceDaemon.AnnounceServer	NSObject		
+class	AnnounceDaemon.AnnounceServer	NSObject	let	announceServiceListener
+class	AnnounceDaemon.AnnounceServer	NSObject	let	playbackSessionServiceListener
+class	AnnounceDaemon.AnnounceServer	NSObject	let	announceReachabilityServiceListener
+class	AnnounceDaemon.AnnounceServer	NSObject	var	systemNotificationObserver
+class	AnnounceDaemon.AnnounceServer	NSObject	let	tonePlayerServiceListener
+enum	AnnounceDaemon.AnnouncementSoundType			
+enum	AnnounceDaemon.AnnouncementSoundType		case	announcementSent
+class	AnnounceDaemon.ANContactStore	HomeMessagingUtils.ContactStore		
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode			
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	unspecified
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	ready
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	inProgress
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	success
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failure
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureRequiringAppLaunch
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureRecipientsUnreachable
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureRecipientsAnnouncementsDisabled
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureSenderAnnouncementsDisabled
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureRecipientCannotReceiveAnnouncements
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureNoHomepod
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureRecipientHomepodsUpdateRequired
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureRemoteAccessNotAllowed
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureNoOtherHomepodToReceiveAnnouncements
+enum	AnnounceDaemon.SendAnnouncementIntentResponseCode		case	failureOnlyAnnouncersDeviceIsAvailable
+enum	AnnounceDaemon.ReadActionType			
+enum	AnnounceDaemon.ReadActionType		case	read
+enum	AnnounceDaemon.ReadActionType		case	repeat
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode			
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	unspecified
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	ready
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	inProgress
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	success
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	failure
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	failureRequiringAppLaunch
+enum	AnnounceDaemon.ReadAnnouncementIntentResponseCode		case	failureNoAnnouncementsToRead
+class	AnnounceDaemon.AppIntentsConnectionListener	NSObject		
+class	AnnounceDaemon.AppIntentsConnectionListener	NSObject	let	connectionListener
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode			
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode		case	unspecified
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode		case	ready
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode		case	inProgress
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode		case	success
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode		case	failure
+enum	AnnounceDaemon.StopAnnouncementIntentResponseCode		case	failureRequiringAppLaunch
+class	AnnounceDaemon.ANMGProductTypeUtility	NSObject		
+struct	AnnounceDaemon.Announcer			
+struct	AnnounceDaemon.Announcer		let	name
+struct	AnnounceDaemon.Announcer		let	isUser
+struct	AnnounceDaemon.Announcer		let	imageSource
+enum	AnnounceDaemon.Announcer.ImageSource			
+enum	AnnounceDaemon.Announcer.ImageSource		case	contact
+enum	AnnounceDaemon.Announcer.ImageSource		case	systemImage
+class	AnnounceDaemon.DemoStateManager	NSObject		
+class	AnnounceDaemon.SiriReferenceResolutionDonation	NSObject		
+class	AnnounceDaemon.SiriReferenceResolutionDonation	NSObject	let	logger
+class	AnnounceDaemon.TelephonyObserver	NSObject		
+class	AnnounceDaemon.TelephonyObserver	NSObject	let	logger
+class	AnnounceDaemon.TelephonyObserver	NSObject	var	delegate
+enum	AnnounceDaemon.AVAudioSessionError			
+enum	AnnounceDaemon.AVAudioSessionError		case	noProxyAudioSession
+enum	AnnounceDaemon.AVAudioSessionError		case	noEndpointAudioSession
+enum	AnnounceDaemon.AVAudioSessionError		case	endpointNotFound
+enum	AnnounceDaemon.UserNotificationType			
+enum	AnnounceDaemon.UserNotificationType		case	announcement
+enum	AnnounceDaemon.UserNotificationType		case	deliveryFailure
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	Swift.Equatable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	Swift.Hashable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	Swift.RawRepresentable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	Swift.CaseIterable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents.AppEnum		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents.AppValue		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents._IntentValue		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AnnounceDaemon.AnnouncementSoundType	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	Swift.Equatable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	Swift.Hashable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	Swift.RawRepresentable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	Swift.CaseIterable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents.AppEnum		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents.AppValue		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents._IntentValue		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance AnnounceDaemon.SendAnnouncementIntentResponseCode	Swift.CustomStringConvertible		
+protocol	conformance AnnounceDaemon.ReadActionType	Swift.Equatable		
+protocol	conformance AnnounceDaemon.ReadActionType	Swift.Hashable		
+protocol	conformance AnnounceDaemon.ReadActionType	Swift.RawRepresentable		
+protocol	conformance AnnounceDaemon.ReadActionType	Swift.CaseIterable		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents.AppEnum		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents.AppValue		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents._IntentValue		
+protocol	conformance AnnounceDaemon.ReadActionType	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AnnounceDaemon.ReadActionType	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	Swift.Equatable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	Swift.Hashable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	Swift.RawRepresentable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	Swift.CaseIterable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents.AppEnum		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents.AppValue		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents._IntentValue		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AnnounceDaemon.ReadAnnouncementIntentResponseCode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	Swift.Equatable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	Swift.Hashable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	Swift.RawRepresentable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	Swift.CaseIterable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents.AppEnum		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents.AppValue		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents._IntentValue		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AnnounceDaemon.StopAnnouncementIntentResponseCode	Foundation.CustomLocalizedStringResourceConvertible		
+protocol	conformance __C.HMAnnounceDeviceNotificationMode	Swift.CustomStringConvertible: AnnounceDaemon		
+protocol	conformance __C.HMHomeLocation	Swift.CustomStringConvertible: AnnounceDaemon		
+protocol	conformance AnnounceDaemon.Announcer	Swift.Hashable		
+protocol	conformance AnnounceDaemon.Announcer	Swift.Equatable		
+protocol	conformance Announcer.ImageSource	Swift.Hashable		
+protocol	conformance Announcer.ImageSource	Swift.Equatable		
+protocol	conformance AVAudioSessionError	Swift.Hashable		
+protocol	conformance AVAudioSessionError	Swift.Equatable		
+protocol	conformance AVAudioSessionError	Swift.Error		
+protocol	conformance AnnounceDaemon.UserNotificationType	Swift.Equatable		
+protocol	conformance AnnounceDaemon.UserNotificationType	Swift.Hashable		
+protocol	conformance AnnounceDaemon.UserNotificationType	Swift.RawRepresentable		
+protocol	conformance AnnounceDaemon.UserNotificationType	Swift.CaseIterable		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents.AppEnum		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents.AppValue		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents.StaticDisplayRepresentable		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents.PersistentlyIdentifiable		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents.TypeDisplayRepresentable		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents._IntentValue		
+protocol	conformance AnnounceDaemon.UserNotificationType	AppIntents.CaseDisplayRepresentable		
+protocol	conformance AnnounceDaemon.UserNotificationType	Foundation.CustomLocalizedStringResourceConvertible		
+extension	AnnounceDaemon.AnnouncementSoundType	RawRepresentable		
+extension	AnnounceDaemon.AnnouncementSoundType	CaseIterable		
+extension	AnnounceDaemon.AnnouncementSoundType	_IntentValue		
+extension	AnnounceDaemon.SendAnnouncementIntentResponseCode	RawRepresentable		
+extension	AnnounceDaemon.SendAnnouncementIntentResponseCode	CaseIterable		
+extension	AnnounceDaemon.SendAnnouncementIntentResponseCode	_IntentValue		
+extension	AnnounceDaemon.ReadActionType	RawRepresentable		
+extension	AnnounceDaemon.ReadActionType	CaseIterable		
+extension	AnnounceDaemon.ReadActionType	_IntentValue		
+extension	AnnounceDaemon.ReadAnnouncementIntentResponseCode	RawRepresentable		
+extension	AnnounceDaemon.ReadAnnouncementIntentResponseCode	CaseIterable		
+extension	AnnounceDaemon.ReadAnnouncementIntentResponseCode	_IntentValue		
+extension	AnnounceDaemon.StopAnnouncementIntentResponseCode	RawRepresentable		
+extension	AnnounceDaemon.StopAnnouncementIntentResponseCode	CaseIterable		
+extension	AnnounceDaemon.StopAnnouncementIntentResponseCode	_IntentValue		
+extension	AnnounceDaemon.UserNotificationType	RawRepresentable		
+extension	AnnounceDaemon.UserNotificationType	CaseIterable		
+extension	AnnounceDaemon.UserNotificationType	_IntentValue		

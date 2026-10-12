@@ -1,0 +1,628 @@
+kind	type	conformance	member_kind	member
+enum	OSEligibility.OSEligibilityAnswer			
+enum	OSEligibility.OSEligibilityAnswer		case	notYetAvailable
+enum	OSEligibility.OSEligibilityAnswer		case	notEligible
+enum	OSEligibility.OSEligibilityAnswer		case	maybe
+enum	OSEligibility.OSEligibilityAnswer		case	eligible
+enum	OSEligibility.OSEligibilityAnswerSource			
+enum	OSEligibility.OSEligibilityAnswerSource		case	computed
+enum	OSEligibility.OSEligibilityAnswerSource		case	forced
+enum	OSEligibility.OSEligibilityInput			
+enum	OSEligibility.OSEligibilityInput		case	countryLocation
+enum	OSEligibility.OSEligibilityInput		case	countryBilling
+enum	OSEligibility.OSEligibilityInput		case	deviceClass
+enum	OSEligibility.OSEligibilityInput		case	deviceLocale
+enum	OSEligibility.OSEligibilityInput		case	chinaCellular
+enum	OSEligibility.OSEligibilityInput		case	deviceRegionCode
+enum	OSEligibility.OSEligibilityInput		case	deviceLanguage
+enum	OSEligibility.OSEligibilityInput		case	generativeModelSystem
+enum	OSEligibility.OSEligibilityInput		case	greymatterOnQueue
+enum	OSEligibility.OSEligibilityInput		case	siriLanguage
+enum	OSEligibility.OSEligibilityInput		case	externalBootDrive
+enum	OSEligibility.OSEligibilityInput		case	sharediPad
+enum	OSEligibility.OSEligibilityInput		case	deviceAndSiriLanguageMatch
+enum	OSEligibility.OSEligibilityInput		case	initialSetupLocation
+enum	OSEligibility.OSEligibilityInput		case	birthdate
+enum	OSEligibility.OSEligibilityInput		case	preciseLocation
+enum	OSEligibility.OSEligibilityInput		case	shiptoLocation
+enum	OSEligibility.OSEligibilityInput		case	phoneAppRemoval
+enum	OSEligibility.OSEligibilityInput		case	isTeen
+enum	OSEligibility.OSEligibilityInput		case	isChild
+enum	OSEligibility.OSEligibilityInput		case	isAgeVerifiedAdult
+enum	OSEligibility.OSEligibilityInput		case	isConnectedToAgeVerifiedAdult
+enum	OSEligibility.OSEligibilityInput		case	isAccountEligibleForAgeAssurance
+enum	OSEligibility.OSEligibilityInput		case	ageAssuranceAreaId
+enum	OSEligibility.OSEligibilityInputStatus			
+enum	OSEligibility.OSEligibilityInputStatus		case	notSet
+enum	OSEligibility.OSEligibilityInputStatus		case	notEligible
+enum	OSEligibility.OSEligibilityInputStatus		case	eligible
+enum	OSEligibility.OSEligibilityInputStatus		case	unspecifiedError
+enum	OSEligibility.OSEligibilityInputStatus		case	tokenExpired
+enum	OSEligibility.OSEligibilityInputStatus		case	noAccount
+enum	OSEligibility.OSEligibilityContext			
+enum	OSEligibility.OSEligibilityContext		case	countryBilling
+enum	OSEligibility.OSEligibilityContext		case	forceReason
+enum	OSEligibility.OSEligibilityContext		case	eligibleDeviceLanguages
+enum	OSEligibility.OSEligibilityContext		case	countryPolicy
+enum	OSEligibility.OSEligibilityContext		case	preciseLocation
+enum	OSEligibility.OSEligibilityContext		case	eligibleSiriLanguage
+enum	OSEligibility.OSEligibilityContext		case	entitlement
+enum	OSEligibility.OSEligibilityContext		case	areaIDs
+enum	OSEligibility.OSEligibilityContext		case	marketplaceInstallFlow
+enum	OSEligibility.OSEligibilityContext		case	accountAreaIDs
+enum	OSEligibility.OSEligibilityContext.EntitlementValue			
+enum	OSEligibility.OSEligibilityContext.EntitlementValue		case	bool
+enum	OSEligibility.OSEligibilityContext.EntitlementValue		case	string
+enum	OSEligibility.OSEligibilityContext.EntitlementValue		case	array
+enum	OSEligibility.OSEligibilityContext.EntitlementValue		case	dictionary
+struct	OSEligibility.OSEligibilityResult			
+struct	OSEligibility.OSEligibilityResult		var	domain
+struct	OSEligibility.OSEligibilityResult		var	answer
+struct	OSEligibility.OSEligibilityResult		var	answerSource
+struct	OSEligibility.OSEligibilityResult		var	statusByInput
+struct	OSEligibility.OSEligibilityResult		var	context
+enum	OSEligibility.OSEligibilityError			
+enum	OSEligibility.OSEligibilityError		case	posixError
+enum	OSEligibility.OSEligibilityError		case	unknownAnswer
+enum	OSEligibility.OSEligibilityResult.CodingKeys			
+enum	OSEligibility.OSEligibilityResult.CodingKeys		case	domain
+enum	OSEligibility.OSEligibilityResult.CodingKeys		case	answer
+enum	OSEligibility.OSEligibilityResult.CodingKeys		case	answerSource
+enum	OSEligibility.OSEligibilityResult.CodingKeys		case	statusByInput
+enum	OSEligibility.OSEligibilityResult.CodingKeys		case	context
+enum	OSEligibility.OSEligibilityContext.CodingKeys			
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	countryBilling
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	forceReason
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	eligibleDeviceLanguages
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	countryPolicy
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	preciseLocation
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	eligibleSiriLanguage
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	entitlement
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	areaIDs
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	marketplaceInstallFlow
+enum	OSEligibility.OSEligibilityContext.CodingKeys		case	accountAreaIDs
+enum	OSEligibility.OSEligibilityContext.CountryBillingCodingKeys			
+enum	OSEligibility.OSEligibilityContext.CountryBillingCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.ForceReasonCodingKeys			
+enum	OSEligibility.OSEligibilityContext.ForceReasonCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EligibleDeviceLanguagesCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EligibleDeviceLanguagesCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.CountryPolicyCodingKeys			
+enum	OSEligibility.OSEligibilityContext.CountryPolicyCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.PreciseLocationCodingKeys			
+enum	OSEligibility.OSEligibilityContext.PreciseLocationCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EligibleSiriLanguageCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EligibleSiriLanguageCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EntitlementCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EntitlementCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.AreaIDsCodingKeys			
+enum	OSEligibility.OSEligibilityContext.AreaIDsCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.MarketplaceInstallFlowCodingKeys			
+enum	OSEligibility.OSEligibilityContext.MarketplaceInstallFlowCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.AccountAreaIDsCodingKeys			
+enum	OSEligibility.OSEligibilityContext.AccountAreaIDsCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.CodingKeys			
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.CodingKeys		case	bool
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.CodingKeys		case	string
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.CodingKeys		case	array
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.CodingKeys		case	dictionary
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.BoolCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.BoolCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.StringCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.StringCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.ArrayCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.ArrayCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.DictionaryCodingKeys			
+enum	OSEligibility.OSEligibilityContext.EntitlementValue.DictionaryCodingKeys		case	_0
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys			
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys		case	notSet
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys		case	notEligible
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys		case	eligible
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys		case	unspecifiedError
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys		case	tokenExpired
+enum	OSEligibility.OSEligibilityInputStatus.CodingKeys		case	noAccount
+enum	OSEligibility.OSEligibilityInputStatus.NotSetCodingKeys			
+enum	OSEligibility.OSEligibilityInputStatus.NotEligibleCodingKeys			
+enum	OSEligibility.OSEligibilityInputStatus.EligibleCodingKeys			
+enum	OSEligibility.OSEligibilityInputStatus.UnspecifiedErrorCodingKeys			
+enum	OSEligibility.OSEligibilityInputStatus.TokenExpiredCodingKeys			
+enum	OSEligibility.OSEligibilityInputStatus.NoAccountCodingKeys			
+enum	OSEligibility.OSEligibilityInput.CodingKeys			
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	countryLocation
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	countryBilling
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	deviceClass
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	deviceLocale
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	chinaCellular
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	deviceRegionCode
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	deviceLanguage
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	generativeModelSystem
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	greymatterOnQueue
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	siriLanguage
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	externalBootDrive
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	sharediPad
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	deviceAndSiriLanguageMatch
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	initialSetupLocation
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	birthdate
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	preciseLocation
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	shiptoLocation
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	phoneAppRemoval
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	isTeen
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	isChild
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	isAgeVerifiedAdult
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	isConnectedToAgeVerifiedAdult
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	isAccountEligibleForAgeAssurance
+enum	OSEligibility.OSEligibilityInput.CodingKeys		case	ageAssuranceAreaId
+enum	OSEligibility.OSEligibilityInput.CountryLocationCodingKeys			
+enum	OSEligibility.OSEligibilityInput.CountryBillingCodingKeys			
+enum	OSEligibility.OSEligibilityInput.DeviceClassCodingKeys			
+enum	OSEligibility.OSEligibilityInput.DeviceLocaleCodingKeys			
+enum	OSEligibility.OSEligibilityInput.ChinaCellularCodingKeys			
+enum	OSEligibility.OSEligibilityInput.DeviceRegionCodeCodingKeys			
+enum	OSEligibility.OSEligibilityInput.DeviceLanguageCodingKeys			
+enum	OSEligibility.OSEligibilityInput.GenerativeModelSystemCodingKeys			
+enum	OSEligibility.OSEligibilityInput.GreymatterOnQueueCodingKeys			
+enum	OSEligibility.OSEligibilityInput.SiriLanguageCodingKeys			
+enum	OSEligibility.OSEligibilityInput.ExternalBootDriveCodingKeys			
+enum	OSEligibility.OSEligibilityInput.SharediPadCodingKeys			
+enum	OSEligibility.OSEligibilityInput.DeviceAndSiriLanguageMatchCodingKeys			
+enum	OSEligibility.OSEligibilityInput.InitialSetupLocationCodingKeys			
+enum	OSEligibility.OSEligibilityInput.BirthdateCodingKeys			
+enum	OSEligibility.OSEligibilityInput.PreciseLocationCodingKeys			
+enum	OSEligibility.OSEligibilityInput.ShiptoLocationCodingKeys			
+enum	OSEligibility.OSEligibilityInput.PhoneAppRemovalCodingKeys			
+enum	OSEligibility.OSEligibilityInput.IsTeenCodingKeys			
+enum	OSEligibility.OSEligibilityInput.IsChildCodingKeys			
+enum	OSEligibility.OSEligibilityInput.IsAgeVerifiedAdultCodingKeys			
+enum	OSEligibility.OSEligibilityInput.IsConnectedToAgeVerifiedAdultCodingKeys			
+enum	OSEligibility.OSEligibilityInput.IsAccountEligibleForAgeAssuranceCodingKeys			
+enum	OSEligibility.OSEligibilityInput.AgeAssuranceAreaIdCodingKeys			
+enum	OSEligibility.OSEligibilityAnswerSource.CodingKeys			
+enum	OSEligibility.OSEligibilityAnswerSource.CodingKeys		case	computed
+enum	OSEligibility.OSEligibilityAnswerSource.CodingKeys		case	forced
+enum	OSEligibility.OSEligibilityAnswerSource.ComputedCodingKeys			
+enum	OSEligibility.OSEligibilityAnswerSource.ForcedCodingKeys			
+enum	OSEligibility.OSEligibilityAnswer.CodingKeys			
+enum	OSEligibility.OSEligibilityAnswer.CodingKeys		case	notYetAvailable
+enum	OSEligibility.OSEligibilityAnswer.CodingKeys		case	notEligible
+enum	OSEligibility.OSEligibilityAnswer.CodingKeys		case	maybe
+enum	OSEligibility.OSEligibilityAnswer.CodingKeys		case	eligible
+enum	OSEligibility.OSEligibilityAnswer.NotYetAvailableCodingKeys			
+enum	OSEligibility.OSEligibilityAnswer.NotEligibleCodingKeys			
+enum	OSEligibility.OSEligibilityAnswer.MaybeCodingKeys			
+enum	OSEligibility.OSEligibilityAnswer.EligibleCodingKeys			
+class	OSEligibility.ApplicationRecordProvider			
+class	OSEligibility.ApplicationRecordProvider		let	appRecord
+class	OSEligibility.LaunchServicesProvider			
+struct	OSEligibility.AppIdentity			
+struct	OSEligibility.AppIdentity		let	isPersonalPersona
+class	OSEligibility.OSEligibilityProvider			
+class	OSEligibility.SecurityProvider			
+enum	OSEligibility.OSEligibilityDomain			
+enum	OSEligibility.OSEligibilityDomain		case	invalid
+enum	OSEligibility.OSEligibilityDomain		case	actinium
+enum	OSEligibility.OSEligibilityDomain		case	adultAgeVerificationRequired
+enum	OSEligibility.OSEligibilityDomain		case	adultAgeVerificationRequiredMiniBuddy
+enum	OSEligibility.OSEligibilityDomain		case	adultAgeVerificationRequiredScreenTime
+enum	OSEligibility.OSEligibilityDomain		case	adultAgeVerificationStatusRequiredSpyglass
+enum	OSEligibility.OSEligibilityDomain		case	ageAssuranceJurisdictionLifecycle
+enum	OSEligibility.OSEligibilityDomain		case	ageAssuranceRegulatoryFeatures
+enum	OSEligibility.OSEligibilityDomain		case	ageVerificationRequiredScreenTime
+enum	OSEligibility.OSEligibilityDomain		case	aiLabeling
+enum	OSEligibility.OSEligibilityDomain		case	aluminum
+enum	OSEligibility.OSEligibilityDomain		case	americium
+enum	OSEligibility.OSEligibilityDomain		case	antimony
+enum	OSEligibility.OSEligibilityDomain		case	appStoreLaunchAgeVerification
+enum	OSEligibility.OSEligibilityDomain		case	argon
+enum	OSEligibility.OSEligibilityDomain		case	arsenic
+enum	OSEligibility.OSEligibilityDomain		case	astatine
+enum	OSEligibility.OSEligibilityDomain		case	barium
+enum	OSEligibility.OSEligibilityDomain		case	berkelium
+enum	OSEligibility.OSEligibilityDomain		case	beryllium
+enum	OSEligibility.OSEligibilityDomain		case	bismuth
+enum	OSEligibility.OSEligibilityDomain		case	blockAskToBuyDisable
+enum	OSEligibility.OSEligibilityDomain		case	bohrium
+enum	OSEligibility.OSEligibilityDomain		case	boron
+enum	OSEligibility.OSEligibilityDomain		case	bromine
+enum	OSEligibility.OSEligibilityDomain		case	cadmium
+enum	OSEligibility.OSEligibilityDomain		case	calcium
+enum	OSEligibility.OSEligibilityDomain		case	californium
+enum	OSEligibility.OSEligibilityDomain		case	carbon
+enum	OSEligibility.OSEligibilityDomain		case	cerium
+enum	OSEligibility.OSEligibilityDomain		case	cesium
+enum	OSEligibility.OSEligibilityDomain		case	childAndTeenRestrictionRequired
+enum	OSEligibility.OSEligibilityDomain		case	childAndTeenRestrictionRequiredMiniBuddy
+enum	OSEligibility.OSEligibilityDomain		case	childTeenAgeVerificationRequiredScreenTime
+enum	OSEligibility.OSEligibilityDomain		case	chlorine
+enum	OSEligibility.OSEligibilityDomain		case	chromium
+enum	OSEligibility.OSEligibilityDomain		case	cobalt
+enum	OSEligibility.OSEligibilityDomain		case	commSafetyForceOn
+enum	OSEligibility.OSEligibilityDomain		case	copernicium
+enum	OSEligibility.OSEligibilityDomain		case	copper
+enum	OSEligibility.OSEligibilityDomain		case	coreNFCPaymentTagReader
+enum	OSEligibility.OSEligibilityDomain		case	curium
+enum	OSEligibility.OSEligibilityDomain		case	darmstadtium
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeApiAlwaysShareRequired
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeApiNotifyForSignificantAppChange
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeApiVendGeoSpecificAgeRanges
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeApiVendGeoSpecificAgeRangesSandbox
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeApiVendVerificationRequired
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeApiVendVerificationRequiredSandbox
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeRequiresAgeRangeFetch
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeSignificantAppChangeAdult
+enum	OSEligibility.OSEligibilityDomain		case	declaredAgeRangeSignificantAppChangeChildTeen
+enum	OSEligibility.OSEligibilityDomain		case	dubnium
+enum	OSEligibility.OSEligibilityDomain		case	dysprosium
+enum	OSEligibility.OSEligibilityDomain		case	einsteinium
+enum	OSEligibility.OSEligibilityDomain		case	erbium
+enum	OSEligibility.OSEligibilityDomain		case	europium
+enum	OSEligibility.OSEligibilityDomain		case	fermium
+enum	OSEligibility.OSEligibilityDomain		case	flerovium
+enum	OSEligibility.OSEligibilityDomain		case	fluorine
+enum	OSEligibility.OSEligibilityDomain		case	forcedShutterSound
+enum	OSEligibility.OSEligibilityDomain		case	forceAskToBuyOn
+enum	OSEligibility.OSEligibilityDomain		case	foundationModels
+enum	OSEligibility.OSEligibilityDomain		case	francium
+enum	OSEligibility.OSEligibilityDomain		case	gadolinium
+enum	OSEligibility.OSEligibilityDomain		case	gallium
+enum	OSEligibility.OSEligibilityDomain		case	germanium
+enum	OSEligibility.OSEligibilityDomain		case	gold
+enum	OSEligibility.OSEligibilityDomain		case	greymatter
+enum	OSEligibility.OSEligibilityDomain		case	guardianAgeVerificationRequired
+enum	OSEligibility.OSEligibilityDomain		case	guardianAgeVerificationRequiredMiniBuddy
+enum	OSEligibility.OSEligibilityDomain		case	hafnium
+enum	OSEligibility.OSEligibilityDomain		case	hassium
+enum	OSEligibility.OSEligibilityDomain		case	helium
+enum	OSEligibility.OSEligibilityDomain		case	highlightsMarketplaces
+enum	OSEligibility.OSEligibilityDomain		case	holmium
+enum	OSEligibility.OSEligibilityDomain		case	hydrogen
+enum	OSEligibility.OSEligibilityDomain		case	indium
+enum	OSEligibility.OSEligibilityDomain		case	iodine
+enum	OSEligibility.OSEligibilityDomain		case	iridium
+enum	OSEligibility.OSEligibilityDomain		case	iron
+enum	OSEligibility.OSEligibilityDomain		case	krypton
+enum	OSEligibility.OSEligibilityDomain		case	lanthanum
+enum	OSEligibility.OSEligibilityDomain		case	lawrencium
+enum	OSEligibility.OSEligibilityDomain		case	lead
+enum	OSEligibility.OSEligibilityDomain		case	lithium
+enum	OSEligibility.OSEligibilityDomain		case	livermorium
+enum	OSEligibility.OSEligibilityDomain		case	lotX
+enum	OSEligibility.OSEligibilityDomain		case	lutetium
+enum	OSEligibility.OSEligibilityDomain		case	magnesium
+enum	OSEligibility.OSEligibilityDomain		case	manganese
+enum	OSEligibility.OSEligibilityDomain		case	meitnerium
+enum	OSEligibility.OSEligibilityDomain		case	mendelevium
+enum	OSEligibility.OSEligibilityDomain		case	mercury
+enum	OSEligibility.OSEligibilityDomain		case	molybdenum
+enum	OSEligibility.OSEligibilityDomain		case	moscovium
+enum	OSEligibility.OSEligibilityDomain		case	neodymium
+enum	OSEligibility.OSEligibilityDomain		case	neon
+enum	OSEligibility.OSEligibilityDomain		case	neptunium
+enum	OSEligibility.OSEligibilityDomain		case	nickel
+enum	OSEligibility.OSEligibilityDomain		case	nihonium
+enum	OSEligibility.OSEligibilityDomain		case	niobium
+enum	OSEligibility.OSEligibilityDomain		case	nitrogen
+enum	OSEligibility.OSEligibilityDomain		case	nobelium
+enum	OSEligibility.OSEligibilityDomain		case	oganesson
+enum	OSEligibility.OSEligibilityDomain		case	osmium
+enum	OSEligibility.OSEligibilityDomain		case	oxygen
+enum	OSEligibility.OSEligibilityDomain		case	palladium
+enum	OSEligibility.OSEligibilityDomain		case	permissionkitSignificantAppChangeRequest
+enum	OSEligibility.OSEligibilityDomain		case	permissionkitSignificantAppChangeRequestSandbox
+enum	OSEligibility.OSEligibilityDomain		case	personalQA
+enum	OSEligibility.OSEligibilityDomain		case	phosphorus
+enum	OSEligibility.OSEligibilityDomain		case	platinum
+enum	OSEligibility.OSEligibilityDomain		case	plutonium
+enum	OSEligibility.OSEligibilityDomain		case	podcastsTranscripts
+enum	OSEligibility.OSEligibilityDomain		case	polonium
+enum	OSEligibility.OSEligibilityDomain		case	potassium
+enum	OSEligibility.OSEligibilityDomain		case	praseodymium
+enum	OSEligibility.OSEligibilityDomain		case	promethium
+enum	OSEligibility.OSEligibilityDomain		case	protactinium
+enum	OSEligibility.OSEligibilityDomain		case	radium
+enum	OSEligibility.OSEligibilityDomain		case	radon
+enum	OSEligibility.OSEligibilityDomain		case	revokeAppAccessRequired
+enum	OSEligibility.OSEligibilityDomain		case	rhenium
+enum	OSEligibility.OSEligibilityDomain		case	rhodium
+enum	OSEligibility.OSEligibilityDomain		case	roentgenium
+enum	OSEligibility.OSEligibilityDomain		case	rubidium
+enum	OSEligibility.OSEligibilityDomain		case	ruthenium
+enum	OSEligibility.OSEligibilityDomain		case	rutherfordium
+enum	OSEligibility.OSEligibilityDomain		case	samarium
+enum	OSEligibility.OSEligibilityDomain		case	scandium
+enum	OSEligibility.OSEligibilityDomain		case	seaborgium
+enum	OSEligibility.OSEligibilityDomain		case	searchMarketplaces
+enum	OSEligibility.OSEligibilityDomain		case	selenium
+enum	OSEligibility.OSEligibilityDomain		case	significantAppUpdateRestricted
+enum	OSEligibility.OSEligibilityDomain		case	silicon
+enum	OSEligibility.OSEligibilityDomain		case	silver
+enum	OSEligibility.OSEligibilityDomain		case	siriMode
+enum	OSEligibility.OSEligibilityDomain		case	siriModeNeedsConsent
+enum	OSEligibility.OSEligibilityDomain		case	siriWithAppIntents
+enum	OSEligibility.OSEligibilityDomain		case	smsMMSRCSAPI
+enum	OSEligibility.OSEligibilityDomain		case	sodium
+enum	OSEligibility.OSEligibilityDomain		case	strontium
+enum	OSEligibility.OSEligibilityDomain		case	sulfur
+enum	OSEligibility.OSEligibilityDomain		case	swiftAssist
+enum	OSEligibility.OSEligibilityDomain		case	tantalum
+enum	OSEligibility.OSEligibilityDomain		case	technetium
+enum	OSEligibility.OSEligibilityDomain		case	teenAttachedToFamilyRequired
+enum	OSEligibility.OSEligibilityDomain		case	tellurium
+enum	OSEligibility.OSEligibilityDomain		case	tennessine
+enum	OSEligibility.OSEligibilityDomain		case	terbium
+enum	OSEligibility.OSEligibilityDomain		case	test
+enum	OSEligibility.OSEligibilityDomain		case	thallium
+enum	OSEligibility.OSEligibilityDomain		case	thorium
+enum	OSEligibility.OSEligibilityDomain		case	thulium
+enum	OSEligibility.OSEligibilityDomain		case	tin
+enum	OSEligibility.OSEligibilityDomain		case	titanium
+enum	OSEligibility.OSEligibilityDomain		case	tungsten
+enum	OSEligibility.OSEligibilityDomain		case	unverifiedAdultBackgroundRestrictionRequired
+enum	OSEligibility.OSEligibilityDomain		case	unverifiedAdultBackgroundRestrictionRequiredMiniBuddy
+enum	OSEligibility.OSEligibilityDomain		case	unverifiedAdultRestrictionRequired
+enum	OSEligibility.OSEligibilityDomain		case	unverifiedAdultRestrictionRequiredMiniBuddy
+enum	OSEligibility.OSEligibilityDomain		case	uranium
+enum	OSEligibility.OSEligibilityDomain		case	vanadium
+enum	OSEligibility.OSEligibilityDomain		case	webContentFilterForceOn
+enum	OSEligibility.OSEligibilityDomain		case	xcodeLLM
+enum	OSEligibility.OSEligibilityDomain		case	xenon
+enum	OSEligibility.OSEligibilityDomain		case	ytterbium
+enum	OSEligibility.OSEligibilityDomain		case	yttrium
+enum	OSEligibility.OSEligibilityDomain		case	zinc
+enum	OSEligibility.OSEligibilityDomain		case	zirconium
+protocol	OSEligibility.ApplicationRecordProviding			
+protocol	OSEligibility.LaunchServicesProviding			
+protocol	OSEligibility.OSEligibilityProviding			
+protocol	OSEligibility.SecurityProviding			
+protocol	conformance OSEligibility.OSEligibilityAnswer	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityAnswer	Swift.Hashable		
+protocol	conformance OSEligibility.OSEligibilityAnswer	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityAnswer	Swift.Encodable		
+protocol	conformance OSEligibility.OSEligibilityAnswerSource	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityAnswerSource	Swift.Hashable		
+protocol	conformance OSEligibility.OSEligibilityAnswerSource	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityAnswerSource	Swift.Encodable		
+protocol	conformance OSEligibility.OSEligibilityInput	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityInput	Swift.Hashable		
+protocol	conformance OSEligibility.OSEligibilityInput	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityInput	Swift.Encodable		
+protocol	conformance OSEligibility.OSEligibilityInputStatus	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityInputStatus	Swift.Hashable		
+protocol	conformance OSEligibility.OSEligibilityInputStatus	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityInputStatus	Swift.Encodable		
+protocol	conformance OSEligibilityContext.EntitlementValue	Swift.Hashable		
+protocol	conformance OSEligibilityContext.EntitlementValue	Swift.Decodable		
+protocol	conformance OSEligibilityContext.EntitlementValue	Swift.Encodable		
+protocol	conformance OSEligibilityContext.EntitlementValue	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityContext	Swift.Hashable		
+protocol	conformance OSEligibility.OSEligibilityContext	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityContext	Swift.Encodable		
+protocol	conformance OSEligibility.OSEligibilityContext	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityResult	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityResult	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityResult	Swift.Encodable		
+protocol	conformance OSEligibility.OSEligibilityError	Swift.Error		
+protocol	conformance EligibleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EligibleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MaybeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MaybeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotEligibleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotEligibleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotYetAvailableCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotYetAvailableCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ForcedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ForcedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ComputedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ComputedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AgeAssuranceAreaIdCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AgeAssuranceAreaIdCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsAccountEligibleForAgeAssuranceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsAccountEligibleForAgeAssuranceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsConnectedToAgeVerifiedAdultCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsConnectedToAgeVerifiedAdultCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsAgeVerifiedAdultCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsAgeVerifiedAdultCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsChildCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsChildCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance IsTeenCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance IsTeenCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PhoneAppRemovalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PhoneAppRemovalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ShiptoLocationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ShiptoLocationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PreciseLocationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PreciseLocationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BirthdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BirthdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance InitialSetupLocationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance InitialSetupLocationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceAndSiriLanguageMatchCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceAndSiriLanguageMatchCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SharediPadCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SharediPadCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ExternalBootDriveCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ExternalBootDriveCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance SiriLanguageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance SiriLanguageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GreymatterOnQueueCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GreymatterOnQueueCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance GenerativeModelSystemCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance GenerativeModelSystemCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceLanguageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceLanguageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceRegionCodeCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceRegionCodeCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ChinaCellularCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ChinaCellularCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceLocaleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceLocaleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DeviceClassCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DeviceClassCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountryBillingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountryBillingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountryLocationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountryLocationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NoAccountCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoAccountCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TokenExpiredCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenExpiredCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance UnspecifiedErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance UnspecifiedErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EligibleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EligibleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotEligibleCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotEligibleCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NotSetCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NotSetCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance DictionaryCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance DictionaryCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance DictionaryCodingKeys	Swift.Hashable		
+protocol	conformance DictionaryCodingKeys	Swift.Equatable		
+protocol	conformance ArrayCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ArrayCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ArrayCodingKeys	Swift.Hashable		
+protocol	conformance ArrayCodingKeys	Swift.Equatable		
+protocol	conformance StringCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StringCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StringCodingKeys	Swift.Hashable		
+protocol	conformance StringCodingKeys	Swift.Equatable		
+protocol	conformance BoolCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance BoolCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance BoolCodingKeys	Swift.Hashable		
+protocol	conformance BoolCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance AccountAreaIDsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AccountAreaIDsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AccountAreaIDsCodingKeys	Swift.Hashable		
+protocol	conformance AccountAreaIDsCodingKeys	Swift.Equatable		
+protocol	conformance MarketplaceInstallFlowCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance MarketplaceInstallFlowCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance MarketplaceInstallFlowCodingKeys	Swift.Hashable		
+protocol	conformance MarketplaceInstallFlowCodingKeys	Swift.Equatable		
+protocol	conformance AreaIDsCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AreaIDsCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance AreaIDsCodingKeys	Swift.Hashable		
+protocol	conformance AreaIDsCodingKeys	Swift.Equatable		
+protocol	conformance EntitlementCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EntitlementCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EntitlementCodingKeys	Swift.Hashable		
+protocol	conformance EntitlementCodingKeys	Swift.Equatable		
+protocol	conformance EligibleSiriLanguageCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EligibleSiriLanguageCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EligibleSiriLanguageCodingKeys	Swift.Hashable		
+protocol	conformance EligibleSiriLanguageCodingKeys	Swift.Equatable		
+protocol	conformance PreciseLocationCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PreciseLocationCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PreciseLocationCodingKeys	Swift.Hashable		
+protocol	conformance PreciseLocationCodingKeys	Swift.Equatable		
+protocol	conformance CountryPolicyCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountryPolicyCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountryPolicyCodingKeys	Swift.Hashable		
+protocol	conformance CountryPolicyCodingKeys	Swift.Equatable		
+protocol	conformance EligibleDeviceLanguagesCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance EligibleDeviceLanguagesCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance EligibleDeviceLanguagesCodingKeys	Swift.Hashable		
+protocol	conformance EligibleDeviceLanguagesCodingKeys	Swift.Equatable		
+protocol	conformance ForceReasonCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ForceReasonCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ForceReasonCodingKeys	Swift.Hashable		
+protocol	conformance ForceReasonCodingKeys	Swift.Equatable		
+protocol	conformance CountryBillingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CountryBillingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CountryBillingCodingKeys	Swift.Hashable		
+protocol	conformance CountryBillingCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance __C.os_eligibility_answer_t	Swift.RawRepresentable		
+protocol	conformance __C.os_eligibility_answer_t	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CountryBillingCodingKeys	Swift.CodingKey		
+protocol	conformance ForceReasonCodingKeys	Swift.CodingKey		
+protocol	conformance EligibleDeviceLanguagesCodingKeys	Swift.CodingKey		
+protocol	conformance CountryPolicyCodingKeys	Swift.CodingKey		
+protocol	conformance PreciseLocationCodingKeys	Swift.CodingKey		
+protocol	conformance EligibleSiriLanguageCodingKeys	Swift.CodingKey		
+protocol	conformance EntitlementCodingKeys	Swift.CodingKey		
+protocol	conformance AreaIDsCodingKeys	Swift.CodingKey		
+protocol	conformance MarketplaceInstallFlowCodingKeys	Swift.CodingKey		
+protocol	conformance AccountAreaIDsCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance BoolCodingKeys	Swift.CodingKey		
+protocol	conformance StringCodingKeys	Swift.CodingKey		
+protocol	conformance ArrayCodingKeys	Swift.CodingKey		
+protocol	conformance DictionaryCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NotSetCodingKeys	Swift.CodingKey		
+protocol	conformance NotEligibleCodingKeys	Swift.CodingKey		
+protocol	conformance EligibleCodingKeys	Swift.CodingKey		
+protocol	conformance UnspecifiedErrorCodingKeys	Swift.CodingKey		
+protocol	conformance TokenExpiredCodingKeys	Swift.CodingKey		
+protocol	conformance NoAccountCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CountryLocationCodingKeys	Swift.CodingKey		
+protocol	conformance CountryBillingCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceClassCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceLocaleCodingKeys	Swift.CodingKey		
+protocol	conformance ChinaCellularCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceRegionCodeCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceLanguageCodingKeys	Swift.CodingKey		
+protocol	conformance GenerativeModelSystemCodingKeys	Swift.CodingKey		
+protocol	conformance GreymatterOnQueueCodingKeys	Swift.CodingKey		
+protocol	conformance SiriLanguageCodingKeys	Swift.CodingKey		
+protocol	conformance ExternalBootDriveCodingKeys	Swift.CodingKey		
+protocol	conformance SharediPadCodingKeys	Swift.CodingKey		
+protocol	conformance DeviceAndSiriLanguageMatchCodingKeys	Swift.CodingKey		
+protocol	conformance InitialSetupLocationCodingKeys	Swift.CodingKey		
+protocol	conformance BirthdateCodingKeys	Swift.CodingKey		
+protocol	conformance PreciseLocationCodingKeys	Swift.CodingKey		
+protocol	conformance ShiptoLocationCodingKeys	Swift.CodingKey		
+protocol	conformance PhoneAppRemovalCodingKeys	Swift.CodingKey		
+protocol	conformance IsTeenCodingKeys	Swift.CodingKey		
+protocol	conformance IsChildCodingKeys	Swift.CodingKey		
+protocol	conformance IsAgeVerifiedAdultCodingKeys	Swift.CodingKey		
+protocol	conformance IsConnectedToAgeVerifiedAdultCodingKeys	Swift.CodingKey		
+protocol	conformance IsAccountEligibleForAgeAssuranceCodingKeys	Swift.CodingKey		
+protocol	conformance AgeAssuranceAreaIdCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance ComputedCodingKeys	Swift.CodingKey		
+protocol	conformance ForcedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NotYetAvailableCodingKeys	Swift.CodingKey		
+protocol	conformance NotEligibleCodingKeys	Swift.CodingKey		
+protocol	conformance MaybeCodingKeys	Swift.CodingKey		
+protocol	conformance EligibleCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance OSEligibility.ApplicationRecordProvider	OSEligibility.ApplicationRecordProviding		
+protocol	conformance OSEligibility.LaunchServicesProvider	OSEligibility.LaunchServicesProviding		
+protocol	conformance OSEligibility.OSEligibilityProvider	OSEligibility.OSEligibilityProviding		
+protocol	conformance OSEligibility.SecurityProvider	OSEligibility.SecurityProviding		
+protocol	conformance OSEligibility.OSEligibilityDomain	Swift.Equatable		
+protocol	conformance OSEligibility.OSEligibilityDomain	Swift.Hashable		
+protocol	conformance OSEligibility.OSEligibilityDomain	Swift.RawRepresentable		
+protocol	conformance OSEligibility.OSEligibilityDomain	Swift.Decodable		
+protocol	conformance OSEligibility.OSEligibilityDomain	Swift.Encodable		
+extension	OSEligibility.OSEligibilityDomain	RawRepresentable		

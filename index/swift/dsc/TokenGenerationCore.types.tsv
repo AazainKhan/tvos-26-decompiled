@@ -1,0 +1,1822 @@
+kind	type	conformance	member_kind	member
+enum	TokenGenerationCore.Regex2BNF.TerminalSymbol			
+enum	TokenGenerationCore.Regex2BNF.TerminalSymbol		case	character
+enum	TokenGenerationCore.Regex2BNF.TerminalSymbol		case	utf8CodeUnit
+enum	TokenGenerationCore.Regex2BNF.TerminalSymbol		case	characterPredicate
+enum	TokenGenerationCore.Regex2BNF.TerminalSymbol		case	characterSet
+enum	TokenGenerationCore.Regex2BNF.Symbol			
+enum	TokenGenerationCore.Regex2BNF.Symbol		case	terminal
+enum	TokenGenerationCore.Regex2BNF.Symbol		case	terminalSequence
+enum	TokenGenerationCore.Regex2BNF.Symbol		case	nonTerminal
+enum	TokenGenerationCore.Regex2BNF.Symbol		case	builtin
+struct	TokenGenerationCore.Regex2BNF.Choice			
+struct	TokenGenerationCore.Regex2BNF.Choice		var	sequence
+struct	TokenGenerationCore.Regex2BNF.Rule			
+struct	TokenGenerationCore.Regex2BNF.Rule		var	symbol
+struct	TokenGenerationCore.Regex2BNF.Rule		var	expression
+struct	TokenGenerationCore.Regex2BNF.Rule		var	predicates
+enum	TokenGenerationCore.Regex2BNF			
+struct	TokenGenerationCore.Regex2BNF.CharacterPredicate			
+struct	TokenGenerationCore.Regex2BNF.CharacterPredicate		let	impl
+struct	TokenGenerationCore.Regex2BNF.Expression			
+struct	TokenGenerationCore.Regex2BNF.Expression		var	choices
+struct	TokenGenerationCore.Regex2BNF.NonTerminalSymbol			
+struct	TokenGenerationCore.Regex2BNF.NonTerminalSymbol		var	name
+enum	TokenGenerationCore.Regex2BNF.CharacterSet			
+enum	TokenGenerationCore.Regex2BNF.Builtin			
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	any
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	whitespace
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	notWhitespace
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	decimalDigit
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	notDecimalDigit
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	wordCharacter
+enum	TokenGenerationCore.Regex2BNF.Builtin		case	notWordCharacter
+struct	TokenGenerationCore.SyntaxError			
+struct	TokenGenerationCore.SyntaxError		var	issue
+struct	TokenGenerationCore.SyntaxError		var	line
+struct	TokenGenerationCore.SyntaxError		var	column
+enum	TokenGenerationCore.BackusNaurParser.State			
+enum	TokenGenerationCore.BackusNaurParser.State		case	start
+enum	TokenGenerationCore.BackusNaurParser.State		case	waitingForFirstColon
+enum	TokenGenerationCore.BackusNaurParser.State		case	waitingForSecondColon
+enum	TokenGenerationCore.BackusNaurParser.State		case	waitingForEqualsSign
+enum	TokenGenerationCore.BackusNaurParser.State		case	choice
+enum	TokenGenerationCore.BackusNaurParser.State		case	referenceSymbol
+enum	TokenGenerationCore.BackusNaurParser.State		case	terminalSymbol
+enum	TokenGenerationCore.BackusNaurParser.State		case	terminalSymbolAfterEscape
+enum	TokenGenerationCore.BackusNaurParser.State		case	terminalSymbolAfterSpecialTerminalMarker
+enum	TokenGenerationCore.BackusNaurParser.State		case	terminalSymbolAfterByteMarker
+enum	TokenGenerationCore.BackusNaurParser.State		case	specialTokenText
+enum	TokenGenerationCore.SyntaxError.Issue			
+enum	TokenGenerationCore.SyntaxError.Issue		case	invalidCharacterInChoice
+enum	TokenGenerationCore.SyntaxError.Issue		case	incompleteExpression
+enum	TokenGenerationCore.SyntaxError.Issue		case	invalidSpecialTokenBaseValue
+enum	TokenGenerationCore.SyntaxError.Issue		case	invalidByteTerminalValue
+enum	TokenGenerationCore.SyntaxError.Issue		case	symbolMustStartWithCarrot
+enum	TokenGenerationCore.SyntaxError.Issue		case	symbolMustNotBeEmpty
+enum	TokenGenerationCore.SyntaxError.Issue		case	symbolMustNotContainSpaces
+enum	TokenGenerationCore.SyntaxError.Issue		case	symbolDeclarationMustBeFollowedbyAssignment
+enum	TokenGenerationCore.SyntaxError.Issue		case	redefiningReservedSymbol
+enum	TokenGenerationCore.SyntaxError.Issue		case	invalidSpecialTokenIDRule
+struct	TokenGenerationCore.BackusNaurParser			
+struct	TokenGenerationCore.ContiguousBitSet			
+struct	TokenGenerationCore.ContiguousBitSet		var	storage
+struct	TokenGenerationCore.ContiguousBitSet		var	count
+struct	TokenGenerationCore.ContiguousBitSet		var	first
+struct	TokenGenerationCore.ContiguousBitSet		var	last
+struct	TokenGenerationCore.ContiguousBitSet.Iterator			
+struct	TokenGenerationCore.ContiguousBitSet.Iterator		let	storage
+struct	TokenGenerationCore.ContiguousBitSet.Iterator		var	wordIndex
+struct	TokenGenerationCore.ContiguousBitSet.Iterator		var	accumulator
+struct	TokenGenerationCore.ContiguousBitSet.Iterator		var	baseIndex
+class	TokenGenerationCore.EarleyRecognizer			
+class	TokenGenerationCore.EarleyRecognizer		let	characterSetsUsedInGrammar
+class	TokenGenerationCore.EarleyRecognizer		let	lastConsumedElement
+class	TokenGenerationCore.EarleyRecognizer		let	recognizerGrammar
+class	TokenGenerationCore.EarleyRecognizer		let	chart
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar			
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	nonTerminalSymbols
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	terminalSymbols
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	recognizerTerminalSymbols
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	nullableSymbols
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	root
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	rules
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	cacheableResursiveNonTerminalsIndex
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	rulesForNonTerminal
+class	TokenGenerationCore.EarleyRecognizer.RecognizerGrammar		let	specialTokenIDSet
+struct	TokenGenerationCore.EarleyRecognizer.State			
+struct	TokenGenerationCore.EarleyRecognizer.State		let	items
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerValidatorCache			
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerValidatorCache		let	recognizerGrammar
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerValidatorCache		var	chart
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerValidatorCache		var	elements
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerValidatorCache		var	earleyItems
+struct	TokenGenerationCore.EarleyRecognizer.Item			
+struct	TokenGenerationCore.EarleyRecognizer.Item		let	ruleIndex
+struct	TokenGenerationCore.EarleyRecognizer.Item		let	symbolIndex
+struct	TokenGenerationCore.EarleyRecognizer.Item		let	startSetIndex
+struct	TokenGenerationCore.EarleyRecognizer.Item		let	cachableParentIndex
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerRule			
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerRule		let	nameIndex
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerRule		let	symbols
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerRule		let	isRecursive
+struct	TokenGenerationCore.EarleyRecognizer.RecognizerRule		let	containsCharacterSetTerminals
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerTerminalSymbol			
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerTerminalSymbol		case	unicodeScalarElement
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerTerminalSymbol		case	unicodeScalarSet
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerTerminalSymbol		case	uft8CodeUnitElement
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerTerminalSymbol		case	specialTokenIDElement
+struct	TokenGenerationCore.EarleyRecognizer.Chart			
+struct	TokenGenerationCore.EarleyRecognizer.Chart		let	staticStateChunks
+struct	TokenGenerationCore.EarleyRecognizer.Chart		var	dynamicStates
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerSymbol			
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerSymbol		case	terminal
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerSymbol		case	nonterminal
+enum	TokenGenerationCore.EarleyRecognizer.RecognizerSymbol		case	end
+struct	TokenGenerationCore.Grammar			
+struct	TokenGenerationCore.Grammar		let	cacheableResursiveNonTerminals
+struct	TokenGenerationCore.Grammar		let	root
+struct	TokenGenerationCore.Grammar		let	rules
+struct	TokenGenerationCore.Grammar		let	characterSetsUsedInGrammar
+struct	TokenGenerationCore.Rule			
+struct	TokenGenerationCore.Rule		var	symbol
+struct	TokenGenerationCore.Rule		var	expression
+enum	TokenGenerationCore.Symbol			
+enum	TokenGenerationCore.Symbol		case	terminal
+enum	TokenGenerationCore.Symbol		case	terminalSequence
+enum	TokenGenerationCore.Symbol		case	nonterminal
+enum	TokenGenerationCore.TerminalSymbol			
+enum	TokenGenerationCore.TerminalSymbol		case	character
+enum	TokenGenerationCore.TerminalSymbol		case	characterSet
+enum	TokenGenerationCore.TerminalSymbol		case	characterSetUsedRecursively
+enum	TokenGenerationCore.TerminalSymbol		case	utf8CodeUnit
+enum	TokenGenerationCore.TerminalSymbol		case	specialTokenText
+enum	TokenGenerationCore.TerminalSymbol		case	specialTokenID
+struct	TokenGenerationCore.NonTerminalSymbol			
+struct	TokenGenerationCore.NonTerminalSymbol		let	identifier
+struct	TokenGenerationCore.Expression			
+struct	TokenGenerationCore.Expression		var	choices
+struct	TokenGenerationCore.Choice			
+struct	TokenGenerationCore.Choice		var	sequence
+enum	TokenGenerationCore.InvalidGrammar			
+enum	TokenGenerationCore.InvalidGrammar		case	referenceToUndefinedSymbol
+enum	TokenGenerationCore.InvalidGrammar		case	rightRecursiveRule
+enum	TokenGenerationCore.InvalidGrammar		case	invalidBounds
+enum	TokenGenerationCore.InvalidGrammar		case	emptyRuleSet
+enum	TokenGenerationCore.Choice.CodingKeys			
+enum	TokenGenerationCore.Choice.CodingKeys		case	sequence
+enum	TokenGenerationCore.Expression.CodingKeys			
+enum	TokenGenerationCore.Expression.CodingKeys		case	choices
+enum	TokenGenerationCore.NonTerminalSymbol.CodingKeys			
+enum	TokenGenerationCore.NonTerminalSymbol.CodingKeys		case	identifier
+enum	TokenGenerationCore.TerminalSymbol.Kind			
+enum	TokenGenerationCore.TerminalSymbol.Kind		case	character
+enum	TokenGenerationCore.TerminalSymbol.Kind		case	characterSet
+enum	TokenGenerationCore.TerminalSymbol.Kind		case	characterSetUsedRecursively
+enum	TokenGenerationCore.TerminalSymbol.Kind		case	utf8CodeUnit
+enum	TokenGenerationCore.TerminalSymbol.Kind		case	specialTokenText
+enum	TokenGenerationCore.TerminalSymbol.Kind		case	specialTokenID
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys			
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	kind
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	character
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	characterSet
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	characterSetUsedRecursively
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	utf8CodeUnit
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	specialTokenText
+enum	TokenGenerationCore.TerminalSymbol.CodingKeys		case	specialTokenID
+enum	TokenGenerationCore.Symbol.CodingKeys			
+enum	TokenGenerationCore.Symbol.CodingKeys		case	terminal
+enum	TokenGenerationCore.Symbol.CodingKeys		case	terminalSequence
+enum	TokenGenerationCore.Symbol.CodingKeys		case	nonterminal
+enum	TokenGenerationCore.Symbol.TerminalCodingKeys			
+enum	TokenGenerationCore.Symbol.TerminalCodingKeys		case	_0
+enum	TokenGenerationCore.Symbol.TerminalSequenceCodingKeys			
+enum	TokenGenerationCore.Symbol.TerminalSequenceCodingKeys		case	_0
+enum	TokenGenerationCore.Symbol.NonterminalCodingKeys			
+enum	TokenGenerationCore.Symbol.NonterminalCodingKeys		case	_0
+enum	TokenGenerationCore.Rule.CodingKeys			
+enum	TokenGenerationCore.Rule.CodingKeys		case	symbol
+enum	TokenGenerationCore.Rule.CodingKeys		case	expression
+class	TokenGenerationCore.Node			
+class	TokenGenerationCore.Node		var	upper
+class	TokenGenerationCore.Node		var	lower
+class	TokenGenerationCore.Node		var	value
+class	TokenGenerationCore.Node		var	remainingDigits
+class	TokenGenerationCore.Node		var	isFraction
+class	TokenGenerationCore.Lock			
+class	TokenGenerationCore.Lock		let	mutex
+class	TokenGenerationCore.MaskCache			
+class	TokenGenerationCore.MaskCache		var	maskCache
+class	TokenGenerationCore.MaskCache		let	lock
+struct	TokenGenerationCore.ConstraintsProvider<A	TokenGenerationCore.GuidedGenerationConstraintsProtocol>		
+struct	TokenGenerationCore.ConstraintsProvider<A	TokenGenerationCore.GuidedGenerationConstraintsProtocol>	let	implementation
+struct	TokenGenerationCore.ExhaustiveLogitMaskGenerator<A	TokenGenerationCore.GrammarRecognizer>		
+struct	TokenGenerationCore.SentencePieceVocabularyTextConverter			
+struct	TokenGenerationCore.SentencePieceVocabularyTextConverter		let	startOfWordToken
+struct	TokenGenerationCore.SentencePieceVocabularyTextConverter		let	startOfWordCharacter
+struct	TokenGenerationCore.SpaceLookaheadMaskGenerator<A	TokenGenerationCore.GrammarRecognizer>		
+struct	TokenGenerationCore.SpaceLookaheadMaskGenerator<A	TokenGenerationCore.GrammarRecognizer>	let	disableCachedResults
+enum	TokenGenerationCore.RecognizerElement			
+enum	TokenGenerationCore.RecognizerElement		case	unicodeScalar
+enum	TokenGenerationCore.RecognizerElement		case	utf8CodeUnit
+enum	TokenGenerationCore.RecognizerElement		case	specialTokenID
+enum	TokenGenerationCore.GuidedGenerationError			
+enum	TokenGenerationCore.GuidedGenerationError		case	invalidConfiguration
+enum	TokenGenerationCore.GuidedGenerationError		case	invalidInputTokens
+enum	TokenGenerationCore.GuidedGenerationError		case	unknownTokenID
+enum	TokenGenerationCore.GuidedGenerationError		case	invalidMaskSize
+enum	TokenGenerationCore.GuidedGenerationError		case	deserializationError
+enum	TokenGenerationCore.LogitMaskComputation			
+enum	TokenGenerationCore.LogitMaskComputation		case	responseReady
+enum	TokenGenerationCore.LogitMaskComputation		case	responseRequiresWork
+enum	TokenGenerationCore.LogitMaskResponse			
+enum	TokenGenerationCore.LogitMaskResponse		case	deterministicTokenRun
+enum	TokenGenerationCore.LogitMaskResponse		case	logitMask
+struct	TokenGenerationCore.TokenIDMask			
+struct	TokenGenerationCore.TokenIDMask		var	mask
+struct	TokenGenerationCore.TokenIDMask		let	vocabularySize
+enum	TokenGenerationCore.TokenIDMaskComputation			
+enum	TokenGenerationCore.TokenIDMaskComputation		case	responseReady
+enum	TokenGenerationCore.TokenIDMaskComputation		case	responseRequiresWork
+enum	TokenGenerationCore.TokenIDMaskResponse			
+enum	TokenGenerationCore.TokenIDMaskResponse		case	deterministicTokenRun
+enum	TokenGenerationCore.TokenIDMaskResponse		case	tokenIDMask
+struct	TokenGenerationCore.GuidedGenerationVocabularyManager			
+struct	TokenGenerationCore.GuidedGenerationVocabularyManager		let	vocabManager
+enum	TokenGenerationCore.MatchResult			
+enum	TokenGenerationCore.MatchResult		case	mismatch
+enum	TokenGenerationCore.MatchResult		case	fullMatch
+enum	TokenGenerationCore.MatchResult		case	partialMatch
+struct	TokenGenerationCore.ValidationResult			
+struct	TokenGenerationCore.ValidationResult		let	match
+struct	TokenGenerationCore.ValidationResult		let	acceptedScalars
+struct	TokenGenerationCore.SuppressionConstraints			
+struct	TokenGenerationCore.SuppressionConstraints		var	suppressedStrings
+struct	TokenGenerationCore.GuidedGenerationConstraints			
+struct	TokenGenerationCore.GuidedGenerationConstraints		let	tokenRecognizer
+struct	TokenGenerationCore.GuidedGenerationConstraints		let	suppressionConstraints
+struct	TokenGenerationCore.GuidedGenerationConstraints		let	constraintsProvider
+enum	TokenGenerationCore.SuppressionConstraints.CodingKeys			
+enum	TokenGenerationCore.SuppressionConstraints.CodingKeys		case	suppressedStrings
+struct	TokenGenerationCore.RollbackState			
+struct	TokenGenerationCore.RollbackState		var	numberOfConfirmedTokens
+struct	TokenGenerationCore.RollbackState		var	suppressedTokenIDs
+enum	TokenGenerationCore.RollbackStatus			
+enum	TokenGenerationCore.RollbackStatus		case	prepareToRollBackTokens
+enum	TokenGenerationCore.RollbackStatus		case	rollBackTokens
+enum	TokenGenerationCore.RollbackStatus		case	noRollbackNeeded
+struct	TokenGenerationCore.DecodingLoop			
+struct	TokenGenerationCore.DecodingLoop		var	constraints
+struct	TokenGenerationCore.DecodingLoop		var	context
+struct	TokenGenerationCore.DecodingLoop		var	rollbackState
+enum	TokenGenerationCore.RollbackStatus.CodingKeys			
+enum	TokenGenerationCore.RollbackStatus.CodingKeys		case	noRollbackNeeded
+enum	TokenGenerationCore.RollbackStatus.CodingKeys		case	prepareToRollBackTokens
+enum	TokenGenerationCore.RollbackStatus.CodingKeys		case	rollBackTokens
+enum	TokenGenerationCore.RollbackStatus.NoRollbackNeededCodingKeys			
+enum	TokenGenerationCore.RollbackStatus.PrepareToRollBackTokensCodingKeys			
+enum	TokenGenerationCore.RollbackStatus.PrepareToRollBackTokensCodingKeys		case	count
+enum	TokenGenerationCore.RollbackStatus.RollBackTokensCodingKeys			
+enum	TokenGenerationCore.RollbackStatus.RollBackTokensCodingKeys		case	count
+enum	TokenGenerationCore.RollbackState.CodingKeys			
+enum	TokenGenerationCore.RollbackState.CodingKeys		case	numberOfConfirmedTokens
+enum	TokenGenerationCore.RollbackState.CodingKeys		case	suppressedTokenIDs
+class	TokenGenerationCore.TokenGrammarRecognizer<A	TokenGenerationCore.GrammarRecognizer>		
+class	TokenGenerationCore.TokenGrammarRecognizer<A	TokenGenerationCore.GrammarRecognizer>	var	cachedMaskResult
+class	TokenGenerationCore.TokenGrammarRecognizer<A	TokenGenerationCore.GrammarRecognizer>	let	lock
+class	TokenGenerationCore.TokenGrammarRecognizer<A	TokenGenerationCore.GrammarRecognizer>	let	vocabManager
+class	TokenGenerationCore.TokenGrammarRecognizer<A	TokenGenerationCore.GrammarRecognizer>	let	lastConsumedTokenID
+class	TokenGenerationCore.TokenGrammarRecognizer<A	TokenGenerationCore.GrammarRecognizer>	let	inputRecognizer
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints			
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	toolConstraints
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	outputConstraints
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	executableStartTokenID
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	executableEndTokenID
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	vocabularySize
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	toolChoice
+struct	TokenGenerationCore.ToolAwareGuidedGenerationConstraints		let	allTokensMask
+class	TokenGenerationCore.VocabularyManager			
+class	TokenGenerationCore.VocabularyManager		let	vocabConverter
+class	TokenGenerationCore.VocabularyManager		let	characterSetsUsedInGrammar
+class	TokenGenerationCore.VocabularyManager		let	tokenizer
+class	TokenGenerationCore.VocabularyManager		let	startOfWordTokenID
+class	TokenGenerationCore.VocabularyManager		let	stopTokenIDs
+class	TokenGenerationCore.VocabularyManager		let	cachedPrefixLookup
+class	TokenGenerationCore.VocabularyManager		var	lazy
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup			
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	tokenRanksForPrefix
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	startOfWordTokenRanksForPrefix
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	characterSetLookup
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	convertedVocabTokens
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	tokenPrefixesMissingStartOfWordPair
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	sortedTokenIDs
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	tokenRanksForSorting
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	utf8CodePointToTokenIDLookup
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	tokenIDToUTF8CodeUnitLookup
+struct	TokenGenerationCore.VocabularyManager.PrefixLookup		let	byteTokenIDSet
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup			
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	accepted
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	candidateRanks
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	acceptedAfterStartWord
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	candidateAfterStartWordRanks
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	recursivelyUsedAccepted
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	recursivelyUsedCandidateRanks
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	recursivelyUsedAcceptedAfterStartWord
+struct	TokenGenerationCore.VocabularyManager.CharacterSetLookup		let	recursivelyUsedCandidateAfterStartWordRanks
+struct	TokenGenerationCore.GuidedGenerationOverrides			
+struct	TokenGenerationCore.GuidedGenerationOverrides		var	_enableDeterministicTokenRuns
+struct	TokenGenerationCore.GuidedGenerationOverrides		var	_enableRightRecursion
+struct	TokenGenerationCore.GuidedGenerationOverrides		var	_numParallelTasks
+struct	TokenGenerationCore.GuidedGenerationOverrides		var	_disableCachedResults
+struct	TokenGenerationCore.GuidedGenerationOverrides		var	_deterministicTokenRunStabilityLookaheadTokenLimit
+struct	TokenGenerationCore.GuidedGenerationOverrides		var	_disableCiderToolGrammar
+enum	TokenGenerationCore.InferenceOutputDelta			
+enum	TokenGenerationCore.InferenceOutputDelta		case	toolCallDelta
+enum	TokenGenerationCore.InferenceOutputDelta		case	thoughtDelta
+enum	TokenGenerationCore.InferenceOutputDelta		case	textDelta
+struct	TokenGenerationCore.InferenceOutputDelta.TextDelta			
+struct	TokenGenerationCore.InferenceOutputDelta.TextDelta		var	text
+struct	TokenGenerationCore.InferenceOutputDelta.ThoughtContentDelta			
+struct	TokenGenerationCore.InferenceOutputDelta.ThoughtContentDelta		var	thoughtID
+struct	TokenGenerationCore.InferenceOutputDelta.ThoughtContentDelta		var	content
+struct	TokenGenerationCore.CompositeInferenceOutputParser			
+struct	TokenGenerationCore.CompositeInferenceOutputParser		var	parsers
+struct	TokenGenerationCore.CompositeInferenceOutputParser.ParserOptions			
+struct	TokenGenerationCore.CompositeInferenceOutputParser.ParserOptions		let	rawValue
+struct	TokenGenerationCore.TextDeltaParser			
+struct	TokenGenerationCore.TextDeltaParser		var	isOutputParsingInProgress
+struct	TokenGenerationCore.ThoughtContentParserNoOp			
+struct	TokenGenerationCore.ThoughtContentParserNoOp		var	isThoughtInProgress
+struct	TokenGenerationCore.ThoughtContentParser			
+struct	TokenGenerationCore.ThoughtContentParser		var	parser
+struct	TokenGenerationCore.ThoughtContentParserCider			
+struct	TokenGenerationCore.ThoughtContentParserCider		var	currentThoughtId
+struct	TokenGenerationCore.ThoughtContentParserCider		var	bufferedPrefix
+struct	TokenGenerationCore.ToolCallParser			
+struct	TokenGenerationCore.ToolCallParser		var	parser
+struct	TokenGenerationCore.ToolCallParser.FunctionDelta			
+struct	TokenGenerationCore.ToolCallParser.FunctionDelta		var	toolCallID
+struct	TokenGenerationCore.ToolCallParser.FunctionDelta		var	name
+struct	TokenGenerationCore.ToolCallParser.FunctionDelta		var	arguments
+struct	TokenGenerationCore.ToolCallParserV4			
+struct	TokenGenerationCore.ToolCallParserV4		var	isToolCallInProgress
+struct	TokenGenerationCore.ToolCallParserV4		var	currentToolCallID
+struct	TokenGenerationCore.ToolCallParserV4		var	bufferedText
+struct	TokenGenerationCore.ToolCallParserV4		var	parser
+struct	TokenGenerationCore.ToolCallParserCider			
+struct	TokenGenerationCore.ToolCallParserCider		var	isToolCallInProgress
+struct	TokenGenerationCore.ToolCallParserCider		var	currentToolCallID
+struct	TokenGenerationCore.ToolCallParserCider		var	bufferedText
+struct	TokenGenerationCore.ToolCallParserCider		var	prefixParser
+struct	TokenGenerationCore.ToolCallParserCider		var	parser
+struct	TokenGenerationCore.ToolCallParserCider.CallParser			
+struct	TokenGenerationCore.ToolCallParserCider.CallParser		var	name
+struct	TokenGenerationCore.ToolCallParserCider.CallParser		var	_name
+struct	TokenGenerationCore.ToolCallParserCider.CallParser		var	argumentsParser
+struct	TokenGenerationCore.ToolCallParserCider.CallParser		var	suffixParser
+struct	TokenGenerationCore.ToolCallParserV4.ConstantParser			
+struct	TokenGenerationCore.ToolCallParserV4.ConstantParser		let	constant
+struct	TokenGenerationCore.ToolCallParserV4.ConstantParser		var	isFinished
+struct	TokenGenerationCore.ToolCallParserV4.ConstantParser		var	matched
+struct	TokenGenerationCore.ToolCallParserV4.CallParser			
+struct	TokenGenerationCore.ToolCallParserV4.CallParser		var	objectParser
+struct	TokenGenerationCore.ToolCallParserV4.CallParser		var	nameParser
+struct	TokenGenerationCore.ToolCallParserV4.CallParser		var	argumentsParser
+struct	TokenGenerationCore.ToolCallParserV4.ArgumentsParser			
+struct	TokenGenerationCore.ToolCallParserV4.ArgumentsParser		var	prefixParser
+struct	TokenGenerationCore.ToolCallParserV4.ArgumentsParser		var	valueParser
+struct	TokenGenerationCore.ToolCallParserV4.NameParser			
+struct	TokenGenerationCore.ToolCallParserV4.NameParser		var	prefixParser
+struct	TokenGenerationCore.ToolCallParserV4.NameParser		var	valueParser
+struct	TokenGenerationCore.ToolCallParserV4.ObjectParser			
+struct	TokenGenerationCore.ToolCallParserV4.ObjectParser		var	depth
+struct	TokenGenerationCore.ToolCallParserV4.ObjectParser		var	isFinished
+struct	TokenGenerationCore.ToolCallParserV4.ObjectParser		var	object
+struct	TokenGenerationCore.ToolCallParserV4.ObjectParser		var	isParsingString
+struct	TokenGenerationCore.ToolCallParserV4.ObjectParser		var	isEscaped
+struct	TokenGenerationCore.ToolCallParserV4.QuotedStringParser			
+struct	TokenGenerationCore.ToolCallParserV4.QuotedStringParser		var	string
+struct	TokenGenerationCore.ToolCallParserV4.QuotedStringParser		var	isFinished
+struct	TokenGenerationCore.ToolCallParserV4.QuotedStringParser		var	parsedOpeningQuote
+struct	TokenGenerationCore.ToolCallParserV4.QuotedStringParser		var	isEscaped
+struct	TokenGenerationCore.ResponseFormatConvention			
+struct	TokenGenerationCore.ResponseFormatConvention		let	_render
+enum	TokenGenerationCore.ToolRenderingResult			
+enum	TokenGenerationCore.ToolRenderingResult		case	text
+enum	TokenGenerationCore.ToolRenderingResult		case	cachableModules
+struct	TokenGenerationCore.ToolCallingConvention			
+struct	TokenGenerationCore.ToolCallingConvention		let	toolRenderer
+struct	TokenGenerationCore.ToolCallingFormatV4			
+struct	TokenGenerationCore.ToolCallingFormatV5			
+struct	TokenGenerationCore.ToolCallingFormatV5		let	formatV4
+struct	TokenGenerationCore.CacheableToolCallingFormatV5			
+struct	TokenGenerationCore.CacheableToolCallingFormatV5		let	formatV4
+struct	TokenGenerationCore.ToolCallingFormatCiderV1			
+struct	TokenGenerationCore.CacheableToolCallingFormatCiderV1			
+struct	TokenGenerationCore.CacheableToolCallingFormatCiderV1		let	fallBackFormatter
+struct	TokenGenerationCore.CiderToolCallToValidJSONConverter			
+struct	TokenGenerationCore.CiderToolCallToValidJSONConverter		var	buffered
+struct	TokenGenerationCore.ImageTokenizationConfiguration			
+struct	TokenGenerationCore.ImageTokenizationConfiguration		let	imageStartTokens
+struct	TokenGenerationCore.ImageTokenizationConfiguration		let	imageEndTokens
+struct	TokenGenerationCore.UnresolvedImageTokenizationConfiguration			
+struct	TokenGenerationCore.UnresolvedImageTokenizationConfiguration		let	imageStartAndEnd
+enum	TokenGenerationCore.UnresolvedImageTokenizationConfiguration.ImageStartAndEnd			
+enum	TokenGenerationCore.UnresolvedImageTokenizationConfiguration.ImageStartAndEnd		case	strings
+enum	TokenGenerationCore.UnresolvedImageTokenizationConfiguration.ImageStartAndEnd		case	tokenIds
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion			
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	v5
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	v6
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	v6_1
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	cider_v1
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	cider_v2
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	cider_v3
+enum	TokenGenerationCore.PromptPreprocessingTemplateVersion		case	cider_v4
+class	TokenGenerationCore.PromptPreprocessingTemplateV6Convention			
+class	TokenGenerationCore.PromptPreprocessingTemplateV6_1Convention			
+struct	TokenGenerationCore.PromptPreprocessingTemplateV5Convention			
+struct	TokenGenerationCore.PromptPreprocessingTemplateCiderV1Convention			
+struct	TokenGenerationCore.PromptPreprocessingTemplateCiderV1Convention		var	defaultTokenTable
+struct	TokenGenerationCore.PromptPreprocessingTemplateCiderV2Convention			
+struct	TokenGenerationCore.PromptPreprocessingTemplateCiderV2Convention		let	ciderV1Convention
+struct	TokenGenerationCore.PromptPreprocessingTemplateCiderV3Convention			
+class	TokenGenerationCore.TokenIDToTextConverter			
+class	TokenGenerationCore.TokenIDToTextConverter		let	underlyingImplementation
+class	TokenGenerationCore.TokenIDToTextConverter		let	tokenizer
+class	TokenGenerationCore.TokenIDToTextConverter		let	isOneShot
+class	TokenGenerationCore.TokenIDToTextConverter		let	promptPreprocessingTemplateVersion
+class	TokenGenerationCore.TokenIDToTextConverterImpl			
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	text
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	bufferedScalarIndex
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	decodedScalars
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	bufferedScalarTokenBoundaryIndexes
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	bufferedScalarTokenBoundaryBufferedIndex
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	decodedTokenIDs
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	remainingUTF8CodeUnits
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	bufferedTokenIDs
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	tokenizer
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	promptPreprocessingTemplateVersion
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	replacementTextByTokenText
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	isOneShot
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	newLineToken
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	newLineTokenID
+class	TokenGenerationCore.TokenIDToTextConverterImpl		let	startOfWordCharacter
+class	TokenGenerationCore.TokenIDToTextConverterImpl		var	toolCallConverter
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl			
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		var	previousTokenIDs
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		let	tokenizer
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		let	promptPreprocessingTemplateVersion
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		let	replacementTextByTokenText
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		var	text
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		var	bufferedTokenIDs
+class	TokenGenerationCore.LegacyTokenIDToTextConverterImpl		let	isOneShot
+struct	TokenGenerationCore.TokenizedStaticPromptTemplatePrefix			
+struct	TokenGenerationCore.TokenizedStaticPromptTemplatePrefix		var	renderedText
+struct	TokenGenerationCore.TokenizedStaticPromptTemplatePrefix		var	tokenIDs
+struct	TokenGenerationCore.TokenizedPromptModule			
+struct	TokenGenerationCore.TokenizedPromptModule		var	isSelfAttentionModule
+struct	TokenGenerationCore.TokenizedPromptModule		var	promptFragments
+struct	TokenGenerationCore.TokenizedPromptModule		var	fragmentTokenizationResults
+enum	TokenGenerationCore.TokenizationResult			
+enum	TokenGenerationCore.TokenizationResult		case	tokenIds
+enum	TokenGenerationCore.TokenizationResult		case	requiresProcessing
+struct	TokenGenerationCore.PromptTokenizationMetadata			
+struct	TokenGenerationCore.PromptTokenizationMetadata		let	promptPreprocessingTemplateVersion
+struct	TokenGenerationCore.PromptTokenizationMetadata		let	tokenTable
+struct	TokenGenerationCore.PromptTokenizationMetadata		let	localizationOverrideMap
+struct	TokenGenerationCore.PromptTokenizationMetadata		let	systemInstructions
+struct	TokenGenerationCore.PromptTokenizationMetadata		let	systemInstructionsLocalizationSuffixes
+class	TokenGenerationCore.TokenizerRunner			
+class	TokenGenerationCore.TokenizerRunner		let	TGCTokenizer
+class	TokenGenerationCore.TokenizerRunner		let	generationOverrides
+enum	TokenGenerationCore.TokenizerRunner.TokenizedItem			
+enum	TokenGenerationCore.TokenizerRunner.TokenizedItem		case	token
+enum	TokenGenerationCore.TokenizerRunner.TokenizedItem		case	attachment
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel			
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel		let	sentencePieceModel
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel		let	hasAddDummyPrefix
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel		let	longestTokenByteLength
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel		let	tokenByteLengths
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel.ChunkInfo			
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel.ChunkInfo		let	text
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel.ChunkInfo		let	startOffset
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel.ChunkInfo		let	endOffset
+struct	TokenGenerationCore.TokenizerRunnerSentencePieceModel.ChunkInfo		let	byteCount
+struct	TokenGenerationCore.TokenWithOffset			
+struct	TokenGenerationCore.TokenWithOffset		let	tokenId
+struct	TokenGenerationCore.TokenWithOffset		let	startOffset
+enum	TokenGenerationCore.TGModes			
+enum	TokenGenerationCore.TGModes		case	complete
+enum	TokenGenerationCore.TGModes		case	debugSpeculativeDecode
+enum	TokenGenerationCore.TGModes		case	tokenize
+struct	TokenGenerationCore.AutomationJSON			
+struct	TokenGenerationCore.AutomationJSON		let	mode
+struct	TokenGenerationCore.AutomationJSON		let	modelBundleId
+struct	TokenGenerationCore.AutomationJSON		let	temperature
+struct	TokenGenerationCore.AutomationJSON		let	maxTokens
+struct	TokenGenerationCore.AutomationJSON		let	randomSeed
+struct	TokenGenerationCore.AutomationJSON		let	prompt
+struct	TokenGenerationCore.AutomationJSON		let	input
+struct	TokenGenerationCore.AutomationJSON		let	locale
+struct	TokenGenerationCore.AutomationJSON		let	inputPromptType
+struct	TokenGenerationCore.AutomationJSON		let	inputVariableBindings
+struct	TokenGenerationCore.AutomationJSON		let	inputImageVariableBindings
+struct	TokenGenerationCore.AutomationJSON		let	inputRichVariableBindings
+struct	TokenGenerationCore.AutomationJSON		let	messages
+struct	TokenGenerationCore.AutomationJSON		var	responses
+struct	TokenGenerationCore.AutomationJSON		var	output
+struct	TokenGenerationCore.AutomationJSON		var	renderedPrompts
+struct	TokenGenerationCore.AutomationJSON		var	constraintValidation
+struct	TokenGenerationCore.AutomationJSON		let	frequencyPenalty
+struct	TokenGenerationCore.AutomationJSON		let	lengthPenalty
+struct	TokenGenerationCore.AutomationJSON		let	stopSequence
+struct	TokenGenerationCore.AutomationJSON		let	prewarm
+struct	TokenGenerationCore.AutomationJSON		let	promptLookupDraftSteps
+struct	TokenGenerationCore.AutomationJSON		let	speculativeSampling
+struct	TokenGenerationCore.AutomationJSON		let	isOpportunistic
+struct	TokenGenerationCore.AutomationJSON		let	tokenHealing
+struct	TokenGenerationCore.AutomationJSON		let	useHighQualityImageTokenization
+struct	TokenGenerationCore.AutomationJSON		let	speculativeDecoding
+struct	TokenGenerationCore.AutomationJSON		let	schema
+struct	TokenGenerationCore.AutomationJSON		let	grammar
+struct	TokenGenerationCore.AutomationJSON		let	dynamicPartsOfGrammars
+struct	TokenGenerationCore.AutomationJSON		let	schemaIdentifier
+struct	TokenGenerationCore.AutomationJSON		let	grammarIdentifier
+struct	TokenGenerationCore.AutomationJSON		let	constrainedDecodingDisabled
+struct	TokenGenerationCore.AutomationJSON		let	iterationCount
+struct	TokenGenerationCore.AutomationJSON		let	promptDelay
+struct	TokenGenerationCore.AutomationJSON		let	userData
+struct	TokenGenerationCore.AutomationJSON		let	samplingStrategyConfiguration
+struct	TokenGenerationCore.AutomationJSON		let	useCaseIdentifier
+struct	TokenGenerationCore.AutomationJSON		let	inputSafetyConfiguration
+struct	TokenGenerationCore.AutomationJSON		let	outputSafetyConfiguration
+struct	TokenGenerationCore.AutomationJSON		let	decoder
+struct	TokenGenerationCore.AutomationJSON		var	decoderConfig
+struct	TokenGenerationCore.AutomationJSON		var	parameterizedPrompts
+enum	TokenGenerationCore.AutomationJSON.InputPromptType			
+enum	TokenGenerationCore.AutomationJSON.InputPromptType		case	prompt
+enum	TokenGenerationCore.AutomationJSON.InputPromptType		case	promptID
+enum	TokenGenerationCore.AutomationJSON.InputPromptType		case	promptTemplate
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding			
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding		case	string
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding		case	selfAttention
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding		case	imagePath
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding		case	embeddingPath
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding		case	preprocessedImagePath
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt			
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt		let	originalPrompt
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt		let	renderedString
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt		let	segments
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt		let	tokenIDs
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt		let	userInfo
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt		let	source
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt.Source			
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt.Source		var	identifier
+struct	TokenGenerationCore.AutomationJSON.RenderedPrompt.Source		var	version
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration			
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration		case	topk
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration		case	nucleus
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration		case	argmax
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration			
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration		let	denyListIdentifier
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration		let	guardrails
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration		let	languageRecognizer
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration		let	languageScriptValidator
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.Guardrails			
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.Guardrails		let	ovs
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.Guardrails		let	textSanitization
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageRecognizer			
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageRecognizer		let	language
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageRecognizer		let	topK
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageScriptValidator			
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageScriptValidator		let	script
+struct	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageScriptValidator		let	isEmojiAllowed
+struct	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration			
+struct	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration		let	denyListIdentifier
+struct	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration		let	guardrails
+struct	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.Guardrails			
+struct	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.Guardrails		let	ovs
+struct	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.Guardrails		let	textSanitization
+enum	TokenGenerationCore.AutomationJSON.Role			
+enum	TokenGenerationCore.AutomationJSON.Role		case	system
+enum	TokenGenerationCore.AutomationJSON.Role		case	user
+enum	TokenGenerationCore.AutomationJSON.Role		case	assistant
+struct	TokenGenerationCore.AutomationJSON.Turn			
+struct	TokenGenerationCore.AutomationJSON.Turn		let	role
+struct	TokenGenerationCore.AutomationJSON.Turn		let	content
+struct	TokenGenerationCore.AutomationJSON.Response			
+struct	TokenGenerationCore.AutomationJSON.Response		let	content
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig			
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		let	targetBundlePath
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		let	draftBundlePath
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		let	tinyBundlePath
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		let	tokenizerPath
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		let	mutableWeightsSymbolName
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		let	mutableWeightsPath
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		var	draftSteps
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		var	draftTreeFactor
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		var	draftSecondaryTreeFactor
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		var	draftAdaptive
+struct	TokenGenerationCore.AutomationJSON.DecoderConfig		var	draftSoftMatchTolerance
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt			
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	prompt
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	inputPromptType
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	locale
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	inputVariableBindings
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	inputImageVariableBindings
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	inputRichVariableBindings
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	samplingStrategyConfiguration
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	temperature
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	frequencyPenalty
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	lengthPenalty
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	stopSequence
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	maxTokens
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	randomSeed
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	promptLookupDraftSteps
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	speculativeSampling
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	tokenHealing
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	speculativeDecoding
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	isOpportunistic
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	schema
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	grammar
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	schemaIdentifier
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	grammarIdentifier
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	dynamicPartsOfGrammars
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	constrainedDecodingDisabled
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	timeout
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	useHighQualityImageTokenization
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	inputSafetyConfiguration
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	outputSafetyConfiguration
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	priorInferenceOutput
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		let	userData
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		var	output
+struct	TokenGenerationCore.AutomationJSON.ParameterizedPrompt		var	renderedPrompt
+enum	TokenGenerationCore.AutomationJSON.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	mode
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	modelBundleId
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	temperature
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	maxTokens
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	randomSeed
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	prompt
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	input
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	locale
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	inputPromptType
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	inputVariableBindings
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	inputImageVariableBindings
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	inputRichVariableBindings
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	messages
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	responses
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	output
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	renderedPrompts
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	constraintValidation
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	frequencyPenalty
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	lengthPenalty
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	stopSequence
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	prewarm
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	promptLookupDraftSteps
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	speculativeSampling
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	isOpportunistic
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	tokenHealing
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	useHighQualityImageTokenization
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	speculativeDecoding
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	schema
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	grammar
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	dynamicPartsOfGrammars
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	schemaIdentifier
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	grammarIdentifier
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	constrainedDecodingDisabled
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	iterationCount
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	promptDelay
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	userData
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	samplingStrategyConfiguration
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	useCaseIdentifier
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	inputSafetyConfiguration
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	outputSafetyConfiguration
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	decoder
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	decoderConfig
+enum	TokenGenerationCore.AutomationJSON.CodingKeys		case	parameterizedPrompts
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	prompt
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	inputPromptType
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	locale
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	inputVariableBindings
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	inputImageVariableBindings
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	inputRichVariableBindings
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	samplingStrategyConfiguration
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	temperature
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	frequencyPenalty
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	lengthPenalty
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	stopSequence
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	maxTokens
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	randomSeed
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	promptLookupDraftSteps
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	speculativeSampling
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	tokenHealing
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	speculativeDecoding
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	isOpportunistic
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	schema
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	grammar
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	schemaIdentifier
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	grammarIdentifier
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	dynamicPartsOfGrammars
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	constrainedDecodingDisabled
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	timeout
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	useHighQualityImageTokenization
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	inputSafetyConfiguration
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	outputSafetyConfiguration
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	priorInferenceOutput
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	userData
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	output
+enum	TokenGenerationCore.AutomationJSON.ParameterizedPrompt.CodingKeys		case	renderedPrompt
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	targetBundlePath
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	draftBundlePath
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	tinyBundlePath
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	tokenizerPath
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	mutableWeightsSymbolName
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	mutableWeightsPath
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	draftSteps
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	draftTreeFactor
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	draftSecondaryTreeFactor
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	draftAdaptive
+enum	TokenGenerationCore.AutomationJSON.DecoderConfig.CodingKeys		case	draftSoftMatchTolerance
+enum	TokenGenerationCore.AutomationJSON.Response.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.Response.CodingKeys		case	content
+enum	TokenGenerationCore.AutomationJSON.Turn.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.Turn.CodingKeys		case	role
+enum	TokenGenerationCore.AutomationJSON.Turn.CodingKeys		case	content
+enum	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.CodingKeys		case	denyListIdentifier
+enum	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.CodingKeys		case	guardrails
+enum	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.Guardrails.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.Guardrails.CodingKeys		case	ovs
+enum	TokenGenerationCore.AutomationJSON.OutputSafetyConfiguration.Guardrails.CodingKeys		case	textSanitization
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.CodingKeys		case	denyListIdentifier
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.CodingKeys		case	guardrails
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.CodingKeys		case	languageRecognizer
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.CodingKeys		case	languageScriptValidator
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageScriptValidator.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageScriptValidator.CodingKeys		case	script
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageScriptValidator.CodingKeys		case	isEmojiAllowed
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageRecognizer.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageRecognizer.CodingKeys		case	language
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.LanguageRecognizer.CodingKeys		case	topK
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.Guardrails.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.Guardrails.CodingKeys		case	ovs
+enum	TokenGenerationCore.AutomationJSON.InputSafetyConfiguration.Guardrails.CodingKeys		case	textSanitization
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.CodingKeys		case	topk
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.CodingKeys		case	nucleus
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.CodingKeys		case	argmax
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.TopkCodingKeys			
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.TopkCodingKeys		case	count
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.NucleusCodingKeys			
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.NucleusCodingKeys		case	threshold
+enum	TokenGenerationCore.AutomationJSON.SamplingStrategyConfiguration.ArgmaxCodingKeys			
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys		case	originalPrompt
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys		case	renderedString
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys		case	segments
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys		case	tokenIDs
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys		case	userInfo
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.CodingKeys		case	source
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.Source.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.Source.CodingKeys		case	identifier
+enum	TokenGenerationCore.AutomationJSON.RenderedPrompt.Source.CodingKeys		case	version
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType			
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType		case	string
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType		case	selfAttention
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType		case	imagePath
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType		case	embeddingPath
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType		case	preprocessedImagePath
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.CodingKeys			
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.CodingKeys		case	type
+enum	TokenGenerationCore.AutomationJSON.RichVariableBinding.CodingKeys		case	value
+enum	TokenGenerationCore.JSON			
+enum	TokenGenerationCore.JSON		case	bool
+enum	TokenGenerationCore.JSON		case	number
+enum	TokenGenerationCore.JSON		case	string
+enum	TokenGenerationCore.JSON		case	array
+enum	TokenGenerationCore.JSON		case	object
+enum	TokenGenerationCore.JSON		case	null
+struct	TokenGenerationCore.JSON.JSONCodingKey			
+struct	TokenGenerationCore.JSON.JSONCodingKey		var	stringValue
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	stopTokenIds
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	cacheKey
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	tokenizerIdentifier
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	createdAt
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	version
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	prefixLookup
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping		var	ranks
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping		var	character
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping		var	byte
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping		var	tokenID
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	tokenRanksForPrefix
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	startOfWordTokenRanksForPrefix
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	convertedVocabTokens
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	sortedTokenIds
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	tokenRanksForSorting
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	utf8CodePointToTokenIdlookup
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	byteTokenIds
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	characterSetLookup
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	tokenPrefixesMissingStartOfWordPair
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup		var	tokenRankings
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup		var	characterSetLookups
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup		var	prefixMappings
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking		var	tokenID
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking		var	rank
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup		var	tokenIds
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup		var	characterSetName
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping		var	tokenIds
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping		var	remainingStrings
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping		var	prefix
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry		var	candidateRanks
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry		var	characterSetName
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry		var	logitMask
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry		var	unknownFields
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData			
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData		var	accepted
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData		var	acceptedAfterStartWord
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData		var	recursivelyUsedAccepted
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData		var	recursivelyUsedAcceptedAfterStartWord
+struct	TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData		var	unknownFields
+enum	TokenGenerationCore.WireFormatError			
+enum	TokenGenerationCore.WireFormatError		case	unexpectedNilValue
+enum	TokenGenerationCore.WireFormatError		case	invalidData
+enum	TokenGenerationCore.WireFormatError		case	characterSetNotFound
+struct	TokenGenerationCore.WireFormatError.ExpectedFieldError			
+struct	TokenGenerationCore.WireFormatError.ExpectedFieldError		let	field
+struct	TokenGenerationCore.WireFormatError.ExpectedFieldError		let	file
+struct	TokenGenerationCore.WireFormatError.ExpectedFieldError		let	line
+struct	TokenGenerationCore.ChatPromptAggregator.AggregationResult			
+struct	TokenGenerationCore.ChatPromptAggregator.AggregationResult		var	prompt
+struct	TokenGenerationCore.ChatPromptAggregator.AggregationResult		var	newToolCalls
+class	TokenGeneration.FoundationModelsExtensionInfo			
+class	TokenGeneration.FoundationModelsExtensionInfo		let	metadata
+class	TokenGeneration.FoundationModelsExtensionInfo		let	adapterWeights
+class	TokenGeneration.FoundationModelsExtensionInfo		let	draftMIL
+class	TokenGeneration.FoundationModelsExtensionInfo		let	draftWeights
+enum	TokenGenerationCore.GenerationError			
+enum	TokenGenerationCore.GenerationError		case	unknownSpecialToken
+enum	TokenGenerationCore.GenerationError		case	invalidSpecialTokenPosition
+enum	TokenGenerationCore.GenerationError		case	invalidAttachmentPosition
+enum	TokenGenerationCore.GenerationError		case	unservicableConfiguration
+enum	TokenGenerationCore.GenerationError		case	invalidPromptFormat
+enum	TokenGenerationCore.GenerationError		case	tokenizationFailed
+enum	TokenGenerationCore.GenerationError		case	detokenizationFailed
+enum	TokenGenerationCore.GenerationError		case	unsupportedGuide
+enum	TokenGenerationCore.GenerationError.Code			
+enum	TokenGenerationCore.GenerationError.Code		case	unknownSpecialToken
+enum	TokenGenerationCore.GenerationError.Code		case	tokenizationFailed
+enum	TokenGenerationCore.GenerationError.Code		case	detokenizationFailed
+enum	TokenGenerationCore.GenerationError.Code		case	invalidSpecialTokenPosition
+enum	TokenGenerationCore.GenerationError.Code		case	invalidAttachmentPosition
+enum	TokenGenerationCore.GenerationError.Code		case	unsupportedGuide
+enum	TokenGenerationCore.GenerationError.Code		case	unservicableConfiguration
+enum	TokenGenerationCore.GenerationError.Code		case	invalidPromptFormat
+struct	TokenGenerationCore.GenerationOverrides			
+struct	TokenGenerationCore.GenerationOverrides		var	_beginningPromptToken
+struct	TokenGenerationCore.GenerationOverrides		var	_useLegacyDetokenizationBuffering
+struct	TokenGeneration.ModelBundle			
+struct	TokenGeneration.ModelBundle		let	resourceURI
+struct	TokenGeneration.ModelBundle		var	isFileBased
+struct	TokenGenerationCore.ModelConfiguration			
+struct	TokenGenerationCore.ModelConfiguration		let	loadedModelConfiguration
+struct	TokenGenerationCore.ModelConfigurationPromptTemplate			
+struct	TokenGenerationCore.ModelConfigurationPromptTemplate		let	rawTemplateString
+class	TokenGenerationCore._LoadedModelConfiguration			
+class	TokenGenerationCore._LoadedModelConfiguration		let	promptTemplates
+class	TokenGenerationCore._LoadedModelConfiguration		let	speculativeDecodingDraftTokenCount
+class	TokenGenerationCore._LoadedModelConfiguration		var	assetInformation
+struct	TokenGenerationCore._LoadedModelConfiguration.AssetInformation			
+struct	TokenGenerationCore._LoadedModelConfiguration.AssetInformation		let	identifier
+struct	TokenGenerationCore._LoadedModelConfiguration.AssetInformation		let	version
+enum	TokenGenerationCore._LoadedModelConfiguration.CodingKeys			
+enum	TokenGenerationCore._LoadedModelConfiguration.CodingKeys		case	promptTemplates
+enum	TokenGenerationCore._LoadedModelConfiguration.CodingKeys		case	speculativeDecodingDraftTokenCount
+struct	TokenGenerationCore.Npy			
+struct	TokenGenerationCore.Npy		let	header
+struct	TokenGenerationCore.Npy		let	data
+struct	TokenGenerationCore.Npy.Header			
+struct	TokenGenerationCore.Npy.Header		let	dType
+struct	TokenGenerationCore.Npy.Header		let	isFortranOrder
+struct	TokenGenerationCore.Npy.Header		let	shape
+struct	TokenGenerationCore.Npy.Header.DataType			
+struct	TokenGenerationCore.Npy.Header.DataType		let	endianness
+struct	TokenGenerationCore.Npy.Header.DataType		let	dataType
+enum	TokenGenerationCore.Npy.Header.DataType.Endianness			
+enum	TokenGenerationCore.Npy.Header.DataType.Endianness		case	host
+enum	TokenGenerationCore.Npy.Header.DataType.Endianness		case	big
+enum	TokenGenerationCore.Npy.Header.DataType.Endianness		case	little
+enum	TokenGenerationCore.Npy.Header.DataType.Endianness		case	notApplicable
+enum	TokenGenerationCore.Npy.Header.DataType.DType			
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	uint8
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	uint16
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	uint32
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	uint64
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	float16
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	float32
+enum	TokenGenerationCore.Npy.Header.DataType.DType		case	float64
+enum	TokenGenerationCore.Npy.NpyParseError			
+enum	TokenGenerationCore.Npy.NpyParseError		case	unsupportedVersion
+enum	TokenGenerationCore.Npy.NpyParseError		case	invalidHeaderString
+enum	TokenGenerationCore.Npy.NpyParseError		case	invalidDataType
+enum	TokenGenerationCore.Npy.NpyParseError		case	missingDescriptionInHeader
+enum	TokenGenerationCore.Npy.NpyParseError		case	missingFortanOrderInHeader
+enum	TokenGenerationCore.Npy.NpyParseError		case	missingShapeInHeader
+enum	TokenGenerationCore.Npy.NpyParseError		case	nonIntegerElementInShape
+struct	TokenGenerationCore.Overridable			
+struct	TokenGenerationCore.Overridable		let	storage
+struct	TokenGenerationCore.Overridable		let	key
+struct	TokenGenerationCore.Overridable		var	getter
+struct	TokenGeneration.Prompt			
+struct	TokenGeneration.Prompt		var	string
+struct	TokenGeneration.Prompt		var	delimiters
+struct	TokenGeneration.Prompt		var	attachments
+struct	TokenGeneration.Prompt.SpecialToken			
+struct	TokenGeneration.Prompt.SpecialToken		let	identifier
+struct	TokenGeneration.Prompt.SpecialToken		var	locale
+struct	TokenGeneration.Prompt.SpecialToken		let	instance
+struct	TokenGeneration.Prompt.SpecialToken		var	annotationOnly
+struct	TokenGeneration.Prompt.SpecialToken.Chat			
+struct	TokenGeneration.Prompt.Delimiter			
+struct	TokenGeneration.Prompt.Delimiter		var	token
+struct	TokenGeneration.Prompt.Delimiter		var	position
+struct	TokenGeneration.Prompt.Delimiter		var	priority
+struct	TokenGeneration.Prompt.ImageEmbeddingAttachment			
+struct	TokenGeneration.Prompt.ImageEmbeddingAttachment		let	encoding
+struct	TokenGeneration.Prompt.ImageEmbeddingAttachment		let	data
+struct	TokenGeneration.Prompt.ImageEmbeddingAttachment		let	tokenCount
+struct	TokenGeneration.Prompt.ImageEmbeddingAttachment		let	signature
+enum	TokenGeneration.Prompt.ImageEmbeddingAttachment.Encoding			
+enum	TokenGeneration.Prompt.ImageEmbeddingAttachment.Encoding		case	uint8
+enum	TokenGeneration.Prompt.ImageEmbeddingAttachment.Encoding		case	float16
+struct	TokenGeneration.Prompt.Attachment			
+struct	TokenGeneration.Prompt.Attachment		var	content
+struct	TokenGeneration.Prompt.Attachment		var	position
+struct	TokenGeneration.Prompt.Attachment		var	priority
+enum	TokenGeneration.Prompt.AttachmentContent			
+enum	TokenGeneration.Prompt.AttachmentContent		case	image
+enum	TokenGeneration.Prompt.AttachmentContent		case	imageEmbedding
+enum	TokenGeneration.Prompt.AttachmentContent		case	imageSurface
+enum	TokenGeneration.Prompt.AttachmentContent		case	preprocessedImage
+enum	TokenGeneration.Prompt.AttachmentContent		case	responseFormat
+enum	TokenGeneration.Prompt.AttachmentContent		case	toolDefinitions
+enum	TokenGeneration.Prompt.AttachmentContent		case	modalities
+enum	TokenGeneration.Prompt.AttachmentContent		case	voice
+enum	TokenGeneration.Prompt.AttachmentContent		case	toolCalls
+struct	TokenGeneration.Prompt.ImageAttachment			
+struct	TokenGeneration.Prompt.ImageAttachment		var	format
+struct	TokenGeneration.Prompt.ImageAttachment		var	data
+enum	TokenGeneration.Prompt.ImageAttachment.Format			
+enum	TokenGeneration.Prompt.ImageAttachment.Format		case	png
+enum	TokenGeneration.Prompt.ImageAttachment.Format		case	jpg
+struct	TokenGeneration.Prompt.PreprocessedImageAttachment			
+struct	TokenGeneration.Prompt.PreprocessedImageAttachment		var	data
+struct	TokenGeneration.Prompt.PreprocessedImageAttachment		var	shape
+struct	TokenGeneration.Prompt.ImageSurfaceAttachment			
+struct	TokenGeneration.Prompt.ImageSurfaceAttachment		var	surface
+struct	TokenGeneration.Prompt.ResponseFormat			
+struct	TokenGeneration.Prompt.ResponseFormat		let	kind
+enum	TokenGeneration.Prompt.ResponseFormat.Kind			
+enum	TokenGeneration.Prompt.ResponseFormat.Kind		case	schema
+enum	TokenGeneration.Prompt.ResponseFormat.Kind		case	grammar
+struct	TokenGeneration.Prompt.ResponseFormat.SchemaDetails			
+struct	TokenGeneration.Prompt.ResponseFormat.SchemaDetails		let	name
+struct	TokenGeneration.Prompt.ResponseFormat.SchemaDetails		let	description
+struct	TokenGeneration.Prompt.ResponseFormat.SchemaDetails		let	schema
+struct	TokenGeneration.Prompt.ResponseFormat.GrammarDetails			
+struct	TokenGeneration.Prompt.ResponseFormat.GrammarDetails		var	name
+struct	TokenGeneration.Prompt.ResponseFormat.GrammarDetails		var	description
+struct	TokenGeneration.Prompt.ResponseFormat.GrammarDetails		var	grammar
+struct	TokenGeneration.Prompt.ToolDefinitions			
+struct	TokenGeneration.Prompt.ToolDefinitions		var	tools
+struct	TokenGeneration.Prompt.StringInterpolation			
+struct	TokenGeneration.Prompt.StringInterpolation		var	result
+struct	TokenGeneration.Prompt.StringInterpolation		var	delimiters
+struct	TokenGeneration.Prompt.StringInterpolation		var	attachments
+struct	TokenGeneration.Prompt.Rendering			
+struct	TokenGeneration.Prompt.Rendering		let	originalPrompt
+struct	TokenGeneration.Prompt.Rendering		let	renderedString
+struct	TokenGeneration.Prompt.Rendering		let	segments
+struct	TokenGeneration.Prompt.Rendering		let	tokenIDs
+struct	TokenGeneration.Prompt.Rendering		let	detokenizedString
+struct	TokenGeneration.Prompt.Rendering		let	userInfo
+struct	TokenGeneration.Prompt.Rendering		let	source
+struct	TokenGeneration.Prompt.Rendering.Source			
+struct	TokenGeneration.Prompt.Rendering.Source		var	identifier
+struct	TokenGeneration.Prompt.Rendering.Source		var	version
+struct	TokenGenerationCore.RenderedSpecialToken			
+struct	TokenGenerationCore.RenderedSpecialToken		var	text
+struct	TokenGenerationCore.RenderedSpecialToken		var	specialToken
+enum	TokenGenerationCore.RenderedPromptFragment			
+enum	TokenGenerationCore.RenderedPromptFragment		case	text
+enum	TokenGenerationCore.RenderedPromptFragment		case	specialToken
+enum	TokenGenerationCore.RenderedPromptFragment		case	attachment
+enum	TokenGenerationCore.PromptFragment			
+enum	TokenGenerationCore.PromptFragment		case	text
+enum	TokenGenerationCore.PromptFragment		case	delimiter
+enum	TokenGenerationCore.PromptFragment		case	attachment
+enum	TokenGenerationCore.PromptMarker			
+enum	TokenGenerationCore.PromptMarker		case	attachment
+enum	TokenGenerationCore.PromptMarker		case	delimiter
+enum	TokenGenerationCore.PromptModule			
+enum	TokenGenerationCore.PromptModule		case	selfAttention
+enum	TokenGenerationCore.PromptModule		case	selfAttentionWithContinuationTokenization
+enum	TokenGenerationCore.PromptModule		case	fullAttention
+struct	TokenGeneration.Prompt.Turn			
+struct	TokenGeneration.Prompt.Turn		var	role
+struct	TokenGeneration.Prompt.Turn		var	responseFormat
+struct	TokenGeneration.Prompt.Turn		var	toolDefinitions
+struct	TokenGeneration.Prompt.Turn		var	locale
+struct	TokenGeneration.Prompt.Turn		var	modalities
+struct	TokenGeneration.Prompt.Turn		var	voice
+struct	TokenGeneration.Prompt.Turn		var	thoughtBudget
+struct	TokenGeneration.Prompt.Turn		var	thoughtContent
+struct	TokenGeneration.Prompt.Turn		var	segments
+struct	TokenGeneration.Prompt.Turn		let	systemInstructionPrefixID
+struct	TokenGeneration.Prompt.Turn		var	toolCalls
+struct	TokenGeneration.Prompt.Turn		var	toolResult
+enum	TokenGeneration.Prompt.Turn.Role			
+enum	TokenGeneration.Prompt.Turn.Role		case	instructions
+enum	TokenGeneration.Prompt.Turn.Role		case	developer
+enum	TokenGeneration.Prompt.Turn.Role		case	response
+enum	TokenGeneration.Prompt.Turn.Role		case	user
+enum	TokenGeneration.Prompt.Turn.Role		case	tool
+enum	TokenGeneration.Prompt.Turn.Segment			
+enum	TokenGeneration.Prompt.Turn.Segment		case	text
+enum	TokenGeneration.Prompt.Turn.Segment		case	image
+enum	TokenGeneration.Prompt.Turn.Segment		case	imageSurface
+enum	TokenGeneration.Prompt.Turn.Segment		case	imageEmbedding
+enum	TokenGeneration.Prompt.Turn.Segment		case	preprocessedImage
+enum	TokenGeneration.Prompt.Turn.Segment		case	selfAttention
+struct	TokenGeneration.Prompt.ToolCall			
+struct	TokenGeneration.Prompt.ToolCall		var	id
+struct	TokenGeneration.Prompt.ToolCall		var	kind
+struct	TokenGeneration.Prompt.ToolCall		var	_userInfo
+enum	TokenGeneration.Prompt.ToolCall.Kind			
+enum	TokenGeneration.Prompt.ToolCall.Kind		case	function
+struct	TokenGeneration.Prompt.ToolCall.Function			
+struct	TokenGeneration.Prompt.ToolCall.Function		var	name
+struct	TokenGeneration.Prompt.ToolCall.Function		var	arguments
+struct	TokenGeneration.Prompt.ToolCallResult			
+struct	TokenGeneration.Prompt.ToolCallResult		var	toolCallID
+struct	TokenGeneration.Prompt.ToolCallResult		var	content
+struct	TokenGeneration.Prompt.ToolCallResult		var	segments
+struct	TokenGeneration.Prompt.TurnDelimiter			
+struct	TokenGeneration.Prompt.TurnDelimiter		var	role
+struct	TokenGeneration.Prompt.TurnDelimiter		var	isTurnEnd
+struct	TokenGeneration.Prompt.TurnDelimiter		var	systemInstructionPrefixID
+struct	TokenGeneration.Prompt.TurnDelimiter		var	index
+struct	TokenGeneration.Prompt.TurnDelimiter		var	priority
+struct	TokenGeneration.Prompt.TurnDelimiter		var	instance
+struct	TokenGeneration.Prompt.TurnDelimiter		var	locale
+struct	TokenGeneration.Prompt.TurnSpan			
+struct	TokenGeneration.Prompt.TurnSpan		var	role
+struct	TokenGeneration.Prompt.TurnSpan		var	instance
+struct	TokenGeneration.Prompt.TurnSpan		var	startIndex
+struct	TokenGeneration.Prompt.TurnSpan		var	endIndex
+struct	TokenGeneration.Prompt.TurnSpan		var	minimumContainedPriority
+struct	TokenGeneration.Prompt.TurnSpan		var	maximumContainedPriority
+struct	TokenGeneration.Prompt.TurnSpan		var	systemInstructionPrefixID
+struct	TokenGeneration.Prompt.TurnSpan		var	locale
+struct	TokenGeneration.Prompt.TurnSpan		var	voice
+struct	TokenGenerationCore.PromptTemplateInfo			
+struct	TokenGenerationCore.PromptTemplateInfo		let	templateID
+struct	TokenGenerationCore.PromptTemplateInfo		let	richVariableBindings
+struct	TokenGenerationCore.PromptTemplateInfo		let	variableBindings
+struct	TokenGenerationCore.PromptTemplateInfo		let	locale
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding			
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding		let	components
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component			
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component		let	content
+enum	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content			
+enum	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content		case	text
+enum	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content		case	imageData
+enum	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content		case	imageSurface
+enum	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content		case	imageEmbeddingData
+enum	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content		case	preprocessedImageData
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content.Text			
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content.Text		let	string
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content.Text		let	isSelfAttention
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content.ImageSurface			
+struct	TokenGenerationCore.PromptTemplateInfo.RichVariableBinding.Component.Content.ImageSurface		var	surface
+enum	TokenGenerationCore.PromptTemplateHelper			
+enum	TokenGenerationCore.ModelConfiguration.PrompteTemplateError			
+enum	TokenGenerationCore.ModelConfiguration.PrompteTemplateError		case	promptTemplateNotFound
+enum	TokenGeneration.PromptVariant			
+enum	TokenGeneration.PromptVariant		case	completion
+enum	TokenGeneration.PromptVariant		case	chat
+enum	TokenGenerationCore.PromptVariantEnvelope			
+enum	TokenGenerationCore.PromptVariantEnvelope		case	chat
+enum	TokenGenerationCore.PromptVariantEnvelope		case	completion
+struct	TokenGenerationCore.PromptVariantEnvelope.ChatMessagesPromptEnvelope			
+struct	TokenGenerationCore.PromptVariantEnvelope.ChatMessagesPromptEnvelope		var	_overridableConfigurationStorage
+struct	TokenGenerationCore.PromptVariantEnvelope.CompletionPromptEnvelope			
+struct	TokenGenerationCore.PromptVariantEnvelope.CompletionPromptEnvelope		var	_overridableConfigurationStorage
+enum	TokenGenerationCore.PromptVariantEnvelope.CodingKeys			
+enum	TokenGenerationCore.PromptVariantEnvelope.CodingKeys		case	chat
+enum	TokenGenerationCore.PromptVariantEnvelope.CodingKeys		case	completion
+enum	TokenGenerationCore.PromptVariantEnvelope.ChatCodingKeys			
+enum	TokenGenerationCore.PromptVariantEnvelope.ChatCodingKeys		case	_0
+enum	TokenGenerationCore.PromptVariantEnvelope.CompletionCodingKeys			
+enum	TokenGenerationCore.PromptVariantEnvelope.CompletionCodingKeys		case	_0
+enum	TokenGenerationCore.PromptVariantEnvelope.CompletionPromptEnvelope.CodingKeys			
+enum	TokenGenerationCore.PromptVariantEnvelope.CompletionPromptEnvelope.CodingKeys		case	_overridableConfigurationStorage
+struct	TokenGenerationCore.PromptVariantEnvelope.OverridableConfigurationStorageEnvelope			
+struct	TokenGenerationCore.PromptVariantEnvelope.OverridableConfigurationStorageEnvelope		let	storage
+enum	TokenGenerationCore.PromptVariantEnvelope.ChatMessagesPromptEnvelope.CodingKeys			
+enum	TokenGenerationCore.PromptVariantEnvelope.ChatMessagesPromptEnvelope.CodingKeys		case	_overridableConfigurationStorage
+enum	TokenGenerationCore.PromptVariantEnvelope.OverridableConfigurationStorageEnvelope.CodingKeys			
+enum	TokenGenerationCore.PromptVariantEnvelope.OverridableConfigurationStorageEnvelope.CodingKeys		case	storage
+struct	TokenGenerationCore.StopSequenceMonitor			
+struct	TokenGenerationCore.StopSequenceMonitor		let	stopSequences
+struct	TokenGenerationCore.StopSequenceMonitor		var	bufferedTokens
+struct	TokenGeneration.Token			
+struct	TokenGeneration.Token		var	text
+enum	TokenGenerationCore.PromptTemplateRenderError			
+enum	TokenGenerationCore.PromptTemplateRenderError		case	promptTemplateNotFound
+struct	TokenGenerationCore.ParseAsChatMessagesPromptParseError			
+struct	TokenGenerationCore.ParseAsChatMessagesPromptParseError		let	problem
+struct	TokenGenerationCore.ParseAsChatMessagesPromptParseError		let	currentComponent
+enum	TokenGenerationCore.ParseAsChatMessagesPromptParseError.Problem			
+enum	TokenGenerationCore.ParseAsChatMessagesPromptParseError.Problem		case	unexpectedBeginning
+enum	TokenGenerationCore.ParseAsChatMessagesPromptParseError.Problem		case	specialTokenAfterSystemDefaultIsNotTurnEnd
+enum	TokenGenerationCore.ParseAsChatMessagesPromptParseError.Problem		case	unknownSpecialTokenAfterTurnEndSpecialToken
+enum	TokenGenerationCore.ParseAsChatMessagesPromptParseError.Problem		case	notEndingWithAssistantSpecialToken
+enum	TokenGenerationCore.ParseAsChatMessagesPromptParseError.Problem		case	appendToLastChatMessageWhileOutputChatMessagesIsEmpty
+struct	TokenGenerationCore.PromptTemplateTransformer			
+struct	TokenGenerationCore.PromptTemplateTransformer		let	catalogClient
+enum	TokenGenerationCore.State			
+enum	TokenGenerationCore.State		case	promptContent
+enum	TokenGenerationCore.State		case	beginning
+enum	TokenGenerationCore.State		case	systemDefaultPrompt
+enum	TokenGenerationCore.State		case	turnEnd
+enum	TokenGenerationCore.ResolvedModelBundleID			
+enum	TokenGenerationCore.ResolvedModelBundleID		case	llmBundle
+enum	TokenGenerationCore.ResolvedModelBundleID		case	assetBackedLLMBundle
+struct	TokenGenerationCore.ChatPromptAggregator			
+struct	TokenGenerationCore.ChatPromptAggregator		var	currentPrompt
+struct	TokenGenerationCore.ChatPromptAggregator		var	ongoingToolCalls
+struct	TokenGenerationCore.Signpost			
+struct	TokenGenerationCore.Signpost		let	event
+struct	TokenGenerationCore.Signpost		let	poster
+struct	TokenGenerationCore.Signpost		let	id
+struct	TokenGenerationCore.Signpost		let	state
+protocol	TokenGenerationCore.Regex2BNFBNFNode			
+protocol	TokenGenerationCore.ConcreteSymbol			
+protocol	TokenGenerationCore.GrammarRecognizer	RecognizerCache		
+protocol	TokenGenerationCore.TokenizerAwareGrammarRecognizer			
+protocol	TokenGenerationCore.GuidedGenerationTokenizer			
+protocol	TokenGenerationCore.MaskProviding			
+protocol	TokenGenerationCore.GuidedGenerationConstraintsProtocol			
+protocol	TokenGenerationCore.VocabularyTextConverting			
+protocol	TokenGenerationCore.LogitMaskGenerating	InputRecognizer		
+protocol	TokenGenerationCore.InferenceOutputParsing			
+protocol	TokenGenerationCore.ThoughtContentParsing			
+protocol	TokenGenerationCore.ToolCallParsing			
+protocol	TokenGenerationCore.ToolRendering			
+protocol	TokenGenerationCore.AttachmentTokenizer			
+protocol	TokenGenerationCore.ToolCallConverter			
+protocol	TokenGenerationCore.PromptPreprocessingTemplateConvention			
+protocol	TokenGenerationCore.OverridingPromptPreprocessingTemplateConvention			
+protocol	TokenGenerationCore.TokenIDToTextConverterProtocol			
+protocol	TokenGenerationCore.TokenizerRunnerTokenizer			
+protocol	TokenGenerationCore.WireFormatType			
+protocol	TokenGenerationCore.WireFormatConvertible	WireFormat		
+protocol	TokenGenerationCore.GenerationOverridesProtocol			
+protocol	TokenGenerationCore.ModelConfigurationProtocol			
+protocol	TokenGenerationCore.ModelCatalogClient			
+protocol	conformance __C.IOSurfacePropertyKey	Swift._HasCustomAnyHashableRepresentation		
+protocol	conformance __C.IOSurfacePropertyKey	Swift.RawRepresentable		
+protocol	conformance __C.IOSurfacePropertyKey	Swift._SwiftNewtypeWrapper		
+protocol	conformance __C.IOSurfacePropertyKey	Swift.Equatable		
+protocol	conformance __C.IOSurfacePropertyKey	Swift._ObjectiveCBridgeable		
+protocol	conformance __C.IOSurfacePropertyKey	Swift.Hashable		
+protocol	conformance Regex2BNF.NonTerminalSymbol	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.NonTerminalSymbol	Swift.Equatable		
+protocol	conformance Regex2BNF.NonTerminalSymbol	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.NonTerminalSymbol	Swift.Hashable		
+protocol	conformance Regex2BNF.Expression	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.Expression	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.Rule	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.Rule	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.Choice	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.Choice	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.Symbol	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.Symbol	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.TerminalSymbol	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.TerminalSymbol	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.Builtin	Swift.CustomStringConvertible		
+protocol	conformance Regex2BNF.Builtin	TokenGenerationCore.Regex2BNFBNFNode		
+protocol	conformance Regex2BNF.Builtin	Swift.Hashable		
+protocol	conformance Regex2BNF.Builtin	Swift.Equatable		
+protocol	conformance TokenGenerationCore.SyntaxError	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.SyntaxError	Swift.Error		
+protocol	conformance SyntaxError.Issue	Swift.Equatable		
+protocol	conformance SyntaxError.Issue	Swift.Hashable		
+protocol	conformance BackusNaurParser.State	Swift.Hashable		
+protocol	conformance BackusNaurParser.State	Swift.Equatable		
+protocol	conformance TokenGenerationCore.ContiguousBitSet	Swift.Equatable		
+protocol	conformance ContiguousBitSet.Iterator	Swift.IteratorProtocol		
+protocol	conformance TokenGenerationCore.ContiguousBitSet	Swift.Sequence		
+protocol	conformance EarleyRecognizer.State	Swift.Hashable		
+protocol	conformance EarleyRecognizer.State	Swift.Equatable		
+protocol	conformance TokenGenerationCore.EarleyRecognizer	TokenGenerationCore.GrammarRecognizer		
+protocol	conformance TokenGenerationCore.EarleyRecognizer	Swift.Hashable		
+protocol	conformance TokenGenerationCore.EarleyRecognizer	Swift.Equatable		
+protocol	conformance TokenGenerationCore.EarleyRecognizer	Swift.CustomDebugStringConvertible		
+protocol	conformance EarleyRecognizer.Chart	Swift.Equatable		
+protocol	conformance EarleyRecognizer.Chart	Swift.Hashable		
+protocol	conformance EarleyRecognizer.RecognizerRule	Swift.Equatable		
+protocol	conformance EarleyRecognizer.RecognizerRule	Swift.Hashable		
+protocol	conformance EarleyRecognizer.Item	Swift.Equatable		
+protocol	conformance EarleyRecognizer.Item	Swift.Hashable		
+protocol	conformance EarleyRecognizer.RecognizerSymbol	Swift.Equatable		
+protocol	conformance EarleyRecognizer.RecognizerSymbol	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Grammar	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Grammar	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.Grammar	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Rule	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Rule	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.Rule	Swift.Decodable		
+protocol	conformance TokenGenerationCore.Rule	Swift.Encodable		
+protocol	conformance TokenGenerationCore.Rule	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Symbol	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Symbol	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.Symbol	Swift.Decodable		
+protocol	conformance TokenGenerationCore.Symbol	Swift.Encodable		
+protocol	conformance TokenGenerationCore.Symbol	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TerminalSymbol	TokenGenerationCore.ConcreteSymbol		
+protocol	conformance TokenGenerationCore.TerminalSymbol	Swift.Decodable		
+protocol	conformance TokenGenerationCore.TerminalSymbol	Swift.Encodable		
+protocol	conformance TokenGenerationCore.TerminalSymbol	Swift.Hashable		
+protocol	conformance TokenGenerationCore.TerminalSymbol	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.TerminalSymbol	Swift.Equatable		
+protocol	conformance TokenGenerationCore.NonTerminalSymbol	TokenGenerationCore.ConcreteSymbol		
+protocol	conformance TokenGenerationCore.NonTerminalSymbol	Swift.Decodable		
+protocol	conformance TokenGenerationCore.NonTerminalSymbol	Swift.Encodable		
+protocol	conformance TokenGenerationCore.NonTerminalSymbol	Swift.Hashable		
+protocol	conformance TokenGenerationCore.NonTerminalSymbol	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.NonTerminalSymbol	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Expression	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Expression	Swift.Decodable		
+protocol	conformance TokenGenerationCore.Expression	Swift.Encodable		
+protocol	conformance TokenGenerationCore.Expression	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Choice	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Choice	Swift.Decodable		
+protocol	conformance TokenGenerationCore.Choice	Swift.Encodable		
+protocol	conformance TokenGenerationCore.Choice	Swift.Equatable		
+protocol	conformance TokenGenerationCore.InvalidGrammar	Swift.Hashable		
+protocol	conformance TokenGenerationCore.InvalidGrammar	Swift.Error		
+protocol	conformance TokenGenerationCore.InvalidGrammar	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.InvalidGrammar	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NonterminalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NonterminalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NonterminalCodingKeys	Swift.Hashable		
+protocol	conformance NonterminalCodingKeys	Swift.Equatable		
+protocol	conformance TerminalSequenceCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TerminalSequenceCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TerminalSequenceCodingKeys	Swift.Hashable		
+protocol	conformance TerminalSequenceCodingKeys	Swift.Equatable		
+protocol	conformance TerminalCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TerminalCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TerminalCodingKeys	Swift.Hashable		
+protocol	conformance TerminalCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.RawRepresentable		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance Kind	Swift.RawRepresentable		
+protocol	conformance Kind	Swift.Hashable		
+protocol	conformance Kind	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Kind	Swift.Decodable		
+protocol	conformance Kind	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TerminalCodingKeys	Swift.CodingKey		
+protocol	conformance TerminalSequenceCodingKeys	Swift.CodingKey		
+protocol	conformance NonterminalCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TokenGenerationCore.RecognizerGuidedGenerationConstraints	TokenGenerationCore.GuidedGenerationConstraintsProtocol		
+protocol	conformance TokenGenerationCore.SpaceLookaheadMaskGenerator	TokenGenerationCore.LogitMaskGenerating		
+protocol	conformance TokenGenerationCore.ExhaustiveLogitMaskGenerator	TokenGenerationCore.LogitMaskGenerating		
+protocol	conformance TokenGenerationCore.SentencePieceVocabularyTextConverter	TokenGenerationCore.VocabularyTextConverting		
+protocol	conformance TokenGenerationCore.RecognizerElement	Swift.Hashable		
+protocol	conformance TokenGenerationCore.RecognizerElement	Swift.Equatable		
+protocol	conformance TokenGenerationCore.GuidedGenerationError	Swift.Error		
+protocol	conformance TokenGenerationCore.GuidedGenerationError	Swift.Equatable		
+protocol	conformance TokenGenerationCore.LogitMaskResponse	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TokenIDMask	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TokenIDMaskResponse	Swift.Equatable		
+protocol	conformance TokenGenerationCore.MatchResult	Swift.Equatable		
+protocol	conformance TokenGenerationCore.SuppressionConstraints	Swift.Decodable		
+protocol	conformance TokenGenerationCore.SuppressionConstraints	Swift.Encodable		
+protocol	conformance TokenGenerationCore.SuppressionConstraints	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TokenGenerationCore.GuidedGenerationConstraints	TokenGenerationCore.MaskProviding		
+protocol	conformance TokenGenerationCore.ToolAwareGuidedGenerationConstraints	TokenGenerationCore.MaskProviding		
+protocol	conformance TokenGenerationCore.RollbackState	Swift.Decodable		
+protocol	conformance TokenGenerationCore.RollbackState	Swift.Encodable		
+protocol	conformance TokenGenerationCore.RollbackState	Swift.Equatable		
+protocol	conformance TokenGenerationCore.RollbackStatus	Swift.Decodable		
+protocol	conformance TokenGenerationCore.RollbackStatus	Swift.Encodable		
+protocol	conformance TokenGenerationCore.RollbackStatus	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RollBackTokensCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RollBackTokensCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RollBackTokensCodingKeys	Swift.Hashable		
+protocol	conformance RollBackTokensCodingKeys	Swift.Equatable		
+protocol	conformance PrepareToRollBackTokensCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PrepareToRollBackTokensCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PrepareToRollBackTokensCodingKeys	Swift.Hashable		
+protocol	conformance PrepareToRollBackTokensCodingKeys	Swift.Equatable		
+protocol	conformance NoRollbackNeededCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoRollbackNeededCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance NoRollbackNeededCodingKeys	Swift.CodingKey		
+protocol	conformance PrepareToRollBackTokensCodingKeys	Swift.CodingKey		
+protocol	conformance RollBackTokensCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TokenGenerationCore.TokenGrammarRecognizer	TokenGenerationCore.TokenizerAwareGrammarRecognizer		
+protocol	conformance TokenGenerationCore.TokenizerRunner	TokenGenerationCore.GuidedGenerationTokenizer		
+protocol	conformance TokenizerRunnerObjC	TokenGenerationCore.TokenizerRunnerTokenizer		
+protocol	conformance CompositeInferenceOutputParser.ParserOptions	Swift.OptionSet		
+protocol	conformance CompositeInferenceOutputParser.ParserOptions	Swift.SetAlgebra		
+protocol	conformance CompositeInferenceOutputParser.ParserOptions	Swift.RawRepresentable		
+protocol	conformance CompositeInferenceOutputParser.ParserOptions	Swift.Equatable		
+protocol	conformance CompositeInferenceOutputParser.ParserOptions	Swift.ExpressibleByArrayLiteral		
+protocol	conformance TokenGenerationCore.ToolCallParser	TokenGenerationCore.InferenceOutputParsing		
+protocol	conformance TokenGenerationCore.TextDeltaParser	TokenGenerationCore.InferenceOutputParsing		
+protocol	conformance TokenGenerationCore.ThoughtContentParser	TokenGenerationCore.InferenceOutputParsing		
+protocol	conformance TokenGenerationCore.ThoughtContentParserNoOp	TokenGenerationCore.ThoughtContentParsing		
+protocol	conformance TokenGenerationCore.ThoughtContentParserCider	TokenGenerationCore.ThoughtContentParsing		
+protocol	conformance ToolCallParser.FunctionDelta	Swift.Equatable		
+protocol	conformance ToolCallParserV4	TokenGenerationCore.ToolCallParsing		
+protocol	conformance ToolCallParserCider	TokenGenerationCore.ToolCallParsing		
+protocol	conformance TokenGenerationCore.ToolCallingFormatV4	TokenGenerationCore.ToolRendering		
+protocol	conformance TokenGenerationCore.ToolCallingFormatV5	TokenGenerationCore.ToolRendering		
+protocol	conformance TokenGenerationCore.CacheableToolCallingFormatV5	TokenGenerationCore.ToolRendering		
+protocol	conformance TokenGenerationCore.ToolCallingFormatCiderV1	TokenGenerationCore.ToolRendering		
+protocol	conformance TokenGenerationCore.CacheableToolCallingFormatCiderV1	TokenGenerationCore.ToolRendering		
+protocol	conformance TokenGenerationCore.CiderToolCallToValidJSONConverter	TokenGenerationCore.ToolCallConverter		
+protocol	conformance TokenGenerationCore.ImageTokenizationConfiguration	Swift.Equatable		
+protocol	conformance TokenGenerationCore.UnresolvedImageTokenizationConfiguration	Swift.Equatable		
+protocol	conformance UnresolvedImageTokenizationConfiguration.ImageStartAndEnd	Swift.Equatable		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateVersion	Swift.Hashable		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateVersion	Swift.RawRepresentable		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateVersion	Swift.Equatable		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateVersion	Swift.Decodable		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateVersion	Swift.Encodable		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateCiderV3Convention	TokenGenerationCore.OverridingPromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateCiderV2Convention	TokenGenerationCore.OverridingPromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateV6_1Convention	TokenGenerationCore.OverridingPromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateV5Convention	TokenGenerationCore.PromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateV6Convention	TokenGenerationCore.PromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateV6_1Convention	TokenGenerationCore.PromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateCiderV1Convention	TokenGenerationCore.PromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateCiderV2Convention	TokenGenerationCore.PromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.PromptPreprocessingTemplateCiderV3Convention	TokenGenerationCore.PromptPreprocessingTemplateConvention		
+protocol	conformance TokenGenerationCore.TokenIDToTextConverter	TokenGenerationCore.TokenIDToTextConverterProtocol		
+protocol	conformance TokenGenerationCore.LegacyTokenIDToTextConverterImpl	TokenGenerationCore.TokenIDToTextConverterProtocol		
+protocol	conformance TokenGenerationCore.TokenIDToTextConverterImpl	TokenGenerationCore.TokenIDToTextConverterProtocol		
+protocol	conformance TokenGenerationCore.TokenizedStaticPromptTemplatePrefix	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TokenizedPromptModule	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TokenizationResult	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TokenizationResult	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.TokenizerRunner	Swift.Equatable		
+protocol	conformance TokenizerRunner.TokenizedItem	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.TokenizerRunnerSentencePieceModel	TokenGenerationCore.TokenizerRunnerTokenizer		
+protocol	conformance TokenGenerationCore.TGModes	Swift.Equatable		
+protocol	conformance TokenGenerationCore.TGModes	Swift.Hashable		
+protocol	conformance TokenGenerationCore.TGModes	Swift.RawRepresentable		
+protocol	conformance AutomationJSON.InputPromptType	Swift.Equatable		
+protocol	conformance AutomationJSON.InputPromptType	Swift.Hashable		
+protocol	conformance AutomationJSON.InputPromptType	Swift.RawRepresentable		
+protocol	conformance AutomationJSON.InputPromptType	Swift.Decodable		
+protocol	conformance AutomationJSON.InputPromptType	Swift.Encodable		
+protocol	conformance AutomationJSON.RichVariableBinding	Swift.Decodable		
+protocol	conformance AutomationJSON.RichVariableBinding	Swift.Encodable		
+protocol	conformance RenderedPrompt.Source	Swift.Decodable		
+protocol	conformance RenderedPrompt.Source	Swift.Encodable		
+protocol	conformance AutomationJSON.RenderedPrompt	Swift.Decodable		
+protocol	conformance AutomationJSON.RenderedPrompt	Swift.Encodable		
+protocol	conformance AutomationJSON.RenderedPrompt	Swift.CustomStringConvertible		
+protocol	conformance AutomationJSON.SamplingStrategyConfiguration	Swift.Decodable		
+protocol	conformance AutomationJSON.SamplingStrategyConfiguration	Swift.Encodable		
+protocol	conformance AutomationJSON.SamplingStrategyConfiguration	Swift.Equatable		
+protocol	conformance InputSafetyConfiguration.Guardrails	Swift.Decodable		
+protocol	conformance InputSafetyConfiguration.Guardrails	Swift.Encodable		
+protocol	conformance InputSafetyConfiguration.LanguageRecognizer	Swift.Decodable		
+protocol	conformance InputSafetyConfiguration.LanguageRecognizer	Swift.Encodable		
+protocol	conformance InputSafetyConfiguration.LanguageScriptValidator	Swift.Decodable		
+protocol	conformance InputSafetyConfiguration.LanguageScriptValidator	Swift.Encodable		
+protocol	conformance AutomationJSON.InputSafetyConfiguration	Swift.Decodable		
+protocol	conformance AutomationJSON.InputSafetyConfiguration	Swift.Encodable		
+protocol	conformance OutputSafetyConfiguration.Guardrails	Swift.Decodable		
+protocol	conformance OutputSafetyConfiguration.Guardrails	Swift.Encodable		
+protocol	conformance AutomationJSON.OutputSafetyConfiguration	Swift.Decodable		
+protocol	conformance AutomationJSON.OutputSafetyConfiguration	Swift.Encodable		
+protocol	conformance AutomationJSON.Role	Swift.Equatable		
+protocol	conformance AutomationJSON.Role	Swift.Hashable		
+protocol	conformance AutomationJSON.Role	Swift.RawRepresentable		
+protocol	conformance AutomationJSON.Role	Swift.Decodable		
+protocol	conformance AutomationJSON.Role	Swift.Encodable		
+protocol	conformance AutomationJSON.Turn	Swift.Decodable		
+protocol	conformance AutomationJSON.Turn	Swift.Encodable		
+protocol	conformance AutomationJSON.Response	Swift.Decodable		
+protocol	conformance AutomationJSON.Response	Swift.Encodable		
+protocol	conformance AutomationJSON.DecoderConfig	Swift.Decodable		
+protocol	conformance AutomationJSON.DecoderConfig	Swift.Encodable		
+protocol	conformance AutomationJSON.ParameterizedPrompt	Swift.Decodable		
+protocol	conformance AutomationJSON.ParameterizedPrompt	Swift.Encodable		
+protocol	conformance TokenGenerationCore.AutomationJSON	Swift.Decodable		
+protocol	conformance TokenGenerationCore.AutomationJSON	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FieldType	Swift.Encodable		
+protocol	conformance FieldType	Swift.RawRepresentable		
+protocol	conformance FieldType	Swift.Hashable		
+protocol	conformance FieldType	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ArgmaxCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ArgmaxCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NucleusCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NucleusCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NucleusCodingKeys	Swift.Hashable		
+protocol	conformance NucleusCodingKeys	Swift.Equatable		
+protocol	conformance TopkCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance TopkCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance TopkCodingKeys	Swift.Hashable		
+protocol	conformance TopkCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TopkCodingKeys	Swift.CodingKey		
+protocol	conformance NucleusCodingKeys	Swift.CodingKey		
+protocol	conformance ArgmaxCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance FieldType	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TokenGenerationCore.JSON	Swift.Decodable		
+protocol	conformance TokenGenerationCore.JSON	Swift.Encodable		
+protocol	conformance TokenGenerationCore.JSON	Swift.Hashable		
+protocol	conformance TokenGenerationCore.JSON	Swift.Equatable		
+protocol	conformance JSONCodingKey	Swift.CustomDebugStringConvertible		
+protocol	conformance JSONCodingKey	Swift.CustomStringConvertible		
+protocol	conformance JSONCodingKey	Swift.CodingKey		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_TokenRanking	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookup	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixMapping	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	InternalSwiftProtobuf.Message		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	InternalSwiftProtobuf._MessageImplementationBase		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	InternalSwiftProtobuf._ProtoNameProviding		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	Swift.CustomDebugStringConvertible		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	Swift.Hashable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_VocabularyManagerCache	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookup	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_PrefixLookupData	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterToIntArrayMapping	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_ByteToTokenIDMapping	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupEntry	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.Tokengenerationcore_Wireformat_CharacterSetLookupData	TokenGenerationCore.WireFormatType		
+protocol	conformance TokenGenerationCore.WireFormatError	Swift.Error		
+protocol	conformance TokenGenerationCore.GenerationError	Swift.Error		
+protocol	conformance GenerationError.Code	Swift.Equatable		
+protocol	conformance GenerationError.Code	Swift.Hashable		
+protocol	conformance GenerationError.Code	Swift.RawRepresentable		
+protocol	conformance TokenGenerationCore.GenerationError	Foundation.LocalizedError		
+protocol	conformance TokenGenerationCore.GenerationError	AppleIntelligenceReporting.AppleIntelligenceError		
+protocol	conformance TokenGenerationCore.GenerationError	Swift.CustomStringConvertible		
+protocol	conformance TokenGenerationCore.GenerationError	Foundation.CustomNSError		
+protocol	conformance TokenGenerationCore.GenerationOverrides	TokenGenerationCore.GenerationOverridesProtocol		
+protocol	conformance TokenGeneration.ModelBundle	Swift.Hashable		
+protocol	conformance TokenGeneration.ModelBundle	Swift.Equatable		
+protocol	conformance TokenGenerationCore.ModelConfiguration	TokenGenerationCore.ModelConfigurationProtocol		
+protocol	conformance TokenGenerationCore._LoadedModelConfiguration	Swift.Decodable		
+protocol	conformance _LoadedModelConfiguration.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance _LoadedModelConfiguration.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance _LoadedModelConfiguration.CodingKeys	Swift.RawRepresentable		
+protocol	conformance _LoadedModelConfiguration.CodingKeys	Swift.Hashable		
+protocol	conformance _LoadedModelConfiguration.CodingKeys	Swift.Equatable		
+protocol	conformance _LoadedModelConfiguration.CodingKeys	Swift.CodingKey		
+protocol	conformance DataType.Endianness	Swift.Equatable		
+protocol	conformance DataType.Endianness	Swift.Hashable		
+protocol	conformance DataType.Endianness	Swift.RawRepresentable		
+protocol	conformance DataType.DType	Swift.Equatable		
+protocol	conformance DataType.DType	Swift.Hashable		
+protocol	conformance DataType.DType	Swift.RawRepresentable		
+protocol	conformance Header.DataType	Swift.Equatable		
+protocol	conformance Header.DataType	Swift.CustomStringConvertible		
+protocol	conformance Npy.Header	Swift.Equatable		
+protocol	conformance TokenGenerationCore.Npy	Swift.Equatable		
+protocol	conformance Npy.NpyParseError	Swift.Hashable		
+protocol	conformance Npy.NpyParseError	Swift.Equatable		
+protocol	conformance Npy.NpyParseError	Swift.Error		
+protocol	conformance Prompt.SpecialToken	Swift.Hashable		
+protocol	conformance Prompt.SpecialToken	Swift.CustomStringConvertible		
+protocol	conformance Prompt.SpecialToken	Swift.Equatable		
+protocol	conformance Prompt.Delimiter	Swift.Hashable		
+protocol	conformance Prompt.Delimiter	Swift.CustomStringConvertible		
+protocol	conformance Prompt.Delimiter	Swift.Equatable		
+protocol	conformance ImageEmbeddingAttachment.Encoding	Swift.Equatable		
+protocol	conformance ImageEmbeddingAttachment.Encoding	Swift.Hashable		
+protocol	conformance ImageEmbeddingAttachment.Encoding	Swift.CustomStringConvertible		
+protocol	conformance Prompt.ImageEmbeddingAttachment	Swift.Hashable		
+protocol	conformance Prompt.ImageEmbeddingAttachment	Swift.CustomStringConvertible		
+protocol	conformance Prompt.ImageEmbeddingAttachment	Swift.Equatable		
+protocol	conformance Prompt.Attachment	Swift.Hashable		
+protocol	conformance Prompt.Attachment	Swift.CustomStringConvertible		
+protocol	conformance Prompt.Attachment	Swift.Equatable		
+protocol	conformance Prompt.AttachmentContent	Swift.Hashable		
+protocol	conformance Prompt.AttachmentContent	Swift.CustomStringConvertible		
+protocol	conformance Prompt.AttachmentContent	Swift.Equatable		
+protocol	conformance ImageAttachment.Format	Swift.Equatable		
+protocol	conformance ImageAttachment.Format	Swift.Hashable		
+protocol	conformance ImageAttachment.Format	Swift.CustomStringConvertible		
+protocol	conformance Prompt.ImageAttachment	Swift.Hashable		
+protocol	conformance Prompt.ImageAttachment	Swift.CustomStringConvertible		
+protocol	conformance Prompt.ImageAttachment	Swift.Equatable		
+protocol	conformance Prompt.PreprocessedImageAttachment	Swift.Hashable		
+protocol	conformance Prompt.PreprocessedImageAttachment	Swift.CustomStringConvertible		
+protocol	conformance Prompt.PreprocessedImageAttachment	Swift.Equatable		
+protocol	conformance Prompt.ImageSurfaceAttachment	Swift.Hashable		
+protocol	conformance Prompt.ImageSurfaceAttachment	Swift.CustomStringConvertible		
+protocol	conformance Prompt.ImageSurfaceAttachment	Swift.Equatable		
+protocol	conformance ResponseFormat.Kind	Swift.Hashable		
+protocol	conformance ResponseFormat.Kind	Swift.Equatable		
+protocol	conformance ResponseFormat.SchemaDetails	Swift.Hashable		
+protocol	conformance ResponseFormat.SchemaDetails	Swift.Equatable		
+protocol	conformance ResponseFormat.GrammarDetails	Swift.Hashable		
+protocol	conformance ResponseFormat.GrammarDetails	Swift.Equatable		
+protocol	conformance Prompt.ResponseFormat	Swift.Hashable		
+protocol	conformance Prompt.ResponseFormat	Swift.Equatable		
+protocol	conformance Prompt.ToolDefinitions	Swift.Hashable		
+protocol	conformance Prompt.ToolDefinitions	Swift.Equatable		
+protocol	conformance Prompt.StringInterpolation	Swift.StringInterpolationProtocol		
+protocol	conformance Rendering.Source	Swift.Hashable		
+protocol	conformance Rendering.Source	Swift.Equatable		
+protocol	conformance Prompt.Rendering	Swift.Hashable		
+protocol	conformance Prompt.Rendering	Swift.Equatable		
+protocol	conformance TokenGeneration.Prompt	Swift.Hashable		
+protocol	conformance TokenGeneration.Prompt	Swift.ExpressibleByStringLiteral		
+protocol	conformance TokenGeneration.Prompt	Swift.ExpressibleByStringInterpolation		
+protocol	conformance TokenGeneration.Prompt	Swift.CustomStringConvertible		
+protocol	conformance TokenGeneration.Prompt	Swift.Equatable		
+protocol	conformance TokenGeneration.Prompt	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance TokenGeneration.Prompt	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance RenderedSpecialToken	Swift.Equatable		
+protocol	conformance RenderedPromptFragment	Swift.Equatable		
+protocol	conformance TokenGenerationCore.PromptModule	Swift.Equatable		
+protocol	conformance Turn.Role	Swift.Equatable		
+protocol	conformance Turn.Role	Swift.Hashable		
+protocol	conformance Turn.Segment	Swift.Hashable		
+protocol	conformance Turn.Segment	Swift.Equatable		
+protocol	conformance Prompt.Turn	Swift.Hashable		
+protocol	conformance Prompt.Turn	Swift.Equatable		
+protocol	conformance ToolCall.Kind	Swift.Hashable		
+protocol	conformance ToolCall.Kind	Swift.Equatable		
+protocol	conformance ToolCall.Function	Swift.Hashable		
+protocol	conformance ToolCall.Function	Swift.Equatable		
+protocol	conformance Prompt.ToolCall	Swift.Hashable		
+protocol	conformance Prompt.ToolCall	Swift.Equatable		
+protocol	conformance Prompt.ToolCallResult	Swift.Hashable		
+protocol	conformance Prompt.ToolCallResult	Swift.Equatable		
+protocol	conformance Content.Text	Swift.Equatable		
+protocol	conformance Content.ImageSurface	Swift.Equatable		
+protocol	conformance Component.Content	Swift.Equatable		
+protocol	conformance RichVariableBinding.Component	Swift.Equatable		
+protocol	conformance PromptTemplateInfo.RichVariableBinding	Swift.Equatable		
+protocol	conformance ModelConfiguration.PrompteTemplateError	Swift.Equatable		
+protocol	conformance ModelConfiguration.PrompteTemplateError	Swift.Hashable		
+protocol	conformance ModelConfiguration.PrompteTemplateError	Swift.RawRepresentable		
+protocol	conformance ModelConfiguration.PrompteTemplateError	Swift.Error		
+protocol	conformance PromptVariantEnvelope.ChatMessagesPromptEnvelope	Swift.Decodable		
+protocol	conformance PromptVariantEnvelope.ChatMessagesPromptEnvelope	Swift.Encodable		
+protocol	conformance PromptVariantEnvelope.CompletionPromptEnvelope	Swift.Decodable		
+protocol	conformance PromptVariantEnvelope.CompletionPromptEnvelope	Swift.Encodable		
+protocol	conformance TokenGenerationCore.PromptVariantEnvelope	Swift.Decodable		
+protocol	conformance TokenGenerationCore.PromptVariantEnvelope	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CompletionCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CompletionCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CompletionCodingKeys	Swift.Hashable		
+protocol	conformance CompletionCodingKeys	Swift.Equatable		
+protocol	conformance ChatCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ChatCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ChatCodingKeys	Swift.Hashable		
+protocol	conformance ChatCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance ChatCodingKeys	Swift.CodingKey		
+protocol	conformance CompletionCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PromptVariantEnvelope.OverridableConfigurationStorageEnvelope	Swift.Decodable		
+protocol	conformance PromptVariantEnvelope.OverridableConfigurationStorageEnvelope	Swift.Encodable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance TokenGeneration.Token	Swift.Hashable		
+protocol	conformance TokenGeneration.Token	Swift.Equatable		
+protocol	conformance PromptTemplateRenderError	Swift.Equatable		
+protocol	conformance PromptTemplateRenderError	Swift.Hashable		
+protocol	conformance PromptTemplateRenderError	Swift.Error		
+protocol	conformance ModelCatalog.CatalogClient	TokenGenerationCore.ModelCatalogClient		
+protocol	conformance ParseAsChatMessagesPromptParseError.Problem	Swift.Hashable		
+protocol	conformance ParseAsChatMessagesPromptParseError.Problem	Swift.Equatable		
+protocol	conformance ParseAsChatMessagesPromptParseError	Swift.Error		
+protocol	conformance PromptTemplateTransformer	PromptKit.PromptComponentValueCustomDataTransformer		
+protocol	conformance ResolvedModelBundleID	Swift.Equatable		
+protocol	conformance State	Swift.Equatable		
+extension	TokenGenerationCore.ContiguousBitSet.Iterator	IteratorProtocol		
+extension	TokenGenerationCore.ContiguousBitSet	Sequence		
+extension	TokenGenerationCore.EarleyRecognizer	GrammarRecognizer		
+extension	TokenGenerationCore.TerminalSymbol.CodingKeys	RawRepresentable		
+extension	TokenGenerationCore.TerminalSymbol.Kind	RawRepresentable		
+extension	TokenGenerationCore.SpaceLookaheadMaskGenerator	LogitMaskGenerating		
+extension	TokenGenerationCore.ExhaustiveLogitMaskGenerator	LogitMaskGenerating		
+extension	TokenGenerationCore.CompositeInferenceOutputParser.ParserOptions	OptionSet		
+extension	TokenGenerationCore.CompositeInferenceOutputParser.ParserOptions	SetAlgebra		
+extension	TokenGenerationCore.CompositeInferenceOutputParser.ParserOptions	RawRepresentable		
+extension	TokenGenerationCore.CompositeInferenceOutputParser.ParserOptions	ExpressibleByArrayLiteral		
+extension	TokenGenerationCore.PromptPreprocessingTemplateVersion	RawRepresentable		
+extension	TokenGenerationCore.TGModes	RawRepresentable		
+extension	TokenGenerationCore.AutomationJSON.InputPromptType	RawRepresentable		
+extension	TokenGenerationCore.AutomationJSON.Role	RawRepresentable		
+extension	TokenGenerationCore.AutomationJSON.RichVariableBinding.FieldType	RawRepresentable		
+extension	TokenGenerationCore.GenerationError.Code	RawRepresentable		
+extension	TokenGenerationCore._LoadedModelConfiguration.CodingKeys	RawRepresentable		
+extension	TokenGenerationCore.Npy.Header.DataType.Endianness	RawRepresentable		
+extension	TokenGenerationCore.Npy.Header.DataType.DType	RawRepresentable		
+extension	TokenGeneration.Prompt.StringInterpolation	StringInterpolationProtocol		
+extension	TokenGeneration.Prompt	ExpressibleByStringLiteral		
+extension	TokenGeneration.Prompt	ExpressibleByStringInterpolation		
+extension	TokenGeneration.Prompt	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	TokenGeneration.Prompt	ExpressibleByUnicodeScalarLiteral		
+extension	TokenGenerationCore.ModelConfiguration.PrompteTemplateError	RawRepresentable		
+extension	TokenGenerationCore.PromptTemplateTransformer	PromptComponentValueCustomDataTransformer		

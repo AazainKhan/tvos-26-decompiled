@@ -1,0 +1,350 @@
+kind	type	conformance	member_kind	member
+enum	DataFlow.JournalEncoder.Failure			
+enum	DataFlow.JournalEncoder.Failure		case	failedToEncodeString
+struct	DataFlow.JournalDatabaseRecorder<A	Swift.Decodable, A: Swift.Encodable>		
+struct	DataFlow.JournalDatabaseRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	database
+struct	DataFlow.JournalDatabaseRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	identifier
+struct	DataFlow.JournalDatabaseRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	startTime
+struct	DataFlow.JournalDatabaseRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	encoder
+enum	DataFlow.JournalDatabaseRecorder.JournalDatabaseError<A	Swift.Decodable, A: Swift.Encodable>		
+enum	DataFlow.JournalDatabaseRecorder.JournalDatabaseError<A	Swift.Decodable, A: Swift.Encodable>	case	jsonEncodingFailed
+class	DataFlow.JournalFileRecorder<A	Swift.Decodable, A: Swift.Encodable>		
+class	DataFlow.JournalFileRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	startTime
+class	DataFlow.JournalFileRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	sessionDirectory
+class	DataFlow.JournalFileRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	fileName
+class	DataFlow.JournalFileRecorder<A	Swift.Decodable, A: Swift.Encodable>	var	state
+class	DataFlow.JournalFileRecorder<A	Swift.Decodable, A: Swift.Encodable>	let	queue
+enum	DataFlow.JournalFileRecorder.State<A	Swift.Decodable, A: Swift.Encodable>		
+enum	DataFlow.JournalFileRecorder.State<A	Swift.Decodable, A: Swift.Encodable>	case	open
+enum	DataFlow.JournalFileRecorder.State<A	Swift.Decodable, A: Swift.Encodable>	case	closed
+enum	DataFlow.JournalFileRecorder.Failure<A	Swift.Decodable, A: Swift.Encodable>		
+enum	DataFlow.JournalFileRecorder.Failure<A	Swift.Decodable, A: Swift.Encodable>	case	failedToOpenStream
+class	DataFlow.Database			
+class	DataFlow.Database		let	location
+class	DataFlow.Database		let	backgroundTaskProvider
+class	DataFlow.Database		let	state
+class	DataFlow.Database		let	queue
+enum	DataFlow.Database.State			
+enum	DataFlow.Database.State		case	closed
+enum	DataFlow.Database.State		case	opened
+enum	DataFlow.Database.State		case	processing
+struct	DataFlow.Database.DatabaseConnectionContext			
+struct	DataFlow.Database.DatabaseConnectionContext		let	connection
+struct	DataFlow.Database.DatabaseConnectionContext		let	backgroundTaskIdentifier
+struct	DataFlow.Database.Transaction			
+struct	DataFlow.Database.Transaction		let	voucher
+struct	DataFlow.Database.Transaction		let	continuation
+struct	DataFlow.Database.Transaction		let	execution
+struct	DataFlow.Database.TransactionContext			
+struct	DataFlow.Database.TransactionContext		let	connection
+struct	DataFlow.Database.TransactionContext		let	transaction
+enum	DataFlow.AsyncStateValue<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue<A	Swift.Equatable>	case	refreshing
+enum	DataFlow.AsyncStateValue<A	Swift.Equatable>	case	fetched
+enum	DataFlow.AsyncStateValue<A	Swift.Equatable>	case	failed
+enum	DataFlow.AsyncStateValue<A	Swift.Equatable>	case	none
+enum	DataFlow.AsyncStateValue<A	Swift.Equatable>	case	fetching
+struct	DataFlow.AsyncState<A	Swift.Equatable>		
+struct	DataFlow.AsyncState<A	Swift.Equatable>	let	value
+struct	DataFlow.AsyncState<A	Swift.Equatable>	let	ttl
+struct	DataFlow.AsyncKeyedState<A	Swift.Hashable, B: Swift.Equatable>		
+struct	DataFlow.AsyncKeyedState<A	Swift.Hashable, B: Swift.Equatable>	let	ttl
+struct	DataFlow.AsyncKeyedState<A	Swift.Hashable, B: Swift.Equatable>	var	storage
+enum	DataFlow.AsyncStateValue.CodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue.CodingKeys<A	Swift.Equatable>	case	none
+enum	DataFlow.AsyncStateValue.CodingKeys<A	Swift.Equatable>	case	fetching
+enum	DataFlow.AsyncStateValue.CodingKeys<A	Swift.Equatable>	case	refreshing
+enum	DataFlow.AsyncStateValue.CodingKeys<A	Swift.Equatable>	case	fetched
+enum	DataFlow.AsyncStateValue.CodingKeys<A	Swift.Equatable>	case	failed
+enum	DataFlow.AsyncStateValue.NoneCodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue.FetchingCodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue.RefreshingCodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue.RefreshingCodingKeys<A	Swift.Equatable>	case	previousResult
+enum	DataFlow.AsyncStateValue.FetchedCodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue.FetchedCodingKeys<A	Swift.Equatable>	case	result
+enum	DataFlow.AsyncStateValue.FetchedCodingKeys<A	Swift.Equatable>	case	date
+enum	DataFlow.AsyncStateValue.FailedCodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncStateValue.FailedCodingKeys<A	Swift.Equatable>	case	errorDomain
+enum	DataFlow.AsyncStateValue.FailedCodingKeys<A	Swift.Equatable>	case	errorCode
+enum	DataFlow.AsyncStateValue.FailedCodingKeys<A	Swift.Equatable>	case	localizedDescription
+enum	DataFlow.AsyncState.CodingKeys<A	Swift.Equatable>		
+enum	DataFlow.AsyncState.CodingKeys<A	Swift.Equatable>	case	value
+enum	DataFlow.AsyncState.CodingKeys<A	Swift.Equatable>	case	ttl
+enum	DataFlow.AsyncKeyedState.CodingKeys<A	Swift.Hashable, B: Swift.Equatable>		
+enum	DataFlow.AsyncKeyedState.CodingKeys<A	Swift.Hashable, B: Swift.Equatable>	case	ttl
+enum	DataFlow.AsyncKeyedState.CodingKeys<A	Swift.Hashable, B: Swift.Equatable>	case	storage
+class	DataFlow.SideEffectRegistry			
+class	DataFlow.SideEffectRegistry		var	tasks
+struct	DataFlow.SideEffectRegistry.RegistryTask			
+struct	DataFlow.SideEffectRegistry.RegistryTask		let	storeIdentifier
+struct	DataFlow.SideEffectRegistry.RegistryTask		let	storeHandle
+struct	DataFlow.SideEffectRegistry.RegistryTask		let	onDisposal
+struct	DataFlow.SideEffectRegistry.RegistryTask		let	cancellable
+struct	DataFlow.DatabaseError			
+struct	DataFlow.DatabaseError		let	code
+struct	DataFlow.DatabaseError		let	description
+struct	DataFlow.JournalFilePlayer<A	Swift.Decodable, A: Swift.Encodable>		
+struct	DataFlow.JournalFilePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	sessionDirectory
+struct	DataFlow.JournalFilePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	fileName
+struct	DataFlow.JournalFilePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	elapsedTime
+enum	DataFlow.JournalMode			
+enum	DataFlow.JournalMode		case	record
+enum	DataFlow.JournalMode		case	replay
+enum	DataFlow.JournalMode		case	none
+struct	DataFlow.DatabaseConnection			
+struct	DataFlow.DatabaseConnection		let	connectionPointer
+enum	DataFlow.DatabaseConnection.Location			
+enum	DataFlow.DatabaseConnection.Location		case	disk
+enum	DataFlow.DatabaseConnection.Location		case	filePath
+enum	DataFlow.DatabaseConnection.Location		case	memory
+enum	DataFlow.DatabaseConnection.Failure			
+enum	DataFlow.DatabaseConnection.Failure		case	connectError
+enum	DataFlow.DatabaseConnection.Failure		case	executeError
+enum	DataFlow.DatabaseConnection.Failure		case	prepareError
+enum	DataFlow.DatabaseConnection.Failure		case	migrationNotFound
+enum	DataFlow.DatabaseConnection.Failure		case	invalidConnectionPointer
+enum	DataFlow.DatabaseConnection.Failure		case	invalidPreparePointer
+struct	DataFlow.JournalDatabasePlayer<A	Swift.Decodable, A: Swift.Encodable>		
+struct	DataFlow.JournalDatabasePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	database
+struct	DataFlow.JournalDatabasePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	identifier
+struct	DataFlow.JournalDatabasePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	elapsedTime
+struct	DataFlow.JournalDatabasePlayer<A	Swift.Decodable, A: Swift.Encodable>	let	decoder
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>		
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>	let	identifier
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>	let	startTime
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>	let	mode
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>	let	recorder
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>	let	player
+class	DataFlow.JournalDatabase<A	Swift.Decodable, A: Swift.Encodable>	var	fragmentCount
+enum	DataFlow.JournalDatabaseMode			
+enum	DataFlow.JournalDatabaseMode		case	record
+enum	DataFlow.JournalDatabaseMode		case	replay
+enum	DataFlow.JournalDatabaseMode		case	none
+struct	DataFlow.EmptyState			
+struct	DataFlow.StoreProxy			
+struct	DataFlow.StoreProxy		let	id
+struct	DataFlow.StoreProxy		var	store
+struct	DataFlow.AsyncStateResolver<A	DataFlow.Feature, B: Swift.Equatable>		
+struct	DataFlow.AsyncStateResolver<A	DataFlow.Feature, B: Swift.Equatable>	let	store
+struct	DataFlow.AsyncStateResolver<A	DataFlow.Feature, B: Swift.Equatable>	let	keyPath
+struct	DataFlow.AsyncStateResolver<A	DataFlow.Feature, B: Swift.Equatable>	let	fetchValue
+struct	DataFlow.StateProjection<A	DataFlow.Feature, B: DataFlow.Feature>		
+struct	DataFlow.StateProjection<A	DataFlow.Feature, B: DataFlow.Feature>	let	get
+struct	DataFlow.StateProjection<A	DataFlow.Feature, B: DataFlow.Feature>	let	set
+enum	DataFlow.DatabaseStatement.Failure			
+enum	DataFlow.DatabaseStatement.Failure		case	bindError
+enum	DataFlow.DatabaseStatement.Failure		case	finalizeError
+enum	DataFlow.DatabaseStatement.Failure		case	insertError
+enum	DataFlow.DatabaseStatement.Failure		case	resetError
+enum	DataFlow.DatabaseStatement.Failure		case	stepError
+class	DataFlow.ChangeObserver<A	DataFlow.Feature>		
+class	DataFlow.ChangeObserver<A	DataFlow.Feature>	let	store
+class	DataFlow.ChangeObserver<A	DataFlow.Feature>	var	cancellables
+class	DataFlow.ChangeObserver<A	DataFlow.Feature>	var	observationContexts
+struct	DataFlow.ChangeObservationContext<A	DataFlow.Feature, B: Swift.Equatable>		
+struct	DataFlow.ChangeObservationContext<A	DataFlow.Feature, B: Swift.Equatable>	let	keyPath
+struct	DataFlow.ChangeObservationContext<A	DataFlow.Feature, B: Swift.Equatable>	let	currentValue
+struct	DataFlow.ChangeObservationContext<A	DataFlow.Feature, B: Swift.Equatable>	let	changeHandler
+class	DataFlow.RootStore<A	DataFlow.Feature>		
+class	DataFlow.RootStore<A	DataFlow.Feature>	let	objectWillChange
+class	DataFlow.RootStore<A	DataFlow.Feature>	let	observationRegistrar
+class	DataFlow.RootStore<A	DataFlow.Feature>	let	feature
+class	DataFlow.RootStore<A	DataFlow.Feature>	let	sharedState
+class	DataFlow.RootStore<A	DataFlow.Feature>	let	localState
+class	DataFlow.RootStore<A	DataFlow.Feature>	let	sideEffectRegistry
+class	DataFlow.RootStore<A	DataFlow.Feature>	var	cancellables
+class	DataFlow.RootStore<A	DataFlow.Feature>	var	journal
+struct	DataFlow.JournalEntry<A	Swift.Decodable, A: Swift.Encodable>		
+struct	DataFlow.JournalEntry<A	Swift.Decodable, A: Swift.Encodable>	let	action
+struct	DataFlow.JournalEntry<A	Swift.Decodable, A: Swift.Encodable>	let	timestamp
+enum	DataFlow.JournalEntry.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>		
+enum	DataFlow.JournalEntry.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	action
+enum	DataFlow.JournalEntry.CodingKeys<A	Swift.Decodable, A: Swift.Encodable>	case	timestamp
+enum	DataFlow.DatabaseRow.Failure			
+enum	DataFlow.DatabaseRow.Failure		case	unexpectedNullField
+enum	DataFlow.DatabaseRow.Failure		case	malformedLink
+enum	DataFlow.DatabaseBinding			
+enum	DataFlow.DatabaseBinding		case	date
+enum	DataFlow.DatabaseBinding		case	double
+enum	DataFlow.DatabaseBinding		case	int
+enum	DataFlow.DatabaseBinding		case	link
+enum	DataFlow.DatabaseBinding		case	string
+class	DataFlow.Store<A	DataFlow.Feature>		
+class	DataFlow.Store<A	DataFlow.Feature>	let	objectWillChange
+class	DataFlow.Store<A	DataFlow.Feature>	let	backingStore
+class	DataFlow.Store<A	DataFlow.Feature>	var	cancellables
+enum	DataFlow.SideEffect			
+enum	DataFlow.SideEffect		case	task
+enum	DataFlow.SideEffect		case	timer
+enum	DataFlow.SideEffect		case	cancel
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>		
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>	let	mode
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>	let	startTime
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>	let	identifier
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>	var	recorder
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>	var	player
+class	DataFlow.JournalFile<A	Swift.Decodable, A: Swift.Encodable>	var	fragmentCount
+class	DataFlow.ApplicationBackgroundTaskProvider			
+class	DataFlow.ApplicationBackgroundTaskProvider		let	application
+class	DataFlow.ApplicationBackgroundTaskProvider		let	appState
+struct	DataFlow.ApplicationBackgroundTaskProvider.Handler			
+struct	DataFlow.ApplicationBackgroundTaskProvider.Handler		let	onActive
+struct	DataFlow.ApplicationBackgroundTaskProvider.Handler		let	onInactive
+struct	DataFlow.ApplicationBackgroundTaskProvider.Handler		let	enterBackgroundToken
+struct	DataFlow.ApplicationBackgroundTaskProvider.Handler		let	enterForegroundToken
+struct	DataFlow.ReadOnlyFeature<A	Swift.Equatable>		
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>		
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	objectWillChange
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	observationRegistrar
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	feature
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	parentState
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	localState
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	stateProjection
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	forwardToParent
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	let	sideEffectRegistry
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	var	previousParentState
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	var	cancellables
+class	DataFlow.ChildStore<A	DataFlow.Feature, B: DataFlow.Feature>	var	journal
+enum	DataFlow.SideEffectCollisionBehavior			
+enum	DataFlow.SideEffectCollisionBehavior		case	drop
+enum	DataFlow.SideEffectCollisionBehavior		case	fail
+enum	DataFlow.SideEffectCollisionBehavior		case	replace
+enum	DataFlow.SideEffectDisposalBehavior			
+enum	DataFlow.SideEffectDisposalBehavior		case	cancel
+enum	DataFlow.SideEffectDisposalBehavior		case	continue
+class	DataFlow.AsyncKeyedStateResolver<A	DataFlow.Feature, B: Swift.Hashable, C: Swift.Equatable>		
+class	DataFlow.AsyncKeyedStateResolver<A	DataFlow.Feature, B: Swift.Hashable, C: Swift.Equatable>	let	store
+class	DataFlow.AsyncKeyedStateResolver<A	DataFlow.Feature, B: Swift.Hashable, C: Swift.Equatable>	let	keyPath
+class	DataFlow.AsyncKeyedStateResolver<A	DataFlow.Feature, B: Swift.Hashable, C: Swift.Equatable>	var	resolvers
+class	DataFlow.AsyncKeyedStateResolver<A	DataFlow.Feature, B: Swift.Hashable, C: Swift.Equatable>	let	fetchValue
+protocol	DataFlow.Journaling	Action		
+protocol	DataFlow.Feature	SharedState, LocalState, Action		
+protocol	DataFlow.JournalRecording	Action		
+protocol	DataFlow.StoreProxySource	Action		
+protocol	ChangeObservationContextProtocol	F		
+protocol	DataFlow.DatabaseReadable			
+protocol	DataFlow.BackgroundTaskProviding			
+protocol	DataFlow.BackingStore	StoreFeature		
+protocol	DataFlow.JournalReplaying	Action		
+protocol	conformance __C.UIBackgroundTaskIdentifier	Swift._HasCustomAnyHashableRepresentation: UIKitCore		
+protocol	conformance __C.UIBackgroundTaskIdentifier	Swift.RawRepresentable: UIKitCore		
+protocol	conformance __C.UIBackgroundTaskIdentifier	Swift._SwiftNewtypeWrapper: UIKitCore		
+protocol	conformance __C.UIBackgroundTaskIdentifier	Swift.Equatable: UIKitCore		
+protocol	conformance __C.UIBackgroundTaskIdentifier	Swift._ObjectiveCBridgeable: UIKitCore		
+protocol	conformance Failure	Swift.Hashable		
+protocol	conformance Failure	Swift.Equatable		
+protocol	conformance Failure	Swift.Error		
+protocol	conformance __C.UIBackgroundTaskIdentifier	Swift.Hashable: UIKitCore		
+protocol	conformance DataFlow.JournalDatabaseRecorder	DataFlow.JournalRecording		
+protocol	conformance JournalDatabaseRecorder.JournalDatabaseError	Swift.Hashable		
+protocol	conformance JournalDatabaseRecorder.JournalDatabaseError	Swift.Equatable		
+protocol	conformance JournalDatabaseRecorder.JournalDatabaseError	Swift.Error		
+protocol	conformance DataFlow.JournalFileRecorder	DataFlow.JournalRecording		
+protocol	conformance DataFlow.JournalFileRecorder	Swift.Actor		
+protocol	conformance Failure	Swift.Hashable		
+protocol	conformance Failure	Swift.Equatable		
+protocol	conformance Failure	Swift.Error		
+protocol	conformance DataFlow.AsyncStateValue	Swift.Equatable		
+protocol	conformance DataFlow.AsyncState	Swift.Equatable		
+protocol	conformance DataFlow.AsyncKeyedState	Swift.Equatable		
+protocol	conformance DataFlow.AsyncKeyedState	Swift.Decodable		
+protocol	conformance DataFlow.AsyncKeyedState	Swift.Encodable		
+protocol	conformance DataFlow.AsyncState	Swift.Decodable		
+protocol	conformance DataFlow.AsyncState	Swift.Encodable		
+protocol	conformance DataFlow.AsyncStateValue	Swift.Decodable		
+protocol	conformance DataFlow.AsyncStateValue	Swift.Encodable		
+protocol	conformance DataFlow.AsyncKeyedState	Swift.Hashable		
+protocol	conformance DataFlow.AsyncState	Swift.Hashable		
+protocol	conformance DataFlow.AsyncStateValue	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance FailedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FailedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FailedCodingKeys	Swift.Hashable		
+protocol	conformance FailedCodingKeys	Swift.Equatable		
+protocol	conformance FetchedCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchedCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance FetchedCodingKeys	Swift.Hashable		
+protocol	conformance FetchedCodingKeys	Swift.Equatable		
+protocol	conformance RefreshingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RefreshingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance RefreshingCodingKeys	Swift.Hashable		
+protocol	conformance RefreshingCodingKeys	Swift.Equatable		
+protocol	conformance FetchingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance FetchingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance NoneCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance NoneCodingKeys	Swift.CodingKey		
+protocol	conformance FetchingCodingKeys	Swift.CodingKey		
+protocol	conformance RefreshingCodingKeys	Swift.CodingKey		
+protocol	conformance FetchedCodingKeys	Swift.CodingKey		
+protocol	conformance FailedCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance DataFlow.SideEffectRegistry	Swift.Actor		
+protocol	conformance DataFlow.DatabaseError	Swift.Error		
+protocol	conformance DataFlow.JournalFilePlayer	DataFlow.JournalReplaying		
+protocol	conformance Failure	Swift.Error		
+protocol	conformance DataFlow.JournalDatabasePlayer	DataFlow.JournalReplaying		
+protocol	conformance DataFlow.JournalDatabase	DataFlow.Journaling		
+protocol	conformance DataFlow.EmptyState	Swift.Equatable		
+protocol	conformance DataFlow.RootStore	DataFlow.StoreProxySource		
+protocol	conformance DataFlow.ChildStore	DataFlow.StoreProxySource		
+protocol	conformance Failure	Swift.Error		
+protocol	conformance ChangeObservationContext	DataFlow.ChangeObservationContextProtocol		
+protocol	conformance DataFlow.RootStore	Combine.ObservableObject		
+protocol	conformance DataFlow.RootStore	Observation.Observable		
+protocol	conformance DataFlow.RootStore	Swift.Identifiable		
+protocol	conformance DataFlow.RootStore	DataFlow.BackingStore		
+protocol	conformance Swift.Int	DataFlow.DatabaseReadable		
+protocol	conformance Swift.Double	DataFlow.DatabaseReadable		
+protocol	conformance Swift.String	DataFlow.DatabaseReadable		
+protocol	conformance DataFlow.JournalEntry	Swift.Encodable		
+protocol	conformance DataFlow.JournalEntry	Swift.Decodable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance Failure	Swift.Error		
+protocol	conformance DataFlow.Store	Combine.ObservableObject		
+protocol	conformance DataFlow.Store	Observation.Observable		
+protocol	conformance DataFlow.JournalFile	DataFlow.Journaling		
+protocol	conformance DataFlow.ApplicationBackgroundTaskProvider	DataFlow.BackgroundTaskProviding		
+protocol	conformance DataFlow.ReadOnlyFeature	DataFlow.Feature		
+protocol	conformance DataFlow.ChildStore	Observation.Observable		
+protocol	conformance DataFlow.ChildStore	Combine.ObservableObject		
+protocol	conformance DataFlow.ChildStore	Swift.Identifiable		
+protocol	conformance DataFlow.ChildStore	DataFlow.BackingStore		
+protocol	conformance DataFlow.SideEffectCollisionBehavior	Swift.Equatable		
+protocol	conformance DataFlow.SideEffectCollisionBehavior	Swift.Hashable		
+protocol	conformance DataFlow.SideEffectDisposalBehavior	Swift.Equatable		
+protocol	conformance DataFlow.SideEffectDisposalBehavior	Swift.Hashable		
+extension	DataFlow.JournalDatabaseRecorder	JournalRecording		
+extension	DataFlow.JournalFileRecorder	JournalRecording		
+extension	DataFlow.JournalFilePlayer	JournalReplaying		
+extension	DataFlow.JournalDatabasePlayer	JournalReplaying		
+extension	DataFlow.JournalDatabase	Journaling		
+extension	DataFlow.RootStore	StoreProxySource		
+extension	DataFlow.ChildStore	StoreProxySource		
+extension	DataFlow.ChangeObservationContext	ChangeObservationContextProtocol		
+extension	DataFlow.RootStore	ObservableObject		
+extension	DataFlow.RootStore	Identifiable		
+extension	DataFlow.RootStore	BackingStore		
+extension	DataFlow.Store	ObservableObject		
+extension	DataFlow.JournalFile	Journaling		
+extension	DataFlow.ReadOnlyFeature	Feature		
+extension	DataFlow.ChildStore	ObservableObject		
+extension	DataFlow.ChildStore	Identifiable		
+extension	DataFlow.ChildStore	BackingStore		

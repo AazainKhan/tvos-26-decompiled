@@ -1,0 +1,26 @@
+owner	kind	declaration
+AKAvailability	+	+ (id)logger;
+AKAvailability	-	- (_Bool)isAvailable;
+AKAvailability	-	- (_Bool)isAvailableToMe;
+AKAvailability	-	- (id)_initWithAvailable:(_Bool)available activityIdentifierString:(id)string personalizedAvailability:(_Bool)availability;
+AKAvailability	-	- (id)_payloadDictionary;
+AKAvailability	-	- (id)initWithAvailable:(_Bool)available activityIdentifier:(id)identifier;
+AKAvailability	-	- (id)initWithAvailable:(_Bool)available activityIdentifierString:(id)string;
+AKAvailability	-	- (id)initWithPublishedStatus:(id)status;
+AKAvailability	-	- (id)initWithStatusPayload:(id)payload invitationPayload:(id)payload;
+AKAvailability	-	- (id)statusPublishRequest;
+AKAvailability	property	@property (readonly, nonatomic) NSString *activityIdentifierString;
+AKAvailability	property	@property (readonly, nonatomic) NSUUID *activityIdentifier;
+AKAvailability	property	@property (readonly, nonatomic) _Bool available;
+AKAvailability	property	@property (readonly, nonatomic) _Bool availableToMe;
+AKAvailability	property	@property (readonly, nonatomic) _Bool personalizedAvailability;
+AKAvailabilityInvitation	-	- (id)_payloadDictionary;
+AKAvailabilityInvitation	-	- (id)initWithAvailableDuringActivityIdentifiers:(id)identifiers unavailableDuringActivityIdentifiers:(id)identifiers;
+AKAvailabilityInvitation	-	- (id)initWithAvailableDuringActivityIdentifiers:(id)identifiers;
+AKAvailabilityInvitation	-	- (id)initWithStatusKitInvitationPayload:(id)payload;
+AKAvailabilityInvitation	-	- (id)statusKitInvitationPayloadWithDateCreated:(id)created;
+AKAvailabilityInvitation	property	@property (readonly, nonatomic) NSArray *availableDuringActivityIdentifiers;
+AKAvailabilityInvitation	property	@property (readonly, nonatomic) NSArray *unavailableDuringActivityIdentifiers;
+NSDictionary(AvailabilityKit)	-	- (_Bool)availabilityKit_boolForKey:(id)key defaultValue:(_Bool)value;
+NSDictionary(AvailabilityKit)	-	- (id)availabilityKit_stringArrayForKey:(id)key allowEmptyString:(_Bool)string;
+NSDictionary(AvailabilityKit)	-	- (id)availabilityKit_stringForKey:(id)key;

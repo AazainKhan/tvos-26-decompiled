@@ -1,0 +1,28 @@
+owner	kind	declaration
+IMTransferServicesCompressionController	+	+ (id)sharedInstance;
+IMTransferServicesCompressionController	-	- (id /* block */)_blockForCopier:(id)copier;
+IMTransferServicesCompressionController	-	- (void)_mapCopier:(id)copier toBlock:(id /* block */)block;
+IMTransferServicesCompressionController	-	- (void)_unmapCopier:(id)copier;
+IMTransferServicesCompressionController	-	- (void)compressFileTransfer:(id)transfer completionBlock:(id /* block */)block;
+IMTransferServicesCompressionController	-	- (void)fileCopierDidFinish:(id)finish;
+IMTransferServicesCompressionController	-	- (void)fileCopierDidStart:(id)start;
+IMTransferServicesController	+	+ (id)sharedInstance;
+IMTransferServicesController	-	- (void)_receiveFileTransfer:(id)transfer topic:(id)topic path:(id)path requestURLString:(id)urlstring ownerID:(id)id sourceAppID:(id)id signature:(id)signature decryptionKey:(id)key retries:(int)retries fileSize:(unsigned long long)size progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)_sendFilePath:(id)path topic:(id)topic userInfo:(id)info transferID:(id)id sourceAppID:(id)id encryptFile:(_Bool)file retries:(int)retries progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)cancelSendTransferID:(id)id;
+IMTransferServicesController	-	- (void)deleteAllPersonalNicknamesWithCompletion:(id /* block */)completion;
+IMTransferServicesController	-	- (void)getNicknameWithRecordID:(id)id decryptionKey:(id)key completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)getNicknameWithRecordID:(id)id decryptionKey:(id)key wallpaperDataTag:(id)tag wallpaperLowResDataTag:(id)tag wallpaperMetadataTag:(id)tag avatarRecipeDataTag:(id)tag isKnownSender:(_Bool)sender shouldDecodeImageFields:(_Bool)fields completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)getNicknameWithRecordID:(id)id decryptionKey:(id)key wallpaperDataTag:(id)tag wallpaperLowResDataTag:(id)tag wallpaperMetadataTag:(id)tag completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)getNicknameWithRecordID:(id)id decryptionKey:(id)key wallpaperDataTag:(id)tag wallpaperLowResDataTag:(id)tag wallpaperMetadataTag:(id)tag isKnownSender:(_Bool)sender completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)getNicknameWithRecordID:(id)id decryptionKey:(id)key wallpaperDataTag:(id)tag wallpaperLowResDataTag:(id)tag wallpaperMetadataTag:(id)tag isKnownSender:(_Bool)sender shouldDecodeImageFields:(_Bool)fields completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)preWarmMMCSForOwnerID:(id)id;
+IMTransferServicesController	-	- (void)receiveFileTransfer:(id)transfer topic:(id)topic path:(id)path requestURLString:(id)urlstring ownerID:(id)id signature:(id)signature decryptionKey:(id)key fileSize:(unsigned long long)size progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)receiveFileTransfer:(id)transfer topic:(id)topic path:(id)path requestURLString:(id)urlstring ownerID:(id)id sourceAppID:(id)id signature:(id)signature decryptionKey:(id)key fileSize:(unsigned long long)size progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)sendFilePath:(id)path topic:(id)topic transferID:(id)id encryptFile:(_Bool)file progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)sendFilePath:(id)path topic:(id)topic userInfo:(id)info transferID:(id)id encryptFile:(_Bool)file progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)sendFilePath:(id)path topic:(id)topic userInfo:(id)info transferID:(id)id sourceAppID:(id)id encryptFile:(_Bool)file progressBlock:(id /* block */)block completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)setPersonalNickname:(id)nickname oldRecordID:(id)id completionBlock:(id /* block */)block;
+IMTransferServicesController	-	- (void)setPersonalNickname:(id)nickname oldRecordID:(id)id completionBlockWithWallpaperAndRecipeDataTags:(id /* block */)tags;
+IMTransferServicesController	-	- (void)setPersonalNickname:(id)nickname oldRecordID:(id)id completionBlockWithWallpaperTags:(id /* block */)tags;
+IMTransferServicesController	-	- (void)updateUltraConstrainedAttachments:(_Bool)attachments;

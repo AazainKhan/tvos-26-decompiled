@@ -1,0 +1,126 @@
+kind	type	conformance	member_kind	member
+class	SensingPredict.AsyncStreamPublisher			
+class	SensingPredict.AsyncStreamPublisher		let	subscriberLock
+class	SensingPredict.AsyncStreamPublisher		let	dataStream
+class	SensingPredict.AsyncStreamPublisher		let	dataContinuation
+class	SensingPredict.AsyncStreamPublisher		let	publisherTask
+class	SensingPredict.SPXPCHandler			
+class	SensingPredict.SPXPCHandler		let	incomingMessageHandlerLock
+class	SensingPredict.SPXPCHandler		let	cancellationHandlerLock
+class	SensingPredict.SPXPCHandler		let	session
+enum	SensingPredict.SPXPCMessage			
+enum	SensingPredict.SPXPCMessage		case	error
+enum	SensingPredict.SPXPCMessage		case	ping
+enum	SensingPredict.SPXPCMessage		case	ack
+enum	SensingPredict.SPXPCMessage.CodingKeys			
+enum	SensingPredict.SPXPCMessage.CodingKeys		case	ping
+enum	SensingPredict.SPXPCMessage.CodingKeys		case	ack
+enum	SensingPredict.SPXPCMessage.CodingKeys		case	error
+enum	SensingPredict.SPXPCMessage.PingCodingKeys			
+enum	SensingPredict.SPXPCMessage.AckCodingKeys			
+enum	SensingPredict.SPXPCMessage.ErrorCodingKeys			
+enum	SensingPredict.SPXPCMessage.ErrorCodingKeys		case	_0
+class	SensingPredict.LockedProperty			
+class	SensingPredict.LockedProperty		let	lockedValue
+struct	SensingPredict.DebugClient			
+struct	SensingPredict.DebugClient		let	handler
+struct	SensingPredict.DebugClient		let	asyncStream
+enum	SensingPredict.DebugServiceMessage			
+enum	SensingPredict.DebugServiceMessage		case	stateUpdate
+enum	SensingPredict.DebugClientMessage			
+enum	SensingPredict.DebugClientMessage		case	requestState
+enum	SensingPredict.DebugEvent			
+enum	SensingPredict.DebugEvent		case	stateUpdate
+struct	SensingPredict.DebugStateDescriptor			
+struct	SensingPredict.DebugStateDescriptor		let	details
+enum	SensingPredict.DebugStateDescriptor.CodingKeys			
+enum	SensingPredict.DebugStateDescriptor.CodingKeys		case	details
+enum	SensingPredict.DebugEvent.CodingKeys			
+enum	SensingPredict.DebugEvent.CodingKeys		case	stateUpdate
+enum	SensingPredict.DebugEvent.StateUpdateCodingKeys			
+enum	SensingPredict.DebugClientMessage.CodingKeys			
+enum	SensingPredict.DebugClientMessage.CodingKeys		case	requestState
+enum	SensingPredict.DebugClientMessage.RequestStateCodingKeys			
+enum	SensingPredict.DebugServiceMessage.CodingKeys			
+enum	SensingPredict.DebugServiceMessage.CodingKeys		case	stateUpdate
+enum	SensingPredict.DebugServiceMessage.StateUpdateCodingKeys			
+enum	SensingPredict.DebugServiceMessage.StateUpdateCodingKeys		case	update
+enum	SensingPredict.DebugServiceMessage.StateUpdateCodingKeys		case	newState
+protocol	SensingPredict.SPXPCBase			
+protocol	SensingPredict.SPXPCClient			
+protocol	SensingPredict.SPXPCMessageBase			
+protocol	conformance SensingPredict.SPXPCMessage	SensingPredict.SPXPCMessageBase		
+protocol	conformance SensingPredict.SPXPCMessage	Swift.Equatable		
+protocol	conformance SensingPredict.SPXPCMessage	Swift.Decodable		
+protocol	conformance SensingPredict.SPXPCMessage	Swift.Encodable		
+protocol	conformance ErrorCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance ErrorCodingKeys	Swift.Hashable		
+protocol	conformance ErrorCodingKeys	Swift.Equatable		
+protocol	conformance AckCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance AckCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance PingCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance PingCodingKeys	Swift.CodingKey		
+protocol	conformance AckCodingKeys	Swift.CodingKey		
+protocol	conformance ErrorCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance SensingPredict.LockedProperty	Swift.CustomStringConvertible		
+protocol	conformance SensingPredict.LockedProperty	Swift.Encodable		
+protocol	conformance SensingPredict.LockedProperty	Swift.Decodable		
+protocol	conformance SensingPredict.LockedProperty	Swift.Equatable		
+protocol	conformance SensingPredict.DebugClient	SensingPredict.SPXPCClient		
+protocol	conformance SensingPredict.DebugClient	SensingPredict.SPXPCBase		
+protocol	conformance SensingPredict.DebugServiceMessage	SensingPredict.SPXPCMessageBase		
+protocol	conformance SensingPredict.DebugServiceMessage	Swift.Decodable		
+protocol	conformance SensingPredict.DebugServiceMessage	Swift.Encodable		
+protocol	conformance SensingPredict.DebugClientMessage	Swift.Equatable		
+protocol	conformance SensingPredict.DebugClientMessage	Swift.Hashable		
+protocol	conformance SensingPredict.DebugClientMessage	SensingPredict.SPXPCMessageBase		
+protocol	conformance SensingPredict.DebugClientMessage	Swift.Decodable		
+protocol	conformance SensingPredict.DebugClientMessage	Swift.Encodable		
+protocol	conformance SensingPredict.DebugEvent	Swift.Equatable		
+protocol	conformance SensingPredict.DebugEvent	Swift.Hashable		
+protocol	conformance SensingPredict.DebugEvent	Swift.Decodable		
+protocol	conformance SensingPredict.DebugEvent	Swift.Encodable		
+protocol	conformance SensingPredict.DebugEvent	Swift.CustomStringConvertible		
+protocol	conformance SensingPredict.DebugStateDescriptor	Swift.Decodable		
+protocol	conformance SensingPredict.DebugStateDescriptor	Swift.Encodable		
+protocol	conformance SensingPredict.DebugStateDescriptor	Swift.Hashable		
+protocol	conformance SensingPredict.DebugStateDescriptor	Swift.Equatable		
+protocol	conformance SensingPredict.DebugStateDescriptor	Swift.CustomStringConvertible		
+protocol	conformance StateUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StateUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance StateUpdateCodingKeys	Swift.Hashable		
+protocol	conformance StateUpdateCodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance RequestStateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance RequestStateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance StateUpdateCodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance StateUpdateCodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance StateUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance RequestStateCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance StateUpdateCodingKeys	Swift.CodingKey		
+protocol	conformance CodingKeys	Swift.CodingKey		

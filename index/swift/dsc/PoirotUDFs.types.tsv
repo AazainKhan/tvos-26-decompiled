@@ -1,0 +1,344 @@
+kind	type	conformance	member_kind	member
+class	PoirotUDFs.UDFContext			
+class	PoirotUDFs.UDFContext		let	ownsConnection
+class	PoirotUDFs.UDFContext		let	schematizer
+class	PoirotUDFs.UDFContext		let	inner
+struct	PoirotUDFs.UDFContext.Inner			
+struct	PoirotUDFs.UDFContext.Inner		var	bridge
+struct	PoirotUDFs.UDFContext.Inner		var	functions
+struct	PoirotUDFs.UDFContext.Inner		var	streamProviders
+struct	PoirotUDFs.UDFContext.Inner		var	tableModule
+struct	PoirotUDFs.UDFContext.Inner		var	_database
+class	PoirotUDFs.PayloadSchematizer			
+class	PoirotUDFs.PayloadSchematizer		let	inner
+class	PoirotUDFs.PayloadSchematizer		let	config
+class	PoirotUDFs.PayloadSchematizer.Inner			
+class	PoirotUDFs.PayloadSchematizer.Inner		var	udfContext
+class	PoirotUDFs.PayloadSchematizer.Inner		var	udfMessageBridge
+class	PoirotUDFs.PayloadSchematizer.Inner		var	storeState
+enum	PoirotUDFs.PayloadSchematizer.StoreState			
+enum	PoirotUDFs.PayloadSchematizer.StoreState		case	initializing
+enum	PoirotUDFs.PayloadSchematizer.StoreState		case	initialized
+enum	PoirotUDFs.PayloadSchematizer.StoreState		case	uninitialized
+class	PoirotUDFs.PBase64DecodeFunction			
+class	PoirotUDFs.PBGetFunction			
+class	PoirotUDFs.PBGetFunction		let	schematizer
+class	PoirotUDFs.PBuildFunction			
+class	PoirotUDFs.PBuildFunction		let	schematizer
+class	PoirotUDFs.PCollectFunction			
+class	PoirotUDFs.PCollectFunction		let	schematizer
+class	PoirotUDFs.PCollectFunction.CollectorContext			
+class	PoirotUDFs.PCollectFunction.CollectorContext		let	messageSchema
+class	PoirotUDFs.PCollectFunction.CollectorContext		let	fieldName
+class	PoirotUDFs.PCollectFunction.CollectorContext		let	fieldType
+class	PoirotUDFs.PCollectFunction.CollectorContext		var	values
+class	PoirotUDFs.PEnumFunction			
+class	PoirotUDFs.PEnumFunction		let	schematizer
+class	PoirotUDFs.PGetFirstFunction			
+class	PoirotUDFs.PGetFirstFunction		let	schematizer
+class	PoirotUDFs.PGetFunction			
+class	PoirotUDFs.PGetFunction		let	schematizer
+class	PoirotUDFs.PHasOneOfFunction			
+class	PoirotUDFs.PHasOneOfFunction		let	schematizer
+enum	PoirotUDFs.PHasOneOfFunctionError			
+enum	PoirotUDFs.PHasOneOfFunctionError		case	invalidParameter
+class	PoirotUDFs.PJSONFunction			
+class	PoirotUDFs.PJSONFunction		let	schematizer
+class	PoirotUDFs.PMessageNameFunction			
+class	PoirotUDFs.PMessageNameFunction		let	schematizer
+class	PoirotUDFs.PObjFunction			
+class	PoirotUDFs.PObjFunction		let	schematizer
+class	PoirotUDFs.POneOfFunction			
+class	PoirotUDFs.POneOfFunction		let	schematizer
+class	PoirotUDFs.PPayloadFunction			
+class	PoirotUDFs.PPayloadFunction		let	schematizer
+class	PoirotUDFs.PGetManyFunction	PoirotSQLite.SQLiteTableUDF PoirotUDFs.PGetManyConfig		
+class	PoirotUDFs.PGetManyFunction	PoirotSQLite.SQLiteTableUDF PoirotUDFs.PGetManyConfig	let	schematizer
+class	PoirotUDFs.PGetManyConnection	PoirotSQLite.SQLiteTableUDF.CaseIterableColumnSchemaConnection PoirotUDFs.PGetManyConfig  first-element-marker  ->		
+class	PoirotUDFs.PGetManyConnection	PoirotSQLite.SQLiteTableUDF.CaseIterableColumnSchemaConnection PoirotUDFs.PGetManyConfig  first-element-marker  ->	var	schematizer
+class	PoirotUDFs.PGetManyCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PGetManyConfig  first-element-marker  ->		
+class	PoirotUDFs.PGetManyCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PGetManyConfig  first-element-marker  ->	var	payload
+class	PoirotUDFs.PGetManyCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PGetManyConfig  first-element-marker  ->	var	propertyPath
+class	PoirotUDFs.PGetManyCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PGetManyConfig  first-element-marker  ->	var	predicate
+class	PoirotUDFs.PGetManyCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PGetManyConfig  first-element-marker  ->	var	schematizer
+class	PoirotUDFs.PGetManyCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PGetManyConfig  first-element-marker  ->	var	resultsCache
+enum	PoirotUDFs.PGetManyConfig			
+enum	PoirotUDFs.PGetManyError			
+enum	PoirotUDFs.PGetManyError		case	logicError
+enum	PoirotUDFs.PGetManyError		case	invalidInputParameters
+enum	PoirotUDFs.PGetManyError		case	invalidType
+enum	PoirotUDFs.PGetManyColumn			
+enum	PoirotUDFs.PGetManyColumn		case	value
+enum	PoirotUDFs.PGetManyColumn		case	object
+enum	PoirotUDFs.PGetManyColumn		case	payload
+enum	PoirotUDFs.PGetManyColumn		case	schemaName
+enum	PoirotUDFs.PGetManyColumn		case	propertyPath
+enum	PoirotUDFs.PGetManyColumn		case	predicate
+struct	PoirotUDFs.PayloadSchematizer.Config			
+struct	PoirotUDFs.PayloadSchematizer.Config		let	enumsAsStrings
+struct	PoirotUDFs.PayloadSchematizer.Config		let	messagesAsJSONStrings
+struct	PoirotUDFs.PayloadSchematizer.Config		let	ignoreUnknownEnums
+class	PoirotUDFs.MessageInBlobBridge			
+class	PoirotUDFs.MessageInBlobBridge		let	inner
+struct	PoirotUDFs.MessageSchemaRegistryData			
+struct	PoirotUDFs.MessageSchemaRegistryData		var	messageSchemas
+struct	PoirotUDFs.MessageSchemaRegistryData		var	messageIds
+struct	PoirotUDFs.MessageSchemaRegistryData		let	schemaStore
+enum	PoirotUDFs.MessageSchemaRegistryError			
+enum	PoirotUDFs.MessageSchemaRegistryError		case	exceededSupportedMaximum
+enum	PoirotUDFs.MessageSchemaRegistryError		case	unknownMessageId
+enum	PoirotUDFs.MessageSchemaRegistryError		case	invalidId
+enum	PoirotUDFs.MessageSchemaRegistryError		case	noMemory
+class	PoirotUDFs.BaseStreamSchemaProvider	PoirotUDFs.UDFSchemaProvider		
+class	PoirotUDFs.BaseStreamSchemaProvider	PoirotUDFs.UDFSchemaProvider	let	messageName
+class	PoirotUDFs.DefaultStreamSchemaProvider	PoirotUDFs.BaseStreamSchemaProvider		
+class	PoirotUDFs.DefaultStreamSchemaProvider	PoirotUDFs.BaseStreamSchemaProvider	var	messageSchema
+class	PoirotUDFs.DefaultStreamSchemaProvider	PoirotUDFs.BaseStreamSchemaProvider	var	oneofs
+class	PoirotUDFs.DefaultStreamSchemaProvider	PoirotUDFs.BaseStreamSchemaProvider	var	messageColumnName
+class	PoirotUDFs.UDFSchemaProvider			
+class	PoirotUDFs.UDFSchemaProvider		var	schemaManifest
+class	PoirotUDFs.UDFSchemaProvider		var	columns
+class	PoirotUDFs.UDFSchemaProvider		var	bridge
+class	PoirotUDFs.UDFSchemaProvider		var	_schemaStore
+class	PoirotUDFs.PStreamConnection	PoirotSQLite.SQLiteTableUDF.BaseConnection PoirotUDFs.PStreamTableConfig  first-element-marker  ->		
+class	PoirotUDFs.PStreamConnection	PoirotSQLite.SQLiteTableUDF.BaseConnection PoirotUDFs.PStreamTableConfig  first-element-marker  ->	var	tableProvider
+class	PoirotUDFs.PStreamConnection	PoirotSQLite.SQLiteTableUDF.BaseConnection PoirotUDFs.PStreamTableConfig  first-element-marker  ->	var	pTable
+class	PoirotUDFs.PStreamCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PStreamTableConfig  first-element-marker  ->		
+class	PoirotUDFs.PStreamCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PStreamTableConfig  first-element-marker  ->	var	pConnection
+class	PoirotUDFs.PStreamCursor	PoirotSQLite.SQLiteTableUDF.BaseCursor PoirotUDFs.PStreamTableConfig  first-element-marker  ->	let	enumerator
+class	PoirotUDFs.PStreamEnumerator			
+class	PoirotUDFs.PStreamEnumerator		let	streamEnumerator
+class	PoirotUDFs.PStreamEnumerator		let	schemaProvider
+class	PoirotUDFs.PStreamEnumerator		var	parsingValueCache
+class	PoirotUDFs.PStreamEnumerator		var	columns
+class	PoirotUDFs.PStreamEnumerator		var	schematizer
+enum	PoirotUDFs.PStreamError			
+enum	PoirotUDFs.PStreamError		case	invalidType
+class	PoirotUDFs.PStreamTableBase	PoirotSQLite.SQLiteTableUDF A<A: PoirotSQLite.SQLiteTableUDFConfig>		
+class	PoirotUDFs.PStreamTableBase	PoirotSQLite.SQLiteTableUDF A<A: PoirotSQLite.SQLiteTableUDFConfig>	let	schematizer
+enum	PoirotUDFs.PStreamTableConfig			
+struct	PoirotUDFs.Column			
+struct	PoirotUDFs.Column		let	name
+struct	PoirotUDFs.Column		let	type
+struct	PoirotUDFs.Column		let	hidden
+enum	PoirotUDFs.Column.CodingKeys			
+enum	PoirotUDFs.Column.CodingKeys		case	name
+enum	PoirotUDFs.Column.CodingKeys		case	type
+enum	PoirotUDFs.Column.CodingKeys		case	hidden
+enum	PoirotUDFs.ColumnType			
+enum	PoirotUDFs.ColumnType		case	text
+enum	PoirotUDFs.ColumnType		case	blob
+enum	PoirotUDFs.ColumnType		case	int32
+enum	PoirotUDFs.ColumnType		case	int64
+enum	PoirotUDFs.ColumnType		case	uint32
+enum	PoirotUDFs.ColumnType		case	uint64
+enum	PoirotUDFs.ColumnType		case	float
+enum	PoirotUDFs.ColumnType		case	double
+enum	PoirotUDFs.ColumnType		case	datetime
+enum	PoirotUDFs.ColumnType		case	bool
+enum	PoirotUDFs.ColumnType		case	message
+enum	PoirotUDFs.ColumnType.StringValue			
+enum	PoirotUDFs.ColumnType.StringValue		case	text
+enum	PoirotUDFs.ColumnType.StringValue		case	blob
+enum	PoirotUDFs.ColumnType.StringValue		case	int32
+enum	PoirotUDFs.ColumnType.StringValue		case	int64
+enum	PoirotUDFs.ColumnType.StringValue		case	uint32
+enum	PoirotUDFs.ColumnType.StringValue		case	uint64
+enum	PoirotUDFs.ColumnType.StringValue		case	float
+enum	PoirotUDFs.ColumnType.StringValue		case	double
+enum	PoirotUDFs.ColumnType.StringValue		case	datetime
+enum	PoirotUDFs.ColumnType.StringValue		case	bool
+enum	PoirotUDFs.ColumnType.StringValue		case	message
+struct	PoirotUDFs.FieldToColumnMap			
+struct	PoirotUDFs.FieldToColumnMap		let	column
+struct	PoirotUDFs.FieldToColumnMap		let	extractValue
+struct	PoirotUDFs.FinalFieldToColumnMap<A	PoirotUDFs.FinalColumnsMappedMessage>		
+struct	PoirotUDFs.FinalFieldToColumnMap<A	PoirotUDFs.FinalColumnsMappedMessage>	let	column
+struct	PoirotUDFs.FinalFieldToColumnMap<A	PoirotUDFs.FinalColumnsMappedMessage>	let	extractValue
+struct	PoirotUDFs.QueryPlanInfo			
+struct	PoirotUDFs.QueryPlanInfo		var	reverseTimestampOrder
+struct	PoirotUDFs.QueryPlanInfo		var	timestampOperands
+struct	PoirotUDFs.QueryPlanInfo		var	columns
+struct	PoirotUDFs.QueryPlanInfo		var	disableCache
+enum	PoirotUDFs.QueryPlanInfo.CodingKeys			
+enum	PoirotUDFs.QueryPlanInfo.CodingKeys		case	reverseTimestampOrder
+enum	PoirotUDFs.QueryPlanInfo.CodingKeys		case	timestampOperands
+enum	PoirotUDFs.QueryPlanInfo.CodingKeys		case	columns
+enum	PoirotUDFs.QueryPlanInfo.CodingKeys		case	disableCache
+struct	PoirotUDFs.StreamElement			
+struct	PoirotUDFs.StreamElement		let	timestamp
+struct	PoirotUDFs.StreamElement		let	data
+enum	PoirotUDFs.UDFError			
+enum	PoirotUDFs.UDFError		case	notSupported
+enum	PoirotUDFs.UDFError		case	internalError
+enum	PoirotUDFs.UDFError		case	notInitialized
+enum	PoirotUDFs.UDFError		case	invalidConnection
+enum	PoirotUDFs.UDFError		case	invalidParameterCount
+protocol	PoirotUDFs.PoirotUDF			
+protocol	PoirotUDFs.ConstructingUDF			
+protocol	PoirotUDFs.PoirotAggregateUDF			
+protocol	PoirotUDFs.PoirotScalarUDF			
+protocol	PoirotUDFs.PoirotSingleValueUDF			
+protocol	PoirotUDFs.MessageSchemaRegistry			
+protocol	PoirotUDFs.ColumnsMappedMessage			
+protocol	PoirotUDFs.FinalColumnsMappedMessage			
+protocol	PoirotUDFs.SchemaProviding			
+protocol	PoirotUDFs.SerializableMessage			
+protocol	PoirotUDFs.StreamEnumerating			
+protocol	PoirotUDFs.StreamSchemaProviding			
+protocol	PoirotUDFs.StreamTableProviding			
+protocol	PoirotUDFs.SupportedByUDFs			
+protocol	PoirotUDFs.UDFBridge			
+protocol	conformance PoirotUDFs.PBase64DecodeFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PBase64DecodeFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PBase64DecodeFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PBase64DecodeFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PBase64DecodeFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PBase64DecodeFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PBGetFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PBGetFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PBGetFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PBGetFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PBGetFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PBGetFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotUDFs.ConstructingUDF		
+protocol	conformance PoirotUDFs.PBuildFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotSQLite.SQLiteAggregateUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotUDFs.ConstructingUDF		
+protocol	conformance PoirotUDFs.PCollectFunction	PoirotUDFs.PoirotAggregateUDF		
+protocol	conformance PoirotUDFs.PEnumFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PEnumFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PEnumFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PEnumFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PEnumFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PEnumFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PGetFirstFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PGetFirstFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PGetFirstFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PGetFirstFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PGetFirstFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PGetFirstFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PGetFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PGetFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PGetFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PGetFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PGetFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PGetFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PHasOneOfFunctionError	Swift.Error		
+protocol	conformance PoirotUDFs.PJSONFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PJSONFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PJSONFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PJSONFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PJSONFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PJSONFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PMessageNameFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PMessageNameFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PMessageNameFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PMessageNameFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PMessageNameFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PMessageNameFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PObjFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PObjFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PObjFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PObjFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PObjFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PObjFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.POneOfFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.POneOfFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.POneOfFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.POneOfFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.POneOfFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.POneOfFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PPayloadFunction	PoirotSQLite.SQLiteUDF		
+protocol	conformance PoirotUDFs.PPayloadFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PPayloadFunction	PoirotSQLite.SQLiteSingleValueUDF		
+protocol	conformance PoirotUDFs.PPayloadFunction	PoirotSQLite.SQLiteScalarUDF		
+protocol	conformance PoirotUDFs.PPayloadFunction	PoirotUDFs.PoirotSingleValueUDF		
+protocol	conformance PoirotUDFs.PPayloadFunction	PoirotUDFs.PoirotScalarUDF		
+protocol	conformance PoirotUDFs.PGetManyConfig	PoirotSQLite.SQLiteTableUDFConfig		
+protocol	conformance PoirotUDFs.PGetManyColumn	PoirotSQLite.UDFColumnSchema		
+protocol	conformance PoirotUDFs.PGetManyColumn	PoirotSQLite.SQLiteColumnDescribing		
+protocol	conformance PoirotUDFs.PGetManyColumn	Swift.Equatable		
+protocol	conformance PoirotUDFs.PGetManyColumn	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance PoirotUDFs.PGetManyFunction	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PGetManyColumn	PoirotSQLite.UDFCaseIterableColumnSchema		
+protocol	conformance PoirotUDFs.PGetManyColumn	Swift.Hashable		
+protocol	conformance PoirotUDFs.PGetManyError	Swift.Error		
+protocol	conformance PoirotUDFs.PGetManyColumn	Swift.CaseIterable		
+protocol	conformance PoirotUDFs.PGetManyColumn	Swift.RawRepresentable		
+protocol	conformance PoirotUDFs.MessageInBlobBridge	PoirotUDFs.UDFBridge		
+protocol	conformance PoirotUDFs.MessageInBlobBridge	PoirotUDFs.MessageSchemaRegistry		
+protocol	conformance PoirotUDFs.MessageSchemaRegistryError	Swift.Hashable		
+protocol	conformance PoirotUDFs.MessageSchemaRegistryError	Swift.Equatable		
+protocol	conformance PoirotUDFs.MessageSchemaRegistryError	Swift.Error		
+protocol	conformance PoirotUDFs.BaseStreamSchemaProvider	PoirotUDFs.StreamSchemaProviding		
+protocol	conformance PoirotUDFs.UDFSchemaProvider	PoirotUDFs.SchemaProviding		
+protocol	conformance PoirotUDFs.PStreamError	Swift.Hashable		
+protocol	conformance PoirotUDFs.PStreamError	Swift.Equatable		
+protocol	conformance PoirotUDFs.PStreamError	Swift.Error		
+protocol	conformance PoirotUDFs.PStreamTableBase	PoirotUDFs.PoirotUDF		
+protocol	conformance PoirotUDFs.PStreamTableConfig	PoirotSQLite.SQLiteTableUDFConfig		
+protocol	conformance Swift.Optional	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.Int	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.Int32	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.UInt32	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.Int64	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.UInt64	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.Float	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.Double	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.Bool	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Swift.String	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Foundation.Data	PoirotUDFs.SupportedByUDFs		
+protocol	conformance Foundation.Date	PoirotUDFs.SupportedByUDFs		
+protocol	conformance PoirotUDFs.Column	Swift.Equatable		
+protocol	conformance PoirotUDFs.Column	Swift.Decodable		
+protocol	conformance PoirotUDFs.Column	Swift.Encodable		
+protocol	conformance PoirotUDFs.Column	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance CodingKeys	Swift.Hashable		
+protocol	conformance CodingKeys	Swift.Equatable		
+protocol	conformance CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotUDFs.Column	PoirotSQLite.UDFColumnSchema		
+protocol	conformance PoirotUDFs.Column	PoirotSQLite.SQLiteColumnDescribing		
+protocol	conformance PoirotUDFs.Column	PoirotSQLite.SQLiteNamesValidating		
+protocol	conformance PoirotUDFs.ColumnType	Swift.Hashable		
+protocol	conformance PoirotUDFs.ColumnType	Swift.Equatable		
+protocol	conformance PoirotUDFs.ColumnType	Swift.Decodable		
+protocol	conformance PoirotUDFs.ColumnType	Swift.Encodable		
+protocol	conformance ColumnType.StringValue	Swift.Hashable		
+protocol	conformance ColumnType.StringValue	Swift.Equatable		
+protocol	conformance ColumnType.StringValue	Swift.Encodable		
+protocol	conformance ColumnType.StringValue	Swift.RawRepresentable		
+protocol	conformance ColumnType.StringValue	Swift.Decodable		
+protocol	conformance PoirotUDFs.QueryPlanInfo	Swift.Encodable		
+protocol	conformance PoirotUDFs.QueryPlanInfo	Swift.Decodable		
+protocol	conformance QueryPlanInfo.CodingKeys	Swift.CustomDebugStringConvertible		
+protocol	conformance QueryPlanInfo.CodingKeys	Swift.CustomStringConvertible		
+protocol	conformance QueryPlanInfo.CodingKeys	Swift.RawRepresentable		
+protocol	conformance QueryPlanInfo.CodingKeys	Swift.Hashable		
+protocol	conformance QueryPlanInfo.CodingKeys	Swift.Equatable		
+protocol	conformance QueryPlanInfo.CodingKeys	Swift.CodingKey		
+protocol	conformance PoirotUDFs.UDFError	Swift.Error		
+extension	PoirotUDFs.PCollectFunction	SQLiteAggregateUDF		
+extension	PoirotUDFs.PGetManyConfig	SQLiteTableUDFConfig		
+extension	PoirotUDFs.PGetManyColumn	CaseIterable		
+extension	PoirotUDFs.PGetManyColumn	RawRepresentable		
+extension	PoirotUDFs.PStreamTableConfig	SQLiteTableUDFConfig		
+extension	PoirotUDFs.ColumnType.StringValue	RawRepresentable		
+extension	PoirotUDFs.QueryPlanInfo.CodingKeys	RawRepresentable		

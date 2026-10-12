@@ -1,0 +1,37 @@
+kind	name	superclass	protocols
+category	CPLEngineLibrary(CPLEngineParameters)		
+category	NSOperation(CPLRecordsBag)		CPLInterruptibleOperation
+category	NSProgress(CPLRecordsBag)		CPLInterruptibleOperation
+interface	CPLCTLCommand	NSObject	CPLLibraryManagerDelegate,CPLInterruptibleOperation,CPLOutput
+interface	CPLDaemonConnection	NSObject	
+interface	CPLDiagnoseArchive	NSObject	
+interface	CPLDiagnoseCommand	CPLCTLCommand	
+interface	CPLDiagnoseService	NSObject	CPLDiagnoseServiceProtocol,NSXPCListenerDelegate
+interface	CPLEngineParameters	NSObject	NSSecureCoding
+interface	CPLEngineParametersStorage	NSObject	CPLEngineParametersStorage
+interface	CPLEngineWrapperStatus	NSObject	NSSecureCoding
+interface	CPLHelpCommand	CPLCTLCommand	
+interface	CPLOutput	NSObject	CPLOutput,CPLInterruptibleOperation
+interface	CPLOutputToVoid	NSObject	CPLOutput
+interface	CPLPagerOutput	CPLOutput	
+interface	CPLPhotosDaemonConnection	NSObject	
+interface	CPLPrivateEngineAlias	NSObject	
+interface	CPLProcessSpecification	NSObject	
+interface	CPLTask	NSObject	
+interface	PLPhotoLibraryIdentifier	NSObject	NSSecureCoding
+interface	PLPhotoLibrarySearchCriteria	NSObject	NSSecureCoding
+protocol	CPLDaemonProcessProtocol		NSObject
+protocol	CPLDiagnoseServiceClientProtocol		
+protocol	CPLDiagnoseServiceProtocol		
+protocol	CPLEngineParametersStorage		NSObject
+protocol	CPLInterruptibleOperation		NSObject
+protocol	CPLLibraryManagerDelegate		NSObject
+protocol	CPLOutput		NSObject
+protocol	CPLPhotosDaemonProtocol		NSObject
+protocol	NSCoding		
+protocol	NSObject		
+protocol	NSSecureCoding		NSCoding
+protocol	NSXPCListenerDelegate		NSObject
+protocol	NSXPCProxyCreating		
+protocol	OS_dispatch_queue		
+protocol	PLAssetsdLibraryManagementServiceProtocol		NSXPCProxyCreating

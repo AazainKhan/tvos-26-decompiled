@@ -1,0 +1,78 @@
+kind	type	conformance	member_kind	member
+enum	Logging.LoggingProviderError			
+enum	Logging.LoggingProviderError		case	unsupportedOption
+enum	Logging.LoggingProviderError		case	logSourcePreparationFailed
+enum	Logging.LoggingProviderError		case	conflictingOptions
+enum	Logging.LoggingProviderError		case	invalidSignpostHandleFormat
+enum	Logging.LoggingProviderError		case	redactingNotAvailable
+enum	Logging.LoggingProviderError		case	nothingToCollect
+enum	Logging.LoggingProviderError		case	loggingDataAlreadyPresent
+enum	Logging.LoggingProviderError		case	logarchiveNotProvided
+enum	Logging.LoggingProviderError		case	logarchiveDoesNotExist
+enum	Logging.LoggingProviderError		case	earliestTimestampNotFound
+enum	Logging.LoggingProviderError		case	latestTimestampNotFound
+class	Logging.LoggingProvider	NSObject		
+class	Logging.LoggingProvider	NSObject	var	logger
+class	Logging.LoggingProvider	NSObject	var	streamFlags
+class	Logging.LoggingProvider	NSObject	var	predicate
+class	Logging.LoggingProvider	NSObject	var	shouldRedactContent
+class	Logging.LoggingProvider	NSObject	var	recordingLayerOptions
+class	Logging.LoggingProvider	NSObject	var	modifiedCategories
+class	Logging.LoggingProvider	NSObject	var	archivePath
+class	Logging.LoggingProvider	NSObject	var	requiresSignpost
+class	Logging.LoggingProvider	NSObject	var	resolvedFilterPredicateString
+class	Logging.LoggingProvider	NSObject	var	initializationError
+class	Logging.LoggingProvider	NSObject	var	enablePersistSignpostHandles
+struct	Logging.LoggingProvider.RecordingLayerOptions			
+struct	Logging.LoggingProvider.RecordingLayerOptions		let	rawValue
+enum	Logging.Platform			
+enum	Logging.Platform		case	macOS
+enum	Logging.Platform		case	iOS
+enum	Logging.Platform		case	tvOS
+enum	Logging.Platform		case	watchOS
+enum	Logging.Platform		case	visionOS
+enum	Logging.Platform		case	bridgeOS
+enum	Logging.Platform		case	unknownOS
+class	Logging.MetalFramePacingDataCategory	NSObject		
+class	Logging.MetalFramePacingDataCategory	NSObject	let	machine
+class	Logging.HangsDataCategory	NSObject		
+class	Logging.HangsDataCategory	NSObject	let	machine
+class	Logging.ScrollingDataCategory	NSObject		
+class	Logging.ScrollingDataCategory	NSObject	let	machine
+class	Logging.AppLaunchDataCategory	NSObject		
+class	Logging.AppLaunchDataCategory	NSObject	let	machine
+class	Logging.InteractionTrackingDataCategory	NSObject		
+class	Logging.InteractionTrackingDataCategory	NSObject	let	machine
+class	Logging.PerfPowerMetricsDataCategory	NSObject		
+class	Logging.PerfPowerMetricsDataCategory	NSObject	let	machine
+class	Logging.MetricKitDataCategory	NSObject		
+class	Logging.MetricKitDataCategory	NSObject	let	machine
+class	Logging.PointsOfInterestDataCategory	NSObject		
+class	Logging.PointsOfInterestDataCategory	NSObject	let	machine
+protocol	Logging.LoggingPassiveDataCategory			
+protocol	conformance Logging.LoggingProviderError	protocol descriptor for LocalizedError		
+protocol	conformance Logging.LoggingProviderError	protocol descriptor for Error		
+protocol	conformance __C.OSLogEventStreamFlags	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance __C.OSLogEventStreamFlags	protocol descriptor for Equatable		
+protocol	conformance __C.OSLogEventStreamFlags	protocol descriptor for RawRepresentable		
+protocol	conformance __C.OSLogEventStreamFlags	protocol descriptor for SetAlgebra		
+protocol	conformance __C.OSLogEventStreamFlags	protocol descriptor for OptionSet		
+protocol	conformance RecordingLayerOptions	protocol descriptor for ExpressibleByArrayLiteral		
+protocol	conformance RecordingLayerOptions	protocol descriptor for Equatable		
+protocol	conformance RecordingLayerOptions	protocol descriptor for RawRepresentable		
+protocol	conformance RecordingLayerOptions	protocol descriptor for SetAlgebra		
+protocol	conformance RecordingLayerOptions	protocol descriptor for OptionSet		
+protocol	conformance Logging.Platform	protocol descriptor for Equatable		
+protocol	conformance Logging.Platform	protocol descriptor for Hashable		
+protocol	conformance Logging.MetalFramePacingDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.HangsDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.ScrollingDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.AppLaunchDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.InteractionTrackingDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.PerfPowerMetricsDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.MetricKitDataCategory	Logging.LoggingPassiveDataCategory		
+protocol	conformance Logging.PointsOfInterestDataCategory	Logging.LoggingPassiveDataCategory		
+extension	Logging.LoggingProvider.RecordingLayerOptions	ExpressibleByArrayLiteral		
+extension	Logging.LoggingProvider.RecordingLayerOptions	RawRepresentable		
+extension	Logging.LoggingProvider.RecordingLayerOptions	SetAlgebra		
+extension	Logging.LoggingProvider.RecordingLayerOptions	OptionSet		

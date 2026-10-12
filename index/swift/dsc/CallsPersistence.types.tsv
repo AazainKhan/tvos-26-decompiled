@@ -1,0 +1,40 @@
+kind	type	conformance	member_kind	member
+enum	CallsPersistence.DataStoreWrapperError			
+enum	CallsPersistence.DataStoreWrapperError		case	storeLoadFailure
+enum	CallsPersistence.DataStoreWrapperError		case	invalidEntityName
+enum	CallsPersistence.DataStoreWrapperError		case	fetchFailure
+enum	CallsPersistence.DataStoreWrapperError		case	saveFailure
+enum	CallsPersistence.DataStoreWrapperError		case	updateError
+enum	CallsPersistence.DataStoreWrapperError		case	deletionError
+enum	CallsPersistence.DataStoreWrapperError		case	synchronizationError
+enum	CallsPersistence.DataStoreWrapperError		case	invalidState
+enum	CallsPersistence.DataStoreWrapperError		case	persistentHistoryChangeError
+enum	CallsPersistence.DataStoreWrapperError		case	batchDeleteError
+class	CallsPersistence.DataStoreWrapper			
+class	CallsPersistence.DataStoreWrapper		let	storeWrapper
+class	CallsPersistence.DataStoreWrapper		let	delegateLock
+class	CallsPersistence.DataStoreWrapper		var	_delegate
+class	CallsPersistence.StoreWrapper			
+class	CallsPersistence.StoreWrapper		var	onContextDidSave
+class	CallsPersistence.StoreWrapper		var	protectedState
+class	CallsPersistence.StoreWrapper		let	stateLock
+class	CallsPersistence.StoreWrapper		let	containerName
+class	CallsPersistence.StoreWrapper		let	model
+class	CallsPersistence.StoreWrapper		let	storeDescription
+enum	CallsPersistence.StoreWrapper.State			
+enum	CallsPersistence.StoreWrapper.State		case	loaded
+enum	CallsPersistence.StoreWrapper.State		case	error
+enum	CallsPersistence.StoreWrapper.State		case	waiting
+enum	CallsPersistence.StoreWrapperError			
+enum	CallsPersistence.StoreWrapperError		case	modelLoadFailed
+enum	CallsPersistence.StoreWrapperError		case	objectModelLoadFailed
+struct	CallsPersistence.ContainerWrapper			
+struct	CallsPersistence.ContainerWrapper		let	model
+struct	CallsPersistence.ContainerWrapper		let	container
+protocol	CallsPersistence.DataStoreWrapperDelegate			
+protocol	CallsPersistence.Syncable	Entity, IDType		
+protocol	CallsPersistence.SyncableEntity	SyncableType, IDType		
+protocol	conformance CallsPersistence.DataStoreWrapperError	Swift.Error		
+protocol	conformance CallsPersistence.StoreWrapperError	Swift.Hashable		
+protocol	conformance CallsPersistence.StoreWrapperError	Swift.Equatable		
+protocol	conformance CallsPersistence.StoreWrapperError	Swift.Error		

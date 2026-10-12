@@ -1,0 +1,21 @@
+owner	kind	declaration
+LineReader	-	- (_Bool)_readNextChunk;
+LineReader	-	- (id)initWithFile:(id)file andReadingWindowSize:(unsigned long long)size;
+LineReader	-	- (id)initWithFile:(id)file;
+LineReader	-	- (id)nextLine;
+LineReader	-	- (void)dealloc;
+StatisticsParser	-	- (_Bool)feedJSONLine:(id)jsonline error:(id *)error;
+StatisticsParser	-	- (id)initWithUnixTimeBoundAndMinQuarantineTime:(long long)time to:(long long)to min_quarantine_time_covered_sec:(unsigned int)min_quarantine_time_covered_sec;
+StatisticsParser	-	- (id)initWithUnixTimeBoundFrom:(long long)from to:(long long)to;
+StatisticsParser	-	- (void)_handleEmitter:(id)emitter inBook:(unsigned char)book;
+StatisticsParser	-	- (void)_handleQuarantineRecord:(id)record;
+StatisticsParser	-	- (void)_handleSnapshotRecord:(id)record;
+StatisticsParser	-	- (void)_handleStatisticsRecord:(id)record;
+StatisticsParser	property	@property (readonly, nonatomic) NSArray *topEmitters;
+StatisticsParser	property	@property (readonly, nonatomic) NSArray *totalBytes;
+StatisticsParser	property	@property (readonly, nonatomic) NSDictionary *quarantinedClients;
+StatisticsParser	property	@property (readonly, nonatomic) NSDictionary *snapshotClients;
+StatisticsParser	property	@property (readonly, nonatomic) NSMutableArray *simulatedQuarantines;
+StatisticsParser	property	@property (readonly, nonatomic) int validLineCount;
+StatisticsParser	property	@property (readonly, nonatomic) long long newestEntryUnixTime;
+StatisticsParser	property	@property (readonly, nonatomic) long long oldestEntryUnixTime;

@@ -1,0 +1,346 @@
+kind	type	conformance	member_kind	member
+enum	PoirotSchematizer.OptionsContainer			
+enum	PoirotSchematizer.OptionsContainer		case	data
+enum	PoirotSchematizer.OptionsContainer		case	schematized
+enum	PoirotSchematizer.OptionsContainer		case	none
+class	PoirotSchematizer.ProtoEnumSchema			
+class	PoirotSchematizer.ProtoEnumSchema		let	name
+class	PoirotSchematizer.ProtoEnumSchema		let	allValues
+class	PoirotSchematizer.ProtoEnumSchema		let	valueSet
+class	PoirotSchematizer.ProtoEnumSchema		let	inner
+struct	PoirotSchematizer.ProtoEnumSchema.Inner			
+struct	PoirotSchematizer.ProtoEnumSchema.Inner		var	options
+struct	PoirotSchematizer.ProtoEnumSchema.Inner		var	valueOptions
+struct	PoirotSchematizer.ProtoEnumSchema.Inner		var	store
+enum	PoirotSchematizer.MergeConflict			
+enum	PoirotSchematizer.MergeConflict		case	conflict
+enum	PoirotSchematizer.PropertyPathUtil.Error			
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	missingPropertyName
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	propertyNameStartsWithIllegalCharacter
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	missingIndex
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	negativeIndex
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	missingClosingBracket
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	missingSeparator
+enum	PoirotSchematizer.PropertyPathUtil.Error		case	zeroLengthPropertyPath
+struct	PoirotSchematizer.PropertyPathElement			
+struct	PoirotSchematizer.PropertyPathElement		let	propertyName
+struct	PoirotSchematizer.PropertyPathElement		let	index
+struct	PoirotSchematizer.PropertyPathUtil			
+enum	PoirotSchematizer.SchematizerError			
+enum	PoirotSchematizer.SchematizerError		case	schemaNotFound
+enum	PoirotSchematizer.SchematizerError		case	enumNotFound
+enum	PoirotSchematizer.SchematizerError		case	internalError
+enum	PoirotSchematizer.SchematizerError		case	fieldNotFound
+enum	PoirotSchematizer.SchematizerError		case	enumValueNotFound
+enum	PoirotSchematizer.SchematizerError		case	protocolBufferError
+enum	PoirotSchematizer.SchematizerError		case	unexpectedType
+enum	PoirotSchematizer.SchematizerError		case	prediacteError
+enum	PoirotSchematizer.SchematizerError		case	protobufParsingError
+enum	PoirotSchematizer.SchematizerError		case	notInitialized
+enum	PoirotSchematizer.SchematizerError		case	oneofNotFound
+enum	PoirotSchematizer.SchematizerError		case	missingFieldSchemaName
+enum	PoirotSchematizer.SchematizerError		case	missingFieldEnumName
+enum	PoirotSchematizer.SchematizerError		case	repeatedValueAccessNoIndex
+enum	PoirotSchematizer.SchematizerError		case	scalarValueAccessWithIndex
+enum	PoirotSchematizer.SchematizerError		case	invalidIndexInKeypath
+enum	PoirotSchematizer.SchematizerError		case	nonMessageTypeInKeypath
+class	PoirotSchematizer.ProtoFieldSchema			
+class	PoirotSchematizer.ProtoFieldSchema		let	name
+class	PoirotSchematizer.ProtoFieldSchema		let	isRepeated
+class	PoirotSchematizer.ProtoFieldSchema		let	fieldNumber
+class	PoirotSchematizer.ProtoFieldSchema		let	isOptional
+class	PoirotSchematizer.ProtoFieldSchema		let	oneofIndex
+class	PoirotSchematizer.ProtoFieldSchema		let	inner
+struct	PoirotSchematizer.ProtoFieldSchema.Config			
+struct	PoirotSchematizer.ProtoFieldSchema.Config		let	type
+struct	PoirotSchematizer.ProtoFieldSchema.Config		let	typeName
+struct	PoirotSchematizer.ProtoFieldSchema.Config		var	store
+struct	PoirotSchematizer.ProtoFieldSchema.Inner			
+struct	PoirotSchematizer.ProtoFieldSchema.Inner		var	container
+struct	PoirotSchematizer.ProtoFieldSchema.Inner		var	options
+struct	PoirotSchematizer.ProtoFieldSchema.Inner		var	store
+struct	PoirotSchematizer.ProtoFieldSchema.MessageSchemaContainer			
+struct	PoirotSchematizer.ProtoFieldSchema.MessageSchemaContainer		var	schema
+enum	PoirotSchematizer.ProtoFieldSchema.FieldContainer			
+enum	PoirotSchematizer.ProtoFieldSchema.FieldContainer		case	config
+enum	PoirotSchematizer.ProtoFieldSchema.FieldContainer		case	field
+enum	PoirotSchematizer.ProtoFieldSchema.FieldContainer		case	messageField
+class	PoirotSchematizer.ProtoMessageSchema			
+class	PoirotSchematizer.ProtoMessageSchema		let	name
+class	PoirotSchematizer.ProtoMessageSchema		let	allFieldNames
+class	PoirotSchematizer.ProtoMessageSchema		let	allOneofNames
+class	PoirotSchematizer.ProtoMessageSchema		let	inner
+struct	PoirotSchematizer.ProtoMessageSchema.Inner			
+struct	PoirotSchematizer.ProtoMessageSchema.Inner		var	store
+struct	PoirotSchematizer.ProtoMessageSchema.Inner		var	fields
+struct	PoirotSchematizer.ProtoMessageSchema.Inner		var	fieldsCache
+struct	PoirotSchematizer.ProtoMessageSchema.Inner		var	oneofs
+struct	PoirotSchematizer.ProtoMessageSchema.Inner		var	uninitializedCount
+struct	PoirotSchematizer.ProtoMessageSchema.Inner		var	options
+enum	PoirotSchematizer.ProtoMessageSchema.FieldContainer			
+enum	PoirotSchematizer.ProtoMessageSchema.FieldContainer		case	manifest
+enum	PoirotSchematizer.ProtoMessageSchema.FieldContainer		case	field
+enum	PoirotSchematizer.ProtoMessageSchema.OneofContainer			
+enum	PoirotSchematizer.ProtoMessageSchema.OneofContainer		case	manifest
+enum	PoirotSchematizer.ProtoMessageSchema.OneofContainer		case	oneof
+class	PoirotSchematizer.ProtoOneofSchema			
+class	PoirotSchematizer.ProtoOneofSchema		let	name
+class	PoirotSchematizer.ProtoOneofSchema		let	allFieldNames
+class	PoirotSchematizer.ProtoOneofSchema		let	allFieldNumbers
+class	PoirotSchematizer.ProtoOneofSchema		let	filedsMap
+class	PoirotSchematizer.ProtoOneofSchema		let	inner
+struct	PoirotSchematizer.ProtoOneofSchema.Inner			
+struct	PoirotSchematizer.ProtoOneofSchema.Inner		var	options
+struct	PoirotSchematizer.ProtoOneofSchema.Inner		var	store
+class	PoirotSchematizer.ProtoSchemaStore			
+class	PoirotSchematizer.ProtoSchemaStore		let	allEnumNames
+class	PoirotSchematizer.ProtoSchemaStore		let	allMessageNames
+class	PoirotSchematizer.ProtoSchemaStore		let	inner
+struct	PoirotSchematizer.ProtoSchemaStore.Inner			
+struct	PoirotSchematizer.ProtoSchemaStore.Inner		var	enumSchemas
+struct	PoirotSchematizer.ProtoSchemaStore.Inner		var	messageSchemas
+enum	PoirotSchematizer.ProtoSchemaStore.MessageContainer			
+enum	PoirotSchematizer.ProtoSchemaStore.MessageContainer		case	manifest
+enum	PoirotSchematizer.ProtoSchemaStore.MessageContainer		case	message
+enum	PoirotSchematizer.ProtoSchemaStore.EnumContainer			
+enum	PoirotSchematizer.ProtoSchemaStore.EnumContainer		case	manifest
+enum	PoirotSchematizer.ProtoSchemaStore.EnumContainer		case	enum
+struct	PoirotSchematizer.SchematizedDataDecodable			
+struct	PoirotSchematizer.SchematizedDataDecodable		let	inner
+struct	PoirotSchematizer.EnumSchema			
+struct	PoirotSchematizer.EnumSchema		let	impl
+struct	PoirotSchematizer.FieldSchema			
+struct	PoirotSchematizer.FieldSchema		let	impl
+struct	PoirotSchematizer.MessageSchema			
+struct	PoirotSchematizer.MessageSchema		let	impl
+struct	PoirotSchematizer.OneofSchema			
+struct	PoirotSchematizer.OneofSchema		let	impl
+enum	PoirotSchematizer.TypeSchema			
+enum	PoirotSchematizer.TypeSchema		case	enum
+enum	PoirotSchematizer.TypeSchema		case	message
+enum	PoirotSchematizer.TypeSchema		case	int32
+enum	PoirotSchematizer.TypeSchema		case	uint32
+enum	PoirotSchematizer.TypeSchema		case	sint32
+enum	PoirotSchematizer.TypeSchema		case	fixed32
+enum	PoirotSchematizer.TypeSchema		case	sfixed32
+enum	PoirotSchematizer.TypeSchema		case	int64
+enum	PoirotSchematizer.TypeSchema		case	uint64
+enum	PoirotSchematizer.TypeSchema		case	sint64
+enum	PoirotSchematizer.TypeSchema		case	fixed64
+enum	PoirotSchematizer.TypeSchema		case	sfixed64
+enum	PoirotSchematizer.TypeSchema		case	double
+enum	PoirotSchematizer.TypeSchema		case	float
+enum	PoirotSchematizer.TypeSchema		case	bool
+enum	PoirotSchematizer.TypeSchema		case	string
+enum	PoirotSchematizer.TypeSchema		case	bytes
+struct	PoirotSchematizer.FieldTag			
+struct	PoirotSchematizer.FieldTag		let	rawValue
+enum	PoirotSchematizer.ProtoWireType			
+enum	PoirotSchematizer.ProtoWireType		case	varInt
+enum	PoirotSchematizer.ProtoWireType		case	fixed64
+enum	PoirotSchematizer.ProtoWireType		case	lengthDelimited
+enum	PoirotSchematizer.ProtoWireType		case	startGroup
+enum	PoirotSchematizer.ProtoWireType		case	endGroup
+enum	PoirotSchematizer.ProtoWireType		case	fixed32
+enum	PoirotSchematizer.SerializationError			
+enum	PoirotSchematizer.SerializationError		case	invalidType
+enum	PoirotSchematizer.SerializationError		case	typeMismatch
+enum	PoirotSchematizer.SerializationError		case	notInitialized
+enum	PoirotSchematizer.SerializationError		case	malformedProtobuf
+enum	PoirotSchematizer.SerializationError		case	truncated
+enum	PoirotSchematizer.SerializationError		case	logicError
+struct	PoirotSchematizer.AnyKey			
+struct	PoirotSchematizer.AnyKey		let	stringValue
+enum	PoirotSchematizer.AnyValue			
+enum	PoirotSchematizer.AnyValue		case	int32
+enum	PoirotSchematizer.AnyValue		case	uint32
+enum	PoirotSchematizer.AnyValue		case	int64
+enum	PoirotSchematizer.AnyValue		case	uint64
+enum	PoirotSchematizer.AnyValue		case	float
+enum	PoirotSchematizer.AnyValue		case	double
+enum	PoirotSchematizer.AnyValue		case	bool
+enum	PoirotSchematizer.AnyValue		case	enum
+enum	PoirotSchematizer.AnyValue		case	string
+enum	PoirotSchematizer.AnyValue		case	bytes
+enum	PoirotSchematizer.AnyValue		case	message
+enum	PoirotSchematizer.UnsafeAnyValue			
+enum	PoirotSchematizer.UnsafeAnyValue		case	int32
+enum	PoirotSchematizer.UnsafeAnyValue		case	uint32
+enum	PoirotSchematizer.UnsafeAnyValue		case	int64
+enum	PoirotSchematizer.UnsafeAnyValue		case	uint64
+enum	PoirotSchematizer.UnsafeAnyValue		case	float
+enum	PoirotSchematizer.UnsafeAnyValue		case	double
+enum	PoirotSchematizer.UnsafeAnyValue		case	bool
+enum	PoirotSchematizer.UnsafeAnyValue		case	enum
+enum	PoirotSchematizer.UnsafeAnyValue		case	string
+enum	PoirotSchematizer.UnsafeAnyValue		case	bytes
+enum	PoirotSchematizer.UnsafeAnyValue		case	message
+struct	PoirotSchematizer.EnumValue			
+struct	PoirotSchematizer.EnumValue		let	impl
+struct	PoirotSchematizer.EnumValueImpl			
+struct	PoirotSchematizer.EnumValueImpl		let	type
+struct	PoirotSchematizer.EnumValueImpl		let	container
+enum	PoirotSchematizer.EnumValueImpl.Container			
+enum	PoirotSchematizer.EnumValueImpl.Container		case	string
+enum	PoirotSchematizer.EnumValueImpl.Container		case	integer
+struct	PoirotSchematizer.FieldPathAndType			
+struct	PoirotSchematizer.FieldPathAndType		var	fieldPath
+struct	PoirotSchematizer.FieldPathAndType		var	type
+enum	PoirotSchematizer.FieldPathComponent			
+enum	PoirotSchematizer.FieldPathComponent		case	fieldNumber
+enum	PoirotSchematizer.FieldPathComponent		case	repeatableFieldNumber
+struct	PoirotSchematizer.FieldValue			
+struct	PoirotSchematizer.FieldValue		let	fieldSchema
+struct	PoirotSchematizer.FieldValue		let	value
+struct	PoirotSchematizer.FieldValueImpl			
+struct	PoirotSchematizer.FieldValueImpl		let	fieldSchema
+struct	PoirotSchematizer.FieldValueImpl		let	value
+struct	PoirotSchematizer.EnumManifest			
+struct	PoirotSchematizer.EnumManifest		var	values
+struct	PoirotSchematizer.EnumManifest		var	options
+struct	PoirotSchematizer.EnumManifest		var	valueOptions
+struct	PoirotSchematizer.FieldManifest			
+struct	PoirotSchematizer.FieldManifest		let	type
+struct	PoirotSchematizer.FieldManifest		let	typeName
+struct	PoirotSchematizer.FieldManifest		let	fieldNumber
+struct	PoirotSchematizer.FieldManifest		let	isRepeated
+struct	PoirotSchematizer.FieldManifest		let	oneofIndex
+struct	PoirotSchematizer.FieldManifest		var	options
+struct	PoirotSchematizer.MessageManifest			
+struct	PoirotSchematizer.MessageManifest		var	fields
+struct	PoirotSchematizer.MessageManifest		var	oneofs
+struct	PoirotSchematizer.MessageManifest		var	options
+struct	PoirotSchematizer.OneofManifest			
+struct	PoirotSchematizer.OneofManifest		var	name
+struct	PoirotSchematizer.OneofManifest		var	options
+struct	PoirotSchematizer.SchemaManifest			
+struct	PoirotSchematizer.SchemaManifest		var	messages
+struct	PoirotSchematizer.SchemaManifest		var	enums
+enum	PoirotSchematizer.SchemaManifestDSCError			
+enum	PoirotSchematizer.SchemaManifestDSCError		case	invalidValueType
+enum	PoirotSchematizer.SchemaManifestDSCError		case	invalidDescriptor
+enum	PoirotSchematizer.SchemaManifestDSCError		case	cannotLoadDescriptor
+enum	PoirotSchematizer.SchemaManifestJSONError			
+enum	PoirotSchematizer.SchemaManifestJSONError		case	invalidValueType
+enum	PoirotSchematizer.TypeManifest			
+enum	PoirotSchematizer.TypeManifest		case	double
+enum	PoirotSchematizer.TypeManifest		case	float
+enum	PoirotSchematizer.TypeManifest		case	int64
+enum	PoirotSchematizer.TypeManifest		case	uint64
+enum	PoirotSchematizer.TypeManifest		case	int32
+enum	PoirotSchematizer.TypeManifest		case	fixed64
+enum	PoirotSchematizer.TypeManifest		case	fixed32
+enum	PoirotSchematizer.TypeManifest		case	bool
+enum	PoirotSchematizer.TypeManifest		case	string
+enum	PoirotSchematizer.TypeManifest		case	message
+enum	PoirotSchematizer.TypeManifest		case	bytes
+enum	PoirotSchematizer.TypeManifest		case	uint32
+enum	PoirotSchematizer.TypeManifest		case	enum
+enum	PoirotSchematizer.TypeManifest		case	sfixed32
+enum	PoirotSchematizer.TypeManifest		case	sfixed64
+enum	PoirotSchematizer.TypeManifest		case	sint32
+enum	PoirotSchematizer.TypeManifest		case	sint64
+struct	PoirotSchematizer.SchemaStore			
+struct	PoirotSchematizer.SchemaStore		let	impl
+class	PoirotSchematizer.QueryableMessage	NSObject		
+class	PoirotSchematizer.QueryableMessage	NSObject	let	schematizedData
+class	PoirotSchematizer.QueryableMessage	NSObject	let	schemaStore
+class	PoirotSchematizer.UnsafeQueryableMessage	NSObject		
+class	PoirotSchematizer.UnsafeQueryableMessage	NSObject	let	data
+class	PoirotSchematizer.UnsafeQueryableMessage	NSObject	let	safetyPolicy
+enum	PoirotSchematizer.UnsafeQueryableMessage.SafetyPolicy			
+enum	PoirotSchematizer.UnsafeQueryableMessage.SafetyPolicy		case	safe
+enum	PoirotSchematizer.UnsafeQueryableMessage.SafetyPolicy		case	unsafe
+struct	PoirotSchematizer.UnsafeSchematizedData			
+struct	PoirotSchematizer.UnsafeSchematizedData		let	messageSchema
+struct	PoirotSchematizer.UnsafeSchematizedData		let	unsafeData
+struct	PoirotSchematizer.Schematizer			
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator			
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator		var	state
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.IterationState			
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.IterationState		var	bookmark
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.IterationState		let	data
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.IterationState		let	fieldNumber
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.IterationState		let	type
+enum	PoirotSchematizer.Schematizer.RepeatableFieldIterator.State			
+enum	PoirotSchematizer.Schematizer.RepeatableFieldIterator.State		case	iterating
+enum	PoirotSchematizer.Schematizer.RepeatableFieldIterator.State		case	done
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.Bookmark			
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.Bookmark		let	arrayType
+struct	PoirotSchematizer.Schematizer.RepeatableFieldIterator.Bookmark		var	startPosition
+enum	PoirotSchematizer.Schematizer.RepeatableFieldIterator.ArrayType			
+enum	PoirotSchematizer.Schematizer.RepeatableFieldIterator.ArrayType		case	compactedWithEndPosition
+enum	PoirotSchematizer.Schematizer.RepeatableFieldIterator.ArrayType		case	regular
+class	PoirotSchematizer.SchematizedData			
+class	PoirotSchematizer.SchematizedData		let	messageSchemaImpl
+class	PoirotSchematizer.SchematizedData		let	data
+struct	PoirotSchematizer.SchematizedDataComposer			
+struct	PoirotSchematizer.SchematizedDataComposer		let	messageSchemaImpl
+struct	PoirotSchematizer.SchematizedDataComposer		var	values
+enum	PoirotSchematizer.SchematizedDataComposerError			
+enum	PoirotSchematizer.SchematizedDataComposerError		case	unknownFields
+enum	PoirotSchematizer.SchematizedDataComposerError		case	invalidOneofIndex
+enum	PoirotSchematizer.SchematizedDataComposerError		case	oneofAlreadySet
+enum	PoirotSchematizer.SchematizedDataComposerError		case	incompatibleType
+enum	PoirotSchematizer.SchematizedDataComposer.Container			
+enum	PoirotSchematizer.SchematizedDataComposer.Container		case	regular
+enum	PoirotSchematizer.SchematizedDataComposer.Container		case	repeated
+struct	PoirotSchematizer.Reader			
+struct	PoirotSchematizer.Reader		let	bytes
+struct	PoirotSchematizer.Reader		let	endPosition
+struct	PoirotSchematizer.Reader		var	position
+struct	PoirotSchematizer.Reader		var	lastComponentCompactedArrayEndPosition
+protocol	PoirotSchematizer.Mergeable			
+protocol	PoirotSchematizer.DataValueDescribing			
+protocol	PoirotSchematizer.SchemaManifestConstructing	Manifest		
+protocol	PoirotSchematizer.EnumManifestConstructing			
+protocol	PoirotSchematizer.MessageManifestConstructing			
+protocol	conformance Swift.Dictionary	PoirotSchematizer.Mergeable		
+protocol	conformance Swift.Optional	PoirotSchematizer.Mergeable		
+protocol	conformance PoirotSchematizer.MergeConflict	Swift.Error		
+protocol	conformance PropertyPathUtil.Error	Foundation.LocalizedError		
+protocol	conformance PropertyPathUtil.Error	Swift.Error		
+protocol	conformance PoirotSchematizer.SchematizerError	Swift.Error		
+protocol	conformance PoirotSchematizer.SchematizerError	Swift.Equatable		
+protocol	conformance PoirotSchematizer.ProtoSchemaStore	Swift.CustomStringConvertible		
+protocol	conformance PoirotSchematizer.SchematizedDataDecodable	Foundation.DecodableWithConfiguration		
+protocol	conformance PoirotSchematizer.TypeSchema	Swift.Equatable		
+protocol	conformance PoirotSchematizer.TypeSchema	Swift.CustomStringConvertible		
+protocol	conformance PoirotSchematizer.FieldTag	Swift.Equatable		
+protocol	conformance PoirotSchematizer.ProtoWireType	Swift.RawRepresentable		
+protocol	conformance PoirotSchematizer.ProtoWireType	Swift.Hashable		
+protocol	conformance PoirotSchematizer.ProtoWireType	Swift.Equatable		
+protocol	conformance PoirotSchematizer.SerializationError	Swift.Equatable		
+protocol	conformance PoirotSchematizer.SerializationError	Swift.Error		
+protocol	conformance PoirotSchematizer.AnyKey	Swift.CodingKey		
+protocol	conformance PoirotSchematizer.AnyKey	Swift.CustomStringConvertible		
+protocol	conformance PoirotSchematizer.AnyKey	Swift.CustomDebugStringConvertible		
+protocol	conformance PoirotSchematizer.AnyKey	Swift.ExpressibleByStringLiteral		
+protocol	conformance PoirotSchematizer.AnyKey	Swift.ExpressibleByExtendedGraphemeClusterLiteral		
+protocol	conformance PoirotSchematizer.AnyKey	Swift.ExpressibleByUnicodeScalarLiteral		
+protocol	conformance PoirotSchematizer.UnsafeAnyValue	Swift.Encodable		
+protocol	conformance Swift.UnsafeRawBufferPointer	PoirotSchematizer.DataValueDescribing		
+protocol	conformance Foundation.Data	PoirotSchematizer.DataValueDescribing		
+protocol	conformance PoirotSchematizer.EnumValueImpl	Swift.Equatable		
+protocol	conformance PoirotSchematizer.EnumValueImpl	Swift.Encodable		
+protocol	conformance PoirotSchematizer.EnumManifest	Swift.Equatable		
+protocol	conformance PoirotSchematizer.EnumManifest	PoirotSchematizer.Mergeable		
+protocol	conformance PoirotSchematizer.FieldManifest	Swift.Equatable		
+protocol	conformance PoirotSchematizer.FieldManifest	PoirotSchematizer.Mergeable		
+protocol	conformance PoirotSchematizer.MessageManifest	Swift.Equatable		
+protocol	conformance PoirotSchematizer.MessageManifest	PoirotSchematizer.Mergeable		
+protocol	conformance PoirotSchematizer.OneofManifest	Swift.Equatable		
+protocol	conformance PoirotSchematizer.OneofManifest	PoirotSchematizer.Mergeable		
+protocol	conformance PoirotSchematizer.SchemaManifest	Swift.Equatable		
+protocol	conformance PoirotSchematizer.SchemaManifest	PoirotSchematizer.Mergeable		
+protocol	conformance PoirotSchematizer.SchemaManifestDSCError	Swift.Error		
+protocol	conformance PoirotSchematizer.SchemaManifestJSONError	Swift.Error		
+protocol	conformance PoirotSchematizer.TypeManifest	Swift.Hashable		
+protocol	conformance PoirotSchematizer.TypeManifest	Swift.Equatable		
+protocol	conformance PoirotSchematizer.UnsafeSchematizedData	Swift.Encodable		
+protocol	conformance PoirotSchematizer.SchematizedDataComposerError	Swift.Error		
+extension	PoirotSchematizer.SchematizedDataDecodable	DecodableWithConfiguration		
+extension	PoirotSchematizer.ProtoWireType	RawRepresentable		
+extension	PoirotSchematizer.AnyKey	ExpressibleByStringLiteral		
+extension	PoirotSchematizer.AnyKey	ExpressibleByExtendedGraphemeClusterLiteral		
+extension	PoirotSchematizer.AnyKey	ExpressibleByUnicodeScalarLiteral		

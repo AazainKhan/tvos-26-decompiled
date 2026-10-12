@@ -1,0 +1,30 @@
+kind	type	conformance	member_kind	member
+struct	HoverTextServices.HoverTextError			
+struct	HoverTextServices.HoverTextError		let	message
+enum	HoverTextServices.AXUIError			
+enum	HoverTextServices.AXUIError		case	ipc
+enum	HoverTextServices.HoverTextAXUIServiceMessageID			
+enum	HoverTextServices.HoverTextAXUIServiceMessageID		case	startHoverText
+enum	HoverTextServices.HoverTextAXUIServiceMessageID		case	stopHoverText
+enum	HoverTextServices.HoverTextAXUIServiceMessageID		case	showAlert
+enum	HoverTextServices.HoverTextAXUIServiceMessageID		case	startHoverTextTyping
+enum	HoverTextServices.HoverTextAXUIServiceMessageID		case	stopHoverTextTyping
+class	HoverTextServices.HoverTextServiceAXUIService	NSObject		
+class	HoverTextServices.HoverTextServiceAXUIService	NSObject	var	hoverTextEnabled
+class	HoverTextServices.HoverTextServiceAXUIService	NSObject	var	hoverTextTypingEnabled
+class	HoverTextServices.HoverTextServiceAXUIService	NSObject	var	_client
+class	HoverTextServices.HoverTextService	NSObject		
+class	HoverTextServices.HoverTextService	NSObject	var	serviceImpl
+protocol	HoverTextServices.AXUIMessageID			
+protocol	HoverTextServices.HoverTextServiceProtocol			
+protocol	conformance HoverTextServices.HoverTextError	Swift.Error		
+protocol	conformance HoverTextServices.HoverTextError	Swift.CustomStringConvertible		
+protocol	conformance HoverTextServices.AXUIError	Swift.CustomStringConvertible		
+protocol	conformance HoverTextServices.AXUIError	Foundation.LocalizedError		
+protocol	conformance HoverTextServices.AXUIError	Swift.Error		
+protocol	conformance HoverTextServices.HoverTextAXUIServiceMessageID	Swift.Equatable		
+protocol	conformance HoverTextServices.HoverTextAXUIServiceMessageID	Swift.Hashable		
+protocol	conformance HoverTextServices.HoverTextAXUIServiceMessageID	Swift.RawRepresentable		
+protocol	conformance HoverTextServices.HoverTextAXUIServiceMessageID	HoverTextServices.AXUIMessageID		
+protocol	conformance HoverTextServices.HoverTextServiceAXUIService	HoverTextServices.HoverTextServiceProtocol		
+extension	HoverTextServices.HoverTextAXUIServiceMessageID	RawRepresentable		

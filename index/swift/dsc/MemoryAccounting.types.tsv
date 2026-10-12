@@ -1,0 +1,27 @@
+kind	type	conformance	member_kind	member
+struct	MemoryAccounting.MemorySubsystem			
+struct	MemoryAccounting.MemorySubsystem		var	name
+struct	MemoryAccounting.MemorySubsystem		var	hardlimit
+struct	MemoryAccounting.MemorySubsystem		var	softlimit
+struct	MemoryAccounting.MemorySubsystem		var	allocated
+struct	MemoryAccounting.MemorySubsystem		var	peak
+class	MemoryAccounting.MemoryAccountingLogger			
+class	MemoryAccounting.MemoryAccountingManager			
+class	MemoryAccounting.MemoryAccountingManager		let	sysctlManager
+class	MemoryAccounting.MemoryAccountingManager		let	memacctlog
+class	MemoryAccounting.MemoryAccountingManager		var	memAcctSubsystems
+enum	MemoryAccounting.SysctlManagerError			
+enum	MemoryAccounting.SysctlManagerError		case	invalidBufferSize
+enum	MemoryAccounting.SysctlManagerError		case	failedToSetSysctl
+enum	MemoryAccounting.SysctlManagerError		case	failedToFetchMib
+enum	MemoryAccounting.SysctlManagerError		case	failedToMapIndex
+class	MemoryAccounting.SysctlManager			
+class	MemoryAccounting.SysctlManager		let	memacctlog
+class	MemoryAccounting.SysctlManager		var	lookupCache
+protocol	MemoryAccounting.SystemReturnable			
+protocol	conformance MemoryAccounting.MemorySubsystem	Swift.CustomStringConvertible		
+protocol	conformance Swift.UInt32	MemoryAccounting.SystemReturnable		
+protocol	conformance Swift.Int32	MemoryAccounting.SystemReturnable		
+protocol	conformance Swift.UInt64	MemoryAccounting.SystemReturnable		
+protocol	conformance Swift.Int64	MemoryAccounting.SystemReturnable		
+protocol	conformance MemoryAccounting.SysctlManagerError	Swift.Error		

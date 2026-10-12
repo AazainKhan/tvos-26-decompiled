@@ -1,0 +1,72 @@
+kind	type	conformance	member_kind	member
+class	CloudAssetsDaemon.Dispatcher			
+class	CloudAssetsDaemon.Dispatcher		let	factory
+struct	CloudAssetsDaemon.Dispatcher.Handler			
+struct	CloudAssetsDaemon.Dispatcher.Handler		let	session
+struct	CloudAssetsDaemon.Dispatcher.Handler		let	dispatcher
+class	CloudAssetsDaemon.RequestTracker			
+class	CloudAssetsDaemon.RequestTracker		let	lock
+class	CloudAssetsDaemon.RequestTracker		var	currentNumber
+class	CloudAssetsDaemon.RequestTracker		var	requests
+class	CloudAssetsDaemon.DownloadRequestContext	CloudAssetsDaemon.RequestContext		
+class	CloudAssetsDaemon.DownloadRequestContext	CloudAssetsDaemon.RequestContext	let	continuation
+class	CloudAssetsDaemon.Uploader			
+class	CloudAssetsDaemon.Uploader		let	engine
+class	CloudAssetsDaemon.Uploader		let	registerer
+class	CloudAssetsDaemon.Uploader.OptionsBuilder			
+class	CloudAssetsDaemon.Uploader.OptionsBuilder		let	assets
+class	CloudAssetsDaemon.Uploader.OptionsBuilder		var	useSimultaneousTransfer
+class	CloudAssetsDaemon.Registerer			
+class	CloudAssetsDaemon.Registerer		let	engine
+class	CloudAssetsDaemon.Registerer.OptionsBuilder			
+class	CloudAssetsDaemon.Registerer.OptionsBuilder		let	requests
+class	CloudAssetsDaemon.Registerer.Context			
+class	CloudAssetsDaemon.Registerer.Context		let	unsafeSelfPointer
+class	CloudAssetsDaemon.Registerer.Context		let	continutation
+enum	CloudAssetsDaemon.ProcessorError			
+enum	CloudAssetsDaemon.ProcessorError		case	internalError
+class	CloudAssetsDaemon.Downloader			
+class	CloudAssetsDaemon.Downloader		let	engine
+class	CloudAssetsDaemon.Downloader.OptionsBuilder			
+class	CloudAssetsDaemon.Downloader.OptionsBuilder		let	assets
+class	CloudAssetsDaemon.Downloader.OptionsBuilder		var	ranges
+class	CloudAssetsDaemon.Downloader.OptionsBuilder		var	storageReference
+class	CloudAssetsDaemon.Downloader.OptionsBuilder		var	storageReferenceSignature
+class	CloudAssetsDaemon.Downloader.OptionsBuilder		var	useSimultaneousTransfer
+class	CloudAssetsDaemon.Downloader.OptionsBuilder		var	applicationID
+struct	CloudAssetsDaemon.Downloader.AssetDownloadResult			
+struct	CloudAssetsDaemon.Downloader.AssetDownloadResult		let	trackingNumber
+struct	CloudAssetsDaemon.Downloader.AssetDownloadResult		let	stagingURL
+struct	CloudAssetsDaemon.Downloader.AssetDownloadResult		let	range
+class	CloudAssetsDaemon.RequestContext			
+class	CloudAssetsDaemon.RequestContext		let	unsafeSelfPointer
+class	CloudAssetsDaemon.RequestContext		let	requests
+class	CloudAssetsDaemon.UploadRequestContext	CloudAssetsDaemon.RequestContext		
+class	CloudAssetsDaemon.UploadRequestContext	CloudAssetsDaemon.RequestContext	var	storageReferenceContinuation
+class	CloudAssetsDaemon.UploadRequestContext	CloudAssetsDaemon.RequestContext	let	trackingNumberContinutation
+class	CloudAssetsDaemon.TenantContext			
+class	CloudAssetsDaemon.TenantContext		let	tenantName
+class	CloudAssetsDaemon.TenantContext		let	workingDirectory
+class	CloudAssetsDaemon.TenantContext		let	requestTracker
+class	CloudAssetsDaemon.ProcessorFactory			
+class	CloudAssetsDaemon.ProcessorFactory		let	requestTracker
+class	CloudAssetsDaemon.ProcessorFactory		var	engines
+struct	CloudAssetsDaemon.ProcessorFactory.TenantDomain			
+struct	CloudAssetsDaemon.ProcessorFactory.TenantDomain		let	tenantName
+struct	CloudAssetsDaemon.ProcessorFactory.TenantDomain		let	workingDirectory
+class	CloudAssetsDaemon.Engine			
+class	CloudAssetsDaemon.Engine		let	unsafeMMCSEngineContextPointer
+class	CloudAssetsDaemon.Engine		let	tenantContext
+class	CloudAssetsDaemon.Engine		let	mmcsEngine
+protocol	CloudAssetsDaemon.Processor			
+protocol	conformance Handler	XPC.XPCPeerHandler		
+protocol	conformance CloudAssetsDaemon.Uploader	CloudAssetsDaemon.Processor		
+protocol	conformance CloudAssetsDaemon.Registerer	CloudAssetsDaemon.Processor		
+protocol	conformance CloudAssetsDaemon.ProcessorError	Swift.Equatable		
+protocol	conformance CloudAssetsDaemon.ProcessorError	Swift.Hashable		
+protocol	conformance CloudAssetsDaemon.ProcessorError	Swift.Error		
+protocol	conformance CloudAssetsDaemon.Downloader	CloudAssetsDaemon.Processor		
+protocol	conformance ProcessorFactory.TenantDomain	Swift.Hashable		
+protocol	conformance ProcessorFactory.TenantDomain	Swift.Equatable		
+protocol	conformance CloudAssetsDaemon.ProcessorFactory	Swift.Actor		
+extension	CloudAssetsDaemon.Dispatcher.Handler	XPCPeerHandler		
