@@ -1,0 +1,25 @@
+item	value	unit	source
+jiggle rotation keyPath	transform (CAValueFunction rotateZ), additive	-	+[HBAppGridView _jiggleTransformAnimation] (HeadBoardHome)
+jiggle rotation keyframes	-0.02822, 0.02822, -0.02822	rad (about ±1.62°)	+[HBAppGridView _jiggleTransformAnimation]
+jiggle position keyPath	transform (CAValueFunction translate), additive	-	+[HBAppGridView _jigglePositionAnimation]
+jiggle position keyframes (x,y,z)	(-1,1,0) (-1,-2,0) (-1,0,0) (1,-1,0) (-1,1,0)	pt	+[HBAppGridView _jigglePositionAnimation]
+jiggle duration (both)	0.325	s	both jiggle methods
+jiggle keyTimes / timing	none set: evenly spaced, linear	-	both jiggle methods
+jiggle repeat	repeatCount FLT_MAX, removedOnCompletion NO	-	both jiggle methods
+jiggle phase	no random phase or timeOffset; position animation is one cached instance	-	+[HBAppGridView _applyJiggleToView:]
+who jiggles	only the cell being moved (editingCellProxyContainer and _editingCell), not every icon	-	-[HBAppGridView startJiggle]
+jiggle stop	CABasicAnimation transform from current presentation value to rest	-	+[HBAppGridView _removeJiggleFromView:]
+jiggle stop duration	0.0875	s	+[HBAppGridView _removeJiggleFromView:]
+move per press: animation	UIView spring, then startJiggle again	-	-[HBAppGridView _handleEndMovementEvent]
+move per press: duration	0.65	s	-[HBAppGridView _handleEndMovementEvent]
+move per press: delay	0	s	-[HBAppGridView _handleEndMovementEvent]
+move per press: damping ratio	1.0 (critically damped)	-	-[HBAppGridView _handleEndMovementEvent]
+move per press: initial velocity	from pan velocity (_HBChangeFactorFromVelocity)	-	-[HBAppGridView _handleEndMovementEvent]
+move per press: options	6 = BeginFromCurrentState | AllowUserInteraction	-	-[HBAppGridView _handleEndMovementEvent]
+lifted cell	persistent focus (setShowsPersistentFocus:YES), brought to front; no separate lift scale	-	-[HBAppGridView _beginGlobalEditingMode]
+drop onto app (folder confirm): scale	0.7 on target cell and editingCellProxy	-	-[HBAppGridView _applyConfirmTransforms]
+drop onto app (folder confirm): duration	0.3	s	-[HBAppGridView _applyConfirmTransforms]
+cell re-centre on style change	0.3	s	-[HBAppGridView _configureStyleForCell:]
+scroll while editing	0.5	s	-[HBAppGridView _scrollToIndexPath:animations:]
+enter edit	state change only: persistent focus on, bring to front, add pan + up/down/left/right gestures, startJiggle	-	-[HBAppGridView _beginGlobalEditingMode], _startEditing
+exit edit	persistent focus off, remove gestures, jiggle stop (0.0875 s)	-	-[HBAppGridView _endGlobalEditingMode]

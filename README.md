@@ -21,7 +21,7 @@ Built for coding agents (Claude Code, Codex, Cursor…) and people building Appl
 | `index/swift/{dsc,apps,disk}/<image>.types.tsv` | Swift types and their fields | 661,287 types |
 | `index/disk-images.tsv` | Maps each `disk/` name (`<binary>~<hash>`) to its full path | 1,224 |
 | `index/animations.tsv` | Every animation in every `.ca` and `.caar` package: keyPath, duration, beginTime, spring mass/stiffness/damping, timing functions, keyframes | 7,713 (3,027 springs) |
-| `index/constants/<image>.tsv` | Numbers that constant-returning methods produce, decoded from machine code: sizes, radii, spacing, spring mass/stiffness/damping, timing curves; `a if ne else b` marks a two-way choice such as `isScaledUI` | 1,093 methods, 12 images |
+| `index/constants/<image>.tsv` | Numbers that constant-returning methods produce, decoded from machine code: sizes, radii, spacing, spring mass/stiffness/damping, timing curves; `a if ne else b` marks a two-way choice such as `isScaledUI` | 1,093+ methods, 14 images; `index/constants/curated/` holds hand-checked tables with sources (for example `home-edit-jiggle.tsv`) |
 | `index/ca-packages.txt` | Every `.ca` / `.caar` package path | 145 |
 
 Every dyld-cache image is in `objc/dsc/` and `swift/dsc/`, every app in `objc/apps/` and `swift/apps/`, and every other executable in `objc/disk/` and `swift/disk/` (names resolve through `index/disk-images.tsv`). Images with the same name in two places carry their parent folder, for example `AVKit~AVKit.framework` and `AVKit~AVKit.axbundle`.
