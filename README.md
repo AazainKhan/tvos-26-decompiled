@@ -2,6 +2,8 @@
 
 A machine-readable map of **tvOS 26.6** (Apple TV HD, `AppleTV5,3`, build `23L773`): which apps and frameworks exist, their Objective-C/Swift interfaces at name level, and the timing of every CoreAnimation package on the system.
 
+> **Legal:** independent interoperability research, not affiliated with or endorsed by Apple. No Apple code, binaries, assets or keys are included. Not legal advice. See [Legal](#legal).
+
 Built for coding agents (Claude Code, Codex, Cursor…) and people building Apple TV–style UIs on other platforms, such as [Glass](https://github.com/AazainKhan/glass-tv-launcher). Query it instead of re-extracting a 5 GB firmware.
 
 **This repo contains no Apple code, binaries, headers or artwork.** It holds names, numbers and paths derived from the firmware, plus scripts that regenerate everything from your own copy of the IPSW. See [NOTICE.md](NOTICE.md).
@@ -72,3 +74,34 @@ It extracts the OS image, unwraps its key through Apple's public key service (`i
 
 - [fireos-karat-re](https://github.com/AazainKhan/fireos-karat-re): the same kind of map for Fire OS 8 on the Fire TV Stick 4K (2nd gen).
 - [glass-tv-launcher](https://github.com/AazainKhan/glass-tv-launcher): the Apple TV–style launcher this research feeds.
+
+## Legal
+
+**Not legal advice.** This section describes how the project is intended to be used. It is not legal advice; if you need certainty for your situation or jurisdiction, ask a lawyer.
+
+**No affiliation.** This project is not affiliated with, authorised, sponsored or endorsed by Apple Inc.
+
+**What this repository is.** Independent research for interoperability: the indexes describe how tvOS is structured so that third-party software (launchers, companion apps, accessibility tools, custom builds for devices you own) can work with it. The repository contains only facts derived from the firmware (names, paths, declared signatures, configuration values and numbers) and original scripts written for this project.
+
+**What it is not.** It does not contain, and pull requests must not add:
+- Apple binaries, firmware, disk images, packages or installers;
+- decompiled or disassembled code, method bodies, generated header files or source reconstructions;
+- images, icons, sounds, fonts, `Assets.car`/resource files or other artwork;
+- encryption keys, certificates, signing material, credentials or tokens, including any found embedded in the firmware;
+- anything that removes, disables or works around copy protection or DRM.
+
+**Get the firmware yourself.** The reproduce scripts expect a firmware file that you obtained lawfully. They do not download it for you, and everything they extract stays in a git-ignored local directory. Do not commit or share that directory.
+
+**About decryption.** Apple distributes the IPSW's file-system images as encrypted archives and publishes the matching keys through its own public key service, which `ipsw fw aea --key` queries. The scripts use that service only to read the firmware you supplied; no keys are stored in this repository. This is not DRM on content: no media, app or account protection is touched.
+
+**Your responsibility.** You are responsible for making sure your use complies with the laws of your jurisdiction and with any agreements you have accepted (for example the device's terms of use or the software licence agreement). Reverse engineering for interoperability is permitted in many jurisdictions under specific conditions, but not everywhere and not for every purpose.
+
+**No warranty, use at your own risk.** The scripts and data are provided "as is", without warranty of any kind (see [LICENSE](LICENSE)). Modifying a device's software can void its warranty, break features or make the device unusable. The authors are not liable for any damage or loss.
+
+**Trademarks.** Apple, Apple TV, tvOS, Siri and AirPlay are trademarks of Apple Inc., registered in the U.S. and other countries. All other trademarks are the property of their respective owners. Names are used only to identify the software described.
+
+**Licence.** The original scripts and documentation are MIT-licensed. The MIT licence does not grant any rights in Apple's software; the derived facts are provided for reference.
+
+**Takedown and contact.** If you are a rights holder and believe something here should not be published, open an issue (or contact the repository owner through GitHub) and it will be reviewed and removed promptly. Security-sensitive reports should not be filed as public issues; use GitHub's private vulnerability reporting on this repository instead.
+
+See also [NOTICE.md](NOTICE.md).
