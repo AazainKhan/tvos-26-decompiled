@@ -1,8 +1,10 @@
-# tvos-26-re
+# tvos-26-decompiled
 
 A machine-readable map of **tvOS 26.6** (Apple TV HD, `AppleTV5,3`, build `23L773`): which apps and frameworks exist, their Objective-C/Swift interfaces at name level, and the timing of every CoreAnimation package on the system.
 
 > **Legal:** independent interoperability research, not affiliated with or endorsed by Apple. No Apple code, binaries, assets or keys are included. Not legal advice. See [Legal](#legal).
+
+> **About the name:** "decompiled" describes how these indexes were made. The firmware was decompiled locally, and only derived facts (names, signatures, numbers) are published here, never the decompiled code itself.
 
 Built for coding agents (Claude Code, Codex, Cursor…) and people building Apple TV–style UIs on other platforms, such as [Glass](https://github.com/AazainKhan/glass-tv-launcher). Query it instead of re-extracting a 5 GB firmware.
 
@@ -72,7 +74,7 @@ It extracts the OS image, unwraps its key through Apple's public key service (`i
 
 ## Related
 
-- [fireos-karat-re](https://github.com/AazainKhan/fireos-karat-re): the same kind of map for Fire OS 8 on the Fire TV Stick 4K (2nd gen).
+- [fireos-karat-decompiled](https://github.com/AazainKhan/fireos-karat-decompiled): the same kind of map for Fire OS 8 on the Fire TV Stick 4K (2nd gen).
 - [glass-tv-launcher](https://github.com/AazainKhan/glass-tv-launcher): the Apple TV–style launcher this research feeds.
 
 ## Legal
