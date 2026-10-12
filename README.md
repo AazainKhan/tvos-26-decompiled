@@ -21,6 +21,7 @@ Built for coding agents (Claude Code, Codex, Cursor…) and people building Appl
 | `index/swift/{dsc,apps,disk}/<image>.types.tsv` | Swift types and their fields | 661,287 types |
 | `index/disk-images.tsv` | Maps each `disk/` name (`<binary>~<hash>`) to its full path | 1,224 |
 | `index/animations.tsv` | Every animation in every `.ca` and `.caar` package: keyPath, duration, beginTime, spring mass/stiffness/damping, timing functions, keyframes | 7,713 (3,027 springs) |
+| `index/constants/<image>.tsv` | Numbers that constant-returning methods produce, decoded from machine code: sizes, radii, spacing, spring mass/stiffness/damping, timing curves; `a if ne else b` marks a two-way choice such as `isScaledUI` | 1,093 methods, 12 images |
 | `index/ca-packages.txt` | Every `.ca` / `.caar` package path | 145 |
 
 Every dyld-cache image is in `objc/dsc/` and `swift/dsc/`, every app in `objc/apps/` and `swift/apps/`, and every other executable in `objc/disk/` and `swift/disk/` (names resolve through `index/disk-images.tsv`). Images with the same name in two places carry their parent folder, for example `AVKit~AVKit.framework` and `AVKit~AVKit.axbundle`.
@@ -51,6 +52,7 @@ What has been decompiled and indexed, measured against tvOS 26.6.
 | App executables dumped | 61 of 61 (one app, `ShortcutsActions`, has no executable) | **100%** |
 | Other on-disk executables dumped (daemons, plugins, extensions, XPC services) | 1,224 of 1,224 Mach-O files | **100%** |
 | CoreAnimation packages parsed (`.ca` XML and `.caar` binary) | 145 of 145 (113 contain animations) | **100%** |
+| Numeric constants decoded from machine code (key UI images: Control Center, system UI, home screen, focus, materials, settings) | 12 images, 1,093 methods | 12 key images |
 | Function bodies (pseudo-code from machine code) | not attempted | 0% |
 | Kernel, iBoot, SEP firmware | not attempted | 0% |
 
@@ -97,7 +99,9 @@ For agents building an Apple TV–style launcher or app:
 5. **Plan deep links and integrations.** Which apps declare URL schemes, and which services exist for a given feature.
    `awk -F'\t' '$5!=""' index/apps.tsv`
 6. **Diff tvOS releases.** Re-run the scripts on a newer IPSW and `git diff index/` to see added or removed classes, members and animations.
-7. **Skip the 5 GB download.** An agent can answer "does tvOS have X?" from these TSVs in seconds.
+7. **Get exact sizes and springs.** Control Center panel width, row heights, corner radii and its push/pop springs, decoded from the binary.
+   `grep -E "PlatterDesiredWidth|RowHeight|CornerRadius" index/constants/TVSystemPanelUI.tsv`
+8. **Skip the 5 GB download.** An agent can answer "does tvOS have X?" from these TSVs in seconds.
 
 ## Regenerate from your own IPSW
 
@@ -114,6 +118,8 @@ It extracts the OS image, unwraps its key through Apple's public key service (`i
 | `scripts/index_bundles.py` | apps, frameworks, `.ca` package list |
 | `scripts/index_headers.py` | class-dump headers → name-level TSV |
 | `scripts/index_swift.py` | swift-dump → type and field names |
+| `scripts/decode_constants.py` | `ipsw dyld disass` output → returned numbers per method |
+| `scripts/relabel_stripped.py` | puts ObjC method names back on a stripped app's disassembly |
 | `scripts/index_caml.py` | `.ca` packages → animation timing TSV |
 
 ## Related
