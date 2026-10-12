@@ -17,7 +17,7 @@ Built for coding agents (Claude Code, Codex, Cursor…) and people building Appl
 | `index/apps.tsv` | Every app: bundle id, executable, min OS, URL schemes, size | 62 |
 | `index/frameworks.tsv` | Every framework: bundle id, whether it ships `Assets.car` / `.ca` motion packages, whether its binary is on disk or in the dyld cache | 1,832 |
 | `index/objc/<image>.classes.tsv` | ObjC classes, protocols, categories with superclass and protocols | 2,663 types |
-| `index/objc/<image>.members.tsv` | ObjC method and property declarations (signatures only) | 28,712 |
+| `index/objc/<image>.members.tsv` | ObjC method and property declarations (signatures only) | 28,912 |
 | `index/swift/PineBoard.types.tsv` | Swift types in the home-screen app and their fields | 106 types |
 | `index/animations.tsv` | Every animation in every `.ca` package: keyPath, duration, beginTime, spring mass/stiffness/damping, timing functions, keyframes | 3,655 (1,674 springs) |
 | `index/ca-packages.txt` | Every `.ca` / `.caar` package path | 145 |
@@ -37,6 +37,53 @@ Images indexed in `objc/`: `PineBoard` (home screen), `TVSystemUIService` (overl
 | Idle / screensaver | `IdleScreen.app`, `TVScreenSaver.app`, `PosterBoard.app` | |
 
 Framework binaries are not on disk in tvOS 26; they live in the dyld shared cache (`System/Library/Caches/com.apple.dyld/`, 3.4 GB). `frameworks.tsv` marks which is which.
+
+## Coverage
+
+What has been decompiled and indexed so far, measured against tvOS 26.6.
+
+| Area | Done | Coverage |
+|---|---|---|
+| App inventory (bundle ids, executables, URL schemes) | 62 of 62 apps | **100%** |
+| Framework inventory (bundle ids, assets, binary location) | 1,832 of 1,832 frameworks | **100%** |
+| CoreAnimation XML packages (`.ca`) parsed | 102 of 102 (84 contain animations) | **100%** |
+| CoreAnimation binary archives (`.caar`) parsed | 0 of 43 | 0% (binary format, not yet decoded) |
+| Target UI images class-dumped (home screen, system UI, Control Center, focus, settings, materials) | 11 of 11 | **100%** |
+| All apps class-dumped | 3 of 62 | 5% |
+| All frameworks class-dumped | 8 of 1,832 | 0.4% |
+
+### Animations
+
+| Type | Count |
+|---|---|
+| `CASpringAnimation` | 1,674 |
+| `CAKeyframeAnimation` | 1,528 |
+| `CABasicAnimation` | 201 |
+| `CAAnimationGroup` | 180 |
+| `LKStateAddAnimation` | 72 |
+| **Total** | **3,655** |
+
+Most common springs: mass 1 / stiffness 435 / damping 25 (`transform.scale.xy`, 378 uses) and mass 2 / stiffness 300 / damping 50 (opacity, scale and position, 506 uses).
+
+### Interfaces (structure)
+
+| Image | Kind | Headers | Types | Members |
+|---|---|---|---|---|
+| `PineBoard` (home screen) | app | 942 | 967 | 10,941 |
+| `TVSystemUIService` | app | 496 | 513 | 5,431 |
+| `TVSettings` | app | 403 | 407 | 4,475 |
+| `PineBoardServices` | framework | 223 | 227 | 2,669 |
+| `TVSystemUI` | framework | 169 | 180 | 1,706 |
+| `TVUIKit` | framework | 94 | 96 | 1,360 |
+| `FocusEngine` | framework | 88 | 90 | 1,137 |
+| `CoreMaterial` | framework | 36 | 35 | 403 |
+| `PineBoardUIServices` | framework | 81 | 84 | 398 |
+| `TVSystemMenuUI` (Control Center) | framework | 48 | 48 | 364 |
+| `TVSettingsFoundation` | framework | 17 | 16 | 28 |
+| **Total ObjC** | | **2,597** | **2,663** | **28,912** |
+| `PineBoard` Swift | app | | 106 types | 106 fields |
+
+Headers were generated locally and are not published; only the type and member names are.
 
 ## Use cases
 
