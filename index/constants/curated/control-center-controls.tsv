@@ -1,0 +1,23 @@
+item	value	unit	source
+module list (order)	sleep/power, wifi, dnd, airplay (audio), sleep_timer, game_controllers, ax (accessibility), restrictions, search (+ screen_recording, tap_to_radar internal)	-	-[TVSSControlCenterPanelPlatterController initWithIdentifier:presentationContext:…] (TVSystemUIService, REA/Ghidra pseudo-code)
+format: sleep/power tile	0xe (title + glyph "power")	enum	same
+format: wifi	0x11 (glyph + title + value line)	enum	same
+format: airplay (audio), sleep timer	0xc (glyph + title)	enum	same
+format: game controllers, accessibility, restrictions, search	6 (round button)	enum	same
+round button (format 6) layout	glyph only, centred X and Y; the title label is never placed (Search carries a title in its content, Accessibility none)	-	-[TVSPRendererFormatProvider layoutConstraintsWithSubviews:contentView:] case 6
+pill (0xc / 0x11) layout	glyph vertically centred in a leading column; title to its right; 0x11 stacks the value line directly under the title; block vertically centred	-	layoutConstraintsWithSubviews:contentView: cases 0xc, 0x11
+big tile (0xe) layout	glyph centred X, 34 from top, height 128 (113 standard); title 13 below the glyph	pt	layoutConstraintsWithSubviews:contentView: case 0xe
+text style enum → UIFontTextStyle (standard / scaled UI)	0 Callout/Headline; 1 Headline/Title3; 2 Caption2/Caption1 semibold; 3 Body/Callout; 4,5 Callout/Headline; 6 Caption1/Body; 7 Caption2/Caption1; 8 Caption2	-	+[TVSPConstants fontForTextStyle:] (disassembly, isScaledUI branch)
+title / value styles per format	formats 8,9: title 1 line style 6, value 1 line style 7; 10,11: style 6; 0xc: title style 7; 0xd: title style 8; 0x10: title 6 + value 7; 0x11: title 7 + value 7; 4,5: centred style 6; 7: centred style 7	enum	-[TVSPRendererFormatProvider stylingForState:identifier:] (REA/Ghidra)
+label rules	numberOfLines 1, adjustsFontSizeToFitWidth NO, adjustsFontForContentSizeCategory NO on pill labels; marquee only while the parent is focused (TVSPLabelAttribute enablesMarqueeWhenAncestorFocused)	-	stylingForState:identifier:, TVSPLabelAttribute
+tvOS type scale (tvOS 18 Sketch "Guide - Type Styles")	Caption2 23/30, Caption1 25/32, Body 29/36, Callout 31/38, Headline 38/46, Title3 48/56, Title2 57/66, Title1 76/96; regular = SF Pro Medium, emphasized = Bold	px at 1080p	tvOS 18 Design Templates Sketch
+Control Center glyph point size	42 (48 scaled)	pt	+[TVSPConstants controlCenterGlyphPointSize]
+pill glyph column (symbol reserved space)	86 (96 scaled); small-medium 70/78; large 92/102	pt	+[TVSPConstants default*SymbolReservedSpace]
+glyph to text spacing	7	pt	+[TVSPConstants defaultImageTextHorizontalSpacing]
+element corner radius	24; one-line cell 40; group background 36; platter 48 (64 scaled)	pt	+[TVSPConstants default*CornerRadius]
+focused shadow	radius 30, y-offset 30 (20 scaled), opacity 0.3	pt	+[TVSPConstants defaultShadow*]
+unfocused shadow	radius 20, y-offset 4	pt	+[TVSPConstants defaultUnfocusedShadow*]
+panel width	480 (520 scaled)	pt	+[TVSPConstants defaultPlatterDesiredWidth]
+row heights	default 96/106, short 80/88, smedium 90/99, really short 60/66, volume 54/63	pt	+[TVSPConstants *RowHeight]
+spacing	row 10, group 20, spacer 10 (h) / 16 (w), top spacer 16	pt	+[TVSPConstants]
+iOS 27 kit control anatomy	1x1 68×68 glyph only (SF Symbol 21 Bold); 2x1 155×69: glyph 15 Bold in a 41 disc (white 0.15 off), title SF Pro Semibold 14, detail SF Pro Medium 14/20 at white 0.33; On: tile light, text black (detail 0.40), glyph accent; 2x2 glyph disc top-left, title + detail bottom-left	pt (iPhone)	iOS 27 UI Kit Sketch, System/Control Center/Controls - iPhone
